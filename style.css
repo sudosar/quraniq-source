@@ -91,6 +91,81 @@ body {
 
 button, input, select, textarea {
     color: inherit;
+    font-family: inherit;
+}
+
+/* ============ DARK MODE OVERRIDES ============ */
+[data-theme="dark"] .conn-tile {
+    background: #2d2d32;
+    border-color: #55555c;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .conn-tile:hover {
+    border-color: #34d87a;
+}
+
+[data-theme="dark"] .conn-tile.selected {
+    background: #34d87a;
+    border-color: #34d87a;
+    color: #000000;
+}
+
+[data-theme="dark"] .btn-secondary {
+    background: #2d2d32;
+    border-color: #55555c;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .btn-primary {
+    background: #34d87a;
+    color: #000000;
+}
+
+[data-theme="dark"] .mode-tab {
+    color: #a0a0b0;
+}
+
+[data-theme="dark"] .mode-tab.active {
+    background: #34d87a;
+    color: #000000;
+}
+
+[data-theme="dark"] .game-desc,
+[data-theme="dark"] .mistakes-display {
+    color: #c0c0cc;
+}
+
+[data-theme="dark"] .game-header h2 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .key {
+    background: #555558;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .wordle-cell {
+    border-color: #55555c;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .scramble-word {
+    background: #2d2d32;
+    border-color: #55555c;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .deduction-opt {
+    background: #2d2d32;
+    border-color: #55555c;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .clue-card {
+    background: #2d2d32;
+    border-color: #55555c;
+    color: #ffffff;
 }
 
 /* ============ HEADER ============ */
