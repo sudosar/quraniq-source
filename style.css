@@ -502,47 +502,198 @@ button, input, select, textarea {
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
-/* Verse panel - hidden by default */
-.conn-verse-panel {
+/* ===== Verse Carousel (per-word) ===== */
+.verse-carousel {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
     width: 100%;
     margin-top: 0;
-    text-align: center;
 }
 
-.conn-verse-panel.expanded {
-    max-height: 300px;
+.verse-carousel.expanded {
+    max-height: 400px;
     opacity: 1;
-    margin-top: 10px;
-    padding-top: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
     border-top: 1px solid rgba(0,0,0,0.15);
 }
 
-.conn-verse-ayah {
+/* Word pills - tappable word selector */
+.verse-pills {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    direction: rtl;
+}
+
+.verse-pill {
     font-family: var(--font-arabic);
-    font-size: 1.15rem;
+    font-size: 0.82rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1.5px solid rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    color: inherit;
+}
+
+.verse-pill:hover {
+    background: rgba(255,255,255,0.5);
+}
+
+.verse-pill.active {
+    background: rgba(0,0,0,0.15);
+    border-color: rgba(0,0,0,0.4);
+    font-weight: 700;
+    transform: scale(1.05);
+}
+
+/* Slides container with nav arrows */
+.verse-slides-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+}
+
+.verse-nav {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.1);
+    color: inherit;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    padding: 0;
+    line-height: 1;
+}
+
+.verse-nav:hover {
+    background: rgba(0,0,0,0.2);
+}
+
+/* Slides area */
+.verse-slides {
+    flex: 1;
+    min-height: 120px;
+    position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.verse-slide {
+    display: none;
+    text-align: center;
+    animation: verseFadeIn 0.3s ease;
+    padding: 4px 8px;
+}
+
+.verse-slide.active {
+    display: block;
+}
+
+@keyframes verseFadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.verse-slide-word {
+    font-family: var(--font-arabic);
+    font-size: 1.3rem;
+    font-weight: 700;
+    direction: rtl;
+    margin-bottom: 2px;
+}
+
+.verse-slide-meaning {
+    font-size: 0.78rem;
+    opacity: 0.75;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.verse-slide-ayah {
+    font-family: var(--font-arabic);
+    font-size: 1.05rem;
     line-height: 2;
     direction: rtl;
-    margin-bottom: 6px;
-    font-weight: 500;
-}
-
-.conn-verse-en {
-    font-size: 0.82rem;
-    font-style: italic;
-    opacity: 0.85;
-    line-height: 1.5;
     margin-bottom: 4px;
+    font-weight: 500;
+    background: rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 8px 12px;
 }
 
-.conn-verse-ref {
-    font-size: 0.75rem;
+.verse-slide-ref {
+    font-size: 0.72rem;
     font-weight: 700;
-    opacity: 0.7;
+    opacity: 0.65;
     letter-spacing: 0.5px;
+}
+
+/* Dots indicator */
+.verse-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.verse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.verse-dot.active {
+    background: rgba(0,0,0,0.5);
+    transform: scale(1.3);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .verse-pill {
+    border-color: rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.08);
+}
+
+[data-theme="dark"] .verse-pill.active {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.5);
+}
+
+[data-theme="dark"] .verse-nav {
+    background: rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .verse-nav:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+[data-theme="dark"] .verse-slide-ayah {
+    background: rgba(255,255,255,0.08);
+}
+
+[data-theme="dark"] .verse-dot {
+    background: rgba(255,255,255,0.2);
+}
+
+[data-theme="dark"] .verse-dot.active {
+    background: rgba(255,255,255,0.6);
 }
 
 /* Arabic connection tiles */

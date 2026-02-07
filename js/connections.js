@@ -192,63 +192,195 @@ function renderSolvedRows() {
     conn.solved.forEach((s, idx) => {
         const row = document.createElement('div');
         row.className = `conn-solved-row ${s.color}`;
-        row.setAttribute('role', 'button');
-        row.setAttribute('aria-expanded', 'false');
-        row.setAttribute('tabindex', '0');
+        row.setAttribute('role', 'region');
+        row.setAttribute('aria-label', s.nameEn || s.name);
         const catName = s.nameEn || s.name;
-        const itemsText = s.items.map(i => typeof i === 'object' ? i.ar : i).join('\u060C ');
 
-        // Look up verse from puzzle data if not in saved state
-        let verse = s.verse;
-        if (!verse) {
-            // Search all puzzles since saved state may be from a different puzzle
+        // Look up full item data from puzzle definition (with per-word verses)
+        let items = s.items;
+        if (!items[0]?.verse) {
             for (const p of PUZZLES.connections) {
                 const cat = p.categories.find(c => (c.nameEn || c.name) === (s.nameEn || s.name));
-                if (cat && cat.verse) { verse = cat.verse; break; }
+                if (cat) { items = cat.items; break; }
             }
         }
 
-        let verseHTML = '';
-        if (verse) {
-            verseHTML = `<div class="conn-verse-panel" id="verse-panel-${idx}" aria-hidden="true">
-                <div class="conn-verse-ayah">${verse.ayah}</div>
-                <div class="conn-verse-en">${verse.en}</div>
-                <div class="conn-verse-ref">— ${verse.ref}</div>
-            </div>`;
-        }
+        const itemsText = items.map(i => typeof i === 'object' ? i.ar : i).join('\u060C ');
 
-        row.innerHTML = `<div class="conn-solved-header">
+        // Build word pill indicators
+        const pillsHTML = items.map((item, i) => {
+            const ar = typeof item === 'object' ? item.ar : item;
+            return `<button class="verse-pill${i === 0 ? ' active' : ''}" data-row="${idx}" data-word="${i}" aria-label="${ar}">${ar}</button>`;
+        }).join('');
+
+        // Build carousel slides
+        const slidesHTML = items.map((item, i) => {
+            const ar = typeof item === 'object' ? item.ar : item;
+            const en = typeof item === 'object' ? item.en : '';
+            const verse = typeof item === 'object' ? item.verse : '';
+            const ref = typeof item === 'object' ? item.ref : '';
+            return `<div class="verse-slide${i === 0 ? ' active' : ''}" data-index="${i}">
+                <div class="verse-slide-word">${ar}</div>
+                <div class="verse-slide-meaning">${en}</div>
+                ${verse ? `<div class="verse-slide-ayah">${verse}</div>
+                <div class="verse-slide-ref">— ${ref}</div>` : ''}
+            </div>`;
+        }).join('');
+
+        row.innerHTML = `<div class="conn-solved-header" tabindex="0" role="button" aria-expanded="false" data-row="${idx}">
             <div class="conn-solved-category">${catName}</div>
             <span class="conn-expand-icon" aria-hidden="true">▼</span>
         </div>
         <div class="conn-solved-items conn-solved-items-ar">${itemsText}</div>
-        ${verseHTML}`;
+        <div class="verse-carousel" id="carousel-${idx}" aria-hidden="true">
+            <div class="verse-pills">${pillsHTML}</div>
+            <div class="verse-slides-container">
+                <button class="verse-nav verse-nav-prev" data-row="${idx}" aria-label="Previous word">‹</button>
+                <div class="verse-slides">${slidesHTML}</div>
+                <button class="verse-nav verse-nav-next" data-row="${idx}" aria-label="Next word">›</button>
+            </div>
+            <div class="verse-dots">${items.map((_, i) => `<span class="verse-dot${i === 0 ? ' active' : ''}" data-row="${idx}" data-word="${i}"></span>`).join('')}</div>
+        </div>`;
 
-        // Toggle expand/collapse on click
-        row.addEventListener('click', () => toggleVersePanel(row, idx));
-        row.addEventListener('keydown', (e) => {
+        container.appendChild(row);
+
+        // Attach event listeners
+        const header = row.querySelector('.conn-solved-header');
+        header.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleCarousel(idx);
+        });
+        header.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                toggleVersePanel(row, idx);
+                toggleCarousel(idx);
             }
         });
 
-        container.appendChild(row);
+        // Nav buttons
+        row.querySelector('.verse-nav-prev').addEventListener('click', (e) => {
+            e.stopPropagation();
+            navigateCarousel(idx, -1);
+        });
+        row.querySelector('.verse-nav-next').addEventListener('click', (e) => {
+            e.stopPropagation();
+            navigateCarousel(idx, 1);
+        });
+
+        // Pill clicks
+        row.querySelectorAll('.verse-pill').forEach(pill => {
+            pill.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const wordIdx = parseInt(pill.dataset.word);
+                goToSlide(idx, wordIdx);
+            });
+        });
+
+        // Dot clicks
+        row.querySelectorAll('.verse-dot').forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const wordIdx = parseInt(dot.dataset.word);
+                goToSlide(idx, wordIdx);
+            });
+        });
+
+        // Touch swipe support
+        setupSwipe(row.querySelector('.verse-slides'), idx, items.length);
     });
 }
 
-function toggleVersePanel(row, idx) {
-    const panel = document.getElementById(`verse-panel-${idx}`);
-    if (!panel) return;
-    const isExpanded = row.getAttribute('aria-expanded') === 'true';
-    row.setAttribute('aria-expanded', String(!isExpanded));
-    panel.setAttribute('aria-hidden', String(isExpanded));
-    panel.classList.toggle('expanded');
-    row.querySelector('.conn-expand-icon').textContent = isExpanded ? '▼' : '▲';
+// Track current slide per row
+const carouselState = {};
+
+function toggleCarousel(rowIdx) {
+    const carousel = document.getElementById(`carousel-${rowIdx}`);
+    if (!carousel) return;
+    const header = carousel.parentElement.querySelector('.conn-solved-header');
+    const isExpanded = header.getAttribute('aria-expanded') === 'true';
+    header.setAttribute('aria-expanded', String(!isExpanded));
+    carousel.setAttribute('aria-hidden', String(isExpanded));
+    carousel.classList.toggle('expanded');
+    header.querySelector('.conn-expand-icon').textContent = isExpanded ? '▼' : '▲';
+
     if (!isExpanded) {
-        // Speak the verse when expanding
-        speakArabic(panel.querySelector('.conn-verse-ayah').textContent);
+        // Speak the first word's verse when opening
+        const activeSlide = carousel.querySelector('.verse-slide.active');
+        if (activeSlide) {
+            const ayah = activeSlide.querySelector('.verse-slide-ayah');
+            if (ayah) speakArabic(ayah.textContent);
+        }
     }
+}
+
+function goToSlide(rowIdx, slideIdx) {
+    const carousel = document.getElementById(`carousel-${rowIdx}`);
+    if (!carousel) return;
+
+    carouselState[rowIdx] = slideIdx;
+
+    // Update slides
+    carousel.querySelectorAll('.verse-slide').forEach((slide, i) => {
+        slide.classList.toggle('active', i === slideIdx);
+    });
+
+    // Update pills
+    carousel.querySelectorAll('.verse-pill').forEach((pill, i) => {
+        pill.classList.toggle('active', i === slideIdx);
+    });
+
+    // Update dots
+    carousel.querySelectorAll('.verse-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === slideIdx);
+    });
+
+    // Speak the verse
+    const activeSlide = carousel.querySelectorAll('.verse-slide')[slideIdx];
+    if (activeSlide) {
+        const ayah = activeSlide.querySelector('.verse-slide-ayah');
+        if (ayah) speakArabic(ayah.textContent);
+    }
+}
+
+function navigateCarousel(rowIdx, direction) {
+    const carousel = document.getElementById(`carousel-${rowIdx}`);
+    if (!carousel) return;
+    const slides = carousel.querySelectorAll('.verse-slide');
+    const current = carouselState[rowIdx] || 0;
+    const next = (current + direction + slides.length) % slides.length;
+    goToSlide(rowIdx, next);
+}
+
+function setupSwipe(container, rowIdx, totalSlides) {
+    let startX = 0;
+    let startY = 0;
+    let isDragging = false;
+
+    container.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        isDragging = true;
+    }, { passive: true });
+
+    container.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+        const diffX = startX - endX;
+        const diffY = Math.abs(startY - endY);
+
+        // Only register horizontal swipes (not vertical scrolling)
+        if (Math.abs(diffX) > 40 && diffY < 80) {
+            if (diffX > 0) {
+                // Swipe left -> next (RTL: previous word)
+                navigateCarousel(rowIdx, 1);
+            } else {
+                // Swipe right -> prev (RTL: next word)
+                navigateCarousel(rowIdx, -1);
+            }
+        }
+    }, { passive: true });
 }
 
 function revealAllConnections() {
