@@ -15,6 +15,7 @@ const app = {
 cleanupOldState(app.state);
 
 document.addEventListener('DOMContentLoaded', () => {
+    initTTS();
     initTheme();
     initModeSelector();
     initSidebar();

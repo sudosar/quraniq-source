@@ -145,6 +145,46 @@ function trapFocus(e) {
     }
 }
 
+// ==================== ARABIC TEXT-TO-SPEECH ====================
+const tts = {
+    supported: 'speechSynthesis' in window,
+    speaking: false,
+    voice: null,
+    _resolved: false
+};
+
+/** Pre-resolve the best Arabic voice (call once on load) */
+function initTTS() {
+    if (!tts.supported) return;
+    const pickVoice = () => {
+        const voices = speechSynthesis.getVoices();
+        // Prefer ar-SA, then any ar-* voice
+        tts.voice = voices.find(v => v.lang === 'ar-SA')
+                 || voices.find(v => v.lang.startsWith('ar'))
+                 || null;
+        tts._resolved = true;
+    };
+    pickVoice();
+    if (!tts._resolved || speechSynthesis.getVoices().length === 0) {
+        speechSynthesis.addEventListener('voiceschanged', pickVoice, { once: true });
+    }
+}
+
+/** Speak Arabic text. Cancels any ongoing speech first. */
+function speakArabic(text) {
+    if (!tts.supported || !text) return;
+    // Cancel any ongoing speech to avoid overlap
+    speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'ar-SA';
+    utter.rate = 0.9;  // Slightly slower for clarity
+    if (tts.voice) utter.voice = tts.voice;
+    utter.onstart = () => { tts.speaking = true; };
+    utter.onend = () => { tts.speaking = false; };
+    utter.onerror = () => { tts.speaking = false; };
+    speechSynthesis.speak(utter);
+}
+
 // ==================== ARABIC NORMALIZATION ====================
 function normalizeArabic(str) {
     return str.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED]/g, '');

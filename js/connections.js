@@ -82,15 +82,22 @@ function renderConnections() {
         tile.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
         tile.disabled = conn.gameOver;
         tile.addEventListener('click', () => toggleConnTile(item));
-        // Long-press tooltip for mobile
+        // Long-press: show tooltip + speak Arabic (mobile)
         let holdTimer;
         tile.addEventListener('touchstart', () => {
             holdTimer = setTimeout(() => {
                 if (tip) showToast(tip, 1500);
+                speakArabic(getConnItemDisplay(item));
             }, 500);
         }, { passive: true });
         tile.addEventListener('touchend', () => clearTimeout(holdTimer));
         tile.addEventListener('touchmove', () => clearTimeout(holdTimer));
+        // Right-click / long-press on desktop: speak Arabic
+        tile.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            speakArabic(getConnItemDisplay(item));
+            if (tip) showToast(tip, 1500);
+        });
         grid.appendChild(tile);
     });
     document.getElementById('conn-submit').disabled = conn.selected.length !== 4;
