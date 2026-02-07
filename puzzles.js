@@ -12,390 +12,510 @@ const PUZZLES = {
             id: 1,
             categories: [
                 { name: "سور سُمّيت بحيوانات", nameEn: "Surahs named after animals", color: "yellow",
-                    items: [{ar:"البقرة",en:"The Cow (2)"},{ar:"النحل",en:"The Bee (16)"},{ar:"النمل",en:"The Ant (27)"},{ar:"العنكبوت",en:"The Spider (29)"}] },
+                    items: [{ar:"البقرة",en:"The Cow (2)"},{ar:"النحل",en:"The Bee (16)"},{ar:"النمل",en:"The Ant (27)"},{ar:"العنكبوت",en:"The Spider (29)"}],
+                    verse: {ayah:"وَأَوْحَىٰ رَبُّكَ إِلَى النَّحْلِ أَنِ اتَّخِذِي مِنَ الْجِبَالِ بُيُوتًا", en:"And your Lord inspired the bee: 'Make your homes in the mountains.'", ref:"16:68"}},
                 { name: "مواد خُلقت منها الكائنات", nameEn: "Materials beings were created from", color: "green",
-                    items: [{ar:"طين",en:"Clay (humans)"},{ar:"نار",en:"Fire (jinn)"},{ar:"نور",en:"Light (angels)"},{ar:"ماء",en:"Water (all living)"}] },
+                    items: [{ar:"طين",en:"Clay (humans)"},{ar:"نار",en:"Fire (jinn)"},{ar:"نور",en:"Light (angels)"},{ar:"ماء",en:"Water (all living)"}],
+                    verse: {ayah:"خَلَقَ الْإِنسَانَ مِن صَلْصَالٍ كَالْفَخَّارِ ۝ وَخَلَقَ الْجَانَّ مِن مَّارِجٍ مِّن نَّارٍ", en:"He created man from clay like pottery, and He created the jinn from a smokeless flame of fire.", ref:"55:14-15"}},
                 { name: "أسماء الله تنتهي بـ «يم»", nameEn: "Names of Allah ending in -eem", color: "blue",
-                    items: [{ar:"الرحيم",en:"The Most Merciful"},{ar:"العليم",en:"The All-Knowing"},{ar:"الحكيم",en:"The All-Wise"},{ar:"الكريم",en:"The Most Generous"}] },
+                    items: [{ar:"الرحيم",en:"The Most Merciful"},{ar:"العليم",en:"The All-Knowing"},{ar:"الحكيم",en:"The All-Wise"},{ar:"الكريم",en:"The Most Generous"}],
+                    verse: {ayah:"بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ", en:"In the name of Allah, the Most Gracious, the Most Merciful.", ref:"1:1"}},
                 { name: "أنبياء ذُكروا في سورة مريم", nameEn: "Prophets mentioned in Surah Maryam", color: "purple",
-                    items: [{ar:"عيسى",en:"Isa (AS)"},{ar:"يحيى",en:"Yahya (AS)"},{ar:"إبراهيم",en:"Ibrahim (AS)"},{ar:"موسى",en:"Musa (AS)"}] }
+                    items: [{ar:"عيسى",en:"Isa (AS)"},{ar:"يحيى",en:"Yahya (AS)"},{ar:"إبراهيم",en:"Ibrahim (AS)"},{ar:"موسى",en:"Musa (AS)"}],
+                    verse: {ayah:"وَاذْكُرْ فِي الْكِتَابِ مَرْيَمَ إِذِ انتَبَذَتْ مِنْ أَهْلِهَا مَكَانًا شَرْقِيًّا", en:"And mention in the Book, Maryam, when she withdrew from her family to a place facing east.", ref:"19:16"}}
             ]
         },
         {
             id: 2,
             categories: [
                 { name: "أشياء أقسم الله بها", nameEn: "Things Allah swears by in the Quran", color: "yellow",
-                    items: [{ar:"التين",en:"The Fig (95:1)"},{ar:"العصر",en:"Time (103:1)"},{ar:"القلم",en:"The Pen (68:1)"},{ar:"الفجر",en:"The Dawn (89:1)"}] },
+                    items: [{ar:"التين",en:"The Fig (95:1)"},{ar:"العصر",en:"Time (103:1)"},{ar:"القلم",en:"The Pen (68:1)"},{ar:"الفجر",en:"The Dawn (89:1)"}],
+                    verse: {ayah:"وَالتِّينِ وَالزَّيْتُونِ ۝ وَطُورِ سِينِينَ ۝ وَهَٰذَا الْبَلَدِ الْأَمِينِ", en:"By the fig and the olive, and Mount Sinai, and this secure city.", ref:"95:1-3"}},
                 { name: "أركان الإسلام في القرآن", nameEn: "Pillars of Islam in the Quran", color: "green",
-                    items: [{ar:"الصلاة",en:"Prayer"},{ar:"الزكاة",en:"Almsgiving"},{ar:"الصيام",en:"Fasting"},{ar:"الحج",en:"Pilgrimage"}] },
+                    items: [{ar:"الصلاة",en:"Prayer"},{ar:"الزكاة",en:"Almsgiving"},{ar:"الصيام",en:"Fasting"},{ar:"الحج",en:"Pilgrimage"}],
+                    verse: {ayah:"وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَارْكَعُوا مَعَ الرَّاكِعِينَ", en:"And establish prayer and give zakah and bow with those who bow.", ref:"2:43"}},
                 { name: "أمم أُهلكت", nameEn: "Destroyed nations in the Quran", color: "blue",
-                    items: [{ar:"عاد",en:"Aad"},{ar:"ثمود",en:"Thamud"},{ar:"مدين",en:"Madyan"},{ar:"سبأ",en:"Saba"}] },
+                    items: [{ar:"عاد",en:"Aad"},{ar:"ثمود",en:"Thamud"},{ar:"مدين",en:"Madyan"},{ar:"سبأ",en:"Saba"}],
+                    verse: {ayah:"وَعَادًا وَثَمُودَ وَأَصْحَابَ الرَّسِّ وَقُرُونًا بَيْنَ ذَٰلِكَ كَثِيرًا", en:"And Aad and Thamud and the companions of the well and many generations between them.", ref:"25:38"}},
                 { name: "أسماء الجنة في القرآن", nameEn: "Names of Paradise in the Quran", color: "purple",
-                    items: [{ar:"الفردوس",en:"Al-Firdaws"},{ar:"عدن",en:"Adn (Eden)"},{ar:"دار السلام",en:"Abode of Peace"},{ar:"النعيم",en:"An-Na'eem"}] }
+                    items: [{ar:"الفردوس",en:"Al-Firdaws"},{ar:"عدن",en:"Adn (Eden)"},{ar:"دار السلام",en:"Abode of Peace"},{ar:"النعيم",en:"An-Na'eem"}],
+                    verse: {ayah:"إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ كَانَتْ لَهُمْ جَنَّاتُ الْفِرْدَوْسِ نُزُلًا", en:"Indeed, those who believed and did righteous deeds — the Gardens of Firdaws will be their lodging.", ref:"18:107"}}
             ]
         },
         {
             id: 3,
             categories: [
                 { name: "عناصر قصة يوسف", nameEn: "Elements of Prophet Yusuf's story", color: "yellow",
-                    items: [{ar:"الرؤيا",en:"The Dream"},{ar:"الجُبّ",en:"The Well"},{ar:"القميص",en:"The Shirt"},{ar:"السجن",en:"The Prison"}] },
+                    items: [{ar:"الرؤيا",en:"The Dream"},{ar:"الجُبّ",en:"The Well"},{ar:"القميص",en:"The Shirt"},{ar:"السجن",en:"The Prison"}],
+                    verse: {ayah:"إِذْ قَالَ يُوسُفُ لِأَبِيهِ يَا أَبَتِ إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا", en:"When Yusuf said to his father: 'O my father, indeed I saw eleven stars.'", ref:"12:4"}},
                 { name: "معجزات موسى عليه السلام", nameEn: "Miracles of Musa (AS)", color: "green",
-                    items: [{ar:"العصا",en:"The Staff"},{ar:"اليد البيضاء",en:"The Glowing Hand"},{ar:"الطوفان",en:"The Flood"},{ar:"الجراد",en:"The Locusts"}] },
+                    items: [{ar:"العصا",en:"The Staff"},{ar:"اليد البيضاء",en:"The Glowing Hand"},{ar:"الطوفان",en:"The Flood"},{ar:"الجراد",en:"The Locusts"}],
+                    verse: {ayah:"فَأَلْقَىٰ عَصَاهُ فَإِذَا هِيَ ثُعْبَانٌ مُّبِينٌ", en:"So he threw his staff, and suddenly it was a serpent, manifest.", ref:"7:107"}},
                 { name: "أوصاف القرآن لنفسه", nameEn: "The Quran's descriptions of itself", color: "blue",
-                    items: [{ar:"هدى",en:"Guidance"},{ar:"شفاء",en:"Healing"},{ar:"بيان",en:"Clear Explanation"},{ar:"فرقان",en:"Criterion"}] },
+                    items: [{ar:"هدى",en:"Guidance"},{ar:"شفاء",en:"Healing"},{ar:"بيان",en:"Clear Explanation"},{ar:"فرقان",en:"Criterion"}],
+                    verse: {ayah:"هُدًى لِّلنَّاسِ وَبَيِّنَاتٍ مِّنَ الْهُدَىٰ وَالْفُرْقَانِ", en:"A guidance for the people and clear proofs of guidance and criterion.", ref:"2:185"}},
                 { name: "ألوان ذُكرت في القرآن", nameEn: "Colors mentioned in the Quran", color: "purple",
-                    items: [{ar:"أبيض",en:"White"},{ar:"أخضر",en:"Green"},{ar:"أصفر",en:"Yellow"},{ar:"أسود",en:"Black"}] }
+                    items: [{ar:"أبيض",en:"White"},{ar:"أخضر",en:"Green"},{ar:"أصفر",en:"Yellow"},{ar:"أسود",en:"Black"}],
+                    verse: {ayah:"وَمِنَ الْجِبَالِ جُدَدٌ بِيضٌ وَحُمْرٌ مُّخْتَلِفٌ أَلْوَانُهَا وَغَرَابِيبُ سُودٌ", en:"And in the mountains are tracts, white and red of varying shades and black.", ref:"35:27"}}
             ]
         },
         {
             id: 4,
             categories: [
                 { name: "قصص سورة الكهف الأربع", nameEn: "Four stories of Surah Al-Kahf", color: "yellow",
-                    items: [{ar:"أصحاب الكهف",en:"Sleepers of the Cave"},{ar:"صاحب الجنتين",en:"Owner of Two Gardens"},{ar:"موسى والخضر",en:"Musa and Al-Khidr"},{ar:"ذو القرنين",en:"Dhul-Qarnayn"}] },
+                    items: [{ar:"أصحاب الكهف",en:"Sleepers of the Cave"},{ar:"صاحب الجنتين",en:"Owner of Two Gardens"},{ar:"موسى والخضر",en:"Musa and Al-Khidr"},{ar:"ذو القرنين",en:"Dhul-Qarnayn"}],
+                    verse: {ayah:"أَمْ حَسِبْتَ أَنَّ أَصْحَابَ الْكَهْفِ وَالرَّقِيمِ كَانُوا مِنْ آيَاتِنَا عَجَبًا", en:"Or did you think that the companions of the cave and the inscription were wonders among Our signs?", ref:"18:9"}},
                 { name: "ملائكة ذُكروا بالاسم", nameEn: "Angels mentioned by name", color: "green",
-                    items: [{ar:"جبريل",en:"Jibreel"},{ar:"ميكائيل",en:"Mikael"},{ar:"مالك",en:"Malik (of Hellfire)"},{ar:"هاروت",en:"Harut"}] },
+                    items: [{ar:"جبريل",en:"Jibreel"},{ar:"ميكائيل",en:"Mikael"},{ar:"مالك",en:"Malik (of Hellfire)"},{ar:"هاروت",en:"Harut"}],
+                    verse: {ayah:"قُلْ مَن كَانَ عَدُوًّا لِّجِبْرِيلَ فَإِنَّهُ نَزَّلَهُ عَلَىٰ قَلْبِكَ بِإِذْنِ اللَّهِ", en:"Say: Whoever is an enemy to Jibreel — it is he who brought it down upon your heart by permission of Allah.", ref:"2:97"}},
                 { name: "فواكه ذُكرت في القرآن", nameEn: "Fruits mentioned in the Quran", color: "blue",
-                    items: [{ar:"تين",en:"Fig"},{ar:"زيتون",en:"Olive"},{ar:"رمان",en:"Pomegranate"},{ar:"عنب",en:"Grape"}] },
+                    items: [{ar:"تين",en:"Fig"},{ar:"زيتون",en:"Olive"},{ar:"رمان",en:"Pomegranate"},{ar:"عنب",en:"Grape"}],
+                    verse: {ayah:"وَالتِّينِ وَالزَّيْتُونِ", en:"By the fig and the olive.", ref:"95:1"}},
                 { name: "سور من آخر القرآن", nameEn: "Surahs from the end of the Quran", color: "purple",
-                    items: [{ar:"الفلق",en:"Al-Falaq (113)"},{ar:"الناس",en:"An-Nas (114)"},{ar:"الإخلاص",en:"Al-Ikhlas (112)"},{ar:"الكوثر",en:"Al-Kawthar (108)"}] }
+                    items: [{ar:"الفلق",en:"Al-Falaq (113)"},{ar:"الناس",en:"An-Nas (114)"},{ar:"الإخلاص",en:"Al-Ikhlas (112)"},{ar:"الكوثر",en:"Al-Kawthar (108)"}],
+                    verse: {ayah:"قُلْ هُوَ اللَّهُ أَحَدٌ", en:"Say: He is Allah, the One.", ref:"112:1"}}
             ]
         },
         {
             id: 5,
             categories: [
                 { name: "أحداث يوم القيامة", nameEn: "Events of the Day of Judgment", color: "yellow",
-                    items: [{ar:"الصور",en:"The Trumpet"},{ar:"الحساب",en:"The Reckoning"},{ar:"الميزان",en:"The Scale"},{ar:"الصراط",en:"The Bridge"}] },
+                    items: [{ar:"الصور",en:"The Trumpet"},{ar:"الحساب",en:"The Reckoning"},{ar:"الميزان",en:"The Scale"},{ar:"الصراط",en:"The Bridge"}],
+                    verse: {ayah:"وَنَضَعُ الْمَوَازِينَ الْقِسْطَ لِيَوْمِ الْقِيَامَةِ فَلَا تُظْلَمُ نَفْسٌ شَيْئًا", en:"And We place the scales of justice for the Day of Resurrection, so no soul will be treated unjustly.", ref:"21:47"}},
                 { name: "أولو العزم من الرسل", nameEn: "Prophets of strong will (Ulul Azm)", color: "green",
-                    items: [{ar:"نوح",en:"Nuh"},{ar:"إبراهيم",en:"Ibrahim"},{ar:"موسى",en:"Musa"},{ar:"عيسى",en:"Isa"}] },
+                    items: [{ar:"نوح",en:"Nuh"},{ar:"إبراهيم",en:"Ibrahim"},{ar:"موسى",en:"Musa"},{ar:"عيسى",en:"Isa"}],
+                    verse: {ayah:"فَاصْبِرْ كَمَا صَبَرَ أُولُو الْعَزْمِ مِنَ الرُّسُلِ", en:"So be patient as those of determination among the messengers were patient.", ref:"46:35"}},
                 { name: "آداب سورة الحجرات", nameEn: "Ethics commanded in Surah Al-Hujurat", color: "blue",
-                    items: [{ar:"تبيّنوا",en:"Verify (49:6)"},{ar:"لا تجسسوا",en:"Do not spy (49:12)"},{ar:"لا تنابزوا",en:"Do not insult (49:11)"},{ar:"لا يسخر",en:"Do not mock (49:11)"}] },
+                    items: [{ar:"تبيّنوا",en:"Verify (49:6)"},{ar:"لا تجسسوا",en:"Do not spy (49:12)"},{ar:"لا تنابزوا",en:"Do not insult (49:11)"},{ar:"لا يسخر",en:"Do not mock (49:11)"}],
+                    verse: {ayah:"يَا أَيُّهَا الَّذِينَ آمَنُوا إِن جَاءَكُمْ فَاسِقٌ بِنَبَإٍ فَتَبَيَّنُوا", en:"O you who believe, if a sinful person comes to you with news, verify it.", ref:"49:6"}},
                 { name: "أجرام سماوية أقسم الله بها", nameEn: "Celestial bodies Allah swears by", color: "purple",
-                    items: [{ar:"الشمس",en:"The Sun (91:1)"},{ar:"القمر",en:"The Moon (91:2)"},{ar:"النجم",en:"The Star (53:1)"},{ar:"البروج",en:"The Constellations (85:1)"}] }
+                    items: [{ar:"الشمس",en:"The Sun (91:1)"},{ar:"القمر",en:"The Moon (91:2)"},{ar:"النجم",en:"The Star (53:1)"},{ar:"البروج",en:"The Constellations (85:1)"}],
+                    verse: {ayah:"وَالشَّمْسِ وَضُحَاهَا ۝ وَالْقَمَرِ إِذَا تَلَاهَا", en:"By the sun and its brightness, and the moon as it follows it.", ref:"91:1-2"}}
             ]
         },
         {
             id: 6,
             categories: [
                 { name: "أشياء ذُكرت في سورة البقرة", nameEn: "Things mentioned in Surah Al-Baqarah", color: "yellow",
-                    items: [{ar:"البقرة",en:"The Cow"},{ar:"التابوت",en:"The Ark"},{ar:"العرش",en:"The Throne"},{ar:"المن والسلوى",en:"Manna and Quails"}] },
+                    items: [{ar:"البقرة",en:"The Cow"},{ar:"التابوت",en:"The Ark"},{ar:"العرش",en:"The Throne"},{ar:"المن والسلوى",en:"Manna and Quails"}],
+                    verse: {ayah:"إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تَذْبَحُوا بَقَرَةً", en:"Indeed, Allah commands you to slaughter a cow.", ref:"2:67"}},
                 { name: "ابتلاءات إبراهيم عليه السلام", nameEn: "Trials of Prophet Ibrahim (AS)", color: "green",
-                    items: [{ar:"النار",en:"The Fire"},{ar:"ذبح الابن",en:"Sacrifice of his son"},{ar:"هجرة الأهل",en:"Leaving family in desert"},{ar:"بناء الكعبة",en:"Building the Ka'bah"}] },
+                    items: [{ar:"النار",en:"The Fire"},{ar:"ذبح الابن",en:"Sacrifice of his son"},{ar:"هجرة الأهل",en:"Leaving family in desert"},{ar:"بناء الكعبة",en:"Building the Ka'bah"}],
+                    verse: {ayah:"قُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا عَلَىٰ إِبْرَاهِيمَ", en:"We said: O fire, be coolness and safety upon Ibrahim.", ref:"21:69"}},
                 { name: "معادن ذُكرت في القرآن", nameEn: "Metals mentioned in the Quran", color: "blue",
-                    items: [{ar:"حديد",en:"Iron"},{ar:"ذهب",en:"Gold"},{ar:"فضة",en:"Silver"},{ar:"نحاس",en:"Copper"}] },
+                    items: [{ar:"حديد",en:"Iron"},{ar:"ذهب",en:"Gold"},{ar:"فضة",en:"Silver"},{ar:"نحاس",en:"Copper"}],
+                    verse: {ayah:"وَأَنزَلْنَا الْحَدِيدَ فِيهِ بَأْسٌ شَدِيدٌ وَمَنَافِعُ لِلنَّاسِ", en:"And We sent down iron, wherein is great military might and benefits for the people.", ref:"57:25"}},
                 { name: "موضوعات سورة الرحمن", nameEn: "Themes of Surah Ar-Rahman", color: "purple",
-                    items: [{ar:"علّم القرآن",en:"Taught the Quran"},{ar:"مرج البحرين",en:"Two seas meeting"},{ar:"فبأي آلاء",en:"Which favors will you deny?"},{ar:"اللؤلؤ والمرجان",en:"Pearls and coral"}] }
+                    items: [{ar:"علّم القرآن",en:"Taught the Quran"},{ar:"مرج البحرين",en:"Two seas meeting"},{ar:"فبأي آلاء",en:"Which favors will you deny?"},{ar:"اللؤلؤ والمرجان",en:"Pearls and coral"}],
+                    verse: {ayah:"الرَّحْمَٰنُ ۝ عَلَّمَ الْقُرْآنَ ۝ خَلَقَ الْإِنسَانَ ۝ عَلَّمَهُ الْبَيَانَ", en:"The Most Merciful. Taught the Quran. Created man. Taught him eloquence.", ref:"55:1-4"}}
             ]
         },
         {
             id: 7,
             categories: [
                 { name: "نساء ذُكرن في القرآن", nameEn: "Women referenced in the Quran", color: "yellow",
-                    items: [{ar:"مريم",en:"Maryam"},{ar:"آسية",en:"Asiya (wife of Fir'awn)"},{ar:"أم موسى",en:"Mother of Musa"},{ar:"امرأة العزيز",en:"Wife of Al-Aziz"}] },
+                    items: [{ar:"مريم",en:"Maryam"},{ar:"آسية",en:"Asiya (wife of Fir'awn)"},{ar:"أم موسى",en:"Mother of Musa"},{ar:"امرأة العزيز",en:"Wife of Al-Aziz"}],
+                    verse: {ayah:"وَإِذْ قَالَتِ الْمَلَائِكَةُ يَا مَرْيَمُ إِنَّ اللَّهَ اصْطَفَاكِ وَطَهَّرَكِ", en:"And when the angels said: O Maryam, indeed Allah has chosen you and purified you.", ref:"3:42"}},
                 { name: "صفات المؤمنين في سورة المؤمنون", nameEn: "Qualities of believers (Al-Mu'minun)", color: "green",
-                    items: [{ar:"خاشعون في صلاتهم",en:"Humble in prayer"},{ar:"معرضون عن اللغو",en:"Avoid vain talk"},{ar:"حافظون لأماناتهم",en:"Guard their trusts"},{ar:"فاعلون للزكاة",en:"Pay Zakat"}] },
+                    items: [{ar:"خاشعون في صلاتهم",en:"Humble in prayer"},{ar:"معرضون عن اللغو",en:"Avoid vain talk"},{ar:"حافظون لأماناتهم",en:"Guard their trusts"},{ar:"فاعلون للزكاة",en:"Pay Zakat"}],
+                    verse: {ayah:"قَدْ أَفْلَحَ الْمُؤْمِنُونَ ۝ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ", en:"Certainly the believers have succeeded — those who are humble in their prayer.", ref:"23:1-2"}},
                 { name: "أمثال في القرآن", nameEn: "Parables/similes in the Quran", color: "blue",
-                    items: [{ar:"كمشكاة",en:"Like a niche (24:35)"},{ar:"كالعنكبوت",en:"Like a spider (29:41)"},{ar:"كالحمار",en:"Like a donkey (62:5)"},{ar:"كالكلب",en:"Like a dog (7:176)"}] },
+                    items: [{ar:"كمشكاة",en:"Like a niche (24:35)"},{ar:"كالعنكبوت",en:"Like a spider (29:41)"},{ar:"كالحمار",en:"Like a donkey (62:5)"},{ar:"كالكلب",en:"Like a dog (7:176)"}],
+                    verse: {ayah:"مَثَلُ نُورِهِ كَمِشْكَاةٍ فِيهَا مِصْبَاحٌ", en:"The example of His light is like a niche within which is a lamp.", ref:"24:35"}},
                 { name: "أعداد محددة في القرآن", nameEn: "Specific numbers in the Quran", color: "purple",
-                    items: [{ar:"سبع سماوات",en:"Seven heavens"},{ar:"اثنا عشر نقيبا",en:"Twelve chiefs"},{ar:"أربعين ليلة",en:"Forty nights"},{ar:"تسعة عشر",en:"Nineteen (74:30)"}] }
+                    items: [{ar:"سبع سماوات",en:"Seven heavens"},{ar:"اثنا عشر نقيبا",en:"Twelve chiefs"},{ar:"أربعين ليلة",en:"Forty nights"},{ar:"تسعة عشر",en:"Nineteen (74:30)"}],
+                    verse: {ayah:"اللَّهُ الَّذِي خَلَقَ سَبْعَ سَمَاوَاتٍ وَمِنَ الْأَرْضِ مِثْلَهُنَّ", en:"It is Allah who created seven heavens and of the earth, the like of them.", ref:"65:12"}}
             ]
         },
         {
             id: 8,
             categories: [
                 { name: "مشاهد من قصة موسى والخضر", nameEn: "Scenes from Musa and Al-Khidr", color: "yellow",
-                    items: [{ar:"السفينة",en:"The Ship (18:71)"},{ar:"الغلام",en:"The Boy (18:74)"},{ar:"الجدار",en:"The Wall (18:77)"},{ar:"مجمع البحرين",en:"Junction of two seas (18:60)"}] },
+                    items: [{ar:"السفينة",en:"The Ship (18:71)"},{ar:"الغلام",en:"The Boy (18:74)"},{ar:"الجدار",en:"The Wall (18:77)"},{ar:"مجمع البحرين",en:"Junction of two seas (18:60)"}],
+                    verse: {ayah:"قَالَ لَهُ مُوسَىٰ هَلْ أَتَّبِعُكَ عَلَىٰ أَن تُعَلِّمَنِ مِمَّا عُلِّمْتَ رُشْدًا", en:"Musa said to him: May I follow you so that you teach me from what you have been taught?", ref:"18:66"}},
                 { name: "أفعال الشيطان في القرآن", nameEn: "Actions of Shaytan in the Quran", color: "green",
-                    items: [{ar:"الوسوسة",en:"Whispering"},{ar:"تزيين المعاصي",en:"Beautifying sins"},{ar:"وعد الفقر",en:"Promising poverty"},{ar:"الأمر بالفحشاء",en:"Commanding indecency"}] },
+                    items: [{ar:"الوسوسة",en:"Whispering"},{ar:"تزيين المعاصي",en:"Beautifying sins"},{ar:"وعد الفقر",en:"Promising poverty"},{ar:"الأمر بالفحشاء",en:"Commanding indecency"}],
+                    verse: {ayah:"الشَّيْطَانُ يَعِدُكُمُ الْفَقْرَ وَيَأْمُرُكُم بِالْفَحْشَاءِ", en:"Satan threatens you with poverty and orders you to immorality.", ref:"2:268"}},
                 { name: "الحروف المقطعة", nameEn: "Huruf Muqatta'at (opening letters)", color: "blue",
-                    items: [{ar:"الم",en:"Alif-Lam-Mim"},{ar:"يس",en:"Ya-Sin"},{ar:"طه",en:"Ta-Ha"},{ar:"حم",en:"Ha-Mim"}] },
+                    items: [{ar:"الم",en:"Alif-Lam-Mim"},{ar:"يس",en:"Ya-Sin"},{ar:"طه",en:"Ta-Ha"},{ar:"حم",en:"Ha-Mim"}],
+                    verse: {ayah:"الم ۝ ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ", en:"Alif-Lam-Mim. This is the Book about which there is no doubt.", ref:"2:1-2"}},
                 { name: "أدعية الأنبياء في القرآن", nameEn: "Prophetic duas in the Quran", color: "purple",
-                    items: [{ar:"رب اغفر لي",en:"My Lord, forgive me (Nuh)"},{ar:"لا إله إلا أنت سبحانك",en:"None worthy but You (Yunus)"},{ar:"رب اشرح لي صدري",en:"Expand my chest (Musa)"},{ar:"رب هب لي حكما",en:"Grant me wisdom (Ibrahim)"}] }
+                    items: [{ar:"رب اغفر لي",en:"My Lord, forgive me (Nuh)"},{ar:"لا إله إلا أنت سبحانك",en:"None worthy but You (Yunus)"},{ar:"رب اشرح لي صدري",en:"Expand my chest (Musa)"},{ar:"رب هب لي حكما",en:"Grant me wisdom (Ibrahim)"}],
+                    verse: {ayah:"رَبِّ اشْرَحْ لِي صَدْرِي ۝ وَيَسِّرْ لِي أَمْرِي", en:"My Lord, expand for me my chest, and ease for me my task.", ref:"20:25-26"}}
             ]
         },
         {
             id: 9,
             categories: [
                 { name: "عبارات من آية الكرسي", nameEn: "Phrases from Ayat al-Kursi (2:255)", color: "yellow",
-                    items: [{ar:"الحي القيوم",en:"The Ever-Living, Self-Sustaining"},{ar:"لا تأخذه سنة ولا نوم",en:"Neither drowsiness nor sleep"},{ar:"وسع كرسيه",en:"His Kursi extends over all"},{ar:"ولا يئوده حفظهما",en:"Guarding them does not tire Him"}] },
+                    items: [{ar:"الحي القيوم",en:"The Ever-Living, Self-Sustaining"},{ar:"لا تأخذه سنة ولا نوم",en:"Neither drowsiness nor sleep"},{ar:"وسع كرسيه",en:"His Kursi extends over all"},{ar:"ولا يئوده حفظهما",en:"Guarding them does not tire Him"}],
+                    verse: {ayah:"اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ", en:"Allah — there is no deity except Him, the Ever-Living, the Sustainer of existence.", ref:"2:255"}},
                 { name: "عبارات من سورة الفاتحة", nameEn: "Phrases from Surah Al-Fatiha", color: "green",
-                    items: [{ar:"بسم الله",en:"In the name of Allah"},{ar:"الحمد لله",en:"All praise is for Allah"},{ar:"مالك يوم الدين",en:"Master of the Day of Judgment"},{ar:"اهدنا الصراط المستقيم",en:"Guide us to the straight path"}] },
+                    items: [{ar:"بسم الله",en:"In the name of Allah"},{ar:"الحمد لله",en:"All praise is for Allah"},{ar:"مالك يوم الدين",en:"Master of the Day of Judgment"},{ar:"اهدنا الصراط المستقيم",en:"Guide us to the straight path"}],
+                    verse: {ayah:"الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ", en:"All praise is due to Allah, Lord of the worlds.", ref:"1:2"}},
                 { name: "وصايا لقمان لابنه", nameEn: "Luqman's advice to his son (31:13-19)", color: "blue",
-                    items: [{ar:"لا تشرك بالله",en:"Do not associate with Allah"},{ar:"أقم الصلاة",en:"Establish prayer"},{ar:"اصبر على ما أصابك",en:"Be patient with what befalls you"},{ar:"لا تمش في الأرض مرحا",en:"Do not walk arrogantly"}] },
+                    items: [{ar:"لا تشرك بالله",en:"Do not associate with Allah"},{ar:"أقم الصلاة",en:"Establish prayer"},{ar:"اصبر على ما أصابك",en:"Be patient with what befalls you"},{ar:"لا تمش في الأرض مرحا",en:"Do not walk arrogantly"}],
+                    verse: {ayah:"يَا بُنَيَّ لَا تُشْرِكْ بِاللَّهِ إِنَّ الشِّرْكَ لَظُلْمٌ عَظِيمٌ", en:"O my son, do not associate anything with Allah. Indeed, association is great injustice.", ref:"31:13"}},
                 { name: "أشياء خُلقت أزواجاً", nameEn: "Things created in pairs (36:36)", color: "purple",
-                    items: [{ar:"الليل والنهار",en:"Night and Day"},{ar:"الذكر والأنثى",en:"Male and Female"},{ar:"السماء والأرض",en:"Heaven and Earth"},{ar:"البر والبحر",en:"Land and Sea"}] }
+                    items: [{ar:"الليل والنهار",en:"Night and Day"},{ar:"الذكر والأنثى",en:"Male and Female"},{ar:"السماء والأرض",en:"Heaven and Earth"},{ar:"البر والبحر",en:"Land and Sea"}],
+                    verse: {ayah:"سُبْحَانَ الَّذِي خَلَقَ الْأَزْوَاجَ كُلَّهَا مِمَّا تُنبِتُ الْأَرْضُ وَمِنْ أَنفُسِهِمْ", en:"Exalted is He who created all pairs — from what the earth grows and from themselves.", ref:"36:36"}}
             ]
         },
         {
             id: 10,
             categories: [
                 { name: "أقسام في سورة الشمس", nameEn: "Oaths in Surah Ash-Shams (91:1-4)", color: "yellow",
-                    items: [{ar:"والشمس وضحاها",en:"By the sun and its brightness"},{ar:"والقمر إذا تلاها",en:"By the moon as it follows"},{ar:"والنهار إذا جلاها",en:"By the day as it reveals"},{ar:"والليل إذا يغشاها",en:"By the night as it covers"}] },
+                    items: [{ar:"والشمس وضحاها",en:"By the sun and its brightness"},{ar:"والقمر إذا تلاها",en:"By the moon as it follows"},{ar:"والنهار إذا جلاها",en:"By the day as it reveals"},{ar:"والليل إذا يغشاها",en:"By the night as it covers"}],
+                    verse: {ayah:"وَالشَّمْسِ وَضُحَاهَا ۝ وَالْقَمَرِ إِذَا تَلَاهَا", en:"By the sun and its brightness, and by the moon as it follows it.", ref:"91:1-2"}},
                 { name: "مراحل خلق الإنسان", nameEn: "Stages of human creation (23:12-14)", color: "green",
-                    items: [{ar:"طين",en:"Clay"},{ar:"نطفة",en:"Drop of fluid"},{ar:"علقة",en:"Clinging clot"},{ar:"مضغة",en:"Lump of flesh"}] },
+                    items: [{ar:"طين",en:"Clay"},{ar:"نطفة",en:"Drop of fluid"},{ar:"علقة",en:"Clinging clot"},{ar:"مضغة",en:"Lump of flesh"}],
+                    verse: {ayah:"وَلَقَدْ خَلَقْنَا الْإِنسَانَ مِن سُلَالَةٍ مِّن طِينٍ", en:"And certainly We created man from an extract of clay.", ref:"23:12"}},
                 { name: "عقوبات الأمم السابقة", nameEn: "Punishments of past nations", color: "blue",
-                    items: [{ar:"الطوفان",en:"The Flood (Nuh)"},{ar:"الريح الصرصر",en:"The Howling Wind (Aad)"},{ar:"الصيحة",en:"The Blast (Thamud)"},{ar:"الخسف",en:"The Earth Swallowed (Qarun)"}] },
+                    items: [{ar:"الطوفان",en:"The Flood (Nuh)"},{ar:"الريح الصرصر",en:"The Howling Wind (Aad)"},{ar:"الصيحة",en:"The Blast (Thamud)"},{ar:"الخسف",en:"The Earth Swallowed (Qarun)"}],
+                    verse: {ayah:"فَكُلًّا أَخَذْنَا بِذَنبِهِ فَمِنْهُم مَّنْ أَرْسَلْنَا عَلَيْهِ حَاصِبًا", en:"So each We seized for his sin; among them were those upon whom We sent a storm of stones.", ref:"29:40"}},
                 { name: "أسماء سورة الفاتحة", nameEn: "Names/titles of Surah Al-Fatiha", color: "purple",
-                    items: [{ar:"أم الكتاب",en:"Mother of the Book"},{ar:"السبع المثاني",en:"Seven Oft-Repeated"},{ar:"الحمد",en:"The Praise"},{ar:"فاتحة الكتاب",en:"Opening of the Book"}] }
+                    items: [{ar:"أم الكتاب",en:"Mother of the Book"},{ar:"السبع المثاني",en:"Seven Oft-Repeated"},{ar:"الحمد",en:"The Praise"},{ar:"فاتحة الكتاب",en:"Opening of the Book"}],
+                    verse: {ayah:"وَلَقَدْ آتَيْنَاكَ سَبْعًا مِّنَ الْمَثَانِي وَالْقُرْآنَ الْعَظِيمَ", en:"And We have certainly given you seven of the oft-repeated and the great Quran.", ref:"15:87"}}
             ]
         },
         {
             id: 11,
             categories: [
                 { name: "الكتب السماوية في القرآن", nameEn: "Divine scriptures in the Quran", color: "yellow",
-                    items: [{ar:"القرآن",en:"The Quran"},{ar:"التوراة",en:"The Torah"},{ar:"الزبور",en:"The Psalms"},{ar:"الإنجيل",en:"The Gospel"}] },
+                    items: [{ar:"القرآن",en:"The Quran"},{ar:"التوراة",en:"The Torah"},{ar:"الزبور",en:"The Psalms"},{ar:"الإنجيل",en:"The Gospel"}],
+                    verse: {ayah:"نَزَّلَ عَلَيْكَ الْكِتَابَ بِالْحَقِّ مُصَدِّقًا لِّمَا بَيْنَ يَدَيْهِ وَأَنزَلَ التَّوْرَاةَ وَالْإِنجِيلَ", en:"He sent down the Book in truth, confirming what was before it, and He sent down the Torah and the Gospel.", ref:"3:3"}},
                 { name: "حقوق أكّد عليها القرآن", nameEn: "Rights emphasized in the Quran", color: "green",
-                    items: [{ar:"حق الوالدين",en:"Rights of parents"},{ar:"حق اليتامى",en:"Rights of orphans"},{ar:"حق الجار",en:"Rights of neighbors"},{ar:"حق ابن السبيل",en:"Rights of travelers"}] },
+                    items: [{ar:"حق الوالدين",en:"Rights of parents"},{ar:"حق اليتامى",en:"Rights of orphans"},{ar:"حق الجار",en:"Rights of neighbors"},{ar:"حق ابن السبيل",en:"Rights of travelers"}],
+                    verse: {ayah:"وَبِالْوَالِدَيْنِ إِحْسَانًا وَبِذِي الْقُرْبَىٰ وَالْيَتَامَىٰ وَالْمَسَاكِينِ", en:"And to parents do good, and to relatives, orphans, and the needy.", ref:"2:83"}},
                 { name: "أسماء جهنم في القرآن", nameEn: "Names of Hellfire in the Quran", color: "blue",
-                    items: [{ar:"جهنم",en:"Jahannam"},{ar:"سعير",en:"Sa'ir (Blazing Fire)"},{ar:"الحطمة",en:"Al-Hutamah (Crusher)"},{ar:"سقر",en:"Saqar"}] },
+                    items: [{ar:"جهنم",en:"Jahannam"},{ar:"سعير",en:"Sa'ir (Blazing Fire)"},{ar:"الحطمة",en:"Al-Hutamah (Crusher)"},{ar:"سقر",en:"Saqar"}],
+                    verse: {ayah:"كَلَّا لَيُنبَذَنَّ فِي الْحُطَمَةِ ۝ وَمَا أَدْرَاكَ مَا الْحُطَمَةُ", en:"No! He will surely be thrown into the Crusher. And what can make you know what the Crusher is?", ref:"104:4-5"}},
                 { name: "حيوانات لها دور في القصص", nameEn: "Animals with narrative roles in the Quran", color: "purple",
-                    items: [{ar:"الهدهد",en:"Hoopoe (Sulayman)"},{ar:"الغراب",en:"Crow (Qabil)"},{ar:"الحوت",en:"Whale (Yunus)"},{ar:"كلب أصحاب الكهف",en:"Dog (Cave companions)"}] }
+                    items: [{ar:"الهدهد",en:"Hoopoe (Sulayman)"},{ar:"الغراب",en:"Crow (Qabil)"},{ar:"الحوت",en:"Whale (Yunus)"},{ar:"كلب أصحاب الكهف",en:"Dog (Cave companions)"}],
+                    verse: {ayah:"فَبَعَثَ اللَّهُ غُرَابًا يَبْحَثُ فِي الْأَرْضِ لِيُرِيَهُ كَيْفَ يُوَارِي سَوْءَةَ أَخِيهِ", en:"Then Allah sent a crow digging in the ground to show him how to hide the body of his brother.", ref:"5:31"}}
             ]
         },
         {
             id: 12,
             categories: [
                 { name: "أشياء مباركة في القرآن", nameEn: "Blessed things in the Quran", color: "yellow",
-                    items: [{ar:"ليلة القدر",en:"Night of Qadr"},{ar:"شجرة الزيتون",en:"Olive tree"},{ar:"مكة",en:"Makkah"},{ar:"ماء المطر",en:"Rain water"}] },
+                    items: [{ar:"ليلة القدر",en:"Night of Qadr"},{ar:"شجرة الزيتون",en:"Olive tree"},{ar:"مكة",en:"Makkah"},{ar:"ماء المطر",en:"Rain water"}],
+                    verse: {ayah:"إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ", en:"Indeed, We sent it down during the Night of Decree.", ref:"97:1"}},
                 { name: "أعمال تكفّر الذنوب", nameEn: "Actions that expiate sins", color: "green",
-                    items: [{ar:"التوبة",en:"Repentance"},{ar:"الصدقة",en:"Charity"},{ar:"الاستغفار",en:"Seeking forgiveness"},{ar:"الحسنات يذهبن السيئات",en:"Good deeds erase bad (11:114)"}] },
+                    items: [{ar:"التوبة",en:"Repentance"},{ar:"الصدقة",en:"Charity"},{ar:"الاستغفار",en:"Seeking forgiveness"},{ar:"الحسنات يذهبن السيئات",en:"Good deeds erase bad (11:114)"}],
+                    verse: {ayah:"إِنَّ الْحَسَنَاتِ يُذْهِبْنَ السَّيِّئَاتِ", en:"Indeed, good deeds do away with misdeeds.", ref:"11:114"}},
                 { name: "طغاة وأعداء الأنبياء", nameEn: "Tyrants and enemies of prophets", color: "blue",
-                    items: [{ar:"فرعون",en:"Fir'awn (vs. Musa)"},{ar:"نمرود",en:"Namrud (vs. Ibrahim)"},{ar:"أبو لهب",en:"Abu Lahab (vs. Muhammad)"},{ar:"قارون",en:"Qarun (arrogant rich)"}] },
+                    items: [{ar:"فرعون",en:"Fir'awn (vs. Musa)"},{ar:"نمرود",en:"Namrud (vs. Ibrahim)"},{ar:"أبو لهب",en:"Abu Lahab (vs. Muhammad)"},{ar:"قارون",en:"Qarun (arrogant rich)"}],
+                    verse: {ayah:"إِنَّ فِرْعَوْنَ عَلَا فِي الْأَرْضِ وَجَعَلَ أَهْلَهَا شِيَعًا", en:"Indeed, Pharaoh exalted himself in the land and made its people into factions.", ref:"28:4"}},
                 { name: "سور تبدأ بـ «قل»", nameEn: "Surahs that begin with 'Qul' (Say)", color: "purple",
-                    items: [{ar:"الكافرون",en:"Al-Kafirun (109)"},{ar:"الإخلاص",en:"Al-Ikhlas (112)"},{ar:"الفلق",en:"Al-Falaq (113)"},{ar:"الناس",en:"An-Nas (114)"}] }
+                    items: [{ar:"الكافرون",en:"Al-Kafirun (109)"},{ar:"الإخلاص",en:"Al-Ikhlas (112)"},{ar:"الفلق",en:"Al-Falaq (113)"},{ar:"الناس",en:"An-Nas (114)"}],
+                    verse: {ayah:"قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ", en:"Say: I seek refuge in the Lord of daybreak.", ref:"113:1"}}
             ]
         },
         {
             id: 13,
             categories: [
                 { name: "معجزات أنبياء مختلفين", nameEn: "Miracles of different prophets", color: "yellow",
-                    items: [{ar:"عصا موسى",en:"Staff of Musa"},{ar:"ناقة صالح",en:"She-camel of Salih"},{ar:"طير عيسى",en:"Birds of Isa"},{ar:"سفينة نوح",en:"Ark of Nuh"}] },
+                    items: [{ar:"عصا موسى",en:"Staff of Musa"},{ar:"ناقة صالح",en:"She-camel of Salih"},{ar:"طير عيسى",en:"Birds of Isa"},{ar:"سفينة نوح",en:"Ark of Nuh"}],
+                    verse: {ayah:"وَلَقَدْ آتَيْنَا مُوسَى تِسْعَ آيَاتٍ بَيِّنَاتٍ", en:"And We certainly gave Musa nine evident signs.", ref:"17:101"}},
                 { name: "أسماء القرآن في القرآن", nameEn: "Names of the Quran within itself", color: "green",
-                    items: [{ar:"الفرقان",en:"The Criterion"},{ar:"الذكر",en:"The Reminder"},{ar:"الكتاب",en:"The Book"},{ar:"التنزيل",en:"The Revelation"}] },
+                    items: [{ar:"الفرقان",en:"The Criterion"},{ar:"الذكر",en:"The Reminder"},{ar:"الكتاب",en:"The Book"},{ar:"التنزيل",en:"The Revelation"}],
+                    verse: {ayah:"تَبَارَكَ الَّذِي نَزَّلَ الْفُرْقَانَ عَلَىٰ عَبْدِهِ", en:"Blessed is He who sent down the Criterion upon His Servant.", ref:"25:1"}},
                 { name: "أماكن مقدسة في القرآن", nameEn: "Sacred places in the Quran", color: "blue",
-                    items: [{ar:"المسجد الحرام",en:"The Sacred Mosque"},{ar:"المسجد الأقصى",en:"Al-Aqsa Mosque"},{ar:"الطور",en:"Mount Tur (Sinai)"},{ar:"بكة",en:"Bakkah (Makkah)"}] },
+                    items: [{ar:"المسجد الحرام",en:"The Sacred Mosque"},{ar:"المسجد الأقصى",en:"Al-Aqsa Mosque"},{ar:"الطور",en:"Mount Tur (Sinai)"},{ar:"بكة",en:"Bakkah (Makkah)"}],
+                    verse: {ayah:"سُبْحَانَ الَّذِي أَسْرَىٰ بِعَبْدِهِ لَيْلًا مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى", en:"Exalted is He who took His Servant by night from the Sacred Mosque to the Farthest Mosque.", ref:"17:1"}},
                 { name: "صفات الله (القوة والعظمة)", nameEn: "Names of Allah (Power & Majesty)", color: "purple",
-                    items: [{ar:"العزيز",en:"The Almighty"},{ar:"الجبار",en:"The Compeller"},{ar:"المتكبر",en:"The Supreme"},{ar:"القهار",en:"The Subduer"}] }
+                    items: [{ar:"العزيز",en:"The Almighty"},{ar:"الجبار",en:"The Compeller"},{ar:"المتكبر",en:"The Supreme"},{ar:"القهار",en:"The Subduer"}],
+                    verse: {ayah:"هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ", en:"He is Allah, other than whom there is no deity, the Sovereign, the Holy, the Source of Peace, the Guardian, the Almighty, the Compeller, the Supreme.", ref:"59:23"}}
             ]
         },
         {
             id: 14,
             categories: [
                 { name: "أسماء مكة في القرآن", nameEn: "Names of Makkah in the Quran", color: "yellow",
-                    items: [{ar:"مكة",en:"Makkah (48:24)"},{ar:"بكة",en:"Bakkah (3:96)"},{ar:"أم القرى",en:"Mother of Cities (42:7)"},{ar:"البلد الأمين",en:"The Secure City (95:3)"}] },
+                    items: [{ar:"مكة",en:"Makkah (48:24)"},{ar:"بكة",en:"Bakkah (3:96)"},{ar:"أم القرى",en:"Mother of Cities (42:7)"},{ar:"البلد الأمين",en:"The Secure City (95:3)"}],
+                    verse: {ayah:"إِنَّ أَوَّلَ بَيْتٍ وُضِعَ لِلنَّاسِ لَلَّذِي بِبَكَّةَ مُبَارَكًا", en:"Indeed, the first House established for mankind was that at Bakkah — blessed.", ref:"3:96"}},
                 { name: "ألقاب النبي محمد ﷺ في القرآن", nameEn: "Titles of Prophet Muhammad in the Quran", color: "green",
-                    items: [{ar:"رحمة للعالمين",en:"Mercy to the worlds (21:107)"},{ar:"خاتم النبيين",en:"Seal of Prophets (33:40)"},{ar:"الأمين",en:"The Trustworthy"},{ar:"البشير والنذير",en:"Bearer of glad tidings & warner"}] },
+                    items: [{ar:"رحمة للعالمين",en:"Mercy to the worlds (21:107)"},{ar:"خاتم النبيين",en:"Seal of Prophets (33:40)"},{ar:"الأمين",en:"The Trustworthy"},{ar:"البشير والنذير",en:"Bearer of glad tidings & warner"}],
+                    verse: {ayah:"وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَالَمِينَ", en:"And We have not sent you except as a mercy to the worlds.", ref:"21:107"}},
                 { name: "أنواع الماء في القرآن", nameEn: "Types of water in the Quran", color: "blue",
-                    items: [{ar:"مطر",en:"Rain"},{ar:"نهر",en:"River"},{ar:"عين",en:"Spring"},{ar:"بحر",en:"Sea"}] },
+                    items: [{ar:"مطر",en:"Rain"},{ar:"نهر",en:"River"},{ar:"عين",en:"Spring"},{ar:"بحر",en:"Sea"}],
+                    verse: {ayah:"وَأَنزَلْنَا مِنَ السَّمَاءِ مَاءً بِقَدَرٍ فَأَسْكَنَّاهُ فِي الْأَرْضِ", en:"And We sent down water from the sky in a measured amount and settled it in the earth.", ref:"23:18"}},
                 { name: "أقمشة وملابس الجنة", nameEn: "Garments of Paradise in the Quran", color: "purple",
-                    items: [{ar:"سندس",en:"Fine green silk"},{ar:"إستبرق",en:"Thick brocade"},{ar:"حرير",en:"Silk"},{ar:"لباس التقوى",en:"Garment of righteousness (7:26)"}] }
+                    items: [{ar:"سندس",en:"Fine green silk"},{ar:"إستبرق",en:"Thick brocade"},{ar:"حرير",en:"Silk"},{ar:"لباس التقوى",en:"Garment of righteousness (7:26)"}],
+                    verse: {ayah:"يُحَلَّوْنَ فِيهَا مِنْ أَسَاوِرَ مِن ذَهَبٍ وَلُؤْلُؤًا وَلِبَاسُهُمْ فِيهَا حَرِيرٌ", en:"They will be adorned therein with bracelets of gold and pearls, and their garments therein will be silk.", ref:"22:23"}}
             ]
         },
         {
             id: 15,
             categories: [
                 { name: "عناصر قصة إبراهيم", nameEn: "Key moments of Ibrahim's story", color: "yellow",
-                    items: [{ar:"الكواكب",en:"The Stars (6:76)"},{ar:"النار",en:"The Fire (21:69)"},{ar:"الذبح",en:"The Sacrifice (37:107)"},{ar:"الكعبة",en:"The Ka'bah (2:127)"}] },
+                    items: [{ar:"الكواكب",en:"The Stars (6:76)"},{ar:"النار",en:"The Fire (21:69)"},{ar:"الذبح",en:"The Sacrifice (37:107)"},{ar:"الكعبة",en:"The Ka'bah (2:127)"}],
+                    verse: {ayah:"وَإِذِ ابْتَلَىٰ إِبْرَاهِيمَ رَبُّهُ بِكَلِمَاتٍ فَأَتَمَّهُنَّ", en:"And when Ibrahim was tried by his Lord with commands and he fulfilled them.", ref:"2:124"}},
                 { name: "أوامر قرآنية عامة", nameEn: "Universal Quranic commands", color: "green",
-                    items: [{ar:"أقيموا الصلاة",en:"Establish prayer"},{ar:"آتوا الزكاة",en:"Give Zakat"},{ar:"أطيعوا الله",en:"Obey Allah"},{ar:"اذكروا الله",en:"Remember Allah"}] },
+                    items: [{ar:"أقيموا الصلاة",en:"Establish prayer"},{ar:"آتوا الزكاة",en:"Give Zakat"},{ar:"أطيعوا الله",en:"Obey Allah"},{ar:"اذكروا الله",en:"Remember Allah"}],
+                    verse: {ayah:"يَا أَيُّهَا الَّذِينَ آمَنُوا أَطِيعُوا اللَّهَ وَأَطِيعُوا الرَّسُولَ", en:"O you who believe, obey Allah and obey the Messenger.", ref:"4:59"}},
                 { name: "عناصر قصة نوح", nameEn: "Elements of Nuh's story", color: "blue",
-                    items: [{ar:"السفينة",en:"The Ark"},{ar:"الطوفان",en:"The Flood"},{ar:"الجودي",en:"Mount Judi"},{ar:"ابن نوح",en:"Son of Nuh"}] },
+                    items: [{ar:"السفينة",en:"The Ark"},{ar:"الطوفان",en:"The Flood"},{ar:"الجودي",en:"Mount Judi"},{ar:"ابن نوح",en:"Son of Nuh"}],
+                    verse: {ayah:"وَقِيلَ يَا أَرْضُ ابْلَعِي مَاءَكِ وَيَا سَمَاءُ أَقْلِعِي وَاسْتَوَتْ عَلَى الْجُودِيِّ", en:"And it was said: O earth, swallow your water, and O sky, withhold. And it rested on Mount Judi.", ref:"11:44"}},
                 { name: "أمراض القلب في القرآن", nameEn: "Spiritual diseases in the Quran", color: "purple",
-                    items: [{ar:"الكبر",en:"Arrogance"},{ar:"الحسد",en:"Envy"},{ar:"الرياء",en:"Showing off"},{ar:"البخل",en:"Miserliness"}] }
+                    items: [{ar:"الكبر",en:"Arrogance"},{ar:"الحسد",en:"Envy"},{ar:"الرياء",en:"Showing off"},{ar:"البخل",en:"Miserliness"}],
+                    verse: {ayah:"وَلَا تُصَعِّرْ خَدَّكَ لِلنَّاسِ وَلَا تَمْشِ فِي الْأَرْضِ مَرَحًا", en:"And do not turn your cheek in contempt toward people and do not walk through the earth exultantly.", ref:"31:18"}}
             ]
         },
         {
             id: 16,
             categories: [
                 { name: "أنبياء اشتهروا بالصبر", nameEn: "Prophets known for patience", color: "yellow",
-                    items: [{ar:"أيوب",en:"Ayyub (AS)"},{ar:"يعقوب",en:"Ya'qub (AS)"},{ar:"يوسف",en:"Yusuf (AS)"},{ar:"إسماعيل",en:"Isma'il (AS)"}] },
+                    items: [{ar:"أيوب",en:"Ayyub (AS)"},{ar:"يعقوب",en:"Ya'qub (AS)"},{ar:"يوسف",en:"Yusuf (AS)"},{ar:"إسماعيل",en:"Isma'il (AS)"}],
+                    verse: {ayah:"إِنَّا وَجَدْنَاهُ صَابِرًا نِّعْمَ الْعَبْدُ إِنَّهُ أَوَّابٌ", en:"Indeed, We found him patient, an excellent servant. Indeed, he was one repeatedly turning back.", ref:"38:44"}},
                 { name: "أنهار الجنة الأربعة", nameEn: "Four rivers of Paradise (47:15)", color: "green",
-                    items: [{ar:"ماء غير آسن",en:"Water unchanged"},{ar:"لبن",en:"Milk"},{ar:"خمر لذة",en:"Wine delightful"},{ar:"عسل مصفى",en:"Honey purified"}] },
+                    items: [{ar:"ماء غير آسن",en:"Water unchanged"},{ar:"لبن",en:"Milk"},{ar:"خمر لذة",en:"Wine delightful"},{ar:"عسل مصفى",en:"Honey purified"}],
+                    verse: {ayah:"فِيهَا أَنْهَارٌ مِّن مَّاءٍ غَيْرِ آسِنٍ وَأَنْهَارٌ مِّن لَّبَنٍ", en:"In it are rivers of water unaltered, and rivers of milk.", ref:"47:15"}},
                 { name: "الأشهر الحرم", nameEn: "Sacred months in the Quran (9:36)", color: "blue",
-                    items: [{ar:"ذو القعدة",en:"Dhul-Qi'dah"},{ar:"ذو الحجة",en:"Dhul-Hijjah"},{ar:"محرم",en:"Muharram"},{ar:"رجب",en:"Rajab"}] },
+                    items: [{ar:"ذو القعدة",en:"Dhul-Qi'dah"},{ar:"ذو الحجة",en:"Dhul-Hijjah"},{ar:"محرم",en:"Muharram"},{ar:"رجب",en:"Rajab"}],
+                    verse: {ayah:"إِنَّ عِدَّةَ الشُّهُورِ عِندَ اللَّهِ اثْنَا عَشَرَ شَهْرًا مِنْهَا أَرْبَعَةٌ حُرُمٌ", en:"Indeed, the number of months with Allah is twelve, of which four are sacred.", ref:"9:36"}},
                 { name: "سور مكية عن الآخرة", nameEn: "Meccan Surahs about the Hereafter", color: "purple",
-                    items: [{ar:"القارعة",en:"Al-Qari'ah (101)"},{ar:"التكاثر",en:"At-Takathur (102)"},{ar:"الزلزلة",en:"Az-Zalzalah (99)"},{ar:"الانفطار",en:"Al-Infitar (82)"}] }
+                    items: [{ar:"القارعة",en:"Al-Qari'ah (101)"},{ar:"التكاثر",en:"At-Takathur (102)"},{ar:"الزلزلة",en:"Az-Zalzalah (99)"},{ar:"الانفطار",en:"Al-Infitar (82)"}],
+                    verse: {ayah:"الْقَارِعَةُ ۝ مَا الْقَارِعَةُ ۝ وَمَا أَدْرَاكَ مَا الْقَارِعَةُ", en:"The Striking Calamity — what is the Striking Calamity? And what can make you know what it is?", ref:"101:1-3"}}
             ]
         },
         {
             id: 17,
             categories: [
                 { name: "عناصر أصحاب الكهف", nameEn: "Elements of the Cave companions", color: "yellow",
-                    items: [{ar:"الفتية",en:"The Youth"},{ar:"الكهف",en:"The Cave"},{ar:"الرقيم",en:"The Inscription"},{ar:"ثلاثمائة سنين",en:"Three hundred years"}] },
+                    items: [{ar:"الفتية",en:"The Youth"},{ar:"الكهف",en:"The Cave"},{ar:"الرقيم",en:"The Inscription"},{ar:"ثلاثمائة سنين",en:"Three hundred years"}],
+                    verse: {ayah:"إِذْ أَوَى الْفِتْيَةُ إِلَى الْكَهْفِ فَقَالُوا رَبَّنَا آتِنَا مِن لَّدُنكَ رَحْمَةً", en:"When the youths retreated to the cave and said: Our Lord, grant us mercy from Yourself.", ref:"18:10"}},
                 { name: "مفاهيم سورة الإخلاص", nameEn: "Concepts in Surah Al-Ikhlas", color: "green",
-                    items: [{ar:"أحد",en:"The One"},{ar:"الصمد",en:"The Eternal Refuge"},{ar:"لم يلد",en:"He begets not"},{ar:"لم يكن له كفوا",en:"None comparable to Him"}] },
+                    items: [{ar:"أحد",en:"The One"},{ar:"الصمد",en:"The Eternal Refuge"},{ar:"لم يلد",en:"He begets not"},{ar:"لم يكن له كفوا",en:"None comparable to Him"}],
+                    verse: {ayah:"قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ", en:"Say: He is Allah, the One. Allah, the Eternal Refuge. He neither begets nor is born.", ref:"112:1-3"}},
                 { name: "أدعية قرآنية مشهورة", nameEn: "Famous Quranic duas", color: "blue",
-                    items: [{ar:"ربنا آتنا في الدنيا حسنة",en:"Our Lord, give us good (2:201)"},{ar:"رب زدني علما",en:"My Lord, increase me in knowledge (20:114)"},{ar:"ربنا لا تزغ قلوبنا",en:"Our Lord, let not our hearts deviate (3:8)"},{ar:"رب أوزعني أن أشكر",en:"My Lord, enable me to be grateful (27:19)"}] },
+                    items: [{ar:"ربنا آتنا في الدنيا حسنة",en:"Our Lord, give us good (2:201)"},{ar:"رب زدني علما",en:"My Lord, increase me in knowledge (20:114)"},{ar:"ربنا لا تزغ قلوبنا",en:"Our Lord, let not our hearts deviate (3:8)"},{ar:"رب أوزعني أن أشكر",en:"My Lord, enable me to be grateful (27:19)"}],
+                    verse: {ayah:"رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ", en:"Our Lord, give us good in this world and good in the Hereafter, and protect us from the Fire.", ref:"2:201"}},
                 { name: "أنواع الرياح في القرآن", nameEn: "Types of wind in the Quran", color: "purple",
-                    items: [{ar:"الرياح مبشرات",en:"Winds as glad tidings"},{ar:"ريح صرصر",en:"Howling wind"},{ar:"الإعصار",en:"Whirlwind"},{ar:"الرياح لواقح",en:"Fertilizing winds (15:22)"}] }
+                    items: [{ar:"الرياح مبشرات",en:"Winds as glad tidings"},{ar:"ريح صرصر",en:"Howling wind"},{ar:"الإعصار",en:"Whirlwind"},{ar:"الرياح لواقح",en:"Fertilizing winds (15:22)"}],
+                    verse: {ayah:"وَأَرْسَلْنَا الرِّيَاحَ لَوَاقِحَ فَأَنزَلْنَا مِنَ السَّمَاءِ مَاءً", en:"And We have sent the fertilizing winds and sent down water from the sky.", ref:"15:22"}}
             ]
         },
         {
             id: 18,
             categories: [
                 { name: "استعارات النور في القرآن", nameEn: "Light metaphors in the Quran (24:35)", color: "yellow",
-                    items: [{ar:"نور على نور",en:"Light upon light"},{ar:"مشكاة",en:"Niche"},{ar:"زجاجة",en:"Glass"},{ar:"كوكب دري",en:"Brilliant star"}] },
+                    items: [{ar:"نور على نور",en:"Light upon light"},{ar:"مشكاة",en:"Niche"},{ar:"زجاجة",en:"Glass"},{ar:"كوكب دري",en:"Brilliant star"}],
+                    verse: {ayah:"اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ مَثَلُ نُورِهِ كَمِشْكَاةٍ فِيهَا مِصْبَاحٌ", en:"Allah is the Light of the heavens and the earth. The example of His light is like a niche containing a lamp.", ref:"24:35"}},
                 { name: "عناصر قصة موسى", nameEn: "Key elements of Musa's story", color: "green",
-                    items: [{ar:"فرعون",en:"Pharaoh"},{ar:"الطور",en:"Mount Tur"},{ar:"التيه",en:"The Wilderness"},{ar:"البحر",en:"The Sea"}] },
+                    items: [{ar:"فرعون",en:"Pharaoh"},{ar:"الطور",en:"Mount Tur"},{ar:"التيه",en:"The Wilderness"},{ar:"البحر",en:"The Sea"}],
+                    verse: {ayah:"فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ فَانفَلَقَ", en:"So We inspired Musa: Strike the sea with your staff. And it parted.", ref:"26:63"}},
                 { name: "صفات المتقين في سورة البقرة", nameEn: "Qualities of the righteous (Al-Baqarah 2:3-4)", color: "blue",
-                    items: [{ar:"يؤمنون بالغيب",en:"Believe in the unseen"},{ar:"يقيمون الصلاة",en:"Establish prayer"},{ar:"مما رزقناهم ينفقون",en:"Spend from what We provide"},{ar:"يؤمنون بما أنزل إليك",en:"Believe in what was revealed"}] },
+                    items: [{ar:"يؤمنون بالغيب",en:"Believe in the unseen"},{ar:"يقيمون الصلاة",en:"Establish prayer"},{ar:"مما رزقناهم ينفقون",en:"Spend from what We provide"},{ar:"يؤمنون بما أنزل إليك",en:"Believe in what was revealed"}],
+                    verse: {ayah:"الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ", en:"Who believe in the unseen, establish prayer, and spend out of what We have provided for them.", ref:"2:3"}},
                 { name: "أسماء الله (الرحمة واللطف)", nameEn: "Names of Allah (Mercy & Gentleness)", color: "purple",
-                    items: [{ar:"الرحمن",en:"The Most Gracious"},{ar:"الودود",en:"The Most Loving"},{ar:"اللطيف",en:"The Subtle"},{ar:"الغفور",en:"The Forgiving"}] }
+                    items: [{ar:"الرحمن",en:"The Most Gracious"},{ar:"الودود",en:"The Most Loving"},{ar:"اللطيف",en:"The Subtle"},{ar:"الغفور",en:"The Forgiving"}],
+                    verse: {ayah:"وَهُوَ الْغَفُورُ الْوَدُودُ", en:"And He is the Forgiving, the Most Loving.", ref:"85:14"}}
             ]
         },
         {
             id: 19,
             categories: [
                 { name: "أسماء الله في آخر سورة الحشر", nameEn: "Names of Allah at end of Al-Hashr (59:23-24)", color: "yellow",
-                    items: [{ar:"الملك",en:"The Sovereign"},{ar:"القدوس",en:"The Holy"},{ar:"السلام",en:"The Source of Peace"},{ar:"المؤمن",en:"The Guardian of Faith"}] },
+                    items: [{ar:"الملك",en:"The Sovereign"},{ar:"القدوس",en:"The Holy"},{ar:"السلام",en:"The Source of Peace"},{ar:"المؤمن",en:"The Guardian of Faith"}],
+                    verse: {ayah:"هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ", en:"He is Allah, other than whom there is no deity, the Sovereign, the Holy, the Source of Peace.", ref:"59:23"}},
                 { name: "صفات المنافقين في القرآن", nameEn: "Traits of hypocrites in the Quran", color: "green",
-                    items: [{ar:"يخادعون الله",en:"They try to deceive Allah"},{ar:"إذا قاموا إلى الصلاة قاموا كسالى",en:"Stand lazily for prayer"},{ar:"يراءون الناس",en:"Show off to people"},{ar:"في قلوبهم مرض",en:"In their hearts is disease"}] },
+                    items: [{ar:"يخادعون الله",en:"They try to deceive Allah"},{ar:"إذا قاموا إلى الصلاة قاموا كسالى",en:"Stand lazily for prayer"},{ar:"يراءون الناس",en:"Show off to people"},{ar:"في قلوبهم مرض",en:"In their hearts is disease"}],
+                    verse: {ayah:"إِنَّ الْمُنَافِقِينَ يُخَادِعُونَ اللَّهَ وَهُوَ خَادِعُهُمْ", en:"Indeed, the hypocrites think to deceive Allah, but He is deceiving them.", ref:"4:142"}},
                 { name: "موضوعات سورة الملك", nameEn: "Themes of Surah Al-Mulk", color: "blue",
-                    items: [{ar:"تبارك الذي بيده الملك",en:"Blessed is He in whose hand is dominion"},{ar:"الموت والحياة ابتلاء",en:"Death and life as a test"},{ar:"سبع سماوات طباقا",en:"Seven layered heavens"},{ar:"الطير فوقهم صافات",en:"Birds above them spreading wings"}] },
+                    items: [{ar:"تبارك الذي بيده الملك",en:"Blessed is He in whose hand is dominion"},{ar:"الموت والحياة ابتلاء",en:"Death and life as a test"},{ar:"سبع سماوات طباقا",en:"Seven layered heavens"},{ar:"الطير فوقهم صافات",en:"Birds above them spreading wings"}],
+                    verse: {ayah:"تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ", en:"Blessed is He in whose hand is dominion, and He is over all things competent.", ref:"67:1"}},
                 { name: "مواضيع آخر آيتين من سورة البقرة", nameEn: "Themes of last 2 ayahs of Al-Baqarah", color: "purple",
-                    items: [{ar:"آمن الرسول",en:"The Messenger has believed"},{ar:"لا يكلف الله نفسا إلا وسعها",en:"Allah does not burden beyond capacity"},{ar:"ربنا لا تؤاخذنا",en:"Our Lord, do not impose blame"},{ar:"أنت مولانا",en:"You are our Protector"}] }
+                    items: [{ar:"آمن الرسول",en:"The Messenger has believed"},{ar:"لا يكلف الله نفسا إلا وسعها",en:"Allah does not burden beyond capacity"},{ar:"ربنا لا تؤاخذنا",en:"Our Lord, do not impose blame"},{ar:"أنت مولانا",en:"You are our Protector"}],
+                    verse: {ayah:"آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ", en:"The Messenger has believed in what was revealed to him from his Lord, and so have the believers.", ref:"2:285"}}
             ]
         },
         {
             id: 20,
             categories: [
                 { name: "أنبياء أُنزلت عليهم كتب", nameEn: "Prophets given major scriptures", color: "yellow",
-                    items: [{ar:"محمد ﷺ",en:"Muhammad — Quran"},{ar:"موسى",en:"Musa — Torah"},{ar:"داود",en:"Dawud — Zabur"},{ar:"عيسى",en:"Isa — Injeel"}] },
+                    items: [{ar:"محمد ﷺ",en:"Muhammad — Quran"},{ar:"موسى",en:"Musa — Torah"},{ar:"داود",en:"Dawud — Zabur"},{ar:"عيسى",en:"Isa — Injeel"}],
+                    verse: {ayah:"إِنَّا أَنزَلْنَا التَّوْرَاةَ فِيهَا هُدًى وَنُورٌ", en:"Indeed, We sent down the Torah, in which was guidance and light.", ref:"5:44"}},
                 { name: "مواضيع سورة يس", nameEn: "Themes of Surah Ya-Sin", color: "green",
-                    items: [{ar:"أصحاب القرية",en:"Companions of the City"},{ar:"الآيات في الأنفس",en:"Signs in creation"},{ar:"البعث بعد الموت",en:"Resurrection after death"},{ar:"يس والقرآن الحكيم",en:"Ya-Sin and the Wise Quran"}] },
+                    items: [{ar:"أصحاب القرية",en:"Companions of the City"},{ar:"الآيات في الأنفس",en:"Signs in creation"},{ar:"البعث بعد الموت",en:"Resurrection after death"},{ar:"يس والقرآن الحكيم",en:"Ya-Sin and the Wise Quran"}],
+                    verse: {ayah:"يس ۝ وَالْقُرْآنِ الْحَكِيمِ ۝ إِنَّكَ لَمِنَ الْمُرْسَلِينَ", en:"Ya-Sin. By the wise Quran. Indeed you are among the messengers.", ref:"36:1-3"}},
                 { name: "أنبياء من ذرية إبراهيم", nameEn: "Prophets from Ibrahim's lineage", color: "blue",
-                    items: [{ar:"إسحاق",en:"Ishaq"},{ar:"يعقوب",en:"Ya'qub"},{ar:"يوسف",en:"Yusuf"},{ar:"إسماعيل",en:"Isma'il"}] },
+                    items: [{ar:"إسحاق",en:"Ishaq"},{ar:"يعقوب",en:"Ya'qub"},{ar:"يوسف",en:"Yusuf"},{ar:"إسماعيل",en:"Isma'il"}],
+                    verse: {ayah:"وَوَهَبْنَا لَهُ إِسْحَاقَ وَيَعْقُوبَ كُلًّا هَدَيْنَا", en:"And We gave him Ishaq and Ya'qub — all of them We guided.", ref:"6:84"}},
                 { name: "أوقات الصلاة في القرآن", nameEn: "Prayer times referenced in the Quran", color: "purple",
-                    items: [{ar:"الفجر",en:"Dawn (Fajr)"},{ar:"الشروق",en:"Sunrise"},{ar:"الظهر",en:"Midday"},{ar:"المغرب",en:"Sunset"}] }
+                    items: [{ar:"الفجر",en:"Dawn (Fajr)"},{ar:"الشروق",en:"Sunrise"},{ar:"الظهر",en:"Midday"},{ar:"المغرب",en:"Sunset"}],
+                    verse: {ayah:"أَقِمِ الصَّلَاةَ لِدُلُوكِ الشَّمْسِ إِلَىٰ غَسَقِ اللَّيْلِ وَقُرْآنَ الْفَجْرِ", en:"Establish prayer at the decline of the sun until the darkness of the night and the Quran at dawn.", ref:"17:78"}}
             ]
         },
         {
             id: 21,
             categories: [
                 { name: "أنبياء ذُكروا في سورة الأنبياء", nameEn: "Prophets mentioned in Surah Al-Anbiya", color: "yellow",
-                    items: [{ar:"داود",en:"Dawud (AS)"},{ar:"سليمان",en:"Sulayman (AS)"},{ar:"أيوب",en:"Ayyub (AS)"},{ar:"ذو الكفل",en:"Dhul-Kifl (AS)"}] },
+                    items: [{ar:"داود",en:"Dawud (AS)"},{ar:"سليمان",en:"Sulayman (AS)"},{ar:"أيوب",en:"Ayyub (AS)"},{ar:"ذو الكفل",en:"Dhul-Kifl (AS)"}],
+                    verse: {ayah:"وَدَاوُودَ وَسُلَيْمَانَ إِذْ يَحْكُمَانِ فِي الْحَرْثِ", en:"And Dawud and Sulayman, when they judged concerning the field.", ref:"21:78"}},
                 { name: "كلمات افتتاحية لسور قرآنية", nameEn: "Opening words of Quranic Surahs", color: "green",
-                    items: [{ar:"اقرأ",en:"Read! (Al-Alaq 96:1)"},{ar:"تبارك",en:"Blessed is (Al-Mulk 67:1)"},{ar:"سبحان",en:"Glory be (Al-Isra 17:1)"},{ar:"الحاقة",en:"The Inevitable (Al-Haqqah 69:1)"}] },
+                    items: [{ar:"اقرأ",en:"Read! (Al-Alaq 96:1)"},{ar:"تبارك",en:"Blessed is (Al-Mulk 67:1)"},{ar:"سبحان",en:"Glory be (Al-Isra 17:1)"},{ar:"الحاقة",en:"The Inevitable (Al-Haqqah 69:1)"}],
+                    verse: {ayah:"اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ", en:"Read in the name of your Lord who created.", ref:"96:1"}},
                 { name: "أدوات عذاب في القرآن", nameEn: "Instruments of punishment in the Quran", color: "blue",
-                    items: [{ar:"حجارة من سجيل",en:"Stones of baked clay"},{ar:"صاعقة",en:"Thunderbolt"},{ar:"ريح صرصر",en:"Howling wind"},{ar:"رجز من السماء",en:"Punishment from the sky"}] },
+                    items: [{ar:"حجارة من سجيل",en:"Stones of baked clay"},{ar:"صاعقة",en:"Thunderbolt"},{ar:"ريح صرصر",en:"Howling wind"},{ar:"رجز من السماء",en:"Punishment from the sky"}],
+                    verse: {ayah:"وَأَمْطَرْنَا عَلَيْهِمْ حِجَارَةً مِّن سِجِّيلٍ", en:"And We rained upon them stones of baked clay.", ref:"15:74"}},
                 { name: "صفات القرآن في أول سورة البقرة", nameEn: "Descriptions of the Quran (Al-Baqarah opening)", color: "purple",
-                    items: [{ar:"لا ريب فيه",en:"No doubt in it (2:2)"},{ar:"هدى للمتقين",en:"Guidance for the righteous (2:2)"},{ar:"مصدّق لما بين يديه",en:"Confirms what came before"},{ar:"تفصيل كل شيء",en:"Explanation of all things"}] }
+                    items: [{ar:"لا ريب فيه",en:"No doubt in it (2:2)"},{ar:"هدى للمتقين",en:"Guidance for the righteous (2:2)"},{ar:"مصدّق لما بين يديه",en:"Confirms what came before"},{ar:"تفصيل كل شيء",en:"Explanation of all things"}],
+                    verse: {ayah:"ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِّلْمُتَّقِينَ", en:"This is the Book about which there is no doubt, a guidance for those conscious of Allah.", ref:"2:2"}}
             ]
         },
         {
             id: 22,
             categories: [
                 { name: "سور سُمّيت بأوقات", nameEn: "Surahs named after times", color: "yellow",
-                    items: [{ar:"الفجر",en:"The Dawn (89)"},{ar:"الضحى",en:"The Morning Hours (93)"},{ar:"العصر",en:"The Declining Day (103)"},{ar:"الليل",en:"The Night (92)"}] },
+                    items: [{ar:"الفجر",en:"The Dawn (89)"},{ar:"الضحى",en:"The Morning Hours (93)"},{ar:"العصر",en:"The Declining Day (103)"},{ar:"الليل",en:"The Night (92)"}],
+                    verse: {ayah:"وَالْعَصْرِ ۝ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ", en:"By time. Indeed, mankind is in loss.", ref:"103:1-2"}},
                 { name: "أشجار ذُكرت في القرآن", nameEn: "Trees mentioned in the Quran", color: "green",
-                    items: [{ar:"الزيتون",en:"Olive tree"},{ar:"النخل",en:"Date palm"},{ar:"السدر",en:"Lote tree"},{ar:"الزقوم",en:"Zaqqum tree (Hellfire)"}] },
+                    items: [{ar:"الزيتون",en:"Olive tree"},{ar:"النخل",en:"Date palm"},{ar:"السدر",en:"Lote tree"},{ar:"الزقوم",en:"Zaqqum tree (Hellfire)"}],
+                    verse: {ayah:"وَشَجَرَةً تَخْرُجُ مِن طُورِ سَيْنَاءَ تَنبُتُ بِالدُّهْنِ وَصِبْغٍ لِّلْآكِلِينَ", en:"And a tree that grows from Mount Sinai which produces oil and food for those who eat.", ref:"23:20"}},
                 { name: "صفات يوم القيامة", nameEn: "Names/descriptions of the Day of Judgment", color: "blue",
-                    items: [{ar:"يوم الحساب",en:"Day of Reckoning"},{ar:"الساعة",en:"The Hour"},{ar:"يوم الفصل",en:"Day of Sorting"},{ar:"الطامة الكبرى",en:"The Greatest Catastrophe"}] },
+                    items: [{ar:"يوم الحساب",en:"Day of Reckoning"},{ar:"الساعة",en:"The Hour"},{ar:"يوم الفصل",en:"Day of Sorting"},{ar:"الطامة الكبرى",en:"The Greatest Catastrophe"}],
+                    verse: {ayah:"يَسْأَلُونَكَ عَنِ السَّاعَةِ أَيَّانَ مُرْسَاهَا", en:"They ask you about the Hour: when is its arrival?", ref:"7:187"}},
                 { name: "أوامر في سورة الإسراء للوالدين", nameEn: "Commands about parents (Al-Isra 17:23-24)", color: "purple",
-                    items: [{ar:"لا تقل لهما أف",en:"Do not say 'uff' to them"},{ar:"لا تنهرهما",en:"Do not repel them"},{ar:"قل لهما قولا كريما",en:"Speak to them kindly"},{ar:"اخفض لهما جناح الذل",en:"Lower the wing of humility"}] }
+                    items: [{ar:"لا تقل لهما أف",en:"Do not say 'uff' to them"},{ar:"لا تنهرهما",en:"Do not repel them"},{ar:"قل لهما قولا كريما",en:"Speak to them kindly"},{ar:"اخفض لهما جناح الذل",en:"Lower the wing of humility"}],
+                    verse: {ayah:"وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ وَبِالْوَالِدَيْنِ إِحْسَانًا", en:"And your Lord has decreed that you worship none but Him, and that you be dutiful to your parents.", ref:"17:23"}}
             ]
         },
         {
             id: 23,
             categories: [
                 { name: "معجزات عيسى عليه السلام", nameEn: "Miracles of Isa (AS) in the Quran", color: "yellow",
-                    items: [{ar:"إحياء الموتى",en:"Raising the dead"},{ar:"إبراء الأكمه والأبرص",en:"Healing blind and leper"},{ar:"الطير من الطين",en:"Bird from clay"},{ar:"المائدة من السماء",en:"Table from heaven"}] },
+                    items: [{ar:"إحياء الموتى",en:"Raising the dead"},{ar:"إبراء الأكمه والأبرص",en:"Healing blind and leper"},{ar:"الطير من الطين",en:"Bird from clay"},{ar:"المائدة من السماء",en:"Table from heaven"}],
+                    verse: {ayah:"وَأُبْرِئُ الْأَكْمَهَ وَالْأَبْرَصَ وَأُحْيِي الْمَوْتَىٰ بِإِذْنِ اللَّهِ", en:"And I cure the blind and the leper, and I give life to the dead — by permission of Allah.", ref:"3:49"}},
                 { name: "أسماء سورة محمد", nameEn: "Surahs named after prophets", color: "green",
-                    items: [{ar:"يونس",en:"Yunus (10)"},{ar:"هود",en:"Hud (11)"},{ar:"يوسف",en:"Yusuf (12)"},{ar:"نوح",en:"Nuh (71)"}] },
+                    items: [{ar:"يونس",en:"Yunus (10)"},{ar:"هود",en:"Hud (11)"},{ar:"يوسف",en:"Yusuf (12)"},{ar:"نوح",en:"Nuh (71)"}],
+                    verse: {ayah:"الر تِلْكَ آيَاتُ الْكِتَابِ الْمُبِينِ ۝ إِنَّا أَنزَلْنَاهُ قُرْآنًا عَرَبِيًّا", en:"Alif-Lam-Ra. These are the verses of the clear Book. Indeed, We have sent it down as an Arabic Quran.", ref:"12:1-2"}},
                 { name: "مخلوقات غيبية في القرآن", nameEn: "Unseen beings in the Quran", color: "blue",
-                    items: [{ar:"الملائكة",en:"Angels"},{ar:"الجن",en:"Jinn"},{ar:"الشياطين",en:"Devils"},{ar:"حور عين",en:"Hoor al-Ayn (of Paradise)"}] },
+                    items: [{ar:"الملائكة",en:"Angels"},{ar:"الجن",en:"Jinn"},{ar:"الشياطين",en:"Devils"},{ar:"حور عين",en:"Hoor al-Ayn (of Paradise)"}],
+                    verse: {ayah:"وَمَا خَلَقْتُ الْجِنَّ وَالْإِنسَ إِلَّا لِيَعْبُدُونِ", en:"And I did not create the jinn and mankind except to worship Me.", ref:"51:56"}},
                 { name: "كلمات تتكرر في سورة الرحمن", nameEn: "Repeated themes in Surah Ar-Rahman", color: "purple",
-                    items: [{ar:"فبأي آلاء ربكما تكذبان",en:"Which favors will you deny?"},{ar:"جنتان",en:"Two gardens"},{ar:"مرج البحرين",en:"Two seas released"},{ar:"كل من عليها فان",en:"Everything upon it will perish"}] }
+                    items: [{ar:"فبأي آلاء ربكما تكذبان",en:"Which favors will you deny?"},{ar:"جنتان",en:"Two gardens"},{ar:"مرج البحرين",en:"Two seas released"},{ar:"كل من عليها فان",en:"Everything upon it will perish"}],
+                    verse: {ayah:"فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ", en:"So which of the favors of your Lord would you deny?", ref:"55:13"}}
             ]
         },
         {
             id: 24,
             categories: [
                 { name: "أطعمة ذُكرت في القرآن", nameEn: "Foods mentioned in the Quran", color: "yellow",
-                    items: [{ar:"المن والسلوى",en:"Manna and quails"},{ar:"اللحم",en:"Meat"},{ar:"اللبن",en:"Milk"},{ar:"العسل",en:"Honey"}] },
+                    items: [{ar:"المن والسلوى",en:"Manna and quails"},{ar:"اللحم",en:"Meat"},{ar:"اللبن",en:"Milk"},{ar:"العسل",en:"Honey"}],
+                    verse: {ayah:"وَظَلَّلْنَا عَلَيْكُمُ الْغَمَامَ وَأَنزَلْنَا عَلَيْكُمُ الْمَنَّ وَالسَّلْوَىٰ", en:"And We shaded you with clouds and sent down to you manna and quails.", ref:"2:57"}},
                 { name: "صفات الله (العلم والسمع)", nameEn: "Names of Allah (Knowledge & Awareness)", color: "green",
-                    items: [{ar:"السميع",en:"The All-Hearing"},{ar:"البصير",en:"The All-Seeing"},{ar:"الخبير",en:"The All-Aware"},{ar:"الشهيد",en:"The Witness"}] },
+                    items: [{ar:"السميع",en:"The All-Hearing"},{ar:"البصير",en:"The All-Seeing"},{ar:"الخبير",en:"The All-Aware"},{ar:"الشهيد",en:"The Witness"}],
+                    verse: {ayah:"وَهُوَ السَّمِيعُ الْبَصِيرُ", en:"And He is the Hearing, the Seeing.", ref:"42:11"}},
                 { name: "أحكام سورة النور", nameEn: "Rulings in Surah An-Nur", color: "blue",
-                    items: [{ar:"غض البصر",en:"Lower the gaze (24:30)"},{ar:"الاستئذان",en:"Seeking permission (24:27)"},{ar:"حجاب المؤمنات",en:"Modesty of believing women (24:31)"},{ar:"حد القذف",en:"Punishment for slander (24:4)"}] },
+                    items: [{ar:"غض البصر",en:"Lower the gaze (24:30)"},{ar:"الاستئذان",en:"Seeking permission (24:27)"},{ar:"حجاب المؤمنات",en:"Modesty of believing women (24:31)"},{ar:"حد القذف",en:"Punishment for slander (24:4)"}],
+                    verse: {ayah:"قُل لِّلْمُؤْمِنِينَ يَغُضُّوا مِنْ أَبْصَارِهِمْ وَيَحْفَظُوا فُرُوجَهُمْ", en:"Tell the believing men to lower their gaze and guard their private parts.", ref:"24:30"}},
                 { name: "أماكن ذُكرت في قصة موسى", nameEn: "Places in Musa's story", color: "purple",
-                    items: [{ar:"مصر",en:"Egypt"},{ar:"مدين",en:"Madyan"},{ar:"الطور",en:"Mount Tur"},{ar:"الوادي المقدس طوى",en:"Sacred valley of Tuwa"}] }
+                    items: [{ar:"مصر",en:"Egypt"},{ar:"مدين",en:"Madyan"},{ar:"الطور",en:"Mount Tur"},{ar:"الوادي المقدس طوى",en:"Sacred valley of Tuwa"}],
+                    verse: {ayah:"فَلَمَّا أَتَاهَا نُودِيَ مِن شَاطِئِ الْوَادِ الْأَيْمَنِ فِي الْبُقْعَةِ الْمُبَارَكَةِ", en:"And when he came to it, he was called from the right side of the valley in a blessed spot.", ref:"28:30"}}
             ]
         },
         {
             id: 25,
             categories: [
                 { name: "أسلحة ومعارك في القرآن", nameEn: "Battles and events in the Quran", color: "yellow",
-                    items: [{ar:"بدر",en:"Badr (3:123)"},{ar:"أحد",en:"Uhud (3:121)"},{ar:"حنين",en:"Hunayn (9:25)"},{ar:"الأحزاب",en:"The Confederates (33:9)"}] },
+                    items: [{ar:"بدر",en:"Badr (3:123)"},{ar:"أحد",en:"Uhud (3:121)"},{ar:"حنين",en:"Hunayn (9:25)"},{ar:"الأحزاب",en:"The Confederates (33:9)"}],
+                    verse: {ayah:"وَلَقَدْ نَصَرَكُمُ اللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌ", en:"And already had Allah given you victory at Badr while you were few in number.", ref:"3:123"}},
                 { name: "أنواع النفس في القرآن", nameEn: "Types of the soul in the Quran", color: "green",
-                    items: [{ar:"النفس المطمئنة",en:"The tranquil soul (89:27)"},{ar:"النفس اللوامة",en:"The self-reproaching soul (75:2)"},{ar:"النفس الأمارة بالسوء",en:"The soul inciting evil (12:53)"},{ar:"النفس الراضية",en:"The pleased soul (89:28)"}] },
+                    items: [{ar:"النفس المطمئنة",en:"The tranquil soul (89:27)"},{ar:"النفس اللوامة",en:"The self-reproaching soul (75:2)"},{ar:"النفس الأمارة بالسوء",en:"The soul inciting evil (12:53)"},{ar:"النفس الراضية",en:"The pleased soul (89:28)"}],
+                    verse: {ayah:"يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ ۝ ارْجِعِي إِلَىٰ رَبِّكِ رَاضِيَةً مَّرْضِيَّةً", en:"O tranquil soul, return to your Lord, well-pleased and pleasing.", ref:"89:27-28"}},
                 { name: "وعود الله في القرآن", nameEn: "Promises of Allah in the Quran", color: "blue",
-                    items: [{ar:"إن مع العسر يسرا",en:"With hardship comes ease (94:6)"},{ar:"لئن شكرتم لأزيدنكم",en:"If grateful, I will increase (14:7)"},{ar:"ادعوني أستجب لكم",en:"Call Me, I will respond (40:60)"},{ar:"إنا نحن نزلنا الذكر وإنا له لحافظون",en:"We will preserve the Quran (15:9)"}] },
+                    items: [{ar:"إن مع العسر يسرا",en:"With hardship comes ease (94:6)"},{ar:"لئن شكرتم لأزيدنكم",en:"If grateful, I will increase (14:7)"},{ar:"ادعوني أستجب لكم",en:"Call Me, I will respond (40:60)"},{ar:"إنا نحن نزلنا الذكر وإنا له لحافظون",en:"We will preserve the Quran (15:9)"}],
+                    verse: {ayah:"فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا", en:"For indeed, with hardship comes ease. Indeed, with hardship comes ease.", ref:"94:5-6"}},
                 { name: "حشرات ذُكرت في القرآن", nameEn: "Insects mentioned in the Quran", color: "purple",
-                    items: [{ar:"النحل",en:"Bee"},{ar:"النمل",en:"Ant"},{ar:"البعوضة",en:"Mosquito (2:26)"},{ar:"الجراد",en:"Locust"}] }
+                    items: [{ar:"النحل",en:"Bee"},{ar:"النمل",en:"Ant"},{ar:"البعوضة",en:"Mosquito (2:26)"},{ar:"الجراد",en:"Locust"}],
+                    verse: {ayah:"وَأَوْحَىٰ رَبُّكَ إِلَى النَّحْلِ أَنِ اتَّخِذِي مِنَ الْجِبَالِ بُيُوتًا", en:"And your Lord inspired the bee: Make your homes in the mountains.", ref:"16:68"}}
             ]
         },
         {
             id: 26,
             categories: [
                 { name: "عبارات من سورة الفتح", nameEn: "Phrases from Surah Al-Fath", color: "yellow",
-                    items: [{ar:"إنا فتحنا لك فتحا مبينا",en:"We have given you a clear victory"},{ar:"ليغفر لك الله",en:"That Allah may forgive you"},{ar:"هو الذي أنزل السكينة",en:"He sent down tranquility"},{ar:"بيعة الرضوان",en:"Pledge under the tree"}] },
+                    items: [{ar:"إنا فتحنا لك فتحا مبينا",en:"We have given you a clear victory"},{ar:"ليغفر لك الله",en:"That Allah may forgive you"},{ar:"هو الذي أنزل السكينة",en:"He sent down tranquility"},{ar:"بيعة الرضوان",en:"Pledge under the tree"}],
+                    verse: {ayah:"إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا", en:"Indeed, We have given you a clear conquest.", ref:"48:1"}},
                 { name: "أنهار ذُكرت في القرآن", nameEn: "Rivers/water bodies in the Quran", color: "green",
-                    items: [{ar:"النيل",en:"The Nile (implied)"},{ar:"البحر",en:"The Sea"},{ar:"العين",en:"The Spring"},{ar:"الأنهار",en:"The Rivers (of Paradise)"}] },
+                    items: [{ar:"النيل",en:"The Nile (implied)"},{ar:"البحر",en:"The Sea"},{ar:"العين",en:"The Spring"},{ar:"الأنهار",en:"The Rivers (of Paradise)"}],
+                    verse: {ayah:"وَهُوَ الَّذِي مَرَجَ الْبَحْرَيْنِ هَٰذَا عَذْبٌ فُرَاتٌ وَهَٰذَا مِلْحٌ أُجَاجٌ", en:"And it is He who released the two seas — one fresh and sweet and the other salty and bitter.", ref:"25:53"}},
                 { name: "صفات المتكبرين في القرآن", nameEn: "Traits of the arrogant in the Quran", color: "blue",
-                    items: [{ar:"استكبر في الأرض",en:"Was arrogant on earth"},{ar:"أنا خير منه",en:"I am better than him (Iblis)"},{ar:"أنا ربكم الأعلى",en:"I am your most exalted lord (Fir'awn)"},{ar:"ما علمت لكم من إله غيري",en:"I know no god for you other than me"}] },
+                    items: [{ar:"استكبر في الأرض",en:"Was arrogant on earth"},{ar:"أنا خير منه",en:"I am better than him (Iblis)"},{ar:"أنا ربكم الأعلى",en:"I am your most exalted lord (Fir'awn)"},{ar:"ما علمت لكم من إله غيري",en:"I know no god for you other than me"}],
+                    verse: {ayah:"قَالَ أَنَا خَيْرٌ مِّنْهُ خَلَقْتَنِي مِن نَّارٍ وَخَلَقْتَهُ مِن طِينٍ", en:"He said: I am better than him. You created me from fire and created him from clay.", ref:"7:12"}},
                 { name: "سور سُمّيت بحروف", nameEn: "Surahs named after letters", color: "purple",
-                    items: [{ar:"طه",en:"Ta-Ha (20)"},{ar:"يس",en:"Ya-Sin (36)"},{ar:"ص",en:"Sad (38)"},{ar:"ق",en:"Qaf (50)"}] }
+                    items: [{ar:"طه",en:"Ta-Ha (20)"},{ar:"يس",en:"Ya-Sin (36)"},{ar:"ص",en:"Sad (38)"},{ar:"ق",en:"Qaf (50)"}],
+                    verse: {ayah:"يس ۝ وَالْقُرْآنِ الْحَكِيمِ", en:"Ya-Sin. By the wise Quran.", ref:"36:1-2"}}
             ]
         },
         {
             id: 27,
             categories: [
                 { name: "أدعية من سورة البقرة", nameEn: "Duas from Surah Al-Baqarah", color: "yellow",
-                    items: [{ar:"ربنا آتنا في الدنيا حسنة",en:"Our Lord, give us good in this world (2:201)"},{ar:"ربنا أفرغ علينا صبرا",en:"Our Lord, pour patience upon us (2:250)"},{ar:"ربنا لا تؤاخذنا إن نسينا",en:"Our Lord, do not blame us if we forget (2:286)"},{ar:"ربنا وابعث فيهم رسولا",en:"Our Lord, send among them a messenger (2:129)"}] },
+                    items: [{ar:"ربنا آتنا في الدنيا حسنة",en:"Our Lord, give us good in this world (2:201)"},{ar:"ربنا أفرغ علينا صبرا",en:"Our Lord, pour patience upon us (2:250)"},{ar:"ربنا لا تؤاخذنا إن نسينا",en:"Our Lord, do not blame us if we forget (2:286)"},{ar:"ربنا وابعث فيهم رسولا",en:"Our Lord, send among them a messenger (2:129)"}],
+                    verse: {ayah:"رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ", en:"Our Lord, give us good in this world and good in the Hereafter, and protect us from the Fire.", ref:"2:201"}},
                 { name: "أسماء الله (الخلق والتدبير)", nameEn: "Names of Allah (Creation & Sovereignty)", color: "green",
-                    items: [{ar:"الخالق",en:"The Creator"},{ar:"المصور",en:"The Fashioner"},{ar:"البارئ",en:"The Originator"},{ar:"الرزاق",en:"The Provider"}] },
+                    items: [{ar:"الخالق",en:"The Creator"},{ar:"المصور",en:"The Fashioner"},{ar:"البارئ",en:"The Originator"},{ar:"الرزاق",en:"The Provider"}],
+                    verse: {ayah:"هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ", en:"He is Allah, the Creator, the Originator, the Fashioner. To Him belong the best names.", ref:"59:24"}},
                 { name: "قصص سورة القصص", nameEn: "Stories in Surah Al-Qasas", color: "blue",
-                    items: [{ar:"ولادة موسى",en:"Birth of Musa"},{ar:"قارون وكنوزه",en:"Qarun and his treasures"},{ar:"موسى في مدين",en:"Musa in Madyan"},{ar:"الشجرة المباركة",en:"The blessed tree (burning bush)"}] },
+                    items: [{ar:"ولادة موسى",en:"Birth of Musa"},{ar:"قارون وكنوزه",en:"Qarun and his treasures"},{ar:"موسى في مدين",en:"Musa in Madyan"},{ar:"الشجرة المباركة",en:"The blessed tree (burning bush)"}],
+                    verse: {ayah:"وَأَوْحَيْنَا إِلَىٰ أُمِّ مُوسَىٰ أَنْ أَرْضِعِيهِ", en:"And We inspired the mother of Musa: Suckle him.", ref:"28:7"}},
                 { name: "أوصاف الجنة في القرآن", nameEn: "Descriptions of Paradise", color: "purple",
-                    items: [{ar:"جنات تجري من تحتها الأنهار",en:"Gardens with rivers flowing"},{ar:"فيها ما تشتهيه الأنفس",en:"Whatever the souls desire"},{ar:"خالدين فيها أبدا",en:"Dwelling therein forever"},{ar:"رضوان من الله أكبر",en:"Allah's pleasure is greater (9:72)"}] }
+                    items: [{ar:"جنات تجري من تحتها الأنهار",en:"Gardens with rivers flowing"},{ar:"فيها ما تشتهيه الأنفس",en:"Whatever the souls desire"},{ar:"خالدين فيها أبدا",en:"Dwelling therein forever"},{ar:"رضوان من الله أكبر",en:"Allah's pleasure is greater (9:72)"}],
+                    verse: {ayah:"جَنَّاتٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ خَالِدِينَ فِيهَا أَبَدًا", en:"Gardens beneath which rivers flow, wherein they abide eternally.", ref:"9:100"}}
             ]
         },
         {
             id: 28,
             categories: [
                 { name: "مشاهد من قصة آدم", nameEn: "Scenes from Adam's story", color: "yellow",
-                    items: [{ar:"سجود الملائكة",en:"Angels' prostration"},{ar:"الشجرة المحرمة",en:"The forbidden tree"},{ar:"وسوسة إبليس",en:"Iblis's whisper"},{ar:"الهبوط إلى الأرض",en:"Descent to earth"}] },
+                    items: [{ar:"سجود الملائكة",en:"Angels' prostration"},{ar:"الشجرة المحرمة",en:"The forbidden tree"},{ar:"وسوسة إبليس",en:"Iblis's whisper"},{ar:"الهبوط إلى الأرض",en:"Descent to earth"}],
+                    verse: {ayah:"وَإِذْ قُلْنَا لِلْمَلَائِكَةِ اسْجُدُوا لِآدَمَ فَسَجَدُوا إِلَّا إِبْلِيسَ", en:"And when We said to the angels: Prostrate to Adam, and they prostrated, except Iblis.", ref:"2:34"}},
                 { name: "أوصاف القيامة في سورة التكوير", nameEn: "Events in Surah At-Takwir (81)", color: "green",
-                    items: [{ar:"إذا الشمس كورت",en:"When the sun is wrapped up"},{ar:"وإذا النجوم انكدرت",en:"When the stars fall"},{ar:"وإذا البحار سجرت",en:"When the seas are set ablaze"},{ar:"وإذا الموءودة سئلت",en:"When the infant girl is asked"}] },
+                    items: [{ar:"إذا الشمس كورت",en:"When the sun is wrapped up"},{ar:"وإذا النجوم انكدرت",en:"When the stars fall"},{ar:"وإذا البحار سجرت",en:"When the seas are set ablaze"},{ar:"وإذا الموءودة سئلت",en:"When the infant girl is asked"}],
+                    verse: {ayah:"إِذَا الشَّمْسُ كُوِّرَتْ ۝ وَإِذَا النُّجُومُ انكَدَرَتْ", en:"When the sun is wrapped up, and when the stars fall.", ref:"81:1-2"}},
                 { name: "أنبياء كانوا ملوكا", nameEn: "Prophets who were kings", color: "blue",
-                    items: [{ar:"داود",en:"Dawud"},{ar:"سليمان",en:"Sulayman"},{ar:"ذو القرنين",en:"Dhul-Qarnayn"},{ar:"طالوت",en:"Talut (Saul)"}] },
+                    items: [{ar:"داود",en:"Dawud"},{ar:"سليمان",en:"Sulayman"},{ar:"ذو القرنين",en:"Dhul-Qarnayn"},{ar:"طالوت",en:"Talut (Saul)"}],
+                    verse: {ayah:"وَلَقَدْ آتَيْنَا دَاوُودَ مِنَّا فَضْلًا يَا جِبَالُ أَوِّبِي مَعَهُ", en:"And We certainly gave Dawud from Us bounty. O mountains, repeat with him.", ref:"34:10"}},
                 { name: "كلمات عن الرزق في القرآن", nameEn: "Words about provision in the Quran", color: "purple",
-                    items: [{ar:"الرزاق",en:"The Provider (51:58)"},{ar:"يرزق من يشاء",en:"He provides whom He wills"},{ar:"وفي السماء رزقكم",en:"In the heaven is your provision (51:22)"},{ar:"نحن نرزقكم",en:"We provide for you (6:151)"}] }
+                    items: [{ar:"الرزاق",en:"The Provider (51:58)"},{ar:"يرزق من يشاء",en:"He provides whom He wills"},{ar:"وفي السماء رزقكم",en:"In the heaven is your provision (51:22)"},{ar:"نحن نرزقكم",en:"We provide for you (6:151)"}],
+                    verse: {ayah:"وَفِي السَّمَاءِ رِزْقُكُمْ وَمَا تُوعَدُونَ", en:"And in the heaven is your provision and whatever you are promised.", ref:"51:22"}}
             ]
         },
         {
             id: 29,
             categories: [
                 { name: "آيات عن الصبر", nameEn: "Verses about patience in the Quran", color: "yellow",
-                    items: [{ar:"فصبر جميل",en:"Beautiful patience (12:18)"},{ar:"إن الله مع الصابرين",en:"Allah is with the patient (2:153)"},{ar:"واصبر وما صبرك إلا بالله",en:"Be patient, for Allah (16:127)"},{ar:"إنما يوفى الصابرون أجرهم",en:"The patient are given reward (39:10)"}] },
+                    items: [{ar:"فصبر جميل",en:"Beautiful patience (12:18)"},{ar:"إن الله مع الصابرين",en:"Allah is with the patient (2:153)"},{ar:"واصبر وما صبرك إلا بالله",en:"Be patient, for Allah (16:127)"},{ar:"إنما يوفى الصابرون أجرهم",en:"The patient are given reward (39:10)"}],
+                    verse: {ayah:"يَا أَيُّهَا الَّذِينَ آمَنُوا اسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ إِنَّ اللَّهَ مَعَ الصَّابِرِينَ", en:"O you who believe, seek help through patience and prayer. Indeed, Allah is with the patient.", ref:"2:153"}},
                 { name: "مخلوقات سخّرها الله لسليمان", nameEn: "Creatures subjected to Sulayman", color: "green",
-                    items: [{ar:"الجن",en:"Jinn"},{ar:"الريح",en:"The Wind"},{ar:"الطير",en:"Birds"},{ar:"النمل",en:"Ants"}] },
+                    items: [{ar:"الجن",en:"Jinn"},{ar:"الريح",en:"The Wind"},{ar:"الطير",en:"Birds"},{ar:"النمل",en:"Ants"}],
+                    verse: {ayah:"وَلِسُلَيْمَانَ الرِّيحَ غُدُوُّهَا شَهْرٌ وَرَوَاحُهَا شَهْرٌ", en:"And to Sulayman the wind — its morning course was a month's journey and its evening course a month.", ref:"34:12"}},
                 { name: "أسباب دخول الجنة", nameEn: "Causes of entering Paradise in the Quran", color: "blue",
-                    items: [{ar:"الإيمان والعمل الصالح",en:"Faith and good deeds"},{ar:"التقوى",en:"God-consciousness"},{ar:"الصبر والصلاة",en:"Patience and prayer"},{ar:"الإنفاق في سبيل الله",en:"Spending in Allah's cause"}] },
+                    items: [{ar:"الإيمان والعمل الصالح",en:"Faith and good deeds"},{ar:"التقوى",en:"God-consciousness"},{ar:"الصبر والصلاة",en:"Patience and prayer"},{ar:"الإنفاق في سبيل الله",en:"Spending in Allah's cause"}],
+                    verse: {ayah:"إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ جَنَّاتُ النَّعِيمِ", en:"Indeed, those who believe and do righteous deeds — for them are the Gardens of Pleasure.", ref:"31:8"}},
                 { name: "كلمات عن القدر في القرآن", nameEn: "Words about divine decree", color: "purple",
-                    items: [{ar:"قدر",en:"Decree/Measure"},{ar:"اللوح المحفوظ",en:"The Preserved Tablet"},{ar:"كن فيكون",en:"Be, and it is"},{ar:"ما أصاب من مصيبة إلا بإذن الله",en:"No calamity except by Allah's will"}] }
+                    items: [{ar:"قدر",en:"Decree/Measure"},{ar:"اللوح المحفوظ",en:"The Preserved Tablet"},{ar:"كن فيكون",en:"Be, and it is"},{ar:"ما أصاب من مصيبة إلا بإذن الله",en:"No calamity except by Allah's will"}],
+                    verse: {ayah:"إِنَّا كُلَّ شَيْءٍ خَلَقْنَاهُ بِقَدَرٍ", en:"Indeed, all things We created with predestination.", ref:"54:49"}}
             ]
         },
         {
             id: 30,
             categories: [
                 { name: "آيات عن ليلة القدر", nameEn: "Verses about Laylat al-Qadr (97)", color: "yellow",
-                    items: [{ar:"إنا أنزلناه في ليلة القدر",en:"We sent it down on the Night of Qadr"},{ar:"ليلة القدر خير من ألف شهر",en:"Better than a thousand months"},{ar:"تنزل الملائكة والروح فيها",en:"Angels and Spirit descend"},{ar:"سلام هي حتى مطلع الفجر",en:"Peace until the rise of dawn"}] },
+                    items: [{ar:"إنا أنزلناه في ليلة القدر",en:"We sent it down on the Night of Qadr"},{ar:"ليلة القدر خير من ألف شهر",en:"Better than a thousand months"},{ar:"تنزل الملائكة والروح فيها",en:"Angels and Spirit descend"},{ar:"سلام هي حتى مطلع الفجر",en:"Peace until the rise of dawn"}],
+                    verse: {ayah:"إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ ۝ وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ ۝ لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ", en:"Indeed, We sent it down during the Night of Decree. And what can make you know what the Night of Decree is? The Night of Decree is better than a thousand months.", ref:"97:1-3"}},
                 { name: "آيات عن الذكر والقرآن", nameEn: "Verses about remembrance and the Quran", color: "green",
-                    items: [{ar:"ولقد يسرنا القرآن للذكر",en:"We made the Quran easy to remember (54:17)"},{ar:"فاذكروني أذكركم",en:"Remember Me, I will remember you (2:152)"},{ar:"ألا بذكر الله تطمئن القلوب",en:"Hearts find rest in Allah's remembrance (13:28)"},{ar:"إنا نحن نزلنا الذكر",en:"We sent down the Reminder (15:9)"}] },
+                    items: [{ar:"ولقد يسرنا القرآن للذكر",en:"We made the Quran easy to remember (54:17)"},{ar:"فاذكروني أذكركم",en:"Remember Me, I will remember you (2:152)"},{ar:"ألا بذكر الله تطمئن القلوب",en:"Hearts find rest in Allah's remembrance (13:28)"},{ar:"إنا نحن نزلنا الذكر",en:"We sent down the Reminder (15:9)"}],
+                    verse: {ayah:"أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ", en:"Verily, in the remembrance of Allah do hearts find rest.", ref:"13:28"}},
                 { name: "صفات عباد الرحمن", nameEn: "Qualities of servants of Ar-Rahman (25:63-74)", color: "blue",
-                    items: [{ar:"يمشون على الأرض هونا",en:"Walk on earth humbly"},{ar:"إذا خاطبهم الجاهلون قالوا سلاما",en:"Say 'peace' to the ignorant"},{ar:"يبيتون لربهم سجدا وقياما",en:"Spend nights in worship"},{ar:"إذا أنفقوا لم يسرفوا",en:"Spend without extravagance"}] },
+                    items: [{ar:"يمشون على الأرض هونا",en:"Walk on earth humbly"},{ar:"إذا خاطبهم الجاهلون قالوا سلاما",en:"Say 'peace' to the ignorant"},{ar:"يبيتون لربهم سجدا وقياما",en:"Spend nights in worship"},{ar:"إذا أنفقوا لم يسرفوا",en:"Spend without extravagance"}],
+                    verse: {ayah:"وَعِبَادُ الرَّحْمَٰنِ الَّذِينَ يَمْشُونَ عَلَى الْأَرْضِ هَوْنًا", en:"And the servants of the Most Merciful are those who walk upon the earth humbly.", ref:"25:63"}},
                 { name: "دروس من سورة الكهف", nameEn: "Lessons from Surah Al-Kahf", color: "purple",
-                    items: [{ar:"الإيمان والثبات",en:"Faith and steadfastness (Cave)"},{ar:"فتنة المال",en:"Trial of wealth (Gardens)"},{ar:"التواضع في العلم",en:"Humility in knowledge (Khidr)"},{ar:"القوة والعدل",en:"Power and justice (Dhul-Qarnayn)"}] }
+                    items: [{ar:"الإيمان والثبات",en:"Faith and steadfastness (Cave)"},{ar:"فتنة المال",en:"Trial of wealth (Gardens)"},{ar:"التواضع في العلم",en:"Humility in knowledge (Khidr)"},{ar:"القوة والعدل",en:"Power and justice (Dhul-Qarnayn)"}],
+                    verse: {ayah:"وَاصْبِرْ نَفْسَكَ مَعَ الَّذِينَ يَدْعُونَ رَبَّهُم بِالْغَدَاةِ وَالْعَشِيِّ يُرِيدُونَ وَجْهَهُ", en:"And keep yourself patient with those who call upon their Lord in the morning and evening, seeking His countenance.", ref:"18:28"}}
             ]
         }
 

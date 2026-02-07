@@ -477,6 +477,74 @@ button, input, select, textarea {
     direction: rtl;
 }
 
+/* Solved row header with expand icon */
+.conn-solved-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.conn-expand-icon {
+    font-size: 0.65rem;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.conn-solved-row {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.conn-solved-row:hover {
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Verse panel - hidden by default */
+.conn-verse-panel {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+}
+
+.conn-verse-panel.expanded {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.conn-verse-ayah {
+    font-family: var(--font-arabic);
+    font-size: 1.15rem;
+    line-height: 2;
+    direction: rtl;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.conn-verse-en {
+    font-size: 0.82rem;
+    font-style: italic;
+    opacity: 0.85;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.conn-verse-ref {
+    font-size: 0.75rem;
+    font-weight: 700;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+}
+
 /* Arabic connection tiles */
 .conn-tile-ar {
     font-family: var(--font-arabic);

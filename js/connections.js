@@ -134,7 +134,7 @@ function submitConnections() {
 
     if (match) {
         // Correct!
-        conn.solved.push({ name: match.name, nameEn: match.nameEn, items: match.items, color: match.color });
+        conn.solved.push({ name: match.name, nameEn: match.nameEn, items: match.items, color: match.color, verse: match.verse || null });
         const matchKeys = new Set(match.items.map(i => getConnItemKey(i)));
         conn.items = conn.items.filter(i => !matchKeys.has(getConnItemKey(i)));
         conn.selected = [];
@@ -189,21 +189,72 @@ function submitConnections() {
 function renderSolvedRows() {
     const container = document.getElementById('connections-solved');
     container.innerHTML = '';
-    conn.solved.forEach(s => {
+    conn.solved.forEach((s, idx) => {
         const row = document.createElement('div');
         row.className = `conn-solved-row ${s.color}`;
-        row.setAttribute('role', 'status');
+        row.setAttribute('role', 'button');
+        row.setAttribute('aria-expanded', 'false');
+        row.setAttribute('tabindex', '0');
         const catName = s.nameEn || s.name;
-        const itemsText = s.items.map(i => typeof i === 'object' ? i.ar : i).join('، ');
-        row.innerHTML = `<div class="conn-solved-category">${catName}</div><div class="conn-solved-items conn-solved-items-ar">${itemsText}</div>`;
+        const itemsText = s.items.map(i => typeof i === 'object' ? i.ar : i).join('\u060C ');
+
+        // Look up verse from puzzle data if not in saved state
+        let verse = s.verse;
+        if (!verse) {
+            // Search all puzzles since saved state may be from a different puzzle
+            for (const p of PUZZLES.connections) {
+                const cat = p.categories.find(c => (c.nameEn || c.name) === (s.nameEn || s.name));
+                if (cat && cat.verse) { verse = cat.verse; break; }
+            }
+        }
+
+        let verseHTML = '';
+        if (verse) {
+            verseHTML = `<div class="conn-verse-panel" id="verse-panel-${idx}" aria-hidden="true">
+                <div class="conn-verse-ayah">${verse.ayah}</div>
+                <div class="conn-verse-en">${verse.en}</div>
+                <div class="conn-verse-ref">— ${verse.ref}</div>
+            </div>`;
+        }
+
+        row.innerHTML = `<div class="conn-solved-header">
+            <div class="conn-solved-category">${catName}</div>
+            <span class="conn-expand-icon" aria-hidden="true">▼</span>
+        </div>
+        <div class="conn-solved-items conn-solved-items-ar">${itemsText}</div>
+        ${verseHTML}`;
+
+        // Toggle expand/collapse on click
+        row.addEventListener('click', () => toggleVersePanel(row, idx));
+        row.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleVersePanel(row, idx);
+            }
+        });
+
         container.appendChild(row);
     });
+}
+
+function toggleVersePanel(row, idx) {
+    const panel = document.getElementById(`verse-panel-${idx}`);
+    if (!panel) return;
+    const isExpanded = row.getAttribute('aria-expanded') === 'true';
+    row.setAttribute('aria-expanded', String(!isExpanded));
+    panel.setAttribute('aria-hidden', String(isExpanded));
+    panel.classList.toggle('expanded');
+    row.querySelector('.conn-expand-icon').textContent = isExpanded ? '▼' : '▲';
+    if (!isExpanded) {
+        // Speak the verse when expanding
+        speakArabic(panel.querySelector('.conn-verse-ayah').textContent);
+    }
 }
 
 function revealAllConnections() {
     conn.puzzle.categories.forEach(cat => {
         if (!conn.solved.some(s => s.name === cat.name)) {
-            conn.solved.push({ name: cat.name, nameEn: cat.nameEn, items: cat.items, color: cat.color });
+            conn.solved.push({ name: cat.name, nameEn: cat.nameEn, items: cat.items, color: cat.color, verse: cat.verse || null });
         }
     });
     conn.items = [];
