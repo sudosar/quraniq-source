@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initModeSelector();
     initSidebar();
     initModals();
+    initResetButton();
     initConnections();
     initWordle();
     initDeduction();
@@ -143,6 +144,56 @@ function initModals() {
     // Close modals on overlay click
     document.querySelectorAll('.modal').forEach(m => {
         m.addEventListener('click', e => { if (e.target === m) m.classList.add('hidden'); });
+    });
+}
+
+// ==================== RESET BUTTON ====================
+function initResetButton() {
+    document.getElementById('reset-btn').addEventListener('click', () => {
+        if (!confirm('Reset the current puzzle? Your progress will be lost.')) return;
+        const mode = app.currentMode;
+        const day = app.dayNumber;
+
+        // Clear saved state for current mode
+        if (mode === 'connections') {
+            delete app.state[`conn_${day}`];
+            conn.selected = [];
+            conn.solved = [];
+            conn.mistakes = 4;
+            conn.gameOver = false;
+            conn.items = shuffle(conn.puzzle.categories.flatMap(c => c.items));
+            document.getElementById('connections-solved').innerHTML = '';
+            renderConnections();
+            updateMistakes();
+        } else if (mode === 'wordle') {
+            delete app.state[`wordle_${day}`];
+            wordle.board = [];
+            wordle.currentRow = 0;
+            wordle.currentCol = 0;
+            wordle.gameOver = false;
+            wordle.evaluations = [];
+            renderWordleBoard();
+            renderWordleKeyboard();
+        } else if (mode === 'deduction') {
+            delete app.state[`ded_${day}`];
+            ded.cluesRevealed = 0;
+            ded.selections = {};
+            ded.gameOver = false;
+            ded.won = false;
+            renderDeduction();
+        } else if (mode === 'scramble') {
+            delete app.state[`scr_${day}`];
+            scr.placed = [];
+            scr.available = shuffle([...scr.puzzle.words]);
+            scr.moves = 0;
+            scr.hintsUsed = 0;
+            scr.gameOver = false;
+            scr.won = false;
+            renderScramble();
+        }
+
+        saveState(app.state);
+        showToast('Puzzle reset!');
     });
 }
 
