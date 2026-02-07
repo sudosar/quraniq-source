@@ -21,6 +21,7 @@ function initConnections() {
         conn.solved = saved.solved || [];
         conn.mistakes = saved.mistakes ?? 4;
         conn.gameOver = saved.gameOver || false;
+        conn.correctCount = saved.correctCount ?? conn.solved.length;
     }
 
     // Flatten items, removing solved ones
@@ -144,6 +145,7 @@ function submitConnections() {
 
         if (conn.solved.length === 4) {
             conn.gameOver = true;
+            conn.correctCount = 4;
             saveConnState();
             setTimeout(() => showConnResult(true), 600);
         }
@@ -177,6 +179,7 @@ function submitConnections() {
         if (conn.mistakes <= 0) {
             conn.gameOver = true;
             conn.selected = [];
+            conn.correctCount = conn.solved.length; // Track how many were correctly guessed before reveal
             renderConnections();
             revealAllConnections();
             saveConnState();
@@ -406,7 +409,8 @@ function saveConnState() {
     app.state[`conn_${app.dayNumber}`] = {
         solved: conn.solved,
         mistakes: conn.mistakes,
-        gameOver: conn.gameOver
+        gameOver: conn.gameOver,
+        correctCount: conn.correctCount ?? conn.solved.length
     };
     saveState(app.state);
 }
@@ -414,16 +418,22 @@ function saveConnState() {
 function showConnResult(won, cacheOnly) {
     const colorMap = { yellow: '🟨', green: '🟩', blue: '🟦', purple: '🟪' };
 
-    // Build emoji grid based on solve order
+    // Only show groups the player actually guessed correctly (not auto-revealed ones)
+    const correctCount = won ? 4 : (conn.correctCount ?? 0);
     let emojiGrid = '';
-    conn.solved.forEach(s => {
-        emojiGrid += colorMap[s.color].repeat(4) + '\n';
+    conn.solved.forEach((s, i) => {
+        if (i < correctCount) {
+            emojiGrid += colorMap[s.color].repeat(4) + '\n';
+        } else {
+            // Auto-revealed groups shown as grey/missed
+            emojiGrid += '⬛⬛⬛⬛\n';
+        }
     });
 
     const mistakesUsed = 4 - conn.mistakes;
     const puzzleNum = getPuzzleIndex(PUZZLES.connections) + 1;
 
-    const shareText = `QuranPuzzle - Connections #${puzzleNum}\n${emojiGrid}Mistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quranpuzz/`;
+    const shareText = `QuranPuzzle - Connections #${puzzleNum}\n${emojiGrid}Groups found: ${correctCount}/4\nMistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quranpuzz/`;
 
     const resultData = {
         icon: won ? '🎉' : '📖',
@@ -432,7 +442,7 @@ function showConnResult(won, cacheOnly) {
         arabic: null,
         translation: won ? '"And We have certainly made the Quran easy for remembrance" - 54:17' : '"So verily, with hardship, there is relief" - 94:5',
         emojiGrid: emojiGrid.trim(),
-        statsText: `Mistakes: ${mistakesUsed}/4`,
+        statsText: `Groups found: ${correctCount}/4 | Mistakes: ${mistakesUsed}/4`,
         shareText
     };
 
