@@ -758,6 +758,31 @@ button, input, select, textarea {
     border-color: rgba(27, 122, 74, 0.6);
 }
 
+/* Permanent highlight for the tile word within the verse */
+.wbw-word.wbw-highlight {
+    background: rgba(218, 165, 32, 0.2);
+    border-color: rgba(218, 165, 32, 0.5);
+    border-width: 2px;
+    font-weight: bold;
+    position: relative;
+}
+
+.wbw-word.wbw-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: rgba(218, 165, 32, 0.7);
+    border-radius: 1px;
+}
+
+[data-theme="dark"] .wbw-word.wbw-highlight {
+    background: rgba(218, 165, 32, 0.25);
+    border-color: rgba(218, 165, 32, 0.6);
+}
+
 .wbw-tooltip {
     text-align: center;
     font-size: 0.88rem;

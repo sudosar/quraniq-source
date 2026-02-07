@@ -306,6 +306,12 @@ function renderSolvedRows() {
 
         // Word-by-word: load data when carousel is first expanded
         row.querySelectorAll('.wbw-container').forEach(container => {
+            // Store the tile word on the container for highlighting
+            const slideEl = container.closest('.verse-slide');
+            if (slideEl) {
+                const tileWord = slideEl.querySelector('.verse-slide-word')?.textContent || '';
+                container.dataset.tileWord = tileWord;
+            }
             loadWBW(container);
         });
 
@@ -349,10 +355,16 @@ async function loadWBW(container) {
     loadingDiv.style.display = 'none';
 
     if (words && words.length > 0) {
-        // Build tappable word spans
-        wordsDiv.innerHTML = words.map((w, i) =>
-            `<span class="wbw-word" data-idx="${i}" data-translation="${w.translation.replace(/"/g, '&quot;')}">${w.arabic}</span>`
-        ).join(' ');
+        // Get the tile word to highlight it in the verse
+        const tileWord = container.dataset.tileWord || '';
+        const tileRoot = tileWord.replace(/[\u064B-\u065F\u0670]/g, ''); // strip diacritics
+
+        // Build tappable word spans, marking the tile word
+        wordsDiv.innerHTML = words.map((w, i) => {
+            const wordRoot = w.arabic.replace(/[\u064B-\u065F\u0670]/g, '');
+            const isMatch = tileRoot && (wordRoot.includes(tileRoot) || tileRoot.includes(wordRoot));
+            return `<span class="wbw-word${isMatch ? ' wbw-highlight' : ''}" data-idx="${i}" data-translation="${w.translation.replace(/"/g, '&quot;')}">${w.arabic}</span>`;
+        }).join(' ');
         wordsDiv.style.display = 'flex';
         fallback.style.display = 'none';
         container.dataset.wbwLoaded = 'true';
@@ -392,9 +404,22 @@ function toggleCarousel(idx) {
     carousel.classList.toggle('expanded');
     header.querySelector('.conn-expand-icon').textContent = isExpanded ? '▼' : '▲';
 
-    if (!isExpanded) {
-        // Stop any playing audio when collapsing
+    if (isExpanded) {
+        // Collapsing — stop any playing audio
         stopQuranAudio();
+    } else {
+        // Expanding — autoplay the recitation for the active slide on first open
+        if (!carousel.dataset.autoPlayed) {
+            carousel.dataset.autoPlayed = 'true';
+            const activeSlide = carousel.querySelector('.verse-slide.active');
+            if (activeSlide) {
+                const playBtn = activeSlide.querySelector('.verse-play-btn');
+                if (playBtn) {
+                    const ref = playBtn.dataset.ref;
+                    setTimeout(() => playQuranAudio(ref, playBtn), 300);
+                }
+            }
+        }
     }
 }
 
