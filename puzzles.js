@@ -267,10 +267,141 @@ const PUZZLES = {
                 { name: "أوقات الصلاة في القرآن", nameEn: "Prayer times referenced in the Quran", color: "purple",
                     items: [{ar:"الفجر",en:"Dawn (Fajr)"},{ar:"الشروق",en:"Sunrise"},{ar:"الظهر",en:"Midday"},{ar:"المغرب",en:"Sunset"}] }
             ]
+        },
+        {
+            id: 21,
+            categories: [
+                { name: "أنبياء ذُكروا في سورة الأنبياء", nameEn: "Prophets mentioned in Surah Al-Anbiya", color: "yellow",
+                    items: [{ar:"داود",en:"Dawud (AS)"},{ar:"سليمان",en:"Sulayman (AS)"},{ar:"أيوب",en:"Ayyub (AS)"},{ar:"ذو الكفل",en:"Dhul-Kifl (AS)"}] },
+                { name: "كلمات افتتاحية لسور قرآنية", nameEn: "Opening words of Quranic Surahs", color: "green",
+                    items: [{ar:"اقرأ",en:"Read! (Al-Alaq 96:1)"},{ar:"تبارك",en:"Blessed is (Al-Mulk 67:1)"},{ar:"سبحان",en:"Glory be (Al-Isra 17:1)"},{ar:"الحاقة",en:"The Inevitable (Al-Haqqah 69:1)"}] },
+                { name: "أدوات عذاب في القرآن", nameEn: "Instruments of punishment in the Quran", color: "blue",
+                    items: [{ar:"حجارة من سجيل",en:"Stones of baked clay"},{ar:"صاعقة",en:"Thunderbolt"},{ar:"ريح صرصر",en:"Howling wind"},{ar:"رجز من السماء",en:"Punishment from the sky"}] },
+                { name: "صفات القرآن في أول سورة البقرة", nameEn: "Descriptions of the Quran (Al-Baqarah opening)", color: "purple",
+                    items: [{ar:"لا ريب فيه",en:"No doubt in it (2:2)"},{ar:"هدى للمتقين",en:"Guidance for the righteous (2:2)"},{ar:"مصدّق لما بين يديه",en:"Confirms what came before"},{ar:"تفصيل كل شيء",en:"Explanation of all things"}] }
+            ]
+        },
+        {
+            id: 22,
+            categories: [
+                { name: "سور سُمّيت بأوقات", nameEn: "Surahs named after times", color: "yellow",
+                    items: [{ar:"الفجر",en:"The Dawn (89)"},{ar:"الضحى",en:"The Morning Hours (93)"},{ar:"العصر",en:"The Declining Day (103)"},{ar:"الليل",en:"The Night (92)"}] },
+                { name: "أشجار ذُكرت في القرآن", nameEn: "Trees mentioned in the Quran", color: "green",
+                    items: [{ar:"الزيتون",en:"Olive tree"},{ar:"النخل",en:"Date palm"},{ar:"السدر",en:"Lote tree"},{ar:"الزقوم",en:"Zaqqum tree (Hellfire)"}] },
+                { name: "صفات يوم القيامة", nameEn: "Names/descriptions of the Day of Judgment", color: "blue",
+                    items: [{ar:"يوم الحساب",en:"Day of Reckoning"},{ar:"الساعة",en:"The Hour"},{ar:"يوم الفصل",en:"Day of Sorting"},{ar:"الطامة الكبرى",en:"The Greatest Catastrophe"}] },
+                { name: "أوامر في سورة الإسراء للوالدين", nameEn: "Commands about parents (Al-Isra 17:23-24)", color: "purple",
+                    items: [{ar:"لا تقل لهما أف",en:"Do not say 'uff' to them"},{ar:"لا تنهرهما",en:"Do not repel them"},{ar:"قل لهما قولا كريما",en:"Speak to them kindly"},{ar:"اخفض لهما جناح الذل",en:"Lower the wing of humility"}] }
+            ]
+        },
+        {
+            id: 23,
+            categories: [
+                { name: "معجزات عيسى عليه السلام", nameEn: "Miracles of Isa (AS) in the Quran", color: "yellow",
+                    items: [{ar:"إحياء الموتى",en:"Raising the dead"},{ar:"إبراء الأكمه والأبرص",en:"Healing blind and leper"},{ar:"الطير من الطين",en:"Bird from clay"},{ar:"المائدة من السماء",en:"Table from heaven"}] },
+                { name: "أسماء سورة محمد", nameEn: "Surahs named after prophets", color: "green",
+                    items: [{ar:"يونس",en:"Yunus (10)"},{ar:"هود",en:"Hud (11)"},{ar:"يوسف",en:"Yusuf (12)"},{ar:"نوح",en:"Nuh (71)"}] },
+                { name: "مخلوقات غيبية في القرآن", nameEn: "Unseen beings in the Quran", color: "blue",
+                    items: [{ar:"الملائكة",en:"Angels"},{ar:"الجن",en:"Jinn"},{ar:"الشياطين",en:"Devils"},{ar:"حور عين",en:"Hoor al-Ayn (of Paradise)"}] },
+                { name: "كلمات تتكرر في سورة الرحمن", nameEn: "Repeated themes in Surah Ar-Rahman", color: "purple",
+                    items: [{ar:"فبأي آلاء ربكما تكذبان",en:"Which favors will you deny?"},{ar:"جنتان",en:"Two gardens"},{ar:"مرج البحرين",en:"Two seas released"},{ar:"كل من عليها فان",en:"Everything upon it will perish"}] }
+            ]
+        },
+        {
+            id: 24,
+            categories: [
+                { name: "أطعمة ذُكرت في القرآن", nameEn: "Foods mentioned in the Quran", color: "yellow",
+                    items: [{ar:"المن والسلوى",en:"Manna and quails"},{ar:"اللحم",en:"Meat"},{ar:"اللبن",en:"Milk"},{ar:"العسل",en:"Honey"}] },
+                { name: "صفات الله (العلم والسمع)", nameEn: "Names of Allah (Knowledge & Awareness)", color: "green",
+                    items: [{ar:"السميع",en:"The All-Hearing"},{ar:"البصير",en:"The All-Seeing"},{ar:"الخبير",en:"The All-Aware"},{ar:"الشهيد",en:"The Witness"}] },
+                { name: "أحكام سورة النور", nameEn: "Rulings in Surah An-Nur", color: "blue",
+                    items: [{ar:"غض البصر",en:"Lower the gaze (24:30)"},{ar:"الاستئذان",en:"Seeking permission (24:27)"},{ar:"حجاب المؤمنات",en:"Modesty of believing women (24:31)"},{ar:"حد القذف",en:"Punishment for slander (24:4)"}] },
+                { name: "أماكن ذُكرت في قصة موسى", nameEn: "Places in Musa's story", color: "purple",
+                    items: [{ar:"مصر",en:"Egypt"},{ar:"مدين",en:"Madyan"},{ar:"الطور",en:"Mount Tur"},{ar:"الوادي المقدس طوى",en:"Sacred valley of Tuwa"}] }
+            ]
+        },
+        {
+            id: 25,
+            categories: [
+                { name: "أسلحة ومعارك في القرآن", nameEn: "Battles and events in the Quran", color: "yellow",
+                    items: [{ar:"بدر",en:"Badr (3:123)"},{ar:"أحد",en:"Uhud (3:121)"},{ar:"حنين",en:"Hunayn (9:25)"},{ar:"الأحزاب",en:"The Confederates (33:9)"}] },
+                { name: "أنواع النفس في القرآن", nameEn: "Types of the soul in the Quran", color: "green",
+                    items: [{ar:"النفس المطمئنة",en:"The tranquil soul (89:27)"},{ar:"النفس اللوامة",en:"The self-reproaching soul (75:2)"},{ar:"النفس الأمارة بالسوء",en:"The soul inciting evil (12:53)"},{ar:"النفس الراضية",en:"The pleased soul (89:28)"}] },
+                { name: "وعود الله في القرآن", nameEn: "Promises of Allah in the Quran", color: "blue",
+                    items: [{ar:"إن مع العسر يسرا",en:"With hardship comes ease (94:6)"},{ar:"لئن شكرتم لأزيدنكم",en:"If grateful, I will increase (14:7)"},{ar:"ادعوني أستجب لكم",en:"Call Me, I will respond (40:60)"},{ar:"إنا نحن نزلنا الذكر وإنا له لحافظون",en:"We will preserve the Quran (15:9)"}] },
+                { name: "حشرات ذُكرت في القرآن", nameEn: "Insects mentioned in the Quran", color: "purple",
+                    items: [{ar:"النحل",en:"Bee"},{ar:"النمل",en:"Ant"},{ar:"البعوضة",en:"Mosquito (2:26)"},{ar:"الجراد",en:"Locust"}] }
+            ]
+        },
+        {
+            id: 26,
+            categories: [
+                { name: "عبارات من سورة الفتح", nameEn: "Phrases from Surah Al-Fath", color: "yellow",
+                    items: [{ar:"إنا فتحنا لك فتحا مبينا",en:"We have given you a clear victory"},{ar:"ليغفر لك الله",en:"That Allah may forgive you"},{ar:"هو الذي أنزل السكينة",en:"He sent down tranquility"},{ar:"بيعة الرضوان",en:"Pledge under the tree"}] },
+                { name: "أنهار ذُكرت في القرآن", nameEn: "Rivers/water bodies in the Quran", color: "green",
+                    items: [{ar:"النيل",en:"The Nile (implied)"},{ar:"البحر",en:"The Sea"},{ar:"العين",en:"The Spring"},{ar:"الأنهار",en:"The Rivers (of Paradise)"}] },
+                { name: "صفات المتكبرين في القرآن", nameEn: "Traits of the arrogant in the Quran", color: "blue",
+                    items: [{ar:"استكبر في الأرض",en:"Was arrogant on earth"},{ar:"أنا خير منه",en:"I am better than him (Iblis)"},{ar:"أنا ربكم الأعلى",en:"I am your most exalted lord (Fir'awn)"},{ar:"ما علمت لكم من إله غيري",en:"I know no god for you other than me"}] },
+                { name: "سور سُمّيت بحروف", nameEn: "Surahs named after letters", color: "purple",
+                    items: [{ar:"طه",en:"Ta-Ha (20)"},{ar:"يس",en:"Ya-Sin (36)"},{ar:"ص",en:"Sad (38)"},{ar:"ق",en:"Qaf (50)"}] }
+            ]
+        },
+        {
+            id: 27,
+            categories: [
+                { name: "أدعية من سورة البقرة", nameEn: "Duas from Surah Al-Baqarah", color: "yellow",
+                    items: [{ar:"ربنا آتنا في الدنيا حسنة",en:"Our Lord, give us good in this world (2:201)"},{ar:"ربنا أفرغ علينا صبرا",en:"Our Lord, pour patience upon us (2:250)"},{ar:"ربنا لا تؤاخذنا إن نسينا",en:"Our Lord, do not blame us if we forget (2:286)"},{ar:"ربنا وابعث فيهم رسولا",en:"Our Lord, send among them a messenger (2:129)"}] },
+                { name: "أسماء الله (الخلق والتدبير)", nameEn: "Names of Allah (Creation & Sovereignty)", color: "green",
+                    items: [{ar:"الخالق",en:"The Creator"},{ar:"المصور",en:"The Fashioner"},{ar:"البارئ",en:"The Originator"},{ar:"الرزاق",en:"The Provider"}] },
+                { name: "قصص سورة القصص", nameEn: "Stories in Surah Al-Qasas", color: "blue",
+                    items: [{ar:"ولادة موسى",en:"Birth of Musa"},{ar:"قارون وكنوزه",en:"Qarun and his treasures"},{ar:"موسى في مدين",en:"Musa in Madyan"},{ar:"الشجرة المباركة",en:"The blessed tree (burning bush)"}] },
+                { name: "أوصاف الجنة في القرآن", nameEn: "Descriptions of Paradise", color: "purple",
+                    items: [{ar:"جنات تجري من تحتها الأنهار",en:"Gardens with rivers flowing"},{ar:"فيها ما تشتهيه الأنفس",en:"Whatever the souls desire"},{ar:"خالدين فيها أبدا",en:"Dwelling therein forever"},{ar:"رضوان من الله أكبر",en:"Allah's pleasure is greater (9:72)"}] }
+            ]
+        },
+        {
+            id: 28,
+            categories: [
+                { name: "مشاهد من قصة آدم", nameEn: "Scenes from Adam's story", color: "yellow",
+                    items: [{ar:"سجود الملائكة",en:"Angels' prostration"},{ar:"الشجرة المحرمة",en:"The forbidden tree"},{ar:"وسوسة إبليس",en:"Iblis's whisper"},{ar:"الهبوط إلى الأرض",en:"Descent to earth"}] },
+                { name: "أوصاف القيامة في سورة التكوير", nameEn: "Events in Surah At-Takwir (81)", color: "green",
+                    items: [{ar:"إذا الشمس كورت",en:"When the sun is wrapped up"},{ar:"وإذا النجوم انكدرت",en:"When the stars fall"},{ar:"وإذا البحار سجرت",en:"When the seas are set ablaze"},{ar:"وإذا الموءودة سئلت",en:"When the infant girl is asked"}] },
+                { name: "أنبياء كانوا ملوكا", nameEn: "Prophets who were kings", color: "blue",
+                    items: [{ar:"داود",en:"Dawud"},{ar:"سليمان",en:"Sulayman"},{ar:"ذو القرنين",en:"Dhul-Qarnayn"},{ar:"طالوت",en:"Talut (Saul)"}] },
+                { name: "كلمات عن الرزق في القرآن", nameEn: "Words about provision in the Quran", color: "purple",
+                    items: [{ar:"الرزاق",en:"The Provider (51:58)"},{ar:"يرزق من يشاء",en:"He provides whom He wills"},{ar:"وفي السماء رزقكم",en:"In the heaven is your provision (51:22)"},{ar:"نحن نرزقكم",en:"We provide for you (6:151)"}] }
+            ]
+        },
+        {
+            id: 29,
+            categories: [
+                { name: "آيات عن الصبر", nameEn: "Verses about patience in the Quran", color: "yellow",
+                    items: [{ar:"فصبر جميل",en:"Beautiful patience (12:18)"},{ar:"إن الله مع الصابرين",en:"Allah is with the patient (2:153)"},{ar:"واصبر وما صبرك إلا بالله",en:"Be patient, for Allah (16:127)"},{ar:"إنما يوفى الصابرون أجرهم",en:"The patient are given reward (39:10)"}] },
+                { name: "مخلوقات سخّرها الله لسليمان", nameEn: "Creatures subjected to Sulayman", color: "green",
+                    items: [{ar:"الجن",en:"Jinn"},{ar:"الريح",en:"The Wind"},{ar:"الطير",en:"Birds"},{ar:"النمل",en:"Ants"}] },
+                { name: "أسباب دخول الجنة", nameEn: "Causes of entering Paradise in the Quran", color: "blue",
+                    items: [{ar:"الإيمان والعمل الصالح",en:"Faith and good deeds"},{ar:"التقوى",en:"God-consciousness"},{ar:"الصبر والصلاة",en:"Patience and prayer"},{ar:"الإنفاق في سبيل الله",en:"Spending in Allah's cause"}] },
+                { name: "كلمات عن القدر في القرآن", nameEn: "Words about divine decree", color: "purple",
+                    items: [{ar:"قدر",en:"Decree/Measure"},{ar:"اللوح المحفوظ",en:"The Preserved Tablet"},{ar:"كن فيكون",en:"Be, and it is"},{ar:"ما أصاب من مصيبة إلا بإذن الله",en:"No calamity except by Allah's will"}] }
+            ]
+        },
+        {
+            id: 30,
+            categories: [
+                { name: "آيات عن ليلة القدر", nameEn: "Verses about Laylat al-Qadr (97)", color: "yellow",
+                    items: [{ar:"إنا أنزلناه في ليلة القدر",en:"We sent it down on the Night of Qadr"},{ar:"ليلة القدر خير من ألف شهر",en:"Better than a thousand months"},{ar:"تنزل الملائكة والروح فيها",en:"Angels and Spirit descend"},{ar:"سلام هي حتى مطلع الفجر",en:"Peace until the rise of dawn"}] },
+                { name: "آيات عن الذكر والقرآن", nameEn: "Verses about remembrance and the Quran", color: "green",
+                    items: [{ar:"ولقد يسرنا القرآن للذكر",en:"We made the Quran easy to remember (54:17)"},{ar:"فاذكروني أذكركم",en:"Remember Me, I will remember you (2:152)"},{ar:"ألا بذكر الله تطمئن القلوب",en:"Hearts find rest in Allah's remembrance (13:28)"},{ar:"إنا نحن نزلنا الذكر",en:"We sent down the Reminder (15:9)"}] },
+                { name: "صفات عباد الرحمن", nameEn: "Qualities of servants of Ar-Rahman (25:63-74)", color: "blue",
+                    items: [{ar:"يمشون على الأرض هونا",en:"Walk on earth humbly"},{ar:"إذا خاطبهم الجاهلون قالوا سلاما",en:"Say 'peace' to the ignorant"},{ar:"يبيتون لربهم سجدا وقياما",en:"Spend nights in worship"},{ar:"إذا أنفقوا لم يسرفوا",en:"Spend without extravagance"}] },
+                { name: "دروس من سورة الكهف", nameEn: "Lessons from Surah Al-Kahf", color: "purple",
+                    items: [{ar:"الإيمان والثبات",en:"Faith and steadfastness (Cave)"},{ar:"فتنة المال",en:"Trial of wealth (Gardens)"},{ar:"التواضع في العلم",en:"Humility in knowledge (Khidr)"},{ar:"القوة والعدل",en:"Power and justice (Dhul-Qarnayn)"}] }
+            ]
         }
+
     ],
 
-    // ==================== VERSE WORDLE PUZZLES (ARABIC) ====================
+        // ==================== VERSE WORDLE PUZZLES (ARABIC) ====================
     // Words are stored WITHOUT diacritics for matching. Display word shown after solving.
     wordle: [
         { id: 1, word: "رحمة", display: "رَحْمَة", hint: "Allah's attribute most mentioned - mercy", verse: "Surah Al-A'raf 7:156 — My mercy encompasses all things.", arabicVerse: "وَرَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ" },
