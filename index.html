@@ -11,11 +11,17 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
 </head>
 <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#game-area" class="skip-link">Skip to game content</a>
+
+    <!-- Live region for screen reader announcements -->
+    <div id="sr-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
     <!-- Header -->
-    <header id="header">
+    <header id="header" role="banner">
         <div class="header-left">
-            <button id="menu-btn" class="icon-btn" aria-label="Menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            <button id="menu-btn" class="icon-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
             </button>
         </div>
         <div class="header-center">
@@ -24,36 +30,36 @@
         </div>
         <div class="header-right">
             <button id="reset-btn" class="icon-btn" aria-label="Reset current puzzle" title="Reset puzzle">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
             </button>
-            <button id="stats-btn" class="icon-btn" aria-label="Statistics">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="14" width="4" height="7"/><rect x="10" y="9" width="4" height="12"/><rect x="16" y="4" width="4" height="17"/></svg>
+            <button id="stats-btn" class="icon-btn" aria-label="View statistics" aria-haspopup="dialog">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="14" width="4" height="7"/><rect x="10" y="9" width="4" height="12"/><rect x="16" y="4" width="4" height="17"/></svg>
             </button>
-            <button id="help-btn" class="icon-btn" aria-label="How to play">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <button id="help-btn" class="icon-btn" aria-label="How to play" aria-haspopup="dialog">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             </button>
-            <button id="theme-btn" class="icon-btn" aria-label="Toggle theme">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <button id="theme-btn" class="icon-btn" aria-label="Toggle dark mode">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             </button>
         </div>
     </header>
 
     <!-- Mode Selector -->
-    <nav id="mode-selector">
-        <button class="mode-tab active" data-mode="connections">
-            <span class="mode-icon">🔗</span>
+    <nav id="mode-selector" role="tablist" aria-label="Game mode selector">
+        <button class="mode-tab active" data-mode="connections" role="tab" aria-selected="true" aria-controls="connections-game" id="tab-connections">
+            <span class="mode-icon" aria-hidden="true">🔗</span>
             <span class="mode-name">Connections</span>
         </button>
-        <button class="mode-tab" data-mode="wordle">
-            <span class="mode-icon">🔤</span>
+        <button class="mode-tab" data-mode="wordle" role="tab" aria-selected="false" aria-controls="wordle-game" id="tab-wordle">
+            <span class="mode-icon" aria-hidden="true">🔤</span>
             <span class="mode-name">Verse Wordle</span>
         </button>
-        <button class="mode-tab" data-mode="deduction">
-            <span class="mode-icon">🔍</span>
+        <button class="mode-tab" data-mode="deduction" role="tab" aria-selected="false" aria-controls="deduction-game" id="tab-deduction">
+            <span class="mode-icon" aria-hidden="true">🔍</span>
             <span class="mode-name">Deduction</span>
         </button>
-        <button class="mode-tab" data-mode="scramble">
-            <span class="mode-icon">🧩</span>
+        <button class="mode-tab" data-mode="scramble" role="tab" aria-selected="false" aria-controls="scramble-game" id="tab-scramble">
+            <span class="mode-icon" aria-hidden="true">🧩</span>
             <span class="mode-name">Scramble</span>
         </button>
     </nav>
@@ -62,16 +68,16 @@
     <main id="game-area">
 
         <!-- ==================== CONNECTIONS MODE ==================== -->
-        <section id="connections-game" class="game-mode active">
+        <section id="connections-game" class="game-mode active" role="tabpanel" aria-labelledby="tab-connections">
             <div class="game-header">
                 <h2>Ayah Connections</h2>
                 <p class="game-desc">Find 4 groups of 4 related Quranic items</p>
             </div>
-            <div id="connections-solved"></div>
-            <div id="connections-grid" class="connections-grid"></div>
+            <div id="connections-solved" aria-label="Solved groups"></div>
+            <div id="connections-grid" class="connections-grid" role="grid" aria-label="Connection tiles"></div>
             <p class="conn-tooltip-hint">Hover or hold a word to see its English meaning</p>
             <div class="connections-controls">
-                <div id="connections-mistakes" class="mistakes-display">
+                <div id="connections-mistakes" class="mistakes-display" aria-live="polite">
                     Mistakes remaining: <span id="mistakes-dots"></span>
                 </div>
                 <div class="btn-row">
@@ -83,39 +89,39 @@
         </section>
 
         <!-- ==================== VERSE WORDLE MODE ==================== -->
-        <section id="wordle-game" class="game-mode">
+        <section id="wordle-game" class="game-mode" role="tabpanel" aria-labelledby="tab-wordle">
             <div class="game-header">
                 <h2>Verse Wordle</h2>
                 <p class="game-desc">Guess the Quranic word in 6 tries</p>
             </div>
-            <div id="wordle-board" class="wordle-board"></div>
-            <div id="wordle-hint" class="wordle-hint"></div>
-            <div id="wordle-keyboard" class="wordle-keyboard"></div>
+            <div id="wordle-board" class="wordle-board" role="grid" aria-label="Wordle game board"></div>
+            <div id="wordle-hint" class="wordle-hint" aria-live="polite"></div>
+            <div id="wordle-keyboard" class="wordle-keyboard" role="group" aria-label="Arabic keyboard"></div>
         </section>
 
         <!-- ==================== DEDUCTION MODE ==================== -->
-        <section id="deduction-game" class="game-mode">
+        <section id="deduction-game" class="game-mode" role="tabpanel" aria-labelledby="tab-deduction">
             <div class="game-header">
                 <h2>Prophet Deduction</h2>
                 <p class="game-desc">Use clues to identify the mystery from the Quran</p>
             </div>
             <div id="deduction-story" class="deduction-story"></div>
-            <div id="deduction-clues" class="deduction-clues"></div>
+            <div id="deduction-clues" class="deduction-clues" role="list" aria-label="Clues"></div>
             <div id="deduction-grid" class="deduction-grid-container"></div>
-            <div id="deduction-answer" class="deduction-answer"></div>
+            <div id="deduction-answer" class="deduction-answer" aria-live="polite"></div>
         </section>
 
         <!-- ==================== SCRAMBLE MODE ==================== -->
-        <section id="scramble-game" class="game-mode">
+        <section id="scramble-game" class="game-mode" role="tabpanel" aria-labelledby="tab-scramble">
             <div class="game-header">
                 <h2>Ayah Scramble</h2>
                 <p class="game-desc">Arrange the words to complete the verse</p>
             </div>
             <div id="scramble-reference" class="scramble-reference"></div>
-            <div id="scramble-dropzone" class="scramble-dropzone"></div>
-            <div id="scramble-words" class="scramble-words"></div>
+            <div id="scramble-dropzone" class="scramble-dropzone" role="list" aria-label="Arranged words"></div>
+            <div id="scramble-words" class="scramble-words" role="list" aria-label="Available words"></div>
             <div class="scramble-controls">
-                <div id="scramble-moves" class="moves-display">Moves: <span>0</span> / <span>15</span></div>
+                <div id="scramble-moves" class="moves-display" aria-live="polite">Moves: <span>0</span> / <span>15</span></div>
                 <div class="btn-row">
                     <button id="scramble-hint" class="btn btn-secondary">Hint</button>
                     <button id="scramble-reset" class="btn btn-secondary">Reset</button>
@@ -125,34 +131,40 @@
         </section>
 
         <!-- ==================== RESULT MODAL ==================== -->
-        <div id="result-modal" class="modal hidden">
+        <div id="result-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="result-title">
             <div class="modal-content">
-                <button class="modal-close" id="result-close">&times;</button>
-                <div id="result-icon" class="result-icon"></div>
+                <button class="modal-close" id="result-close" aria-label="Close">&times;</button>
+                <div id="result-icon" class="result-icon" aria-hidden="true"></div>
                 <h2 id="result-title"></h2>
                 <div id="result-verse" class="result-verse"></div>
                 <div id="result-grid" class="result-grid"></div>
                 <div id="result-stats" class="result-stats"></div>
                 <div class="result-actions">
                     <button id="share-btn" class="btn btn-primary btn-share">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
                         Share Result
                     </button>
                     <button id="copy-btn" class="btn btn-secondary">Copy to Clipboard</button>
                 </div>
-                <div id="share-toast" class="share-toast hidden">Copied to clipboard!</div>
+                <div id="share-toast" class="share-toast hidden" role="status">Copied to clipboard!</div>
                 <div class="next-puzzle">
                     <span>Next puzzle in</span>
-                    <span id="countdown-timer" class="countdown"></span>
+                    <span id="countdown-timer" class="countdown" aria-label="Countdown to next puzzle"></span>
                 </div>
             </div>
         </div>
 
         <!-- ==================== STATS MODAL ==================== -->
-        <div id="stats-modal" class="modal hidden">
+        <div id="stats-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="stats-title">
             <div class="modal-content">
-                <button class="modal-close" id="stats-close">&times;</button>
-                <h2>Your Statistics</h2>
+                <button class="modal-close" id="stats-close" aria-label="Close">&times;</button>
+                <h2 id="stats-title">Your Statistics</h2>
+                <div id="stats-mode-tabs" class="stats-mode-tabs" role="tablist" aria-label="Statistics mode selector">
+                    <button class="stats-tab active" data-stats-mode="connections" role="tab" aria-selected="true">Connections</button>
+                    <button class="stats-tab" data-stats-mode="wordle" role="tab" aria-selected="false">Wordle</button>
+                    <button class="stats-tab" data-stats-mode="deduction" role="tab" aria-selected="false">Deduction</button>
+                    <button class="stats-tab" data-stats-mode="scramble" role="tab" aria-selected="false">Scramble</button>
+                </div>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="stat-number" id="stat-played">0</div>
@@ -171,38 +183,38 @@
                         <div class="stat-label">Max Streak</div>
                     </div>
                 </div>
-                <h3>Guess Distribution</h3>
-                <div id="guess-distribution" class="guess-distribution"></div>
+                <h3 id="dist-heading">Score Distribution</h3>
+                <div id="guess-distribution" class="guess-distribution" aria-labelledby="dist-heading"></div>
             </div>
         </div>
 
         <!-- ==================== HELP MODAL ==================== -->
-        <div id="help-modal" class="modal hidden">
+        <div id="help-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="help-title">
             <div class="modal-content">
-                <button class="modal-close" id="help-close">&times;</button>
-                <h2>How to Play</h2>
+                <button class="modal-close" id="help-close" aria-label="Close">&times;</button>
+                <h2 id="help-title">How to Play</h2>
                 <div id="help-content" class="help-content"></div>
             </div>
         </div>
 
         <!-- ==================== MENU SIDEBAR ==================== -->
-        <div id="sidebar" class="sidebar hidden">
+        <div id="sidebar" class="sidebar hidden" role="navigation" aria-label="Game navigation">
             <div class="sidebar-header">
                 <h2>QuranPuzzle</h2>
-                <button id="sidebar-close" class="icon-btn">&times;</button>
+                <button id="sidebar-close" class="icon-btn" aria-label="Close menu">&times;</button>
             </div>
             <nav class="sidebar-nav">
                 <a href="#" data-mode="connections" class="sidebar-link active">
-                    <span>🔗</span> Ayah Connections
+                    <span aria-hidden="true">🔗</span> Ayah Connections
                 </a>
                 <a href="#" data-mode="wordle" class="sidebar-link">
-                    <span>🔤</span> Verse Wordle
+                    <span aria-hidden="true">🔤</span> Verse Wordle
                 </a>
                 <a href="#" data-mode="deduction" class="sidebar-link">
-                    <span>🔍</span> Prophet Deduction
+                    <span aria-hidden="true">🔍</span> Prophet Deduction
                 </a>
                 <a href="#" data-mode="scramble" class="sidebar-link">
-                    <span>🧩</span> Ayah Scramble
+                    <span aria-hidden="true">🧩</span> Ayah Scramble
                 </a>
             </nav>
             <div class="sidebar-footer">
@@ -214,7 +226,11 @@
     </main>
 
     <script src="puzzles.js"></script>
-    <script src="game.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/connections.js"></script>
+    <script src="js/wordle.js"></script>
+    <script src="js/deduction.js"></script>
+    <script src="js/scramble.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
-

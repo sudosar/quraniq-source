@@ -1,0 +1,167 @@
+/* ============================================
+   QURANPUZZLE - DEDUCTION GAME
+   ============================================ */
+
+const ded = {
+    puzzle: null,
+    cluesRevealed: 0,
+    selections: {},
+    gameOver: false,
+    won: false
+};
+
+function initDeduction() {
+    const idx = getPuzzleIndex(PUZZLES.deduction);
+    ded.puzzle = PUZZLES.deduction[idx];
+
+    // Check saved state
+    const saved = app.state[`ded_${app.dayNumber}`];
+    if (saved) {
+        ded.cluesRevealed = saved.cluesRevealed || 0;
+        ded.selections = saved.selections || {};
+        ded.gameOver = saved.gameOver || false;
+        ded.won = saved.won || false;
+    }
+
+    renderDeduction();
+}
+
+function renderDeduction() {
+    // Story
+    const storyEl = document.getElementById('deduction-story');
+    storyEl.innerHTML = `<div class="story-title">${ded.puzzle.title}</div><p>${ded.puzzle.intro}</p>`;
+
+    // Clues
+    const cluesEl = document.getElementById('deduction-clues');
+    cluesEl.innerHTML = '';
+    ded.puzzle.clues.forEach((clue, i) => {
+        const card = document.createElement('div');
+        card.className = 'clue-card' + (i < ded.cluesRevealed ? ' revealed' : '');
+        card.setAttribute('role', 'listitem');
+        card.innerHTML = `
+            <div class="clue-number">${i + 1}</div>
+            <div class="clue-text">${i < ded.cluesRevealed ? clue : '<span class="clue-hidden">Tap to reveal clue ' + (i + 1) + '</span>'}</div>
+        `;
+        if (!ded.gameOver && i === ded.cluesRevealed) {
+            card.addEventListener('click', () => {
+                ded.cluesRevealed++;
+                saveDedState();
+                renderDeduction();
+                announce(`Clue ${ded.cluesRevealed} revealed`);
+            });
+            card.style.cursor = 'pointer';
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-label', `Reveal clue ${i + 1}`);
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    card.click();
+                }
+            });
+        }
+        cluesEl.appendChild(card);
+    });
+
+    // Categories
+    const gridEl = document.getElementById('deduction-grid');
+    gridEl.innerHTML = '<div class="deduction-categories"></div>';
+    const catContainer = gridEl.querySelector('.deduction-categories');
+
+    Object.entries(ded.puzzle.categories).forEach(([key, cat]) => {
+        const catEl = document.createElement('div');
+        catEl.className = 'deduction-category';
+        catEl.innerHTML = `<h4>${cat.label}</h4><div class="deduction-options" data-cat="${key}" role="radiogroup" aria-label="${cat.label}"></div>`;
+        const optsEl = catEl.querySelector('.deduction-options');
+
+        cat.options.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'deduction-opt';
+            btn.setAttribute('role', 'radio');
+            btn.setAttribute('aria-checked', ded.selections[key] === opt ? 'true' : 'false');
+            if (ded.selections[key] === opt) btn.classList.add('selected');
+            if (ded.gameOver) {
+                if (opt === cat.answer) btn.classList.add('selected');
+                else if (ded.selections[key] === opt && opt !== cat.answer) {
+                    btn.style.background = '#e74c3c';
+                    btn.style.color = 'white';
+                    btn.style.borderColor = '#e74c3c';
+                }
+            }
+            btn.textContent = opt;
+            btn.disabled = ded.gameOver;
+            btn.addEventListener('click', () => {
+                ded.selections[key] = opt;
+                saveDedState();
+                renderDeduction();
+                announce(`Selected ${opt} for ${cat.label}`);
+            });
+            optsEl.appendChild(btn);
+        });
+
+        catContainer.appendChild(catEl);
+    });
+
+    // Answer button
+    const ansEl = document.getElementById('deduction-answer');
+    if (ded.gameOver) {
+        ansEl.innerHTML = `<p style="color:var(--accent);font-weight:600;margin-top:12px">${ded.won ? 'Correct! MashaAllah!' : 'Not quite - keep learning!'}</p>`;
+    } else {
+        const allSelected = Object.keys(ded.puzzle.categories).every(k => ded.selections[k]);
+        ansEl.innerHTML = `<button class="btn btn-primary" id="ded-submit" ${!allSelected ? 'disabled' : ''}>Submit Answer</button>
+            <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:8px">Reveal clues for hints, then select one answer per category</p>`;
+        if (allSelected) {
+            document.getElementById('ded-submit').addEventListener('click', submitDeduction);
+        }
+    }
+}
+
+function submitDeduction() {
+    if (ded.gameOver) return;
+
+    const cats = ded.puzzle.categories;
+    ded.won = Object.keys(cats).every(k => ded.selections[k] === cats[k].answer);
+    ded.gameOver = true;
+    saveDedState();
+    renderDeduction();
+
+    announce(ded.won ? 'Correct! All answers are right!' : 'Not quite right. Keep learning!');
+    setTimeout(() => showDedResult(), 600);
+}
+
+function saveDedState() {
+    app.state[`ded_${app.dayNumber}`] = {
+        cluesRevealed: ded.cluesRevealed,
+        selections: ded.selections,
+        gameOver: ded.gameOver,
+        won: ded.won
+    };
+    saveState(app.state);
+}
+
+function showDedResult() {
+    const cats = ded.puzzle.categories;
+    let emojiGrid = '';
+    let correct = 0;
+    Object.keys(cats).forEach(k => {
+        const isCorrect = ded.selections[k] === cats[k].answer;
+        emojiGrid += `${cats[k].label}: ${isCorrect ? '✅' : '❌'}\n`;
+        if (isCorrect) correct++;
+    });
+
+    const puzzleNum = getPuzzleIndex(PUZZLES.deduction) + 1;
+    const cluesUsed = ded.cluesRevealed;
+
+    const shareText = `QuranPuzzle - Deduction #${puzzleNum}\n"${ded.puzzle.title}"\n${emojiGrid}${correct}/4 correct | ${cluesUsed} clues used\n\nhttps://sudosar.github.io/quranpuzz/`;
+
+    showResultModal({
+        icon: ded.won ? '🕵️' : '📖',
+        title: ded.won ? 'Mystery Solved!' : `${correct}/4 Correct`,
+        arabic: ded.puzzle.arabic,
+        translation: ded.puzzle.verse,
+        emojiGrid: emojiGrid.trim(),
+        statsText: `${correct}/4 correct using ${cluesUsed} clues`,
+        shareText
+    });
+
+    updateModeStats('deduction', ded.won, ded.won ? Math.max(1, 7 - cluesUsed) : 0);
+}
