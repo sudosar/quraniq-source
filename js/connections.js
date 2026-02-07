@@ -219,11 +219,14 @@ function renderSolvedRows() {
             const en = typeof item === 'object' ? item.en : '';
             const verse = typeof item === 'object' ? item.verse : '';
             const ref = typeof item === 'object' ? item.ref : '';
-            return `<div class="verse-slide${i === 0 ? ' active' : ''}" data-index="${i}">
+            return `<div class="verse-slide${i === 0 ? ' active' : ''}" data-index="${i}" data-ref="${ref}">
                 <div class="verse-slide-word">${ar}</div>
                 <div class="verse-slide-meaning">${en}</div>
                 ${verse ? `<div class="verse-slide-ayah">${verse}</div>
-                <div class="verse-slide-ref">— ${ref}</div>` : ''}
+                <div class="verse-slide-ref-row">
+                    <button class="verse-play-btn" data-ref="${ref}" aria-label="Play recitation">&#9654;</button>
+                    <span class="verse-slide-ref">— ${ref}</span>
+                </div>` : ''}
             </div>`;
         }).join('');
 
@@ -276,6 +279,19 @@ function renderSolvedRows() {
             });
         });
 
+        // Play button clicks
+        row.querySelectorAll('.verse-play-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const ref = btn.dataset.ref;
+                if (quranAudio.playing && btn.classList.contains('playing')) {
+                    stopQuranAudio();
+                } else {
+                    playQuranAudio(ref, btn);
+                }
+            });
+        });
+
         // Dot clicks
         row.querySelectorAll('.verse-dot').forEach(dot => {
             dot.addEventListener('click', (e) => {
@@ -304,12 +320,8 @@ function toggleCarousel(rowIdx) {
     header.querySelector('.conn-expand-icon').textContent = isExpanded ? '▼' : '▲';
 
     if (!isExpanded) {
-        // Speak the first word's verse when opening
-        const activeSlide = carousel.querySelector('.verse-slide.active');
-        if (activeSlide) {
-            const ayah = activeSlide.querySelector('.verse-slide-ayah');
-            if (ayah) speakArabic(ayah.textContent);
-        }
+        // Stop any playing audio when collapsing
+        stopQuranAudio();
     }
 }
 
@@ -334,12 +346,8 @@ function goToSlide(rowIdx, slideIdx) {
         dot.classList.toggle('active', i === slideIdx);
     });
 
-    // Speak the verse
-    const activeSlide = carousel.querySelectorAll('.verse-slide')[slideIdx];
-    if (activeSlide) {
-        const ayah = activeSlide.querySelector('.verse-slide-ayah');
-        if (ayah) speakArabic(ayah.textContent);
-    }
+    // Stop any playing audio when switching slides
+    stopQuranAudio();
 }
 
 function navigateCarousel(rowIdx, direction) {
