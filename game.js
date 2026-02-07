@@ -308,9 +308,9 @@ function initConnections() {
     }
 
     // Flatten items, removing solved ones
-    const solvedItems = new Set(conn.solved.flatMap(s => s.items));
+    const solvedKeys = new Set(conn.solved.flatMap(s => s.items.map(i => getConnItemKey(i))));
     conn.items = shuffle(
-        conn.puzzle.categories.flatMap(c => c.items).filter(i => !solvedItems.has(i))
+        conn.puzzle.categories.flatMap(c => c.items).filter(i => !solvedKeys.has(getConnItemKey(i)))
     );
 
     renderConnections();
@@ -335,15 +335,40 @@ function initConnections() {
     }
 }
 
+function getConnItemKey(item) {
+    return typeof item === 'object' ? item.ar : item;
+}
+
+function getConnItemDisplay(item) {
+    return typeof item === 'object' ? item.ar : item;
+}
+
+function getConnItemTooltip(item) {
+    return typeof item === 'object' ? item.en : '';
+}
+
 function renderConnections() {
     const grid = document.getElementById('connections-grid');
     grid.innerHTML = '';
     conn.items.forEach(item => {
+        const key = getConnItemKey(item);
         const tile = document.createElement('button');
-        tile.className = 'conn-tile' + (conn.selected.includes(item) ? ' selected' : '');
-        tile.textContent = item;
+        const isSelected = conn.selected.some(i => getConnItemKey(i) === key);
+        tile.className = 'conn-tile conn-tile-ar' + (isSelected ? ' selected' : '');
+        tile.textContent = getConnItemDisplay(item);
+        const tip = getConnItemTooltip(item);
+        if (tip) tile.setAttribute('data-tooltip', tip);
         tile.disabled = conn.gameOver;
         tile.addEventListener('click', () => toggleConnTile(item));
+        // Long-press tooltip for mobile
+        let holdTimer;
+        tile.addEventListener('touchstart', (e) => {
+            holdTimer = setTimeout(() => {
+                if (tip) showToast(tip, 1500);
+            }, 500);
+        }, { passive: true });
+        tile.addEventListener('touchend', () => clearTimeout(holdTimer));
+        tile.addEventListener('touchmove', () => clearTimeout(holdTimer));
         grid.appendChild(tile);
     });
     document.getElementById('conn-submit').disabled = conn.selected.length !== 4;
@@ -351,7 +376,7 @@ function renderConnections() {
 
 function toggleConnTile(item) {
     if (conn.gameOver) return;
-    const idx = conn.selected.indexOf(item);
+    const idx = conn.selected.findIndex(i => getConnItemKey(i) === getConnItemKey(item));
     if (idx >= 0) {
         conn.selected.splice(idx, 1);
     } else if (conn.selected.length < 4) {
@@ -369,16 +394,18 @@ function submitConnections() {
     if (conn.selected.length !== 4 || conn.gameOver) return;
 
     // Check if selection matches any unsolved category
+    const selectedKeys = new Set(conn.selected.map(i => getConnItemKey(i)));
     const match = conn.puzzle.categories.find(cat =>
         !conn.solved.some(s => s.name === cat.name) &&
-        cat.items.every(i => conn.selected.includes(i)) &&
-        conn.selected.every(i => cat.items.includes(i))
+        cat.items.every(i => selectedKeys.has(getConnItemKey(i))) &&
+        cat.items.length === conn.selected.length
     );
 
     if (match) {
         // Correct!
-        conn.solved.push({ name: match.name, items: match.items, color: match.color });
-        conn.items = conn.items.filter(i => !match.items.includes(i));
+        conn.solved.push({ name: match.name, nameEn: match.nameEn, items: match.items, color: match.color });
+        const matchKeys = new Set(match.items.map(i => getConnItemKey(i)));
+        conn.items = conn.items.filter(i => !matchKeys.has(getConnItemKey(i)));
         conn.selected = [];
         renderSolvedRows();
         renderConnections();
@@ -393,7 +420,8 @@ function submitConnections() {
         let oneAway = false;
         conn.puzzle.categories.forEach(cat => {
             if (!conn.solved.some(s => s.name === cat.name)) {
-                const overlap = conn.selected.filter(i => cat.items.includes(i)).length;
+                const catKeys = new Set(cat.items.map(i => getConnItemKey(i)));
+                const overlap = conn.selected.filter(i => catKeys.has(getConnItemKey(i))).length;
                 if (overlap === 3) oneAway = true;
             }
         });
@@ -427,7 +455,9 @@ function renderSolvedRows() {
     conn.solved.forEach(s => {
         const row = document.createElement('div');
         row.className = `conn-solved-row ${s.color}`;
-        row.innerHTML = `<div class="conn-solved-category">${s.name}</div><div class="conn-solved-items">${s.items.join(', ')}</div>`;
+        const catName = s.nameEn || s.name;
+        const itemsText = s.items.map(i => typeof i === 'object' ? i.ar : i).join('، ');
+        row.innerHTML = `<div class="conn-solved-category">${catName}</div><div class="conn-solved-items conn-solved-items-ar">${itemsText}</div>`;
         container.appendChild(row);
     });
 }
@@ -435,7 +465,7 @@ function renderSolvedRows() {
 function revealAllConnections() {
     conn.puzzle.categories.forEach(cat => {
         if (!conn.solved.some(s => s.name === cat.name)) {
-            conn.solved.push({ name: cat.name, items: cat.items, color: cat.color });
+            conn.solved.push({ name: cat.name, nameEn: cat.nameEn, items: cat.items, color: cat.color });
         }
     });
     conn.items = [];

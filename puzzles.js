@@ -9,351 +9,183 @@ const PUZZLES = {
         {
             id: 1,
             categories: [
-                {
-                    name: "Prophets mentioned in Surah Al-Anbiya",
-                    color: "yellow",
-                    items: ["Musa", "Dawud", "Sulayman", "Ayyub"]
-                },
-                {
-                    name: "Names of Allah (Ar-Rahman group)",
-                    color: "green",
-                    items: ["Ar-Rahman", "Ar-Raheem", "Al-Wadud", "Al-Latif"]
-                },
-                {
-                    name: "Items mentioned in Surah Al-Baqarah",
-                    color: "blue",
-                    items: ["Cow", "Mountain", "Throne", "Ark"]
-                },
-                {
-                    name: "Surahs named after Prophets",
-                    color: "purple",
-                    items: ["Yunus", "Hud", "Yusuf", "Ibrahim"]
-                }
+                { name: "أنبياء في سورة الأنبياء", nameEn: "Prophets in Surah Al-Anbiya", color: "yellow",
+                    items: [{ar:"موسى",en:"Musa"},{ar:"داود",en:"Dawud"},{ar:"سليمان",en:"Sulayman"},{ar:"أيوب",en:"Ayyub"}] },
+                { name: "أسماء الله (مجموعة الرحمة)", nameEn: "Names of Allah (Ar-Rahman group)", color: "green",
+                    items: [{ar:"الرحمن",en:"Ar-Rahman"},{ar:"الرحيم",en:"Ar-Raheem"},{ar:"الودود",en:"Al-Wadud"},{ar:"اللطيف",en:"Al-Latif"}] },
+                { name: "أشياء ذُكرت في سورة البقرة", nameEn: "Items in Surah Al-Baqarah", color: "blue",
+                    items: [{ar:"بقرة",en:"Cow"},{ar:"جبل",en:"Mountain"},{ar:"عرش",en:"Throne"},{ar:"تابوت",en:"Ark"}] },
+                { name: "سور سُمّيت بأسماء أنبياء", nameEn: "Surahs named after Prophets", color: "purple",
+                    items: [{ar:"يونس",en:"Yunus"},{ar:"هود",en:"Hud"},{ar:"يوسف",en:"Yusuf"},{ar:"إبراهيم",en:"Ibrahim"}] }
             ]
         },
         {
             id: 2,
             categories: [
-                {
-                    name: "Miracles of Prophet Musa (AS)",
-                    color: "yellow",
-                    items: ["Staff to serpent", "Parting the sea", "Glowing hand", "Twelve springs"]
-                },
-                {
-                    name: "Five Pillars of Islam",
-                    color: "green",
-                    items: ["Shahada", "Salah", "Zakat", "Hajj"]
-                },
-                {
-                    name: "Angels mentioned in the Quran",
-                    color: "blue",
-                    items: ["Jibreel", "Mikael", "Israfil", "Malik"]
-                },
-                {
-                    name: "Things Allah swears by in the Quran",
-                    color: "purple",
-                    items: ["The Sun", "The Fig", "The Pen", "Time (Al-Asr)"]
-                }
+                { name: "معجزات موسى عليه السلام", nameEn: "Miracles of Prophet Musa (AS)", color: "yellow",
+                    items: [{ar:"العصا حية",en:"Staff to serpent"},{ar:"انفلاق البحر",en:"Parting the sea"},{ar:"اليد البيضاء",en:"Glowing hand"},{ar:"اثنتا عشرة عيناً",en:"Twelve springs"}] },
+                { name: "أركان الإسلام الخمسة", nameEn: "Five Pillars of Islam", color: "green",
+                    items: [{ar:"شهادة",en:"Shahada"},{ar:"صلاة",en:"Salah"},{ar:"زكاة",en:"Zakat"},{ar:"حج",en:"Hajj"}] },
+                { name: "ملائكة ذُكروا في القرآن", nameEn: "Angels mentioned in the Quran", color: "blue",
+                    items: [{ar:"جبريل",en:"Jibreel"},{ar:"ميكائيل",en:"Mikael"},{ar:"إسرافيل",en:"Israfil"},{ar:"مالك",en:"Malik"}] },
+                { name: "أشياء أقسم الله بها", nameEn: "Things Allah swears by", color: "purple",
+                    items: [{ar:"الشمس",en:"The Sun"},{ar:"التين",en:"The Fig"},{ar:"القلم",en:"The Pen"},{ar:"العصر",en:"Time (Al-Asr)"}] }
             ]
         },
         {
             id: 3,
             categories: [
-                {
-                    name: "People destroyed in the Quran",
-                    color: "yellow",
-                    items: ["People of Aad", "People of Thamud", "People of Lut", "People of Nuh"]
-                },
-                {
-                    name: "Fruits mentioned in the Quran",
-                    color: "green",
-                    items: ["Dates", "Grapes", "Olives", "Pomegranates"]
-                },
-                {
-                    name: "Companions of the Cave (themes)",
-                    color: "blue",
-                    items: ["Youth", "Sleep", "Dog", "Cave"]
-                },
-                {
-                    name: "Descriptions of the Quran itself",
-                    color: "purple",
-                    items: ["Light (Nur)", "Guidance (Huda)", "Healing (Shifa)", "Mercy (Rahma)"]
-                }
+                { name: "أقوام أُهلكت في القرآن", nameEn: "People destroyed in the Quran", color: "yellow",
+                    items: [{ar:"قوم عاد",en:"People of Aad"},{ar:"قوم ثمود",en:"People of Thamud"},{ar:"قوم لوط",en:"People of Lut"},{ar:"قوم نوح",en:"People of Nuh"}] },
+                { name: "فواكه ذُكرت في القرآن", nameEn: "Fruits mentioned in the Quran", color: "green",
+                    items: [{ar:"تمر",en:"Dates"},{ar:"عنب",en:"Grapes"},{ar:"زيتون",en:"Olives"},{ar:"رمان",en:"Pomegranates"}] },
+                { name: "عناصر قصة أصحاب الكهف", nameEn: "Companions of the Cave", color: "blue",
+                    items: [{ar:"فتية",en:"Youth"},{ar:"نوم",en:"Sleep"},{ar:"كلب",en:"Dog"},{ar:"كهف",en:"Cave"}] },
+                { name: "أوصاف القرآن لنفسه", nameEn: "Descriptions of the Quran itself", color: "purple",
+                    items: [{ar:"نور",en:"Light (Nur)"},{ar:"هدى",en:"Guidance (Huda)"},{ar:"شفاء",en:"Healing (Shifa)"},{ar:"رحمة",en:"Mercy (Rahma)"}] }
             ]
         },
         {
             id: 4,
             categories: [
-                {
-                    name: "Women mentioned in the Quran",
-                    color: "yellow",
-                    items: ["Maryam", "Asiya", "Wife of Lut", "Mother of Musa"]
-                },
-                {
-                    name: "Prophets given major scriptures",
-                    color: "green",
-                    items: ["Muhammad (Quran)", "Musa (Torah)", "Dawud (Zabur)", "Isa (Injeel)"]
-                },
-                {
-                    name: "Trials of Prophet Ibrahim (AS)",
-                    color: "blue",
-                    items: ["Fire", "Sacrifice of son", "Leaving family in desert", "Building the Kaaba"]
-                },
-                {
-                    name: "Last ten Surahs of the Quran",
-                    color: "purple",
-                    items: ["Al-Fil", "Al-Kawthar", "Al-Ikhlas", "An-Nas"]
-                }
+                { name: "نساء ذُكرن في القرآن", nameEn: "Women mentioned in the Quran", color: "yellow",
+                    items: [{ar:"مريم",en:"Maryam"},{ar:"آسية",en:"Asiya"},{ar:"امرأة لوط",en:"Wife of Lut"},{ar:"أم موسى",en:"Mother of Musa"}] },
+                { name: "أنبياء أُنزلت عليهم كتب", nameEn: "Prophets given major scriptures", color: "green",
+                    items: [{ar:"محمد ﷺ — القرآن",en:"Muhammad — Quran"},{ar:"موسى — التوراة",en:"Musa — Torah"},{ar:"داود — الزبور",en:"Dawud — Zabur"},{ar:"عيسى — الإنجيل",en:"Isa — Injeel"}] },
+                { name: "ابتلاءات إبراهيم عليه السلام", nameEn: "Trials of Prophet Ibrahim (AS)", color: "blue",
+                    items: [{ar:"النار",en:"Fire"},{ar:"ذبح الابن",en:"Sacrifice of son"},{ar:"ترك الأهل في الصحراء",en:"Leaving family in desert"},{ar:"بناء الكعبة",en:"Building the Kaaba"}] },
+                { name: "من آخر عشر سور", nameEn: "Last ten Surahs of the Quran", color: "purple",
+                    items: [{ar:"الفيل",en:"Al-Fil"},{ar:"الكوثر",en:"Al-Kawthar"},{ar:"الإخلاص",en:"Al-Ikhlas"},{ar:"الناس",en:"An-Nas"}] }
             ]
         },
         {
             id: 5,
             categories: [
-                {
-                    name: "Events of the Day of Judgment",
-                    color: "yellow",
-                    items: ["Trumpet blown", "Mountains crumble", "Seas overflow", "Stars fall"]
-                },
-                {
-                    name: "Attributes of believers in Surah Al-Mu'minun",
-                    color: "green",
-                    items: ["Humble in prayer", "Avoid vain talk", "Pay Zakat", "Guard modesty"]
-                },
-                {
-                    name: "Things created in pairs (Quran 36:36)",
-                    color: "blue",
-                    items: ["Night and Day", "Male and Female", "Sun and Moon", "Land and Sea"]
-                },
-                {
-                    name: "Locations mentioned in the Quran",
-                    color: "purple",
-                    items: ["Makkah", "Madinah (Yathrib)", "Mount Sinai", "Badr"]
-                }
+                { name: "أحداث يوم القيامة", nameEn: "Events of the Day of Judgment", color: "yellow",
+                    items: [{ar:"نُفخ في الصور",en:"Trumpet blown"},{ar:"دُكّت الجبال",en:"Mountains crumble"},{ar:"فُجّرت البحار",en:"Seas overflow"},{ar:"انكدرت النجوم",en:"Stars fall"}] },
+                { name: "صفات المؤمنين في سورة المؤمنون", nameEn: "Attributes of believers (Al-Mu'minun)", color: "green",
+                    items: [{ar:"خاشعون في الصلاة",en:"Humble in prayer"},{ar:"معرضون عن اللغو",en:"Avoid vain talk"},{ar:"فاعلون للزكاة",en:"Pay Zakat"},{ar:"حافظون لفروجهم",en:"Guard modesty"}] },
+                { name: "أشياء خُلقت أزواجاً", nameEn: "Things created in pairs (36:36)", color: "blue",
+                    items: [{ar:"الليل والنهار",en:"Night and Day"},{ar:"الذكر والأنثى",en:"Male and Female"},{ar:"الشمس والقمر",en:"Sun and Moon"},{ar:"البر والبحر",en:"Land and Sea"}] },
+                { name: "أماكن ذُكرت في القرآن", nameEn: "Locations in the Quran", color: "purple",
+                    items: [{ar:"مكة",en:"Makkah"},{ar:"يثرب",en:"Madinah (Yathrib)"},{ar:"طور سيناء",en:"Mount Sinai"},{ar:"بدر",en:"Badr"}] }
             ]
         },
         {
             id: 6,
             categories: [
-                {
-                    name: "Stories in Surah Al-Kahf",
-                    color: "yellow",
-                    items: ["Sleepers of the Cave", "Owner of Two Gardens", "Musa and Khidr", "Dhul-Qarnayn"]
-                },
-                {
-                    name: "Names of Jahannam in the Quran",
-                    color: "green",
-                    items: ["An-Nar", "Jahannam", "Sa'ir", "Hutama"]
-                },
-                {
-                    name: "Animals mentioned in the Quran",
-                    color: "blue",
-                    items: ["Bee", "Spider", "Ant", "Hoopoe"]
-                },
-                {
-                    name: "Meccan Surahs about the Hereafter",
-                    color: "purple",
-                    items: ["Al-Qari'ah", "At-Takathur", "Az-Zalzalah", "Al-Infitar"]
-                }
+                { name: "قصص سورة الكهف", nameEn: "Stories in Surah Al-Kahf", color: "yellow",
+                    items: [{ar:"أصحاب الكهف",en:"Sleepers of the Cave"},{ar:"صاحب الجنتين",en:"Owner of Two Gardens"},{ar:"موسى والخضر",en:"Musa and Khidr"},{ar:"ذو القرنين",en:"Dhul-Qarnayn"}] },
+                { name: "أسماء جهنم في القرآن", nameEn: "Names of Jahannam", color: "green",
+                    items: [{ar:"النار",en:"An-Nar (The Fire)"},{ar:"جهنم",en:"Jahannam"},{ar:"سعير",en:"Sa'ir"},{ar:"حُطمة",en:"Hutama"}] },
+                { name: "حيوانات ذُكرت في القرآن", nameEn: "Animals in the Quran", color: "blue",
+                    items: [{ar:"نحل",en:"Bee"},{ar:"عنكبوت",en:"Spider"},{ar:"نمل",en:"Ant"},{ar:"هدهد",en:"Hoopoe"}] },
+                { name: "سور مكية عن الآخرة", nameEn: "Meccan Surahs about the Hereafter", color: "purple",
+                    items: [{ar:"القارعة",en:"Al-Qari'ah"},{ar:"التكاثر",en:"At-Takathur"},{ar:"الزلزلة",en:"Az-Zalzalah"},{ar:"الانفطار",en:"Al-Infitar"}] }
             ]
         },
         {
             id: 7,
             categories: [
-                {
-                    name: "Qualities of the Quran in Surah Al-Baqarah",
-                    color: "yellow",
-                    items: ["No doubt in it", "Guidance for the mindful", "Confirms previous books", "Criterion of right and wrong"]
-                },
-                {
-                    name: "Prophets from the lineage of Ibrahim",
-                    color: "green",
-                    items: ["Ishaq", "Yaqub", "Yusuf", "Ismail"]
-                },
-                {
-                    name: "Rewards of Paradise (Jannah)",
-                    color: "blue",
-                    items: ["Rivers of milk", "Rivers of honey", "Gardens beneath which rivers flow", "Thornless lote trees"]
-                },
-                {
-                    name: "Causes of revelation (Asbab al-Nuzul themes)",
-                    color: "purple",
-                    items: ["Changing Qiblah", "Night Journey", "Battle of Badr", "Treaty of Hudaybiyyah"]
-                }
+                { name: "صفات القرآن في سورة البقرة", nameEn: "Qualities of the Quran (Al-Baqarah)", color: "yellow",
+                    items: [{ar:"لا ريب فيه",en:"No doubt in it"},{ar:"هدى للمتقين",en:"Guidance for the mindful"},{ar:"مصدّق لما قبله",en:"Confirms previous books"},{ar:"فرقان",en:"Criterion of right and wrong"}] },
+                { name: "أنبياء من ذرية إبراهيم", nameEn: "Prophets from Ibrahim's lineage", color: "green",
+                    items: [{ar:"إسحاق",en:"Ishaq"},{ar:"يعقوب",en:"Yaqub"},{ar:"يوسف",en:"Yusuf"},{ar:"إسماعيل",en:"Ismail"}] },
+                { name: "نعيم الجنة", nameEn: "Rewards of Paradise (Jannah)", color: "blue",
+                    items: [{ar:"أنهار من لبن",en:"Rivers of milk"},{ar:"أنهار من عسل",en:"Rivers of honey"},{ar:"جنات تجري من تحتها الأنهار",en:"Gardens with rivers"},{ar:"سدر مخضود",en:"Thornless lote trees"}] },
+                { name: "أسباب نزول", nameEn: "Causes of revelation", color: "purple",
+                    items: [{ar:"تحويل القبلة",en:"Changing Qiblah"},{ar:"الإسراء والمعراج",en:"Night Journey"},{ar:"غزوة بدر",en:"Battle of Badr"},{ar:"صلح الحديبية",en:"Treaty of Hudaybiyyah"}] }
             ]
         },
         {
             id: 8,
             categories: [
-                {
-                    name: "Characteristics of hypocrites (Al-Munafiqun)",
-                    color: "yellow",
-                    items: ["Lying when speaking", "Breaking promises", "Deceiving believers", "Showing off in prayer"]
-                },
-                {
-                    name: "Things Shaytan does (Quranic references)",
-                    color: "green",
-                    items: ["Whispers", "Beautifies evil deeds", "Causes forgetfulness", "Promises poverty"]
-                },
-                {
-                    name: "Prayers mentioned in the Quran",
-                    color: "blue",
-                    items: ["Dua of Adam (AS)", "Dua of Yunus (AS)", "Dua of Ibrahim (AS)", "Dua of Musa (AS)"]
-                },
-                {
-                    name: "Number references in the Quran",
-                    color: "purple",
-                    items: ["Seven heavens", "Twelve tribes", "Nineteen angels", "Forty nights"]
-                }
+                { name: "صفات المنافقين", nameEn: "Characteristics of hypocrites", color: "yellow",
+                    items: [{ar:"الكذب عند الحديث",en:"Lying when speaking"},{ar:"إخلاف الوعد",en:"Breaking promises"},{ar:"خداع المؤمنين",en:"Deceiving believers"},{ar:"الرياء في الصلاة",en:"Showing off in prayer"}] },
+                { name: "أفعال الشيطان في القرآن", nameEn: "Things Shaytan does", color: "green",
+                    items: [{ar:"الوسوسة",en:"Whispers"},{ar:"تزيين السوء",en:"Beautifies evil deeds"},{ar:"الإنساء",en:"Causes forgetfulness"},{ar:"وعد الفقر",en:"Promises poverty"}] },
+                { name: "أدعية الأنبياء في القرآن", nameEn: "Prayers of Prophets", color: "blue",
+                    items: [{ar:"دعاء آدم",en:"Dua of Adam (AS)"},{ar:"دعاء يونس",en:"Dua of Yunus (AS)"},{ar:"دعاء إبراهيم",en:"Dua of Ibrahim (AS)"},{ar:"دعاء موسى",en:"Dua of Musa (AS)"}] },
+                { name: "أعداد ذُكرت في القرآن", nameEn: "Number references in the Quran", color: "purple",
+                    items: [{ar:"سبع سماوات",en:"Seven heavens"},{ar:"اثنا عشر سبطاً",en:"Twelve tribes"},{ar:"تسعة عشر ملَكاً",en:"Nineteen angels"},{ar:"أربعين ليلة",en:"Forty nights"}] }
             ]
         },
         {
             id: 9,
             categories: [
-                {
-                    name: "Parables in the Quran",
-                    color: "yellow",
-                    items: ["Light upon light", "Spider's web", "Fly's wing", "Dog panting"]
-                },
-                {
-                    name: "Types of water mentioned in the Quran",
-                    color: "green",
-                    items: ["Rain from sky", "Springs from earth", "Rivers flowing", "Sea water"]
-                },
-                {
-                    name: "Quranic commands to the Prophet (SAW)",
-                    color: "blue",
-                    items: ["Read (Iqra)", "Stand in prayer at night", "Warn your nearest kin", "Be patient"]
-                },
-                {
-                    name: "Metals and materials in the Quran",
-                    color: "purple",
-                    items: ["Iron (Hadid)", "Gold", "Silver", "Copper"]
-                }
+                { name: "أمثال في القرآن", nameEn: "Parables in the Quran", color: "yellow",
+                    items: [{ar:"نور على نور",en:"Light upon light"},{ar:"بيت العنكبوت",en:"Spider's web"},{ar:"جناح ذبابة",en:"Fly's wing"},{ar:"كمثل الكلب يلهث",en:"Dog panting"}] },
+                { name: "أنواع الماء في القرآن", nameEn: "Types of water in the Quran", color: "green",
+                    items: [{ar:"مطر من السماء",en:"Rain from sky"},{ar:"عيون من الأرض",en:"Springs from earth"},{ar:"أنهار جارية",en:"Rivers flowing"},{ar:"ماء البحر",en:"Sea water"}] },
+                { name: "أوامر قرآنية للنبي ﷺ", nameEn: "Commands to the Prophet (SAW)", color: "blue",
+                    items: [{ar:"اقرأ",en:"Read (Iqra)"},{ar:"قم الليل",en:"Stand in prayer at night"},{ar:"أنذر عشيرتك",en:"Warn your nearest kin"},{ar:"اصبر",en:"Be patient"}] },
+                { name: "معادن ومواد في القرآن", nameEn: "Metals and materials in the Quran", color: "purple",
+                    items: [{ar:"حديد",en:"Iron"},{ar:"ذهب",en:"Gold"},{ar:"فضة",en:"Silver"},{ar:"نحاس",en:"Copper"}] }
             ]
         },
         {
             id: 10,
             categories: [
-                {
-                    name: "Oaths in Surah Ash-Shams",
-                    color: "yellow",
-                    items: ["By the sun", "By the moon", "By the day", "By the night"]
-                },
-                {
-                    name: "Prophet Yusuf's story elements",
-                    color: "green",
-                    items: ["Dream of eleven stars", "Thrown in a well", "False accusation", "Interpreter of dreams"]
-                },
-                {
-                    name: "Rights emphasized in the Quran",
-                    color: "blue",
-                    items: ["Rights of parents", "Rights of orphans", "Rights of neighbors", "Rights of travelers"]
-                },
-                {
-                    name: "Surahs beginning with 'Qul' (Say)",
-                    color: "purple",
-                    items: ["Al-Kafirun", "Al-Ikhlas", "Al-Falaq", "An-Nas"]
-                }
+                { name: "أقسام في سورة الشمس", nameEn: "Oaths in Surah Ash-Shams", color: "yellow",
+                    items: [{ar:"والشمس",en:"By the sun"},{ar:"والقمر",en:"By the moon"},{ar:"والنهار",en:"By the day"},{ar:"والليل",en:"By the night"}] },
+                { name: "عناصر قصة يوسف", nameEn: "Prophet Yusuf's story elements", color: "green",
+                    items: [{ar:"رؤيا أحد عشر كوكباً",en:"Dream of eleven stars"},{ar:"أُلقي في الجُبّ",en:"Thrown in a well"},{ar:"تهمة باطلة",en:"False accusation"},{ar:"تأويل الأحلام",en:"Interpreter of dreams"}] },
+                { name: "حقوق أكّد عليها القرآن", nameEn: "Rights emphasized in the Quran", color: "blue",
+                    items: [{ar:"حق الوالدين",en:"Rights of parents"},{ar:"حق اليتامى",en:"Rights of orphans"},{ar:"حق الجار",en:"Rights of neighbors"},{ar:"حق ابن السبيل",en:"Rights of travelers"}] },
+                { name: "سور تبدأ بـ «قل»", nameEn: "Surahs beginning with 'Qul'", color: "purple",
+                    items: [{ar:"الكافرون",en:"Al-Kafirun"},{ar:"الإخلاص",en:"Al-Ikhlas"},{ar:"الفلق",en:"Al-Falaq"},{ar:"الناس",en:"An-Nas"}] }
             ]
         },
         {
             id: 11,
             categories: [
-                {
-                    name: "Creation miracles mentioned in the Quran",
-                    color: "yellow",
-                    items: ["Heavens and Earth in six days", "Human from clay", "Jinn from fire", "Angels from light"]
-                },
-                {
-                    name: "Characteristics of Surah Al-Fatiha",
-                    color: "green",
-                    items: ["Mother of the Book", "Seven oft-repeated", "Opening chapter", "Contains praise and supplication"]
-                },
-                {
-                    name: "Punishments of past nations",
-                    color: "blue",
-                    items: ["Flood (Nuh)", "Wind (Aad)", "Earthquake (Thamud)", "Rain of stones (Lut)"]
-                },
-                {
-                    name: "Stages of human creation (Quran 23:12-14)",
-                    color: "purple",
-                    items: ["Clay", "Drop of fluid", "Clinging clot", "Lump of flesh"]
-                }
+                { name: "معجزات الخلق في القرآن", nameEn: "Creation miracles in the Quran", color: "yellow",
+                    items: [{ar:"السماوات والأرض في ستة أيام",en:"Heavens & Earth in six days"},{ar:"الإنسان من طين",en:"Human from clay"},{ar:"الجن من نار",en:"Jinn from fire"},{ar:"الملائكة من نور",en:"Angels from light"}] },
+                { name: "خصائص سورة الفاتحة", nameEn: "Characteristics of Al-Fatiha", color: "green",
+                    items: [{ar:"أم الكتاب",en:"Mother of the Book"},{ar:"السبع المثاني",en:"Seven oft-repeated"},{ar:"فاتحة القرآن",en:"Opening chapter"},{ar:"حمد ودعاء",en:"Praise and supplication"}] },
+                { name: "عقوبات الأمم السابقة", nameEn: "Punishments of past nations", color: "blue",
+                    items: [{ar:"طوفان نوح",en:"Flood (Nuh)"},{ar:"ريح عاد",en:"Wind (Aad)"},{ar:"زلزلة ثمود",en:"Earthquake (Thamud)"},{ar:"حجارة قوم لوط",en:"Rain of stones (Lut)"}] },
+                { name: "مراحل خلق الإنسان", nameEn: "Stages of human creation (23:12-14)", color: "purple",
+                    items: [{ar:"طين",en:"Clay"},{ar:"نطفة",en:"Drop of fluid"},{ar:"علقة",en:"Clinging clot"},{ar:"مضغة",en:"Lump of flesh"}] }
             ]
         },
         {
             id: 12,
             categories: [
-                {
-                    name: "Ulul Azm (Prophets of strong will)",
-                    color: "yellow",
-                    items: ["Nuh", "Ibrahim", "Musa", "Isa"]
-                },
-                {
-                    name: "Themes of Surah Ar-Rahman",
-                    color: "green",
-                    items: ["Teaching the Quran", "Which favors will you deny?", "Two gardens", "Balance and justice"]
-                },
-                {
-                    name: "Etiquettes taught in Surah Al-Hujurat",
-                    color: "blue",
-                    items: ["Verify news", "Avoid suspicion", "Do not spy", "Do not mock others"]
-                },
-                {
-                    name: "Colors mentioned in the Quran",
-                    color: "purple",
-                    items: ["White", "Black", "Green", "Yellow"]
-                }
+                { name: "أولو العزم من الرسل", nameEn: "Ulul Azm (Prophets of strong will)", color: "yellow",
+                    items: [{ar:"نوح",en:"Nuh"},{ar:"إبراهيم",en:"Ibrahim"},{ar:"موسى",en:"Musa"},{ar:"عيسى",en:"Isa"}] },
+                { name: "مواضيع سورة الرحمن", nameEn: "Themes of Surah Ar-Rahman", color: "green",
+                    items: [{ar:"علّم القرآن",en:"Teaching the Quran"},{ar:"فبأي آلاء ربكما تكذبان",en:"Which favors will you deny?"},{ar:"جنتان",en:"Two gardens"},{ar:"الميزان والعدل",en:"Balance and justice"}] },
+                { name: "آداب سورة الحجرات", nameEn: "Etiquettes in Surah Al-Hujurat", color: "blue",
+                    items: [{ar:"تبيّنوا",en:"Verify news"},{ar:"اجتنبوا الظن",en:"Avoid suspicion"},{ar:"لا تجسسوا",en:"Do not spy"},{ar:"لا يسخر قوم من قوم",en:"Do not mock others"}] },
+                { name: "ألوان ذُكرت في القرآن", nameEn: "Colors mentioned in the Quran", color: "purple",
+                    items: [{ar:"أبيض",en:"White"},{ar:"أسود",en:"Black"},{ar:"أخضر",en:"Green"},{ar:"أصفر",en:"Yellow"}] }
             ]
         },
         {
             id: 13,
             categories: [
-                {
-                    name: "Surah Al-Mulk themes",
-                    color: "yellow",
-                    items: ["Sovereignty belongs to Allah", "Death and life as a test", "Seven layered heavens", "Birds held in the sky"]
-                },
-                {
-                    name: "Actions that expiate sins",
-                    color: "green",
-                    items: ["Repentance (Tawbah)", "Charity (Sadaqah)", "Fasting", "Good deeds erase bad"]
-                },
-                {
-                    name: "Enemies of prophets mentioned in Quran",
-                    color: "blue",
-                    items: ["Firaun (to Musa)", "Abu Lahab (to Muhammad)", "Namrud (to Ibrahim)", "Qarun (arrogant rich)"]
-                },
-                {
-                    name: "Celestial objects in the Quran",
-                    color: "purple",
-                    items: ["Stars", "Moon", "Sun", "Constellations"]
-                }
+                { name: "مواضيع سورة الملك", nameEn: "Surah Al-Mulk themes", color: "yellow",
+                    items: [{ar:"المُلك لله",en:"Sovereignty belongs to Allah"},{ar:"الموت والحياة ابتلاء",en:"Death and life as a test"},{ar:"سبع سماوات طباقاً",en:"Seven layered heavens"},{ar:"الطير في السماء",en:"Birds held in the sky"}] },
+                { name: "أعمال تكفّر الذنوب", nameEn: "Actions that expiate sins", color: "green",
+                    items: [{ar:"توبة",en:"Repentance (Tawbah)"},{ar:"صدقة",en:"Charity (Sadaqah)"},{ar:"صيام",en:"Fasting"},{ar:"الحسنات يذهبن السيئات",en:"Good deeds erase bad"}] },
+                { name: "أعداء الأنبياء في القرآن", nameEn: "Enemies of prophets in the Quran", color: "blue",
+                    items: [{ar:"فرعون",en:"Firaun (to Musa)"},{ar:"أبو لهب",en:"Abu Lahab (to Muhammad)"},{ar:"نمرود",en:"Namrud (to Ibrahim)"},{ar:"قارون",en:"Qarun (arrogant rich)"}] },
+                { name: "أجرام سماوية في القرآن", nameEn: "Celestial objects in the Quran", color: "purple",
+                    items: [{ar:"نجوم",en:"Stars"},{ar:"قمر",en:"Moon"},{ar:"شمس",en:"Sun"},{ar:"بروج",en:"Constellations"}] }
             ]
         },
         {
             id: 14,
             categories: [
-                {
-                    name: "Blessed things in the Quran",
-                    color: "yellow",
-                    items: ["Olive tree", "Night of Qadr", "Makkah (Bakkah)", "Rain water"]
-                },
-                {
-                    name: "Responsibilities of a Muslim",
-                    color: "green",
-                    items: ["Enjoin good", "Forbid evil", "Establish prayer", "Trust in Allah"]
-                },
-                {
-                    name: "Scenes from the story of Musa and Khidr",
-                    color: "blue",
-                    items: ["Damaged boat", "Boy who was killed", "Rebuilt wall", "Fish escaped at junction"]
-                },
-                {
-                    name: "Ayat al-Kursi themes (2:255)",
-                    color: "purple",
-                    items: ["No god but He", "Neither slumber nor sleep", "His Kursi extends over heavens and earth", "No intercession except by His leave"]
-                }
+                { name: "أشياء مباركة في القرآن", nameEn: "Blessed things in the Quran", color: "yellow",
+                    items: [{ar:"شجرة الزيتون",en:"Olive tree"},{ar:"ليلة القدر",en:"Night of Qadr"},{ar:"مكة (بكة)",en:"Makkah (Bakkah)"},{ar:"ماء المطر",en:"Rain water"}] },
+                { name: "مسؤوليات المسلم", nameEn: "Responsibilities of a Muslim", color: "green",
+                    items: [{ar:"الأمر بالمعروف",en:"Enjoin good"},{ar:"النهي عن المنكر",en:"Forbid evil"},{ar:"إقامة الصلاة",en:"Establish prayer"},{ar:"التوكل على الله",en:"Trust in Allah"}] },
+                { name: "مشاهد من قصة موسى والخضر", nameEn: "Scenes from Musa and Khidr", color: "blue",
+                    items: [{ar:"خرق السفينة",en:"Damaged boat"},{ar:"قتل الغلام",en:"Boy who was killed"},{ar:"إقامة الجدار",en:"Rebuilt wall"},{ar:"الحوت عند المجمع",en:"Fish escaped at junction"}] },
+                { name: "مواضيع آية الكرسي", nameEn: "Ayat al-Kursi themes (2:255)", color: "purple",
+                    items: [{ar:"لا إله إلا هو",en:"No god but He"},{ar:"لا تأخذه سنة ولا نوم",en:"Neither slumber nor sleep"},{ar:"وسع كرسيه السماوات والأرض",en:"His Kursi extends over heavens & earth"},{ar:"لا شفاعة إلا بإذنه",en:"No intercession except by His leave"}] }
             ]
         }
     ],
