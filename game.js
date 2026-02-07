@@ -176,16 +176,15 @@ function showHelpModal() {
         `,
         wordle: `
             <h3>Verse Wordle</h3>
-            <p>Guess the Quranic word in 6 tries. Each guess must be a valid 5-letter English word.</p>
-            <div class="example-row">
-                <div class="example-cell" style="background:var(--correct)">L</div>
-                <div class="example-cell" style="background:var(--absent)">I</div>
-                <div class="example-cell" style="background:var(--present)">G</div>
-                <div class="example-cell" style="background:var(--absent)">H</div>
-                <div class="example-cell" style="background:var(--correct)">T</div>
+            <p>Guess the Arabic Quranic word in 6 tries. Use the on-screen Arabic keyboard to type letters.</p>
+            <div class="example-row" style="direction:rtl">
+                <div class="example-cell" style="background:var(--correct)">ر</div>
+                <div class="example-cell" style="background:var(--absent)">ح</div>
+                <div class="example-cell" style="background:var(--present)">م</div>
+                <div class="example-cell" style="background:var(--absent)">ة</div>
             </div>
             <p><strong style="color:var(--correct)">Green</strong> = correct letter & position. <strong style="color:var(--present)">Yellow</strong> = correct letter, wrong position. <strong style="color:var(--absent)">Gray</strong> = not in the word.</p>
-            <p>A hint related to the Quran is shown to help you!</p>
+            <p>An English hint is shown to help you guess the Arabic word!</p>
         `,
         deduction: `
             <h3>Prophet Deduction</h3>
@@ -488,7 +487,7 @@ const wordle = {
 function initWordle() {
     const idx = getPuzzleIndex(PUZZLES.wordle);
     wordle.puzzle = PUZZLES.wordle[idx];
-    wordle.word = wordle.puzzle.word.toUpperCase();
+    wordle.word = normalizeArabic(wordle.puzzle.word);
     wordle.wordLen = wordle.word.length;
 
     // Check saved state
@@ -513,15 +512,21 @@ function initWordle() {
     document.addEventListener('keydown', handleWordleKey);
 }
 
+// Strip Arabic diacritics (tashkeel) for comparison
+function normalizeArabic(str) {
+    return str.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED]/g, '');
+}
+
 function renderWordleBoard() {
     const board = document.getElementById('wordle-board');
     board.innerHTML = '';
+    board.setAttribute('dir', 'rtl');
     for (let r = 0; r < wordle.maxRows; r++) {
         const row = document.createElement('div');
         row.className = 'wordle-row';
         for (let c = 0; c < wordle.wordLen; c++) {
             const cell = document.createElement('div');
-            cell.className = 'wordle-cell';
+            cell.className = 'wordle-cell arabic-cell';
             cell.id = `wc-${r}-${c}`;
             row.appendChild(cell);
         }
@@ -532,21 +537,24 @@ function renderWordleBoard() {
 function renderWordleKeyboard() {
     const kb = document.getElementById('wordle-keyboard');
     kb.innerHTML = '';
+    kb.setAttribute('dir', 'rtl');
     const rows = [
-        ['Q','W','E','R','T','Y','U','I','O','P'],
-        ['A','S','D','F','G','H','J','K','L'],
-        ['ENTER','Z','X','C','V','B','N','M','⌫']
+        ['ض','ص','ث','ق','ف','غ','ع','ه','خ','ح','ج'],
+        ['ش','س','ي','ب','ل','ا','ت','ن','م','ك'],
+        ['⏎','ئ','ء','ؤ','ر','ى','ة','و','ز','د','ذ','⌫'],
+        ['ظ','ط','أ','إ','آ']
     ];
     rows.forEach(row => {
         const rowEl = document.createElement('div');
         rowEl.className = 'keyboard-row';
         row.forEach(key => {
             const btn = document.createElement('button');
-            btn.className = 'key' + (key.length > 1 ? ' wide' : '');
+            const isAction = key === '⏎' || key === '⌫';
+            btn.className = 'key' + (isAction ? ' wide' : '');
             btn.textContent = key;
             btn.id = `wk-${key}`;
             btn.addEventListener('click', () => {
-                if (key === 'ENTER') submitWordleGuess();
+                if (key === '⏎') submitWordleGuess();
                 else if (key === '⌫') deleteWordleLetter();
                 else addWordleLetter(key);
             });
@@ -580,17 +588,17 @@ function handleWordleKey(e) {
     if (e.ctrlKey || e.altKey || e.metaKey) return;
     if (e.key === 'Enter') submitWordleGuess();
     else if (e.key === 'Backspace') deleteWordleLetter();
-    else if (/^[a-zA-Z]$/.test(e.key)) addWordleLetter(e.key.toUpperCase());
+    else if (/^[\u0600-\u06FF]$/.test(e.key)) addWordleLetter(e.key);
 }
 
 function submitWordleGuess() {
     if (wordle.gameOver || wordle.currentCol < wordle.wordLen) return;
 
-    const guess = wordle.board[wordle.currentRow].join('');
+    const guess = normalizeArabic(wordle.board[wordle.currentRow].join(''));
 
-    // Validate word
-    if (!VALID_WORDS.has(guess.toLowerCase())) {
-        showToast('Not a valid word');
+    // Validate word - check against valid Arabic words
+    if (!VALID_WORDS.has(guess)) {
+        showToast('Not a recognized word - try a Quranic term');
         const row = document.getElementById('wordle-board').children[wordle.currentRow];
         row.classList.add('jiggle');
         setTimeout(() => row.classList.remove('jiggle'), 300);
@@ -607,7 +615,8 @@ function submitWordleGuess() {
             const cell = document.getElementById(`wc-${wordle.currentRow}-${c}`);
             cell.classList.add(evaluation[c]);
             // Update keyboard
-            const keyBtn = document.getElementById(`wk-${guess[c]}`);
+            const letter = wordle.board[wordle.currentRow][c];
+            const keyBtn = document.getElementById(`wk-${letter}`);
             if (keyBtn) {
                 const priority = { correct: 3, present: 2, absent: 1 };
                 const current = keyBtn.classList.contains('correct') ? 3 :
@@ -636,7 +645,7 @@ function submitWordleGuess() {
         if (wordle.currentRow >= wordle.maxRows) {
             wordle.gameOver = true;
             saveWordleState();
-            showToast(wordle.word);
+            showToast(wordle.puzzle.display || wordle.word);
             setTimeout(() => showWordleResult(false), 300);
             return;
         }
@@ -715,13 +724,14 @@ function showWordleResult(won) {
 
     const puzzleNum = getPuzzleIndex(PUZZLES.wordle) + 1;
     const tries = won ? wordle.evaluations.length : 'X';
+    const displayWord = wordle.puzzle.display || wordle.word;
 
     const shareText = `QuranPuzzle - Verse Wordle #${puzzleNum}\n${tries}/${wordle.maxRows}\n\n${emojiGrid}\n📖 quranpuzzle.app`;
 
     showResultModal({
         icon: won ? '🌟' : '📖',
-        title: won ? `Solved in ${wordle.evaluations.length}!` : `The word was: ${wordle.word}`,
-        arabic: null,
+        title: won ? `Solved in ${wordle.evaluations.length}!` : `The word was: ${displayWord}`,
+        arabic: displayWord,
         translation: wordle.puzzle.verse,
         emojiGrid: emojiGrid.trim(),
         statsText: `${tries}/${wordle.maxRows}`,

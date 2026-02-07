@@ -496,6 +496,12 @@ button, input, select, textarea {
     transition: border-color 0.1s;
 }
 
+.wordle-cell.arabic-cell {
+    font-family: var(--font-arabic);
+    font-size: 1.8rem;
+    text-transform: none;
+}
+
 .wordle-cell.filled {
     border-color: var(--text-secondary);
     animation: popIn 0.1s ease;
@@ -554,22 +560,21 @@ button, input, select, textarea {
 }
 
 .key {
-    min-width: 36px;
-    height: 52px;
+    min-width: 30px;
+    height: 48px;
     border: none;
     border-radius: 6px;
     background: var(--key-bg);
     color: var(--key-text);
-    font-family: var(--font-main);
-    font-size: 0.85rem;
+    font-family: var(--font-arabic);
+    font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-transform: uppercase;
     transition: all 0.1s;
-    padding: 0 8px;
+    padding: 0 4px;
 }
 
 .key:hover {
@@ -1150,13 +1155,15 @@ button, input, select, textarea {
     }
 
     .key {
-        min-width: 28px;
-        height: 46px;
-        font-size: 0.75rem;
+        min-width: 24px;
+        height: 42px;
+        font-size: 0.9rem;
+        padding: 0 2px;
     }
 
     .key.wide {
-        min-width: 48px;
+        min-width: 40px;
+        font-size: 0.8rem;
     }
 
     .mode-tab {
