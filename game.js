@@ -744,7 +744,7 @@ function showWordleResult(won) {
     showResultModal({
         icon: won ? '🌟' : '📖',
         title: won ? `Solved in ${wordle.evaluations.length}!` : `The word was: ${displayWord}`,
-        arabic: displayWord,
+        arabic: wordle.puzzle.arabicVerse || displayWord,
         translation: wordle.puzzle.verse,
         emojiGrid: emojiGrid.trim(),
         statsText: `${tries}/${wordle.maxRows}`,
