@@ -8,7 +8,8 @@ const app = {
     dayNumber: getDayNumber(),
     state: loadState(),
     stats: loadStats(),
-    statsViewMode: 'connections'
+    statsViewMode: 'connections',
+    lastResults: {} // Cache result data per mode so it can be re-shown
 };
 
 // Cleanup old state entries (older than 7 days)
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initWordle();
     initDeduction();
     initScramble();
+    restoreViewResultsButtons();
     startCountdown();
 });
 
@@ -259,6 +261,11 @@ function showHelpModal() {
 
 // ==================== RESULT MODAL ====================
 function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, statsText, shareText }) {
+    // Cache the result so it can be re-opened later
+    app.lastResults[app.currentMode] = { icon, title, verse, arabic, translation, emojiGrid, statsText, shareText };
+    // Show the "View Results" button in the game area
+    showViewResultsButton(app.currentMode);
+
     document.getElementById('result-icon').textContent = icon;
     document.getElementById('result-title').textContent = title;
 
@@ -308,6 +315,53 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
     });
 
     openModal('result-modal');
+}
+
+// ==================== VIEW RESULTS BUTTON ====================
+function showViewResultsButton(mode) {
+    const containerId = `${mode}-game`;
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    // Remove any existing button first
+    const existing = container.querySelector('.view-results-btn');
+    if (existing) existing.remove();
+
+    const btn = document.createElement('button');
+    btn.className = 'btn btn-primary view-results-btn';
+    btn.innerHTML = '📊 View Results & Share';
+    btn.setAttribute('aria-label', 'View results and share');
+    btn.addEventListener('click', () => {
+        const cached = app.lastResults[mode];
+        if (cached) {
+            // Temporarily set currentMode so the result modal uses the right mode
+            const prevMode = app.currentMode;
+            app.currentMode = mode;
+            showResultModal(cached);
+            app.currentMode = prevMode;
+        }
+    });
+    container.appendChild(btn);
+}
+
+// Restore "View Results" buttons on page load for completed games
+function restoreViewResultsButtons() {
+    // For each mode, if the game is over, rebuild the result data (cacheOnly)
+    // so the "View Results" button appears without opening the modal
+    if (conn.gameOver && conn.solved.length > 0) {
+        const won = conn.solved.length === 4 && conn.mistakes > 0;
+        showConnResult(won, true);
+    }
+    if (wordle.gameOver && wordle.evaluations.length > 0) {
+        const won = normalizeArabic(wordle.board[wordle.evaluations.length - 1]?.join('') || '') === wordle.word;
+        showWordleResult(won, true);
+    }
+    if (ded.gameOver) {
+        showDedResult(true);
+    }
+    if (scr.gameOver && scr.placed.length > 0) {
+        showScrResult(true);
+    }
 }
 
 // ==================== COUNTDOWN TIMER (UTC-based) ====================

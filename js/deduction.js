@@ -138,7 +138,7 @@ function saveDedState() {
     saveState(app.state);
 }
 
-function showDedResult() {
+function showDedResult(cacheOnly) {
     const cats = ded.puzzle.categories;
     let emojiGrid = '';
     let correct = 0;
@@ -153,7 +153,7 @@ function showDedResult() {
 
     const shareText = `QuranPuzzle - Deduction #${puzzleNum}\n"${ded.puzzle.title}"\n${emojiGrid}${correct}/4 correct | ${cluesUsed} clues used\n\nhttps://sudosar.github.io/quranpuzz/`;
 
-    showResultModal({
+    const resultData = {
         icon: ded.won ? '🕵️' : '📖',
         title: ded.won ? 'Mystery Solved!' : `${correct}/4 Correct`,
         arabic: ded.puzzle.arabic,
@@ -161,7 +161,14 @@ function showDedResult() {
         emojiGrid: emojiGrid.trim(),
         statsText: `${correct}/4 correct using ${cluesUsed} clues`,
         shareText
-    });
+    };
 
+    if (cacheOnly) {
+        app.lastResults['deduction'] = resultData;
+        showViewResultsButton('deduction');
+        return;
+    }
+
+    showResultModal(resultData);
     updateModeStats('deduction', ded.won, ded.won ? Math.max(1, 7 - cluesUsed) : 0);
 }

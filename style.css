@@ -644,6 +644,28 @@ button, input, select, textarea {
     cursor: not-allowed;
 }
 
+/* View Results button - shown after game completion */
+.view-results-btn {
+    display: block;
+    margin: 20px auto 10px;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 12px;
+    animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .btn-secondary {
     background: var(--bg-card);
     color: var(--text);

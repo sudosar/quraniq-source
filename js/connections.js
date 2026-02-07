@@ -271,7 +271,7 @@ function saveConnState() {
     saveState(app.state);
 }
 
-function showConnResult(won) {
+function showConnResult(won, cacheOnly) {
     const colorMap = { yellow: '🟨', green: '🟩', blue: '🟦', purple: '🟪' };
 
     // Build emoji grid based on solve order
@@ -285,7 +285,7 @@ function showConnResult(won) {
 
     const shareText = `QuranPuzzle - Connections #${puzzleNum}\n${emojiGrid}Mistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quranpuzz/`;
 
-    showResultModal({
+    const resultData = {
         icon: won ? '🎉' : '📖',
         title: won ? 'Excellent!' : 'Keep Learning!',
         verse: null,
@@ -294,7 +294,15 @@ function showConnResult(won) {
         emojiGrid: emojiGrid.trim(),
         statsText: `Mistakes: ${mistakesUsed}/4`,
         shareText
-    });
+    };
 
+    if (cacheOnly) {
+        // Just cache the result and show the button, don't open the modal
+        app.lastResults['connections'] = resultData;
+        showViewResultsButton('connections');
+        return;
+    }
+
+    showResultModal(resultData);
     updateModeStats('connections', won, won ? (4 - mistakesUsed) : 0);
 }

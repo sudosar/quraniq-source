@@ -262,7 +262,7 @@ function saveWordleState() {
     saveState(app.state);
 }
 
-function showWordleResult(won) {
+function showWordleResult(won, cacheOnly) {
     const emojiMap = { correct: '🟩', present: '🟨', absent: '⬛' };
     let emojiGrid = '';
     wordle.evaluations.forEach(row => {
@@ -275,7 +275,7 @@ function showWordleResult(won) {
 
     const shareText = `QuranPuzzle - Verse Wordle #${puzzleNum}\n${tries}/${wordle.maxRows}\n\n${emojiGrid}\nhttps://sudosar.github.io/quranpuzz/`;
 
-    showResultModal({
+    const resultData = {
         icon: won ? '🌟' : '📖',
         title: won ? `Solved in ${wordle.evaluations.length}!` : `The word was: ${displayWord}`,
         arabic: wordle.puzzle.arabicVerse || displayWord,
@@ -283,7 +283,14 @@ function showWordleResult(won) {
         emojiGrid: emojiGrid.trim(),
         statsText: `${tries}/${wordle.maxRows}`,
         shareText
-    });
+    };
 
+    if (cacheOnly) {
+        app.lastResults['wordle'] = resultData;
+        showViewResultsButton('wordle');
+        return;
+    }
+
+    showResultModal(resultData);
     updateModeStats('wordle', won, won ? wordle.evaluations.length : 0);
 }

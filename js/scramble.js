@@ -215,7 +215,7 @@ function saveScrState() {
     saveState(app.state);
 }
 
-function showScrResult() {
+function showScrResult(cacheOnly) {
     const total = scr.puzzle.words.length;
     const correctCount = scr.placed.filter((w, i) => w === scr.puzzle.words[i]).length;
 
@@ -230,7 +230,7 @@ function showScrResult() {
 
     const shareText = `QuranPuzzle - Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${starStr}\nMoves: ${scr.moves}/${scr.maxMoves}\n\nhttps://sudosar.github.io/quranpuzz/`;
 
-    showResultModal({
+    const resultData = {
         icon: scr.won ? '✨' : '📖',
         title: scr.won ? 'Verse Complete!' : 'Nice Try!',
         arabic: scr.puzzle.arabic,
@@ -238,7 +238,14 @@ function showScrResult() {
         emojiGrid: `${emojiGrid}\n${starStr}`,
         statsText: `Moves: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}`,
         shareText
-    });
+    };
 
+    if (cacheOnly) {
+        app.lastResults['scramble'] = resultData;
+        showViewResultsButton('scramble');
+        return;
+    }
+
+    showResultModal(resultData);
     updateModeStats('scramble', scr.won, scr.won ? Math.max(1, 6 - scr.hintsUsed) : 0);
 }
