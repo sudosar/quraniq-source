@@ -698,6 +698,108 @@ button, input, select, textarea {
     50% { box-shadow: 0 0 8px 4px rgba(27, 122, 74, 0.15); }
 }
 
+/* ===== Word-by-Word Verse Display ===== */
+.verse-card {
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.wbw-container {
+    position: relative;
+}
+
+.wbw-words {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    direction: rtl;
+    padding: 8px 6px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 8px;
+    line-height: 1.8;
+}
+
+[data-theme="dark"] .wbw-words {
+    background: rgba(255,255,255,0.08);
+}
+
+.wbw-word {
+    font-family: var(--font-arabic);
+    font-size: 1.05rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.wbw-word:hover {
+    background: rgba(255,255,255,0.35);
+    border-color: rgba(0,0,0,0.15);
+}
+
+[data-theme="dark"] .wbw-word:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.2);
+}
+
+.wbw-word.wbw-active {
+    background: rgba(27, 122, 74, 0.2);
+    border-color: rgba(27, 122, 74, 0.5);
+    transform: scale(1.08);
+    box-shadow: 0 2px 8px rgba(27, 122, 74, 0.15);
+}
+
+[data-theme="dark"] .wbw-word.wbw-active {
+    background: rgba(27, 122, 74, 0.3);
+    border-color: rgba(27, 122, 74, 0.6);
+}
+
+.wbw-tooltip {
+    text-align: center;
+    font-size: 0.88rem;
+    font-style: italic;
+    font-weight: 600;
+    padding: 6px 14px;
+    margin-top: 6px;
+    background: rgba(27, 122, 74, 0.12);
+    border-radius: 8px;
+    color: inherit;
+    animation: tooltipFadeIn 0.25s ease;
+    border: 1px solid rgba(27, 122, 74, 0.25);
+}
+
+[data-theme="dark"] .wbw-tooltip {
+    background: rgba(27, 122, 74, 0.2);
+    border-color: rgba(27, 122, 74, 0.35);
+}
+
+@keyframes tooltipFadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.wbw-loading {
+    text-align: center;
+    font-size: 0.75rem;
+    opacity: 0.5;
+    padding: 8px;
+    font-style: italic;
+}
+
+.verse-reveal-hint {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.45;
+    text-align: center;
+    margin-top: 6px;
+    pointer-events: none;
+}
+
 /* Dots indicator */
 .verse-dots {
     display: flex;

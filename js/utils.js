@@ -299,6 +299,40 @@ function speakArabic(text) {
     // No-op: replaced by playQuranAudio for verse recitation
 }
 
+// ==================== WORD-BY-WORD API (Quran.com) ====================
+const wbwCache = {}; // Cache word-by-word data by verse key
+
+/**
+ * Fetch word-by-word data for a verse from the Quran.com API.
+ * Returns an array of { arabic, translation } objects.
+ * Caches results to avoid repeat API calls.
+ */
+async function fetchWordByWord(ref) {
+    const parsed = parseQuranRef(ref);
+    if (!parsed) return null;
+    const key = `${parsed.surah}:${parsed.ayah}`;
+    if (wbwCache[key]) return wbwCache[key];
+
+    try {
+        const resp = await fetch(
+            `https://api.quran.com/api/v4/verses/by_key/${key}?language=en&words=true&word_fields=text_uthmani,translation`
+        );
+        if (!resp.ok) return null;
+        const data = await resp.json();
+        const words = (data.verse?.words || []).filter(w => w.char_type_name === 'word').map(w => ({
+            arabic: w.text_uthmani || w.text,
+            translation: w.translation?.text || ''
+        }));
+        if (words.length > 0) {
+            wbwCache[key] = words;
+            return words;
+        }
+    } catch (e) {
+        console.warn('WBW fetch failed for', key, e);
+    }
+    return null;
+}
+
 // ==================== ARABIC NORMALIZATION ====================
 function normalizeArabic(str) {
     return str.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED]/g, '');

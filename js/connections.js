@@ -221,14 +221,23 @@ function renderSolvedRows() {
             const ar = typeof item === 'object' ? item.ar : item;
             const en = typeof item === 'object' ? item.en : '';
             const verse = typeof item === 'object' ? item.verse : '';
+            const verseEn = typeof item === 'object' ? (item.verseEn || '') : '';
             const ref = typeof item === 'object' ? item.ref : '';
             return `<div class="verse-slide${i === 0 ? ' active' : ''}" data-index="${i}" data-ref="${ref}">
                 <div class="verse-slide-word">${ar}</div>
                 <div class="verse-slide-meaning">${en}</div>
-                ${verse ? `<div class="verse-slide-ayah">${verse}</div>
-                <div class="verse-slide-ref-row">
-                    <button class="verse-play-btn" data-ref="${ref}" aria-label="Play recitation">&#9654;</button>
-                    <span class="verse-slide-ref">— ${ref}</span>
+                ${verse ? `<div class="verse-card" data-row="${idx}" data-word="${i}">
+                    <div class="wbw-container" data-ref="${ref}">
+                        <div class="verse-slide-ayah wbw-fallback">${verse}</div>
+                        <div class="wbw-words" style="display:none;"></div>
+                        <div class="wbw-loading" style="display:none;">Loading word-by-word...</div>
+                    </div>
+                    <div class="wbw-tooltip" style="display:none;"></div>
+                    <div class="verse-slide-ref-row">
+                        <button class="verse-play-btn" data-ref="${ref}" aria-label="Play recitation">&#9654;</button>
+                        <span class="verse-slide-ref">— ${ref}</span>
+                    </div>
+                    <div class="verse-reveal-hint">Tap any word to see its meaning</div>
                 </div>` : ''}
             </div>`;
         }).join('');
@@ -295,6 +304,11 @@ function renderSolvedRows() {
             });
         });
 
+        // Word-by-word: load data when carousel is first expanded
+        row.querySelectorAll('.wbw-container').forEach(container => {
+            loadWBW(container);
+        });
+
         // Dot clicks
         row.querySelectorAll('.verse-dot').forEach(dot => {
             dot.addEventListener('click', (e) => {
@@ -312,8 +326,64 @@ function renderSolvedRows() {
 // Track current slide per row
 const carouselState = {};
 
-function toggleCarousel(rowIdx) {
-    const carousel = document.getElementById(`carousel-${rowIdx}`);
+/**
+ * Load word-by-word data for a verse container.
+ * Fetches from Quran.com API, replaces the static verse text
+ * with individually tappable Arabic words.
+ */
+async function loadWBW(container) {
+    const ref = container.dataset.ref;
+    if (!ref || container.dataset.wbwLoaded) return;
+
+    const fallback = container.querySelector('.wbw-fallback');
+    const wordsDiv = container.querySelector('.wbw-words');
+    const loadingDiv = container.querySelector('.wbw-loading');
+    const tooltip = container.parentElement.querySelector('.wbw-tooltip');
+
+    // Show loading state
+    loadingDiv.style.display = 'block';
+    container.dataset.wbwLoaded = 'pending';
+
+    const words = await fetchWordByWord(ref);
+
+    loadingDiv.style.display = 'none';
+
+    if (words && words.length > 0) {
+        // Build tappable word spans
+        wordsDiv.innerHTML = words.map((w, i) =>
+            `<span class="wbw-word" data-idx="${i}" data-translation="${w.translation.replace(/"/g, '&quot;')}">${w.arabic}</span>`
+        ).join(' ');
+        wordsDiv.style.display = 'flex';
+        fallback.style.display = 'none';
+        container.dataset.wbwLoaded = 'true';
+
+        // Attach tap handlers to each word
+        wordsDiv.querySelectorAll('.wbw-word').forEach(wordEl => {
+            wordEl.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const translation = wordEl.dataset.translation;
+                // Remove active from all siblings
+                wordsDiv.querySelectorAll('.wbw-word').forEach(w => w.classList.remove('wbw-active'));
+                wordEl.classList.add('wbw-active');
+                // Show tooltip
+                tooltip.textContent = translation;
+                tooltip.style.display = 'block';
+                // Auto-hide after 3 seconds
+                clearTimeout(tooltip._hideTimer);
+                tooltip._hideTimer = setTimeout(() => {
+                    tooltip.style.display = 'none';
+                    wordEl.classList.remove('wbw-active');
+                }, 3000);
+            });
+        });
+    } else {
+        // API failed — keep the static verse text as fallback
+        container.dataset.wbwLoaded = 'fallback';
+    }
+}
+
+function toggleCarousel(idx) {
+    const carousel = document.getElementById(`carousel-${idx}`);
     if (!carousel) return;
     const header = carousel.parentElement.querySelector('.conn-solved-header');
     const isExpanded = header.getAttribute('aria-expanded') === 'true';
