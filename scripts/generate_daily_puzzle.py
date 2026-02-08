@@ -7,15 +7,15 @@ themes.
 
 Model selection
 ───────────────
-Primary:   gemini-2.5-flash  (Low tier — 150 req/day free on GitHub Models)
-Fallback:  gpt-4o-mini      (Low tier — 150 req/day free, used if primary fails)
+Primary:   DeepSeek-R1  (Low tier — 150 req/day free on GitHub Models)
+Fallback:  gpt-4o-mini  (Low tier — 150 req/day free, used if primary fails)
 
-Why gemini-2.5-flash?
-  • Superior Quranic/Islamic knowledge and Arabic accuracy
-  • Excellent structured JSON output
-  • Reliable Arabic text generation with diacritics (tashkeel)
+Why DeepSeek-R1?
+  • Strong reasoning model — thinks step-by-step before answering
+  • Better factual accuracy for Quranic content (avoids misclassifications)
+  • Good Arabic text generation with diacritics (tashkeel)
   • Low tier = 150 free requests/day (we need ≤5)
-  • Proven accuracy in earlier testing with Gemini models
+  • Note: outputs <think>...</think> blocks that must be stripped before JSON parsing
 """
 import json
 import os
@@ -33,7 +33,7 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 API_URL = "https://models.inference.ai.azure.com/chat/completions"
 
 # Model priority: try the primary first, fall back to secondary
-PRIMARY_MODEL = os.environ.get("PUZZLE_MODEL", "gemini-2.5-flash")
+PRIMARY_MODEL = os.environ.get("PUZZLE_MODEL", "DeepSeek-R1")
 FALLBACK_MODEL = "gpt-4o-mini"
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -235,18 +235,18 @@ def call_model(prompt, model_id):
                 "content": prompt
             }
         ],
-        "temperature": 0.9,
+        "temperature": 0.6,
         "top_p": 0.95,
-        "max_tokens": 4096,
+        "max_tokens": 8192,
     }
 
-    # response_format json_object is supported by OpenAI models but may
-    # cause 400 errors on Gemini models — only add for non-Gemini.
-    if "gemini" not in model_id.lower():
+    # response_format json_object is only supported by OpenAI models.
+    # DeepSeek-R1 and Gemini models handle JSON via prompt instruction.
+    if model_id.lower().startswith("gpt-"):
         payload["response_format"] = {"type": "json_object"}
 
     try:
-        resp = requests.post(API_URL, headers=headers, json=payload, timeout=90)
+        resp = requests.post(API_URL, headers=headers, json=payload, timeout=180)
 
         if resp.status_code == 429:
             print(f"  ⚠ Rate limited on {model_id}")
@@ -458,12 +458,19 @@ def main():
                 current_model = FALLBACK_MODEL
             continue
 
-        # Parse JSON
+        # Parse JSON — DeepSeek-R1 wraps reasoning in <think>...</think> tags
         try:
             cleaned = raw.strip()
+            # Strip <think>...</think> reasoning blocks (DeepSeek-R1)
+            cleaned = re.sub(r'<think>.*?</think>', '', cleaned, flags=re.DOTALL).strip()
+            # Strip markdown code fences
             if cleaned.startswith("```"):
                 cleaned = re.sub(r'^```(?:json)?\s*', '', cleaned)
                 cleaned = re.sub(r'\s*```$', '', cleaned)
+            # Extract JSON object if there's surrounding text
+            json_match = re.search(r'\{[\s\S]*\}', cleaned)
+            if json_match:
+                cleaned = json_match.group(0)
             puzzle = json.loads(cleaned)
         except json.JSONDecodeError as e:
             print(f"  ✗ JSON parse error: {e}")
