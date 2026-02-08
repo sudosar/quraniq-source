@@ -29,9 +29,30 @@ const conn = {
 };
 
 function initConnections() {
-    const idx = getPuzzleIndex(PUZZLES.connections);
-    conn.puzzle = PUZZLES.connections[idx];
+    // Try to load AI-generated daily puzzle, fall back to pre-made puzzles
+    loadDailyPuzzle().then(puzzle => {
+        conn.puzzle = puzzle;
+        setupConnectionsGame();
+    }).catch(() => {
+        // Fallback to pre-made puzzles
+        const idx = getPuzzleIndex(PUZZLES.connections);
+        conn.puzzle = PUZZLES.connections[idx];
+        setupConnectionsGame();
+    });
+}
 
+async function loadDailyPuzzle() {
+    const today = new Date().toISOString().slice(0, 10);
+    const resp = await fetch(`data/daily_puzzle.json?t=${today}`);
+    if (!resp.ok) throw new Error('No daily puzzle');
+    const data = await resp.json();
+    if (!data.generated || !data.puzzle || data.date !== today) {
+        throw new Error('Daily puzzle not available or stale');
+    }
+    return { id: 'daily', categories: data.puzzle.categories };
+}
+
+function setupConnectionsGame() {
     // Check saved state
     const saved = app.state[`conn_${app.dayNumber}`];
     if (saved) {
@@ -663,7 +684,7 @@ function showConnResult(won, cacheOnly) {
     });
 
     const mistakesUsed = 4 - conn.mistakes;
-    const puzzleNum = getPuzzleIndex(PUZZLES.connections) + 1;
+    const puzzleNum = conn.puzzle.id === 'daily' ? app.dayNumber : getPuzzleIndex(PUZZLES.connections) + 1;
 
     const shareText = `QuranPuzzle - Connections #${puzzleNum}\n${emojiGrid}Groups found: ${correctCount}/4\nMistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quranpuzz/`;
 
