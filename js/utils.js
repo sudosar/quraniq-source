@@ -15,129 +15,6 @@ function getPuzzleIndex(arr) {
     return getDayNumber() % arr.length;
 }
 
-// ==================== VERSE COOLING PERIOD ====================
-const VERSE_COOL_KEY = 'quranpuzzle_verse_history';
-const COOLING_DAYS = 30;
-
-/**
- * Extract all verse refs from a connections puzzle.
- * Returns a Set of normalized ref strings (e.g. "7:26", "59:23").
- */
-function extractPuzzleVerseRefs(puzzle) {
-    const refs = new Set();
-    if (!puzzle || !puzzle.categories) return refs;
-    for (const cat of puzzle.categories) {
-        // Category-level verse
-        if (cat.verse && cat.verse.ref) {
-            const norm = normalizeRef(cat.verse.ref);
-            if (norm) refs.add(norm);
-        }
-        // Item-level verses
-        if (cat.items) {
-            for (const item of cat.items) {
-                if (item.ref) {
-                    const norm = normalizeRef(item.ref);
-                    if (norm) refs.add(norm);
-                }
-            }
-        }
-    }
-    return refs;
-}
-
-/**
- * Normalize a ref to "surah:ayah" format for consistent comparison.
- * "7:26" → "7:26", "18:9-12" → "18:9", "التين:1-3" → "95:1"
- */
-function normalizeRef(ref) {
-    if (!ref) return null;
-    const parsed = parseQuranRef(ref);
-    if (parsed) return `${parsed.surah}:${parsed.ayah}`;
-    return null;
-}
-
-/**
- * Load verse history from localStorage.
- * Returns { "surah:ayah": dayNumber, ... }
- */
-function loadVerseHistory() {
-    try {
-        return JSON.parse(localStorage.getItem(VERSE_COOL_KEY)) || {};
-    } catch { return {}; }
-}
-
-/**
- * Save verse history to localStorage.
- */
-function saveVerseHistory(history) {
-    localStorage.setItem(VERSE_COOL_KEY, JSON.stringify(history));
-}
-
-/**
- * Record that a puzzle's verses were shown today.
- */
-function recordPuzzleVerses(puzzle) {
-    const history = loadVerseHistory();
-    const today = getDayNumber();
-    const refs = extractPuzzleVerseRefs(puzzle);
-    for (const ref of refs) {
-        history[ref] = today;
-    }
-    // Prune entries older than COOLING_DAYS to keep storage lean
-    for (const [ref, day] of Object.entries(history)) {
-        if (today - day > COOLING_DAYS) {
-            delete history[ref];
-        }
-    }
-    saveVerseHistory(history);
-}
-
-/**
- * Check how many of a puzzle's verses are still in cooling period.
- * Returns the count of "hot" (recently shown) verses.
- */
-function countHotVerses(puzzle, history, today) {
-    const refs = extractPuzzleVerseRefs(puzzle);
-    let hot = 0;
-    for (const ref of refs) {
-        const lastShown = history[ref];
-        if (lastShown !== undefined && (today - lastShown) < COOLING_DAYS && (today - lastShown) > 0) {
-            hot++;
-        }
-    }
-    return hot;
-}
-
-/**
- * Select the best puzzle from an array using verse cooling.
- * Uses a seeded deterministic base index (so all users get the same puzzle),
- * then picks the candidate with the fewest cooling conflicts.
- * Falls back to the base index if all candidates have conflicts.
- */
-function getConnectionsPuzzleIndex(arr) {
-    const today = getDayNumber();
-    const history = loadVerseHistory();
-    const baseIdx = today % arr.length;
-
-    // Score all puzzles by how many hot verses they have
-    const candidates = arr.map((puzzle, i) => ({
-        index: i,
-        hotCount: countHotVerses(puzzle, history, today)
-    }));
-
-    // Sort: prefer 0 hot verses, then fewer hot verses.
-    // Among ties, prefer puzzles closest to the base index (wrapping).
-    candidates.sort((a, b) => {
-        if (a.hotCount !== b.hotCount) return a.hotCount - b.hotCount;
-        // Distance from base index (circular)
-        const distA = (a.index - baseIdx + arr.length) % arr.length;
-        const distB = (b.index - baseIdx + arr.length) % arr.length;
-        return distA - distB;
-    });
-
-    return candidates[0].index;
-}
-
 // ==================== SHUFFLE ====================
 function shuffle(arr) {
     const a = [...arr];
@@ -320,143 +197,71 @@ function parseQuranRef(ref) {
     };
     const arMatch = ref.match(/([^:]+):(\d+)/);
     if (arMatch) {
-        const surahNum = surahNames[arMatch[1].trim()];
-        if (surahNum) return { surah: surahNum, ayah: parseInt(arMatch[2]) };
+        const name = arMatch[1].trim();
+        if (surahNames[name]) {
+            return { surah: surahNames[name], ayah: parseInt(arMatch[2]) };
+        }
     }
     return null;
 }
 
 /**
- * Build the CDN URL for a specific ayah.
- * Format: https://everyayah.com/data/{reciter}/{surah3}{ayah3}.mp3
+ * Play a Quranic verse audio from EveryAyah CDN.
+ * @param {string} ref - Quranic reference like "59:23"
+ * @param {HTMLElement} [btn] - Optional play button to update icon
  */
-function getAyahAudioUrl(surah, ayah) {
-    const s = String(surah).padStart(3, '0');
-    const a = String(ayah).padStart(3, '0');
-    return `${quranAudio.baseUrl}${quranAudio.reciter}/${s}${a}.mp3`;
-}
-
-/**
- * Play Quranic recitation for a given ref string (e.g. "59:23").
- * Uses cached Audio objects for instant replay.
- * Returns the Audio element (or null if ref is unparseable).
- */
-function playQuranAudio(ref, btnElement) {
-    // Stop any currently playing audio
-    stopQuranAudio();
-
+function playVerseAudio(ref, btn) {
     const parsed = parseQuranRef(ref);
-    if (!parsed) return null;
+    if (!parsed) return;
 
-    const key = `${parsed.surah}:${parsed.ayah}`;
+    const { surah, ayah } = parsed;
+    const key = `${surah}:${ayah}`;
+
+    // If already playing this verse, stop it
+    if (quranAudio.playing && quranAudio.current && quranAudio.current._key === key) {
+        quranAudio.current.pause();
+        quranAudio.current.currentTime = 0;
+        quranAudio.playing = false;
+        if (btn) btn.textContent = '▶';
+        return;
+    }
+
+    // Stop any currently playing audio
+    if (quranAudio.current) {
+        quranAudio.current.pause();
+        quranAudio.current.currentTime = 0;
+        // Reset previous button
+        document.querySelectorAll('.verse-play-btn').forEach(b => b.textContent = '▶');
+    }
+
+    // Build EveryAyah URL: padded surah (3 digits) + padded ayah (3 digits)
+    const surahPad = String(surah).padStart(3, '0');
+    const ayahPad = String(ayah).padStart(3, '0');
+    const url = `${quranAudio.baseUrl}${quranAudio.reciter}/${surahPad}${ayahPad}.mp3`;
+
     let audio = quranAudio.cache[key];
-
     if (!audio) {
-        audio = new Audio(getAyahAudioUrl(parsed.surah, parsed.ayah));
-        audio.preload = 'auto';
+        audio = new Audio(url);
+        audio._key = key;
         quranAudio.cache[key] = audio;
     }
 
-    // Update button state if provided
-    if (btnElement) {
-        btnElement.classList.add('loading');
-        btnElement.setAttribute('aria-label', 'Loading recitation...');
-    }
-
-    audio.oncanplaythrough = () => {
-        if (btnElement) {
-            btnElement.classList.remove('loading');
-            btnElement.classList.add('playing');
-            btnElement.setAttribute('aria-label', 'Playing recitation');
-        }
-    };
+    if (btn) btn.textContent = '⏸';
+    quranAudio.current = audio;
+    quranAudio.playing = true;
 
     audio.onended = () => {
         quranAudio.playing = false;
-        quranAudio.current = null;
-        if (btnElement) {
-            btnElement.classList.remove('playing', 'loading');
-            btnElement.setAttribute('aria-label', 'Play recitation');
-        }
+        if (btn) btn.textContent = '▶';
     };
-
     audio.onerror = () => {
         quranAudio.playing = false;
-        quranAudio.current = null;
-        if (btnElement) {
-            btnElement.classList.remove('playing', 'loading');
-            btnElement.setAttribute('aria-label', 'Play recitation');
-        }
+        if (btn) btn.textContent = '▶';
     };
 
     audio.currentTime = 0;
     audio.play().catch(() => {
-        // Autoplay blocked — user interaction required (already handled by click)
-        if (btnElement) btnElement.classList.remove('loading');
-    });
-
-    quranAudio.current = audio;
-    quranAudio.playing = true;
-    return audio;
-}
-
-/** Stop any currently playing Quran audio */
-function stopQuranAudio() {
-    if (quranAudio.current) {
-        quranAudio.current.pause();
-        quranAudio.current.currentTime = 0;
         quranAudio.playing = false;
-        quranAudio.current = null;
-    }
-    // Also remove playing/loading classes from any buttons
-    document.querySelectorAll('.verse-play-btn.playing, .verse-play-btn.loading').forEach(btn => {
-        btn.classList.remove('playing', 'loading');
+        if (btn) btn.textContent = '▶';
     });
-}
-
-/**
- * Legacy speakArabic — now a no-op for tile long-press.
- * Tile pronunciation is handled by quranAudio for verses only.
- */
-function speakArabic(text) {
-    // No-op: replaced by playQuranAudio for verse recitation
-}
-
-// ==================== WORD-BY-WORD API (Quran.com) ====================
-const wbwCache = {}; // Cache word-by-word data by verse key
-
-/**
- * Fetch word-by-word data for a verse from the Quran.com API.
- * Returns an array of { arabic, translation } objects.
- * Caches results to avoid repeat API calls.
- */
-async function fetchWordByWord(ref) {
-    const parsed = parseQuranRef(ref);
-    if (!parsed) return null;
-    const key = `${parsed.surah}:${parsed.ayah}`;
-    if (wbwCache[key]) return wbwCache[key];
-
-    try {
-        const resp = await fetch(
-            `https://api.quran.com/api/v4/verses/by_key/${key}?language=en&words=true&word_fields=text_uthmani,translation`
-        );
-        if (!resp.ok) return null;
-        const data = await resp.json();
-        const words = (data.verse?.words || []).filter(w => w.char_type_name === 'word').map(w => ({
-            arabic: w.text_uthmani || w.text,
-            translation: w.translation?.text || ''
-        }));
-        if (words.length > 0) {
-            wbwCache[key] = words;
-            return words;
-        }
-    } catch (e) {
-        console.warn('WBW fetch failed for', key, e);
-    }
-    return null;
-}
-
-// ==================== ARABIC NORMALIZATION ====================
-function normalizeArabic(str) {
-    return str.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED]/g, '');
 }
