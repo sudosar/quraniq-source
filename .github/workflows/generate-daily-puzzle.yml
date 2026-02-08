@@ -7,10 +7,18 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+    outputs:
+      generated: ${{ steps.check.outputs.generated }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -51,3 +59,32 @@ jobs:
             git commit -m "Generate daily puzzle for $DATE"
             git push
           }
+
+  deploy:
+    needs: generate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: claude/quranic-puzzle-game-RWunP
+
+      - name: Pull latest changes
+        run: git pull origin claude/quranic-puzzle-game-RWunP
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
