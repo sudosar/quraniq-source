@@ -1,5 +1,9 @@
 /* ============================================
-   QURANPUZZLE - SCRAMBLE GAME
+   QURANPUZZLE - AYAH SCRAMBLE GAME (ARABIC)
+   ============================================
+   Players arrange scrambled Arabic word segments
+   of a Quranic verse into the correct order.
+   Hints reveal the English translation of a segment.
    ============================================ */
 
 const scr = {
@@ -9,6 +13,8 @@ const scr = {
     moves: 0,
     maxMoves: 15,
     hintsUsed: 0,
+    maxHints: 3,
+    revealedHints: {},  // index -> true for segments whose English has been revealed
     gameOver: false,
     won: false
 };
@@ -38,7 +44,14 @@ async function loadDailyScramble() {
 }
 
 function setupScrambleGame() {
+    // The puzzle now has:
+    //   words: array of Arabic segments (correct order)
+    //   translations: array of English translations (parallel to words)
+    //   reference: verse reference
+    //   arabic: full Arabic verse
+    //   hint: general hint text
     scr.maxMoves = Math.max(scr.puzzle.words.length * 3, 10);
+    scr.maxHints = Math.min(3, Math.floor(scr.puzzle.words.length / 2));
 
     // Check saved state
     const saved = app.state[`scr_${app.dayNumber}`];
@@ -47,15 +60,24 @@ function setupScrambleGame() {
         scr.available = saved.available || [];
         scr.moves = saved.moves || 0;
         scr.hintsUsed = saved.hintsUsed || 0;
+        scr.revealedHints = saved.revealedHints || {};
         scr.gameOver = saved.gameOver || false;
         scr.won = saved.won || false;
     } else {
         scr.available = shuffle([...scr.puzzle.words]);
         scr.placed = [];
+        scr.revealedHints = {};
     }
 
     renderScramble();
 
+    // Remove old listeners and re-attach
+    const hintBtn = document.getElementById('scramble-hint');
+    const resetBtn = document.getElementById('scramble-reset');
+    const checkBtn = document.getElementById('scramble-check');
+    hintBtn.replaceWith(hintBtn.cloneNode(true));
+    resetBtn.replaceWith(resetBtn.cloneNode(true));
+    checkBtn.replaceWith(checkBtn.cloneNode(true));
     document.getElementById('scramble-hint').addEventListener('click', useScrambleHint);
     document.getElementById('scramble-reset').addEventListener('click', resetScramble);
     document.getElementById('scramble-check').addEventListener('click', checkScramble);
@@ -65,84 +87,158 @@ function renderScramble() {
     // Reference
     document.getElementById('scramble-reference').textContent = scr.puzzle.reference;
 
-    // Moves counter
+    // Moves & hints counter
     const movesEl = document.getElementById('scramble-moves');
-    movesEl.innerHTML = `Moves: <span>${scr.moves}</span> / <span>${scr.maxMoves}</span>`;
+    movesEl.innerHTML = `Moves: <span>${scr.moves}</span> / <span>${scr.maxMoves}</span> &nbsp;|&nbsp; Hints: <span>${scr.hintsUsed}</span> / <span>${scr.maxHints}</span>`;
 
-    // Drop zone
+    // Drop zone (placed words)
     const dropzone = document.getElementById('scramble-dropzone');
     dropzone.innerHTML = '';
+    dropzone.setAttribute('dir', 'rtl');
     if (scr.placed.length === 0) {
-        dropzone.innerHTML = '<span style="color:var(--text-secondary);font-size:0.85rem">Tap words below to arrange the verse</span>';
+        dropzone.innerHTML = '<span style="color:var(--text-secondary);font-size:0.85rem">Tap words below to arrange the verse in order</span>';
     }
     scr.placed.forEach((word, i) => {
-        const el = document.createElement('div');
-        el.className = 'scramble-word in-zone';
-        el.textContent = word;
-        el.setAttribute('role', 'listitem');
-        if (!scr.gameOver) {
-            el.setAttribute('tabindex', '0');
-            el.setAttribute('aria-label', `Remove "${word}" from position ${i + 1}`);
-            el.addEventListener('click', () => {
-                scr.placed.splice(i, 1);
-                scr.available.push(word);
-                scr.moves++;
-                saveScrState();
-                renderScramble();
-                announce(`Removed "${word}". ${scr.placed.length} words placed.`);
-            });
-            el.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
-            });
-        }
+        const el = createWordElement(word, i, true);
         dropzone.appendChild(el);
     });
 
-    // Available words
+    // Available words (scrambled)
     const wordsEl = document.getElementById('scramble-words');
     wordsEl.innerHTML = '';
+    wordsEl.setAttribute('dir', 'rtl');
     scr.available.forEach((word, i) => {
-        const el = document.createElement('div');
-        el.className = 'scramble-word';
-        el.textContent = word;
-        el.setAttribute('role', 'listitem');
-        if (!scr.gameOver) {
-            el.setAttribute('tabindex', '0');
-            el.setAttribute('aria-label', `Place "${word}"`);
-            el.addEventListener('click', () => {
-                scr.available.splice(i, 1);
-                scr.placed.push(word);
-                scr.moves++;
-                saveScrState();
-                renderScramble();
-                announce(`Placed "${word}". ${scr.available.length} words remaining.`);
-                // Auto-check if all placed
-                if (scr.available.length === 0) {
-                    setTimeout(() => checkScramble(), 300);
-                }
-            });
-            el.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
-            });
-        }
+        const el = createWordElement(word, i, false);
         wordsEl.appendChild(el);
     });
 
     // Update button states
     document.getElementById('scramble-check').disabled = scr.available.length > 0 || scr.gameOver;
-    document.getElementById('scramble-hint').disabled = scr.gameOver;
+    document.getElementById('scramble-hint').disabled = scr.gameOver || scr.hintsUsed >= scr.maxHints;
     document.getElementById('scramble-reset').disabled = scr.gameOver;
+
+    // Update hint button text
+    const hintBtn = document.getElementById('scramble-hint');
+    if (scr.hintsUsed >= scr.maxHints) {
+        hintBtn.textContent = 'No Hints Left';
+    } else {
+        hintBtn.textContent = `Hint (${scr.maxHints - scr.hintsUsed} left)`;
+    }
+}
+
+function createWordElement(word, index, isPlaced) {
+    const el = document.createElement('div');
+    el.className = 'scramble-word' + (isPlaced ? ' in-zone' : '');
+    el.setAttribute('role', 'listitem');
+    el.setAttribute('dir', 'rtl');
+
+    // Arabic text
+    const textSpan = document.createElement('span');
+    textSpan.className = 'scramble-word-text';
+    textSpan.textContent = word;
+    el.appendChild(textSpan);
+
+    // Check if this word has a revealed hint
+    const wordIdx = scr.puzzle.words.indexOf(word);
+    if (wordIdx !== -1 && scr.revealedHints[wordIdx] && scr.puzzle.translations) {
+        const hintSpan = document.createElement('span');
+        hintSpan.className = 'scramble-word-hint';
+        hintSpan.textContent = scr.puzzle.translations[wordIdx];
+        el.appendChild(hintSpan);
+        el.classList.add('has-hint');
+    }
+
+    if (!scr.gameOver) {
+        el.setAttribute('tabindex', '0');
+        if (isPlaced) {
+            el.setAttribute('aria-label', `Remove "${word}" from position ${index + 1}`);
+            el.addEventListener('click', () => {
+                scr.placed.splice(index, 1);
+                scr.available.push(word);
+                scr.moves++;
+                saveScrState();
+                renderScramble();
+                announce(`Removed word. ${scr.placed.length} words placed.`);
+            });
+        } else {
+            el.setAttribute('aria-label', `Place "${word}"`);
+            el.addEventListener('click', () => {
+                scr.available.splice(index, 1);
+                scr.placed.push(word);
+                scr.moves++;
+                saveScrState();
+                renderScramble();
+                announce(`Placed word. ${scr.available.length} words remaining.`);
+                // Auto-check if all placed
+                if (scr.available.length === 0) {
+                    setTimeout(() => checkScramble(), 300);
+                }
+            });
+        }
+        el.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+        });
+    }
+
+    return el;
 }
 
 function useScrambleHint() {
-    if (scr.gameOver) return;
-    scr.hintsUsed++;
+    if (scr.gameOver || scr.hintsUsed >= scr.maxHints) return;
 
-    // Find the first incorrect position
+    // Find a word that hasn't had its translation revealed yet
+    const translations = scr.puzzle.translations || [];
+    if (translations.length === 0) {
+        // Fallback: use the old hint behavior (place next correct word)
+        useScrambleHintFallback();
+        return;
+    }
+
+    // Find an unrevealed word — prioritize words in the available pool
+    let targetIdx = -1;
+
+    // First try: find an unrevealed word in the available pool
+    for (const word of scr.available) {
+        const idx = scr.puzzle.words.indexOf(word);
+        if (idx !== -1 && !scr.revealedHints[idx]) {
+            targetIdx = idx;
+            break;
+        }
+    }
+
+    // Second try: find any unrevealed word
+    if (targetIdx === -1) {
+        for (let i = 0; i < scr.puzzle.words.length; i++) {
+            if (!scr.revealedHints[i]) {
+                targetIdx = i;
+                break;
+            }
+        }
+    }
+
+    if (targetIdx === -1) {
+        showToast('All translations already revealed');
+        return;
+    }
+
+    scr.hintsUsed++;
+    scr.revealedHints[targetIdx] = true;
+
+    const word = scr.puzzle.words[targetIdx];
+    const translation = translations[targetIdx] || '...';
+    showToast(`${word} = "${translation}"`);
+    announce(`Hint: ${word} means "${translation}"`);
+
+    saveScrState();
+    renderScramble();
+}
+
+function useScrambleHintFallback() {
+    // Old behavior: place the next correct word in position
+    scr.hintsUsed++;
     const correctWords = scr.puzzle.words;
     for (let i = 0; i < correctWords.length; i++) {
         if (scr.placed[i] !== correctWords[i]) {
-            // Remove this word from wherever it is and place it correctly
             const word = correctWords[i];
             const availIdx = scr.available.indexOf(word);
             const placedIdx = scr.placed.indexOf(word);
@@ -153,7 +249,6 @@ function useScrambleHint() {
                 scr.placed.splice(placedIdx, 1);
             }
 
-            // Insert at correct position
             scr.placed.splice(i, 0, word);
             scr.moves++;
             break;
@@ -231,6 +326,7 @@ function saveScrState() {
         available: scr.available,
         moves: scr.moves,
         hintsUsed: scr.hintsUsed,
+        revealedHints: scr.revealedHints,
         gameOver: scr.gameOver,
         won: scr.won
     };
@@ -247,18 +343,25 @@ function showScrResult(cacheOnly) {
     });
 
     const puzzleNum = getPuzzleIndex(PUZZLES.scramble) + 1;
-    const stars = scr.won ? Math.max(1, 5 - Math.floor(scr.moves / (scr.maxMoves / 5))) : 0;
+    // Stars: deduct for hints used (similar to deduction)
+    const baseStars = scr.won ? Math.max(1, 5 - Math.floor(scr.moves / (scr.maxMoves / 5))) : 0;
+    const stars = Math.max(0, baseStars - scr.hintsUsed);
     const starStr = '⭐'.repeat(stars) + '☆'.repeat(5 - stars);
 
-    const shareText = `QuranPuzzle - Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${starStr}\nMoves: ${scr.moves}/${scr.maxMoves}\n\nhttps://sudosar.github.io/quranpuzz/`;
+    const shareText = `QuranPuzzle - Ayah Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${starStr}\nMoves: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}\n\nhttps://sudosar.github.io/quranpuzz/`;
+
+    // Show the full verse translation in the result
+    const translationText = scr.puzzle.translations
+        ? scr.puzzle.translations.join(' ')
+        : (scr.puzzle.english || scr.puzzle.words.join(' '));
 
     const resultData = {
         icon: scr.won ? '✨' : '📖',
         title: scr.won ? 'Verse Complete!' : 'Nice Try!',
-        arabic: scr.puzzle.arabic,
-        translation: scr.puzzle.words.join(' '),
+        arabic: scr.puzzle.arabic || scr.puzzle.words.join(' '),
+        translation: translationText,
         emojiGrid: `${emojiGrid}\n${starStr}`,
-        statsText: `Moves: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}`,
+        statsText: `Moves: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}`,
         shareText
     };
 
@@ -269,5 +372,7 @@ function showScrResult(cacheOnly) {
     }
 
     showResultModal(resultData);
-    updateModeStats('scramble', scr.won, scr.won ? Math.max(1, 6 - scr.hintsUsed) : 0);
+    // Score: higher is better, deduct for hints
+    const score = scr.won ? Math.max(1, 6 - scr.hintsUsed) : 0;
+    updateModeStats('scramble', scr.won, score);
 }

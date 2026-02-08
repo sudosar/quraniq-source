@@ -12,18 +12,49 @@ const wordle = {
     maxRows: 6,
     wordLen: 5,
     evaluations: [],
-    keydownHandler: null
+    keydownHandler: null,
+    validWords: null  // Set of valid Quranic words for current length
 };
 
+/* ---------- Quranic word list loader ---------- */
+let _quranWordsCache = null;
+
+async function loadQuranWords() {
+    if (_quranWordsCache) return _quranWordsCache;
+    try {
+        const resp = await fetch('data/quran_words.json');
+        if (!resp.ok) throw new Error('Failed to load word list');
+        _quranWordsCache = await resp.json();
+        return _quranWordsCache;
+    } catch (e) {
+        console.warn('Could not load Quranic word list:', e);
+        return null;
+    }
+}
+
+function isValidQuranWord(guess) {
+    // If word list didn't load, accept any word (graceful fallback)
+    if (!wordle.validWords) return true;
+    return wordle.validWords.has(guess);
+}
+
 function initWordle() {
-    // Try to load AI-generated daily puzzle, fall back to pre-made puzzles
-    loadDailyWordle().then(puzzle => {
+    // Load word list and puzzle in parallel
+    Promise.all([
+        loadQuranWords(),
+        loadDailyWordle().catch(() => {
+            const idx = getPuzzleIndex(PUZZLES.wordle);
+            return PUZZLES.wordle[idx];
+        })
+    ]).then(([wordData, puzzle]) => {
         wordle.puzzle = puzzle;
-        setupWordleGame();
-    }).catch(() => {
-        // Fallback to pre-made puzzles
-        const idx = getPuzzleIndex(PUZZLES.wordle);
-        wordle.puzzle = PUZZLES.wordle[idx];
+        // Build valid word set for the target word's length
+        const targetLen = normalizeArabic(puzzle.word).length;
+        if (wordData && wordData[String(targetLen)]) {
+            wordle.validWords = new Set(wordData[String(targetLen)]);
+            // Also ensure the answer itself is in the valid set
+            wordle.validWords.add(normalizeArabic(puzzle.word));
+        }
         setupWordleGame();
     });
 }
@@ -156,10 +187,21 @@ function submitWordleGuess() {
 
     const guess = normalizeArabic(wordle.board[wordle.currentRow].join(''));
 
-    // Relaxed validation: accept any guess of the correct length
-    // Still check VALID_WORDS but also accept if length matches
     if (guess.length !== wordle.wordLen) {
         showToast('Word must be ' + wordle.wordLen + ' letters');
+        return;
+    }
+
+    // Validate against Quranic word list
+    if (!isValidQuranWord(guess)) {
+        showToast('Not a Quranic word');
+        // Shake the current row to indicate invalid
+        const row = document.querySelector(`#wc-${wordle.currentRow}-0`)?.parentElement;
+        if (row) {
+            row.classList.add('shake');
+            setTimeout(() => row.classList.remove('shake'), 600);
+        }
+        announce('Not a valid Quranic word. Try again.');
         return;
     }
 

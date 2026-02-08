@@ -181,15 +181,35 @@ function showStatsModal() {
 }
 
 function renderStatsContent() {
+    const insightsEl = document.getElementById('performance-insights');
+    const statsGrid = document.querySelector('.stats-grid');
+    const distHeading = document.getElementById('dist-heading');
+    const distEl = document.getElementById('guess-distribution');
+
+    if (app.statsViewMode === 'insights') {
+        // Show insights, hide regular stats
+        statsGrid.style.display = 'none';
+        distHeading.style.display = 'none';
+        distEl.style.display = 'none';
+        insightsEl.style.display = 'block';
+        renderPerformanceInsights();
+        return;
+    }
+
+    // Show regular stats, hide insights
+    statsGrid.style.display = '';
+    distHeading.style.display = '';
+    distEl.style.display = '';
+    insightsEl.style.display = 'none';
+
     const s = app.stats[app.statsViewMode] || createDefaultModeStats();
     document.getElementById('stat-played').textContent = s.played;
     document.getElementById('stat-win-pct').textContent = s.played ? Math.round((s.won / s.played) * 100) : 0;
     document.getElementById('stat-streak').textContent = s.streak;
     document.getElementById('stat-max-streak').textContent = s.maxStreak;
 
-    const distEl = document.getElementById('guess-distribution');
-    distEl.innerHTML = '';
     const maxDist = Math.max(1, ...Object.values(s.distribution));
+    distEl.innerHTML = '';
     for (let i = 1; i <= 6; i++) {
         const count = s.distribution[i] || 0;
         const pct = Math.max(8, (count / maxDist) * 100);
@@ -250,9 +270,9 @@ function showHelpModal() {
         `,
         scramble: `
             <h3>Ayah Scramble</h3>
-            <p>The words of a Quranic verse have been scrambled. Tap words to place them in order, rebuilding the verse.</p>
-            <p>You have a limited number of moves. Try to solve it in as few moves as possible!</p>
-            <p>Tap a placed word to remove it from the answer zone.</p>
+            <p>The Arabic words of a Quranic verse have been scrambled. Tap the segments to place them in the correct order, rebuilding the verse right-to-left.</p>
+            <p>Stuck? Use the <strong>Hint</strong> button to reveal the English translation of one segment. Each hint used will impact your final score.</p>
+            <p>Tap a placed word to remove it from the answer zone. Try to solve it in as few moves as possible!</p>
         `
     };
     content.innerHTML = helps[app.currentMode] || helps.connections;
@@ -379,4 +399,183 @@ function startCountdown() {
     };
     update();
     setInterval(update, 1000);
+}
+
+// ==================== PERFORMANCE INSIGHTS ====================
+
+/**
+ * Estimate a percentile rank based on win rate and streak.
+ * Uses a sigmoid-like curve to map performance to a realistic percentile.
+ * This is a local-only estimate — no server needed.
+ */
+function estimatePercentile(winRate, streak, maxStreak, played) {
+    if (played === 0) return 0;
+    // Weighted score: 50% win rate, 25% current streak, 25% max streak
+    // Win rate is 0-1, streaks are normalized (cap at 30 for scaling)
+    const streakScore = Math.min(streak / 30, 1);
+    const maxStreakScore = Math.min(maxStreak / 30, 1);
+    const raw = (winRate * 0.50) + (streakScore * 0.25) + (maxStreakScore * 0.25);
+    // Sigmoid mapping: push toward realistic distribution
+    // Most players cluster around 40-70%, top players at 90%+
+    const percentile = Math.round(100 / (1 + Math.exp(-8 * (raw - 0.45))));
+    return Math.max(1, Math.min(99, percentile));
+}
+
+function getScholarTitle(overallPercentile, totalPlayed) {
+    if (totalPlayed === 0) return { title: 'New Student', emoji: '📖', desc: 'Play your first game to begin your journey!' };
+    if (overallPercentile >= 95) return { title: 'Hafiz', emoji: '🌟', desc: 'Exceptional mastery across all challenges' };
+    if (overallPercentile >= 85) return { title: 'Quranic Scholar', emoji: '🏆', desc: 'Deep understanding and consistent excellence' };
+    if (overallPercentile >= 70) return { title: 'Dedicated Learner', emoji: '📚', desc: 'Strong performance with room to grow' };
+    if (overallPercentile >= 50) return { title: 'Rising Student', emoji: '🌱', desc: 'Building a solid foundation' };
+    if (overallPercentile >= 30) return { title: 'Eager Seeker', emoji: '🔍', desc: 'Every puzzle brings you closer to knowledge' };
+    return { title: 'Beginner', emoji: '✨', desc: 'The journey of a thousand miles begins with a single step' };
+}
+
+function getGameInsight(mode, stats) {
+    if (stats.played === 0) return null;
+    const winRate = stats.won / stats.played;
+    const pct = estimatePercentile(winRate, stats.streak, stats.maxStreak, stats.played);
+
+    const modeNames = {
+        connections: 'Ayah Connections',
+        wordle: 'Verse Wordle',
+        deduction: 'Prophet Deduction',
+        scramble: 'Ayah Scramble'
+    };
+
+    const modeEmojis = {
+        connections: '🔗',
+        wordle: '🔤',
+        deduction: '🔎',
+        scramble: '🧩'
+    };
+
+    // Determine strength descriptor
+    let strength = '';
+    if (pct >= 80) strength = 'Excellent';
+    else if (pct >= 60) strength = 'Strong';
+    else if (pct >= 40) strength = 'Developing';
+    else strength = 'Needs Practice';
+
+    return {
+        mode,
+        name: modeNames[mode],
+        emoji: modeEmojis[mode],
+        percentile: pct,
+        winRate: Math.round(winRate * 100),
+        strength,
+        played: stats.played,
+        streak: stats.streak,
+        maxStreak: stats.maxStreak
+    };
+}
+
+function renderPerformanceInsights() {
+    const el = document.getElementById('performance-insights');
+    const modes = ['connections', 'wordle', 'deduction', 'scramble'];
+
+    // Calculate overall stats
+    let totalPlayed = 0, totalWon = 0, bestStreak = 0;
+    const gameInsights = [];
+
+    modes.forEach(mode => {
+        const s = app.stats[mode] || createDefaultModeStats();
+        totalPlayed += s.played;
+        totalWon += s.won;
+        bestStreak = Math.max(bestStreak, s.maxStreak);
+        const insight = getGameInsight(mode, s);
+        if (insight) gameInsights.push(insight);
+    });
+
+    const overallWinRate = totalPlayed > 0 ? totalWon / totalPlayed : 0;
+    const overallPercentile = estimatePercentile(overallWinRate, bestStreak, bestStreak, totalPlayed);
+    const scholar = getScholarTitle(overallPercentile, totalPlayed);
+
+    // Find strongest and weakest games
+    let strongest = null, weakest = null;
+    if (gameInsights.length >= 2) {
+        gameInsights.sort((a, b) => b.percentile - a.percentile);
+        strongest = gameInsights[0];
+        weakest = gameInsights[gameInsights.length - 1];
+    }
+
+    // Build HTML
+    let html = '';
+
+    // Scholar rank card
+    html += `
+        <div class="insight-card scholar-card">
+            <div class="scholar-emoji">${scholar.emoji}</div>
+            <div class="scholar-title">${scholar.title}</div>
+            <div class="scholar-desc">${scholar.desc}</div>
+            <div class="percentile-bar-container">
+                <div class="percentile-label">Overall Rank</div>
+                <div class="percentile-bar">
+                    <div class="percentile-fill" style="width:${overallPercentile}%"></div>
+                    <span class="percentile-text">Top ${100 - overallPercentile}%</span>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Per-game breakdown
+    if (gameInsights.length > 0) {
+        html += '<div class="insight-section-title">Game Performance</div>';
+        html += '<div class="game-insights-grid">';
+        gameInsights.forEach(g => {
+            const barColor = g.percentile >= 70 ? 'var(--correct)' :
+                             g.percentile >= 40 ? 'var(--present)' : 'var(--absent)';
+            html += `
+                <div class="game-insight-card">
+                    <div class="game-insight-header">
+                        <span class="game-insight-emoji">${g.emoji}</span>
+                        <span class="game-insight-name">${g.name}</span>
+                    </div>
+                    <div class="game-insight-percentile">
+                        <div class="mini-bar">
+                            <div class="mini-bar-fill" style="width:${g.percentile}%;background:${barColor}"></div>
+                        </div>
+                        <span class="mini-pct">Top ${100 - g.percentile}%</span>
+                    </div>
+                    <div class="game-insight-stats">
+                        <span>${g.winRate}% wins</span>
+                        <span>${g.played} played</span>
+                        <span>${g.maxStreak} best streak</span>
+                    </div>
+                    <div class="game-insight-strength ${g.strength.toLowerCase().replace(' ', '-')}">${g.strength}</div>
+                </div>
+            `;
+        });
+        html += '</div>';
+    }
+
+    // Strengths & tips
+    if (strongest && weakest && strongest.mode !== weakest.mode) {
+        html += `
+            <div class="insight-section-title">Your Profile</div>
+            <div class="insight-tips">
+                <div class="insight-tip strength">
+                    <span class="tip-icon">${strongest.emoji}</span>
+                    <span>Your strongest game is <strong>${strongest.name}</strong> — keep it up!</span>
+                </div>
+                <div class="insight-tip growth">
+                    <span class="tip-icon">${weakest.emoji}</span>
+                    <span>Try focusing on <strong>${weakest.name}</strong> to improve your overall rank.</span>
+                </div>
+            </div>
+        `;
+    }
+
+    // No data message
+    if (totalPlayed === 0) {
+        html = `
+            <div class="insight-card scholar-card">
+                <div class="scholar-emoji">📖</div>
+                <div class="scholar-title">Welcome!</div>
+                <div class="scholar-desc">Play some games to unlock your performance insights and discover your Quranic Scholar rank.</div>
+            </div>
+        `;
+    }
+
+    el.innerHTML = html;
 }

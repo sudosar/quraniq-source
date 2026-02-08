@@ -570,13 +570,15 @@ Choose a completely different verse."""
 
     return f"""You are an expert Islamic scholar creating a daily "Ayah Scramble" puzzle.
 
-TASK: Choose a well-known Quranic verse and split its ENGLISH translation into word segments for a scramble game.
+TASK: Choose a well-known Quranic verse and split its ARABIC text into word segments for a scramble game.
+Players will rearrange the Arabic segments to reconstruct the original verse.
+They can use hints to reveal the English translation of individual segments.
 
 RULES:
-1. Choose a meaningful, well-known Quranic verse
-2. Split the English translation into 4-7 logical word segments (not individual words, but meaningful phrases)
-3. Each segment should be 1-4 words long
-4. When placed in correct order, the segments form the complete English translation
+1. Choose a meaningful, well-known Quranic verse (5-15 words long)
+2. Split the Arabic verse into 4-7 logical word segments (1-3 Arabic words each)
+3. When placed in correct right-to-left order, the segments form the complete Arabic verse
+4. For each Arabic segment, provide its English translation
 5. Provide the full Arabic verse with diacritics
 6. Provide the verse reference (Surah Name surah:ayah format)
 7. Provide a hint about the verse's theme
@@ -588,17 +590,20 @@ STRICTLY FORBIDDEN verse references (used in last 30 days):
 OUTPUT FORMAT: Return a valid JSON object:
 {{
   "reference": "Surah Name (surah:ayah)",
-  "words": ["segment 1", "segment 2", "segment 3", "segment 4"],
+  "words": ["Arabic segment 1", "Arabic segment 2", "Arabic segment 3", "Arabic segment 4"],
+  "translations": ["English for segment 1", "English for segment 2", "English for segment 3", "English for segment 4"],
   "arabic": "Full Arabic verse with diacritics",
   "hint": "A hint about the verse's theme or context"
 }}
 
 IMPORTANT:
 - Return ONLY the JSON object, no markdown
-- The "words" array contains English phrase segments in CORRECT order
+- The "words" array contains ARABIC segments in CORRECT order (right-to-left reading order)
+- The "translations" array has English translations matching each Arabic segment by index
 - 4-7 segments total
-- Each segment should be a meaningful phrase chunk
-- The verse must be real and the Arabic must be accurate with full tashkeel"""
+- Each segment should be a meaningful Arabic phrase chunk (1-3 words)
+- The verse must be real and the Arabic must be accurate with full tashkeel
+- The concatenation of all segments should equal the full Arabic verse"""
 
 
 def validate_scramble(puzzle, history):
@@ -613,6 +618,16 @@ def validate_scramble(puzzle, history):
         errors.append("Missing 'arabic'")
     if not puzzle.get("hint"):
         errors.append("Missing 'hint'")
+
+    # Validate translations array
+    translations = puzzle.get("translations", [])
+    if len(translations) != len(words):
+        errors.append(f"translations array length ({len(translations)}) must match words array length ({len(words)})")
+
+    # Check that words are Arabic (contain Arabic characters)
+    for i, w in enumerate(words):
+        if not re.search(r'[\u0600-\u06FF]', w):
+            errors.append(f"Word segment {i} ('{w}') doesn't contain Arabic characters")
 
     # Cooldown
     ref = puzzle.get("reference", "")

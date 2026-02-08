@@ -114,7 +114,8 @@ def make_test_deduction():
 def make_test_scramble():
     return {
         "reference": "Surah Al-Fatiha (1:1)",
-        "words": ["In the name", "of Allah", "the Most Gracious", "the Most Merciful"],
+        "words": ["بِسْمِ", "اللَّهِ", "الرَّحْمَٰنِ", "الرَّحِيمِ"],
+        "translations": ["In the name of", "Allah", "the Most Gracious", "the Most Merciful"],
         "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
         "hint": "The opening verse of the Quran"
     }
@@ -283,13 +284,14 @@ test("Cooldown violation for reference", any("reference" in v.lower() or "Refere
 print("\n19. Validate scramble with too few segments")
 history = make_empty_history()
 bad_puzzle = make_test_scramble()
-bad_puzzle["words"] = ["one", "two"]  # Only 2 segments
+bad_puzzle["words"] = ["بِسْمِ", "اللَّهِ"]  # Only 2 segments
+bad_puzzle["translations"] = ["In the name of", "Allah"]
 errors, cooldown, warnings = gen.validate_scramble(bad_puzzle, history)
 test("Error for too few segments", any("segment" in e for e in errors), f"errors={errors}")
 
 print("\n20. Validate scramble with missing fields")
 history = make_empty_history()
-bad_puzzle = {"words": ["a", "b", "c", "d"]}
+bad_puzzle = {"words": ["بِسْمِ", "اللَّهِ", "الرَّحْمَٰنِ", "الرَّحِيمِ"]}
 errors, cooldown, warnings = gen.validate_scramble(bad_puzzle, history)
 test("Errors for missing fields", len(errors) >= 2, f"errors={errors}")
 

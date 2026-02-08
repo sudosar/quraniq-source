@@ -115,7 +115,7 @@
         <section id="scramble-game" class="game-mode" role="tabpanel" aria-labelledby="tab-scramble">
             <div class="game-header">
                 <h2>Ayah Scramble</h2>
-                <p class="game-desc">Arrange the words to complete the verse</p>
+                <p class="game-desc">Arrange the Arabic words to complete the verse. Use hints to reveal English translations.</p>
             </div>
             <div id="scramble-reference" class="scramble-reference"></div>
             <div id="scramble-dropzone" class="scramble-dropzone" role="list" aria-label="Arranged words"></div>
@@ -160,6 +160,7 @@
                 <button class="modal-close" id="stats-close" aria-label="Close">&times;</button>
                 <h2 id="stats-title">Your Statistics</h2>
                 <div id="stats-mode-tabs" class="stats-mode-tabs" role="tablist" aria-label="Statistics mode selector">
+                    <button class="stats-tab" data-stats-mode="insights" role="tab" aria-selected="false">Insights</button>
                     <button class="stats-tab active" data-stats-mode="connections" role="tab" aria-selected="true">Connections</button>
                     <button class="stats-tab" data-stats-mode="wordle" role="tab" aria-selected="false">Wordle</button>
                     <button class="stats-tab" data-stats-mode="deduction" role="tab" aria-selected="false">Deduction</button>
@@ -185,6 +186,9 @@
                 </div>
                 <h3 id="dist-heading">Score Distribution</h3>
                 <div id="guess-distribution" class="guess-distribution" aria-labelledby="dist-heading"></div>
+
+                <!-- Performance Insights -->
+                <div id="performance-insights" class="performance-insights"></div>
             </div>
         </div>
 
