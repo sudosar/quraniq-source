@@ -504,29 +504,37 @@ async function loadWBW(container) {
                     }
                 }
             }
-            return `<span class="wbw-word${isMatch ? ' wbw-highlight' : ''}" data-idx="${i}" data-translation="${w.translation.replace(/"/g, '&quot;')}">${w.arabic}</span>`;
+            return `<span class="wbw-word${isMatch ? ' wbw-highlight' : ''}" data-idx="${i}" data-translation="${w.translation.replace(/"/g, '&quot;')}"><span class="wbw-en"></span><span class="wbw-ar">${w.arabic}</span></span>`;
         }).join(' ');
         wordsDiv.style.display = 'flex';
         fallback.style.display = 'none';
         container.dataset.wbwLoaded = 'true';
 
-        // Attach tap handlers to each word
+        // Attach tap handlers to each word — toggle English above the tapped word
         wordsDiv.querySelectorAll('.wbw-word').forEach(wordEl => {
             wordEl.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const translation = wordEl.dataset.translation;
-                // Remove active from all siblings
-                wordsDiv.querySelectorAll('.wbw-word').forEach(w => w.classList.remove('wbw-active'));
-                wordEl.classList.add('wbw-active');
-                // Show tooltip
-                tooltip.textContent = translation;
-                tooltip.style.display = 'block';
-                // Auto-hide after 3 seconds
-                clearTimeout(tooltip._hideTimer);
-                tooltip._hideTimer = setTimeout(() => {
-                    tooltip.style.display = 'none';
+                const enEl = wordEl.querySelector('.wbw-en');
+                const wasActive = wordEl.classList.contains('wbw-active');
+                if (wasActive) {
+                    // Toggle off this word
                     wordEl.classList.remove('wbw-active');
-                }, 3000);
+                    if (enEl) { enEl.textContent = ''; enEl.style.display = 'none'; }
+                } else {
+                    // Toggle on this word
+                    wordEl.classList.add('wbw-active');
+                    if (enEl) {
+                        enEl.textContent = translation;
+                        enEl.style.display = 'block';
+                    }
+                    // Auto-hide after 6 seconds
+                    const timer = setTimeout(() => {
+                        wordEl.classList.remove('wbw-active');
+                        if (enEl) { enEl.textContent = ''; enEl.style.display = 'none'; }
+                    }, 6000);
+                    wordEl._hideTimer = timer;
+                }
             });
         });
     } else {
@@ -602,8 +610,11 @@ function goToSlide(rowIdx, slideIdx) {
     }
 
     // Hide any visible WBW tooltip from previous slide
-    carousel.querySelectorAll('.wbw-tooltip').forEach(t => t.style.display = 'none');
-    carousel.querySelectorAll('.wbw-word.wbw-active').forEach(w => w.classList.remove('wbw-active'));
+    carousel.querySelectorAll('.wbw-word.wbw-active').forEach(w => {
+        w.classList.remove('wbw-active');
+        const en = w.querySelector('.wbw-en');
+        if (en) { en.textContent = ''; en.style.display = 'none'; }
+    });
 }
 
 function navigateCarousel(rowIdx, direction) {
