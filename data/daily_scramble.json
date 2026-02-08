@@ -1,0 +1,28 @@
+{
+  "date": "2026-02-08",
+  "puzzle": {
+    "reference": "Al-Baqarah (2:153)",
+    "words": [
+      "يَا أَيُّهَا",
+      "الَّذِينَ آمَنُوا",
+      "اسْتَعِينُوا",
+      "بِالصَّبْرِ",
+      "وَالصَّلَاةِ ۚ",
+      "إِنَّ اللَّهَ",
+      "مَعَ الصَّابِرِينَ"
+    ],
+    "translations": [
+      "O you",
+      "who have believed,",
+      "seek help",
+      "through patience",
+      "and prayer.",
+      "Indeed, Allah",
+      "is with the patient."
+    ],
+    "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا اسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ ۚ إِنَّ اللَّهَ مَعَ الصَّابِرِينَ",
+    "hint": "This verse calls upon believers to seek divine assistance through two fundamental acts of worship and virtue."
+  },
+  "generated": true,
+  "model": "auto (chain)"
+}
