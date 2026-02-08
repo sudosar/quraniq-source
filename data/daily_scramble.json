@@ -1,0 +1,22 @@
+{
+  "date": "2026-02-08",
+  "puzzle": {
+    "reference": "Surah Al-Baqarah (2:152)",
+    "words": [
+      "فَاذْكُرُونِي",
+      "أَذْكُرْكُمْ",
+      "وَاشْكُرُوا لِي",
+      "وَلَا تَكْفُرُونِ"
+    ],
+    "translations": [
+      "So remember Me",
+      "I will remember you",
+      "and be grateful to Me",
+      "and do not deny Me"
+    ],
+    "arabic": "فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ",
+    "hint": "This verse emphasizes the mutual relationship between Allah and His servants, encouraging remembrance and gratitude."
+  },
+  "generated": true,
+  "model": "auto (chain)"
+}

@@ -1,0 +1,12 @@
+{
+  "date": "2026-02-08",
+  "puzzle": {
+    "word": "هدى",
+    "display": "هُدًى",
+    "hint": "Divine guidance that illuminates the path of the pious",
+    "verse": "Al-Baqarah 2:2 — This is the Book about which there is no doubt, a guidance for those conscious of Allah.",
+    "arabicVerse": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ"
+  },
+  "generated": true,
+  "model": "auto (chain)"
+}
