@@ -566,6 +566,19 @@ function renderPerformanceInsights() {
         `;
     }
 
+    // Share button
+    if (totalPlayed > 0) {
+        html += `
+            <div class="insight-share-actions">
+                <button id="share-insights-btn" class="btn btn-primary btn-share">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                    Share My Journey
+                </button>
+                <button id="copy-insights-btn" class="btn btn-secondary">Copy to Clipboard</button>
+            </div>
+        `;
+    }
+
     // No data message
     if (totalPlayed === 0) {
         html = `
@@ -578,4 +591,53 @@ function renderPerformanceInsights() {
     }
 
     el.innerHTML = html;
+
+    // Attach share button event if present
+    const shareInsightsBtn = el.querySelector('#share-insights-btn');
+    const copyInsightsBtn = el.querySelector('#copy-insights-btn');
+    if (shareInsightsBtn || copyInsightsBtn) {
+        const shareText = generateInsightsShareText(scholar, overallPercentile, gameInsights, totalPlayed, bestStreak);
+        if (shareInsightsBtn) {
+            shareInsightsBtn.addEventListener('click', async () => {
+                if (navigator.share) {
+                    try { await navigator.share({ text: shareText }); } catch {}
+                } else {
+                    await navigator.clipboard.writeText(shareText);
+                    showToast('Copied to clipboard!');
+                }
+            });
+        }
+        if (copyInsightsBtn) {
+            copyInsightsBtn.addEventListener('click', async () => {
+                await navigator.clipboard.writeText(shareText);
+                showToast('Copied to clipboard!');
+            });
+        }
+    }
+}
+
+/**
+ * Generate a WhatsApp/social media friendly emoji share text for Insights.
+ */
+function generateInsightsShareText(scholar, overallPercentile, gameInsights, totalPlayed, bestStreak) {
+    const progressBar = (pct) => {
+        const filled = Math.round(pct / 10);
+        return '█'.repeat(filled) + '░'.repeat(10 - filled);
+    };
+
+    let text = `📖 QuranPuzzle - My Journey\n\n`;
+    text += `${scholar.emoji} ${scholar.title} | Top ${100 - overallPercentile}%\n\n`;
+
+    if (gameInsights.length > 0) {
+        gameInsights.forEach(g => {
+            text += `${g.emoji} ${g.name}: ${g.winRate}% wins ${progressBar(g.winRate)}\n`;
+        });
+        text += `\n`;
+    }
+
+    text += `🏆 Best Streak: ${bestStreak}\n`;
+    text += `📊 Games Played: ${totalPlayed}\n\n`;
+    text += `https://sudosar.github.io/quranpuzz/`;
+
+    return text;
 }

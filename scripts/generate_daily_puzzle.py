@@ -691,7 +691,7 @@ GAME_CONFIGS = {
 def generate_game(game_type, history, today):
     """Generate a single game puzzle with retries and model fallback chain.
     
-    Fallback chain: DeepSeek-R1 → Gemini Flash → GPT-4o-mini
+    Fallback chain: DeepSeek-R1 → Gemini Flash → Phi-4
     Each model gets up to MAX_RETRIES attempts before falling back.
     Rate limiting immediately triggers fallback to the next model.
     """
@@ -789,7 +789,7 @@ def main():
 
     print(f"Available APIs:")
     if GITHUB_TOKEN:
-        print(f"  ✓ GitHub Models (DeepSeek-R1, GPT-4o-mini)")
+        print(f"  ✓ GitHub Models (DeepSeek-R1, Phi-4)")
     else:
         print(f"  ✗ GitHub Models (GITHUB_TOKEN not set)")
     if GEMINI_API_KEY:

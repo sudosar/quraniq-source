@@ -2102,3 +2102,23 @@ button, input, select, textarea {
     background: var(--border);
     border-radius: 3px;
 }
+
+/* ===== Insight Share Actions ===== */
+.insight-share-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.insight-share-actions .btn {
+    flex: 1;
+    max-width: 200px;
+}
+
+.insight-share-actions .btn-share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
