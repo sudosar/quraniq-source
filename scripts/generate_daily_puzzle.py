@@ -11,7 +11,7 @@ Model fallback chain
 ────────────────────
 1. DeepSeek-R1    (GitHub Models — free, best reasoning)
 2. Gemini Flash   (Google Gemini API — free tier, strong Arabic/Quranic)
-3. GPT-4o-mini    (GitHub Models — free, last resort)
+3. Phi-4          (GitHub Models — free, last resort)
 
 Each game uses 1 API call (up to 5 retries), so worst case = 20 calls/day.
 """
@@ -31,11 +31,11 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 
-# Model fallback chain: DeepSeek-R1 → Gemini Flash → GPT-4o-mini
+# Model fallback chain: DeepSeek-R1 → Gemini Flash → Phi-4
 MODEL_CHAIN = [
     {"id": "DeepSeek-R1", "api": "github", "label": "DeepSeek-R1 (GitHub Models)"},
     {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Google)"},
-    {"id": "gpt-4o-mini", "api": "github", "label": "GPT-4o-mini (GitHub Models)"},
+    {"id": "Phi-4", "api": "github", "label": "Phi-4 (GitHub Models)"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
