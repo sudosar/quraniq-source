@@ -1,12 +1,12 @@
 {
   "date": "2026-02-08",
   "puzzle": {
-    "word": "علم",
-    "display": "عِلْمٌ",
-    "hint": "This word signifies knowledge and is highly valued in Islam.",
-    "verse": "Al-Baqarah 2:255 — Allah is the Eternal, the Sustainer of all existence. He is not overtaken by sleep or fatigue. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills.",
-    "arabicVerse": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۖ وَهُوَ الْعَلِيُّ الْكَبِيرُ"
+    "word": "نفس",
+    "display": "نَفْس",
+    "hint": "Related to the essence of being; often paired with accountability.",
+    "verse": "Surah Al-An'am 6:70 — And leave those who take their religion as amusement and diversion and whom the worldly life has deluded. And remind through the Qur'an that a soul will be destroyed for what it has earned. There will be for it other than Allah no protector and no intercessor. And if it should offer every compensation, it will not be taken from it. Those are the ones who are destroyed for what they have earned. For them will be a drink of scalding water and a painful punishment because they disbelieved.",
+    "arabicVerse": "وَذَرِ ٱلَّذِينَ ٱتَّخَذُوا۟ دِينَهُمْ لَعِبًا وَلَهْوًا وَغَرَّتْهُمُ ٱلْحَيَوٰةُ ٱلدُّنْيَا ۚ وَذَكِّرْ بِهِۦٓ أَن تُبْسَلَ نَفْسٌۢ بِمَا كَسَبَتْ لَيْسَ لَهَا مِن دُونِ ٱللَّهِ وَلِىٌّ وَلَا شَفِيعٌ وَإِن تَعْدِلْ كُلَّ عَدْلٍ لَّا يُؤْخَذْ مِنْهَآ ۗ أُو۟لَٰٓئِكَ ٱلَّذِينَ أُبْسِلُوا۟ بِمَا كَسَبُوا۟ ۖ لَهُمْ شَرَابٌ مِّنْ حَمِيمٍ وَعَذَابٌ أَلِيمٌۢ بِمَا كَانُوا۟ يَكْفُرُونَ"
   },
   "generated": true,
-  "model": "DeepSeek-R1"
+  "model": "auto (chain)"
 }

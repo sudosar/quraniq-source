@@ -1,6 +1,5 @@
 {
-  "date": "2026-02-08",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "الأنبياء",
@@ -164,6 +163,88 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "wordle": {
+    "word": "نفس",
+    "display": "نَفْس",
+    "hint": "Related to the essence of being; often paired with accountability.",
+    "verse": "Surah Al-An'am 6:70 — And leave those who take their religion as amusement and diversion and whom the worldly life has deluded. And remind through the Qur'an that a soul will be destroyed for what it has earned. There will be for it other than Allah no protector and no intercessor. And if it should offer every compensation, it will not be taken from it. Those are the ones who are destroyed for what they have earned. For them will be a drink of scalding water and a painful punishment because they disbelieved.",
+    "arabicVerse": "وَذَرِ ٱلَّذِينَ ٱتَّخَذُوا۟ دِينَهُمْ لَعِبًا وَلَهْوًا وَغَرَّتْهُمُ ٱلْحَيَوٰةُ ٱلدُّنْيَا ۚ وَذَكِّرْ بِهِۦٓ أَن تُبْسَلَ نَفْسٌۢ بِمَا كَسَبَتْ لَيْسَ لَهَا مِن دُونِ ٱللَّهِ وَلِىٌّ وَلَا شَفِيعٌ وَإِن تَعْدِلْ كُلَّ عَدْلٍ لَّا يُؤْخَذْ مِنْهَآ ۗ أُو۟لَٰٓئِكَ ٱلَّذِينَ أُبْسِلُوا۟ بِمَا كَسَبُوا۟ ۖ لَهُمْ شَرَابٌ مِّنْ حَمِيمٍ وَعَذَابٌ أَلِيمٌۢ بِمَا كَانُوا۟ يَكْفُرُونَ"
+  },
+  "deduction": {
+    "title": "The Test of Wealth and Gratitude",
+    "intro": "A man of immense fortune was put to the ultimate test. Would his wealth lead him to arrogance and forgetfulness of his Lord, or would he remain steadfast in gratitude? Unravel the clues to discover this individual's identity and the nature of his divine trial.",
+    "clues": [
+      "He was blessed with abundance beyond measure.",
+      "His prosperity was a test of his faith and humility.",
+      "He was warned about the dangers of being consumed by worldly possessions.",
+      "He attributed his success solely to his own knowledge and abilities, forgetting the source of his blessings.",
+      "An orchard was central to his trial, representing his abundant provision.",
+      "His once-flourishing possessions were reduced to barrenness overnight as a consequence of his arrogance."
+    ],
+    "categories": {
+      "prophet": {
+        "label": "Prophet/Person",
+        "options": [
+          "Prophet Musa (Moses)",
+          "Prophet Nuh (Noah)",
+          "The Companion with Two Gardens",
+          "Prophet Sulaiman (Solomon)",
+          "Qarun (Korah)"
+        ],
+        "answer": "The Companion with Two Gardens"
+      },
+      "trial": {
+        "label": "Trial/Event",
+        "options": [
+          "The Great Flood",
+          "The Golden Calf",
+          "The Destruction of the Gardens",
+          "The Plague",
+          "The Earthquake"
+        ],
+        "answer": "The Destruction of the Gardens"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The Ark",
+          "The Mountain",
+          "The Gardens",
+          "The Palace",
+          "The River"
+        ],
+        "answer": "The Gardens"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "He repented and was forgiven",
+          "He was granted even greater wealth",
+          "His wealth was destroyed, and he was left in regret",
+          "He became a prophet",
+          "He was turned into stone"
+        ],
+        "answer": "His wealth was destroyed, and he was left in regret"
+      }
+    },
+    "verse": "And he regretted what he had spent on it after it had collapsed upon its trellises and said, \"Oh, I wish I had not associated anyone with my Lord.\" (Al-Kahf:42)",
+    "arabic": "وَأُحِيطَ بِثَمَرِهِۦ فَأَصْبَحَ يُقَلِّبُ كَفَّيْهِ عَلَىٰ مَآ أَنفَقَ فِيهَا وَهِىَ خَاوِيَةٌ عَلَىٰ عُرُوشِهَا وَيَقُولُ يَٰلَيْتَنِى لَمْ أُشْرِكْ بِرَبِّىٓ أَحَدًا"
+  },
+  "scramble": {
+    "reference": "Al-Baqarah (2:156)",
+    "words": [
+      "إِنَّا إِلَيْهِ",
+      "وَإِنَّا",
+      "لِلَّهِ",
+      "رَاجِعُونَ"
+    ],
+    "translations": [
+      "indeed, to Him",
+      "and indeed",
+      "[belong] to Allah",
+      "[we will] return"
+    ],
+    "arabic": "الَّذِينَ إِذَا أَصَابَتْهُم مُّصِيبَةٌ قَالُوا إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ",
+    "hint": "This verse is often recited upon hearing news of a loss or calamity."
+  }
 }
