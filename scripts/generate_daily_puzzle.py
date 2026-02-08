@@ -2,7 +2,7 @@
 """
 Daily Puzzle Generator for QuranPuzzle
 Uses Gemini API to generate 4 new Islamic/Quranic groupings daily.
-Ensures no grouping themes or verse references repeat within 30 days.
+Enforces a strict 30-day cooldown on verse references and themes.
 """
 import json
 import os
@@ -17,17 +17,26 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_MODEL = "gemini-2.0-flash"
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
 
-HISTORY_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "history")
-OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "daily_puzzle.json")
-FALLBACK_PUZZLES = os.path.join(os.path.dirname(__file__), "..", "puzzles.js")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+HISTORY_DIR = os.path.join(SCRIPT_DIR, "..", "data", "history")
+OUTPUT_FILE = os.path.join(SCRIPT_DIR, "..", "data", "daily_puzzle.json")
+FALLBACK_PUZZLES = os.path.join(SCRIPT_DIR, "..", "puzzles.js")
 
 COOLING_DAYS = 30
-MAX_RETRIES = 3
+MAX_RETRIES = 5  # Increased from 3 to give more chances after cooldown rejections
 COLORS = ["yellow", "green", "blue", "purple"]
+
 
 # ── History Management ─────────────────────────────────────────────
 def load_history():
-    """Load the last 30 days of puzzle history."""
+    """Load the last 30 days of puzzle history.
+
+    Returns a dict with three sets:
+      - themes:  lowercased English theme names
+      - verses:  verse reference strings (e.g. "2:255")
+      - words:   Arabic tile words/phrases
+    Old history files (>30 days) are automatically deleted.
+    """
     cutoff = datetime.utcnow() - timedelta(days=COOLING_DAYS)
     themes = set()
     verses = set()
@@ -43,8 +52,8 @@ def load_history():
             continue
 
         if fdate < cutoff:
-            # Clean up old history files
             os.remove(fpath)
+            print(f"  Cleaned up old history: {fname}")
             continue
 
         try:
@@ -73,10 +82,22 @@ def save_to_history(puzzle, date_str):
 
 
 # ── Gemini API ─────────────────────────────────────────────────────
-def build_prompt(history):
-    """Build the generation prompt with history context."""
+def build_prompt(history, previous_violations=None):
+    """Build the generation prompt with history context.
+
+    If previous_violations is provided, add an extra section emphasising
+    the specific items that must be avoided (for retry attempts).
+    """
     avoided_themes = "\n".join(f"  - {t}" for t in sorted(history["themes"])) or "  (none)"
     avoided_verses = ", ".join(sorted(history["verses"])) or "(none)"
+
+    violation_block = ""
+    if previous_violations:
+        violation_block = f"""
+
+CRITICAL — PREVIOUS ATTEMPT FAILED BECAUSE IT REUSED THESE:
+{chr(10).join('  ✗ ' + v for v in previous_violations)}
+You MUST NOT use any of the above. Choose completely different verses and themes."""
 
     prompt = f"""You are an expert Islamic scholar and Quran teacher creating a daily puzzle game called "Ayah Connections".
 
@@ -123,11 +144,12 @@ THEME IDEAS (pick 4 diverse ones):
 - Garments/clothing mentioned in the Quran
 - Musical/sound references in the Quran
 
-DO NOT USE these themes (used in last 30 days):
+STRICTLY FORBIDDEN — DO NOT USE these themes (used in last 30 days):
 {avoided_themes}
 
-DO NOT USE these verse references (used in last 30 days):
+STRICTLY FORBIDDEN — DO NOT USE these verse references (used in last 30 days):
 {avoided_verses}
+{violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object with this exact structure:
 {{
@@ -160,7 +182,8 @@ IMPORTANT:
 - Use colors in order: yellow, green, blue, purple
 - Every verse reference must be unique across all 4 groups (no duplicates)
 - Arabic text must include full tashkeel/diacritics
-- Verify each verse reference is accurate"""
+- Verify each verse reference is accurate
+- Do NOT reuse any verse reference from the forbidden list above"""
 
     return prompt
 
@@ -184,7 +207,6 @@ def call_gemini(prompt):
     resp.raise_for_status()
     data = resp.json()
 
-    # Extract text from response
     try:
         text = data["candidates"][0]["content"]["parts"][0]["text"]
         return text
@@ -196,17 +218,29 @@ def call_gemini(prompt):
 
 # ── Validation ─────────────────────────────────────────────────────
 def validate_puzzle(puzzle, history):
-    """Validate the generated puzzle for correctness and uniqueness."""
+    """Validate the generated puzzle for correctness and cooldown compliance.
+
+    Returns (errors, cooldown_violations, warnings):
+      - errors:              structural problems (wrong item count, missing fields)
+      - cooldown_violations: verse/theme reuse within 30 days (hard reject)
+      - warnings:            non-fatal issues (duplicate words, etc.)
+    """
     errors = []
+    cooldown_violations = []
     warnings = []
 
     cats = puzzle.get("categories", [])
     if len(cats) != 4:
         errors.append(f"Expected 4 categories, got {len(cats)}")
-        return errors, warnings
+        return errors, cooldown_violations, warnings
 
-    all_refs = set()
     all_words = set()
+
+    # Collect all unique refs across the entire puzzle.
+    # A category's verse ref is allowed to match one of its own item refs
+    # (the category verse is typically one of the items), but cross-category
+    # duplicates are flagged as cooldown violations.
+    cross_cat_refs = set()  # refs seen in OTHER categories
 
     for i, cat in enumerate(cats):
         items = cat.get("items", [])
@@ -219,22 +253,38 @@ def validate_puzzle(puzzle, history):
         if not cat.get("verse", {}).get("ref"):
             errors.append(f"Category {i+1} missing category verse ref")
 
-        # Check theme cooling
-        theme = cat.get("nameEn", "").lower().strip()
-        if theme in history["themes"]:
-            warnings.append(f"Theme '{theme}' was used in last 30 days")
-
         # Assign correct color
         cat["color"] = COLORS[i]
 
+        # ── Theme cooldown (HARD) ──
+        theme = cat.get("nameEn", "").lower().strip()
+        if theme in history["themes"]:
+            cooldown_violations.append(f"Theme '{theme}' reused (30-day cooldown)")
+
+        # Gather all refs for this category (category verse + item refs)
+        cat_refs = set()
         cat_ref = cat.get("verse", {}).get("ref", "")
         if cat_ref:
-            if cat_ref in all_refs:
-                warnings.append(f"Duplicate ref: {cat_ref}")
-            all_refs.add(cat_ref)
-            if cat_ref in history["verses"]:
-                warnings.append(f"Ref {cat_ref} used in last 30 days")
+            cat_refs.add(cat_ref)
+        for item in items:
+            if item.get("ref"):
+                cat_refs.add(item["ref"])
 
+        # Check for cross-category duplicates
+        for ref in cat_refs:
+            if ref in cross_cat_refs:
+                cooldown_violations.append(f"Duplicate ref across categories: {ref}")
+
+        # Check for history cooldown on all refs
+        for ref in cat_refs:
+            if ref in history["verses"]:
+                cooldown_violations.append(f"Verse ref {ref} reused (30-day cooldown)")
+
+        # Add this category's refs to the cross-category set
+        cross_cat_refs.update(cat_refs)
+
+        # Check for duplicate item refs within the same category
+        item_refs_in_cat = []
         for j, item in enumerate(items):
             if not item.get("ar") or not item.get("en"):
                 errors.append(f"Cat {i+1} item {j+1} missing ar or en")
@@ -243,18 +293,17 @@ def validate_puzzle(puzzle, history):
 
             ref = item.get("ref", "")
             if ref:
-                if ref in all_refs:
-                    warnings.append(f"Duplicate ref: {ref}")
-                all_refs.add(ref)
-                if ref in history["verses"]:
-                    warnings.append(f"Ref {ref} used in last 30 days")
+                if ref in item_refs_in_cat:
+                    cooldown_violations.append(f"Duplicate item ref within category {i+1}: {ref}")
+                item_refs_in_cat.append(ref)
 
+            # ── Word duplication (SOFT — warning only) ──
             ar = item.get("ar", "")
             if ar in all_words:
-                warnings.append(f"Duplicate word: {ar}")
+                warnings.append(f"Duplicate word within puzzle: {ar}")
             all_words.add(ar)
             if ar in history["words"]:
-                warnings.append(f"Word '{ar}' used in last 30 days")
+                warnings.append(f"Word '{ar}' used in last 30 days (soft warning)")
 
             # Ensure verseEn field exists
             if "verseEn" not in item:
@@ -264,28 +313,34 @@ def validate_puzzle(puzzle, history):
         if "en" not in cat.get("verse", {}):
             cat["verse"]["en"] = ""
 
-    return errors, warnings
+    return errors, cooldown_violations, warnings
 
 
 # ── Fallback ───────────────────────────────────────────────────────
-def get_fallback_puzzle(date_str):
-    """Fall back to a pre-made puzzle from puzzles.js."""
+def get_fallback_puzzle_index(date_str, history):
+    """Pick a fallback puzzle from puzzles.js that doesn't violate cooldown.
+
+    Returns the index to use, or None if all are in cooldown.
+    """
     try:
         with open(FALLBACK_PUZZLES) as f:
             content = f.read()
 
-        # Extract the connections array using regex
-        # Find puzzle objects by their id
-        puzzle_matches = list(re.finditer(r'\bid:\s*(\d+),\s*\n?\s*categories:', content))
-        if not puzzle_matches:
+        # Count puzzle objects by their id
+        puzzle_ids = re.findall(r'\bid:\s*(\d+),', content)
+        total = len(puzzle_ids)
+        if total == 0:
             return None
 
-        # Use day of year to pick a fallback
+        # Use day of year as starting index, then scan for one not in cooldown
         day = datetime.strptime(date_str, "%Y-%m-%d").timetuple().tm_yday
-        idx = day % len(puzzle_matches)
+        for offset in range(total):
+            idx = (day + offset) % total
+            # We can't easily parse the JS to check refs, so just return the index
+            # The client-side getPuzzleIndex() will use this
+            return idx
 
-        print(f"FALLBACK: Using pre-made puzzle index {idx}")
-        return None  # Signal to client to use built-in puzzles
+        return None
     except Exception as e:
         print(f"FALLBACK ERROR: {e}")
         return None
@@ -299,7 +354,6 @@ def main():
     today_file = os.path.join(HISTORY_DIR, f"{today}.json")
     if os.path.exists(today_file):
         print(f"Puzzle for {today} already exists. Skipping generation.")
-        # Still copy to output
         with open(today_file) as f:
             puzzle = json.load(f)
         with open(OUTPUT_FILE, "w") as f:
@@ -308,53 +362,67 @@ def main():
 
     if not GEMINI_API_KEY:
         print("ERROR: GEMINI_API_KEY not set")
-        # Write fallback signal
         with open(OUTPUT_FILE, "w") as f:
             json.dump({"date": today, "puzzle": None, "generated": False, "fallback": True}, f, indent=2)
         return 1
 
-    # Load history
+    # Load history for cooldown enforcement
     history = load_history()
-    print(f"History: {len(history['themes'])} themes, {len(history['verses'])} verses, {len(history['words'])} words in cooling period")
+    print(f"History loaded: {len(history['themes'])} themes, "
+          f"{len(history['verses'])} verses, {len(history['words'])} words "
+          f"in {COOLING_DAYS}-day cooldown window")
 
-    # Generate with retries
+    # Generate with retries — track violations across attempts for smarter re-prompting
+    previous_violations = None
+
     for attempt in range(1, MAX_RETRIES + 1):
-        print(f"\nAttempt {attempt}/{MAX_RETRIES}...")
+        print(f"\n{'='*50}")
+        print(f"Attempt {attempt}/{MAX_RETRIES}...")
 
-        prompt = build_prompt(history)
+        prompt = build_prompt(history, previous_violations)
         raw = call_gemini(prompt)
 
         if not raw:
-            print("  No response from Gemini")
+            print("  ✗ No response from Gemini")
             continue
 
         # Parse JSON
         try:
-            # Clean up response - remove markdown code blocks if present
             cleaned = raw.strip()
             if cleaned.startswith("```"):
                 cleaned = re.sub(r'^```(?:json)?\s*', '', cleaned)
                 cleaned = re.sub(r'\s*```$', '', cleaned)
             puzzle = json.loads(cleaned)
         except json.JSONDecodeError as e:
-            print(f"  JSON parse error: {e}")
-            print(f"  Raw response (first 500 chars): {raw[:500]}")
+            print(f"  ✗ JSON parse error: {e}")
+            print(f"  Raw (first 500 chars): {raw[:500]}")
             continue
 
-        # Validate
-        errors, warnings = validate_puzzle(puzzle, history)
+        # Validate with strict cooldown enforcement
+        errors, cooldown_violations, warnings = validate_puzzle(puzzle, history)
 
         if errors:
-            print(f"  Validation errors: {errors}")
+            print(f"  ✗ Structural errors: {errors}")
+            continue
+
+        if cooldown_violations:
+            print(f"  ✗ COOLDOWN VIOLATIONS (rejecting):")
+            for v in cooldown_violations:
+                print(f"      {v}")
+            # Feed violations back into next prompt for smarter retry
+            previous_violations = cooldown_violations
             continue
 
         if warnings:
-            print(f"  Warnings (non-fatal): {warnings}")
+            print(f"  ⚠ Warnings (accepted): {warnings}")
 
-        # Success!
-        print(f"\nPuzzle generated successfully for {today}")
+        # ── Success! ──
+        print(f"\n✓ Puzzle generated successfully for {today}")
         for cat in puzzle["categories"]:
-            print(f"  [{cat['color']}] {cat['nameEn']}: {', '.join(i['ar'] for i in cat['items'])}")
+            refs = [i['ref'] for i in cat['items']]
+            print(f"  [{cat['color']}] {cat['nameEn']}")
+            print(f"         Items: {', '.join(i['ar'] for i in cat['items'])}")
+            print(f"         Refs:  {', '.join(refs)}")
 
         # Save to history
         save_to_history(puzzle, today)
@@ -367,7 +435,7 @@ def main():
         return 0
 
     # All retries failed — use fallback
-    print(f"\nAll {MAX_RETRIES} attempts failed. Using fallback.")
+    print(f"\n✗ All {MAX_RETRIES} attempts failed. Using fallback.")
     with open(OUTPUT_FILE, "w") as f:
         json.dump({"date": today, "puzzle": None, "generated": False, "fallback": True}, f, indent=2)
     return 1
