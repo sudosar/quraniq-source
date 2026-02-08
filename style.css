@@ -881,7 +881,7 @@ button, input, select, textarea {
 /* Arabic connection tiles */
 .conn-tile-ar {
     font-family: var(--font-arabic);
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     direction: rtl;
     line-height: 1.4;
     position: relative;
@@ -1732,7 +1732,7 @@ button, input, select, textarea {
     }
 
     .conn-tile-ar {
-        font-size: 0.85rem;
+        font-size: 1.15rem;
     }
 }
 
