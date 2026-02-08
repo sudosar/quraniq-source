@@ -356,14 +356,10 @@ function showScrResult(cacheOnly) {
     });
 
     const puzzleNum = getPuzzleIndex(PUZZLES.scramble) + 1;
-    // Stars based on extra moves beyond minimum (= word count) and hints used
-    // Minimum moves = number of words (placing each once perfectly)
-    const minMoves = scr.puzzle.words.length;
-    const extraMoves = Math.max(0, scr.moves - minMoves);
-    const extraAllowed = scr.maxMoves - minMoves; // total extra moves budget
-    // 0 extra moves = 5 stars, scale down as extra moves increase
-    const baseStars = scr.won ? Math.max(1, 5 - Math.floor(extraMoves / Math.max(1, extraAllowed / 5))) : 0;
-    const stars = Math.max(0, baseStars - scr.hintsUsed);
+    // Stars based on hints used only (matches the score system)
+    // 0 hints = 5 stars, 1 hint = 4 stars, 2 hints = 3 stars, 3 hints = 2 stars
+    // Moves are just a gameplay limit, not a performance penalty
+    const stars = scr.won ? Math.max(1, 5 - scr.hintsUsed) : 0;
     const starStr = '⭐'.repeat(stars) + '☆'.repeat(5 - stars);
 
     const shareText = `QuranPuzzle - Ayah Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${starStr}\nMoves: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}\n\nhttps://sudosar.github.io/quranpuzz/`;
