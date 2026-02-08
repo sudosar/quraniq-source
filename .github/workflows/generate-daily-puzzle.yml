@@ -57,7 +57,9 @@ jobs:
           git add data/
           git diff --staged --quiet || {
             DATE=$(date -u +%Y-%m-%d)
-            git commit -m "Generate daily puzzle for $DATE"
+          
+            git commit -m "Generate daily puzzles for $(date -u +%Y-%m-%d)" || echo "No changes"
+
             git push
           }
 
