@@ -29,8 +29,11 @@ const conn = {
 };
 
 function initConnections() {
-    const idx = getPuzzleIndex(PUZZLES.connections);
+    const idx = getConnectionsPuzzleIndex(PUZZLES.connections);
     conn.puzzle = PUZZLES.connections[idx];
+
+    // Record this puzzle's verses for the cooling period system
+    recordPuzzleVerses(conn.puzzle);
 
     // Check saved state
     const saved = app.state[`conn_${app.dayNumber}`];
@@ -663,7 +666,7 @@ function showConnResult(won, cacheOnly) {
     });
 
     const mistakesUsed = 4 - conn.mistakes;
-    const puzzleNum = getPuzzleIndex(PUZZLES.connections) + 1;
+    const puzzleNum = getConnectionsPuzzleIndex(PUZZLES.connections) + 1;
 
     const shareText = `QuranPuzzle - Connections #${puzzleNum}\n${emojiGrid}Groups found: ${correctCount}/4\nMistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quranpuzz/`;
 

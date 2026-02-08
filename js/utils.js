@@ -15,6 +15,129 @@ function getPuzzleIndex(arr) {
     return getDayNumber() % arr.length;
 }
 
+// ==================== VERSE COOLING PERIOD ====================
+const VERSE_COOL_KEY = 'quranpuzzle_verse_history';
+const COOLING_DAYS = 30;
+
+/**
+ * Extract all verse refs from a connections puzzle.
+ * Returns a Set of normalized ref strings (e.g. "7:26", "59:23").
+ */
+function extractPuzzleVerseRefs(puzzle) {
+    const refs = new Set();
+    if (!puzzle || !puzzle.categories) return refs;
+    for (const cat of puzzle.categories) {
+        // Category-level verse
+        if (cat.verse && cat.verse.ref) {
+            const norm = normalizeRef(cat.verse.ref);
+            if (norm) refs.add(norm);
+        }
+        // Item-level verses
+        if (cat.items) {
+            for (const item of cat.items) {
+                if (item.ref) {
+                    const norm = normalizeRef(item.ref);
+                    if (norm) refs.add(norm);
+                }
+            }
+        }
+    }
+    return refs;
+}
+
+/**
+ * Normalize a ref to "surah:ayah" format for consistent comparison.
+ * "7:26" → "7:26", "18:9-12" → "18:9", "التين:1-3" → "95:1"
+ */
+function normalizeRef(ref) {
+    if (!ref) return null;
+    const parsed = parseQuranRef(ref);
+    if (parsed) return `${parsed.surah}:${parsed.ayah}`;
+    return null;
+}
+
+/**
+ * Load verse history from localStorage.
+ * Returns { "surah:ayah": dayNumber, ... }
+ */
+function loadVerseHistory() {
+    try {
+        return JSON.parse(localStorage.getItem(VERSE_COOL_KEY)) || {};
+    } catch { return {}; }
+}
+
+/**
+ * Save verse history to localStorage.
+ */
+function saveVerseHistory(history) {
+    localStorage.setItem(VERSE_COOL_KEY, JSON.stringify(history));
+}
+
+/**
+ * Record that a puzzle's verses were shown today.
+ */
+function recordPuzzleVerses(puzzle) {
+    const history = loadVerseHistory();
+    const today = getDayNumber();
+    const refs = extractPuzzleVerseRefs(puzzle);
+    for (const ref of refs) {
+        history[ref] = today;
+    }
+    // Prune entries older than COOLING_DAYS to keep storage lean
+    for (const [ref, day] of Object.entries(history)) {
+        if (today - day > COOLING_DAYS) {
+            delete history[ref];
+        }
+    }
+    saveVerseHistory(history);
+}
+
+/**
+ * Check how many of a puzzle's verses are still in cooling period.
+ * Returns the count of "hot" (recently shown) verses.
+ */
+function countHotVerses(puzzle, history, today) {
+    const refs = extractPuzzleVerseRefs(puzzle);
+    let hot = 0;
+    for (const ref of refs) {
+        const lastShown = history[ref];
+        if (lastShown !== undefined && (today - lastShown) < COOLING_DAYS && (today - lastShown) > 0) {
+            hot++;
+        }
+    }
+    return hot;
+}
+
+/**
+ * Select the best puzzle from an array using verse cooling.
+ * Uses a seeded deterministic base index (so all users get the same puzzle),
+ * then picks the candidate with the fewest cooling conflicts.
+ * Falls back to the base index if all candidates have conflicts.
+ */
+function getConnectionsPuzzleIndex(arr) {
+    const today = getDayNumber();
+    const history = loadVerseHistory();
+    const baseIdx = today % arr.length;
+
+    // Score all puzzles by how many hot verses they have
+    const candidates = arr.map((puzzle, i) => ({
+        index: i,
+        hotCount: countHotVerses(puzzle, history, today)
+    }));
+
+    // Sort: prefer 0 hot verses, then fewer hot verses.
+    // Among ties, prefer puzzles closest to the base index (wrapping).
+    candidates.sort((a, b) => {
+        if (a.hotCount !== b.hotCount) return a.hotCount - b.hotCount;
+        // Distance from base index (circular)
+        const distA = (a.index - baseIdx + arr.length) % arr.length;
+        const distB = (b.index - baseIdx + arr.length) % arr.length;
+        return distA - distB;
+    });
+
+    return candidates[0].index;
+}
+
 // ==================== SHUFFLE ====================
 function shuffle(arr) {
     const a = [...arr];
