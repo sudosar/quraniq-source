@@ -34,7 +34,7 @@ GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/c
 # Model fallback chain: DeepSeek-R1 → Gemini Flash → GPT-4o-mini
 MODEL_CHAIN = [
     {"id": "DeepSeek-R1", "api": "github", "label": "DeepSeek-R1 (GitHub Models)"},
-    {"id": "gemini-2.0-flash", "api": "gemini", "label": "Gemini 2.0 Flash (Google)"},
+    {"id": "gemini-2.5-pro", "api": "gemini", "label": "Gemini 2.5 Pro (Google)"},
     {"id": "gpt-4o-mini", "api": "github", "label": "GPT-4o-mini (GitHub Models)"},
 ]
 
@@ -772,7 +772,7 @@ def main():
     else:
         print(f"  ✗ GitHub Models (GITHUB_TOKEN not set)")
     if GEMINI_API_KEY:
-        print(f"  ✓ Gemini API (gemini-2.0-flash)")
+        print(f"  ✓ Gemini API (gemini-2.5-pro)")
     else:
         print(f"  ✗ Gemini API (GEMINI_API_KEY not set)")
 
