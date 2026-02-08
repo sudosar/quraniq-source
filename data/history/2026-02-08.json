@@ -1,6 +1,5 @@
 {
-  "date": "2026-02-08",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "الأنبياء",
@@ -164,6 +163,85 @@
       }
     ]
   },
-  "generated": true,
-  "model": "DeepSeek-R1"
+  "wordle": {
+    "word": "علم",
+    "display": "عِلْمٌ",
+    "hint": "This word signifies knowledge and is highly valued in Islam.",
+    "verse": "Al-Baqarah 2:255 — Allah is the Eternal, the Sustainer of all existence. He is not overtaken by sleep or fatigue. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills.",
+    "arabicVerse": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۖ وَهُوَ الْعَلِيُّ الْكَبِيرُ"
+  },
+  "deduction": {
+    "title": "The Enigma of the Great Flood",
+    "intro": "In a time of great disobedience and corruption, a faithful servant of Allah faced an immense challenge. With a heavy heart, he warned his people of the impending doom, but they turned a deaf ear. This story unfolds with trials, perseverance, and a miraculous event that changed the course of humanity.",
+    "clues": [
+      "Clue 1: This story involves a significant warning to a sinful community.",
+      "Clue 2: The main figure is known for his unwavering faith amidst ridicule.",
+      "Clue 3: A massive construction plays a pivotal role in this narrative.",
+      "Clue 4: This event is often associated with a divine punishment in the form of water.",
+      "Clue 5: The figure's plea to his people was met with mockery and disbelief.",
+      "Clue 6: This prophet is famously known for building an ark to save himself and the believers."
+    ],
+    "categories": {
+      "prophet": {
+        "label": "Prophet/Person",
+        "options": [
+          "Nuh",
+          "Ibrahim",
+          "Musa",
+          "Yunus",
+          "Dawud"
+        ],
+        "answer": "Nuh"
+      },
+      "trial": {
+        "label": "Trial/Event",
+        "options": [
+          "The Great Flood",
+          "The Fire",
+          "The Exodus",
+          "The Night Journey",
+          "The Battle of Badr"
+        ],
+        "answer": "The Great Flood"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "Mount Sinai",
+          "Cave of Hira",
+          "The Ark",
+          "The Red Sea",
+          "The Kaaba"
+        ],
+        "answer": "The Ark"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "Destruction of the disbelievers",
+          "Rescue of the believers",
+          "Separation of the sea",
+          "Revelation of the scriptures",
+          "Establishment of a new covenant"
+        ],
+        "answer": "Destruction of the disbelievers"
+      }
+    },
+    "verse": "And We certainly saved Noah and those with him in the laden ark, and We drowned the others. Indeed, in that is a sign, and most of them were not to be believers. (Surah Al-Mu'minun: 27)",
+    "arabic": "وَأَنْجَيْنَا نُوحًا وَالَّذِينَ مَعَهُ فِي الْفُلْكِ الْمَشْحُونِ ۖ وَغَرَقْنَا الْآخَرِينَ ۚ إِنَّ فِي ذَٰلِكَ لَآيَةً ۖ وَمَا كَانَ أَكْثَرُهُمْ مُؤْمِنِينَ"
+  },
+  "scramble": {
+    "reference": "Surah Al-Baqarah (2:255)",
+    "words": [
+      "Allah! There is no",
+      "deity except Him,",
+      "the Ever-Living,",
+      "the Sustainer of existence.",
+      "Neither drowsiness",
+      "overtakes Him nor sleep.",
+      "To Him belongs what is in the heavens"
+    ],
+    "arabic": "ٱللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ٱلْحَيُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي ٱلسَّمَـٰوَٰتِ وَمَا فِي ٱلْأَرْضِ",
+    "hint": "This verse emphasizes the uniqueness and oneness of Allah, highlighting His eternal nature and sovereignty."
+  }
 }
