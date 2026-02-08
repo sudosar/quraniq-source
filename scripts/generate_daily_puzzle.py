@@ -1,8 +1,21 @@
 #!/usr/bin/env python3
 """
 Daily Puzzle Generator for QuranPuzzle
-Uses Gemini API to generate 4 new Islamic/Quranic groupings daily.
-Enforces a strict 30-day cooldown on verse references and themes.
+Uses GitHub Models API (OpenAI-compatible) to generate 4 new Islamic/Quranic
+groupings daily.  Enforces a strict 30-day cooldown on verse references and
+themes.
+
+Model selection
+───────────────
+Primary:   gpt-4o-mini  (Low tier — 150 req/day free on GitHub Models)
+Fallback:  gpt-4o       (High tier — 50 req/day free, used if primary fails)
+
+Why gpt-4o-mini?
+  • Best-in-class structured JSON output among GitHub Models candidates
+  • Reliable Arabic text generation with diacritics (tashkeel)
+  • Low tier = 150 free requests/day (we need ≤5)
+  • 128K context / 16K output — plenty for our prompt
+  • OpenAI-compatible API — minimal migration from Gemini
 """
 import json
 import os
@@ -13,9 +26,15 @@ import requests
 from datetime import datetime, timedelta
 
 # ── Configuration ──────────────────────────────────────────────────
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL = "gemini-2.0-flash"
-GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
+# GitHub Models uses a Personal Access Token with "Models: Read-only" permission
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+
+# GitHub Models API endpoint (OpenAI-compatible)
+API_URL = "https://models.inference.ai.azure.com/chat/completions"
+
+# Model priority: try the primary first, fall back to secondary
+PRIMARY_MODEL = os.environ.get("PUZZLE_MODEL", "gpt-4o-mini")
+FALLBACK_MODEL = "gpt-4o"
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 HISTORY_DIR = os.path.join(SCRIPT_DIR, "..", "data", "history")
@@ -23,7 +42,7 @@ OUTPUT_FILE = os.path.join(SCRIPT_DIR, "..", "data", "daily_puzzle.json")
 FALLBACK_PUZZLES = os.path.join(SCRIPT_DIR, "..", "puzzles.js")
 
 COOLING_DAYS = 30
-MAX_RETRIES = 5  # Increased from 3 to give more chances after cooldown rejections
+MAX_RETRIES = 5
 COLORS = ["yellow", "green", "blue", "purple"]
 
 
@@ -81,7 +100,7 @@ def save_to_history(puzzle, date_str):
         json.dump(puzzle, f, ensure_ascii=False, indent=2)
 
 
-# ── Gemini API ─────────────────────────────────────────────────────
+# ── GitHub Models API (OpenAI-compatible) ─────────────────────────
 def build_prompt(history, previous_violations=None):
     """Build the generation prompt with history context.
 
@@ -188,31 +207,72 @@ IMPORTANT:
     return prompt
 
 
-def call_gemini(prompt):
-    """Call the Gemini API and return the response text."""
-    payload = {
-        "contents": [{
-            "parts": [{"text": prompt}]
-        }],
-        "generationConfig": {
-            "temperature": 0.9,
-            "topP": 0.95,
-            "topK": 40,
-            "maxOutputTokens": 8192,
-            "responseMimeType": "application/json"
-        }
+def call_model(prompt, model_id):
+    """Call the GitHub Models API (OpenAI-compatible) and return the response text.
+
+    Args:
+        prompt:   The user prompt string
+        model_id: The model identifier (e.g. "gpt-4o-mini")
+
+    Returns:
+        The generated text, or None on failure.
+    """
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {GITHUB_TOKEN}"
     }
 
-    resp = requests.post(GEMINI_URL, json=payload, timeout=60)
-    resp.raise_for_status()
-    data = resp.json()
+    payload = {
+        "model": model_id,
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an expert Islamic scholar and Quran teacher. "
+                           "You always respond with valid JSON only, no markdown."
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        "temperature": 0.9,
+        "top_p": 0.95,
+        "max_tokens": 4096,
+        "response_format": {"type": "json_object"}
+    }
 
     try:
-        text = data["candidates"][0]["content"]["parts"][0]["text"]
+        resp = requests.post(API_URL, headers=headers, json=payload, timeout=90)
+
+        if resp.status_code == 429:
+            print(f"  ⚠ Rate limited on {model_id}")
+            return None
+
+        if resp.status_code == 401:
+            print(f"  ✗ Authentication failed. Ensure GITHUB_TOKEN has 'Models: Read-only' permission.")
+            return None
+
+        resp.raise_for_status()
+        data = resp.json()
+
+        text = data["choices"][0]["message"]["content"]
+        usage = data.get("usage", {})
+        print(f"  Tokens: {usage.get('prompt_tokens', '?')} in, "
+              f"{usage.get('completion_tokens', '?')} out, "
+              f"{usage.get('total_tokens', '?')} total")
         return text
+
+    except requests.exceptions.Timeout:
+        print(f"  ✗ Request timed out for {model_id}")
+        return None
+    except requests.exceptions.HTTPError as e:
+        print(f"  ✗ HTTP error for {model_id}: {e}")
+        return None
     except (KeyError, IndexError) as e:
-        print(f"ERROR: Unexpected Gemini response structure: {e}")
-        print(json.dumps(data, indent=2)[:500])
+        print(f"  ✗ Unexpected response structure from {model_id}: {e}")
+        return None
+    except Exception as e:
+        print(f"  ✗ Unexpected error calling {model_id}: {e}")
         return None
 
 
@@ -240,7 +300,7 @@ def validate_puzzle(puzzle, history):
     # A category's verse ref is allowed to match one of its own item refs
     # (the category verse is typically one of the items), but cross-category
     # duplicates are flagged as cooldown violations.
-    cross_cat_refs = set()  # refs seen in OTHER categories
+    cross_cat_refs = set()
 
     for i, cat in enumerate(cats):
         items = cat.get("items", [])
@@ -326,18 +386,14 @@ def get_fallback_puzzle_index(date_str, history):
         with open(FALLBACK_PUZZLES) as f:
             content = f.read()
 
-        # Count puzzle objects by their id
         puzzle_ids = re.findall(r'\bid:\s*(\d+),', content)
         total = len(puzzle_ids)
         if total == 0:
             return None
 
-        # Use day of year as starting index, then scan for one not in cooldown
         day = datetime.strptime(date_str, "%Y-%m-%d").timetuple().tm_yday
         for offset in range(total):
             idx = (day + offset) % total
-            # We can't easily parse the JS to check refs, so just return the index
-            # The client-side getPuzzleIndex() will use this
             return idx
 
         return None
@@ -360,8 +416,10 @@ def main():
             json.dump({"date": today, "puzzle": puzzle, "generated": True}, f, ensure_ascii=False, indent=2)
         return 0
 
-    if not GEMINI_API_KEY:
-        print("ERROR: GEMINI_API_KEY not set")
+    if not GITHUB_TOKEN:
+        print("ERROR: GITHUB_TOKEN not set.")
+        print("  Create a Fine-grained PAT at https://github.com/settings/tokens")
+        print("  with 'Models: Read-only' permission under Account permissions.")
         with open(OUTPUT_FILE, "w") as f:
             json.dump({"date": today, "puzzle": None, "generated": False, "fallback": True}, f, indent=2)
         return 1
@@ -374,16 +432,20 @@ def main():
 
     # Generate with retries — track violations across attempts for smarter re-prompting
     previous_violations = None
+    current_model = PRIMARY_MODEL
 
     for attempt in range(1, MAX_RETRIES + 1):
         print(f"\n{'='*50}")
-        print(f"Attempt {attempt}/{MAX_RETRIES}...")
+        print(f"Attempt {attempt}/{MAX_RETRIES} using {current_model}...")
 
         prompt = build_prompt(history, previous_violations)
-        raw = call_gemini(prompt)
+        raw = call_model(prompt, current_model)
 
         if not raw:
-            print("  ✗ No response from Gemini")
+            # If primary model fails, try fallback model on next attempt
+            if current_model == PRIMARY_MODEL and FALLBACK_MODEL:
+                print(f"  → Switching to fallback model: {FALLBACK_MODEL}")
+                current_model = FALLBACK_MODEL
             continue
 
         # Parse JSON
@@ -409,7 +471,6 @@ def main():
             print(f"  ✗ COOLDOWN VIOLATIONS (rejecting):")
             for v in cooldown_violations:
                 print(f"      {v}")
-            # Feed violations back into next prompt for smarter retry
             previous_violations = cooldown_violations
             continue
 
@@ -417,7 +478,7 @@ def main():
             print(f"  ⚠ Warnings (accepted): {warnings}")
 
         # ── Success! ──
-        print(f"\n✓ Puzzle generated successfully for {today}")
+        print(f"\n✓ Puzzle generated successfully for {today} using {current_model}")
         for cat in puzzle["categories"]:
             refs = [i['ref'] for i in cat['items']]
             print(f"  [{cat['color']}] {cat['nameEn']}")
@@ -430,7 +491,12 @@ def main():
         # Save as daily puzzle
         os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
         with open(OUTPUT_FILE, "w") as f:
-            json.dump({"date": today, "puzzle": puzzle, "generated": True}, f, ensure_ascii=False, indent=2)
+            json.dump({
+                "date": today,
+                "puzzle": puzzle,
+                "generated": True,
+                "model": current_model
+            }, f, ensure_ascii=False, indent=2)
 
         return 0
 
