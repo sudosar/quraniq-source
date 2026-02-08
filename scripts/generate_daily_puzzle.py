@@ -238,10 +238,12 @@ def call_model(prompt, model_id):
         "temperature": 0.9,
         "top_p": 0.95,
         "max_tokens": 4096,
-        # Note: response_format json_object works for OpenAI models;
-        # Gemini models handle JSON via system prompt instruction.
-        "response_format": {"type": "json_object"}
     }
+
+    # response_format json_object is supported by OpenAI models but may
+    # cause 400 errors on Gemini models — only add for non-Gemini.
+    if "gemini" not in model_id.lower():
+        payload["response_format"] = {"type": "json_object"}
 
     try:
         resp = requests.post(API_URL, headers=headers, json=payload, timeout=90)
@@ -268,7 +270,13 @@ def call_model(prompt, model_id):
         print(f"  ✗ Request timed out for {model_id}")
         return None
     except requests.exceptions.HTTPError as e:
+        # Log the response body for debugging
+        try:
+            err_body = resp.text[:500]
+        except Exception:
+            err_body = "(could not read response body)"
         print(f"  ✗ HTTP error for {model_id}: {e}")
+        print(f"  Response body: {err_body}")
         return None
     except (KeyError, IndexError) as e:
         print(f"  ✗ Unexpected response structure from {model_id}: {e}")
