@@ -651,6 +651,21 @@ button, input, select, textarea {
     letter-spacing: 0.5px;
 }
 
+.verse-ref-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+    font-weight: 600;
+    font-size: 0.78rem;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+.verse-ref-link:hover {
+    opacity: 1;
+    text-decoration-style: solid;
+}
+
 .verse-play-btn {
     width: 36px;
     height: 36px;

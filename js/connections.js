@@ -2,6 +2,23 @@
    QURANPUZZLE - CONNECTIONS GAME
    ============================================ */
 
+/* Convert a Quranic reference like "7:26" or "18:95-96" to a quran.com URL */
+function refToQuranLink(ref) {
+    if (!ref) return '#';
+    // Handle range refs like "18:95-96" → link to first verse "18:95"
+    // Handle multi-verse refs like "112:1-4" → link to first verse "112:1"
+    const match = ref.match(/(\d+):(\d+)/);
+    if (match) {
+        return `https://quran.com/${match[1]}/${match[2]}`;
+    }
+    // Fallback: just the surah number
+    const surahMatch = ref.match(/(\d+)/);
+    if (surahMatch) {
+        return `https://quran.com/${surahMatch[1]}`;
+    }
+    return '#';
+}
+
 const conn = {
     puzzle: null,
     selected: [],
@@ -219,13 +236,17 @@ function renderSolvedRows() {
         // Build carousel slides
         const slidesHTML = items.map((item, i) => {
             const ar = typeof item === 'object' ? item.ar : item;
-            const en = typeof item === 'object' ? item.en : '';
+            const enRaw = typeof item === 'object' ? item.en : '';
             const verse = typeof item === 'object' ? item.verse : '';
             const verseEn = typeof item === 'object' ? (item.verseEn || '') : '';
             const ref = typeof item === 'object' ? item.ref : '';
+            // Strip any embedded ref like "(7:26)" from en text since we add it separately
+            const en = enRaw.replace(/\s*\(\d+:\d+(?:-\d+)?\)\s*$/, '').trim();
+            const refLink = refToQuranLink(ref);
+            const refHTML = ref ? `<a href="${refLink}" class="verse-ref-link" target="_blank" rel="noopener noreferrer">(${ref})</a>` : '';
             return `<div class="verse-slide${i === 0 ? ' active' : ''}" data-index="${i}" data-ref="${ref}">
                 <div class="verse-slide-word">${ar}</div>
-                <div class="verse-slide-meaning">${en}</div>
+                <div class="verse-slide-meaning">${en} ${refHTML}</div>
                 ${verse ? `<div class="verse-card" data-row="${idx}" data-word="${i}">
                     <div class="wbw-container" data-ref="${ref}">
                         <div class="verse-slide-ayah wbw-fallback">${verse}</div>
@@ -235,9 +256,8 @@ function renderSolvedRows() {
                     <div class="wbw-tooltip" style="display:none;"></div>
                     <div class="verse-slide-ref-row">
                         <button class="verse-play-btn" data-ref="${ref}" aria-label="Play recitation">&#9654;</button>
-                        <span class="verse-slide-ref">— ${ref}</span>
                     </div>
-                    <div class="verse-reveal-hint">Tap any word to see its meaning</div>
+                    <div class="verse-reveal-hint">TAP ANY WORD TO SEE ITS MEANING</div>
                 </div>` : ''}
             </div>`;
         }).join('');
