@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """
 Daily Puzzle Generator for QuranPuzzle — All 4 Games
-Uses GitHub Models API (OpenAI-compatible) to generate daily puzzles for:
+Generates daily puzzles for:
   1. Connections (Ayah Connections)
   2. Wordle (Verse Wordle)
   3. Deduction (Prophet Deduction)
   4. Scramble (Ayah Scramble)
 
-Model selection
-───────────────
-Primary:   DeepSeek-R1  (Low tier — 150 req/day free on GitHub Models)
-Fallback:  gpt-4o-mini  (Low tier — 150 req/day free, used if primary fails)
+Model fallback chain
+────────────────────
+1. DeepSeek-R1    (GitHub Models — free, best reasoning)
+2. Gemini Flash   (Google Gemini API — free tier, strong Arabic/Quranic)
+3. GPT-4o-mini    (GitHub Models — free, last resort)
 
 Each game uses 1 API call (up to 5 retries), so worst case = 20 calls/day.
 """
@@ -24,9 +25,18 @@ from datetime import datetime, timedelta
 
 # ── Configuration ──────────────────────────────────────────────────
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
-API_URL = "https://models.inference.ai.azure.com/chat/completions"
-PRIMARY_MODEL = os.environ.get("PUZZLE_MODEL", "DeepSeek-R1")
-FALLBACK_MODEL = "gpt-4o-mini"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+
+# API endpoints
+GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
+GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+
+# Model fallback chain: DeepSeek-R1 → Gemini Flash → GPT-4o-mini
+MODEL_CHAIN = [
+    {"id": "DeepSeek-R1", "api": "github", "label": "DeepSeek-R1 (GitHub Models)"},
+    {"id": "gemini-2.0-flash", "api": "gemini", "label": "Gemini 2.0 Flash (Google)"},
+    {"id": "gpt-4o-mini", "api": "github", "label": "GPT-4o-mini (GitHub Models)"},
+]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
@@ -134,13 +144,34 @@ def save_to_history(all_puzzles, date_str):
         json.dump(all_puzzles, f, ensure_ascii=False, indent=2)
 
 
-# ── GitHub Models API ──────────────────────────────────────────────
-def call_model(prompt, model_id, system_msg=None):
-    """Call the GitHub Models API and return the response text."""
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {GITHUB_TOKEN}"
-    }
+# ── LLM API (GitHub Models + Gemini) ──────────────────────────────
+def call_model(prompt, model_config, system_msg=None):
+    """Call an LLM API and return the response text.
+    
+    model_config: dict with 'id', 'api' ('github' or 'gemini'), 'label'
+    """
+    model_id = model_config["id"]
+    api_type = model_config["api"]
+
+    # Select endpoint and auth based on API type
+    if api_type == "gemini":
+        if not GEMINI_API_KEY:
+            print(f"  ⚠ GEMINI_API_KEY not set, skipping {model_config['label']}")
+            return None
+        api_url = GEMINI_API_URL
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {GEMINI_API_KEY}"
+        }
+    else:  # github
+        if not GITHUB_TOKEN:
+            print(f"  ⚠ GITHUB_TOKEN not set, skipping {model_config['label']}")
+            return None
+        api_url = GITHUB_MODELS_URL
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {GITHUB_TOKEN}"
+        }
 
     if system_msg is None:
         system_msg = ("You are an expert Islamic scholar and Quran teacher. "
@@ -157,17 +188,18 @@ def call_model(prompt, model_id, system_msg=None):
         "max_tokens": 8192,
     }
 
+    # Only GPT models support response_format
     if model_id.lower().startswith("gpt-"):
         payload["response_format"] = {"type": "json_object"}
 
     try:
-        resp = requests.post(API_URL, headers=headers, json=payload, timeout=180)
+        resp = requests.post(api_url, headers=headers, json=payload, timeout=180)
 
         if resp.status_code == 429:
-            print(f"  ⚠ Rate limited on {model_id}")
-            return None
+            print(f"  ⚠ Rate limited on {model_config['label']}")
+            return "RATE_LIMITED"
         if resp.status_code == 401:
-            print(f"  ✗ Authentication failed.")
+            print(f"  ✗ Authentication failed for {model_config['label']}")
             return None
 
         resp.raise_for_status()
@@ -180,18 +212,18 @@ def call_model(prompt, model_id, system_msg=None):
         return text
 
     except requests.exceptions.Timeout:
-        print(f"  ✗ Request timed out for {model_id}")
+        print(f"  ✗ Request timed out for {model_config['label']}")
         return None
     except requests.exceptions.HTTPError as e:
         try:
             err_body = resp.text[:500]
         except Exception:
             err_body = "(could not read response body)"
-        print(f"  ✗ HTTP error for {model_id}: {e}")
+        print(f"  ✗ HTTP error for {model_config['label']}: {e}")
         print(f"  Response body: {err_body}")
         return None
     except Exception as e:
-        print(f"  ✗ Unexpected error calling {model_id}: {e}")
+        print(f"  ✗ Unexpected error calling {model_config['label']}: {e}")
         return None
 
 
@@ -621,54 +653,71 @@ GAME_CONFIGS = {
 
 
 def generate_game(game_type, history, today):
-    """Generate a single game puzzle with retries and cooldown enforcement."""
+    """Generate a single game puzzle with retries and model fallback chain.
+    
+    Fallback chain: DeepSeek-R1 → Gemini Flash → GPT-4o-mini
+    Each model gets up to MAX_RETRIES attempts before falling back.
+    Rate limiting immediately triggers fallback to the next model.
+    """
     config = GAME_CONFIGS[game_type]
     print(f"\n{'═'*60}")
     print(f"  Generating: {config['label']}")
     print(f"{'═'*60}")
 
     previous_violations = None
-    current_model = PRIMARY_MODEL
+    total_attempt = 0
 
-    for attempt in range(1, MAX_RETRIES + 1):
-        print(f"\n  Attempt {attempt}/{MAX_RETRIES} using {current_model}...")
+    for model_config in MODEL_CHAIN:
+        model_label = model_config["label"]
+        print(f"\n  Trying model: {model_label}")
 
-        prompt = config["build_prompt"](history, previous_violations)
-        raw = call_model(prompt, current_model)
+        for retry in range(1, MAX_RETRIES + 1):
+            total_attempt += 1
+            print(f"\n  Attempt {total_attempt} (retry {retry}/{MAX_RETRIES}) using {model_label}...")
 
-        if not raw:
-            if current_model == PRIMARY_MODEL and FALLBACK_MODEL:
-                print(f"  → Switching to fallback model: {FALLBACK_MODEL}")
-                current_model = FALLBACK_MODEL
-            continue
+            prompt = config["build_prompt"](history, previous_violations)
+            raw = call_model(prompt, model_config)
 
-        try:
-            puzzle = parse_json_response(raw)
-        except json.JSONDecodeError as e:
-            print(f"  ✗ JSON parse error: {e}")
-            print(f"  Raw (first 500 chars): {raw[:500]}")
-            continue
+            # Rate limited → immediately fall back to next model
+            if raw == "RATE_LIMITED":
+                print(f"  → Rate limited, falling back to next model...")
+                break
 
-        errors, cooldown_violations, warnings = config["validate"](puzzle, history)
+            # Other failure (timeout, auth, etc.) → try next model
+            if not raw:
+                print(f"  → Failed, falling back to next model...")
+                break
 
-        if errors:
-            print(f"  ✗ Structural errors: {errors}")
-            continue
+            try:
+                puzzle = parse_json_response(raw)
+            except json.JSONDecodeError as e:
+                print(f"  ✗ JSON parse error: {e}")
+                print(f"  Raw (first 500 chars): {raw[:500]}")
+                continue  # Retry same model (might be a fluke)
 
-        if cooldown_violations:
-            print(f"  ✗ COOLDOWN VIOLATIONS (rejecting):")
-            for v in cooldown_violations:
-                print(f"      {v}")
-            previous_violations = cooldown_violations
-            continue
+            errors, cooldown_violations, warnings = config["validate"](puzzle, history)
 
-        if warnings:
-            print(f"  ⚠ Warnings (accepted): {warnings}")
+            if errors:
+                print(f"  ✗ Structural errors: {errors}")
+                continue  # Retry same model
 
-        print(f"\n  ✓ {config['label']} generated successfully using {current_model}")
-        return puzzle
+            if cooldown_violations:
+                print(f"  ✗ COOLDOWN VIOLATIONS (rejecting):")
+                for v in cooldown_violations:
+                    print(f"      {v}")
+                previous_violations = cooldown_violations
+                continue  # Retry same model with violation feedback
 
-    print(f"\n  ✗ All {MAX_RETRIES} attempts failed for {config['label']}.")
+            if warnings:
+                print(f"  ⚠ Warnings (accepted): {warnings}")
+
+            print(f"\n  ✓ {config['label']} generated successfully using {model_label}")
+            return puzzle
+
+        # All retries exhausted for this model, try next
+        print(f"  → Exhausted retries for {model_label}")
+
+    print(f"\n  ✗ All models failed for {config['label']} after {total_attempt} total attempts.")
     return None
 
 
@@ -697,11 +746,20 @@ def main():
             print(f"Warning: Could not restore output files: {e}")
         return 0
 
-    if not GITHUB_TOKEN:
-        print("ERROR: GITHUB_TOKEN not set.")
-        print("  Create a Fine-grained PAT at https://github.com/settings/tokens")
-        print("  with 'Models: Read-only' permission under Account permissions.")
+    if not GITHUB_TOKEN and not GEMINI_API_KEY:
+        print("ERROR: No API credentials set.")
+        print("  Set GITHUB_TOKEN (GitHub Models PAT) and/or GEMINI_API_KEY.")
         return 1
+
+    print(f"Available APIs:")
+    if GITHUB_TOKEN:
+        print(f"  ✓ GitHub Models (DeepSeek-R1, GPT-4o-mini)")
+    else:
+        print(f"  ✗ GitHub Models (GITHUB_TOKEN not set)")
+    if GEMINI_API_KEY:
+        print(f"  ✓ Gemini API (gemini-2.0-flash)")
+    else:
+        print(f"  ✗ Gemini API (GEMINI_API_KEY not set)")
 
     # Load history for cooldown enforcement
     history = load_history()
@@ -731,7 +789,7 @@ def main():
                     "date": today,
                     "puzzle": puzzle,
                     "generated": True,
-                    "model": PRIMARY_MODEL,
+                    "model": "auto (chain)",
                 }, f, ensure_ascii=False, indent=2)
             print(f"  → Saved to {os.path.basename(output_path)}")
         else:
