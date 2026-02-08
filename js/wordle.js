@@ -16,8 +16,30 @@ const wordle = {
 };
 
 function initWordle() {
-    const idx = getPuzzleIndex(PUZZLES.wordle);
-    wordle.puzzle = PUZZLES.wordle[idx];
+    // Try to load AI-generated daily puzzle, fall back to pre-made puzzles
+    loadDailyWordle().then(puzzle => {
+        wordle.puzzle = puzzle;
+        setupWordleGame();
+    }).catch(() => {
+        // Fallback to pre-made puzzles
+        const idx = getPuzzleIndex(PUZZLES.wordle);
+        wordle.puzzle = PUZZLES.wordle[idx];
+        setupWordleGame();
+    });
+}
+
+async function loadDailyWordle() {
+    const today = new Date().toISOString().slice(0, 10);
+    const resp = await fetch(`data/daily_wordle.json?t=${today}`);
+    if (!resp.ok) throw new Error('No daily wordle');
+    const data = await resp.json();
+    if (!data.generated || !data.puzzle || data.date !== today) {
+        throw new Error('Daily wordle not available or stale');
+    }
+    return data.puzzle;
+}
+
+function setupWordleGame() {
     wordle.word = normalizeArabic(wordle.puzzle.word);
     wordle.wordLen = wordle.word.length;
 

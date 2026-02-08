@@ -11,9 +11,30 @@ const ded = {
 };
 
 function initDeduction() {
-    const idx = getPuzzleIndex(PUZZLES.deduction);
-    ded.puzzle = PUZZLES.deduction[idx];
+    // Try to load AI-generated daily puzzle, fall back to pre-made puzzles
+    loadDailyDeduction().then(puzzle => {
+        ded.puzzle = puzzle;
+        setupDeductionGame();
+    }).catch(() => {
+        // Fallback to pre-made puzzles
+        const idx = getPuzzleIndex(PUZZLES.deduction);
+        ded.puzzle = PUZZLES.deduction[idx];
+        setupDeductionGame();
+    });
+}
 
+async function loadDailyDeduction() {
+    const today = new Date().toISOString().slice(0, 10);
+    const resp = await fetch(`data/daily_deduction.json?t=${today}`);
+    if (!resp.ok) throw new Error('No daily deduction');
+    const data = await resp.json();
+    if (!data.generated || !data.puzzle || data.date !== today) {
+        throw new Error('Daily deduction not available or stale');
+    }
+    return data.puzzle;
+}
+
+function setupDeductionGame() {
     // Check saved state
     const saved = app.state[`ded_${app.dayNumber}`];
     if (saved) {

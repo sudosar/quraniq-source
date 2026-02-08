@@ -14,8 +14,30 @@ const scr = {
 };
 
 function initScramble() {
-    const idx = getPuzzleIndex(PUZZLES.scramble);
-    scr.puzzle = PUZZLES.scramble[idx];
+    // Try to load AI-generated daily puzzle, fall back to pre-made puzzles
+    loadDailyScramble().then(puzzle => {
+        scr.puzzle = puzzle;
+        setupScrambleGame();
+    }).catch(() => {
+        // Fallback to pre-made puzzles
+        const idx = getPuzzleIndex(PUZZLES.scramble);
+        scr.puzzle = PUZZLES.scramble[idx];
+        setupScrambleGame();
+    });
+}
+
+async function loadDailyScramble() {
+    const today = new Date().toISOString().slice(0, 10);
+    const resp = await fetch(`data/daily_scramble.json?t=${today}`);
+    if (!resp.ok) throw new Error('No daily scramble');
+    const data = await resp.json();
+    if (!data.generated || !data.puzzle || data.date !== today) {
+        throw new Error('Daily scramble not available or stale');
+    }
+    return data.puzzle;
+}
+
+function setupScrambleGame() {
     scr.maxMoves = Math.max(scr.puzzle.words.length * 3, 10);
 
     // Check saved state

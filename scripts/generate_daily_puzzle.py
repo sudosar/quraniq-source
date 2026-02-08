@@ -1,21 +1,18 @@
 #!/usr/bin/env python3
 """
-Daily Puzzle Generator for QuranPuzzle
-Uses GitHub Models API (OpenAI-compatible) to generate 4 new Islamic/Quranic
-groupings daily.  Enforces a strict 30-day cooldown on verse references and
-themes.
+Daily Puzzle Generator for QuranPuzzle — All 4 Games
+Uses GitHub Models API (OpenAI-compatible) to generate daily puzzles for:
+  1. Connections (Ayah Connections)
+  2. Wordle (Verse Wordle)
+  3. Deduction (Prophet Deduction)
+  4. Scramble (Ayah Scramble)
 
 Model selection
 ───────────────
 Primary:   DeepSeek-R1  (Low tier — 150 req/day free on GitHub Models)
 Fallback:  gpt-4o-mini  (Low tier — 150 req/day free, used if primary fails)
 
-Why DeepSeek-R1?
-  • Strong reasoning model — thinks step-by-step before answering
-  • Better factual accuracy for Quranic content (avoids misclassifications)
-  • Good Arabic text generation with diacritics (tashkeel)
-  • Low tier = 150 free requests/day (we need ≤5)
-  • Note: outputs <think>...</think> blocks that must be stripped before JSON parsing
+Each game uses 1 API call (up to 5 retries), so worst case = 20 calls/day.
 """
 import json
 import os
@@ -26,40 +23,42 @@ import requests
 from datetime import datetime, timedelta
 
 # ── Configuration ──────────────────────────────────────────────────
-# GitHub Models uses a Personal Access Token with "Models: Read-only" permission
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
-
-# GitHub Models API endpoint (OpenAI-compatible)
 API_URL = "https://models.inference.ai.azure.com/chat/completions"
-
-# Model priority: try the primary first, fall back to secondary
 PRIMARY_MODEL = os.environ.get("PUZZLE_MODEL", "DeepSeek-R1")
 FALLBACK_MODEL = "gpt-4o-mini"
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-HISTORY_DIR = os.path.join(SCRIPT_DIR, "..", "data", "history")
-OUTPUT_FILE = os.path.join(SCRIPT_DIR, "..", "data", "daily_puzzle.json")
+DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
+HISTORY_DIR = os.path.join(DATA_DIR, "history")
 FALLBACK_PUZZLES = os.path.join(SCRIPT_DIR, "..", "puzzles.js")
 
 COOLING_DAYS = 30
 MAX_RETRIES = 5
 COLORS = ["yellow", "green", "blue", "purple"]
 
+# Output files for each game type
+OUTPUT_FILES = {
+    "connections": os.path.join(DATA_DIR, "daily_puzzle.json"),
+    "wordle": os.path.join(DATA_DIR, "daily_wordle.json"),
+    "deduction": os.path.join(DATA_DIR, "daily_deduction.json"),
+    "scramble": os.path.join(DATA_DIR, "daily_scramble.json"),
+}
+
 
 # ── History Management ─────────────────────────────────────────────
 def load_history():
-    """Load the last 30 days of puzzle history.
+    """Load the last 30 days of puzzle history for all game types.
 
-    Returns a dict with three sets:
-      - themes:  lowercased English theme names
-      - verses:  verse reference strings (e.g. "2:255")
-      - words:   Arabic tile words/phrases
-    Old history files (>30 days) are automatically deleted.
+    Returns a dict with sets for each game type's used content.
     """
     cutoff = datetime.utcnow() - timedelta(days=COOLING_DAYS)
-    themes = set()
-    verses = set()
-    words = set()
+    history = {
+        "connections": {"themes": set(), "verses": set(), "words": set()},
+        "wordle": {"words": set(), "verses": set(), "hints": set()},
+        "deduction": {"titles": set(), "prophets": set()},
+        "scramble": {"verses": set(), "references": set()},
+    }
 
     os.makedirs(HISTORY_DIR, exist_ok=True)
     for fpath in glob.glob(os.path.join(HISTORY_DIR, "*.json")):
@@ -77,171 +76,87 @@ def load_history():
 
         try:
             with open(fpath) as f:
-                puzzle = json.load(f)
-            for cat in puzzle.get("categories", []):
-                themes.add(cat.get("nameEn", "").lower().strip())
-                if cat.get("verse", {}).get("ref"):
-                    verses.add(cat["verse"]["ref"])
-                for item in cat.get("items", []):
-                    if item.get("ref"):
-                        verses.add(item["ref"])
-                    if item.get("ar"):
-                        words.add(item["ar"])
+                data = json.load(f)
         except (json.JSONDecodeError, KeyError):
             continue
 
-    return {"themes": themes, "verses": verses, "words": words}
+        # Connections history
+        conn = data.get("connections")
+        if conn:
+            for cat in conn.get("categories", []):
+                history["connections"]["themes"].add(cat.get("nameEn", "").lower().strip())
+                if cat.get("verse", {}).get("ref"):
+                    history["connections"]["verses"].add(cat["verse"]["ref"])
+                for item in cat.get("items", []):
+                    if item.get("ref"):
+                        history["connections"]["verses"].add(item["ref"])
+                    if item.get("ar"):
+                        history["connections"]["words"].add(item["ar"])
+
+        # Wordle history
+        wdl = data.get("wordle")
+        if wdl:
+            if wdl.get("word"):
+                history["wordle"]["words"].add(wdl["word"])
+            if wdl.get("display"):
+                history["wordle"]["words"].add(wdl["display"])
+            if wdl.get("hint"):
+                history["wordle"]["hints"].add(wdl["hint"].lower().strip())
+            if wdl.get("verse"):
+                history["wordle"]["verses"].add(wdl.get("verse", ""))
+
+        # Deduction history
+        ded = data.get("deduction")
+        if ded:
+            if ded.get("title"):
+                history["deduction"]["titles"].add(ded["title"].lower().strip())
+            cats = ded.get("categories", {})
+            if isinstance(cats, dict):
+                prophet_cat = cats.get("prophet", {})
+                if prophet_cat.get("answer"):
+                    history["deduction"]["prophets"].add(prophet_cat["answer"])
+
+        # Scramble history
+        scr = data.get("scramble")
+        if scr:
+            if scr.get("reference"):
+                history["scramble"]["references"].add(scr["reference"])
+            if scr.get("arabic"):
+                history["scramble"]["verses"].add(scr["arabic"])
+
+    return history
 
 
-def save_to_history(puzzle, date_str):
-    """Save a puzzle to the history directory."""
+def save_to_history(all_puzzles, date_str):
+    """Save all game puzzles to a single history file."""
     os.makedirs(HISTORY_DIR, exist_ok=True)
     with open(os.path.join(HISTORY_DIR, f"{date_str}.json"), "w") as f:
-        json.dump(puzzle, f, ensure_ascii=False, indent=2)
+        json.dump(all_puzzles, f, ensure_ascii=False, indent=2)
 
 
-# ── GitHub Models API (OpenAI-compatible) ─────────────────────────
-def build_prompt(history, previous_violations=None):
-    """Build the generation prompt with history context.
-
-    If previous_violations is provided, add an extra section emphasising
-    the specific items that must be avoided (for retry attempts).
-    """
-    avoided_themes = "\n".join(f"  - {t}" for t in sorted(history["themes"])) or "  (none)"
-    avoided_verses = ", ".join(sorted(history["verses"])) or "(none)"
-
-    violation_block = ""
-    if previous_violations:
-        violation_block = f"""
-
-CRITICAL — PREVIOUS ATTEMPT FAILED BECAUSE IT REUSED THESE:
-{chr(10).join('  ✗ ' + v for v in previous_violations)}
-You MUST NOT use any of the above. Choose completely different verses and themes."""
-
-    prompt = f"""You are an expert Islamic scholar and Quran teacher creating a daily puzzle game called "Ayah Connections".
-
-TASK: Generate exactly 4 groups of 4 related Quranic/Islamic items. Each group has a theme, and each item has an Arabic word/phrase with a specific Quranic verse reference.
-
-RULES:
-1. Each group MUST have exactly 4 items
-2. All 4 groups should be from DIFFERENT areas of Islamic knowledge (e.g., don't have two groups both about prophets)
-3. Items within a group must clearly belong together under the stated theme
-4. The Arabic word/phrase for each item MUST appear in the referenced Quranic verse (either exact match or root form)
-5. Verse references MUST be real and accurate (surah:ayah format like "2:255")
-6. The verse text MUST be the actual Quranic Arabic text with full diacritics (tashkeel)
-7. Each group needs a category-level verse that represents the overall theme
-8. Make the puzzle challenging but fair — the 4 groups should be distinguishable but some items could plausibly fit in multiple groups
-
-DIFFICULTY GUIDELINES:
-- Include 1 easy group (well-known concepts), 1 medium, 1 hard, and 1 tricky group
-- Some items should be "red herrings" that seem to fit another group but don't
-
-THEME IDEAS (pick 4 diverse ones):
-- Names/attributes of Allah mentioned in specific surahs
-- Animals mentioned in the Quran
-- Prophets and their specific miracles/stories
-- Items/objects mentioned in Quranic stories
-- Quranic parables and their lessons
-- Places mentioned in the Quran
-- Types of worship/ibadah mentioned
-- Descriptions of Paradise/Hell
-- Quranic commands and prohibitions
-- Scientific phenomena referenced in the Quran
-- Family relationships in Quranic stories
-- Numbers mentioned in the Quran
-- Prayers/duas from the Quran
-- Characteristics of believers/disbelievers
-- Events of the Day of Judgment
-- Angels and their roles
-- Battles/events in Islamic history referenced in Quran
-- Foods/drinks mentioned in the Quran
-- Natural elements (water, mountains, stars, etc.)
-- Surah names and their meanings
-- Quranic oaths (things Allah swears by)
-- Types of hearts mentioned in the Quran
-- Stages of human creation
-- Garments/clothing mentioned in the Quran
-- Musical/sound references in the Quran
-
-STRICTLY FORBIDDEN — DO NOT USE these themes (used in last 30 days):
-{avoided_themes}
-
-STRICTLY FORBIDDEN — DO NOT USE these verse references (used in last 30 days):
-{avoided_verses}
-{violation_block}
-
-OUTPUT FORMAT: Return a valid JSON object with this exact structure:
-{{
-  "categories": [
-    {{
-      "name": "Arabic group name",
-      "nameEn": "English group name",
-      "color": "yellow",
-      "items": [
-        {{
-          "ar": "Arabic word/phrase",
-          "en": "English meaning",
-          "verse": "Full Quranic verse text with diacritics",
-          "ref": "surah:ayah"
-        }},
-        ... (4 items total)
-      ],
-      "verse": {{
-        "ayah": "Representative verse for the whole group",
-        "en": "English translation of the verse",
-        "ref": "surah:ayah"
-      }}
-    }},
-    ... (4 categories total)
-  ]
-}}
-
-IMPORTANT:
-- Return ONLY the JSON object, no markdown formatting, no code blocks
-- Use colors in order: yellow, green, blue, purple
-- Every verse reference must be unique across all 4 groups (no duplicates)
-- Arabic text must include full tashkeel/diacritics
-- Verify each verse reference is accurate
-- Do NOT reuse any verse reference from the forbidden list above"""
-
-    return prompt
-
-
-def call_model(prompt, model_id):
-    """Call the GitHub Models API (OpenAI-compatible) and return the response text.
-
-    Args:
-        prompt:   The user prompt string
-        model_id: The model identifier (e.g. "gpt-4o-mini")
-
-    Returns:
-        The generated text, or None on failure.
-    """
+# ── GitHub Models API ──────────────────────────────────────────────
+def call_model(prompt, model_id, system_msg=None):
+    """Call the GitHub Models API and return the response text."""
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {GITHUB_TOKEN}"
     }
 
+    if system_msg is None:
+        system_msg = ("You are an expert Islamic scholar and Quran teacher. "
+                      "You always respond with valid JSON only, no markdown.")
+
     payload = {
         "model": model_id,
         "messages": [
-            {
-                "role": "system",
-                "content": "You are an expert Islamic scholar and Quran teacher. "
-                           "You always respond with valid JSON only, no markdown."
-            },
-            {
-                "role": "user",
-                "content": prompt
-            }
+            {"role": "system", "content": system_msg},
+            {"role": "user", "content": prompt}
         ],
         "temperature": 0.6,
         "top_p": 0.95,
         "max_tokens": 8192,
     }
 
-    # response_format json_object is only supported by OpenAI models.
-    # DeepSeek-R1 and Gemini models handle JSON via prompt instruction.
     if model_id.lower().startswith("gpt-"):
         payload["response_format"] = {"type": "json_object"}
 
@@ -251,14 +166,12 @@ def call_model(prompt, model_id):
         if resp.status_code == 429:
             print(f"  ⚠ Rate limited on {model_id}")
             return None
-
         if resp.status_code == 401:
-            print(f"  ✗ Authentication failed. Ensure GITHUB_TOKEN has 'Models: Read-only' permission.")
+            print(f"  ✗ Authentication failed.")
             return None
 
         resp.raise_for_status()
         data = resp.json()
-
         text = data["choices"][0]["message"]["content"]
         usage = data.get("usage", {})
         print(f"  Tokens: {usage.get('prompt_tokens', '?')} in, "
@@ -270,7 +183,6 @@ def call_model(prompt, model_id):
         print(f"  ✗ Request timed out for {model_id}")
         return None
     except requests.exceptions.HTTPError as e:
-        # Log the response body for debugging
         try:
             err_body = resp.text[:500]
         except Exception:
@@ -278,60 +190,111 @@ def call_model(prompt, model_id):
         print(f"  ✗ HTTP error for {model_id}: {e}")
         print(f"  Response body: {err_body}")
         return None
-    except (KeyError, IndexError) as e:
-        print(f"  ✗ Unexpected response structure from {model_id}: {e}")
-        return None
     except Exception as e:
         print(f"  ✗ Unexpected error calling {model_id}: {e}")
         return None
 
 
-# ── Validation ─────────────────────────────────────────────────────
-def validate_puzzle(puzzle, history):
-    """Validate the generated puzzle for correctness and cooldown compliance.
+def parse_json_response(raw):
+    """Parse JSON from model response, handling <think> tags and markdown fences."""
+    cleaned = raw.strip()
+    cleaned = re.sub(r'<think>.*?</think>', '', cleaned, flags=re.DOTALL).strip()
+    if cleaned.startswith("```"):
+        cleaned = re.sub(r'^```(?:json)?\s*', '', cleaned)
+        cleaned = re.sub(r'\s*```$', '', cleaned)
+    json_match = re.search(r'\{[\s\S]*\}', cleaned)
+    if json_match:
+        cleaned = json_match.group(0)
+    return json.loads(cleaned)
 
-    Returns (errors, cooldown_violations, warnings):
-      - errors:              structural problems (wrong item count, missing fields)
-      - cooldown_violations: verse/theme reuse within 30 days (hard reject)
-      - warnings:            non-fatal issues (duplicate words, etc.)
-    """
-    errors = []
-    cooldown_violations = []
-    warnings = []
 
+# ═══════════════════════════════════════════════════════════════════
+# CONNECTIONS GENERATOR
+# ═══════════════════════════════════════════════════════════════════
+def build_connections_prompt(history, previous_violations=None):
+    avoided_themes = "\n".join(f"  - {t}" for t in sorted(history["connections"]["themes"])) or "  (none)"
+    avoided_verses = ", ".join(sorted(history["connections"]["verses"])) or "(none)"
+
+    violation_block = ""
+    if previous_violations:
+        violation_block = f"""
+
+CRITICAL — PREVIOUS ATTEMPT FAILED BECAUSE IT REUSED THESE:
+{chr(10).join('  ✗ ' + v for v in previous_violations)}
+You MUST NOT use any of the above. Choose completely different verses and themes."""
+
+    return f"""You are an expert Islamic scholar creating a daily puzzle game called "Ayah Connections".
+
+TASK: Generate exactly 4 groups of 4 related Quranic/Islamic items.
+
+RULES:
+1. Each group MUST have exactly 4 items
+2. All 4 groups should be from DIFFERENT areas of Islamic knowledge
+3. Items within a group must clearly belong together under the stated theme
+4. The Arabic word/phrase for each item MUST appear in the referenced Quranic verse
+5. Verse references MUST be real and accurate (surah:ayah format like "2:255")
+6. The verse text MUST be actual Quranic Arabic with full diacritics (tashkeel)
+7. Each group needs a category-level verse that represents the overall theme
+8. Make the puzzle challenging but fair
+
+DIFFICULTY: 1 easy, 1 medium, 1 hard, 1 tricky group.
+
+STRICTLY FORBIDDEN themes (used in last 30 days):
+{avoided_themes}
+
+STRICTLY FORBIDDEN verse references (used in last 30 days):
+{avoided_verses}
+{violation_block}
+
+OUTPUT FORMAT: Return a valid JSON object:
+{{
+  "categories": [
+    {{
+      "name": "Arabic group name",
+      "nameEn": "English group name",
+      "color": "yellow",
+      "items": [
+        {{"ar": "Arabic word", "en": "English meaning", "verse": "Full Quranic verse with diacritics", "ref": "surah:ayah"}},
+        ... (4 items)
+      ],
+      "verse": {{"ayah": "Representative verse", "en": "English translation", "ref": "surah:ayah"}}
+    }},
+    ... (4 categories, colors: yellow, green, blue, purple)
+  ]
+}}
+
+IMPORTANT:
+- Return ONLY the JSON object, no markdown
+- Every verse reference must be unique across all groups
+- Arabic text must include full tashkeel/diacritics
+- Verify each verse reference is accurate"""
+
+
+def validate_connections(puzzle, history):
+    errors, cooldown_violations, warnings = [], [], []
     cats = puzzle.get("categories", [])
     if len(cats) != 4:
         errors.append(f"Expected 4 categories, got {len(cats)}")
         return errors, cooldown_violations, warnings
 
     all_words = set()
-
-    # Collect all unique refs across the entire puzzle.
-    # A category's verse ref is allowed to match one of its own item refs
-    # (the category verse is typically one of the items), but cross-category
-    # duplicates are flagged as cooldown violations.
     cross_cat_refs = set()
 
     for i, cat in enumerate(cats):
         items = cat.get("items", [])
         if len(items) != 4:
             errors.append(f"Category {i+1} has {len(items)} items, expected 4")
-
         if not cat.get("name") or not cat.get("nameEn"):
             errors.append(f"Category {i+1} missing name or nameEn")
-
         if not cat.get("verse", {}).get("ref"):
             errors.append(f"Category {i+1} missing category verse ref")
 
-        # Assign correct color
         cat["color"] = COLORS[i]
 
-        # ── Theme cooldown (HARD) ──
         theme = cat.get("nameEn", "").lower().strip()
-        if theme in history["themes"]:
+        if theme in history["connections"]["themes"]:
             cooldown_violations.append(f"Theme '{theme}' reused (30-day cooldown)")
 
-        # Gather all refs for this category (category verse + item refs)
         cat_refs = set()
         cat_ref = cat.get("verse", {}).get("ref", "")
         if cat_ref:
@@ -340,145 +303,353 @@ def validate_puzzle(puzzle, history):
             if item.get("ref"):
                 cat_refs.add(item["ref"])
 
-        # Check for cross-category duplicates
         for ref in cat_refs:
             if ref in cross_cat_refs:
                 cooldown_violations.append(f"Duplicate ref across categories: {ref}")
-
-        # Check for history cooldown on all refs
         for ref in cat_refs:
-            if ref in history["verses"]:
+            if ref in history["connections"]["verses"]:
                 cooldown_violations.append(f"Verse ref {ref} reused (30-day cooldown)")
-
-        # Add this category's refs to the cross-category set
         cross_cat_refs.update(cat_refs)
 
-        # Check for duplicate item refs within the same category
-        item_refs_in_cat = []
         for j, item in enumerate(items):
             if not item.get("ar") or not item.get("en"):
                 errors.append(f"Cat {i+1} item {j+1} missing ar or en")
             if not item.get("verse") or not item.get("ref"):
                 errors.append(f"Cat {i+1} item {j+1} missing verse or ref")
-
-            ref = item.get("ref", "")
-            if ref:
-                if ref in item_refs_in_cat:
-                    cooldown_violations.append(f"Duplicate item ref within category {i+1}: {ref}")
-                item_refs_in_cat.append(ref)
-
-            # ── Word duplication (SOFT — warning only) ──
             ar = item.get("ar", "")
             if ar in all_words:
-                warnings.append(f"Duplicate word within puzzle: {ar}")
+                warnings.append(f"Duplicate word: {ar}")
             all_words.add(ar)
-            if ar in history["words"]:
-                warnings.append(f"Word '{ar}' used in last 30 days (soft warning)")
-
-            # Ensure verseEn field exists
+            if ar in history["connections"]["words"]:
+                warnings.append(f"Word '{ar}' used in last 30 days")
             if "verseEn" not in item:
                 item["verseEn"] = ""
 
-        # Ensure category verse has en field
         if "en" not in cat.get("verse", {}):
             cat["verse"]["en"] = ""
 
     return errors, cooldown_violations, warnings
 
 
-# ── Fallback ───────────────────────────────────────────────────────
-def get_fallback_puzzle_index(date_str, history):
-    """Pick a fallback puzzle from puzzles.js that doesn't violate cooldown.
+# ═══════════════════════════════════════════════════════════════════
+# WORDLE GENERATOR
+# ═══════════════════════════════════════════════════════════════════
+def build_wordle_prompt(history, previous_violations=None):
+    avoided_words = ", ".join(sorted(history["wordle"]["words"])) or "(none)"
+    avoided_hints = "\n".join(f"  - {h}" for h in sorted(history["wordle"]["hints"])) or "  (none)"
 
-    Returns the index to use, or None if all are in cooldown.
-    """
-    try:
-        with open(FALLBACK_PUZZLES) as f:
-            content = f.read()
+    violation_block = ""
+    if previous_violations:
+        violation_block = f"""
 
-        puzzle_ids = re.findall(r'\bid:\s*(\d+),', content)
-        total = len(puzzle_ids)
-        if total == 0:
-            return None
+CRITICAL — PREVIOUS ATTEMPT FAILED:
+{chr(10).join('  ✗ ' + v for v in previous_violations)}
+Choose a completely different word."""
 
-        day = datetime.strptime(date_str, "%Y-%m-%d").timetuple().tm_yday
-        for offset in range(total):
-            idx = (day + offset) % total
-            return idx
+    return f"""You are an expert Islamic scholar creating a daily "Verse Wordle" puzzle.
 
-        return None
-    except Exception as e:
-        print(f"FALLBACK ERROR: {e}")
-        return None
+TASK: Generate ONE Arabic Quranic word for a Wordle-style guessing game.
+
+RULES:
+1. The word MUST be a meaningful Quranic Arabic word (noun, verb root, or concept)
+2. The word (without diacritics) MUST be 3-5 Arabic letters long
+3. The word MUST appear in a real Quranic verse
+4. Provide the word both WITH and WITHOUT diacritics (tashkeel)
+5. Provide an English hint that helps guess the word without giving it away directly
+6. Provide the full Quranic verse (Arabic with diacritics) where the word appears
+7. Provide the English translation/context of the verse
+
+STRICTLY FORBIDDEN words (used in last 30 days):
+{avoided_words}
+
+STRICTLY FORBIDDEN hints (used in last 30 days):
+{avoided_hints}
+{violation_block}
+
+OUTPUT FORMAT: Return a valid JSON object:
+{{
+  "word": "Arabic word WITHOUT diacritics (for matching, e.g. رحمة)",
+  "display": "Arabic word WITH diacritics (for display, e.g. رَحْمَة)",
+  "hint": "English hint that helps guess the word",
+  "verse": "Surah Name surah:ayah — English translation of the verse",
+  "arabicVerse": "Full Arabic verse text with diacritics"
+}}
+
+IMPORTANT:
+- Return ONLY the JSON object, no markdown
+- The word without diacritics must be 3-5 letters
+- The hint should be clever but not too obscure
+- Choose words that are meaningful Islamic concepts"""
 
 
-# ── Main ───────────────────────────────────────────────────────────
-def main():
-    today = datetime.utcnow().strftime("%Y-%m-%d")
+def validate_wordle(puzzle, history):
+    errors, cooldown_violations, warnings = [], [], []
 
-    # Check if already generated today
-    today_file = os.path.join(HISTORY_DIR, f"{today}.json")
-    if os.path.exists(today_file):
-        print(f"Puzzle for {today} already exists. Skipping generation.")
-        with open(today_file) as f:
-            puzzle = json.load(f)
-        with open(OUTPUT_FILE, "w") as f:
-            json.dump({"date": today, "puzzle": puzzle, "generated": True}, f, ensure_ascii=False, indent=2)
-        return 0
+    word = puzzle.get("word", "")
+    display = puzzle.get("display", "")
+    hint = puzzle.get("hint", "")
+    verse = puzzle.get("verse", "")
+    arabic_verse = puzzle.get("arabicVerse", "")
 
-    if not GITHUB_TOKEN:
-        print("ERROR: GITHUB_TOKEN not set.")
-        print("  Create a Fine-grained PAT at https://github.com/settings/tokens")
-        print("  with 'Models: Read-only' permission under Account permissions.")
-        with open(OUTPUT_FILE, "w") as f:
-            json.dump({"date": today, "puzzle": None, "generated": False, "fallback": True}, f, indent=2)
-        return 1
+    if not word:
+        errors.append("Missing 'word' field")
+    if not display:
+        errors.append("Missing 'display' field")
+    if not hint:
+        errors.append("Missing 'hint' field")
+    if not verse:
+        errors.append("Missing 'verse' field")
+    if not arabic_verse:
+        errors.append("Missing 'arabicVerse' field")
 
-    # Load history for cooldown enforcement
-    history = load_history()
-    print(f"History loaded: {len(history['themes'])} themes, "
-          f"{len(history['verses'])} verses, {len(history['words'])} words "
-          f"in {COOLING_DAYS}-day cooldown window")
+    # Check word length (strip diacritics for counting)
+    stripped = re.sub(r'[\u064B-\u065F\u0670\u06D6-\u06ED]', '', word)
+    if len(stripped) < 3 or len(stripped) > 5:
+        errors.append(f"Word '{word}' is {len(stripped)} letters (need 3-5)")
 
-    # Generate with retries — track violations across attempts for smarter re-prompting
+    # Cooldown checks
+    if word in history["wordle"]["words"] or display in history["wordle"]["words"]:
+        cooldown_violations.append(f"Word '{word}' reused (30-day cooldown)")
+    if hint.lower().strip() in history["wordle"]["hints"]:
+        cooldown_violations.append(f"Hint reused (30-day cooldown)")
+
+    return errors, cooldown_violations, warnings
+
+
+# ═══════════════════════════════════════════════════════════════════
+# DEDUCTION GENERATOR
+# ═══════════════════════════════════════════════════════════════════
+def build_deduction_prompt(history, previous_violations=None):
+    avoided_titles = "\n".join(f"  - {t}" for t in sorted(history["deduction"]["titles"])) or "  (none)"
+    avoided_prophets = ", ".join(sorted(history["deduction"]["prophets"])) or "(none)"
+
+    violation_block = ""
+    if previous_violations:
+        violation_block = f"""
+
+CRITICAL — PREVIOUS ATTEMPT FAILED:
+{chr(10).join('  ✗ ' + v for v in previous_violations)}
+Choose a completely different story/prophet."""
+
+    return f"""You are an expert Islamic scholar creating a daily "Prophet Deduction" puzzle.
+
+TASK: Create a mystery-style deduction puzzle about a Quranic story or prophet.
+
+RULES:
+1. Create an engaging title and intro paragraph that sets the scene WITHOUT revealing the answer
+2. Provide exactly 6 progressive clues, from vague to specific
+3. Create exactly 4 categories for the player to guess, each with exactly 5 options and 1 correct answer
+4. The 4 categories should cover: the main figure (prophet/person), the trial/event, a key element (place/object), and the outcome
+5. Include a relevant Quranic verse (Arabic with diacritics) and its English translation
+6. All clues and answers must be Quranically accurate
+
+STRICTLY FORBIDDEN titles/stories (used in last 30 days):
+{avoided_titles}
+
+STRICTLY FORBIDDEN prophets as main answer (used in last 30 days):
+{avoided_prophets}
+{violation_block}
+
+OUTPUT FORMAT: Return a valid JSON object:
+{{
+  "title": "The Mystery Title",
+  "intro": "An engaging intro paragraph...",
+  "clues": ["Clue 1 (vaguest)", "Clue 2", "Clue 3", "Clue 4", "Clue 5", "Clue 6 (most specific)"],
+  "categories": {{
+    "prophet": {{ "label": "Prophet/Person", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "correct" }},
+    "trial": {{ "label": "Trial/Event", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "correct" }},
+    "location": {{ "label": "Key Element", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "correct" }},
+    "outcome": {{ "label": "Outcome", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "correct" }}
+  }},
+  "verse": "English translation with reference (surah:ayah)",
+  "arabic": "Arabic verse with full diacritics"
+}}
+
+IMPORTANT:
+- Return ONLY the JSON object, no markdown
+- Clues must go from vague to specific (early clues should be solvable by scholars, later clues by beginners)
+- Each category must have exactly 5 plausible options
+- The correct answer must be among the 5 options
+- All facts must be Quranically accurate"""
+
+
+def validate_deduction(puzzle, history):
+    errors, cooldown_violations, warnings = [], [], []
+
+    if not puzzle.get("title"):
+        errors.append("Missing 'title'")
+    if not puzzle.get("intro"):
+        errors.append("Missing 'intro'")
+
+    clues = puzzle.get("clues", [])
+    if len(clues) != 6:
+        errors.append(f"Expected 6 clues, got {len(clues)}")
+
+    cats = puzzle.get("categories", {})
+    if not isinstance(cats, dict):
+        errors.append("'categories' must be a dict")
+        return errors, cooldown_violations, warnings
+
+    for key in ["prophet", "trial", "location", "outcome"]:
+        cat = cats.get(key)
+        if not cat:
+            errors.append(f"Missing category '{key}'")
+            continue
+        if not cat.get("label"):
+            errors.append(f"Category '{key}' missing label")
+        opts = cat.get("options", [])
+        if len(opts) != 5:
+            errors.append(f"Category '{key}' has {len(opts)} options, expected 5")
+        if not cat.get("answer"):
+            errors.append(f"Category '{key}' missing answer")
+        elif cat["answer"] not in opts:
+            errors.append(f"Category '{key}' answer '{cat['answer']}' not in options")
+
+    if not puzzle.get("verse"):
+        errors.append("Missing 'verse'")
+    if not puzzle.get("arabic"):
+        errors.append("Missing 'arabic'")
+
+    # Cooldown
+    title = puzzle.get("title", "").lower().strip()
+    if title in history["deduction"]["titles"]:
+        cooldown_violations.append(f"Title '{title}' reused (30-day cooldown)")
+
+    prophet_answer = cats.get("prophet", {}).get("answer", "")
+    if prophet_answer in history["deduction"]["prophets"]:
+        cooldown_violations.append(f"Prophet '{prophet_answer}' reused (30-day cooldown)")
+
+    return errors, cooldown_violations, warnings
+
+
+# ═══════════════════════════════════════════════════════════════════
+# SCRAMBLE GENERATOR
+# ═══════════════════════════════════════════════════════════════════
+def build_scramble_prompt(history, previous_violations=None):
+    avoided_refs = "\n".join(f"  - {r}" for r in sorted(history["scramble"]["references"])) or "  (none)"
+
+    violation_block = ""
+    if previous_violations:
+        violation_block = f"""
+
+CRITICAL — PREVIOUS ATTEMPT FAILED:
+{chr(10).join('  ✗ ' + v for v in previous_violations)}
+Choose a completely different verse."""
+
+    return f"""You are an expert Islamic scholar creating a daily "Ayah Scramble" puzzle.
+
+TASK: Choose a well-known Quranic verse and split its ENGLISH translation into word segments for a scramble game.
+
+RULES:
+1. Choose a meaningful, well-known Quranic verse
+2. Split the English translation into 4-7 logical word segments (not individual words, but meaningful phrases)
+3. Each segment should be 1-4 words long
+4. When placed in correct order, the segments form the complete English translation
+5. Provide the full Arabic verse with diacritics
+6. Provide the verse reference (Surah Name surah:ayah format)
+7. Provide a hint about the verse's theme
+
+STRICTLY FORBIDDEN verse references (used in last 30 days):
+{avoided_refs}
+{violation_block}
+
+OUTPUT FORMAT: Return a valid JSON object:
+{{
+  "reference": "Surah Name (surah:ayah)",
+  "words": ["segment 1", "segment 2", "segment 3", "segment 4"],
+  "arabic": "Full Arabic verse with diacritics",
+  "hint": "A hint about the verse's theme or context"
+}}
+
+IMPORTANT:
+- Return ONLY the JSON object, no markdown
+- The "words" array contains English phrase segments in CORRECT order
+- 4-7 segments total
+- Each segment should be a meaningful phrase chunk
+- The verse must be real and the Arabic must be accurate with full tashkeel"""
+
+
+def validate_scramble(puzzle, history):
+    errors, cooldown_violations, warnings = [], [], []
+
+    if not puzzle.get("reference"):
+        errors.append("Missing 'reference'")
+    words = puzzle.get("words", [])
+    if len(words) < 3 or len(words) > 8:
+        errors.append(f"Expected 4-7 word segments, got {len(words)}")
+    if not puzzle.get("arabic"):
+        errors.append("Missing 'arabic'")
+    if not puzzle.get("hint"):
+        errors.append("Missing 'hint'")
+
+    # Cooldown
+    ref = puzzle.get("reference", "")
+    if ref in history["scramble"]["references"]:
+        cooldown_violations.append(f"Reference '{ref}' reused (30-day cooldown)")
+    arabic = puzzle.get("arabic", "")
+    if arabic in history["scramble"]["verses"]:
+        cooldown_violations.append(f"Verse reused (30-day cooldown)")
+
+    return errors, cooldown_violations, warnings
+
+
+# ═══════════════════════════════════════════════════════════════════
+# UNIFIED GENERATION LOOP
+# ═══════════════════════════════════════════════════════════════════
+GAME_CONFIGS = {
+    "connections": {
+        "build_prompt": build_connections_prompt,
+        "validate": validate_connections,
+        "label": "Ayah Connections",
+    },
+    "wordle": {
+        "build_prompt": build_wordle_prompt,
+        "validate": validate_wordle,
+        "label": "Verse Wordle",
+    },
+    "deduction": {
+        "build_prompt": build_deduction_prompt,
+        "validate": validate_deduction,
+        "label": "Prophet Deduction",
+    },
+    "scramble": {
+        "build_prompt": build_scramble_prompt,
+        "validate": validate_scramble,
+        "label": "Ayah Scramble",
+    },
+}
+
+
+def generate_game(game_type, history, today):
+    """Generate a single game puzzle with retries and cooldown enforcement."""
+    config = GAME_CONFIGS[game_type]
+    print(f"\n{'═'*60}")
+    print(f"  Generating: {config['label']}")
+    print(f"{'═'*60}")
+
     previous_violations = None
     current_model = PRIMARY_MODEL
 
     for attempt in range(1, MAX_RETRIES + 1):
-        print(f"\n{'='*50}")
-        print(f"Attempt {attempt}/{MAX_RETRIES} using {current_model}...")
+        print(f"\n  Attempt {attempt}/{MAX_RETRIES} using {current_model}...")
 
-        prompt = build_prompt(history, previous_violations)
+        prompt = config["build_prompt"](history, previous_violations)
         raw = call_model(prompt, current_model)
 
         if not raw:
-            # If primary model fails, try fallback model on next attempt
             if current_model == PRIMARY_MODEL and FALLBACK_MODEL:
                 print(f"  → Switching to fallback model: {FALLBACK_MODEL}")
                 current_model = FALLBACK_MODEL
             continue
 
-        # Parse JSON — DeepSeek-R1 wraps reasoning in <think>...</think> tags
         try:
-            cleaned = raw.strip()
-            # Strip <think>...</think> reasoning blocks (DeepSeek-R1)
-            cleaned = re.sub(r'<think>.*?</think>', '', cleaned, flags=re.DOTALL).strip()
-            # Strip markdown code fences
-            if cleaned.startswith("```"):
-                cleaned = re.sub(r'^```(?:json)?\s*', '', cleaned)
-                cleaned = re.sub(r'\s*```$', '', cleaned)
-            # Extract JSON object if there's surrounding text
-            json_match = re.search(r'\{[\s\S]*\}', cleaned)
-            if json_match:
-                cleaned = json_match.group(0)
-            puzzle = json.loads(cleaned)
+            puzzle = parse_json_response(raw)
         except json.JSONDecodeError as e:
             print(f"  ✗ JSON parse error: {e}")
             print(f"  Raw (first 500 chars): {raw[:500]}")
             continue
 
-        # Validate with strict cooldown enforcement
-        errors, cooldown_violations, warnings = validate_puzzle(puzzle, history)
+        errors, cooldown_violations, warnings = config["validate"](puzzle, history)
 
         if errors:
             print(f"  ✗ Structural errors: {errors}")
@@ -494,34 +665,104 @@ def main():
         if warnings:
             print(f"  ⚠ Warnings (accepted): {warnings}")
 
-        # ── Success! ──
-        print(f"\n✓ Puzzle generated successfully for {today} using {current_model}")
-        for cat in puzzle["categories"]:
-            refs = [i['ref'] for i in cat['items']]
-            print(f"  [{cat['color']}] {cat['nameEn']}")
-            print(f"         Items: {', '.join(i['ar'] for i in cat['items'])}")
-            print(f"         Refs:  {', '.join(refs)}")
+        print(f"\n  ✓ {config['label']} generated successfully using {current_model}")
+        return puzzle
 
-        # Save to history
-        save_to_history(puzzle, today)
+    print(f"\n  ✗ All {MAX_RETRIES} attempts failed for {config['label']}.")
+    return None
 
-        # Save as daily puzzle
-        os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-        with open(OUTPUT_FILE, "w") as f:
-            json.dump({
-                "date": today,
-                "puzzle": puzzle,
-                "generated": True,
-                "model": current_model
-            }, f, ensure_ascii=False, indent=2)
 
+def main():
+    today = datetime.utcnow().strftime("%Y-%m-%d")
+
+    # Check if already generated today
+    today_file = os.path.join(HISTORY_DIR, f"{today}.json")
+    if os.path.exists(today_file):
+        print(f"Puzzles for {today} already exist. Skipping generation.")
+        # Still write output files from history
+        try:
+            with open(today_file) as f:
+                all_puzzles = json.load(f)
+            for game_type, output_path in OUTPUT_FILES.items():
+                puzzle_data = all_puzzles.get(game_type)
+                if puzzle_data:
+                    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+                    with open(output_path, "w") as f:
+                        json.dump({
+                            "date": today,
+                            "puzzle": puzzle_data,
+                            "generated": True,
+                        }, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            print(f"Warning: Could not restore output files: {e}")
         return 0
 
-    # All retries failed — use fallback
-    print(f"\n✗ All {MAX_RETRIES} attempts failed. Using fallback.")
-    with open(OUTPUT_FILE, "w") as f:
-        json.dump({"date": today, "puzzle": None, "generated": False, "fallback": True}, f, indent=2)
-    return 1
+    if not GITHUB_TOKEN:
+        print("ERROR: GITHUB_TOKEN not set.")
+        print("  Create a Fine-grained PAT at https://github.com/settings/tokens")
+        print("  with 'Models: Read-only' permission under Account permissions.")
+        return 1
+
+    # Load history for cooldown enforcement
+    history = load_history()
+    print(f"History loaded:")
+    print(f"  Connections: {len(history['connections']['themes'])} themes, "
+          f"{len(history['connections']['verses'])} verses")
+    print(f"  Wordle: {len(history['wordle']['words'])} words")
+    print(f"  Deduction: {len(history['deduction']['titles'])} titles, "
+          f"{len(history['deduction']['prophets'])} prophets")
+    print(f"  Scramble: {len(history['scramble']['references'])} references")
+
+    # Generate all 4 games
+    all_puzzles = {}
+    any_success = False
+
+    for game_type in ["connections", "wordle", "deduction", "scramble"]:
+        puzzle = generate_game(game_type, history, today)
+        if puzzle:
+            all_puzzles[game_type] = puzzle
+            any_success = True
+
+            # Write individual output file
+            output_path = OUTPUT_FILES[game_type]
+            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            with open(output_path, "w") as f:
+                json.dump({
+                    "date": today,
+                    "puzzle": puzzle,
+                    "generated": True,
+                    "model": PRIMARY_MODEL,
+                }, f, ensure_ascii=False, indent=2)
+            print(f"  → Saved to {os.path.basename(output_path)}")
+        else:
+            # Write fallback marker
+            output_path = OUTPUT_FILES[game_type]
+            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            with open(output_path, "w") as f:
+                json.dump({
+                    "date": today,
+                    "puzzle": None,
+                    "generated": False,
+                    "fallback": True,
+                }, f, indent=2)
+
+    # Save all puzzles to history
+    if any_success:
+        save_to_history(all_puzzles, today)
+        print(f"\n{'═'*60}")
+        print(f"  ✓ Daily puzzles saved to history/{today}.json")
+        print(f"  Games generated: {', '.join(all_puzzles.keys())}")
+        print(f"{'═'*60}")
+
+    # Print summary
+    print(f"\n{'═'*60}")
+    print(f"  GENERATION SUMMARY for {today}")
+    print(f"{'═'*60}")
+    for game_type in ["connections", "wordle", "deduction", "scramble"]:
+        status = "✓" if game_type in all_puzzles else "✗ (fallback)"
+        print(f"  {status} {GAME_CONFIGS[game_type]['label']}")
+
+    return 0 if any_success else 1
 
 
 if __name__ == "__main__":
