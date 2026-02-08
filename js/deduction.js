@@ -191,5 +191,8 @@ function showDedResult(cacheOnly) {
     }
 
     showResultModal(resultData);
-    updateModeStats('deduction', ded.won, ded.won ? Math.max(1, 7 - cluesUsed) : 0);
+    // Score: fewer clues = better score (1=best, 6=worst)
+    // 0 clues → score 1, 1 clue → score 2, ..., 5+ clues → score 6
+    const score = ded.won ? Math.min(6, Math.max(1, cluesUsed + 1)) : 0;
+    updateModeStats('deduction', ded.won, score);
 }
