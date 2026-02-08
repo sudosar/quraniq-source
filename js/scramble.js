@@ -271,12 +271,25 @@ function resetScramble() {
     announce('Puzzle reset. All words moved back to available.');
 }
 
+function normalizeArabicForCompare(text) {
+    // Normalize whitespace and trim
+    return text.replace(/\s+/g, ' ').trim();
+}
+
 function checkScramble() {
     if (scr.available.length > 0 || scr.gameOver) return;
 
     const correct = scr.puzzle.words;
-    const isCorrect = scr.placed.length === correct.length &&
+    // Primary check: exact match by position
+    let isCorrect = scr.placed.length === correct.length &&
         scr.placed.every((w, i) => w === correct[i]);
+
+    // Fallback: compare the joined result against the full arabic verse
+    if (!isCorrect && scr.puzzle.arabic) {
+        const placedJoined = normalizeArabicForCompare(scr.placed.join(' '));
+        const verseNorm = normalizeArabicForCompare(scr.puzzle.arabic);
+        isCorrect = placedJoined === verseNorm;
+    }
 
     if (isCorrect) {
         scr.won = true;

@@ -576,12 +576,15 @@ They can use hints to reveal the English translation of individual segments.
 
 RULES:
 1. Choose a meaningful, well-known Quranic verse (5-15 words long)
-2. Split the Arabic verse into 4-7 logical word segments (1-3 Arabic words each)
-3. When placed in correct right-to-left order, the segments form the complete Arabic verse
-4. For each Arabic segment, provide its English translation
-5. Provide the full Arabic verse with diacritics
-6. Provide the verse reference (Surah Name surah:ayah format)
-7. Provide a hint about the verse's theme
+2. Write the FULL Arabic verse first in the "arabic" field
+3. Split EXACTLY that Arabic text into 4-7 consecutive segments
+4. The "words" array MUST be in the CORRECT reading order of the verse
+5. CRITICAL: Joining all segments with a single space MUST exactly reproduce the "arabic" field
+   Example: if arabic = "A B C D E F", then words could be ["A B", "C D", "E F"]
+   And " ".join(words) MUST equal the arabic field exactly
+6. For each Arabic segment, provide its English translation in the same index position
+7. Provide the verse reference in "Surah Name (surah:ayah)" format
+8. Provide a hint about the verse's theme
 
 STRICTLY FORBIDDEN verse references (used in last 30 days):
 {avoided_refs}
@@ -590,20 +593,24 @@ STRICTLY FORBIDDEN verse references (used in last 30 days):
 OUTPUT FORMAT: Return a valid JSON object:
 {{
   "reference": "Surah Name (surah:ayah)",
-  "words": ["Arabic segment 1", "Arabic segment 2", "Arabic segment 3", "Arabic segment 4"],
+  "words": ["first Arabic segment", "second Arabic segment", "third Arabic segment", "fourth Arabic segment"],
   "translations": ["English for segment 1", "English for segment 2", "English for segment 3", "English for segment 4"],
-  "arabic": "Full Arabic verse with diacritics",
+  "arabic": "Full Arabic verse with diacritics (MUST equal words joined by spaces)",
   "hint": "A hint about the verse's theme or context"
 }}
 
+VERIFICATION CHECKLIST (you MUST verify before responding):
+- [ ] words[0] + " " + words[1] + " " + ... + words[N] == arabic  (EXACT MATCH)
+- [ ] words are in correct sequential reading order (not scrambled)
+- [ ] Each segment is 1-3 consecutive Arabic words from the verse
+- [ ] translations array has same length as words array
+- [ ] The verse reference is real and accurate
+- [ ] Arabic text has full tashkeel/diacritics
+
 IMPORTANT:
 - Return ONLY the JSON object, no markdown
-- The "words" array contains ARABIC segments in CORRECT order (right-to-left reading order)
-- The "translations" array has English translations matching each Arabic segment by index
-- 4-7 segments total
-- Each segment should be a meaningful Arabic phrase chunk (1-3 words)
-- The verse must be real and the Arabic must be accurate with full tashkeel
-- The concatenation of all segments should equal the full Arabic verse"""
+- DO NOT scramble the words array — it must be in correct order
+- The game code will scramble them for the player"""
 
 
 def validate_scramble(puzzle, history):
@@ -628,6 +635,20 @@ def validate_scramble(puzzle, history):
     for i, w in enumerate(words):
         if not re.search(r'[\u0600-\u06FF]', w):
             errors.append(f"Word segment {i} ('{w}') doesn't contain Arabic characters")
+
+    # CRITICAL: Verify that joining words reproduces the arabic field
+    arabic = puzzle.get("arabic", "")
+    if words and arabic:
+        joined = " ".join(words)
+        # Normalize whitespace for comparison
+        norm_joined = re.sub(r'\s+', ' ', joined).strip()
+        norm_arabic = re.sub(r'\s+', ' ', arabic).strip()
+        if norm_joined != norm_arabic:
+            errors.append(
+                f"Words joined don't match arabic field.\n"
+                f"  Joined:  '{norm_joined}'\n"
+                f"  Arabic:  '{norm_arabic}'"
+            )
 
     # Cooldown
     ref = puzzle.get("reference", "")
