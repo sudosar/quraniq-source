@@ -356,8 +356,13 @@ function showScrResult(cacheOnly) {
     });
 
     const puzzleNum = getPuzzleIndex(PUZZLES.scramble) + 1;
-    // Stars: deduct for hints used (similar to deduction)
-    const baseStars = scr.won ? Math.max(1, 5 - Math.floor(scr.moves / (scr.maxMoves / 5))) : 0;
+    // Stars based on extra moves beyond minimum (= word count) and hints used
+    // Minimum moves = number of words (placing each once perfectly)
+    const minMoves = scr.puzzle.words.length;
+    const extraMoves = Math.max(0, scr.moves - minMoves);
+    const extraAllowed = scr.maxMoves - minMoves; // total extra moves budget
+    // 0 extra moves = 5 stars, scale down as extra moves increase
+    const baseStars = scr.won ? Math.max(1, 5 - Math.floor(extraMoves / Math.max(1, extraAllowed / 5))) : 0;
     const stars = Math.max(0, baseStars - scr.hintsUsed);
     const starStr = '⭐'.repeat(stars) + '☆'.repeat(5 - stars);
 
