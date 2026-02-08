@@ -1,0 +1,53 @@
+name: Generate Daily Puzzle
+
+on:
+  schedule:
+    - cron: '5 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: claude/quranic-puzzle-game-RWunP
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate daily puzzle
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/generate_daily_puzzle.py
+
+      - name: Check if puzzle was generated
+        id: check
+        run: |
+          if [ -f "data/daily_puzzle.json" ]; then
+            GENERATED=$(python3 -c "import json; d=json.load(open('data/daily_puzzle.json' )); print('true' if d.get('generated') else 'false')")
+            echo "generated=$GENERATED" >> $GITHUB_OUTPUT
+          else
+            echo "generated=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.check.outputs.generated == 'true'
+        run: |
+          git config user.name "QuranPuzzle Bot"
+          git config user.email "bot@quranpuzzle.app"
+          git add data/
+          git diff --staged --quiet || {
+            DATE=$(date -u +%Y-%m-%d)
+            git commit -m "Generate daily puzzle for $DATE"
+            git push
+          }
