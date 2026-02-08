@@ -7,15 +7,15 @@ themes.
 
 Model selection
 ───────────────
-Primary:   gpt-4o-mini  (Low tier — 150 req/day free on GitHub Models)
-Fallback:  gpt-4o       (High tier — 50 req/day free, used if primary fails)
+Primary:   gemini-2.5-flash  (Low tier — 150 req/day free on GitHub Models)
+Fallback:  gpt-4o-mini      (Low tier — 150 req/day free, used if primary fails)
 
-Why gpt-4o-mini?
-  • Best-in-class structured JSON output among GitHub Models candidates
+Why gemini-2.5-flash?
+  • Superior Quranic/Islamic knowledge and Arabic accuracy
+  • Excellent structured JSON output
   • Reliable Arabic text generation with diacritics (tashkeel)
   • Low tier = 150 free requests/day (we need ≤5)
-  • 128K context / 16K output — plenty for our prompt
-  • OpenAI-compatible API — minimal migration from Gemini
+  • Proven accuracy in earlier testing with Gemini models
 """
 import json
 import os
@@ -33,8 +33,8 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 API_URL = "https://models.inference.ai.azure.com/chat/completions"
 
 # Model priority: try the primary first, fall back to secondary
-PRIMARY_MODEL = os.environ.get("PUZZLE_MODEL", "gpt-4o-mini")
-FALLBACK_MODEL = "gpt-4o"
+PRIMARY_MODEL = os.environ.get("PUZZLE_MODEL", "gemini-2.5-flash")
+FALLBACK_MODEL = "gpt-4o-mini"
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 HISTORY_DIR = os.path.join(SCRIPT_DIR, "..", "data", "history")
@@ -238,6 +238,8 @@ def call_model(prompt, model_id):
         "temperature": 0.9,
         "top_p": 0.95,
         "max_tokens": 4096,
+        # Note: response_format json_object works for OpenAI models;
+        # Gemini models handle JSON via system prompt instruction.
         "response_format": {"type": "json_object"}
     }
 
