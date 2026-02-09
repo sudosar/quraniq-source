@@ -763,3 +763,26 @@ function showConnResult(won, cacheOnly) {
     }
     trackVerses(verseRefs);
 }
+
+// Expand all solved rows (called when closing result modal)
+function expandAllConnRows() {
+    conn.solved.forEach((_, idx) => {
+        const carousel = document.getElementById(`carousel-${idx}`);
+        if (carousel && !carousel.classList.contains('expanded')) {
+            toggleCarousel(idx);
+        }
+    });
+}
+
+// Get the first verse ref from the puzzle for playback on result modal
+function getFirstConnVerseRef() {
+    if (!conn.puzzle || !conn.puzzle.categories) return null;
+    for (const cat of conn.puzzle.categories) {
+        if (cat.items) {
+            for (const item of cat.items) {
+                if (item.ref) return item.ref;
+            }
+        }
+    }
+    return null;
+}

@@ -195,11 +195,24 @@ function initModals() {
     document.getElementById('stats-close').addEventListener('click', () => closeModal('stats-modal'));
     document.getElementById('help-btn').addEventListener('click', () => showHelpModal());
     document.getElementById('help-close').addEventListener('click', () => closeModal('help-modal'));
-    document.getElementById('result-close').addEventListener('click', () => closeModal('result-modal'));
+    document.getElementById('result-close').addEventListener('click', () => {
+        closeModal('result-modal');
+        // Expand all solved rows when closing connections result
+        if (app.currentMode === 'connections' && typeof expandAllConnRows === 'function') {
+            setTimeout(() => expandAllConnRows(), 300);
+        }
+    });
 
     // Close modals on overlay click
     document.querySelectorAll('.modal').forEach(m => {
-        m.addEventListener('click', e => { if (e.target === m) closeModal(m.id); });
+        m.addEventListener('click', e => {
+            if (e.target === m) {
+                closeModal(m.id);
+                if (m.id === 'result-modal' && app.currentMode === 'connections' && typeof expandAllConnRows === 'function') {
+                    setTimeout(() => expandAllConnRows(), 300);
+                }
+            }
+        });
     });
 
     // Close modals on Escape
@@ -384,9 +397,18 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         verseEl.innerHTML = (arabic ? `<span>${arabic}</span>` : '') +
             (translationHtml ? `<span class="translation">${translationHtml}</span>` : '');
     } else if (app.currentMode === 'connections') {
-        // Show explore prompt instead of a static verse
+        // Show tappable listen prompt that plays a verse from the puzzle
         verseEl.style.display = 'block';
-        verseEl.innerHTML = '<span class="translation" style="font-style:italic;">Close this and tap any group to listen to the ayah and explore word-by-word meanings</span>';
+        const firstRef = getFirstConnVerseRef();
+        if (firstRef) {
+            verseEl.innerHTML = '<button class="conn-result-listen-btn" id="conn-result-listen">Tap here to listen to an ayah from today\'s puzzle \u25B6</button>';
+            const listenBtn = document.getElementById('conn-result-listen');
+            listenBtn.addEventListener('click', () => {
+                playQuranAudio(firstRef, listenBtn);
+            });
+        } else {
+            verseEl.innerHTML = '<span class="translation" style="font-style:italic;">Tap each group to explore the ayahs</span>';
+        }
     } else {
         verseEl.style.display = 'none';
     }
