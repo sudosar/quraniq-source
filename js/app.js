@@ -280,9 +280,9 @@ function showHelpModal() {
 }
 
 // ==================== RESULT MODAL ====================
-function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, statsText, shareText }) {
+function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, stars }) {
     // Cache the result so it can be re-opened later
-    app.lastResults[app.currentMode] = { icon, title, verse, arabic, translation, emojiGrid, statsText, shareText };
+    app.lastResults[app.currentMode] = { icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, stars };
     // Show the "View Results" button in the game area
     showViewResultsButton(app.currentMode);
 
@@ -299,6 +299,13 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
     }
 
     document.getElementById('result-grid').textContent = emojiGrid || '';
+    const starsEl = document.getElementById('result-stars');
+    if (stars !== undefined && stars !== null) {
+        starsEl.textContent = '⭐'.repeat(stars) + '☆'.repeat(5 - stars);
+        starsEl.style.display = 'block';
+    } else {
+        starsEl.style.display = 'none';
+    }
     document.getElementById('result-stats').textContent = statsText || '';
 
     // Share buttons

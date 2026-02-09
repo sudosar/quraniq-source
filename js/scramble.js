@@ -382,7 +382,8 @@ function showScrResult(cacheOnly) {
         title: scr.won ? 'Verse Complete!' : 'Nice Try!',
         arabic: scr.puzzle.arabic || scr.puzzle.words.join(' '),
         translation: translationText,
-        emojiGrid: `${emojiGrid}\n${starStr}`,
+        emojiGrid: emojiGrid,
+        stars: scr.won ? stars : null,
         statsText: `Attempts: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}`,
         shareText
     };

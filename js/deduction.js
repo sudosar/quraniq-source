@@ -172,7 +172,19 @@ function showDedResult(cacheOnly) {
     const puzzleNum = getPuzzleIndex(PUZZLES.deduction) + 1;
     const cluesUsed = ded.cluesRevealed;
 
-    const shareText = `QuranIQ - Deduction #${puzzleNum}\n"${ded.puzzle.title}"\n${emojiGrid}${correct}/4 correct | ${cluesUsed} clues used\n\nhttps://sudosar.github.io/quraniq/`;
+    // Star calculation: based on clues used (fewer = better)
+    // Won with 0-1 clues = 5, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1; lost = 0
+    let stars = 0;
+    if (ded.won) {
+        if (cluesUsed <= 1) stars = 5;
+        else if (cluesUsed === 2) stars = 4;
+        else if (cluesUsed === 3) stars = 3;
+        else if (cluesUsed === 4) stars = 2;
+        else stars = 1;
+    }
+    const starStr = '⭐'.repeat(stars) + '☆'.repeat(5 - stars);
+
+    const shareText = `QuranIQ - Deduction #${puzzleNum}\n"${ded.puzzle.title}"\n${emojiGrid}${starStr}\n${correct}/4 correct | ${cluesUsed} clues used\n\nhttps://sudosar.github.io/quraniq/`;
 
     const resultData = {
         icon: ded.won ? '🕵️' : '📖',
@@ -180,6 +192,7 @@ function showDedResult(cacheOnly) {
         arabic: ded.puzzle.arabic,
         translation: ded.puzzle.verse,
         emojiGrid: emojiGrid.trim(),
+        stars: ded.won ? stars : null,
         statsText: `${correct}/4 correct using ${cluesUsed} clues`,
         shareText
     };
