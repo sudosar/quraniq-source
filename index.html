@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuranIQ - Daily Quranic Puzzle Game</title>
+    <meta name="description" content="Test your Quranic knowledge daily with 4 unique puzzle modes: Ayah Connections, Harf by Harf, Prophet Deduction, and Ayah Scramble. Play free every day!">
+    <meta name="theme-color" content="#1B5E20">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sudosar.github.io/quraniq/">
+    <meta property="og:title" content="QuranIQ - Daily Quranic Puzzle Game">
+    <meta property="og:description" content="Test your Quranic knowledge daily with 4 unique puzzle modes. Play free every day!">
+    <meta property="og:image" content="https://sudosar.github.io/quraniq/icons/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="QuranIQ - Daily Quranic Puzzle Game">
+    <meta name="twitter:description" content="Test your Quranic knowledge daily with 4 unique puzzle modes. Play free every day!">
+    <meta name="twitter:image" content="https://sudosar.github.io/quraniq/icons/og-preview.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="QuranIQ">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260209e">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+    <link rel="stylesheet" href="style.css?v=20260209f">
+    <link rel="icon" href="icons/icon-192.png" type="image/png">
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7SBPH5C6L"></script>
     <script>
@@ -261,12 +286,22 @@
         </div>
     </main>
 
-    <script src="puzzles.js?v=20260209e"></script>
-    <script src="js/utils.js?v=20260209e"></script>
-    <script src="js/connections.js?v=20260209e"></script>
-    <script src="js/wordle.js?v=20260209e"></script>
-    <script src="js/deduction.js?v=20260209e"></script>
-    <script src="js/scramble.js?v=20260209e"></script>
-    <script src="js/app.js?v=20260209e"></script>
+    <script src="puzzles.js?v=20260209f"></script>
+    <script src="js/utils.js?v=20260209f"></script>
+    <script src="js/connections.js?v=20260209f"></script>
+    <script src="js/wordle.js?v=20260209f"></script>
+    <script src="js/deduction.js?v=20260209f"></script>
+    <script src="js/scramble.js?v=20260209f"></script>
+    <script src="js/app.js?v=20260209f"></script>
+    <script>
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('SW registered:', reg.scope))
+                    .catch(err => console.log('SW registration failed:', err));
+            });
+        }
+    </script>
 </body>
 </html>
