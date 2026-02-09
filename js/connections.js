@@ -734,7 +734,7 @@ function showConnResult(won, cacheOnly) {
         title: won ? 'Excellent!' : 'Keep Learning!',
         verse: null,
         arabic: null,
-        translation: won ? '"And We have certainly made the Quran easy for remembrance" - 54:17' : '"So verily, with hardship, there is relief" - 94:5',
+        translation: null,
         emojiGrid: emojiGrid.trim(),
         moons,
         statsText: `Groups found: ${correctCount}/4 | Mistakes: ${mistakesUsed}/4`,

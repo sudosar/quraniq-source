@@ -377,12 +377,16 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         let translationHtml = translation || '';
         // Make verse reference numbers clickable links to Quran.com
         if (linkParsed && translationHtml) {
-            const refPattern = new RegExp(`(${linkParsed.surah}:${linkParsed.ayah}(?:-\\d+)?)`);
+            const refPattern = new RegExp(`(${linkParsed.surah}:${linkParsed.ayah}(?:-\d+)?)`);
             translationHtml = translationHtml.replace(refPattern,
                 `<a href="https://quran.com/${linkParsed.surah}/${linkParsed.ayah}" target="_blank" rel="noopener noreferrer" class="verse-ref-link" title="Read on Quran.com">$1</a>`);
         }
         verseEl.innerHTML = (arabic ? `<span>${arabic}</span>` : '') +
             (translationHtml ? `<span class="translation">${translationHtml}</span>` : '');
+    } else if (app.currentMode === 'connections') {
+        // Show explore prompt instead of a static verse
+        verseEl.style.display = 'block';
+        verseEl.innerHTML = '<span class="translation" style="font-style:italic;">Tap each group below to listen to the ayahs and explore word-by-word meanings</span>';
     } else {
         verseEl.style.display = 'none';
     }
@@ -476,12 +480,6 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         }
     } else {
         audioContainer.style.display = 'none';
-    }
-
-    // Show verse exploration hint for connections mode
-    const exploreHint = document.getElementById('result-explore-hint');
-    if (exploreHint) {
-        exploreHint.style.display = (app.currentMode === 'connections') ? 'block' : 'none';
     }
 
     openModal('result-modal');
