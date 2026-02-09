@@ -98,6 +98,12 @@ function setupWordleGame() {
     }
     wordle.keydownHandler = handleWordleKey;
     document.addEventListener('keydown', wordle.keydownHandler);
+
+    // Restore View Results button for completed games
+    if (wordle.gameOver && wordle.evaluations.length > 0) {
+        const won = normalizeArabic(wordle.board[wordle.evaluations.length - 1]?.join('') || '') === wordle.word;
+        showWordleResult(won, true);
+    }
 }
 
 function renderWordleBoard() {

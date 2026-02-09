@@ -81,6 +81,11 @@ function setupScrambleGame() {
     document.getElementById('scramble-hint').addEventListener('click', useScrambleHint);
     document.getElementById('scramble-reset').addEventListener('click', resetScramble);
     document.getElementById('scramble-check').addEventListener('click', checkScramble);
+
+    // Restore View Results button for completed games
+    if (scr.gameOver && scr.placed.length > 0) {
+        showScrResult(true);
+    }
 }
 
 function renderScramble() {

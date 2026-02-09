@@ -89,6 +89,9 @@ function setupConnectionsGame() {
 
     if (conn.gameOver) {
         revealAllConnections();
+        // Restore the View Results button for completed games
+        const won = conn.solved.length === 4 && (4 - conn.mistakes) < 4;
+        showConnResult(won, true);
     }
 }
 

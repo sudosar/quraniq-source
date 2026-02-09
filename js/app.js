@@ -471,22 +471,13 @@ function showViewResultsButton(mode) {
 
 // Restore "View Results" buttons on page load for completed games
 function restoreViewResultsButtons() {
-    // For each mode, if the game is over, rebuild the result data (cacheOnly)
-    // so the "View Results" button appears without opening the modal
-    if (conn.gameOver && conn.solved.length > 0) {
-        const won = conn.solved.length === 4 && conn.mistakes > 0;
-        showConnResult(won, true);
-    }
-    if (wordle.gameOver && wordle.evaluations.length > 0) {
-        const won = normalizeArabic(wordle.board[wordle.evaluations.length - 1]?.join('') || '') === wordle.word;
-        showWordleResult(won, true);
-    }
-    if (ded.gameOver) {
-        showDedResult(true);
-    }
-    if (scr.gameOver && scr.placed.length > 0) {
-        showScrResult(true);
-    }
+    // Each game mode's setup function now handles restoring the View Results button
+    // after the async puzzle load completes. This function is kept for backward
+    // compatibility but the actual restore happens in:
+    //   - setupConnectionsGame()
+    //   - setupWordleGame()
+    //   - setupDeductionGame()
+    //   - setupScrambleGame()
 }
 
 // ==================== COUNTDOWN TIMER (UTC-based) ====================

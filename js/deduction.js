@@ -45,6 +45,11 @@ function setupDeductionGame() {
     }
 
     renderDeduction();
+
+    // Restore View Results button for completed games
+    if (ded.gameOver) {
+        showDedResult(true);
+    }
 }
 
 function renderDeduction() {
