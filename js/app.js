@@ -220,13 +220,23 @@ function initModals() {
     });
 }
 
-// ==================== RESET BUTTON ====================
+// ==================== HIDDEN DEV RESET (tap logo 5x) ====================
 function initResetButton() {
-    document.getElementById('reset-btn').addEventListener('click', () => {
-        if (!confirm('Reset the current puzzle? Your progress will be lost.')) return;
-        localStorage.removeItem(STATE_KEY);
-        app.state = {};
-        location.reload();
+    let tapCount = 0;
+    let tapTimer = null;
+    const logo = document.querySelector('.logo');
+    if (!logo) return;
+    logo.addEventListener('click', () => {
+        tapCount++;
+        clearTimeout(tapTimer);
+        tapTimer = setTimeout(() => { tapCount = 0; }, 1500);
+        if (tapCount >= 5) {
+            tapCount = 0;
+            if (!confirm('🔧 Dev Reset: Clear all puzzle state and reload?')) return;
+            localStorage.removeItem(STATE_KEY);
+            app.state = {};
+            location.reload();
+        }
     });
 }
 
