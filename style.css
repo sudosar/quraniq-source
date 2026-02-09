@@ -2772,51 +2772,57 @@ button, input, select, textarea {
     border: 2px solid var(--bg-card, #fff);
 }
 
-/* ===== Result Modal Audio Controls ===== */
-.result-audio {
+/* ===== Result Modal Audio & Quran Link Row ===== */
+.result-audio-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 16px;
     margin: 8px 0 4px;
+    flex-wrap: wrap;
 }
 
-.result-play-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 2px solid var(--islamic-gold, #c9a227);
-    background: transparent;
-    color: var(--islamic-gold, #c9a227);
-    font-size: 1.1rem;
+.result-autoplay-btn {
+    background: none;
+    border: 1px solid var(--text-secondary, #6b6b80);
+    color: var(--text-secondary, #6b6b80);
+    font-size: 0.78rem;
     cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 20px;
+    transition: all 0.2s;
+    min-height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background 0.2s, transform 0.15s;
 }
 
-.result-play-btn:hover {
+.result-autoplay-btn:hover {
+    border-color: var(--islamic-gold, #c9a227);
+    color: var(--islamic-gold, #c9a227);
+}
+
+.result-autoplay-btn.active {
+    border-color: var(--islamic-gold, #c9a227);
+    color: var(--islamic-gold, #c9a227);
     background: rgba(201, 162, 39, 0.1);
-    transform: scale(1.05);
 }
 
-.result-play-btn.playing {
-    background: var(--islamic-gold, #c9a227);
-    color: var(--bg, #fff);
+.result-quran-link {
+    color: var(--islamic-gold, #c9a227);
+    font-size: 0.78rem;
+    text-decoration: none;
+    padding: 5px 12px;
+    border: 1px solid var(--islamic-gold, #c9a227);
+    border-radius: 20px;
+    transition: all 0.2s;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
 }
 
-.result-mute-btn {
-    background: none;
-    border: none;
-    color: var(--text-secondary, #6b6b80);
-    font-size: 0.75rem;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 6px;
-    transition: color 0.2s;
-}
-
-.result-mute-btn:hover {
-    color: var(--text, #1a1a2e);
+.result-quran-link:hover {
+    background: rgba(201, 162, 39, 0.1);
+    text-decoration: none;
 }

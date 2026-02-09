@@ -392,48 +392,59 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         setTimeout(() => toast.classList.add('hidden'), 2000);
     });
 
-    // ===== Verse Audio =====
+    // ===== Verse Audio & Quran.com Link =====
     const audioContainer = document.getElementById('result-audio');
-    const playBtn = document.getElementById('result-play-btn');
-    const muteBtn = document.getElementById('result-mute-btn');
+    const autoplayBtn = document.getElementById('result-autoplay-btn');
+    const quranLink = document.getElementById('result-quran-link');
     const isMuted = localStorage.getItem('quraniq_audio_mute') === '1';
 
     // Try to extract a surah:ayah ref from verseRef or translation text
     const audioRef = verseRef || extractVerseRef(translation) || extractVerseRef(verse);
 
     if (audioRef && parseQuranRef(audioRef)) {
+        const parsed = parseQuranRef(audioRef);
         audioContainer.style.display = 'flex';
-        playBtn.textContent = '\u25B6';
-        playBtn.classList.remove('playing');
-        muteBtn.textContent = isMuted ? '\uD83D\uDD07 Auto-play off' : '\uD83D\uDD0A Auto-play on';
 
-        // Clone to remove old listeners
-        const newPlayBtn = playBtn.cloneNode(true);
-        playBtn.parentNode.replaceChild(newPlayBtn, playBtn);
-        newPlayBtn.id = 'result-play-btn';
-        newPlayBtn.addEventListener('click', () => {
-            playQuranAudio(audioRef, newPlayBtn);
-        });
+        // Autoplay toggle button
+        const newAutoplayBtn = autoplayBtn.cloneNode(true);
+        autoplayBtn.parentNode.replaceChild(newAutoplayBtn, autoplayBtn);
+        newAutoplayBtn.id = 'result-autoplay-btn';
 
-        const newMuteBtn = muteBtn.cloneNode(true);
-        muteBtn.parentNode.replaceChild(newMuteBtn, muteBtn);
-        newMuteBtn.id = 'result-mute-btn';
-        newMuteBtn.addEventListener('click', () => {
+        const updateAutoplayState = (muted) => {
+            if (muted) {
+                newAutoplayBtn.textContent = '\uD83D\uDD07 Auto-play off';
+                newAutoplayBtn.classList.remove('active');
+            } else {
+                newAutoplayBtn.textContent = '\uD83D\uDD0A Auto-play on';
+                newAutoplayBtn.classList.add('active');
+            }
+        };
+        updateAutoplayState(isMuted);
+
+        newAutoplayBtn.addEventListener('click', () => {
             const nowMuted = localStorage.getItem('quraniq_audio_mute') === '1';
             if (nowMuted) {
                 localStorage.removeItem('quraniq_audio_mute');
-                newMuteBtn.textContent = '\uD83D\uDD0A Auto-play on';
+                updateAutoplayState(false);
+                // Start playing immediately when turning on
+                playQuranAudio(audioRef);
                 showToast('Verse recitation auto-play enabled');
             } else {
                 localStorage.setItem('quraniq_audio_mute', '1');
-                newMuteBtn.textContent = '\uD83D\uDD07 Auto-play off';
+                updateAutoplayState(true);
+                // Stop any playing audio
+                if (typeof stopQuranAudio === 'function') stopQuranAudio();
                 showToast('Verse recitation auto-play disabled');
             }
         });
 
+        // Quran.com link
+        quranLink.href = `https://quran.com/${parsed.surah}/${parsed.ayah}`;
+        quranLink.style.display = 'flex';
+
         // Autoplay if not muted
         if (!isMuted) {
-            setTimeout(() => playQuranAudio(audioRef, newPlayBtn), 600);
+            setTimeout(() => playQuranAudio(audioRef), 600);
         }
     } else {
         audioContainer.style.display = 'none';
