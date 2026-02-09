@@ -873,13 +873,15 @@ function generateInsightsShareText(scholar, overallScore, gameInsights, totalPla
 
 
 // ═══════════════════════════════════════════════════════════════════
-// DHIKR COUNTER
+// DHIKR COUNTER — Community-synced
 // ═══════════════════════════════════════════════════════════════════
+const DHIKR_ENDPOINT = ''; // Set to your Apps Script Web App URL
+
 function initDhikrCounter() {
     const DHIKR_KEY = 'quraniq_dhikr';
     const tapBtn = document.getElementById('dhikr-tap');
     const countEl = document.getElementById('dhikr-count');
-    const totalEl = document.getElementById('dhikr-total');
+    const communityEl = document.getElementById('dhikr-community-count');
     const resetBtn = document.getElementById('dhikr-reset');
     const picker = document.getElementById('dhikr-picker');
 
@@ -892,27 +894,83 @@ function initDhikrCounter() {
 
     // Reset if different day
     if (saved.date !== today) {
-        saved = { date: today, phrase: 'subhanallah', counts: {}, current: 0 };
+        saved = { date: today, phrase: 'subhanallah', counts: {}, pending: {} };
     }
     if (!saved.counts) saved.counts = {};
+    if (!saved.pending) saved.pending = {};
     if (!saved.phrase) saved.phrase = 'subhanallah';
 
     let currentPhrase = saved.phrase;
     let currentCount = saved.counts[currentPhrase] || 0;
-
-    function getTotalToday() {
-        return Object.values(saved.counts).reduce((a, b) => a + b, 0);
-    }
+    let syncTimer = null;
+    let communityTotal = saved.communityTotal || 0;
 
     function save() {
         saved.counts[currentPhrase] = currentCount;
         saved.phrase = currentPhrase;
+        saved.communityTotal = communityTotal;
         localStorage.setItem(DHIKR_KEY, JSON.stringify(saved));
     }
 
     function render() {
         countEl.textContent = currentCount;
-        totalEl.textContent = `Total today: ${getTotalToday()}`;
+        if (communityTotal > 0) {
+            communityEl.textContent = communityTotal.toLocaleString();
+        }
+    }
+
+    // Sync pending taps to the server (batched, debounced)
+    function scheduleSyncToServer() {
+        if (!DHIKR_ENDPOINT) return;
+        clearTimeout(syncTimer);
+        syncTimer = setTimeout(() => flushPending(), 2000); // 2s debounce
+    }
+
+    async function flushPending() {
+        const pending = { ...saved.pending };
+        // Only flush phrases with > 0 pending
+        const toSend = Object.entries(pending).filter(([, v]) => v > 0);
+        if (toSend.length === 0) return;
+
+        for (const [phrase, count] of toSend) {
+            try {
+                const resp = await fetch(DHIKR_ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify({ phrase, count })
+                });
+                if (resp.ok) {
+                    const result = await resp.json();
+                    // Clear the pending count for this phrase
+                    saved.pending[phrase] = (saved.pending[phrase] || 0) - count;
+                    if (saved.pending[phrase] <= 0) delete saved.pending[phrase];
+                    // Update community total from server response
+                    if (result.today) {
+                        communityTotal = result.today;
+                    }
+                }
+            } catch (e) {
+                console.warn('Dhikr sync failed:', e);
+            }
+        }
+        save();
+        render();
+    }
+
+    // Fetch community totals on load
+    async function fetchCommunityTotal() {
+        if (!DHIKR_ENDPOINT) return;
+        try {
+            const resp = await fetch(DHIKR_ENDPOINT);
+            if (resp.ok) {
+                const data = await resp.json();
+                communityTotal = data.today || 0;
+                save();
+                render();
+            }
+        } catch (e) {
+            console.warn('Dhikr fetch failed:', e);
+        }
     }
 
     // Phrase picker
@@ -934,6 +992,9 @@ function initDhikrCounter() {
     // Tap counter
     tapBtn.addEventListener('click', () => {
         currentCount++;
+        communityTotal++;
+        // Track pending sync
+        saved.pending[currentPhrase] = (saved.pending[currentPhrase] || 0) + 1;
         save();
         render();
         // Haptic feedback if available
@@ -946,13 +1007,20 @@ function initDhikrCounter() {
         if (currentCount === 33 || currentCount === 99 || currentCount === 100) {
             showToast(`${currentCount}× MashaAllah! 🤲`);
         }
+        scheduleSyncToServer();
     });
 
-    // Reset
+    // Reset (local only — community total stays)
     resetBtn.addEventListener('click', () => {
         currentCount = 0;
         save();
         render();
+    });
+
+    // Flush pending when user leaves the page
+    window.addEventListener('beforeunload', () => flushPending());
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') flushPending();
     });
 
     // Set initial active phrase button
@@ -961,4 +1029,7 @@ function initDhikrCounter() {
     });
 
     render();
+    fetchCommunityTotal();
+    // Also flush any pending from a previous session
+    flushPending();
 }
