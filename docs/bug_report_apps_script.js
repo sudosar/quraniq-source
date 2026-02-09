@@ -14,7 +14,7 @@
  */
 
 // ===== CONFIGURATION =====
-const GITHUB_TOKEN = 'YOUR_GITHUB_PERSONAL_ACCESS_TOKEN'; // Fine-grained PAT with Issues write permission
+const GITHUB_TOKEN = 'YOUR_GITHUB_PERSONAL_ACCESS_TOKEN'; // Fine-grained PAT with Issues write + Contents write permission
 const REPO_OWNER = 'sudosar';
 const REPO_NAME = 'quraniq';
 // ==========================
@@ -28,6 +28,8 @@ function doPost(e) {
     const screenSize = data.screenSize || 'Unknown';
     const url = data.url || 'Unknown';
     const timestamp = data.timestamp || new Date().toISOString();
+    const gameMode = data.gameMode || 'Unknown';
+    const theme = data.theme || 'Unknown';
     const screenshot = data.screenshot || null; // base64 data URL
     
     // Build the issue body
@@ -38,14 +40,15 @@ function doPost(e) {
     body += `| Field | Value |\n`;
     body += `|-------|-------|\n`;
     body += `| **URL** | ${url} |\n`;
-    body += `| **User Agent** | ${userAgent} |\n`;
+    body += `| **Game Mode** | ${gameMode} |\n`;
+    body += `| **Theme** | ${theme} |\n`;
     body += `| **Screen Size** | ${screenSize} |\n`;
+    body += `| **User Agent** | \`${userAgent}\` |\n`;
     body += `| **Timestamp** | ${timestamp} |\n\n`;
     
-    // If screenshot provided, upload to GitHub as an issue comment image
+    // If screenshot provided, upload to repo and embed
     if (screenshot) {
-      // Upload screenshot to a gist for embedding
-      const imageUrl = uploadScreenshotToGist(screenshot, timestamp);
+      const imageUrl = uploadScreenshotToRepo(screenshot, timestamp);
       if (imageUrl) {
         body += `### Screenshot\n\n![Bug Screenshot](${imageUrl})\n`;
       }
@@ -92,39 +95,43 @@ function doGet(e) {
 }
 
 /**
- * Upload screenshot as a GitHub Gist and return the raw URL for embedding.
+ * Upload screenshot as a file to the repo's bug-screenshots branch and return the raw URL.
  */
-function uploadScreenshotToGist(base64DataUrl, timestamp) {
+function uploadScreenshotToRepo(base64DataUrl, timestamp) {
   try {
-    // Extract base64 data (remove "data:image/png;base64," prefix)
+    // Extract pure base64 data (remove "data:image/png;base64," or "data:image/jpeg;base64," prefix)
     const base64Data = base64DataUrl.replace(/^data:image\/\w+;base64,/, '');
     
-    const gistUrl = 'https://api.github.com/gists';
-    const filename = `quraniq-bug-${timestamp.replace(/[:.]/g, '-')}.md`;
+    // Determine file extension
+    const ext = base64DataUrl.startsWith('data:image/png') ? 'png' : 'jpg';
     
-    const gistPayload = {
-      description: `QuranIQ Bug Report Screenshot - ${timestamp}`,
-      public: false,
-      files: {}
-    };
-    gistPayload.files[filename] = {
-      content: `![Screenshot](${base64DataUrl})`
+    // Create a unique filename
+    const safeTimestamp = timestamp.replace(/[:.]/g, '-').replace(/T/, '_').replace(/Z/, '');
+    const filename = `bug-screenshots/${safeTimestamp}.${ext}`;
+    
+    // Upload file to repo via GitHub Contents API
+    const uploadUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filename}`;
+    
+    const uploadPayload = {
+      message: `Bug report screenshot ${safeTimestamp}`,
+      content: base64Data,
+      branch: 'claude/quranic-puzzle-game-RWunP'
     };
     
-    const response = UrlFetchApp.fetch(gistUrl, {
-      method: 'post',
+    const response = UrlFetchApp.fetch(uploadUrl, {
+      method: 'put',
       contentType: 'application/json',
       headers: {
         'Authorization': `Bearer ${GITHUB_TOKEN}`,
-        'Accept': 'application/vnd.github+json'
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28'
       },
-      payload: JSON.stringify(gistPayload)
+      payload: JSON.stringify(uploadPayload)
     });
     
     const result = JSON.parse(response.getContentText());
-    // Return the raw URL of the gist file
-    const file = result.files[filename];
-    return file.raw_url;
+    // Return the download URL which serves the raw image
+    return result.content.download_url;
   } catch (e) {
     Logger.log('Screenshot upload failed: ' + e.message);
     return null;
