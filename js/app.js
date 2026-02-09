@@ -397,18 +397,9 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         verseEl.innerHTML = (arabic ? `<span>${arabic}</span>` : '') +
             (translationHtml ? `<span class="translation">${translationHtml}</span>` : '');
     } else if (app.currentMode === 'connections') {
-        // Show tappable listen prompt that plays a verse from the puzzle
+        // Simple prompt — tapping anywhere closes modal and expands rows
         verseEl.style.display = 'block';
-        const firstRef = getFirstConnVerseRef();
-        if (firstRef) {
-            verseEl.innerHTML = '<button class="conn-result-listen-btn" id="conn-result-listen">Tap here to listen to an ayah from today\'s puzzle \u25B6</button>';
-            const listenBtn = document.getElementById('conn-result-listen');
-            listenBtn.addEventListener('click', () => {
-                playQuranAudio(firstRef, listenBtn);
-            });
-        } else {
-            verseEl.innerHTML = '<span class="translation" style="font-style:italic;">Tap each group to explore the ayahs</span>';
-        }
+        verseEl.innerHTML = '<span class="translation" style="font-style:italic;">Tap to explore the ayahs from today\'s puzzle</span>';
     } else {
         verseEl.style.display = 'none';
     }
