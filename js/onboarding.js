@@ -51,11 +51,6 @@ function showOnboarding() {
                     </div>
                 </div>
 
-                <div class="onboarding-dots" aria-hidden="true">
-                    <div class="onboarding-dot active"></div>
-                    <div class="onboarding-dot"></div>
-                </div>
-
                 <button class="onboarding-start-btn" id="onboarding-next">
                     Continue
                 </button>
@@ -69,11 +64,6 @@ function showOnboarding() {
                     <div class="onboarding-notification-icon" aria-hidden="true">🔔</div>
                     <h3>Never Miss a Puzzle</h3>
                     <p>Get a daily reminder when new puzzles are ready. You can change this anytime in the menu.</p>
-                </div>
-
-                <div class="onboarding-dots" aria-hidden="true">
-                    <div class="onboarding-dot"></div>
-                    <div class="onboarding-dot active"></div>
                 </div>
 
                 <div class="onboarding-btn-group">
