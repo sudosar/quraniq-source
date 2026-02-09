@@ -386,7 +386,7 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
     } else if (app.currentMode === 'connections') {
         // Show explore prompt instead of a static verse
         verseEl.style.display = 'block';
-        verseEl.innerHTML = '<span class="translation" style="font-style:italic;">Tap each group below to listen to the ayahs and explore word-by-word meanings</span>';
+        verseEl.innerHTML = '<span class="translation" style="font-style:italic;">Close this and tap any group to listen to the ayah and explore word-by-word meanings</span>';
     } else {
         verseEl.style.display = 'none';
     }
