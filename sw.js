@@ -1,5 +1,5 @@
 // QuranIQ Service Worker
-const CACHE_NAME = 'quraniq-v1';
+const CACHE_NAME = 'quraniq-v2';
 
 // Static assets that rarely change - cache first
 const STATIC_ASSETS = [
@@ -16,6 +16,7 @@ const STATIC_ASSETS = [
   './js/scramble.js',
   './js/utils.js',
   './js/wordle.js',
+  './js/onboarding.js',
   './puzzles.js',
   './data/quran_words.json'
 ];
@@ -50,6 +51,24 @@ self.addEventListener('activate', (event) => {
     })
   );
   self.clients.claim();
+});
+
+// Handle notification clicks
+self.addEventListener('notificationclick', (event) => {
+    event.notification.close();
+    const url = event.notification.data?.url || './';
+    event.waitUntil(
+        clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
+            // Focus existing window if open
+            for (const client of windowClients) {
+                if (client.url.includes('quraniq') && 'focus' in client) {
+                    return client.focus();
+                }
+            }
+            // Otherwise open new window
+            return clients.openWindow(url);
+        })
+    );
 });
 
 // Fetch: network-first for daily puzzles and API calls, cache-first for static assets

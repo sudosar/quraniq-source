@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initScramble();
     restoreViewResultsButtons();
     startCountdown();
+    initNotifications();
+    showOnboarding();
 });
 
 // ==================== THEME ====================

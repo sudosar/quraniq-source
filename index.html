@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260209f">
+    <link rel="stylesheet" href="style.css?v=20260209g">
     <link rel="icon" href="icons/icon-192.png" type="image/png">
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7SBPH5C6L"></script>
@@ -277,6 +277,7 @@
                 <button class="modal-close" id="restore-close" aria-label="Close">&times;</button>
                 <h2 id="restore-title">Restore Progress</h2>
                 <p style="color:var(--text-secondary);margin-bottom:12px;">Paste your save code below to restore your progress on this device.</p>
+                <label for="restore-input" class="sr-only">Save code</label>
                 <textarea id="restore-input" class="restore-textarea" placeholder="Paste your QIQ:... save code here" rows="4"></textarea>
                 <div class="result-actions" style="margin-top:12px;">
                     <button id="restore-confirm-btn" class="btn btn-primary">Restore</button>
@@ -286,13 +287,14 @@
         </div>
     </main>
 
-    <script src="puzzles.js?v=20260209f"></script>
-    <script src="js/utils.js?v=20260209f"></script>
-    <script src="js/connections.js?v=20260209f"></script>
-    <script src="js/wordle.js?v=20260209f"></script>
-    <script src="js/deduction.js?v=20260209f"></script>
-    <script src="js/scramble.js?v=20260209f"></script>
-    <script src="js/app.js?v=20260209f"></script>
+    <script src="puzzles.js?v=20260209g"></script>
+    <script src="js/utils.js?v=20260209g"></script>
+    <script src="js/connections.js?v=20260209g"></script>
+    <script src="js/wordle.js?v=20260209g"></script>
+    <script src="js/deduction.js?v=20260209g"></script>
+    <script src="js/scramble.js?v=20260209g"></script>
+    <script src="js/onboarding.js?v=20260209g"></script>
+    <script src="js/app.js?v=20260209g"></script>
     <script>
         // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {
