@@ -121,6 +121,53 @@ function initSidebar() {
             closeSidebar();
         });
     });
+
+    // Save progress button
+    document.getElementById('save-progress-btn').addEventListener('click', async () => {
+        closeSidebar();
+        const saveCode = exportProgress();
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'QuranIQ Save Code',
+                    text: `My QuranIQ save code (keep this safe!):\n\n${saveCode}`
+                });
+            } catch {
+                // User cancelled share, copy to clipboard instead
+                await navigator.clipboard.writeText(saveCode);
+                showToast('Save code copied to clipboard! Keep it safe.');
+            }
+        } else {
+            await navigator.clipboard.writeText(saveCode);
+            showToast('Save code copied to clipboard! Keep it safe.');
+        }
+    });
+
+    // Restore progress button
+    document.getElementById('restore-progress-btn').addEventListener('click', () => {
+        closeSidebar();
+        openModal('restore-modal');
+    });
+
+    // Restore modal handlers
+    document.getElementById('restore-close').addEventListener('click', () => closeModal('restore-modal'));
+    document.getElementById('restore-cancel-btn').addEventListener('click', () => closeModal('restore-modal'));
+    document.getElementById('restore-confirm-btn').addEventListener('click', () => {
+        const input = document.getElementById('restore-input').value.trim();
+        if (!input) {
+            showToast('Please paste your save code first.');
+            return;
+        }
+        const result = importProgress(input);
+        if (result.success) {
+            closeModal('restore-modal');
+            showToast(result.message);
+            // Reload to apply restored data
+            setTimeout(() => location.reload(), 1500);
+        } else {
+            showToast(result.message);
+        }
+    });
 }
 
 // ==================== MODALS ====================
@@ -238,6 +285,8 @@ function updateModeStats(mode, won, guessNum) {
     }
     s.lastDay = today;
     saveStats(app.stats);
+    // Submit score to leaderboard (async, non-blocking)
+    submitScore().catch(() => {});
 }
 
 // ==================== HELP MODAL ====================
@@ -536,6 +585,37 @@ function renderPerformanceInsights() {
     // Build HTML
     let html = '';
 
+    // Try to get real percentile from leaderboard
+    let displayPercentile = overallScore;
+    let totalPlayersOnline = 0;
+    let percentileSource = 'estimated';
+
+    // Check cached percentile first (instant)
+    const cached = getCachedPercentile();
+    if (cached && cached.percentile !== undefined) {
+        displayPercentile = cached.percentile;
+        totalPlayersOnline = cached.totalPlayers || 0;
+        percentileSource = 'real';
+    }
+
+    // Submit score and get fresh percentile (async, updates UI when ready)
+    if (totalPlayed > 0) {
+        submitScore().then(result => {
+            if (result && result.percentile !== undefined) {
+                const label = el.querySelector('.percentile-label');
+                const fill = el.querySelector('.percentile-fill');
+                const playersCount = el.querySelector('.players-count');
+                if (label) label.textContent = `Better than ${result.percentile}% of players`;
+                if (fill) fill.style.width = `${result.percentile}%`;
+                if (playersCount) playersCount.textContent = `${result.totalPlayers} players worldwide`;
+            }
+        }).catch(() => {});
+    }
+
+    const playersCountHtml = totalPlayersOnline > 0
+        ? `<div class="players-count">${totalPlayersOnline} players worldwide</div>`
+        : (SCORE_ENDPOINT ? '<div class="players-count">Connecting to leaderboard...</div>' : '');
+
     // Scholar rank card
     html += `
         <div class="insight-card scholar-card">
@@ -543,10 +623,11 @@ function renderPerformanceInsights() {
             <div class="scholar-title">${scholar.title}</div>
             <div class="scholar-desc">${scholar.desc}</div>
             <div class="percentile-bar-container">
-                <div class="percentile-label">Better than ${overallScore}% of players</div>
+                <div class="percentile-label">Better than ${displayPercentile}% of players</div>
                 <div class="percentile-bar">
-                    <div class="percentile-fill" style="width:${overallScore}%"></div>
+                    <div class="percentile-fill" style="width:${displayPercentile}%"></div>
                 </div>
+                ${playersCountHtml}
             </div>
         </div>
     `;
@@ -659,7 +740,7 @@ function renderPerformanceInsights() {
     const shareInsightsBtn = el.querySelector('#share-insights-btn');
     const copyInsightsBtn = el.querySelector('#copy-insights-btn');
     if (shareInsightsBtn || copyInsightsBtn) {
-        const shareText = generateInsightsShareText(scholar, overallScore, gameInsights, totalPlayed, bestStreak);
+        const shareText = generateInsightsShareText(scholar, displayPercentile, gameInsights, totalPlayed, bestStreak, totalPlayersOnline);
         if (shareInsightsBtn) {
             shareInsightsBtn.addEventListener('click', async () => {
                 if (navigator.share) {
@@ -682,14 +763,16 @@ function renderPerformanceInsights() {
 /**
  * Generate a WhatsApp/social media friendly emoji share text for Insights.
  */
-function generateInsightsShareText(scholar, overallScore, gameInsights, totalPlayed, bestStreak) {
+function generateInsightsShareText(scholar, overallScore, gameInsights, totalPlayed, bestStreak, totalPlayersOnline) {
     const progressBar = (pct) => {
         const filled = Math.round(pct / 10);
         return '█'.repeat(filled) + '░'.repeat(10 - filled);
     };
 
     let text = `📖 QuranIQ - My Journey\n\n`;
-    text += `${scholar.emoji} ${scholar.title} | Better than ${overallScore}% of players\n\n`;
+    text += `${scholar.emoji} ${scholar.title} | Better than ${overallScore}% of players\n`;
+    if (totalPlayersOnline > 0) text += `👥 ${totalPlayersOnline} players worldwide\n`;
+    text += `\n`;
 
     if (gameInsights.length > 0) {
         gameInsights.forEach(g => {

@@ -381,6 +381,183 @@ function getVerseStats() {
     };
 }
 
+// ==================== ANONYMOUS LEADERBOARD ====================
+const PLAYER_ID_KEY = 'quraniq_player_id';
+const SCORE_ENDPOINT = ''; // Set this to your Google Apps Script Web App URL
+
+/**
+ * Get or create a persistent anonymous player ID.
+ * This is a random hash — no personal info.
+ */
+function getPlayerId() {
+    let id = localStorage.getItem(PLAYER_ID_KEY);
+    if (!id) {
+        // Generate a random 8-char hex ID
+        const arr = new Uint8Array(4);
+        crypto.getRandomValues(arr);
+        id = Array.from(arr, b => b.toString(16).padStart(2, '0')).join('');
+        localStorage.setItem(PLAYER_ID_KEY, id);
+    }
+    return id;
+}
+
+/**
+ * Calculate the player's overall score (0-100) based on their stats.
+ * Formula: 40% win rate + 30% streak (cap 15) + 30% games played (cap 30)
+ */
+function calculatePlayerScore() {
+    const stats = loadStats();
+    const modes = ['connections', 'wordle', 'deduction', 'scramble'];
+    let totalPlayed = 0, totalWon = 0, bestStreak = 0;
+    modes.forEach(m => {
+        const s = stats[m];
+        totalPlayed += s.played;
+        totalWon += s.won;
+        bestStreak = Math.max(bestStreak, s.maxStreak);
+    });
+    const winRate = totalPlayed > 0 ? totalWon / totalPlayed : 0;
+    const streakFactor = Math.min(bestStreak / 15, 1);
+    const gamesFactor = Math.min(totalPlayed / 30, 1);
+    return Math.round(winRate * 40 + streakFactor * 30 + gamesFactor * 30);
+}
+
+/**
+ * Submit the player's score to the leaderboard and get real percentile.
+ * Returns { percentile, totalPlayers } or null if endpoint not configured.
+ */
+async function submitScore() {
+    if (!SCORE_ENDPOINT) return null;
+    try {
+        const stats = loadStats();
+        const verseStats = getVerseStats();
+        const modes = ['connections', 'wordle', 'deduction', 'scramble'];
+        let totalPlayed = 0, totalWon = 0, bestStreak = 0;
+        modes.forEach(m => {
+            totalPlayed += stats[m].played;
+            totalWon += stats[m].won;
+            bestStreak = Math.max(bestStreak, stats[m].maxStreak);
+        });
+        const score = calculatePlayerScore();
+        const payload = {
+            id: getPlayerId(),
+            score: score,
+            games: totalPlayed,
+            wins: totalWon,
+            streak: bestStreak,
+            versesExplored: verseStats.totalVerses
+        };
+        const resp = await fetch(SCORE_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain' }, // Apps Script requires text/plain for CORS
+            body: JSON.stringify(payload)
+        });
+        if (!resp.ok) return null;
+        const result = await resp.json();
+        // Cache the result locally
+        localStorage.setItem('quraniq_percentile', JSON.stringify({
+            percentile: result.percentile,
+            totalPlayers: result.totalPlayers,
+            updated: new Date().toISOString()
+        }));
+        return result;
+    } catch (e) {
+        console.warn('Score submission failed:', e);
+        return null;
+    }
+}
+
+/**
+ * Get the cached percentile data (from last submission).
+ * Returns { percentile, totalPlayers, updated } or null.
+ */
+function getCachedPercentile() {
+    try {
+        return JSON.parse(localStorage.getItem('quraniq_percentile'));
+    } catch { return null; }
+}
+
+/**
+ * Fetch current leaderboard stats (GET request).
+ * Returns { totalPlayers, brackets, avgScore } or null.
+ */
+async function fetchLeaderboard() {
+    if (!SCORE_ENDPOINT) return null;
+    try {
+        const resp = await fetch(SCORE_ENDPOINT);
+        if (!resp.ok) return null;
+        return await resp.json();
+    } catch { return null; }
+}
+
+// ==================== PROGRESS SAVE/RESTORE ====================
+
+/**
+ * Export all player data as a compact Base64 string.
+ * Includes: stats, verses, player ID, theme.
+ */
+function exportProgress() {
+    const data = {
+        v: 1, // version for future compatibility
+        stats: JSON.parse(localStorage.getItem(STATS_KEY) || '{}'),
+        verses: JSON.parse(localStorage.getItem(VERSES_KEY) || '{"refs":[]}'),
+        playerId: getPlayerId(),
+        theme: localStorage.getItem('quraniq_theme') || 'dark',
+        percentile: JSON.parse(localStorage.getItem('quraniq_percentile') || 'null'),
+        exported: new Date().toISOString()
+    };
+    const json = JSON.stringify(data);
+    // Encode to Base64 (handle Unicode)
+    const encoded = btoa(unescape(encodeURIComponent(json)));
+    return 'QIQ:' + encoded;
+}
+
+/**
+ * Import player data from a Base64 save string.
+ * Returns { success: boolean, message: string }
+ */
+function importProgress(saveString) {
+    try {
+        if (!saveString || !saveString.startsWith('QIQ:')) {
+            return { success: false, message: 'Invalid save code. It should start with QIQ:' };
+        }
+        const encoded = saveString.substring(4); // Remove 'QIQ:' prefix
+        const json = decodeURIComponent(escape(atob(encoded)));
+        const data = JSON.parse(json);
+
+        if (!data.v || !data.stats) {
+            return { success: false, message: 'Invalid or corrupted save data.' };
+        }
+
+        // Restore stats
+        if (data.stats) {
+            localStorage.setItem(STATS_KEY, JSON.stringify(data.stats));
+        }
+        // Restore verses
+        if (data.verses) {
+            // Merge with existing verses (don't lose any)
+            const existing = loadVerseTracker();
+            const merged = new Set([...existing.refs, ...(data.verses.refs || [])]);
+            localStorage.setItem(VERSES_KEY, JSON.stringify({ refs: Array.from(merged) }));
+        }
+        // Restore player ID
+        if (data.playerId) {
+            localStorage.setItem(PLAYER_ID_KEY, data.playerId);
+        }
+        // Restore theme
+        if (data.theme) {
+            localStorage.setItem('quraniq_theme', data.theme);
+        }
+        // Restore cached percentile
+        if (data.percentile) {
+            localStorage.setItem('quraniq_percentile', JSON.stringify(data.percentile));
+        }
+
+        return { success: true, message: `Progress restored! Stats from ${data.exported ? new Date(data.exported).toLocaleDateString() : 'backup'} loaded.` };
+    } catch (e) {
+        return { success: false, message: 'Failed to restore: ' + e.message };
+    }
+}
+
 // ==================== ARABIC NORMALIZATION ====================
 function normalizeArabic(str) {
     return str.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED]/g, '');
