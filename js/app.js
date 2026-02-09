@@ -1,5 +1,5 @@
 /* ============================================
-   QURANPUZZLE - APP INITIALIZATION
+   QURANIQ - APP INITIALIZATION
    ============================================ */
 
 // ==================== APP STATE ====================
@@ -32,14 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ==================== THEME ====================
 function initTheme() {
-    const saved = localStorage.getItem('quranpuzzle_theme');
+    const saved = localStorage.getItem('quraniq_theme') || localStorage.getItem('quranpuzzle_theme');
     if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.setAttribute('data-theme', 'dark');
     }
     document.getElementById('theme-btn').addEventListener('click', () => {
         const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
         document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-        localStorage.setItem('quranpuzzle_theme', isDark ? 'light' : 'dark');
+        localStorage.setItem('quraniq_theme', isDark ? 'light' : 'dark');
         announce(isDark ? 'Switched to light mode' : 'Switched to dark mode');
     });
 }
@@ -625,7 +625,7 @@ function generateInsightsShareText(scholar, overallPercentile, gameInsights, tot
         return '█'.repeat(filled) + '░'.repeat(10 - filled);
     };
 
-    let text = `📖 QuranPuzzle - My Journey\n\n`;
+    let text = `📖 QuranIQ - My Journey\n\n`;
     text += `${scholar.emoji} ${scholar.title} | Top ${100 - overallPercentile}%\n\n`;
 
     if (gameInsights.length > 0) {

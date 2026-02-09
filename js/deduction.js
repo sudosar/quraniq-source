@@ -1,5 +1,5 @@
 /* ============================================
-   QURANPUZZLE - DEDUCTION GAME
+   QURANIQ - DEDUCTION GAME
    ============================================ */
 
 const ded = {
@@ -172,7 +172,7 @@ function showDedResult(cacheOnly) {
     const puzzleNum = getPuzzleIndex(PUZZLES.deduction) + 1;
     const cluesUsed = ded.cluesRevealed;
 
-    const shareText = `QuranPuzzle - Deduction #${puzzleNum}\n"${ded.puzzle.title}"\n${emojiGrid}${correct}/4 correct | ${cluesUsed} clues used\n\nhttps://sudosar.github.io/quranpuzz/`;
+    const shareText = `QuranIQ - Deduction #${puzzleNum}\n"${ded.puzzle.title}"\n${emojiGrid}${correct}/4 correct | ${cluesUsed} clues used\n\nhttps://sudosar.github.io/quranpuzz/`;
 
     const resultData = {
         icon: ded.won ? '🕵️' : '📖',

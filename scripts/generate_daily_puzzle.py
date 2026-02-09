@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Daily Puzzle Generator for QuranPuzzle — All 4 Games
+Daily Puzzle Generator for QuranIQ — All 4 Games
 Generates daily puzzles for:
   1. Connections (Ayah Connections)
   2. Wordle (Verse Wordle)

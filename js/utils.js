@@ -1,5 +1,5 @@
 /* ============================================
-   QURANPUZZLE - SHARED UTILITIES
+   QURANIQ - SHARED UTILITIES
    ============================================ */
 
 // ==================== UTC DAY CALCULATION ====================
@@ -45,8 +45,20 @@ function announce(msg) {
 }
 
 // ==================== STATE MANAGEMENT ====================
-const STATE_KEY = 'quranpuzzle_state';
-const STATS_KEY = 'quranpuzzle_stats_v2'; // v2 = per-mode stats
+const STATE_KEY = 'quraniq_state';
+const STATS_KEY = 'quraniq_stats_v2'; // v2 = per-mode stats
+
+// Migrate old QuranPuzzle keys to QuranIQ keys
+(function migrateKeys() {
+    if (!localStorage.getItem('quraniq_state') && localStorage.getItem('quranpuzzle_state')) {
+        localStorage.setItem('quraniq_state', localStorage.getItem('quranpuzzle_state'));
+        localStorage.removeItem('quranpuzzle_state');
+    }
+    if (!localStorage.getItem('quraniq_stats_v2') && localStorage.getItem('quranpuzzle_stats_v2')) {
+        localStorage.setItem('quraniq_stats_v2', localStorage.getItem('quranpuzzle_stats_v2'));
+        localStorage.removeItem('quranpuzzle_stats_v2');
+    }
+})();
 
 function loadState() {
     try {
