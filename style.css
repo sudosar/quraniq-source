@@ -604,6 +604,7 @@ button, input, select, textarea {
 .conn-solved-row {
     cursor: pointer;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+    overflow: visible;
 }
 
 .conn-solved-row:hover {
@@ -622,11 +623,13 @@ button, input, select, textarea {
 }
 
 .verse-carousel.expanded {
-    max-height: 400px;
+    max-height: 800px;
     opacity: 1;
     margin-top: 12px;
     padding-top: 12px;
+    padding-bottom: 8px;
     border-top: 1px solid rgba(0,0,0,0.15);
+    overflow: visible;
 }
 
 /* Word pills - tappable word selector */
