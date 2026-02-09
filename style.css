@@ -3253,3 +3253,26 @@ button, input, select, textarea {
 [data-theme="light"] .dhikr-community {
     background: linear-gradient(135deg, rgba(201, 162, 39, 0.08), rgba(201, 162, 39, 0.02));
 }
+
+/* ===== Result Modal: Verse Exploration Hint ===== */
+.result-explore-hint {
+    text-align: center;
+    margin: 12px 0 4px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    opacity: 0;
+    animation: fadeInHint 0.8s ease 0.5s forwards;
+}
+
+.result-explore-hint span {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 16px;
+    background: var(--accent-bg, rgba(196, 164, 105, 0.1));
+    border: 1px solid var(--accent);
+}
+
+@keyframes fadeInHint {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -184,11 +184,28 @@ function submitConnections() {
         renderConnections();
         announce(`Correct! Found group: ${match.nameEn || match.name}. ${conn.solved.length} of 4 groups found.`);
 
-        if (conn.solved.length === 4) {
+        // Auto-expand the just-solved row and play the verse
+        const solvedIdx = conn.solved.length - 1;
+        const isLastRow = conn.solved.length === 4;
+        setTimeout(() => {
+            toggleCarousel(solvedIdx);
+            // Auto-collapse after 6s for rows 1-3 so player can continue
+            if (!isLastRow) {
+                setTimeout(() => {
+                    const carousel = document.getElementById(`carousel-${solvedIdx}`);
+                    if (carousel && carousel.classList.contains('expanded')) {
+                        toggleCarousel(solvedIdx);
+                    }
+                }, 6000);
+            }
+        }, 500);
+
+        if (isLastRow) {
             conn.gameOver = true;
             conn.correctCount = 4;
             saveConnState();
-            setTimeout(() => showConnResult(true), 600);
+            // Delay result modal so player can hear the last verse
+            setTimeout(() => showConnResult(true), 6000);
         }
     } else {
         // Check for one-away

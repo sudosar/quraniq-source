@@ -478,6 +478,12 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         audioContainer.style.display = 'none';
     }
 
+    // Show verse exploration hint for connections mode
+    const exploreHint = document.getElementById('result-explore-hint');
+    if (exploreHint) {
+        exploreHint.style.display = (app.currentMode === 'connections') ? 'block' : 'none';
+    }
+
     openModal('result-modal');
 }
 
