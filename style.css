@@ -69,18 +69,23 @@
 }
 
 :root {
-    /* Colors - Light Mode */
-    --bg: #fafaf8;
+    /* Colors - Light Mode (Islamic-inspired: Emerald + Gold) */
+    --bg: #faf9f5;
     --bg-card: #ffffff;
-    --bg-hover: #f0f0ee;
+    --bg-hover: #f0efe8;
     --text: #1a1a2e;
     --text-secondary: #6b6b80;
-    --border: #e0e0dc;
+    --border: #ddd9cc;
     --accent: #1b7a4a;
     --accent-light: #e8f5ee;
     --accent-hover: #15613b;
     --gold: #c9a227;
     --gold-light: #fef9e7;
+    --islamic-gold: #c9a227;
+    --islamic-gold-light: rgba(201, 162, 39, 0.12);
+    --islamic-emerald: #1b7a4a;
+    --islamic-navy: #0a1628;
+    --pattern-opacity: 0.035;
 
     /* Connections colors */
     --conn-yellow: #f9df6d;
@@ -111,17 +116,22 @@
 }
 
 [data-theme="dark"] {
-    --bg: #0f0f10;
-    --bg-card: #262628;
-    --bg-hover: #333336;
+    --bg: #0d0e12;
+    --bg-card: #1a1b22;
+    --bg-hover: #2a2b34;
     --text: #f0f0f2;
     --text-secondary: #a0a0b0;
-    --border: #4a4a50;
+    --border: #3a3b44;
     --accent: #34d87a;
     --accent-light: #1a3a28;
     --accent-hover: #2bc46a;
     --gold: #f1c40f;
     --gold-light: #2a2510;
+    --islamic-gold: #f1c40f;
+    --islamic-gold-light: rgba(241, 196, 15, 0.1);
+    --islamic-emerald: #34d87a;
+    --islamic-navy: #0d0e12;
+    --pattern-opacity: 0.04;
 
     --conn-yellow: #f9df6d;
     --conn-yellow-text: #3d3500;
@@ -155,6 +165,23 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Islamic geometric pattern background overlay */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: var(--pattern-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23c9a227' stroke-width='0.8'%3E%3Cpath d='M40 0L80 40L40 80L0 40Z'/%3E%3Cpath d='M40 10L70 40L40 70L10 40Z'/%3E%3Cpath d='M40 20L60 40L40 60L20 40Z'/%3E%3Ccircle cx='40' cy='40' r='8'/%3E%3Cpath d='M0 0L40 40M80 0L40 40M0 80L40 40M80 80L40 40'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 80px 80px;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
 button, input, select, textarea {
     color: inherit;
     font-family: inherit;
@@ -168,7 +195,8 @@ button, input, select, textarea {
 }
 
 [data-theme="dark"] .conn-tile:hover {
-    border-color: #34d87a;
+    border-color: var(--islamic-gold);
+    box-shadow: 0 2px 8px rgba(241, 196, 15, 0.1);
 }
 
 [data-theme="dark"] .conn-tile.selected {
@@ -193,8 +221,9 @@ button, input, select, textarea {
 }
 
 [data-theme="dark"] .mode-tab.active {
-    background: #34d87a;
+    background: linear-gradient(135deg, #34d87a, #2bc46a);
     color: #000000;
+    box-shadow: 0 2px 8px rgba(52, 216, 122, 0.2);
 }
 
 [data-theme="dark"] .game-desc,
@@ -248,6 +277,25 @@ button, input, select, textarea {
     z-index: 100;
 }
 
+/* Decorative gold line under header */
+#header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--islamic-gold) 20%,
+        var(--islamic-gold) 50%,
+        var(--islamic-gold) 80%,
+        transparent 100%
+    );
+    opacity: 0.5;
+}
+
 .header-center {
     text-align: center;
 }
@@ -260,7 +308,12 @@ button, input, select, textarea {
 }
 
 .logo-accent {
-    color: var(--accent);
+    color: var(--islamic-gold);
+    text-shadow: 0 0 20px rgba(201, 162, 39, 0.2);
+}
+
+[data-theme="dark"] .logo-accent {
+    text-shadow: 0 0 24px rgba(241, 196, 15, 0.3);
 }
 
 .subtitle {
@@ -269,6 +322,18 @@ button, input, select, textarea {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 600;
+}
+
+.subtitle::before {
+    content: '\2E31 ';
+    color: var(--islamic-gold);
+    opacity: 0.6;
+}
+
+.subtitle::after {
+    content: ' \2E31';
+    color: var(--islamic-gold);
+    opacity: 0.6;
 }
 
 .header-left, .header-right {
@@ -304,6 +369,24 @@ button, input, select, textarea {
     border-bottom: 1px solid var(--border);
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
+/* Subtle gold accent on mode selector bottom border */
+#mode-selector::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--islamic-gold),
+        transparent
+    );
+    opacity: 0.3;
 }
 
 .mode-tab {
@@ -329,8 +412,9 @@ button, input, select, textarea {
 }
 
 .mode-tab.active {
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
     color: white;
+    box-shadow: 0 2px 8px rgba(27, 122, 74, 0.25);
 }
 
 .mode-icon {
@@ -369,6 +453,18 @@ button, input, select, textarea {
     margin-bottom: 4px;
 }
 
+/* Islamic decorative divider after game header */
+.game-header::after {
+    content: '✦  ❖  ✦';
+    display: block;
+    text-align: center;
+    color: var(--islamic-gold);
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    margin-top: 8px;
+    opacity: 0.5;
+}
+
 .game-desc {
     color: var(--text-secondary);
     font-size: 0.85rem;
@@ -405,8 +501,9 @@ button, input, select, textarea {
 }
 
 .conn-tile:hover {
-    border-color: var(--accent);
+    border-color: var(--islamic-gold);
     transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(201, 162, 39, 0.12);
 }
 
 .conn-tile.selected {
@@ -458,6 +555,17 @@ button, input, select, textarea {
 .conn-solved-row.green { background: var(--conn-green); color: var(--conn-green-text); }
 .conn-solved-row.blue { background: var(--conn-blue); color: var(--conn-blue-text); }
 .conn-solved-row.purple { background: var(--conn-purple); color: var(--conn-purple-text); }
+
+/* Islamic corner accents on solved rows */
+.conn-solved-row::before,
+.conn-solved-row::after {
+    font-size: 0.7rem;
+    opacity: 0.3;
+    position: absolute;
+}
+.conn-solved-row {
+    position: relative;
+}
 
 .conn-solved-category {
     font-weight: 700;
@@ -1047,6 +1155,11 @@ button, input, select, textarea {
     padding: 12px 28px;
 }
 
+.btn-share.btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    box-shadow: 0 2px 12px rgba(27, 122, 74, 0.25);
+}
+
 /* ============ WORDLE GAME ============ */
 .wordle-board {
     display: flex;
@@ -1195,6 +1308,19 @@ button, input, select, textarea {
     margin-bottom: 16px;
     font-size: 0.95rem;
     line-height: 1.7;
+    border-left: 3px solid var(--islamic-gold);
+    position: relative;
+}
+
+.deduction-story::before {
+    content: '\275D';
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 1.8rem;
+    color: var(--islamic-gold);
+    opacity: 0.15;
+    font-family: serif;
 }
 
 .deduction-story .story-title {
@@ -1230,6 +1356,7 @@ button, input, select, textarea {
 .clue-card.revealed {
     border-color: var(--accent);
     background: var(--accent-light);
+    border-left: 3px solid var(--islamic-gold);
 }
 
 .clue-number {
@@ -1343,6 +1470,25 @@ button, input, select, textarea {
     align-items: center;
     margin-bottom: 16px;
     transition: border-color 0.2s;
+    position: relative;
+}
+
+/* Subtle corner ornaments on dropzone */
+.scramble-dropzone::before,
+.scramble-dropzone::after {
+    content: '\2726';
+    position: absolute;
+    color: var(--islamic-gold);
+    font-size: 0.7rem;
+    opacity: 0.3;
+}
+.scramble-dropzone::before {
+    top: 4px;
+    left: 8px;
+}
+.scramble-dropzone::after {
+    bottom: 4px;
+    right: 8px;
 }
 
 .scramble-dropzone.active {
@@ -1467,6 +1613,19 @@ button, input, select, textarea {
     overflow-y: auto;
     position: relative;
     animation: slideUp 0.3s ease;
+    border-top: 3px solid var(--islamic-gold);
+}
+
+/* Islamic ornamental top accent on modals */
+.modal-content::before {
+    content: '\2726  \2756  \2726';
+    display: block;
+    text-align: center;
+    font-size: 0.55rem;
+    color: var(--islamic-gold);
+    margin-bottom: 12px;
+    opacity: 0.4;
+    letter-spacing: 4px;
 }
 
 @keyframes slideUp {
@@ -1510,12 +1669,15 @@ button, input, select, textarea {
     font-family: var(--font-arabic);
     font-size: 1.2rem;
     direction: rtl;
-    padding: 16px;
+    padding: 20px 16px;
     background: var(--bg);
     border-radius: var(--radius-sm);
     margin-bottom: 16px;
     line-height: 2;
     border: 1px solid var(--border);
+    position: relative;
+    border-top: 2px solid var(--islamic-gold);
+    border-bottom: 2px solid var(--islamic-gold);
 }
 
 .result-verse .translation {
@@ -1536,6 +1698,14 @@ button, input, select, textarea {
     line-height: 1.6;
     margin-bottom: 16px;
     white-space: pre-line;
+}
+
+/* Star rating glow effect */
+.result-stars {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 0 4px rgba(201, 162, 39, 0.4));
 }
 
 .result-stats {
@@ -1574,6 +1744,18 @@ button, input, select, textarea {
     border-top: 1px solid var(--border);
     font-size: 0.85rem;
     color: var(--text-secondary);
+    position: relative;
+}
+
+.next-puzzle::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--islamic-gold), transparent);
+    opacity: 0.3;
 }
 
 .countdown {
@@ -1654,6 +1836,13 @@ button, input, select, textarea {
     color: var(--accent);
 }
 
+.help-content h3::before {
+    content: '\2726 ';
+    color: var(--islamic-gold);
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
 .help-content p {
     font-size: 0.9rem;
     line-height: 1.6;
@@ -1695,6 +1884,17 @@ button, input, select, textarea {
     flex-direction: column;
 }
 
+/* Subtle Islamic pattern on sidebar */
+.sidebar::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: var(--pattern-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23c9a227' stroke-width='0.5'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3Ccircle cx='30' cy='30' r='8'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 60px 60px;
+}
+
 .sidebar.visible {
     transform: translateX(0);
 }
@@ -1703,17 +1903,57 @@ button, input, select, textarea {
     transform: translateX(-100%);
 }
 
+.sidebar > * {
+    position: relative;
+    z-index: 1;
+}
+
 .sidebar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
     border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+.sidebar-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--islamic-gold), transparent);
+    opacity: 0.4;
 }
 
 .sidebar-header h2 {
     font-size: 1.1rem;
     font-weight: 700;
+}
+
+/* Bismillah in sidebar */
+.sidebar-bismillah {
+    text-align: center;
+    font-family: var(--font-arabic);
+    font-size: 1rem;
+    color: var(--islamic-gold);
+    padding: 14px 16px 10px;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+.sidebar-bismillah::after {
+    content: '\2726  \2756  \2726';
+    display: block;
+    font-size: 0.5rem;
+    margin-top: 6px;
+    opacity: 0.4;
+    letter-spacing: 4px;
 }
 
 .sidebar-nav {
@@ -1741,6 +1981,7 @@ button, input, select, textarea {
     background: var(--accent-light);
     color: var(--accent);
     font-weight: 600;
+    border-right: 3px solid var(--islamic-gold);
 }
 
 .sidebar-footer {
@@ -1748,12 +1989,36 @@ button, input, select, textarea {
     border-top: 1px solid var(--border);
     font-size: 0.8rem;
     color: var(--text-secondary);
+    position: relative;
+}
+
+.sidebar-footer::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--islamic-gold), transparent);
+    opacity: 0.3;
 }
 
 .sidebar-verse {
-    font-style: italic;
+    font-style: normal;
     margin-top: 8px;
-    line-height: 1.5;
+    line-height: 1.8;
+    font-family: var(--font-arabic);
+    font-size: 0.85rem;
+    color: var(--islamic-gold);
+    opacity: 0.8;
+}
+
+.sidebar-verse em {
+    font-family: var(--font-main);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-top: 4px;
 }
 
 .sidebar-overlay {
@@ -1782,6 +2047,20 @@ button, input, select, textarea {
     text-align: center;
     background: linear-gradient(135deg, var(--accent-light), var(--bg));
     border: 1px solid var(--border);
+    border-top: 3px solid var(--islamic-gold);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle Islamic pattern overlay on scholar card */
+.scholar-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23c9a227' stroke-width='0.6'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3Ccircle cx='30' cy='30' r='10'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 60px 60px;
+    pointer-events: none;
 }
 
 .scholar-emoji {
@@ -1826,7 +2105,7 @@ button, input, select, textarea {
 
 .percentile-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--accent), #1b7a4a);
+    background: linear-gradient(90deg, var(--accent), var(--islamic-gold));
     border-radius: 14px;
     transition: width 0.8s ease;
     min-width: 30px;
@@ -2077,6 +2356,8 @@ button, input, select, textarea {
     z-index: 500;
     animation: toastIn 0.3s ease, toastOut 0.3s ease 1.5s forwards;
     pointer-events: none;
+    border: 1px solid var(--islamic-gold);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes toastIn {
