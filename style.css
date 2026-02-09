@@ -2809,20 +2809,16 @@ button, input, select, textarea {
     background: rgba(201, 162, 39, 0.1);
 }
 
-.result-quran-link {
+.verse-ref-link {
     color: var(--islamic-gold, #c9a227);
-    font-size: 0.78rem;
-    text-decoration: none;
-    padding: 5px 12px;
-    border: 1px solid var(--islamic-gold, #c9a227);
-    border-radius: 20px;
-    transition: all 0.2s;
-    min-height: 32px;
-    display: flex;
-    align-items: center;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+    font-weight: 600;
+    transition: color 0.2s;
 }
 
-.result-quran-link:hover {
-    background: rgba(201, 162, 39, 0.1);
-    text-decoration: none;
+.verse-ref-link:hover {
+    color: var(--islamic-gold-light, #d4af37);
+    text-decoration-style: solid;
 }

@@ -341,10 +341,21 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
     document.getElementById('result-title').textContent = title;
 
     const verseEl = document.getElementById('result-verse');
+    // Try to extract a surah:ayah ref for linking
+    const linkRef = verseRef || extractVerseRef(translation) || extractVerseRef(verse);
+    const linkParsed = linkRef ? parseQuranRef(linkRef) : null;
+
     if (arabic || translation) {
         verseEl.style.display = 'block';
+        let translationHtml = translation || '';
+        // Make verse reference numbers clickable links to Quran.com
+        if (linkParsed && translationHtml) {
+            const refPattern = new RegExp(`(${linkParsed.surah}:${linkParsed.ayah}(?:-\\d+)?)`);
+            translationHtml = translationHtml.replace(refPattern,
+                `<a href="https://quran.com/${linkParsed.surah}/${linkParsed.ayah}" target="_blank" rel="noopener noreferrer" class="verse-ref-link" title="Read on Quran.com">$1</a>`);
+        }
         verseEl.innerHTML = (arabic ? `<span>${arabic}</span>` : '') +
-            (translation ? `<span class="translation">${translation}</span>` : '');
+            (translationHtml ? `<span class="translation">${translationHtml}</span>` : '');
     } else {
         verseEl.style.display = 'none';
     }
@@ -392,17 +403,13 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         setTimeout(() => toast.classList.add('hidden'), 2000);
     });
 
-    // ===== Verse Audio & Quran.com Link =====
+    // ===== Verse Audio Autoplay =====
     const audioContainer = document.getElementById('result-audio');
     const autoplayBtn = document.getElementById('result-autoplay-btn');
-    const quranLink = document.getElementById('result-quran-link');
     const isMuted = localStorage.getItem('quraniq_audio_mute') === '1';
+    const audioRef = linkRef;
 
-    // Try to extract a surah:ayah ref from verseRef or translation text
-    const audioRef = verseRef || extractVerseRef(translation) || extractVerseRef(verse);
-
-    if (audioRef && parseQuranRef(audioRef)) {
-        const parsed = parseQuranRef(audioRef);
+    if (audioRef && linkParsed) {
         audioContainer.style.display = 'flex';
 
         // Autoplay toggle button
@@ -426,21 +433,15 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
             if (nowMuted) {
                 localStorage.removeItem('quraniq_audio_mute');
                 updateAutoplayState(false);
-                // Start playing immediately when turning on
                 playQuranAudio(audioRef);
                 showToast('Verse recitation auto-play enabled');
             } else {
                 localStorage.setItem('quraniq_audio_mute', '1');
                 updateAutoplayState(true);
-                // Stop any playing audio
                 if (typeof stopQuranAudio === 'function') stopQuranAudio();
                 showToast('Verse recitation auto-play disabled');
             }
         });
-
-        // Quran.com link
-        quranLink.href = `https://quran.com/${parsed.surah}/${parsed.ayah}`;
-        quranLink.style.display = 'flex';
 
         // Autoplay if not muted
         if (!isMuted) {
