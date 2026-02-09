@@ -2258,6 +2258,73 @@ button, input, select, textarea {
     flex-shrink: 0;
 }
 
+/* ============ QURAN JOURNEY CARD ============ */
+.quran-journey-card {
+    text-align: center;
+    padding: 20px 16px;
+}
+
+.quran-journey-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 16px;
+}
+
+.quran-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quran-stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold, #c9a84c);
+}
+
+.quran-stat-label {
+    font-size: 0.7rem;
+    color: var(--text-secondary, #787c7e);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+.quran-progress-container {
+    margin-top: 8px;
+}
+
+.quran-progress-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary, #787c7e);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.quran-progress-bar {
+    height: 12px;
+    background: var(--border, #e0e0dc);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.quran-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--correct, #538d4e), var(--gold, #c9a84c));
+    border-radius: 6px;
+    transition: width 0.8s ease;
+    min-width: 2px;
+}
+
+.quran-progress-text {
+    font-size: 0.7rem;
+    color: var(--text-secondary, #787c7e);
+    margin-top: 4px;
+}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 480px) {
     .wordle-cell {

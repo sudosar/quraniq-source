@@ -730,4 +730,16 @@ function showConnResult(won, cacheOnly) {
 
     showResultModal(resultData);
     updateModeStats('connections', won, won ? (4 - mistakesUsed) : 0);
+
+    // Track all verse references from this puzzle
+    const verseRefs = [];
+    if (conn.puzzle && conn.puzzle.categories) {
+        conn.puzzle.categories.forEach(cat => {
+            if (cat.items) cat.items.forEach(item => {
+                if (item.ref) verseRefs.push(item.ref);
+            });
+            if (cat.verse && cat.verse.ref) verseRefs.push(cat.verse.ref);
+        });
+    }
+    trackVerses(verseRefs);
 }

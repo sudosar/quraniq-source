@@ -208,4 +208,9 @@ function showDedResult(cacheOnly) {
     // 0 clues → score 1, 1 clue → score 2, ..., 5+ clues → score 6
     const score = ded.won ? Math.min(6, Math.max(1, cluesUsed + 1)) : 0;
     updateModeStats('deduction', ded.won, score);
+
+    // Track the verse reference from this puzzle
+    if (ded.puzzle && ded.puzzle.verse) {
+        trackVerses([ded.puzzle.verse]);
+    }
 }

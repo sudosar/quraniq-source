@@ -412,24 +412,25 @@ function startCountdown() {
 
 /**
  * Calculate a performance score (0-100) based on win rate, streak, and games played.
- * Simple weighted formula: 70% win rate, 15% best streak, 15% experience.
+ * Balanced formula: 40% win rate, 30% best streak, 30% experience.
+ * Rewards consistent daily play and long-term engagement.
  * This is a local-only score — no server needed.
  */
 function calculateScore(winRate, maxStreak, played) {
     if (played === 0) return 0;
-    const streakBonus = Math.min(maxStreak / 10, 1);
-    const gamesBonus = Math.min(played / 20, 1);
-    const raw = (winRate * 0.70) + (streakBonus * 0.15) + (gamesBonus * 0.15);
+    const streakBonus = Math.min(maxStreak / 15, 1);
+    const gamesBonus = Math.min(played / 30, 1);
+    const raw = (winRate * 0.40) + (streakBonus * 0.30) + (gamesBonus * 0.30);
     return Math.max(1, Math.min(99, Math.round(raw * 100)));
 }
 
 function getScholarTitle(score, totalPlayed) {
     if (totalPlayed === 0) return { title: 'New Student', emoji: '📖', desc: 'Play your first game to begin your journey!' };
-    if (score >= 90) return { title: 'Hafiz', emoji: '🌟', desc: 'Exceptional mastery across all challenges' };
-    if (score >= 75) return { title: 'Quranic Scholar', emoji: '🏆', desc: 'Deep understanding and consistent excellence' };
-    if (score >= 60) return { title: 'Dedicated Learner', emoji: '📚', desc: 'Strong performance with room to grow' };
-    if (score >= 45) return { title: 'Rising Student', emoji: '🌱', desc: 'Building a solid foundation' };
-    if (score >= 25) return { title: 'Eager Seeker', emoji: '🔍', desc: 'Every puzzle brings you closer to knowledge' };
+    if (score >= 85) return { title: 'Hafiz', emoji: '🌟', desc: 'Exceptional mastery across all challenges' };
+    if (score >= 70) return { title: 'Quranic Scholar', emoji: '🏆', desc: 'Deep understanding and consistent excellence' };
+    if (score >= 55) return { title: 'Dedicated Learner', emoji: '📚', desc: 'Strong performance with room to grow' };
+    if (score >= 40) return { title: 'Rising Student', emoji: '🌱', desc: 'Building a solid foundation' };
+    if (score >= 20) return { title: 'Eager Seeker', emoji: '🔍', desc: 'Every puzzle brings you closer to knowledge' };
     return { title: 'Beginner', emoji: '✨', desc: 'The journey of a thousand miles begins with a single step' };
 }
 
@@ -454,9 +455,9 @@ function getGameInsight(mode, stats) {
 
     // Determine strength descriptor
     let strength = '';
-    if (score >= 75) strength = 'Excellent';
-    else if (score >= 55) strength = 'Strong';
-    else if (score >= 35) strength = 'Developing';
+    if (score >= 70) strength = 'Excellent';
+    else if (score >= 50) strength = 'Strong';
+    else if (score >= 30) strength = 'Developing';
     else strength = 'Needs Practice';
 
     return {
@@ -501,6 +502,9 @@ function renderPerformanceInsights() {
         weakest = gameInsights[gameInsights.length - 1];
     }
 
+    // Get verse stats
+    const verseStats = getVerseStats();
+
     // Build HTML
     let html = '';
 
@@ -518,6 +522,36 @@ function renderPerformanceInsights() {
             </div>
         </div>
     `;
+
+    // Quran Journey card
+    if (verseStats.totalVerses > 0) {
+        html += `
+            <div class="insight-section-title">Quran Journey</div>
+            <div class="insight-card quran-journey-card">
+                <div class="quran-journey-stats">
+                    <div class="quran-stat">
+                        <div class="quran-stat-number">${verseStats.totalVerses}</div>
+                        <div class="quran-stat-label">Verses Explored</div>
+                    </div>
+                    <div class="quran-stat">
+                        <div class="quran-stat-number">${verseStats.uniqueSurahs}</div>
+                        <div class="quran-stat-label">Surahs Touched</div>
+                    </div>
+                    <div class="quran-stat">
+                        <div class="quran-stat-number">${verseStats.quranPercent}%</div>
+                        <div class="quran-stat-label">of the Quran</div>
+                    </div>
+                </div>
+                <div class="quran-progress-container">
+                    <div class="quran-progress-label">Quran Progress</div>
+                    <div class="quran-progress-bar">
+                        <div class="quran-progress-fill" style="width:${Math.min(verseStats.quranPercent, 100)}%"></div>
+                    </div>
+                    <div class="quran-progress-text">${verseStats.totalVerses} of 6,236 verses</div>
+                </div>
+            </div>
+        `;
+    }
 
     // Per-game breakdown
     if (gameInsights.length > 0) {
@@ -636,6 +670,10 @@ function generateInsightsShareText(scholar, overallScore, gameInsights, totalPla
         text += `\n`;
     }
 
+    const verseStats = getVerseStats();
+    if (verseStats.totalVerses > 0) {
+        text += `📖 ${verseStats.totalVerses} Verses Explored | ${verseStats.uniqueSurahs} Surahs | ${verseStats.quranPercent}% of Quran\n`;
+    }
     text += `🏆 Best Streak: ${bestStreak}\n`;
     text += `📊 Games Played: ${totalPlayed}\n\n`;
     text += `https://sudosar.github.io/quraniq/`;

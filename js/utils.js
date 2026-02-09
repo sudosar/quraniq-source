@@ -322,6 +322,65 @@ async function fetchWordByWord(ref) {
     return null;
 }
 
+// ==================== VERSE TRACKING ====================
+const VERSES_KEY = 'quraniq_verses';
+
+/**
+ * Load the set of unique verse references the player has encountered.
+ * Returns { refs: ['3:3', '19:7', ...], surahs: Set([3, 19, ...]) }
+ */
+function loadVerseTracker() {
+    try {
+        const data = JSON.parse(localStorage.getItem(VERSES_KEY));
+        if (data && Array.isArray(data.refs)) return data;
+        return { refs: [] };
+    } catch { return { refs: [] }; }
+}
+
+/**
+ * Track new verse references encountered during a game.
+ * @param {string[]} newRefs - Array of reference strings like '3:3', '19:7', 'Surah Al-Fatihah (1:5)'
+ */
+function trackVerses(newRefs) {
+    const tracker = loadVerseTracker();
+    const existing = new Set(tracker.refs);
+    let added = 0;
+    newRefs.forEach(ref => {
+        // Normalize: extract surah:ayah from various formats
+        const parsed = parseQuranRef(ref);
+        if (parsed) {
+            const key = `${parsed.surah}:${parsed.ayah}`;
+            if (!existing.has(key)) {
+                existing.add(key);
+                added++;
+            }
+        }
+    });
+    if (added > 0) {
+        tracker.refs = Array.from(existing);
+        localStorage.setItem(VERSES_KEY, JSON.stringify(tracker));
+    }
+    return { total: existing.size, added };
+}
+
+/**
+ * Get verse stats for display in Insights.
+ * Returns { totalVerses, uniqueSurahs, quranPercent }
+ */
+function getVerseStats() {
+    const tracker = loadVerseTracker();
+    const surahs = new Set();
+    tracker.refs.forEach(ref => {
+        const match = ref.match(/(\d+):/);
+        if (match) surahs.add(parseInt(match[1]));
+    });
+    return {
+        totalVerses: tracker.refs.length,
+        uniqueSurahs: surahs.size,
+        quranPercent: Math.round((tracker.refs.length / 6236) * 1000) / 10 // 1 decimal
+    };
+}
+
 // ==================== ARABIC NORMALIZATION ====================
 function normalizeArabic(str) {
     return str.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED]/g, '');

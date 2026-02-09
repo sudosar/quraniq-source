@@ -399,4 +399,9 @@ function showScrResult(cacheOnly) {
     // 0 hints → score 1, 1 hint → score 2, 2 hints → score 3, 3 hints → score 4
     const score = scr.won ? Math.min(6, Math.max(1, scr.hintsUsed + 1)) : 0;
     updateModeStats('scramble', scr.won, score);
+
+    // Track the verse reference from this puzzle
+    if (scr.puzzle && scr.puzzle.reference) {
+        trackVerses([scr.puzzle.reference]);
+    }
 }

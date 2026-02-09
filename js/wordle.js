@@ -367,4 +367,9 @@ function showWordleResult(won, cacheOnly) {
 
     showResultModal(resultData);
     updateModeStats('wordle', won, won ? wordle.evaluations.length : 0);
+
+    // Track the verse reference from this puzzle
+    if (wordle.puzzle && wordle.puzzle.verse) {
+        trackVerses([wordle.puzzle.verse]);
+    }
 }
