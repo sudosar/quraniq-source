@@ -337,7 +337,7 @@ function showWordleResult(won, cacheOnly) {
     const tries = won ? wordle.evaluations.length : 'X';
     const displayWord = wordle.puzzle.display || wordle.word;
 
-    const shareText = `QuranIQ - Verse Wordle #${puzzleNum}\n${tries}/${wordle.maxRows}\n\n${emojiGrid}\nhttps://sudosar.github.io/quranpuzz/`;
+    const shareText = `QuranIQ - Verse Wordle #${puzzleNum}\n${tries}/${wordle.maxRows}\n\n${emojiGrid}\nhttps://sudosar.github.io/quraniq/`;
 
     const resultData = {
         icon: won ? '🌟' : '📖',

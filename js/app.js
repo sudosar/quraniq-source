@@ -637,7 +637,7 @@ function generateInsightsShareText(scholar, overallPercentile, gameInsights, tot
 
     text += `🏆 Best Streak: ${bestStreak}\n`;
     text += `📊 Games Played: ${totalPlayed}\n\n`;
-    text += `https://sudosar.github.io/quranpuzz/`;
+    text += `https://sudosar.github.io/quraniq/`;
 
     return text;
 }

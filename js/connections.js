@@ -697,7 +697,7 @@ function showConnResult(won, cacheOnly) {
     const mistakesUsed = 4 - conn.mistakes;
     const puzzleNum = conn.puzzle.id === 'daily' ? app.dayNumber : getPuzzleIndex(PUZZLES.connections) + 1;
 
-    const shareText = `QuranIQ - Connections #${puzzleNum}\n${emojiGrid}Groups found: ${correctCount}/4\nMistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quranpuzz/`;
+    const shareText = `QuranIQ - Connections #${puzzleNum}\n${emojiGrid}Groups found: ${correctCount}/4\nMistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quraniq/`;
 
     const resultData = {
         icon: won ? '🎉' : '📖',

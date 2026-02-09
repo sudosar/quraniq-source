@@ -370,7 +370,7 @@ function showScrResult(cacheOnly) {
     const stars = scr.won ? Math.max(1, 5 - scr.hintsUsed) : 0;
     const starStr = '⭐'.repeat(stars) + '☆'.repeat(5 - stars);
 
-    const shareText = `QuranIQ - Ayah Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${starStr}\nAttempts: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}\n\nhttps://sudosar.github.io/quranpuzz/`;
+    const shareText = `QuranIQ - Ayah Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${starStr}\nAttempts: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}\n\nhttps://sudosar.github.io/quraniq/`;
 
     // Show the full verse translation in the result
     const translationText = scr.puzzle.translations
