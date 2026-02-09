@@ -875,7 +875,9 @@ function generateInsightsShareText(scholar, overallScore, gameInsights, totalPla
 // ═══════════════════════════════════════════════════════════════════
 // DHIKR COUNTER — Community-synced
 // ═══════════════════════════════════════════════════════════════════
-const DHIKR_ENDPOINT = ''; // Set to your Apps Script Web App URL
+// Uses the same Apps Script endpoint as bug reports
+const DHIKR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwwkJpfKBvth3H1aXe-WjVJ-OcWxQWADY5IM0gqQZxS0WL3b6bRuv2b-KQV9WcgGZ6d/exec';
+const DHIKR_RAW_URL = 'https://raw.githubusercontent.com/sudosar/quraniq/claude/quranic-puzzle-game-RWunP/data/dhikr.json';
 
 function initDhikrCounter() {
     const DHIKR_KEY = 'quraniq_dhikr';
@@ -914,21 +916,17 @@ function initDhikrCounter() {
 
     function render() {
         countEl.textContent = currentCount;
-        if (communityTotal > 0) {
-            communityEl.textContent = communityTotal.toLocaleString();
-        }
+        communityEl.textContent = communityTotal > 0 ? communityTotal.toLocaleString() : '—';
     }
 
     // Sync pending taps to the server (batched, debounced)
     function scheduleSyncToServer() {
-        if (!DHIKR_ENDPOINT) return;
         clearTimeout(syncTimer);
-        syncTimer = setTimeout(() => flushPending(), 2000); // 2s debounce
+        syncTimer = setTimeout(() => flushPending(), 3000); // 3s debounce
     }
 
     async function flushPending() {
         const pending = { ...saved.pending };
-        // Only flush phrases with > 0 pending
         const toSend = Object.entries(pending).filter(([, v]) => v > 0);
         if (toSend.length === 0) return;
 
@@ -937,17 +935,13 @@ function initDhikrCounter() {
                 const resp = await fetch(DHIKR_ENDPOINT, {
                     method: 'POST',
                     headers: { 'Content-Type': 'text/plain' },
-                    body: JSON.stringify({ phrase, count })
+                    body: JSON.stringify({ action: 'dhikr', phrase, count })
                 });
                 if (resp.ok) {
                     const result = await resp.json();
-                    // Clear the pending count for this phrase
                     saved.pending[phrase] = (saved.pending[phrase] || 0) - count;
                     if (saved.pending[phrase] <= 0) delete saved.pending[phrase];
-                    // Update community total from server response
-                    if (result.today) {
-                        communityTotal = result.today;
-                    }
+                    if (result.today) communityTotal = result.today;
                 }
             } catch (e) {
                 console.warn('Dhikr sync failed:', e);
@@ -957,14 +951,19 @@ function initDhikrCounter() {
         render();
     }
 
-    // Fetch community totals on load
+    // Fetch community totals from GitHub raw (fast, cached by CDN)
     async function fetchCommunityTotal() {
-        if (!DHIKR_ENDPOINT) return;
         try {
-            const resp = await fetch(DHIKR_ENDPOINT);
+            const resp = await fetch(DHIKR_RAW_URL + '?t=' + Date.now()); // cache-bust
             if (resp.ok) {
                 const data = await resp.json();
-                communityTotal = data.today || 0;
+                // Only use if it's today's data
+                const today = new Date().toISOString().slice(0, 10);
+                if (data.date === today) {
+                    communityTotal = data.total || 0;
+                } else {
+                    communityTotal = 0; // New day, server hasn't been updated yet
+                }
                 save();
                 render();
             }
@@ -977,12 +976,9 @@ function initDhikrCounter() {
     picker.addEventListener('click', (e) => {
         const btn = e.target.closest('.dhikr-phrase');
         if (!btn) return;
-        // Save current count before switching
         saved.counts[currentPhrase] = currentCount;
-        // Switch phrase
         currentPhrase = btn.dataset.phrase;
         currentCount = saved.counts[currentPhrase] || 0;
-        // Update active state
         picker.querySelectorAll('.dhikr-phrase').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         save();
@@ -993,43 +989,38 @@ function initDhikrCounter() {
     tapBtn.addEventListener('click', () => {
         currentCount++;
         communityTotal++;
-        // Track pending sync
         saved.pending[currentPhrase] = (saved.pending[currentPhrase] || 0) + 1;
         save();
         render();
-        // Haptic feedback if available
         if (navigator.vibrate) navigator.vibrate(15);
-        // Pulse animation
         tapBtn.classList.remove('dhikr-tap-ripple');
-        void tapBtn.offsetWidth; // force reflow
+        void tapBtn.offsetWidth;
         tapBtn.classList.add('dhikr-tap-ripple');
-        // Milestone feedback
         if (currentCount === 33 || currentCount === 99 || currentCount === 100) {
             showToast(`${currentCount}× MashaAllah! 🤲`);
         }
         scheduleSyncToServer();
     });
 
-    // Reset (local only — community total stays)
+    // Reset (local only)
     resetBtn.addEventListener('click', () => {
         currentCount = 0;
         save();
         render();
     });
 
-    // Flush pending when user leaves the page
+    // Flush pending when user leaves
     window.addEventListener('beforeunload', () => flushPending());
     document.addEventListener('visibilitychange', () => {
         if (document.visibilityState === 'hidden') flushPending();
     });
 
-    // Set initial active phrase button
+    // Set initial active phrase
     picker.querySelectorAll('.dhikr-phrase').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.phrase === currentPhrase);
     });
 
     render();
     fetchCommunityTotal();
-    // Also flush any pending from a previous session
     flushPending();
 }
