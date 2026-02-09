@@ -3,7 +3,7 @@
    Floating bug report button with screenshot capture
    ============================================ */
 
-const BUG_REPORT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwwkJpfKBvth3H1aXe-WjVJ-OcWxQWADY5IM0gqQZxS0WL3b6bRuv2b-KQV9WcgGZ6d/exec'; // Set this to your Google Apps Script Web App URL
+const BUG_REPORT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzU3zTnouQtg354xUSUXVaNXwRn2H1i3kt99jVofled3cwPXjZ6vhqUezXhmaY7Fm8i/exec'; // Set this to your Google Apps Script Web App URL
 
 /**
  * Initialize the bug report nub - a tiny floating button on the edge of the screen.

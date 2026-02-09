@@ -880,7 +880,7 @@ function generateInsightsShareText(scholar, overallScore, gameInsights, totalPla
 // DHIKR COUNTER — Community-synced
 // ═══════════════════════════════════════════════════════════════════
 // Uses the same Apps Script endpoint as bug reports
-const DHIKR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwwkJpfKBvth3H1aXe-WjVJ-OcWxQWADY5IM0gqQZxS0WL3b6bRuv2b-KQV9WcgGZ6d/exec';
+const DHIKR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzU3zTnouQtg354xUSUXVaNXwRn2H1i3kt99jVofled3cwPXjZ6vhqUezXhmaY7Fm8i/exec';
 const DHIKR_RAW_URL = 'https://raw.githubusercontent.com/sudosar/quraniq/claude/quranic-puzzle-game-RWunP/data/dhikr.json';
 
 function initDhikrCounter() {
