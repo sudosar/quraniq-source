@@ -383,7 +383,7 @@ function getVerseStats() {
 
 // ==================== ANONYMOUS LEADERBOARD ====================
 const PLAYER_ID_KEY = 'quraniq_player_id';
-const SCORE_ENDPOINT = ''; // Set this to your Google Apps Script Web App URL
+const SCORE_ENDPOINT = 'https://script.google.com/macros/s/AKfycbylXgj7bNBzWfq4Nxwz0jEOP1mLF-jvy_ngxC_lctnJCro2j6a-AUQujB4xxeTKw6XEqA/exec';
 
 /**
  * Get or create a persistent anonymous player ID.
