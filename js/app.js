@@ -165,6 +165,9 @@ function initSidebar() {
     });
     document.getElementById('shukr-close').addEventListener('click', () => closeModal('shukr-modal'));
 
+    // Dhikr counter
+    initDhikrCounter();
+
     // Restore modal handlers
     document.getElementById('restore-close').addEventListener('click', () => closeModal('restore-modal'));
     document.getElementById('restore-cancel-btn').addEventListener('click', () => closeModal('restore-modal'));
@@ -866,4 +869,96 @@ function generateInsightsShareText(scholar, overallScore, gameInsights, totalPla
     text += `https://sudosar.github.io/quraniq/`;
 
     return text;
+}
+
+
+// ═══════════════════════════════════════════════════════════════════
+// DHIKR COUNTER
+// ═══════════════════════════════════════════════════════════════════
+function initDhikrCounter() {
+    const DHIKR_KEY = 'quraniq_dhikr';
+    const tapBtn = document.getElementById('dhikr-tap');
+    const countEl = document.getElementById('dhikr-count');
+    const totalEl = document.getElementById('dhikr-total');
+    const resetBtn = document.getElementById('dhikr-reset');
+    const picker = document.getElementById('dhikr-picker');
+
+    if (!tapBtn) return;
+
+    // Load saved state
+    const today = new Date().toISOString().slice(0, 10);
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(DHIKR_KEY)) || {}; } catch(e) {}
+
+    // Reset if different day
+    if (saved.date !== today) {
+        saved = { date: today, phrase: 'subhanallah', counts: {}, current: 0 };
+    }
+    if (!saved.counts) saved.counts = {};
+    if (!saved.phrase) saved.phrase = 'subhanallah';
+
+    let currentPhrase = saved.phrase;
+    let currentCount = saved.counts[currentPhrase] || 0;
+
+    function getTotalToday() {
+        return Object.values(saved.counts).reduce((a, b) => a + b, 0);
+    }
+
+    function save() {
+        saved.counts[currentPhrase] = currentCount;
+        saved.phrase = currentPhrase;
+        localStorage.setItem(DHIKR_KEY, JSON.stringify(saved));
+    }
+
+    function render() {
+        countEl.textContent = currentCount;
+        totalEl.textContent = `Total today: ${getTotalToday()}`;
+    }
+
+    // Phrase picker
+    picker.addEventListener('click', (e) => {
+        const btn = e.target.closest('.dhikr-phrase');
+        if (!btn) return;
+        // Save current count before switching
+        saved.counts[currentPhrase] = currentCount;
+        // Switch phrase
+        currentPhrase = btn.dataset.phrase;
+        currentCount = saved.counts[currentPhrase] || 0;
+        // Update active state
+        picker.querySelectorAll('.dhikr-phrase').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        save();
+        render();
+    });
+
+    // Tap counter
+    tapBtn.addEventListener('click', () => {
+        currentCount++;
+        save();
+        render();
+        // Haptic feedback if available
+        if (navigator.vibrate) navigator.vibrate(15);
+        // Pulse animation
+        tapBtn.classList.remove('dhikr-tap-ripple');
+        void tapBtn.offsetWidth; // force reflow
+        tapBtn.classList.add('dhikr-tap-ripple');
+        // Milestone feedback
+        if (currentCount === 33 || currentCount === 99 || currentCount === 100) {
+            showToast(`${currentCount}× MashaAllah! 🤲`);
+        }
+    });
+
+    // Reset
+    resetBtn.addEventListener('click', () => {
+        currentCount = 0;
+        save();
+        render();
+    });
+
+    // Set initial active phrase button
+    picker.querySelectorAll('.dhikr-phrase').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.phrase === currentPhrase);
+    });
+
+    render();
 }

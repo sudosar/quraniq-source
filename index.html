@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260209w">
+    <link rel="stylesheet" href="style.css?v=20260209x">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="icons/icon-192.png" type="image/png" sizes="192x192">
     <!-- Google Analytics (GA4) -->
@@ -319,6 +319,28 @@
                     <p class="shukr-body">We humbly ask you to <strong>make du'a for the people behind these projects</strong> — that Allah rewards them abundantly, blesses their work, and guides them to what is best. And if you are able, consider <strong>donating</strong> to support their noble efforts.</p>
                 </div>
 
+                <div class="shukr-section dhikr-section">
+                    <h3 class="shukr-subtitle">📿 Dhikr Counter</h3>
+                    <p class="shukr-body" style="text-align:center;margin-bottom:12px">Tap to count your dhikr. Select a phrase and tap the counter.</p>
+                    <div class="dhikr-picker" id="dhikr-picker">
+                        <button class="dhikr-phrase active" data-phrase="subhanallah">سُبْحَانَ اللَّهِ</button>
+                        <button class="dhikr-phrase" data-phrase="alhamdulillah">الْحَمْدُ لِلَّهِ</button>
+                        <button class="dhikr-phrase" data-phrase="allahuakbar">اللَّهُ أَكْبَرُ</button>
+                        <button class="dhikr-phrase" data-phrase="astaghfirullah">أَسْتَغْفِرُ اللَّهَ</button>
+                        <button class="dhikr-phrase" data-phrase="lailahaillallah">لَا إِلَٰهَ إِلَّا اللَّهُ</button>
+                    </div>
+                    <div class="dhikr-counter-wrap">
+                        <button class="dhikr-tap" id="dhikr-tap" aria-label="Tap to count dhikr">
+                            <span class="dhikr-count" id="dhikr-count">0</span>
+                            <span class="dhikr-label">tap</span>
+                        </button>
+                    </div>
+                    <div class="dhikr-controls">
+                        <button class="dhikr-ctrl-btn" id="dhikr-reset" aria-label="Reset counter">↺ Reset</button>
+                        <span class="dhikr-total" id="dhikr-total">Total today: 0</span>
+                    </div>
+                </div>
+
                 <div class="shukr-section">
                     <h3 class="shukr-subtitle">🌟 With Gratitude To</h3>
                     <div class="shukr-credits">
@@ -359,15 +381,15 @@
         </div>
     </main>
 
-    <script src="puzzles.js?v=20260209w"></script>
-    <script src="js/utils.js?v=20260209w"></script>
-    <script src="js/connections.js?v=20260209w"></script>
-    <script src="js/wordle.js?v=20260209w"></script>
-    <script src="js/deduction.js?v=20260209w"></script>
-    <script src="js/scramble.js?v=20260209w"></script>
-    <script src="js/onboarding.js?v=20260209w"></script>
-    <script src="js/bugreport.js?v=20260209w"></script>
-    <script src="js/app.js?v=20260209w"></script>
+    <script src="puzzles.js?v=20260209x"></script>
+    <script src="js/utils.js?v=20260209x"></script>
+    <script src="js/connections.js?v=20260209x"></script>
+    <script src="js/wordle.js?v=20260209x"></script>
+    <script src="js/deduction.js?v=20260209x"></script>
+    <script src="js/scramble.js?v=20260209x"></script>
+    <script src="js/onboarding.js?v=20260209x"></script>
+    <script src="js/bugreport.js?v=20260209x"></script>
+    <script src="js/app.js?v=20260209x"></script>
     <script>
         // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {
