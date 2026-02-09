@@ -346,7 +346,7 @@ function showWordleResult(won, cacheOnly) {
     }
     const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
-    const shareText = `QuranIQ - Verse Wordle #${puzzleNum}\n${tries}/${wordle.maxRows}\n\n${emojiGrid}${moonStr}\n\nhttps://sudosar.github.io/quraniq/`;
+    const shareText = `QuranIQ - Harf by Harf #${puzzleNum}\n${tries}/${wordle.maxRows}\n\n${emojiGrid}${moonStr}\n\nhttps://sudosar.github.io/quraniq/`;
 
     const resultData = {
         icon: won ? '🌟' : '📖',

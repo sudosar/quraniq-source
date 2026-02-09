@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build a Quranic word list for Wordle validation.
+Build a Quranic word list for Harf by Harf validation.
 
 Fetches the Quran text surah-by-surah from alquran.cloud API (Uthmani script),
 extracts all unique words, normalizes them (strip diacritics), and

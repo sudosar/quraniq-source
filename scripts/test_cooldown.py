@@ -327,7 +327,7 @@ try:
          f"themes={history['connections']['themes']}")
     test("Connections verses loaded", "2:255" in history["connections"]["verses"],
          f"verses={history['connections']['verses']}")
-    test("Wordle words loaded", "رحمة" in history["wordle"]["words"],
+    test("Harf by Harf words loaded", "رحمة" in history["wordle"]["words"],
          f"words={history['wordle']['words']}")
     test("Deduction titles loaded", "the test mystery" in history["deduction"]["titles"],
          f"titles={history['deduction']['titles']}")

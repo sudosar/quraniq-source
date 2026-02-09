@@ -301,7 +301,7 @@ function showHelpModal() {
             <p>You have 4 mistakes before the game ends. Each incorrect guess costs one attempt.</p>
         `,
         wordle: `
-            <h3>Verse Wordle</h3>
+            <h3>Harf by Harf</h3>
             <p>Guess the Arabic Quranic word in 6 tries. Use the on-screen Arabic keyboard to type letters.</p>
             <div class="example-row" style="direction:rtl">
                 <div class="example-cell" style="background:var(--correct)">ر</div>
@@ -490,7 +490,7 @@ function getGameInsight(mode, stats) {
 
     const modeNames = {
         connections: 'Ayah Connections',
-        wordle: 'Verse Wordle',
+        wordle: 'Harf by Harf',
         deduction: 'Prophet Deduction',
         scramble: 'Ayah Scramble'
     };

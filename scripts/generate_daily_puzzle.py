@@ -3,7 +3,7 @@
 Daily Puzzle Generator for QuranIQ — All 4 Games
 Generates daily puzzles for:
   1. Connections (Ayah Connections)
-  2. Wordle (Verse Wordle)
+  2. Harf by Harf (Word Guessing)
   3. Deduction (Prophet Deduction)
   4. Scramble (Ayah Scramble)
 
@@ -103,7 +103,7 @@ def load_history():
                     if item.get("ar"):
                         history["connections"]["words"].add(item["ar"])
 
-        # Wordle history
+        # Harf by Harf history
         wdl = data.get("wordle")
         if wdl:
             if wdl.get("word"):
@@ -378,9 +378,9 @@ CRITICAL — PREVIOUS ATTEMPT FAILED:
 {chr(10).join('  ✗ ' + v for v in previous_violations)}
 Choose a completely different word."""
 
-    return f"""You are an expert Islamic scholar creating a daily "Verse Wordle" puzzle.
+    return f"""You are an expert Islamic scholar creating a daily "Harf by Harf" puzzle.
 
-TASK: Generate ONE Arabic Quranic word for a Wordle-style guessing game.
+TASK: Generate ONE Arabic Quranic word for a Harf-by-Harf style guessing game.
 
 RULES:
 1. The word MUST be a meaningful Quranic Arabic word (noun, verb root, or concept)
@@ -673,7 +673,7 @@ GAME_CONFIGS = {
     "wordle": {
         "build_prompt": build_wordle_prompt,
         "validate": validate_wordle,
-        "label": "Verse Wordle",
+        "label": "Harf by Harf",
     },
     "deduction": {
         "build_prompt": build_deduction_prompt,
@@ -802,7 +802,7 @@ def main():
     print(f"History loaded:")
     print(f"  Connections: {len(history['connections']['themes'])} themes, "
           f"{len(history['connections']['verses'])} verses")
-    print(f"  Wordle: {len(history['wordle']['words'])} words")
+    print(f"  Harf by Harf: {len(history['wordle']['words'])} words")
     print(f"  Deduction: {len(history['deduction']['titles'])} titles, "
           f"{len(history['deduction']['prophets'])} prophets")
     print(f"  Scramble: {len(history['scramble']['references'])} references")

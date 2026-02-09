@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260209d">
+    <link rel="stylesheet" href="style.css?v=20260209e">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
 </head>
 <body>
@@ -52,7 +52,7 @@
         </button>
         <button class="mode-tab" data-mode="wordle" role="tab" aria-selected="false" aria-controls="wordle-game" id="tab-wordle">
             <span class="mode-icon" aria-hidden="true">🔤</span>
-            <span class="mode-name">Verse Wordle</span>
+            <span class="mode-name">Harf by Harf</span>
         </button>
         <button class="mode-tab" data-mode="deduction" role="tab" aria-selected="false" aria-controls="deduction-game" id="tab-deduction">
             <span class="mode-icon" aria-hidden="true">🔍</span>
@@ -88,13 +88,13 @@
             </div>
         </section>
 
-        <!-- ==================== VERSE WORDLE MODE ==================== -->
+        <!-- ==================== HARF BY HARF MODE ==================== -->
         <section id="wordle-game" class="game-mode" role="tabpanel" aria-labelledby="tab-wordle">
             <div class="game-header">
-                <h2>Verse Wordle</h2>
+                <h2>Harf by Harf</h2>
                 <p class="game-desc">Guess the Quranic word in 6 tries</p>
             </div>
-            <div id="wordle-board" class="wordle-board" role="grid" aria-label="Wordle game board"></div>
+            <div id="wordle-board" class="wordle-board" role="grid" aria-label="Harf by Harf game board"></div>
             <div id="wordle-hint" class="wordle-hint" aria-live="polite"></div>
             <div id="wordle-keyboard" class="wordle-keyboard" role="group" aria-label="Arabic keyboard"></div>
         </section>
@@ -163,7 +163,7 @@
                 <div id="stats-mode-tabs" class="stats-mode-tabs" role="tablist" aria-label="Statistics mode selector">
                     <button class="stats-tab" data-stats-mode="insights" role="tab" aria-selected="false">Insights</button>
                     <button class="stats-tab active" data-stats-mode="connections" role="tab" aria-selected="true">Connections</button>
-                    <button class="stats-tab" data-stats-mode="wordle" role="tab" aria-selected="false">Wordle</button>
+                    <button class="stats-tab" data-stats-mode="wordle" role="tab" aria-selected="false">Harf</button>
                     <button class="stats-tab" data-stats-mode="deduction" role="tab" aria-selected="false">Deduction</button>
                     <button class="stats-tab" data-stats-mode="scramble" role="tab" aria-selected="false">Scramble</button>
                 </div>
@@ -214,7 +214,7 @@
                     <span aria-hidden="true">🔗</span> Ayah Connections
                 </a>
                 <a href="#" data-mode="wordle" class="sidebar-link">
-                    <span aria-hidden="true">🔤</span> Verse Wordle
+                    <span aria-hidden="true">🔤</span> Harf by Harf
                 </a>
                 <a href="#" data-mode="deduction" class="sidebar-link">
                     <span aria-hidden="true">🔍</span> Prophet Deduction
@@ -253,12 +253,12 @@
         </div>
     </main>
 
-    <script src="puzzles.js?v=20260209d"></script>
-    <script src="js/utils.js?v=20260209d"></script>
-    <script src="js/connections.js?v=20260209d"></script>
-    <script src="js/wordle.js?v=20260209d"></script>
-    <script src="js/deduction.js?v=20260209d"></script>
-    <script src="js/scramble.js?v=20260209d"></script>
-    <script src="js/app.js?v=20260209d"></script>
+    <script src="puzzles.js?v=20260209e"></script>
+    <script src="js/utils.js?v=20260209e"></script>
+    <script src="js/connections.js?v=20260209e"></script>
+    <script src="js/wordle.js?v=20260209e"></script>
+    <script src="js/deduction.js?v=20260209e"></script>
+    <script src="js/scramble.js?v=20260209e"></script>
+    <script src="js/app.js?v=20260209e"></script>
 </body>
 </html>
