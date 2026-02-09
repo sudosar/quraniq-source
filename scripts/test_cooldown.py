@@ -33,7 +33,7 @@ def make_empty_history():
     return {
         "connections": {"themes": set(), "verses": set(), "words": set()},
         "wordle": {"words": set(), "verses": set(), "hints": set()},
-        "deduction": {"titles": set(), "prophets": set()},
+        "deduction": {"titles": set(), "characters": set()},
         "scramble": {"verses": set(), "references": set()},
     }
 
@@ -240,7 +240,7 @@ test("Cooldown violation for title", any("title" in v.lower() for v in cooldown)
 
 print("\n14. Validate deduction with prophet in cooldown")
 history = make_empty_history()
-history["deduction"]["prophets"].add("Yusuf")
+history["deduction"]["characters"].add("Yusuf")
 puzzle = make_test_deduction()
 errors, cooldown, warnings = gen.validate_deduction(puzzle, history)
 test("Cooldown violation for prophet", any("Yusuf" in v for v in cooldown), f"cooldown={cooldown}")

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuranIQ - Daily Quranic Puzzle Game</title>
-    <meta name="description" content="Test your Quranic knowledge daily with 4 unique puzzle modes: Ayah Connections, Harf by Harf, Prophet Deduction, and Ayah Scramble. Play free every day!">
+    <meta name="description" content="Test your Quranic knowledge daily with 4 unique puzzle modes: Ayah Connections, Harf by Harf, Who Am I?, and Ayah Scramble. Play free every day!">
     <meta name="theme-color" content="#1B5E20">
 
     <!-- Open Graph / Facebook -->
@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260209v">
+    <link rel="stylesheet" href="style.css?v=20260209w">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="icons/icon-192.png" type="image/png" sizes="192x192">
     <!-- Google Analytics (GA4) -->
@@ -87,7 +87,7 @@
         </button>
         <button class="mode-tab" data-mode="deduction" role="tab" aria-selected="false" aria-controls="deduction-game" id="tab-deduction">
             <span class="mode-icon" aria-hidden="true">🔍</span>
-            <span class="mode-name">Deduction</span>
+            <span class="mode-name">Who Am I?</span>
         </button>
         <button class="mode-tab" data-mode="scramble" role="tab" aria-selected="false" aria-controls="scramble-game" id="tab-scramble">
             <span class="mode-icon" aria-hidden="true">🧩</span>
@@ -133,8 +133,8 @@
         <!-- ==================== DEDUCTION MODE ==================== -->
         <section id="deduction-game" class="game-mode" role="tabpanel" aria-labelledby="tab-deduction">
             <div class="game-header">
-                <h2>Prophet Deduction</h2>
-                <p class="game-desc">Use clues to identify the mystery from the Quran</p>
+                <h2>Who Am I?</h2>
+                <p class="game-desc">Read clues in first person and guess the Quranic figure</p>
             </div>
             <div id="deduction-story" class="deduction-story"></div>
             <div id="deduction-clues" class="deduction-clues" role="list" aria-label="Clues"></div>
@@ -198,7 +198,7 @@
                     <button class="stats-tab" data-stats-mode="insights" role="tab" aria-selected="false">Insights</button>
                     <button class="stats-tab active" data-stats-mode="connections" role="tab" aria-selected="true">Connections</button>
                     <button class="stats-tab" data-stats-mode="wordle" role="tab" aria-selected="false">Harf</button>
-                    <button class="stats-tab" data-stats-mode="deduction" role="tab" aria-selected="false">Deduction</button>
+                    <button class="stats-tab" data-stats-mode="deduction" role="tab" aria-selected="false">Who Am I?</button>
                     <button class="stats-tab" data-stats-mode="scramble" role="tab" aria-selected="false">Scramble</button>
                 </div>
                 <div class="stats-grid">
@@ -251,7 +251,7 @@
                     <span aria-hidden="true">🔤</span> Harf by Harf
                 </a>
                 <a href="#" data-mode="deduction" class="sidebar-link">
-                    <span aria-hidden="true">🔍</span> Prophet Deduction
+                    <span aria-hidden="true">🔍</span> Who Am I?
                 </a>
                 <a href="#" data-mode="scramble" class="sidebar-link">
                     <span aria-hidden="true">🧩</span> Ayah Scramble
@@ -359,15 +359,15 @@
         </div>
     </main>
 
-    <script src="puzzles.js?v=20260209v"></script>
-    <script src="js/utils.js?v=20260209v"></script>
-    <script src="js/connections.js?v=20260209v"></script>
-    <script src="js/wordle.js?v=20260209v"></script>
-    <script src="js/deduction.js?v=20260209v"></script>
-    <script src="js/scramble.js?v=20260209v"></script>
-    <script src="js/onboarding.js?v=20260209v"></script>
-    <script src="js/bugreport.js?v=20260209v"></script>
-    <script src="js/app.js?v=20260209v"></script>
+    <script src="puzzles.js?v=20260209w"></script>
+    <script src="js/utils.js?v=20260209w"></script>
+    <script src="js/connections.js?v=20260209w"></script>
+    <script src="js/wordle.js?v=20260209w"></script>
+    <script src="js/deduction.js?v=20260209w"></script>
+    <script src="js/scramble.js?v=20260209w"></script>
+    <script src="js/onboarding.js?v=20260209w"></script>
+    <script src="js/bugreport.js?v=20260209w"></script>
+    <script src="js/app.js?v=20260209w"></script>
     <script>
         // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {

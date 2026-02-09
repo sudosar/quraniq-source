@@ -1,7 +1,7 @@
 {
   "name": "QuranIQ - Daily Quranic Puzzle Game",
   "short_name": "QuranIQ",
-  "description": "Test your Quranic knowledge daily with 4 unique puzzle modes: Ayah Connections, Harf by Harf, Prophet Deduction, and Ayah Scramble.",
+  "description": "Test your Quranic knowledge daily with 4 unique puzzle modes: Ayah Connections, Harf by Harf, Who Am I?, and Ayah Scramble.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#FFFDE7",

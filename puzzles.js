@@ -560,20 +560,20 @@ const PUZZLES = {
     deduction: [
         {
             id: 1,
-            title: "The Mystery Prophet",
-            intro: "A great prophet faced a tremendous trial. Using the clues below, identify the prophet, the trial, the location, and the outcome.",
+            title: "The Steadfast Caller",
+            intro: "Someone is speaking to you from the depths of history. They endured centuries of rejection. Can you figure out who they are?",
             clues: [
-                "This prophet is one of the Ulul Azm (Prophets of strong will)",
-                "His people rejected him for 950 years",
-                "Allah commanded him to build something unusual",
-                "Water played a central role in the outcome",
-                "His own son refused to join him",
-                "Animals came in pairs"
+                "I am one of the Ulul Azm — the Prophets of strong will",
+                "My people rejected me, and I called them for 950 years",
+                "Allah commanded me to build something unusual",
+                "Water played a central role in what happened to my people",
+                "My own son refused to join me and was lost",
+                "Animals came to me in pairs, boarding what I had built"
             ],
             categories: {
-                prophet: { label: "Prophet", options: ["Nuh", "Ibrahim", "Musa", "Isa", "Muhammad"], answer: "Nuh" },
+                identity: { label: "Who Am I?", options: ["Nuh", "Ibrahim", "Musa", "Isa", "Muhammad (SAW)"], answer: "Nuh" },
                 trial: { label: "Trial", options: ["Fire", "Flood", "Exile", "Battle", "Famine"], answer: "Flood" },
-                location: { label: "What he built", options: ["Mosque", "Ark", "Kaaba", "Well", "Tower"], answer: "Ark" },
+                location: { label: "What I built", options: ["Mosque", "Ark", "Kaaba", "Well", "Tower"], answer: "Ark" },
                 outcome: { label: "Outcome", options: ["Victory in battle", "New civilization", "Migration", "Miracle shown", "Earth renewed"], answer: "Earth renewed" }
             },
             verse: "And it was revealed to Nuh that, 'No one will believe from your people except those who have already believed, so do not be distressed by what they have been doing.' (11:36)",
@@ -581,18 +581,18 @@ const PUZZLES = {
         },
         {
             id: 2,
-            title: "The Patient Prophet",
-            intro: "This prophet was tested with extreme hardship but never lost faith. Identify the details of his story.",
+            title: "The Enduring Servant",
+            intro: "A voice speaks from a time of immense suffering. Despite losing everything, they never lost faith. Who is speaking?",
             clues: [
-                "He lost his wealth, his health, and his children",
-                "His wife remained faithful to him throughout",
-                "He is described as an excellent servant who always turned to Allah",
-                "Allah told him to strike the ground with his foot for a cure",
-                "His patience became proverbial",
-                "He is mentioned in Surah Sad"
+                "I lost my wealth, my health, and my children",
+                "My wife remained faithful to me throughout my trial",
+                "Allah described me as an excellent servant who always turned to Him",
+                "I was told to strike the ground with my foot, and a healing spring appeared",
+                "My patience became proverbial among all people",
+                "My story is told in Surah Sad"
             ],
             categories: {
-                prophet: { label: "Prophet", options: ["Ayyub", "Yaqub", "Zakariyya", "Shuayb", "Idris"], answer: "Ayyub" },
+                identity: { label: "Who Am I?", options: ["Ayyub", "Yaqub", "Zakariyya", "Shuayb", "Idris"], answer: "Ayyub" },
                 trial: { label: "Main trial", options: ["Blindness", "Loss of everything", "Exile", "Imprisonment", "Mockery"], answer: "Loss of everything" },
                 location: { label: "Cure involved", options: ["River water", "Spring from the ground", "Honey", "Zamzam", "Olive oil"], answer: "Spring from the ground" },
                 outcome: { label: "Reward", options: ["Kingdom restored", "All blessings doubled", "Prophethood for son", "Long life", "Great wealth"], answer: "All blessings doubled" }
@@ -602,21 +602,21 @@ const PUZZLES = {
         },
         {
             id: 3,
-            title: "The Miraculous Birth",
-            intro: "An extraordinary birth took place by Allah's command. Identify the key elements of this story.",
+            title: "The Chosen Mother",
+            intro: "A woman speaks — the only one mentioned by name in the entire Quran. Her story is one of devotion, miracles, and trial.",
             clues: [
-                "The mother received food from Allah in her place of worship",
-                "An angel appeared in human form to deliver the news",
-                "The child spoke from the cradle",
-                "The mother was told to shake a palm tree",
-                "She was the only woman mentioned by name in the Quran",
-                "Her son could heal the blind and raise the dead by Allah's permission"
+                "I received food from Allah while I was in my place of worship",
+                "An angel appeared to me in human form with extraordinary news",
+                "I was told to shake a palm tree and fresh dates would fall",
+                "My people accused me, but my newborn defended me",
+                "I am the only woman mentioned by name in the Quran",
+                "My son could heal the blind and raise the dead by Allah's permission"
             ],
             categories: {
-                prophet: { label: "The Child", options: ["Yahya", "Isa", "Ismail", "Musa", "Ibrahim"], answer: "Isa" },
-                trial: { label: "Mother's trial", options: ["Exile", "Poverty", "Accusations from people", "Illness", "War"], answer: "Accusations from people" },
-                location: { label: "Where the birth occurred", options: ["Makkah", "Near a palm tree", "In Egypt", "In a cave", "By a river"], answer: "Near a palm tree" },
-                outcome: { label: "Baby's first miracle", options: ["Moved a mountain", "Spoke from cradle", "Healed the sick", "Split water", "Glowed with light"], answer: "Spoke from cradle" }
+                identity: { label: "Who Am I?", options: ["Maryam", "Hawwa", "Asiya", "Khadijah", "Sarah"], answer: "Maryam" },
+                trial: { label: "My trial", options: ["Exile", "Poverty", "Accusations from people", "Illness", "War"], answer: "Accusations from people" },
+                location: { label: "Where I gave birth", options: ["Makkah", "Near a palm tree", "In Egypt", "In a cave", "By a river"], answer: "Near a palm tree" },
+                outcome: { label: "My baby's first miracle", options: ["Moved a mountain", "Spoke from cradle", "Healed the sick", "Split water", "Glowed with light"], answer: "Spoke from cradle" }
             },
             verse: "She said, 'How can I have a boy while no man has touched me and I have not been unchaste?' He said, 'Thus it will be; your Lord says, It is easy for Me.' (19:20-21)",
             arabic: "قَالَتْ أَنَّىٰ يَكُونُ لِي غُلَامٌ وَلَمْ يَمْسَسْنِي بَشَرٌ وَلَمْ أَكُ بَغِيًّا"
@@ -624,19 +624,19 @@ const PUZZLES = {
         {
             id: 4,
             title: "The Dream Interpreter",
-            intro: "A young prophet's journey from betrayal to power, driven by his God-given gift.",
+            intro: "A voice speaks from a prison cell, then from a palace. A journey from betrayal to power. Who is speaking?",
             clues: [
-                "His brothers were jealous of him",
-                "He was thrown into a dark place as a child",
-                "He was falsely accused and imprisoned",
-                "A king had a dream that no one could interpret",
-                "He eventually became a minister of Egypt",
-                "His father lost his sight from weeping"
+                "My brothers were jealous of me because of a dream I had",
+                "I was thrown into a dark well as a child",
+                "I was falsely accused by a powerful woman and imprisoned",
+                "A king had a dream that no one could interpret — except me",
+                "I became a minister of Egypt and controlled its storehouses",
+                "My father lost his sight from weeping over me"
             ],
             categories: {
-                prophet: { label: "Prophet", options: ["Yusuf", "Musa", "Dawud", "Sulayman", "Idris"], answer: "Yusuf" },
+                identity: { label: "Who Am I?", options: ["Yusuf", "Musa", "Dawud", "Sulayman", "Idris"], answer: "Yusuf" },
                 trial: { label: "First trial", options: ["Thrown in a well", "Cast into fire", "Set adrift in river", "Exiled to desert", "Sold as slave"], answer: "Thrown in a well" },
-                location: { label: "Where he rose to power", options: ["Babylon", "Egypt", "Palestine", "Yemen", "Makkah"], answer: "Egypt" },
+                location: { label: "Where I rose to power", options: ["Babylon", "Egypt", "Palestine", "Yemen", "Makkah"], answer: "Egypt" },
                 outcome: { label: "Family reunion", options: ["Brothers came for grain", "Father came for trade", "Angel guided them", "King summoned them", "Dream revealed location"], answer: "Brothers came for grain" }
             },
             verse: "Indeed, I saw eleven stars and the sun and the moon; I saw them prostrating to me. (12:4)",
@@ -645,19 +645,19 @@ const PUZZLES = {
         {
             id: 5,
             title: "The Friend of Allah",
-            intro: "Known as Khalilullah, this prophet faced extreme tests of faith throughout his life.",
+            intro: "Known as Khalilullah, this speaker faced extreme tests of faith throughout their life. Who is speaking?",
             clues: [
-                "He questioned his people's worship of idols",
-                "He was thrown into a fire but Allah saved him",
-                "He was commanded to leave his wife and infant in a barren valley",
-                "He was commanded to sacrifice his son",
-                "He rebuilt a sacred house with his son",
-                "He is the father of many prophets"
+                "I questioned my people — why do you worship what you carve with your own hands?",
+                "I was thrown into a great fire, but Allah made it cool and peaceful for me",
+                "I was commanded to leave my wife and infant son in a barren valley with no water",
+                "I was commanded to sacrifice my beloved son, and I submitted to Allah's will",
+                "I rebuilt a sacred house with my son, raising its foundations",
+                "I am the father of many prophets who came after me"
             ],
             categories: {
-                prophet: { label: "Prophet", options: ["Ibrahim", "Nuh", "Musa", "Ismail", "Yaqub"], answer: "Ibrahim" },
+                identity: { label: "Who Am I?", options: ["Ibrahim", "Nuh", "Musa", "Ismail", "Yaqub"], answer: "Ibrahim" },
                 trial: { label: "Greatest test", options: ["The fire", "Sacrifice of son", "Leaving family", "Debating the king", "Smashing idols"], answer: "Sacrifice of son" },
-                location: { label: "What he rebuilt", options: ["Al-Aqsa", "The Kaaba", "The Ark", "A temple", "A well"], answer: "The Kaaba" },
+                location: { label: "What I rebuilt", options: ["Al-Aqsa", "The Kaaba", "The Ark", "A temple", "A well"], answer: "The Kaaba" },
                 outcome: { label: "Legacy", options: ["Father of prophets", "King of a nation", "Writer of scripture", "Builder of cities", "Teacher of angels"], answer: "Father of prophets" }
             },
             verse: "And who is better in religion than one who submits himself to Allah while being a doer of good and follows the religion of Ibrahim, inclining toward truth? And Allah took Ibrahim as an intimate friend. (4:125)",
@@ -666,19 +666,19 @@ const PUZZLES = {
         {
             id: 6,
             title: "The Speaker to Allah",
-            intro: "This prophet had a direct conversation with Allah and led a nation to freedom.",
+            intro: "Someone who spoke directly with the Creator tells their story. From a palace to a desert to a mountain of light. Who is speaking?",
             clues: [
-                "He was raised in the palace of his enemy",
-                "He accidentally caused a man's death and fled",
-                "Allah spoke to him near a burning bush",
-                "He had a speech difficulty and asked for his brother's help",
-                "His staff transformed into a serpent",
-                "The sea was parted for him and his people"
+                "I was raised in the palace of my greatest enemy",
+                "I accidentally caused a man's death and fled in fear",
+                "Allah spoke to me near a burning bush and gave me a mission",
+                "I had a speech difficulty and asked for my brother to help me",
+                "My staff transformed into a serpent before a tyrant king",
+                "I struck the sea with my staff and it parted for my people"
             ],
             categories: {
-                prophet: { label: "Prophet", options: ["Musa", "Ibrahim", "Harun", "Dawud", "Sulayman"], answer: "Musa" },
+                identity: { label: "Who Am I?", options: ["Musa", "Ibrahim", "Harun", "Dawud", "Sulayman"], answer: "Musa" },
                 trial: { label: "Enemy", options: ["Firaun", "Namrud", "Abu Jahl", "Jalut", "Qarun"], answer: "Firaun" },
-                location: { label: "Where Allah spoke to him", options: ["Mount Sinai", "Cave of Hira", "Dome of Rock", "Makkah", "Madinah"], answer: "Mount Sinai" },
+                location: { label: "Where Allah spoke to me", options: ["Mount Sinai", "Cave of Hira", "Dome of Rock", "Makkah", "Madinah"], answer: "Mount Sinai" },
                 outcome: { label: "Miracle at the sea", options: ["Sea froze", "Sea parted", "Bridge appeared", "Walked on water", "Sea dried up"], answer: "Sea parted" }
             },
             verse: "And I produced you for Myself. Go, you and your brother, with My signs and do not slacken in My remembrance. Go, both of you, to Firaun. Indeed, he has transgressed. (20:41-43)",
@@ -686,21 +686,21 @@ const PUZZLES = {
         },
         {
             id: 7,
-            title: "The Rescued Prophet",
-            intro: "Swallowed by a great creature, this prophet called out to Allah from the depths of darkness.",
+            title: "The Voice from the Depths",
+            intro: "A cry echoes from layers of darkness — inside a creature, under the sea, in the night. Who is calling out?",
             clues: [
-                "He was sent to the people of Nineveh",
-                "He left his people in anger before receiving permission",
-                "He drew lots on a ship and lost",
-                "He was swallowed by a whale (large fish)",
-                "He called out 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers'",
-                "His people eventually believed after he returned"
+                "I was sent to the people of a great city to warn them",
+                "I left my people in anger before Allah gave me permission",
+                "I drew lots on a ship and lost",
+                "I was swallowed by a great whale",
+                "I called out from the darkness: 'There is no deity except You; I have been of the wrongdoers'",
+                "When I returned, my people believed and were saved"
             ],
             categories: {
-                prophet: { label: "Prophet", options: ["Yunus", "Nuh", "Ilyas", "Alyasa", "Lut"], answer: "Yunus" },
-                trial: { label: "What swallowed him", options: ["Whale", "Sea serpent", "Giant wave", "Whirlpool", "Storm"], answer: "Whale" },
-                location: { label: "His people's city", options: ["Nineveh", "Babylon", "Sodom", "Madyan", "Thamud"], answer: "Nineveh" },
-                outcome: { label: "Result of his return", options: ["People believed", "People destroyed", "People migrated", "People divided", "People fought"], answer: "People believed" }
+                identity: { label: "Who Am I?", options: ["Yunus", "Nuh", "Ilyas", "Alyasa", "Lut"], answer: "Yunus" },
+                trial: { label: "What swallowed me", options: ["Whale", "Sea serpent", "Giant wave", "Whirlpool", "Storm"], answer: "Whale" },
+                location: { label: "My people's city", options: ["Nineveh", "Babylon", "Sodom", "Madyan", "Thamud"], answer: "Nineveh" },
+                outcome: { label: "Result of my return", options: ["People believed", "People destroyed", "People migrated", "People divided", "People fought"], answer: "People believed" }
             },
             verse: "And he called out within the darknesses, 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.' (21:87)",
             arabic: "فَنَادَىٰ فِي الظُّلُمَاتِ أَن لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ"
@@ -708,20 +708,20 @@ const PUZZLES = {
         {
             id: 8,
             title: "The Wise King",
-            intro: "A prophet-king who was given power over wind, jinn, and could understand the language of creatures.",
+            intro: "A ruler speaks who commanded armies of men, jinn, and birds. His kingdom was unlike any other. Who is speaking?",
             clues: [
-                "He inherited from his father, who was also a prophet-king",
-                "He understood the speech of birds and ants",
-                "He had power over the jinn who worked for him",
-                "A bird (Hoopoe) brought him news of a queen",
-                "The Queen of Sheba visited him",
-                "He asked Allah for a kingdom that none after him would have"
+                "I inherited my kingdom from my father, who was also a prophet and king",
+                "I understood the speech of birds and ants",
+                "The jinn worked for me, building and diving",
+                "A hoopoe bird brought me news of a queen who worshipped the sun",
+                "The Queen of Sheba came to visit me and accepted the truth",
+                "I asked Allah for a kingdom that none after me would ever have"
             ],
             categories: {
-                prophet: { label: "Prophet", options: ["Sulayman", "Dawud", "Yusuf", "Dhul-Qarnayn", "Luqman"], answer: "Sulayman" },
-                trial: { label: "Special ability", options: ["Language of creatures", "Super strength", "Invisible", "Time travel", "Healing touch"], answer: "Language of creatures" },
+                identity: { label: "Who Am I?", options: ["Sulayman", "Dawud", "Yusuf", "Dhul-Qarnayn", "Luqman"], answer: "Sulayman" },
+                trial: { label: "Special ability", options: ["Language of creatures", "Super strength", "Invisibility", "Time travel", "Healing touch"], answer: "Language of creatures" },
                 location: { label: "Famous visitor", options: ["Queen of Sheba", "Queen of Egypt", "King of Persia", "King of Rome", "Queen of Babylon"], answer: "Queen of Sheba" },
-                outcome: { label: "His request to Allah", options: ["Unique kingdom", "Eternal life", "Many children", "Knowledge of all", "Power over death"], answer: "Unique kingdom" }
+                outcome: { label: "My request to Allah", options: ["Unique kingdom", "Eternal life", "Many children", "Knowledge of all", "Power over death"], answer: "Unique kingdom" }
             },
             verse: "He said, 'My Lord, forgive me and grant me a kingdom such as will not belong to anyone after me. Indeed, You are the Bestower.' (38:35)",
             arabic: "قَالَ رَبِّ اغْفِرْ لِي وَهَبْ لِي مُلْكًا لَّا يَنبَغِي لِأَحَدٍ مِّن بَعْدِي ۖ إِنَّكَ أَنتَ الْوَهَّابُ"
@@ -729,38 +729,38 @@ const PUZZLES = {
         {
             id: 9,
             title: "The Sleepers",
-            intro: "A group of young believers fled persecution and experienced a miraculous event.",
+            intro: "A group speaks together — young believers who fled and experienced something beyond time itself. Who are they?",
             clues: [
-                "They were youth who believed in their Lord",
-                "They fled from a tyrannical ruler who persecuted believers",
-                "They sought refuge in a cave",
-                "Allah caused them to sleep for a very long time",
-                "Their dog lay stretched at the entrance of the cave",
-                "When they awoke, they thought they had slept only a day or less"
+                "We were youth who believed in our Lord, and He increased us in guidance",
+                "We fled from a tyrannical ruler who persecuted believers",
+                "We sought refuge in a cave and prayed for Allah's mercy",
+                "Allah caused us to sleep for an incredibly long time",
+                "Our dog lay stretched at the entrance, guarding us",
+                "When we awoke, we thought we had slept only a day or part of a day"
             ],
             categories: {
-                prophet: { label: "Who were they", options: ["Sleepers of the Cave", "People of the Ditch", "Companions of the Elephant", "People of the Garden", "Army of Talut"], answer: "Sleepers of the Cave" },
-                trial: { label: "How long they slept", options: ["100 years", "300+ years", "40 years", "7 years", "1000 years"], answer: "300+ years" },
-                location: { label: "Where they hid", options: ["Cave", "Mountain top", "Underground tunnel", "Forest", "Island"], answer: "Cave" },
-                outcome: { label: "Their companion", options: ["A dog", "A cat", "A bird", "A horse", "A sheep"], answer: "A dog" }
+                identity: { label: "Who Are We?", options: ["Sleepers of the Cave", "People of the Ditch", "Companions of the Elephant", "People of the Garden", "Army of Talut"], answer: "Sleepers of the Cave" },
+                trial: { label: "How long we slept", options: ["100 years", "300+ years", "40 years", "7 years", "1000 years"], answer: "300+ years" },
+                location: { label: "Where we hid", options: ["Cave", "Mountain top", "Underground tunnel", "Forest", "Island"], answer: "Cave" },
+                outcome: { label: "Our companion", options: ["A dog", "A cat", "A bird", "A horse", "A sheep"], answer: "A dog" }
             },
             verse: "Do you think that the companions of the cave and the inscription were, among Our signs, a wonder? (18:9)",
             arabic: "أَمْ حَسِبْتَ أَنَّ أَصْحَابَ الْكَهْفِ وَالرَّقِيمِ كَانُوا مِنْ آيَاتِنَا عَجَبًا"
         },
         {
             id: 10,
-            title: "The Night Journey",
-            intro: "A miraculous journey that took place in a single night, covering an extraordinary distance.",
+            title: "The Night Traveler",
+            intro: "A miraculous journey in a single night, from one sacred place to another and beyond. Who made this journey?",
             clues: [
-                "It began at Al-Masjid Al-Haram in Makkah",
-                "The destination was Al-Masjid Al-Aqsa in Jerusalem",
-                "The traveler then ascended through the seven heavens",
-                "He met previous prophets at different levels of heaven",
-                "The five daily prayers were prescribed during this journey",
-                "The Quraysh refused to believe this account"
+                "My journey began at Al-Masjid Al-Haram in Makkah",
+                "I was taken to Al-Masjid Al-Aqsa in Jerusalem",
+                "I then ascended through the seven heavens",
+                "I met previous prophets at different levels of heaven",
+                "The five daily prayers were prescribed for my Ummah during this journey",
+                "When I told my people, the Quraysh refused to believe me"
             ],
             categories: {
-                prophet: { label: "Who traveled", options: ["Muhammad (SAW)", "Musa", "Ibrahim", "Isa", "Idris"], answer: "Muhammad (SAW)" },
+                identity: { label: "Who Am I?", options: ["Muhammad (SAW)", "Musa", "Ibrahim", "Isa", "Idris"], answer: "Muhammad (SAW)" },
                 trial: { label: "Name of the journey", options: ["Isra and Mi'raj", "Hijrah", "Conquest of Makkah", "Treaty signing", "First revelation"], answer: "Isra and Mi'raj" },
                 location: { label: "Destination on earth", options: ["Al-Aqsa", "Mount Sinai", "Madinah", "Cave of Hira", "Taif"], answer: "Al-Aqsa" },
                 outcome: { label: "What was prescribed", options: ["Five daily prayers", "Fasting Ramadan", "Hajj pilgrimage", "Zakat", "Shahada"], answer: "Five daily prayers" }
@@ -771,19 +771,19 @@ const PUZZLES = {
         {
             id: 11,
             title: "The Builder of the Barrier",
-            intro: "A powerful ruler who traveled the earth and built a mighty structure to protect people.",
+            intro: "A powerful ruler speaks — one who traveled to the ends of the earth and used his power for good. Who is speaking?",
             clues: [
-                "He traveled to where the sun sets and where it rises",
-                "Allah established him on earth and gave him means to everything",
-                "A people asked him for help against Yajuj and Majuj",
-                "He built a barrier using iron and molten copper",
-                "He attributed his power to his Lord, not himself",
-                "The barrier will be broken near the end of times"
+                "I traveled to where the sun sets and where it rises",
+                "Allah established me on earth and gave me means to everything",
+                "A desperate people asked me for help against a terrifying threat",
+                "I built a mighty barrier using iron and molten copper",
+                "I attributed all my power to my Lord, not to myself",
+                "My barrier will stand until near the end of times"
             ],
             categories: {
-                prophet: { label: "Who was he", options: ["Dhul-Qarnayn", "Sulayman", "Dawud", "Talut", "Luqman"], answer: "Dhul-Qarnayn" },
-                trial: { label: "Threat he addressed", options: ["Yajuj and Majuj", "Shaytan's army", "Great flood", "Dragon", "Invading kings"], answer: "Yajuj and Majuj" },
-                location: { label: "Materials used", options: ["Iron and copper", "Stone and clay", "Gold and silver", "Wood and rope", "Bricks and mortar"], answer: "Iron and copper" },
+                identity: { label: "Who Am I?", options: ["Dhul-Qarnayn", "Sulayman", "Dawud", "Talut", "Luqman"], answer: "Dhul-Qarnayn" },
+                trial: { label: "Threat I addressed", options: ["Yajuj and Majuj", "Shaytan's army", "Great flood", "Dragon", "Invading kings"], answer: "Yajuj and Majuj" },
+                location: { label: "Materials I used", options: ["Iron and copper", "Stone and clay", "Gold and silver", "Wood and rope", "Bricks and mortar"], answer: "Iron and copper" },
                 outcome: { label: "When it breaks", options: ["Near Day of Judgment", "After 1000 years", "Never", "When sun rises from west", "When trumpet blows"], answer: "Near Day of Judgment" }
             },
             verse: "He said, 'This is a mercy from my Lord. But when the promise of my Lord comes, He will make it level, and ever is the promise of my Lord true.' (18:98)",
@@ -791,66 +791,108 @@ const PUZZLES = {
         },
         {
             id: 12,
-            title: "The Elderly Father's Prayer",
-            intro: "An elderly prophet prayed for an heir despite being very old, and Allah answered his prayer miraculously.",
+            title: "The Tyrant King",
+            intro: "A voice of arrogance and power speaks. He claimed divinity and oppressed an entire nation. Who is speaking?",
             clues: [
-                "He served in the temple (mihrab) and cared for Maryam",
-                "He was elderly and his wife was barren",
-                "He prayed secretly to Allah for an heir",
-                "Allah gave him glad tidings of a son with a name never given before",
-                "He was told he would not speak to people for three days as a sign",
-                "His son would later confirm the coming of a Word from Allah"
+                "I ruled over a great kingdom and my word was law",
+                "I enslaved an entire people and killed their sons",
+                "A prophet was raised in my own palace without my knowledge",
+                "I witnessed miraculous signs but my heart remained hardened",
+                "I chased the believers to the sea, certain of my victory",
+                "The sea closed upon me and my army, and I declared belief too late"
             ],
             categories: {
-                prophet: { label: "Prophet", options: ["Zakariyya", "Ibrahim", "Yaqub", "Shuayb", "Lut"], answer: "Zakariyya" },
-                trial: { label: "His difficulty", options: ["Old age and barren wife", "Poverty", "Exile", "Blindness", "Enemy king"], answer: "Old age and barren wife" },
-                location: { label: "Son's name", options: ["Yahya", "Isa", "Ismail", "Ishaq", "Yusuf"], answer: "Yahya" },
-                outcome: { label: "Sign given to him", options: ["Could not speak for 3 days", "Staff bloomed", "Hair turned white", "Ground split", "Fire descended"], answer: "Could not speak for 3 days" }
+                identity: { label: "Who Am I?", options: ["Firaun (Pharaoh)", "Namrud", "Qarun", "Abu Lahab", "Jalut (Goliath)"], answer: "Firaun (Pharaoh)" },
+                trial: { label: "Prophet who opposed me", options: ["Musa", "Ibrahim", "Nuh", "Hud", "Salih"], answer: "Musa" },
+                location: { label: "Where I perished", options: ["The Red Sea", "A battlefield", "My palace", "The desert", "A mountain"], answer: "The Red Sea" },
+                outcome: { label: "What happened to my body", options: ["Preserved as a sign", "Lost forever", "Buried in pyramid", "Turned to stone", "Consumed by fire"], answer: "Preserved as a sign" }
             },
-            verse: "So the angels called him while he was standing in prayer in the chamber, 'Indeed, Allah gives you good tidings of Yahya, confirming a word from Allah.' (3:39)",
-            arabic: "فَنَادَتْهُ الْمَلَائِكَةُ وَهُوَ قَائِمٌ يُصَلِّي فِي الْمِحْرَابِ أَنَّ اللَّهَ يُبَشِّرُكَ بِيَحْيَىٰ مُصَدِّقًا بِكَلِمَةٍ مِّنَ اللَّهِ"
+            verse: "Today We will save you in body that you may be to those who succeed you a sign. And indeed, many among the people are heedless of Our signs. (10:92)",
+            arabic: "فَالْيَوْمَ نُنَجِّيكَ بِبَدَنِكَ لِتَكُونَ لِمَنْ خَلْفَكَ آيَةً ۚ وَإِنَّ كَثِيرًا مِّنَ النَّاسِ عَنْ آيَاتِنَا لَغَافِلُونَ"
         },
         {
             id: 13,
-            title: "The Great Sacrifice",
-            intro: "A father was commanded in a dream to make the ultimate sacrifice, testing the limits of obedience.",
+            title: "The Wealthy Rebel",
+            intro: "A man of immense wealth speaks — so rich that the keys to his treasures were a burden to carry. But wealth led to his downfall.",
             clues: [
-                "The father received this command through a recurring dream",
-                "He consulted his son, who willingly agreed",
-                "The son said 'You will find me patient, if Allah wills'",
-                "When both submitted to Allah's will, the command was fulfilled",
-                "A great ram was sent as a ransom",
-                "This event is commemorated annually by Muslims"
+                "I was from the people of Musa, but I rebelled against them",
+                "Allah gave me so much treasure that its keys alone were heavy for a group of strong men",
+                "My people advised me not to exult, for Allah does not love the exultant",
+                "I went out before my people in full adornment and they envied me",
+                "Those who desired the worldly life wished they had what I had",
+                "Allah caused the earth to swallow me and my home"
             ],
             categories: {
-                prophet: { label: "Father", options: ["Ibrahim", "Nuh", "Yaqub", "Ismail", "Adam"], answer: "Ibrahim" },
-                trial: { label: "Son", options: ["Ismail", "Ishaq", "Yusuf", "Yahya", "Isa"], answer: "Ismail" },
-                location: { label: "What replaced the sacrifice", options: ["A ram", "A camel", "A dove", "A bull", "A goat"], answer: "A ram" },
-                outcome: { label: "Annual commemoration", options: ["Eid al-Adha", "Eid al-Fitr", "Ashura", "Mawlid", "Laylat al-Qadr"], answer: "Eid al-Adha" }
+                identity: { label: "Who Am I?", options: ["Qarun", "Firaun", "Haman", "Namrud", "Abu Lahab"], answer: "Qarun" },
+                trial: { label: "My sin", options: ["Arrogance over wealth", "Idol worship", "Murder", "Sorcery", "Tyranny"], answer: "Arrogance over wealth" },
+                location: { label: "What was heavy to carry", options: ["Keys to treasures", "Gold bars", "Crown jewels", "Bags of coins", "Chests of gems"], answer: "Keys to treasures" },
+                outcome: { label: "My punishment", options: ["Earth swallowed me", "Drowned in sea", "Struck by lightning", "Turned to stone", "Consumed by fire"], answer: "Earth swallowed me" }
             },
-            verse: "And when they had both submitted and he put him down upon his forehead, We called to him, 'O Ibrahim, you have fulfilled the vision.' (37:103-105)",
-            arabic: "فَلَمَّا أَسْلَمَا وَتَلَّهُ لِلْجَبِينِ وَنَادَيْنَاهُ أَن يَا إِبْرَاهِيمُ قَدْ صَدَّقْتَ الرُّؤْيَا"
+            verse: "So We caused the earth to swallow him and his home. And there was for him no company to aid him other than Allah, nor was he of those who could defend themselves. (28:81)",
+            arabic: "فَخَسَفْنَا بِهِ وَبِدَارِهِ الْأَرْضَ فَمَا كَانَ لَهُ مِن فِئَةٍ يَنصُرُونَهُ مِن دُونِ اللَّهِ وَمَا كَانَ مِنَ الْمُنتَصِرِينَ"
         },
         {
             id: 14,
-            title: "The First Sin",
-            intro: "The very first act of disobedience in creation and its consequences.",
+            title: "The First Inhabitants",
+            intro: "Two voices speak together from the very beginning of human existence. Their story involves a garden, a test, and a fall.",
             clues: [
-                "It took place in a garden",
-                "A forbidden tree was the center of the test",
-                "Shaytan whispered and deceived them",
-                "They covered themselves with leaves when they realized",
-                "They were sent down to earth",
-                "They repented and Allah forgave them"
+                "We were placed in a garden and told to enjoy everything freely",
+                "There was one tree we were forbidden from approaching",
+                "Shaytan whispered to us and deceived us with false promises",
+                "When we realized what we had done, we covered ourselves with leaves",
+                "We were sent down to earth as a consequence",
+                "We repented sincerely, and Allah forgave us"
             ],
             categories: {
-                prophet: { label: "Who was tested", options: ["Adam and Hawwa", "Ibrahim", "Musa", "Dawud", "Nuh"], answer: "Adam and Hawwa" },
+                identity: { label: "Who Are We?", options: ["Adam and Hawwa", "Ibrahim and Sarah", "Musa and Harun", "Dawud and Sulayman", "Nuh and his wife"], answer: "Adam and Hawwa" },
                 trial: { label: "The forbidden thing", options: ["A tree", "A fruit", "A river", "A mountain", "A stone"], answer: "A tree" },
                 location: { label: "Where it happened", options: ["Jannah (Garden)", "Earth", "A mountain", "A cave", "The sea"], answer: "Jannah (Garden)" },
-                outcome: { label: "After repentance", options: ["Allah forgave them", "Punished forever", "Lost prophethood", "Became angels", "Returned to Garden"], answer: "Allah forgave them" }
+                outcome: { label: "After repentance", options: ["Allah forgave us", "Punished forever", "Lost prophethood", "Became angels", "Returned to Garden"], answer: "Allah forgave us" }
             },
             verse: "Then Adam received from his Lord [some] words, and He accepted his repentance. Indeed, it is He who is the Accepting of Repentance, the Merciful. (2:37)",
             arabic: "فَتَلَقَّىٰ آدَمُ مِن رَّبِّهِ كَلِمَاتٍ فَتَابَ عَلَيْهِ ۚ إِنَّهُ هُوَ التَّوَّابُ الرَّحِيمُ"
+        },
+        {
+            id: 15,
+            title: "The Wise Advisor",
+            intro: "A father speaks timeless wisdom to his son. He was not a prophet, but Allah honored him with a surah bearing his name.",
+            clues: [
+                "I was given wisdom by Allah, and I was grateful for it",
+                "I advised my son not to associate anything with Allah",
+                "I told my son to establish prayer and enjoin good",
+                "I reminded my son to be patient with whatever befalls him",
+                "I told my son not to walk arrogantly upon the earth",
+                "A surah of the Quran is named after me"
+            ],
+            categories: {
+                identity: { label: "Who Am I?", options: ["Luqman", "Khidr", "Dhul-Qarnayn", "Idris", "Shuayb"], answer: "Luqman" },
+                trial: { label: "My role", options: ["Wise father and advisor", "Prophet and king", "Warrior and leader", "Scholar and teacher", "Merchant and traveler"], answer: "Wise father and advisor" },
+                location: { label: "My first advice to my son", options: ["Do not commit shirk", "Fast every day", "Give all wealth away", "Travel the world", "Memorize scripture"], answer: "Do not commit shirk" },
+                outcome: { label: "How Allah honored me", options: ["Surah named after me", "Made me a prophet", "Gave me a kingdom", "Granted me eternal life", "Sent me an angel"], answer: "Surah named after me" }
+            },
+            verse: "And We had certainly given Luqman wisdom, saying, 'Be grateful to Allah.' And whoever is grateful is grateful for the benefit of himself. (31:12)",
+            arabic: "وَلَقَدْ آتَيْنَا لُقْمَانَ الْحِكْمَةَ أَنِ اشْكُرْ لِلَّهِ ۚ وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِ"
+        },
+        {
+            id: 16,
+            title: "The Believing Queen",
+            intro: "A woman of power speaks — she was married to the most tyrannical ruler, yet her faith never wavered.",
+            clues: [
+                "My husband was one of the worst tyrants in history",
+                "I believed in Allah despite living in a palace of disbelief",
+                "I prayed to Allah to build me a house in Jannah near Him",
+                "I rescued and raised a baby who would become a great prophet",
+                "Allah mentioned me as an example for all believers",
+                "The Prophet Muhammad (SAW) said I was one of the best women of all time"
+            ],
+            categories: {
+                identity: { label: "Who Am I?", options: ["Asiya", "Maryam", "Khadijah", "Hawwa", "Sarah"], answer: "Asiya" },
+                trial: { label: "My husband", options: ["Firaun", "Namrud", "Abu Lahab", "Abu Jahl", "Qarun"], answer: "Firaun" },
+                location: { label: "Who I raised", options: ["Musa", "Isa", "Ibrahim", "Yusuf", "Yahya"], answer: "Musa" },
+                outcome: { label: "My prayer", options: ["A house in Jannah", "A righteous child", "Freedom from palace", "Guidance for husband", "Wealth for the poor"], answer: "A house in Jannah" }
+            },
+            verse: "And Allah presents an example of those who believed: the wife of Firaun, when she said, 'My Lord, build for me near You a house in Paradise.' (66:11)",
+            arabic: "وَضَرَبَ اللَّهُ مَثَلًا لِّلَّذِينَ آمَنُوا امْرَأَتَ فِرْعَوْنَ إِذْ قَالَتْ رَبِّ ابْنِ لِي عِندَكَ بَيْتًا فِي الْجَنَّةِ"
         }
     ],
 

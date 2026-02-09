@@ -4,7 +4,7 @@ Daily Puzzle Generator for QuranIQ — All 4 Games
 Generates daily puzzles for:
   1. Connections (Ayah Connections)
   2. Harf by Harf (Word Guessing)
-  3. Deduction (Prophet Deduction)
+  3. Deduction (Who Am I?)
   4. Scramble (Ayah Scramble)
 
 Model fallback chain
@@ -66,7 +66,7 @@ def load_history():
     history = {
         "connections": {"themes": set(), "verses": set(), "words": set()},
         "wordle": {"words": set(), "verses": set(), "hints": set()},
-        "deduction": {"titles": set(), "prophets": set()},
+        "deduction": {"titles": set(), "characters": set()},
         "scramble": {"verses": set(), "references": set()},
     }
 
@@ -122,9 +122,9 @@ def load_history():
                 history["deduction"]["titles"].add(ded["title"].lower().strip())
             cats = ded.get("categories", {})
             if isinstance(cats, dict):
-                prophet_cat = cats.get("prophet", {})
-                if prophet_cat.get("answer"):
-                    history["deduction"]["prophets"].add(prophet_cat["answer"])
+                identity_cat = cats.get("identity", cats.get("prophet", {}))
+                if identity_cat.get("answer"):
+                    history["deduction"]["characters"].add(identity_cat["answer"])
 
         # Scramble history
         scr = data.get("scramble")
@@ -453,7 +453,7 @@ def validate_wordle(puzzle, history):
 # ═══════════════════════════════════════════════════════════════════
 def build_deduction_prompt(history, previous_violations=None):
     avoided_titles = "\n".join(f"  - {t}" for t in sorted(history["deduction"]["titles"])) or "  (none)"
-    avoided_prophets = ", ".join(sorted(history["deduction"]["prophets"])) or "(none)"
+    avoided_characters = ", ".join(sorted(history["deduction"].get("characters", history["deduction"].get("prophets", set())))) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -461,34 +461,38 @@ def build_deduction_prompt(history, previous_violations=None):
 
 CRITICAL — PREVIOUS ATTEMPT FAILED:
 {chr(10).join('  ✗ ' + v for v in previous_violations)}
-Choose a completely different story/prophet."""
+Choose a completely different story/character."""
 
-    return f"""You are an expert Islamic scholar creating a daily "Prophet Deduction" puzzle.
+    return f"""You are an expert Islamic scholar creating a daily "Who Am I?" puzzle for QuranIQ.
 
-TASK: Create a mystery-style deduction puzzle about a Quranic story or prophet.
+TASK: Create a mystery-style "Who Am I?" puzzle about ANY figure, character, or group mentioned in the Quran.
+This can be a prophet, a ruler (e.g. Pharaoh, Namrud), a righteous person (e.g. Maryam, Luqman), a group (e.g. People of the Cave, People of the Elephant), or even a notable figure like Qarun, Iblis, etc.
 
 RULES:
 1. Create an engaging title and intro paragraph that sets the scene WITHOUT revealing the answer
-2. Provide exactly 6 progressive clues, from vague to specific
+2. Provide exactly 6 progressive clues written in FIRST PERSON (as if the character is speaking about themselves)
+   - Example: "I was thrown into a fire, but Allah made it cool and peaceful for me" (not "He was thrown...")
+   - For groups, use "We" instead of "I"
 3. Create exactly 4 categories for the player to guess, each with exactly 5 options and 1 correct answer
-4. The 4 categories should cover: the main figure (prophet/person), the trial/event, a key element (place/object), and the outcome
+4. The 4 categories should cover: the identity (who am I?), the trial/event, a key element (place/object), and the outcome
 5. Include a relevant Quranic verse (Arabic with diacritics) and its English translation
 6. All clues and answers must be Quranically accurate
+7. Vary the character types — don't always use prophets. Include rulers, righteous people, groups, and other Quranic figures
 
 STRICTLY FORBIDDEN titles/stories (used in last 30 days):
 {avoided_titles}
 
-STRICTLY FORBIDDEN prophets as main answer (used in last 30 days):
-{avoided_prophets}
+STRICTLY FORBIDDEN characters as main answer (used in last 30 days):
+{avoided_characters}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
 {{
   "title": "The Mystery Title",
-  "intro": "An engaging intro paragraph...",
-  "clues": ["Clue 1 (vaguest)", "Clue 2", "Clue 3", "Clue 4", "Clue 5", "Clue 6 (most specific)"],
+  "intro": "An engaging intro paragraph (in second person, setting the scene)...",
+  "clues": ["I ... (vaguest, first person)", "I ...", "I ...", "I ...", "I ...", "I ... (most specific, first person)"],
   "categories": {{
-    "prophet": {{ "label": "Prophet/Person", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "correct" }},
+    "identity": {{ "label": "Who Am I?", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "correct" }},
     "trial": {{ "label": "Trial/Event", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "correct" }},
     "location": {{ "label": "Key Element", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "correct" }},
     "outcome": {{ "label": "Outcome", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "correct" }}
@@ -499,6 +503,8 @@ OUTPUT FORMAT: Return a valid JSON object:
 
 IMPORTANT:
 - Return ONLY the JSON object, no markdown
+- ALL clues MUST be in first person ("I was...", "I did...", "My people...") — the character is speaking
+- For groups, use "We" instead of "I"
 - Clues must go from vague to specific (early clues should be solvable by scholars, later clues by beginners)
 - Each category must have exactly 5 plausible options
 - The correct answer must be among the 5 options
@@ -522,7 +528,9 @@ def validate_deduction(puzzle, history):
         errors.append("'categories' must be a dict")
         return errors, cooldown_violations, warnings
 
-    for key in ["prophet", "trial", "location", "outcome"]:
+    # Accept both 'identity' (new) and 'prophet' (legacy) as the first category
+    identity_key = "identity" if "identity" in cats else "prophet"
+    for key in [identity_key, "trial", "location", "outcome"]:
         cat = cats.get(key)
         if not cat:
             errors.append(f"Missing category '{key}'")
@@ -547,9 +555,12 @@ def validate_deduction(puzzle, history):
     if title in history["deduction"]["titles"]:
         cooldown_violations.append(f"Title '{title}' reused (30-day cooldown)")
 
-    prophet_answer = cats.get("prophet", {}).get("answer", "")
-    if prophet_answer in history["deduction"]["prophets"]:
-        cooldown_violations.append(f"Prophet '{prophet_answer}' reused (30-day cooldown)")
+    # Check cooldown for character identity (supports both 'identity' and 'prophet' keys)
+    identity_cat = cats.get("identity", cats.get("prophet", {}))
+    character_answer = identity_cat.get("answer", "")
+    characters_history = history["deduction"].get("characters", history["deduction"].get("prophets", set()))
+    if character_answer in characters_history:
+        cooldown_violations.append(f"Character '{character_answer}' reused (30-day cooldown)")
 
     return errors, cooldown_violations, warnings
 
@@ -678,7 +689,7 @@ GAME_CONFIGS = {
     "deduction": {
         "build_prompt": build_deduction_prompt,
         "validate": validate_deduction,
-        "label": "Prophet Deduction",
+        "label": "Who Am I?",
     },
     "scramble": {
         "build_prompt": build_scramble_prompt,
@@ -804,7 +815,7 @@ def main():
           f"{len(history['connections']['verses'])} verses")
     print(f"  Harf by Harf: {len(history['wordle']['words'])} words")
     print(f"  Deduction: {len(history['deduction']['titles'])} titles, "
-          f"{len(history['deduction']['prophets'])} prophets")
+          f"{len(history['deduction']['characters'])} characters")
     print(f"  Scramble: {len(history['scramble']['references'])} references")
 
     # Generate all 4 games

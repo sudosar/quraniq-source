@@ -41,8 +41,8 @@ function showOnboarding() {
                     </div>
                     <div class="onboarding-mode">
                         <div class="onboarding-mode-icon" aria-hidden="true">🔍</div>
-                        <div class="onboarding-mode-name">Prophet Deduction</div>
-                        <div class="onboarding-mode-desc">Use clues to identify Quranic events</div>
+                        <div class="onboarding-mode-name">Who Am I?</div>
+                        <div class="onboarding-mode-desc">Guess the Quranic figure from first-person clues</div>
                     </div>
                     <div class="onboarding-mode">
                         <div class="onboarding-mode-icon" aria-hidden="true">🧩</div>

@@ -339,8 +339,8 @@ function showHelpModal() {
             <p>An English hint is shown to help you guess the Arabic word!</p>
         `,
         deduction: `
-            <h3>Prophet Deduction</h3>
-            <p>Read the story clues and deduce the correct answers in each category. Click on clues to reveal them one at a time.</p>
+            <h3>Who Am I?</h3>
+            <p>A Quranic figure speaks in first person through progressive clues. Tap to reveal clues one at a time and figure out who is speaking!</p>
             <p>Select your answers for each category, then submit. The fewer clues you need, the better your score!</p>
         `,
         scramble: `
@@ -567,7 +567,7 @@ function getGameInsight(mode, stats) {
     const modeNames = {
         connections: 'Ayah Connections',
         wordle: 'Harf by Harf',
-        deduction: 'Prophet Deduction',
+        deduction: 'Who Am I?',
         scramble: 'Ayah Scramble'
     };
 
