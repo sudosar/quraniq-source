@@ -1,11 +1,11 @@
 {
-  "date": "2026-02-08",
+  "date": "2026-02-09",
   "puzzle": {
-    "word": "هدى",
-    "display": "هُدًى",
-    "hint": "Divine guidance that illuminates the path of the pious",
-    "verse": "Al-Baqarah 2:2 — This is the Book about which there is no doubt, a guidance for those conscious of Allah.",
-    "arabicVerse": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ"
+    "word": "كتاب",
+    "display": "كِتَاب",
+    "hint": "A sacred scripture, often referring to a divine revelation.",
+    "verse": "Al-Imran 3:3 — He has sent down upon you the Book in truth, confirming that which was before it. And He sent down the Torah and the Gospel.",
+    "arabicVerse": "نَزَّلَ عَلَيْكَ ٱلْكِتَٰبَ بِٱلْحَقِّ مُصَدِّقًا لِّمَا بَيْنَ يَدَيْهِ وَأَنزَلَ ٱلتَّوْرَىٰةَ وَٱلْإِنجِيلَ"
   },
   "generated": true,
   "model": "auto (chain)"

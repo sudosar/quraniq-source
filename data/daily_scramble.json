@@ -1,21 +1,21 @@
 {
-  "date": "2026-02-08",
+  "date": "2026-02-09",
   "puzzle": {
-    "reference": "Surah Al-Baqarah (2:152)",
+    "reference": "Surah Al-Fatihah (1:5)",
     "words": [
-      "فَاذْكُرُونِي",
-      "أَذْكُرْكُمْ",
-      "وَاشْكُرُوا لِي",
-      "وَلَا تَكْفُرُونِ"
+      "إِيَّاكَ",
+      "نَعْبُدُ",
+      "وَإِيَّاكَ",
+      "نَسْتَعِينُ"
     ],
     "translations": [
-      "So remember Me",
-      "I will remember you",
-      "and be grateful to Me",
-      "and do not deny Me"
+      "You alone",
+      "we worship",
+      "and You alone",
+      "we ask for help"
     ],
-    "arabic": "فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ",
-    "hint": "This verse emphasizes the mutual relationship between Allah and His servants, encouraging remembrance and gratitude."
+    "arabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+    "hint": "This verse encapsulates the essence of monotheism and absolute reliance on Allah in worship and seeking assistance."
   },
   "generated": true,
   "model": "auto (chain)"
