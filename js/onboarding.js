@@ -82,6 +82,7 @@ function showOnboarding() {
 
     // Step 1 -> Step 2
     document.getElementById('onboarding-next').addEventListener('click', () => {
+        trackOnboardingStep(2);
         document.getElementById('onboarding-step-1').style.display = 'none';
         document.getElementById('onboarding-step-2').style.display = 'block';
         document.getElementById('onboarding-enable-notif').focus();
@@ -90,11 +91,13 @@ function showOnboarding() {
     // Enable notifications
     document.getElementById('onboarding-enable-notif').addEventListener('click', async () => {
         await requestNotificationPermission();
+        trackOnboardingComplete();
         completeOnboarding();
     });
 
     // Skip notifications
     document.getElementById('onboarding-skip-notif').addEventListener('click', () => {
+        trackOnboardingSkip();
         completeOnboarding();
     });
 
@@ -162,9 +165,11 @@ async function requestNotificationPermission() {
     if (permission === 'granted') {
         enableNotifications();
         showToast('Daily reminders enabled!');
+        trackNotificationPermission('granted');
         return true;
     } else {
         showToast('Notifications not enabled.');
+        trackNotificationPermission('denied');
         return false;
     }
 }

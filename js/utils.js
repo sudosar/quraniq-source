@@ -238,6 +238,7 @@ function parseQuranRef(ref) {
  * @param {HTMLElement} [btn] - Optional play button to update icon
  */
 function playQuranAudio(ref, btn) {
+    trackVerseAudioPlay(ref, 'user');
     return playVerseAudio(ref, btn);
 }
 

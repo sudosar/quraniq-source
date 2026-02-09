@@ -176,6 +176,7 @@ function submitConnections() {
 
     if (match) {
         // Correct!
+        trackConnGuess(true, match.nameEn || match.name);
         conn.solved.push({ name: match.name, nameEn: match.nameEn, items: match.items, color: match.color, verse: match.verse || null });
         const matchKeys = new Set(match.items.map(i => getConnItemKey(i)));
         conn.items = conn.items.filter(i => !matchKeys.has(getConnItemKey(i)));
@@ -225,6 +226,7 @@ function submitConnections() {
             announce('Incorrect guess.');
         }
 
+        trackConnGuess(false, null);
         conn.mistakes--;
         updateMistakes();
 
@@ -749,6 +751,7 @@ function showConnResult(won, cacheOnly) {
     }
 
     showResultModal(resultData);
+    trackGameComplete('connections', won, correctCount);
     updateModeStats('connections', won, won ? (4 - mistakesUsed) : 0);
 
     // Track all verse references from this puzzle

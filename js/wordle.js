@@ -214,6 +214,8 @@ function submitWordleGuess() {
     // Evaluate
     const evaluation = evaluateWordleGuess(guess);
     wordle.evaluations.push(evaluation);
+    const isCorrect = evaluation.every(e => e === 'correct');
+    trackHarfGuess(wordle.evaluations.length, isCorrect);
 
     // Animate reveal
     const statusLabels = { correct: 'correct position', present: 'wrong position', absent: 'not in word' };
@@ -373,6 +375,7 @@ function showWordleResult(won, cacheOnly) {
     }
 
     showResultModal(resultData);
+    trackGameComplete('wordle', won, won ? wordle.evaluations.length : 0);
     updateModeStats('wordle', won, won ? wordle.evaluations.length : 0);
 
     // Track the verse reference from this puzzle

@@ -71,6 +71,7 @@ function renderDeduction() {
         if (!ded.gameOver && i === ded.cluesRevealed) {
             card.addEventListener('click', () => {
                 ded.cluesRevealed++;
+                trackDeductionClueReveal(ded.cluesRevealed);
                 saveDedState();
                 renderDeduction();
                 announce(`Clue ${ded.cluesRevealed} revealed`);
@@ -146,6 +147,9 @@ function submitDeduction() {
 
     const cats = ded.puzzle.categories;
     ded.won = Object.keys(cats).every(k => ded.selections[k] === cats[k].answer);
+    Object.keys(cats).forEach(k => {
+        trackDeductionGuess(k, ded.selections[k] === cats[k].answer);
+    });
     ded.gameOver = true;
     saveDedState();
     renderDeduction();
@@ -210,6 +214,7 @@ function showDedResult(cacheOnly) {
     }
 
     showResultModal(resultData);
+    trackGameComplete('deduction', ded.won, cluesUsed);
     // Score: fewer clues = better score (1=best, 6=worst)
     // 0 clues → score 1, 1 clue → score 2, ..., 5+ clues → score 6
     const score = ded.won ? Math.min(6, Math.max(1, cluesUsed + 1)) : 0;

@@ -401,6 +401,7 @@ function showScrResult(cacheOnly) {
     }
 
     showResultModal(resultData);
+    trackGameComplete('scramble', scr.won, scr.hintsUsed);
     // Score: fewer hints = better score (1=best, 6=worst)
     // 0 hints → score 1, 1 hint → score 2, 2 hints → score 3, 3 hints → score 4
     const score = scr.won ? Math.min(6, Math.max(1, scr.hintsUsed + 1)) : 0;

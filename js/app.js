@@ -37,6 +37,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hash === 'shukr') openModal('shukr-modal');
     else if (hash === 'help') openModal('help-modal');
     else if (hash === 'stats') showStatsModal();
+
+    // PWA install prompt tracking
+    window.addEventListener('beforeinstallprompt', (e) => {
+        trackInstallPrompt('shown');
+        e.userChoice.then((choice) => {
+            trackInstallPrompt(choice.outcome === 'accepted' ? 'accepted' : 'dismissed');
+        });
+    });
+
+    // Track if app is running as installed PWA
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+        trackEvent('pwa_launch', { mode: 'standalone' });
+    }
 });
 
 // ==================== THEME ====================
@@ -49,7 +62,9 @@ function initTheme() {
         const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
         document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
         localStorage.setItem('quraniq_theme', isDark ? 'light' : 'dark');
+        const newTheme = isDark ? 'light' : 'dark';
         announce(isDark ? 'Switched to light mode' : 'Switched to dark mode');
+        trackThemeToggle(newTheme);
     });
 }
 
@@ -90,6 +105,7 @@ function switchMode(mode) {
     document.querySelectorAll('.game-mode').forEach(g => g.classList.toggle('active', g.id === `${mode}-game`));
     document.querySelectorAll('.sidebar-link').forEach(l => l.classList.toggle('active', l.dataset.mode === mode));
     announce(`Switched to ${mode} mode`);
+    trackModeSwitch(mode);
 }
 
 // ==================== SIDEBAR ====================
@@ -103,8 +119,8 @@ function initSidebar() {
         sidebar.classList.add('visible');
         overlay.classList.remove('hidden');
         menuBtn.setAttribute('aria-expanded', 'true');
-        // Focus the close button
         document.getElementById('sidebar-close').focus();
+        trackSidebarOpen();
     });
 
     const closeSidebar = () => {
@@ -126,6 +142,7 @@ function initSidebar() {
     document.querySelectorAll('.sidebar-link').forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault();
+            trackSidebarLink(link.dataset.mode);
             switchMode(link.dataset.mode);
             closeSidebar();
         });
@@ -134,6 +151,7 @@ function initSidebar() {
     // Save progress button
     document.getElementById('save-progress-btn').addEventListener('click', async () => {
         closeSidebar();
+        trackSaveProgress();
         const saveCode = exportProgress();
         if (navigator.share) {
             try {
@@ -161,6 +179,7 @@ function initSidebar() {
     // Shukr button
     document.getElementById('shukr-btn').addEventListener('click', () => {
         closeSidebar();
+        trackShukrOpen();
         openModal('shukr-modal');
     });
     document.getElementById('shukr-close').addEventListener('click', () => closeModal('shukr-modal'));
@@ -179,11 +198,12 @@ function initSidebar() {
         }
         const result = importProgress(input);
         if (result.success) {
+            trackRestoreProgress(true);
             closeModal('restore-modal');
             showToast(result.message);
-            // Reload to apply restored data
             setTimeout(() => location.reload(), 1500);
         } else {
+            trackRestoreProgress(false);
             showToast(result.message);
         }
     });
@@ -191,9 +211,9 @@ function initSidebar() {
 
 // ==================== MODALS ====================
 function initModals() {
-    document.getElementById('stats-btn').addEventListener('click', () => showStatsModal());
+    document.getElementById('stats-btn').addEventListener('click', () => { trackModalOpen('stats'); showStatsModal(); });
     document.getElementById('stats-close').addEventListener('click', () => closeModal('stats-modal'));
-    document.getElementById('help-btn').addEventListener('click', () => showHelpModal());
+    document.getElementById('help-btn').addEventListener('click', () => { trackModalOpen('help'); showHelpModal(); });
     document.getElementById('help-close').addEventListener('click', () => closeModal('help-modal'));
     document.getElementById('result-close').addEventListener('click', () => {
         closeModal('result-modal');
@@ -226,6 +246,8 @@ function initModals() {
     document.querySelectorAll('.stats-tab').forEach(tab => {
         tab.addEventListener('click', () => {
             app.statsViewMode = tab.dataset.statsMode;
+            trackStatsTabSwitch(tab.dataset.statsMode);
+            if (tab.dataset.statsMode === 'insights') trackInsightsView();
             document.querySelectorAll('.stats-tab').forEach(t => {
                 const isActive = t.dataset.statsMode === app.statsViewMode;
                 t.classList.toggle('active', isActive);
@@ -401,6 +423,7 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         verseEl.style.display = 'block';
         verseEl.innerHTML = '<span class="translation conn-explore-tap" style="font-style:italic; cursor:pointer;">Tap to explore the ayahs from today\'s puzzle \u25BC</span>';
         verseEl.querySelector('.conn-explore-tap').addEventListener('click', () => {
+            trackExplorePromptTap();
             closeModal('result-modal');
             setTimeout(() => expandAllConnRows(), 300);
         });
@@ -435,11 +458,13 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         if (navigator.share) {
             try {
                 await navigator.share({ text: shareText });
+                trackShare(app.currentMode, 'native_share');
             } catch {}
         } else {
             await navigator.clipboard.writeText(shareText);
             toast.classList.remove('hidden');
             setTimeout(() => toast.classList.add('hidden'), 2000);
+            trackShare(app.currentMode, 'clipboard');
         }
     };
 
@@ -449,6 +474,7 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         toast.classList.remove('hidden');
         announce('Copied to clipboard');
         setTimeout(() => toast.classList.add('hidden'), 2000);
+        trackShare(app.currentMode, 'clipboard');
     });
 
     // ===== Verse Audio Autoplay =====
@@ -1005,8 +1031,10 @@ function initDhikrCounter() {
         tapBtn.classList.remove('dhikr-tap-ripple');
         void tapBtn.offsetWidth;
         tapBtn.classList.add('dhikr-tap-ripple');
+        trackDhikrTap(currentPhrase, currentCount);
         if (currentCount === 33 || currentCount === 99 || currentCount === 100) {
             showToast(`${currentCount}× MashaAllah! 🤲`);
+            trackDhikrMilestone(currentPhrase, currentCount);
         }
         scheduleSyncToServer();
     });

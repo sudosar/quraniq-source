@@ -16,7 +16,7 @@ function initBugReport() {
     nub.setAttribute('aria-label', 'Report a bug');
     nub.title = 'Report a bug';
     nub.innerHTML = '🐛';
-    nub.addEventListener('click', openBugReportModal);
+    nub.addEventListener('click', () => { trackBugReportOpen(); openBugReportModal(); });
     document.body.appendChild(nub);
 
     // Create the bug report modal
@@ -182,12 +182,14 @@ async function submitBugReport() {
         // no-cors means we can't read the response, so assume success
         status.textContent = '✅ Bug report submitted! Thank you for helping improve QuranIQ.';
         status.className = 'bug-status bug-status-success';
+        trackBugReportSubmit(true);
 
         // Close after a delay
         setTimeout(() => closeBugReportModal(), 2500);
     } catch (e) {
         status.textContent = '⚠️ Failed to submit. Please try again later.';
         status.className = 'bug-status bug-status-error';
+        trackBugReportSubmit(false);
         btn.textContent = 'Submit Bug Report';
         btn.disabled = false;
     }
