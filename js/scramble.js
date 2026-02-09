@@ -10,7 +10,7 @@ const scr = {
     puzzle: null,
     placed: [],
     available: [],
-    moves: 0,
+    moves: 0,        // now only counts wrong guesses
     maxMoves: 15,
     hintsUsed: 0,
     maxHints: 3,
@@ -50,7 +50,7 @@ function setupScrambleGame() {
     //   reference: verse reference
     //   arabic: full Arabic verse
     //   hint: general hint text
-    scr.maxMoves = Math.max(scr.puzzle.words.length * 3, 10);
+    scr.maxMoves = Math.max(scr.puzzle.words.length, 3);
     scr.maxHints = Math.min(3, Math.floor(scr.puzzle.words.length / 2));
 
     // Check saved state
@@ -87,9 +87,9 @@ function renderScramble() {
     // Reference
     document.getElementById('scramble-reference').textContent = scr.puzzle.reference;
 
-    // Moves & hints counter
+    // Attempts & hints counter — "Attempts" = wrong guesses only
     const movesEl = document.getElementById('scramble-moves');
-    movesEl.innerHTML = `Moves: <span>${scr.moves}</span> / <span>${scr.maxMoves}</span> &nbsp;|&nbsp; Hints: <span>${scr.hintsUsed}</span> / <span>${scr.maxHints}</span>`;
+    movesEl.innerHTML = `Attempts: <span>${scr.moves}</span> / <span>${scr.maxMoves}</span> &nbsp;|&nbsp; Hints: <span>${scr.hintsUsed}</span> / <span>${scr.maxHints}</span>`;
 
     // Drop zone (placed words)
     const dropzone = document.getElementById('scramble-dropzone');
@@ -155,7 +155,7 @@ function createWordElement(word, index, isPlaced) {
             el.addEventListener('click', () => {
                 scr.placed.splice(index, 1);
                 scr.available.push(word);
-                scr.moves++;
+                // No move increment — placing/removing is free
                 saveScrState();
                 renderScramble();
                 announce(`Removed word. ${scr.placed.length} words placed.`);
@@ -165,7 +165,7 @@ function createWordElement(word, index, isPlaced) {
             el.addEventListener('click', () => {
                 scr.available.splice(index, 1);
                 scr.placed.push(word);
-                scr.moves++;
+                // No move increment — placing/removing is free
                 saveScrState();
                 renderScramble();
                 announce(`Placed word. ${scr.available.length} words remaining.`);
@@ -250,7 +250,7 @@ function useScrambleHintFallback() {
             }
 
             scr.placed.splice(i, 0, word);
-            scr.moves++;
+            // No move increment for hints — hints have their own counter
             break;
         }
     }
@@ -265,7 +265,7 @@ function resetScramble() {
     if (scr.gameOver) return;
     scr.available = shuffle([...scr.placed, ...scr.available]);
     scr.placed = [];
-    scr.moves++;
+    // No move increment — reset is free, only wrong guesses cost attempts
     saveScrState();
     renderScramble();
     announce('Puzzle reset. All words moved back to available.');
@@ -303,6 +303,9 @@ function checkScramble() {
         announce('Correct! Verse complete!');
         setTimeout(() => showScrResult(), 800);
     } else {
+        // Wrong guess — this costs an attempt
+        scr.moves++;
+
         // Show which are correct/wrong
         const dropWords = document.querySelectorAll('#scramble-dropzone .scramble-word');
         let correctCount = 0;
@@ -317,12 +320,17 @@ function checkScramble() {
         showToast('Not quite right - try again!');
         announce(`${correctCount} of ${correct.length} words in correct position.`);
 
-        // Check if out of moves
+        // Check if out of attempts
         if (scr.moves >= scr.maxMoves) {
             scr.gameOver = true;
             saveScrState();
             setTimeout(() => showScrResult(), 800);
+        } else {
+            saveScrState();
         }
+
+        // Update display to show new attempt count
+        renderScramble();
 
         // Remove feedback after a moment
         setTimeout(() => {
@@ -358,11 +366,11 @@ function showScrResult(cacheOnly) {
     const puzzleNum = getPuzzleIndex(PUZZLES.scramble) + 1;
     // Stars based on hints used only (matches the score system)
     // 0 hints = 5 stars, 1 hint = 4 stars, 2 hints = 3 stars, 3 hints = 2 stars
-    // Moves are just a gameplay limit, not a performance penalty
+    // Attempts (wrong guesses) are just a gameplay limit, not a rating factor
     const stars = scr.won ? Math.max(1, 5 - scr.hintsUsed) : 0;
     const starStr = '⭐'.repeat(stars) + '☆'.repeat(5 - stars);
 
-    const shareText = `QuranPuzzle - Ayah Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${starStr}\nMoves: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}\n\nhttps://sudosar.github.io/quranpuzz/`;
+    const shareText = `QuranPuzzle - Ayah Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${starStr}\nAttempts: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}\n\nhttps://sudosar.github.io/quranpuzz/`;
 
     // Show the full verse translation in the result
     const translationText = scr.puzzle.translations
@@ -375,7 +383,7 @@ function showScrResult(cacheOnly) {
         arabic: scr.puzzle.arabic || scr.puzzle.words.join(' '),
         translation: translationText,
         emojiGrid: `${emojiGrid}\n${starStr}`,
-        statsText: `Moves: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}`,
+        statsText: `Attempts: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}`,
         shareText
     };
 
