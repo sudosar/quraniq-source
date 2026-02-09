@@ -411,37 +411,32 @@ function startCountdown() {
 // ==================== PERFORMANCE INSIGHTS ====================
 
 /**
- * Estimate a percentile rank based on win rate and streak.
- * Uses a sigmoid-like curve to map performance to a realistic percentile.
- * This is a local-only estimate — no server needed.
+ * Calculate a performance score (0-100) based on win rate, streak, and games played.
+ * Simple weighted formula: 70% win rate, 15% best streak, 15% experience.
+ * This is a local-only score — no server needed.
  */
-function estimatePercentile(winRate, streak, maxStreak, played) {
+function calculateScore(winRate, maxStreak, played) {
     if (played === 0) return 0;
-    // Weighted score: 50% win rate, 25% current streak, 25% max streak
-    // Win rate is 0-1, streaks are normalized (cap at 30 for scaling)
-    const streakScore = Math.min(streak / 30, 1);
-    const maxStreakScore = Math.min(maxStreak / 30, 1);
-    const raw = (winRate * 0.50) + (streakScore * 0.25) + (maxStreakScore * 0.25);
-    // Sigmoid mapping: push toward realistic distribution
-    // Most players cluster around 40-70%, top players at 90%+
-    const percentile = Math.round(100 / (1 + Math.exp(-8 * (raw - 0.45))));
-    return Math.max(1, Math.min(99, percentile));
+    const streakBonus = Math.min(maxStreak / 10, 1);
+    const gamesBonus = Math.min(played / 20, 1);
+    const raw = (winRate * 0.70) + (streakBonus * 0.15) + (gamesBonus * 0.15);
+    return Math.max(1, Math.min(99, Math.round(raw * 100)));
 }
 
-function getScholarTitle(overallPercentile, totalPlayed) {
+function getScholarTitle(score, totalPlayed) {
     if (totalPlayed === 0) return { title: 'New Student', emoji: '📖', desc: 'Play your first game to begin your journey!' };
-    if (overallPercentile >= 95) return { title: 'Hafiz', emoji: '🌟', desc: 'Exceptional mastery across all challenges' };
-    if (overallPercentile >= 85) return { title: 'Quranic Scholar', emoji: '🏆', desc: 'Deep understanding and consistent excellence' };
-    if (overallPercentile >= 70) return { title: 'Dedicated Learner', emoji: '📚', desc: 'Strong performance with room to grow' };
-    if (overallPercentile >= 50) return { title: 'Rising Student', emoji: '🌱', desc: 'Building a solid foundation' };
-    if (overallPercentile >= 30) return { title: 'Eager Seeker', emoji: '🔍', desc: 'Every puzzle brings you closer to knowledge' };
+    if (score >= 90) return { title: 'Hafiz', emoji: '🌟', desc: 'Exceptional mastery across all challenges' };
+    if (score >= 75) return { title: 'Quranic Scholar', emoji: '🏆', desc: 'Deep understanding and consistent excellence' };
+    if (score >= 60) return { title: 'Dedicated Learner', emoji: '📚', desc: 'Strong performance with room to grow' };
+    if (score >= 45) return { title: 'Rising Student', emoji: '🌱', desc: 'Building a solid foundation' };
+    if (score >= 25) return { title: 'Eager Seeker', emoji: '🔍', desc: 'Every puzzle brings you closer to knowledge' };
     return { title: 'Beginner', emoji: '✨', desc: 'The journey of a thousand miles begins with a single step' };
 }
 
 function getGameInsight(mode, stats) {
     if (stats.played === 0) return null;
     const winRate = stats.won / stats.played;
-    const pct = estimatePercentile(winRate, stats.streak, stats.maxStreak, stats.played);
+    const score = calculateScore(winRate, stats.maxStreak, stats.played);
 
     const modeNames = {
         connections: 'Ayah Connections',
@@ -459,16 +454,16 @@ function getGameInsight(mode, stats) {
 
     // Determine strength descriptor
     let strength = '';
-    if (pct >= 80) strength = 'Excellent';
-    else if (pct >= 60) strength = 'Strong';
-    else if (pct >= 40) strength = 'Developing';
+    if (score >= 75) strength = 'Excellent';
+    else if (score >= 55) strength = 'Strong';
+    else if (score >= 35) strength = 'Developing';
     else strength = 'Needs Practice';
 
     return {
         mode,
         name: modeNames[mode],
         emoji: modeEmojis[mode],
-        percentile: pct,
+        score,
         winRate: Math.round(winRate * 100),
         strength,
         played: stats.played,
@@ -495,13 +490,13 @@ function renderPerformanceInsights() {
     });
 
     const overallWinRate = totalPlayed > 0 ? totalWon / totalPlayed : 0;
-    const overallPercentile = estimatePercentile(overallWinRate, bestStreak, bestStreak, totalPlayed);
-    const scholar = getScholarTitle(overallPercentile, totalPlayed);
+    const overallScore = calculateScore(overallWinRate, bestStreak, totalPlayed);
+    const scholar = getScholarTitle(overallScore, totalPlayed);
 
     // Find strongest and weakest games
     let strongest = null, weakest = null;
     if (gameInsights.length >= 2) {
-        gameInsights.sort((a, b) => b.percentile - a.percentile);
+        gameInsights.sort((a, b) => b.score - a.score);
         strongest = gameInsights[0];
         weakest = gameInsights[gameInsights.length - 1];
     }
@@ -516,10 +511,10 @@ function renderPerformanceInsights() {
             <div class="scholar-title">${scholar.title}</div>
             <div class="scholar-desc">${scholar.desc}</div>
             <div class="percentile-bar-container">
-                <div class="percentile-label">Overall Rank</div>
+                <div class="percentile-label">QuranIQ Score</div>
                 <div class="percentile-bar">
-                    <div class="percentile-fill" style="width:${overallPercentile}%"></div>
-                    <span class="percentile-text">Top ${100 - overallPercentile}%</span>
+                    <div class="percentile-fill" style="width:${overallScore}%"></div>
+                    <span class="percentile-text">${overallScore}/100</span>
                 </div>
             </div>
         </div>
@@ -530,8 +525,8 @@ function renderPerformanceInsights() {
         html += '<div class="insight-section-title">Game Performance</div>';
         html += '<div class="game-insights-grid">';
         gameInsights.forEach(g => {
-            const barColor = g.percentile >= 70 ? 'var(--correct)' :
-                             g.percentile >= 40 ? 'var(--present)' : 'var(--absent)';
+            const barColor = g.score >= 70 ? 'var(--correct)' :
+                             g.score >= 40 ? 'var(--present)' : 'var(--absent)';
             html += `
                 <div class="game-insight-card">
                     <div class="game-insight-header">
@@ -540,9 +535,9 @@ function renderPerformanceInsights() {
                     </div>
                     <div class="game-insight-percentile">
                         <div class="mini-bar">
-                            <div class="mini-bar-fill" style="width:${g.percentile}%;background:${barColor}"></div>
+                            <div class="mini-bar-fill" style="width:${g.score}%;background:${barColor}"></div>
                         </div>
-                        <span class="mini-pct">Top ${100 - g.percentile}%</span>
+                        <span class="mini-pct">${g.score}/100</span>
                     </div>
                     <div class="game-insight-stats">
                         <span>${g.winRate}% wins</span>
@@ -603,7 +598,7 @@ function renderPerformanceInsights() {
     const shareInsightsBtn = el.querySelector('#share-insights-btn');
     const copyInsightsBtn = el.querySelector('#copy-insights-btn');
     if (shareInsightsBtn || copyInsightsBtn) {
-        const shareText = generateInsightsShareText(scholar, overallPercentile, gameInsights, totalPlayed, bestStreak);
+        const shareText = generateInsightsShareText(scholar, overallScore, gameInsights, totalPlayed, bestStreak);
         if (shareInsightsBtn) {
             shareInsightsBtn.addEventListener('click', async () => {
                 if (navigator.share) {
@@ -626,14 +621,14 @@ function renderPerformanceInsights() {
 /**
  * Generate a WhatsApp/social media friendly emoji share text for Insights.
  */
-function generateInsightsShareText(scholar, overallPercentile, gameInsights, totalPlayed, bestStreak) {
+function generateInsightsShareText(scholar, overallScore, gameInsights, totalPlayed, bestStreak) {
     const progressBar = (pct) => {
         const filled = Math.round(pct / 10);
         return '█'.repeat(filled) + '░'.repeat(10 - filled);
     };
 
     let text = `📖 QuranIQ - My Journey\n\n`;
-    text += `${scholar.emoji} ${scholar.title} | Top ${100 - overallPercentile}%\n\n`;
+    text += `${scholar.emoji} ${scholar.title} | Score: ${overallScore}/100\n\n`;
 
     if (gameInsights.length > 0) {
         gameInsights.forEach(g => {
