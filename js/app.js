@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     startCountdown();
     initNotifications();
     showOnboarding();
+
+    // Hash-based deep linking (e.g., #shukr, #help, #stats)
+    const hash = window.location.hash.replace('#', '');
+    if (hash === 'shukr') openModal('shukr-modal');
+    else if (hash === 'help') openModal('help-modal');
+    else if (hash === 'stats') showStatsModal();
 });
 
 // ==================== THEME ====================
