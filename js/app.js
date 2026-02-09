@@ -511,10 +511,9 @@ function renderPerformanceInsights() {
             <div class="scholar-title">${scholar.title}</div>
             <div class="scholar-desc">${scholar.desc}</div>
             <div class="percentile-bar-container">
-                <div class="percentile-label">QuranIQ Score</div>
+                <div class="percentile-label">Better than ${overallScore}% of players</div>
                 <div class="percentile-bar">
                     <div class="percentile-fill" style="width:${overallScore}%"></div>
-                    <span class="percentile-text">${overallScore}/100</span>
                 </div>
             </div>
         </div>
@@ -537,7 +536,7 @@ function renderPerformanceInsights() {
                         <div class="mini-bar">
                             <div class="mini-bar-fill" style="width:${g.score}%;background:${barColor}"></div>
                         </div>
-                        <span class="mini-pct">${g.score}/100</span>
+                        <span class="mini-pct">${g.score}%</span>
                     </div>
                     <div class="game-insight-stats">
                         <span>${g.winRate}% wins</span>
@@ -628,7 +627,7 @@ function generateInsightsShareText(scholar, overallScore, gameInsights, totalPla
     };
 
     let text = `📖 QuranIQ - My Journey\n\n`;
-    text += `${scholar.emoji} ${scholar.title} | Score: ${overallScore}/100\n\n`;
+    text += `${scholar.emoji} ${scholar.title} | Better than ${overallScore}% of players\n\n`;
 
     if (gameInsights.length > 0) {
         gameInsights.forEach(g => {
