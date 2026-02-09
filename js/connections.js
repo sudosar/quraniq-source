@@ -697,17 +697,17 @@ function showConnResult(won, cacheOnly) {
     const mistakesUsed = 4 - conn.mistakes;
     const puzzleNum = conn.puzzle.id === 'daily' ? app.dayNumber : getPuzzleIndex(PUZZLES.connections) + 1;
 
-    // Star calculation: based on mistakes and groups found
+    // Moon rating: based on mistakes and groups found
     // Won with 0 mistakes = 5, 1 = 4, 2 = 3, 3 = 2; lost = max 1 per group found
-    let stars = 0;
+    let moons = 0;
     if (won) {
-        stars = Math.max(1, 5 - mistakesUsed);
+        moons = Math.max(1, 5 - mistakesUsed);
     } else {
-        stars = Math.max(0, Math.min(1, correctCount));
+        moons = Math.max(0, Math.min(1, correctCount));
     }
-    const starStr = '⭐'.repeat(stars) + '☆'.repeat(5 - stars);
+    const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
-    const shareText = `QuranIQ - Connections #${puzzleNum}\n${emojiGrid}${starStr}\nGroups found: ${correctCount}/4\nMistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quraniq/`;
+    const shareText = `QuranIQ - Connections #${puzzleNum}\n${emojiGrid}${moonStr}\nGroups found: ${correctCount}/4\nMistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quraniq/`;
 
     const resultData = {
         icon: won ? '🎉' : '📖',
@@ -716,7 +716,7 @@ function showConnResult(won, cacheOnly) {
         arabic: null,
         translation: won ? '"And We have certainly made the Quran easy for remembrance" - 54:17' : '"So verily, with hardship, there is relief" - 94:5',
         emojiGrid: emojiGrid.trim(),
-        stars,
+        moons,
         statsText: `Groups found: ${correctCount}/4 | Mistakes: ${mistakesUsed}/4`,
         shareText
     };

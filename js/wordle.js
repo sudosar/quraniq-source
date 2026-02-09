@@ -337,16 +337,16 @@ function showWordleResult(won, cacheOnly) {
     const tries = won ? wordle.evaluations.length : 'X';
     const displayWord = wordle.puzzle.display || wordle.word;
 
-    // Star calculation: fewer tries = more stars
-    // 1 try = 5 stars, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1, loss = 0
-    let stars = 0;
+    // Moon rating: fewer tries = more moons
+    // 1 try = 5 moons, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1, loss = 0
+    let moons = 0;
     if (won) {
         const numTries = wordle.evaluations.length;
-        stars = Math.max(1, 6 - numTries);
+        moons = Math.max(1, 6 - numTries);
     }
-    const starStr = '⭐'.repeat(stars) + '☆'.repeat(5 - stars);
+    const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
-    const shareText = `QuranIQ - Verse Wordle #${puzzleNum}\n${tries}/${wordle.maxRows}\n\n${emojiGrid}${starStr}\n\nhttps://sudosar.github.io/quraniq/`;
+    const shareText = `QuranIQ - Verse Wordle #${puzzleNum}\n${tries}/${wordle.maxRows}\n\n${emojiGrid}${moonStr}\n\nhttps://sudosar.github.io/quraniq/`;
 
     const resultData = {
         icon: won ? '🌟' : '📖',
@@ -354,7 +354,7 @@ function showWordleResult(won, cacheOnly) {
         arabic: wordle.puzzle.arabicVerse || displayWord,
         translation: wordle.puzzle.verse,
         emojiGrid: emojiGrid.trim(),
-        stars: won ? stars : null,
+        moons: won ? moons : null,
         statsText: `${tries}/${wordle.maxRows}`,
         shareText
     };

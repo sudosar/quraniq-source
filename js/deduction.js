@@ -172,19 +172,19 @@ function showDedResult(cacheOnly) {
     const puzzleNum = getPuzzleIndex(PUZZLES.deduction) + 1;
     const cluesUsed = ded.cluesRevealed;
 
-    // Star calculation: based on clues used (fewer = better)
+    // Moon rating: based on clues used (fewer = better)
     // Won with 0-1 clues = 5, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1; lost = 0
-    let stars = 0;
+    let moons = 0;
     if (ded.won) {
-        if (cluesUsed <= 1) stars = 5;
-        else if (cluesUsed === 2) stars = 4;
-        else if (cluesUsed === 3) stars = 3;
-        else if (cluesUsed === 4) stars = 2;
-        else stars = 1;
+        if (cluesUsed <= 1) moons = 5;
+        else if (cluesUsed === 2) moons = 4;
+        else if (cluesUsed === 3) moons = 3;
+        else if (cluesUsed === 4) moons = 2;
+        else moons = 1;
     }
-    const starStr = '⭐'.repeat(stars) + '☆'.repeat(5 - stars);
+    const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
-    const shareText = `QuranIQ - Deduction #${puzzleNum}\n"${ded.puzzle.title}"\n${emojiGrid}${starStr}\n${correct}/4 correct | ${cluesUsed} clues used\n\nhttps://sudosar.github.io/quraniq/`;
+    const shareText = `QuranIQ - Deduction #${puzzleNum}\n"${ded.puzzle.title}"\n${emojiGrid}${moonStr}\n${correct}/4 correct | ${cluesUsed} clues used\n\nhttps://sudosar.github.io/quraniq/`;
 
     const resultData = {
         icon: ded.won ? '🕵️' : '📖',
@@ -192,7 +192,7 @@ function showDedResult(cacheOnly) {
         arabic: ded.puzzle.arabic,
         translation: ded.puzzle.verse,
         emojiGrid: emojiGrid.trim(),
-        stars: ded.won ? stars : null,
+        moons: ded.won ? moons : null,
         statsText: `${correct}/4 correct using ${cluesUsed} clues`,
         shareText
     };
