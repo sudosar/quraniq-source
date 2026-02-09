@@ -890,14 +890,8 @@ function initDhikrCounter() {
     if (!tapBtn) return;
 
     // Load saved state
-    const today = new Date().toISOString().slice(0, 10);
     let saved = {};
     try { saved = JSON.parse(localStorage.getItem(DHIKR_KEY)) || {}; } catch(e) {}
-
-    // Reset if different day
-    if (saved.date !== today) {
-        saved = { date: today, phrase: 'subhanallah', counts: {}, pending: {} };
-    }
     if (!saved.counts) saved.counts = {};
     if (!saved.pending) saved.pending = {};
     if (!saved.phrase) saved.phrase = 'subhanallah';
@@ -941,7 +935,7 @@ function initDhikrCounter() {
                     const result = await resp.json();
                     saved.pending[phrase] = (saved.pending[phrase] || 0) - count;
                     if (saved.pending[phrase] <= 0) delete saved.pending[phrase];
-                    if (result.today) communityTotal = result.today;
+                    if (result.total) communityTotal = result.total;
                 }
             } catch (e) {
                 console.warn('Dhikr sync failed:', e);
@@ -951,19 +945,13 @@ function initDhikrCounter() {
         render();
     }
 
-    // Fetch community totals from GitHub raw (fast, cached by CDN)
+    // Fetch all-time community total from GitHub raw (fast CDN)
     async function fetchCommunityTotal() {
         try {
             const resp = await fetch(DHIKR_RAW_URL + '?t=' + Date.now()); // cache-bust
             if (resp.ok) {
                 const data = await resp.json();
-                // Only use if it's today's data
-                const today = new Date().toISOString().slice(0, 10);
-                if (data.date === today) {
-                    communityTotal = data.total || 0;
-                } else {
-                    communityTotal = 0; // New day, server hasn't been updated yet
-                }
+                communityTotal = data.total || 0;
                 save();
                 render();
             }

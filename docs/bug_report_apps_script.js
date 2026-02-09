@@ -73,19 +73,7 @@ function handleDhikr(data) {
   const sha = fileData.sha;
   const content = JSON.parse(Utilities.newBlob(Utilities.base64Decode(fileData.content)).getDataAsString());
   
-  // Check if it's a new day — reset if so
-  const today = Utilities.formatDate(new Date(), 'UTC', 'yyyy-MM-dd');
-  if (content.date !== today) {
-    content.date = today;
-    content.subhanallah = 0;
-    content.alhamdulillah = 0;
-    content.allahuakbar = 0;
-    content.astaghfirullah = 0;
-    content.lailahaillallah = 0;
-    content.total = 0;
-  }
-  
-  // Increment
+  // Increment (all-time counter, no daily reset)
   content[phrase] = (content[phrase] || 0) + count;
   content.total = validPhrases.reduce((sum, p) => sum + (content[p] || 0), 0);
   
@@ -109,7 +97,7 @@ function handleDhikr(data) {
   
   return ContentService.createTextOutput(JSON.stringify({
     success: true,
-    today: content.total,
+    total: content.total,
     phrases: {
       subhanallah: content.subhanallah,
       alhamdulillah: content.alhamdulillah,
