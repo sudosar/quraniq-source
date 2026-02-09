@@ -2957,3 +2957,137 @@ button, input, select, textarea {
     background: rgba(201, 162, 39, 0.08);
     border-color: var(--islamic-gold, #c9a227);
 }
+
+/* ===== Bug Report Nub ===== */
+.bug-nub {
+    position: fixed;
+    bottom: 80px;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px 0 0 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-right: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 90;
+    box-shadow: -2px 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0.6;
+    padding: 0;
+}
+
+.bug-nub:hover, .bug-nub:focus-visible {
+    opacity: 1;
+    transform: translateX(-4px);
+}
+
+/* Bug Report Modal Content */
+.bug-report-content {
+    max-width: 420px;
+}
+
+.bug-report-body {
+    padding: 16px;
+}
+
+.bug-screenshot-preview {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin-bottom: 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    max-height: 200px;
+}
+
+.bug-screenshot-img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    display: block;
+}
+
+.bug-screenshot-loading {
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.bug-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: var(--text);
+}
+
+.bug-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    resize: vertical;
+    min-height: 60px;
+    box-sizing: border-box;
+}
+
+.bug-textarea:focus {
+    outline: none;
+    border-color: var(--islamic-gold);
+    box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.2);
+}
+
+.bug-char-count {
+    text-align: right;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+    margin-bottom: 12px;
+}
+
+.bug-submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--islamic-gold);
+    color: #1a1a2e;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+
+.bug-submit-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.bug-submit-btn:not(:disabled):hover {
+    opacity: 0.9;
+}
+
+.bug-status {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    min-height: 1.2em;
+}
+
+.bug-status-success {
+    color: var(--correct);
+}
+
+.bug-status-error {
+    color: #e74c3c;
+}

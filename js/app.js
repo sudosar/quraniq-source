@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     restoreViewResultsButtons();
     startCountdown();
     initNotifications();
+    initBugReport();
     showOnboarding();
 
     // Hash-based deep linking (e.g., #shukr, #help, #stats)

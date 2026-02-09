@@ -1,5 +1,5 @@
 // QuranIQ Service Worker
-const CACHE_NAME = 'quraniq-v6';
+const CACHE_NAME = 'quraniq-v7';
 
 // Assets to pre-cache on install
 const PRECACHE_ASSETS = [
@@ -17,6 +17,7 @@ const PRECACHE_ASSETS = [
   './js/utils.js',
   './js/wordle.js',
   './js/onboarding.js',
+  './js/bugreport.js',
   './puzzles.js',
   './data/quran_words.json'
 ];
