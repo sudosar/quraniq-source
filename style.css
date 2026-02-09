@@ -2822,3 +2822,138 @@ button, input, select, textarea {
     color: var(--islamic-gold-light, #d4af37);
     text-decoration-style: solid;
 }
+
+/* ===== Shukr / Thanks Modal ===== */
+.shukr-modal-content {
+    max-width: 520px;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.shukr-header {
+    margin-bottom: 16px;
+}
+
+.shukr-bismillah {
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    color: var(--islamic-gold, #c9a227);
+    margin-bottom: 8px;
+}
+
+.shukr-section {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border, rgba(255,255,255,0.1));
+}
+
+.shukr-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.shukr-dua {
+    background: rgba(201, 162, 39, 0.06);
+    border-radius: 12px;
+    padding: 16px;
+    border-bottom: none;
+}
+
+.shukr-arabic {
+    font-family: 'Amiri', serif;
+    font-size: 1.25rem;
+    color: var(--islamic-gold, #c9a227);
+    line-height: 1.8;
+    margin-bottom: 8px;
+    direction: rtl;
+}
+
+.shukr-translation {
+    font-size: 0.85rem;
+    color: var(--text-secondary, #aaa);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.shukr-body {
+    font-size: 0.88rem;
+    color: var(--text-primary, #e0e0e0);
+    line-height: 1.65;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.shukr-subtitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--islamic-gold, #c9a227);
+    margin-bottom: 12px;
+}
+
+.shukr-credits {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.shukr-credit-card {
+    display: block;
+    background: var(--card-bg, rgba(255,255,255,0.05));
+    border: 1px solid var(--border, rgba(255,255,255,0.1));
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: left;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.shukr-credit-card:hover {
+    border-color: var(--islamic-gold, #c9a227);
+    background: rgba(201, 162, 39, 0.06);
+}
+
+.shukr-credit-card strong {
+    display: block;
+    font-size: 0.92rem;
+    color: var(--islamic-gold, #c9a227);
+    margin-bottom: 4px;
+}
+
+.shukr-credit-card span {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-secondary, #aaa);
+    line-height: 1.45;
+}
+
+.shukr-donate {
+    margin-top: 6px;
+    color: var(--islamic-emerald, #2e7d32) !important;
+    font-weight: 600;
+    font-size: 0.78rem !important;
+}
+
+.shukr-closing {
+    text-align: center;
+    border-bottom: none;
+}
+
+.shukr-closing .shukr-body {
+    text-align: center;
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .shukr-dua {
+    background: rgba(201, 162, 39, 0.08);
+}
+
+[data-theme="light"] .shukr-credit-card {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .shukr-credit-card:hover {
+    background: rgba(201, 162, 39, 0.08);
+    border-color: var(--islamic-gold, #c9a227);
+}

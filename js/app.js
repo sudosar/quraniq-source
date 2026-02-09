@@ -151,6 +151,13 @@ function initSidebar() {
         openModal('restore-modal');
     });
 
+    // Shukr button
+    document.getElementById('shukr-btn').addEventListener('click', () => {
+        closeSidebar();
+        openModal('shukr-modal');
+    });
+    document.getElementById('shukr-close').addEventListener('click', () => closeModal('shukr-modal'));
+
     // Restore modal handlers
     document.getElementById('restore-close').addEventListener('click', () => closeModal('restore-modal'));
     document.getElementById('restore-cancel-btn').addEventListener('click', () => closeModal('restore-modal'));
