@@ -397,9 +397,13 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         verseEl.innerHTML = (arabic ? `<span>${arabic}</span>` : '') +
             (translationHtml ? `<span class="translation">${translationHtml}</span>` : '');
     } else if (app.currentMode === 'connections') {
-        // Simple prompt — tapping anywhere closes modal and expands rows
+        // Tappable prompt that closes modal and expands rows
         verseEl.style.display = 'block';
-        verseEl.innerHTML = '<span class="translation" style="font-style:italic;">Tap to explore the ayahs from today\'s puzzle</span>';
+        verseEl.innerHTML = '<span class="translation conn-explore-tap" style="font-style:italic; cursor:pointer;">Tap to explore the ayahs from today\'s puzzle \u25BC</span>';
+        verseEl.querySelector('.conn-explore-tap').addEventListener('click', () => {
+            closeModal('result-modal');
+            setTimeout(() => expandAllConnRows(), 300);
+        });
     } else {
         verseEl.style.display = 'none';
     }
