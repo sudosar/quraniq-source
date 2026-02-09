@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260209g">
+    <link rel="stylesheet" href="style.css?v=20260209h">
     <link rel="icon" href="icons/icon-192.png" type="image/png">
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7SBPH5C6L"></script>
@@ -170,6 +170,10 @@
                 <div id="result-icon" class="result-icon" aria-hidden="true"></div>
                 <h2 id="result-title"></h2>
                 <div id="result-verse" class="result-verse"></div>
+                <div id="result-audio" class="result-audio" style="display:none;">
+                    <button id="result-play-btn" class="verse-play-btn result-play-btn" aria-label="Play verse recitation">&#9654;</button>
+                    <button id="result-mute-btn" class="result-mute-btn" aria-label="Toggle auto-play recitation"></button>
+                </div>
                 <div id="result-grid" class="result-grid"></div>
                 <div id="result-stars" class="result-stars"></div>
                 <div id="result-stats" class="result-stats"></div>
@@ -287,14 +291,14 @@
         </div>
     </main>
 
-    <script src="puzzles.js?v=20260209g"></script>
-    <script src="js/utils.js?v=20260209g"></script>
-    <script src="js/connections.js?v=20260209g"></script>
-    <script src="js/wordle.js?v=20260209g"></script>
-    <script src="js/deduction.js?v=20260209g"></script>
-    <script src="js/scramble.js?v=20260209g"></script>
-    <script src="js/onboarding.js?v=20260209g"></script>
-    <script src="js/app.js?v=20260209g"></script>
+    <script src="puzzles.js?v=20260209h"></script>
+    <script src="js/utils.js?v=20260209h"></script>
+    <script src="js/connections.js?v=20260209h"></script>
+    <script src="js/wordle.js?v=20260209h"></script>
+    <script src="js/deduction.js?v=20260209h"></script>
+    <script src="js/scramble.js?v=20260209h"></script>
+    <script src="js/onboarding.js?v=20260209h"></script>
+    <script src="js/app.js?v=20260209h"></script>
     <script>
         // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {

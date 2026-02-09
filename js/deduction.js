@@ -194,7 +194,8 @@ function showDedResult(cacheOnly) {
         emojiGrid: emojiGrid.trim(),
         moons: ded.won ? moons : null,
         statsText: `${correct}/4 correct using ${cluesUsed} clues`,
-        shareText
+        shareText,
+        verseRef: extractVerseRef(ded.puzzle.verse)
     };
 
     if (cacheOnly) {

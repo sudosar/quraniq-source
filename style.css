@@ -2771,3 +2771,52 @@ button, input, select, textarea {
     border-radius: 50%;
     border: 2px solid var(--bg-card, #fff);
 }
+
+/* ===== Result Modal Audio Controls ===== */
+.result-audio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 8px 0 4px;
+}
+
+.result-play-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--islamic-gold, #c9a227);
+    background: transparent;
+    color: var(--islamic-gold, #c9a227);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.result-play-btn:hover {
+    background: rgba(201, 162, 39, 0.1);
+    transform: scale(1.05);
+}
+
+.result-play-btn.playing {
+    background: var(--islamic-gold, #c9a227);
+    color: var(--bg, #fff);
+}
+
+.result-mute-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary, #6b6b80);
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: color 0.2s;
+}
+
+.result-mute-btn:hover {
+    color: var(--text, #1a1a2e);
+}

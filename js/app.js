@@ -331,9 +331,9 @@ function showHelpModal() {
 }
 
 // ==================== RESULT MODAL ====================
-function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons }) {
+function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons, verseRef }) {
     // Cache the result so it can be re-opened later
-    app.lastResults[app.currentMode] = { icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons };
+    app.lastResults[app.currentMode] = { icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons, verseRef };
     // Show the "View Results" button in the game area
     showViewResultsButton(app.currentMode);
 
@@ -391,6 +391,53 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         announce('Copied to clipboard');
         setTimeout(() => toast.classList.add('hidden'), 2000);
     });
+
+    // ===== Verse Audio =====
+    const audioContainer = document.getElementById('result-audio');
+    const playBtn = document.getElementById('result-play-btn');
+    const muteBtn = document.getElementById('result-mute-btn');
+    const isMuted = localStorage.getItem('quraniq_audio_mute') === '1';
+
+    // Try to extract a surah:ayah ref from verseRef or translation text
+    const audioRef = verseRef || extractVerseRef(translation) || extractVerseRef(verse);
+
+    if (audioRef && parseQuranRef(audioRef)) {
+        audioContainer.style.display = 'flex';
+        playBtn.textContent = '\u25B6';
+        playBtn.classList.remove('playing');
+        muteBtn.textContent = isMuted ? '\uD83D\uDD07 Auto-play off' : '\uD83D\uDD0A Auto-play on';
+
+        // Clone to remove old listeners
+        const newPlayBtn = playBtn.cloneNode(true);
+        playBtn.parentNode.replaceChild(newPlayBtn, playBtn);
+        newPlayBtn.id = 'result-play-btn';
+        newPlayBtn.addEventListener('click', () => {
+            playQuranAudio(audioRef, newPlayBtn);
+        });
+
+        const newMuteBtn = muteBtn.cloneNode(true);
+        muteBtn.parentNode.replaceChild(newMuteBtn, muteBtn);
+        newMuteBtn.id = 'result-mute-btn';
+        newMuteBtn.addEventListener('click', () => {
+            const nowMuted = localStorage.getItem('quraniq_audio_mute') === '1';
+            if (nowMuted) {
+                localStorage.removeItem('quraniq_audio_mute');
+                newMuteBtn.textContent = '\uD83D\uDD0A Auto-play on';
+                showToast('Verse recitation auto-play enabled');
+            } else {
+                localStorage.setItem('quraniq_audio_mute', '1');
+                newMuteBtn.textContent = '\uD83D\uDD07 Auto-play off';
+                showToast('Verse recitation auto-play disabled');
+            }
+        });
+
+        // Autoplay if not muted
+        if (!isMuted) {
+            setTimeout(() => playQuranAudio(audioRef, newPlayBtn), 600);
+        }
+    } else {
+        audioContainer.style.display = 'none';
+    }
 
     openModal('result-modal');
 }

@@ -1,5 +1,5 @@
 // QuranIQ Service Worker
-const CACHE_NAME = 'quraniq-v2';
+const CACHE_NAME = 'quraniq-v3';
 
 // Static assets that rarely change - cache first
 const STATIC_ASSETS = [

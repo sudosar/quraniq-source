@@ -136,6 +136,10 @@ function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     modal.classList.add('hidden');
     modal.removeEventListener('keydown', trapFocus);
+    // Stop audio when closing result modal
+    if (modalId === 'result-modal' && typeof stopQuranAudio === 'function') {
+        stopQuranAudio();
+    }
     // Restore focus
     if (_lastFocusedElement) {
         _lastFocusedElement.focus();
@@ -168,6 +172,17 @@ const quranAudio = {
 
 /** No-op kept for backward compatibility (was initTTS) */
 function initTTS() { /* replaced by quranAudio */ }
+
+/**
+ * Extract a surah:ayah reference from a text string.
+ * Handles patterns like: "(21:87)", "7:156", "Surah Al-Fatiha (1:1)"
+ * Returns the first match as "surah:ayah" string or null.
+ */
+function extractVerseRef(text) {
+    if (!text) return null;
+    const m = text.match(/(\d{1,3}):(\d{1,3})/);
+    return m ? `${m[1]}:${m[2]}` : null;
+}
 
 /**
  * Parse a Quranic reference string into surah:ayah.

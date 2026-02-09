@@ -385,7 +385,8 @@ function showScrResult(cacheOnly) {
         emojiGrid: emojiGrid,
         moons: scr.won ? moons : null,
         statsText: `Attempts: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}`,
-        shareText
+        shareText,
+        verseRef: extractVerseRef(scr.puzzle.reference)
     };
 
     if (cacheOnly) {

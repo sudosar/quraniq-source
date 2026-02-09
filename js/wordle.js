@@ -356,7 +356,8 @@ function showWordleResult(won, cacheOnly) {
         emojiGrid: emojiGrid.trim(),
         moons: won ? moons : null,
         statsText: `${tries}/${wordle.maxRows}`,
-        shareText
+        shareText,
+        verseRef: extractVerseRef(wordle.puzzle.verse)
     };
 
     if (cacheOnly) {
