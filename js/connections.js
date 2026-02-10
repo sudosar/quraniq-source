@@ -736,25 +736,30 @@ function getConnCrescentData() {
 
     conn.solved.forEach((s, i) => {
         const wasSolved = i < correctCount;
-        // Count how many of this row's 4 item refs have been explored
+        // Use unique refs per row (some rows share the same verse for all items)
         const items = s.items || [];
-        let rowExplored = 0;
+        const uniqueRefs = new Set();
         items.forEach(item => {
             const ref = typeof item === 'object' ? item.ref : '';
-            if (ref && explored.has(ref)) rowExplored++;
+            if (ref) uniqueRefs.add(ref);
         });
-        totalVerses += items.length;
+        const rowTotal = uniqueRefs.size || items.length;
+        let rowExplored = 0;
+        uniqueRefs.forEach(ref => {
+            if (explored.has(ref)) rowExplored++;
+        });
+        totalVerses += rowTotal;
         totalExplored += rowExplored;
 
         let crescent;
         if (!wasSolved) {
             crescent = '🌑'; // Failed / auto-revealed
-        } else if (rowExplored >= items.length) {
-            crescent = '🌕'; // Solved + all verses explored
+        } else if (rowExplored >= rowTotal) {
+            crescent = '🌕'; // Solved + all unique verses explored
         } else {
             crescent = '🌙'; // Solved but not all explored
         }
-        perRow.push({ crescent, explored: rowExplored, total: items.length, wasSolved });
+        perRow.push({ crescent, explored: rowExplored, total: rowTotal, wasSolved });
     });
 
     const crescentRow = perRow.map(r => r.crescent).join('');
