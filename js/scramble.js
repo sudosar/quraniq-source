@@ -92,6 +92,26 @@ function renderScramble() {
     // Reference
     document.getElementById('scramble-reference').textContent = scr.puzzle.reference;
 
+    // Crescent meter — shows remaining crescents based on hints used
+    // Scoring: 0 hints = 5 moons, 1 = 4, 2 = 3, 3 = 2 (each hint always costs 1 moon)
+    const scrMeterEl = document.getElementById('scr-crescent-meter');
+    if (scrMeterEl) {
+        const currentMoons = scr.gameOver && !scr.won ? 0 : Math.max(1, 5 - scr.hintsUsed);
+        const crescents = Array.from({length: 5}, (_, i) =>
+            `<span class="ded-moon ${i < currentMoons ? 'active' : 'spent'}">${i < currentMoons ? '\u{1F319}' : '\u{1F311}'}</span>`
+        ).join('');
+
+        if (scr.gameOver) {
+            scrMeterEl.innerHTML = `<div class="ded-meter-row">${crescents}</div>`;
+        } else if (scr.hintsUsed < scr.maxHints) {
+            scrMeterEl.innerHTML = `<div class="ded-meter-row">${crescents}</div>
+                <div class="ded-meter-hint">Each hint costs a \u{1F319}</div>`;
+        } else {
+            scrMeterEl.innerHTML = `<div class="ded-meter-row">${crescents}</div>
+                <div class="ded-meter-hint">All hints used</div>`;
+        }
+    }
+
     // Attempts & hints counter — "Attempts" = wrong guesses only
     const movesEl = document.getElementById('scramble-moves');
     movesEl.innerHTML = `Attempts: <span>${scr.moves}</span> / <span>${scr.maxMoves}</span> &nbsp;|&nbsp; Hints: <span>${scr.hintsUsed}</span> / <span>${scr.maxHints}</span>`;

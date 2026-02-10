@@ -1333,6 +1333,67 @@ button, input, select, textarea {
     color: var(--accent);
 }
 
+/* Crescent meter */
+.ded-crescent-meter {
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.ded-meter-row {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.ded-moon {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.ded-moon.spent {
+    opacity: 0.4;
+    filter: grayscale(0.5);
+    transform: scale(0.85);
+}
+
+.ded-moon.active {
+    animation: moonPulse 0.3s ease;
+}
+
+@keyframes moonPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.ded-meter-hint {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    font-style: italic;
+}
+
+/* Post-game revealed clues (ones the player didn't reveal during play) */
+.clue-card.post-game-reveal {
+    border-color: var(--border);
+    background: var(--bg-card);
+    border-left: 3px solid var(--text-secondary);
+    opacity: 0.75;
+}
+
+.clue-card.post-game-reveal .clue-number {
+    background: var(--text-secondary);
+}
+
+.clue-card.post-game-reveal .clue-text {
+    color: var(--text-secondary);
+}
+
 .deduction-clues {
     display: flex;
     flex-direction: column;

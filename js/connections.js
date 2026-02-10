@@ -84,15 +84,34 @@ async function loadDailyPuzzle() {
 }
 
 function setupConnectionsGame() {
-    // Check saved state
+    // Check saved state — validate it matches the current puzzle
     const saved = app.state[`conn_${app.dayNumber}`];
-    if (saved) {
+    let stateValid = false;
+    if (saved && saved.solved && saved.solved.length > 0) {
+        // Verify saved groups belong to the current puzzle by checking category names
+        const puzzleCatNames = new Set(conn.puzzle.categories.map(c => c.nameEn || c.name));
+        stateValid = saved.solved.every(s => puzzleCatNames.has(s.nameEn || s.name));
+    } else if (saved) {
+        // No solved groups yet — state is valid (fresh game with saved mistakes etc.)
+        stateValid = true;
+    }
+
+    if (saved && stateValid) {
         conn.solved = saved.solved || [];
         conn.mistakes = saved.mistakes ?? 4;
         conn.gameOver = saved.gameOver || false;
         conn.correctCount = saved.correctCount ?? conn.solved.length;
         conn.exploredVerses = new Set(saved.exploredVerses || []);
     } else {
+        // Clear stale state from a different puzzle
+        if (saved && !stateValid) {
+            delete app.state[`conn_${app.dayNumber}`];
+            saveState(app.state);
+        }
+        conn.solved = [];
+        conn.mistakes = 4;
+        conn.gameOver = false;
+        conn.correctCount = 0;
         conn.exploredVerses = new Set();
     }
 
@@ -743,7 +762,8 @@ function saveConnState() {
         mistakes: conn.mistakes,
         gameOver: conn.gameOver,
         correctCount: conn.correctCount ?? conn.solved.length,
-        exploredVerses: Array.from(conn.exploredVerses)
+        exploredVerses: Array.from(conn.exploredVerses),
+        puzzleSource: conn.puzzleSource || 'unknown'
     };
     saveState(app.state);
 }
