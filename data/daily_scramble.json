@@ -1,21 +1,21 @@
 {
-  "date": "2026-02-09",
+  "date": "2026-02-10",
   "puzzle": {
-    "reference": "Surah Al-Fatihah (1:5)",
+    "reference": "Surah Al-Baqarah (2:255)",
     "words": [
-      "إِيَّاكَ",
-      "نَعْبُدُ",
-      "وَإِيَّاكَ",
-      "نَسْتَعِينُ"
+      "اللَّهُ لَا إِلَٰهَ",
+      "إِلَّا هُوَ",
+      "الْحَيُّ",
+      "الْقَيُّومُ"
     ],
     "translations": [
-      "You alone",
-      "we worship",
-      "and You alone",
-      "we ask for help"
+      "Allah, there is no deity",
+      "except Him,",
+      "the Ever-Living,",
+      "the Sustainer of all existence."
     ],
-    "arabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-    "hint": "This verse encapsulates the essence of monotheism and absolute reliance on Allah in worship and seeking assistance."
+    "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
+    "hint": "This verse describes two of Allah's fundamental attributes, emphasizing His eternal existence and self-sufficiency, often recited for protection."
   },
   "generated": true,
   "model": "auto (chain)"

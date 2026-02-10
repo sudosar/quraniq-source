@@ -1,64 +1,64 @@
 {
-  "date": "2026-02-09",
+  "date": "2026-02-10",
   "puzzle": {
-    "title": "The Trial Beneath the Waves",
-    "intro": "A prophet, burdened by his mission, made a decision that led him far from his people and into an unexpected trial. His journey took a dramatic turn, testing his faith and patience in the most profound way. Can you deduce the details of this extraordinary event from the clues provided?",
+    "title": "The Slumber of Ages",
+    "intro": "You are about to embark on a journey through time, encountering a profound mystery of faith and divine power. Imagine a group of individuals who defied the norms of their society, clinging to monotheism in a world of polytheism. Their story is a testament to Allah's ability to protect His righteous servants in the most extraordinary ways. Can you unravel the identity of these remarkable figures?",
     "clues": [
-      "A prophet was sent to a people, but departed in haste, feeling frustration with their rejection.",
-      "His journey led him to the sea, where he boarded a heavily laden vessel seeking passage.",
-      "A great storm arose, threatening the ship, and a decision was made to cast one person overboard to lighten the load, determined by lots.",
-      "He was swallowed by a creature of the deep, a miraculous event decreed by Divine will.",
-      "Within the confines of the creature's belly, he called out to his Lord, repenting and glorifying Allah in the darkness.",
-      "After a period of intense supplication, he was cast upon a barren shore, weak but alive, and later returned to find his people had finally believed."
+      "We were a small group of young men who believed in one God, despite the widespread polytheism of our people.",
+      "We fled from a tyrannical ruler who threatened us for our faith, fearing persecution and death.",
+      "We sought refuge in a secluded place, hoping for Allah's mercy and protection from our oppressors.",
+      "Our Lord caused us to fall into a deep sleep, a miraculous slumber that defied the passage of time.",
+      "When we awoke, we believed we had only rested for a day or part of a day, unaware of the vast period that had truly passed.",
+      "The Quran mentions that we remained in our state for three hundred years, and exceeded by nine, becoming a sign for mankind."
     ],
     "categories": {
-      "prophet": {
-        "label": "Prophet/Person",
+      "identity": {
+        "label": "Who Am I?",
         "options": [
-          "Prophet Nuh",
-          "Prophet Lut",
-          "Prophet Musa",
-          "Prophet Yunus",
-          "Prophet Yusuf"
+          "The People of the Ditch",
+          "The People of Thamud",
+          "The People of the Cave",
+          "The People of Madyan",
+          "The Companions of the Elephant"
         ],
-        "answer": "Prophet Yunus"
+        "answer": "The People of the Cave"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "The flood of Nuh",
-          "The destruction of Sodom",
-          "The journey in the belly of the great fish",
-          "The splitting of the sea",
-          "The burning bush revelation"
+          "Facing a great flood",
+          "Being swallowed by the earth",
+          "The long miraculous slumber",
+          "The destruction of their city",
+          "The splitting of the sea"
         ],
-        "answer": "The journey in the belly of the great fish"
+        "answer": "The long miraculous slumber"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Ark",
-          "Mount Sinai",
-          "The Staff of Musa",
-          "The Great Fish",
-          "The Well of Yusuf"
+          "A burning bush",
+          "A mountain",
+          "A boat",
+          "A cave",
+          "A well"
         ],
-        "answer": "The Great Fish"
+        "answer": "A cave"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "A new covenant with humanity",
-          "A miraculous birth for his people",
-          "A kingdom established for his lineage",
-          "A return to his people who then believed",
-          "A victory over a tyrannical ruler"
+          "They were granted immense wealth and power",
+          "They were transformed into apes and swine",
+          "They were raised from sleep as a profound sign",
+          "They were drowned in a great deluge",
+          "They built a magnificent kingdom"
         ],
-        "answer": "A return to his people who then believed"
+        "answer": "They were raised from sleep as a profound sign"
       }
     },
-    "verse": "And [mention] Dhun-Nun, when he went off in anger and thought that We would not decree [anything] upon him. But he called out within the darknesses, 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.' (Al-Anbiya 21:87)",
-    "arabic": "وَذَا ٱلنُّونِ إِذ ذَّهَبَ مُغَٰضِبًا فَظَنَّ أَن لَّن نَّقْدِرَ عَلَيْهِ فَنَادَىٰ فِى ٱلظُّلُمَٰتِ أَن لَّآ إِلَٰهَ إِلَّآ أَنتَ سُبْحَٰنَكَ إِنِّى كُنتُ مِنَ ٱلظَّٰلِمِينَ"
+    "verse": "And they remained in their cave for three hundred years and exceeded by nine. (Al-Kahf 18:25)",
+    "arabic": "وَلَبِثُوا فِي كَهْفِهِمْ ثَلَاثَ مِائَةٍ سِنِينَ وَازْدَادُوا تِسْعًا"
   },
   "generated": true,
   "model": "auto (chain)"
