@@ -544,18 +544,12 @@ async function loadWBW(container) {
                     wordEl.classList.remove('wbw-active');
                     if (enEl) { enEl.textContent = ''; enEl.style.display = 'none'; }
                 } else {
-                    // Toggle on this word
+                    // Toggle on — English stays visible until row is collapsed
                     wordEl.classList.add('wbw-active');
                     if (enEl) {
                         enEl.textContent = translation;
                         enEl.style.display = 'block';
                     }
-                    // Auto-hide after 6 seconds
-                    const timer = setTimeout(() => {
-                        wordEl.classList.remove('wbw-active');
-                        if (enEl) { enEl.textContent = ''; enEl.style.display = 'none'; }
-                    }, 6000);
-                    wordEl._hideTimer = timer;
                 }
             });
         });
@@ -576,8 +570,13 @@ function toggleCarousel(idx) {
     header.querySelector('.conn-expand-icon').textContent = isExpanded ? '▼' : '▲';
 
     if (isExpanded) {
-        // Collapsing — stop any playing audio
+        // Collapsing — stop any playing audio and reset all visible English translations
         stopQuranAudio();
+        carousel.querySelectorAll('.wbw-word.wbw-active').forEach(w => {
+            w.classList.remove('wbw-active');
+            const en = w.querySelector('.wbw-en');
+            if (en) { en.textContent = ''; en.style.display = 'none'; }
+        });
     } else {
         // Expanding — autoplay the recitation for the active slide
         const activeSlide = carousel.querySelector('.verse-slide.active');
