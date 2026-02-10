@@ -677,33 +677,8 @@ function renderPerformanceInsights() {
         weakest = gameInsights[gameInsights.length - 1];
     }
 
-    // Backfill verse tracking from currently loaded puzzles
-    // (covers games completed before verse tracking was added)
-    try {
-        const verseRefs = [];
-        // Connections
-        if (typeof conn !== 'undefined' && conn.puzzle && conn.puzzle.categories) {
-            conn.puzzle.categories.forEach(cat => {
-                if (cat.items) cat.items.forEach(item => {
-                    if (item.ref) verseRefs.push(item.ref);
-                });
-                if (cat.verse && cat.verse.ref) verseRefs.push(cat.verse.ref);
-            });
-        }
-        // Wordle
-        if (typeof wordle !== 'undefined' && wordle.puzzle && wordle.puzzle.verse) {
-            verseRefs.push(wordle.puzzle.verse);
-        }
-        // Deduction
-        if (typeof ded !== 'undefined' && ded.puzzle && ded.puzzle.verse) {
-            verseRefs.push(ded.puzzle.verse);
-        }
-        // Scramble
-        if (typeof scr !== 'undefined' && scr.puzzle && scr.puzzle.reference) {
-            verseRefs.push(scr.puzzle.reference);
-        }
-        if (verseRefs.length > 0) trackVerses(verseRefs);
-    } catch (e) { console.warn('Verse backfill failed:', e); }
+    // Verses are tracked only on active engagement (audio play, word tap)
+    // Cooling period uses server-side history in data/history/, not client-side tracking
 
     // Get verse stats
     const verseStats = getVerseStats();

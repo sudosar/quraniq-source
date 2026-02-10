@@ -304,7 +304,10 @@ function playVerseAudio(ref, btn) {
     };
 
     audio.currentTime = 0;
-    audio.play().catch(() => {
+    audio.play().then(() => {
+        // Track this verse as actively explored (user heard the recitation)
+        trackVerses([ref]);
+    }).catch(() => {
         quranAudio.playing = false;
         if (btn) btn.textContent = '▶';
     });

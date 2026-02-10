@@ -378,8 +378,5 @@ function showWordleResult(won, cacheOnly) {
     trackGameComplete('wordle', won, won ? wordle.evaluations.length : 0);
     updateModeStats('wordle', won, won ? wordle.evaluations.length : 0);
 
-    // Track the verse reference from this puzzle
-    if (wordle.puzzle && wordle.puzzle.verse) {
-        trackVerses([wordle.puzzle.verse]);
-    }
+    // Verses are now tracked only on active engagement (audio play, word tap)
 }

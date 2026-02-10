@@ -541,6 +541,11 @@ async function loadWBW(container) {
                         enEl.textContent = translation;
                         enEl.style.display = 'block';
                     }
+                    // Track this verse as explored (user engaged with word meaning)
+                    const wbwContainer = wordEl.closest('.wbw-container');
+                    if (wbwContainer && wbwContainer.dataset.ref) {
+                        trackVerses([wbwContainer.dataset.ref]);
+                    }
                 }
             });
         });
@@ -743,18 +748,7 @@ function showConnResult(won, cacheOnly) {
     showResultModal(resultData);
     trackGameComplete('connections', won, correctCount);
     updateModeStats('connections', won, won ? (4 - mistakesUsed) : 0);
-
-    // Track all verse references from this puzzle
-    const verseRefs = [];
-    if (conn.puzzle && conn.puzzle.categories) {
-        conn.puzzle.categories.forEach(cat => {
-            if (cat.items) cat.items.forEach(item => {
-                if (item.ref) verseRefs.push(item.ref);
-            });
-            if (cat.verse && cat.verse.ref) verseRefs.push(cat.verse.ref);
-        });
-    }
-    trackVerses(verseRefs);
+    // Verses are now tracked only on active engagement (audio play, word tap)
 }
 
 // Expand all solved rows and autoplay first verse (called when closing result modal)

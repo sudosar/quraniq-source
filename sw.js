@@ -1,5 +1,5 @@
 // QuranIQ Service Worker
-const CACHE_NAME = 'quraniq-v25';
+const CACHE_NAME = 'quraniq-v19';
 
 // Assets to pre-cache on install
 const PRECACHE_ASSETS = [
