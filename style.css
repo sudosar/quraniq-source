@@ -3313,6 +3313,14 @@ button, input, select, textarea {
     border: 1px solid var(--border);
     border-top: 2px solid var(--islamic-gold);
     border-bottom: 2px solid var(--islamic-gold);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    -webkit-tap-highlight-color: rgba(196, 164, 105, 0.2);
+}
+
+.conn-explore-stats:active {
+    transform: scale(0.97);
+    background: var(--accent-bg, rgba(196, 164, 105, 0.08));
 }
 
 .conn-explore-stats .explore-count {
@@ -3327,9 +3335,19 @@ button, input, select, textarea {
 }
 
 .conn-explore-stats .explore-hint {
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
     font-style: italic;
+}
+
+.conn-explore-stats .explore-hint::after {
+    content: ' ▼';
+    font-style: normal;
+    font-size: 0.75rem;
+}
+
+.conn-explore-stats .explore-hint.explore-complete::after {
+    content: '';
 }
 
 .conn-explore-stats .explore-hint.explore-complete {

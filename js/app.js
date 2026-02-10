@@ -422,10 +422,18 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         // For connections: show exploration stats and encourage more exploration
         verseEl.style.display = 'block';
         const freshData = typeof getConnCrescentData === 'function' ? getConnCrescentData() : { totalExplored: exploredCount || 0, totalVerses: totalVerses || 16 };
-        verseEl.innerHTML = `<div class="conn-explore-stats">
+        const allExplored = freshData.totalExplored >= freshData.totalVerses;
+        verseEl.innerHTML = `<div class="conn-explore-stats" style="cursor:pointer;">
             <div class="explore-count">Verses explored: <strong>${freshData.totalExplored}/${freshData.totalVerses}</strong></div>
-            ${freshData.totalExplored < freshData.totalVerses ? '<div class="explore-hint">Tap rows below to explore more verses and earn \uD83C\uDF15</div>' : '<div class="explore-hint explore-complete">\u2728 All verses explored! Ma sha Allah! \u2728</div>'}
+            ${!allExplored ? '<div class="explore-hint">\uD83C\uDF15 Tap rows below to explore more verses and earn full moons</div>' : '<div class="explore-hint explore-complete">\u2728 All verses explored! Ma sha Allah! \u2728</div>'}
         </div>`;
+        if (!allExplored) {
+            verseEl.querySelector('.conn-explore-stats').addEventListener('click', () => {
+                trackExplorePromptTap();
+                closeModal('result-modal');
+                setTimeout(() => expandAllConnRows(), 300);
+            });
+        }
     } else if (app.currentMode === 'connections') {
         // Tappable prompt that closes modal and expands rows
         verseEl.style.display = 'block';
