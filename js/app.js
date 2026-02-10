@@ -393,9 +393,9 @@ function showHelpModal() {
 }
 
 // ==================== RESULT MODAL ====================
-function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons, verseRef }) {
+function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons, verseRef, crescentRow, exploredCount, totalVerses, dynamicShareFn }) {
     // Cache the result so it can be re-opened later
-    app.lastResults[app.currentMode] = { icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons, verseRef };
+    app.lastResults[app.currentMode] = { icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons, verseRef, crescentRow, exploredCount, totalVerses, dynamicShareFn };
     // Show the "View Results" button in the game area
     showViewResultsButton(app.currentMode);
 
@@ -418,6 +418,14 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         }
         verseEl.innerHTML = (arabic ? `<span>${arabic}</span>` : '') +
             (translationHtml ? `<span class="translation">${translationHtml}</span>` : '');
+    } else if (app.currentMode === 'connections' && crescentRow) {
+        // For connections: show exploration stats and encourage more exploration
+        verseEl.style.display = 'block';
+        const freshData = typeof getConnCrescentData === 'function' ? getConnCrescentData() : { totalExplored: exploredCount || 0, totalVerses: totalVerses || 16 };
+        verseEl.innerHTML = `<div class="conn-explore-stats">
+            <div class="explore-count">Verses explored: <strong>${freshData.totalExplored}/${freshData.totalVerses}</strong></div>
+            ${freshData.totalExplored < freshData.totalVerses ? '<div class="explore-hint">Tap rows below to explore more verses and earn \uD83C\uDF15</div>' : '<div class="explore-hint explore-complete">\u2728 All verses explored! Ma sha Allah! \u2728</div>'}
+        </div>`;
     } else if (app.currentMode === 'connections') {
         // Tappable prompt that closes modal and expands rows
         verseEl.style.display = 'block';
@@ -432,16 +440,27 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
     }
 
     document.getElementById('result-grid').textContent = emojiGrid || '';
+
+    // Crescent / Moon display
     const moonsEl = document.getElementById('result-stars');
-    if (moons !== undefined && moons !== null) {
-        moonsEl.textContent = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
+    if (crescentRow) {
+        // Connections mode: show dynamic crescent row
+        const freshData = typeof getConnCrescentData === 'function' ? getConnCrescentData() : null;
+        moonsEl.textContent = freshData ? freshData.crescentRow : crescentRow;
+        moonsEl.style.display = 'block';
+    } else if (moons !== undefined && moons !== null) {
+        moonsEl.textContent = '\uD83C\uDF19'.repeat(moons) + '\uD83C\uDF11'.repeat(5 - moons);
         moonsEl.style.display = 'block';
     } else {
         moonsEl.style.display = 'none';
     }
     document.getElementById('result-stats').textContent = statsText || '';
 
-    // Share buttons
+    // Ensure share actions are visible (may have been hidden by encouragement modal)
+    const actionsEl = document.querySelector('#result-modal .result-actions');
+    if (actionsEl) actionsEl.style.display = '';
+
+    // Share buttons — use dynamicShareFn if available (for connections)
     const shareBtn = document.getElementById('share-btn');
     const copyBtn = document.getElementById('copy-btn');
     const toast = document.getElementById('share-toast');
@@ -454,14 +473,21 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
     copyBtn.parentNode.replaceChild(newCopyBtn, copyBtn);
     newCopyBtn.id = 'copy-btn';
 
+    const getShareText = () => {
+        // If there's a dynamic share function, call it for fresh data
+        if (typeof dynamicShareFn === 'function') return dynamicShareFn();
+        return shareText;
+    };
+
     const doShare = async () => {
+        const text = getShareText();
         if (navigator.share) {
             try {
-                await navigator.share({ text: shareText });
+                await navigator.share({ text });
                 trackShare(app.currentMode, 'native_share');
             } catch {}
         } else {
-            await navigator.clipboard.writeText(shareText);
+            await navigator.clipboard.writeText(text);
             toast.classList.remove('hidden');
             setTimeout(() => toast.classList.add('hidden'), 2000);
             trackShare(app.currentMode, 'clipboard');
@@ -470,7 +496,8 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
 
     newShareBtn.addEventListener('click', doShare);
     newCopyBtn.addEventListener('click', async () => {
-        await navigator.clipboard.writeText(shareText);
+        const text = getShareText();
+        await navigator.clipboard.writeText(text);
         toast.classList.remove('hidden');
         announce('Copied to clipboard');
         setTimeout(() => toast.classList.add('hidden'), 2000);

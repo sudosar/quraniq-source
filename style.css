@@ -3301,3 +3301,57 @@ button, input, select, textarea {
 .conn-result-listen-btn:active {
     transform: scale(0.97);
 }
+
+
+/* ==================== CRESCENT SCORING & EXPLORATION STATS ==================== */
+
+.conn-explore-stats {
+    text-align: center;
+    padding: 12px 16px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--islamic-gold);
+    border-bottom: 2px solid var(--islamic-gold);
+}
+
+.conn-explore-stats .explore-count {
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.conn-explore-stats .explore-count strong {
+    color: var(--islamic-gold);
+    font-size: 1.1rem;
+}
+
+.conn-explore-stats .explore-hint {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.conn-explore-stats .explore-hint.explore-complete {
+    color: var(--islamic-gold);
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Encouragement modal explore prompt */
+.conn-explore-tap {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border-radius: var(--radius-sm);
+}
+
+.conn-explore-tap:hover {
+    background: var(--accent-bg, rgba(196, 164, 105, 0.1));
+}
+
+.conn-explore-tap:active {
+    background: var(--accent-bg, rgba(196, 164, 105, 0.2));
+}

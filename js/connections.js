@@ -25,7 +25,8 @@ const conn = {
     solved: [],
     mistakes: 4,
     items: [],
-    gameOver: false
+    gameOver: false,
+    exploredVerses: new Set()  // Track verse refs explored this session (audio play or word tap)
 };
 
 function initConnections() {
@@ -60,6 +61,9 @@ function setupConnectionsGame() {
         conn.mistakes = saved.mistakes ?? 4;
         conn.gameOver = saved.gameOver || false;
         conn.correctCount = saved.correctCount ?? conn.solved.length;
+        conn.exploredVerses = new Set(saved.exploredVerses || []);
+    } else {
+        conn.exploredVerses = new Set();
     }
 
     // Flatten items, removing solved ones
@@ -354,6 +358,11 @@ function renderSolvedRows() {
                     stopQuranAudio();
                 } else {
                     playQuranAudio(ref, btn);
+                    // Track this verse as explored in this session
+                    if (ref) {
+                        conn.exploredVerses.add(ref);
+                        saveConnState();
+                    }
                 }
             });
         });
@@ -545,6 +554,8 @@ async function loadWBW(container) {
                     const wbwContainer = wordEl.closest('.wbw-container');
                     if (wbwContainer && wbwContainer.dataset.ref) {
                         trackVerses([wbwContainer.dataset.ref]);
+                        conn.exploredVerses.add(wbwContainer.dataset.ref);
+                        saveConnState();
                     }
                 }
             });
@@ -581,6 +592,11 @@ function toggleCarousel(idx) {
             if (playBtn) {
                 const ref = playBtn.dataset.ref;
                 setTimeout(() => playQuranAudio(ref, playBtn), 300);
+                // Track this verse as explored in this session
+                if (ref) {
+                    conn.exploredVerses.add(ref);
+                    saveConnState();
+                }
             }
         }
     }
@@ -623,6 +639,11 @@ function goToSlide(rowIdx, slideIdx) {
         if (playBtn) {
             const ref = playBtn.dataset.ref;
             setTimeout(() => playQuranAudio(ref, playBtn), 300);
+            // Track this verse as explored in this session
+            if (ref) {
+                conn.exploredVerses.add(ref);
+                saveConnState();
+            }
         }
     }
 
@@ -691,9 +712,77 @@ function saveConnState() {
         solved: conn.solved,
         mistakes: conn.mistakes,
         gameOver: conn.gameOver,
-        correctCount: conn.correctCount ?? conn.solved.length
+        correctCount: conn.correctCount ?? conn.solved.length,
+        exploredVerses: Array.from(conn.exploredVerses)
     };
     saveState(app.state);
+}
+
+/**
+ * Compute crescent data for each row based on current exploration state.
+ * Returns { crescentRow, totalExplored, totalVerses, perRow[] }
+ *
+ * Per-row crescent logic:
+ *   🌕 Full Moon  = row solved correctly AND all 4 verses in that row explored
+ *   🌙 Crescent   = row solved correctly (not all verses explored)
+ *   🌑 Dark Moon  = row was auto-revealed (failed)
+ */
+function getConnCrescentData() {
+    const correctCount = conn.solved.length === 4 && conn.mistakes > 0 ? 4 : (conn.correctCount ?? 0);
+    const explored = conn.exploredVerses;
+    let totalExplored = 0;
+    let totalVerses = 0;
+    const perRow = [];
+
+    conn.solved.forEach((s, i) => {
+        const wasSolved = i < correctCount;
+        // Count how many of this row's 4 item refs have been explored
+        const items = s.items || [];
+        let rowExplored = 0;
+        items.forEach(item => {
+            const ref = typeof item === 'object' ? item.ref : '';
+            if (ref && explored.has(ref)) rowExplored++;
+        });
+        totalVerses += items.length;
+        totalExplored += rowExplored;
+
+        let crescent;
+        if (!wasSolved) {
+            crescent = '🌑'; // Failed / auto-revealed
+        } else if (rowExplored >= items.length) {
+            crescent = '🌕'; // Solved + all verses explored
+        } else {
+            crescent = '🌙'; // Solved but not all explored
+        }
+        perRow.push({ crescent, explored: rowExplored, total: items.length, wasSolved });
+    });
+
+    const crescentRow = perRow.map(r => r.crescent).join('');
+    return { crescentRow, totalExplored, totalVerses, perRow };
+}
+
+/**
+ * Generate share text dynamically based on current exploration state.
+ * Called at the moment the user taps Share/Copy, not at result time.
+ */
+function getConnShareText() {
+    const colorMap = { yellow: '🟨', green: '🟩', blue: '🟦', purple: '🟪' };
+    const correctCount = conn.solved.length === 4 && conn.mistakes > 0 ? 4 : (conn.correctCount ?? 0);
+    const mistakesUsed = 4 - conn.mistakes;
+    const puzzleNum = conn.puzzle.id === 'daily' ? app.dayNumber : getPuzzleIndex(PUZZLES.connections) + 1;
+
+    let emojiGrid = '';
+    conn.solved.forEach((s, i) => {
+        if (i < correctCount) {
+            emojiGrid += colorMap[s.color].repeat(4) + '\n';
+        } else {
+            emojiGrid += '⬛⬛⬛⬛\n';
+        }
+    });
+
+    const { crescentRow, totalExplored, totalVerses } = getConnCrescentData();
+
+    return `QuranIQ - Connections #${puzzleNum}\n${emojiGrid.trim()}\n${crescentRow}\nVerses explored: ${totalExplored}/${totalVerses}\nGroups: ${correctCount}/4 | Mistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quraniq/`;
 }
 
 function showConnResult(won, cacheOnly) {
@@ -706,25 +795,14 @@ function showConnResult(won, cacheOnly) {
         if (i < correctCount) {
             emojiGrid += colorMap[s.color].repeat(4) + '\n';
         } else {
-            // Auto-revealed groups shown as grey/missed
             emojiGrid += '⬛⬛⬛⬛\n';
         }
     });
 
     const mistakesUsed = 4 - conn.mistakes;
-    const puzzleNum = conn.puzzle.id === 'daily' ? app.dayNumber : getPuzzleIndex(PUZZLES.connections) + 1;
 
-    // Moon rating: based on mistakes and groups found
-    // Won with 0 mistakes = 5, 1 = 4, 2 = 3, 3 = 2; lost = max 1 per group found
-    let moons = 0;
-    if (won) {
-        moons = Math.max(1, 5 - mistakesUsed);
-    } else {
-        moons = Math.max(0, Math.min(1, correctCount));
-    }
-    const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
-
-    const shareText = `QuranIQ - Connections #${puzzleNum}\n${emojiGrid}${moonStr}\nGroups found: ${correctCount}/4\nMistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quraniq/`;
+    // Compute current crescent state
+    const { crescentRow, totalExplored, totalVerses } = getConnCrescentData();
 
     const resultData = {
         icon: won ? '🎉' : '📖',
@@ -733,9 +811,13 @@ function showConnResult(won, cacheOnly) {
         arabic: null,
         translation: null,
         emojiGrid: emojiGrid.trim(),
-        moons,
-        statsText: `Groups found: ${correctCount}/4 | Mistakes: ${mistakesUsed}/4`,
-        shareText
+        moons: null, // We use crescentRow instead of old moon system for connections
+        crescentRow,
+        exploredCount: totalExplored,
+        totalVerses,
+        statsText: `Groups: ${correctCount}/4 | Mistakes: ${mistakesUsed}/4`,
+        shareText: getConnShareText(), // Initial share text (will be regenerated at share time)
+        dynamicShareFn: getConnShareText // Function to get fresh share text at share time
     };
 
     if (cacheOnly) {
@@ -745,10 +827,57 @@ function showConnResult(won, cacheOnly) {
         return;
     }
 
-    showResultModal(resultData);
+    // First time: show encouragement modal (no share buttons)
+    showConnEncouragementModal(resultData, won, correctCount, mistakesUsed);
     trackGameComplete('connections', won, correctCount);
     updateModeStats('connections', won, won ? (4 - mistakesUsed) : 0);
-    // Verses are now tracked only on active engagement (audio play, word tap)
+}
+
+/**
+ * Show the encouragement modal after game ends.
+ * This modal has no share/copy buttons — it encourages the user to explore verses.
+ * After closing, all rows expand for exploration.
+ * The "View Results & Share" button will show the full result with dynamic crescents.
+ */
+function showConnEncouragementModal(resultData, won, correctCount, mistakesUsed) {
+    // Cache the result for later "View Results & Share"
+    app.lastResults['connections'] = resultData;
+    showViewResultsButton('connections');
+
+    document.getElementById('result-icon').textContent = resultData.icon;
+    document.getElementById('result-title').textContent = resultData.title;
+
+    // Show explore prompt
+    const verseEl = document.getElementById('result-verse');
+    verseEl.style.display = 'block';
+    verseEl.innerHTML = `<span class="translation conn-explore-tap" style="cursor:pointer;">
+        <span style="font-size:1.1rem;font-style:normal;">📖 Explore the ayahs to earn full moons!</span><br>
+        <span style="font-size:0.85rem;color:var(--text-secondary);">🌙 = solved &nbsp; 🌕 = solved + all 4 verses explored &nbsp; 🌑 = missed</span><br>
+        <span style="font-size:0.9rem;margin-top:8px;display:inline-block;">Tap to start exploring ▼</span>
+    </span>`;
+    verseEl.querySelector('.conn-explore-tap').addEventListener('click', () => {
+        trackExplorePromptTap();
+        closeModal('result-modal');
+        setTimeout(() => expandAllConnRows(), 300);
+    });
+
+    document.getElementById('result-grid').textContent = resultData.emojiGrid;
+
+    // Show current crescents (will be mostly 🌙/🌑 at this point)
+    const moonsEl = document.getElementById('result-stars');
+    moonsEl.innerHTML = resultData.crescentRow;
+    moonsEl.style.display = 'block';
+
+    document.getElementById('result-stats').textContent = `Groups: ${correctCount}/4 | Mistakes: ${mistakesUsed}/4`;
+
+    // Hide share buttons in encouragement modal
+    const actionsEl = document.querySelector('#result-modal .result-actions');
+    if (actionsEl) actionsEl.style.display = 'none';
+
+    // Hide audio row
+    document.getElementById('result-audio').style.display = 'none';
+
+    openModal('result-modal');
 }
 
 // Expand all solved rows and autoplay first verse (called when closing result modal)
