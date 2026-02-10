@@ -30,21 +30,51 @@ const conn = {
 };
 
 function initConnections() {
-    // Try to load AI-generated daily puzzle, fall back to pre-made puzzles
-    loadDailyPuzzle().then(puzzle => {
+    // Try to load AI-generated daily puzzle with retries, fall back to pre-made puzzles
+    loadDailyPuzzleWithRetry().then(puzzle => {
         conn.puzzle = puzzle;
+        conn.puzzleSource = 'daily';
         setupConnectionsGame();
     }).catch(() => {
         // Fallback to pre-made puzzles
         const idx = getPuzzleIndex(PUZZLES.connections);
         conn.puzzle = PUZZLES.connections[idx];
+        conn.puzzleSource = 'fallback';
         setupConnectionsGame();
     });
 }
 
+/**
+ * Fetch today's daily puzzle with smart retry logic.
+ * During the generation window (first 4 hours of the day UTC),
+ * retries up to 3 times with increasing delays before falling back.
+ * Outside the window, falls back immediately if stale.
+ */
+async function loadDailyPuzzleWithRetry() {
+    const now = new Date();
+    const utcHour = now.getUTCHours();
+    // Generation window: 00:00–04:00 UTC (workflow runs at ~00:05, deploys by ~00:10)
+    const inGenerationWindow = utcHour < 4;
+    const maxRetries = inGenerationWindow ? 3 : 0;
+    const retryDelays = [15000, 30000, 60000]; // 15s, 30s, 60s
+
+    for (let attempt = 0; attempt <= maxRetries; attempt++) {
+        try {
+            const puzzle = await loadDailyPuzzle();
+            return puzzle;
+        } catch (e) {
+            if (attempt < maxRetries) {
+                // Wait before retrying
+                await new Promise(r => setTimeout(r, retryDelays[attempt]));
+            }
+        }
+    }
+    throw new Error('Daily puzzle not available after retries');
+}
+
 async function loadDailyPuzzle() {
     const today = new Date().toISOString().slice(0, 10);
-    const resp = await fetch(`data/daily_puzzle.json?t=${today}`);
+    const resp = await fetch(`data/daily_puzzle.json?t=${Date.now()}`);
     if (!resp.ok) throw new Error('No daily puzzle');
     const data = await resp.json();
     if (!data.generated || !data.puzzle || data.date !== today) {
