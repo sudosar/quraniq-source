@@ -407,5 +407,8 @@ function showScrResult(cacheOnly) {
     const score = scr.won ? Math.min(6, Math.max(1, scr.hintsUsed + 1)) : 0;
     updateModeStats('scramble', scr.won, score);
 
-    // Verses are now tracked only on active engagement (audio play, word tap)
+    // Track the verse — completing Ayah Scramble means engaging with the verse directly
+    if (scr.puzzle && scr.puzzle.reference) {
+        trackVerses([scr.puzzle.reference]);
+    }
 }
