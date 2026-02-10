@@ -190,15 +190,6 @@ function submitConnections() {
         const isLastRow = conn.solved.length === 4;
         setTimeout(() => {
             toggleCarousel(solvedIdx);
-            // Auto-collapse after 6s for rows 1-3 so player can continue
-            if (!isLastRow) {
-                setTimeout(() => {
-                    const carousel = document.getElementById(`carousel-${solvedIdx}`);
-                    if (carousel && carousel.classList.contains('expanded')) {
-                        toggleCarousel(solvedIdx);
-                    }
-                }, 6000);
-            }
         }, 500);
 
         if (isLastRow) {
