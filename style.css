@@ -1042,36 +1042,62 @@ button, input, select, textarea {
     position: relative;
 }
 
-/* Tooltip on hover (desktop) */
-.conn-tile-ar[data-tooltip]:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: calc(100% + 6px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0,0,0,0.85);
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-family: var(--font-main);
-    font-size: 0.72rem;
-    font-weight: 500;
-    white-space: nowrap;
-    z-index: 50;
-    pointer-events: none;
-    direction: ltr;
-}
+/* Tooltip on hover (desktop only — hidden on touch devices) */
+@media (hover: hover) and (pointer: fine) {
+    .conn-tile-ar[data-tooltip]:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: calc(100% + 6px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.85);
+        color: #fff;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-family: var(--font-main);
+        font-size: 0.72rem;
+        font-weight: 500;
+        white-space: normal;
+        text-align: center;
+        max-width: 200px;
+        min-width: 80px;
+        width: max-content;
+        z-index: 50;
+        pointer-events: none;
+        direction: ltr;
+    }
 
-.conn-tile-ar[data-tooltip]:hover::before {
-    content: '';
-    position: absolute;
-    bottom: calc(100% + 2px);
-    left: 50%;
-    transform: translateX(-50%);
-    border: 4px solid transparent;
-    border-top-color: rgba(0,0,0,0.85);
-    z-index: 50;
-    pointer-events: none;
+    .conn-tile-ar[data-tooltip]:hover::before {
+        content: '';
+        position: absolute;
+        bottom: calc(100% + 2px);
+        left: 50%;
+        transform: translateX(-50%);
+        border: 4px solid transparent;
+        border-top-color: rgba(0,0,0,0.85);
+        z-index: 50;
+        pointer-events: none;
+    }
+
+    /* Keep tooltips within viewport for edge tiles */
+    .connections-grid .conn-tile-ar:nth-child(4n+1)[data-tooltip]:hover::after {
+        left: 0;
+        transform: translateX(0);
+    }
+    .connections-grid .conn-tile-ar:nth-child(4n)[data-tooltip]:hover::after {
+        left: auto;
+        right: 0;
+        transform: translateX(0);
+    }
+    .connections-grid .conn-tile-ar:nth-child(4n+1)[data-tooltip]:hover::before {
+        left: 20%;
+        transform: translateX(-50%);
+    }
+    .connections-grid .conn-tile-ar:nth-child(4n)[data-tooltip]:hover::before {
+        left: auto;
+        right: 10%;
+        transform: translateX(50%);
+    }
 }
 
 /* Tooltip hint line */
