@@ -57,12 +57,13 @@ function renderDeduction() {
     const storyEl = document.getElementById('deduction-story');
     storyEl.innerHTML = `<div class="story-title">${ded.puzzle.title}</div><p>${ded.puzzle.intro}</p>`;
 
+    // Moon rating helper: 0-1 clues = 5, 2 = 4, 3 = 3, 4 = 2, 5+ = 1
+    const moonsForClues = (n) => n <= 1 ? 5 : n === 2 ? 4 : n === 3 ? 3 : n === 4 ? 2 : 1;
+
     // Crescent meter — shows remaining crescents and cost warning
     const meterEl = document.getElementById('ded-crescent-meter');
     if (meterEl) {
         const totalClues = ded.puzzle.clues.length;
-        // Moon rating: 0-1 clues = 5, 2 = 4, 3 = 3, 4 = 2, 5+ = 1
-        const moonsForClues = (n) => n <= 1 ? 5 : n === 2 ? 4 : n === 3 ? 3 : n === 4 ? 2 : 1;
         const currentMoons = moonsForClues(ded.cluesRevealed);
         const crescents = Array.from({length: 5}, (_, i) =>
             `<span class="ded-moon ${i < currentMoons ? 'active' : 'spent'}">${i < currentMoons ? '🌙' : '🌑'}</span>`
