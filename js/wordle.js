@@ -39,24 +39,24 @@ function isValidQuranWord(guess) {
 }
 
 function initWordle() {
-    // Load word list and puzzle in parallel
-    Promise.all([
-        loadQuranWords(),
-        loadDailyWordle().catch(() => {
-            const idx = getPuzzleIndex(PUZZLES.wordle);
-            return PUZZLES.wordle[idx];
-        })
-    ]).then(([wordData, puzzle]) => {
-        wordle.puzzle = puzzle;
-        // Build valid word set for the target word's length
-        const targetLen = normalizeArabic(puzzle.word).length;
-        if (wordData && wordData[String(targetLen)]) {
-            wordle.validWords = new Set(wordData[String(targetLen)]);
-            // Also ensure the answer itself is in the valid set
-            wordle.validWords.add(normalizeArabic(puzzle.word));
+    // Pre-load word list
+    loadQuranWords();
+    // Load daily puzzle with holding screen if not ready
+    loadDailyWithHolding(
+        'daily_wordle.json',
+        'wordle-game',
+        'Harf by Harf',
+        (puzzle) => {
+            wordle.puzzle = puzzle;
+            // Build valid word set for the target word's length
+            const targetLen = normalizeArabic(puzzle.word).length;
+            if (_quranWordsCache && _quranWordsCache[String(targetLen)]) {
+                wordle.validWords = new Set(_quranWordsCache[String(targetLen)]);
+                wordle.validWords.add(normalizeArabic(puzzle.word));
+            }
+            setupWordleGame();
         }
-        setupWordleGame();
-    });
+    );
 }
 
 async function loadDailyWordle() {

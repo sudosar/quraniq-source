@@ -11,16 +11,16 @@ const ded = {
 };
 
 function initDeduction() {
-    // Try to load AI-generated daily puzzle, fall back to pre-made puzzles
-    loadDailyDeduction().then(puzzle => {
-        ded.puzzle = puzzle;
-        setupDeductionGame();
-    }).catch(() => {
-        // Fallback to pre-made puzzles
-        const idx = getPuzzleIndex(PUZZLES.deduction);
-        ded.puzzle = PUZZLES.deduction[idx];
-        setupDeductionGame();
-    });
+    // Load daily puzzle with holding screen if not ready
+    loadDailyWithHolding(
+        'daily_deduction.json',
+        'deduction-game',
+        'Who Am I?',
+        (puzzle) => {
+            ded.puzzle = puzzle;
+            setupDeductionGame();
+        }
+    );
 }
 
 async function loadDailyDeduction() {

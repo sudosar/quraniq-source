@@ -333,6 +333,9 @@ function updateModeStats(mode, won, guessNum) {
     if (!s) return;
     const today = app.dayNumber;
 
+    // Don't record stats when serving yesterday's stale puzzle
+    if (typeof isServingStale === 'function' && isServingStale()) return;
+
     // Prevent double-counting same day for same mode
     if (s.lastDay === today) return;
 

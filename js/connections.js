@@ -30,18 +30,18 @@ const conn = {
 };
 
 function initConnections() {
-    // Try to load AI-generated daily puzzle with retries, fall back to pre-made puzzles
-    loadDailyPuzzleWithRetry().then(puzzle => {
-        conn.puzzle = puzzle;
-        conn.puzzleSource = 'daily';
-        setupConnectionsGame();
-    }).catch(() => {
-        // Fallback to pre-made puzzles
-        const idx = getPuzzleIndex(PUZZLES.connections);
-        conn.puzzle = PUZZLES.connections[idx];
-        conn.puzzleSource = 'fallback';
-        setupConnectionsGame();
-    });
+    // Load daily puzzle with holding screen if not ready
+    loadDailyWithHolding(
+        'daily_puzzle.json',
+        'connections-game',
+        'Ayah Connections',
+        (puzzle, stale) => {
+            conn.puzzle = puzzle;
+            conn.puzzleSource = stale ? 'stale' : 'daily';
+            setupConnectionsGame();
+        },
+        (data) => ({ id: 'daily', categories: data.puzzle.categories })
+    );
 }
 
 /**

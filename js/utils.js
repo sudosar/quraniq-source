@@ -67,6 +67,9 @@ function loadState() {
 }
 
 function saveState(state) {
+    // Don't persist game state when serving yesterday's stale puzzle.
+    // This prevents stale data from conflicting when the fresh puzzle arrives.
+    if (typeof isServingStale === 'function' && isServingStale()) return;
     localStorage.setItem(STATE_KEY, JSON.stringify(state));
 }
 
@@ -580,4 +583,71 @@ function importProgress(saveString) {
 // ==================== ARABIC NORMALIZATION ====================
 function normalizeArabic(str) {
     return str.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED]/g, '');
+}
+
+// ==================== DAILY PUZZLE LOADING (STALE-TOLERANT) ====================
+
+// Global flag: set to true when serving stale (yesterday's) puzzles.
+// When true, stats should NOT be recorded to avoid double-counting.
+let _servingStale = false;
+function isServingStale() { return _servingStale; }
+
+/**
+ * Shared daily puzzle loader.
+ * 1. Tries to load today's puzzle from the data file.
+ * 2. If today's isn't ready yet, serves yesterday's puzzle (the stale one)
+ *    and starts background polling every 60s.
+ * 3. When the fresh puzzle finally arrives, reloads the page so all games
+ *    pick up the new data cleanly.
+ *
+ * @param {string} dataFile - JSON file name (e.g., 'daily_puzzle.json')
+ * @param {Function} onLoaded - Callback with puzzle data when loaded
+ * @param {Function} [extractPuzzle] - Optional transform on the raw JSON data
+ */
+function loadDailyWithHolding(dataFile, sectionId, gameName, onLoaded, extractPuzzle) {
+    const today = new Date().toISOString().slice(0, 10);
+
+    fetch(`data/${dataFile}?t=${Date.now()}`)
+        .then(r => { if (!r.ok) throw new Error('fetch failed'); return r.json(); })
+        .then(data => {
+            if (!data.generated || !data.puzzle) {
+                throw new Error('no puzzle');
+            }
+            const puzzle = extractPuzzle ? extractPuzzle(data) : data.puzzle;
+
+            if (data.date === today) {
+                // Fresh puzzle — serve normally
+                onLoaded(puzzle, false);
+            } else {
+                // Stale puzzle — serve it but mark as stale and poll for new one
+                _servingStale = true;
+                onLoaded(puzzle, true);
+                startStalePoll(dataFile, today);
+            }
+        })
+        .catch(() => {
+            // Complete failure (no file at all) — nothing to show
+            // This shouldn't happen in production since the file always exists
+            console.warn(`Failed to load ${dataFile}`);
+        });
+}
+
+/** Background-poll for today's puzzle; reload the page when it arrives. */
+let _stalePollStarted = false;
+function startStalePoll(dataFile, today) {
+    if (_stalePollStarted) return; // Only one poller across all games
+    _stalePollStarted = true;
+
+    const poll = setInterval(() => {
+        fetch(`data/${dataFile}?t=${Date.now()}`)
+            .then(r => r.ok ? r.json() : null)
+            .then(data => {
+                if (data && data.generated && data.date === today) {
+                    clearInterval(poll);
+                    // Fresh puzzle arrived — reload the whole page for clean state
+                    window.location.reload();
+                }
+            })
+            .catch(() => {}); // Silently retry
+    }, 60000); // Check every 60 seconds
 }

@@ -3434,3 +3434,76 @@ button, input, select, textarea {
 .conn-explore-tap:active {
     background: var(--accent-bg, rgba(196, 164, 105, 0.2));
 }
+
+/* ===== Puzzle Holding Screen ===== */
+.puzzle-holding-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    min-height: 300px;
+    animation: holdingFadeIn 0.5s ease;
+}
+
+@keyframes holdingFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.holding-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: holdingPulse 2s ease-in-out infinite;
+}
+
+@keyframes holdingPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; }
+}
+
+.holding-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.75rem 0;
+}
+
+.holding-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    max-width: 320px;
+}
+
+.holding-spinner {
+    margin-bottom: 1rem;
+}
+
+.spinner-crescent {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--border, #333);
+    border-top-color: var(--accent, #d4a843);
+    border-radius: 50%;
+    animation: holdingSpin 1s linear infinite;
+}
+
+@keyframes holdingSpin {
+    to { transform: rotate(360deg); }
+}
+
+.holding-dots-line {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+    font-family: monospace;
+}
+
+.holding-dots {
+    display: inline-block;
+    min-width: 1.5em;
+    text-align: left;
+}

@@ -20,16 +20,16 @@ const scr = {
 };
 
 function initScramble() {
-    // Try to load AI-generated daily puzzle, fall back to pre-made puzzles
-    loadDailyScramble().then(puzzle => {
-        scr.puzzle = puzzle;
-        setupScrambleGame();
-    }).catch(() => {
-        // Fallback to pre-made puzzles
-        const idx = getPuzzleIndex(PUZZLES.scramble);
-        scr.puzzle = PUZZLES.scramble[idx];
-        setupScrambleGame();
-    });
+    // Load daily puzzle with holding screen if not ready
+    loadDailyWithHolding(
+        'daily_scramble.json',
+        'scramble-game',
+        'Ayah Scramble',
+        (puzzle) => {
+            scr.puzzle = puzzle;
+            setupScrambleGame();
+        }
+    );
 }
 
 async function loadDailyScramble() {
