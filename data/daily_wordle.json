@@ -1,11 +1,12 @@
 {
-  "date": "2026-02-10",
+  "date": "2026-02-11",
   "puzzle": {
-    "word": "نور",
-    "display": "نُور",
-    "hint": "It illuminates the darkness and guides the way.",
-    "verse": "An-Nur 24:35 — Allah is the Light of the heavens and the earth. The example of His light is like a niche within which is a lamp, the lamp is in a glass, the glass as if it were a pearly [white] star...",
-    "arabicVerse": "اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ ۚ مَثَلُ نُورِهِ كَمِشْكَاةٍ فِيهَا مِصْبَاحٌ ۖ الْمِصْبَاحُ فِي زُجَاجَةٍ ۖ الزُّجَاجَةُ كَأَنَّهَا كَوْكَبٌ دُرِّيٌّ يُوقَدُ مِن شَجَرَةٍ مُّبَارَكَةٍ زَيْتُونَةٍ لَّا شَرْقِيَّةٍ وَلَا غَرْبِيَّةٍ يَكَادُ زَيْتُهَا يُضِيءُ وَلَوْ لَمْ تَمْسَسْهُ نَارٌ ۚ نُّورٌ عَلَىٰ نُورٍ ۗ يَهْدِي اللَّهُ لِنُورِهِ مَن يَشَاءُ ۚ وَيَضْرِبُ اللَّهُ الْأَمْثَالَ لِلنَّاسِ ۗ وَاللَّهُ بِكُلِّ شَيْءٍ عَلِيمٌ"
+    "word": "قلب",
+    "display": "قَلْب",
+    "hint": "The spiritual center of understanding in humans",
+    "verse": "Qaf 50:37 — Indeed in that is a reminder for whoever has a heart or who listens attentively.",
+    "arabicVerse": "إِنَّ فِي ذَٰلِكَ لَذِكْرَىٰ لِمَن كَانَ لَهُ قَلْبٌ أَوْ أَلْقَى السَّمْعَ وَهُوَ شَهِيدٌ"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
