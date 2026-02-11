@@ -299,7 +299,9 @@ OUTPUT FORMAT: Return a valid JSON object:
 
 IMPORTANT:
 - Return ONLY the JSON object, no markdown
-- Every verse reference must be unique across all groups
+- EVERY verse reference MUST be unique — no two items can share the same surah:ayah ref
+- Each of the 16 items MUST reference a DIFFERENT verse (16 unique refs total)
+- The 4 category-level verses should also be unique (can overlap with item refs)
 - Arabic text must include full tashkeel/diacritics
 - Verify each verse reference is accurate"""
 
@@ -329,14 +331,23 @@ def validate_connections(puzzle, history):
         if theme in history["connections"]["themes"]:
             cooldown_violations.append(f"Theme '{theme}' reused (30-day cooldown)")
 
-        cat_refs = set()
+        # Collect all refs in this category (including duplicates)
+        cat_ref_list = []
         cat_ref = cat.get("verse", {}).get("ref", "")
         if cat_ref:
-            cat_refs.add(cat_ref)
+            cat_ref_list.append(cat_ref)
         for item in items:
             if item.get("ref"):
-                cat_refs.add(item["ref"])
+                cat_ref_list.append(item["ref"])
 
+        # Check for duplicate refs WITHIN this category
+        seen_in_cat = set()
+        for ref in cat_ref_list:
+            if ref in seen_in_cat:
+                cooldown_violations.append(f"Duplicate ref within category {i+1}: {ref}")
+            seen_in_cat.add(ref)
+
+        cat_refs = set(cat_ref_list)
         for ref in cat_refs:
             if ref in cross_cat_refs:
                 cooldown_violations.append(f"Duplicate ref across categories: {ref}")
