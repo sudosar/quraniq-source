@@ -388,7 +388,7 @@ function showScrResult(cacheOnly) {
         emojiGrid += w === scr.puzzle.words[i] ? '🟩' : '🟥';
     });
 
-    const puzzleNum = getPuzzleIndex(PUZZLES.scramble) + 1;
+    const puzzleNum = getPuzzleNumber();
     // Moon rating based on hints used only (matches the score system)
     // 0 hints = 5 moons, 1 hint = 4 moons, 2 hints = 3 moons, 3 hints = 2 moons
     // Attempts (wrong guesses) are just a gameplay limit, not a rating factor

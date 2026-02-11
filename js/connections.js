@@ -828,7 +828,7 @@ function getConnShareText() {
     const colorMap = { yellow: '🟨', green: '🟩', blue: '🟦', purple: '🟪' };
     const correctCount = conn.solved.length === 4 && conn.mistakes > 0 ? 4 : (conn.correctCount ?? 0);
     const mistakesUsed = 4 - conn.mistakes;
-    const puzzleNum = conn.puzzle.id === 'daily' ? app.dayNumber : getPuzzleIndex(PUZZLES.connections) + 1;
+    const puzzleNum = getPuzzleNumber();
 
     let emojiGrid = '';
     conn.solved.forEach((s, i) => {

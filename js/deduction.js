@@ -212,7 +212,7 @@ function showDedResult(cacheOnly) {
         if (isCorrect) correct++;
     });
 
-    const puzzleNum = getPuzzleIndex(PUZZLES.deduction) + 1;
+    const puzzleNum = getPuzzleNumber();
     const cluesUsed = ded.cluesRevealed;
 
     // Moon rating: based on clues used (fewer = better)

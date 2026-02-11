@@ -341,7 +341,7 @@ function showWordleResult(won, cacheOnly) {
         emojiGrid += row.map(e => emojiMap[e]).join('') + '\n';
     });
 
-    const puzzleNum = getPuzzleIndex(PUZZLES.wordle) + 1;
+    const puzzleNum = getPuzzleNumber();
     const tries = won ? wordle.evaluations.length : 'X';
     const displayWord = wordle.puzzle.display || wordle.word;
 

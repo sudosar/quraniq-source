@@ -4,11 +4,21 @@
 
 // ==================== UTC DAY CALCULATION ====================
 const EPOCH = Date.UTC(2025, 0, 1); // Jan 1 2025 UTC
+const LAUNCH_DATE = Date.UTC(2026, 1, 8); // Feb 8 2026 UTC — first daily puzzle
 const DAY_MS = 86400000;
 
 function getDayNumber() {
     const now = Date.now();
     return Math.floor((now - EPOCH) / DAY_MS);
+}
+
+/**
+ * Sequential puzzle number starting from #1 on launch day (Feb 8 2026).
+ * All 4 games share the same number for a given day.
+ */
+function getPuzzleNumber() {
+    const now = Date.now();
+    return Math.floor((now - LAUNCH_DATE) / DAY_MS) + 1;
 }
 
 function getPuzzleIndex(arr) {
