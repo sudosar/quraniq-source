@@ -14,12 +14,14 @@ Model fallback chain
 3. Phi-4          (GitHub Models — free, last resort)
 
 Each game uses 1 API call (up to 5 retries), so worst case = 20 calls/day.
+A 60-second pause between games respects DeepSeek-R1's 1 req/min rate limit.
 """
 import json
 import os
 import sys
 import re
 import glob
+import time
 import requests
 from datetime import datetime, timedelta
 
@@ -822,7 +824,13 @@ def main():
     all_puzzles = {}
     any_success = False
 
-    for game_type in ["connections", "wordle", "deduction", "scramble"]:
+    game_types = ["connections", "wordle", "deduction", "scramble"]
+    for i, game_type in enumerate(game_types):
+        # Wait 60s between games to respect DeepSeek-R1's 1 req/min rate limit
+        if i > 0:
+            print(f"\n  ⏳ Waiting 60 seconds before next game (DeepSeek rate limit: 1 req/min)...")
+            time.sleep(60)
+
         puzzle = generate_game(game_type, history, today)
         if puzzle:
             all_puzzles[game_type] = puzzle
