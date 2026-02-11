@@ -951,6 +951,17 @@ button, input, select, textarea {
 
 /* wbw-tooltip removed — English now shown inline above each word */
 
+/* Verse separator (۝) shown between short verse and next verse for context */
+.wbw-separator {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 4px;
+    font-size: 1.1rem;
+    opacity: 0.5;
+    cursor: default;
+    user-select: none;
+}
+
 .wbw-loading {
     text-align: center;
     font-size: 0.75rem;

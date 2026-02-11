@@ -319,6 +319,11 @@ function playVerseAudio(ref, btn) {
 // ==================== WORD-BY-WORD API ====================
 const wbwCache = {}; // Cache word-by-word data by verse key
 
+/**
+ * Fetch word-by-word data for a verse. If the verse is short (3 words or fewer),
+ * automatically fetches the next verse too and appends it for context.
+ * A visual separator (۝) is inserted between the two verses.
+ */
 async function fetchWordByWord(ref) {
     const parsed = parseQuranRef(ref);
     if (!parsed) return null;
@@ -330,10 +335,36 @@ async function fetchWordByWord(ref) {
         );
         if (!resp.ok) return null;
         const data = await resp.json();
-        const words = (data.verse?.words || []).filter(w => w.char_type_name === 'word').map(w => ({
+        let words = (data.verse?.words || []).filter(w => w.char_type_name === 'word').map(w => ({
             arabic: w.text_uthmani || w.text,
             translation: w.translation?.text || ''
         }));
+
+        // If the verse is short (3 words or fewer), fetch the next verse for context
+        if (words.length > 0 && words.length <= 3) {
+            const nextAyah = parsed.ayah + 1;
+            const nextKey = `${parsed.surah}:${nextAyah}`;
+            try {
+                const nextResp = await fetch(
+                    `https://api.quran.com/api/v4/verses/by_key/${nextKey}?language=en&words=true&word_fields=text_uthmani,translation`
+                );
+                if (nextResp.ok) {
+                    const nextData = await nextResp.json();
+                    const nextWords = (nextData.verse?.words || []).filter(w => w.char_type_name === 'word').map(w => ({
+                        arabic: w.text_uthmani || w.text,
+                        translation: w.translation?.text || ''
+                    }));
+                    if (nextWords.length > 0) {
+                        // Add a verse separator marker, then append next verse words
+                        words.push({ arabic: '۝', translation: `— ${nextKey} —`, isSeparator: true });
+                        words = words.concat(nextWords);
+                    }
+                }
+            } catch (e) {
+                // Silently ignore — showing just the short verse is fine
+            }
+        }
+
         if (words.length > 0) {
             wbwCache[key] = words;
             return words;

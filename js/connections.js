@@ -575,6 +575,10 @@ async function loadWBW(container) {
                     }
                 }
             }
+            // Handle verse separator marker
+            if (w.isSeparator) {
+                return `<span class="wbw-separator" data-idx="${i}" data-translation="${w.translation.replace(/"/g, '&quot;')}"><span class="wbw-ar">${w.arabic}</span></span>`;
+            }
             return `<span class="wbw-word${isMatch ? ' wbw-highlight' : ''}" data-idx="${i}" data-translation="${w.translation.replace(/"/g, '&quot;')}"><span class="wbw-en"></span><span class="wbw-ar">${w.arabic}</span></span>`;
         }).join(' ');
         wordsDiv.style.display = 'flex';
