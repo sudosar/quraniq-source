@@ -44,6 +44,9 @@ async function initLeaderboard() {
 function openLeaderboard() {
     const modal = document.getElementById('leaderboard-modal');
     if (!modal) return;
+    // Backfill any local scores that weren't submitted to Firebase
+    // (e.g., games completed before joining a group)
+    if (typeof backfillTodayScores === 'function') backfillTodayScores();
     // Sync verse stats to Firebase when opening leaderboard
     if (typeof syncVerseStatsToFirebase === 'function') syncVerseStatsToFirebase();
     renderLeaderboardUI();

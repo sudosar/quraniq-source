@@ -306,7 +306,6 @@ async function leaveGroup(code) {
  */
 async function submitFirebaseScore(gameMode, crescents) {
     if (!FB_STATE.user || !FB_STATE.initialized) return;
-    if (Object.keys(FB_STATE.groups).length === 0) return; // No groups, skip
 
     const today = getTodayDateString();
     const uid = FB_STATE.user.uid;
@@ -654,6 +653,138 @@ function getUserGroups() {
  */
 function isFirebaseReady() {
     return FB_STATE.initialized && FB_STATE.user !== null;
+}
+
+// ==================== SCORE BACKFILL ====================
+
+/**
+ * Backfill today's scores from local game state to Firebase.
+ * This handles the case where a user completed games before joining a group,
+ * or when Firebase wasn't initialized at game completion time.
+ * Called when the leaderboard is opened.
+ */
+async function backfillTodayScores() {
+    if (!FB_STATE.user || !FB_STATE.initialized) return;
+    if (Object.keys(FB_STATE.groups).length === 0) return;
+
+    const today = getTodayDateString();
+    const uid = FB_STATE.user.uid;
+    const scorePath = `users/${uid}/scores/${today}`;
+
+    try {
+        // Read current Firebase scores for today
+        const snap = await FB_STATE.db.ref(scorePath).once('value');
+        const current = snap.val() || {};
+
+        // Read local game state
+        const state = loadState();
+        const dayNum = getDayNumber();
+        let changed = false;
+
+        // --- Connections ---
+        const connState = state[`conn_${dayNum}`];
+        if (connState && connState.gameOver && !current.connections) {
+            // Calculate connections moons from state
+            const correctCount = connState.correctCount ?? (connState.solved ? connState.solved.length : 0);
+            const explored = new Set(connState.exploredVerses || []);
+            // Each correctly solved row = 1 moon, full moon if all verses explored
+            // Simplified: count correct rows as moons (max 4)
+            let connMoons = 0;
+            if (connState.solved) {
+                connState.solved.forEach((s, i) => {
+                    if (i < correctCount) {
+                        // Check if all verses in this row were explored
+                        const items = s.items || [];
+                        const uniqueRefs = new Set();
+                        items.forEach(item => {
+                            const ref = typeof item === 'object' ? item.ref : '';
+                            if (ref) uniqueRefs.add(ref);
+                        });
+                        let allExplored = uniqueRefs.size > 0;
+                        uniqueRefs.forEach(ref => {
+                            if (!explored.has(ref)) allExplored = false;
+                        });
+                        if (allExplored) connMoons++;
+                    }
+                });
+            }
+            current.connections = connMoons;
+            changed = true;
+            console.log('[FB] Backfill connections:', connMoons);
+        }
+
+        // --- Harf by Harf (Wordle) ---
+        const wordleState = state[`wordle_${dayNum}`];
+        if (wordleState && wordleState.gameOver && !current.harf) {
+            const evals = wordleState.evaluations || [];
+            const lastRow = evals[evals.length - 1] || [];
+            const won = lastRow.every(e => e === 'correct');
+            let moons = 0;
+            if (won) {
+                moons = Math.max(1, 6 - evals.length);
+            }
+            current.harf = moons;
+            changed = true;
+            console.log('[FB] Backfill harf:', moons);
+        }
+
+        // --- Who Am I? (Deduction) ---
+        const dedState = state[`ded_${dayNum}`];
+        if (dedState && dedState.gameOver && !current.deduction) {
+            let moons = 0;
+            if (dedState.won) {
+                const clues = dedState.cluesRevealed || 0;
+                if (clues <= 1) moons = 5;
+                else if (clues === 2) moons = 4;
+                else if (clues === 3) moons = 3;
+                else if (clues === 4) moons = 2;
+                else moons = 1;
+            }
+            current.deduction = moons;
+            changed = true;
+            console.log('[FB] Backfill deduction:', moons);
+        }
+
+        // --- Scramble ---
+        const scrState = state[`scr_${dayNum}`];
+        if (scrState && scrState.gameOver && !current.scramble) {
+            let moons = 0;
+            if (scrState.won) {
+                moons = Math.max(1, 5 - (scrState.hintsUsed || 0));
+            }
+            current.scramble = moons;
+            changed = true;
+            console.log('[FB] Backfill scramble:', moons);
+        }
+
+        // If any scores were backfilled, recalculate total and save
+        if (changed) {
+            const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
+            current.total = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
+
+            const stats = loadStats();
+            const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
+            let bestStreak = 0;
+            allModes.forEach(m => {
+                if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak);
+            });
+            current.streak = bestStreak;
+            current.timestamp = firebase.database.ServerValue.TIMESTAMP;
+
+            await FB_STATE.db.ref(scorePath).set(current);
+            console.log('[FB] Backfill complete — total:', current.total);
+
+            // Invalidate leaderboard cache
+            Object.keys(FB_STATE.leaderboardCache).forEach(k => {
+                delete FB_STATE.leaderboardCache[k];
+            });
+
+            // Also sync verse stats
+            syncVerseStatsToFirebase();
+        }
+    } catch (err) {
+        console.error('[FB] Score backfill failed:', err);
+    }
 }
 
 // ==================== VERSE STATS SYNC ====================
