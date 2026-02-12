@@ -271,6 +271,9 @@
                 <button id="shukr-btn" class="sidebar-action-btn" aria-label="Thanks and credits">
                     <span aria-hidden="true">🤲</span> Shukr &amp; Thanks
                 </button>
+                <button id="sidebar-install-btn" class="sidebar-action-btn pwa-install-btn hidden" aria-label="Install QuranIQ app">
+                    <span aria-hidden="true">📲</span> Install App
+                </button>
             </div>
             <div class="sidebar-footer">
                 <p>Test your Quranic knowledge daily</p>
@@ -278,6 +281,21 @@
             </div>
         </div>
         <div id="sidebar-overlay" class="sidebar-overlay hidden"></div>
+
+        <!-- ==================== PWA INSTALL BANNER ==================== -->
+        <div id="pwa-install-banner" class="pwa-banner hidden" role="alert">
+            <div class="pwa-banner-content">
+                <div class="pwa-banner-icon" aria-hidden="true">🕌</div>
+                <div class="pwa-banner-text">
+                    <strong>Install QuranIQ</strong>
+                    <span>Play offline &amp; get quick access from your home screen</span>
+                </div>
+            </div>
+            <div class="pwa-banner-actions">
+                <button id="pwa-install-btn" class="pwa-banner-install">Install</button>
+                <button id="pwa-dismiss-btn" class="pwa-banner-dismiss" aria-label="Dismiss">&times;</button>
+            </div>
+        </div>
 
         <!-- ==================== RESTORE MODAL ==================== -->
         <div id="restore-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="restore-title">

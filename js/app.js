@@ -38,13 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (hash === 'help') openModal('help-modal');
     else if (hash === 'stats') showStatsModal();
 
-    // PWA install prompt tracking
-    window.addEventListener('beforeinstallprompt', (e) => {
-        trackInstallPrompt('shown');
-        e.userChoice.then((choice) => {
-            trackInstallPrompt(choice.outcome === 'accepted' ? 'accepted' : 'dismissed');
-        });
-    });
+    // PWA install prompt
+    initPWAInstall();
 
     // Track if app is running as installed PWA
     if (window.matchMedia('(display-mode: standalone)').matches) {
@@ -1073,4 +1068,148 @@ function initDhikrCounter() {
     render();
     fetchCommunityTotal();
     flushPending();
+}
+
+
+// ═══════════════════════════════════════════════════════════════════
+// PWA INSTALL PROMPT — Subtle re-prompt for dismissed users
+// ═══════════════════════════════════════════════════════════════════
+const PWA_DISMISS_KEY = 'quraniq_pwa_dismiss';
+const PWA_DISMISS_COOLDOWN = 7 * 24 * 60 * 60 * 1000; // 7 days
+const PWA_BANNER_DELAY = 45000; // 45 seconds before showing banner
+
+let deferredInstallPrompt = null;
+
+function initPWAInstall() {
+    // Already running as installed PWA — no need for install prompts
+    if (window.matchMedia('(display-mode: standalone)').matches ||
+        window.navigator.standalone === true) {
+        return;
+    }
+
+    // Capture the beforeinstallprompt event
+    window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent the default mini-infobar on mobile
+        e.preventDefault();
+        deferredInstallPrompt = e;
+
+        trackInstallPrompt('shown');
+
+        // Always show the sidebar install button when installable
+        showSidebarInstallButton();
+
+        // Show the subtle banner after a delay (if not recently dismissed)
+        scheduleBanner();
+    });
+
+    // Listen for successful install
+    window.addEventListener('appinstalled', () => {
+        deferredInstallPrompt = null;
+        trackInstallPrompt('accepted');
+        hidePWABanner();
+        hideSidebarInstallButton();
+        showToast('QuranIQ installed! ✨ Jazak Allahu Khairan');
+    });
+}
+
+function showSidebarInstallButton() {
+    const btn = document.getElementById('sidebar-install-btn');
+    if (btn) {
+        btn.classList.remove('hidden');
+        btn.addEventListener('click', () => {
+            triggerInstallPrompt('sidebar');
+        });
+    }
+}
+
+function hideSidebarInstallButton() {
+    const btn = document.getElementById('sidebar-install-btn');
+    if (btn) btn.classList.add('hidden');
+}
+
+function scheduleBanner() {
+    // Check if user recently dismissed the banner
+    const dismissedAt = localStorage.getItem(PWA_DISMISS_KEY);
+    if (dismissedAt) {
+        const elapsed = Date.now() - parseInt(dismissedAt, 10);
+        if (elapsed < PWA_DISMISS_COOLDOWN) return; // Still in cooldown
+    }
+
+    // Show banner after delay
+    setTimeout(() => {
+        if (!deferredInstallPrompt) return; // No longer installable
+        showPWABanner();
+    }, PWA_BANNER_DELAY);
+}
+
+function showPWABanner() {
+    const banner = document.getElementById('pwa-install-banner');
+    if (!banner) return;
+
+    banner.classList.remove('hidden');
+    // Trigger animation after a frame
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            banner.classList.add('visible');
+        });
+    });
+
+    // Install button
+    const installBtn = document.getElementById('pwa-install-btn');
+    installBtn.addEventListener('click', () => {
+        triggerInstallPrompt('banner');
+    }, { once: true });
+
+    // Dismiss button
+    const dismissBtn = document.getElementById('pwa-dismiss-btn');
+    dismissBtn.addEventListener('click', () => {
+        dismissPWABanner();
+    }, { once: true });
+
+    // Auto-hide after 15 seconds if not interacted with
+    setTimeout(() => {
+        if (banner.classList.contains('visible')) {
+            hidePWABanner();
+        }
+    }, 15000);
+
+    trackEvent('pwa_banner', { action: 'shown' });
+}
+
+function hidePWABanner() {
+    const banner = document.getElementById('pwa-install-banner');
+    if (!banner) return;
+    banner.classList.remove('visible');
+    setTimeout(() => banner.classList.add('hidden'), 400);
+}
+
+function dismissPWABanner() {
+    localStorage.setItem(PWA_DISMISS_KEY, Date.now().toString());
+    hidePWABanner();
+    trackEvent('pwa_banner', { action: 'dismissed' });
+}
+
+async function triggerInstallPrompt(source) {
+    if (!deferredInstallPrompt) return;
+
+    try {
+        deferredInstallPrompt.prompt();
+        const { outcome } = await deferredInstallPrompt.userChoice;
+        trackInstallPrompt(outcome === 'accepted' ? 'accepted' : 'dismissed');
+        trackEvent('pwa_install_trigger', { source, outcome });
+
+        if (outcome === 'accepted') {
+            hidePWABanner();
+            hideSidebarInstallButton();
+        } else {
+            // User dismissed the native prompt — set cooldown
+            localStorage.setItem(PWA_DISMISS_KEY, Date.now().toString());
+            hidePWABanner();
+        }
+    } catch (err) {
+        // Fallback: prompt may have already been used
+        console.warn('Install prompt error:', err);
+    }
+
+    deferredInstallPrompt = null;
 }
