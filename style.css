@@ -623,7 +623,7 @@ button, input, select, textarea {
 }
 
 .verse-carousel.expanded {
-    max-height: 800px;
+    max-height: 2000px;
     opacity: 1;
     margin-top: 12px;
     padding-top: 12px;
@@ -701,7 +701,7 @@ button, input, select, textarea {
     flex: 1;
     min-height: 120px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     touch-action: pan-y;
 }
 
