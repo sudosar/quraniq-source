@@ -174,6 +174,9 @@ function renderLeaderboardTable(data, activeCode) {
         `;
     }
 
+    // Calculate top scorer badges for each game type
+    const gameBadges = calculateGameBadges(data);
+
     let html = '<div class="lb-table">';
 
     // Header
@@ -199,12 +202,19 @@ function renderLeaderboardTable(data, activeCode) {
 
         const quranPct = player.quranPercent > 0 ? `${player.quranPercent}%` : '-';
 
+        // Get this player's badges
+        const badges = gameBadges[player.uid] || [];
+        const badgesHtml = badges.length > 0
+            ? `<span class="lb-badges">${badges.map(b => `<span class="lb-badge" title="Top ${b.label} today">${b.icon}</span>`).join('')}</span>`
+            : '';
+
         html += `
             <div class="lb-row ${meClass}" title="${breakdown}">
                 <div class="lb-rank">${rankEmoji}</div>
                 <div class="lb-player">
                     <span class="lb-player-name">${escapeHtml(player.displayName)}</span>
                     ${player.isMe ? '<span class="lb-you-badge">you</span>' : ''}
+                    ${badgesHtml}
                 </div>
                 <div class="lb-today">${todayMoons}</div>
                 <div class="lb-total">${player.ramadanTotal}🌙</div>
@@ -215,10 +225,48 @@ function renderLeaderboardTable(data, activeCode) {
 
     html += '</div>';
 
-    // Expand row for game breakdown on tap (mobile)
-    html += `<p class="lb-tap-hint">Tap a row to see game breakdown</p>`;
+    // Badge legend
+    html += `<p class="lb-badge-legend">🔗 Connections · 🔤 Harf · 🔍 Who Am I · 🧩 Scramble · 🌙 Juz</p>`;
 
     return html;
+}
+
+/**
+ * Calculate which player has the top score in each game type today.
+ * Returns a map of uid -> array of badge objects.
+ */
+function calculateGameBadges(data) {
+    const games = [
+        { key: 'connections', icon: '🔗', label: 'Connections' },
+        { key: 'harf',        icon: '🔤', label: 'Harf by Harf' },
+        { key: 'deduction',   icon: '🔍', label: 'Who Am I' },
+        { key: 'scramble',    icon: '🧩', label: 'Scramble' },
+        { key: 'juz',         icon: '🌙', label: 'Juz Journey' }
+    ];
+
+    const badges = {}; // uid -> [{ icon, label }]
+
+    games.forEach(game => {
+        let topScore = 0;
+        let topUid = null;
+
+        // Find the highest score for this game (must be > 0)
+        data.forEach(player => {
+            const score = (player.todayScores && player.todayScores[game.key]) || 0;
+            if (score > topScore) {
+                topScore = score;
+                topUid = player.uid;
+            }
+        });
+
+        // Only award badge if someone actually scored > 0
+        if (topUid && topScore > 0) {
+            if (!badges[topUid]) badges[topUid] = [];
+            badges[topUid].push({ icon: game.icon, label: game.label });
+        }
+    });
+
+    return badges;
 }
 
 function renderMiniMoons(count, max) {

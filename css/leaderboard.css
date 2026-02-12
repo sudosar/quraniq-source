@@ -450,9 +450,39 @@
     font-style: italic;
 }
 
+/* ==================== GAME BADGES ==================== */
+.lb-badges {
+    display: inline-flex;
+    gap: 1px;
+    margin-left: 2px;
+    flex-shrink: 0;
+}
+
+.lb-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    font-size: 0.65rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(201, 162, 39, 0.2), rgba(201, 162, 39, 0.08));
+    border: 1px solid rgba(201, 162, 39, 0.4);
+    filter: drop-shadow(0 0 2px rgba(201, 162, 39, 0.3));
+    cursor: default;
+}
+
+.lb-badge-legend {
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--text-secondary, #6b6b80);
+    margin-top: 0.5rem;
+    letter-spacing: 0.3px;
+}
+
 /* ==================== EXPANDED ROW (Game Breakdown) ==================== */
 .lb-row.lb-expanded {
-    background: var(--card-bg, rgba(255,255,255,0.05));
+    background: var(--bg-card, rgba(255,255,255,0.05));
     border-radius: 8px;
 }
 
