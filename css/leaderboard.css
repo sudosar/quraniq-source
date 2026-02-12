@@ -114,10 +114,10 @@
 .lb-name-input {
     flex: 1;
     padding: 0.6rem 0.8rem;
-    border: 2px solid var(--border, #333);
+    border: 2px solid var(--border, #ddd9cc);
     border-radius: 10px;
-    background: var(--card-bg, #1a1a2e);
-    color: var(--text, #e0e0e0);
+    background: var(--bg-card, #ffffff);
+    color: var(--text, #1a1a2e);
     font-size: 1rem;
     outline: none;
     transition: border-color 0.2s;
@@ -128,7 +128,8 @@
 }
 
 .lb-name-input::placeholder {
-    color: var(--text-secondary, #666);
+    color: var(--text-secondary, #6b6b80);
+    opacity: 0.8;
 }
 
 /* ==================== DIALOG (Create/Join) ==================== */
@@ -471,17 +472,13 @@
     }
 }
 
-/* ==================== LIGHT THEME OVERRIDES ==================== */
-[data-theme="light"] .lb-name-input {
-    background: #fff;
-    border-color: #ddd;
-    color: #333;
+/* ==================== DARK THEME OVERRIDES ==================== */
+[data-theme="dark"] .lb-name-input {
+    background: var(--bg-card, #1a1b22);
+    border-color: var(--border, #3a3b44);
+    color: var(--text, #f0f0f2);
 }
 
-[data-theme="light"] .lb-row.lb-me {
-    background: rgba(212, 175, 55, 0.12);
-}
-
-[data-theme="light"] .lb-group-tab {
-    border-color: #ddd;
+[data-theme="dark"] .lb-name-input::placeholder {
+    color: var(--text-secondary, #a0a0b0);
 }

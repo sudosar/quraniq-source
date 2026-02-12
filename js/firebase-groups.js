@@ -89,19 +89,39 @@ async function initFirebase() {
  * Set or update the user's display name.
  */
 async function setDisplayName(name) {
-    if (!FB_STATE.user) return false;
-    const cleanName = name.trim().substring(0, 30);
-    if (!cleanName) return false;
-
-    try {
-        await FB_STATE.db.ref(`users/${FB_STATE.user.uid}/displayName`).set(cleanName);
-        FB_STATE.displayName = cleanName;
-        localStorage.setItem('quraniq_display_name', cleanName);
-        return true;
-    } catch (err) {
-        console.error('[FB] Set display name failed:', err);
+    const cleanName = (name || '').trim().substring(0, 30);
+    if (!cleanName) {
+        console.warn('[FB] setDisplayName: empty name');
         return false;
     }
+
+    // Ensure Firebase is initialized and user is authenticated
+    if (!FB_STATE.initialized || !FB_STATE.user) {
+        console.warn('[FB] setDisplayName: Firebase not ready, attempting init...');
+        const ok = await initFirebase();
+        if (!ok || !FB_STATE.user) {
+            console.error('[FB] setDisplayName: Firebase init failed');
+            return false;
+        }
+    }
+
+    // Retry up to 2 times on failure
+    for (let attempt = 1; attempt <= 2; attempt++) {
+        try {
+            await FB_STATE.db.ref(`users/${FB_STATE.user.uid}/displayName`).set(cleanName);
+            FB_STATE.displayName = cleanName;
+            localStorage.setItem('quraniq_display_name', cleanName);
+            console.log('[FB] Display name saved:', cleanName);
+            return true;
+        } catch (err) {
+            console.error(`[FB] Set display name failed (attempt ${attempt}):`, err);
+            if (attempt < 2) {
+                // Wait briefly before retry
+                await new Promise(r => setTimeout(r, 1000));
+            }
+        }
+    }
+    return false;
 }
 
 /**
