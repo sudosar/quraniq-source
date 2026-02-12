@@ -304,6 +304,12 @@
 .juz-surah-en.show {
   opacity: 1;
 }
+.juz-surah-translit {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  font-style: italic;
+}
 .juz-surah-hint-icon {
   display: inline-flex;
   align-items: center;

@@ -43,16 +43,16 @@ Generate a daily Juz Puzzle for Ramadan. Each puzzle focuses on one of the 30 Ju
   "surah_question": {
     "correct_surah": <number>,
     "options": [
-      { "num": <number>, "name": "<string>", "name_ar": "<string>" },
-      { "num": <number>, "name": "<string>", "name_ar": "<string>" },
-      { "num": <number>, "name": "<string>", "name_ar": "<string>" },
-      { "num": <number>, "name": "<string>", "name_ar": "<string>" }
+      { "num": <number>, "name": "<transliteration>", "name_ar": "<arabic>", "name_en": "<english meaning>" },
+      { "num": <number>, "name": "<transliteration>", "name_ar": "<arabic>", "name_en": "<english meaning>" },
+      { "num": <number>, "name": "<transliteration>", "name_ar": "<arabic>", "name_en": "<english meaning>" },
+      { "num": <number>, "name": "<transliteration>", "name_ar": "<arabic>", "name_en": "<english meaning>" }
     ]
   },
   "surah_order": {
     "surahs": [
-      { "num": <number>, "name": "<string>", "name_ar": "<string>" },
-      { "num": <number>, "name": "<string>", "name_ar": "<string>" },
+      { "num": <number>, "name": "<transliteration>", "name_ar": "<arabic>", "name_en": "<english meaning>" },
+      { "num": <number>, "name": "<transliteration>", "name_ar": "<arabic>", "name_en": "<english meaning>" },
       // ... all surahs in the juz
     ]
   },
@@ -93,16 +93,16 @@ Generate a daily Juz Puzzle for Ramadan. Each puzzle focuses on one of the 30 Ju
   "surah_question": {
     "correct_surah": 2,
     "options": [
-      { "num": 1, "name": "Al-Fatiha", "name_ar": "الفاتحة" },
-      { "num": 2, "name": "Al-Baqarah", "name_ar": "البقرة" },
-      { "num": 3, "name": "Aal-E-Imran", "name_ar": "آل عمران" },
-      { "num": 67, "name": "Al-Mulk", "name_ar": "الملك" }
+      { "num": 1, "name": "Al-Fatiha", "name_ar": "الفاتحة", "name_en": "The Opening" },
+      { "num": 2, "name": "Al-Baqarah", "name_ar": "البقرة", "name_en": "The Cow" },
+      { "num": 3, "name": "Aal-E-Imran", "name_ar": "آل عمران", "name_en": "The Family of Imran" },
+      { "num": 67, "name": "Al-Mulk", "name_ar": "الملك", "name_en": "The Sovereignty" }
     ]
   },
   "surah_order": {
     "surahs": [
-      { "num": 1, "name": "Al-Fatiha", "name_ar": "الفاتحة" },
-      { "num": 2, "name": "Al-Baqarah", "name_ar": "البقرة" }
+      { "num": 1, "name": "Al-Fatiha", "name_ar": "الفاتحة", "name_en": "The Opening" },
+      { "num": 2, "name": "Al-Baqarah", "name_ar": "البقرة", "name_en": "The Cow" }
     ]
   },
   "educational_notes": {

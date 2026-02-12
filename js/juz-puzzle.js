@@ -29,16 +29,16 @@ const SAMPLE_JUZ_PUZZLE = {
   surah_question: {
     correct_surah: 2,
     options: [
-      { num: 1, name: "Al-Fatiha", name_ar: "الفاتحة" },
-      { num: 2, name: "Al-Baqarah", name_ar: "البقرة" },
-      { num: 3, name: "Aal-E-Imran", name_ar: "آل عمران" },
-      { num: 67, name: "Al-Mulk", name_ar: "الملك" }
+      { num: 1, name: "Al-Fatiha", name_ar: "الفاتحة", name_en: "The Opening" },
+      { num: 2, name: "Al-Baqarah", name_ar: "البقرة", name_en: "The Cow" },
+      { num: 3, name: "Aal-E-Imran", name_ar: "آل عمران", name_en: "The Family of Imran" },
+      { num: 67, name: "Al-Mulk", name_ar: "الملك", name_en: "The Sovereignty" }
     ]
   },
   surah_order: {
     surahs: [
-      { num: 1, name: "Al-Fatiha", name_ar: "الفاتحة" },
-      { num: 2, name: "Al-Baqarah", name_ar: "البقرة" }
+      { num: 1, name: "Al-Fatiha", name_ar: "الفاتحة", name_en: "The Opening" },
+      { num: 2, name: "Al-Baqarah", name_ar: "البقرة", name_en: "The Cow" }
     ]
   },
   educational_notes: {
@@ -462,19 +462,23 @@ function renderRound3() {
 
       <!-- Options (Arabic names, tappable for English) -->
       <div class="juz-options juz-surah-options" id="juz-surah-options">
-        ${shuffled.map((opt, i) => `
+        ${shuffled.map((opt, i) => {
+          const enText = opt.name_en || opt.name;
+          const fullText = juzState.round3Answered ? `${enText} <span class="juz-surah-translit">(${opt.name})</span>` : enText;
+          return `
           <button class="juz-option juz-surah-option ${juzState.round3Answered && opt.num === q.correct_surah ? 'correct' : ''}" 
                   onclick="submitSurahAnswer(this, ${opt.num})" 
                   data-num="${opt.num}"
                   ${juzState.round3Answered ? 'disabled' : ''}>
             <span class="juz-surah-ar">${opt.name_ar}</span>
-            <span class="juz-surah-en ${juzState.round3Answered || juzState.surahTooltipsRevealed.has(opt.num) ? 'show' : ''}" onclick="event.stopPropagation(); revealSurahTooltip(${opt.num}, this)">${opt.name}</span>
+            <span class="juz-surah-en ${juzState.round3Answered || juzState.surahTooltipsRevealed.has(opt.num) ? 'show' : ''}">${fullText}</span>
             ${!juzState.surahTooltipsRevealed.has(opt.num) && !juzState.round3Answered ? `<span class="juz-surah-hint-icon" onclick="event.stopPropagation(); revealSurahTooltip(${opt.num}, this.previousElementSibling)">?</span>` : ''}
           </button>
-        `).join('')}
+        `;
+        }).join('')}
       </div>
 
-      <p class="juz-hint-notice">Tap <span class="juz-hint-icon-inline">?</span> for English name (costs 1🌙)</p>
+      <p class="juz-hint-notice">Tap <span class="juz-hint-icon-inline">?</span> for English translation (costs 1🌙)</p>
 
       <div id="juz-surah-feedback" class="juz-feedback">
         ${juzState.round3Answered ? renderSavedFeedback('surah') : ''}
@@ -498,7 +502,18 @@ function revealSurahTooltip(num, enEl) {
 
 function revealAllSurahEnglishNames() {
   // Reveal all English names and hide all ? icons in Round 3
-  document.querySelectorAll('#juz-surah-options .juz-surah-en').forEach(el => el.classList.add('show'));
+  // Also update text to show both translation and transliteration
+  const q = juzState.puzzle.surah_question;
+  document.querySelectorAll('#juz-surah-options .juz-surah-option').forEach(btn => {
+    const num = parseInt(btn.dataset.num);
+    const opt = q.options.find(o => o.num === num);
+    if (opt) {
+      const enEl = btn.querySelector('.juz-surah-en');
+      const enText = opt.name_en || opt.name;
+      enEl.innerHTML = `${enText} <span class="juz-surah-translit">(${opt.name})</span>`;
+      enEl.classList.add('show');
+    }
+  });
   document.querySelectorAll('#juz-surah-options .juz-surah-hint-icon').forEach(el => el.style.display = 'none');
 }
 
@@ -566,7 +581,7 @@ function renderRound4() {
       </div>
 
       ${!juzState.round4Answered ? `
-        <p class="juz-hint-notice">Tap <span class="juz-hint-icon-inline">?</span> for English name (costs 1🌙)</p>
+        <p class="juz-hint-notice">Tap <span class="juz-hint-icon-inline">?</span> for English translation (costs 1🌙)</p>
         <div class="juz-order-actions" id="juz-order-actions">
           <button class="btn btn-secondary" onclick="shuffleOrder()">Shuffle</button>
           <button class="btn btn-primary" onclick="submitOrder()">Check Order</button>
@@ -590,6 +605,8 @@ function renderOrderList() {
   return juzState.surahOrderGuess.map((s, i) => {
     const enRevealed = juzState.round4Answered || juzState.orderTooltipsRevealed.has(s.num);
     const showHintIcon = !juzState.round4Answered && !juzState.orderTooltipsRevealed.has(s.num);
+    const enText = s.name_en || s.name;
+    const displayText = juzState.round4Answered ? `${enText} <span class="juz-surah-translit">(${s.name})</span>` : enText;
     return `
     <div class="juz-order-item ${juzState.round4Answered ? (isCorrectPosition(i) ? 'correct' : 'wrong') : ''}" 
          draggable="${!juzState.round4Answered}" 
@@ -598,7 +615,7 @@ function renderOrderList() {
       <span class="juz-order-handle">☰</span>
       <span class="juz-order-num">${i + 1}</span>
       <span class="juz-order-name-ar">${s.name_ar}</span>
-      <span class="juz-order-name-en ${enRevealed ? 'show' : ''}">${s.name}</span>
+      <span class="juz-order-name-en ${enRevealed ? 'show' : ''}">${displayText}</span>
       ${showHintIcon ? `<span class="juz-order-hint-icon" onclick="event.stopPropagation(); revealOrderTooltip(${s.num})">?</span>` : ''}
       ${!juzState.round4Answered ? `
         <div class="juz-order-arrows">
@@ -629,9 +646,19 @@ function revealOrderTooltip(num) {
 }
 
 function revealAllOrderEnglishNames() {
-  // Reveal all English names in Round 4 order list
-  document.querySelectorAll('#juz-order-list .juz-order-name-en').forEach(el => el.classList.add('show'));
-  document.querySelectorAll('#juz-order-list .juz-order-hint-icon').forEach(el => el.style.display = 'none');
+  // Reveal all English names in Round 4 order list and update text to include transliteration
+  document.querySelectorAll('#juz-order-list .juz-order-item').forEach(item => {
+    const num = parseInt(item.dataset.num);
+    const surah = juzState.surahOrderGuess.find(s => s.num === num);
+    const enEl = item.querySelector('.juz-order-name-en');
+    if (enEl && surah) {
+      const enText = surah.name_en || surah.name;
+      enEl.innerHTML = `${enText} <span class="juz-surah-translit">(${surah.name})</span>`;
+      enEl.classList.add('show');
+    }
+    const hintIcon = item.querySelector('.juz-order-hint-icon');
+    if (hintIcon) hintIcon.style.display = 'none';
+  });
 }
 
 function isCorrectPosition(idx) {
@@ -839,7 +866,7 @@ function submitOrder() {
       `Correct! The surahs in Juz ${juzState.puzzle.juz_number} are in this exact order.`, 1);
   } else {
     // Show correct order
-    const correctNames = juzState.surahOrderSubset.map((s, i) => `${i + 1}. ${s.name_ar} (${s.name})`).join(' → ');
+    const correctNames = juzState.surahOrderSubset.map((s, i) => `${i + 1}. ${s.name_ar} (${s.name_en || s.name})`).join(' → ');
     showRoundFeedback('juz-order-feedback', false,
       `The correct order is: ${correctNames}`, 0);
   }
@@ -885,7 +912,7 @@ function renderSavedFeedback(round) {
       isCorrect = juzState.scores.round4 > 0;
       explanation = isCorrect
         ? `Correct! The surahs in Juz ${juzState.puzzle.juz_number} are in this exact order.`
-        : `The correct order is: ${juzState.surahOrderSubset.map((s, i) => `${i + 1}. ${s.name_ar} (${s.name})`).join(' → ')}`;
+        : `The correct order is: ${juzState.surahOrderSubset.map((s, i) => `${i + 1}. ${s.name_ar} (${s.name_en || s.name})`).join(' → ')}`;
       score = juzState.scores.round4;
       break;
   }
