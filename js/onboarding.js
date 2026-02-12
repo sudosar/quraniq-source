@@ -221,18 +221,41 @@ function scheduleNextReminder() {
     }, delay);
 }
 
-function sendDailyNotification() {
+function sendDailyNotification(retryCount) {
     if (!areNotificationsEnabled()) return;
+    retryCount = retryCount || 0;
 
     // Check if the user already played today (don't nag them)
     try {
         const state = JSON.parse(localStorage.getItem(STATE_KEY) || '{}');
         const today = getDayNumber();
         const todayKey = `day_${today}`;
-        // If they have state for today, they've already visited
         if (state[todayKey]) return;
     } catch (e) {}
 
+    // Verify today's puzzle actually exists before notifying
+    const todayStr = new Date().toISOString().slice(0, 10);
+    fetch('data/daily_puzzle.json?t=' + Date.now())
+        .then(r => r.ok ? r.json() : null)
+        .then(data => {
+            if (data && data.date === todayStr) {
+                // Puzzle is ready — send notification
+                doSendNotification();
+            } else if (retryCount < 12) {
+                // Puzzle not ready yet — retry in 5 minutes (up to 1 hour)
+                setTimeout(() => sendDailyNotification(retryCount + 1), 300000);
+            }
+            // After 12 retries (1 hour), give up silently
+        })
+        .catch(() => {
+            // Network error — retry in 5 minutes
+            if (retryCount < 12) {
+                setTimeout(() => sendDailyNotification(retryCount + 1), 300000);
+            }
+        });
+}
+
+function doSendNotification() {
     // Try service worker notification first (works when tab is closed on mobile)
     if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
         navigator.serviceWorker.ready.then(reg => {
@@ -244,7 +267,6 @@ function sendDailyNotification() {
                 renotify: true,
                 data: { url: './' }
             }).catch(() => {
-                // Fallback to basic notification
                 showBasicNotification();
             });
         });

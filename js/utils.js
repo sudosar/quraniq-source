@@ -634,6 +634,15 @@ let _servingStale = false;
 function isServingStale() { return _servingStale; }
 
 /**
+ * Convert a date string (YYYY-MM-DD) to the dayNumber used for state keys.
+ * This ensures stale puzzles use the original day's state key.
+ */
+function dateToDayNumber(dateStr) {
+    const d = new Date(dateStr + 'T00:00:00Z');
+    return Math.floor((d.getTime() - EPOCH) / DAY_MS);
+}
+
+/**
  * Shared daily puzzle loader.
  * 1. Tries to load today's puzzle from the data file.
  * 2. If today's isn't ready yet, serves yesterday's puzzle (the stale one)
@@ -660,8 +669,13 @@ function loadDailyWithHolding(dataFile, sectionId, gameName, onLoaded, extractPu
                 // Fresh puzzle — serve normally
                 onLoaded(puzzle, false);
             } else {
-                // Stale puzzle — serve it but mark as stale and poll for new one
+                // Stale puzzle — override dayNumber to match the puzzle's date
+                // so the state key (e.g., conn_407) matches yesterday's saved state.
+                // This preserves the user's completed game instead of resetting it.
                 _servingStale = true;
+                if (typeof app !== 'undefined') {
+                    app.dayNumber = dateToDayNumber(data.date);
+                }
                 onLoaded(puzzle, true);
                 startStalePoll(dataFile, today);
             }
