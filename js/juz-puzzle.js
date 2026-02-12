@@ -67,6 +67,7 @@ let juzState = {
   surahOrderSubset: [],  // The subset of surahs selected for ordering
   tooltipsRevealed: new Set(),
   surahTooltipsRevealed: new Set(),
+  orderTooltipsRevealed: new Set(),
   round2Answered: false,
   round3Answered: false,
   round4Answered: false
@@ -80,6 +81,7 @@ function loadJuzState() {
       // Restore Sets from arrays
       raw.tooltipsRevealed = new Set(raw.tooltipsRevealed || []);
       raw.surahTooltipsRevealed = new Set(raw.surahTooltipsRevealed || []);
+      raw.orderTooltipsRevealed = new Set(raw.orderTooltipsRevealed || []);
       return raw;
     }
   } catch (e) {}
@@ -92,6 +94,7 @@ function saveJuzState() {
     // Convert Sets to arrays for JSON serialization
     tooltipsRevealed: Array.from(juzState.tooltipsRevealed),
     surahTooltipsRevealed: Array.from(juzState.surahTooltipsRevealed),
+    orderTooltipsRevealed: Array.from(juzState.orderTooltipsRevealed),
     // Don't save transient data
     wbwData: null,
     audioPlaying: false
@@ -139,6 +142,7 @@ function initJuzPuzzle(puzzleData) {
       surahOrderGuess: [...orderSubset].sort(() => Math.random() - 0.5),
       tooltipsRevealed: new Set(),
       surahTooltipsRevealed: new Set(),
+      orderTooltipsRevealed: new Set(),
       round2Answered: false,
       round3Answered: false,
       round4Answered: false
@@ -464,7 +468,7 @@ function renderRound3() {
                   data-num="${opt.num}"
                   ${juzState.round3Answered ? 'disabled' : ''}>
             <span class="juz-surah-ar">${opt.name_ar}</span>
-            <span class="juz-surah-en ${juzState.surahTooltipsRevealed.has(opt.num) ? 'show' : ''}" onclick="event.stopPropagation(); revealSurahTooltip(${opt.num}, this)">${opt.name}</span>
+            <span class="juz-surah-en ${juzState.round3Answered || juzState.surahTooltipsRevealed.has(opt.num) ? 'show' : ''}" onclick="event.stopPropagation(); revealSurahTooltip(${opt.num}, this)">${opt.name}</span>
             ${!juzState.surahTooltipsRevealed.has(opt.num) && !juzState.round3Answered ? `<span class="juz-surah-hint-icon" onclick="event.stopPropagation(); revealSurahTooltip(${opt.num}, this.previousElementSibling)">?</span>` : ''}
           </button>
         `).join('')}
@@ -492,6 +496,12 @@ function revealSurahTooltip(num, enEl) {
   if (hintIcon) hintIcon.style.display = 'none';
 }
 
+function revealAllSurahEnglishNames() {
+  // Reveal all English names and hide all ? icons in Round 3
+  document.querySelectorAll('#juz-surah-options .juz-surah-en').forEach(el => el.classList.add('show'));
+  document.querySelectorAll('#juz-surah-options .juz-surah-hint-icon').forEach(el => el.style.display = 'none');
+}
+
 function submitSurahAnswer(btn, num) {
   if (juzState.round3Answered) return;
 
@@ -508,6 +518,8 @@ function submitSurahAnswer(btn, num) {
     juzState.round3Answered = true;
     updateCrescentMeter();
     saveJuzState();
+    // Reveal all English names on solve
+    revealAllSurahEnglishNames();
     showRoundFeedback('juz-surah-feedback', true,
       juzState.puzzle.educational_notes.surah_overview,
       juzState.scores.round3);
@@ -524,6 +536,8 @@ function submitSurahAnswer(btn, num) {
       juzState.round3Answered = true;
       updateCrescentMeter();
       saveJuzState();
+      // Reveal all English names on solve
+      revealAllSurahEnglishNames();
       showRoundFeedback('juz-surah-feedback', false,
         juzState.puzzle.educational_notes.surah_overview, 0);
     }
@@ -552,6 +566,7 @@ function renderRound4() {
       </div>
 
       ${!juzState.round4Answered ? `
+        <p class="juz-hint-notice">Tap <span class="juz-hint-icon-inline">?</span> for English name (costs 1🌙)</p>
         <div class="juz-order-actions" id="juz-order-actions">
           <button class="btn btn-secondary" onclick="shuffleOrder()">Shuffle</button>
           <button class="btn btn-primary" onclick="submitOrder()">Check Order</button>
@@ -572,7 +587,10 @@ function renderRound4() {
 }
 
 function renderOrderList() {
-  return juzState.surahOrderGuess.map((s, i) => `
+  return juzState.surahOrderGuess.map((s, i) => {
+    const enRevealed = juzState.round4Answered || juzState.orderTooltipsRevealed.has(s.num);
+    const showHintIcon = !juzState.round4Answered && !juzState.orderTooltipsRevealed.has(s.num);
+    return `
     <div class="juz-order-item ${juzState.round4Answered ? (isCorrectPosition(i) ? 'correct' : 'wrong') : ''}" 
          draggable="${!juzState.round4Answered}" 
          data-idx="${i}" 
@@ -580,7 +598,8 @@ function renderOrderList() {
       <span class="juz-order-handle">☰</span>
       <span class="juz-order-num">${i + 1}</span>
       <span class="juz-order-name-ar">${s.name_ar}</span>
-      <span class="juz-order-name-en">${s.name}</span>
+      <span class="juz-order-name-en ${enRevealed ? 'show' : ''}">${s.name}</span>
+      ${showHintIcon ? `<span class="juz-order-hint-icon" onclick="event.stopPropagation(); revealOrderTooltip(${s.num})">?</span>` : ''}
       ${!juzState.round4Answered ? `
         <div class="juz-order-arrows">
           <button class="juz-arrow-btn" onclick="moveItem(${i}, -1)">▲</button>
@@ -588,7 +607,31 @@ function renderOrderList() {
         </div>
       ` : ''}
     </div>
-  `).join('');
+  `;
+  }).join('');
+}
+
+function revealOrderTooltip(num) {
+  if (juzState.orderTooltipsRevealed.has(num)) return;
+  juzState.orderTooltipsRevealed.add(num);
+  juzState.hintsUsed++;
+  updateCrescentMeter();
+  saveJuzState();
+
+  // Update the specific item's English name and hide its ? icon
+  const item = document.querySelector(`.juz-order-item[data-num="${num}"]`);
+  if (item) {
+    const enEl = item.querySelector('.juz-order-name-en');
+    if (enEl) enEl.classList.add('show');
+    const hintIcon = item.querySelector('.juz-order-hint-icon');
+    if (hintIcon) hintIcon.style.display = 'none';
+  }
+}
+
+function revealAllOrderEnglishNames() {
+  // Reveal all English names in Round 4 order list
+  document.querySelectorAll('#juz-order-list .juz-order-name-en').forEach(el => el.classList.add('show'));
+  document.querySelectorAll('#juz-order-list .juz-order-hint-icon').forEach(el => el.style.display = 'none');
 }
 
 function isCorrectPosition(idx) {
@@ -781,9 +824,12 @@ function submitOrder() {
     item.setAttribute('draggable', 'false');
   });
 
-  // Remove action buttons
+  // Remove action buttons and hint notice
   const actionsEl = document.getElementById('juz-order-actions');
   if (actionsEl) actionsEl.innerHTML = '';
+
+  // Reveal all English names on solve
+  revealAllOrderEnglishNames();
 
   updateCrescentMeter();
   saveJuzState();

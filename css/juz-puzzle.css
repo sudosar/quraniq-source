@@ -427,6 +427,30 @@
   font-size: 0.8rem;
   color: var(--text-secondary);
   margin-left: auto;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.juz-order-name-en.show {
+  opacity: 1;
+}
+.juz-order-hint-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--islamic-gold);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  margin-left: auto;
+}
+.juz-order-hint-icon:hover {
+  transform: scale(1.15);
 }
 .juz-order-arrows {
   display: flex;
