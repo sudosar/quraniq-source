@@ -404,7 +404,7 @@ function attachLeaderboardHandlers(activeCode) {
     document.getElementById('lb-share-invite')?.addEventListener('click', async () => {
         const groupName = FB_STATE.groups[activeCode]?.name || 'our QuranIQ group';
         const inviteLink = `https://sudosar.github.io/quraniq/#join=${activeCode}`;
-        const inviteMsg = `Join ${groupName} on QuranIQ! \u{1F319}\n\nCompete with me in daily Quranic puzzles this Ramadan.\n\n\u{1F449} ${inviteLink}\n\nOr open QuranIQ and enter code: ${activeCode}`;
+        const inviteMsg = `Join ${groupName} on QuranIQ! \u{1F319}\n\nLet's explore the Quran together this Ramadan through daily puzzles.\n\n\u{1F449} ${inviteLink}\n\nOr open QuranIQ and enter code: ${activeCode}`;
 
         // Try native share first (mobile), fall back to clipboard
         if (navigator.share) {
