@@ -1,0 +1,601 @@
+/* ============================================
+   JUZ PUZZLE — Ramadan Daily Juz Challenge CSS
+   ============================================ */
+
+.juz-puzzle {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ===== Header ===== */
+.juz-header {
+  margin-bottom: 20px;
+}
+.juz-badge {
+  display: inline-block;
+  background: var(--islamic-gold);
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.juz-title {
+  font-family: 'Amiri', serif;
+  font-size: 2.2rem;
+  color: var(--text);
+  margin: 4px 0;
+  direction: rtl;
+}
+.juz-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ===== Progress Steps ===== */
+.juz-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 16px;
+  padding: 0 10px;
+}
+.juz-progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  opacity: 0.35;
+  transition: opacity 0.3s;
+}
+.juz-progress-step.active {
+  opacity: 1;
+}
+.juz-progress-step.done {
+  opacity: 0.7;
+}
+.juz-progress-step .step-icon {
+  font-size: 1.3rem;
+}
+.juz-progress-step .step-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.juz-progress-step.active .step-label {
+  color: var(--accent);
+}
+.juz-progress-step.done .step-label {
+  color: var(--islamic-gold);
+}
+.juz-progress-line {
+  flex: 1;
+  height: 2px;
+  background: var(--border);
+  margin: 0 6px;
+  margin-bottom: 18px;
+  transition: background 0.3s;
+}
+.juz-progress-line.done {
+  background: var(--islamic-gold);
+}
+
+/* ===== Crescent Meter ===== */
+.juz-crescent-meter {
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 12px);
+  padding: 10px 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.juz-moons {
+  font-size: 1.6rem;
+  letter-spacing: 4px;
+  margin-bottom: 4px;
+}
+.juz-hint-cost {
+  font-size: 0.75rem;
+  color: var(--islamic-gold);
+}
+.juz-hint-free {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* ===== Round Common ===== */
+.juz-round {
+  text-align: center;
+}
+.juz-round-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.juz-round-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+/* ===== Round 1: Verse ===== */
+.juz-audio-row {
+  margin-bottom: 16px;
+}
+.juz-audio-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--radius-sm, 8px);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-main, 'Inter', sans-serif);
+  transition: background 0.2s;
+}
+.juz-audio-btn:hover {
+  background: var(--accent-hover);
+}
+
+.juz-verse-container {
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--islamic-gold);
+  border-radius: var(--radius, 12px);
+  padding: 16px;
+  margin-bottom: 12px;
+  text-align: right;
+  direction: rtl;
+}
+.juz-verse-ref {
+  font-size: 0.75rem;
+  color: var(--islamic-gold);
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  direction: ltr;
+}
+.juz-verse-plain {
+  font-family: 'Amiri', serif;
+  font-size: 1.5rem;
+  line-height: 2.2;
+  color: var(--text);
+}
+
+/* Word-by-Word */
+.juz-verse-wbw {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  direction: rtl;
+}
+.juz-wbw-word {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-width: 50px;
+}
+.juz-wbw-word:hover {
+  background: var(--islamic-gold-light);
+}
+.juz-wbw-word.revealed {
+  background: var(--islamic-gold-light);
+  border: 1px solid var(--islamic-gold);
+}
+.juz-wbw-ar {
+  font-family: 'Amiri', serif;
+  font-size: 1.3rem;
+  color: var(--text);
+}
+.juz-wbw-en {
+  font-size: 0.6rem;
+  color: var(--accent);
+  font-weight: 600;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s, max-height 0.3s;
+  direction: ltr;
+}
+.juz-wbw-en.show {
+  opacity: 1;
+  max-height: 30px;
+}
+.juz-wbw-end {
+  font-family: 'Amiri', serif;
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  align-self: center;
+}
+
+.juz-hint-notice {
+  font-size: 0.75rem;
+  color: var(--islamic-gold);
+  margin: 12px 0;
+}
+.juz-hint-icon-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--islamic-gold);
+  color: #000;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+/* ===== Round 2 & 3: Options ===== */
+.juz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.juz-option {
+  background: var(--bg-hover);
+  border: 2px solid var(--border);
+  border-radius: var(--radius, 12px);
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-main, 'Inter', sans-serif);
+  transition: all 0.2s;
+}
+.juz-option:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+.juz-option.correct {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--accent);
+  font-weight: 700;
+}
+.juz-option.wrong {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  text-decoration: line-through;
+}
+.juz-option:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+/* Surah option with Arabic + English */
+.juz-surah-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+.juz-surah-ar {
+  font-family: 'Amiri', serif;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.juz-surah-en {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.juz-surah-en.show {
+  opacity: 1;
+}
+.juz-surah-hint-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--islamic-gold);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.juz-surah-hint-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Verse reminder */
+.juz-verse-reminder {
+  margin-bottom: 16px;
+}
+.juz-verse-mini {
+  font-family: 'Amiri', serif;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  background: var(--bg-hover);
+  border-radius: var(--radius-sm, 8px);
+  padding: 10px;
+  direction: rtl;
+  line-height: 1.8;
+}
+
+/* ===== Round 4: Surah Order ===== */
+.juz-order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.juz-order-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-hover);
+  border: 2px solid var(--border);
+  border-radius: var(--radius, 12px);
+  padding: 12px 14px;
+  cursor: grab;
+  transition: all 0.2s;
+  user-select: none;
+}
+.juz-order-item:active {
+  cursor: grabbing;
+}
+.juz-order-item.dragging {
+  opacity: 0.5;
+  border-color: var(--accent);
+}
+.juz-order-item.drag-over {
+  border-color: var(--islamic-gold);
+  background: var(--islamic-gold-light);
+}
+.juz-order-item.correct {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+.juz-order-item.wrong {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+}
+.juz-order-handle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: grab;
+}
+.juz-order-num {
+  background: var(--accent);
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.juz-order-name-ar {
+  font-family: 'Amiri', serif;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+.juz-order-name-en {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-left: auto;
+}
+.juz-order-arrows {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-left: 4px;
+}
+.juz-arrow-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  width: 24px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.juz-arrow-btn:hover:not(:disabled) {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.juz-arrow-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.juz-order-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* ===== Feedback ===== */
+.juz-feedback {
+  margin-top: 12px;
+}
+.juz-feedback-box {
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 12px);
+  padding: 16px;
+  text-align: left;
+}
+.juz-feedback-box.correct {
+  border-left: 4px solid var(--accent);
+}
+.juz-feedback-box.wrong {
+  border-left: 4px solid #e74c3c;
+}
+.juz-feedback-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.juz-feedback-icon {
+  font-size: 1.3rem;
+}
+.juz-feedback-score {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--islamic-gold);
+}
+.juz-feedback-text {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* ===== Continue Button ===== */
+.juz-continue-btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ===== Results ===== */
+.juz-results {
+  padding: 10px 0;
+}
+.juz-results-moons {
+  font-size: 2.5rem;
+  letter-spacing: 6px;
+  margin-bottom: 6px;
+}
+.juz-results-score {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--islamic-gold);
+  margin-bottom: 20px;
+}
+.juz-results-breakdown {
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 12px);
+  padding: 12px;
+  margin-bottom: 20px;
+}
+.juz-result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--border);
+}
+.juz-result-row:last-child {
+  border-bottom: none;
+}
+.juz-result-label {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+.juz-result-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--islamic-gold);
+}
+
+/* Educational Summary */
+.juz-edu-summary {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.juz-edu-summary h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.juz-edu-card {
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm, 8px);
+  padding: 12px;
+  margin-bottom: 8px;
+}
+.juz-edu-card strong {
+  font-size: 0.8rem;
+  color: var(--islamic-gold);
+  display: block;
+  margin-bottom: 4px;
+}
+.juz-edu-card p {
+  font-size: 0.8rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Share button */
+.juz-share-btn {
+  width: 100%;
+}
+
+/* Touch drag clone */
+.juz-touch-clone {
+  background: var(--bg-card, #1a1a2e);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius, 12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transform: scale(1.03);
+}
+
+/* Subset note */
+.juz-subset-note {
+  color: var(--islamic-gold);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Badge complete variant */
+.juz-badge-complete {
+  background: linear-gradient(135deg, var(--islamic-gold), #e6a817);
+  font-size: 0.8rem;
+  padding: 6px 18px;
+}
+
+/* Smooth transitions for order items */
+.juz-order-item {
+  transition: transform 0.15s ease, background 0.2s, border-color 0.2s;
+}
+.juz-order-item.dragging {
+  opacity: 0.4;
+  transform: scale(0.95);
+}
+.juz-order-item.drag-over {
+  transform: scale(1.02);
+}

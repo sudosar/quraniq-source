@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/juz-puzzle.css">
     <style>
         /* ===== Test Lab Specific Styles ===== */
         .test-lab-header {
@@ -260,12 +261,16 @@
             </div>
             <div class="test-section-body">
                 <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">
-                    Build and test new game modes here. The sandbox area below has full access to QuranIQ styles and utilities.
+                    Ramadan Daily Juz Puzzle — Test the 4-round Juz challenge game.
                 </p>
+                <div class="quick-actions">
+                    <button onclick="initJuzPuzzle()" class="active">Launch Juz Puzzle (Sample)</button>
+                    <button onclick="initJuzPuzzle(JUZ30_SAMPLE)">Try Juz 30 Sample</button>
+                </div>
                 <div id="sandbox-game">
                     <div class="sandbox-placeholder">
-                        <p>✨ Your new feature renders here ✨</p>
-                        <p style="font-size: 0.8rem;">Edit <code>test.html</code> or load a module via the console below</p>
+                        <p>🌙 Ramadan Juz Puzzle 🌙</p>
+                        <p style="font-size: 0.8rem;">Click "Launch Juz Puzzle" above to start</p>
                     </div>
                 </div>
             </div>
@@ -585,6 +590,87 @@
             testLog('Test Lab ready. Theme: ' + savedTheme);
             inspectPuzzle('connections');
         });
+        // ===== Juz 30 Sample Data =====
+        const JUZ30_SAMPLE = {
+          date: "2026-03-30",
+          juz_number: 30,
+          juz_name: "Amma",
+          juz_name_ar: "عَمَّ",
+          verse: {
+            surah_number: 93,
+            surah_name: "Ad-Duha",
+            surah_name_ar: "الضحى",
+            ayah_number: 3,
+            arabic_text: "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+            translation: "Your Lord has not forsaken you, nor has He become displeased.",
+            audio_url: "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1543.mp3"
+          },
+          theme_question: {
+            correct: "Allah's reassurance to the Prophet after a pause in revelation",
+            options: [
+              "Allah's reassurance to the Prophet after a pause in revelation",
+              "The punishment of those who deny the Day of Judgment",
+              "The creation of the heavens and the earth",
+              "The story of Prophet Musa and the burning bush"
+            ]
+          },
+          surah_question: {
+            correct_surah: 93,
+            options: [
+              { num: 91, name: "Ash-Shams", name_ar: "الشمس" },
+              { num: 93, name: "Ad-Duha", name_ar: "الضحى" },
+              { num: 94, name: "Ash-Sharh", name_ar: "الشرح" },
+              { num: 112, name: "Al-Ikhlas", name_ar: "الإخلاص" }
+            ]
+          },
+          surah_order: {
+            surahs: [
+              { num: 78, name: "An-Naba", name_ar: "النبأ" },
+              { num: 79, name: "An-Naziat", name_ar: "النازعات" },
+              { num: 80, name: "Abasa", name_ar: "عبس" },
+              { num: 81, name: "At-Takwir", name_ar: "التكوير" },
+              { num: 82, name: "Al-Infitar", name_ar: "الانفطار" },
+              { num: 83, name: "Al-Mutaffifin", name_ar: "المطففين" },
+              { num: 84, name: "Al-Inshiqaq", name_ar: "الانشقاق" },
+              { num: 85, name: "Al-Buruj", name_ar: "البروج" },
+              { num: 86, name: "At-Tariq", name_ar: "الطارق" },
+              { num: 87, name: "Al-Ala", name_ar: "الأعلى" },
+              { num: 88, name: "Al-Ghashiyah", name_ar: "الغاشية" },
+              { num: 89, name: "Al-Fajr", name_ar: "الفجر" },
+              { num: 90, name: "Al-Balad", name_ar: "البلد" },
+              { num: 91, name: "Ash-Shams", name_ar: "الشمس" },
+              { num: 92, name: "Al-Layl", name_ar: "الليل" },
+              { num: 93, name: "Ad-Duha", name_ar: "الضحى" },
+              { num: 94, name: "Ash-Sharh", name_ar: "الشرح" },
+              { num: 95, name: "At-Tin", name_ar: "التين" },
+              { num: 96, name: "Al-Alaq", name_ar: "العلق" },
+              { num: 97, name: "Al-Qadr", name_ar: "القدر" },
+              { num: 98, name: "Al-Bayyinah", name_ar: "البينة" },
+              { num: 99, name: "Az-Zalzalah", name_ar: "الزلزلة" },
+              { num: 100, name: "Al-Adiyat", name_ar: "العاديات" },
+              { num: 101, name: "Al-Qariah", name_ar: "القارعة" },
+              { num: 102, name: "At-Takathur", name_ar: "التكاثر" },
+              { num: 103, name: "Al-Asr", name_ar: "العصر" },
+              { num: 104, name: "Al-Humazah", name_ar: "الهمزة" },
+              { num: 105, name: "Al-Fil", name_ar: "الفيل" },
+              { num: 106, name: "Quraysh", name_ar: "قريش" },
+              { num: 107, name: "Al-Maun", name_ar: "الماعون" },
+              { num: 108, name: "Al-Kawthar", name_ar: "الكوثر" },
+              { num: 109, name: "Al-Kafirun", name_ar: "الكافرون" },
+              { num: 110, name: "An-Nasr", name_ar: "النصر" },
+              { num: 111, name: "Al-Masad", name_ar: "المسد" },
+              { num: 112, name: "Al-Ikhlas", name_ar: "الإخلاص" },
+              { num: 113, name: "Al-Falaq", name_ar: "الفلق" },
+              { num: 114, name: "An-Nas", name_ar: "الناس" }
+            ]
+          },
+          educational_notes: {
+            verse_context: "Surah Ad-Duha was revealed after a period when the Prophet Muhammad (peace be upon him) did not receive any revelation, causing him distress. The Quraysh mocked him saying his Lord had abandoned him. This verse is Allah's direct comfort — He has neither forsaken nor become displeased with His Messenger.",
+            theme_explanation: "The theme of divine reassurance runs throughout this surah. Allah reminds the Prophet of His continuous care — from his orphanhood to guidance — and promises that the Hereafter will be better than the present. It teaches us that periods of difficulty are not signs of Allah's displeasure.",
+            surah_overview: "Juz 30 (Amma) contains 37 surahs — the most of any juz. These are mostly short Makkan surahs focused on core beliefs: the Day of Judgment, Allah's power in creation, and moral accountability. They were among the first revelations and are the most memorized portions of the Quran."
+          }
+        };
     </script>
+    <script src="js/juz-puzzle.js"></script>
 </body>
 </html>
