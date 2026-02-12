@@ -1,21 +1,24 @@
 {
-  "date": "2026-02-11",
+  "date": "2026-02-12",
   "puzzle": {
-    "reference": "Surah Al-Asr (103:3)",
+    "reference": "Surah Al-Mulk (67:2)",
     "words": [
-      "إِلَّا ٱلَّذِينَ ءَامَنُوا۟",
-      "وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ",
-      "وَتَوَاصَوْا۟ بِٱلْحَقِّ",
-      "وَتَوَاصَوْا۟ بِٱلصَّبْرِ"
+      "الَّذِي خَلَقَ",
+      "الْمَوْتَ وَالْحَيَاةَ",
+      "لِيَبْلُوَكُمْ أَيُّكُمْ",
+      "أَحْسَنُ عَمَلًا",
+      "وَهُوَ الْعَزِيزُ الْغَفُورُ"
     ],
     "translations": [
-      "Except for those who believe",
-      "and do righteous deeds",
-      "and enjoin one another to truth",
-      "and enjoin one another to patience"
+      "Who created",
+      "death and life",
+      "to test which of you",
+      "is best in deed",
+      "And He is the Exalted in Might, the Forgiving"
     ],
-    "arabic": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
-    "hint": "This verse outlines the four essential qualities of those who are saved from loss."
+    "arabic": "الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا وَهُوَ الْعَزِيزُ الْغَفُورُ",
+    "hint": "Discusses the purpose of creation and Allah's attributes of Might and Forgiveness"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

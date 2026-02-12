@@ -1,11 +1,12 @@
 {
-  "date": "2026-02-11",
+  "date": "2026-02-12",
   "puzzle": {
-    "word": "قلب",
-    "display": "قَلْب",
-    "hint": "The spiritual center of understanding in humans",
-    "verse": "Qaf 50:37 — Indeed in that is a reminder for whoever has a heart or who listens attentively.",
-    "arabicVerse": "إِنَّ فِي ذَٰلِكَ لَذِكْرَىٰ لِمَن كَانَ لَهُ قَلْبٌ أَوْ أَلْقَى السَّمْعَ وَهُوَ شَهِيدٌ"
+    "word": "صبر",
+    "display": "صَبْر",
+    "hint": "A virtue emphasized in times of trial, meaning steadfast endurance through difficulty",
+    "verse": "Al-Baqarah 2:45 — And seek help through patience and prayer, though it is a hard thing except for the humble",
+    "arabicVerse": "وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ ۚ وَإِنَّهَا لَكَبِيرَةٌ إِلَّا عَلَى الْخَاشِعِينَ"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

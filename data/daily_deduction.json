@@ -1,64 +1,65 @@
 {
-  "date": "2026-02-11",
+  "date": "2026-02-12",
   "puzzle": {
-    "title": "The Burden of Riches",
-    "intro": "You stand before a tale of immense fortune, a life adorned with gold and power, yet ultimately a cautionary lesson for all who seek worldly grandeur. Can you unravel the identity of this figure whose story echoes through time, a testament to the fleeting nature of worldly possessions?",
+    "title": "The Miracle of Silent Proof",
+    "intro": "You encounter a figure shrouded story of divine intervention. A tale of miraculous provision and a speechless defense that echoes through time. Can you uncover who faced this extraordinary trial?",
     "clues": [
-      "I was from the people of a great Prophet, but I chose a path of arrogance and oppression.",
-      "Allah bestowed upon me immense wealth, so much that the keys to my treasures were a heavy burden for a strong group of men.",
-      "My people advised me not to exult in my riches, reminding me that Allah does not love the exultant.",
-      "I arrogantly claimed that my vast fortune was due to my own knowledge and effort, not a blessing from Allah.",
-      "I was warned against corruption and reminded to seek the Hereafter with what Allah had given me, but I refused to listen and continued in my pride.",
-      "Eventually, Allah caused the earth to swallow me and my dwelling, leaving me with no helpers against His decree."
+      "I received a divine message that left me astonished",
+      "My people questioned my purity when I returned with a child",
+      "I was commanded to fast from speaking for a period",
+      "A spring of water and dates sustained me during my trial",
+      "My Lord made a miraculous tree shake to provide for me",
+      "An angel appeared to me in the form of a perfect man"
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Pharaoh",
-          "Haman",
-          "Qarun",
-          "Abu Lahab",
-          "Namrud"
+          "Maryam",
+          "Asiya",
+          "Hawa",
+          "Sarah",
+          "Khadijah"
         ],
-        "answer": "Qarun"
+        "answer": "Maryam"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "The splitting of the sea",
-          "The fire of Nimrod",
-          "The flood",
-          "The swallowing by the earth",
-          "The plague of locusts"
+          "Giving birth alone under a palm tree",
+          "Facing a deadly famine",
+          "Being thrown into a fiery pit",
+          "Fleeing a tyrannical ruler",
+          "Guarding a sacred relic"
         ],
-        "answer": "The swallowing by the earth"
+        "answer": "Giving birth alone under a palm tree"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Ark",
-          "The Staff",
-          "The Golden Calf",
-          "The Treasures/Keys",
-          "The Well of Zamzam"
+          "Palm tree",
+          "Burning bush",
+          "Stone temple",
+          "River Nile",
+          "Mount Sinai"
         ],
-        "answer": "The Treasures/Keys"
+        "answer": "Palm tree"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Granted kingship",
-          "Saved from destruction",
-          "Swallowed by the earth",
-          "Became a prophet",
-          "Died peacefully"
+          "My innocence was proven when my infant son spoke",
+          "I became a revered queen",
+          "My people were destroyed by divine punishment",
+          "I led my nation to victory",
+          "A miraculous well appeared permanently"
         ],
-        "answer": "Swallowed by the earth"
+        "answer": "My innocence was proven when my infant son spoke"
       }
     },
-    "verse": "So We caused the earth to swallow him and his home. And there was for him no body of supporters to aid him other than Allah, nor was he of those who could defend themselves. (Al-Qasas 28:81)",
-    "arabic": "فَخَسَفْنَا بِهِ وَبِدَارِهِ الْأَرْضَ فَمَا كَانَ لَهُ مِن فِئَةٍ يَنصُرُونَهُ مِن دُونِ اللَّهِ وَمَا كَانَ مِنَ الْمُنتَصِرِينَ"
+    "verse": "Then he called her from below her, 'Do not grieve; your Lord has provided beneath you a stream. And shake toward you the trunk of the palm tree; it will drop upon you ripe, fresh dates.' (Maryam 19:24-25)",
+    "arabic": "فَنَادَىٰهَا مِن تَحْتِهَا أَلَّا تَحْزَنِي قَدْ جَعَلَ رَبُّكِ تَحْتَكِ سَرِيًّا ﴿٢٤﴾ وَهُزِّي إِلَيْكِ بِجِذْعِ النَّخْلَةِ تُسَاقِطْ عَلَيْكِ رُطَبًا جَنِيًّا ﴿٢٥﴾"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
