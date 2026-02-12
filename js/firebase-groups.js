@@ -348,6 +348,9 @@ async function submitFirebaseScore(gameMode, crescents) {
         await FB_STATE.db.ref(scorePath).set(current);
         console.log('[FB] Score submitted:', gameMode, crescents);
 
+        // Sync verse exploration stats to Firebase profile
+        syncVerseStatsToFirebase();
+
         // Invalidate leaderboard cache
         Object.keys(FB_STATE.leaderboardCache).forEach(k => {
             delete FB_STATE.leaderboardCache[k];
@@ -396,9 +399,11 @@ async function fetchGroupLeaderboard(groupCode) {
         // Fetch in parallel (batch of member data)
         const promises = memberUids.map(async (uid) => {
             try {
-                const [nameSnap, scoresSnap] = await Promise.all([
+                const [nameSnap, scoresSnap, verseSnap, pctSnap] = await Promise.all([
                     FB_STATE.db.ref(`users/${uid}/displayName`).once('value'),
-                    FB_STATE.db.ref(`users/${uid}/scores`).orderByKey().limitToLast(30).once('value')
+                    FB_STATE.db.ref(`users/${uid}/scores`).orderByKey().limitToLast(30).once('value'),
+                    FB_STATE.db.ref(`users/${uid}/versesExplored`).once('value'),
+                    FB_STATE.db.ref(`users/${uid}/quranPercent`).once('value')
                 ]);
 
                 const displayName = nameSnap.val() || 'Anonymous';
@@ -452,6 +457,8 @@ async function fetchGroupLeaderboard(groupCode) {
                     ramadanTotal,
                     daysPlayed,
                     streak: currentStreak,
+                    versesExplored: verseSnap.val() || 0,
+                    quranPercent: pctSnap.val() || 0,
                     isMe: uid === FB_STATE.user.uid
                 };
             } catch {
@@ -647,4 +654,24 @@ function getUserGroups() {
  */
 function isFirebaseReady() {
     return FB_STATE.initialized && FB_STATE.user !== null;
+}
+
+// ==================== VERSE STATS SYNC ====================
+
+/**
+ * Sync local verse exploration stats to Firebase user profile.
+ * Called after each score submission so leaderboard can display Quran %.
+ */
+async function syncVerseStatsToFirebase() {
+    if (!FB_STATE.user || !FB_STATE.initialized) return;
+    try {
+        const stats = typeof getVerseStats === 'function' ? getVerseStats() : null;
+        if (!stats) return;
+
+        const uid = FB_STATE.user.uid;
+        await FB_STATE.db.ref(`users/${uid}/versesExplored`).set(stats.totalVerses);
+        await FB_STATE.db.ref(`users/${uid}/quranPercent`).set(stats.quranPercent);
+    } catch (err) {
+        console.error('[FB] Verse stats sync failed:', err);
+    }
 }

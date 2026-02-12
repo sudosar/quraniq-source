@@ -13,6 +13,14 @@
             ".validate": "newData.isBoolean()"
           }
         },
+        "versesExplored": {
+          ".read": "auth != null",
+          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 6236"
+        },
+        "quranPercent": {
+          ".read": "auth != null",
+          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 100"
+        },
         "scores": {
           ".read": "auth != null",
           "$date": {

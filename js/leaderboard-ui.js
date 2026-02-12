@@ -44,6 +44,8 @@ async function initLeaderboard() {
 function openLeaderboard() {
     const modal = document.getElementById('leaderboard-modal');
     if (!modal) return;
+    // Sync verse stats to Firebase when opening leaderboard
+    if (typeof syncVerseStatsToFirebase === 'function') syncVerseStatsToFirebase();
     renderLeaderboardUI();
     openModal('leaderboard-modal');
     trackEvent('leaderboard_open');
@@ -178,7 +180,7 @@ function renderLeaderboardTable(data, activeCode) {
             <div class="lb-player">Player</div>
             <div class="lb-today" title="Today's crescents">Today</div>
             <div class="lb-total" title="Ramadan total">Total</div>
-            <div class="lb-streak" title="Current streak">🔥</div>
+            <div class="lb-quran" title="% of Quran explored">Quran</div>
         </div>
     `;
 
@@ -192,6 +194,8 @@ function renderLeaderboardTable(data, activeCode) {
         // Game breakdown tooltip
         const breakdown = `Connections: ${player.todayScores.connections}🌙 | Harf: ${player.todayScores.harf}🌙 | Who Am I: ${player.todayScores.deduction}🌙 | Scramble: ${player.todayScores.scramble}🌙 | Juz: ${player.todayScores.juz}🌙`;
 
+        const quranPct = player.quranPercent > 0 ? `${player.quranPercent}%` : '-';
+
         html += `
             <div class="lb-row ${meClass}" title="${breakdown}">
                 <div class="lb-rank">${rankEmoji}</div>
@@ -201,7 +205,7 @@ function renderLeaderboardTable(data, activeCode) {
                 </div>
                 <div class="lb-today">${todayMoons}</div>
                 <div class="lb-total">${player.ramadanTotal}🌙</div>
-                <div class="lb-streak">${player.streak > 0 ? player.streak : '-'}</div>
+                <div class="lb-quran" title="${player.versesExplored} of 6,236 verses">${quranPct}</div>
             </div>
         `;
     });
