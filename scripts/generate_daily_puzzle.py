@@ -55,7 +55,12 @@ OUTPUT_FILES = {
     "wordle": os.path.join(DATA_DIR, "daily_wordle.json"),
     "deduction": os.path.join(DATA_DIR, "daily_deduction.json"),
     "scramble": os.path.join(DATA_DIR, "daily_scramble.json"),
+    "juz": os.path.join(DATA_DIR, "daily_juz.json"),
 }
+
+# Ramadan 2026 dates (1 Ramadan 1447 AH = Feb 18, 2026)
+RAMADAN_START = datetime(2026, 2, 18)
+RAMADAN_END = datetime(2026, 3, 20)  # 30 days
 
 
 # ── History Management ─────────────────────────────────────────────
@@ -70,6 +75,7 @@ def load_history():
         "wordle": {"words": set(), "verses": set(), "hints": set()},
         "deduction": {"titles": set(), "characters": set()},
         "scramble": {"verses": set(), "references": set()},
+        "juz": {"juz_numbers": set(), "verses": set()},
     }
 
     os.makedirs(HISTORY_DIR, exist_ok=True)
@@ -135,6 +141,15 @@ def load_history():
                 history["scramble"]["references"].add(scr["reference"])
             if scr.get("arabic"):
                 history["scramble"]["verses"].add(scr["arabic"])
+
+        # Juz Journey history
+        juz = data.get("juz")
+        if juz:
+            if juz.get("juz_number"):
+                history["juz"]["juz_numbers"].add(juz["juz_number"])
+            verse = juz.get("verse", {})
+            if verse.get("surah_number") and verse.get("ayah_number"):
+                history["juz"]["verses"].add(f"{verse['surah_number']}:{verse['ayah_number']}")
 
     return history
 
@@ -686,6 +701,230 @@ def validate_scramble(puzzle, history):
 
 
 # ═══════════════════════════════════════════════════════════════════
+# JUZ JOURNEY GENERATOR (Ramadan-only)
+# ═══════════════════════════════════════════════════════════════════
+
+# Cumulative ayah count before each surah (for audio URL calculation)
+# surah_number -> total ayahs before it. Surah 1 has 0 before it.
+SURAH_AYAH_OFFSET = {
+    1: 0, 2: 7, 3: 293, 4: 493, 5: 669, 6: 789, 7: 954, 8: 1160, 9: 1235, 10: 1364,
+    11: 1473, 12: 1596, 13: 1707, 14: 1750, 15: 1802, 16: 1850, 17: 1978, 18: 2089,
+    19: 2198, 20: 2296, 21: 2431, 22: 2519, 23: 2597, 24: 2715, 25: 2779, 26: 2856,
+    27: 3083, 28: 3176, 29: 3264, 30: 3333, 31: 3393, 32: 3427, 33: 3457, 34: 3530,
+    35: 3584, 36: 3629, 37: 3712, 38: 3794, 39: 3882, 40: 3957, 41: 4042, 42: 4096,
+    43: 4149, 44: 4238, 45: 4297, 46: 4334, 47: 4369, 48: 4407, 49: 4436, 50: 4462,
+    51: 4507, 52: 4567, 53: 4616, 54: 4678, 55: 4733, 56: 4811, 57: 4907, 58: 4936,
+    59: 4958, 60: 4982, 61: 5007, 62: 5021, 63: 5032, 64: 5043, 65: 5061, 66: 5073,
+    67: 5085, 68: 5115, 69: 5167, 70: 5219, 71: 5263, 72: 5291, 73: 5319, 74: 5339,
+    75: 5395, 76: 5435, 77: 5466, 78: 5516, 79: 5556, 80: 5602, 81: 5644, 82: 5673,
+    83: 5692, 84: 5728, 85: 5753, 86: 5775, 87: 5792, 88: 5811, 89: 5837, 90: 5867,
+    91: 5887, 92: 5902, 93: 5923, 94: 5934, 95: 5942, 96: 5950, 97: 5969, 98: 5974,
+    99: 5982, 100: 5990, 101: 5999, 102: 6010, 103: 6018, 104: 6021, 105: 6030,
+    106: 6035, 107: 6039, 108: 6046, 109: 6049, 110: 6055, 111: 6058, 112: 6063,
+    113: 6067, 114: 6072
+}
+
+def get_audio_url(surah_number, ayah_number):
+    """Calculate the EveryAyah audio URL for a given surah:ayah."""
+    absolute_ayah = SURAH_AYAH_OFFSET.get(surah_number, 0) + ayah_number
+    return f"https://cdn.islamic.network/quran/audio/128/ar.alafasy/{absolute_ayah}.mp3"
+
+
+def get_juz_number_for_today(today_str):
+    """Calculate which Juz to generate based on the date (Day 1 of Ramadan = Juz 1)."""
+    today_dt = datetime.strptime(today_str, "%Y-%m-%d")
+    day_of_ramadan = (today_dt - RAMADAN_START).days + 1
+    return max(1, min(30, day_of_ramadan))
+
+
+def build_juz_prompt(history, previous_violations=None):
+    """Build the LLM prompt for Juz Journey puzzle generation."""
+    today = datetime.utcnow().strftime("%Y-%m-%d")
+    juz_number = get_juz_number_for_today(today)
+
+    avoided_verses = ", ".join(sorted(history["juz"]["verses"])) or "(none)"
+
+    violation_block = ""
+    if previous_violations:
+        violation_block = f"""
+
+CRITICAL — PREVIOUS ATTEMPT FAILED:
+{chr(10).join('  ✗ ' + v for v in previous_violations)}
+Fix these issues in your next attempt."""
+
+    return f"""You are an expert Islamic scholar creating a daily "Juz Journey" puzzle for Ramadan.
+
+TASK: Generate a puzzle for JUZ {juz_number} of the Quran.
+
+RULES:
+1. Choose a short, impactful, representative verse from Juz {juz_number}
+2. The verse MUST actually be in Juz {juz_number} — verify the surah and ayah numbers
+3. Arabic text MUST have full diacritics (tashkeel)
+4. Create a theme question with 1 correct answer and 3 plausible distractors
+5. Create a surah identification question with the correct surah and 3 distractors
+   - Distractors should be from the same Juz or nearby Juz
+   - Each surah option needs: num, name (transliteration), name_ar (Arabic), name_en (English meaning)
+6. List ALL surahs that appear in Juz {juz_number} in correct order
+   - Include surahs that start in this Juz OR continue from the previous Juz
+   - Each surah needs: num, name, name_ar, name_en
+7. Write educational notes about the verse context, theme, and surah overview
+8. The audio_url field should follow this pattern:
+   https://cdn.islamic.network/quran/audio/128/ar.alafasy/ABSOLUTE_AYAH.mp3
+   where ABSOLUTE_AYAH is the sequential ayah number across the entire Quran
+
+STRICTLY FORBIDDEN verses (used recently):
+{avoided_verses}
+{violation_block}
+
+OUTPUT FORMAT: Return a valid JSON object:
+{{{{
+  "date": "{today}",
+  "juz_number": {juz_number},
+  "juz_name": "<transliterated name of the Juz>",
+  "juz_name_ar": "<Arabic name of the Juz>",
+  "verse": {{{{
+    "surah_number": <number>,
+    "surah_name": "<transliteration>",
+    "surah_name_ar": "<Arabic>",
+    "ayah_number": <number>,
+    "arabic_text": "<full Arabic with diacritics>",
+    "translation": "<English translation>",
+    "audio_url": "<EveryAyah CDN URL>"
+  }}}},
+  "theme_question": {{{{
+    "correct": "<correct theme description>",
+    "options": ["<option1>", "<option2>", "<option3>", "<option4>"]
+  }}}},
+  "surah_question": {{{{
+    "correct_surah": <surah number>,
+    "options": [
+      {{{{ "num": <n>, "name": "<transliteration>", "name_ar": "<Arabic>", "name_en": "<English meaning>" }}}},
+      {{{{ "num": <n>, "name": "<transliteration>", "name_ar": "<Arabic>", "name_en": "<English meaning>" }}}},
+      {{{{ "num": <n>, "name": "<transliteration>", "name_ar": "<Arabic>", "name_en": "<English meaning>" }}}},
+      {{{{ "num": <n>, "name": "<transliteration>", "name_ar": "<Arabic>", "name_en": "<English meaning>" }}}}
+    ]
+  }}}},
+  "surah_order": {{{{
+    "surahs": [
+      {{{{ "num": <n>, "name": "<transliteration>", "name_ar": "<Arabic>", "name_en": "<English meaning>" }}}}
+    ]
+  }}}},
+  "educational_notes": {{{{
+    "verse_context": "<context about the verse>",
+    "theme_explanation": "<explanation of the theme>",
+    "surah_overview": "<overview of the surah>"
+  }}}}
+}}}}
+
+IMPORTANT:
+- Return ONLY the JSON object, no markdown
+- The correct theme MUST be in the options array
+- The correct surah MUST be in the surah_question options
+- surah_order.surahs MUST list ALL surahs in Juz {juz_number} in correct order
+- All Arabic text must have full tashkeel/diacritics
+- Verify the verse is actually in Juz {juz_number}"""
+
+
+def validate_juz(puzzle, history):
+    """Validate a Juz Journey puzzle."""
+    errors, cooldown_violations, warnings = [], [], []
+
+    # Required top-level fields
+    for field in ["juz_number", "juz_name", "juz_name_ar"]:
+        if not puzzle.get(field):
+            errors.append(f"Missing '{field}'")
+
+    juz_num = puzzle.get("juz_number")
+    if juz_num and (juz_num < 1 or juz_num > 30):
+        errors.append(f"Invalid juz_number: {juz_num} (must be 1-30)")
+
+    # Verse validation
+    verse = puzzle.get("verse", {})
+    if not isinstance(verse, dict):
+        errors.append("'verse' must be a dict")
+    else:
+        for field in ["surah_number", "surah_name", "surah_name_ar", "ayah_number", "arabic_text", "translation"]:
+            if not verse.get(field):
+                errors.append(f"verse missing '{field}'")
+        # Auto-fix audio_url if missing or wrong
+        if verse.get("surah_number") and verse.get("ayah_number"):
+            expected_url = get_audio_url(verse["surah_number"], verse["ayah_number"])
+            if verse.get("audio_url") != expected_url:
+                warnings.append(f"Auto-fixing audio_url to {expected_url}")
+                puzzle["verse"]["audio_url"] = expected_url
+
+    # Theme question validation
+    theme = puzzle.get("theme_question", {})
+    if not isinstance(theme, dict):
+        errors.append("'theme_question' must be a dict")
+    else:
+        if not theme.get("correct"):
+            errors.append("theme_question missing 'correct'")
+        opts = theme.get("options", [])
+        if len(opts) != 4:
+            errors.append(f"theme_question has {len(opts)} options, expected 4")
+        if theme.get("correct") and theme["correct"] not in opts:
+            errors.append("theme_question correct answer not in options")
+
+    # Surah question validation
+    sq = puzzle.get("surah_question", {})
+    if not isinstance(sq, dict):
+        errors.append("'surah_question' must be a dict")
+    else:
+        if not sq.get("correct_surah"):
+            errors.append("surah_question missing 'correct_surah'")
+        opts = sq.get("options", [])
+        if len(opts) != 4:
+            errors.append(f"surah_question has {len(opts)} options, expected 4")
+        for i, opt in enumerate(opts):
+            if not isinstance(opt, dict):
+                errors.append(f"surah_question option {i} must be a dict")
+            else:
+                for field in ["num", "name", "name_ar", "name_en"]:
+                    if not opt.get(field):
+                        errors.append(f"surah_question option {i} missing '{field}'")
+        # Check correct surah is in options
+        correct_num = sq.get("correct_surah")
+        if correct_num and opts:
+            found = any(o.get("num") == correct_num for o in opts if isinstance(o, dict))
+            if not found:
+                errors.append(f"correct_surah {correct_num} not found in surah_question options")
+
+    # Surah order validation
+    so = puzzle.get("surah_order", {})
+    if not isinstance(so, dict):
+        errors.append("'surah_order' must be a dict")
+    else:
+        surahs = so.get("surahs", [])
+        if len(surahs) < 1:
+            errors.append("surah_order has no surahs")
+        for i, s in enumerate(surahs):
+            if not isinstance(s, dict):
+                errors.append(f"surah_order surah {i} must be a dict")
+            else:
+                for field in ["num", "name", "name_ar", "name_en"]:
+                    if not s.get(field):
+                        errors.append(f"surah_order surah {i} missing '{field}'")
+
+    # Educational notes
+    notes = puzzle.get("educational_notes", {})
+    if not isinstance(notes, dict):
+        errors.append("'educational_notes' must be a dict")
+    else:
+        for field in ["verse_context", "theme_explanation", "surah_overview"]:
+            if not notes.get(field):
+                errors.append(f"educational_notes missing '{field}'")
+
+    # Cooldown — verse reuse check
+    if verse.get("surah_number") and verse.get("ayah_number"):
+        ref = f"{verse['surah_number']}:{verse['ayah_number']}"
+        if ref in history["juz"]["verses"]:
+            cooldown_violations.append(f"Verse {ref} reused (30-day cooldown)")
+
+    return errors, cooldown_violations, warnings
+
+
+# ═══════════════════════════════════════════════════════════════════
 # UNIFIED GENERATION LOOP
 # ═══════════════════════════════════════════════════════════════════
 GAME_CONFIGS = {
@@ -708,6 +947,11 @@ GAME_CONFIGS = {
         "build_prompt": build_scramble_prompt,
         "validate": validate_scramble,
         "label": "Ayah Scramble",
+    },
+    "juz": {
+        "build_prompt": build_juz_prompt,
+        "validate": validate_juz,
+        "label": "Juz Journey",
     },
 }
 
@@ -830,12 +1074,24 @@ def main():
     print(f"  Deduction: {len(history['deduction']['titles'])} titles, "
           f"{len(history['deduction']['characters'])} characters")
     print(f"  Scramble: {len(history['scramble']['references'])} references")
+    print(f"  Juz Journey: {len(history['juz']['juz_numbers'])} juz, "
+          f"{len(history['juz']['verses'])} verses")
 
-    # Generate all 4 games
+    # Determine which games to generate
+    # Juz Journey only generates during Ramadan (Feb 18 - Mar 20, 2026)
+    game_types = ["connections", "wordle", "deduction", "scramble"]
+    today_dt = datetime.strptime(today, "%Y-%m-%d")
+    if RAMADAN_START <= today_dt <= RAMADAN_END:
+        game_types.append("juz")
+        juz_num = get_juz_number_for_today(today)
+        print(f"\n  \U0001f319 Ramadan mode: Generating Juz Journey (Juz {juz_num})")
+    else:
+        print(f"\n  Juz Journey: Skipped (not during Ramadan)")
+
+    # Generate all games
     all_puzzles = {}
     any_success = False
 
-    game_types = ["connections", "wordle", "deduction", "scramble"]
     for i, game_type in enumerate(game_types):
         # Wait 60s between games to respect DeepSeek-R1's 1 req/min rate limit
         if i > 0:
@@ -879,11 +1135,11 @@ def main():
         print(f"{'═'*60}")
 
     # Print summary
-    print(f"\n{'═'*60}")
+    print(f"\n{'\u2550'*60}")
     print(f"  GENERATION SUMMARY for {today}")
-    print(f"{'═'*60}")
-    for game_type in ["connections", "wordle", "deduction", "scramble"]:
-        status = "✓" if game_type in all_puzzles else "✗ (fallback)"
+    print(f"{'\u2550'*60}")
+    for game_type in game_types:
+        status = "\u2713" if game_type in all_puzzles else "\u2717 (fallback)"
         print(f"  {status} {GAME_CONFIGS[game_type]['label']}")
 
     return 0 if any_success else 1

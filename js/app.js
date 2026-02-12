@@ -26,17 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
     initWordle();
     initDeduction();
     initScramble();
+    initJuzJourney();
     restoreViewResultsButtons();
     startCountdown();
     initNotifications();
     initBugReport();
     showOnboarding();
 
-    // Hash-based deep linking (e.g., #shukr, #help, #stats)
+    // Hash-based deep linking (e.g., #shukr, #help, #stats, #juz)
     const hash = window.location.hash.replace('#', '');
     if (hash === 'shukr') openModal('shukr-modal');
     else if (hash === 'help') openModal('help-modal');
     else if (hash === 'stats') showStatsModal();
+    else if (hash === 'juz') switchMode('juz');
 
     // PWA install prompt
     initPWAInstall();

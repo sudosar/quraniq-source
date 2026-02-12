@@ -32,7 +32,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260210m">
+    <link rel="stylesheet" href="style.css?v=20260212">
+    <link rel="stylesheet" href="css/juz-puzzle.css?v=20260212">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="icons/icon-192.png" type="image/png" sizes="192x192">
     <!-- Google Analytics (GA4) -->
@@ -92,6 +93,10 @@
         <button class="mode-tab" data-mode="scramble" role="tab" aria-selected="false" aria-controls="scramble-game" id="tab-scramble">
             <span class="mode-icon" aria-hidden="true">🧩</span>
             <span class="mode-name">Scramble</span>
+        </button>
+        <button class="mode-tab juz-tab" data-mode="juz" role="tab" aria-selected="false" aria-controls="juz-game" id="tab-juz">
+            <span class="mode-icon" aria-hidden="true">🌙</span>
+            <span class="mode-name">Juz Journey</span>
         </button>
     </nav>
 
@@ -161,6 +166,59 @@
                     <button id="scramble-check" class="btn btn-primary">Check</button>
                 </div>
             </div>
+        </section>
+
+        <!-- ==================== JUZ JOURNEY MODE ==================== -->
+        <section id="juz-game" class="game-mode" role="tabpanel" aria-labelledby="tab-juz">
+            <!-- Ramadan Countdown (shown before Feb 18) -->
+            <div id="juz-countdown-container" class="juz-countdown-container">
+                <div class="juz-countdown-header">
+                    <div class="juz-countdown-crescent">🌙</div>
+                    <h2 class="juz-countdown-title">Juz Journey</h2>
+                    <p class="juz-countdown-subtitle">A Daily Ramadan Quranic Puzzle</p>
+                </div>
+                <div class="juz-countdown-timer-wrap">
+                    <p class="juz-countdown-label">Ramadan begins in</p>
+                    <div id="juz-countdown-timer" class="juz-countdown-timer">
+                        <div class="juz-countdown-unit">
+                            <span id="juz-cd-days" class="juz-cd-num">--</span>
+                            <span class="juz-cd-label">Days</span>
+                        </div>
+                        <div class="juz-countdown-sep">:</div>
+                        <div class="juz-countdown-unit">
+                            <span id="juz-cd-hours" class="juz-cd-num">--</span>
+                            <span class="juz-cd-label">Hours</span>
+                        </div>
+                        <div class="juz-countdown-sep">:</div>
+                        <div class="juz-countdown-unit">
+                            <span id="juz-cd-mins" class="juz-cd-num">--</span>
+                            <span class="juz-cd-label">Minutes</span>
+                        </div>
+                        <div class="juz-countdown-sep">:</div>
+                        <div class="juz-countdown-unit">
+                            <span id="juz-cd-secs" class="juz-cd-num">--</span>
+                            <span class="juz-cd-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="juz-countdown-verse">
+                    <p class="juz-countdown-arabic">شَهْرُ رَمَضَانَ الَّذِي أُنزِلَ فِيهِ الْقُرْآنُ هُدًى لِّلنَّاسِ وَبَيِّنَاتٍ مِّنَ الْهُدَىٰ وَالْفُرْقَانِ</p>
+                    <p class="juz-countdown-translation"><em>The month of Ramadan in which the Quran was revealed, a guidance for the people and clear proofs of guidance and criterion.</em></p>
+                    <p class="juz-countdown-ref">— Al-Baqarah 2:185</p>
+                </div>
+                <div class="juz-countdown-coming">
+                    <div class="juz-coming-badge">Coming Soon</div>
+                    <p>Each day of Ramadan, explore one Juz of the Quran through an interactive 4-round puzzle. Listen to verses, identify themes, name Surahs, and test your knowledge of the Quran's structure.</p>
+                    <div class="juz-coming-features">
+                        <div class="juz-feature"><span>🎧</span> Listen &amp; Discover Verses</div>
+                        <div class="juz-feature"><span>📖</span> Identify Themes &amp; Topics</div>
+                        <div class="juz-feature"><span>🕌</span> Name the Surah</div>
+                        <div class="juz-feature"><span>📋</span> Order Surahs in the Juz</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Actual Game (shown from Feb 18 onwards) -->
+            <div id="juz-puzzle-container" class="juz-puzzle-container" style="display:none;"></div>
         </section>
 
         <!-- ==================== RESULT MODAL ==================== -->
@@ -257,6 +315,9 @@
                 </a>
                 <a href="#" data-mode="scramble" class="sidebar-link">
                     <span aria-hidden="true">🧩</span> Ayah Scramble
+                </a>
+                <a href="#" data-mode="juz" class="sidebar-link juz-sidebar-link">
+                    <span aria-hidden="true">🌙</span> Juz Journey
                 </a>
             </nav>
             <div class="sidebar-actions">
@@ -413,7 +474,8 @@
     <script src="js/onboarding.js?v=20260210m"></script>
     <script src="js/bugreport.js?v=20260210m"></script>
     <script src="js/analytics.js?v=20260210m"></script>
-    <script src="js/app.js?v=20260210m"></script>
+    <script src="js/juz-puzzle.js?v=20260212"></script>
+    <script src="js/app.js?v=20260212"></script>
     <script>
         // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {
