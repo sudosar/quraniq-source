@@ -338,6 +338,29 @@
   direction: rtl;
   line-height: 1.8;
 }
+.juz-verse-translation {
+  font-size: 0.85rem;
+  color: var(--accent);
+  background: var(--accent-light, rgba(27, 94, 32, 0.08));
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm, 8px);
+  padding: 10px 12px;
+  margin-top: 8px;
+  line-height: 1.6;
+  text-align: center;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease, margin 0.5s ease;
+  padding: 0 12px;
+  margin-top: 0;
+}
+.juz-verse-translation.show {
+  opacity: 1;
+  max-height: 120px;
+  padding: 10px 12px;
+  margin-top: 8px;
+}
 
 /* ===== Round 4: Surah Order ===== */
 .juz-order-list {

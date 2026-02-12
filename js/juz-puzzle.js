@@ -372,6 +372,9 @@ function renderRound2() {
       <!-- Verse reminder (collapsed) -->
       <div class="juz-verse-reminder">
         <div class="juz-verse-mini">${juzState.puzzle.verse.arabic_text}</div>
+        <div class="juz-verse-translation ${juzState.round2Answered ? 'show' : ''}" id="juz-verse-translation">
+          <em>${juzState.puzzle.verse.translation}</em>
+        </div>
       </div>
 
       <!-- Options -->
@@ -409,6 +412,8 @@ function submitThemeAnswer(btn, answer) {
     juzState.round2Answered = true;
     updateCrescentMeter();
     saveJuzState();
+    // Reveal the English translation as a reward
+    revealVerseTranslation();
     showRoundFeedback('juz-theme-feedback', true,
       juzState.puzzle.educational_notes.theme_explanation,
       juzState.scores.round2);
@@ -425,10 +430,17 @@ function submitThemeAnswer(btn, answer) {
       juzState.round2Answered = true;
       updateCrescentMeter();
       saveJuzState();
+      // Reveal the English translation even on failure
+      revealVerseTranslation();
       showRoundFeedback('juz-theme-feedback', false,
         juzState.puzzle.educational_notes.theme_explanation, 0);
     }
   }
+}
+
+function revealVerseTranslation() {
+  const el = document.getElementById('juz-verse-translation');
+  if (el) el.classList.add('show');
 }
 
 // ===== ROUND 3: Surah Identification =====
