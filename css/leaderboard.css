@@ -1,0 +1,443 @@
+/* ============================================
+   QURANIQ - LEADERBOARD STYLES
+   ============================================ */
+
+/* ==================== LEADERBOARD BUTTON (Header) ==================== */
+#leaderboard-btn {
+    position: relative;
+}
+#leaderboard-btn.lb-hidden {
+    display: none;
+}
+
+#lb-notif-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #e74c3c;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* ==================== LEADERBOARD MODAL ==================== */
+#leaderboard-modal .modal-content {
+    max-width: 480px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+#leaderboard-content {
+    padding: 0.5rem 0;
+}
+
+/* ==================== ONBOARDING (No Groups) ==================== */
+.lb-onboarding {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.lb-onboarding-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.lb-onboarding h3 {
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.lb-onboarding p {
+    color: var(--text-secondary, #999);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.lb-onboarding-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.lb-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.lb-btn:active {
+    transform: scale(0.97);
+}
+
+/* ==================== NAME PROMPT ==================== */
+.lb-name-prompt {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.lb-name-prompt h3 {
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.lb-name-prompt p {
+    color: var(--text-secondary, #999);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.lb-name-input-wrap {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.lb-name-input {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    border: 2px solid var(--border, #333);
+    border-radius: 10px;
+    background: var(--card-bg, #1a1a2e);
+    color: var(--text, #e0e0e0);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.lb-name-input:focus {
+    border-color: var(--gold);
+}
+
+.lb-name-input::placeholder {
+    color: var(--text-secondary, #666);
+}
+
+/* ==================== DIALOG (Create/Join) ==================== */
+.lb-dialog {
+    padding: 1rem;
+}
+
+.lb-dialog h3 {
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.lb-dialog p {
+    color: var(--text-secondary, #999);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.lb-back-btn {
+    background: none;
+    border: none;
+    color: var(--gold);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.lb-back-btn:hover {
+    text-decoration: underline;
+}
+
+/* ==================== GROUP TABS ==================== */
+.lb-group-tabs {
+    display: flex;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.lb-group-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.lb-group-tab {
+    flex-shrink: 0;
+    padding: 0.45rem 0.9rem;
+    border: 2px solid var(--border, #333);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--text-secondary, #999);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.lb-group-tab.active {
+    background: var(--gold);
+    color: #000;
+    border-color: var(--gold);
+}
+
+.lb-group-tab:not(.active):hover {
+    border-color: var(--gold);
+    color: var(--text, #e0e0e0);
+}
+
+.lb-add-group {
+    font-size: 1.1rem;
+    padding: 0.45rem 0.7rem;
+    color: var(--gold);
+    border-style: dashed;
+}
+
+/* ==================== GROUP INFO BAR ==================== */
+.lb-group-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border, #333);
+    margin-bottom: 0.5rem;
+}
+
+.lb-group-code {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+}
+
+.lb-code-label {
+    color: var(--text-secondary, #999);
+}
+
+.lb-code-value {
+    font-family: monospace;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+}
+
+.lb-copy-code {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.2rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.lb-copy-code:hover {
+    opacity: 1;
+}
+
+.lb-leave-btn {
+    background: none;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    padding: 0.3rem 0.7rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.lb-leave-btn:hover {
+    background: #e74c3c;
+    color: #fff;
+}
+
+/* ==================== LEADERBOARD TABLE ==================== */
+.lb-table-container {
+    min-height: 100px;
+}
+
+.lb-loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary, #999);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.lb-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border, #333);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: lb-spin 0.8s linear infinite;
+}
+
+@keyframes lb-spin {
+    to { transform: rotate(360deg); }
+}
+
+.lb-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.lb-row {
+    display: grid;
+    grid-template-columns: 36px 1fr 60px 60px 36px;
+    align-items: center;
+    padding: 0.6rem 0.4rem;
+    border-bottom: 1px solid var(--border, #222);
+    cursor: pointer;
+    transition: background 0.15s;
+    border-radius: 8px;
+}
+
+.lb-row:hover {
+    background: var(--card-bg, rgba(255,255,255,0.03));
+}
+
+.lb-row.lb-header {
+    cursor: default;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-secondary, #999);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--border, #333);
+}
+
+.lb-row.lb-header:hover {
+    background: transparent;
+}
+
+.lb-row.lb-me {
+    background: rgba(212, 175, 55, 0.08);
+    border-left: 3px solid var(--gold);
+}
+
+.lb-rank {
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.lb-player {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    overflow: hidden;
+}
+
+.lb-player-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lb-you-badge {
+    background: var(--gold);
+    color: #000;
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.lb-today, .lb-total, .lb-streak {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.lb-today {
+    color: var(--gold);
+}
+
+.lb-streak {
+    font-size: 0.85rem;
+}
+
+/* ==================== EMPTY STATE ==================== */
+.lb-empty {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.lb-empty p {
+    color: var(--text-secondary, #999);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.lb-empty-hint {
+    font-size: 0.85rem;
+}
+
+.lb-tap-hint {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-secondary, #666);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* ==================== EXPANDED ROW (Game Breakdown) ==================== */
+.lb-row.lb-expanded {
+    background: var(--card-bg, rgba(255,255,255,0.05));
+    border-radius: 8px;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 400px) {
+    .lb-row {
+        grid-template-columns: 30px 1fr 50px 50px 30px;
+        padding: 0.5rem 0.2rem;
+    }
+
+    .lb-player-name {
+        font-size: 0.85rem;
+    }
+
+    .lb-today, .lb-total, .lb-streak {
+        font-size: 0.8rem;
+    }
+}
+
+/* ==================== LIGHT THEME OVERRIDES ==================== */
+[data-theme="light"] .lb-name-input {
+    background: #fff;
+    border-color: #ddd;
+    color: #333;
+}
+
+[data-theme="light"] .lb-row.lb-me {
+    background: rgba(212, 175, 55, 0.12);
+}
+
+[data-theme="light"] .lb-group-tab {
+    border-color: #ddd;
+}

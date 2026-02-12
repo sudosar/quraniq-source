@@ -34,6 +34,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=20260212">
     <link rel="stylesheet" href="css/juz-puzzle.css?v=20260212">
+    <link rel="stylesheet" href="css/leaderboard.css?v=20260212">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="icons/icon-192.png" type="image/png" sizes="192x192">
     <!-- Google Analytics (GA4) -->
@@ -64,6 +65,10 @@
             <div class="subtitle">Daily Quranic Challenge</div>
         </div>
         <div class="header-right">
+            <button id="leaderboard-btn" class="icon-btn lb-hidden" aria-label="Group leaderboard" aria-haspopup="dialog">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 16.4 5.7 21l2.3-7L2 9.4h7.6z"/></svg>
+                <span id="lb-notif-badge"></span>
+            </button>
             <button id="stats-btn" class="icon-btn" aria-label="View statistics" aria-haspopup="dialog">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="14" width="4" height="7"/><rect x="10" y="9" width="4" height="12"/><rect x="16" y="4" width="4" height="17"/></svg>
             </button>
@@ -329,6 +334,9 @@
                 </button>
             </div>
             <div class="sidebar-actions" style="border-top:1px solid var(--border);padding-top:8px;margin-top:4px;">
+                <button id="sidebar-leaderboard-btn" class="sidebar-action-btn" aria-label="Group leaderboard">
+                    <span aria-hidden="true">🏆</span> Group Leaderboard
+                </button>
                 <button id="shukr-btn" class="sidebar-action-btn" aria-label="Thanks and credits">
                     <span aria-hidden="true">🤲</span> Shukr &amp; Thanks
                 </button>
@@ -370,6 +378,15 @@
                     <button id="restore-confirm-btn" class="btn btn-primary">Restore</button>
                     <button id="restore-cancel-btn" class="btn btn-secondary">Cancel</button>
                 </div>
+            </div>
+        </div>
+
+        <!-- ==================== LEADERBOARD MODAL ==================== -->
+        <div id="leaderboard-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="lb-title">
+            <div class="modal-content">
+                <button class="modal-close" id="lb-close" aria-label="Close">&times;</button>
+                <h2 id="lb-title" class="modal-title">👥 Group Leaderboard</h2>
+                <div id="leaderboard-content"></div>
             </div>
         </div>
 
@@ -465,6 +482,11 @@
         </div>
     </main>
 
+    <!-- Firebase SDK (compat for non-module usage) -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+
     <script src="puzzles.js?v=20260210m"></script>
     <script src="js/utils.js?v=20260210m"></script>
     <script src="js/connections.js?v=20260210m"></script>
@@ -475,6 +497,8 @@
     <script src="js/bugreport.js?v=20260210m"></script>
     <script src="js/analytics.js?v=20260210m"></script>
     <script src="js/juz-puzzle.js?v=20260212"></script>
+    <script src="js/firebase-groups.js?v=20260212"></script>
+    <script src="js/leaderboard-ui.js?v=20260212"></script>
     <script src="js/app.js?v=20260212"></script>
     <script>
         // Register Service Worker for PWA

@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startCountdown();
     initNotifications();
     initBugReport();
+    initLeaderboard();
     showOnboarding();
 
     // Hash-based deep linking (e.g., #shukr, #help, #stats, #juz)
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (hash === 'help') openModal('help-modal');
     else if (hash === 'stats') showStatsModal();
     else if (hash === 'juz') switchMode('juz');
+    else if (hash === 'leaderboard') openModal('leaderboard-modal');
 
     // PWA install prompt
     initPWAInstall();
@@ -181,6 +183,12 @@ function initSidebar() {
     });
     document.getElementById('shukr-close').addEventListener('click', () => closeModal('shukr-modal'));
 
+    // Sidebar leaderboard button
+    document.getElementById('sidebar-leaderboard-btn')?.addEventListener('click', () => {
+        closeSidebar();
+        if (typeof openLeaderboard === 'function') openLeaderboard();
+    });
+
     // Dhikr counter
     initDhikrCounter();
 
@@ -212,6 +220,8 @@ function initModals() {
     document.getElementById('stats-close').addEventListener('click', () => closeModal('stats-modal'));
     document.getElementById('help-btn').addEventListener('click', () => { trackModalOpen('help'); showHelpModal(); });
     document.getElementById('help-close').addEventListener('click', () => closeModal('help-modal'));
+    document.getElementById('leaderboard-btn')?.addEventListener('click', () => { if (typeof openLeaderboard === 'function') openLeaderboard(); });
+    document.getElementById('lb-close')?.addEventListener('click', () => closeModal('leaderboard-modal'));
     document.getElementById('result-close').addEventListener('click', () => {
         closeModal('result-modal');
         // Expand all solved rows when closing connections result
@@ -398,6 +408,18 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
     app.lastResults[app.currentMode] = { icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons, verseRef, crescentRow, exploredCount, totalVerses, dynamicShareFn };
     // Show the "View Results" button in the game area
     showViewResultsButton(app.currentMode);
+
+    // Submit score to Firebase group leaderboard (non-blocking)
+    if (typeof submitFirebaseScore === 'function') {
+        let fbMoons = 0;
+        if (moons !== undefined && moons !== null) {
+            fbMoons = moons;
+        } else if (crescentRow) {
+            // Connections: count full moons in crescent row
+            fbMoons = (crescentRow.match(/🌕/g) || []).length;
+        }
+        submitFirebaseScore(app.currentMode, fbMoons).catch(() => {});
+    }
 
     document.getElementById('result-icon').textContent = icon;
     document.getElementById('result-title').textContent = title;

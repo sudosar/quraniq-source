@@ -1,0 +1,71 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".write": "auth != null && auth.uid === $uid",
+        "displayName": {
+          ".read": "auth != null",
+          ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 30"
+        },
+        "groups": {
+          ".read": "auth != null && auth.uid === $uid",
+          "$groupCode": {
+            ".validate": "newData.isBoolean()"
+          }
+        },
+        "scores": {
+          ".read": "auth != null",
+          "$date": {
+            ".validate": "$date.matches(/^\\d{4}-\\d{2}-\\d{2}$/)",
+            "connections": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5" },
+            "harf": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5" },
+            "deduction": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5" },
+            "scramble": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5" },
+            "juz": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5" },
+            "total": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 25" },
+            "streak": { ".validate": "newData.isNumber() && newData.val() >= 0" },
+            "timestamp": { ".validate": "newData.isNumber()" }
+          }
+        }
+      }
+    },
+    "groups": {
+      ".read": false,
+      "$groupCode": {
+        ".read": "auth != null && root.child('groups/' + $groupCode + '/members/' + auth.uid).exists()",
+        "name": {
+          ".read": "auth != null",
+          ".write": "auth != null && !data.exists()",
+          ".validate": "newData.isString() && newData.val().length >= 2 && newData.val().length <= 40"
+        },
+        "createdBy": {
+          ".write": "auth != null && !data.exists()",
+          ".validate": "newData.val() === auth.uid"
+        },
+        "createdAt": {
+          ".write": "auth != null && !data.exists()",
+          ".validate": "newData.isNumber()"
+        },
+        "members": {
+          ".read": "auth != null",
+          "$uid": {
+            ".write": "auth != null && ($uid === auth.uid || root.child('groups/' + $groupCode + '/createdBy').val() === auth.uid)",
+            ".validate": "newData.isBoolean() || !newData.exists()"
+          }
+        },
+        "memberCount": {
+          ".read": "auth != null",
+          ".write": "auth != null",
+          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 20"
+        }
+      }
+    },
+    "groupLookup": {
+      "$groupCode": {
+        ".read": "auth != null",
+        ".write": "auth != null && !data.exists()",
+        ".validate": "newData.isBoolean()"
+      }
+    }
+  }
+}

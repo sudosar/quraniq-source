@@ -966,6 +966,11 @@ function showFinalResults() {
     moonStr += i < finalScore ? '🌕' : '🌑';
   }
 
+  // Submit score to Firebase group leaderboard (non-blocking)
+  if (typeof submitFirebaseScore === 'function') {
+    submitFirebaseScore('juz', finalScore).catch(() => {});
+  }
+
   // Build share text
   const shareText = `QuranIQ Juz Journey — Juz ${p.juz_number} (${p.juz_name_ar})\n${moonStr} ${finalScore}/5\n\nTheme: ${juzState.scores.round2 > 0 ? '✅' : '❌'} | Surah: ${juzState.scores.round3 > 0 ? '✅' : '❌'} | Order: ${juzState.scores.round4 > 0 ? '✅' : '❌'}\nHints: ${juzState.hintsUsed}\n\nhttps://sudosar.github.io/quraniq`;
 
