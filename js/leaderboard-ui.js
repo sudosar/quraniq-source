@@ -23,6 +23,13 @@ async function initLeaderboard() {
     const lbBtn = document.getElementById('leaderboard-btn');
     if (lbBtn) lbBtn.classList.remove('lb-hidden');
 
+    // Process pending join code from invite link (#join=CODE)
+    if (window._pendingJoinCode) {
+        const code = window._pendingJoinCode;
+        delete window._pendingJoinCode;
+        processInviteJoin(code);
+    }
+
     // Check for notifications after a short delay
     setTimeout(async () => {
         await checkGroupNotifications();
@@ -133,9 +140,12 @@ function renderGroupLeaderboardView(groups, activeCode) {
             <div class="lb-group-code">
                 <span class="lb-code-label">Group Code:</span>
                 <span class="lb-code-value" id="lb-code-display">${activeCode}</span>
-                <button class="lb-copy-code" id="lb-copy-code" title="Copy code to share">📋</button>
+                <button class="lb-copy-code" id="lb-copy-code" title="Copy code">📋</button>
             </div>
-            <button class="lb-leave-btn" id="lb-leave-btn" title="Leave this group">Leave</button>
+            <div class="lb-group-actions">
+                <button class="lb-share-invite" id="lb-share-invite" title="Share invite link">📤 Invite</button>
+                <button class="lb-leave-btn" id="lb-leave-btn" title="Leave this group">Leave</button>
+            </div>
         </div>
     `;
 
@@ -379,14 +389,43 @@ function attachLeaderboardHandlers(activeCode) {
         showAddGroupDialog();
     });
 
-    // Copy code
+    // Copy code (short tap)
     document.getElementById('lb-copy-code')?.addEventListener('click', async () => {
         try {
             await navigator.clipboard.writeText(activeCode);
-            showToast('Group code copied! Share it with family and friends.');
+            showToast('Group code copied!');
             trackEvent('group_code_copied', { code: activeCode });
         } catch {
             showToast(`Group code: ${activeCode}`);
+        }
+    });
+
+    // Share invite button
+    document.getElementById('lb-share-invite')?.addEventListener('click', async () => {
+        const groupName = FB_STATE.groups[activeCode]?.name || 'our QuranIQ group';
+        const inviteLink = `https://sudosar.github.io/quraniq/#join=${activeCode}`;
+        const inviteMsg = `Join ${groupName} on QuranIQ! \u{1F319}\n\nCompete with me in daily Quranic puzzles this Ramadan.\n\n\u{1F449} ${inviteLink}\n\nOr open QuranIQ and enter code: ${activeCode}`;
+
+        // Try native share first (mobile), fall back to clipboard
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: `Join ${groupName} on QuranIQ`,
+                    text: inviteMsg
+                });
+                trackEvent('group_invite_shared', { code: activeCode, method: 'native' });
+                return;
+            } catch (e) {
+                // User cancelled or share failed, fall through to clipboard
+            }
+        }
+
+        try {
+            await navigator.clipboard.writeText(inviteMsg);
+            showToast('Invite message copied! Paste it in WhatsApp or any chat.');
+            trackEvent('group_invite_shared', { code: activeCode, method: 'clipboard' });
+        } catch {
+            showToast(`Share this link: ${inviteLink}`);
         }
     });
 
@@ -463,6 +502,117 @@ function checkNameThen(callback) {
 
     saveBtn?.addEventListener('click', doSave);
     input?.addEventListener('keydown', (e) => { if (e.key === 'Enter') doSave(); });
+}
+
+// ==================== INVITE LINK JOIN FLOW ====================
+
+/**
+ * Process an invite join link (#join=CODE).
+ * Opens the leaderboard modal, checks if user already in group,
+ * prompts for name if needed, then auto-joins.
+ */
+async function processInviteJoin(code) {
+    code = code.toUpperCase();
+
+    // Check if already in this group
+    const groups = getUserGroups();
+    if (groups[code]) {
+        openModal('leaderboard-modal');
+        setActiveGroup(code);
+        renderLeaderboardUI();
+        showToast('You\'re already in this group!');
+        return;
+    }
+
+    // Check group limit
+    if (Object.keys(groups).length >= MAX_GROUPS_PER_USER) {
+        showToast(`You can only be in ${MAX_GROUPS_PER_USER} groups. Leave one first.`);
+        return;
+    }
+
+    // Open the leaderboard modal with a special invite join view
+    openModal('leaderboard-modal');
+    const content = document.getElementById('leaderboard-content');
+
+    // Check if display name is set
+    const name = localStorage.getItem('quraniq_display_name');
+    if (!name) {
+        // Show name prompt first, then join
+        content.innerHTML = `
+            <div class="lb-dialog lb-invite-dialog">
+                <div class="lb-onboarding-icon">🤝</div>
+                <h3>You've been invited!</h3>
+                <p>Someone invited you to join their QuranIQ group. First, choose a display name so they know who you are.</p>
+                <div class="lb-name-input-wrap">
+                    <input type="text" id="lb-invite-name" class="lb-name-input" placeholder="e.g. Dad, Aisha, Ahmed" maxlength="30" autocomplete="off">
+                    <button id="lb-invite-name-save" class="btn btn-primary">Join Group</button>
+                </div>
+                <p class="lb-invite-code-hint">Joining group: <strong>${code}</strong></p>
+            </div>
+        `;
+
+        const input = document.getElementById('lb-invite-name');
+        const saveBtn = document.getElementById('lb-invite-name-save');
+        if (input) input.focus();
+
+        const doJoin = async () => {
+            const n = input?.value.trim();
+            if (!n) { showToast('Please enter a name.'); return; }
+            saveBtn.disabled = true;
+            saveBtn.textContent = 'Joining...';
+
+            // Save name first
+            const nameOk = await setDisplayName(n);
+            if (!nameOk) {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Join Group';
+                showToast('Failed to save name. Try again.');
+                return;
+            }
+
+            // Now join the group
+            const joinOk = await joinGroup(code);
+            if (joinOk) {
+                showToast(`Welcome, ${n}! You joined the group.`);
+                trackEvent('group_joined_via_invite', { code });
+                setActiveGroup(code);
+                renderLeaderboardUI();
+            } else {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Join Group';
+            }
+        };
+
+        saveBtn?.addEventListener('click', doJoin);
+        input?.addEventListener('keydown', (e) => { if (e.key === 'Enter') doJoin(); });
+    } else {
+        // Name already set — show a quick confirmation and auto-join
+        content.innerHTML = `
+            <div class="lb-dialog lb-invite-dialog">
+                <div class="lb-onboarding-icon">🤝</div>
+                <h3>You've been invited!</h3>
+                <p>Joining group <strong>${code}</strong>...</p>
+                <div class="lb-loading"><div class="lb-spinner"></div> Joining...</div>
+            </div>
+        `;
+
+        const joinOk = await joinGroup(code);
+        if (joinOk) {
+            showToast('You joined the group!');
+            trackEvent('group_joined_via_invite', { code });
+            setActiveGroup(code);
+            renderLeaderboardUI();
+        } else {
+            content.innerHTML = `
+                <div class="lb-dialog lb-invite-dialog">
+                    <div class="lb-onboarding-icon">😕</div>
+                    <h3>Couldn't join</h3>
+                    <p>The group code <strong>${code}</strong> may be invalid or the group is full.</p>
+                    <button class="btn btn-primary" onclick="renderLeaderboardUI()">OK</button>
+                </div>
+            `;
+        }
+    }
 }
 
 // ==================== NOTIFICATION BADGE & IN-APP ALERTS ====================

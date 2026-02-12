@@ -251,6 +251,34 @@
     opacity: 1;
 }
 
+.lb-group-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.lb-share-invite {
+    background: linear-gradient(135deg, var(--gold), #c5a028);
+    color: #000;
+    border: none;
+    padding: 0.35rem 0.7rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.lb-share-invite:hover {
+    transform: scale(1.03);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.lb-share-invite:active {
+    transform: scale(0.97);
+}
+
 .lb-leave-btn {
     background: none;
     border: 1px solid #e74c3c;
@@ -265,6 +293,21 @@
 .lb-leave-btn:hover {
     background: #e74c3c;
     color: #fff;
+}
+
+/* ==================== INVITE DIALOG ==================== */
+.lb-invite-dialog {
+    text-align: center;
+}
+
+.lb-invite-dialog h3 {
+    font-size: 1.15rem;
+}
+
+.lb-invite-code-hint {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #666);
+    margin-top: 0.75rem;
 }
 
 /* ==================== LEADERBOARD TABLE ==================== */
