@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuranIQ — Test Lab</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== Test Lab Specific Styles ===== */
+        .test-lab-header {
+            background: var(--bg-card);
+            border-bottom: 2px solid var(--islamic-gold);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .test-lab-header h1 {
+            font-family: var(--font-main);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .test-lab-header h1 span {
+            color: var(--islamic-gold);
+        }
+        .test-lab-header .badge {
+            background: var(--islamic-gold);
+            color: #000;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .test-lab-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .test-lab-controls button {
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 6px 12px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-family: var(--font-main);
+        }
+        .test-lab-controls button:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        .test-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+        .test-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .test-section-header {
+            background: var(--bg-hover);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+        }
+        .test-section-header h2 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .test-section-header .toggle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            transition: transform 0.2s;
+        }
+        .test-section-header.collapsed .toggle {
+            transform: rotate(-90deg);
+        }
+        .test-section-body {
+            padding: 16px;
+        }
+        .test-section-body.hidden {
+            display: none;
+        }
+
+        /* Console output */
+        .test-console {
+            background: #1a1a2e;
+            color: #a0ffa0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 12px;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .test-console .log-info { color: #a0ffa0; }
+        .test-console .log-warn { color: #f1c40f; }
+        .test-console .log-error { color: #e74c3c; }
+
+        /* Sandbox game area */
+        #sandbox-game {
+            min-height: 300px;
+            border: 2px dashed var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        #sandbox-game.active {
+            border-style: solid;
+            border-color: var(--accent);
+        }
+        .sandbox-placeholder {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            padding: 60px 20px;
+        }
+        .sandbox-placeholder p {
+            margin-bottom: 8px;
+        }
+
+        /* Quick action buttons */
+        .quick-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .quick-actions button {
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-family: var(--font-main);
+            transition: all 0.15s;
+        }
+        .quick-actions button:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        .quick-actions button.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        /* API test area */
+        .api-test {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        .api-test input {
+            flex: 1;
+            min-width: 200px;
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-main);
+            font-size: 0.85rem;
+        }
+        .api-test button {
+            padding: 8px 16px;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: var(--font-main);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Data viewer */
+        .data-viewer {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.75rem;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            color: var(--text);
+        }
+
+        /* Toast for test page */
+        .test-toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--accent);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: var(--radius);
+            font-size: 0.85rem;
+            font-weight: 500;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            pointer-events: none;
+        }
+        .test-toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="test-lab-header">
+        <h1>Quran<span>IQ</span> Test Lab</h1>
+        <div class="test-lab-controls">
+            <span class="badge">Dev Only</span>
+            <button onclick="toggleTheme()">🌙 Theme</button>
+            <button onclick="clearConsole()">🗑 Clear Log</button>
+            <button onclick="window.location.href='index.html'">← Back to App</button>
+        </div>
+    </div>
+
+    <div class="test-container">
+
+        <!-- Section 1: Feature Sandbox -->
+        <div class="test-section">
+            <div class="test-section-header" onclick="toggleSection(this)">
+                <h2>🧪 Feature Sandbox</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="test-section-body">
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">
+                    Build and test new game modes here. The sandbox area below has full access to QuranIQ styles and utilities.
+                </p>
+                <div id="sandbox-game">
+                    <div class="sandbox-placeholder">
+                        <p>✨ Your new feature renders here ✨</p>
+                        <p style="font-size: 0.8rem;">Edit <code>test.html</code> or load a module via the console below</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Quran API Explorer -->
+        <div class="test-section">
+            <div class="test-section-header" onclick="toggleSection(this)">
+                <h2>📖 Quran API Explorer</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="test-section-body">
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">
+                    Test Quran API calls. Enter a surah:ayah reference to fetch word-by-word data, translations, and audio.
+                </p>
+                <div class="api-test">
+                    <input type="text" id="api-ref" placeholder="e.g. 2:255 or 112:1-4" value="1:1">
+                    <button onclick="fetchVerse()">Fetch Verse</button>
+                    <button onclick="fetchWBW()">Fetch WBW</button>
+                    <button onclick="fetchJuzMeta()">Fetch Juz Info</button>
+                </div>
+                <div id="api-result" class="data-viewer">Results will appear here...</div>
+            </div>
+        </div>
+
+        <!-- Section 3: Daily Puzzle Inspector -->
+        <div class="test-section">
+            <div class="test-section-header" onclick="toggleSection(this)">
+                <h2>🔍 Daily Puzzle Inspector</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="test-section-body">
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">
+                    View the raw data for today's daily puzzles across all 4 game modes.
+                </p>
+                <div class="quick-actions">
+                    <button onclick="inspectPuzzle('connections')" class="active">Connections</button>
+                    <button onclick="inspectPuzzle('wordle')">Wordle</button>
+                    <button onclick="inspectPuzzle('deduction')">Deduction</button>
+                    <button onclick="inspectPuzzle('scramble')">Scramble</button>
+                </div>
+                <div id="puzzle-data" class="data-viewer">Loading...</div>
+            </div>
+        </div>
+
+        <!-- Section 4: Component Gallery -->
+        <div class="test-section">
+            <div class="test-section-header" onclick="toggleSection(this)">
+                <h2>🎨 Component Gallery</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="test-section-body">
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">
+                    Preview existing UI components with different states.
+                </p>
+
+                <h3 style="font-size: 0.85rem; margin: 16px 0 8px; color: var(--text-secondary);">Crescent Meters</h3>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px;">
+                    <div>
+                        <span style="font-size: 0.75rem; color: var(--text-secondary);">5/5 Full</span><br>
+                        <span style="font-size: 1.5rem;">🌕🌕🌕🌕🌕</span>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.75rem; color: var(--text-secondary);">3/5 Mixed</span><br>
+                        <span style="font-size: 1.5rem;">🌕🌕🌕🌙🌙</span>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.75rem; color: var(--text-secondary);">0/5 Empty</span><br>
+                        <span style="font-size: 1.5rem;">🌑🌑🌑🌑🌑</span>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 0.85rem; margin: 16px 0 8px; color: var(--text-secondary);">Connection Tiles (Arabic)</h3>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; max-width: 400px; margin-bottom: 16px;">
+                    <button class="conn-tile conn-tile-ar" style="padding: 12px 4px; font-size: 1rem;">بِسْمِ</button>
+                    <button class="conn-tile conn-tile-ar selected" style="padding: 12px 4px; font-size: 1rem;">ٱللَّهِ</button>
+                    <button class="conn-tile conn-tile-ar" style="padding: 12px 4px; font-size: 1rem;">ٱلرَّحْمَـٰنِ</button>
+                    <button class="conn-tile conn-tile-ar" style="padding: 12px 4px; font-size: 1rem;">ٱلرَّحِيمِ</button>
+                </div>
+
+                <h3 style="font-size: 0.85rem; margin: 16px 0 8px; color: var(--text-secondary);">Solved Row Colors</h3>
+                <div style="max-width: 400px; margin-bottom: 16px;">
+                    <div style="background: var(--conn-yellow); color: var(--conn-yellow-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">Yellow — Easiest</div>
+                    <div style="background: var(--conn-green); color: var(--conn-green-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">Green — Easy</div>
+                    <div style="background: var(--conn-blue); color: var(--conn-blue-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">Blue — Medium</div>
+                    <div style="background: var(--conn-purple); color: var(--conn-purple-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">Purple — Hard</div>
+                </div>
+
+                <h3 style="font-size: 0.85rem; margin: 16px 0 8px; color: var(--text-secondary);">Buttons</h3>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-secondary">Secondary</button>
+                    <button class="btn btn-primary" disabled>Disabled</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: State & Storage -->
+        <div class="test-section">
+            <div class="test-section-header" onclick="toggleSection(this)">
+                <h2>💾 State & Storage</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="test-section-body">
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">
+                    Inspect and manage localStorage state for all game modes.
+                </p>
+                <div class="quick-actions">
+                    <button onclick="viewStorage('all')">View All</button>
+                    <button onclick="viewStorage('conn')">Connections</button>
+                    <button onclick="viewStorage('wordle')">Wordle</button>
+                    <button onclick="viewStorage('ded')">Deduction</button>
+                    <button onclick="viewStorage('scr')">Scramble</button>
+                    <button onclick="viewStorage('stats')">Stats</button>
+                    <button onclick="if(confirm('Clear ALL game state?')) { localStorage.clear(); testLog('Cleared all localStorage', 'warn'); viewStorage('all'); }">⚠ Clear All</button>
+                </div>
+                <div id="storage-data" class="data-viewer">Click a button above to inspect storage...</div>
+            </div>
+        </div>
+
+        <!-- Section 6: Console -->
+        <div class="test-section">
+            <div class="test-section-header" onclick="toggleSection(this)">
+                <h2>📋 Test Console</h2>
+                <span class="toggle">▼</span>
+            </div>
+            <div class="test-section-body">
+                <div id="test-console" class="test-console">QuranIQ Test Lab initialized.\n</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Toast -->
+    <div id="test-toast" class="test-toast"></div>
+
+    <script>
+        // ===== Theme Toggle =====
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('quraniq-theme', next);
+            testLog(`Theme switched to ${next}`);
+        }
+        // Load saved theme
+        const savedTheme = localStorage.getItem('quraniq-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        // ===== Section Toggle =====
+        function toggleSection(header) {
+            header.classList.toggle('collapsed');
+            const body = header.nextElementSibling;
+            body.classList.toggle('hidden');
+        }
+
+        // ===== Test Console =====
+        function testLog(msg, level = 'info') {
+            const el = document.getElementById('test-console');
+            const time = new Date().toLocaleTimeString();
+            const prefix = level === 'error' ? '✗' : level === 'warn' ? '⚠' : '✓';
+            el.innerHTML += `<span class="log-${level}">[${time}] ${prefix} ${msg}</span>\n`;
+            el.scrollTop = el.scrollHeight;
+        }
+        function clearConsole() {
+            document.getElementById('test-console').innerHTML = 'Console cleared.\n';
+        }
+
+        // ===== Toast =====
+        function showTestToast(msg, duration = 2000) {
+            const toast = document.getElementById('test-toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), duration);
+        }
+
+        // ===== Quran API Explorer =====
+        async function fetchVerse() {
+            const ref = document.getElementById('api-ref').value.trim();
+            const resultEl = document.getElementById('api-result');
+            resultEl.textContent = 'Fetching...';
+            try {
+                const [surah, ayah] = ref.split(':');
+                const range = ayah.includes('-') ? ayah : `${ayah}-${ayah}`;
+                const url = `https://api.alquran.cloud/v1/surah/${surah}`;
+                const res = await fetch(url);
+                const data = await res.json();
+                const ayahs = data.data.ayahs.filter(a => {
+                    const num = a.numberInSurah;
+                    const [start, end] = range.split('-').map(Number);
+                    return num >= start && num <= (end || start);
+                });
+                const display = ayahs.map(a => ({
+                    number: `${surah}:${a.numberInSurah}`,
+                    arabic: a.text,
+                }));
+                // Also fetch English translation
+                const enRes = await fetch(`https://api.alquran.cloud/v1/surah/${surah}/en.asad`);
+                const enData = await enRes.json();
+                const enAyahs = enData.data.ayahs.filter(a => {
+                    const num = a.numberInSurah;
+                    const [start, end] = range.split('-').map(Number);
+                    return num >= start && num <= (end || start);
+                });
+                display.forEach((d, i) => {
+                    if (enAyahs[i]) d.english = enAyahs[i].text;
+                });
+                resultEl.textContent = JSON.stringify(display, null, 2);
+                testLog(`Fetched verse ${ref} — ${display.length} ayah(s)`);
+            } catch (e) {
+                resultEl.textContent = `Error: ${e.message}`;
+                testLog(`API error: ${e.message}`, 'error');
+            }
+        }
+
+        async function fetchWBW() {
+            const ref = document.getElementById('api-ref').value.trim();
+            const resultEl = document.getElementById('api-result');
+            resultEl.textContent = 'Fetching word-by-word...';
+            try {
+                const [surah, ayah] = ref.split(':');
+                const url = `https://api.quran.com/api/v4/verses/by_key/${surah}:${ayah}?language=en&words=true&word_fields=text_uthmani,translation`;
+                const res = await fetch(url);
+                const data = await res.json();
+                const words = data.verse.words.map(w => ({
+                    arabic: w.text_uthmani,
+                    translation: w.translation?.text || '',
+                    position: w.position,
+                }));
+                resultEl.textContent = JSON.stringify(words, null, 2);
+                testLog(`Fetched WBW for ${ref} — ${words.length} words`);
+            } catch (e) {
+                resultEl.textContent = `Error: ${e.message}`;
+                testLog(`WBW error: ${e.message}`, 'error');
+            }
+        }
+
+        async function fetchJuzMeta() {
+            const ref = document.getElementById('api-ref').value.trim();
+            const resultEl = document.getElementById('api-result');
+            resultEl.textContent = 'Fetching juz info...';
+            try {
+                // Treat input as juz number if it's just a number
+                const juzNum = ref.includes(':') ? 1 : parseInt(ref);
+                const url = `https://api.quran.com/api/v4/juzs`;
+                const res = await fetch(url);
+                const data = await res.json();
+                const juz = data.juzs.find(j => j.juz_number === juzNum);
+                if (juz) {
+                    resultEl.textContent = JSON.stringify(juz, null, 2);
+                    testLog(`Fetched Juz ${juzNum} metadata`);
+                } else {
+                    resultEl.textContent = JSON.stringify(data.juzs.slice(0, 3), null, 2) + '\n\n... (enter juz number 1-30)';
+                    testLog('Enter a juz number (1-30) to fetch specific juz info', 'warn');
+                }
+            } catch (e) {
+                resultEl.textContent = `Error: ${e.message}`;
+                testLog(`Juz API error: ${e.message}`, 'error');
+            }
+        }
+
+        // ===== Daily Puzzle Inspector =====
+        async function inspectPuzzle(mode) {
+            const resultEl = document.getElementById('puzzle-data');
+            const buttons = resultEl.parentElement.querySelectorAll('.quick-actions button');
+            buttons.forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            resultEl.textContent = 'Loading...';
+            const files = {
+                connections: 'data/daily_puzzle.json',
+                wordle: 'data/daily_wordle.json',
+                deduction: 'data/daily_deduction.json',
+                scramble: 'data/daily_scramble.json',
+            };
+            try {
+                const res = await fetch(files[mode] + '?t=' + Date.now());
+                const data = await res.json();
+                resultEl.textContent = JSON.stringify(data, null, 2);
+                testLog(`Loaded ${mode} puzzle — date: ${data.date || data.puzzle?.date || 'unknown'}`);
+            } catch (e) {
+                resultEl.textContent = `Error loading ${mode}: ${e.message}`;
+                testLog(`Failed to load ${mode} puzzle: ${e.message}`, 'error');
+            }
+        }
+
+        // ===== State & Storage =====
+        function viewStorage(filter) {
+            const resultEl = document.getElementById('storage-data');
+            const buttons = resultEl.parentElement.querySelectorAll('.quick-actions button:not(:last-child)');
+            buttons.forEach(b => b.classList.remove('active'));
+            if (event.target.tagName === 'BUTTON') event.target.classList.add('active');
+
+            const entries = {};
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (filter === 'all' ||
+                    (filter === 'conn' && key.includes('conn')) ||
+                    (filter === 'wordle' && (key.includes('wordle') || key.includes('harf'))) ||
+                    (filter === 'ded' && (key.includes('ded') || key.includes('deduction'))) ||
+                    (filter === 'scr' && (key.includes('scr') || key.includes('scramble'))) ||
+                    (filter === 'stats' && key.includes('stat'))) {
+                    try {
+                        entries[key] = JSON.parse(localStorage.getItem(key));
+                    } catch {
+                        entries[key] = localStorage.getItem(key);
+                    }
+                }
+            }
+            resultEl.textContent = Object.keys(entries).length
+                ? JSON.stringify(entries, null, 2)
+                : `No localStorage entries found for filter: ${filter}`;
+            testLog(`Storage view: ${filter} — ${Object.keys(entries).length} entries`);
+        }
+
+        // ===== Init =====
+        document.addEventListener('DOMContentLoaded', () => {
+            testLog('Test Lab ready. Theme: ' + savedTheme);
+            inspectPuzzle('connections');
+        });
+    </script>
+</body>
+</html>
