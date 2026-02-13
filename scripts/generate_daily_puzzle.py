@@ -45,8 +45,7 @@ DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 HISTORY_DIR = os.path.join(DATA_DIR, "history")
 FALLBACK_PUZZLES = os.path.join(SCRIPT_DIR, "..", "puzzles.js")
 
-COOLING_DAYS = 30  # Default for most games
-COOLING_DAYS_CONNECTIONS = 365  # 365 days for Connections to cycle through all 6,236 Quran verses
+COOLING_DAYS = 365  # 365-day cooldown for all games to maximize verse variety
 MAX_RETRIES = 5
 COLORS = ["yellow", "green", "blue", "purple"]
 
@@ -68,15 +67,11 @@ RAMADAN_END = datetime(2026, 3, 20)  # 30 days
 def load_history():
     """Load puzzle history for cooldown enforcement.
 
-    Connections uses a 365-day cooldown (to cycle through all 6,236 Quran verses).
-    Other games use a 30-day cooldown.
+    All games use a 365-day cooldown to maximize verse variety
+    and cycle through the Quran's 6,236 verses.
     Returns a dict with sets for each game type's used content.
     """
-    now = datetime.utcnow()
-    cutoff_default = now - timedelta(days=COOLING_DAYS)
-    cutoff_connections = now - timedelta(days=COOLING_DAYS_CONNECTIONS)
-    # Keep files as long as the longest cooldown needs them
-    cleanup_cutoff = cutoff_connections
+    cutoff = datetime.utcnow() - timedelta(days=COOLING_DAYS)
 
     history = {
         "connections": {"themes": set(), "verses": set(), "words": set()},
@@ -95,7 +90,7 @@ def load_history():
         except ValueError:
             continue
 
-        if fdate < cleanup_cutoff:
+        if fdate < cutoff:
             os.remove(fpath)
             print(f"  Cleaned up old history: {fname}")
             continue
@@ -106,61 +101,58 @@ def load_history():
         except (json.JSONDecodeError, KeyError):
             continue
 
-        # Connections history (365-day cooldown)
-        if fdate >= cutoff_connections:
-            conn = data.get("connections")
-            if conn:
-                for cat in conn.get("categories", []):
-                    history["connections"]["themes"].add(cat.get("nameEn", "").lower().strip())
-                    if cat.get("verse", {}).get("ref"):
-                        history["connections"]["verses"].add(cat["verse"]["ref"])
-                    for item in cat.get("items", []):
-                        if item.get("ref"):
-                            history["connections"]["verses"].add(item["ref"])
-                        if item.get("ar"):
-                            history["connections"]["words"].add(item["ar"])
+        # Connections history
+        conn = data.get("connections")
+        if conn:
+            for cat in conn.get("categories", []):
+                history["connections"]["themes"].add(cat.get("nameEn", "").lower().strip())
+                if cat.get("verse", {}).get("ref"):
+                    history["connections"]["verses"].add(cat["verse"]["ref"])
+                for item in cat.get("items", []):
+                    if item.get("ref"):
+                        history["connections"]["verses"].add(item["ref"])
+                    if item.get("ar"):
+                        history["connections"]["words"].add(item["ar"])
 
-        # Other games use default 30-day cooldown
-        if fdate >= cutoff_default:
-            # Harf by Harf history
-            wdl = data.get("wordle")
-            if wdl:
-                if wdl.get("word"):
-                    history["wordle"]["words"].add(wdl["word"])
-                if wdl.get("display"):
-                    history["wordle"]["words"].add(wdl["display"])
-                if wdl.get("hint"):
-                    history["wordle"]["hints"].add(wdl["hint"].lower().strip())
-                if wdl.get("verse"):
-                    history["wordle"]["verses"].add(wdl.get("verse", ""))
+        # Harf by Harf history
+        wdl = data.get("wordle")
+        if wdl:
+            if wdl.get("word"):
+                history["wordle"]["words"].add(wdl["word"])
+            if wdl.get("display"):
+                history["wordle"]["words"].add(wdl["display"])
+            if wdl.get("hint"):
+                history["wordle"]["hints"].add(wdl["hint"].lower().strip())
+            if wdl.get("verse"):
+                history["wordle"]["verses"].add(wdl.get("verse", ""))
 
-            # Deduction history
-            ded = data.get("deduction")
-            if ded:
-                if ded.get("title"):
-                    history["deduction"]["titles"].add(ded["title"].lower().strip())
-                cats = ded.get("categories", {})
-                if isinstance(cats, dict):
-                    identity_cat = cats.get("identity", cats.get("prophet", {}))
-                    if identity_cat.get("answer"):
-                        history["deduction"]["characters"].add(identity_cat["answer"])
+        # Deduction history
+        ded = data.get("deduction")
+        if ded:
+            if ded.get("title"):
+                history["deduction"]["titles"].add(ded["title"].lower().strip())
+            cats = ded.get("categories", {})
+            if isinstance(cats, dict):
+                identity_cat = cats.get("identity", cats.get("prophet", {}))
+                if identity_cat.get("answer"):
+                    history["deduction"]["characters"].add(identity_cat["answer"])
 
-            # Scramble history
-            scr = data.get("scramble")
-            if scr:
-                if scr.get("reference"):
-                    history["scramble"]["references"].add(scr["reference"])
-                if scr.get("arabic"):
-                    history["scramble"]["verses"].add(scr["arabic"])
+        # Scramble history
+        scr = data.get("scramble")
+        if scr:
+            if scr.get("reference"):
+                history["scramble"]["references"].add(scr["reference"])
+            if scr.get("arabic"):
+                history["scramble"]["verses"].add(scr["arabic"])
 
-            # Juz Journey history
-            juz = data.get("juz")
-            if juz:
-                if juz.get("juz_number"):
-                    history["juz"]["juz_numbers"].add(juz["juz_number"])
-                verse = juz.get("verse", {})
-                if verse.get("surah_number") and verse.get("ayah_number"):
-                    history["juz"]["verses"].add(f"{verse['surah_number']}:{verse['ayah_number']}")
+        # Juz Journey history
+        juz = data.get("juz")
+        if juz:
+            if juz.get("juz_number"):
+                history["juz"]["juz_numbers"].add(juz["juz_number"])
+            verse = juz.get("verse", {})
+            if verse.get("surah_number") and verse.get("ayah_number"):
+                history["juz"]["verses"].add(f"{verse['surah_number']}:{verse['ayah_number']}")
 
     return history
 
