@@ -1,5 +1,6 @@
-// QuranIQ Service Worker
-const CACHE_NAME = 'quraniq-v35';
+// QuranIQ Service Worker — v36 (Periodic Background Sync)
+const CACHE_NAME = 'quraniq-v36';
+const PUZZLE_CHECK_TAG = 'quraniq-puzzle-check';
 
 // Assets to pre-cache on install
 const PRECACHE_ASSETS = [
@@ -23,7 +24,7 @@ const PRECACHE_ASSETS = [
   './data/quran_words.json'
 ];
 
-// Install: pre-cache assets
+// ── Install: pre-cache assets ────────────────────────────────────
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -33,7 +34,7 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
 
-// Activate: clean up old caches
+// ── Activate: clean up old caches ────────────────────────────────
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -47,23 +48,98 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Handle notification clicks
-self.addEventListener('notificationclick', (event) => {
-    event.notification.close();
-    const url = event.notification.data?.url || './';
-    event.waitUntil(
-        clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
-            for (const client of windowClients) {
-                if (client.url.includes('quraniq') && 'focus' in client) {
-                    return client.focus();
-                }
-            }
-            return clients.openWindow(url);
-        })
-    );
+// ── Periodic Background Sync ─────────────────────────────────────
+// Fires even when the tab is closed (Chrome 80+, Edge 80+).
+// The browser wakes the service worker at roughly the registered
+// interval and fires this event.
+self.addEventListener('periodicsync', (event) => {
+  if (event.tag === PUZZLE_CHECK_TAG) {
+    event.waitUntil(checkAndNotify());
+  }
 });
 
-// Fetch: NETWORK-FIRST for everything (always get latest when online, fall back to cache when offline)
+// ── Message handler (for client-triggered checks) ────────────────
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'CHECK_PUZZLE') {
+    event.waitUntil(checkAndNotify());
+  }
+});
+
+// ── Core: check for new puzzle and send notification ─────────────
+async function checkAndNotify() {
+  try {
+    // Fetch today's puzzle with cache-bust
+    const resp = await fetch('data/daily_puzzle.json?t=' + Date.now(), {
+      cache: 'no-store'
+    });
+    if (!resp.ok) return;
+
+    const data = await resp.json();
+    const todayStr = new Date().toISOString().slice(0, 10);
+
+    // Only notify if the puzzle is for today
+    if (data.date !== todayStr) return;
+
+    // Check if we already notified today (stored in IndexedDB-like KV via Cache API)
+    const notifCache = await caches.open('quraniq-notif-state');
+    const lastNotif = await notifCache.match('last-notified-date');
+    if (lastNotif) {
+      const lastDate = await lastNotif.text();
+      if (lastDate === todayStr) return; // Already notified today
+    }
+
+    // Check if user has notifications enabled (stored as a cache entry)
+    const prefResp = await notifCache.match('notifications-enabled');
+    if (!prefResp) return; // User hasn't enabled notifications
+    const pref = await prefResp.text();
+    if (pref !== 'true') return;
+
+    // Send the notification
+    await self.registration.showNotification('QuranIQ', {
+      body: 'New daily puzzles are ready! Test your Quranic knowledge.',
+      icon: './icons/icon-192.png',
+      badge: './icons/icon-192.png',
+      tag: 'quraniq-daily',
+      renotify: true,
+      data: { url: './' },
+      vibrate: [200, 100, 200],
+      actions: [
+        { action: 'play', title: 'Play Now' }
+      ]
+    });
+
+    // Mark today as notified
+    await notifCache.put(
+      'last-notified-date',
+      new Response(todayStr)
+    );
+  } catch (e) {
+    // Silently fail — will retry on next sync
+  }
+}
+
+// ── Handle notification clicks ───────────────────────────────────
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+
+  const action = event.action;
+  const url = event.notification.data?.url || './';
+
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
+      // Try to focus an existing QuranIQ tab
+      for (const client of windowClients) {
+        if (client.url.includes('quraniq') && 'focus' in client) {
+          return client.focus();
+        }
+      }
+      // Otherwise open a new window
+      return clients.openWindow(url);
+    })
+  );
+});
+
+// ── Fetch: network-first for everything ──────────────────────────
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 

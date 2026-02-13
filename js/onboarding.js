@@ -1,9 +1,16 @@
 /* ============================================
    QURANIQ - ONBOARDING & NOTIFICATIONS
+   ============================================
+   Notification strategy (layered for maximum reliability):
+   1. Periodic Background Sync — wakes SW every ~12h even when tab is closed (Chrome/Edge 80+)
+   2. Visibility check — when user returns to any tab, SW checks for new puzzle
+   3. setTimeout fallback — schedules a timer for UTC midnight (works only while tab is open)
+   All three layers are active simultaneously; the SW deduplicates via last-notified-date.
    ============================================ */
 
 const ONBOARDING_KEY = 'quraniq_onboarded';
 const NOTIFICATION_KEY = 'quraniq_notifications';
+const NOTIF_CACHE_NAME = 'quraniq-notif-state';
 
 // ==================== ONBOARDING TUTORIAL ====================
 
@@ -142,8 +149,69 @@ function completeOnboarding() {
 // ==================== NOTIFICATION SYSTEM ====================
 
 /**
- * Request notification permission and schedule daily reminders.
- * Uses the Notification API + service worker for reliable delivery.
+ * Sync the notification preference to the service worker's Cache API store.
+ * The SW reads this when it wakes up via Periodic Background Sync.
+ */
+async function syncNotifPrefToSW(enabled) {
+    try {
+        const cache = await caches.open(NOTIF_CACHE_NAME);
+        await cache.put('notifications-enabled', new Response(enabled ? 'true' : 'false'));
+    } catch (e) {
+        // Cache API not available — SW fallback won't work, but setTimeout will
+    }
+}
+
+/**
+ * Register Periodic Background Sync so the SW wakes up every ~12 hours
+ * to check for new puzzles, even when the tab is closed.
+ */
+async function registerPeriodicSync() {
+    if (!('serviceWorker' in navigator)) return;
+
+    try {
+        const reg = await navigator.serviceWorker.ready;
+
+        // Check if Periodic Background Sync is supported
+        if ('periodicSync' in reg) {
+            const status = await navigator.permissions.query({ name: 'periodic-background-sync' });
+            if (status.state === 'granted') {
+                await reg.periodicSync.register('quraniq-puzzle-check', {
+                    minInterval: 12 * 60 * 60 * 1000 // 12 hours
+                });
+                return true;
+            }
+        }
+    } catch (e) {
+        // Periodic Sync not supported or permission denied — fall through to other strategies
+    }
+    return false;
+}
+
+/**
+ * Unregister Periodic Background Sync when notifications are disabled.
+ */
+async function unregisterPeriodicSync() {
+    if (!('serviceWorker' in navigator)) return;
+    try {
+        const reg = await navigator.serviceWorker.ready;
+        if ('periodicSync' in reg) {
+            await reg.periodicSync.unregister('quraniq-puzzle-check');
+        }
+    } catch (e) {}
+}
+
+/**
+ * Ask the service worker to check for a new puzzle right now.
+ * Used as a fallback trigger (visibility change, setTimeout).
+ */
+function triggerSWCheck() {
+    if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+        navigator.serviceWorker.controller.postMessage({ type: 'CHECK_PUZZLE' });
+    }
+}
+
+/**
+ * Request notification permission and enable all notification layers.
  */
 async function requestNotificationPermission() {
     if (!('Notification' in window)) {
@@ -152,7 +220,7 @@ async function requestNotificationPermission() {
     }
 
     if (Notification.permission === 'granted') {
-        enableNotifications();
+        await enableNotifications();
         return true;
     }
 
@@ -163,7 +231,7 @@ async function requestNotificationPermission() {
 
     const permission = await Notification.requestPermission();
     if (permission === 'granted') {
-        enableNotifications();
+        await enableNotifications();
         showToast('Daily reminders enabled!');
         trackNotificationPermission('granted');
         return true;
@@ -174,18 +242,39 @@ async function requestNotificationPermission() {
     }
 }
 
-function enableNotifications() {
+async function enableNotifications() {
     localStorage.setItem(NOTIFICATION_KEY, 'enabled');
+
+    // Layer 1: Periodic Background Sync (works when tab is closed)
+    await syncNotifPrefToSW(true);
+    const hasPBS = await registerPeriodicSync();
+
+    // Layer 2: Visibility change listener (works when user returns to tab)
+    setupVisibilityCheck();
+
+    // Layer 3: setTimeout fallback (works while tab is open)
     scheduleNextReminder();
+
+    if (hasPBS) {
+        console.log('[QuranIQ] Periodic Background Sync registered (12h interval)');
+    } else {
+        console.log('[QuranIQ] Periodic Sync not available; using visibility + timer fallbacks');
+    }
 }
 
-function disableNotifications() {
+async function disableNotifications() {
     localStorage.setItem(NOTIFICATION_KEY, 'disabled');
-    // Clear any pending notification timeout
+
+    // Unregister all layers
+    await syncNotifPrefToSW(false);
+    await unregisterPeriodicSync();
+
+    // Clear setTimeout fallback
     if (window._notifTimeout) {
         clearTimeout(window._notifTimeout);
         window._notifTimeout = null;
     }
+
     showToast('Daily reminders disabled.');
 }
 
@@ -193,21 +282,43 @@ function areNotificationsEnabled() {
     return localStorage.getItem(NOTIFICATION_KEY) === 'enabled' && Notification.permission === 'granted';
 }
 
-/**
- * Schedule a notification for the next UTC midnight (when new puzzles drop).
- * Uses setTimeout since there's no native cron in browsers.
- * Re-schedules itself after each notification.
- */
+// ── Layer 2: Visibility change ───────────────────────────────────
+// When the user returns to the tab (e.g., opens phone, switches back),
+// tell the SW to check if there's a new puzzle to notify about.
+
+let _visibilityListenerAdded = false;
+
+function setupVisibilityCheck() {
+    if (_visibilityListenerAdded) return;
+    _visibilityListenerAdded = true;
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible' && areNotificationsEnabled()) {
+            // Small delay to let network settle after wake
+            setTimeout(() => triggerSWCheck(), 2000);
+        }
+    });
+}
+
+// ── Layer 3: setTimeout fallback ─────────────────────────────────
+// Classic approach: schedule a timer for UTC midnight + buffer.
+// Only works while the tab is open, but provides immediate coverage.
+
 function scheduleNextReminder() {
     if (!areNotificationsEnabled()) return;
+
+    // Clear any existing timer
+    if (window._notifTimeout) {
+        clearTimeout(window._notifTimeout);
+    }
 
     const now = Date.now();
     const todayStart = Math.floor(now / DAY_MS) * DAY_MS;
     const nextMidnight = todayStart + DAY_MS;
     let delay = nextMidnight - now;
 
-    // Add a small buffer (30 seconds after midnight) so puzzles are ready
-    delay += 30000;
+    // Add buffer (2 minutes after midnight) so GitHub Actions has time to push
+    delay += 120000;
 
     // If somehow we're past midnight + buffer, schedule for tomorrow
     if (delay < 60000) {
@@ -215,80 +326,19 @@ function scheduleNextReminder() {
     }
 
     window._notifTimeout = setTimeout(() => {
-        sendDailyNotification();
+        // Tell the SW to check and notify
+        triggerSWCheck();
         // Re-schedule for next day
         scheduleNextReminder();
     }, delay);
 }
 
-function sendDailyNotification(retryCount) {
-    if (!areNotificationsEnabled()) return;
-    retryCount = retryCount || 0;
-
-    // Check if the user already played today (don't nag them)
-    try {
-        const state = JSON.parse(localStorage.getItem(STATE_KEY) || '{}');
-        const today = getDayNumber();
-        const todayKey = `day_${today}`;
-        if (state[todayKey]) return;
-    } catch (e) {}
-
-    // Verify today's puzzle actually exists before notifying
-    const todayStr = new Date().toISOString().slice(0, 10);
-    fetch('data/daily_puzzle.json?t=' + Date.now())
-        .then(r => r.ok ? r.json() : null)
-        .then(data => {
-            if (data && data.date === todayStr) {
-                // Puzzle is ready — send notification
-                doSendNotification();
-            } else if (retryCount < 12) {
-                // Puzzle not ready yet — retry in 5 minutes (up to 1 hour)
-                setTimeout(() => sendDailyNotification(retryCount + 1), 300000);
-            }
-            // After 12 retries (1 hour), give up silently
-        })
-        .catch(() => {
-            // Network error — retry in 5 minutes
-            if (retryCount < 12) {
-                setTimeout(() => sendDailyNotification(retryCount + 1), 300000);
-            }
-        });
-}
-
-function doSendNotification() {
-    // Try service worker notification first (works when tab is closed on mobile)
-    if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-        navigator.serviceWorker.ready.then(reg => {
-            reg.showNotification('QuranIQ', {
-                body: 'New daily puzzles are ready! Test your Quranic knowledge.',
-                icon: './icons/icon-192.png',
-                badge: './icons/icon-192.png',
-                tag: 'quraniq-daily',
-                renotify: true,
-                data: { url: './' }
-            }).catch(() => {
-                showBasicNotification();
-            });
-        });
-    } else {
-        showBasicNotification();
-    }
-}
-
-function showBasicNotification() {
-    try {
-        new Notification('QuranIQ', {
-            body: 'New daily puzzles are ready! Test your Quranic knowledge.',
-            icon: './icons/icon-192.png',
-            tag: 'quraniq-daily'
-        });
-    } catch (e) {}
-}
+// ── Initialize ───────────────────────────────────────────────────
 
 /**
  * Initialize the notification system on page load.
  * - Shows the notification toggle in the sidebar
- * - Resumes scheduling if previously enabled
+ * - Resumes all notification layers if previously enabled
  */
 function initNotifications() {
     // Add notification toggle to sidebar
@@ -300,7 +350,7 @@ function initNotifications() {
         updateNotificationButton(btn);
         btn.addEventListener('click', async () => {
             if (areNotificationsEnabled()) {
-                disableNotifications();
+                await disableNotifications();
             } else {
                 await requestNotificationPermission();
             }
@@ -309,9 +359,16 @@ function initNotifications() {
         sidebarActions.appendChild(btn);
     }
 
-    // Resume scheduling if enabled
+    // Resume all notification layers if enabled
     if (areNotificationsEnabled()) {
+        syncNotifPrefToSW(true);
+        registerPeriodicSync();
+        setupVisibilityCheck();
         scheduleNextReminder();
+
+        // Also do an immediate check in case we missed a notification
+        // (e.g., phone was off all night, user opens app in the morning)
+        setTimeout(() => triggerSWCheck(), 3000);
     }
 }
 
