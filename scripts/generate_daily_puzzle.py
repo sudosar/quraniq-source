@@ -1164,12 +1164,16 @@ def main():
             print(f"Warning: Could not restore output files: {e}")
         return 0
 
-    if not GITHUB_TOKEN and not GEMINI_API_KEY:
+    if not OPENAI_API_KEY and not GITHUB_TOKEN and not GEMINI_API_KEY:
         print("ERROR: No API credentials set.")
-        print("  Set GITHUB_TOKEN (GitHub Models PAT) and/or GEMINI_API_KEY.")
+        print("  Set OPENAI_API_KEY, GITHUB_TOKEN, and/or GEMINI_API_KEY.")
         return 1
 
     print(f"Available APIs:")
+    if OPENAI_API_KEY:
+        print(f"  ✓ OpenAI API (GPT-4.1)")
+    else:
+        print(f"  ✗ OpenAI API (OPENAI_API_KEY not set)")
     if GITHUB_TOKEN:
         print(f"  ✓ GitHub Models (DeepSeek-R1, Phi-4)")
     else:
@@ -1204,12 +1208,12 @@ def main():
 
     # Generate all games
     all_puzzles = {}
-    any_success = False
+    failed_games = []
 
     for i, game_type in enumerate(game_types):
-        # Wait 60s between games to respect DeepSeek-R1's 1 req/min rate limit
+        # Wait 60s between games to respect rate limits
         if i > 0:
-            print(f"\n  ⏳ Waiting 60 seconds before next game (DeepSeek rate limit: 1 req/min)...")
+            print(f"\n  ⏳ Waiting 60 seconds before next game (rate limit)...")
             time.sleep(60)
 
         puzzle = generate_game(game_type, history, today)
@@ -1219,48 +1223,46 @@ def main():
                 puzzle = enrich_connections_with_verses(puzzle)
 
             all_puzzles[game_type] = puzzle
-            any_success = True
-
-            # Write individual output file
-            output_path = OUTPUT_FILES[game_type]
-            os.makedirs(os.path.dirname(output_path), exist_ok=True)
-            with open(output_path, "w") as f:
-                json.dump({
-                    "date": today,
-                    "puzzle": puzzle,
-                    "generated": True,
-                    "model": "auto (chain)",
-                }, f, ensure_ascii=False, indent=2)
-            print(f"  → Saved to {os.path.basename(output_path)}")
         else:
-            # Write fallback marker
-            output_path = OUTPUT_FILES[game_type]
-            os.makedirs(os.path.dirname(output_path), exist_ok=True)
-            with open(output_path, "w") as f:
-                json.dump({
-                    "date": today,
-                    "puzzle": None,
-                    "generated": False,
-                    "fallback": True,
-                }, f, indent=2)
-
-    # Save all puzzles to history
-    if any_success:
-        save_to_history(all_puzzles, today)
-        print(f"\n{'═'*60}")
-        print(f"  ✓ Daily puzzles saved to history/{today}.json")
-        print(f"  Games generated: {', '.join(all_puzzles.keys())}")
-        print(f"{'═'*60}")
+            failed_games.append(game_type)
 
     # Print summary
-    print(f"\n{'═'*60}")
+    sep = '=' * 60
+    print(f"\n{sep}")
     print(f"  GENERATION SUMMARY for {today}")
-    print(f"{'═'*60}")
+    print(f"{sep}")
     for game_type in game_types:
-        status = "\u2713" if game_type in all_puzzles else "\u2717 (fallback)"
+        status = "\u2713" if game_type in all_puzzles else "\u2717 FAILED"
         print(f"  {status} {GAME_CONFIGS[game_type]['label']}")
 
-    return 0 if any_success else 1
+    # ALL games must succeed before writing output files and deploying
+    if failed_games:
+        print(f"\n  \u2717 {len(failed_games)} game(s) failed: {', '.join(failed_games)}")
+        print(f"  \u2717 NOT writing output files — page will NOT be updated.")
+        print(f"  \u2717 Previous day's puzzles remain live until all games succeed.")
+        return 1
+
+    # All games succeeded — write output files and save history
+    for game_type, puzzle in all_puzzles.items():
+        output_path = OUTPUT_FILES[game_type]
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        with open(output_path, "w") as f:
+            json.dump({
+                "date": today,
+                "puzzle": puzzle,
+                "generated": True,
+                "model": "auto (chain)",
+            }, f, ensure_ascii=False, indent=2)
+        print(f"  → Saved to {os.path.basename(output_path)}")
+
+    save_to_history(all_puzzles, today)
+    print(f"\n{sep}")
+    print(f"  ✓ ALL {len(game_types)} puzzles generated and saved!")
+    print(f"  ✓ History saved to history/{today}.json")
+    print(f"  ✓ Page will be updated with today's puzzles.")
+    print(f"{sep}")
+
+    return 0
 
 
 if __name__ == "__main__":
