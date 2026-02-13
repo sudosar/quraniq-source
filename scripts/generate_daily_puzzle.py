@@ -45,7 +45,8 @@ DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 HISTORY_DIR = os.path.join(DATA_DIR, "history")
 FALLBACK_PUZZLES = os.path.join(SCRIPT_DIR, "..", "puzzles.js")
 
-COOLING_DAYS = 30
+COOLING_DAYS = 30  # Default for most games
+COOLING_DAYS_CONNECTIONS = 365  # 365 days for Connections to cycle through all 6,236 Quran verses
 MAX_RETRIES = 5
 COLORS = ["yellow", "green", "blue", "purple"]
 
@@ -65,11 +66,18 @@ RAMADAN_END = datetime(2026, 3, 20)  # 30 days
 
 # ── History Management ─────────────────────────────────────────────
 def load_history():
-    """Load the last 30 days of puzzle history for all game types.
+    """Load puzzle history for cooldown enforcement.
 
+    Connections uses a 365-day cooldown (to cycle through all 6,236 Quran verses).
+    Other games use a 30-day cooldown.
     Returns a dict with sets for each game type's used content.
     """
-    cutoff = datetime.utcnow() - timedelta(days=COOLING_DAYS)
+    now = datetime.utcnow()
+    cutoff_default = now - timedelta(days=COOLING_DAYS)
+    cutoff_connections = now - timedelta(days=COOLING_DAYS_CONNECTIONS)
+    # Keep files as long as the longest cooldown needs them
+    cleanup_cutoff = cutoff_connections
+
     history = {
         "connections": {"themes": set(), "verses": set(), "words": set()},
         "wordle": {"words": set(), "verses": set(), "hints": set()},
@@ -87,7 +95,7 @@ def load_history():
         except ValueError:
             continue
 
-        if fdate < cutoff:
+        if fdate < cleanup_cutoff:
             os.remove(fpath)
             print(f"  Cleaned up old history: {fname}")
             continue
@@ -98,58 +106,61 @@ def load_history():
         except (json.JSONDecodeError, KeyError):
             continue
 
-        # Connections history
-        conn = data.get("connections")
-        if conn:
-            for cat in conn.get("categories", []):
-                history["connections"]["themes"].add(cat.get("nameEn", "").lower().strip())
-                if cat.get("verse", {}).get("ref"):
-                    history["connections"]["verses"].add(cat["verse"]["ref"])
-                for item in cat.get("items", []):
-                    if item.get("ref"):
-                        history["connections"]["verses"].add(item["ref"])
-                    if item.get("ar"):
-                        history["connections"]["words"].add(item["ar"])
+        # Connections history (365-day cooldown)
+        if fdate >= cutoff_connections:
+            conn = data.get("connections")
+            if conn:
+                for cat in conn.get("categories", []):
+                    history["connections"]["themes"].add(cat.get("nameEn", "").lower().strip())
+                    if cat.get("verse", {}).get("ref"):
+                        history["connections"]["verses"].add(cat["verse"]["ref"])
+                    for item in cat.get("items", []):
+                        if item.get("ref"):
+                            history["connections"]["verses"].add(item["ref"])
+                        if item.get("ar"):
+                            history["connections"]["words"].add(item["ar"])
 
-        # Harf by Harf history
-        wdl = data.get("wordle")
-        if wdl:
-            if wdl.get("word"):
-                history["wordle"]["words"].add(wdl["word"])
-            if wdl.get("display"):
-                history["wordle"]["words"].add(wdl["display"])
-            if wdl.get("hint"):
-                history["wordle"]["hints"].add(wdl["hint"].lower().strip())
-            if wdl.get("verse"):
-                history["wordle"]["verses"].add(wdl.get("verse", ""))
+        # Other games use default 30-day cooldown
+        if fdate >= cutoff_default:
+            # Harf by Harf history
+            wdl = data.get("wordle")
+            if wdl:
+                if wdl.get("word"):
+                    history["wordle"]["words"].add(wdl["word"])
+                if wdl.get("display"):
+                    history["wordle"]["words"].add(wdl["display"])
+                if wdl.get("hint"):
+                    history["wordle"]["hints"].add(wdl["hint"].lower().strip())
+                if wdl.get("verse"):
+                    history["wordle"]["verses"].add(wdl.get("verse", ""))
 
-        # Deduction history
-        ded = data.get("deduction")
-        if ded:
-            if ded.get("title"):
-                history["deduction"]["titles"].add(ded["title"].lower().strip())
-            cats = ded.get("categories", {})
-            if isinstance(cats, dict):
-                identity_cat = cats.get("identity", cats.get("prophet", {}))
-                if identity_cat.get("answer"):
-                    history["deduction"]["characters"].add(identity_cat["answer"])
+            # Deduction history
+            ded = data.get("deduction")
+            if ded:
+                if ded.get("title"):
+                    history["deduction"]["titles"].add(ded["title"].lower().strip())
+                cats = ded.get("categories", {})
+                if isinstance(cats, dict):
+                    identity_cat = cats.get("identity", cats.get("prophet", {}))
+                    if identity_cat.get("answer"):
+                        history["deduction"]["characters"].add(identity_cat["answer"])
 
-        # Scramble history
-        scr = data.get("scramble")
-        if scr:
-            if scr.get("reference"):
-                history["scramble"]["references"].add(scr["reference"])
-            if scr.get("arabic"):
-                history["scramble"]["verses"].add(scr["arabic"])
+            # Scramble history
+            scr = data.get("scramble")
+            if scr:
+                if scr.get("reference"):
+                    history["scramble"]["references"].add(scr["reference"])
+                if scr.get("arabic"):
+                    history["scramble"]["verses"].add(scr["arabic"])
 
-        # Juz Journey history
-        juz = data.get("juz")
-        if juz:
-            if juz.get("juz_number"):
-                history["juz"]["juz_numbers"].add(juz["juz_number"])
-            verse = juz.get("verse", {})
-            if verse.get("surah_number") and verse.get("ayah_number"):
-                history["juz"]["verses"].add(f"{verse['surah_number']}:{verse['ayah_number']}")
+            # Juz Journey history
+            juz = data.get("juz")
+            if juz:
+                if juz.get("juz_number"):
+                    history["juz"]["juz_numbers"].add(juz["juz_number"])
+                verse = juz.get("verse", {})
+                if verse.get("surah_number") and verse.get("ayah_number"):
+                    history["juz"]["verses"].add(f"{verse['surah_number']}:{verse['ayah_number']}")
 
     return history
 
@@ -275,16 +286,16 @@ You MUST NOT use any of the above. Choose completely different verses and themes
     return f"""You are an expert Islamic scholar creating a daily puzzle game called "Ayah Connections".
 
 TASK: Generate exactly 4 groups of 4 related Quranic/Islamic items.
+The goal is to expose players to Quranic verses — each item is a word that appears in a real verse.
 
 RULES:
 1. Each group MUST have exactly 4 items
 2. All 4 groups should be from DIFFERENT areas of Islamic knowledge
 3. Items within a group must clearly belong together under the stated theme
-4. The Arabic word/phrase for each item MUST appear in the referenced Quranic verse
+4. The Arabic word/phrase for each item MUST actually appear in the referenced Quranic verse
 5. Verse references MUST be real and accurate (surah:ayah format like "2:255")
-6. The verse text MUST be actual Quranic Arabic with full diacritics (tashkeel)
-7. Each group needs a category-level verse that represents the overall theme
-8. Make the puzzle challenging but fair
+6. Each group needs a category-level representative verse reference
+7. Make the puzzle challenging but fair
 
 DIFFICULTY: 1 easy, 1 medium, 1 hard, 1 tricky group.
 
@@ -295,30 +306,32 @@ STRICTLY FORBIDDEN verse references (used in last 30 days):
 {avoided_verses}
 {violation_block}
 
-OUTPUT FORMAT: Return a valid JSON object:
+OUTPUT FORMAT: Return ONLY a valid JSON object. Do NOT include full verse text — only the reference.
 {{
   "categories": [
     {{
-      "name": "Arabic group name",
+      "name": "Arabic group name with tashkeel",
       "nameEn": "English group name",
       "color": "yellow",
       "items": [
-        {{"ar": "Arabic word", "en": "English meaning", "verse": "Full Quranic verse with diacritics", "ref": "surah:ayah"}},
-        ... (4 items)
+        {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
+        {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
+        {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
+        {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}}
       ],
-      "verse": {{"ayah": "Representative verse", "en": "English translation", "ref": "surah:ayah"}}
+      "verse": {{"ref": "surah:ayah"}}
     }},
     ... (4 categories, colors: yellow, green, blue, purple)
   ]
 }}
 
 IMPORTANT:
-- Return ONLY the JSON object, no markdown
-- EVERY verse reference MUST be unique — no two items can share the same surah:ayah ref
-- Each of the 16 items MUST reference a DIFFERENT verse (16 unique refs total)
-- The 4 category-level verses should also be unique (can overlap with item refs)
-- Arabic text must include full tashkeel/diacritics
-- Verify each verse reference is accurate"""
+- Return ONLY the JSON object, no markdown, no explanation
+- Do NOT include any verse text — only refs. Verse text will be looked up separately.
+- EVERY verse reference MUST be unique — 16 different refs for 16 items
+- The 4 category-level verse refs should also be unique (can overlap with item refs)
+- Arabic words must include full tashkeel/diacritics
+- Verify each verse reference is a real Quranic verse"""
 
 
 def validate_connections(puzzle, history):
@@ -374,19 +387,27 @@ def validate_connections(puzzle, history):
         for j, item in enumerate(items):
             if not item.get("ar") or not item.get("en"):
                 errors.append(f"Cat {i+1} item {j+1} missing ar or en")
-            if not item.get("verse") or not item.get("ref"):
-                errors.append(f"Cat {i+1} item {j+1} missing verse or ref")
+            if not item.get("ref"):
+                errors.append(f"Cat {i+1} item {j+1} missing ref")
             ar = item.get("ar", "")
             if ar in all_words:
                 warnings.append(f"Duplicate word: {ar}")
             all_words.add(ar)
             if ar in history["connections"]["words"]:
                 warnings.append(f"Word '{ar}' used in last 30 days")
+            # Ensure optional fields exist for downstream compatibility
+            if "verse" not in item:
+                item["verse"] = ""
             if "verseEn" not in item:
                 item["verseEn"] = ""
 
-        if "en" not in cat.get("verse", {}):
+        # Ensure category verse has required fields
+        if "verse" not in cat or not isinstance(cat["verse"], dict):
+            cat["verse"] = {"ref": "", "ayah": "", "en": ""}
+        if "en" not in cat["verse"]:
             cat["verse"]["en"] = ""
+        if "ayah" not in cat["verse"]:
+            cat["verse"]["ayah"] = ""
 
     return errors, cooldown_violations, warnings
 
@@ -925,6 +946,105 @@ def validate_juz(puzzle, history):
 
 
 # ═══════════════════════════════════════════════════════════════════
+# QURAN API — VERSE TEXT LOOKUP
+# ═══════════════════════════════════════════════════════════════════
+QURAN_API_BASE = "https://api.quran.com/api/v4"
+
+
+def fetch_verse_text(ref):
+    """Fetch the Arabic text (Uthmani script) and English translation for a verse ref.
+    
+    Uses the Quran.com API word-by-word endpoint to get both Arabic (Uthmani)
+    and English word-by-word translations.
+    
+    Args:
+        ref: Verse reference in "surah:ayah" format (e.g. "2:255")
+    Returns:
+        dict with 'arabic' and 'english' keys, or None on failure
+    """
+    try:
+        key = ref.strip()
+        url = f"{QURAN_API_BASE}/verses/by_key/{key}?language=en&words=true&word_fields=text_uthmani,translation"
+        resp = requests.get(url, timeout=15)
+        if resp.status_code != 200:
+            print(f"    ⚠ Quran API returned {resp.status_code} for {ref}")
+            return None
+        data = resp.json()
+        verse_data = data.get("verse", {})
+        words = verse_data.get("words", [])
+        
+        if not words:
+            print(f"    ⚠ No words returned for {ref}")
+            return None
+        
+        # Build Arabic text from Uthmani script words
+        arabic = " ".join(w.get("text_uthmani", "") for w in words if w.get("text_uthmani"))
+        
+        # Build English from word-by-word translations
+        en_parts = []
+        for w in words:
+            t = w.get("translation", {})
+            if isinstance(t, dict) and t.get("text"):
+                en_parts.append(t["text"].strip())
+        english = " ".join(en_parts)
+        
+        if not arabic:
+            print(f"    ⚠ Empty Arabic text for {ref}")
+            return None
+        
+        return {"arabic": arabic, "english": english}
+    except Exception as e:
+        print(f"    ⚠ Quran API error for {ref}: {e}")
+        return None
+
+
+def enrich_connections_with_verses(puzzle):
+    """Post-process a Connections puzzle: look up full verse text from Quran API.
+    
+    For each item, fetches the Arabic verse text and English translation
+    using the ref field. Also enriches category-level verses.
+    """
+    print("\n  📖 Looking up verse text from Quran API...")
+    cats = puzzle.get("categories", [])
+    total_refs = 0
+    found_refs = 0
+    
+    for cat in cats:
+        # Enrich each item's verse
+        for item in cat.get("items", []):
+            ref = item.get("ref", "")
+            if not ref:
+                continue
+            total_refs += 1
+            verse_data = fetch_verse_text(ref)
+            if verse_data:
+                item["verse"] = verse_data["arabic"]
+                item["verseEn"] = verse_data["english"]
+                found_refs += 1
+            else:
+                item["verse"] = ""
+                item["verseEn"] = ""
+            # Small delay to be respectful to the API
+            time.sleep(0.3)
+        
+        # Enrich category-level verse
+        cat_verse = cat.get("verse", {})
+        if isinstance(cat_verse, dict) and cat_verse.get("ref"):
+            cat_ref = cat_verse["ref"]
+            verse_data = fetch_verse_text(cat_ref)
+            if verse_data:
+                cat_verse["ayah"] = verse_data["arabic"]
+                cat_verse["en"] = verse_data["english"]
+            else:
+                cat_verse["ayah"] = ""
+                cat_verse["en"] = ""
+            time.sleep(0.3)
+    
+    print(f"  ✓ Verse lookup complete: {found_refs}/{total_refs} verses found")
+    return puzzle
+
+
+# ═══════════════════════════════════════════════════════════════════
 # UNIFIED GENERATION LOOP
 # ═══════════════════════════════════════════════════════════════════
 GAME_CONFIGS = {
@@ -1100,6 +1220,10 @@ def main():
 
         puzzle = generate_game(game_type, history, today)
         if puzzle:
+            # Post-process: enrich Connections with verse text from Quran API
+            if game_type == "connections":
+                puzzle = enrich_connections_with_verses(puzzle)
+
             all_puzzles[game_type] = puzzle
             any_success = True
 
