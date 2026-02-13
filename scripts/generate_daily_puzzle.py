@@ -33,6 +33,38 @@ import time
 import requests
 from datetime import datetime, timedelta
 
+# ── Arabic text helpers ────────────────────────────────────────────
+def normalize_arabic(text):
+    """Normalize Arabic text for comparison by stripping diacritics and special chars."""
+    text = re.sub(r'[\u064B-\u065F\u0670]', '', text)  # tashkeel
+    text = text.replace('\u0671', '\u0627').replace('\u0622', '\u0627')  # alef variants
+    text = text.replace('\u0623', '\u0627').replace('\u0625', '\u0627')
+    text = text.replace('\u0640', '')  # tatweel
+    text = re.sub(r'[\u06D6-\u06ED]', '', text)  # Quranic annotation marks
+    text = re.sub(r'[\u06DD\u06DE\u06DF\u06E0\u06E1\u06E2\u06E3\u06E4\u06E5\u06E6\u06E7\u06E8\u06E9\u06EA\u06EB\u06EC\u06ED]', '', text)
+    text = re.sub(r'[\u0615\u0616\u0617\u0618\u0619\u061A]', '', text)
+    text = re.sub(r'[\u06D6-\u06FF]', '', text)  # extended Arabic-B
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
+def word_in_verse(word, verse_text):
+    """Check if an Arabic word appears in a verse, with normalization."""
+    w = normalize_arabic(word)
+    v = normalize_arabic(verse_text)
+    if not w or not v:
+        return False
+    if w in v:
+        return True
+    # Try without alef-lam prefix
+    if w.startswith('\u0627\u0644') and w[2:] in v:
+        return True
+    # Try adding alef-lam prefix
+    if ('\u0627\u0644' + w) in v:
+        return True
+    return False
+
+
 # ── Configuration ──────────────────────────────────────────────────
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -349,7 +381,12 @@ RULES:
 1. Each group MUST have exactly 4 items
 2. All 4 groups should be from DIFFERENT areas of Islamic knowledge
 3. Items within a group must clearly belong together under the stated theme
-4. The Arabic word/phrase for each item MUST actually appear in the referenced Quranic verse
+4. **CRITICAL** The EXACT Arabic word (same form, same inflection) MUST appear in the referenced verse.
+   - The word will be verified against the actual Quran API text. If the word is NOT found in the verse, the puzzle is REJECTED.
+   - Example: if you write "ar": "بَيْتٍ" and "ref": "24:28", the word بيت must literally appear in verse 24:28.
+   - Do NOT cite a verse that merely discusses the concept — the exact word form must be present.
+   - BAD: بَابًا ref 4:46 (verse 4:46 does not contain the word بابا)
+   - GOOD: بَابًا ref 23:77 (verse 23:77 contains بابا)
 5. Verse references MUST be real and accurate (surah:ayah format like "2:255")
 6. Each group needs a category-level representative verse reference
 7. Make the puzzle challenging but fair
@@ -1094,11 +1131,16 @@ def enrich_connections_with_verses(puzzle):
     
     For each item, fetches the Arabic verse text and English translation
     using the ref field. Also enriches category-level verses.
+    
+    CRITICAL: Validates that each Arabic word actually appears in its cited verse.
+    Returns (puzzle, mismatches) where mismatches is a list of error strings.
+    If mismatches is non-empty, the puzzle should be rejected and regenerated.
     """
     print("\n  📖 Looking up verse text from Quran API...")
     cats = puzzle.get("categories", [])
     total_refs = 0
     found_refs = 0
+    mismatches = []
     
     for cat in cats:
         # Enrich each item's verse
@@ -1112,6 +1154,14 @@ def enrich_connections_with_verses(puzzle):
                 item["verse"] = verse_data["arabic"]
                 item["verseEn"] = verse_data["english"]
                 found_refs += 1
+                # Validate: word must actually appear in the verse
+                ar_word = item.get("ar", "")
+                if ar_word and not word_in_verse(ar_word, verse_data["arabic"]):
+                    msg = f"Word '{ar_word}' ({item.get('en','')}) NOT found in verse {ref}"
+                    mismatches.append(msg)
+                    print(f"    ✗ {msg}")
+                else:
+                    print(f"    ✓ '{ar_word}' found in {ref}")
             else:
                 item["verse"] = ""
                 item["verseEn"] = ""
@@ -1131,8 +1181,12 @@ def enrich_connections_with_verses(puzzle):
                 cat_verse["en"] = ""
             time.sleep(0.3)
     
+    if mismatches:
+        print(f"  ✗ Word-in-verse check FAILED: {len(mismatches)} mismatches")
+    else:
+        print(f"  ✓ Word-in-verse check passed: all {found_refs} words verified")
     print(f"  ✓ Verse lookup complete: {found_refs}/{total_refs} verses found")
-    return puzzle
+    return puzzle, mismatches
 
 
 def enrich_wordle_with_verses(puzzle):
@@ -1374,6 +1428,17 @@ def generate_game(game_type, history, today):
             if warnings:
                 print(f"  ⚠ Warnings (accepted): {warnings}")
 
+            # For connections: verify words actually appear in cited verses
+            if game_type == "connections":
+                enriched, mismatches = enrich_connections_with_verses(puzzle)
+                if mismatches:
+                    print(f"  ✗ WORD-IN-VERSE MISMATCHES (rejecting):")
+                    for m in mismatches:
+                        print(f"      {m}")
+                    previous_violations = (previous_violations or []) + mismatches
+                    continue  # Retry — the LLM picked wrong verse refs
+                puzzle = enriched
+
             print(f"\n  ✓ {config['label']} generated successfully using {model_label}")
             return puzzle
 
@@ -1468,9 +1533,8 @@ def main():
         puzzle = generate_game(game_type, history, today)
         if puzzle:
             # Post-process: enrich with verse text from Quran API
-            if game_type == "connections":
-                puzzle = enrich_connections_with_verses(puzzle)
-            elif game_type == "wordle":
+            # Note: connections enrichment is done inside generate_game (word-in-verse validation)
+            if game_type == "wordle":
                 puzzle = enrich_wordle_with_verses(puzzle)
             elif game_type == "deduction":
                 puzzle = enrich_deduction_with_verses(puzzle)
