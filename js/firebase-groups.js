@@ -508,11 +508,20 @@ async function submitFirebaseScore(gameMode, crescents) {
 }
 
 /**
- * Get today's date string in YYYY-MM-DD format (UTC).
+ * Get today's date string in YYYY-MM-DD format.
+ * Prefers the active puzzle date (from the loaded puzzle file) so that
+ * scores are always keyed to the puzzle's date, not the wall-clock UTC date.
+ * This prevents yesterday's scores from appearing under today's date when
+ * the user plays a stale puzzle between midnight UTC and puzzle deployment.
  */
 function getTodayDateString() {
+    // Use the puzzle date if available (set by loadDailyWithHolding)
+    if (typeof getActivePuzzleDate === 'function') {
+        const pd = getActivePuzzleDate();
+        if (pd) return pd;
+    }
+    // Fallback to UTC date (e.g., before puzzle loads)
     const now = new Date();
-    // Use UTC to match the daily puzzle reset
     return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}-${String(now.getUTCDate()).padStart(2, '0')}`;
 }
 
@@ -884,8 +893,10 @@ async function backfillTodayScores() {
         const current = snap.val() || {};
 
         // Read local game state
+        // Use app.dayNumber (which tracks the puzzle's day, not wall-clock)
+        // so the local state key matches the Firebase date key.
         const state = loadState();
-        const dayNum = getDayNumber();
+        const dayNum = (typeof app !== 'undefined' && app.dayNumber) ? app.dayNumber : getDayNumber();
         let changed = false;
 
         // --- Connections ---

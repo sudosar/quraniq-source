@@ -678,6 +678,12 @@ function normalizeArabic(str) {
 let _servingStale = false;
 function isServingStale() { return _servingStale; }
 
+// The date of the puzzle currently being served (YYYY-MM-DD).
+// Used by Firebase score submission to ensure scores are written under
+// the correct date key (the puzzle's date, not the current UTC date).
+let _activePuzzleDate = null;
+function getActivePuzzleDate() { return _activePuzzleDate; }
+
 /**
  * Convert a date string (YYYY-MM-DD) to the dayNumber used for state keys.
  * This ensures stale puzzles use the original day's state key.
@@ -709,6 +715,9 @@ function loadDailyWithHolding(dataFile, sectionId, gameName, onLoaded, extractPu
                 throw new Error('no puzzle');
             }
             const puzzle = extractPuzzle ? extractPuzzle(data) : data.puzzle;
+
+            // Store the puzzle date globally for Firebase score keying
+            _activePuzzleDate = data.date;
 
             if (data.date === today) {
                 // Fresh puzzle — serve normally
