@@ -97,6 +97,9 @@ async function initFirebase() {
         FB_STATE.initialized = true;
         console.log('[FB] Firebase initialized');
 
+        // One-time score reset: clear all dates before 2026-02-13 (fresh start)
+        oneTimeScoreReset();
+
         // Check for pending group migration (after save code restore)
         processPendingMigration();
 
@@ -104,6 +107,51 @@ async function initFirebase() {
     } catch (err) {
         console.error('[FB] Init failed:', err);
         return false;
+    }
+}
+
+/**
+ * One-time cleanup: delete all score dates before the reset date.
+ * This gives everyone a fresh start. Runs once per device, tracked via localStorage.
+ * Safe to remove this function after all users have visited (e.g., after Ramadan starts).
+ */
+async function oneTimeScoreReset() {
+    const RESET_KEY = 'quraniq_score_reset_v1';
+    const RESET_CUTOFF = '2026-02-13'; // Keep this date and after; delete everything before
+
+    if (localStorage.getItem(RESET_KEY)) return; // Already done on this device
+    if (!FB_STATE.user) return;
+
+    try {
+        const uid = FB_STATE.user.uid;
+        const scoresSnap = await FB_STATE.db.ref(`users/${uid}/scores`).once('value');
+        const scores = scoresSnap.val();
+        if (!scores) {
+            localStorage.setItem(RESET_KEY, Date.now().toString());
+            return;
+        }
+
+        const dates = Object.keys(scores);
+        const oldDates = dates.filter(d => d < RESET_CUTOFF);
+
+        if (oldDates.length > 0) {
+            console.log('[FB] Score reset: removing', oldDates.length, 'old date(s):', oldDates.join(', '));
+            for (const date of oldDates) {
+                await FB_STATE.db.ref(`users/${uid}/scores/${date}`).remove();
+            }
+            // Invalidate leaderboard cache
+            Object.keys(FB_STATE.leaderboardCache).forEach(k => {
+                delete FB_STATE.leaderboardCache[k];
+            });
+            console.log('[FB] Score reset complete — fresh start from', RESET_CUTOFF);
+        } else {
+            console.log('[FB] Score reset: no old dates to remove');
+        }
+
+        localStorage.setItem(RESET_KEY, Date.now().toString());
+    } catch (err) {
+        console.error('[FB] Score reset failed:', err);
+        // Don't set the flag so it retries next visit
     }
 }
 
