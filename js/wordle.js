@@ -13,7 +13,9 @@ const wordle = {
     wordLen: 5,
     evaluations: [],
     keydownHandler: null,
-    validWords: null  // Set of valid Quranic words for current length
+    validWords: null,  // Set of valid Quranic words for current length
+    hintsUsed: 0,      // Number of hints used (each costs 1 turn + 1 extra crescent)
+    hintRows: []       // Which rows were hint reveals (for emoji grid)
 };
 
 /* ---------- Quranic word list loader ---------- */
@@ -81,16 +83,22 @@ function setupWordleGame() {
         wordle.currentRow = saved.currentRow || 0;
         wordle.gameOver = saved.gameOver || false;
         wordle.evaluations = saved.evaluations || [];
+        wordle.hintsUsed = saved.hintsUsed || 0;
+        wordle.hintRows = saved.hintRows || [];
     }
 
     renderWordleBoard();
     renderWordleKeyboard();
+    renderHintButton();
     document.getElementById('wordle-hint').innerHTML = `<strong>Hint:</strong> ${wordle.puzzle.hint}`;
 
     // Replay saved state
     if (saved && wordle.evaluations.length > 0) {
         replayWordleState();
     }
+
+    // Update hint button state after replay
+    updateHintButton();
 
     // Keyboard input — use a named handler so it can be properly managed
     if (wordle.keydownHandler) {
@@ -157,6 +165,167 @@ function renderWordleKeyboard() {
         });
         kb.appendChild(rowEl);
     });
+}
+
+/* ---------- Hint Button ---------- */
+
+function renderHintButton() {
+    // Insert hint button between the hint text and the keyboard
+    const hintTextEl = document.getElementById('wordle-hint');
+    let hintBtn = document.getElementById('wordle-hint-btn');
+    if (!hintBtn) {
+        hintBtn = document.createElement('button');
+        hintBtn.id = 'wordle-hint-btn';
+        hintBtn.className = 'wordle-hint-btn';
+        hintBtn.setAttribute('aria-label', 'Use hint: reveals a letter, costs 1 turn and 1 crescent');
+        hintBtn.addEventListener('click', useWordleHint);
+        // Insert after the hint text div
+        hintTextEl.parentNode.insertBefore(hintBtn, hintTextEl.nextSibling);
+    }
+    updateHintButton();
+}
+
+function updateHintButton() {
+    const btn = document.getElementById('wordle-hint-btn');
+    if (!btn) return;
+
+    const canHint = !wordle.gameOver &&
+                    wordle.currentRow < wordle.maxRows - 1 && // Must have at least 1 row left to play after hint
+                    getUnrevealedPositions().length > 0;
+
+    btn.disabled = !canHint;
+    btn.innerHTML = `<span class="hint-icon">💡</span> Reveal a Letter <span class="hint-cost">−1 turn, −1 🌙</span>`;
+
+    if (wordle.gameOver) {
+        btn.style.display = 'none';
+    } else {
+        btn.style.display = '';
+    }
+}
+
+/**
+ * Get positions in the word that haven't been revealed as 'correct' yet
+ * (either by a guess or a previous hint).
+ */
+function getUnrevealedPositions() {
+    const revealed = new Set();
+
+    // Check all evaluated rows for correct positions
+    for (let r = 0; r < wordle.evaluations.length; r++) {
+        for (let c = 0; c < wordle.wordLen; c++) {
+            if (wordle.evaluations[r][c] === 'correct') {
+                revealed.add(c);
+            }
+        }
+    }
+
+    // Return positions not yet revealed
+    const unrevealed = [];
+    for (let c = 0; c < wordle.wordLen; c++) {
+        if (!revealed.has(c)) unrevealed.push(c);
+    }
+    return unrevealed;
+}
+
+function useWordleHint() {
+    if (wordle.gameOver) return;
+
+    // Need at least 1 row after the hint row to still play
+    if (wordle.currentRow >= wordle.maxRows - 1) {
+        showToast('No turns left for a hint');
+        return;
+    }
+
+    const unrevealed = getUnrevealedPositions();
+    if (unrevealed.length === 0) {
+        showToast('All letters already revealed');
+        return;
+    }
+
+    // Clear any partially typed letters in the current row
+    for (let c = 0; c < wordle.wordLen; c++) {
+        const cell = document.getElementById(`wc-${wordle.currentRow}-${c}`);
+        cell.textContent = '';
+        cell.classList.remove('filled');
+    }
+    wordle.board[wordle.currentRow] = [];
+    wordle.currentCol = 0;
+
+    // Pick a random unrevealed position
+    const pos = unrevealed[Math.floor(Math.random() * unrevealed.length)];
+    const letter = wordle.word[pos];
+
+    // Fill the entire row with the correct word but mark it as a hint row
+    // The hint row shows only the revealed letter; others are blank/absent
+    const hintBoard = [];
+    const hintEval = [];
+    for (let c = 0; c < wordle.wordLen; c++) {
+        if (c === pos) {
+            hintBoard.push(letter);
+            hintEval.push('correct');
+        } else {
+            // Fill with the correct letter at that position (for board storage)
+            // but mark as 'hint-blank' — we'll use a special marker
+            hintBoard.push(wordle.word[c]);
+            hintEval.push('hint-blank');
+        }
+    }
+
+    wordle.board[wordle.currentRow] = hintBoard;
+    wordle.evaluations.push(hintEval);
+    wordle.hintRows.push(wordle.currentRow);
+    wordle.hintsUsed++;
+
+    // Animate the hint reveal
+    for (let c = 0; c < wordle.wordLen; c++) {
+        setTimeout(() => {
+            const cell = document.getElementById(`wc-${wordle.currentRow}-${c}`);
+            if (c === pos) {
+                cell.textContent = letter;
+                cell.classList.add('filled', 'correct', 'hint-reveal');
+                cell.setAttribute('aria-label',
+                    `Row ${wordle.currentRow + 1}, Column ${c + 1}: ${letter}, hint revealed`);
+
+                // Update keyboard for the revealed letter
+                const keyBtn = document.getElementById(`wk-${letter}`);
+                if (keyBtn) {
+                    const priority = { correct: 3, present: 2, absent: 1 };
+                    const current = keyBtn.classList.contains('correct') ? 3 :
+                        keyBtn.classList.contains('present') ? 2 :
+                        keyBtn.classList.contains('absent') ? 1 : 0;
+                    if (priority['correct'] > current) {
+                        keyBtn.classList.remove('correct', 'present', 'absent');
+                        keyBtn.classList.add('correct');
+                    }
+                }
+            } else {
+                // Empty cell for non-revealed positions
+                cell.textContent = '';
+                cell.classList.add('hint-empty');
+                cell.setAttribute('aria-label',
+                    `Row ${wordle.currentRow + 1}, Column ${c + 1}: hint row`);
+            }
+        }, c * 150);
+    }
+
+    setTimeout(() => {
+        announce(`Hint used: letter ${letter} revealed at position ${pos + 1}. Turn consumed.`);
+
+        wordle.currentRow++;
+        wordle.currentCol = 0;
+
+        // Check if this was the last available row (shouldn't happen due to guard, but just in case)
+        if (wordle.currentRow >= wordle.maxRows) {
+            wordle.gameOver = true;
+            const displayWord = wordle.puzzle.display || wordle.word;
+            showToast(displayWord);
+            announce(`Game over. The word was ${displayWord}.`);
+            setTimeout(() => showWordleResult(false), 300);
+        }
+
+        saveWordleState();
+        updateHintButton();
+    }, wordle.wordLen * 150 + 100);
 }
 
 function addWordleLetter(letter) {
@@ -270,6 +439,7 @@ function submitWordleGuess() {
         }
 
         saveWordleState();
+        updateHintButton();
     }, wordle.wordLen * 250 + 100);
 }
 
@@ -302,22 +472,47 @@ function evaluateWordleGuess(guess) {
 
 function replayWordleState() {
     for (let r = 0; r < wordle.evaluations.length; r++) {
+        const isHintRow = wordle.hintRows.includes(r);
+
         for (let c = 0; c < wordle.wordLen; c++) {
             const cell = document.getElementById(`wc-${r}-${c}`);
-            const letter = wordle.board[r][c];
-            cell.textContent = letter;
-            cell.classList.add('filled', wordle.evaluations[r][c]);
+            const evalResult = wordle.evaluations[r][c];
 
-            // Update keyboard
-            const keyBtn = document.getElementById(`wk-${letter}`);
-            if (keyBtn) {
-                const priority = { correct: 3, present: 2, absent: 1 };
-                const current = keyBtn.classList.contains('correct') ? 3 :
-                    keyBtn.classList.contains('present') ? 2 :
-                    keyBtn.classList.contains('absent') ? 1 : 0;
-                if (priority[wordle.evaluations[r][c]] > current) {
-                    keyBtn.classList.remove('correct', 'present', 'absent');
-                    keyBtn.classList.add(wordle.evaluations[r][c]);
+            if (isHintRow) {
+                if (evalResult === 'correct') {
+                    // Show the revealed letter
+                    cell.textContent = wordle.board[r][c];
+                    cell.classList.add('filled', 'correct', 'hint-reveal');
+
+                    // Update keyboard
+                    const letter = wordle.board[r][c];
+                    const keyBtn = document.getElementById(`wk-${letter}`);
+                    if (keyBtn) {
+                        keyBtn.classList.remove('correct', 'present', 'absent');
+                        keyBtn.classList.add('correct');
+                    }
+                } else {
+                    // hint-blank: empty cell
+                    cell.textContent = '';
+                    cell.classList.add('hint-empty');
+                }
+            } else {
+                // Normal guess row
+                const letter = wordle.board[r][c];
+                cell.textContent = letter;
+                cell.classList.add('filled', evalResult);
+
+                // Update keyboard
+                const keyBtn = document.getElementById(`wk-${letter}`);
+                if (keyBtn) {
+                    const priority = { correct: 3, present: 2, absent: 1 };
+                    const current = keyBtn.classList.contains('correct') ? 3 :
+                        keyBtn.classList.contains('present') ? 2 :
+                        keyBtn.classList.contains('absent') ? 1 : 0;
+                    if (priority[evalResult] > current) {
+                        keyBtn.classList.remove('correct', 'present', 'absent');
+                        keyBtn.classList.add(evalResult);
+                    }
                 }
             }
         }
@@ -329,7 +524,9 @@ function saveWordleState() {
         board: wordle.board,
         currentRow: wordle.currentRow,
         gameOver: wordle.gameOver,
-        evaluations: wordle.evaluations
+        evaluations: wordle.evaluations,
+        hintsUsed: wordle.hintsUsed,
+        hintRows: wordle.hintRows
     };
     saveState(app.state);
 }
@@ -337,33 +534,42 @@ function saveWordleState() {
 function showWordleResult(won, cacheOnly) {
     const emojiMap = { correct: '🟩', present: '🟨', absent: '⬛' };
     let emojiGrid = '';
-    wordle.evaluations.forEach(row => {
-        emojiGrid += row.map(e => emojiMap[e]).join('') + '\n';
+    wordle.evaluations.forEach((row, r) => {
+        if (wordle.hintRows.includes(r)) {
+            // Hint row: show 💡 for the revealed letter, ⬜ for blanks
+            emojiGrid += row.map(e => e === 'correct' ? '💡' : '⬜').join('') + '\n';
+        } else {
+            emojiGrid += row.map(e => emojiMap[e] || '⬜').join('') + '\n';
+        }
     });
 
     const puzzleNum = getPuzzleNumber();
-    const tries = won ? wordle.evaluations.length : 'X';
+    const guessRows = wordle.evaluations.filter((_, r) => !wordle.hintRows.includes(r)).length;
+    const tries = won ? guessRows : 'X';
     const displayWord = wordle.puzzle.display || wordle.word;
 
     // Moon rating: fewer tries = more moons
-    // 1 try = 5 moons, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1, loss = 0
+    // Base: 1 try = 5 moons, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1, loss = 0
+    // Penalty: each hint costs 1 extra moon
     let moons = 0;
     if (won) {
-        const numTries = wordle.evaluations.length;
-        moons = Math.max(1, 6 - numTries);
+        const totalRows = wordle.evaluations.length; // includes hint rows
+        const baseMoons = Math.max(1, 6 - totalRows);
+        moons = Math.max(0, baseMoons - wordle.hintsUsed);
     }
     const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
-    const shareText = `QuranIQ - Harf by Harf #${puzzleNum}\n${tries}/${wordle.maxRows}\n\n${emojiGrid}${moonStr}\n\nhttps://sudosar.github.io/quraniq/`;
+    const hintNote = wordle.hintsUsed > 0 ? ` (${wordle.hintsUsed} hint${wordle.hintsUsed > 1 ? 's' : ''})` : '';
+    const shareText = `QuranIQ - Harf by Harf #${puzzleNum}\n${tries}/${wordle.maxRows}${hintNote}\n\n${emojiGrid}${moonStr}\n\nhttps://sudosar.github.io/quraniq/`;
 
     const resultData = {
         icon: won ? '🌟' : '📖',
-        title: won ? `Solved in ${wordle.evaluations.length}!` : `The word was: ${displayWord}`,
+        title: won ? `Solved in ${guessRows}!${hintNote}` : `The word was: ${displayWord}`,
         arabic: wordle.puzzle.arabicVerse || displayWord,
         translation: wordle.puzzle.verse,
         emojiGrid: emojiGrid.trim(),
         moons: won ? moons : null,
-        statsText: `${tries}/${wordle.maxRows}`,
+        statsText: `${tries}/${wordle.maxRows}${hintNote}`,
         shareText,
         verseRef: extractVerseRef(wordle.puzzle.verse)
     };
@@ -375,8 +581,8 @@ function showWordleResult(won, cacheOnly) {
     }
 
     showResultModal(resultData);
-    trackGameComplete('wordle', won, won ? wordle.evaluations.length : 0);
-    updateModeStats('wordle', won, won ? wordle.evaluations.length : 0);
+    trackGameComplete('wordle', won, won ? guessRows : 0);
+    updateModeStats('wordle', won, won ? guessRows : 0);
 
     // Track the verse — completing Harf by Harf means engaging with the verse directly
     if (wordle.puzzle && wordle.puzzle.verse) {

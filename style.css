@@ -1279,6 +1279,69 @@ button, input, select, textarea {
     min-height: 24px;
 }
 
+/* Hint button */
+.wordle-hint-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 8px auto 12px;
+    padding: 8px 18px;
+    border: 2px solid var(--accent);
+    border-radius: 24px;
+    background: transparent;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.wordle-hint-btn:hover:not(:disabled) {
+    background: var(--accent);
+    color: white;
+}
+
+.wordle-hint-btn:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.wordle-hint-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
+}
+
+.hint-icon {
+    font-size: 1rem;
+}
+
+.hint-cost {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+/* Hint reveal cell — pulsing glow on the revealed letter */
+.wordle-cell.hint-reveal {
+    animation: hintPulse 0.8s ease;
+    box-shadow: 0 0 12px rgba(76, 175, 80, 0.5);
+}
+
+@keyframes hintPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 rgba(76, 175, 80, 0); }
+    50% { transform: scale(1.12); box-shadow: 0 0 18px rgba(76, 175, 80, 0.6); }
+    100% { transform: scale(1); box-shadow: 0 0 12px rgba(76, 175, 80, 0.3); }
+}
+
+/* Hint row empty cells — subtle dashed border */
+.wordle-cell.hint-empty {
+    background: transparent;
+    border: 2px dashed var(--border);
+    animation: none;
+}
+
 .wordle-keyboard {
     display: flex;
     flex-direction: column;
@@ -1338,6 +1401,13 @@ button, input, select, textarea {
 .key.correct { background: var(--correct); color: white; }
 .key.present { background: var(--present); color: white; }
 .key.absent { background: var(--absent); color: white; }
+
+/* Center the hint button below the hint text */
+#wordle-game .wordle-hint-btn {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* ============ DEDUCTION GAME ============ */
 .deduction-story {
