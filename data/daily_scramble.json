@@ -1,23 +1,28 @@
 {
-  "date": "2026-02-12",
+  "date": "2026-02-13",
   "puzzle": {
-    "reference": "Surah Al-Mulk (67:2)",
-    "words": [
-      "الَّذِي خَلَقَ",
-      "الْمَوْتَ وَالْحَيَاةَ",
-      "لِيَبْلُوَكُمْ أَيُّكُمْ",
-      "أَحْسَنُ عَمَلًا",
-      "وَهُوَ الْعَزِيزُ الْغَفُورُ"
+    "verseRef": "65:3",
+    "reference": "Surah At-Talaq (65:3)",
+    "segments": [
+      "وَمَن يَتَوَكَّلْ",
+      "عَلَى ٱللَّهِ",
+      "فَهُوَ",
+      "حَسْبُهُۥٓ"
     ],
     "translations": [
-      "Who created",
-      "death and life",
-      "to test which of you",
-      "is best in deed",
-      "And He is the Exalted in Might, the Forgiving"
+      "And whoever relies",
+      "upon Allah",
+      "then He",
+      "is sufficient for him"
     ],
-    "arabic": "الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا وَهُوَ الْعَزِيزُ الْغَفُورُ",
-    "hint": "Discusses the purpose of creation and Allah's attributes of Might and Forgiveness"
+    "hint": "This verse emphasizes the importance and reward of placing complete trust and reliance on Allah in all matters.",
+    "arabic": "وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ۚ وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥٓ ۚ إِنَّ ٱللَّهَ بَـٰلِغُ أَمْرِهِۦ ۚ قَدْ جَعَلَ ٱللَّهُ لِكُلِّ شَىْءٍۢ قَدْرًۭا",
+    "words": [
+      "وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ۚ",
+      "وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥٓ",
+      "ۚ إِنَّ ٱللَّهَ بَـٰلِغُ أَمْرِهِۦ ۚ",
+      "قَدْ جَعَلَ ٱللَّهُ لِكُلِّ شَىْءٍۢ قَدْرًۭا"
+    ]
   },
   "generated": true,
   "model": "auto (chain)"

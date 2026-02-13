@@ -1,64 +1,65 @@
 {
-  "date": "2026-02-12",
+  "date": "2026-02-13",
   "puzzle": {
-    "title": "The Miracle of Silent Proof",
-    "intro": "You encounter a figure shrouded story of divine intervention. A tale of miraculous provision and a speechless defense that echoes through time. Can you uncover who faced this extraordinary trial?",
+    "title": "The Sovereign's Grand Submission",
+    "intro": "You find yourself in a land of ancient wonders and profound revelation. A powerful ruler, faced with an unexpected invitation, embarked on a journey that would change the course of her destiny and the faith of her people. Can you uncover the identity of this majestic figure?",
     "clues": [
-      "I received a divine message that left me astonished",
-      "My people questioned my purity when I returned with a child",
-      "I was commanded to fast from speaking for a period",
-      "A spring of water and dates sustained me during my trial",
-      "My Lord made a miraculous tree shake to provide for me",
-      "An angel appeared to me in the form of a perfect man"
+      "I ruled over a prosperous kingdom, adorned with immense wealth and a magnificent throne.",
+      "My people and I worshipped a celestial body, believing it to be our lord, though I harbored doubts in my heart.",
+      "A peculiar messenger, a bird, delivered a letter to me, calling me and my people to submission to the One God.",
+      "I consulted my advisors, who were mighty in strength, about how to respond to this unprecedented message.",
+      "I decided to send a valuable gift to the one who sent the letter, hoping to gauge his power and intentions.",
+      "Upon my arrival, I was astonished by a palace with a floor made of glass, appearing as a pool of water, and it was then that I declared my submission to the Lord of all creation."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Maryam",
-          "Asiya",
-          "Hawa",
-          "Sarah",
-          "Khadijah"
+          "Pharaoh",
+          "Queen of Sheba",
+          "Dhu al-Qarnayn",
+          "Luqman",
+          "Prophet Yusuf"
         ],
-        "answer": "Maryam"
+        "answer": "Queen of Sheba"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Giving birth alone under a palm tree",
-          "Facing a deadly famine",
-          "Being thrown into a fiery pit",
-          "Fleeing a tyrannical ruler",
-          "Guarding a sacred relic"
+          "The splitting of the sea",
+          "The great flood",
+          "The journey to meet Prophet Sulayman",
+          "The destruction of the people of Lut",
+          "The burning of Prophet Ibrahim"
         ],
-        "answer": "Giving birth alone under a palm tree"
+        "answer": "The journey to meet Prophet Sulayman"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Palm tree",
-          "Burning bush",
-          "Stone temple",
-          "River Nile",
-          "Mount Sinai"
+          "The Ark",
+          "The Staff",
+          "The Throne",
+          "The Mountain",
+          "The Fire"
         ],
-        "answer": "Palm tree"
+        "answer": "The Throne"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "My innocence was proven when my infant son spoke",
-          "I became a revered queen",
-          "My people were destroyed by divine punishment",
-          "I led my nation to victory",
-          "A miraculous well appeared permanently"
+          "Became a prophet",
+          "Was destroyed by Allah",
+          "Embraced Islam",
+          "Led her people to war",
+          "Built a grand temple"
         ],
-        "answer": "My innocence was proven when my infant son spoke"
+        "answer": "Embraced Islam"
       }
     },
-    "verse": "Then he called her from below her, 'Do not grieve; your Lord has provided beneath you a stream. And shake toward you the trunk of the palm tree; it will drop upon you ripe, fresh dates.' (Maryam 19:24-25)",
-    "arabic": "فَنَادَىٰهَا مِن تَحْتِهَا أَلَّا تَحْزَنِي قَدْ جَعَلَ رَبُّكِ تَحْتَكِ سَرِيًّا ﴿٢٤﴾ وَهُزِّي إِلَيْكِ بِجِذْعِ النَّخْلَةِ تُسَاقِطْ عَلَيْكِ رُطَبًا جَنِيًّا ﴿٢٥﴾"
+    "verseRef": "27:23",
+    "arabic": "إِنِّى وَجَدتُّ ٱمْرَأَةًۭ تَمْلِكُهُمْ وَأُوتِيَتْ مِن كُلِّ شَىْءٍۢ وَلَهَا عَرْشٌ عَظِيمٌۭ",
+    "verse": "Indeed, I found a woman ruling them and she has been given of every thing and for her (is) a throne great (23) (27:23)"
   },
   "generated": true,
   "model": "auto (chain)"

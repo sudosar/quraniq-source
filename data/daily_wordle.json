@@ -1,11 +1,12 @@
 {
-  "date": "2026-02-12",
+  "date": "2026-02-13",
   "puzzle": {
-    "word": "صبر",
-    "display": "صَبْر",
-    "hint": "A virtue emphasized in times of trial, meaning steadfast endurance through difficulty",
-    "verse": "Al-Baqarah 2:45 — And seek help through patience and prayer, though it is a hard thing except for the humble",
-    "arabicVerse": "وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ ۚ وَإِنَّهَا لَكَبِيرَةٌ إِلَّا عَلَى الْخَاشِعِينَ"
+    "word": "دين",
+    "display": "دِين",
+    "hint": "It defines one's way of life and submission to the Creator.",
+    "verseRef": "1:4",
+    "arabicVerse": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
+    "verse": "1:4 — (The) Master (of the) Day (of the) Judgment (4)"
   },
   "generated": true,
   "model": "auto (chain)"
