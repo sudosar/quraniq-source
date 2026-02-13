@@ -1135,9 +1135,9 @@ def main():
         print(f"{'═'*60}")
 
     # Print summary
-    print(f"\n{'\u2550'*60}")
+    print(f"\n{'═'*60}")
     print(f"  GENERATION SUMMARY for {today}")
-    print(f"{'\u2550'*60}")
+    print(f"{'═'*60}")
     for game_type in game_types:
         status = "\u2713" if game_type in all_puzzles else "\u2717 (fallback)"
         print(f"  {status} {GAME_CONFIGS[game_type]['label']}")
