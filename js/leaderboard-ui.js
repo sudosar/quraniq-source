@@ -164,6 +164,29 @@ function renderGroupLeaderboardView(groups, activeCode) {
     return tabsHtml + infoHtml + tableHtml;
 }
 
+// Current sort field for leaderboard (default: total)
+let _lbSortField = 'total';
+
+function sortLeaderboardData(data, field) {
+    const sorted = [...data];
+    sorted.sort((a, b) => {
+        if (field === 'total') {
+            if (b.ramadanTotal !== a.ramadanTotal) return b.ramadanTotal - a.ramadanTotal;
+            if (b.todayTotal !== a.todayTotal) return b.todayTotal - a.todayTotal;
+            return (b.quranPercent || 0) - (a.quranPercent || 0);
+        } else if (field === 'today') {
+            if (b.todayTotal !== a.todayTotal) return b.todayTotal - a.todayTotal;
+            if (b.ramadanTotal !== a.ramadanTotal) return b.ramadanTotal - a.ramadanTotal;
+            return (b.quranPercent || 0) - (a.quranPercent || 0);
+        } else { // quran
+            if ((b.quranPercent || 0) !== (a.quranPercent || 0)) return (b.quranPercent || 0) - (a.quranPercent || 0);
+            if (b.ramadanTotal !== a.ramadanTotal) return b.ramadanTotal - a.ramadanTotal;
+            return b.todayTotal - a.todayTotal;
+        }
+    });
+    return sorted;
+}
+
 function renderLeaderboardTable(data, activeCode) {
     if (!data || data.length === 0) {
         return `
@@ -174,19 +197,23 @@ function renderLeaderboardTable(data, activeCode) {
         `;
     }
 
+    // Sort data by current field
+    data = sortLeaderboardData(data, _lbSortField);
+
     // Calculate top scorer badges for each game type
     const gameBadges = calculateGameBadges(data);
 
     let html = '<div class="lb-table">';
 
-    // Header
+    // Header with tappable sort columns
+    const arrow = ' ▼';
     html += `
         <div class="lb-row lb-header">
             <div class="lb-rank">#</div>
             <div class="lb-player">Player</div>
-            <div class="lb-today" title="Today's crescents">Today</div>
-            <div class="lb-total" title="Ramadan total">Total</div>
-            <div class="lb-quran" title="% of Quran explored">Quran</div>
+            <div class="lb-today lb-sort-col${_lbSortField === 'today' ? ' lb-sort-active' : ''}" data-sort="today" title="Tap to sort by today's crescents">Today${_lbSortField === 'today' ? arrow : ''}</div>
+            <div class="lb-total lb-sort-col${_lbSortField === 'total' ? ' lb-sort-active' : ''}" data-sort="total" title="Tap to sort by total crescents">Total${_lbSortField === 'total' ? arrow : ''}</div>
+            <div class="lb-quran lb-sort-col${_lbSortField === 'quran' ? ' lb-sort-active' : ''}" data-sort="quran" title="Tap to sort by Quran explored">Quran${_lbSortField === 'quran' ? arrow : ''}</div>
         </div>
     `;
 
@@ -506,6 +533,37 @@ function attachLeaderboardHandlers(activeCode) {
     });
 }
 
+// Store last fetched data and group code for re-rendering on sort change
+let _lbLastData = null;
+let _lbLastGroupCode = null;
+
+function attachLeaderboardTableHandlers(container) {
+    // Attach sort column click handlers
+    container.querySelectorAll('.lb-sort-col').forEach(col => {
+        col.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const field = col.getAttribute('data-sort');
+            if (field && field !== _lbSortField) {
+                _lbSortField = field;
+                // Re-render with new sort using cached data
+                if (_lbLastData && _lbLastGroupCode) {
+                    container.innerHTML = renderLeaderboardTable(_lbLastData, _lbLastGroupCode);
+                    attachLeaderboardTableHandlers(container);
+                }
+            }
+        });
+    });
+
+    // Attach row click handlers
+    container.querySelectorAll('.lb-row:not(.lb-header)').forEach(row => {
+        row.addEventListener('click', () => {
+            const wasExpanded = row.classList.contains('lb-expanded');
+            container.querySelectorAll('.lb-row').forEach(r => r.classList.remove('lb-expanded'));
+            if (!wasExpanded) row.classList.toggle('lb-expanded');
+        });
+    });
+}
+
 async function loadAndRenderLeaderboard(groupCode) {
     const container = document.getElementById('lb-table-container');
     if (!container) return;
@@ -513,17 +571,11 @@ async function loadAndRenderLeaderboard(groupCode) {
     container.innerHTML = '<div class="lb-loading"><div class="lb-spinner"></div> Loading...</div>';
 
     const data = await fetchGroupLeaderboard(groupCode);
+    _lbLastData = data;
+    _lbLastGroupCode = groupCode;
+    _lbSortField = 'total'; // Reset to default on fresh load
     container.innerHTML = renderLeaderboardTable(data, groupCode);
-
-    // Attach row click handlers
-    container.querySelectorAll('.lb-row:not(.lb-header)').forEach(row => {
-        row.addEventListener('click', () => {
-            // Toggle expanded state to show game breakdown
-            const wasExpanded = row.classList.contains('lb-expanded');
-            container.querySelectorAll('.lb-row').forEach(r => r.classList.remove('lb-expanded'));
-            if (!wasExpanded) row.classList.toggle('lb-expanded');
-        });
-    });
+    attachLeaderboardTableHandlers(container);
 }
 
 /**

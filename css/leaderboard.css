@@ -374,6 +374,25 @@
     background: transparent;
 }
 
+.lb-sort-col {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: color 0.2s, opacity 0.2s;
+    opacity: 0.6;
+}
+
+.lb-sort-col:active {
+    opacity: 1;
+    transform: scale(0.95);
+}
+
+.lb-sort-col.lb-sort-active {
+    color: var(--gold);
+    opacity: 1;
+    font-weight: 700;
+}
+
 .lb-row.lb-me {
     background: rgba(212, 175, 55, 0.08);
     border-left: 3px solid var(--gold);
