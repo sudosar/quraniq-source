@@ -584,14 +584,21 @@ This can be a prophet, a ruler (e.g. Pharaoh, Namrud), a righteous person (e.g. 
 
 RULES:
 1. Create an engaging title and intro paragraph that sets the scene WITHOUT revealing the answer
-2. Provide exactly 6 progressive clues written in FIRST PERSON (as if the character is speaking about themselves)
+2. The title and intro MUST be completely GENDER-NEUTRAL:
+   - NEVER use gendered pronouns (he/she/him/her/his/hers) in the title or intro
+   - NEVER use gendered nouns (king/queen, man/woman, mother/father, son/daughter, wife/husband) in the title or intro
+   - Use neutral terms: "figure", "soul", "individual", "ruler", "leader", "servant of Allah", "one who...", "this person", "they"
+   - BAD: "A powerful queen embarked on a journey that would change her destiny"
+   - GOOD: "A powerful ruler embarked on a journey that would change the course of their destiny"
+3. Provide exactly 6 progressive clues written in FIRST PERSON (as if the character is speaking about themselves)
    - Example: "I was thrown into a fire, but Allah made it cool and peaceful for me" (not "He was thrown...")
    - For groups, use "We" instead of "I"
-3. Create exactly 4 categories for the player to guess, each with exactly 5 options and 1 correct answer
-4. The 4 categories should cover: the identity (who am I?), the trial/event, a key element (place/object), and the outcome
-5. Include a relevant Quranic verse reference in surah:ayah format
-6. All clues and answers must be Quranically accurate
-7. Vary the character types — don't always use prophets. Include rulers, righteous people, groups, and other Quranic figures
+   - Clues MAY reveal gender gradually (since the player is actively solving), but the intro and title MUST NOT
+4. Create exactly 4 categories for the player to guess, each with exactly 5 options and 1 correct answer
+5. The 4 categories should cover: the identity (who am I?), the trial/event, a key element (place/object), and the outcome
+6. Include a relevant Quranic verse reference in surah:ayah format
+7. All clues and answers must be Quranically accurate
+8. Vary the character types — don't always use prophets. Include rulers, righteous people, groups, and other Quranic figures
 
 FORBIDDEN titles (used recently): {avoided_titles}
 
@@ -668,6 +675,25 @@ def validate_deduction(puzzle, history):
             puzzle["verseRef"] = verse_ref
         else:
             errors.append("Missing 'verseRef' field")
+
+    # Gender-leak check in title and intro
+    gender_words = [
+        'he ', 'she ', 'him ', 'her ', 'his ', 'hers ',
+        ' he ', ' she ', ' him ', ' her ', ' his ', ' hers ',
+        'king', 'queen', 'mother', 'father', 'son ', 'daughter',
+        'wife', 'husband', 'woman', ' man ', 'prince', 'princess',
+        'boy ', 'girl ', 'brother', 'sister',
+    ]
+    title_lower = puzzle.get("title", "").lower()
+    intro_lower = puzzle.get("intro", "").lower()
+    for gw in gender_words:
+        if gw in title_lower or gw in f" {title_lower} ":
+            warnings.append(f"Title may reveal gender (contains '{gw.strip()}')")
+            break
+    for gw in gender_words:
+        if gw in intro_lower or gw in f" {intro_lower} ":
+            cooldown_violations.append(f"Intro reveals gender (contains '{gw.strip()}'). Must be gender-neutral.")
+            break
 
     # Cooldown
     title = puzzle.get("title", "").lower().strip()

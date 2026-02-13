@@ -2,7 +2,7 @@
   "date": "2026-02-13",
   "puzzle": {
     "title": "The Sovereign's Grand Submission",
-    "intro": "You find yourself in a land of ancient wonders and profound revelation. A powerful ruler, faced with an unexpected invitation, embarked on a journey that would change the course of her destiny and the faith of her people. Can you uncover the identity of this majestic figure?",
+    "intro": "You find yourself in a land of ancient wonders and profound revelation. A powerful ruler, faced with an unexpected invitation, embarked on a journey that would change the course of their destiny and the faith of their people. Can you uncover the identity of this majestic figure?",
     "clues": [
       "I ruled over a prosperous kingdom, adorned with immense wealth and a magnificent throne.",
       "My people and I worshipped a celestial body, believing it to be our lord, though I harbored doubts in my heart.",
@@ -51,7 +51,7 @@
           "Became a prophet",
           "Was destroyed by Allah",
           "Embraced Islam",
-          "Led her people to war",
+          "Led their people to war",
           "Built a grand temple"
         ],
         "answer": "Embraced Islam"
