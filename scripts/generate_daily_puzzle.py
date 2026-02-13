@@ -7,12 +7,11 @@ Generates daily puzzles for:
   3. Deduction (Who Am I?)
   4. Scramble (Ayah Scramble)
 
-Model fallback chain
-────────────────────
-1. GPT-4.1        (GitHub Models — primary, strong JSON + Arabic)
-2. DeepSeek-R1    (GitHub Models — fallback, best reasoning)
-3. Gemini Flash   (Google Gemini API — free tier, strong Arabic/Quranic)
-4. Phi-4          (GitHub Models — last resort)
+Model fallback chain (based on Feb 2026 benchmark)
+──────────────────────────────────────────────────
+1. Gemini 2.5 Flash (Google Gemini API — fastest, best verse avoidance)
+2. DeepSeek-R1      (GitHub Models — perfect avoidance, slow but thorough)
+3. GPT-4.1          (OpenAI — fast, great diversity, weaker avoidance)
 
 Each game uses 1 API call (up to 5 retries), so worst case = 25 calls/day.
 A 60-second pause between games respects rate limits.
@@ -44,12 +43,12 @@ OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 
-# Model fallback chain: GPT-4.1 → DeepSeek-R1 → Gemini Flash → Phi-4
+# Model fallback chain: Gemini 2.5 Flash → DeepSeek-R1 → GPT-4.1
+# Benchmark (Feb 2026): Gemini best avoidance+speed, DeepSeek best reasoning, GPT best diversity
 MODEL_CHAIN = [
-    {"id": "gpt-4.1", "api": "openai", "label": "GPT-4.1 (OpenAI)"},
-    {"id": "DeepSeek-R1", "api": "github", "label": "DeepSeek-R1 (GitHub Models)"},
     {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Google)"},
-    {"id": "Phi-4", "api": "github", "label": "Phi-4 (GitHub Models)"},
+    {"id": "DeepSeek-R1", "api": "github", "label": "DeepSeek-R1 (GitHub Models)"},
+    {"id": "gpt-4.1", "api": "openai", "label": "GPT-4.1 (OpenAI)"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -384,10 +383,12 @@ OUTPUT FORMAT: Return ONLY a valid JSON object. Do NOT include full verse text �
 IMPORTANT:
 - Return ONLY the JSON object, no markdown, no explanation
 - Do NOT include any verse text — only refs. Verse text will be looked up separately.
-- EVERY verse reference MUST be unique — 16 different refs for 16 items
-- The 4 category-level verse refs should also be unique (can overlap with item refs)
+- EVERY verse reference MUST be unique across the ENTIRE puzzle — all 16 item refs + 4 category refs = 20 refs, ALL DIFFERENT
+- Do NOT reuse the category-level ref for any item within that category
+- Each of the 16 items MUST reference a DIFFERENT surah:ayah
 - Arabic words must include full tashkeel/diacritics
-- Verify each verse reference is a real Quranic verse"""
+- Verify each verse reference is a real Quranic verse
+- Do NOT pick famous/popular verses (e.g. 2:255, 24:35, 36:82) — explore lesser-known verses"""
 
 
 def validate_connections(puzzle, history):
