@@ -264,7 +264,7 @@ def parse_json_response(raw):
 # CONNECTIONS GENERATOR
 # ═══════════════════════════════════════════════════════════════════
 def build_connections_prompt(history, previous_violations=None):
-    avoided_themes = "\n".join(f"  - {t}" for t in sorted(history["connections"]["themes"])) or "  (none)"
+    avoided_themes = ", ".join(sorted(history["connections"]["themes"])) or "(none)"
     avoided_verses = ", ".join(sorted(history["connections"]["verses"])) or "(none)"
 
     violation_block = ""
@@ -291,11 +291,9 @@ RULES:
 
 DIFFICULTY: 1 easy, 1 medium, 1 hard, 1 tricky group.
 
-STRICTLY FORBIDDEN themes (used in last 30 days):
-{avoided_themes}
+FORBIDDEN themes (used recently): {avoided_themes}
 
-STRICTLY FORBIDDEN verse references (used in last 30 days):
-{avoided_verses}
+FORBIDDEN verse refs (used recently): {avoided_verses}
 {violation_block}
 
 OUTPUT FORMAT: Return ONLY a valid JSON object. Do NOT include full verse text — only the reference.
@@ -349,7 +347,7 @@ def validate_connections(puzzle, history):
 
         theme = cat.get("nameEn", "").lower().strip()
         if theme in history["connections"]["themes"]:
-            cooldown_violations.append(f"Theme '{theme}' reused (30-day cooldown)")
+            cooldown_violations.append(f"Theme '{theme}' reused (cooldown)")
 
         # Collect all refs in this category (including duplicates)
         cat_ref_list = []
@@ -373,7 +371,7 @@ def validate_connections(puzzle, history):
                 cooldown_violations.append(f"Duplicate ref across categories: {ref}")
         for ref in cat_refs:
             if ref in history["connections"]["verses"]:
-                cooldown_violations.append(f"Verse ref {ref} reused (30-day cooldown)")
+                cooldown_violations.append(f"Verse ref {ref} reused (cooldown)")
         cross_cat_refs.update(cat_refs)
 
         for j, item in enumerate(items):
@@ -386,7 +384,7 @@ def validate_connections(puzzle, history):
                 warnings.append(f"Duplicate word: {ar}")
             all_words.add(ar)
             if ar in history["connections"]["words"]:
-                warnings.append(f"Word '{ar}' used in last 30 days")
+                warnings.append(f"Word '{ar}' reused (cooldown)")
             # Ensure optional fields exist for downstream compatibility
             if "verse" not in item:
                 item["verse"] = ""
@@ -409,7 +407,6 @@ def validate_connections(puzzle, history):
 # ═══════════════════════════════════════════════════════════════════
 def build_wordle_prompt(history, previous_violations=None):
     avoided_words = ", ".join(sorted(history["wordle"]["words"])) or "(none)"
-    avoided_hints = "\n".join(f"  - {h}" for h in sorted(history["wordle"]["hints"])) or "  (none)"
 
     violation_block = ""
     if previous_violations:
@@ -432,11 +429,7 @@ RULES:
 6. Provide the full Quranic verse (Arabic with diacritics) where the word appears
 7. Provide the English translation/context of the verse
 
-STRICTLY FORBIDDEN words (used in last 30 days):
-{avoided_words}
-
-STRICTLY FORBIDDEN hints (used in last 30 days):
-{avoided_hints}
+FORBIDDEN words (used recently): {avoided_words}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -482,9 +475,9 @@ def validate_wordle(puzzle, history):
 
     # Cooldown checks
     if word in history["wordle"]["words"] or display in history["wordle"]["words"]:
-        cooldown_violations.append(f"Word '{word}' reused (30-day cooldown)")
+        cooldown_violations.append(f"Word '{word}' reused (cooldown)")
     if hint.lower().strip() in history["wordle"]["hints"]:
-        cooldown_violations.append(f"Hint reused (30-day cooldown)")
+        cooldown_violations.append(f"Hint reused (cooldown)")
 
     return errors, cooldown_violations, warnings
 
@@ -493,7 +486,7 @@ def validate_wordle(puzzle, history):
 # DEDUCTION GENERATOR
 # ═══════════════════════════════════════════════════════════════════
 def build_deduction_prompt(history, previous_violations=None):
-    avoided_titles = "\n".join(f"  - {t}" for t in sorted(history["deduction"]["titles"])) or "  (none)"
+    avoided_titles = ", ".join(sorted(history["deduction"]["titles"])) or "(none)"
     avoided_characters = ", ".join(sorted(history["deduction"].get("characters", history["deduction"].get("prophets", set())))) or "(none)"
 
     violation_block = ""
@@ -520,11 +513,9 @@ RULES:
 6. All clues and answers must be Quranically accurate
 7. Vary the character types — don't always use prophets. Include rulers, righteous people, groups, and other Quranic figures
 
-STRICTLY FORBIDDEN titles/stories (used in last 30 days):
-{avoided_titles}
+FORBIDDEN titles (used recently): {avoided_titles}
 
-STRICTLY FORBIDDEN characters as main answer (used in last 30 days):
-{avoided_characters}
+FORBIDDEN characters (used recently): {avoided_characters}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -594,14 +585,14 @@ def validate_deduction(puzzle, history):
     # Cooldown
     title = puzzle.get("title", "").lower().strip()
     if title in history["deduction"]["titles"]:
-        cooldown_violations.append(f"Title '{title}' reused (30-day cooldown)")
+        cooldown_violations.append(f"Title '{title}' reused (cooldown)")
 
     # Check cooldown for character identity (supports both 'identity' and 'prophet' keys)
     identity_cat = cats.get("identity", cats.get("prophet", {}))
     character_answer = identity_cat.get("answer", "")
     characters_history = history["deduction"].get("characters", history["deduction"].get("prophets", set()))
     if character_answer in characters_history:
-        cooldown_violations.append(f"Character '{character_answer}' reused (30-day cooldown)")
+        cooldown_violations.append(f"Character '{character_answer}' reused (cooldown)")
 
     return errors, cooldown_violations, warnings
 
@@ -610,7 +601,7 @@ def validate_deduction(puzzle, history):
 # SCRAMBLE GENERATOR
 # ═══════════════════════════════════════════════════════════════════
 def build_scramble_prompt(history, previous_violations=None):
-    avoided_refs = "\n".join(f"  - {r}" for r in sorted(history["scramble"]["references"])) or "  (none)"
+    avoided_refs = ", ".join(sorted(history["scramble"]["references"])) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -638,8 +629,7 @@ RULES:
 7. Provide the verse reference in "Surah Name (surah:ayah)" format
 8. Provide a hint about the verse's theme
 
-STRICTLY FORBIDDEN verse references (used in last 30 days):
-{avoided_refs}
+FORBIDDEN verse refs (used recently): {avoided_refs}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -705,10 +695,10 @@ def validate_scramble(puzzle, history):
     # Cooldown
     ref = puzzle.get("reference", "")
     if ref in history["scramble"]["references"]:
-        cooldown_violations.append(f"Reference '{ref}' reused (30-day cooldown)")
+        cooldown_violations.append(f"Reference '{ref}' reused (cooldown)")
     arabic = puzzle.get("arabic", "")
     if arabic in history["scramble"]["verses"]:
-        cooldown_violations.append(f"Verse reused (30-day cooldown)")
+        cooldown_violations.append(f"Verse reused (cooldown)")
 
     return errors, cooldown_violations, warnings
 
@@ -785,8 +775,7 @@ RULES:
    https://cdn.islamic.network/quran/audio/128/ar.alafasy/ABSOLUTE_AYAH.mp3
    where ABSOLUTE_AYAH is the sequential ayah number across the entire Quran
 
-STRICTLY FORBIDDEN verses (used recently):
-{avoided_verses}
+FORBIDDEN verse refs (used recently): {avoided_verses}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -932,7 +921,7 @@ def validate_juz(puzzle, history):
     if verse.get("surah_number") and verse.get("ayah_number"):
         ref = f"{verse['surah_number']}:{verse['ayah_number']}"
         if ref in history["juz"]["verses"]:
-            cooldown_violations.append(f"Verse {ref} reused (30-day cooldown)")
+            cooldown_violations.append(f"Verse {ref} reused (cooldown)")
 
     return errors, cooldown_violations, warnings
 
