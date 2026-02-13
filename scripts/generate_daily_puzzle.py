@@ -9,12 +9,13 @@ Generates daily puzzles for:
 
 Model fallback chain
 ────────────────────
-1. DeepSeek-R1    (GitHub Models — free, best reasoning)
-2. Gemini Flash   (Google Gemini API — free tier, strong Arabic/Quranic)
-3. Phi-4          (GitHub Models — free, last resort)
+1. GPT-4.1        (GitHub Models — primary, strong JSON + Arabic)
+2. DeepSeek-R1    (GitHub Models — fallback, best reasoning)
+3. Gemini Flash   (Google Gemini API — free tier, strong Arabic/Quranic)
+4. Phi-4          (GitHub Models — last resort)
 
-Each game uses 1 API call (up to 5 retries), so worst case = 20 calls/day.
-A 60-second pause between games respects DeepSeek-R1's 1 req/min rate limit.
+Each game uses 1 API call (up to 5 retries), so worst case = 25 calls/day.
+A 60-second pause between games respects rate limits.
 """
 import json
 import os
@@ -28,13 +29,16 @@ from datetime import datetime, timedelta
 # ── Configuration ──────────────────────────────────────────────────
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
 # API endpoints
+OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 
-# Model fallback chain: DeepSeek-R1 → Gemini Flash → Phi-4
+# Model fallback chain: GPT-4.1 → DeepSeek-R1 → Gemini Flash → Phi-4
 MODEL_CHAIN = [
+    {"id": "gpt-4.1", "api": "openai", "label": "GPT-4.1 (OpenAI)"},
     {"id": "DeepSeek-R1", "api": "github", "label": "DeepSeek-R1 (GitHub Models)"},
     {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Google)"},
     {"id": "Phi-4", "api": "github", "label": "Phi-4 (GitHub Models)"},
@@ -164,17 +168,26 @@ def save_to_history(all_puzzles, date_str):
         json.dump(all_puzzles, f, ensure_ascii=False, indent=2)
 
 
-# ── LLM API (GitHub Models + Gemini) ──────────────────────────────
+# ── LLM API (OpenAI + GitHub Models + Gemini) ──────────────────────
 def call_model(prompt, model_config, system_msg=None):
     """Call an LLM API and return the response text.
     
-    model_config: dict with 'id', 'api' ('github' or 'gemini'), 'label'
+    model_config: dict with 'id', 'api' ('openai', 'github', or 'gemini'), 'label'
     """
     model_id = model_config["id"]
     api_type = model_config["api"]
 
     # Select endpoint and auth based on API type
-    if api_type == "gemini":
+    if api_type == "openai":
+        if not OPENAI_API_KEY:
+            print(f"  ⚠ OPENAI_API_KEY not set, skipping {model_config['label']}")
+            return None
+        api_url = OPENAI_API_URL
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {OPENAI_API_KEY}"
+        }
+    elif api_type == "gemini":
         if not GEMINI_API_KEY:
             print(f"  ⚠ GEMINI_API_KEY not set, skipping {model_config['label']}")
             return None
