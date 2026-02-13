@@ -16,6 +16,14 @@ Model fallback chain
 
 Each game uses 1 API call (up to 5 retries), so worst case = 25 calls/day.
 A 60-second pause between games respects rate limits.
+
+Coverage strategy
+─────────────────
+- All games share a global "all_verses" set to prevent cross-game verse overlap
+- Connections: 16 verse refs/day → covers ~93% of Quran in 365 days
+- Wordle/Scramble: 1 verse ref/day each, tracked and deduplicated
+- Deduction: 1 verse ref/day, 60-day cooldown (limited character pool)
+- Combined: ~19 unique verses/day → full Quran coverage in ~1 year
 """
 import json
 import os
@@ -49,7 +57,8 @@ DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 HISTORY_DIR = os.path.join(DATA_DIR, "history")
 FALLBACK_PUZZLES = os.path.join(SCRIPT_DIR, "..", "puzzles.js")
 
-COOLING_DAYS = 365  # 365-day cooldown for all games to maximize verse variety
+COOLING_DAYS = 365          # Default cooldown for most games
+DEDUCTION_COOLING_DAYS = 60 # Shorter cooldown for Who Am I (limited character pool ~70-200)
 MAX_RETRIES = 5
 COLORS = ["yellow", "green", "blue", "purple"]
 
@@ -67,22 +76,35 @@ RAMADAN_START = datetime(2026, 2, 18)
 RAMADAN_END = datetime(2026, 3, 20)  # 30 days
 
 
+# ── Utility: extract surah:ayah ref from various formats ──────────
+def extract_ref(text):
+    """Extract a 'surah:ayah' ref from text like 'Surah Al-Baqarah (2:152)' or '2:152'."""
+    m = re.search(r'(\d{1,3}):(\d{1,3})', str(text))
+    if m:
+        return f"{m.group(1)}:{m.group(2)}"
+    return None
+
+
 # ── History Management ─────────────────────────────────────────────
 def load_history():
     """Load puzzle history for cooldown enforcement.
 
-    All games use a 365-day cooldown to maximize verse variety
-    and cycle through the Quran's 6,236 verses.
-    Returns a dict with sets for each game type's used content.
+    All games use a 365-day cooldown (except Deduction at 60 days)
+    to maximize verse variety and cycle through the Quran's 6,236 verses.
+
+    Returns a dict with sets for each game type's used content,
+    plus a global 'all_verses' set that tracks ALL verse refs across ALL games.
     """
-    cutoff = datetime.utcnow() - timedelta(days=COOLING_DAYS)
+    cutoff_default = datetime.utcnow() - timedelta(days=COOLING_DAYS)
+    cutoff_deduction = datetime.utcnow() - timedelta(days=DEDUCTION_COOLING_DAYS)
 
     history = {
         "connections": {"themes": set(), "verses": set(), "words": set()},
-        "wordle": {"words": set(), "verses": set(), "hints": set()},
-        "deduction": {"titles": set(), "characters": set()},
+        "wordle": {"words": set(), "verses": set(), "hints": set(), "verseRefs": set()},
+        "deduction": {"titles": set(), "characters": set(), "verseRefs": set()},
         "scramble": {"verses": set(), "references": set()},
         "juz": {"juz_numbers": set(), "verses": set()},
+        "all_verses": set(),  # Global cross-game verse deduplication
     }
 
     os.makedirs(HISTORY_DIR, exist_ok=True)
@@ -94,7 +116,8 @@ def load_history():
         except ValueError:
             continue
 
-        if fdate < cutoff:
+        # Only clean up files older than the longest cooldown
+        if fdate < cutoff_default:
             os.remove(fpath)
             print(f"  Cleaned up old history: {fname}")
             continue
@@ -105,20 +128,23 @@ def load_history():
         except (json.JSONDecodeError, KeyError):
             continue
 
-        # Connections history
+        # Connections history (365-day cooldown)
         conn = data.get("connections")
         if conn:
             for cat in conn.get("categories", []):
                 history["connections"]["themes"].add(cat.get("nameEn", "").lower().strip())
-                if cat.get("verse", {}).get("ref"):
-                    history["connections"]["verses"].add(cat["verse"]["ref"])
+                cat_verse_ref = cat.get("verse", {}).get("ref")
+                if cat_verse_ref:
+                    history["connections"]["verses"].add(cat_verse_ref)
+                    history["all_verses"].add(cat_verse_ref)
                 for item in cat.get("items", []):
                     if item.get("ref"):
                         history["connections"]["verses"].add(item["ref"])
+                        history["all_verses"].add(item["ref"])
                     if item.get("ar"):
                         history["connections"]["words"].add(item["ar"])
 
-        # Harf by Harf history
+        # Harf by Harf history (365-day cooldown)
         wdl = data.get("wordle")
         if wdl:
             if wdl.get("word"):
@@ -129,10 +155,20 @@ def load_history():
                 history["wordle"]["hints"].add(wdl["hint"].lower().strip())
             if wdl.get("verse"):
                 history["wordle"]["verses"].add(wdl.get("verse", ""))
+            # Track verse ref (new field)
+            if wdl.get("verseRef"):
+                history["wordle"]["verseRefs"].add(wdl["verseRef"])
+                history["all_verses"].add(wdl["verseRef"])
+            else:
+                # Backwards compat: try to extract ref from verse string
+                ref = extract_ref(wdl.get("verse", ""))
+                if ref:
+                    history["wordle"]["verseRefs"].add(ref)
+                    history["all_verses"].add(ref)
 
-        # Deduction history
+        # Deduction history (60-day cooldown — only load within deduction window)
         ded = data.get("deduction")
-        if ded:
+        if ded and fdate >= cutoff_deduction:
             if ded.get("title"):
                 history["deduction"]["titles"].add(ded["title"].lower().strip())
             cats = ded.get("categories", {})
@@ -140,12 +176,25 @@ def load_history():
                 identity_cat = cats.get("identity", cats.get("prophet", {}))
                 if identity_cat.get("answer"):
                     history["deduction"]["characters"].add(identity_cat["answer"])
+            # Track verse ref (new field)
+            if ded.get("verseRef"):
+                history["deduction"]["verseRefs"].add(ded["verseRef"])
+                history["all_verses"].add(ded["verseRef"])
+            else:
+                # Backwards compat: try to extract ref from verse string
+                ref = extract_ref(ded.get("verse", ""))
+                if ref:
+                    history["deduction"]["verseRefs"].add(ref)
+                    history["all_verses"].add(ref)
 
-        # Scramble history
+        # Scramble history (365-day cooldown)
         scr = data.get("scramble")
         if scr:
             if scr.get("reference"):
                 history["scramble"]["references"].add(scr["reference"])
+                ref = extract_ref(scr["reference"])
+                if ref:
+                    history["all_verses"].add(ref)
             if scr.get("arabic"):
                 history["scramble"]["verses"].add(scr["arabic"])
 
@@ -156,7 +205,9 @@ def load_history():
                 history["juz"]["juz_numbers"].add(juz["juz_number"])
             verse = juz.get("verse", {})
             if verse.get("surah_number") and verse.get("ayah_number"):
-                history["juz"]["verses"].add(f"{verse['surah_number']}:{verse['ayah_number']}")
+                ref = f"{verse['surah_number']}:{verse['ayah_number']}"
+                history["juz"]["verses"].add(ref)
+                history["all_verses"].add(ref)
 
     return history
 
@@ -278,7 +329,9 @@ def parse_json_response(raw):
 # ═══════════════════════════════════════════════════════════════════
 def build_connections_prompt(history, previous_violations=None):
     avoided_themes = ", ".join(sorted(history["connections"]["themes"])) or "(none)"
-    avoided_verses = ", ".join(sorted(history["connections"]["verses"])) or "(none)"
+    # Merge game-specific + global verse refs for maximum dedup
+    all_avoided = history["connections"]["verses"] | history["all_verses"]
+    avoided_verses = ", ".join(sorted(all_avoided)) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -306,7 +359,7 @@ DIFFICULTY: 1 easy, 1 medium, 1 hard, 1 tricky group.
 
 FORBIDDEN themes (used recently): {avoided_themes}
 
-FORBIDDEN verse refs (used recently): {avoided_verses}
+FORBIDDEN verse refs (used recently — includes ALL games): {avoided_verses}
 {violation_block}
 
 OUTPUT FORMAT: Return ONLY a valid JSON object. Do NOT include full verse text — only the reference.
@@ -382,9 +435,12 @@ def validate_connections(puzzle, history):
         for ref in cat_refs:
             if ref in cross_cat_refs:
                 cooldown_violations.append(f"Duplicate ref across categories: {ref}")
+        # Check against game-specific AND global cooldown
         for ref in cat_refs:
             if ref in history["connections"]["verses"]:
-                cooldown_violations.append(f"Verse ref {ref} reused (cooldown)")
+                cooldown_violations.append(f"Verse ref {ref} reused (connections cooldown)")
+            elif ref in history["all_verses"]:
+                cooldown_violations.append(f"Verse ref {ref} reused (cross-game cooldown)")
         cross_cat_refs.update(cat_refs)
 
         for j, item in enumerate(items):
@@ -416,10 +472,13 @@ def validate_connections(puzzle, history):
 
 
 # ═══════════════════════════════════════════════════════════════════
-# WORDLE GENERATOR
+# WORDLE GENERATOR (Harf by Harf)
 # ═══════════════════════════════════════════════════════════════════
 def build_wordle_prompt(history, previous_violations=None):
     avoided_words = ", ".join(sorted(history["wordle"]["words"])) or "(none)"
+    # Merge game-specific + global verse refs
+    all_avoided = history["wordle"]["verseRefs"] | history["all_verses"]
+    avoided_refs = ", ".join(sorted(all_avoided)) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -439,10 +498,11 @@ RULES:
 3. The word MUST appear in a real Quranic verse
 4. Provide the word both WITH and WITHOUT diacritics (tashkeel)
 5. Provide an English hint that helps guess the word without giving it away directly
-6. Provide the full Quranic verse (Arabic with diacritics) where the word appears
-7. Provide the English translation/context of the verse
+6. Provide the verse reference in surah:ayah format (e.g. "2:255")
 
 FORBIDDEN words (used recently): {avoided_words}
+
+FORBIDDEN verse refs (used recently — includes ALL games): {avoided_refs}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -450,15 +510,15 @@ OUTPUT FORMAT: Return a valid JSON object:
   "word": "Arabic word WITHOUT diacritics (for matching, e.g. رحمة)",
   "display": "Arabic word WITH diacritics (for display, e.g. رَحْمَة)",
   "hint": "English hint that helps guess the word",
-  "verse": "Surah Name surah:ayah — English translation of the verse",
-  "arabicVerse": "Full Arabic verse text with diacritics"
+  "verseRef": "surah:ayah (e.g. 2:255)"
 }}
 
 IMPORTANT:
 - Return ONLY the JSON object, no markdown
 - The word without diacritics must be 3-5 letters
 - The hint should be clever but not too obscure
-- Choose words that are meaningful Islamic concepts"""
+- Choose words that are meaningful Islamic concepts
+- Do NOT include full verse text — only the ref. Verse text will be looked up separately."""
 
 
 def validate_wordle(puzzle, history):
@@ -467,8 +527,7 @@ def validate_wordle(puzzle, history):
     word = puzzle.get("word", "")
     display = puzzle.get("display", "")
     hint = puzzle.get("hint", "")
-    verse = puzzle.get("verse", "")
-    arabic_verse = puzzle.get("arabicVerse", "")
+    verse_ref = puzzle.get("verseRef", "")
 
     if not word:
         errors.append("Missing 'word' field")
@@ -476,10 +535,8 @@ def validate_wordle(puzzle, history):
         errors.append("Missing 'display' field")
     if not hint:
         errors.append("Missing 'hint' field")
-    if not verse:
-        errors.append("Missing 'verse' field")
-    if not arabic_verse:
-        errors.append("Missing 'arabicVerse' field")
+    if not verse_ref:
+        errors.append("Missing 'verseRef' field")
 
     # Check word length (strip diacritics for counting)
     stripped = re.sub(r'[\u064B-\u065F\u0670\u06D6-\u06ED]', '', word)
@@ -491,16 +548,25 @@ def validate_wordle(puzzle, history):
         cooldown_violations.append(f"Word '{word}' reused (cooldown)")
     if hint.lower().strip() in history["wordle"]["hints"]:
         cooldown_violations.append(f"Hint reused (cooldown)")
+    # Check verse ref against game-specific AND global cooldown
+    if verse_ref:
+        if verse_ref in history["wordle"]["verseRefs"]:
+            cooldown_violations.append(f"Verse ref '{verse_ref}' reused (wordle cooldown)")
+        elif verse_ref in history["all_verses"]:
+            cooldown_violations.append(f"Verse ref '{verse_ref}' reused (cross-game cooldown)")
 
     return errors, cooldown_violations, warnings
 
 
 # ═══════════════════════════════════════════════════════════════════
-# DEDUCTION GENERATOR
+# DEDUCTION GENERATOR (Who Am I?)
 # ═══════════════════════════════════════════════════════════════════
 def build_deduction_prompt(history, previous_violations=None):
     avoided_titles = ", ".join(sorted(history["deduction"]["titles"])) or "(none)"
-    avoided_characters = ", ".join(sorted(history["deduction"].get("characters", history["deduction"].get("prophets", set())))) or "(none)"
+    avoided_characters = ", ".join(sorted(history["deduction"].get("characters", set()))) or "(none)"
+    # Merge game-specific + global verse refs
+    all_avoided = history["deduction"]["verseRefs"] | history["all_verses"]
+    avoided_refs = ", ".join(sorted(all_avoided)) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -522,13 +588,15 @@ RULES:
    - For groups, use "We" instead of "I"
 3. Create exactly 4 categories for the player to guess, each with exactly 5 options and 1 correct answer
 4. The 4 categories should cover: the identity (who am I?), the trial/event, a key element (place/object), and the outcome
-5. Include a relevant Quranic verse (Arabic with diacritics) and its English translation
+5. Include a relevant Quranic verse reference in surah:ayah format
 6. All clues and answers must be Quranically accurate
 7. Vary the character types — don't always use prophets. Include rulers, righteous people, groups, and other Quranic figures
 
 FORBIDDEN titles (used recently): {avoided_titles}
 
 FORBIDDEN characters (used recently): {avoided_characters}
+
+FORBIDDEN verse refs (used recently — includes ALL games): {avoided_refs}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -542,12 +610,12 @@ OUTPUT FORMAT: Return a valid JSON object:
     "location": {{ "label": "Key Element", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "correct" }},
     "outcome": {{ "label": "Outcome", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "correct" }}
   }},
-  "verse": "English translation with reference (surah:ayah)",
-  "arabic": "Arabic verse with full diacritics"
+  "verseRef": "surah:ayah (e.g. 27:44)"
 }}
 
 IMPORTANT:
 - Return ONLY the JSON object, no markdown
+- Do NOT include full verse text — only the ref. Verse text will be looked up separately.
 - ALL clues MUST be in first person ("I was...", "I did...", "My people...") — the character is speaking
 - For groups, use "We" instead of "I"
 - Clues must go from vague to specific (early clues should be solvable by scholars, later clues by beginners)
@@ -590,10 +658,15 @@ def validate_deduction(puzzle, history):
         elif cat["answer"] not in opts:
             errors.append(f"Category '{key}' answer '{cat['answer']}' not in options")
 
-    if not puzzle.get("verse"):
-        errors.append("Missing 'verse'")
-    if not puzzle.get("arabic"):
-        errors.append("Missing 'arabic'")
+    # Require verseRef (new format) — accept verse field for backwards compat
+    verse_ref = puzzle.get("verseRef", "")
+    if not verse_ref:
+        # Try to extract from legacy 'verse' field
+        verse_ref = extract_ref(puzzle.get("verse", ""))
+        if verse_ref:
+            puzzle["verseRef"] = verse_ref
+        else:
+            errors.append("Missing 'verseRef' field")
 
     # Cooldown
     title = puzzle.get("title", "").lower().strip()
@@ -603,9 +676,16 @@ def validate_deduction(puzzle, history):
     # Check cooldown for character identity (supports both 'identity' and 'prophet' keys)
     identity_cat = cats.get("identity", cats.get("prophet", {}))
     character_answer = identity_cat.get("answer", "")
-    characters_history = history["deduction"].get("characters", history["deduction"].get("prophets", set()))
+    characters_history = history["deduction"].get("characters", set())
     if character_answer in characters_history:
         cooldown_violations.append(f"Character '{character_answer}' reused (cooldown)")
+
+    # Check verse ref against game-specific AND global cooldown
+    if verse_ref:
+        if verse_ref in history["deduction"]["verseRefs"]:
+            cooldown_violations.append(f"Verse ref '{verse_ref}' reused (deduction cooldown)")
+        elif verse_ref in history["all_verses"]:
+            cooldown_violations.append(f"Verse ref '{verse_ref}' reused (cross-game cooldown)")
 
     return errors, cooldown_violations, warnings
 
@@ -614,7 +694,15 @@ def validate_deduction(puzzle, history):
 # SCRAMBLE GENERATOR
 # ═══════════════════════════════════════════════════════════════════
 def build_scramble_prompt(history, previous_violations=None):
-    avoided_refs = ", ".join(sorted(history["scramble"]["references"])) or "(none)"
+    # Merge game-specific + global verse refs
+    all_avoided = set()
+    for ref in history["scramble"]["references"]:
+        all_avoided.add(ref)
+        extracted = extract_ref(ref)
+        if extracted:
+            all_avoided.add(extracted)
+    all_avoided |= history["all_verses"]
+    avoided_refs = ", ".join(sorted(all_avoided)) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -626,92 +714,65 @@ Choose a completely different verse."""
 
     return f"""You are an expert Islamic scholar creating a daily "Ayah Scramble" puzzle.
 
-TASK: Choose a well-known Quranic verse and split its ARABIC text into word segments for a scramble game.
-Players will rearrange the Arabic segments to reconstruct the original verse.
-They can use hints to reveal the English translation of individual segments.
+TASK: Choose a well-known Quranic verse for a scramble game.
+Players will rearrange Arabic segments to reconstruct the original verse.
 
 RULES:
 1. Choose a meaningful, well-known Quranic verse (5-15 words long)
-2. Write the FULL Arabic verse first in the "arabic" field
-3. Split EXACTLY that Arabic text into 4-7 consecutive segments
-4. The "words" array MUST be in the CORRECT reading order of the verse
-5. CRITICAL: Joining all segments with a single space MUST exactly reproduce the "arabic" field
-   Example: if arabic = "A B C D E F", then words could be ["A B", "C D", "E F"]
-   And " ".join(words) MUST equal the arabic field exactly
-6. For each Arabic segment, provide its English translation in the same index position
-7. Provide the verse reference in "Surah Name (surah:ayah)" format
-8. Provide a hint about the verse's theme
+2. Provide the verse reference in surah:ayah format (e.g. "2:152")
+3. Split the verse into 4-7 consecutive segments (1-3 words each)
+4. For each segment, provide its English translation
+5. Provide a hint about the verse's theme
 
-FORBIDDEN verse refs (used recently): {avoided_refs}
+FORBIDDEN verse refs (used recently — includes ALL games): {avoided_refs}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
 {{
+  "verseRef": "surah:ayah (e.g. 2:152)",
   "reference": "Surah Name (surah:ayah)",
-  "words": ["first Arabic segment", "second Arabic segment", "third Arabic segment", "fourth Arabic segment"],
-  "translations": ["English for segment 1", "English for segment 2", "English for segment 3", "English for segment 4"],
-  "arabic": "Full Arabic verse with diacritics (MUST equal words joined by spaces)",
+  "segments": ["segment boundary description 1", "segment boundary description 2", ...],
+  "translations": ["English for segment 1", "English for segment 2", ...],
   "hint": "A hint about the verse's theme or context"
 }}
 
-VERIFICATION CHECKLIST (you MUST verify before responding):
-- [ ] words[0] + " " + words[1] + " " + ... + words[N] == arabic  (EXACT MATCH)
-- [ ] words are in correct sequential reading order (not scrambled)
-- [ ] Each segment is 1-3 consecutive Arabic words from the verse
-- [ ] translations array has same length as words array
-- [ ] The verse reference is real and accurate
-- [ ] Arabic text has full tashkeel/diacritics
-
 IMPORTANT:
 - Return ONLY the JSON object, no markdown
-- DO NOT scramble the words array — it must be in correct order
-- The game code will scramble them for the player"""
+- Do NOT include full Arabic verse text — it will be looked up from the Quran API
+- The "segments" array describes how to split the verse (e.g. ["words 1-2", "words 3-4", "words 5-7"])
+  OR provide the Arabic segments directly — they will be verified against the API
+- translations array must have same length as segments array
+- The verse reference must be real and accurate"""
 
 
 def validate_scramble(puzzle, history):
     errors, cooldown_violations, warnings = [], [], []
 
-    if not puzzle.get("reference"):
-        errors.append("Missing 'reference'")
-    words = puzzle.get("words", [])
-    if len(words) < 3 or len(words) > 8:
-        errors.append(f"Expected 4-7 word segments, got {len(words)}")
-    if not puzzle.get("arabic"):
-        errors.append("Missing 'arabic'")
+    # Accept both new format (verseRef) and legacy (reference)
+    verse_ref = puzzle.get("verseRef", "")
+    if not verse_ref:
+        verse_ref = extract_ref(puzzle.get("reference", ""))
+        if verse_ref:
+            puzzle["verseRef"] = verse_ref
+    
+    if not verse_ref and not puzzle.get("reference"):
+        errors.append("Missing 'verseRef' or 'reference'")
     if not puzzle.get("hint"):
         errors.append("Missing 'hint'")
 
-    # Validate translations array
+    # Validate translations
     translations = puzzle.get("translations", [])
-    if len(translations) != len(words):
-        errors.append(f"translations array length ({len(translations)}) must match words array length ({len(words)})")
+    segments = puzzle.get("segments", puzzle.get("words", []))
+    if translations and segments and len(translations) != len(segments):
+        errors.append(f"translations length ({len(translations)}) must match segments length ({len(segments)})")
 
-    # Check that words are Arabic (contain Arabic characters)
-    for i, w in enumerate(words):
-        if not re.search(r'[\u0600-\u06FF]', w):
-            errors.append(f"Word segment {i} ('{w}') doesn't contain Arabic characters")
-
-    # CRITICAL: Verify that joining words reproduces the arabic field
-    arabic = puzzle.get("arabic", "")
-    if words and arabic:
-        joined = " ".join(words)
-        # Normalize whitespace for comparison
-        norm_joined = re.sub(r'\s+', ' ', joined).strip()
-        norm_arabic = re.sub(r'\s+', ' ', arabic).strip()
-        if norm_joined != norm_arabic:
-            errors.append(
-                f"Words joined don't match arabic field.\n"
-                f"  Joined:  '{norm_joined}'\n"
-                f"  Arabic:  '{norm_arabic}'"
-            )
-
-    # Cooldown
-    ref = puzzle.get("reference", "")
-    if ref in history["scramble"]["references"]:
-        cooldown_violations.append(f"Reference '{ref}' reused (cooldown)")
-    arabic = puzzle.get("arabic", "")
-    if arabic in history["scramble"]["verses"]:
-        cooldown_violations.append(f"Verse reused (cooldown)")
+    # Cooldown — check both game-specific and global
+    ref_str = puzzle.get("reference", "")
+    if ref_str in history["scramble"]["references"]:
+        cooldown_violations.append(f"Reference '{ref_str}' reused (scramble cooldown)")
+    if verse_ref:
+        if verse_ref in history["all_verses"]:
+            cooldown_violations.append(f"Verse ref '{verse_ref}' reused (cross-game cooldown)")
 
     return errors, cooldown_violations, warnings
 
@@ -758,7 +819,7 @@ def build_juz_prompt(history, previous_violations=None):
     today = datetime.utcnow().strftime("%Y-%m-%d")
     juz_number = get_juz_number_for_today(today)
 
-    avoided_verses = ", ".join(sorted(history["juz"]["verses"])) or "(none)"
+    avoided_verses = ", ".join(sorted(history["juz"]["verses"] | history["all_verses"])) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -788,7 +849,7 @@ RULES:
    https://cdn.islamic.network/quran/audio/128/ar.alafasy/ABSOLUTE_AYAH.mp3
    where ABSOLUTE_AYAH is the sequential ayah number across the entire Quran
 
-FORBIDDEN verse refs (used recently): {avoided_verses}
+FORBIDDEN verse refs (used recently — includes ALL games): {avoided_verses}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -930,11 +991,13 @@ def validate_juz(puzzle, history):
             if not notes.get(field):
                 errors.append(f"educational_notes missing '{field}'")
 
-    # Cooldown — verse reuse check
+    # Cooldown — verse reuse check (game-specific + global)
     if verse.get("surah_number") and verse.get("ayah_number"):
         ref = f"{verse['surah_number']}:{verse['ayah_number']}"
         if ref in history["juz"]["verses"]:
-            cooldown_violations.append(f"Verse {ref} reused (cooldown)")
+            cooldown_violations.append(f"Verse {ref} reused (juz cooldown)")
+        elif ref in history["all_verses"]:
+            cooldown_violations.append(f"Verse {ref} reused (cross-game cooldown)")
 
     return errors, cooldown_violations, warnings
 
@@ -985,6 +1048,9 @@ def fetch_verse_text(ref):
         if not arabic:
             print(f"    ⚠ Empty Arabic text for {ref}")
             return None
+        
+        # Strip verse number markers (e.g. ١٥٢) that the API appends at the end
+        arabic = re.sub(r'\s*[\u0660-\u0669]+\s*$', '', arabic).strip()
         
         return {"arabic": arabic, "english": english}
     except Exception as e:
@@ -1038,6 +1104,148 @@ def enrich_connections_with_verses(puzzle):
     return puzzle
 
 
+def enrich_wordle_with_verses(puzzle):
+    """Post-process a Wordle puzzle: look up full verse text from Quran API.
+    
+    Fetches the Arabic verse and English translation using the verseRef field,
+    replacing any LLM-generated verse text with authoritative Quran API data.
+    """
+    ref = puzzle.get("verseRef", "")
+    if not ref:
+        print("  ⚠ No verseRef in wordle puzzle, skipping verse lookup")
+        return puzzle
+    
+    print(f"\n  📖 Looking up verse text for Harf by Harf ({ref})...")
+    verse_data = fetch_verse_text(ref)
+    if verse_data:
+        # Extract surah name from ref for display
+        surah_num = ref.split(":")[0]
+        puzzle["arabicVerse"] = verse_data["arabic"]
+        puzzle["verse"] = f"{ref} — {verse_data['english']}"
+        print(f"  ✓ Verse text fetched from Quran API")
+    else:
+        print(f"  ⚠ Could not fetch verse text for {ref}")
+        # Keep any LLM-generated text as fallback
+        if not puzzle.get("arabicVerse"):
+            puzzle["arabicVerse"] = ""
+        if not puzzle.get("verse"):
+            puzzle["verse"] = ref
+    
+    return puzzle
+
+
+def enrich_scramble_with_verses(puzzle):
+    """Post-process a Scramble puzzle: look up full verse text from Quran API.
+    
+    Fetches the Arabic verse from the Quran API and splits it into segments,
+    replacing any LLM-generated Arabic text with authoritative data.
+    """
+    ref = puzzle.get("verseRef", "")
+    if not ref:
+        ref = extract_ref(puzzle.get("reference", ""))
+        if ref:
+            puzzle["verseRef"] = ref
+    
+    if not ref:
+        print("  ⚠ No verse ref in scramble puzzle, skipping verse lookup")
+        return puzzle
+    
+    print(f"\n  📖 Looking up verse text for Scramble ({ref})...")
+    verse_data = fetch_verse_text(ref)
+    if not verse_data:
+        print(f"  ⚠ Could not fetch verse text for {ref}")
+        return puzzle
+    
+    arabic_from_api = verse_data["arabic"]
+    print(f"  ✓ Arabic text fetched: {arabic_from_api[:80]}...")
+    
+    # Split the API Arabic text into segments
+    # Try to match the number of segments from the LLM's translations
+    translations = puzzle.get("translations", [])
+    target_segments = len(translations) if translations else 5
+    
+    # Split Arabic into words
+    arabic_words = arabic_from_api.split()
+    num_words = len(arabic_words)
+    
+    if num_words < 3:
+        print(f"  ⚠ Verse too short ({num_words} words), keeping as-is")
+        puzzle["arabic"] = arabic_from_api
+        puzzle["words"] = [arabic_from_api]
+        return puzzle
+    
+    # Calculate segment sizes to get close to target_segments
+    target_segments = max(3, min(7, target_segments, num_words))
+    base_size = num_words // target_segments
+    remainder = num_words % target_segments
+    
+    segments = []
+    idx = 0
+    for i in range(target_segments):
+        size = base_size + (1 if i < remainder else 0)
+        if size > 0:
+            segment = " ".join(arabic_words[idx:idx + size])
+            segments.append(segment)
+            idx += size
+    
+    # Verify reconstruction
+    reconstructed = " ".join(segments)
+    if reconstructed != arabic_from_api:
+        # Normalize and try again
+        norm_reconstructed = re.sub(r'\s+', ' ', reconstructed).strip()
+        norm_arabic = re.sub(r'\s+', ' ', arabic_from_api).strip()
+        if norm_reconstructed != norm_arabic:
+            print(f"  ⚠ Segment reconstruction mismatch, using simple split")
+            segments = arabic_words[:7] if num_words > 7 else arabic_words
+    
+    puzzle["arabic"] = arabic_from_api
+    puzzle["words"] = segments
+    
+    # Adjust translations array to match segment count if needed
+    if len(translations) != len(segments):
+        # Pad or trim translations
+        if len(translations) > len(segments):
+            puzzle["translations"] = translations[:len(segments)]
+        else:
+            while len(translations) < len(segments):
+                translations.append("")
+            puzzle["translations"] = translations
+    
+    print(f"  ✓ Scramble enriched: {len(segments)} segments from {num_words} words")
+    return puzzle
+
+
+def enrich_deduction_with_verses(puzzle):
+    """Post-process a Deduction puzzle: look up full verse text from Quran API.
+    
+    Fetches the Arabic verse and English translation using the verseRef field.
+    """
+    ref = puzzle.get("verseRef", "")
+    if not ref:
+        ref = extract_ref(puzzle.get("verse", ""))
+        if ref:
+            puzzle["verseRef"] = ref
+    
+    if not ref:
+        print("  ⚠ No verse ref in deduction puzzle, skipping verse lookup")
+        return puzzle
+    
+    print(f"\n  📖 Looking up verse text for Who Am I? ({ref})...")
+    verse_data = fetch_verse_text(ref)
+    if verse_data:
+        puzzle["arabic"] = verse_data["arabic"]
+        puzzle["verse"] = f"{verse_data['english']} ({ref})"
+        print(f"  ✓ Verse text fetched from Quran API")
+    else:
+        print(f"  ⚠ Could not fetch verse text for {ref}")
+        if not puzzle.get("arabic"):
+            puzzle["arabic"] = ""
+        if not puzzle.get("verse"):
+            puzzle["verse"] = ref
+    
+    return puzzle
+
+
 # ═══════════════════════════════════════════════════════════════════
 # UNIFIED GENERATION LOOP
 # ═══════════════════════════════════════════════════════════════════
@@ -1073,7 +1281,7 @@ GAME_CONFIGS = {
 def generate_game(game_type, history, today):
     """Generate a single game puzzle with retries and model fallback chain.
     
-    Fallback chain: DeepSeek-R1 → Gemini Flash → Phi-4
+    Fallback chain: GPT-4.1 → DeepSeek-R1 → Gemini Flash → Phi-4
     Each model gets up to MAX_RETRIES attempts before falling back.
     Rate limiting immediately triggers fallback to the next model.
     """
@@ -1185,15 +1393,19 @@ def main():
 
     # Load history for cooldown enforcement
     history = load_history()
-    print(f"History loaded:")
+    print(f"\nHistory loaded:")
     print(f"  Connections: {len(history['connections']['themes'])} themes, "
           f"{len(history['connections']['verses'])} verses")
-    print(f"  Harf by Harf: {len(history['wordle']['words'])} words")
+    print(f"  Harf by Harf: {len(history['wordle']['words'])} words, "
+          f"{len(history['wordle']['verseRefs'])} verse refs")
     print(f"  Deduction: {len(history['deduction']['titles'])} titles, "
-          f"{len(history['deduction']['characters'])} characters")
+          f"{len(history['deduction']['characters'])} characters, "
+          f"{len(history['deduction']['verseRefs'])} verse refs "
+          f"(60-day cooldown)")
     print(f"  Scramble: {len(history['scramble']['references'])} references")
     print(f"  Juz Journey: {len(history['juz']['juz_numbers'])} juz, "
           f"{len(history['juz']['verses'])} verses")
+    print(f"  Global: {len(history['all_verses'])} unique verse refs across ALL games")
 
     # Determine which games to generate
     # Juz Journey only generates during Ramadan (Feb 18 - Mar 20, 2026)
@@ -1218,11 +1430,43 @@ def main():
 
         puzzle = generate_game(game_type, history, today)
         if puzzle:
-            # Post-process: enrich Connections with verse text from Quran API
+            # Post-process: enrich with verse text from Quran API
             if game_type == "connections":
                 puzzle = enrich_connections_with_verses(puzzle)
+            elif game_type == "wordle":
+                puzzle = enrich_wordle_with_verses(puzzle)
+            elif game_type == "deduction":
+                puzzle = enrich_deduction_with_verses(puzzle)
+            elif game_type == "scramble":
+                puzzle = enrich_scramble_with_verses(puzzle)
 
             all_puzzles[game_type] = puzzle
+
+            # Update the global all_verses set so subsequent games avoid these refs
+            if game_type == "connections":
+                for cat in puzzle.get("categories", []):
+                    cat_ref = cat.get("verse", {}).get("ref")
+                    if cat_ref:
+                        history["all_verses"].add(cat_ref)
+                    for item in cat.get("items", []):
+                        if item.get("ref"):
+                            history["all_verses"].add(item["ref"])
+            elif game_type == "wordle":
+                ref = puzzle.get("verseRef")
+                if ref:
+                    history["all_verses"].add(ref)
+            elif game_type == "deduction":
+                ref = puzzle.get("verseRef")
+                if ref:
+                    history["all_verses"].add(ref)
+            elif game_type == "scramble":
+                ref = puzzle.get("verseRef")
+                if ref:
+                    history["all_verses"].add(ref)
+            elif game_type == "juz":
+                v = puzzle.get("verse", {})
+                if v.get("surah_number") and v.get("ayah_number"):
+                    history["all_verses"].add(f"{v['surah_number']}:{v['ayah_number']}")
         else:
             failed_games.append(game_type)
 
@@ -1259,6 +1503,7 @@ def main():
     print(f"\n{sep}")
     print(f"  ✓ ALL {len(game_types)} puzzles generated and saved!")
     print(f"  ✓ History saved to history/{today}.json")
+    print(f"  ✓ Global verse coverage: {len(history['all_verses'])} unique verses tracked")
     print(f"  ✓ Page will be updated with today's puzzles.")
     print(f"{sep}")
 
