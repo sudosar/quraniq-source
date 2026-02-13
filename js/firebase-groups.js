@@ -623,8 +623,9 @@ async function fetchGroupLeaderboard(groupCode) {
                 // Per-game all-time totals (for badge tiebreaking)
                 const allTimeScores = { connections: 0, harf: 0, deduction: 0, scramble: 0, juz: 0 };
 
-                // Sort dates and calculate
-                const dates = Object.keys(scores).sort();
+                // Sort dates and calculate (ignore dates before cutoff)
+                const SCORE_CUTOFF = '2026-02-13';
+                const dates = Object.keys(scores).sort().filter(d => d >= SCORE_CUTOFF);
                 dates.forEach(date => {
                     const s = scores[date];
                     if (s && s.total > 0) {
