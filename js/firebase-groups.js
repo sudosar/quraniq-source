@@ -488,10 +488,11 @@ async function fetchGroupLeaderboard(groupCode) {
         const results = await Promise.all(promises);
         const validResults = results.filter(r => r !== null);
 
-        // Sort by today's total (descending), then Ramadan total
+        // Sort by Total (primary), Today (secondary), Quran % (tertiary)
         validResults.sort((a, b) => {
+            if (b.ramadanTotal !== a.ramadanTotal) return b.ramadanTotal - a.ramadanTotal;
             if (b.todayTotal !== a.todayTotal) return b.todayTotal - a.todayTotal;
-            return b.ramadanTotal - a.ramadanTotal;
+            return (b.quranPercent || 0) - (a.quranPercent || 0);
         });
 
         // Cache the result
