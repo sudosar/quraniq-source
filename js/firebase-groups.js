@@ -61,17 +61,37 @@ async function initFirebase() {
 
         // Sign in anonymously and wait for auth state
         await new Promise((resolve) => {
+            let resolved = false;
             const unsubscribe = FB_STATE.auth.onAuthStateChanged((user) => {
+                if (resolved) return;
                 FB_STATE.user = user;
                 if (user) {
                     console.log('[FB] Signed in:', user.uid.substring(0, 8) + '...');
                     // Load groups in background (don't block init)
                     loadUserGroups().catch(() => {});
+                    resolved = true;
+                    unsubscribe();
+                    resolve();
                 }
-                unsubscribe();
-                resolve();
+                // If user is null, don't resolve yet — wait for signInAnonymously to complete
             });
-            FB_STATE.auth.signInAnonymously().catch(() => resolve());
+            FB_STATE.auth.signInAnonymously().catch((err) => {
+                console.error('[FB] Anonymous sign-in failed:', err);
+                if (!resolved) {
+                    resolved = true;
+                    unsubscribe();
+                    resolve();
+                }
+            });
+            // Timeout after 10 seconds to avoid hanging forever
+            setTimeout(() => {
+                if (!resolved) {
+                    console.warn('[FB] Auth timed out, continuing without user');
+                    resolved = true;
+                    unsubscribe();
+                    resolve();
+                }
+            }, 10000);
         });
 
         FB_STATE.initialized = true;
@@ -199,6 +219,14 @@ async function setDisplayName(name) {
     if (!FB_STATE.initialized || !FB_STATE.user) {
         console.warn('[FB] setDisplayName: Firebase not ready, attempting init...');
         const ok = await initFirebase();
+        // Fallback: check firebase.auth().currentUser directly
+        if (!FB_STATE.user && typeof firebase !== 'undefined' && firebase.auth) {
+            const currentUser = firebase.auth().currentUser;
+            if (currentUser) {
+                FB_STATE.user = currentUser;
+                console.log('[FB] setDisplayName: recovered user from auth().currentUser');
+            }
+        }
         if (!ok || !FB_STATE.user) {
             console.error('[FB] setDisplayName: Firebase init failed');
             return false;
