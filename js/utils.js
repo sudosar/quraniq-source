@@ -559,13 +559,32 @@ async function fetchLeaderboard() {
  * Includes: stats, verses, player ID, theme.
  */
 function exportProgress() {
+    // Collect Firebase group data for restore
+    let fbData = null;
+    try {
+        const fbGroups = JSON.parse(localStorage.getItem('quraniq_fb_groups') || '{}');
+        const fbUid = (typeof FB_STATE !== 'undefined' && FB_STATE.user) ? FB_STATE.user.uid : null;
+        const displayName = localStorage.getItem('quraniq_display_name') || '';
+        if (fbUid || (fbGroups.groups && Object.keys(fbGroups.groups).length > 0)) {
+            fbData = {
+                uid: fbUid,
+                displayName: displayName,
+                groups: fbGroups.groups || {},
+                activeGroupCode: fbGroups.activeGroupCode || null
+            };
+        }
+    } catch (e) {
+        console.warn('[Export] Could not collect Firebase data:', e);
+    }
+
     const data = {
-        v: 1, // version for future compatibility
+        v: 2, // version 2: includes Firebase group data
         stats: JSON.parse(localStorage.getItem(STATS_KEY) || '{}'),
         verses: JSON.parse(localStorage.getItem(VERSES_KEY) || '{"refs":[]}'),
         playerId: getPlayerId(),
         theme: localStorage.getItem('quraniq_theme') || 'dark',
         percentile: JSON.parse(localStorage.getItem('quraniq_percentile') || 'null'),
+        firebase: fbData,
         exported: new Date().toISOString()
     };
     const json = JSON.stringify(data);
@@ -615,7 +634,33 @@ function importProgress(saveString) {
             localStorage.setItem('quraniq_percentile', JSON.stringify(data.percentile));
         }
 
-        return { success: true, message: `Progress restored! Stats from ${data.exported ? new Date(data.exported).toLocaleDateString() : 'backup'} loaded.` };
+        // Restore Firebase group data (v2+)
+        if (data.firebase) {
+            const fb = data.firebase;
+            // Restore display name
+            if (fb.displayName) {
+                localStorage.setItem('quraniq_display_name', fb.displayName);
+            }
+            // Restore local group cache for instant UI
+            if (fb.groups && Object.keys(fb.groups).length > 0) {
+                localStorage.setItem('quraniq_fb_groups', JSON.stringify({
+                    groups: fb.groups,
+                    activeGroupCode: fb.activeGroupCode
+                }));
+            }
+            // Set pending migration: old UID + group codes
+            // On next Firebase init, the new UID will re-join these groups
+            if (fb.uid && fb.groups) {
+                localStorage.setItem('quraniq_fb_migration', JSON.stringify({
+                    oldUid: fb.uid,
+                    groupCodes: Object.keys(fb.groups),
+                    displayName: fb.displayName || '',
+                    timestamp: new Date().toISOString()
+                }));
+            }
+        }
+
+        return { success: true, message: `Progress restored! Stats and groups from ${data.exported ? new Date(data.exported).toLocaleDateString() : 'backup'} loaded.` };
     } catch (e) {
         return { success: false, message: 'Failed to restore: ' + e.message };
     }

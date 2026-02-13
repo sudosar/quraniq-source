@@ -76,10 +76,110 @@ async function initFirebase() {
 
         FB_STATE.initialized = true;
         console.log('[FB] Firebase initialized');
+
+        // Check for pending group migration (after save code restore)
+        processPendingMigration();
+
         return true;
     } catch (err) {
         console.error('[FB] Init failed:', err);
         return false;
+    }
+}
+
+/**
+ * Process pending migration after a save code restore.
+ * Re-joins groups and migrates scores from old UID to new UID.
+ */
+async function processPendingMigration() {
+    try {
+        const migrationStr = localStorage.getItem('quraniq_fb_migration');
+        if (!migrationStr) return;
+
+        const migration = JSON.parse(migrationStr);
+        if (!migration.oldUid || !migration.groupCodes || !FB_STATE.user) return;
+
+        const newUid = FB_STATE.user.uid;
+        const oldUid = migration.oldUid;
+
+        // Skip if same UID (no migration needed)
+        if (newUid === oldUid) {
+            localStorage.removeItem('quraniq_fb_migration');
+            return;
+        }
+
+        console.log('[FB] Processing migration from', oldUid.substring(0, 8), 'to', newUid.substring(0, 8));
+
+        // Restore display name
+        if (migration.displayName) {
+            await FB_STATE.db.ref(`users/${newUid}/displayName`).set(migration.displayName);
+            localStorage.setItem('quraniq_display_name', migration.displayName);
+            FB_STATE.displayName = migration.displayName;
+        }
+
+        // Re-join each group with the new UID
+        for (const code of migration.groupCodes) {
+            try {
+                // Check if group still exists
+                const groupSnap = await FB_STATE.db.ref(`groups/${code}/name`).once('value');
+                if (!groupSnap.val()) {
+                    console.log('[FB] Migration: group', code, 'no longer exists, skipping');
+                    continue;
+                }
+
+                // Check if old UID is still a member (hasn't been cleaned up)
+                const oldMemberSnap = await FB_STATE.db.ref(`groups/${code}/members/${oldUid}`).once('value');
+
+                // Add new UID as member
+                await FB_STATE.db.ref(`groups/${code}/members/${newUid}`).set(true);
+                await FB_STATE.db.ref(`users/${newUid}/groups/${code}`).set(true);
+
+                // Remove old UID from group (swap)
+                if (oldMemberSnap.val()) {
+                    await FB_STATE.db.ref(`groups/${code}/members/${oldUid}`).remove();
+                    await FB_STATE.db.ref(`users/${oldUid}/groups/${code}`).remove();
+                    // Member count stays the same (swap, not add)
+                } else {
+                    // Old UID was already removed, increment count
+                    const countSnap = await FB_STATE.db.ref(`groups/${code}/memberCount`).once('value');
+                    await FB_STATE.db.ref(`groups/${code}/memberCount`).set((countSnap.val() || 0) + 1);
+                }
+
+                console.log('[FB] Migration: re-joined group', code);
+            } catch (err) {
+                console.error('[FB] Migration: failed to rejoin group', code, err);
+            }
+        }
+
+        // Migrate scores from old UID to new UID
+        try {
+            const scoresSnap = await FB_STATE.db.ref(`users/${oldUid}/scores`).once('value');
+            const oldScores = scoresSnap.val();
+            if (oldScores) {
+                await FB_STATE.db.ref(`users/${newUid}/scores`).set(oldScores);
+                console.log('[FB] Migration: scores migrated');
+            }
+        } catch (err) {
+            console.error('[FB] Migration: score migration failed:', err);
+        }
+
+        // Clean up old user data
+        try {
+            await FB_STATE.db.ref(`users/${oldUid}`).remove();
+        } catch (e) {
+            // Non-critical
+        }
+
+        // Clear migration flag
+        localStorage.removeItem('quraniq_fb_migration');
+        console.log('[FB] Migration complete');
+
+        // Reload groups from Firebase to get fresh state
+        await loadUserGroups();
+
+    } catch (err) {
+        console.error('[FB] Migration failed:', err);
+        // Don't remove the flag — will retry on next load
     }
 }
 
