@@ -1038,8 +1038,9 @@ QURAN_API_BASE = "https://api.quran.com/api/v4"
 def fetch_verse_text(ref):
     """Fetch the Arabic text (Uthmani script) and English translation for a verse ref.
     
-    Uses the Quran.com API word-by-word endpoint to get both Arabic (Uthmani)
-    and English word-by-word translations.
+    Uses the Quran.com API to get:
+    - Arabic text from word-by-word endpoint (Uthmani script)
+    - English from Sahih International translation (resource_id=20)
     
     Args:
         ref: Verse reference in "surah:ayah" format (e.g. "2:255")
@@ -1048,7 +1049,9 @@ def fetch_verse_text(ref):
     """
     try:
         key = ref.strip()
-        url = f"{QURAN_API_BASE}/verses/by_key/{key}?language=en&words=true&word_fields=text_uthmani,translation"
+        
+        # Fetch Arabic (Uthmani) + Sahih International translation in one call
+        url = f"{QURAN_API_BASE}/verses/by_key/{key}?language=en&words=true&word_fields=text_uthmani&translations=20"
         resp = requests.get(url, timeout=15)
         if resp.status_code != 200:
             print(f"    ⚠ Quran API returned {resp.status_code} for {ref}")
@@ -1064,13 +1067,14 @@ def fetch_verse_text(ref):
         # Build Arabic text from Uthmani script words
         arabic = " ".join(w.get("text_uthmani", "") for w in words if w.get("text_uthmani"))
         
-        # Build English from word-by-word translations
-        en_parts = []
-        for w in words:
-            t = w.get("translation", {})
-            if isinstance(t, dict) and t.get("text"):
-                en_parts.append(t["text"].strip())
-        english = " ".join(en_parts)
+        # Get proper English translation (Sahih International)
+        english = ""
+        translations = verse_data.get("translations", [])
+        if translations:
+            raw_en = translations[0].get("text", "")
+            # Strip footnote <sup> tags and their content, then any remaining HTML tags
+            cleaned = re.sub(r'<sup[^>]*>[^<]*</sup>', '', raw_en)  # remove footnotes entirely
+            english = re.sub(r'<[^>]+>', '', cleaned).strip()  # remove any remaining HTML tags
         
         if not arabic:
             print(f"    ⚠ Empty Arabic text for {ref}")
