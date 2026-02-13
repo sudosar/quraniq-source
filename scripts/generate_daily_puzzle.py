@@ -1228,6 +1228,12 @@ def enrich_scramble_with_verses(puzzle):
     puzzle["arabic"] = arabic_from_api
     puzzle["words"] = segments
     
+    # Store full English translation from API for result display
+    english_from_api = verse_data.get("english", "")
+    if english_from_api:
+        puzzle["verseEn"] = english_from_api
+        print(f"  ✓ Full English translation stored: {english_from_api[:80]}...")
+    
     # Adjust translations array to match segment count if needed
     if len(translations) != len(segments):
         # Pad or trim translations

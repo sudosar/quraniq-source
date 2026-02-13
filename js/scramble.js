@@ -398,9 +398,11 @@ function showScrResult(cacheOnly) {
     const shareText = `QuranIQ - Ayah Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${moonStr}\nAttempts: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}\n\nhttps://sudosar.github.io/quraniq/`;
 
     // Show the full verse translation in the result
-    const translationText = scr.puzzle.translations
-        ? scr.puzzle.translations.join(' ')
-        : (scr.puzzle.english || scr.puzzle.words.join(' '));
+    // Prefer verseEn (full translation from Quran API) over joined segment translations
+    const translationText = scr.puzzle.verseEn
+        || (scr.puzzle.translations ? scr.puzzle.translations.join(' ') : '')
+        || scr.puzzle.english
+        || scr.puzzle.words.join(' ');
 
     const resultData = {
         icon: scr.won ? '✨' : '📖',
