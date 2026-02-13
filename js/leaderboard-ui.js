@@ -212,8 +212,10 @@ function renderLeaderboardTable(data, activeCode) {
             <div class="lb-row ${meClass}" title="${breakdown}">
                 <div class="lb-rank">${rankEmoji}</div>
                 <div class="lb-player">
-                    <span class="lb-player-name">${escapeHtml(player.displayName)}</span>
-                    ${player.isMe ? '<span class="lb-you-badge">you</span>' : ''}
+                    <span class="lb-player-top">
+                        <span class="lb-player-name">${escapeHtml(player.displayName)}</span>
+                        ${player.isMe ? '<span class="lb-you-badge">you</span>' : ''}
+                    </span>
                     ${badgesHtml}
                 </div>
                 <div class="lb-today">${todayMoons}</div>

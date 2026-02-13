@@ -387,9 +387,19 @@
 
 .lb-player {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.15rem 0.4rem;
     overflow: hidden;
+    min-width: 0;
+}
+
+.lb-player-top {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    min-width: 0;
+    max-width: 100%;
 }
 
 .lb-player-name {
@@ -398,6 +408,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-width: 0;
 }
 
 .lb-you-badge {
@@ -452,22 +463,22 @@
 
 /* ==================== GAME BADGES ==================== */
 .lb-badges {
-    display: inline-flex;
-    gap: 1px;
-    margin-left: 2px;
-    flex-shrink: 0;
+    display: flex;
+    gap: 2px;
+    flex-basis: 100%;
+    margin-top: -1px;
 }
 
 .lb-badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 18px;
-    height: 18px;
-    font-size: 0.65rem;
+    width: 16px;
+    height: 16px;
+    font-size: 0.6rem;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(201, 162, 39, 0.2), rgba(201, 162, 39, 0.08));
-    border: 1px solid rgba(201, 162, 39, 0.4);
+    background: linear-gradient(135deg, rgba(201, 162, 39, 0.25), rgba(201, 162, 39, 0.1));
+    border: 1px solid rgba(201, 162, 39, 0.45);
     filter: drop-shadow(0 0 2px rgba(201, 162, 39, 0.3));
     cursor: default;
 }
