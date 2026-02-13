@@ -200,8 +200,8 @@ function renderLeaderboardTable(data, activeCode) {
     // Sort data by current field
     data = sortLeaderboardData(data, _lbSortField);
 
-    // Calculate top scorer badges for each game type
-    const gameBadges = calculateGameBadges(data);
+    // Calculate top scorer badges for each game type (follows sort order)
+    const gameBadges = calculateGameBadges(data, _lbSortField);
 
     let html = '<div class="lb-table">';
 
@@ -231,8 +231,9 @@ function renderLeaderboardTable(data, activeCode) {
 
         // Get this player's badges
         const badges = gameBadges[player.uid] || [];
+        const badgeContext = _lbSortField === 'today' ? 'today' : 'overall';
         const badgesHtml = badges.length > 0
-            ? `<span class="lb-badges">${badges.map(b => `<span class="lb-badge" title="Top ${b.label} today">${b.icon}</span>`).join('')}</span>`
+            ? `<span class="lb-badges">${badges.map(b => `<span class="lb-badge" title="Top ${b.label} ${badgeContext}">${b.icon}</span>`).join('')}</span>`
             : '';
 
         html += `
@@ -261,10 +262,14 @@ function renderLeaderboardTable(data, activeCode) {
 }
 
 /**
- * Calculate which player has the top score in each game type today.
+ * Calculate which player has the top score in each game type.
+ * Badges follow the current sort field:
+ *   - 'total': badge goes to highest all-time per-game total (tie → higher today score)
+ *   - 'today': badge goes to highest today per-game score (tie → higher all-time total)
+ *   - 'quran': same as 'total'
  * Returns a map of uid -> array of badge objects.
  */
-function calculateGameBadges(data) {
+function calculateGameBadges(data, sortField) {
     const games = [
         { key: 'connections', icon: '🔗', label: 'Connections' },
         { key: 'harf',        icon: '🔤', label: 'Harf by Harf' },
@@ -273,17 +278,27 @@ function calculateGameBadges(data) {
         { key: 'juz',         icon: '🌙', label: 'Juz Journey' }
     ];
 
+    const useToday = sortField === 'today';
     const badges = {}; // uid -> [{ icon, label }]
 
     games.forEach(game => {
         let topScore = 0;
+        let topTiebreaker = 0;
         let topUid = null;
 
-        // Find the highest score for this game (must be > 0)
         data.forEach(player => {
-            const score = (player.todayScores && player.todayScores[game.key]) || 0;
-            if (score > topScore) {
-                topScore = score;
+            // Primary score based on sort field
+            const primary = useToday
+                ? ((player.todayScores && player.todayScores[game.key]) || 0)
+                : ((player.allTimeScores && player.allTimeScores[game.key]) || 0);
+            // Tiebreaker is the other column
+            const tiebreaker = useToday
+                ? ((player.allTimeScores && player.allTimeScores[game.key]) || 0)
+                : ((player.todayScores && player.todayScores[game.key]) || 0);
+
+            if (primary > topScore || (primary === topScore && primary > 0 && tiebreaker > topTiebreaker)) {
+                topScore = primary;
+                topTiebreaker = tiebreaker;
                 topUid = player.uid;
             }
         });

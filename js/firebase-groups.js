@@ -572,6 +572,9 @@ async function fetchGroupLeaderboard(groupCode) {
                 let currentStreak = 0;
                 let maxStreak = 0;
 
+                // Per-game all-time totals (for badge tiebreaking)
+                const allTimeScores = { connections: 0, harf: 0, deduction: 0, scramble: 0, juz: 0 };
+
                 // Sort dates and calculate
                 const dates = Object.keys(scores).sort();
                 dates.forEach(date => {
@@ -579,6 +582,13 @@ async function fetchGroupLeaderboard(groupCode) {
                     if (s && s.total > 0) {
                         ramadanTotal += s.total;
                         daysPlayed++;
+                    }
+                    if (s) {
+                        allTimeScores.connections += s.connections || 0;
+                        allTimeScores.harf += s.harf || 0;
+                        allTimeScores.deduction += s.deduction || 0;
+                        allTimeScores.scramble += s.scramble || 0;
+                        allTimeScores.juz += s.juz || 0;
                     }
                 });
 
@@ -610,6 +620,7 @@ async function fetchGroupLeaderboard(groupCode) {
                         scramble: todayScores.scramble || 0,
                         juz: todayScores.juz || 0
                     },
+                    allTimeScores,
                     ramadanTotal,
                     daysPlayed,
                     streak: currentStreak,
@@ -650,6 +661,14 @@ async function fetchGroupLeaderboard(groupCode) {
                 }
                 if (ghost.streak > myEntry.streak) {
                     myEntry.streak = ghost.streak;
+                }
+                // Merge per-game all-time totals (keep higher of each)
+                if (ghost.allTimeScores && myEntry.allTimeScores) {
+                    for (const g of Object.keys(ghost.allTimeScores)) {
+                        if ((ghost.allTimeScores[g] || 0) > (myEntry.allTimeScores[g] || 0)) {
+                            myEntry.allTimeScores[g] = ghost.allTimeScores[g];
+                        }
+                    }
                 }
                 // Remove ghost from group in background (don't block UI)
                 (async () => {
