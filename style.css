@@ -3249,7 +3249,7 @@ button, input, select, textarea {
 /* ===== Bug Report Nub ===== */
 .bug-nub {
     position: fixed;
-    bottom: 80px;
+    bottom: 160px;
     right: 0;
     width: 36px;
     height: 36px;
