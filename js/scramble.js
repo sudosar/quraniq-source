@@ -288,6 +288,31 @@ function createWordElement(word, index, isPlaced) {
     return el;
 }
 
+/* ---- Global cleanup for stuck drag clones ---- */
+function cleanupDragClones() {
+    document.querySelectorAll('.dragging-clone').forEach(c => c.remove());
+    document.querySelectorAll('.scramble-word.touch-dragging').forEach(el => {
+        el.classList.remove('touch-dragging');
+        el.style.opacity = '';
+    });
+    document.querySelectorAll('.scramble-word.dragging').forEach(el => {
+        el.classList.remove('dragging');
+        el.style.opacity = '';
+    });
+    document.querySelectorAll('.scramble-word.drag-over').forEach(el => {
+        el.classList.remove('drag-over');
+    });
+}
+
+// Clean up on visibility change (tab switch, app switch)
+document.addEventListener('visibilitychange', cleanupDragClones);
+// Clean up when any overlay/modal opens (leaderboard, stats, etc.)
+document.addEventListener('click', (e) => {
+    if (e.target.closest('.modal, .overlay, [data-modal], .leaderboard-toggle, .stats-btn, .nav-icon')) {
+        cleanupDragClones();
+    }
+});
+
 /* ---- Touch drag support for mobile ---- */
 function setupTouchDrag(el, index) {
     let touchStartY = 0;
@@ -338,6 +363,16 @@ function setupTouchDrag(el, index) {
             }
         }
     }, { passive: false });
+
+    el.addEventListener('touchcancel', () => {
+        if (clone) { clone.remove(); clone = null; }
+        el.style.opacity = '';
+        el.classList.remove('touch-dragging');
+        isDragging = false;
+        document.querySelectorAll('.scramble-word.drag-over').forEach(
+            w => w.classList.remove('drag-over')
+        );
+    });
 
     el.addEventListener('touchend', (e) => {
         if (isDragging && clone) {
