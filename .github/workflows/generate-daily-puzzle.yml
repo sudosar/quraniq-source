@@ -9,6 +9,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 
 concurrency:
   group: "puzzle-generation"
@@ -34,21 +35,38 @@ jobs:
         run: pip install requests
 
       - name: Generate daily puzzle
+        id: generate
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.MODELS_PAT }} 
+          GITHUB_TOKEN: ${{ secrets.MODELS_PAT }}
         run: python scripts/generate_daily_puzzle.py
 
       - name: Check if puzzle was generated
         id: check
         run: |
           if [ -f "data/daily_puzzle.json" ]; then
-            GENERATED=$(python3 -c "import json; d=json.load(open('data/daily_puzzle.json' )); print('true' if d.get('generated') else 'false')")
+            GENERATED=$(python3 -c "import json; d=json.load(open('data/daily_puzzle.json')); print('true' if d.get('generated') else 'false')")
             echo "generated=$GENERATED" >> $GITHUB_OUTPUT
           else
             echo "generated=false" >> $GITHUB_OUTPUT
           fi
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          gh issue create \
+            --repo "${{ github.repository }}" \
+            --title "Puzzle generation failed for ${DATE}" \
+            --body "Puzzle generation failed for ${DATE}. Check the workflow run logs at ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} for details." \
+            --label "bug" 2>/dev/null || \
+          gh issue create \
+            --repo "${{ github.repository }}" \
+            --title "Puzzle generation failed for ${DATE}" \
+            --body "Puzzle generation failed for ${DATE}. Check the workflow run logs for details."
 
       - name: Commit and push
         if: steps.check.outputs.generated == 'true'
@@ -57,10 +75,7 @@ jobs:
           git config user.email "bot@quranpuzzle.app"
           git add data/
           git diff --staged --quiet || {
-            DATE=$(date -u +%Y-%m-%d)
-          
             git commit -m "Generate daily puzzles for $(date -u +%Y-%m-%d)" || echo "No changes"
-
             git push
           }
 
