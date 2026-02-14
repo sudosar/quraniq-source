@@ -617,8 +617,10 @@
         // ===== Reset Individual Game State =====
         function resetGameState(prefix) {
             const names = { conn: 'Connections', wordle: 'Harf by Harf', ded: 'Who Am I?', scr: 'Scramble' };
+            const modeMap = { conn: 'connections', wordle: 'wordle', ded: 'deduction', scr: 'scramble' };
             const name = names[prefix] || prefix;
-            if (!confirm(`Reset ${name} progress for today? This cannot be undone.`)) return;
+            const modeName = modeMap[prefix] || prefix;
+            if (!confirm(`Reset ${name} progress for today? This will clear your game state and allow a new score submission. Other games are not affected.`)) return;
 
             // Find the day number (same logic as main app)
             const startDate = new Date('2025-01-26T00:00:00');
@@ -626,7 +628,10 @@
             today.setHours(0, 0, 0, 0);
             const dayNumber = Math.floor((today - startDate) / 86400000);
 
-            // Remove from quraniq_state
+            let stateReset = false;
+            let statsReset = false;
+
+            // 1. Remove game state from quraniq_state
             const stateKey = 'quraniq_state';
             try {
                 const state = JSON.parse(localStorage.getItem(stateKey) || '{}');
@@ -634,14 +639,35 @@
                 if (state[key]) {
                     delete state[key];
                     localStorage.setItem(stateKey, JSON.stringify(state));
-                    testLog(`Reset ${name} state (key: ${key})`, 'warn');
-                    showTestToast(`${name} progress reset! Reload the game to play again.`);
+                    stateReset = true;
+                    testLog(`Reset ${name} game state (key: ${key})`, 'warn');
                 } else {
                     testLog(`No ${name} state found for today (key: ${key})`, 'info');
-                    showTestToast(`No ${name} progress found for today.`);
                 }
             } catch (e) {
-                testLog(`Error resetting ${name}: ${e.message}`, 'error');
+                testLog(`Error resetting ${name} state: ${e.message}`, 'error');
+            }
+
+            // 2. Reset stats lastDay for this mode only (so new score can submit)
+            const statsKey = 'quraniq_stats_v2';
+            try {
+                const stats = JSON.parse(localStorage.getItem(statsKey) || '{}');
+                if (stats[modeName] && stats[modeName].lastDay === dayNumber) {
+                    // Undo the stats entry for today
+                    stats[modeName].played = Math.max(0, (stats[modeName].played || 0) - 1);
+                    stats[modeName].lastDay = -1;
+                    localStorage.setItem(statsKey, JSON.stringify(stats));
+                    statsReset = true;
+                    testLog(`Reset ${name} stats lastDay (was day ${dayNumber}, now -1)`, 'warn');
+                }
+            } catch (e) {
+                testLog(`Error resetting ${name} stats: ${e.message}`, 'error');
+            }
+
+            if (stateReset || statsReset) {
+                showTestToast(`${name} reset! Go back to the game and reload to play again.`);
+            } else {
+                showTestToast(`No ${name} progress found for today.`);
             }
             viewStorage(prefix);
         }
