@@ -403,9 +403,25 @@ function showHelpModal() {
         `,
         scramble: `
             <h3>Ayah Scramble</h3>
-            <p>The Arabic words of a Quranic verse have been scrambled. Tap the segments to place them in the correct order, rebuilding the verse right-to-left.</p>
-            <p>Stuck? Use the <strong>Hint</strong> button to reveal the English translation of one segment. Each hint used will impact your final score.</p>
-            <p>Tap a placed word to remove it from the answer zone. Try to solve it in as few moves as possible!</p>
+            <p>The segments of a Quranic verse have been scrambled. Tap segments to place them in the answer zone, or <strong>drag</strong> them to reorder. Rebuild the verse in the correct order!</p>
+            <p>A free <strong>theme hint</strong> is always shown at the top to give you context about the verse.</p>
+            <p><strong>Hints</strong> (each costs 1🌙):</p>
+            <ul style="text-align:left;margin:8px auto;max-width:280px">
+                <li>Hint 1: Reveals English translations for <em>all</em> segments</li>
+                <li>Hints 2–3: Locks a segment in its correct position</li>
+            </ul>
+            <p>You have <strong>5 attempts</strong> to arrange the verse correctly. Tap a placed segment to remove it, or drag to swap positions.</p>
+        `,
+        juz: `
+            <h3>Juz Journey</h3>
+            <p>Explore one Juz of the Quran each day of Ramadan through 4 rounds:</p>
+            <ul style="text-align:left;margin:8px auto;max-width:300px">
+                <li><strong>📖 Verse Discovery</strong> — Listen to a verse and tap words for English meanings (each costs 1🌙)</li>
+                <li><strong>🎯 Theme</strong> — Identify the verse's theme (2 attempts)</li>
+                <li><strong>📜 Surah</strong> — Name which Surah the verse belongs to (2 attempts)</li>
+                <li><strong>📊 Order</strong> — Arrange the Surahs of the Juz in correct order</li>
+            </ul>
+            <p>Earn up to <strong>5🌙</strong> per Juz. Hints reduce your score, so use them wisely!</p>
         `
     };
     content.innerHTML = helps[app.currentMode] || helps.connections;
