@@ -1213,7 +1213,7 @@ def fetch_verse_text(ref):
         key = ref.strip()
         
         # Fetch Arabic (Uthmani) + Sahih International translation in one call
-        url = f"{QURAN_API_BASE}/verses/by_key/{key}?language=en&words=true&word_fields=text_uthmani&translations=20"
+        url = f"{QURAN_API_BASE}/verses/by_key/{key}?language=en&words=true&word_fields=text_uthmani,translation&translations=20"
         resp = requests.get(url, timeout=15)
         if resp.status_code != 200:
             print(f"    ⚠ Quran API returned {resp.status_code} for {ref}")
@@ -1245,7 +1245,17 @@ def fetch_verse_text(ref):
         # Strip verse number markers (e.g. ١٥٢) that the API appends at the end
         arabic = re.sub(r'\s*[\u0660-\u0669]+\s*$', '', arabic).strip()
         
-        return {"arabic": arabic, "english": english}
+        # Build word-by-word translations list (excluding end markers)
+        wbw = []
+        for w in words:
+            if w.get("char_type_name") == "end":
+                continue
+            text = w.get("text_uthmani", "")
+            trans = w.get("translation", {})
+            en_text = trans.get("text", "") if isinstance(trans, dict) else ""
+            wbw.append({"arabic": text, "english": en_text})
+        
+        return {"arabic": arabic, "english": english, "wbw": wbw}
     except Exception as e:
         print(f"    ⚠ Quran API error for {ref}: {e}")
         return None
@@ -1371,47 +1381,71 @@ def enrich_scramble_with_verses(puzzle):
     arabic_from_api = verse_data["arabic"]
     print(f"  ✓ Arabic text fetched: {arabic_from_api[:80]}...")
     
-    # Split the API Arabic text into segments
-    # Try to match the number of segments from the LLM's translations
-    translations = puzzle.get("translations", [])
-    target_segments = len(translations) if translations else 5
+    # Use word-by-word data from API for both segments and translations
+    # This ensures perfect 1:1 alignment between Arabic chunks and English tooltips
+    wbw = verse_data.get("wbw", [])
+    translations_llm = puzzle.get("translations", [])
+    target_segments = len(translations_llm) if translations_llm else 5
     
-    # Split Arabic into words
-    arabic_words = arabic_from_api.split()
-    num_words = len(arabic_words)
-    
-    if num_words < 3:
-        print(f"  ⚠ Verse too short ({num_words} words), keeping as-is")
+    if wbw and len(wbw) >= 3:
+        num_words = len(wbw)
+        target_segments = max(3, min(7, target_segments, num_words))
+        base_size = num_words // target_segments
+        remainder = num_words % target_segments
+        
+        segments = []
+        segment_translations = []
+        idx = 0
+        for i in range(target_segments):
+            size = base_size + (1 if i < remainder else 0)
+            if size > 0:
+                ar_parts = [wbw[j]["arabic"] for j in range(idx, idx + size)]
+                en_parts = [wbw[j]["english"] for j in range(idx, idx + size)]
+                segments.append(" ".join(ar_parts))
+                segment_translations.append(" ".join(en_parts))
+                idx += size
+        
         puzzle["arabic"] = arabic_from_api
-        puzzle["words"] = [arabic_from_api]
-        return puzzle
-    
-    # Calculate segment sizes to get close to target_segments
-    target_segments = max(3, min(7, target_segments, num_words))
-    base_size = num_words // target_segments
-    remainder = num_words % target_segments
-    
-    segments = []
-    idx = 0
-    for i in range(target_segments):
-        size = base_size + (1 if i < remainder else 0)
-        if size > 0:
-            segment = " ".join(arabic_words[idx:idx + size])
-            segments.append(segment)
-            idx += size
-    
-    # Verify reconstruction
-    reconstructed = " ".join(segments)
-    if reconstructed != arabic_from_api:
-        # Normalize and try again
-        norm_reconstructed = re.sub(r'\s+', ' ', reconstructed).strip()
-        norm_arabic = re.sub(r'\s+', ' ', arabic_from_api).strip()
-        if norm_reconstructed != norm_arabic:
-            print(f"  ⚠ Segment reconstruction mismatch, using simple split")
-            segments = arabic_words[:7] if num_words > 7 else arabic_words
-    
-    puzzle["arabic"] = arabic_from_api
-    puzzle["words"] = segments
+        puzzle["words"] = segments
+        puzzle["translations"] = segment_translations
+        
+        print(f"  ✓ Built {len(segments)} segments from {num_words} wbw entries")
+        for i, (seg, trans) in enumerate(zip(segments, segment_translations)):
+            print(f"    [{i}] {seg[:50]} → {trans[:60]}")
+    else:
+        # Fallback: split raw Arabic text (no wbw translations available)
+        print(f"  ⚠ No word-by-word data, falling back to raw text split")
+        arabic_words = arabic_from_api.split()
+        num_words = len(arabic_words)
+        
+        if num_words < 3:
+            print(f"  ⚠ Verse too short ({num_words} words), keeping as-is")
+            puzzle["arabic"] = arabic_from_api
+            puzzle["words"] = [arabic_from_api]
+            return puzzle
+        
+        target_segments = max(3, min(7, target_segments, num_words))
+        base_size = num_words // target_segments
+        remainder = num_words % target_segments
+        
+        segments = []
+        idx = 0
+        for i in range(target_segments):
+            size = base_size + (1 if i < remainder else 0)
+            if size > 0:
+                segments.append(" ".join(arabic_words[idx:idx + size]))
+                idx += size
+        
+        puzzle["arabic"] = arabic_from_api
+        puzzle["words"] = segments
+        # Adjust LLM translations to match segment count
+        if len(translations_llm) != len(segments):
+            if len(translations_llm) > len(segments):
+                puzzle["translations"] = translations_llm[:len(segments)]
+            else:
+                while len(translations_llm) < len(segments):
+                    translations_llm.append("")
+                puzzle["translations"] = translations_llm
     
     # Store full English translation from API for result display
     english_from_api = verse_data.get("english", "")
@@ -1419,17 +1453,7 @@ def enrich_scramble_with_verses(puzzle):
         puzzle["verseEn"] = english_from_api
         print(f"  ✓ Full English translation stored: {english_from_api[:80]}...")
     
-    # Adjust translations array to match segment count if needed
-    if len(translations) != len(segments):
-        # Pad or trim translations
-        if len(translations) > len(segments):
-            puzzle["translations"] = translations[:len(segments)]
-        else:
-            while len(translations) < len(segments):
-                translations.append("")
-            puzzle["translations"] = translations
-    
-    print(f"  ✓ Scramble enriched: {len(segments)} segments from {num_words} words")
+    print(f"  ✓ Scramble enriched: {len(segments)} segments")
     return puzzle
 
 
