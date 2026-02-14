@@ -231,5 +231,33 @@
     "verseRef": "18:95",
     "arabic": "قَالَ مَا مَكَّنِّى فِيهِ رَبِّى خَيْرٌۭ فَأَعِينُونِى بِقُوَّةٍ أَجْعَلْ بَيْنَكُمْ وَبَيْنَهُمْ رَدْمًا",
     "verse": "He said, \"That in which my Lord has established me is better [than what you offer], but assist me with strength [i.e., manpower]; I will make between you and them a dam. (18:95)"
+  },
+  "scramble": {
+    "verseRef": "13:11",
+    "reference": "Ar-Ra'd (13:11)",
+    "segments": [
+      "إِنَّ اللَّهَ",
+      "لَا يُغَيِّرُ",
+      "مَا بِقَوْمٍ",
+      "حَتَّىٰ يُغَيِّرُوا",
+      "مَا بِأَنفُسِهِمْ"
+    ],
+    "translations": [
+      "Indeed, Allah",
+      "does not change",
+      "the condition of a people",
+      "until they change",
+      "what is within themselves"
+    ],
+    "hint": "This verse highlights the principle of personal and collective responsibility for change and improvement.",
+    "arabic": "لَهُۥ مُعَقِّبَـٰتٌۭ مِّنۢ بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِۦ يَحْفَظُونَهُۥ مِنْ أَمْرِ ٱللَّهِ ۗ إِنَّ ٱللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ۗ وَإِذَآ أَرَادَ ٱللَّهُ بِقَوْمٍۢ سُوٓءًۭا فَلَا مَرَدَّ لَهُۥ ۚ وَمَا لَهُم مِّن دُونِهِۦ مِن وَالٍ",
+    "words": [
+      "لَهُۥ مُعَقِّبَـٰتٌۭ مِّنۢ بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِۦ يَحْفَظُونَهُۥ",
+      "مِنْ أَمْرِ ٱللَّهِ ۗ إِنَّ ٱللَّهَ لَا يُغَيِّرُ",
+      "مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ۗ وَإِذَآ",
+      "أَرَادَ ٱللَّهُ بِقَوْمٍۢ سُوٓءًۭا فَلَا مَرَدَّ لَهُۥ",
+      "ۚ وَمَا لَهُم مِّن دُونِهِۦ مِن وَالٍ"
+    ],
+    "verseEn": "For him [i.e., each one] are successive [angels] before and behind him who protect him by the decree of Allāh. Indeed, Allāh will not change the condition of a people until they change what is in themselves. And when Allāh intends for a people ill, there is no repelling it. And there is not for them besides Him any patron."
   }
 }
