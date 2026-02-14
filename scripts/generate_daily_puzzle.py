@@ -713,23 +713,24 @@ def validate_deduction(puzzle, history):
         else:
             errors.append("Missing 'verseRef' field")
 
-    # Gender-leak check in title and intro
-    gender_words = [
-        'he ', 'she ', 'him ', 'her ', 'his ', 'hers ',
-        ' he ', ' she ', ' him ', ' her ', ' his ', ' hers ',
-        'king', 'queen', 'mother', 'father', 'son ', 'daughter',
-        'wife', 'husband', 'woman', ' man ', 'prince', 'princess',
-        'boy ', 'girl ', 'brother', 'sister',
+    # Gender-leak check in title and intro (using word boundaries to avoid false positives)
+    gender_patterns = [
+        r'\bhe\b', r'\bshe\b', r'\bhim\b', r'\bher\b', r'\bhis\b', r'\bhers\b',
+        r'\bking\b', r'\bqueen\b', r'\bmother\b', r'\bfather\b', r'\bson\b', r'\bdaughter\b',
+        r'\bwife\b', r'\bhusband\b', r'\bwoman\b', r'\bman\b', r'\bprince\b', r'\bprincess\b',
+        r'\bboy\b', r'\bgirl\b', r'\bbrother\b', r'\bsister\b',
     ]
     title_lower = puzzle.get("title", "").lower()
     intro_lower = puzzle.get("intro", "").lower()
-    for gw in gender_words:
-        if gw in title_lower or gw in f" {title_lower} ":
-            warnings.append(f"Title may reveal gender (contains '{gw.strip()}')")
+    for gp in gender_patterns:
+        match = re.search(gp, title_lower)
+        if match:
+            warnings.append(f"Title may reveal gender (contains '{match.group()}')")
             break
-    for gw in gender_words:
-        if gw in intro_lower or gw in f" {intro_lower} ":
-            cooldown_violations.append(f"Intro reveals gender (contains '{gw.strip()}'). Must be gender-neutral.")
+    for gp in gender_patterns:
+        match = re.search(gp, intro_lower)
+        if match:
+            cooldown_violations.append(f"Intro reveals gender (contains '{match.group()}'). Must be gender-neutral.")
             break
 
     # Cooldown
