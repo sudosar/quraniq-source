@@ -466,10 +466,11 @@ function getPlayerId() {
 
 /**
  * Calculate the player's overall score (0-100) based on their stats.
- * Formula: 40% win rate + 30% streak (cap 15) + 30% games played (cap 30)
+ * Formula: 25% win rate + 15% streak (cap 15) + 20% games (cap 100) + 20% Quran% + 20% days active (cap 60)
  */
 function calculatePlayerScore() {
     const stats = loadStats();
+    const verseStats = getVerseStats();
     const modes = ['connections', 'wordle', 'deduction', 'scramble'];
     let totalPlayed = 0, totalWon = 0, bestStreak = 0;
     modes.forEach(m => {
@@ -480,8 +481,11 @@ function calculatePlayerScore() {
     });
     const winRate = totalPlayed > 0 ? totalWon / totalPlayed : 0;
     const streakFactor = Math.min(bestStreak / 15, 1);
-    const gamesFactor = Math.min(totalPlayed / 30, 1);
-    return Math.round(winRate * 40 + streakFactor * 30 + gamesFactor * 30);
+    const gamesFactor = Math.min(totalPlayed / 100, 1);
+    const quranFactor = Math.min((verseStats.quranPercent || 0) / 100, 1);
+    const daysActive = Math.ceil(totalPlayed / 4);
+    const daysFactor = Math.min(daysActive / 60, 1);
+    return Math.round(winRate * 25 + streakFactor * 15 + gamesFactor * 20 + quranFactor * 20 + daysFactor * 20);
 }
 
 /**

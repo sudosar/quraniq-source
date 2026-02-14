@@ -669,33 +669,44 @@ function startCountdown() {
 // ==================== PERFORMANCE INSIGHTS ====================
 
 /**
- * Calculate a performance score (0-100) based on win rate, streak, and games played.
- * Balanced formula: 40% win rate, 30% best streak, 30% experience.
- * Rewards consistent daily play and long-term engagement.
+ * Calculate a performance score (0-100) based on 5 factors:
+ * 25% win rate, 15% best streak, 20% games played, 20% Quran % explored, 20% days active.
+ * Rewards skill, consistency, volume, and Quranic exploration.
  * This is a local-only score — no server needed.
  */
-function calculateScore(winRate, maxStreak, played) {
+function calculateScore(winRate, maxStreak, played, quranPercent, daysActive) {
     if (played === 0) return 0;
-    const streakBonus = Math.min(maxStreak / 15, 1);
-    const gamesBonus = Math.min(played / 30, 1);
-    const raw = (winRate * 0.40) + (streakBonus * 0.30) + (gamesBonus * 0.30);
+    const streakFactor = Math.min(maxStreak / 15, 1);
+    const gamesFactor = Math.min(played / 100, 1);
+    const quranFactor = Math.min((quranPercent || 0) / 100, 1);
+    const daysFactor = Math.min((daysActive || 0) / 60, 1);
+    const raw = (winRate * 0.25) + (streakFactor * 0.15) + (gamesFactor * 0.20) + (quranFactor * 0.20) + (daysFactor * 0.20);
     return Math.max(1, Math.min(99, Math.round(raw * 100)));
 }
 
-function getScholarTitle(score, totalPlayed) {
+/**
+ * Determine the scholar title based on score AND minimum milestone requirements.
+ * Each tier requires both a minimum score and minimum engagement thresholds.
+ */
+function getScholarTitle(score, totalPlayed, maxStreak, quranPercent, daysActive) {
     if (totalPlayed === 0) return { title: 'New Student', emoji: '📖', desc: 'Play your first game to begin your journey!' };
-    if (score >= 85) return { title: 'Hafiz', emoji: '🌟', desc: 'Exceptional mastery across all challenges' };
-    if (score >= 70) return { title: 'Quranic Scholar', emoji: '🏆', desc: 'Deep understanding and consistent excellence' };
-    if (score >= 55) return { title: 'Dedicated Learner', emoji: '📚', desc: 'Strong performance with room to grow' };
-    if (score >= 40) return { title: 'Rising Student', emoji: '🌱', desc: 'Building a solid foundation' };
-    if (score >= 20) return { title: 'Eager Seeker', emoji: '🔍', desc: 'Every puzzle brings you closer to knowledge' };
+    if (score >= 85 && totalPlayed >= 200 && daysActive >= 60 && quranPercent >= 10 && maxStreak >= 15)
+        return { title: 'Hafiz', emoji: '🌟', desc: 'Exceptional mastery across all challenges' };
+    if (score >= 70 && totalPlayed >= 100 && daysActive >= 30 && quranPercent >= 5 && maxStreak >= 10)
+        return { title: 'Quranic Scholar', emoji: '🏆', desc: 'Deep understanding and consistent excellence' };
+    if (score >= 55 && totalPlayed >= 40 && daysActive >= 14 && quranPercent >= 2 && maxStreak >= 5)
+        return { title: 'Dedicated Learner', emoji: '📚', desc: 'Strong performance with room to grow' };
+    if (score >= 35 && totalPlayed >= 16 && daysActive >= 7 && quranPercent >= 0.5 && maxStreak >= 3)
+        return { title: 'Rising Student', emoji: '🌱', desc: 'Building a solid foundation' };
+    if (score >= 20 && totalPlayed >= 4 && daysActive >= 2 && maxStreak >= 1)
+        return { title: 'Eager Seeker', emoji: '🔍', desc: 'Every puzzle brings you closer to knowledge' };
     return { title: 'Beginner', emoji: '✨', desc: 'The journey of a thousand miles begins with a single step' };
 }
 
 function getGameInsight(mode, stats) {
     if (stats.played === 0) return null;
     const winRate = stats.won / stats.played;
-    const score = calculateScore(winRate, stats.maxStreak, stats.played);
+    const score = calculateScore(winRate, stats.maxStreak, stats.played, 0, 0);
 
     const modeNames = {
         connections: 'Ayah Connections',
@@ -749,8 +760,10 @@ function renderPerformanceInsights() {
     });
 
     const overallWinRate = totalPlayed > 0 ? totalWon / totalPlayed : 0;
-    const overallScore = calculateScore(overallWinRate, bestStreak, totalPlayed);
-    const scholar = getScholarTitle(overallScore, totalPlayed);
+    const verseStats = getVerseStats();
+    const daysActive = Math.ceil(totalPlayed / 4); // approximate: 4 games per day
+    const overallScore = calculateScore(overallWinRate, bestStreak, totalPlayed, verseStats.quranPercent, daysActive);
+    const scholar = getScholarTitle(overallScore, totalPlayed, bestStreak, verseStats.quranPercent, daysActive);
 
     // Find strongest and weakest games
     let strongest = null, weakest = null;
@@ -762,9 +775,6 @@ function renderPerformanceInsights() {
 
     // Verses are tracked only on active engagement (audio play, word tap)
     // Cooling period uses server-side history in data/history/, not client-side tracking
-
-    // Get verse stats
-    const verseStats = getVerseStats();
 
     // Build HTML
     let html = '';
