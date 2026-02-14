@@ -1,65 +1,66 @@
 {
-  "date": "2026-02-13",
+  "date": "2026-02-14",
   "puzzle": {
-    "title": "The Sovereign's Grand Submission",
-    "intro": "You find yourself in a land of ancient wonders and profound revelation. A powerful ruler, faced with an unexpected invitation, embarked on a journey that would change the course of her destiny and the faith of her people. Can you uncover the identity of this majestic figure?",
+    "title": "The Builder of Barriers",
+    "intro": "Across vast lands, a powerful individual embarked on a series of expeditions, granted immense authority and means. This soul encountered diverse communities and faced unique challenges, leaving a lasting mark on history and faith through their actions and wisdom, all while acknowledging the true source of their strength.",
     "clues": [
-      "I ruled over a prosperous kingdom, adorned with immense wealth and a magnificent throne.",
-      "My people and I worshipped a celestial body, believing it to be our lord, though I harbored doubts in my heart.",
-      "A peculiar messenger, a bird, delivered a letter to me, calling me and my people to submission to the One God.",
-      "I consulted my advisors, who were mighty in strength, about how to respond to this unprecedented message.",
-      "I decided to send a valuable gift to the one who sent the letter, hoping to gauge his power and intentions.",
-      "Upon my arrival, I was astonished by a palace with a floor made of glass, appearing as a pool of water, and it was then that I declared my submission to the Lord of all creation."
+      "I was granted power and means over everything, and I followed a way.",
+      "My journey took me to the setting place of the sun, where I found a people.",
+      "I encountered a community who could barely understand speech, residing between two mountains.",
+      "I was asked to build a barrier, not for personal gain, but to protect against a destructive force.",
+      "I declared that the strength to build this massive wall came from Allah, and it would stand until a promised time.",
+      "My name, often translated as 'The Two-Horned One,' signifies my reach across the earth or perhaps two distinct eras."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
+          "Prophet Musa",
+          "Prophet Sulayman",
+          "Dhul-Qarnayn",
           "Pharaoh",
-          "Queen of Sheba",
-          "Dhu al-Qarnayn",
-          "Luqman",
-          "Prophet Yusuf"
+          "Luqman"
         ],
-        "answer": "Queen of Sheba"
+        "answer": "Dhul-Qarnayn"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "The splitting of the sea",
-          "The great flood",
-          "The journey to meet Prophet Sulayman",
-          "The destruction of the people of Lut",
-          "The burning of Prophet Ibrahim"
+          "Receiving revelation",
+          "Facing a tyrant",
+          "Building a great ship",
+          "Constructing a mighty barrier",
+          "Being swallowed by a fish"
         ],
-        "answer": "The journey to meet Prophet Sulayman"
+        "answer": "Constructing a mighty barrier"
       },
       "location": {
         "label": "Key Element",
         "options": [
           "The Ark",
           "The Staff",
-          "The Throne",
-          "The Mountain",
-          "The Fire"
+          "The Iron Barrier",
+          "The River Nile",
+          "The Throne"
         ],
-        "answer": "The Throne"
+        "answer": "The Iron Barrier"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Became a prophet",
-          "Was destroyed by Allah",
-          "Embraced Islam",
-          "Led her people to war",
-          "Built a grand temple"
+          "Salvation from flood",
+          "Becoming a great kingdom",
+          "Protection for a people",
+          "Destruction of an oppressor",
+          "Enduring wisdom"
         ],
-        "answer": "Embraced Islam"
+        "answer": "Protection for a people"
       }
     },
-    "verseRef": "27:23",
-    "arabic": "إِنِّى وَجَدتُّ ٱمْرَأَةًۭ تَمْلِكُهُمْ وَأُوتِيَتْ مِن كُلِّ شَىْءٍۢ وَلَهَا عَرْشٌ عَظِيمٌۭ",
-    "verse": "Indeed, I found a woman ruling them and she has been given of every thing and for her (is) a throne great (23) (27:23)"
+    "verseRef": "18:95",
+    "arabic": "قَالَ مَا مَكَّنِّى فِيهِ رَبِّى خَيْرٌۭ فَأَعِينُونِى بِقُوَّةٍ أَجْعَلْ بَيْنَكُمْ وَبَيْنَهُمْ رَدْمًا",
+    "verse": "He said, \"That in which my Lord has established me is better [than what you offer], but assist me with strength [i.e., manpower]; I will make between you and them a dam. (18:95)"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
