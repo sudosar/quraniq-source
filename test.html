@@ -622,11 +622,10 @@
             const modeName = modeMap[prefix] || prefix;
             if (!confirm(`Reset ${name} progress for today? This will clear your game state and allow a new score submission. Other games are not affected.`)) return;
 
-            // Find the day number (same logic as main app)
-            const startDate = new Date('2025-01-26T00:00:00');
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-            const dayNumber = Math.floor((today - startDate) / 86400000);
+            // Find the day number (same logic as main app: EPOCH = Jan 1 2025 UTC)
+            const EPOCH = Date.UTC(2025, 0, 1);
+            const DAY_MS = 86400000;
+            const dayNumber = Math.floor((Date.now() - EPOCH) / DAY_MS);
 
             let stateReset = false;
             let statsReset = false;
