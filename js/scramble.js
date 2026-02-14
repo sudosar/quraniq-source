@@ -16,7 +16,8 @@ const scr = {
     maxHints: 3,
     revealedHints: {},  // index -> true for segments whose English has been revealed
     gameOver: false,
-    won: false
+    won: false,
+    lastChecked: null   // track last checked arrangement to prevent duplicate deductions
 };
 
 function initScramble() {
@@ -67,6 +68,7 @@ function setupScrambleGame() {
         scr.available = shuffle([...scr.puzzle.words]);
         scr.placed = [];
         scr.revealedHints = {};
+        scr.lastChecked = null;
     }
 
     renderScramble();
@@ -319,6 +321,7 @@ function checkScramble() {
     if (isCorrect) {
         scr.won = true;
         scr.gameOver = true;
+        scr.lastChecked = null;
         // Animate correct
         document.querySelectorAll('#scramble-dropzone .scramble-word').forEach(el => {
             el.classList.add('correct-pos');
@@ -328,6 +331,14 @@ function checkScramble() {
         announce('Correct! Verse complete!');
         setTimeout(() => showScrResult(), 800);
     } else {
+        // Check if this is the same arrangement as last check — don't deduct again
+        const currentArrangement = scr.placed.join('|');
+        if (scr.lastChecked === currentArrangement) {
+            showToast('Rearrange the words before checking again');
+            return;
+        }
+        scr.lastChecked = currentArrangement;
+
         // Wrong guess — this costs an attempt
         scr.moves++;
 

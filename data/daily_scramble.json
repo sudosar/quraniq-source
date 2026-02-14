@@ -1,29 +1,33 @@
 {
   "date": "2026-02-14",
   "puzzle": {
-    "verseRef": "65:2",
-    "reference": "Surah At-Talaq (65:2)",
+    "verseRef": "13:11",
+    "reference": "Ar-Ra'd (13:11)",
     "segments": [
-      "وَمَن يَتَّقِ",
-      "اللَّهَ",
-      "يَجْعَل لَّهُ",
-      "مَخْرَجًا"
+      "إِنَّ اللَّهَ",
+      "لَا يُغَيِّرُ",
+      "مَا بِقَوْمٍ",
+      "حَتَّىٰ يُغَيِّرُوا",
+      "مَا بِأَنفُسِهِمْ"
     ],
     "translations": [
-      "And whoever fears",
-      "Allah",
-      "He will make for him",
-      "a way out"
+      "Indeed, Allah",
+      "does not change",
+      "the condition of a people",
+      "until they change",
+      "what is within themselves"
     ],
-    "hint": "This verse highlights the blessings of Taqwa (God-consciousness) in overcoming life's challenges and finding solutions.",
-    "arabic": "فَإِذَا بَلَغْنَ أَجَلَهُنَّ فَأَمْسِكُوهُنَّ بِمَعْرُوفٍ أَوْ فَارِقُوهُنَّ بِمَعْرُوفٍۢ وَأَشْهِدُوا۟ ذَوَىْ عَدْلٍۢ مِّنكُمْ وَأَقِيمُوا۟ ٱلشَّهَـٰدَةَ لِلَّهِ ۚ ذَٰلِكُمْ يُوعَظُ بِهِۦ مَن كَانَ يُؤْمِنُ بِٱللَّهِ وَٱلْيَوْمِ ٱلْـَٔاخِرِ ۚ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا",
+    "hint": "This verse highlights the principle of personal and collective responsibility for change and improvement.",
+    "arabic": "لَهُۥ مُعَقِّبَـٰتٌۭ مِّنۢ بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِۦ يَحْفَظُونَهُۥ مِنْ أَمْرِ ٱللَّهِ ۗ إِنَّ ٱللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ۗ وَإِذَآ أَرَادَ ٱللَّهُ بِقَوْمٍۢ سُوٓءًۭا فَلَا مَرَدَّ لَهُۥ ۚ وَمَا لَهُم مِّن دُونِهِۦ مِن وَالٍ",
     "words": [
-      "فَإِذَا بَلَغْنَ أَجَلَهُنَّ فَأَمْسِكُوهُنَّ بِمَعْرُوفٍ أَوْ فَارِقُوهُنَّ بِمَعْرُوفٍۢ",
-      "وَأَشْهِدُوا۟ ذَوَىْ عَدْلٍۢ مِّنكُمْ وَأَقِيمُوا۟ ٱلشَّهَـٰدَةَ لِلَّهِ ۚ",
-      "ذَٰلِكُمْ يُوعَظُ بِهِۦ مَن كَانَ يُؤْمِنُ بِٱللَّهِ وَٱلْيَوْمِ",
-      "ٱلْـَٔاخِرِ ۚ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا"
+      "لَهُۥ مُعَقِّبَـٰتٌۭ مِّنۢ بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِۦ يَحْفَظُونَهُۥ",
+      "مِنْ أَمْرِ ٱللَّهِ ۗ إِنَّ ٱللَّهَ لَا يُغَيِّرُ",
+      "مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ۗ وَإِذَآ",
+      "أَرَادَ ٱللَّهُ بِقَوْمٍۢ سُوٓءًۭا فَلَا مَرَدَّ لَهُۥ",
+      "ۚ وَمَا لَهُم مِّن دُونِهِۦ مِن وَالٍ"
     ],
-    "verseEn": "And when they have [nearly] fulfilled their term, either retain them according to acceptable terms or part with them according to acceptable terms. And bring to witness two just men from among you and establish the testimony for [the acceptance of] Allāh. That is instructed to whoever should believe in Allāh and the Last Day. And whoever fears Allāh - He will make for him a way out"
+    "verseEn": "For him [i.e., each one] are successive [angels] before and behind him who protect him by the decree of Allāh. Indeed, Allāh will not change the condition of a people until they change what is in themselves. And when Allāh intends for a people ill, there is no repelling it. And there is not for them besides Him any patron."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
