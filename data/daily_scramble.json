@@ -1,32 +1,29 @@
 {
   "date": "2026-02-14",
   "puzzle": {
-    "verseRef": "13:11",
-    "reference": "Ar-Ra'd (13:11)",
+    "verseRef": "3:139",
+    "reference": "Surah Al-Imran (3:139)",
     "segments": [
-      "إِنَّ اللَّهَ",
-      "لَا يُغَيِّرُ",
-      "مَا بِقَوْمٍ",
-      "حَتَّىٰ يُغَيِّرُوا",
-      "مَا بِأَنفُسِهِمْ"
+      "وَلَا تَهِنُوا",
+      "وَلَا تَحْزَنُوا",
+      "وَأَنتُمُ الْأَعْلَوْنَ",
+      "إِن كُنتُم مُّؤْمِنِينَ"
     ],
     "translations": [
-      "Indeed, Allah",
-      "does not change",
-      "the condition of a people",
-      "until they change",
-      "what is within themselves"
+      "And (do) not weaken and (do) not",
+      "grieve and you (will be)",
+      "[the] superior if",
+      "you are believers"
     ],
-    "hint": "This verse highlights the principle of personal and collective responsibility for change and improvement.",
-    "arabic": "لَهُۥ مُعَقِّبَـٰتٌۭ مِّنۢ بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِۦ يَحْفَظُونَهُۥ مِنْ أَمْرِ ٱللَّهِ ۗ إِنَّ ٱللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ۗ وَإِذَآ أَرَادَ ٱللَّهُ بِقَوْمٍۢ سُوٓءًۭا فَلَا مَرَدَّ لَهُۥ ۚ وَمَا لَهُم مِّن دُونِهِۦ مِن وَالٍ",
+    "hint": "This verse offers encouragement to believers, reminding them of their elevated status and urging them not to despair in the face of challenges.",
+    "arabic": "وَلَا تَهِنُوا۟ وَلَا تَحْزَنُوا۟ وَأَنتُمُ ٱلْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ",
     "words": [
-      "لَهُۥ مُعَقِّبَـٰتٌۭ مِّنۢ بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِۦ يَحْفَظُونَهُۥ",
-      "مِنْ أَمْرِ ٱللَّهِ ۗ إِنَّ ٱللَّهَ لَا يُغَيِّرُ",
-      "مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ۗ وَإِذَآ",
-      "أَرَادَ ٱللَّهُ بِقَوْمٍۢ سُوٓءًۭا فَلَا مَرَدَّ لَهُۥ",
-      "ۚ وَمَا لَهُم مِّن دُونِهِۦ مِن وَالٍ"
+      "وَلَا تَهِنُوا۟ وَلَا",
+      "تَحْزَنُوا۟ وَأَنتُمُ",
+      "ٱلْأَعْلَوْنَ إِن",
+      "كُنتُم مُّؤْمِنِينَ"
     ],
-    "verseEn": "For him [i.e., each one] are successive [angels] before and behind him who protect him by the decree of Allāh. Indeed, Allāh will not change the condition of a people until they change what is in themselves. And when Allāh intends for a people ill, there is no repelling it. And there is not for them besides Him any patron."
+    "verseEn": "So do not weaken and do not grieve, and you will be superior if you are [true] believers."
   },
   "generated": true,
   "model": "auto (chain)"

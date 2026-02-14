@@ -231,5 +231,30 @@
     "verseRef": "18:95",
     "arabic": "قَالَ مَا مَكَّنِّى فِيهِ رَبِّى خَيْرٌۭ فَأَعِينُونِى بِقُوَّةٍ أَجْعَلْ بَيْنَكُمْ وَبَيْنَهُمْ رَدْمًا",
     "verse": "He said, \"That in which my Lord has established me is better [than what you offer], but assist me with strength [i.e., manpower]; I will make between you and them a dam. (18:95)"
+  },
+  "scramble": {
+    "verseRef": "3:139",
+    "reference": "Surah Al-Imran (3:139)",
+    "segments": [
+      "وَلَا تَهِنُوا",
+      "وَلَا تَحْزَنُوا",
+      "وَأَنتُمُ الْأَعْلَوْنَ",
+      "إِن كُنتُم مُّؤْمِنِينَ"
+    ],
+    "translations": [
+      "And (do) not weaken and (do) not",
+      "grieve and you (will be)",
+      "[the] superior if",
+      "you are believers"
+    ],
+    "hint": "This verse offers encouragement to believers, reminding them of their elevated status and urging them not to despair in the face of challenges.",
+    "arabic": "وَلَا تَهِنُوا۟ وَلَا تَحْزَنُوا۟ وَأَنتُمُ ٱلْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ",
+    "words": [
+      "وَلَا تَهِنُوا۟ وَلَا",
+      "تَحْزَنُوا۟ وَأَنتُمُ",
+      "ٱلْأَعْلَوْنَ إِن",
+      "كُنتُم مُّؤْمِنِينَ"
+    ],
+    "verseEn": "So do not weaken and do not grieve, and you will be superior if you are [true] believers."
   }
 }
