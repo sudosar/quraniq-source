@@ -1584,27 +1584,39 @@ def generate_game(game_type, history, today):
 def main():
     today = datetime.utcnow().strftime("%Y-%m-%d")
 
-    # Check if already generated today
+    # Check if already generated today (supports partial regeneration)
     today_file = os.path.join(HISTORY_DIR, f"{today}.json")
+    existing_puzzles = {}
     if os.path.exists(today_file):
-        print(f"Puzzles for {today} already exist. Skipping generation.")
-        # Still write output files from history
         try:
             with open(today_file) as f:
-                all_puzzles = json.load(f)
-            for game_type, output_path in OUTPUT_FILES.items():
-                puzzle_data = all_puzzles.get(game_type)
-                if puzzle_data:
-                    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-                    with open(output_path, "w") as f:
-                        json.dump({
-                            "date": today,
-                            "puzzle": puzzle_data,
-                            "generated": True,
-                        }, f, ensure_ascii=False, indent=2)
-        except Exception as e:
-            print(f"Warning: Could not restore output files: {e}")
-        return 0
+                existing_puzzles = json.load(f)
+        except (json.JSONDecodeError, KeyError):
+            existing_puzzles = {}
+
+        # Check which core games already exist
+        core_games = ["connections", "wordle", "deduction", "scramble"]
+        missing_games = [g for g in core_games if g not in existing_puzzles]
+        if not missing_games:
+            print(f"All puzzles for {today} already exist. Skipping generation.")
+            # Still write output files from history
+            try:
+                for game_type, output_path in OUTPUT_FILES.items():
+                    puzzle_data = existing_puzzles.get(game_type)
+                    if puzzle_data:
+                        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+                        with open(output_path, "w") as f:
+                            json.dump({
+                                "date": today,
+                                "puzzle": puzzle_data,
+                                "generated": True,
+                            }, f, ensure_ascii=False, indent=2)
+            except Exception as e:
+                print(f"Warning: Could not restore output files: {e}")
+            return 0
+        else:
+            print(f"Partial history found for {today}. Missing: {', '.join(missing_games)}")
+            print(f"Will regenerate only missing games.")
 
     if not OPENAI_API_KEY and not GITHUB_TOKEN and not GEMINI_API_KEY:
         print("ERROR: No API credentials set.")
@@ -1654,17 +1666,24 @@ def main():
     else:
         print(f"\n  Juz Journey: Skipped (not during Ramadan)")
 
-    # Generate all games
-    all_puzzles = {}
+    # Generate all games (skip games already in partial history)
+    all_puzzles = dict(existing_puzzles)  # Start with any existing puzzles
     failed_games = []
+    generated_count = 0
 
     for i, game_type in enumerate(game_types):
-        # Wait 60s between games to respect rate limits
-        if i > 0:
+        # Skip games that already exist in today's history
+        if game_type in existing_puzzles:
+            print(f"\n  ✓ {GAME_CONFIGS[game_type]['label']}: already generated, skipping")
+            continue
+
+        # Wait 60s between API calls to respect rate limits
+        if generated_count > 0:
             print(f"\n  ⏳ Waiting 60 seconds before next game (rate limit)...")
             time.sleep(60)
 
         puzzle = generate_game(game_type, history, today)
+        generated_count += 1
         if puzzle:
             # Post-process: enrich with verse text from Quran API
             # Note: connections enrichment is done inside generate_game (word-in-verse validation)
