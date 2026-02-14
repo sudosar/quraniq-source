@@ -35,33 +35,69 @@ from datetime import datetime, timedelta
 
 # ── Arabic text helpers ────────────────────────────────────────────
 def normalize_arabic(text):
-    """Normalize Arabic text for comparison by stripping diacritics and special chars."""
-    text = re.sub(r'[\u064B-\u065F\u0670]', '', text)  # tashkeel
-    text = text.replace('\u0671', '\u0627').replace('\u0622', '\u0627')  # alef variants
-    text = text.replace('\u0623', '\u0627').replace('\u0625', '\u0627')
-    text = text.replace('\u0640', '')  # tatweel
-    text = re.sub(r'[\u06D6-\u06ED]', '', text)  # Quranic annotation marks
-    text = re.sub(r'[\u06DD\u06DE\u06DF\u06E0\u06E1\u06E2\u06E3\u06E4\u06E5\u06E6\u06E7\u06E8\u06E9\u06EA\u06EB\u06EC\u06ED]', '', text)
-    text = re.sub(r'[\u0615\u0616\u0617\u0618\u0619\u061A]', '', text)
-    text = re.sub(r'[\u06D6-\u06FF]', '', text)  # extended Arabic-B
+    """Normalize Arabic text for comparison — handles Uthmani vs standard script.
+    
+    The Quran API returns Uthmani script which uses special Unicode characters
+    (superscript alef, small waw/ya, alef wasla, etc.) that differ from the
+    standard Arabic script that LLMs typically generate.
+    """
+    # Convert Uthmani-specific characters to standard equivalents
+    text = text.replace('\u0670', '\u0627')  # superscript alef → alef
+    text = text.replace('\u06E5', '\u0648')  # small waw → waw
+    text = text.replace('\u06E6', '\u064A')  # small ya → ya
+    # Remove all diacritics (tashkeel)
+    text = re.sub(r'[\u0610-\u061A\u064B-\u065F]', '', text)
+    # Remove tatweel
+    text = text.replace('\u0640', '')
+    # Normalize alef variants to plain alef
+    text = re.sub(r'[\u0622\u0623\u0625\u0671\u0672\u0673\u0675]', '\u0627', text)
+    # Normalize ya variants (Farsi ya to Arabic ya)
+    text = text.replace('\u06CC', '\u064A')
+    # Normalize teh marbuta to heh
+    text = text.replace('\u0629', '\u0647')
+    # Remove zero-width characters
+    text = re.sub(r'[\u200B-\u200F\u202A-\u202E\u2060-\u2064\uFEFF]', '', text)
+    # Remove Uthmani annotation marks and extended Arabic-B
+    text = re.sub(r'[\u06D6-\u06FF]', '', text)
+    text = re.sub(r'[\u06E0-\u06EF]', '', text)
+    # Remove combining marks
+    text = re.sub(r'[\u0300-\u036F]', '', text)
+    # Collapse spaces
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
 
 def word_in_verse(word, verse_text):
-    """Check if an Arabic word appears in a verse, with normalization."""
+    """Check if an Arabic word appears in a verse, with Uthmani-aware normalization.
+    
+    Uses multiple strategies to match LLM-generated standard Arabic words
+    against Uthmani script verse text from the Quran API.
+    """
     w = normalize_arabic(word)
     v = normalize_arabic(verse_text)
     if not w or not v:
         return False
+    # 1. Exact normalized substring match
     if w in v:
         return True
-    # Try without alef-lam prefix
+    # 2. Try without alef-lam prefix
     if w.startswith('\u0627\u0644') and w[2:] in v:
         return True
-    # Try adding alef-lam prefix
+    # 3. Try adding alef-lam prefix
     if ('\u0627\u0644' + w) in v:
         return True
+    # 4. Try without trailing alef (tanween accusative marker كتابًا → كتاب)
+    if w.endswith('\u0627') and w[:-1] in v:
+        return True
+    # 5. Check if any verse word contains the search word or vice versa
+    for vw in v.split():
+        if w in vw or vw in w:
+            return True
+    # 6. 3-letter root overlap — catches verb/noun form differences
+    for vw in v.split():
+        for i in range(len(w) - 2):
+            if w[i:i+3] in vw:
+                return True
     return False
 
 
