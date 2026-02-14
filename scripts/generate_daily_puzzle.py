@@ -126,6 +126,7 @@ FALLBACK_PUZZLES = os.path.join(SCRIPT_DIR, "..", "puzzles.js")
 
 COOLING_DAYS = 365          # Default cooldown for most games
 DEDUCTION_COOLING_DAYS = 60 # Shorter cooldown for Who Am I (limited character pool ~70-200)
+SURAH_COOLING_DAYS = 30    # Surah-level cooldown for single-verse games (Scramble, Wordle, Deduction)
 MAX_RETRIES = 5
 COLORS = ["yellow", "green", "blue", "purple"]
 
@@ -164,12 +165,13 @@ def load_history():
     """
     cutoff_default = datetime.utcnow() - timedelta(days=COOLING_DAYS)
     cutoff_deduction = datetime.utcnow() - timedelta(days=DEDUCTION_COOLING_DAYS)
+    cutoff_surah = datetime.utcnow() - timedelta(days=SURAH_COOLING_DAYS)
 
     history = {
         "connections": {"themes": set(), "verses": set(), "words": set()},
-        "wordle": {"words": set(), "verses": set(), "hints": set(), "verseRefs": set()},
-        "deduction": {"titles": set(), "characters": set(), "verseRefs": set()},
-        "scramble": {"verses": set(), "references": set()},
+        "wordle": {"words": set(), "verses": set(), "hints": set(), "verseRefs": set(), "surahs": set()},
+        "deduction": {"titles": set(), "characters": set(), "verseRefs": set(), "surahs": set()},
+        "scramble": {"verses": set(), "references": set(), "surahs": set()},
         "juz": {"juz_numbers": set(), "verses": set()},
         "all_verses": set(),  # Global cross-game verse deduplication
     }
@@ -223,15 +225,14 @@ def load_history():
             if wdl.get("verse"):
                 history["wordle"]["verses"].add(wdl.get("verse", ""))
             # Track verse ref (new field)
-            if wdl.get("verseRef"):
-                history["wordle"]["verseRefs"].add(wdl["verseRef"])
-                history["all_verses"].add(wdl["verseRef"])
-            else:
-                # Backwards compat: try to extract ref from verse string
-                ref = extract_ref(wdl.get("verse", ""))
-                if ref:
-                    history["wordle"]["verseRefs"].add(ref)
-                    history["all_verses"].add(ref)
+            wdl_ref = wdl.get("verseRef") or extract_ref(wdl.get("verse", ""))
+            if wdl_ref:
+                history["wordle"]["verseRefs"].add(wdl_ref)
+                history["all_verses"].add(wdl_ref)
+                # Surah-level cooldown (30 days)
+                if fdate >= cutoff_surah:
+                    surah_num = wdl_ref.split(":")[0]
+                    history["wordle"]["surahs"].add(surah_num)
 
         # Deduction history (60-day cooldown — only load within deduction window)
         ded = data.get("deduction")
@@ -244,24 +245,27 @@ def load_history():
                 if identity_cat.get("answer"):
                     history["deduction"]["characters"].add(identity_cat["answer"])
             # Track verse ref (new field)
-            if ded.get("verseRef"):
-                history["deduction"]["verseRefs"].add(ded["verseRef"])
-                history["all_verses"].add(ded["verseRef"])
-            else:
-                # Backwards compat: try to extract ref from verse string
-                ref = extract_ref(ded.get("verse", ""))
-                if ref:
-                    history["deduction"]["verseRefs"].add(ref)
-                    history["all_verses"].add(ref)
+            ded_ref = ded.get("verseRef") or extract_ref(ded.get("verse", ""))
+            if ded_ref:
+                history["deduction"]["verseRefs"].add(ded_ref)
+                history["all_verses"].add(ded_ref)
+                # Surah-level cooldown (30 days)
+                if fdate >= cutoff_surah:
+                    surah_num = ded_ref.split(":")[0]
+                    history["deduction"]["surahs"].add(surah_num)
 
         # Scramble history (365-day cooldown)
         scr = data.get("scramble")
         if scr:
             if scr.get("reference"):
                 history["scramble"]["references"].add(scr["reference"])
-                ref = extract_ref(scr["reference"])
-                if ref:
-                    history["all_verses"].add(ref)
+            scr_ref = scr.get("verseRef") or extract_ref(scr.get("reference", ""))
+            if scr_ref:
+                history["all_verses"].add(scr_ref)
+                # Surah-level cooldown (30 days)
+                if fdate >= cutoff_surah:
+                    surah_num = scr_ref.split(":")[0]
+                    history["scramble"]["surahs"].add(surah_num)
             if scr.get("arabic"):
                 history["scramble"]["verses"].add(scr["arabic"])
 
@@ -601,6 +605,7 @@ def build_wordle_prompt(history, previous_violations=None):
     # Merge game-specific + global verse refs
     all_avoided = history["wordle"]["verseRefs"] | history["all_verses"]
     avoided_refs = ", ".join(sorted(all_avoided)) or "(none)"
+    avoided_surahs = ", ".join(sorted(history["wordle"]["surahs"], key=lambda x: int(x))) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -625,6 +630,8 @@ RULES:
 FORBIDDEN words (used recently): {avoided_words}
 
 FORBIDDEN verse refs (used recently — includes ALL games): {avoided_refs}
+
+FORBIDDEN surahs (used in last 30 days — pick a DIFFERENT surah): {avoided_surahs}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -640,6 +647,7 @@ IMPORTANT:
 - The word without diacritics must be 3-5 letters
 - The hint should be clever but not too obscure
 - Choose words that are meaningful Islamic concepts
+- The verse MUST be from a surah NOT in the forbidden surahs list
 - Do NOT include full verse text — only the ref. Verse text will be looked up separately."""
 
 
@@ -676,6 +684,10 @@ def validate_wordle(puzzle, history):
             cooldown_violations.append(f"Verse ref '{verse_ref}' reused (wordle cooldown)")
         elif verse_ref in history["all_verses"]:
             cooldown_violations.append(f"Verse ref '{verse_ref}' reused (cross-game cooldown)")
+        # Surah-level cooldown (30 days)
+        surah_num = verse_ref.split(":")[0]
+        if surah_num in history["wordle"]["surahs"]:
+            cooldown_violations.append(f"Surah {surah_num} reused (30-day surah cooldown)")
 
     return errors, cooldown_violations, warnings
 
@@ -689,6 +701,7 @@ def build_deduction_prompt(history, previous_violations=None):
     # Merge game-specific + global verse refs
     all_avoided = history["deduction"]["verseRefs"] | history["all_verses"]
     avoided_refs = ", ".join(sorted(all_avoided)) or "(none)"
+    avoided_surahs = ", ".join(sorted(history["deduction"]["surahs"], key=lambda x: int(x))) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -726,6 +739,8 @@ FORBIDDEN titles (used recently): {avoided_titles}
 FORBIDDEN characters (used recently): {avoided_characters}
 
 FORBIDDEN verse refs (used recently — includes ALL games): {avoided_refs}
+
+FORBIDDEN surahs (used in last 30 days — pick a DIFFERENT surah): {avoided_surahs}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -835,6 +850,10 @@ def validate_deduction(puzzle, history):
             cooldown_violations.append(f"Verse ref '{verse_ref}' reused (deduction cooldown)")
         elif verse_ref in history["all_verses"]:
             cooldown_violations.append(f"Verse ref '{verse_ref}' reused (cross-game cooldown)")
+        # Surah-level cooldown (30 days)
+        surah_num = verse_ref.split(":")[0]
+        if surah_num in history["deduction"]["surahs"]:
+            cooldown_violations.append(f"Surah {surah_num} reused (30-day surah cooldown)")
 
     return errors, cooldown_violations, warnings
 
@@ -852,6 +871,7 @@ def build_scramble_prompt(history, previous_violations=None):
             all_avoided.add(extracted)
     all_avoided |= history["all_verses"]
     avoided_refs = ", ".join(sorted(all_avoided)) or "(none)"
+    avoided_surahs = ", ".join(sorted(history["scramble"]["surahs"], key=lambda x: int(x))) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -859,21 +879,36 @@ def build_scramble_prompt(history, previous_violations=None):
 
 CRITICAL — PREVIOUS ATTEMPT FAILED:
 {chr(10).join('  ✗ ' + v for v in previous_violations)}
-Choose a completely different verse."""
+Choose a completely different verse from a DIFFERENT surah."""
 
     return f"""You are an expert Islamic scholar creating a daily "Ayah Scramble" puzzle.
 
-TASK: Choose a well-known Quranic verse for a scramble game.
+TASK: Choose a significant, well-known Quranic verse for a scramble game.
 Players will rearrange Arabic segments to reconstruct the original verse.
 
+VERSE SELECTION GUIDANCE:
+Pick verses of significance — ones that Muslims commonly memorize, reflect upon, or cite.
+Examples of the kind of verses to choose (DO NOT use these exact ones if forbidden):
+- Verses about Allah's attributes (e.g. Ayat al-Kursi style, Surah Ikhlas style)
+- Verses with powerful promises or warnings
+- Verses about patience, gratitude, tawakkul, or taqwa
+- Verses telling key moments in prophetic stories
+- Verses with well-known du'as (supplications)
+- Verses about the signs of creation (sun, moon, mountains, seas)
+- Verses about justice, charity, or family
+Avoid obscure legal/inheritance detail verses or repetitive transitional phrases.
+
 RULES:
-1. Choose a meaningful, well-known Quranic verse (5-15 words long)
+1. Choose a meaningful, significant Quranic verse (5-15 words long)
 2. Provide the verse reference in surah:ayah format (e.g. "2:152")
 3. Split the verse into 4-7 consecutive segments (1-3 words each)
 4. For each segment, provide its English translation
 5. Provide a hint about the verse's theme
+6. The verse MUST be from a surah NOT in the forbidden surahs list below
 
 FORBIDDEN verse refs (used recently — includes ALL games): {avoided_refs}
+
+FORBIDDEN surahs (used in last 30 days — pick a DIFFERENT surah): {avoided_surahs}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -891,7 +926,8 @@ IMPORTANT:
 - The "segments" array describes how to split the verse (e.g. ["words 1-2", "words 3-4", "words 5-7"])
   OR provide the Arabic segments directly — they will be verified against the API
 - translations array must have same length as segments array
-- The verse reference must be real and accurate"""
+- The verse reference must be real and accurate
+- The verse MUST be from a surah NOT in the forbidden surahs list"""
 
 
 def validate_scramble(puzzle, history):
@@ -922,6 +958,10 @@ def validate_scramble(puzzle, history):
     if verse_ref:
         if verse_ref in history["all_verses"]:
             cooldown_violations.append(f"Verse ref '{verse_ref}' reused (cross-game cooldown)")
+        # Surah-level cooldown (30 days)
+        surah_num = verse_ref.split(":")[0]
+        if surah_num in history["scramble"]["surahs"]:
+            cooldown_violations.append(f"Surah {surah_num} reused (30-day surah cooldown)")
 
     return errors, cooldown_violations, warnings
 
@@ -1591,12 +1631,14 @@ def main():
     print(f"  Connections: {len(history['connections']['themes'])} themes, "
           f"{len(history['connections']['verses'])} verses")
     print(f"  Harf by Harf: {len(history['wordle']['words'])} words, "
-          f"{len(history['wordle']['verseRefs'])} verse refs")
+          f"{len(history['wordle']['verseRefs'])} verse refs, "
+          f"{len(history['wordle']['surahs'])} surahs blocked (30-day)")
     print(f"  Deduction: {len(history['deduction']['titles'])} titles, "
           f"{len(history['deduction']['characters'])} characters, "
-          f"{len(history['deduction']['verseRefs'])} verse refs "
-          f"(60-day cooldown)")
-    print(f"  Scramble: {len(history['scramble']['references'])} references")
+          f"{len(history['deduction']['verseRefs'])} verse refs, "
+          f"{len(history['deduction']['surahs'])} surahs blocked (30-day)")
+    print(f"  Scramble: {len(history['scramble']['references'])} references, "
+          f"{len(history['scramble']['surahs'])} surahs blocked (30-day)")
     print(f"  Juz Journey: {len(history['juz']['juz_numbers'])} juz, "
           f"{len(history['juz']['verses'])} verses")
     print(f"  Global: {len(history['all_verses'])} unique verse refs across ALL games")
