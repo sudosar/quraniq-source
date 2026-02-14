@@ -566,11 +566,16 @@
         // ===== State & Storage =====
         function viewStorage(filter) {
             const resultEl = document.getElementById('storage-data');
-            const buttons = resultEl.parentElement.querySelectorAll('.quick-actions button:not(:last-child)');
-            buttons.forEach(b => b.classList.remove('active'));
-            if (event.target.tagName === 'BUTTON') event.target.classList.add('active');
+            // Don't crash if called programmatically (no event)
+            try {
+                const buttons = resultEl.parentElement.querySelectorAll('.quick-actions button:not(:last-child)');
+                buttons.forEach(b => b.classList.remove('active'));
+                if (event && event.target && event.target.tagName === 'BUTTON') event.target.classList.add('active');
+            } catch(e) {}
 
             const entries = {};
+
+            // Check top-level localStorage keys
             for (let i = 0; i < localStorage.length; i++) {
                 const key = localStorage.key(i);
                 if (filter === 'all' ||
@@ -586,6 +591,23 @@
                     }
                 }
             }
+
+            // Also look inside quraniq_state for game-specific sub-keys
+            try {
+                const state = JSON.parse(localStorage.getItem('quraniq_state') || '{}');
+                const prefixMap = { conn: 'conn_', wordle: 'wordle_', ded: 'ded_', scr: 'scr_', stats: 'stats' };
+                const prefix = prefixMap[filter];
+                if (filter === 'all') {
+                    if (Object.keys(state).length > 0) entries['quraniq_state'] = state;
+                } else if (prefix) {
+                    const filtered = {};
+                    for (const [k, v] of Object.entries(state)) {
+                        if (k.startsWith(prefix)) filtered[k] = v;
+                    }
+                    if (Object.keys(filtered).length > 0) entries['quraniq_state (filtered)'] = filtered;
+                }
+            } catch(e) {}
+
             resultEl.textContent = Object.keys(entries).length
                 ? JSON.stringify(entries, null, 2)
                 : `No localStorage entries found for filter: ${filter}`;
