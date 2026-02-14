@@ -633,6 +633,28 @@ function saveScrState() {
     saveState(app.state);
 }
 
+function resetScrambleProgress() {
+    if (!confirm('Reset your Scramble progress for today? This cannot be undone.')) return;
+    delete app.state[`scr_${app.dayNumber}`];
+    saveState(app.state);
+    // Reset all state
+    scr.placed = [];
+    scr.available = shuffle([...scr.puzzle.words]);
+    scr.moves = 0;
+    scr.hintsUsed = 0;
+    scr.translationsRevealed = false;
+    scr.lockedPositions = {};
+    scr.gameOver = false;
+    scr.won = false;
+    scr.lastChecked = null;
+    // Remove any View Results button
+    delete app.lastResults['scramble'];
+    const vrBtn = document.querySelector('#scramble-game .view-results-btn');
+    if (vrBtn) vrBtn.remove();
+    renderScramble();
+    showToast('Scramble progress reset');
+}
+
 function showScrResult(cacheOnly) {
     const total = scr.puzzle.words.length;
     const correctCount = scr.placed.filter((w, i) => w === scr.puzzle.words[i]).length;

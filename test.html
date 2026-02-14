@@ -387,6 +387,13 @@
                     <button onclick="viewStorage('stats')">Stats</button>
                     <button onclick="if(confirm('Clear ALL game state?')) { localStorage.clear(); testLog('Cleared all localStorage', 'warn'); viewStorage('all'); }">⚠ Clear All</button>
                 </div>
+                <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 12px 0 8px;">Reset individual game progress for today:</p>
+                <div class="quick-actions">
+                    <button onclick="resetGameState('conn')">🔄 Connections</button>
+                    <button onclick="resetGameState('wordle')">🔄 Harf by Harf</button>
+                    <button onclick="resetGameState('ded')">🔄 Who Am I?</button>
+                    <button onclick="resetGameState('scr')">🔄 Scramble</button>
+                </div>
                 <div id="storage-data" class="data-viewer">Click a button above to inspect storage...</div>
             </div>
         </div>
@@ -583,6 +590,38 @@
                 ? JSON.stringify(entries, null, 2)
                 : `No localStorage entries found for filter: ${filter}`;
             testLog(`Storage view: ${filter} — ${Object.keys(entries).length} entries`);
+        }
+
+        // ===== Reset Individual Game State =====
+        function resetGameState(prefix) {
+            const names = { conn: 'Connections', wordle: 'Harf by Harf', ded: 'Who Am I?', scr: 'Scramble' };
+            const name = names[prefix] || prefix;
+            if (!confirm(`Reset ${name} progress for today? This cannot be undone.`)) return;
+
+            // Find the day number (same logic as main app)
+            const startDate = new Date('2025-01-26T00:00:00');
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const dayNumber = Math.floor((today - startDate) / 86400000);
+
+            // Remove from quraniq_state
+            const stateKey = 'quraniq_state';
+            try {
+                const state = JSON.parse(localStorage.getItem(stateKey) || '{}');
+                const key = `${prefix}_${dayNumber}`;
+                if (state[key]) {
+                    delete state[key];
+                    localStorage.setItem(stateKey, JSON.stringify(state));
+                    testLog(`Reset ${name} state (key: ${key})`, 'warn');
+                    showTestToast(`${name} progress reset! Reload the game to play again.`);
+                } else {
+                    testLog(`No ${name} state found for today (key: ${key})`, 'info');
+                    showTestToast(`No ${name} progress found for today.`);
+                }
+            } catch (e) {
+                testLog(`Error resetting ${name}: ${e.message}`, 'error');
+            }
+            viewStorage(prefix);
         }
 
         // ===== Init =====
