@@ -379,15 +379,51 @@ def call_model(prompt, model_config, system_msg=None):
 
 
 def parse_json_response(raw):
-    """Parse JSON from model response, handling <think> tags and markdown fences."""
+    """Parse JSON from model response, handling <think> tags, markdown fences,
+    and common LLM JSON formatting issues (trailing commas, unescaped chars)."""
     cleaned = raw.strip()
+    # Remove <think> blocks (DeepSeek reasoning)
     cleaned = re.sub(r'<think>.*?</think>', '', cleaned, flags=re.DOTALL).strip()
+    # Remove markdown code fences
     if cleaned.startswith("```"):
         cleaned = re.sub(r'^```(?:json)?\s*', '', cleaned)
         cleaned = re.sub(r'\s*```$', '', cleaned)
+    # Extract the outermost JSON object
     json_match = re.search(r'\{[\s\S]*\}', cleaned)
     if json_match:
         cleaned = json_match.group(0)
+
+    # Try parsing as-is first
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        pass
+
+    # Fix 1: Remove trailing commas before } or ]
+    fixed = re.sub(r',\s*([}\]])', r'\1', cleaned)
+    try:
+        return json.loads(fixed)
+    except json.JSONDecodeError:
+        pass
+
+    # Fix 2: Try to fix unescaped newlines inside string values
+    fixed2 = re.sub(r'(?<!\\)\n(?=(?:[^"]*"[^"]*")*[^"]*"[^"]*$)', r'\\n', fixed)
+    try:
+        return json.loads(fixed2)
+    except json.JSONDecodeError:
+        pass
+
+    # Fix 3: Extract array if the top-level is an array (some models wrap in [])
+    arr_match = re.search(r'\[[\s\S]*\]', cleaned)
+    if arr_match:
+        try:
+            arr = json.loads(arr_match.group(0))
+            if isinstance(arr, list) and len(arr) > 0 and isinstance(arr[0], dict):
+                return arr[0]
+        except json.JSONDecodeError:
+            pass
+
+    # Last resort: raise the original error for logging
     return json.loads(cleaned)
 
 
@@ -402,11 +438,23 @@ def build_connections_prompt(history, previous_violations=None):
 
     violation_block = ""
     if previous_violations:
-        violation_block = f"""
-
-CRITICAL — PREVIOUS ATTEMPT FAILED BECAUSE IT REUSED THESE:
-{chr(10).join('  ✗ ' + v for v in previous_violations)}
-You MUST NOT use any of the above. Choose completely different verses and themes."""
+        # Separate word-in-verse mismatches from cooldown violations for clearer feedback
+        verse_mismatches = [v for v in previous_violations if 'NOT found in verse' in v]
+        other_violations = [v for v in previous_violations if 'NOT found in verse' not in v]
+        parts = []
+        if other_violations:
+            parts.append(f"""CRITICAL — PREVIOUS ATTEMPT REUSED THESE (FORBIDDEN):
+{chr(10).join('  ✗ ' + v for v in other_violations)}
+You MUST NOT use any of the above. Choose completely different verses and themes.""")
+        if verse_mismatches:
+            parts.append(f"""CRITICAL — WORD-IN-VERSE VERIFICATION FAILED:
+{chr(10).join('  ✗ ' + v for v in verse_mismatches)}
+The above words were NOT found in their cited verses when checked against the Quran API.
+For each failed word, either:
+  a) Cite a DIFFERENT verse where that EXACT word form actually appears, OR
+  b) Replace the word with a different word that DOES appear in the cited verse.
+Do NOT guess — only cite verses where you are CERTAIN the exact Arabic word form appears.""")
+        violation_block = '\n\n' + '\n\n'.join(parts)
 
     return f"""You are an expert Islamic scholar creating a daily puzzle game called "Ayah Connections".
 
@@ -1194,7 +1242,9 @@ def enrich_connections_with_verses(puzzle):
                 # Validate: word must actually appear in the verse
                 ar_word = item.get("ar", "")
                 if ar_word and not word_in_verse(ar_word, verse_data["arabic"]):
-                    msg = f"Word '{ar_word}' ({item.get('en','')}) NOT found in verse {ref}"
+                    # Include a snippet of the verse so the LLM can see what words ARE there
+                    verse_snippet = verse_data['arabic'][:120]
+                    msg = f"Word '{ar_word}' ({item.get('en','')}) NOT found in verse {ref}. Verse text: {verse_snippet}..."
                     mismatches.append(msg)
                     print(f"    ✗ {msg}")
                 else:
@@ -1432,10 +1482,15 @@ def generate_game(game_type, history, today):
             prompt = config["build_prompt"](history, previous_violations)
             raw = call_model(prompt, model_config)
 
-            # Rate limited → immediately fall back to next model
+            # Rate limited → wait 30s and retry once before falling back
             if raw == "RATE_LIMITED":
-                print(f"  → Rate limited, falling back to next model...")
-                break
+                if retry < MAX_RETRIES:
+                    print(f"  → Rate limited on {model_label}, waiting 30s before retry...")
+                    time.sleep(30)
+                    continue  # Retry same model after backoff
+                else:
+                    print(f"  → Rate limited on {model_label} (no retries left), falling back to next model...")
+                    break
 
             # Other failure (timeout, auth, etc.) → try next model
             if not raw:
