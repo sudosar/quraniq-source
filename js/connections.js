@@ -762,6 +762,24 @@ function saveConnState() {
         puzzleSource: conn.puzzleSource || 'unknown'
     };
     saveState(app.state);
+
+    // Update cached result data and sync to Firebase if game is over
+    if (conn.gameOver && app.lastResults['connections']) {
+        const { crescentRow, totalExplored, totalVerses } = getConnCrescentData();
+        const res = app.lastResults['connections'];
+
+        // Refresh cache so "View Results" modal is always current
+        res.crescentRow = crescentRow;
+        res.exploredCount = totalExplored;
+        res.totalVerses = totalVerses;
+        res.shareText = getConnShareText(); // Update share text template
+
+        // Re-calculate moons for Firebase (count of full moons 🌕)
+        if (typeof submitFirebaseScore === 'function') {
+            const fbMoons = (crescentRow.match(/🌕/g) || []).length;
+            submitFirebaseScore('connections', fbMoons).catch(() => { });
+        }
+    }
 }
 
 /**
