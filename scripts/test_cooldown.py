@@ -32,9 +32,11 @@ def test(name, condition, detail=""):
 def make_empty_history():
     return {
         "connections": {"themes": set(), "verses": set(), "words": set()},
-        "wordle": {"words": set(), "verses": set(), "hints": set()},
-        "deduction": {"titles": set(), "characters": set()},
-        "scramble": {"verses": set(), "references": set()},
+        "wordle": {"words": set(), "verses": set(), "hints": set(), "verseRefs": set(), "surahs": set()},
+        "deduction": {"titles": set(), "characters": set(), "verseRefs": set(), "surahs": set()},
+        "scramble": {"verses": set(), "references": set(), "surahs": set()},
+        "juz": {"juz_numbers": set(), "verses": set()},
+        "all_verses": set(),
     }
 
 
@@ -44,42 +46,42 @@ def make_test_connections():
             {
                 "name": "تست", "nameEn": "Test Theme Alpha", "color": "yellow",
                 "items": [
-                    {"ar": "كلمة١", "en": "Word 1", "verse": "verse text", "ref": "2:255", "verseEn": ""},
-                    {"ar": "كلمة٢", "en": "Word 2", "verse": "verse text", "ref": "2:256", "verseEn": ""},
-                    {"ar": "كلمة٣", "en": "Word 3", "verse": "verse text", "ref": "2:257", "verseEn": ""},
-                    {"ar": "كلمة٤", "en": "Word 4", "verse": "verse text", "ref": "2:258", "verseEn": ""},
+                    {"ar": "شمس", "en": "Sun", "verse": "verse text", "ref": "2:255", "verseEn": ""},
+                    {"ar": "قمر", "en": "Moon", "verse": "verse text", "ref": "2:256", "verseEn": ""},
+                    {"ar": "نجم", "en": "Star", "verse": "verse text", "ref": "2:257", "verseEn": ""},
+                    {"ar": "سماء", "en": "Sky", "verse": "verse text", "ref": "2:258", "verseEn": ""},
                 ],
-                "verse": {"ayah": "test", "en": "test", "ref": "2:255"}
+                "verse": {"ayah": "test", "en": "test", "ref": "1:1"}
             },
             {
                 "name": "تست٢", "nameEn": "Test Theme Beta", "color": "green",
                 "items": [
-                    {"ar": "كلمة٥", "en": "Word 5", "verse": "verse text", "ref": "3:1", "verseEn": ""},
-                    {"ar": "كلمة٦", "en": "Word 6", "verse": "verse text", "ref": "3:2", "verseEn": ""},
-                    {"ar": "كلمة٧", "en": "Word 7", "verse": "verse text", "ref": "3:3", "verseEn": ""},
-                    {"ar": "كلمة٨", "en": "Word 8", "verse": "verse text", "ref": "3:4", "verseEn": ""},
+                    {"ar": "غيمة", "en": "Cloud", "verse": "verse text", "ref": "3:1", "verseEn": ""},
+                    {"ar": "نار", "en": "Fire", "verse": "verse text", "ref": "3:2", "verseEn": ""},
+                    {"ar": "تراب", "en": "Dirt", "verse": "verse text", "ref": "3:3", "verseEn": ""},
+                    {"ar": "ريح", "en": "Wind", "verse": "verse text", "ref": "3:4", "verseEn": ""},
                 ],
-                "verse": {"ayah": "test", "en": "test", "ref": "3:1"}
+                "verse": {"ayah": "test", "en": "test", "ref": "1:2"}
             },
             {
                 "name": "تست٣", "nameEn": "Test Theme Gamma", "color": "blue",
                 "items": [
-                    {"ar": "كلمة٩", "en": "Word 9", "verse": "verse text", "ref": "4:1", "verseEn": ""},
-                    {"ar": "كلمة١٠", "en": "Word 10", "verse": "verse text", "ref": "4:2", "verseEn": ""},
-                    {"ar": "كلمة١١", "en": "Word 11", "verse": "verse text", "ref": "4:3", "verseEn": ""},
-                    {"ar": "كلمة١٢", "en": "Word 12", "verse": "verse text", "ref": "4:4", "verseEn": ""},
+                    {"ar": "جبل", "en": "Mountain", "verse": "verse text", "ref": "4:1", "verseEn": ""},
+                    {"ar": "بحر", "en": "Sea", "verse": "verse text", "ref": "4:2", "verseEn": ""},
+                    {"ar": "وادي", "en": "Valley", "verse": "verse text", "ref": "4:3", "verseEn": ""},
+                    {"ar": "نهر", "en": "River", "verse": "verse text", "ref": "4:4", "verseEn": ""},
                 ],
-                "verse": {"ayah": "test", "en": "test", "ref": "4:1"}
+                "verse": {"ayah": "test", "en": "test", "ref": "1:3"}
             },
             {
                 "name": "تست٤", "nameEn": "Test Theme Delta", "color": "purple",
                 "items": [
-                    {"ar": "كلمة١٣", "en": "Word 13", "verse": "verse text", "ref": "5:1", "verseEn": ""},
-                    {"ar": "كلمة١٤", "en": "Word 14", "verse": "verse text", "ref": "5:2", "verseEn": ""},
-                    {"ar": "كلمة١٥", "en": "Word 15", "verse": "verse text", "ref": "5:3", "verseEn": ""},
-                    {"ar": "كلمة١٦", "en": "Word 16", "verse": "verse text", "ref": "5:4", "verseEn": ""},
+                    {"ar": "خبز", "en": "Bread", "verse": "verse text", "ref": "5:1", "verseEn": ""},
+                    {"ar": "لحم", "en": "Meat", "verse": "verse text", "ref": "5:2", "verseEn": ""},
+                    {"ar": "عسل", "en": "Honey", "verse": "verse text", "ref": "5:3", "verseEn": ""},
+                    {"ar": "لبن", "en": "Milk", "verse": "verse text", "ref": "5:4", "verseEn": ""},
                 ],
-                "verse": {"ayah": "test", "en": "test", "ref": "5:1"}
+                "verse": {"ayah": "test", "en": "test", "ref": "1:4"}
             }
         ]
     }
@@ -90,6 +92,7 @@ def make_test_wordle():
         "word": "رحمة",
         "display": "رَحْمَة",
         "hint": "Allah's attribute most mentioned - mercy",
+        "verseRef": "7:156",
         "verse": "Surah Al-A'raf 7:156 — My mercy encompasses all things.",
         "arabicVerse": "وَرَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ"
     }
@@ -106,6 +109,7 @@ def make_test_deduction():
             "location": {"label": "Location", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "opt1"},
             "outcome": {"label": "Outcome", "options": ["opt1", "opt2", "opt3", "opt4", "opt5"], "answer": "opt1"},
         },
+        "verseRef": "12:1",
         "verse": "Test verse translation",
         "arabic": "آية اختبار"
     }
@@ -114,10 +118,49 @@ def make_test_deduction():
 def make_test_scramble():
     return {
         "reference": "Surah Al-Fatiha (1:1)",
-        "words": ["بِسْمِ", "اللَّهِ", "الرَّحْمَٰنِ", "الرَّحِيمِ"],
+        "verseRef": "1:1",
+        "segments": ["بِسْمِ", "اللَّهِ", "الرَّحْمَٰنِ", "الرَّحِيمِ"],
         "translations": ["In the name of", "Allah", "the Most Gracious", "the Most Merciful"],
         "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
         "hint": "The opening verse of the Quran"
+    }
+
+
+def make_test_juz():
+    return {
+        "juz_number": 1,
+        "juz_name": "Alif Lam Meem",
+        "juz_name_ar": "الم",
+        "verse": {
+            "surah_number": 2,
+            "surah_name": "Al-Baqarah",
+            "surah_name_ar": "البقرة",
+            "ayah_number": 45,
+            "arabic_text": "وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ",
+            "translation": "And seek help through patience and prayer.",
+            "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/52.mp3"
+        },
+        "theme_question": {
+            "correct": "Patience and prayer",
+            "options": ["Patience and prayer", "Fasting", "Charity", "Hajj"]
+        },
+        "surah_question": {
+            "correct_surah": 2,
+            "options": [
+                {"num": 1, "name": "Al-Fatiha", "name_ar": "الفاتحة", "name_en": "The Opening"},
+                {"num": 2, "name": "Al-Baqarah", "name_ar": "البقرة", "name_en": "The Cow"},
+                {"num": 3, "name": "Aal-E-Imran", "name_ar": "آل عمران", "name_en": "The Family of Imran"},
+                {"num": 4, "name": "An-Nisa", "name_ar": "النساء", "name_en": "The Women"}
+            ]
+        },
+        "surah_order": {
+            "surahs": [{"num": 1, "name": "Al-Fatiha", "name_ar": "الفاتحة", "name_en": "The Opening"}]
+        },
+        "educational_notes": {
+            "verse_context": "test",
+            "theme_explanation": "test",
+            "surah_overview": "test"
+        }
     }
 
 
@@ -153,12 +196,12 @@ test("Cooldown violation for theme", any("theme" in v.lower() for v in cooldown)
 
 print("\n4. Validate connections with word in cooldown (soft warning)")
 history = make_empty_history()
-history["connections"]["words"].add("كلمة١")
+history["connections"]["words"].add("شمس")
 puzzle = make_test_connections()
 errors, cooldown, warnings = gen.validate_connections(puzzle, history)
 test("No structural errors", len(errors) == 0, f"errors={errors}")
 test("No cooldown violations (word is soft)", len(cooldown) == 0, f"cooldown={cooldown}")
-test("Warning for word reuse", any("كلمة١" in w for w in warnings), f"warnings={warnings}")
+test("Warning for word reuse", any("شمس" in w for w in warnings), f"warnings={warnings}")
 
 print("\n5. Validate connections with wrong item count")
 history = make_empty_history()
@@ -178,7 +221,7 @@ test("Prompt contains avoided verses", "2:255" in prompt)
 print("\n7. Build connections prompt with violations")
 violations = ["Verse ref 2:255 reused (30-day cooldown)"]
 prompt = gen.build_connections_prompt(history, previous_violations=violations)
-test("Prompt contains violation block", "PREVIOUS ATTEMPT FAILED" in prompt)
+test("Prompt contains violation block", "PREVIOUS ATTEMPT REUSED THESE" in prompt)
 test("Prompt contains specific violation", "2:255 reused" in prompt)
 
 
@@ -297,6 +340,50 @@ test("Errors for missing fields", len(errors) >= 2, f"errors={errors}")
 
 
 # ═══════════════════════════════════════════════════════════════
+# JUZ JOURNEY TESTS (Decoupled Cooldown)
+# ═══════════════════════════════════════════════════════════════
+print("\n" + "="*50)
+print("JUZ JOURNEY TESTS")
+print("="*50)
+
+print("\n21. Validate juz with empty history")
+history = make_empty_history()
+puzzle = make_test_juz()
+errors, cooldown, warnings = gen.validate_juz(puzzle, history)
+test("No structural errors", len(errors) == 0, f"errors={errors}")
+test("No cooldown violations", len(cooldown) == 0, f"cooldown={cooldown}")
+
+print("\n22. Validate juz with verse in global cooldown (SHOULD BE EXEMPT)")
+history = make_empty_history()
+history["all_verses"].add("2:45")
+puzzle = make_test_juz()
+errors, cooldown, warnings = gen.validate_juz(puzzle, history)
+test("No cooldown violation (exempt from global)", len(cooldown) == 0, f"cooldown={cooldown}")
+
+print("\n23. Validate juz with verse in its own cooldown (SHOULD FAIL)")
+history = make_empty_history()
+history["juz"]["verses"].add("2:45")
+puzzle = make_test_juz()
+errors, cooldown, warnings = gen.validate_juz(puzzle, history)
+test("Cooldown violation for its own history", any("2:45" in v for v in cooldown), f"cooldown={cooldown}")
+
+print("\n24. Validate regular game with verse in juz cooldown (SHOULD BE EXEMPT)")
+history = make_empty_history()
+history["juz"]["verses"].add("2:255")
+puzzle = make_test_connections() # Uses 2:255
+errors, cooldown, warnings = gen.validate_connections(puzzle, history)
+test("Regular game exempt from juz cooldown", len(cooldown) == 0, f"cooldown={cooldown}")
+
+print("\n25. Build juz prompt avoids only its own history")
+history = make_empty_history()
+history["juz"]["verses"].add("2:45")
+history["all_verses"].add("3:100")
+prompt = gen.build_juz_prompt(history)
+test("Prompt contains its own avoided verses", "2:45" in prompt)
+test("Prompt does NOT contain global avoided verses", "3:100" not in prompt)
+
+
+# ═══════════════════════════════════════════════════════════════
 # HISTORY TESTS
 # ═══════════════════════════════════════════════════════════════
 print("\n" + "="*50)
@@ -318,7 +405,8 @@ try:
     with open(os.path.join(tmpdir, f"{yesterday}.json"), "w") as f:
         json.dump(test_history_data, f, ensure_ascii=False)
 
-    old_date = (datetime.utcnow() - timedelta(days=35)).strftime("%Y-%m-%d")
+        # Use a date older than 365 days to test cleanup
+        old_date = (datetime.utcnow() - timedelta(days=400)).strftime("%Y-%m-%d")
     with open(os.path.join(tmpdir, f"{old_date}.json"), "w") as f:
         json.dump(test_history_data, f, ensure_ascii=False)
 

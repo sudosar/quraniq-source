@@ -323,7 +323,8 @@ def load_history(exclude_date=None):
             if verse.get("surah_number") and verse.get("ayah_number"):
                 ref = f"{verse['surah_number']}:{verse['ayah_number']}"
                 history["juz"]["verses"].add(ref)
-                history["all_verses"].add(ref)
+                # Juz Journey is Ramadan-only and exempt from global cross-game cooldown
+                # history["all_verses"].add(ref)
 
     return history
 
@@ -1085,6 +1086,8 @@ def validate_scramble(puzzle, history):
     segments = puzzle.get("segments", puzzle.get("words", []))
     if translations and segments and len(translations) != len(segments):
         errors.append(f"translations length ({len(translations)}) must match segments length ({len(segments)})")
+    if segments and (len(segments) < 4 or len(segments) > 7):
+        errors.append(f"Scramble must have 4-7 segments, got {len(segments)}")
 
     # Cooldown — check both game-specific and global
     ref_str = puzzle.get("reference", "")
@@ -1143,7 +1146,8 @@ def build_juz_prompt(history, previous_violations=None):
     today = datetime.utcnow().strftime("%Y-%m-%d")
     juz_number = get_juz_number_for_today(today)
 
-    avoided_verses = ", ".join(sorted(history["juz"]["verses"] | history["all_verses"])) or "(none)"
+    # Juz Journey only avoids its own used verses (30-day Ramadan window)
+    avoided_verses = ", ".join(sorted(history["juz"]["verses"])) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -1315,13 +1319,14 @@ def validate_juz(puzzle, history):
             if not notes.get(field):
                 errors.append(f"educational_notes missing '{field}'")
 
-    # Cooldown — verse reuse check (game-specific + global)
+    # Cooldown — verse reuse check (game-specific only)
     if verse.get("surah_number") and verse.get("ayah_number"):
         ref = f"{verse['surah_number']}:{verse['ayah_number']}"
         if ref in history["juz"]["verses"]:
             cooldown_violations.append(f"Verse {ref} reused (juz cooldown)")
-        elif ref in history["all_verses"]:
-            cooldown_violations.append(f"Verse {ref} reused (cross-game cooldown)")
+        # Juz Journey is exempt from cross-game cooldown
+        # elif ref in history["all_verses"]:
+        #     cooldown_violations.append(f"Verse {ref} reused (cross-game cooldown)")
 
     return errors, cooldown_violations, warnings
 
@@ -1971,9 +1976,8 @@ def main():
                 if ref:
                     history["all_verses"].add(ref)
             elif game_type == "juz":
-                v = puzzle.get("verse", {})
-                if v.get("surah_number") and v.get("ayah_number"):
-                    history["all_verses"].add(f"{v['surah_number']}:{v['ayah_number']}")
+                # Juz Journey is Ramadan-only and exempt from global cross-game cooldown
+                pass
         else:
             failed_games.append(game_type)
 
