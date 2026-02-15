@@ -1817,23 +1817,52 @@ def main():
         # Check which core games already exist
         core_games = ["connections", "wordle", "deduction", "scramble"]
         missing_games = [g for g in core_games if g not in existing_puzzles]
+        
+        force_regen = False
         if not missing_games:
-            print(f"All puzzles for {today} already exist. Skipping generation.")
-            # Still write output files from history
-            try:
-                for game_type, output_path in OUTPUT_FILES.items():
-                    puzzle_data = existing_puzzles.get(game_type)
-                    if puzzle_data:
-                        os.makedirs(os.path.dirname(output_path), exist_ok=True)
-                        with open(output_path, "w") as f:
-                            json.dump({
-                                "date": today,
-                                "puzzle": puzzle_data,
-                                "generated": True,
-                            }, f, ensure_ascii=False, indent=2)
-            except Exception as e:
-                print(f"Warning: Could not restore output files: {e}")
-            return 0
+            # Validate loaded puzzles to ensure they are not corrupted (e.g. empty verses)
+            valid_history = True
+            for g in core_games:
+                if g == "connections":
+                    cats = existing_puzzles[g].get("categories", [])
+                    for cat in cats:
+                        if not cat.get("verse", {}).get("ayah"):
+                            print(f"  ⚠ Found corrupt data in history (empty category verse): {g}")
+                            valid_history = False
+                            break
+                        for item in cat.get("items", []):
+                            if not item.get("verse"):
+                                print(f"  ⚠ Found corrupt data in history (empty item verse): {g}")
+                                valid_history = False
+                                break
+                        if not valid_history: break
+                if not valid_history: break
+            
+            if not valid_history:
+                print("  ⚠ History contains corrupted data. Will regenerate affected games.")
+                existing_puzzles = {} # Force full regeneration
+                force_regen = True
+            else:
+                print(f"All puzzles for {today} already exist and are valid. Skipping generation.")
+                # Still write output files from history
+                try:
+                    for game_type, output_path in OUTPUT_FILES.items():
+                        puzzle_data = existing_puzzles.get(game_type)
+                        if puzzle_data:
+                            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+                            with open(output_path, "w") as f:
+                                json.dump({
+                                    "date": today,
+                                    "puzzle": puzzle_data,
+                                    "generated": True,
+                                }, f, ensure_ascii=False, indent=2)
+                except Exception as e:
+                    print(f"Warning: Could not restore output files: {e}")
+                return 0
+
+        if not force_regen:
+            print(f"Partial history found for {today}. Missing: {', '.join(missing_games)}")
+            print(f"Will regenerate only missing games.")
         else:
             print(f"Partial history found for {today}. Missing: {', '.join(missing_games)}")
             print(f"Will regenerate only missing games.")

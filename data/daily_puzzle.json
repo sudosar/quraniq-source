@@ -50,8 +50,8 @@
             "ar": "جَبَّارٍ",
             "en": "Compeller",
             "ref": "59:23",
-            "verse": "",
-            "verseEn": ""
+            "verse": "هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْمَلِكُ ٱلْقُدُّوسُ ٱلسَّلَـٰمُ ٱلْمُؤْمِنُ ٱلْمُهَيْمِنُ ٱلْعَزِيزُ ٱلْجَبَّارُ ٱلْمُتَكَبِّرُ ۚ سُبْحَـٰنَ ٱللَّهِ عَمَّا يُشْرِكُونَ",
+            "verseEn": "He is Allāh, other than whom there is no deity, the Sovereign, the Pure, the Perfection, the Grantor of Security, the Overseer, the Exalted in Might, the Compeller, the Superior. Exalted is Allāh above whatever they associate with Him."
           },
           {
             "ar": "الْقَوِيُّ",
@@ -71,14 +71,14 @@
             "ar": "الْمُقْتَدِرُ",
             "en": "The Omnipotent",
             "ref": "54:42",
-            "verse": "",
-            "verseEn": ""
+            "verse": "كَذَّبُوا۟ بِـَٔايَـٰتِنَا كُلِّهَا فَأَخَذْنَـٰهُمْ أَخْذَ عَزِيزٍۢ مُّقْتَدِرٍ",
+            "verseEn": "They denied Our signs, all of them, so We seized them with a seizure of one Exalted in Might and Perfect in Ability."
           }
         ],
         "verse": {
           "ref": "51:58",
-          "ayah": "",
-          "en": ""
+          "ayah": "إِنَّ ٱللَّهَ هُوَ ٱلرَّزَّاقُ ذُو ٱلْقُوَّةِ ٱلْمَتِينُ",
+          "en": "Indeed, it is Allāh who is the [continual] Provider, the firm possessor of strength."
         },
         "color": "green"
       },
@@ -90,15 +90,15 @@
             "ar": "الْجِنَّ",
             "en": "the jinn",
             "ref": "72:13",
-            "verse": "",
-            "verseEn": ""
+            "verse": "وَأَنَّا لَمَّا سَمِعْنَا ٱلْهُدَىٰٓ ءَامَنَّا بِهِۦ ۖ فَمَن يُؤْمِنۢ بِرَبِّهِۦ فَلَا يَخَافُ بَخْسًۭا وَلَا رَهَقًۭا",
+            "verseEn": "And when we heard the guidance [i.e., the Qur’ān], we believed in it. And whoever believes in his Lord will not fear deprivation or burden."
           },
           {
             "ar": "مَلَائِكَةً",
             "en": "angels",
             "ref": "43:53",
-            "verse": "",
-            "verseEn": ""
+            "verse": "فَلَوْلَآ أُلْقِىَ عَلَيْهِ أَسْوِرَةٌۭ مِّن ذَهَبٍ أَوْ جَآءَ مَعَهُ ٱلْمَلَـٰٓئِكَةُ مُقْتَرِنِينَ",
+            "verseEn": "Then why have there not been placed upon him bracelets of gold or come with him the angels in conjunction?\""
           },
           {
             "ar": "رُوحًا",
@@ -111,14 +111,14 @@
             "ar": "الْغَيْبِ",
             "en": "the Unseen",
             "ref": "59:22",
-            "verse": "",
-            "verseEn": ""
+            "verse": "هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَـٰهَ إِلَّا هُوَ ۖ عَـٰلِمُ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ ۖ هُوَ ٱلرَّحْمَـٰنُ ٱلرَّحِيمُ",
+            "verseEn": "He is Allāh, other than whom there is no deity, Knower of the unseen and the witnessed. He is the Entirely Merciful, the Especially Merciful."
           }
         ],
         "verse": {
           "ref": "6:59",
-          "ayah": "",
-          "en": ""
+          "ayah": "۞ وَعِندَهُۥ مَفَاتِحُ ٱلْغَيْبِ لَا يَعْلَمُهَآ إِلَّا هُوَ ۚ وَيَعْلَمُ مَا فِى ٱلْبَرِّ وَٱلْبَحْرِ ۚ وَمَا تَسْقُطُ مِن وَرَقَةٍ إِلَّا يَعْلَمُهَا وَلَا حَبَّةٍۢ فِى ظُلُمَـٰتِ ٱلْأَرْضِ وَلَا رَطْبٍۢ وَلَا يَابِسٍ إِلَّا فِى كِتَـٰبٍۢ مُّبِينٍۢ",
+          "en": "And with Him are the keys of the unseen; none knows them except Him. And He knows what is on the land and in the sea. Not a leaf falls but that He knows it. And no grain is there within the darknesses of the earth and no moist or dry [thing] but that it is [written] in a clear record."
         },
         "color": "blue"
       },
@@ -151,8 +151,8 @@
             "ar": "صَنَعَ",
             "en": "He made",
             "ref": "21:80",
-            "verse": "",
-            "verseEn": ""
+            "verse": "وَعَلَّمْنَـٰهُ صَنْعَةَ لَبُوسٍۢ لَّكُمْ لِتُحْصِنَكُم مِّنۢ بَأْسِكُمْ ۖ فَهَلْ أَنتُمْ شَـٰكِرُونَ",
+            "verseEn": "And We taught him the fashioning of coats of armor to protect you from your [enemy in] battle. So will you then be grateful?"
           }
         ],
         "verse": {
@@ -164,6 +164,5 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "generated": true
 }
