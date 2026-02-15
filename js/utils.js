@@ -187,6 +187,133 @@ const quranAudio = {
 function initTTS() { /* replaced by quranAudio */ }
 
 /**
+ * Advanced Arabic normalization for matching words.
+ * Strips diacritics, normalizes alef variants, hamzas, etc.
+ */
+function normalizeForMatch(str) {
+    if (!str) return '';
+    return str
+        .replace(/[\u0610-\u061A\u064B-\u065F\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED]/g, '') // strip tashkeel/diacritics
+        .replace(/\u0670/g, '\u0627') // superscript alef -> regular alef
+        .replace(/[\u0671]/g, '\u0627') // alef wasla -> alef
+        .replace(/[\u0622\u0623\u0625]/g, '\u0627') // alef variants -> alef
+        .replace(/[\u0624]/g, '\u0648') // waw hamza -> waw
+        .replace(/[\u0626]/g, '\u064A') // ya hamza -> ya
+        .replace(/[\u0629]/g, '\u0647') // taa marbuta -> ha
+        .replace(/[\u0649]/g, '\u064A') // alef maqsura -> ya
+        .replace(/\u0621/g, '') // remove standalone hamza
+        .replace(/\u0640/g, '') // remove tatweel
+        .replace(/[\u064E\u064F\u0650\u0651\u0652\u0653\u0654\u0655\u0656\u0657\u0658]/g, '') // extra diacritics cleanup
+        .replace(/\u06E5|\u06E6/g, '') // remove small waw/ya
+        .replace(/[\u06DF-\u06E2]/g, '') // remove Quranic annotation marks
+        .replace(/\s*[\u06D6-\u06DE]\s*/g, '') // remove Quranic stop signs
+        .trim();
+}
+
+/**
+ * Further simplify for fuzzy matching - remove hamza carriers and normalize away differences.
+ */
+function deepNormalize(str) {
+    if (!str) return '';
+    return str
+        .replace(/[\u0621\u0623\u0625\u0624\u0626\u0622]/g, '') // remove all hamza forms
+        .replace(/\u0648(?=[\u064A\u0627])/g, ''); // remove و before ي/ا (handles رؤيا vs ريا)
+}
+
+/**
+ * Strip common prefixes for root comparison - only for words long enough.
+ */
+function stripPrefixes(str) {
+    if (!str) return '';
+    // Don't strip from very short words (3 chars or less after stripping would be too short)
+    const prefixes = ['وال', 'فال', 'بال', 'كال', 'لل', 'ال', 'و', 'ف', 'ب', 'ل', 'ك'];
+    for (const p of prefixes) {
+        if (str.startsWith(p) && str.length > p.length + 2) {
+            return str.slice(p.length);
+        }
+    }
+    return str;
+}
+
+/**
+ * Strip common suffixes - only for words long enough.
+ */
+function stripSuffixes(str) {
+    if (!str || str.length <= 3) return str || ''; // don't strip from very short words
+    return str.replace(/(ون|ين|ات|ها|هم|هن|كم|نا|ى|ه|ا)$/, '');
+}
+
+/**
+ * Speak Arabic text using Quranic word-by-word audio if a reference is provided,
+ * otherwise falling back to client-side Text-to-Speech (Web Speech API).
+ * @param {string} text - The Arabic text to speak (usually a single word)
+ * @param {string} [ref] - Optional Quranic reference for high-quality audio
+ */
+async function speakArabic(text, ref) {
+    if (!text) return;
+    const cleanText = normalizeForMatch(text);
+
+    // 1. Try high-quality word-by-word audio if ref is available
+    if (ref) {
+        try {
+            const words = await fetchWordByWord(ref);
+            if (words && words.length > 0) {
+                const cleanRoot = stripSuffixes(stripPrefixes(cleanText));
+
+                // Find the word in the verse that matches our text
+                const match = words.find(w => {
+                    if (w.isSeparator) return false;
+                    const wNorm = normalizeForMatch(w.arabic);
+                    if (wNorm === cleanText) return true;
+
+                    // Root-to-root match
+                    const wRoot = stripSuffixes(stripPrefixes(wNorm));
+                    return wRoot === cleanRoot && wRoot.length >= 2;
+                });
+
+                if (match && match.audio_url) {
+                    const audioUrl = `https://audio.quran.com/${match.audio_url}`;
+                    const audio = new Audio(audioUrl);
+                    audio.play().catch(e => {
+                        console.warn('WBW audio play failed, falling back to TTS', e);
+                        speakWithTTS(text);
+                    });
+                    return;
+                }
+            }
+        } catch (e) {
+            console.warn('WBW audio fetch failed', e);
+        }
+    }
+
+    // 2. Fallback to client-side TTS
+    speakWithTTS(text);
+}
+
+/** 
+ * Internal helper for browser-based Arabic TTS 
+ * Handles diacritics better by stripping them if needed, or keeping them
+ * depending on browser support.
+ */
+function speakWithTTS(text) {
+    if (!window.speechSynthesis) return;
+
+    // Stop any current speech
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'ar-SA'; // Standard Arabic
+    utterance.rate = 0.9;     // Slightly slower for clarity
+
+    // Try to find a high-quality Arabic voice if available
+    const voices = window.speechSynthesis.getVoices();
+    const arVoice = voices.find(v => v.lang.startsWith('ar')) || voices.find(v => v.name.includes('Arabic'));
+    if (arVoice) utterance.voice = arVoice;
+
+    window.speechSynthesis.speak(utterance);
+}
+
+/**
  * Extract a surah:ayah reference from a text string.
  * Handles patterns like: "(21:87)", "7:156", "Surah Al-Fatiha (1:1)"
  * Returns the first match as "surah:ayah" string or null.
@@ -374,13 +501,14 @@ async function fetchWordByWord(ref) {
     if (wbwCache[key]) return wbwCache[key];
     try {
         const resp = await fetch(
-            `https://api.quran.com/api/v4/verses/by_key/${key}?language=en&words=true&word_fields=text_uthmani,translation`
+            `https://api.quran.com/api/v4/verses/by_key/${key}?language=en&words=true&word_fields=text_uthmani,translation,audio_url`
         );
         if (!resp.ok) return null;
         const data = await resp.json();
         let words = (data.verse?.words || []).filter(w => w.char_type_name === 'word').map(w => ({
             arabic: w.text_uthmani || w.text,
-            translation: w.translation?.text || ''
+            translation: w.translation?.text || '',
+            audio_url: w.audio_url
         }));
 
         // If the verse is short (3 words or fewer), fetch the next verse for context
@@ -389,13 +517,14 @@ async function fetchWordByWord(ref) {
             const nextKey = `${parsed.surah}:${nextAyah}`;
             try {
                 const nextResp = await fetch(
-                    `https://api.quran.com/api/v4/verses/by_key/${nextKey}?language=en&words=true&word_fields=text_uthmani,translation`
+                    `https://api.quran.com/api/v4/verses/by_key/${nextKey}?language=en&words=true&word_fields=text_uthmani,translation,audio_url`
                 );
                 if (nextResp.ok) {
                     const nextData = await nextResp.json();
                     const nextWords = (nextData.verse?.words || []).filter(w => w.char_type_name === 'word').map(w => ({
                         arabic: w.text_uthmani || w.text,
-                        translation: w.translation?.text || ''
+                        translation: w.translation?.text || '',
+                        audio_url: w.audio_url
                     }));
                     if (nextWords.length > 0) {
                         // Add a verse separator marker, then append next verse words
@@ -794,6 +923,6 @@ function startStalePoll(dataFile, today) {
                     window.location.reload();
                 }
             })
-            .catch(() => {}); // Silently retry
+            .catch(() => { }); // Silently retry
     }, 60000); // Check every 60 seconds
 }

@@ -187,7 +187,7 @@ function renderConnections() {
         tile.addEventListener('touchstart', () => {
             holdTimer = setTimeout(() => {
                 if (tip) showToast(tip, 1500);
-                speakArabic(getConnItemDisplay(item));
+                speakArabic(getConnItemDisplay(item), item.ref);
             }, 500);
         }, { passive: true });
         tile.addEventListener('touchend', () => clearTimeout(holdTimer));
@@ -195,7 +195,7 @@ function renderConnections() {
         // Right-click / long-press on desktop: speak Arabic
         tile.addEventListener('contextmenu', (e) => {
             e.preventDefault();
-            speakArabic(getConnItemDisplay(item));
+            speakArabic(getConnItemDisplay(item), item.ref);
             if (tip) showToast(tip, 1500);
         });
         grid.appendChild(tile);
@@ -507,53 +507,6 @@ async function loadWBW(container) {
     if (words && words.length > 0) {
         // Get the tile word to highlight it in the verse
         const tileWord = container.dataset.tileWord || '';
-
-        // Advanced Arabic normalization for matching
-        function normalizeForMatch(str) {
-            return str
-                .replace(/[\u0610-\u061A\u064B-\u065F\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED]/g, '') // strip tashkeel/diacritics
-                .replace(/\u0670/g, '\u0627') // superscript alef -> regular alef (e.g. كِتَـٰب -> كتاب)
-                .replace(/[\u0671]/g, '\u0627') // alef wasla -> alef
-                .replace(/[\u0622\u0623\u0625]/g, '\u0627') // alef variants -> alef
-                .replace(/[\u0624]/g, '\u0648') // waw hamza -> waw
-                .replace(/[\u0626]/g, '\u064A') // ya hamza -> ya
-                .replace(/[\u0629]/g, '\u0647') // taa marbuta -> ha
-                .replace(/[\u0649]/g, '\u064A') // alef maqsura -> ya
-                .replace(/\u0621/g, '') // remove standalone hamza
-                .replace(/\u0640/g, '') // remove tatweel
-                .replace(/[\u064E\u064F\u0650\u0651\u0652\u0653\u0654\u0655\u0656\u0657\u0658]/g, '') // extra diacritics cleanup
-                .replace(/\u06E5|\u06E6/g, '') // remove small waw/ya
-                .replace(/[\u06DF-\u06E2]/g, '') // remove Quranic annotation marks
-                .replace(/\s*[\u06D6-\u06DE]\s*/g, '') // remove Quranic stop signs
-                .trim();
-        }
-
-        // Further simplify for fuzzy matching - remove hamza carriers and normalize away differences
-        function deepNormalize(str) {
-            return str
-                .replace(/[\u0621\u0623\u0625\u0624\u0626\u0622]/g, '') // remove all hamza forms
-                .replace(/\u0648(?=[\u064A\u0627])/g, ''); // remove و before ي/ا (handles رؤيا vs ريا)
-        }
-
-        // Strip common prefixes for root comparison - only for words long enough
-        function stripPrefixes(str) {
-            // Don't strip from very short words (3 chars or less after stripping would be too short)
-            const prefixes = ['وال', 'فال', 'بال', 'كال', 'لل', 'ال', 'و', 'ف', 'ب', 'ل', 'ك'];
-            for (const p of prefixes) {
-                if (str.startsWith(p) && str.length > p.length + 2) {
-                    return str.slice(p.length);
-                }
-            }
-            return str;
-        }
-
-        // Strip common suffixes - only for words long enough
-        function stripSuffixes(str) {
-            if (str.length <= 3) return str; // don't strip from very short words
-            return str.replace(/(ون|ين|ات|ها|هم|هن|كم|نا|ى|ه|ا)$/, '');
-        }
-
-        // Get all tile word variants for matching
         const tileNorm = normalizeForMatch(tileWord);
         const tileWords = tileWord.split(/\s+/).map(w => normalizeForMatch(w));
         const tileRoots = tileWords.map(w => stripSuffixes(stripPrefixes(w)));
