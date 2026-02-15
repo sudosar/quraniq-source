@@ -291,8 +291,51 @@ def save_to_history(all_puzzles, date_str):
 
 
 # ── LLM API (OpenAI + GitHub Models + Gemini) ──────────────────────
+MAX_CONTINUATIONS = 3  # Max continuation attempts for truncated JSON
+
+
+def is_json_truncated(text):
+    """Detect if a JSON response appears truncated (incomplete brackets)."""
+    cleaned = text.strip()
+    # Remove <think> blocks and markdown fences for analysis
+    cleaned = re.sub(r'<think>.*?</think>', '', cleaned, flags=re.DOTALL).strip()
+    if cleaned.startswith("```"):
+        cleaned = re.sub(r'^```(?:json)?\s*', '', cleaned)
+        cleaned = re.sub(r'\s*```$', '', cleaned)
+    # Count unmatched braces/brackets (ignoring those inside strings)
+    depth_brace = 0
+    depth_bracket = 0
+    in_string = False
+    escape = False
+    for ch in cleaned:
+        if escape:
+            escape = False
+            continue
+        if ch == '\\':
+            escape = True
+            continue
+        if ch == '"':
+            in_string = not in_string
+            continue
+        if in_string:
+            continue
+        if ch == '{':
+            depth_brace += 1
+        elif ch == '}':
+            depth_brace -= 1
+        elif ch == '[':
+            depth_bracket += 1
+        elif ch == ']':
+            depth_bracket -= 1
+    # If we opened more braces/brackets than we closed, it's truncated
+    return depth_brace > 0 or depth_bracket > 0
+
+
 def call_model(prompt, model_config, system_msg=None):
     """Call an LLM API and return the response text.
+    
+    If the response contains truncated JSON, automatically sends continuation
+    requests (up to MAX_CONTINUATIONS) to get the complete output.
     
     model_config: dict with 'id', 'api' ('openai', 'github', or 'gemini'), 'label'
     """
@@ -364,6 +407,45 @@ def call_model(prompt, model_config, system_msg=None):
         print(f"  Tokens: {usage.get('prompt_tokens', '?')} in, "
               f"{usage.get('completion_tokens', '?')} out, "
               f"{usage.get('total_tokens', '?')} total")
+
+        # Check for truncated JSON and attempt continuation
+        if is_json_truncated(text):
+            print(f"  ⚠ Truncated JSON detected, attempting continuation...")
+            accumulated = text
+            for cont in range(1, MAX_CONTINUATIONS + 1):
+                print(f"  → Continuation {cont}/{MAX_CONTINUATIONS}...")
+                cont_payload = {
+                    "model": model_id,
+                    "messages": [
+                        {"role": "system", "content": system_msg},
+                        {"role": "user", "content": prompt},
+                        {"role": "assistant", "content": accumulated},
+                        {"role": "user", "content": "Your JSON response was cut off. Continue EXACTLY from where you stopped. Output ONLY the remaining JSON, no repetition, no explanation."}
+                    ],
+                    "temperature": 0.3,
+                    "top_p": 0.95,
+                    "max_tokens": 8192,
+                }
+                try:
+                    cont_resp = requests.post(api_url, headers=headers, json=cont_payload, timeout=180)
+                    if cont_resp.status_code != 200:
+                        print(f"  ✗ Continuation failed (HTTP {cont_resp.status_code})")
+                        break
+                    cont_data = cont_resp.json()
+                    cont_text = cont_data["choices"][0]["message"]["content"]
+                    cont_usage = cont_data.get("usage", {})
+                    print(f"  Continuation tokens: {cont_usage.get('completion_tokens', '?')} out")
+                    accumulated += cont_text
+                    if not is_json_truncated(accumulated):
+                        print(f"  ✓ JSON completed after {cont} continuation(s)")
+                        return accumulated
+                except Exception as ce:
+                    print(f"  ✗ Continuation error: {ce}")
+                    break
+            # Return whatever we accumulated even if still truncated
+            print(f"  ⚠ Returning accumulated response ({len(accumulated)} chars)")
+            return accumulated
+
         return text
 
     except requests.exceptions.Timeout:
@@ -1757,14 +1839,24 @@ def main():
         status = "\u2713" if game_type in all_puzzles else "\u2717 FAILED"
         print(f"  {status} {GAME_CONFIGS[game_type]['label']}")
 
+    # Always save successful puzzles to history (enables partial regeneration on retry)
+    if all_puzzles:
+        save_to_history(all_puzzles, today)
+        successful = [g for g in game_types if g in all_puzzles]
+        print(f"\n  ✓ Saved {len(successful)} puzzle(s) to history/{today}.json")
+        print(f"    Saved: {', '.join(successful)}")
+        if failed_games:
+            print(f"    Missing: {', '.join(failed_games)} (will retry on next run)")
+
     # ALL games must succeed before writing output files and deploying
     if failed_games:
         print(f"\n  \u2717 {len(failed_games)} game(s) failed: {', '.join(failed_games)}")
         print(f"  \u2717 NOT writing output files — page will NOT be updated.")
         print(f"  \u2717 Previous day's puzzles remain live until all games succeed.")
+        print(f"  ℹ Successful puzzles saved to history — next run will only regenerate failed games.")
         return 1
 
-    # All games succeeded — write output files and save history
+    # All games succeeded — write output files
     for game_type, puzzle in all_puzzles.items():
         output_path = OUTPUT_FILES[game_type]
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -1777,7 +1869,6 @@ def main():
             }, f, ensure_ascii=False, indent=2)
         print(f"  → Saved to {os.path.basename(output_path)}")
 
-    save_to_history(all_puzzles, today)
     print(f"\n{sep}")
     print(f"  ✓ ALL {len(game_types)} puzzles generated and saved!")
     print(f"  ✓ History saved to history/{today}.json")

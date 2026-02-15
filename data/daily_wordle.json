@@ -1,13 +1,12 @@
 {
-  "date": "2026-02-14",
+  "date": "2026-02-15",
   "puzzle": {
-    "word": "امر",
-    "display": "أَمْر",
-    "hint": "It can be a divine directive or a general concern.",
-    "verseRef": "2:210",
-    "arabicVerse": "هَلْ يَنظُرُونَ إِلَّآ أَن يَأْتِيَهُمُ ٱللَّهُ فِى ظُلَلٍۢ مِّنَ ٱلْغَمَامِ وَٱلْمَلَـٰٓئِكَةُ وَقُضِىَ ٱلْأَمْرُ ۚ وَإِلَى ٱللَّهِ تُرْجَعُ ٱلْأُمُورُ",
-    "verse": "2:210 — Do they await but that Allāh should come to them in covers of clouds and the angels [as well] and the matter is [then] decided? And to Allāh [all] matters are returned."
+    "word": "بصر",
+    "display": "بَصَر",
+    "hint": "What allows you to see the wonders of creation?",
+    "verseRef": "51:21",
+    "arabicVerse": "وَفِىٓ أَنفُسِكُمْ ۚ أَفَلَا تُبْصِرُونَ",
+    "verse": "51:21 — And in yourselves. Then will you not see?"
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "generated": true
 }

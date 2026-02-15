@@ -1,30 +1,29 @@
 {
-  "date": "2026-02-14",
+  "date": "2026-02-15",
   "puzzle": {
-    "verseRef": "3:139",
-    "reference": "Surah Al-Imran (3:139)",
+    "verseRef": "20:55",
+    "reference": "Surah Taha (20:55)",
     "segments": [
-      "وَلَا تَهِنُوا",
-      "وَلَا تَحْزَنُوا",
-      "وَأَنتُمُ الْأَعْلَوْنَ",
-      "إِن كُنتُم مُّؤْمِنِينَ"
+      "مِنْهَا خَلَقْنَاكُمْ",
+      "وَفِيهَا نُعِيدُكُمْ",
+      "وَمِنْهَا نُخْرِجُكُمْ",
+      "تَارَةً أُخْرَىٰ"
     ],
     "translations": [
-      "And (do) not weaken and (do) not",
-      "grieve and you (will be)",
-      "[the] superior if",
-      "you are believers"
+      "From it We created you",
+      "and in it We will return you",
+      "and from it We will bring you out",
+      "time another"
     ],
-    "hint": "This verse offers encouragement to believers, reminding them of their elevated status and urging them not to despair in the face of challenges.",
-    "arabic": "وَلَا تَهِنُوا۟ وَلَا تَحْزَنُوا۟ وَأَنتُمُ ٱلْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ",
+    "hint": "This verse speaks about the origin, destiny, and resurrection of humanity in relation to the earth.",
+    "arabic": "۞ مِنْهَا خَلَقْنَـٰكُمْ وَفِيهَا نُعِيدُكُمْ وَمِنْهَا نُخْرِجُكُمْ تَارَةً أُخْرَىٰ",
     "words": [
-      "وَلَا تَهِنُوا۟ وَلَا",
-      "تَحْزَنُوا۟ وَأَنتُمُ",
-      "ٱلْأَعْلَوْنَ إِن",
-      "كُنتُم مُّؤْمِنِينَ"
+      "۞ مِنْهَا خَلَقْنَـٰكُمْ",
+      "وَفِيهَا نُعِيدُكُمْ",
+      "وَمِنْهَا نُخْرِجُكُمْ",
+      "تَارَةً أُخْرَىٰ"
     ],
-    "verseEn": "So do not weaken and do not grieve, and you will be superior if you are [true] believers."
+    "verseEn": "From it [i.e., the earth] We created you, and into it We will return you, and from it We will extract you another time."
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "generated": true
 }

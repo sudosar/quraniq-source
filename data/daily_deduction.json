@@ -1,66 +1,65 @@
 {
-  "date": "2026-02-14",
+  "date": "2026-02-15",
   "puzzle": {
-    "title": "The Builder of Barriers",
-    "intro": "Across vast lands, a powerful individual embarked on a series of expeditions, granted immense authority and means. This soul encountered diverse communities and faced unique challenges, leaving a lasting mark on history and faith through their actions and wisdom, all while acknowledging the true source of their strength.",
+    "title": "The Voice of Steadfastness",
+    "intro": "This individual is remembered for profound wisdom and guidance, offering counsel that transcends generations. Their words are a testament to piety and the importance of recognizing the blessings and trials from the Divine. Uncover the identity of this revered soul.",
     "clues": [
-      "I was granted power and means over everything, and I followed a way.",
-      "My journey took me to the setting place of the sun, where I found a people.",
-      "I encountered a community who could barely understand speech, residing between two mountains.",
-      "I was asked to build a barrier, not for personal gain, but to protect against a destructive force.",
-      "I declared that the strength to build this massive wall came from Allah, and it would stand until a promised time.",
-      "My name, often translated as 'The Two-Horned One,' signifies my reach across the earth or perhaps two distinct eras."
+      "I was not a prophet, but my wisdom is immortalized in the Divine Scripture.",
+      "My counsel to my child emphasized gratitude to Allah and avoiding shirk.",
+      "I taught about the importance of prayer, enjoining good, and forbidding evil.",
+      "I warned against arrogance and walking with insolence on the earth.",
+      "My name is given to an entire chapter in the Quran, highlighting my teachings.",
+      "My advice included patience in adversity, for indeed, that is from the most resolute of affairs."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Musa",
-          "Prophet Sulayman",
-          "Dhul-Qarnayn",
-          "Pharaoh",
-          "Luqman"
+          "Prophet Idris",
+          "Prophet Yahya",
+          "Luqman",
+          "Imran",
+          "Prophet Hud"
         ],
-        "answer": "Dhul-Qarnayn"
+        "answer": "Luqman"
       },
       "trial": {
-        "label": "Trial/Event",
+        "label": "Key Teaching/Guidance",
         "options": [
-          "Receiving revelation",
-          "Facing a tyrant",
-          "Building a great ship",
-          "Constructing a mighty barrier",
-          "Being swallowed by a fish"
+          "Building an ark",
+          "Facing a mighty army",
+          "Dispensing wisdom and moral advice",
+          "Interpreting dreams",
+          "Leading a nation to victory"
         ],
-        "answer": "Constructing a mighty barrier"
+        "answer": "Dispensing wisdom and moral advice"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Ark",
-          "The Staff",
-          "The Iron Barrier",
-          "The River Nile",
-          "The Throne"
+          "A burning bush",
+          "A large fish",
+          "A specific mountain",
+          "A wise counsel to an offspring",
+          "A grand palace"
         ],
-        "answer": "The Iron Barrier"
+        "answer": "A wise counsel to an offspring"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Salvation from flood",
-          "Becoming a great kingdom",
-          "Protection for a people",
-          "Destruction of an oppressor",
-          "Enduring wisdom"
+          "Became a king",
+          "Was granted prophethood",
+          "His wisdom was recorded in the Quran",
+          "Led his people to a new land",
+          "Was given immense wealth"
         ],
-        "answer": "Protection for a people"
+        "answer": "His wisdom was recorded in the Quran"
       }
     },
-    "verseRef": "18:95",
-    "arabic": "قَالَ مَا مَكَّنِّى فِيهِ رَبِّى خَيْرٌۭ فَأَعِينُونِى بِقُوَّةٍ أَجْعَلْ بَيْنَكُمْ وَبَيْنَهُمْ رَدْمًا",
-    "verse": "He said, \"That in which my Lord has established me is better [than what you offer], but assist me with strength [i.e., manpower]; I will make between you and them a dam. (18:95)"
+    "verseRef": "31:12",
+    "arabic": "وَلَقَدْ ءَاتَيْنَا لُقْمَـٰنَ ٱلْحِكْمَةَ أَنِ ٱشْكُرْ لِلَّهِ ۚ وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِۦ ۖ وَمَن كَفَرَ فَإِنَّ ٱللَّهَ غَنِىٌّ حَمِيدٌۭ",
+    "verse": "And We had certainly given Luqmān wisdom [and said], \"Be grateful to Allāh.\" And whoever is grateful is grateful for [the benefit of] himself. And whoever denies [His favor] - then indeed, Allāh is Free of need and Praiseworthy. (31:12)"
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "generated": true
 }
