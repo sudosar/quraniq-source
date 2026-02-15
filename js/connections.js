@@ -26,7 +26,8 @@ const conn = {
     mistakes: 4,
     items: [],
     gameOver: false,
-    exploredVerses: new Set()  // Track verse refs explored this session (audio play or word tap)
+    exploredVerses: new Set(),  // Track verse refs explored this session (audio play or word tap)
+    submittedGuesses: new Set() // Track submitted wrong combinations (sorted keys joined by |)
 };
 
 function initConnections() {
@@ -101,7 +102,9 @@ function setupConnectionsGame() {
         conn.mistakes = saved.mistakes ?? 4;
         conn.gameOver = saved.gameOver || false;
         conn.correctCount = saved.correctCount ?? conn.solved.length;
+        conn.correctCount = saved.correctCount ?? conn.solved.length;
         conn.exploredVerses = new Set(saved.exploredVerses || []);
+        conn.submittedGuesses = new Set(saved.submittedGuesses || []);
     } else {
         // Clear stale state from a different puzzle
         if (saved && !stateValid) {
@@ -112,7 +115,9 @@ function setupConnectionsGame() {
         conn.mistakes = 4;
         conn.gameOver = false;
         conn.correctCount = 0;
+        conn.correctCount = 0;
         conn.exploredVerses = new Set();
+        conn.submittedGuesses = new Set();
     }
 
     // Flatten items, removing solved ones
@@ -219,11 +224,26 @@ function updateMistakes() {
 function submitConnections() {
     if (conn.selected.length !== 4 || conn.gameOver) return;
 
+    // Sort selected keys to create a unique signature for this combination
+    const selectedKeys = conn.selected.map(i => getConnItemKey(i)).sort();
+    const guessKey = selectedKeys.join('|');
+
+    if (conn.submittedGuesses.has(guessKey)) {
+        showToast('Already guessed!');
+
+        // Shake animation to indicate rejection
+        document.querySelectorAll('.conn-tile.selected').forEach(t => {
+            t.classList.add('shake');
+            setTimeout(() => t.classList.remove('shake'), 500);
+        });
+        return;
+    }
+
     // Check if selection matches any unsolved category
-    const selectedKeys = new Set(conn.selected.map(i => getConnItemKey(i)));
+    const selectedKeysSet = new Set(selectedKeys);
     const match = conn.puzzle.categories.find(cat =>
         !conn.solved.some(s => s.name === cat.name) &&
-        cat.items.every(i => selectedKeys.has(getConnItemKey(i))) &&
+        cat.items.every(i => selectedKeysSet.has(getConnItemKey(i))) &&
         cat.items.length === conn.selected.length
     );
 
@@ -253,6 +273,9 @@ function submitConnections() {
             setTimeout(() => showConnResult(true), 6000);
         }
     } else {
+        // Wrong guess - track it
+        conn.submittedGuesses.add(guessKey);
+
         // Check for one-away
         let oneAway = false;
         conn.puzzle.categories.forEach(cat => {
@@ -317,7 +340,7 @@ function renderSolvedRows() {
                     saveConnState();
                 }
             }
-            
+
             // Fallback to static puzzles if still missing
             if (!items[0]?.verse) {
                 for (const p of PUZZLES.connections) {
@@ -573,7 +596,7 @@ async function loadWBW(container) {
                     const wordDeep = deepNormalize(wordRoot);
                     for (const tr of tileRoots) {
                         const tileDeep = deepNormalize(tr);
-                        if (tileDeep.length >= 2 && wordDeep.length >= 2 && 
+                        if (tileDeep.length >= 2 && wordDeep.length >= 2 &&
                             (wordDeep === tileDeep || wordDeep.startsWith(tileDeep) || tileDeep.startsWith(wordDeep))) {
                             isMatch = true;
                             break;
@@ -782,6 +805,7 @@ function saveConnState() {
         gameOver: conn.gameOver,
         correctCount: conn.correctCount ?? conn.solved.length,
         exploredVerses: Array.from(conn.exploredVerses),
+        submittedGuesses: Array.from(conn.submittedGuesses),
         puzzleSource: conn.puzzleSource || 'unknown'
     };
     saveState(app.state);
