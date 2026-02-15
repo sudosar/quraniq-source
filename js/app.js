@@ -458,14 +458,32 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
     if (arabic || translation) {
         verseEl.style.display = 'block';
         let translationHtml = translation || '';
-        // Make verse reference numbers clickable links to Quran.com
+        // Strip the numeric ref from the translation text (we'll show it in the title instead)
         if (linkParsed && translationHtml) {
-            const refPattern = new RegExp(`(${linkParsed.surah}:${linkParsed.ayah}(?:-\d+)?)`);
-            translationHtml = translationHtml.replace(refPattern,
-                `<a href="https://quran.com/${linkParsed.surah}/${linkParsed.ayah}" target="_blank" rel="noopener noreferrer" class="verse-ref-link" title="Read on Quran.com">$1</a>`);
+            const refPattern = new RegExp(`\\s*${linkParsed.surah}:${linkParsed.ayah}(?:-\\d+)?\\s*[—–-]?\\s*`);
+            translationHtml = translationHtml.replace(refPattern, '').trim();
+            // Also strip leading "— " if the ref was at the start
+            translationHtml = translationHtml.replace(/^[—–-]\s*/, '').trim();
         }
-        verseEl.innerHTML = (arabic ? `<span>${arabic}</span>` : '') +
-            (translationHtml ? `<span class="translation">${translationHtml}</span>` : '');
+        // Build Surah name title
+        const surahName = linkParsed ? getSurahName(linkParsed.surah) : null;
+        const surahTitle = surahName
+            ? `Surah ${surahName} (${linkParsed.surah}:${linkParsed.ayah})`
+            : (linkRef || '');
+        const quranUrl = linkParsed
+            ? `https://quran.com/${linkParsed.surah}/${linkParsed.ayah}`
+            : null;
+        // Build the verse card as a clickable link
+        const titleHtml = surahTitle
+            ? `<div class="result-verse-title">${surahTitle}</div>`
+            : '';
+        const arabicHtml = arabic ? `<span class="result-verse-arabic">${arabic}</span>` : '';
+        const transHtml = translationHtml ? `<span class="translation">— ${translationHtml}</span>` : '';
+        if (quranUrl) {
+            verseEl.innerHTML = `<a href="${quranUrl}" target="_blank" rel="noopener noreferrer" class="result-verse-link" title="Read on Quran.com">${titleHtml}${arabicHtml}${transHtml}</a>`;
+        } else {
+            verseEl.innerHTML = `${titleHtml}${arabicHtml}${transHtml}`;
+        }
     } else if (app.currentMode === 'connections' && crescentRow) {
         // For connections: show exploration stats and encourage more exploration
         verseEl.style.display = 'block';
