@@ -370,7 +370,7 @@ function updateModeStats(mode, won, guessNum) {
     s.lastDay = today;
     saveStats(app.stats);
     // Submit score to leaderboard (async, non-blocking)
-    submitScore().catch(() => {});
+    submitScore().catch(() => { });
 }
 
 // ==================== HELP MODAL ====================
@@ -444,7 +444,7 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
             // Connections: count full moons in crescent row
             fbMoons = (crescentRow.match(/🌕/g) || []).length;
         }
-        submitFirebaseScore(app.currentMode, fbMoons).catch(() => {});
+        submitFirebaseScore(app.currentMode, fbMoons).catch(() => { });
     }
 
     document.getElementById('result-icon').textContent = icon;
@@ -559,7 +559,7 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
             try {
                 await navigator.share({ text });
                 trackShare(app.currentMode, 'native_share');
-            } catch {}
+            } catch { }
         } else {
             await navigator.clipboard.writeText(text);
             toast.classList.remove('hidden');
@@ -654,6 +654,15 @@ function showViewResultsButton(mode) {
         }
     });
     container.appendChild(btn);
+
+    // Hide game controls to declutter UI
+    if (mode === 'connections') {
+        const controls = container.querySelector('.connections-controls');
+        if (controls) controls.style.display = 'none';
+    } else if (mode === 'scramble') {
+        const controls = container.querySelector('.scramble-controls');
+        if (controls) controls.style.display = 'none';
+    }
 }
 
 // Restore "View Results" buttons on page load for completed games
@@ -821,7 +830,7 @@ function renderPerformanceInsights() {
                 if (fill) fill.style.width = `${result.percentile}%`;
                 if (playersCount) playersCount.textContent = `${result.totalPlayers} players worldwide`;
             }
-        }).catch(() => {});
+        }).catch(() => { });
     }
 
     const playersCountHtml = totalPlayersOnline > 0
@@ -880,7 +889,7 @@ function renderPerformanceInsights() {
         html += '<div class="game-insights-grid">';
         gameInsights.forEach(g => {
             const barColor = g.score >= 70 ? 'var(--correct)' :
-                             g.score >= 40 ? 'var(--present)' : 'var(--absent)';
+                g.score >= 40 ? 'var(--present)' : 'var(--absent)';
             html += `
                 <div class="game-insight-card">
                     <div class="game-insight-header">
@@ -956,7 +965,7 @@ function renderPerformanceInsights() {
         if (shareInsightsBtn) {
             shareInsightsBtn.addEventListener('click', async () => {
                 if (navigator.share) {
-                    try { await navigator.share({ text: shareText }); } catch {}
+                    try { await navigator.share({ text: shareText }); } catch { }
                 } else {
                     await navigator.clipboard.writeText(shareText);
                     showToast('Copied to clipboard!');
@@ -1024,7 +1033,7 @@ function initDhikrCounter() {
 
     // Load saved state
     let saved = {};
-    try { saved = JSON.parse(localStorage.getItem(DHIKR_KEY)) || {}; } catch(e) {}
+    try { saved = JSON.parse(localStorage.getItem(DHIKR_KEY)) || {}; } catch (e) { }
     if (!saved.counts) saved.counts = {};
     if (!saved.pending) saved.pending = {};
     if (!saved.phrase) saved.phrase = 'subhanallah';
