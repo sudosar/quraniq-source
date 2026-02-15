@@ -67,6 +67,45 @@ def normalize_arabic(text):
     return text
 
 
+def words_share_root(word1, word2, min_overlap=3):
+    """Check if two Arabic words likely share the same root.
+    
+    Uses multiple strategies:
+    1. Exact normalized match
+    2. One contains the other
+    3. Shared consecutive substring of min_overlap characters
+    
+    This catches cases like وعد/وعدا/وعده/موعدا (all root و-ع-د)
+    and فتنة/فتنة (same word, different diacritics).
+    """
+    n1 = normalize_arabic(word1)
+    n2 = normalize_arabic(word2)
+    if not n1 or not n2:
+        return False
+    
+    # Strip definite article for comparison
+    s1 = n1[2:] if n1.startswith('ال') else n1
+    s2 = n2[2:] if n2.startswith('ال') else n2
+    
+    # Exact match after stripping article
+    if s1 == s2:
+        return True
+    
+    # One contains the other (handles prefixed/suffixed forms)
+    if len(s1) >= 3 and len(s2) >= 3:
+        if s1 in s2 or s2 in s1:
+            return True
+    
+    # Check for shared consecutive substring of min_overlap length
+    shorter, longer = (s1, s2) if len(s1) <= len(s2) else (s2, s1)
+    for i in range(len(shorter) - min_overlap + 1):
+        sub = shorter[i:i + min_overlap]
+        if sub in longer:
+            return True
+    
+    return False
+
+
 def word_in_verse(word, verse_text):
     """Check if an Arabic word appears in a verse, with Uthmani-aware normalization.
     
@@ -560,7 +599,7 @@ RULES:
 5. Verse references MUST be real and accurate (surah:ayah format like "2:255")
 6. Each group needs a category-level representative verse reference
 7. Make the puzzle challenging but fair
-8. **CRITICAL** Every Arabic word MUST be unique across ALL 4 categories. No two items in the entire puzzle should use the same word (even with different diacritics).
+8. **CRITICAL** Every Arabic word MUST be unique across ALL 4 categories. No two items in the entire puzzle should share the same root or be forms of the same word (e.g., do NOT use وَعْدَ in one category and مَوْعِدًا in another — they share the root و-ع-د). Each item must be a completely different word from a different root.
 
 DIFFICULTY: 1 easy, 1 medium, 1 hard, 1 tricky group.
 
@@ -606,7 +645,7 @@ def validate_connections(puzzle, history):
         errors.append(f"Expected 4 categories, got {len(cats)}")
         return errors, cooldown_violations, warnings
 
-    all_words = set()  # set of (original_word, normalized_word) tuples
+    all_words = []  # list of original Arabic words seen so far
     cross_cat_refs = set()
 
     for i, cat in enumerate(cats):
@@ -658,13 +697,12 @@ def validate_connections(puzzle, history):
             if not item.get("ref"):
                 errors.append(f"Cat {i+1} item {j+1} missing ref")
             ar = item.get("ar", "")
-            ar_norm = normalize_arabic(ar)
-            # Check for duplicate words across categories (using normalized comparison)
-            for prev_word, prev_norm in all_words:
-                if ar_norm and (ar_norm == prev_norm or ar_norm in prev_norm or prev_norm in ar_norm):
-                    cooldown_violations.append(f"Duplicate word across categories: '{ar}' matches '{prev_word}'")
+            # Check for same-root words across categories
+            for prev_word in all_words:
+                if ar and words_share_root(ar, prev_word):
+                    cooldown_violations.append(f"Same-root word across categories: '{ar}' shares root with '{prev_word}'")
                     break
-            all_words.add((ar, ar_norm))
+            all_words.append(ar)
             if ar in history["connections"]["words"]:
                 warnings.append(f"Word '{ar}' reused (cooldown)")
             # Ensure optional fields exist for downstream compatibility

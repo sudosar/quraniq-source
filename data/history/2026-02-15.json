@@ -2,162 +2,162 @@
   "connections": {
     "categories": [
       {
-        "name": "مَشْرُوبَاتٌ فِي الْقُرْآنِ",
-        "nameEn": "Drinks in the Quran",
+        "name": "كَلِمَاتٌ مِنَ الْقُرْآنِ",
+        "nameEn": "Words from the Quran",
         "items": [
           {
-            "ar": "لَبَنًا",
-            "en": "milk",
-            "ref": "16:66",
-            "verse": "وَإِنَّ لَكُمْ فِى ٱلْأَنْعَـٰمِ لَعِبْرَةًۭ ۖ نُّسْقِيكُم مِّمَّا فِى بُطُونِهِۦ مِنۢ بَيْنِ فَرْثٍۢ وَدَمٍۢ لَّبَنًا خَالِصًۭا سَآئِغًۭا لِّلشَّـٰرِبِينَ",
-            "verseEn": "And indeed, for you in grazing livestock is a lesson. We give you drink from what is in their bellies - between excretion and blood - pure milk, palatable to drinkers."
+            "ar": "بَصِيرًا",
+            "en": "All-Seeing",
+            "ref": "17:1",
+            "verse": "سُبْحَـٰنَ ٱلَّذِىٓ أَسْرَىٰ بِعَبْدِهِۦ لَيْلًۭا مِّنَ ٱلْمَسْجِدِ ٱلْحَرَامِ إِلَى ٱلْمَسْجِدِ ٱلْأَقْصَا ٱلَّذِى بَـٰرَكْنَا حَوْلَهُۥ لِنُرِيَهُۥ مِنْ ءَايَـٰتِنَآ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
+            "verseEn": "Exalted is He who took His Servant [i.e., Prophet Muḥammad (ﷺ)] by night from al-Masjid al-Ḥarām to al-Masjid al-Aqṣā, whose surroundings We have blessed, to show him of Our signs. Indeed, He is the Hearing, the Seeing."
           },
           {
-            "ar": "مَاءٍ",
-            "en": "water",
-            "ref": "16:65",
-            "verse": "وَٱللَّهُ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءًۭ فَأَحْيَا بِهِ ٱلْأَرْضَ بَعْدَ مَوْتِهَآ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَةًۭ لِّقَوْمٍۢ يَسْمَعُونَ",
-            "verseEn": "And Allāh has sent down rain from the sky and given life thereby to the earth after its lifelessness. Indeed in that is a sign for a people who listen."
+            "ar": "جَعَلْنَاهُ",
+            "en": "We made him",
+            "ref": "19:10",
+            "verse": "قَالَ رَبِّ ٱجْعَل لِّىٓ ءَايَةًۭ ۚ قَالَ ءَايَتُكَ أَلَّا تُكَلِّمَ ٱلنَّاسَ ثَلَـٰثَ لَيَالٍۢ سَوِيًّۭا",
+            "verseEn": "[Zechariah] said, \"My Lord, make for me a sign.\" He said, \"Your sign is that you will not speak to the people for three nights, [being] sound.\""
           },
           {
-            "ar": "شَرَابٌ",
-            "en": "drink",
-            "ref": "16:69",
-            "verse": "ثُمَّ كُلِى مِن كُلِّ ٱلثَّمَرَٰتِ فَٱسْلُكِى سُبُلَ رَبِّكِ ذُلُلًۭا ۚ يَخْرُجُ مِنۢ بُطُونِهَا شَرَابٌۭ مُّخْتَلِفٌ أَلْوَٰنُهُۥ فِيهِ شِفَآءٌۭ لِّلنَّاسِ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةًۭ لِّقَوْمٍۢ يَتَفَكَّرُونَ",
-            "verseEn": "Then eat from all the fruits and follow the ways of your Lord laid down [for you].\" There emerges from their bellies a drink, varying in colors, in which there is healing for people. Indeed in that is a sign for a people who give thought."
+            "ar": "بُشْرَىٰ",
+            "en": "glad tidings",
+            "ref": "16:89",
+            "verse": "وَيَوْمَ نَبْعَثُ فِى كُلِّ أُمَّةٍۢ شَهِيدًا عَلَيْهِم مِّنْ أَنفُسِهِمْ ۖ وَجِئْنَا بِكَ شَهِيدًا عَلَىٰ هَـٰٓؤُلَآءِ ۚ وَنَزَّلْنَا عَلَيْكَ ٱلْكِتَـٰبَ تِبْيَـٰنًۭا لِّكُلِّ شَىْءٍۢ وَهُدًۭى وَرَحْمَةًۭ وَبُشْرَىٰ لِلْمُسْلِمِينَ",
+            "verseEn": "And [mention] the Day when We will resurrect among every nation a witness over them from themselves [i.e., their prophet]. And We will bring you, [O Muḥammad], as a witness over these [i.e., your nation]. And We have sent down to you the Book as clarification for all things and as guidance and mercy and good tidings for the Muslims."
           },
           {
-            "ar": "خَمْرٍ",
-            "en": "wine",
-            "ref": "47:15",
-            "verse": "مَّثَلُ ٱلْجَنَّةِ ٱلَّتِى وُعِدَ ٱلْمُتَّقُونَ ۖ فِيهَآ أَنْهَـٰرٌۭ مِّن مَّآءٍ غَيْرِ ءَاسِنٍۢ وَأَنْهَـٰرٌۭ مِّن لَّبَنٍۢ لَّمْ يَتَغَيَّرْ طَعْمُهُۥ وَأَنْهَـٰرٌۭ مِّنْ خَمْرٍۢ لَّذَّةٍۢ لِّلشَّـٰرِبِينَ وَأَنْهَـٰرٌۭ مِّنْ عَسَلٍۢ مُّصَفًّۭى ۖ وَلَهُمْ فِيهَا مِن كُلِّ ٱلثَّمَرَٰتِ وَمَغْفِرَةٌۭ مِّن رَّبِّهِمْ ۖ كَمَنْ هُوَ خَـٰلِدٌۭ فِى ٱلنَّارِ وَسُقُوا۟ مَآءً حَمِيمًۭا فَقَطَّعَ أَمْعَآءَهُمْ",
-            "verseEn": "Is the description of Paradise, which the righteous are promised, wherein are rivers of water unaltered, rivers of milk the taste of which never changes, rivers of wine delicious to those who drink, and rivers of purified honey, in which they will have from all [kinds of] fruits and forgiveness from their Lord... [Are its inhabitants] like those who abide eternally in the Fire and are given to drink scalding water that will sever their intestines?"
+            "ar": "سَبِيلًا",
+            "en": "a way",
+            "ref": "17:48",
+            "verse": "ٱنظُرْ كَيْفَ ضَرَبُوا۟ لَكَ ٱلْأَمْثَالَ فَضَلُّوا۟ فَلَا يَسْتَطِيعُونَ سَبِيلًۭا",
+            "verseEn": "Look how they strike for you comparisons; but they have strayed, so they cannot [find] a way."
           }
         ],
         "verse": {
-          "ref": "76:5",
-          "ayah": "إِنَّ ٱلْأَبْرَارَ يَشْرَبُونَ مِن كَأْسٍۢ كَانَ مِزَاجُهَا كَافُورًا",
-          "en": "Indeed, the righteous will drink from a cup [of wine] whose mixture is of Kāfūr,"
+          "ref": "17:89",
+          "ayah": "وَلَقَدْ صَرَّفْنَا لِلنَّاسِ فِى هَـٰذَا ٱلْقُرْءَانِ مِن كُلِّ مَثَلٍۢ فَأَبَىٰٓ أَكْثَرُ ٱلنَّاسِ إِلَّا كُفُورًۭا",
+          "en": "And We have certainly diversified for the people in this Qur’ān from every [kind of] example, but most of the people refused except disbelief."
         },
         "color": "yellow"
       },
       {
-        "name": "أَنْوَاعُ الْوَعْدِ",
-        "nameEn": "Types of Promises",
+        "name": "مَظَاهِرُ الْقُوَّةِ الإِلَهِيَّةِ",
+        "nameEn": "Manifestations of Divine Power",
         "items": [
           {
-            "ar": "وَعْدَ",
-            "en": "promise",
-            "ref": "19:61",
-            "verse": "جَنَّـٰتِ عَدْنٍ ٱلَّتِى وَعَدَ ٱلرَّحْمَـٰنُ عِبَادَهُۥ بِٱلْغَيْبِ ۚ إِنَّهُۥ كَانَ وَعْدُهُۥ مَأْتِيًّۭا",
-            "verseEn": "[Therein are] gardens of perpetual residence which the Most Merciful has promised His servants in the unseen. Indeed, His promise has ever been eminent."
+            "ar": "جَبَّارٍ",
+            "en": "Compeller",
+            "ref": "59:23",
+            "verse": "",
+            "verseEn": ""
           },
           {
-            "ar": "مَوْعِدًا",
-            "en": "appointed time",
-            "ref": "18:58",
-            "verse": "وَرَبُّكَ ٱلْغَفُورُ ذُو ٱلرَّحْمَةِ ۖ لَوْ يُؤَاخِذُهُم بِمَا كَسَبُوا۟ لَعَجَّلَ لَهُمُ ٱلْعَذَابَ ۚ بَل لَّهُم مَّوْعِدٌۭ لَّن يَجِدُوا۟ مِن دُونِهِۦ مَوْئِلًۭا",
-            "verseEn": "And your Lord is the Forgiving, the possessor of mercy. If He were to impose blame upon them for what they earned, He would have hastened for them the punishment. Rather, for them is an appointment from which they will never find an escape."
+            "ar": "الْقَوِيُّ",
+            "en": "The All-Strong",
+            "ref": "42:19",
+            "verse": "ٱللَّهُ لَطِيفٌۢ بِعِبَادِهِۦ يَرْزُقُ مَن يَشَآءُ ۖ وَهُوَ ٱلْقَوِىُّ ٱلْعَزِيزُ",
+            "verseEn": "Allāh is Subtle with His servants; He gives provision to whom He wills. And He is the Powerful, the Exalted in Might."
           },
           {
-            "ar": "وَعْدًا",
-            "en": "a promise",
-            "ref": "20:86",
-            "verse": "فَرَجَعَ مُوسَىٰٓ إِلَىٰ قَوْمِهِۦ غَضْبَـٰنَ أَسِفًۭا ۚ قَالَ يَـٰقَوْمِ أَلَمْ يَعِدْكُمْ رَبُّكُمْ وَعْدًا حَسَنًا ۚ أَفَطَالَ عَلَيْكُمُ ٱلْعَهْدُ أَمْ أَرَدتُّمْ أَن يَحِلَّ عَلَيْكُمْ غَضَبٌۭ مِّن رَّبِّكُمْ فَأَخْلَفْتُم مَّوْعِدِى",
-            "verseEn": "So Moses returned to his people, angry and grieved. He said, \"O my people, did your Lord not make you a good promise? Then, was the time [of its fulfillment] too long for you, or did you wish that wrath from your Lord descend upon you, so you broke your promise [of obedience] to me?\""
+            "ar": "الْقَاهِرُ",
+            "en": "The Irresistible",
+            "ref": "6:18",
+            "verse": "وَهُوَ ٱلْقَاهِرُ فَوْقَ عِبَادِهِۦ ۚ وَهُوَ ٱلْحَكِيمُ ٱلْخَبِيرُ",
+            "verseEn": "And He is the subjugator over His servants. And He is the Wise, the Aware."
           },
           {
-            "ar": "وَعْدُهُ",
-            "en": "His promise",
-            "ref": "30:6",
-            "verse": "وَعْدَ ٱللَّهِ ۖ لَا يُخْلِفُ ٱللَّهُ وَعْدَهُۥ وَلَـٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يَعْلَمُونَ",
-            "verseEn": "[It is] the promise of Allāh. Allāh does not fail in His promise, but most of the people do not know."
+            "ar": "الْمُقْتَدِرُ",
+            "en": "The Omnipotent",
+            "ref": "54:42",
+            "verse": "",
+            "verseEn": ""
           }
         ],
         "verse": {
-          "ref": "17:108",
-          "ayah": "وَيَقُولُونَ سُبْحَـٰنَ رَبِّنَآ إِن كَانَ وَعْدُ رَبِّنَا لَمَفْعُولًۭا",
-          "en": "And they say, \"Exalted is our Lord! Indeed, the promise of our Lord has been fulfilled.\""
+          "ref": "51:58",
+          "ayah": "",
+          "en": ""
         },
         "color": "green"
       },
       {
-        "name": "مَوَانِعُ ٱلْهِدَايَةِ",
-        "nameEn": "Obstacles to Guidance",
+        "name": "مَظَاهِرُ الْغَيْبِ",
+        "nameEn": "Aspects of the Unseen",
         "items": [
           {
-            "ar": "ٱلْغَفْلَةُ",
-            "en": "heedlessness",
-            "ref": "21:97",
-            "verse": "وَٱقْتَرَبَ ٱلْوَعْدُ ٱلْحَقُّ فَإِذَا هِىَ شَـٰخِصَةٌ أَبْصَـٰرُ ٱلَّذِينَ كَفَرُوا۟ يَـٰوَيْلَنَا قَدْ كُنَّا فِى غَفْلَةٍۢ مِّنْ هَـٰذَا بَلْ كُنَّا ظَـٰلِمِينَ",
-            "verseEn": "And [when] the true promise [i.e., the resurrection] has approached; then suddenly the eyes of those who disbelieved will be staring [in horror, while they say], \"O woe to us; we had been unmindful of this; rather, we were wrongdoers.\""
+            "ar": "الْجِنَّ",
+            "en": "the jinn",
+            "ref": "72:13",
+            "verse": "",
+            "verseEn": ""
           },
           {
-            "ar": "ٱلْإِعْرَاضَ",
-            "en": "turning away",
-            "ref": "20:124",
-            "verse": "وَمَنْ أَعْرَضَ عَن ذِكْرِى فَإِنَّ لَهُۥ مَعِيشَةًۭ ضَنكًۭا وَنَحْشُرُهُۥ يَوْمَ ٱلْقِيَـٰمَةِ أَعْمَىٰ",
-            "verseEn": "And whoever turns away from My remembrance - indeed, he will have a depressed [i.e., difficult] life, and We will gather [i.e., raise] him on the Day of Resurrection blind.\""
+            "ar": "مَلَائِكَةً",
+            "en": "angels",
+            "ref": "43:53",
+            "verse": "",
+            "verseEn": ""
           },
           {
-            "ar": "ٱلْكِبْرِ",
-            "en": "arrogance",
-            "ref": "7:146",
-            "verse": "سَأَصْرِفُ عَنْ ءَايَـٰتِىَ ٱلَّذِينَ يَتَكَبَّرُونَ فِى ٱلْأَرْضِ بِغَيْرِ ٱلْحَقِّ وَإِن يَرَوْا۟ كُلَّ ءَايَةٍۢ لَّا يُؤْمِنُوا۟ بِهَا وَإِن يَرَوْا۟ سَبِيلَ ٱلرُّشْدِ لَا يَتَّخِذُوهُ سَبِيلًۭا وَإِن يَرَوْا۟ سَبِيلَ ٱلْغَىِّ يَتَّخِذُوهُ سَبِيلًۭا ۚ ذَٰلِكَ بِأَنَّهُمْ كَذَّبُوا۟ بِـَٔايَـٰتِنَا وَكَانُوا۟ عَنْهَا غَـٰفِلِينَ",
-            "verseEn": "I will turn away from My signs those who are arrogant upon the earth without right; and if they should see every sign, they will not believe in it. And if they see the way of consciousness, they will not adopt it as a way; but if they see the way of error, they will adopt it as a way. That is because they have denied Our signs and they were heedless of them."
+            "ar": "رُوحًا",
+            "en": "a spirit",
+            "ref": "40:15",
+            "verse": "رَفِيعُ ٱلدَّرَجَـٰتِ ذُو ٱلْعَرْشِ يُلْقِى ٱلرُّوحَ مِنْ أَمْرِهِۦ عَلَىٰ مَن يَشَآءُ مِنْ عِبَادِهِۦ لِيُنذِرَ يَوْمَ ٱلتَّلَاقِ",
+            "verseEn": "[He is] the Exalted above [all] degrees, Owner of the Throne; He places the inspiration of His command [i.e., revelation] upon whom He wills of His servants to warn of the Day of Meeting."
           },
           {
-            "ar": "ٱلرَّيْبِ",
-            "en": "doubt",
-            "ref": "9:45",
-            "verse": "إِنَّمَا يَسْتَـْٔذِنُكَ ٱلَّذِينَ لَا يُؤْمِنُونَ بِٱللَّهِ وَٱلْيَوْمِ ٱلْـَٔاخِرِ وَٱرْتَابَتْ قُلُوبُهُمْ فَهُمْ فِى رَيْبِهِمْ يَتَرَدَّدُونَ",
-            "verseEn": "Only those would ask permission of you who do not believe in Allāh and the Last Day and whose hearts have doubted, and they, in their doubt, are hesitating."
+            "ar": "الْغَيْبِ",
+            "en": "the Unseen",
+            "ref": "59:22",
+            "verse": "",
+            "verseEn": ""
           }
         ],
         "verse": {
-          "ref": "6:25",
-          "ayah": "وَمِنْهُم مَّن يَسْتَمِعُ إِلَيْكَ ۖ وَجَعَلْنَا عَلَىٰ قُلُوبِهِمْ أَكِنَّةً أَن يَفْقَهُوهُ وَفِىٓ ءَاذَانِهِمْ وَقْرًۭا ۚ وَإِن يَرَوْا۟ كُلَّ ءَايَةٍۢ لَّا يُؤْمِنُوا۟ بِهَا ۚ حَتَّىٰٓ إِذَا جَآءُوكَ يُجَـٰدِلُونَكَ يَقُولُ ٱلَّذِينَ كَفَرُوٓا۟ إِنْ هَـٰذَآ إِلَّآ أَسَـٰطِيرُ ٱلْأَوَّلِينَ",
-          "en": "And among them are those who listen to you, but We have placed over their hearts coverings, lest they understand it, and in their ears deafness. And if they should see every sign, they will not believe in it. Even when they come to you arguing with you, those who disbelieve say, \"This is not but legends of the former peoples.\""
+          "ref": "6:59",
+          "ayah": "",
+          "en": ""
         },
         "color": "blue"
       },
       {
-        "name": "مَوَانِعُ ٱلتَّفَكُّرِ",
-        "nameEn": "Obstacles to Contemplation",
+        "name": "أَنْوَاعُ الْخَلْقِ وَالتَّكْوِينِ",
+        "nameEn": "Modes of Creation and Formation",
         "items": [
           {
-            "ar": "ٱلْأَصْنَامَ",
-            "en": "the idols",
-            "ref": "21:57",
-            "verse": "وَتَٱللَّهِ لَأَكِيدَنَّ أَصْنَـٰمَكُم بَعْدَ أَن تُوَلُّوا۟ مُدْبِرِينَ",
-            "verseEn": "And [I swear] by Allāh, I will surely plan against your idols after you have turned and gone away.\""
+            "ar": "تَخْلُقُونَ",
+            "en": "you create",
+            "ref": "29:17",
+            "verse": "إِنَّمَا تَعْبُدُونَ مِن دُونِ ٱللَّهِ أَوْثَـٰنًۭا وَتَخْلُقُونَ إِفْكًا ۚ إِنَّ ٱلَّذِينَ تَعْبُدُونَ مِن دُونِ ٱللَّهِ لَا يَمْلِكُونَ لَكُمْ رِزْقًۭا فَٱبْتَغُوا۟ عِندَ ٱللَّهِ ٱلرِّزْقَ وَٱعْبُدُوهُ وَٱشْكُرُوا۟ لَهُۥٓ ۖ إِلَيْهِ تُرْجَعُونَ",
+            "verseEn": "You only worship, besides Allāh, idols, and you produce a falsehood. Indeed, those you worship besides Allāh do not possess for you [the power of] provision. So seek from Allāh provision and worship Him and be grateful to Him. To Him you will be returned.\""
           },
           {
-            "ar": "ٱلْأَهْوَاءَ",
-            "en": "the vain desires",
-            "ref": "25:43",
-            "verse": "أَرَءَيْتَ مَنِ ٱتَّخَذَ إِلَـٰهَهُۥ هَوَىٰهُ أَفَأَنتَ تَكُونُ عَلَيْهِ وَكِيلًا",
-            "verseEn": "Have you seen the one who takes as his god his own desire? Then would you be responsible for him?"
+            "ar": "فَطَرَكُمْ",
+            "en": "He originated you",
+            "ref": "36:22",
+            "verse": "وَمَا لِىَ لَآ أَعْبُدُ ٱلَّذِى فَطَرَنِى وَإِلَيْهِ تُرْجَعُونَ",
+            "verseEn": "And why should I not worship He who created me and to whom you will be returned?"
           },
           {
-            "ar": "ٱلْأَقْفَالُ",
-            "en": "the locks (on hearts)",
-            "ref": "47:24",
-            "verse": "أَفَلَا يَتَدَبَّرُونَ ٱلْقُرْءَانَ أَمْ عَلَىٰ قُلُوبٍ أَقْفَالُهَآ",
-            "verseEn": "Then do they not reflect upon the Qur’ān, or are there locks upon [their] hearts?"
+            "ar": "يُكَوِّرُ",
+            "en": "He wraps",
+            "ref": "39:5",
+            "verse": "خَلَقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ بِٱلْحَقِّ ۖ يُكَوِّرُ ٱلَّيْلَ عَلَى ٱلنَّهَارِ وَيُكَوِّرُ ٱلنَّهَارَ عَلَى ٱلَّيْلِ ۖ وَسَخَّرَ ٱلشَّمْسَ وَٱلْقَمَرَ ۖ كُلٌّۭ يَجْرِى لِأَجَلٍۢ مُّسَمًّى ۗ أَلَا هُوَ ٱلْعَزِيزُ ٱلْغَفَّـٰرُ",
+            "verseEn": "He created the heavens and earth in truth. He wraps the night over the day and wraps the day over the night and has subjected the sun and the moon, each running [its course] for a specified term. Unquestionably, He is the Exalted in Might, the Perpetual Forgiver."
           },
           {
-            "ar": "ٱلْغُلْفُ",
-            "en": "uncircumcised hearts / covered hearts",
-            "ref": "4:155",
-            "verse": "فَبِمَا نَقْضِهِم مِّيثَـٰقَهُمْ وَكُفْرِهِم بِـَٔايَـٰتِ ٱللَّهِ وَقَتْلِهِمُ ٱلْأَنۢبِيَآءَ بِغَيْرِ حَقٍّۢ وَقَوْلِهِمْ قُلُوبُنَا غُلْفٌۢ ۚ بَلْ طَبَعَ ٱللَّهُ عَلَيْهَا بِكُفْرِهِمْ فَلَا يُؤْمِنُونَ إِلَّا قَلِيلًۭا",
-            "verseEn": "And [We cursed them] for their breaking of the covenant and their disbelief in the signs of Allāh and their killing of the prophets without right and their saying, \"Our hearts are wrapped\" [i.e., sealed against reception]. Rather, Allāh has sealed them because of their disbelief, so they believe not, except for a few."
+            "ar": "صَنَعَ",
+            "en": "He made",
+            "ref": "21:80",
+            "verse": "",
+            "verseEn": ""
           }
         ],
         "verse": {
-          "ref": "30:22",
-          "ayah": "وَمِنْ ءَايَـٰتِهِۦ خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍۢ لِّلْعَـٰلِمِينَ",
-          "en": "And of His signs is the creation of the heavens and the earth and the diversity of your languages and your colors. Indeed in that are signs for those of knowledge."
+          "ref": "6:95",
+          "ayah": "۞ إِنَّ ٱللَّهَ فَالِقُ ٱلْحَبِّ وَٱلنَّوَىٰ ۖ يُخْرِجُ ٱلْحَىَّ مِنَ ٱلْمَيِّتِ وَمُخْرِجُ ٱلْمَيِّتِ مِنَ ٱلْحَىِّ ۚ ذَٰلِكُمُ ٱللَّهُ ۖ فَأَنَّىٰ تُؤْفَكُونَ",
+          "en": "Indeed, Allāh is the cleaver of grain and date seeds. He brings the living out of the dead and brings the dead out of the living. That is Allāh; so how are you deluded?"
         },
         "color": "purple"
       }
