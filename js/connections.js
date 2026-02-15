@@ -306,9 +306,24 @@ function renderSolvedRows() {
         // Look up full item data from puzzle definition (with per-word verses)
         let items = s.items;
         if (!items[0]?.verse) {
-            for (const p of PUZZLES.connections) {
-                const cat = p.categories.find(c => (c.nameEn || c.name) === (s.nameEn || s.name));
-                if (cat) { items = cat.items; break; }
+            // First try to recover from the current daily puzzle (self-healing)
+            if (conn.puzzle && conn.puzzle.categories) {
+                const dailyCat = conn.puzzle.categories.find(c => (c.nameEn || c.name) === (s.nameEn || s.name));
+                if (dailyCat && dailyCat.items && dailyCat.items[0]?.verse) {
+                    items = dailyCat.items;
+                    // Auto-heal the stored state for next time
+                    s.items = items;
+                    if (dailyCat.verse) s.verse = dailyCat.verse;
+                    saveConnState();
+                }
+            }
+            
+            // Fallback to static puzzles if still missing
+            if (!items[0]?.verse) {
+                for (const p of PUZZLES.connections) {
+                    const cat = p.categories.find(c => (c.nameEn || c.name) === (s.nameEn || s.name));
+                    if (cat) { items = cat.items; break; }
+                }
             }
         }
 
