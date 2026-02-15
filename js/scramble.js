@@ -118,7 +118,7 @@ function renderScramble() {
     // Crescent meter
     const scrMeterEl = document.getElementById('scr-crescent-meter');
     if (scrMeterEl) {
-        const currentMoons = scr.gameOver && !scr.won ? 0 : Math.max(1, 5 - scr.hintsUsed);
+        const currentMoons = scr.gameOver && !scr.won ? 0 : Math.max(1, 5 - scr.hintsUsed - scr.moves);
         const crescents = Array.from({ length: 5 }, (_, i) =>
             `<span class="ded-moon ${i < currentMoons ? 'active' : 'spent'}">${i < currentMoons ? '\u{1F319}' : '\u{1F311}'}</span>`
         ).join('');
@@ -693,7 +693,7 @@ function showScrResult(cacheOnly) {
     });
 
     const puzzleNum = getPuzzleNumber();
-    const moons = scr.won ? Math.max(1, 5 - scr.hintsUsed) : 0;
+    const moons = scr.won ? Math.max(1, 5 - scr.hintsUsed - scr.moves) : 0;
     const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
     const shareText = `QuranIQ - Ayah Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${moonStr}\nAttempts: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}\n\nhttps://sudosar.github.io/quraniq/`;
