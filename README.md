@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-TO update later
 =======
 # 🕌 QuranIQ
 
