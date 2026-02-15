@@ -600,6 +600,10 @@ RULES:
 6. Each group needs a category-level representative verse reference
 7. Make the puzzle challenging but fair
 8. **CRITICAL** Every Arabic word MUST be unique across ALL 4 categories. No two items in the entire puzzle should share the same root or be forms of the same word (e.g., do NOT use وَعْدَ in one category and مَوْعِدًا in another — they share the root و-ع-د). Each item must be a completely different word from a different root.
+9. **CRITICAL** Category names MUST be specific.
+   - **FORBIDDEN**: "Words from the Quran", "Common Nouns", "Verbs", "Words starting with M", "Words from Juz 30".
+   - **REQUIRED**: Specific semantic fields like "Rivers in Jannah", "Names of Hellfire", "Fruits mentioned in Quran", "Family of the Prophet", "Attributes of Allah relating to Mercy".
+   - If a category is too broad, the puzzle will be REJECTED.
 
 DIFFICULTY: 1 easy, 1 medium, 1 hard, 1 tricky group.
 

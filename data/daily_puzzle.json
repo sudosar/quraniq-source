@@ -3,44 +3,44 @@
   "puzzle": {
     "categories": [
       {
-        "name": "كَلِمَاتٌ مِنَ الْقُرْآنِ",
-        "nameEn": "Words from the Quran",
+        "name": "أَلْوَانٌ مَذْكُورَةٌ فِي الْقُرْآنِ",
+        "nameEn": "Colors Mentioned in the Quran",
+        "color": "yellow",
         "items": [
           {
-            "ar": "بَصِيرًا",
-            "en": "All-Seeing",
-            "ref": "17:1",
-            "verse": "سُبْحَـٰنَ ٱلَّذِىٓ أَسْرَىٰ بِعَبْدِهِۦ لَيْلًۭا مِّنَ ٱلْمَسْجِدِ ٱلْحَرَامِ إِلَى ٱلْمَسْجِدِ ٱلْأَقْصَا ٱلَّذِى بَـٰرَكْنَا حَوْلَهُۥ لِنُرِيَهُۥ مِنْ ءَايَـٰتِنَآ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
-            "verseEn": "Exalted is He who took His Servant [i.e., Prophet Muḥammad (ﷺ)] by night from al-Masjid al-Ḥarām to al-Masjid al-Aqṣā, whose surroundings We have blessed, to show him of Our signs. Indeed, He is the Hearing, the Seeing."
+            "ar": "بَيْضٌ",
+            "en": "white",
+            "ref": "37:49",
+            "verse": "كَأَنَّهُنَّ بَيْضٌۭ مَّكْنُونٌۭ",
+            "verseEn": "As if they were [delicate] eggs, well-protected."
           },
           {
-            "ar": "جَعَلْنَاهُ",
-            "en": "We made him",
-            "ref": "19:10",
-            "verse": "قَالَ رَبِّ ٱجْعَل لِّىٓ ءَايَةًۭ ۚ قَالَ ءَايَتُكَ أَلَّا تُكَلِّمَ ٱلنَّاسَ ثَلَـٰثَ لَيَالٍۢ سَوِيًّۭا",
-            "verseEn": "[Zechariah] said, \"My Lord, make for me a sign.\" He said, \"Your sign is that you will not speak to the people for three nights, [being] sound.\""
+            "ar": "صُفْرٌ",
+            "en": "yellow",
+            "ref": "77:33",
+            "verse": "كَأَنَّهُۥ جِمَـٰلَتٌۭ صُفْرٌۭ",
+            "verseEn": "As if they were yellowish [black] camels."
           },
           {
-            "ar": "بُشْرَىٰ",
-            "en": "glad tidings",
-            "ref": "16:89",
-            "verse": "وَيَوْمَ نَبْعَثُ فِى كُلِّ أُمَّةٍۢ شَهِيدًا عَلَيْهِم مِّنْ أَنفُسِهِمْ ۖ وَجِئْنَا بِكَ شَهِيدًا عَلَىٰ هَـٰٓؤُلَآءِ ۚ وَنَزَّلْنَا عَلَيْكَ ٱلْكِتَـٰبَ تِبْيَـٰنًۭا لِّكُلِّ شَىْءٍۢ وَهُدًۭى وَرَحْمَةًۭ وَبُشْرَىٰ لِلْمُسْلِمِينَ",
-            "verseEn": "And [mention] the Day when We will resurrect among every nation a witness over them from themselves [i.e., their prophet]. And We will bring you, [O Muḥammad], as a witness over these [i.e., your nation]. And We have sent down to you the Book as clarification for all things and as guidance and mercy and good tidings for the Muslims."
+            "ar": "سُودٌ",
+            "en": "black",
+            "ref": "3:106",
+            "verse": "يَوْمَ تَبْيَضُّ وُجُوهٌۭ وَتَسْوَدُّ وُجُوهٌۭ ۚ فَأَمَّا ٱلَّذِينَ ٱسْوَدَّتْ وُجُوهُهُمْ أَكَفَرْتُم بَعْدَ إِيمَـٰنِكُمْ فَذُوقُوا۟ ٱلْعَذَابَ بِمَا كُنتُمْ تَكْفُرُونَ",
+            "verseEn": "On the Day [some] faces will turn white and [some] faces will turn black. As for those whose faces turn black, [to them it will be said], \"Did you disbelieve [i.e., reject faith] after your belief? Then taste the punishment for what you used to reject.\""
           },
           {
-            "ar": "سَبِيلًا",
-            "en": "a way",
-            "ref": "17:48",
-            "verse": "ٱنظُرْ كَيْفَ ضَرَبُوا۟ لَكَ ٱلْأَمْثَالَ فَضَلُّوا۟ فَلَا يَسْتَطِيعُونَ سَبِيلًۭا",
-            "verseEn": "Look how they strike for you comparisons; but they have strayed, so they cannot [find] a way."
+            "ar": "خُضْرٌ",
+            "en": "green",
+            "ref": "18:31",
+            "verse": "أُو۟لَـٰٓئِكَ لَهُمْ جَنَّـٰتُ عَدْنٍۢ تَجْرِى مِن تَحْتِهِمُ ٱلْأَنْهَـٰرُ يُحَلَّوْنَ فِيهَا مِنْ أَسَاوِرَ مِن ذَهَبٍۢ وَيَلْبَسُونَ ثِيَابًا خُضْرًۭا مِّن سُندُسٍۢ وَإِسْتَبْرَقٍۢ مُّتَّكِـِٔينَ فِيهَا عَلَى ٱلْأَرَآئِكِ ۚ نِعْمَ ٱلثَّوَابُ وَحَسُنَتْ مُرْتَفَقًۭا",
+            "verseEn": "Those will have gardens of perpetual residence; beneath them rivers will flow. They will be adorned therein with bracelets of gold and will wear green garments of fine silk and brocade, reclining therein on adorned couches. Excellent is the reward, and good is the resting place."
           }
         ],
         "verse": {
-          "ref": "17:89",
-          "ayah": "وَلَقَدْ صَرَّفْنَا لِلنَّاسِ فِى هَـٰذَا ٱلْقُرْءَانِ مِن كُلِّ مَثَلٍۢ فَأَبَىٰٓ أَكْثَرُ ٱلنَّاسِ إِلَّا كُفُورًۭا",
-          "en": "And We have certainly diversified for the people in this Qur’ān from every [kind of] example, but most of the people refused except disbelief."
-        },
-        "color": "yellow"
+          "ref": "35:27",
+          "en": "Do you not see that Allāh sends down rain from the sky, and We produce thereby fruits of varying colors? And in the mountains are tracts, white and red of varying shades and [some] extremely black.",
+          "ayah": "أَلَمْ تَرَ أَنَّ ٱللَّهَ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءًۭ فَأَخْرَجْنَا بِهِۦ ثَمَرَٰتٍۢ مُّخْتَلِفًا أَلْوَٰنُهَا ۚ وَمِنَ ٱلْجِبَالِ جُدَدٌۢ بِيضٌۭ وَحُمْرٌۭ مُّخْتَلِفٌ أَلْوَٰنُهَا وَغَرَابِيبُ سُودٌۭ"
+        }
       },
       {
         "name": "مَظَاهِرُ الْقُوَّةِ الإِلَهِيَّةِ",
@@ -50,8 +50,8 @@
             "ar": "جَبَّارٍ",
             "en": "Compeller",
             "ref": "59:23",
-            "verse": "هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْمَلِكُ ٱلْقُدُّوسُ ٱلسَّلَـٰمُ ٱلْمُؤْمِنُ ٱلْمُهَيْمِنُ ٱلْعَزِيزُ ٱلْجَبَّارُ ٱلْمُتَكَبِّرُ ۚ سُبْحَـٰنَ ٱللَّهِ عَمَّا يُشْرِكُونَ",
-            "verseEn": "He is Allāh, other than whom there is no deity, the Sovereign, the Pure, the Perfection, the Grantor of Security, the Overseer, the Exalted in Might, the Compeller, the Superior. Exalted is Allāh above whatever they associate with Him."
+            "verse": "",
+            "verseEn": ""
           },
           {
             "ar": "الْقَوِيُّ",
@@ -71,14 +71,14 @@
             "ar": "الْمُقْتَدِرُ",
             "en": "The Omnipotent",
             "ref": "54:42",
-            "verse": "كَذَّبُوا۟ بِـَٔايَـٰتِنَا كُلِّهَا فَأَخَذْنَـٰهُمْ أَخْذَ عَزِيزٍۢ مُّقْتَدِرٍ",
-            "verseEn": "They denied Our signs, all of them, so We seized them with a seizure of one Exalted in Might and Perfect in Ability."
+            "verse": "",
+            "verseEn": ""
           }
         ],
         "verse": {
           "ref": "51:58",
-          "ayah": "إِنَّ ٱللَّهَ هُوَ ٱلرَّزَّاقُ ذُو ٱلْقُوَّةِ ٱلْمَتِينُ",
-          "en": "Indeed, it is Allāh who is the [continual] Provider, the firm possessor of strength."
+          "ayah": "",
+          "en": ""
         },
         "color": "green"
       },
@@ -90,15 +90,15 @@
             "ar": "الْجِنَّ",
             "en": "the jinn",
             "ref": "72:13",
-            "verse": "وَأَنَّا لَمَّا سَمِعْنَا ٱلْهُدَىٰٓ ءَامَنَّا بِهِۦ ۖ فَمَن يُؤْمِنۢ بِرَبِّهِۦ فَلَا يَخَافُ بَخْسًۭا وَلَا رَهَقًۭا",
-            "verseEn": "And when we heard the guidance [i.e., the Qur’ān], we believed in it. And whoever believes in his Lord will not fear deprivation or burden."
+            "verse": "",
+            "verseEn": ""
           },
           {
             "ar": "مَلَائِكَةً",
             "en": "angels",
             "ref": "43:53",
-            "verse": "فَلَوْلَآ أُلْقِىَ عَلَيْهِ أَسْوِرَةٌۭ مِّن ذَهَبٍ أَوْ جَآءَ مَعَهُ ٱلْمَلَـٰٓئِكَةُ مُقْتَرِنِينَ",
-            "verseEn": "Then why have there not been placed upon him bracelets of gold or come with him the angels in conjunction?\""
+            "verse": "",
+            "verseEn": ""
           },
           {
             "ar": "رُوحًا",
@@ -111,14 +111,14 @@
             "ar": "الْغَيْبِ",
             "en": "the Unseen",
             "ref": "59:22",
-            "verse": "هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَـٰهَ إِلَّا هُوَ ۖ عَـٰلِمُ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ ۖ هُوَ ٱلرَّحْمَـٰنُ ٱلرَّحِيمُ",
-            "verseEn": "He is Allāh, other than whom there is no deity, Knower of the unseen and the witnessed. He is the Entirely Merciful, the Especially Merciful."
+            "verse": "",
+            "verseEn": ""
           }
         ],
         "verse": {
           "ref": "6:59",
-          "ayah": "۞ وَعِندَهُۥ مَفَاتِحُ ٱلْغَيْبِ لَا يَعْلَمُهَآ إِلَّا هُوَ ۚ وَيَعْلَمُ مَا فِى ٱلْبَرِّ وَٱلْبَحْرِ ۚ وَمَا تَسْقُطُ مِن وَرَقَةٍ إِلَّا يَعْلَمُهَا وَلَا حَبَّةٍۢ فِى ظُلُمَـٰتِ ٱلْأَرْضِ وَلَا رَطْبٍۢ وَلَا يَابِسٍ إِلَّا فِى كِتَـٰبٍۢ مُّبِينٍۢ",
-          "en": "And with Him are the keys of the unseen; none knows them except Him. And He knows what is on the land and in the sea. Not a leaf falls but that He knows it. And no grain is there within the darknesses of the earth and no moist or dry [thing] but that it is [written] in a clear record."
+          "ayah": "",
+          "en": ""
         },
         "color": "blue"
       },
@@ -151,8 +151,8 @@
             "ar": "صَنَعَ",
             "en": "He made",
             "ref": "21:80",
-            "verse": "وَعَلَّمْنَـٰهُ صَنْعَةَ لَبُوسٍۢ لَّكُمْ لِتُحْصِنَكُم مِّنۢ بَأْسِكُمْ ۖ فَهَلْ أَنتُمْ شَـٰكِرُونَ",
-            "verseEn": "And We taught him the fashioning of coats of armor to protect you from your [enemy in] battle. So will you then be grateful?"
+            "verse": "",
+            "verseEn": ""
           }
         ],
         "verse": {
@@ -164,5 +164,6 @@
       }
     ]
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
