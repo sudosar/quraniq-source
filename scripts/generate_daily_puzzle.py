@@ -560,6 +560,7 @@ RULES:
 5. Verse references MUST be real and accurate (surah:ayah format like "2:255")
 6. Each group needs a category-level representative verse reference
 7. Make the puzzle challenging but fair
+8. **CRITICAL** Every Arabic word MUST be unique across ALL 4 categories. No two items in the entire puzzle should use the same word (even with different diacritics).
 
 DIFFICULTY: 1 easy, 1 medium, 1 hard, 1 tricky group.
 
@@ -605,7 +606,7 @@ def validate_connections(puzzle, history):
         errors.append(f"Expected 4 categories, got {len(cats)}")
         return errors, cooldown_violations, warnings
 
-    all_words = set()
+    all_words = set()  # set of (original_word, normalized_word) tuples
     cross_cat_refs = set()
 
     for i, cat in enumerate(cats):
@@ -657,9 +658,13 @@ def validate_connections(puzzle, history):
             if not item.get("ref"):
                 errors.append(f"Cat {i+1} item {j+1} missing ref")
             ar = item.get("ar", "")
-            if ar in all_words:
-                warnings.append(f"Duplicate word: {ar}")
-            all_words.add(ar)
+            ar_norm = normalize_arabic(ar)
+            # Check for duplicate words across categories (using normalized comparison)
+            for prev_word, prev_norm in all_words:
+                if ar_norm and (ar_norm == prev_norm or ar_norm in prev_norm or prev_norm in ar_norm):
+                    cooldown_violations.append(f"Duplicate word across categories: '{ar}' matches '{prev_word}'")
+                    break
+            all_words.add((ar, ar_norm))
             if ar in history["connections"]["words"]:
                 warnings.append(f"Word '{ar}' reused (cooldown)")
             # Ensure optional fields exist for downstream compatibility
