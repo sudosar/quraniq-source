@@ -119,7 +119,7 @@ function renderScramble() {
     const scrMeterEl = document.getElementById('scr-crescent-meter');
     if (scrMeterEl) {
         const currentMoons = scr.gameOver && !scr.won ? 0 : Math.max(1, 5 - scr.hintsUsed);
-        const crescents = Array.from({length: 5}, (_, i) =>
+        const crescents = Array.from({ length: 5 }, (_, i) =>
             `<span class="ded-moon ${i < currentMoons ? 'active' : 'spent'}">${i < currentMoons ? '\u{1F319}' : '\u{1F311}'}</span>`
         ).join('');
 
@@ -273,10 +273,6 @@ function createWordElement(word, index, isPlaced) {
                     saveScrState();
                     renderScramble();
                     announce(`Placed word. ${scr.available.length} words remaining.`);
-                    // Auto-check if all placed
-                    if (scr.available.length === 0) {
-                        setTimeout(() => checkScramble(), 300);
-                    }
                 });
             }
             el.addEventListener('keydown', (e) => {
@@ -535,10 +531,7 @@ function useHintLockPosition() {
     saveScrState();
     renderScramble();
 
-    // Auto-check if all placed after locking
-    if (scr.available.length === 0) {
-        setTimeout(() => checkScramble(), 300);
-    }
+
 }
 
 function resetScramble() {
