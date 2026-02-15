@@ -1,4 +1,3 @@
-=======
 # 🕌 QuranIQ
 
 **A Daily Puzzle Challenge to Deepen Your Connection with the Quran.**
