@@ -193,7 +193,7 @@ def extract_ref(text):
 
 
 # ── History Management ─────────────────────────────────────────────
-def load_history():
+def load_history(exclude_date=None):
     """Load puzzle history for cooldown enforcement.
 
     All games use a 365-day cooldown (except Deduction at 60 days)
@@ -221,6 +221,8 @@ def load_history():
         try:
             date_str = fname.replace(".json", "")
             fdate = datetime.strptime(date_str, "%Y-%m-%d")
+            if exclude_date and date_str == exclude_date:
+                continue
         except ValueError:
             continue
 
@@ -1886,8 +1888,8 @@ def main():
     else:
         print(f"  ✗ Gemini API (GEMINI_API_KEY not set)")
 
-    # Load history for cooldown enforcement
-    history = load_history()
+    # Load history for cooldown enforcement (exclude today to allow replacing buggy attempts)
+    history = load_history(exclude_date=today)
     print(f"\nHistory loaded:")
     print(f"  Connections: {len(history['connections']['themes'])} themes, "
           f"{len(history['connections']['verses'])} verses")
