@@ -1487,6 +1487,20 @@ def enrich_connections_with_verses(puzzle):
                     print(f"    ✗ Retry failed for category verse {cat_verse['ref']}")
                 time.sleep(1)
     
+    # Final validation pass: reject if any verses are still missing
+    for cat in cats:
+        for item in cat.get("items", []):
+            if item.get("ref") and not item.get("verse"):
+                msg = f"Could not fetch verse text for item '{item.get('ar')}' ({item.get('ref')})"
+                mismatches.append(msg)
+                print(f"    ✗ {msg}")
+        
+        cat_verse = cat.get("verse", {})
+        if isinstance(cat_verse, dict) and cat_verse.get("ref") and not cat_verse.get("ayah"):
+            msg = f"Could not fetch verse text for category '{cat.get('nameEn')}' ({cat_verse.get('ref')})"
+            mismatches.append(msg)
+            print(f"    ✗ {msg}")
+    
     if mismatches:
         print(f"  ✗ Word-in-verse check FAILED: {len(mismatches)} mismatches")
     else:
@@ -1763,6 +1777,15 @@ def generate_game(game_type, history, today):
                     previous_violations = (previous_violations or []) + mismatches
                     continue  # Retry — the LLM picked wrong verse refs
                 puzzle = enriched
+            
+            # For Scramble: verify verse text fetching works (critical)
+            elif game_type == "scramble":
+                enriched = enrich_scramble_with_verses(puzzle)
+                if not enriched.get("arabic") or not enriched.get("words"):
+                    print(f"  ✗ SCRAMBLE ENRICHMENT FAILED (rejecting): Could not fetch verse text")
+                    previous_violations = (previous_violations or []) + ["Could not fetch verse text from API"]
+                    continue
+                puzzle = enriched
 
             print(f"\n  ✓ {config['label']} generated successfully using {model_label}")
             return puzzle
@@ -1884,8 +1907,6 @@ def main():
                 puzzle = enrich_wordle_with_verses(puzzle)
             elif game_type == "deduction":
                 puzzle = enrich_deduction_with_verses(puzzle)
-            elif game_type == "scramble":
-                puzzle = enrich_scramble_with_verses(puzzle)
 
             all_puzzles[game_type] = puzzle
 
