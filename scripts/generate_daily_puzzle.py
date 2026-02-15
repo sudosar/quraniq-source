@@ -165,6 +165,7 @@ FALLBACK_PUZZLES = os.path.join(SCRIPT_DIR, "..", "puzzles.js")
 
 COOLING_DAYS = 365          # Default cooldown for most games
 DEDUCTION_COOLING_DAYS = 60 # Shorter cooldown for Who Am I (limited character pool ~70-200)
+THEME_COOLING_DAYS = 30     # Shorter cooldown for English themes to allow more flexibility
 SURAH_COOLING_DAYS = 30    # Surah-level cooldown for single-verse games (Scramble, Wordle, Deduction)
 MAX_RETRIES = 5
 COLORS = ["yellow", "green", "blue", "purple"]
@@ -205,6 +206,7 @@ def load_history(exclude_date=None):
     cutoff_default = datetime.utcnow() - timedelta(days=COOLING_DAYS)
     cutoff_deduction = datetime.utcnow() - timedelta(days=DEDUCTION_COOLING_DAYS)
     cutoff_surah = datetime.utcnow() - timedelta(days=SURAH_COOLING_DAYS)
+    cutoff_theme = datetime.utcnow() - timedelta(days=THEME_COOLING_DAYS)
 
     history = {
         "connections": {"themes": set(), "verses": set(), "words": set()},
@@ -242,7 +244,9 @@ def load_history(exclude_date=None):
         conn = data.get("connections")
         if conn:
             for cat in conn.get("categories", []):
-                history["connections"]["themes"].add(cat.get("nameEn", "").lower().strip())
+                # Only add theme to history if it's within the theme cooldown window
+                if fdate >= cutoff_theme:
+                    history["connections"]["themes"].add(cat.get("nameEn", "").lower().strip())
                 cat_verse_ref = cat.get("verse", {}).get("ref")
                 if cat_verse_ref:
                     history["connections"]["verses"].add(cat_verse_ref)
