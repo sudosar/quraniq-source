@@ -1322,7 +1322,7 @@ def validate_juz(puzzle, history):
 QURAN_API_BASE = "https://api.quran.com/api/v4"
 
 
-def fetch_verse_text(ref):
+def fetch_verse_text(ref, max_retries=3):
     """Fetch the Arabic text (Uthmani script) and English translation for a verse ref.
     
     Uses the Quran.com API to get:
@@ -1331,59 +1331,67 @@ def fetch_verse_text(ref):
     
     Args:
         ref: Verse reference in "surah:ayah" format (e.g. "2:255")
+        max_retries: Number of retry attempts on failure (default 3)
     Returns:
         dict with 'arabic' and 'english' keys, or None on failure
     """
-    try:
-        key = ref.strip()
-        
-        # Fetch Arabic (Uthmani) + Sahih International translation in one call
-        url = f"{QURAN_API_BASE}/verses/by_key/{key}?language=en&words=true&word_fields=text_uthmani,translation&translations=20"
-        resp = requests.get(url, timeout=15)
-        if resp.status_code != 200:
-            print(f"    ⚠ Quran API returned {resp.status_code} for {ref}")
-            return None
-        data = resp.json()
-        verse_data = data.get("verse", {})
-        words = verse_data.get("words", [])
-        
-        if not words:
-            print(f"    ⚠ No words returned for {ref}")
-            return None
-        
-        # Build Arabic text from Uthmani script words
-        arabic = " ".join(w.get("text_uthmani", "") for w in words if w.get("text_uthmani"))
-        
-        # Get proper English translation (Sahih International)
-        english = ""
-        translations = verse_data.get("translations", [])
-        if translations:
-            raw_en = translations[0].get("text", "")
-            # Strip footnote <sup> tags and their content, then any remaining HTML tags
-            cleaned = re.sub(r'<sup[^>]*>[^<]*</sup>', '', raw_en)  # remove footnotes entirely
-            english = re.sub(r'<[^>]+>', '', cleaned).strip()  # remove any remaining HTML tags
-        
-        if not arabic:
-            print(f"    ⚠ Empty Arabic text for {ref}")
-            return None
-        
-        # Strip verse number markers (e.g. ١٥٢) that the API appends at the end
-        arabic = re.sub(r'\s*[\u0660-\u0669]+\s*$', '', arabic).strip()
-        
-        # Build word-by-word translations list (excluding end markers)
-        wbw = []
-        for w in words:
-            if w.get("char_type_name") == "end":
+    key = ref.strip()
+    
+    for attempt in range(max_retries):
+        try:
+            # Fetch Arabic (Uthmani) + Sahih International translation in one call
+            url = f"{QURAN_API_BASE}/verses/by_key/{key}?language=en&words=true&word_fields=text_uthmani,translation&translations=20"
+            resp = requests.get(url, timeout=20)
+            if resp.status_code != 200:
+                print(f"    ⚠ Quran API returned {resp.status_code} for {ref} (attempt {attempt+1}/{max_retries})")
+                time.sleep(2 * (attempt + 1))  # exponential backoff
                 continue
-            text = w.get("text_uthmani", "")
-            trans = w.get("translation", {})
-            en_text = trans.get("text", "") if isinstance(trans, dict) else ""
-            wbw.append({"arabic": text, "english": en_text})
-        
-        return {"arabic": arabic, "english": english, "wbw": wbw}
-    except Exception as e:
-        print(f"    ⚠ Quran API error for {ref}: {e}")
-        return None
+            data = resp.json()
+            verse_data = data.get("verse", {})
+            words = verse_data.get("words", [])
+            
+            if not words:
+                print(f"    ⚠ No words returned for {ref} (attempt {attempt+1}/{max_retries})")
+                time.sleep(2 * (attempt + 1))
+                continue
+            
+            # Build Arabic text from Uthmani script words
+            arabic = " ".join(w.get("text_uthmani", "") for w in words if w.get("text_uthmani"))
+            
+            # Get proper English translation (Sahih International)
+            english = ""
+            translations = verse_data.get("translations", [])
+            if translations:
+                raw_en = translations[0].get("text", "")
+                # Strip footnote <sup> tags and their content, then any remaining HTML tags
+                cleaned = re.sub(r'<sup[^>]*>[^<]*</sup>', '', raw_en)  # remove footnotes entirely
+                english = re.sub(r'<[^>]+>', '', cleaned).strip()  # remove any remaining HTML tags
+            
+            if not arabic:
+                print(f"    ⚠ Empty Arabic text for {ref} (attempt {attempt+1}/{max_retries})")
+                time.sleep(2 * (attempt + 1))
+                continue
+            
+            # Strip verse number markers (e.g. ١٥٢) that the API appends at the end
+            arabic = re.sub(r'\s*[\u0660-\u0669]+\s*$', '', arabic).strip()
+            
+            # Build word-by-word translations list (excluding end markers)
+            wbw = []
+            for w in words:
+                if w.get("char_type_name") == "end":
+                    continue
+                text = w.get("text_uthmani", "")
+                trans = w.get("translation", {})
+                en_text = trans.get("text", "") if isinstance(trans, dict) else ""
+                wbw.append({"arabic": text, "english": en_text})
+            
+            return {"arabic": arabic, "english": english, "wbw": wbw}
+        except Exception as e:
+            print(f"    ⚠ Quran API error for {ref} (attempt {attempt+1}/{max_retries}): {e}")
+            time.sleep(2 * (attempt + 1))
+    
+    print(f"    ✗ Failed to fetch verse {ref} after {max_retries} attempts")
+    return None
 
 
 def enrich_connections_with_verses(puzzle):
@@ -1442,6 +1450,42 @@ def enrich_connections_with_verses(puzzle):
                 cat_verse["ayah"] = ""
                 cat_verse["en"] = ""
             time.sleep(0.3)
+    
+    # Retry pass: attempt to fill any items that still have empty verse text
+    missing_count = 0
+    for cat in cats:
+        for item in cat.get("items", []):
+            if item.get("ref") and not item.get("verse"):
+                missing_count += 1
+        cat_verse = cat.get("verse", {})
+        if isinstance(cat_verse, dict) and cat_verse.get("ref") and not cat_verse.get("ayah"):
+            missing_count += 1
+    
+    if missing_count > 0:
+        print(f"\n  🔄 Retry pass: {missing_count} verses still missing, retrying with longer timeout...")
+        time.sleep(5)  # Wait before retry pass
+        for cat in cats:
+            for item in cat.get("items", []):
+                if item.get("ref") and not item.get("verse"):
+                    verse_data = fetch_verse_text(item["ref"], max_retries=3)
+                    if verse_data:
+                        item["verse"] = verse_data["arabic"]
+                        item["verseEn"] = verse_data["english"]
+                        found_refs += 1
+                        print(f"    ✓ Retry succeeded for {item['ref']}")
+                    else:
+                        print(f"    ✗ Retry failed for {item['ref']}")
+                    time.sleep(1)
+            cat_verse = cat.get("verse", {})
+            if isinstance(cat_verse, dict) and cat_verse.get("ref") and not cat_verse.get("ayah"):
+                verse_data = fetch_verse_text(cat_verse["ref"], max_retries=3)
+                if verse_data:
+                    cat_verse["ayah"] = verse_data["arabic"]
+                    cat_verse["en"] = verse_data["english"]
+                    print(f"    ✓ Retry succeeded for category verse {cat_verse['ref']}")
+                else:
+                    print(f"    ✗ Retry failed for category verse {cat_verse['ref']}")
+                time.sleep(1)
     
     if mismatches:
         print(f"  ✗ Word-in-verse check FAILED: {len(mismatches)} mismatches")
