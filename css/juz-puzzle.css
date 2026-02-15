@@ -495,9 +495,56 @@
   margin-bottom: 16px;
 }
 
-/* ===== Feedback ===== */
+/* ===== Feedback & Hints ===== */
 .juz-feedback {
   margin-top: 12px;
+}
+.juz-hint-actions {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+.juz-hint-btn {
+  font-size: 0.8rem;
+  padding: 8px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--islamic-gold);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.juz-hint-btn:hover:not(:disabled) {
+  border-color: var(--islamic-gold);
+  background: var(--bg-hover);
+  transform: translateY(-1px);
+}
+.juz-hint-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+  border-color: var(--border);
+}
+.juz-hint-box {
+  background: var(--accent-light, rgba(27, 94, 32, 0.08));
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm, 8px);
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+.juz-hint-box strong {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--accent);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.juz-hint-box p {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin: 0;
 }
 .juz-feedback-box {
   background: var(--bg-hover);

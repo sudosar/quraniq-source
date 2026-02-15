@@ -84,7 +84,7 @@ function loadJuzState() {
       raw.orderTooltipsRevealed = new Set(raw.orderTooltipsRevealed || []);
       return raw;
     }
-  } catch (e) {}
+  } catch (e) { }
   return null;
 }
 
@@ -106,7 +106,7 @@ function loadJuzStats() {
   try {
     const raw = JSON.parse(localStorage.getItem(JUZ_STATS_KEY));
     if (raw) return raw;
-  } catch (e) {}
+  } catch (e) { }
   return { played: 0, totalScore: 0, juzCompleted: [] };
 }
 
@@ -123,6 +123,12 @@ function initJuzPuzzle(puzzleData) {
   if (saved && saved.puzzle && saved.puzzle.juz_number === data.juz_number && saved.puzzle.date === data.date) {
     // Restore saved state
     juzState = saved;
+    // Migration: ensure new fields exist for legacy saved states
+    if (juzState.hintPenalty === undefined) juzState.hintPenalty = 0;
+    if (juzState.round2HintUsed === undefined) juzState.round2HintUsed = false;
+    if (juzState.round3HintUsed === undefined) juzState.round3HintUsed = false;
+    if (juzState.round4HintUsed === undefined) juzState.round4HintUsed = false;
+
     juzState.wbwData = null;
     juzState.audioPlaying = false;
   } else {
@@ -133,6 +139,7 @@ function initJuzPuzzle(puzzleData) {
       puzzle: data,
       currentRound: 1,
       hintsUsed: 0,
+      hintPenalty: 0,
       scores: { round2: 0, round3: 0, round4: 0 },
       attempts: { round2: 0, round3: 0 },
       completed: false,
@@ -145,7 +152,10 @@ function initJuzPuzzle(puzzleData) {
       orderTooltipsRevealed: new Set(),
       round2Answered: false,
       round3Answered: false,
-      round4Answered: false
+      round4Answered: false,
+      round2HintUsed: false,
+      round3HintUsed: false,
+      round4HintUsed: false
     };
   }
 
@@ -246,23 +256,23 @@ function renderJuzPuzzle() {
 // ===== Crescent Meter =====
 function renderCrescentMeter() {
   const maxCrescents = 5;
-  const totalScore = juzState.scores.round2 + juzState.scores.round3 + juzState.scores.round4;
-  const penalty = juzState.hintsUsed;
-  const finalScore = Math.max(0, Math.min(maxCrescents, totalScore - penalty));
+  const rawScore = juzState.scores.round2 + juzState.scores.round3 + juzState.scores.round4;
+  const penalty = juzState.hintPenalty || 0;
+  const finalScore = Math.max(0, rawScore - penalty);
 
   let moons = '';
-  for (let i = 0; i < maxCrescents; i++) {
-    if (i < finalScore) {
+  for (let i = 1; i <= maxCrescents; i++) {
+    if (i <= finalScore) {
       moons += '🌕';
-    } else if (i < totalScore) {
-      moons += '🌙'; // Lost to hints
+    } else if (i - 0.5 <= finalScore) {
+      moons += '🌗';
     } else {
       moons += '🌑';
     }
   }
 
-  const hintText = juzState.hintsUsed > 0
-    ? `<span class="juz-hint-cost">${juzState.hintsUsed} hint${juzState.hintsUsed > 1 ? 's' : ''} used (−${juzState.hintsUsed}🌙)</span>`
+  const hintText = penalty > 0
+    ? `<span class="juz-hint-cost">Hints used (−${penalty}🌙)</span>`
     : '<span class="juz-hint-free">No hints used yet</span>';
 
   return `
@@ -324,7 +334,7 @@ function renderRound1() {
       </div>
 
       <!-- Hint cost notice -->
-      <p class="juz-hint-notice">Each English tooltip costs 1🌙 hint</p>
+      <p class="juz-hint-notice">Discovery: First 3 words free, then 0.5🌙 each</p>
 
       <!-- Continue Button -->
       <button class="btn btn-primary juz-continue-btn" onclick="advanceRound(2)">
@@ -336,9 +346,16 @@ function renderRound1() {
 
 function revealWordTooltip(idx) {
   if (juzState.tooltipsRevealed.has(idx)) return; // Already revealed
+
   juzState.tooltipsRevealed.add(idx);
   juzState.hintsUsed++;
-  updateCrescentMeter();
+
+  // Scoring: First 3 are free, then 0.5 crescents each
+  if (juzState.hintsUsed > 3) {
+    juzState.hintPenalty += 0.5;
+    updateCrescentMeter();
+  }
+
   saveJuzState();
 
   const wordEl = document.querySelector(`.juz-wbw-word[data-idx="${idx}"]`);
@@ -392,6 +409,17 @@ function renderRound2() {
           </button>
         `).join('')}
       </div>
+
+      <!-- Hint Button -->
+      ${!juzState.round2Answered ? `
+        <div class="juz-hint-actions">
+          <button class="btn btn-secondary juz-hint-btn" 
+                  onclick="useThemeHint()" 
+                  ${juzState.round2HintUsed ? 'disabled' : ''}>
+            ${juzState.round2HintUsed ? '50/50 Used' : '💡 Use Hint (0.5🌙)'}
+          </button>
+        </div>
+      ` : ''}
 
       <div id="juz-theme-feedback" class="juz-feedback">
         ${juzState.round2Answered ? renderSavedFeedback('theme') : ''}
@@ -447,6 +475,37 @@ function revealVerseTranslation() {
   if (el) el.classList.add('show');
 }
 
+function useThemeHint() {
+  if (juzState.round2HintUsed || juzState.round2Answered) return;
+
+  juzState.round2HintUsed = true;
+  juzState.hintPenalty += 0.5;
+  updateCrescentMeter();
+
+  const q = juzState.puzzle.theme_question;
+  const btns = Array.from(document.querySelectorAll('#juz-theme-options .juz-option'));
+
+  // Find all wrong buttons
+  const wrongBtns = btns.filter(b => b.dataset.answer !== q.correct);
+
+  // Shuffle and disable 2 of them
+  const toRemove = wrongBtns.sort(() => Math.random() - 0.5).slice(0, 2);
+  toRemove.forEach(b => {
+    b.disabled = true;
+    b.style.opacity = '0.3';
+    b.innerHTML = `<span style="text-decoration: line-through">${b.innerHTML}</span>`;
+  });
+
+  // Disable the hint button
+  const hintBtn = document.querySelector('.juz-hint-btn');
+  if (hintBtn) {
+    hintBtn.disabled = true;
+    hintBtn.textContent = '50/50 Used';
+  }
+
+  saveJuzState();
+}
+
 // ===== ROUND 3: Surah Identification =====
 function renderRound3() {
   const content = document.getElementById('juz-round-content');
@@ -463,9 +522,9 @@ function renderRound3() {
       <!-- Options (Arabic names, tappable for English) -->
       <div class="juz-options juz-surah-options" id="juz-surah-options">
         ${shuffled.map((opt, i) => {
-          const enText = opt.name_en || opt.name;
-          const fullText = juzState.round3Answered ? `${enText} <span class="juz-surah-translit">(${opt.name})</span>` : enText;
-          return `
+    const enText = opt.name_en || opt.name;
+    const fullText = juzState.round3Answered ? `${enText} <span class="juz-surah-translit">(${opt.name})</span>` : enText;
+    return `
           <button class="juz-option juz-surah-option ${juzState.round3Answered && opt.num === q.correct_surah ? 'correct' : ''}" 
                   onclick="submitSurahAnswer(this, ${opt.num})" 
                   data-num="${opt.num}"
@@ -475,10 +534,21 @@ function renderRound3() {
             ${!juzState.surahTooltipsRevealed.has(opt.num) && !juzState.round3Answered ? `<span class="juz-surah-hint-icon" onclick="event.stopPropagation(); revealSurahTooltip(${opt.num}, this.previousElementSibling)">?</span>` : ''}
           </button>
         `;
-        }).join('')}
+  }).join('')}
       </div>
 
-      <p class="juz-hint-notice">Tap <span class="juz-hint-icon-inline">?</span> for English translation (costs 1🌙)</p>
+      <!-- Hint Actions -->
+      ${!juzState.round3Answered ? `
+        <div class="juz-hint-actions" style="margin-bottom: 20px;">
+          <button class="btn btn-secondary juz-hint-btn" 
+                  onclick="useSurahContextHint()" 
+                  ${juzState.round3HintUsed ? 'disabled' : ''}>
+            ${juzState.round3HintUsed ? 'Context Revealed' : '💡 Use Hint (0.5🌙)'}
+          </button>
+        </div>
+      ` : ''}
+
+      <p class="juz-hint-notice">Tap <span class="juz-hint-icon-inline">?</span> for English translation (costs 0.5🌙)</p>
 
       <div id="juz-surah-feedback" class="juz-feedback">
         ${juzState.round3Answered ? renderSavedFeedback('surah') : ''}
@@ -490,7 +560,7 @@ function renderRound3() {
 function revealSurahTooltip(num, enEl) {
   if (juzState.surahTooltipsRevealed.has(num)) return;
   juzState.surahTooltipsRevealed.add(num);
-  juzState.hintsUsed++;
+  juzState.hintPenalty += 0.5;
   updateCrescentMeter();
   saveJuzState();
 
@@ -559,6 +629,33 @@ function submitSurahAnswer(btn, num) {
   }
 }
 
+function useSurahContextHint() {
+  if (juzState.round3HintUsed || juzState.round3Answered) return;
+
+  juzState.round3HintUsed = true;
+  juzState.hintPenalty += 0.5;
+  updateCrescentMeter();
+
+  const feedback = document.getElementById('juz-surah-feedback');
+  if (feedback) {
+    feedback.innerHTML = `
+      <div class="juz-hint-box">
+        <strong>💡 Context Hint:</strong>
+        <p>${juzState.puzzle.educational_notes.surah_overview}</p>
+      </div>
+    `;
+    feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  const hintBtn = document.querySelector('.juz-hint-btn');
+  if (hintBtn) {
+    hintBtn.disabled = true;
+    hintBtn.textContent = 'Context Revealed';
+  }
+
+  saveJuzState();
+}
+
 // ===== ROUND 4: Surah Order =====
 function renderRound4() {
   const content = document.getElementById('juz-round-content');
@@ -571,9 +668,9 @@ function renderRound4() {
       <h3 class="juz-round-title">Round 4: Order the Surahs</h3>
       <p class="juz-round-desc">
         ${isSubset
-          ? `Arrange these ${subset.length} Surahs in the correct order as they appear in Juz ${juzState.puzzle.juz_number}. <span class="juz-subset-note">(${totalSurahs} surahs total in this Juz)</span>`
-          : `Arrange the Surahs in the correct order as they appear in Juz ${juzState.puzzle.juz_number}.`
-        }
+      ? `Arrange these ${subset.length} Surahs in the correct order as they appear in Juz ${juzState.puzzle.juz_number}. <span class="juz-subset-note">(${totalSurahs} surahs total in this Juz)</span>`
+      : `Arrange the Surahs in the correct order as they appear in Juz ${juzState.puzzle.juz_number}.`
+    }
       </p>
 
       <div class="juz-order-list" id="juz-order-list">
@@ -581,9 +678,14 @@ function renderRound4() {
       </div>
 
       ${!juzState.round4Answered ? `
-        <p class="juz-hint-notice">Tap <span class="juz-hint-icon-inline">?</span> for English translation (costs 1🌙)</p>
+        <p class="juz-hint-notice">Tap <span class="juz-hint-icon-inline">?</span> for English translation (costs 0.5🌙)</p>
         <div class="juz-order-actions" id="juz-order-actions">
           <button class="btn btn-secondary" onclick="shuffleOrder()">Shuffle</button>
+          <button class="btn btn-secondary juz-hint-btn" 
+                  onclick="useOrderHint()" 
+                  ${juzState.round4HintUsed ? 'disabled' : ''}>
+            ${juzState.round4HintUsed ? 'Correct Surah Fixed' : '💡 Help (0.5🌙)'}
+          </button>
           <button class="btn btn-primary" onclick="submitOrder()">Check Order</button>
         </div>
       ` : ''}
@@ -631,7 +733,7 @@ function renderOrderList() {
 function revealOrderTooltip(num) {
   if (juzState.orderTooltipsRevealed.has(num)) return;
   juzState.orderTooltipsRevealed.add(num);
-  juzState.hintsUsed++;
+  juzState.hintPenalty += 0.5;
   updateCrescentMeter();
   saveJuzState();
 
@@ -643,6 +745,46 @@ function revealOrderTooltip(num) {
     const hintIcon = item.querySelector('.juz-order-hint-icon');
     if (hintIcon) hintIcon.style.display = 'none';
   }
+}
+
+function useOrderHint() {
+  if (juzState.round4HintUsed || juzState.round4Answered) return;
+
+  juzState.round4HintUsed = true;
+  juzState.hintPenalty += 0.5;
+  updateCrescentMeter();
+
+  // Logic: Correctly place the first misplaced surah
+  const correctOrder = juzState.surahOrderSubset;
+  const currentGuess = juzState.surahOrderGuess;
+
+  let firstWrongIdx = -1;
+  for (let i = 0; i < correctOrder.length; i++) {
+    if (currentGuess[i].num !== correctOrder[i].num) {
+      firstWrongIdx = i;
+      break;
+    }
+  }
+
+  if (firstWrongIdx !== -1) {
+    const targetSurah = correctOrder[firstWrongIdx];
+    // Find where it is in current guess
+    const currentIdx = currentGuess.findIndex(s => s.num === targetSurah.num);
+    // Swap
+    [currentGuess[firstWrongIdx], currentGuess[currentIdx]] = [currentGuess[currentIdx], currentGuess[firstWrongIdx]];
+  }
+
+  // Re-render the list
+  const list = document.getElementById('juz-order-list');
+  if (list) list.innerHTML = renderOrderList();
+
+  const hintBtn = document.querySelector('.juz-order-actions .juz-hint-btn');
+  if (hintBtn) {
+    hintBtn.disabled = true;
+    hintBtn.textContent = 'Correct Surah Fixed';
+  }
+
+  saveJuzState();
 }
 
 function revealAllOrderEnglishNames() {
@@ -886,9 +1028,9 @@ function showRoundFeedback(containerId, isCorrect, explanation, score) {
       </div>
       <p class="juz-feedback-text">${explanation}</p>
       ${isLastRound
-        ? `<button class="btn btn-primary juz-continue-btn" onclick="advanceRound(5)">View Results</button>`
-        : `<button class="btn btn-primary juz-continue-btn" onclick="advanceRound(${nextRound})">Continue →</button>`
-      }
+      ? `<button class="btn btn-primary juz-continue-btn" onclick="advanceRound(5)">View Results</button>`
+      : `<button class="btn btn-primary juz-continue-btn" onclick="advanceRound(${nextRound})">Continue →</button>`
+    }
     </div>
   `;
 }
@@ -927,9 +1069,9 @@ function renderSavedFeedback(round) {
       </div>
       <p class="juz-feedback-text">${explanation}</p>
       ${isLastRound
-        ? `<button class="btn btn-primary juz-continue-btn" onclick="advanceRound(5)">View Results</button>`
-        : `<button class="btn btn-primary juz-continue-btn" onclick="advanceRound(${juzState.currentRound + 1})">Continue →</button>`
-      }
+      ? `<button class="btn btn-primary juz-continue-btn" onclick="advanceRound(5)">View Results</button>`
+      : `<button class="btn btn-primary juz-continue-btn" onclick="advanceRound(${juzState.currentRound + 1})">Continue →</button>`
+    }
     </div>
   `;
 }
@@ -949,7 +1091,8 @@ function showFinalResults() {
   const stats = loadJuzStats();
   if (!stats.juzCompleted.includes(juzState.puzzle.juz_number)) {
     stats.played++;
-    stats.totalScore += Math.max(0, juzState.scores.round2 + juzState.scores.round3 + juzState.scores.round4 - juzState.hintsUsed);
+    const totalRaw = juzState.scores.round2 + juzState.scores.round3 + juzState.scores.round4;
+    stats.totalScore += Math.max(0, totalRaw - juzState.hintPenalty);
     stats.juzCompleted.push(juzState.puzzle.juz_number);
     saveJuzStats(stats);
   }
@@ -958,21 +1101,27 @@ function showFinalResults() {
   const p = juzState.puzzle;
 
   const totalScore = juzState.scores.round2 + juzState.scores.round3 + juzState.scores.round4;
-  const finalScore = Math.max(0, Math.min(5, totalScore - juzState.hintsUsed));
+  const finalScore = Math.max(0, totalScore - juzState.hintPenalty);
 
   // Build moon string
   let moonStr = '';
-  for (let i = 0; i < 5; i++) {
-    moonStr += i < finalScore ? '🌕' : '🌑';
+  for (let i = 1; i <= 5; i++) {
+    if (i <= finalScore) {
+      moonStr += '🌕';
+    } else if (i - 0.5 <= finalScore) {
+      moonStr += '🌗';
+    } else {
+      moonStr += '🌑';
+    }
   }
 
   // Submit score to Firebase group leaderboard (non-blocking)
   if (typeof submitFirebaseScore === 'function') {
-    submitFirebaseScore('juz', finalScore).catch(() => {});
+    submitFirebaseScore('juz', finalScore).catch(() => { });
   }
 
   // Build share text
-  const shareText = `QuranIQ Juz Journey — Juz ${p.juz_number} (${p.juz_name_ar})\n${moonStr} ${finalScore}/5\n\nTheme: ${juzState.scores.round2 > 0 ? '✅' : '❌'} | Surah: ${juzState.scores.round3 > 0 ? '✅' : '❌'} | Order: ${juzState.scores.round4 > 0 ? '✅' : '❌'}\nHints: ${juzState.hintsUsed}\n\nhttps://sudosar.github.io/quraniq`;
+  const shareText = `QuranIQ Juz Journey — Juz ${p.juz_number} (${p.juz_name_ar})\n${moonStr} ${finalScore}/5\n\nTheme: ${juzState.scores.round2 > 0 ? '✅' : '❌'} | Surah: ${juzState.scores.round3 > 0 ? '✅' : '❌'} | Order: ${juzState.scores.round4 > 0 ? '✅' : '❌'}\nPenalty: -${juzState.hintPenalty}🌙\n\nhttps://sudosar.github.io/quraniq`;
 
   container.innerHTML = `
     <div class="juz-puzzle">
@@ -988,8 +1137,8 @@ function showFinalResults() {
 
         <div class="juz-results-breakdown">
           <div class="juz-result-row">
-            <span class="juz-result-label">📖 Verse Discovery</span>
-            <span class="juz-result-value">${juzState.hintsUsed} hint${juzState.hintsUsed !== 1 ? 's' : ''} used</span>
+            <span class="juz-result-label">📖 Discovery Penalty</span>
+            <span class="juz-result-value">${juzState.hintPenalty > 0 ? `−${juzState.hintPenalty}🌙` : 'None'}</span>
           </div>
           <div class="juz-result-row">
             <span class="juz-result-label">🎯 Theme</span>
