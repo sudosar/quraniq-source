@@ -1,0 +1,40 @@
+name: Publish App to Public Repo
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Repo
+        uses: actions/checkout@v4
+
+      - name: Prepare Public Files
+        run: |
+          mkdir public_build
+          # Copy only specific files and directories allowed for public view
+          cp -r css public_build/
+          cp -r data public_build/
+          cp -r js public_build/
+          cp -r icons public_build/
+          cp index.html public_build/
+          cp puzzles.js public_build/
+          cp style.css public_build/
+          cp favicon.ico public_build/
+          cp manifest.json public_build/
+          cp sw.js public_build/
+          cp .nojekyll public_build/ || true
+
+      - name: Push to Public Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.DEPLOY_TOKEN }}
+        with:
+          source-directory: 'public_build'
+          destination-github-username: '${{ github.repository_owner }}'
+          destination-repository-name: 'quraniq'
+          user-email: github-actions[bot]@users.noreply.github.com
+          target-branch: main
