@@ -225,7 +225,7 @@ function renderLeaderboardTable(data, activeCode) {
         const todayMoons = renderMiniMoons(player.todayTotal, 25);
 
         // Game breakdown tooltip
-        const breakdown = `Connections: ${player.todayScores.connections}🌙 | Harf: ${player.todayScores.harf}🌙 | Who Am I: ${player.todayScores.deduction}🌙 | Scramble: ${player.todayScores.scramble}🌙 | Juz: ${player.todayScores.juz}🌙`;
+        const breakdown = `🔗 Connections: ${player.todayScores.connections} | 🔤 Harf: ${player.todayScores.harf} | 🔍 Who Am I: ${player.todayScores.deduction} | 🧩 Scramble: ${player.todayScores.scramble} | 🌙 Juz: ${player.todayScores.juz}`;
 
         const quranPct = player.quranPercent > 0 ? `${player.quranPercent}%` : '-';
 
@@ -272,10 +272,10 @@ function renderLeaderboardTable(data, activeCode) {
 function calculateGameBadges(data, sortField) {
     const games = [
         { key: 'connections', icon: '🔗', label: 'Connections' },
-        { key: 'harf',        icon: '🔤', label: 'Harf by Harf' },
-        { key: 'deduction',   icon: '🔍', label: 'Who Am I' },
-        { key: 'scramble',    icon: '🧩', label: 'Scramble' },
-        { key: 'juz',         icon: '🌙', label: 'Juz Journey' }
+        { key: 'harf', icon: '🔤', label: 'Harf by Harf' },
+        { key: 'deduction', icon: '🔍', label: 'Who Am I' },
+        { key: 'scramble', icon: '🧩', label: 'Scramble' },
+        { key: 'juz', icon: '🌙', label: 'Juz Journey' }
     ];
 
     const useToday = sortField === 'today';

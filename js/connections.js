@@ -774,9 +774,9 @@ function saveConnState() {
         res.totalVerses = totalVerses;
         res.shareText = getConnShareText(); // Update share text template
 
-        // Re-calculate moons for Firebase (count of full moons 🌕)
+        // Re-calculate moons for Firebase (count of all solved groups: 🌕 or 🌙)
         if (typeof submitFirebaseScore === 'function') {
-            const fbMoons = (crescentRow.match(/🌕/g) || []).length;
+            const fbMoons = (crescentRow.match(/[🌕🌙]/g) || []).length;
             submitFirebaseScore('connections', fbMoons).catch(() => { });
         }
     }
