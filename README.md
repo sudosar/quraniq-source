@@ -91,4 +91,3 @@ This project is open-source and available under the [MIT License](LICENSE).
 ---
 
 > *"And We have certainly made the Quran easy for remembrance, so is there any who will remember?"* — Surah Al-Qamar 54:17
->>>>>>> f2ffaa5 (docs: add comprehensive README.md)
