@@ -135,7 +135,25 @@ function saveStats(stats) {
 let _lastFocusedElement = null;
 
 function openModal(modalId) {
-    _lastFocusedElement = document.activeElement;
+    const alreadyOpen = document.querySelectorAll('.modal:not(.hidden)');
+
+    // If no modal is open, save the current focus
+    if (alreadyOpen.length === 0) {
+        _lastFocusedElement = document.activeElement;
+    }
+
+    // Close any other open modals first
+    alreadyOpen.forEach(m => {
+        if (m.id !== modalId) {
+            m.classList.add('hidden');
+            m.removeEventListener('keydown', trapFocus);
+            // Stop audio if it was a result modal
+            if (m.id === 'result-modal' && typeof stopQuranAudio === 'function') {
+                stopQuranAudio();
+            }
+        }
+    });
+
     const modal = document.getElementById(modalId);
     modal.classList.remove('hidden');
     // Focus the close button inside the modal
