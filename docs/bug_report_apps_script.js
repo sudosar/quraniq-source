@@ -16,8 +16,8 @@
 // ===== CONFIGURATION =====
 const GITHUB_TOKEN = 'YOUR_GITHUB_PERSONAL_ACCESS_TOKEN'; // Fine-grained PAT with Issues write + Contents write permission
 const REPO_OWNER = 'sudosar';
-const REPO_NAME = 'quraniq';
-const BRANCH = 'claude/quranic-puzzle-game-RWunP';
+const REPO_NAME = 'quraniq-source';
+const BRANCH = 'main';
 const DHIKR_PATH = 'data/dhikr.json';
 // ==========================
 
