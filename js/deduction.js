@@ -215,8 +215,8 @@ function showDedResult(cacheOnly) {
     const puzzleNum = getPuzzleNumber();
     const cluesUsed = ded.cluesRevealed;
 
-    // Moon rating: based on clues used (fewer = better)
-    // Won with 0-1 clues = 5, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1; lost = 0
+    // Moon rating: perfect (4/4) uses clue-based scoring, partial gives 1🌙 per correct
+    // Won with 0-1 clues = 5, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1; partial = correct count
     let moons = 0;
     if (ded.won) {
         if (cluesUsed <= 1) moons = 5;
@@ -224,6 +224,8 @@ function showDedResult(cacheOnly) {
         else if (cluesUsed === 3) moons = 3;
         else if (cluesUsed === 4) moons = 2;
         else moons = 1;
+    } else {
+        moons = correct;
     }
     const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
@@ -235,7 +237,7 @@ function showDedResult(cacheOnly) {
         arabic: ded.puzzle.arabic,
         translation: ded.puzzle.verse,
         emojiGrid: emojiGrid.trim(),
-        moons: ded.won ? moons : null,
+        moons: moons || null,
         statsText: `${correct}/4 correct using ${cluesUsed} clues`,
         shareText,
         verseRef: extractVerseRef(ded.puzzle.verse)
@@ -251,7 +253,7 @@ function showDedResult(cacheOnly) {
     trackGameComplete('deduction', ded.won, cluesUsed);
     // Score: fewer clues = better score (1=best, 6=worst)
     // 0 clues → score 1, 1 clue → score 2, ..., 5+ clues → score 6
-    const score = ded.won ? Math.min(6, Math.max(1, cluesUsed + 1)) : 0;
+    const score = ded.won ? Math.min(6, Math.max(1, cluesUsed + 1)) : (correct > 0 ? 7 - correct : 0);
     updateModeStats('deduction', ded.won, score);
 
     // Track the verse — completing Who Am I? means engaging with the verse directly
