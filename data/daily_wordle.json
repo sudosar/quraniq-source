@@ -1,12 +1,13 @@
 {
-  "date": "2026-02-15",
+  "date": "2026-02-16",
   "puzzle": {
-    "word": "بصر",
-    "display": "بَصَر",
-    "hint": "What allows you to see the wonders of creation?",
-    "verseRef": "51:21",
-    "arabicVerse": "وَفِىٓ أَنفُسِكُمْ ۚ أَفَلَا تُبْصِرُونَ",
-    "verse": "51:21 — And in yourselves. Then will you not see?"
+    "word": "نساء",
+    "display": "نِسَاء",
+    "hint": "This surah is named after this word, referring to half of humanity.",
+    "verseRef": "4:1",
+    "arabicVerse": "يَـٰٓأَيُّهَا ٱلنَّاسُ ٱتَّقُوا۟ رَبَّكُمُ ٱلَّذِى خَلَقَكُم مِّن نَّفْسٍۢ وَٰحِدَةٍۢ وَخَلَقَ مِنْهَا زَوْجَهَا وَبَثَّ مِنْهُمَا رِجَالًۭا كَثِيرًۭا وَنِسَآءًۭ ۚ وَٱتَّقُوا۟ ٱللَّهَ ٱلَّذِى تَسَآءَلُونَ بِهِۦ وَٱلْأَرْحَامَ ۚ إِنَّ ٱللَّهَ كَانَ عَلَيْكُمْ رَقِيبًۭا",
+    "verse": "4:1 — O mankind, fear your Lord, who created you from one soul and created from it its mate and dispersed from both of them many men and women. And fear Allāh, through whom you ask one another, and the wombs. Indeed Allāh is ever, over you, an Observer."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

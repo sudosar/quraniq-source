@@ -1,65 +1,66 @@
 {
-  "date": "2026-02-15",
+  "date": "2026-02-16",
   "puzzle": {
-    "title": "The Voice of Steadfastness",
-    "intro": "This individual is remembered for profound wisdom and guidance, offering counsel that transcends generations. Their words are a testament to piety and the importance of recognizing the blessings and trials from the Divine. Uncover the identity of this revered soul.",
+    "title": "The Claim of Absolute Authority",
+    "intro": "In ancient times, a powerful individual rose to dominion over a vast land and its inhabitants. This figure's reign was marked by immense pride and a profound challenge to divine authority. Prepare to uncover the identity of a soul whose ultimate fate became a lasting lesson for all generations.",
     "clues": [
-      "I was not a prophet, but my wisdom is immortalized in the Divine Scripture.",
-      "My counsel to my child emphasized gratitude to Allah and avoiding shirk.",
-      "I taught about the importance of prayer, enjoining good, and forbidding evil.",
-      "I warned against arrogance and walking with insolence on the earth.",
-      "My name is given to an entire chapter in the Quran, highlighting my teachings.",
-      "My advice included patience in adversity, for indeed, that is from the most resolute of affairs."
+      "I held sway over a mighty empire, where my word was law.",
+      "I declared myself the supreme deity, demanding worship from all under my rule.",
+      "I oppressed a specific community, enslaving them and ordering the killing of their infant males.",
+      "I was repeatedly confronted by a humble messenger of God, who performed clear miracles before me and my magicians.",
+      "I stubbornly rejected the truth, accusing the messenger of sorcery and plotting to destroy him and his followers.",
+      "My entire army and I were engulfed by the sea as we relentlessly pursued those who had been freed from my grasp."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Idris",
-          "Prophet Yahya",
-          "Luqman",
-          "Imran",
-          "Prophet Hud"
+          "Nimrod",
+          "Abu Jahl",
+          "Iblis",
+          "Fir'awn",
+          "Haman"
         ],
-        "answer": "Luqman"
+        "answer": "Fir'awn"
       },
       "trial": {
-        "label": "Key Teaching/Guidance",
+        "label": "Trial/Event",
         "options": [
-          "Building an ark",
-          "Facing a mighty army",
-          "Dispensing wisdom and moral advice",
-          "Interpreting dreams",
-          "Leading a nation to victory"
+          "The Great Flood",
+          "The Burning Fire",
+          "The Drowning of the Oppressor",
+          "The Destruction by Wind",
+          "The Earthquake of Disbelief"
         ],
-        "answer": "Dispensing wisdom and moral advice"
+        "answer": "The Drowning of the Oppressor"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A burning bush",
-          "A large fish",
-          "A specific mountain",
-          "A wise counsel to an offspring",
-          "A grand palace"
+          "The Ark of Noah",
+          "The Staff of Moses",
+          "The Golden Idol",
+          "The Well of Zamzam",
+          "The Throne of Bilqis"
         ],
-        "answer": "A wise counsel to an offspring"
+        "answer": "The Staff of Moses"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Became a king",
-          "Was granted prophethood",
-          "His wisdom was recorded in the Quran",
-          "Led his people to a new land",
-          "Was given immense wealth"
+          "Granted a vast kingdom",
+          "Body preserved as a sign",
+          "Forgiven after repentance",
+          "Elevated to prophethood",
+          "His people became pious"
         ],
-        "answer": "His wisdom was recorded in the Quran"
+        "answer": "Body preserved as a sign"
       }
     },
-    "verseRef": "31:12",
-    "arabic": "وَلَقَدْ ءَاتَيْنَا لُقْمَـٰنَ ٱلْحِكْمَةَ أَنِ ٱشْكُرْ لِلَّهِ ۚ وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِۦ ۖ وَمَن كَفَرَ فَإِنَّ ٱللَّهَ غَنِىٌّ حَمِيدٌۭ",
-    "verse": "And We had certainly given Luqmān wisdom [and said], \"Be grateful to Allāh.\" And whoever is grateful is grateful for [the benefit of] himself. And whoever denies [His favor] - then indeed, Allāh is Free of need and Praiseworthy. (31:12)"
+    "verseRef": "20:78",
+    "arabic": "فَأَتْبَعَهُمْ فِرْعَوْنُ بِجُنُودِهِۦ فَغَشِيَهُم مِّنَ ٱلْيَمِّ مَا غَشِيَهُمْ",
+    "verse": "So Pharaoh pursued them with his soldiers, and there covered them from the sea that which covered them, (20:78)"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

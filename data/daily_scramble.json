@@ -1,29 +1,33 @@
 {
-  "date": "2026-02-15",
+  "date": "2026-02-16",
   "puzzle": {
-    "verseRef": "20:55",
-    "reference": "Surah Taha (20:55)",
+    "verseRef": "17:23",
+    "reference": "Surah Al-Isra (17:23)",
     "segments": [
-      "مِنْهَا خَلَقْنَاكُمْ",
-      "وَفِيهَا نُعِيدُكُمْ",
-      "وَمِنْهَا نُخْرِجُكُمْ",
-      "تَارَةً أُخْرَىٰ"
+      "وَقَضَىٰ رَبُّكَ",
+      "أَلَّا تَعْبُدُوا",
+      "إِلَّا إِيَّاهُ",
+      "وَبِالْوَالِدَيْنِ",
+      "إِحْسَانًا"
     ],
     "translations": [
-      "From it We created you",
-      "and in it We will return you",
-      "and from it We will bring you out",
-      "time another"
+      "And has decreed your Lord that (do) not worship except",
+      "Him Alone and to the parents (be) good Whether reach",
+      "with you the old age one of them or both of them",
+      "then (do) not say to both of them a word of disrespect and (do) not",
+      "repel them but speak to them a word noble"
     ],
-    "hint": "This verse speaks about the origin, destiny, and resurrection of humanity in relation to the earth.",
-    "arabic": "۞ مِنْهَا خَلَقْنَـٰكُمْ وَفِيهَا نُعِيدُكُمْ وَمِنْهَا نُخْرِجُكُمْ تَارَةً أُخْرَىٰ",
+    "hint": "This verse emphasizes two fundamental commands in Islam: the oneness of God and the importance of showing kindness to one's parents.",
+    "arabic": "۞ وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوٓا۟ إِلَّآ إِيَّاهُ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًا ۚ إِمَّا يَبْلُغَنَّ عِندَكَ ٱلْكِبَرَ أَحَدُهُمَآ أَوْ كِلَاهُمَا فَلَا تَقُل لَّهُمَآ أُفٍّۢ وَلَا تَنْهَرْهُمَا وَقُل لَّهُمَا قَوْلًۭا كَرِيمًۭا",
     "words": [
-      "۞ مِنْهَا خَلَقْنَـٰكُمْ",
-      "وَفِيهَا نُعِيدُكُمْ",
-      "وَمِنْهَا نُخْرِجُكُمْ",
-      "تَارَةً أُخْرَىٰ"
+      "۞ وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوٓا۟ إِلَّآ",
+      "إِيَّاهُ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًا ۚ إِمَّا يَبْلُغَنَّ",
+      "عِندَكَ ٱلْكِبَرَ أَحَدُهُمَآ أَوْ كِلَاهُمَا",
+      "فَلَا تَقُل لَّهُمَآ أُفٍّۢ وَلَا",
+      "تَنْهَرْهُمَا وَقُل لَّهُمَا قَوْلًۭا كَرِيمًۭا"
     ],
-    "verseEn": "From it [i.e., the earth] We created you, and into it We will return you, and from it We will extract you another time."
+    "verseEn": "And your Lord has decreed that you worship not except Him, and to parents, good treatment. Whether one or both of them reach old age [while] with you, say not to them [so much as], \"uff,\" and do not repel them but speak to them a noble word."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
