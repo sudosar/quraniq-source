@@ -21,6 +21,7 @@ jobs:
           cp -r js public_build/
           cp -r icons public_build/
           cp index.html public_build/
+          cp test.html public_build/
           cp puzzles.js public_build/
           cp style.css public_build/
           cp favicon.ico public_build/
