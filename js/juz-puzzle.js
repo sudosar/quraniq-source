@@ -836,6 +836,8 @@ function setupDragAndDrop() {
       dragItem = item;
       item.classList.add('dragging');
       e.dataTransfer.effectAllowed = 'move';
+      // Required for Firefox to allow dragging
+      e.dataTransfer.setData('text/plain', item.dataset.idx);
     });
 
     item.addEventListener('dragend', () => {
@@ -891,6 +893,9 @@ function setupTouchDragAndDrop() {
 
     target.addEventListener('touchstart', (e) => {
       if (juzState.round4Answered) return;
+      // Prevent scrolling if touching the handle
+      e.preventDefault();
+
       touchItem = item;
       startIdx = parseInt(item.dataset.idx);
       startY = e.touches[0].clientY;
@@ -907,7 +912,7 @@ function setupTouchDragAndDrop() {
       touchClone.style.opacity = '0.85';
       touchClone.style.pointerEvents = 'none';
       document.body.appendChild(touchClone);
-    }, { passive: true });
+    }, { passive: false });
 
     target.addEventListener('touchmove', (e) => {
       if (!touchItem || !touchClone) return;
