@@ -1,0 +1,49 @@
+{
+  "date": "2026-02-18",
+  "puzzle": {
+    "date": "2026-02-18",
+    "juz_number": 1,
+    "juz_name": "Alif Lam Meem",
+    "juz_name_ar": "الم",
+    "verse": {
+      "surah_number": 2,
+      "surah_name": "Al-Baqarah",
+      "surah_name_ar": "البقرة",
+      "ayah_number": 185,
+      "arabic_text": "شَهْرُ رَمَضَانَ الَّذِي أُنزِلَ فِيهِ الْقُرْآنُ هُدًى لِّلنَّاسِ وَبَيِّنَاتٍ مِّنَ الْهُدَىٰ وَالْفُرْقَانِ",
+      "translation": "The month of Ramadan in which the Quran was revealed, a guidance for the people and clear proofs of guidance and criterion.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/192.mp3"
+    },
+    "theme_question": {
+      "correct": "The month in which the Quran was revealed as guidance",
+      "options": [
+        "The month in which the Quran was revealed as guidance",
+        "The obligation of pilgrimage to Makkah",
+        "The story of Prophet Ibrahim building the Kaaba",
+        "The rules of financial transactions in Islam"
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 2,
+      "options": [
+        { "num": 1, "name": "Al-Fatiha", "name_ar": "الفاتحة", "name_en": "The Opening" },
+        { "num": 2, "name": "Al-Baqarah", "name_ar": "البقرة", "name_en": "The Cow" },
+        { "num": 3, "name": "Aal-E-Imran", "name_ar": "آل عمران", "name_en": "The Family of Imran" },
+        { "num": 4, "name": "An-Nisa", "name_ar": "النساء", "name_en": "The Women" }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        { "num": 1, "name": "Al-Fatiha", "name_ar": "الفاتحة", "name_en": "The Opening" },
+        { "num": 2, "name": "Al-Baqarah", "name_ar": "البقرة", "name_en": "The Cow" }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This iconic verse establishes the profound connection between Ramadan and the Quran. It was revealed in Madinah as part of the passage prescribing fasting for Muslims. Allah chose to highlight the revelation of the Quran as the primary distinction of this blessed month, even before mentioning the obligation to fast.",
+      "theme_explanation": "Ramadan is not merely a month of abstaining from food and drink — it is fundamentally the month of the Quran. The verse emphasizes that the Quran serves three purposes: it is 'guidance for the people' (hudā lin-nās), it contains 'clear proofs of guidance' (bayyināt min al-hudā), and it is 'the criterion' (al-furqān) that distinguishes truth from falsehood.",
+      "surah_overview": "Al-Baqarah is the longest surah in the Quran with 286 verses. Revealed in Madinah, it establishes the foundational laws of Islamic life including prayer, fasting, Hajj, and financial dealings. It contains Ayat al-Kursi (2:255), the longest verse in the Quran (2:282), and the famous closing verses (2:285-286). Juz 1 covers Al-Fatiha and the first 141 verses of Al-Baqarah."
+    }
+  },
+  "generated": true,
+  "model": "manual (launch day)"
+}
