@@ -77,5 +77,6 @@ jobs:
           git add data/
           git diff --staged --quiet || {
             git commit -m "Generate daily puzzles for $(date -u +%Y-%m-%d)" || echo "No changes"
+            git pull --rebase origin main
             git push
           }
