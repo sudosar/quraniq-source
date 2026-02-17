@@ -33,14 +33,14 @@ def analyze_history():
                         if item.get("ar"):
                             word_counts[item["ar"]].append(f"{date_str} (conn word)")
             
-            # Wordle
-            wdl = data.get("wordle")
+            # Harf
+            wdl = data.get("harf") or data.get("wordle")
             if wdl:
-                ref = wdl.get("verseRef")
+                ref = wdl.get("verseRef") or extract_ref(wdl.get("verse", ""))
                 if ref:
-                    verse_counts[ref].append(f"{date_str} (wordle)")
+                    verse_counts[ref].append(f"{date_str} (harf)")
                 if wdl.get("word"):
-                    word_counts[wdl["word"]].append(f"{date_str} (wordle word)")
+                    word_counts[wdl["word"]].append(f"{date_str} (harf word)")
                     
             # Deduction
             ded = data.get("deduction")

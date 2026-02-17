@@ -108,19 +108,29 @@ function createDefaultModeStats() {
 
 function loadStats() {
     try {
-        const raw = JSON.parse(localStorage.getItem(STATS_KEY));
-        if (raw && raw.connections) return raw;
+        let raw = JSON.parse(localStorage.getItem(STATS_KEY));
+        if (!raw) raw = {};
+
+        // Migration: Wordle -> Harf
+        if (raw.wordle && !raw.harf) {
+            raw.harf = raw.wordle;
+            delete raw.wordle;
+            saveStats(raw); // persist migration
+        }
+
+        if (raw.connections && raw.harf) return raw;
+
         // Return fresh per-mode stats
         return {
-            connections: createDefaultModeStats(),
-            wordle: createDefaultModeStats(),
-            deduction: createDefaultModeStats(),
-            scramble: createDefaultModeStats()
+            connections: raw.connections || createDefaultModeStats(),
+            harf: raw.harf || createDefaultModeStats(),
+            deduction: raw.deduction || createDefaultModeStats(),
+            scramble: raw.scramble || createDefaultModeStats()
         };
     } catch {
         return {
             connections: createDefaultModeStats(),
-            wordle: createDefaultModeStats(),
+            harf: createDefaultModeStats(),
             deduction: createDefaultModeStats(),
             scramble: createDefaultModeStats()
         };

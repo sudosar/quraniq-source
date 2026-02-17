@@ -1,0 +1,423 @@
+/* ============================================
+   QURANIQ - ADMIN DASHBOARD STYLING
+   ============================================ */
+
+:root {
+    --admin-bg: #0f172a;
+    --admin-surface: #1e293b;
+    --admin-border: #334155;
+    --admin-text: #f8fafc;
+    --admin-text-dim: #94a3b8;
+    --admin-primary: #38bdf8;
+    --admin-success: #4ade80;
+    --admin-warning: #fbbf24;
+    --admin-error: #f87171;
+    --admin-accent: #818cf8;
+}
+
+.admin-body {
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* --- Auth Overlay --- */
+.auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--admin-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.auth-card {
+    background: var(--admin-surface);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--admin-border);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.auth-card h2 {
+    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
+    color: var(--admin-primary);
+}
+
+.auth-card p {
+    color: var(--admin-text-dim);
+    margin-bottom: 2rem;
+}
+
+.pin-input-group {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+#admin-pin {
+    background: var(--admin-bg);
+    border: 1px solid var(--admin-border);
+    color: var(--admin-primary);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    width: 120px;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+#admin-pin:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+#auth-btn {
+    background: var(--admin-primary);
+    color: var(--admin-bg);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#auth-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.error-msg {
+    color: var(--admin-error) !important;
+    margin-top: 1rem !important;
+    font-size: 0.875rem;
+}
+
+/* --- Navigation --- */
+.admin-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--admin-surface);
+    border-bottom: 1px solid var(--admin-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.admin-logo h1 {
+    font-size: 1.25rem;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.025em;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--admin-text-dim);
+    font-size: 0.875rem;
+}
+
+#logout-btn {
+    background: transparent;
+    border: 1px solid var(--admin-border);
+    color: var(--admin-text-dim);
+    padding: 0.4rem 1rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#logout-btn:hover {
+    border-color: var(--admin-error);
+    color: var(--admin-error);
+}
+
+/* --- Layout --- */
+.admin-container {
+    padding-bottom: 4rem;
+}
+
+.admin-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Summary Cards --- */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: var(--admin-surface);
+    border: 1px solid var(--admin-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    background: var(--admin-bg);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    border: 1px solid var(--admin-border);
+}
+
+.stat-info h3 {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--admin-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-info p {
+    margin: 0.25rem 0 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--admin-primary);
+}
+
+/* --- Layout Sections --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.admin-section {
+    background: var(--admin-surface);
+    border: 1px solid var(--admin-border);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.section-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--admin-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* --- Health List --- */
+.health-list {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.health-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    background: var(--admin-bg);
+    border: 1px solid var(--admin-border);
+    border-radius: 0.75rem;
+    transition: all 0.2s;
+}
+
+.health-item:hover {
+    border-color: var(--admin-border-hover);
+    transform: translateX(4px);
+}
+
+.health-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.health-name .label {
+    font-weight: 600;
+}
+
+.health-name .meta {
+    font-size: 0.75rem;
+    color: var(--admin-text-dim);
+}
+
+.health-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-ok {
+    background: rgba(74, 222, 128, 0.15);
+    color: var(--admin-success);
+}
+
+.status-error {
+    background: rgba(248, 113, 113, 0.15);
+    color: var(--admin-error);
+}
+
+.status-warning {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--admin-warning);
+}
+
+/* --- Integrity Log --- */
+.integrity-log {
+    padding: 1.5rem;
+    font-family: 'Cascadia Code', 'Fira Code', monospace;
+    font-size: 0.875rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.log-item {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.log-item.info {
+    color: var(--admin-text-dim);
+}
+
+.log-item.success {
+    color: var(--admin-success);
+}
+
+.log-item.error {
+    color: var(--admin-error);
+}
+
+.log-item.warning {
+    color: var(--admin-warning);
+}
+
+/* --- Table Styles --- */
+.table-container {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--admin-text-dim);
+    background: rgba(15, 23, 42, 0.2);
+}
+
+.admin-table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--admin-border);
+    font-size: 0.875rem;
+}
+
+.admin-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.badge {
+    padding: 0.15rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: var(--admin-primary);
+    color: var(--admin-bg);
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+    opacity: 0.7;
+}
+
+.btn-icon:hover {
+    opacity: 1;
+}
+
+.loading-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(56, 189, 248, 0.1);
+    border-top: 3px solid var(--admin-primary);
+    border-radius: 50%;
+    margin: 2rem auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

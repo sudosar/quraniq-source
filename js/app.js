@@ -13,6 +13,23 @@ const app = {
     lastResults: {} // Cache result data per mode so it can be re-shown
 };
 
+// Migration: Wordle saved state -> Harf saved state
+(function migrateWordleState() {
+    let changed = false;
+    Object.keys(app.state).forEach(key => {
+        if (key.startsWith('wordle_')) {
+            const newKey = key.replace('wordle_', 'harf_');
+            if (!app.state[newKey]) {
+                app.state[newKey] = app.state[key];
+                changed = true;
+            }
+            // We can optionally delete the old key, or keep it for safety. 
+            // Let's keep it for now but the app will use 'harf_'
+        }
+    });
+    if (changed) saveState(app.state);
+})();
+
 // Cleanup old state entries (older than 7 days)
 cleanupOldState(app.state);
 
@@ -24,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initModals();
     initResetButton();
     initConnections();
-    initWordle();
+    initHarf();
     initDeduction();
     initScramble();
     initJuzJourney();
@@ -35,12 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initLeaderboard();
     showOnboarding();
 
-    // Hash-based deep linking (e.g., #connections, #wordle, #deduction, #scramble, #juz, #shukr, #help, #stats, #join=CODE)
+    // Hash-based deep linking (e.g., #connections, #harf, #deduction, #scramble, #juz, #shukr, #help, #stats, #join=CODE)
     const hash = window.location.hash.replace('#', '');
-    const GAME_MODES = ['connections', 'wordle', 'deduction', 'scramble', 'juz'];
+    const GAME_MODES = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
     if (GAME_MODES.includes(hash)) {
         switchMode(hash);
-    } else if (hash === 'shukr') openModal('shukr-modal');
+    } else if (hash === 'wordle') switchMode('harf'); // Redirect old #wordle links
+    else if (hash === 'shukr') openModal('shukr-modal');
     else if (hash === 'help') openModal('help-modal');
     else if (hash === 'stats') showStatsModal();
     else if (hash === 'leaderboard') openModal('leaderboard-modal');
@@ -122,7 +140,7 @@ function switchMode(mode) {
     });
     document.querySelectorAll('.game-mode').forEach(g => g.classList.toggle('active', g.id === `${mode}-game`));
     document.querySelectorAll('.sidebar-link').forEach(l => l.classList.toggle('active', l.dataset.mode === mode));
-    announce(`Switched to ${mode} mode`);
+    announce(`Switched to ${mode} challenge`);
     trackModeSwitch(mode);
 }
 
@@ -296,7 +314,7 @@ function initResetButton() {
         tapTimer = setTimeout(() => { tapCount = 0; }, 1500);
         if (tapCount >= 5) {
             tapCount = 0;
-            if (!confirm('🔧 Dev Reset: Clear all puzzle state and reload?')) return;
+            if (!confirm('🔧 Dev Reset: Clear all challenge state and reload?')) return;
             localStorage.removeItem(STATE_KEY);
             app.state = {};
             location.reload();
@@ -391,9 +409,9 @@ function showHelpModal() {
             <p>Find four groups of four related Quranic items. Select four items you think belong together, then tap Submit.</p>
             <p>Difficulty increases with each group:</p>
             <p>🟨 Easiest &rarr; 🟩 &rarr; 🟦 &rarr; 🟪 Hardest</p>
-            <p>You have 4 mistakes before the game ends. Each incorrect guess costs one attempt.</p>
+            <p>You have 4 mistakes before the session ends. Each incorrect guess costs one attempt.</p>
         `,
-        wordle: `
+        harf: `
             <h3>Harf by Harf</h3>
             <p>Guess the Arabic Quranic word in 6 tries. Use the on-screen Arabic keyboard to type letters.</p>
             <div class="example-row" style="direction:rtl">
@@ -664,7 +682,7 @@ function showViewResultsButton(mode) {
     });
     container.appendChild(btn);
 
-    // Hide game controls to declutter UI
+    // Hide controls to declutter UI
     if (mode === 'connections') {
         const controls = container.querySelector('.connections-controls');
         if (controls) controls.style.display = 'none';
@@ -680,7 +698,7 @@ function restoreViewResultsButtons() {
     // after the async puzzle load completes. This function is kept for backward
     // compatibility but the actual restore happens in:
     //   - setupConnectionsGame()
-    //   - setupWordleGame()
+    //   - setupHarfGame()
     //   - setupDeductionGame()
     //   - setupScrambleGame()
 }
@@ -725,7 +743,7 @@ function calculateScore(winRate, maxStreak, played, quranPercent, daysActive) {
  * Each tier requires both a minimum score and minimum engagement thresholds.
  */
 function getScholarTitle(score, totalPlayed, maxStreak, quranPercent, daysActive) {
-    if (totalPlayed === 0) return { title: 'New Student', emoji: '📖', desc: 'Play your first game to begin your journey!' };
+    if (totalPlayed === 0) return { title: 'New Student', emoji: '📖', desc: 'Complete your first challenge to begin your journey!' };
     if (score >= 85 && totalPlayed >= 200 && daysActive >= 60 && quranPercent >= 10 && maxStreak >= 15)
         return { title: 'Hafiz', emoji: '🌟', desc: 'Exceptional mastery across all challenges' };
     if (score >= 70 && totalPlayed >= 100 && daysActive >= 30 && quranPercent >= 5 && maxStreak >= 10)
@@ -746,14 +764,14 @@ function getGameInsight(mode, stats) {
 
     const modeNames = {
         connections: 'Ayah Connections',
-        wordle: 'Harf by Harf',
+        harf: 'Harf by Harf',
         deduction: 'Who Am I?',
         scramble: 'Ayah Scramble'
     };
 
     const modeEmojis = {
         connections: '🔗',
-        wordle: '🔤',
+        harf: '🔤',
         deduction: '🔎',
         scramble: '🧩'
     };
@@ -780,7 +798,7 @@ function getGameInsight(mode, stats) {
 
 function renderPerformanceInsights() {
     const el = document.getElementById('performance-insights');
-    const modes = ['connections', 'wordle', 'deduction', 'scramble'];
+    const modes = ['connections', 'harf', 'deduction', 'scramble'];
 
     // Calculate overall stats
     let totalPlayed = 0, totalWon = 0, bestStreak = 0;
@@ -894,7 +912,7 @@ function renderPerformanceInsights() {
 
     // Per-game breakdown
     if (gameInsights.length > 0) {
-        html += '<div class="insight-section-title">Game Performance</div>';
+        html += '<div class="insight-section-title">Challenge Performance</div>';
         html += '<div class="game-insights-grid">';
         gameInsights.forEach(g => {
             const barColor = g.score >= 70 ? 'var(--correct)' :
@@ -959,7 +977,7 @@ function renderPerformanceInsights() {
             <div class="insight-card scholar-card">
                 <div class="scholar-emoji">📖</div>
                 <div class="scholar-title">Welcome!</div>
-                <div class="scholar-desc">Play some games to unlock your performance insights and discover your Quranic Scholar rank.</div>
+                <div class="scholar-desc">Complete some challenges to unlock your performance insights and discover your Quranic Scholar rank.</div>
             </div>
         `;
     }
@@ -1000,13 +1018,13 @@ function generateInsightsShareText(scholar, overallScore, gameInsights, totalPla
     };
 
     let text = `📖 QuranIQ - My Journey\n\n`;
-    text += `${scholar.emoji} ${scholar.title} | Better than ${overallScore}% of players\n`;
-    if (totalPlayersOnline > 0) text += `👥 ${totalPlayersOnline} players worldwide\n`;
+    text += `${scholar.emoji} ${scholar.title} | Better than ${overallScore}% of users\n`;
+    if (totalPlayersOnline > 0) text += `👥 ${totalPlayersOnline} users worldwide\n`;
     text += `\n`;
 
     if (gameInsights.length > 0) {
         gameInsights.forEach(g => {
-            text += `${g.emoji} ${g.name}: ${g.winRate}% wins ${progressBar(g.winRate)}\n`;
+            text += `${g.emoji} ${g.name}: ${g.winRate}% success ${progressBar(g.winRate)}\n`;
         });
         text += `\n`;
     }
@@ -1016,7 +1034,7 @@ function generateInsightsShareText(scholar, overallScore, gameInsights, totalPla
         text += `📖 ${verseStats.totalVerses} Verses Explored | ${verseStats.uniqueSurahs} Surahs | ${verseStats.quranPercent}% of Quran\n`;
     }
     text += `🏆 Best Streak: ${bestStreak}\n`;
-    text += `📊 Games Played: ${totalPlayed}\n\n`;
+    text += `📊 Challenges Completed: ${totalPlayed}\n\n`;
     text += `https://sudosar.github.io/quraniq/#connections`;
 
     return text;

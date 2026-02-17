@@ -1178,7 +1178,7 @@ function showFinalResults() {
 
         <!-- Share -->
         <button class="btn btn-primary juz-share-btn" onclick="shareJuzResults()">Share Results</button>
-        <button class="btn btn-secondary" onclick="initJuzPuzzle()" style="margin-top: 8px;">Play Again (Sample)</button>
+        <button class="btn btn-secondary" onclick="initJuzPuzzle()" style="margin-top: 8px;">Restart Journey (Sample)</button>
       </div>
     </div>
   `;

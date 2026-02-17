@@ -173,7 +173,7 @@ COLORS = ["yellow", "green", "blue", "purple"]
 # Output files for each game type
 OUTPUT_FILES = {
     "connections": os.path.join(DATA_DIR, "daily_puzzle.json"),
-    "wordle": os.path.join(DATA_DIR, "daily_wordle.json"),
+    "harf": os.path.join(DATA_DIR, "daily_harf.json"),
     "deduction": os.path.join(DATA_DIR, "daily_deduction.json"),
     "scramble": os.path.join(DATA_DIR, "daily_scramble.json"),
     "juz": os.path.join(DATA_DIR, "daily_juz.json"),
@@ -210,7 +210,7 @@ def load_history(exclude_date=None):
 
     history = {
         "connections": {"themes": set(), "verses": set(), "words": set()},
-        "wordle": {"words": set(), "verses": set(), "hints": set(), "verseRefs": set(), "surahs": set()},
+        "harf": {"words": set(), "verses": set(), "hints": set(), "verseRefs": set(), "surahs": set()},
         "deduction": {"titles": set(), "characters": set(), "verseRefs": set(), "surahs": set()},
         "scramble": {"verses": set(), "references": set(), "surahs": set()},
         "juz": {"juz_numbers": set(), "verses": set()},
@@ -258,26 +258,25 @@ def load_history(exclude_date=None):
                     if item.get("ar"):
                         history["connections"]["words"].add(item["ar"])
 
-        # Harf by Harf history (365-day cooldown)
-        wdl = data.get("wordle")
+        # Harf history (legacy: wordle)
+        wdl = data.get("harf") or data.get("wordle")
         if wdl:
             if wdl.get("word"):
-                history["wordle"]["words"].add(wdl["word"])
+                history["harf"]["words"].add(wdl["word"])
             if wdl.get("display"):
-                history["wordle"]["words"].add(wdl["display"])
+                history["harf"]["words"].add(wdl["display"])
             if wdl.get("hint"):
-                history["wordle"]["hints"].add(wdl["hint"].lower().strip())
+                history["harf"]["hints"].add(wdl.get("hint", "").lower().strip())
             if wdl.get("verse"):
-                history["wordle"]["verses"].add(wdl.get("verse", ""))
-            # Track verse ref (new field)
+                history["harf"]["verses"].add(wdl.get("verse", ""))
+            
             wdl_ref = wdl.get("verseRef") or extract_ref(wdl.get("verse", ""))
             if wdl_ref:
-                history["wordle"]["verseRefs"].add(wdl_ref)
+                history["harf"]["verseRefs"].add(wdl_ref)
                 history["all_verses"].add(wdl_ref)
-                # Surah-level cooldown (30 days)
                 if fdate >= cutoff_surah:
                     surah_num = wdl_ref.split(":")[0]
-                    history["wordle"]["surahs"].add(surah_num)
+                    history["harf"]["surahs"].add(surah_num)
 
         # Deduction history (60-day cooldown — only load within deduction window)
         ded = data.get("deduction")
@@ -736,12 +735,12 @@ def validate_connections(puzzle, history):
 # ═══════════════════════════════════════════════════════════════════
 # WORDLE GENERATOR (Harf by Harf)
 # ═══════════════════════════════════════════════════════════════════
-def build_wordle_prompt(history, previous_violations=None):
-    avoided_words = ", ".join(sorted(history["wordle"]["words"])) or "(none)"
+def build_harf_prompt(history, previous_violations=None):
+    avoided_words = ", ".join(sorted(history["harf"]["words"])) or "(none)"
     # Merge game-specific + global verse refs
-    all_avoided = history["wordle"]["verseRefs"] | history["all_verses"]
+    all_avoided = history["harf"]["verseRefs"] | history["all_verses"]
     avoided_refs = ", ".join(sorted(all_avoided)) or "(none)"
-    avoided_surahs = ", ".join(sorted(history["wordle"]["surahs"], key=lambda x: int(x))) or "(none)"
+    avoided_surahs = ", ".join(sorted(history["harf"]["surahs"], key=lambda x: int(x))) or "(none)"
 
     violation_block = ""
     if previous_violations:
@@ -787,7 +786,7 @@ IMPORTANT:
 - Do NOT include full verse text — only the ref. Verse text will be looked up separately."""
 
 
-def validate_wordle(puzzle, history):
+def validate_harf(puzzle, history):
     errors, cooldown_violations, warnings = [], [], []
 
     word = puzzle.get("word", "")
@@ -810,19 +809,19 @@ def validate_wordle(puzzle, history):
         errors.append(f"Word '{word}' is {len(stripped)} letters (need 3-5)")
 
     # Cooldown checks
-    if word in history["wordle"]["words"] or display in history["wordle"]["words"]:
+    if word in history["harf"]["words"] or display in history["harf"]["words"]:
         cooldown_violations.append(f"Word '{word}' reused (cooldown)")
-    if hint.lower().strip() in history["wordle"]["hints"]:
+    if hint.lower().strip() in history["harf"]["hints"]:
         cooldown_violations.append(f"Hint reused (cooldown)")
     # Check verse ref against game-specific AND global cooldown
     if verse_ref:
-        if verse_ref in history["wordle"]["verseRefs"]:
-            cooldown_violations.append(f"Verse ref '{verse_ref}' reused (wordle cooldown)")
+        if verse_ref in history["harf"]["verseRefs"]:
+            cooldown_violations.append(f"Verse ref '{verse_ref}' reused (harf cooldown)")
         elif verse_ref in history["all_verses"]:
             cooldown_violations.append(f"Verse ref '{verse_ref}' reused (cross-game cooldown)")
         # Surah-level cooldown (30 days)
         surah_num = verse_ref.split(":")[0]
-        if surah_num in history["wordle"]["surahs"]:
+        if surah_num in history["harf"]["surahs"]:
             cooldown_violations.append(f"Surah {surah_num} reused (30-day surah cooldown)")
 
     return errors, cooldown_violations, warnings
@@ -1524,15 +1523,15 @@ def enrich_connections_with_verses(puzzle):
     return puzzle, mismatches
 
 
-def enrich_wordle_with_verses(puzzle):
-    """Post-process a Wordle puzzle: look up full verse text from Quran API.
+def enrich_harf_with_verses(puzzle):
+    """Post-process a Harf puzzle: look up full verse text from Quran API.
     
     Fetches the Arabic verse and English translation using the verseRef field,
     replacing any LLM-generated verse text with authoritative Quran API data.
     """
     ref = puzzle.get("verseRef", "")
     if not ref:
-        print("  ⚠ No verseRef in wordle puzzle, skipping verse lookup")
+        print("  ⚠ No verseRef in harf puzzle, skipping verse lookup")
         return puzzle
     
     print(f"\n  📖 Looking up verse text for Harf by Harf ({ref})...")
@@ -1695,9 +1694,9 @@ GAME_CONFIGS = {
         "validate": validate_connections,
         "label": "Ayah Connections",
     },
-    "wordle": {
-        "build_prompt": build_wordle_prompt,
-        "validate": validate_wordle,
+    "harf": {
+        "build_prompt": build_harf_prompt,
+        "validate": validate_harf,
         "label": "Harf by Harf",
     },
     "deduction": {
@@ -1826,7 +1825,7 @@ def main():
             existing_puzzles = {}
 
         # Check which core games already exist
-        core_games = ["connections", "wordle", "deduction", "scramble"]
+        core_games = ["connections", "harf", "deduction", "scramble"]
         missing_games = [g for g in core_games if g not in existing_puzzles]
         
         force_regen = False
@@ -1902,9 +1901,9 @@ def main():
     print(f"\nHistory loaded:")
     print(f"  Connections: {len(history['connections']['themes'])} themes, "
           f"{len(history['connections']['verses'])} verses")
-    print(f"  Harf by Harf: {len(history['wordle']['words'])} words, "
-          f"{len(history['wordle']['verseRefs'])} verse refs, "
-          f"{len(history['wordle']['surahs'])} surahs blocked (30-day)")
+    print(f"  Harf by Harf: {len(history['harf']['words'])} words, "
+          f"{len(history['harf']['verseRefs'])} verse refs, "
+          f"{len(history['harf']['surahs'])} surahs blocked (30-day)")
     print(f"  Deduction: {len(history['deduction']['titles'])} titles, "
           f"{len(history['deduction']['characters'])} characters, "
           f"{len(history['deduction']['verseRefs'])} verse refs, "
@@ -1917,7 +1916,7 @@ def main():
 
     # Determine which games to generate
     # Juz Journey only generates during Ramadan (Feb 18 - Mar 20, 2026)
-    game_types = ["connections", "wordle", "deduction", "scramble"]
+    game_types = ["connections", "harf", "deduction", "scramble"]
     today_dt = datetime.strptime(today, "%Y-%m-%d")
     if RAMADAN_START <= today_dt <= RAMADAN_END:
         game_types.append("juz")
@@ -1947,8 +1946,8 @@ def main():
         if puzzle:
             # Post-process: enrich with verse text from Quran API
             # Note: connections enrichment is done inside generate_game (word-in-verse validation)
-            if game_type == "wordle":
-                puzzle = enrich_wordle_with_verses(puzzle)
+            if game_type == "harf":
+                puzzle = enrich_harf_with_verses(puzzle)
             elif game_type == "deduction":
                 puzzle = enrich_deduction_with_verses(puzzle)
 
@@ -1963,7 +1962,7 @@ def main():
                     for item in cat.get("items", []):
                         if item.get("ref"):
                             history["all_verses"].add(item["ref"])
-            elif game_type == "wordle":
+            elif game_type == "harf":
                 ref = puzzle.get("verseRef")
                 if ref:
                     history["all_verses"].add(ref)

@@ -16,7 +16,7 @@ const PRECACHE_ASSETS = [
   './js/deduction.js',
   './js/scramble.js',
   './js/utils.js',
-  './js/wordle.js',
+  './js/harf.js',
   './js/onboarding.js',
   './js/bugreport.js',
   './js/analytics.js',

@@ -1,8 +1,8 @@
 /* ============================================
-   QURANIQ - VERSE WORDLE GAME
+   QURANIQ - HARF BY HARF GAME
    ============================================ */
 
-const wordle = {
+const harf = {
     puzzle: null,
     board: [],
     currentRow: 0,
@@ -34,98 +34,100 @@ async function loadQuranWords() {
     }
 }
 
-function isValidQuranWord(guess) {
+function isValidHarfWord(guess) {
     // If word list didn't load, accept any word (graceful fallback)
-    if (!wordle.validWords) return true;
-    return wordle.validWords.has(guess);
+    if (!harf.validWords) return true;
+    return harf.validWords.has(guess);
 }
 
-function initWordle() {
+function initHarf() {
     // Pre-load word list
     loadQuranWords();
     // Load daily puzzle with holding screen if not ready
     loadDailyWithHolding(
-        'daily_wordle.json',
-        'wordle-game',
+        'daily_harf.json',
+        'harf-game',
         'Harf by Harf',
         (puzzle) => {
-            wordle.puzzle = puzzle;
+            harf.puzzle = puzzle;
             // Build valid word set for the target word's length
             const targetLen = normalizeArabic(puzzle.word).length;
             if (_quranWordsCache && _quranWordsCache[String(targetLen)]) {
-                wordle.validWords = new Set(_quranWordsCache[String(targetLen)]);
-                wordle.validWords.add(normalizeArabic(puzzle.word));
+                harf.validWords = new Set(_quranWordsCache[String(targetLen)]);
+                harf.validWords.add(normalizeArabic(puzzle.word));
             }
-            setupWordleGame();
+            setupHarfGame();
         }
     );
 }
 
-async function loadDailyWordle() {
+async function loadDailyHarf() {
     const today = new Date().toISOString().slice(0, 10);
-    const resp = await fetch(`data/daily_wordle.json?t=${today}`);
-    if (!resp.ok) throw new Error('No daily wordle');
+    const resp = await fetch(`data/daily_harf.json?t=${today}`);
+    if (!resp.ok) throw new Error('No daily harf puzzle');
     const data = await resp.json();
     if (!data.generated || !data.puzzle || data.date !== today) {
-        throw new Error('Daily wordle not available or stale');
+        throw new Error('Daily harf puzzle not available or stale');
     }
     return data.puzzle;
 }
 
-function setupWordleGame() {
-    wordle.word = normalizeArabic(wordle.puzzle.word);
-    wordle.wordLen = wordle.word.length;
+function setupHarfGame() {
+    harf.word = normalizeArabic(harf.puzzle.word);
+    harf.wordLen = harf.word.length;
 
     // Check saved state
-    const saved = app.state[`wordle_${app.dayNumber}`];
+    const saved = app.state[`harf_${app.dayNumber}`];
     if (saved) {
-        wordle.board = saved.board || [];
-        wordle.currentRow = saved.currentRow || 0;
-        wordle.gameOver = saved.gameOver || false;
-        wordle.evaluations = saved.evaluations || [];
-        wordle.hintsUsed = saved.hintsUsed || 0;
-        wordle.hintRows = saved.hintRows || [];
+        harf.board = saved.board || [];
+        harf.currentRow = saved.currentRow || 0;
+        harf.gameOver = saved.gameOver || false;
+        harf.evaluations = saved.evaluations || [];
+        harf.hintsUsed = saved.hintsUsed || 0;
+        harf.hintRows = saved.hintRows || [];
     }
 
-    renderWordleBoard();
-    renderWordleKeyboard();
-    renderHintButton();
-    document.getElementById('wordle-hint').innerHTML = `<strong>Hint:</strong> ${wordle.puzzle.hint}`;
+    renderHarfBoard();
+    renderHarfKeyboard();
+    renderHarfHintButton();
+    const hintEl = document.getElementById('harf-hint');
+    if (hintEl) hintEl.innerHTML = `<strong>Hint:</strong> ${harf.puzzle.hint}`;
 
     // Replay saved state
-    if (saved && wordle.evaluations.length > 0) {
-        replayWordleState();
+    if (saved && harf.evaluations.length > 0) {
+        replayHarfState();
     }
 
     // Update hint button state after replay
-    updateHintButton();
+    updateHarfHintButton();
 
     // Keyboard input — use a named handler so it can be properly managed
-    if (wordle.keydownHandler) {
-        document.removeEventListener('keydown', wordle.keydownHandler);
+    if (harf.keydownHandler) {
+        document.removeEventListener('keydown', harf.keydownHandler);
     }
-    wordle.keydownHandler = handleWordleKey;
-    document.addEventListener('keydown', wordle.keydownHandler);
+    harf.keydownHandler = handleHarfKey;
+    document.addEventListener('keydown', harf.keydownHandler);
 
     // Restore View Results button for completed games
-    if (wordle.gameOver && wordle.evaluations.length > 0) {
-        const won = normalizeArabic(wordle.board[wordle.evaluations.length - 1]?.join('') || '') === wordle.word;
-        showWordleResult(won, true);
+    if (harf.gameOver && harf.evaluations.length > 0) {
+        const won = normalizeArabic(harf.board[harf.evaluations.length - 1]?.join('') || '') === harf.word;
+        showHarfResult(won, true);
     }
 }
 
-function renderWordleBoard() {
-    const board = document.getElementById('wordle-board');
+function renderHarfBoard() {
+    const board = document.getElementById('harf-board');
+    if (!board) return;
     board.innerHTML = '';
     board.setAttribute('dir', 'rtl');
-    for (let r = 0; r < wordle.maxRows; r++) {
+    for (let r = 0; r < harf.maxRows; r++) {
         const row = document.createElement('div');
-        row.className = 'wordle-row';
+        row.className = 'harf-row';
         row.setAttribute('role', 'row');
-        for (let c = 0; c < wordle.wordLen; c++) {
+        for (let c = 0; c < harf.wordLen; c++) {
             const cell = document.createElement('div');
-            cell.className = 'wordle-cell arabic-cell';
-            cell.id = `wc-${r}-${c}`;
+            cell.className = 'harf-cell arabic-cell';
+            cell.id = `hc-${r}-${c}`;
             cell.setAttribute('role', 'gridcell');
             cell.setAttribute('aria-label', `Row ${r + 1}, Column ${c + 1}: empty`);
             row.appendChild(cell);
@@ -134,8 +136,9 @@ function renderWordleBoard() {
     }
 }
 
-function renderWordleKeyboard() {
-    const kb = document.getElementById('wordle-keyboard');
+function renderHarfKeyboard() {
+    const kb = document.getElementById('harf-keyboard');
+    if (!kb) return;
     kb.innerHTML = '';
     kb.setAttribute('dir', 'rtl');
     const rows = [
@@ -152,14 +155,14 @@ function renderWordleKeyboard() {
             const isAction = key === '⏎' || key === '⌫';
             btn.className = 'key' + (isAction ? ' wide' : '');
             btn.textContent = key;
-            btn.id = `wk-${key}`;
+            btn.id = `hk-${key}`;
             if (key === '⏎') btn.setAttribute('aria-label', 'Submit guess');
             else if (key === '⌫') btn.setAttribute('aria-label', 'Delete letter');
             else btn.setAttribute('aria-label', key);
             btn.addEventListener('click', () => {
-                if (key === '⏎') submitWordleGuess();
-                else if (key === '⌫') deleteWordleLetter();
-                else addWordleLetter(key);
+                if (key === '⏎') submitHarfGuess();
+                else if (key === '⌫') deleteHarfLetter();
+                else addHarfLetter(key);
             });
             rowEl.appendChild(btn);
         });
@@ -169,34 +172,36 @@ function renderWordleKeyboard() {
 
 /* ---------- Hint Button ---------- */
 
-function renderHintButton() {
+function renderHarfHintButton() {
     // Insert hint button between the hint text and the keyboard
-    const hintTextEl = document.getElementById('wordle-hint');
-    let hintBtn = document.getElementById('wordle-hint-btn');
+    const hintTextEl = document.getElementById('harf-hint');
+    if (!hintTextEl) return;
+
+    let hintBtn = document.getElementById('harf-hint-btn');
     if (!hintBtn) {
         hintBtn = document.createElement('button');
-        hintBtn.id = 'wordle-hint-btn';
-        hintBtn.className = 'wordle-hint-btn';
+        hintBtn.id = 'harf-hint-btn';
+        hintBtn.className = 'harf-hint-btn';
         hintBtn.setAttribute('aria-label', 'Use hint: reveals a letter, costs 1 turn and 1 crescent');
-        hintBtn.addEventListener('click', useWordleHint);
+        hintBtn.addEventListener('click', useHarfHint);
         // Insert after the hint text div
         hintTextEl.parentNode.insertBefore(hintBtn, hintTextEl.nextSibling);
     }
-    updateHintButton();
+    updateHarfHintButton();
 }
 
-function updateHintButton() {
-    const btn = document.getElementById('wordle-hint-btn');
+function updateHarfHintButton() {
+    const btn = document.getElementById('harf-hint-btn');
     if (!btn) return;
 
-    const canHint = !wordle.gameOver &&
-        wordle.currentRow < wordle.maxRows - 1 && // Must have at least 1 row left to play after hint
-        getUnrevealedPositions().length > 0;
+    const canHint = !harf.gameOver &&
+        harf.currentRow < harf.maxRows - 1 && // Must have at least 1 row left to play after hint
+        getUnrevealedHarfPositions().length > 0;
 
     btn.disabled = !canHint;
     btn.innerHTML = `<span class="hint-icon">💡</span> Reveal a Letter <span class="hint-cost">−1 turn, −1 🌙</span>`;
 
-    if (wordle.gameOver) {
+    if (harf.gameOver) {
         btn.style.display = 'none';
     } else {
         btn.style.display = '';
@@ -207,13 +212,13 @@ function updateHintButton() {
  * Get positions in the word that haven't been revealed as 'correct' yet
  * (either by a guess or a previous hint).
  */
-function getUnrevealedPositions() {
+function getUnrevealedHarfPositions() {
     const revealed = new Set();
 
     // Check all evaluated rows for correct positions
-    for (let r = 0; r < wordle.evaluations.length; r++) {
-        for (let c = 0; c < wordle.wordLen; c++) {
-            if (wordle.evaluations[r][c] === 'correct') {
+    for (let r = 0; r < harf.evaluations.length; r++) {
+        for (let c = 0; c < harf.wordLen; c++) {
+            if (harf.evaluations[r][c] === 'correct') {
                 revealed.add(c);
             }
         }
@@ -221,89 +226,93 @@ function getUnrevealedPositions() {
 
     // Return positions not yet revealed
     const unrevealed = [];
-    for (let c = 0; c < wordle.wordLen; c++) {
+    for (let c = 0; c < harf.wordLen; c++) {
         if (!revealed.has(c)) unrevealed.push(c);
     }
     return unrevealed;
 }
 
-function useWordleHint() {
-    if (wordle.gameOver) return;
+function useHarfHint() {
+    if (harf.gameOver) return;
 
     // Need at least 1 row after the hint row to still play
-    if (wordle.currentRow >= wordle.maxRows - 1) {
+    if (harf.currentRow >= harf.maxRows - 1) {
         showToast('No turns left for a hint');
         return;
     }
 
-    const unrevealed = getUnrevealedPositions();
+    const unrevealed = getUnrevealedHarfPositions();
     if (unrevealed.length === 0) {
         showToast('All letters already revealed');
         return;
     }
 
     // Clear any partially typed letters in the current row
-    for (let c = 0; c < wordle.wordLen; c++) {
-        const cell = document.getElementById(`wc-${wordle.currentRow}-${c}`);
-        cell.textContent = '';
-        cell.classList.remove('filled');
+    for (let c = 0; c < harf.wordLen; c++) {
+        const cell = document.getElementById(`hc-${harf.currentRow}-${c}`);
+        if (cell) {
+            cell.textContent = '';
+            cell.classList.remove('filled');
+        }
     }
-    wordle.board[wordle.currentRow] = [];
-    wordle.currentCol = 0;
+    harf.board[harf.currentRow] = [];
+    harf.currentCol = 0;
 
     // Pick a random unrevealed position
     const pos = unrevealed[Math.floor(Math.random() * unrevealed.length)];
-    const letter = wordle.word[pos];
+    const letter = harf.word[pos];
 
     // Fill the entire row with the correct word but mark it as a hint row
     // The hint row shows only the revealed letter; others are blank/absent
     const hintBoard = [];
     const hintEval = [];
-    for (let c = 0; c < wordle.wordLen; c++) {
+    for (let c = 0; c < harf.wordLen; c++) {
         if (c === pos) {
             hintBoard.push(letter);
             hintEval.push('correct');
         } else {
             // Fill with the correct letter at that position (for board storage)
             // but mark as 'hint-blank' — we'll use a special marker
-            hintBoard.push(wordle.word[c]);
+            hintBoard.push(harf.word[c]);
             hintEval.push('hint-blank');
         }
     }
 
-    wordle.board[wordle.currentRow] = hintBoard;
-    wordle.evaluations.push(hintEval);
-    wordle.hintRows.push(wordle.currentRow);
-    wordle.hintsUsed++;
+    harf.board[harf.currentRow] = hintBoard;
+    harf.evaluations.push(hintEval);
+    harf.hintRows.push(harf.currentRow);
+    harf.hintsUsed++;
 
     // Animate the hint reveal
-    for (let c = 0; c < wordle.wordLen; c++) {
+    for (let c = 0; c < harf.wordLen; c++) {
         setTimeout(() => {
-            const cell = document.getElementById(`wc-${wordle.currentRow}-${c}`);
-            if (c === pos) {
-                cell.textContent = letter;
-                cell.classList.add('filled', 'correct', 'hint-reveal');
-                cell.setAttribute('aria-label',
-                    `Row ${wordle.currentRow + 1}, Column ${c + 1}: ${letter}, hint revealed`);
+            const cell = document.getElementById(`hc-${harf.currentRow}-${c}`);
+            if (cell) {
+                if (c === pos) {
+                    cell.textContent = letter;
+                    cell.classList.add('filled', 'correct', 'hint-reveal');
+                    cell.setAttribute('aria-label',
+                        `Row ${harf.currentRow + 1}, Column ${c + 1}: ${letter}, hint revealed`);
 
-                // Update keyboard for the revealed letter
-                const keyBtn = document.getElementById(`wk-${letter}`);
-                if (keyBtn) {
-                    const priority = { correct: 3, present: 2, absent: 1 };
-                    const current = keyBtn.classList.contains('correct') ? 3 :
-                        keyBtn.classList.contains('present') ? 2 :
-                            keyBtn.classList.contains('absent') ? 1 : 0;
-                    if (priority['correct'] > current) {
-                        keyBtn.classList.remove('correct', 'present', 'absent');
-                        keyBtn.classList.add('correct');
+                    // Update keyboard for the revealed letter
+                    const keyBtn = document.getElementById(`hk-${letter}`);
+                    if (keyBtn) {
+                        const priority = { correct: 3, present: 2, absent: 1 };
+                        const current = keyBtn.classList.contains('correct') ? 3 :
+                            keyBtn.classList.contains('present') ? 2 :
+                                keyBtn.classList.contains('absent') ? 1 : 0;
+                        if (priority['correct'] > current) {
+                            keyBtn.classList.remove('correct', 'present', 'absent');
+                            keyBtn.classList.add('correct');
+                        }
                     }
+                } else {
+                    // Empty cell for non-revealed positions
+                    cell.textContent = '';
+                    cell.classList.add('hint-empty');
+                    cell.setAttribute('aria-label',
+                        `Row ${harf.currentRow + 1}, Column ${c + 1}: hint row`);
                 }
-            } else {
-                // Empty cell for non-revealed positions
-                cell.textContent = '';
-                cell.classList.add('hint-empty');
-                cell.setAttribute('aria-label',
-                    `Row ${wordle.currentRow + 1}, Column ${c + 1}: hint row`);
             }
         }, c * 150);
     }
@@ -311,67 +320,69 @@ function useWordleHint() {
     setTimeout(() => {
         announce(`Hint used: letter ${letter} revealed at position ${pos + 1}. Turn consumed.`);
 
-        wordle.currentRow++;
-        wordle.currentCol = 0;
+        harf.currentRow++;
+        harf.currentCol = 0;
 
         // Check if this was the last available row (shouldn't happen due to guard, but just in case)
-        if (wordle.currentRow >= wordle.maxRows) {
-            wordle.gameOver = true;
-            const displayWord = wordle.puzzle.display || wordle.word;
+        if (harf.currentRow >= harf.maxRows) {
+            harf.gameOver = true;
+            const displayWord = harf.puzzle.display || harf.word;
             showToast(displayWord);
             announce(`Game over. The word was ${displayWord}.`);
-            setTimeout(() => showWordleResult(false), 300);
+            setTimeout(() => showHarfResult(false), 300);
         }
 
-        saveWordleState();
-        updateHintButton();
-    }, wordle.wordLen * 150 + 100);
+        saveHarfState();
+        updateHarfHintButton();
+    }, harf.wordLen * 150 + 100);
 }
 
-function addWordleLetter(letter) {
-    if (wordle.gameOver || wordle.currentCol >= wordle.wordLen) return;
-    const cell = document.getElementById(`wc-${wordle.currentRow}-${wordle.currentCol}`);
+function addHarfLetter(letter) {
+    if (harf.gameOver || harf.currentCol >= harf.wordLen) return;
+    const cell = document.getElementById(`hc-${harf.currentRow}-${harf.currentCol}`);
+    if (!cell) return;
     cell.textContent = letter;
     cell.classList.add('filled');
-    cell.setAttribute('aria-label', `Row ${wordle.currentRow + 1}, Column ${wordle.currentCol + 1}: ${letter}`);
-    if (!wordle.board[wordle.currentRow]) wordle.board[wordle.currentRow] = [];
-    wordle.board[wordle.currentRow][wordle.currentCol] = letter;
-    wordle.currentCol++;
+    cell.setAttribute('aria-label', `Row ${harf.currentRow + 1}, Column ${harf.currentCol + 1}: ${letter}`);
+    if (!harf.board[harf.currentRow]) harf.board[harf.currentRow] = [];
+    harf.board[harf.currentRow][harf.currentCol] = letter;
+    harf.currentCol++;
 }
 
-function deleteWordleLetter() {
-    if (wordle.gameOver || wordle.currentCol <= 0) return;
-    wordle.currentCol--;
-    const cell = document.getElementById(`wc-${wordle.currentRow}-${wordle.currentCol}`);
+function deleteHarfLetter() {
+    if (harf.gameOver || harf.currentCol <= 0) return;
+    harf.currentCol--;
+    const cell = document.getElementById(`hc-${harf.currentRow}-${harf.currentCol}`);
+    if (!cell) return;
     cell.textContent = '';
     cell.classList.remove('filled');
-    cell.setAttribute('aria-label', `Row ${wordle.currentRow + 1}, Column ${wordle.currentCol + 1}: empty`);
-    if (wordle.board[wordle.currentRow]) wordle.board[wordle.currentRow][wordle.currentCol] = '';
+    cell.setAttribute('aria-label', `Row ${harf.currentRow + 1}, Column ${harf.currentCol + 1}: empty`);
+    if (harf.board[harf.currentRow]) harf.board[harf.currentRow][harf.currentCol] = '';
 }
 
-function handleWordleKey(e) {
-    if (app.currentMode !== 'wordle') return;
+function handleHarfKey(e) {
+    if (app.currentMode !== 'harf') return;
     if (e.ctrlKey || e.altKey || e.metaKey) return;
-    if (e.key === 'Enter') submitWordleGuess();
-    else if (e.key === 'Backspace') deleteWordleLetter();
-    else if (/^[\u0600-\u06FF]$/.test(e.key)) addWordleLetter(e.key);
+    if (e.key === 'Enter') submitHarfGuess();
+    else if (e.key === 'Backspace') deleteHarfLetter();
+    else if (/^[\u0600-\u06FF]$/.test(e.key)) addHarfLetter(e.key);
 }
 
-function submitWordleGuess() {
-    if (wordle.gameOver || wordle.currentCol < wordle.wordLen) return;
+function submitHarfGuess() {
+    if (harf.gameOver || harf.currentCol < harf.wordLen) return;
 
-    const guess = normalizeArabic(wordle.board[wordle.currentRow].join(''));
+    const guess = normalizeArabic(harf.board[harf.currentRow].join(''));
 
-    if (guess.length !== wordle.wordLen) {
-        showToast('Word must be ' + wordle.wordLen + ' letters');
+    if (guess.length !== harf.wordLen) {
+        showToast('Word must be ' + harf.wordLen + ' letters');
         return;
     }
 
     // Validate against Quranic word list
-    if (!isValidQuranWord(guess)) {
+    if (!isValidHarfWord(guess)) {
         showToast('Not a Quranic word');
         // Shake the current row to indicate invalid
-        const row = document.querySelector(`#wc-${wordle.currentRow}-0`)?.parentElement;
+        const row = document.querySelector(`#hc-${harf.currentRow}-0`)?.parentElement;
         if (row) {
             row.classList.add('shake');
             setTimeout(() => row.classList.remove('shake'), 600);
@@ -381,22 +392,24 @@ function submitWordleGuess() {
     }
 
     // Evaluate
-    const evaluation = evaluateWordleGuess(guess);
-    wordle.evaluations.push(evaluation);
+    const evaluation = evaluateHarfGuess(guess);
+    harf.evaluations.push(evaluation);
     const isCorrect = evaluation.every(e => e === 'correct');
-    trackHarfGuess(wordle.evaluations.length, isCorrect);
+    trackHarfGuess(harf.evaluations.length, isCorrect);
 
     // Animate reveal
     const statusLabels = { correct: 'correct position', present: 'wrong position', absent: 'not in word' };
-    for (let c = 0; c < wordle.wordLen; c++) {
+    for (let c = 0; c < harf.wordLen; c++) {
         setTimeout(() => {
-            const cell = document.getElementById(`wc-${wordle.currentRow}-${c}`);
-            cell.classList.add(evaluation[c]);
-            cell.setAttribute('aria-label',
-                `Row ${wordle.currentRow + 1}, Column ${c + 1}: ${wordle.board[wordle.currentRow][c]}, ${statusLabels[evaluation[c]]}`);
+            const cell = document.getElementById(`hc-${harf.currentRow}-${c}`);
+            if (cell) {
+                cell.classList.add(evaluation[c]);
+                cell.setAttribute('aria-label',
+                    `Row ${harf.currentRow + 1}, Column ${c + 1}: ${harf.board[harf.currentRow][c]}, ${statusLabels[evaluation[c]]}`);
+            }
             // Update keyboard
-            const letter = wordle.board[wordle.currentRow][c];
-            const keyBtn = document.getElementById(`wk-${letter}`);
+            const letter = harf.board[harf.currentRow][c];
+            const keyBtn = document.getElementById(`hk-${letter}`);
             if (keyBtn) {
                 const priority = { correct: 3, present: 2, absent: 1 };
                 const current = keyBtn.classList.contains('correct') ? 3 :
@@ -414,42 +427,42 @@ function submitWordleGuess() {
         // Announce result to screen reader
         const correctCount = evaluation.filter(e => e === 'correct').length;
         const presentCount = evaluation.filter(e => e === 'present').length;
-        announce(`Row ${wordle.currentRow + 1}: ${correctCount} correct, ${presentCount} in wrong position.`);
+        announce(`Row ${harf.currentRow + 1}: ${correctCount} correct, ${presentCount} in wrong position.`);
 
         // Check win
-        if (guess === wordle.word) {
-            wordle.gameOver = true;
-            saveWordleState();
+        if (guess === harf.word) {
+            harf.gameOver = true;
+            saveHarfState();
             announce('Congratulations! You guessed the word!');
-            setTimeout(() => showWordleResult(true), 300);
+            setTimeout(() => showHarfResult(true), 300);
             return;
         }
 
-        wordle.currentRow++;
-        wordle.currentCol = 0;
+        harf.currentRow++;
+        harf.currentCol = 0;
 
-        if (wordle.currentRow >= wordle.maxRows) {
-            wordle.gameOver = true;
-            saveWordleState();
-            const displayWord = wordle.puzzle.display || wordle.word;
+        if (harf.currentRow >= harf.maxRows) {
+            harf.gameOver = true;
+            saveHarfState();
+            const displayWord = harf.puzzle.display || harf.word;
             showToast(displayWord);
             announce(`Game over. The word was ${displayWord}.`);
-            setTimeout(() => showWordleResult(false), 300);
+            setTimeout(() => showHarfResult(false), 300);
             return;
         }
 
-        saveWordleState();
-        updateHintButton();
-    }, wordle.wordLen * 250 + 100);
+        saveHarfState();
+        updateHarfHintButton();
+    }, harf.wordLen * 250 + 100);
 }
 
-function evaluateWordleGuess(guess) {
-    const result = Array(wordle.wordLen).fill('absent');
-    const targetLetters = [...wordle.word];
+function evaluateHarfGuess(guess) {
+    const result = Array(harf.wordLen).fill('absent');
+    const targetLetters = [...harf.word];
     const guessLetters = [...guess];
 
     // First pass: correct positions
-    for (let i = 0; i < wordle.wordLen; i++) {
+    for (let i = 0; i < harf.wordLen; i++) {
         if (guessLetters[i] === targetLetters[i]) {
             result[i] = 'correct';
             targetLetters[i] = null;
@@ -458,7 +471,7 @@ function evaluateWordleGuess(guess) {
     }
 
     // Second pass: present but wrong position
-    for (let i = 0; i < wordle.wordLen; i++) {
+    for (let i = 0; i < harf.wordLen; i++) {
         if (guessLetters[i] === null) continue;
         const idx = targetLetters.indexOf(guessLetters[i]);
         if (idx !== -1) {
@@ -470,23 +483,24 @@ function evaluateWordleGuess(guess) {
     return result;
 }
 
-function replayWordleState() {
-    for (let r = 0; r < wordle.evaluations.length; r++) {
-        const isHintRow = wordle.hintRows.includes(r);
+function replayHarfState() {
+    for (let r = 0; r < harf.evaluations.length; r++) {
+        const isHintRow = harf.hintRows.includes(r);
 
-        for (let c = 0; c < wordle.wordLen; c++) {
-            const cell = document.getElementById(`wc-${r}-${c}`);
-            const evalResult = wordle.evaluations[r][c];
+        for (let c = 0; c < harf.wordLen; c++) {
+            const cell = document.getElementById(`hc-${r}-${c}`);
+            if (!cell) continue;
+            const evalResult = harf.evaluations[r][c];
 
             if (isHintRow) {
                 if (evalResult === 'correct') {
                     // Show the revealed letter
-                    cell.textContent = wordle.board[r][c];
+                    cell.textContent = harf.board[r][c];
                     cell.classList.add('filled', 'correct', 'hint-reveal');
 
                     // Update keyboard
-                    const letter = wordle.board[r][c];
-                    const keyBtn = document.getElementById(`wk-${letter}`);
+                    const letter = harf.board[r][c];
+                    const keyBtn = document.getElementById(`hk-${letter}`);
                     if (keyBtn) {
                         keyBtn.classList.remove('correct', 'present', 'absent');
                         keyBtn.classList.add('correct');
@@ -498,12 +512,12 @@ function replayWordleState() {
                 }
             } else {
                 // Normal guess row
-                const letter = wordle.board[r][c];
+                const letter = harf.board[r][c];
                 cell.textContent = letter;
                 cell.classList.add('filled', evalResult);
 
                 // Update keyboard
-                const keyBtn = document.getElementById(`wk-${letter}`);
+                const keyBtn = document.getElementById(`hk-${letter}`);
                 if (keyBtn) {
                     const priority = { correct: 3, present: 2, absent: 1 };
                     const current = keyBtn.classList.contains('correct') ? 3 :
@@ -519,23 +533,23 @@ function replayWordleState() {
     }
 }
 
-function saveWordleState() {
-    app.state[`wordle_${app.dayNumber}`] = {
-        board: wordle.board,
-        currentRow: wordle.currentRow,
-        gameOver: wordle.gameOver,
-        evaluations: wordle.evaluations,
-        hintsUsed: wordle.hintsUsed,
-        hintRows: wordle.hintRows
+function saveHarfState() {
+    app.state[`harf_${app.dayNumber}`] = {
+        board: harf.board,
+        currentRow: harf.currentRow,
+        gameOver: harf.gameOver,
+        evaluations: harf.evaluations,
+        hintsUsed: harf.hintsUsed,
+        hintRows: harf.hintRows
     };
     saveState(app.state);
 }
 
-function showWordleResult(won, cacheOnly) {
+function showHarfResult(won, cacheOnly) {
     const emojiMap = { correct: '🟩', present: '🟨', absent: '⬛' };
     let emojiGrid = '';
-    wordle.evaluations.forEach((row, r) => {
-        if (wordle.hintRows.includes(r)) {
+    harf.evaluations.forEach((row, r) => {
+        if (harf.hintRows.includes(r)) {
             // Hint row: show 💡 for the revealed letter, ⬜ for blanks
             emojiGrid += row.map(e => e === 'correct' ? '💡' : '⬜').join('') + '\n';
         } else {
@@ -544,48 +558,48 @@ function showWordleResult(won, cacheOnly) {
     });
 
     const puzzleNum = getPuzzleNumber();
-    const guessRows = wordle.evaluations.filter((_, r) => !wordle.hintRows.includes(r)).length;
+    const guessRows = harf.evaluations.filter((_, r) => !harf.hintRows.includes(r)).length;
     const tries = won ? guessRows : 'X';
-    const displayWord = wordle.puzzle.display || wordle.word;
+    const displayWord = harf.puzzle.display || harf.word;
 
     // Moon rating: fewer tries = more moons
     // Base: 1 try = 5 moons, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1, loss = 0
     // Penalty: each hint costs 1 extra moon
     let moons = 0;
     if (won) {
-        const totalRows = wordle.evaluations.length; // includes hint rows
+        const totalRows = harf.evaluations.length; // includes hint rows
         const baseMoons = Math.max(1, 6 - totalRows);
-        moons = Math.max(0, baseMoons - wordle.hintsUsed);
+        moons = Math.max(0, baseMoons - harf.hintsUsed);
     }
     const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
-    const hintNote = wordle.hintsUsed > 0 ? ` (${wordle.hintsUsed} hint${wordle.hintsUsed > 1 ? 's' : ''})` : '';
-    const shareText = `QuranIQ - Harf by Harf #${puzzleNum}\n${tries}/${wordle.maxRows}${hintNote}\n\n${emojiGrid}${moonStr}\n\nhttps://sudosar.github.io/quraniq/#wordle`;
+    const hintNote = harf.hintsUsed > 0 ? ` (${harf.hintsUsed} hint${harf.hintsUsed > 1 ? 's' : ''})` : '';
+    const shareText = `QuranIQ - Harf by Harf #${puzzleNum}\n${tries}/${harf.maxRows}${hintNote}\n\n${emojiGrid}${moonStr}\n\nhttps://sudosar.github.io/quraniq/#harf`;
 
     const resultData = {
         icon: won ? '🌟' : '📖',
         title: won ? `Solved in ${guessRows}!${hintNote}` : `The word was: ${displayWord}`,
-        arabic: wordle.puzzle.arabicVerse || displayWord,
-        translation: wordle.puzzle.verse,
+        arabic: harf.puzzle.arabicVerse || displayWord,
+        translation: harf.puzzle.verse,
         emojiGrid: emojiGrid.trim(),
         moons: won ? moons : null,
-        statsText: `${tries}/${wordle.maxRows}${hintNote}`,
+        statsText: `${tries}/${harf.maxRows}${hintNote}`,
         shareText,
-        verseRef: extractVerseRef(wordle.puzzle.verse)
+        verseRef: extractVerseRef(harf.puzzle.verse)
     };
 
     if (cacheOnly) {
-        app.lastResults['wordle'] = resultData;
-        showViewResultsButton('wordle');
+        app.lastResults['harf'] = resultData;
+        showViewResultsButton('harf');
         return;
     }
 
     showResultModal(resultData);
-    trackGameComplete('wordle', won, won ? guessRows : 0);
-    updateModeStats('wordle', won, won ? guessRows : 0);
+    trackGameComplete('harf', won, won ? guessRows : 0);
+    updateModeStats('harf', won, won ? guessRows : 0);
 
     // Track the verse — completing Harf by Harf means engaging with the verse directly
-    if (wordle.puzzle && wordle.puzzle.verse) {
-        trackVerses([wordle.puzzle.verse]);
+    if (harf.puzzle && harf.puzzle.verse) {
+        trackVerses([harf.puzzle.verse]);
     }
 }

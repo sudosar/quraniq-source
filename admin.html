@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | QuranIQ Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&family=Amiri:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="admin-body">
+    <div id="auth-overlay" class="auth-overlay">
+        <div class="auth-card">
+            <h2>Admin Access</h2>
+            <p>Please enter the administrator PIN to continue.</p>
+            <div class="pin-input-group">
+                <input type="password" id="admin-pin" placeholder="••••" maxlength="4">
+                <button id="auth-btn">Authorize</button>
+            </div>
+            <p id="auth-error" class="error-msg"></p>
+        </div>
+    </div>
+
+    <div class="admin-container" id="admin-main" style="display: none;">
+        <nav class="admin-nav">
+            <div class="nav-left">
+                <div class="admin-logo">
+                    <span class="logo-icon">💠</span>
+                    <h1>QuranIQ Admin</h1>
+                </div>
+            </div>
+            <div class="nav-right">
+                <span id="current-date">--:--</span>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </nav>
+
+        <main class="admin-content">
+            <!-- Header Summary Cards -->
+            <section class="summary-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-info">
+                        <h3>Total History</h3>
+                        <p id="total-days">-- days</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏥</div>
+                    <div class="stat-info">
+                        <h3>App Health</h3>
+                        <p id="app-health">Calculating...</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🧩</div>
+                    <div class="stat-info">
+                        <h3>Today's Puzzles</h3>
+                        <p id="puzzles-status">--/5</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                <!-- Today's Puzzle Health Section -->
+                <section class="admin-section health-section">
+                    <div class="section-header">
+                        <h2>Today's Puzzle Health</h2>
+                        <button id="refresh-health" class="btn-icon">🔄</button>
+                    </div>
+                    <div class="health-list" id="health-list">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </section>
+
+                <!-- Activity Visualization Section -->
+                <section class="admin-section activity-section">
+                    <div class="section-header">
+                        <h2>System Integrity</h2>
+                        <span class="badge">Live</span>
+                    </div>
+                    <div class="integrity-log" id="integrity-log">
+                        <!-- Integrity checks will be listed here -->
+                        <div class="log-item info">Scanning file system...</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Historical Metrics Table -->
+            <section class="admin-section full-width">
+                <div class="section-header">
+                    <h2>Recent History Metrics</h2>
+                </div>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Connections</th>
+                                <th>Harf</th>
+                                <th>Deduction</th>
+                                <th>Scramble</th>
+                                <th>Juz</th>
+                                <th>Integrity</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-table-body">
+                            <!-- Populated via admin.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

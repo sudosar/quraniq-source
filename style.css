@@ -17,9 +17,11 @@
     text-decoration: none;
     transition: top 0.2s;
 }
+
 .skip-link:focus {
     top: 0;
 }
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -46,6 +48,7 @@
     border-bottom: 2px solid var(--border, #e0e0dc);
     padding-bottom: 0;
 }
+
 .stats-tab {
     flex: 1;
     padding: 8px 4px;
@@ -59,9 +62,11 @@
     margin-bottom: -2px;
     transition: color 0.2s, border-color 0.2s;
 }
+
 .stats-tab:hover {
     color: var(--text, #1a1a2e);
 }
+
 .stats-tab.active {
     color: var(--accent, #1b7a4a);
     border-bottom-color: var(--accent, #1b7a4a);
@@ -150,7 +155,9 @@
 }
 
 /* ============ RESET & BASE ============ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -177,12 +184,15 @@ body::before {
     background-size: 80px 80px;
 }
 
-body > * {
+body>* {
     position: relative;
     z-index: 1;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
     color: inherit;
     font-family: inherit;
 }
@@ -240,7 +250,7 @@ button, input, select, textarea {
     color: #ffffff;
 }
 
-[data-theme="dark"] .wordle-cell {
+[data-theme="dark"] .harf-cell {
     border-color: #55555c;
     color: #ffffff;
 }
@@ -285,14 +295,12 @@ button, input, select, textarea {
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        var(--islamic-gold) 20%,
-        var(--islamic-gold) 50%,
-        var(--islamic-gold) 80%,
-        transparent 100%
-    );
+    background: linear-gradient(90deg,
+            transparent 0%,
+            var(--islamic-gold) 20%,
+            var(--islamic-gold) 50%,
+            var(--islamic-gold) 80%,
+            transparent 100%);
     opacity: 0.5;
 }
 
@@ -336,7 +344,8 @@ button, input, select, textarea {
     opacity: 0.6;
 }
 
-.header-left, .header-right {
+.header-left,
+.header-right {
     display: flex;
     gap: 4px;
     align-items: center;
@@ -380,12 +389,10 @@ button, input, select, textarea {
     left: 20%;
     right: 20%;
     height: 1px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        var(--islamic-gold),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            var(--islamic-gold),
+            transparent);
     opacity: 0.3;
 }
 
@@ -438,8 +445,15 @@ button, input, select, textarea {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .game-header {
@@ -514,14 +528,24 @@ button, input, select, textarea {
 }
 
 .conn-tile.shake,
-.wordle-row.shake {
+.harf-row.shake {
     animation: shake 0.5s ease;
 }
 
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-6px); }
-    75% { transform: translateX(6px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-6px);
+    }
+
+    75% {
+        transform: translateX(6px);
+    }
 }
 
 .conn-tile.pop {
@@ -529,9 +553,17 @@ button, input, select, textarea {
 }
 
 @keyframes pop {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .conn-solved-row {
@@ -547,14 +579,36 @@ button, input, select, textarea {
 }
 
 @keyframes revealRow {
-    from { opacity: 0; transform: scaleY(0.8); }
-    to { opacity: 1; transform: scaleY(1); }
+    from {
+        opacity: 0;
+        transform: scaleY(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
 }
 
-.conn-solved-row.yellow { background: var(--conn-yellow); color: var(--conn-yellow-text); }
-.conn-solved-row.green { background: var(--conn-green); color: var(--conn-green-text); }
-.conn-solved-row.blue { background: var(--conn-blue); color: var(--conn-blue-text); }
-.conn-solved-row.purple { background: var(--conn-purple); color: var(--conn-purple-text); }
+.conn-solved-row.yellow {
+    background: var(--conn-yellow);
+    color: var(--conn-yellow-text);
+}
+
+.conn-solved-row.green {
+    background: var(--conn-green);
+    color: var(--conn-green-text);
+}
+
+.conn-solved-row.blue {
+    background: var(--conn-blue);
+    color: var(--conn-blue-text);
+}
+
+.conn-solved-row.purple {
+    background: var(--conn-purple);
+    color: var(--conn-purple-text);
+}
 
 /* Islamic corner accents on solved rows */
 .conn-solved-row::before,
@@ -563,6 +617,7 @@ button, input, select, textarea {
     opacity: 0.3;
     position: absolute;
 }
+
 .conn-solved-row {
     position: relative;
 }
@@ -609,7 +664,7 @@ button, input, select, textarea {
 
 .conn-solved-row:hover {
     transform: scale(1.01);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 /* ===== Verse Carousel (per-word) ===== */
@@ -628,7 +683,7 @@ button, input, select, textarea {
     margin-top: 12px;
     padding-top: 12px;
     padding-bottom: 8px;
-    border-top: 1px solid rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
     overflow: visible;
 }
 
@@ -647,8 +702,8 @@ button, input, select, textarea {
     font-size: 0.82rem;
     padding: 4px 12px;
     border-radius: 20px;
-    border: 1.5px solid rgba(0,0,0,0.2);
-    background: rgba(255,255,255,0.3);
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     transition: all 0.2s ease;
     font-weight: 500;
@@ -656,12 +711,12 @@ button, input, select, textarea {
 }
 
 .verse-pill:hover {
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .verse-pill.active {
-    background: rgba(0,0,0,0.15);
-    border-color: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 0, 0, 0.4);
     font-weight: 700;
     transform: scale(1.05);
 }
@@ -680,7 +735,7 @@ button, input, select, textarea {
     height: 32px;
     border-radius: 50%;
     border: none;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
     color: inherit;
     font-size: 1.3rem;
     cursor: pointer;
@@ -693,7 +748,7 @@ button, input, select, textarea {
 }
 
 .verse-nav:hover {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 /* Slides area */
@@ -717,8 +772,15 @@ button, input, select, textarea {
 }
 
 @keyframes verseFadeIn {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .verse-slide-word {
@@ -743,7 +805,7 @@ button, input, select, textarea {
     direction: rtl;
     margin-bottom: 4px;
     font-weight: 500;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     padding: 8px 12px;
 }
@@ -773,6 +835,7 @@ button, input, select, textarea {
     opacity: 0.85;
     transition: opacity 0.2s ease;
 }
+
 .verse-ref-link:hover {
     opacity: 1;
     text-decoration-style: solid;
@@ -782,8 +845,8 @@ button, input, select, textarea {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border: 2px solid rgba(0,0,0,0.25);
-    background: rgba(255,255,255,0.3);
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.3);
     color: inherit;
     font-size: 14px;
     cursor: pointer;
@@ -794,14 +857,17 @@ button, input, select, textarea {
     flex-shrink: 0;
     position: relative;
 }
+
 .verse-play-btn:hover {
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     transform: scale(1.1);
 }
+
 .verse-play-btn.loading {
     pointer-events: none;
     opacity: 0.6;
 }
+
 .verse-play-btn.loading::after {
     content: '';
     position: absolute;
@@ -812,17 +878,29 @@ button, input, select, textarea {
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
 }
+
 .verse-play-btn.playing {
     background: rgba(27, 122, 74, 0.3);
     border-color: rgba(27, 122, 74, 0.6);
     animation: pulse-glow 1.5s ease-in-out infinite;
 }
+
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
+
 @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(27, 122, 74, 0.3); }
-    50% { box-shadow: 0 0 8px 4px rgba(27, 122, 74, 0.15); }
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(27, 122, 74, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 8px 4px rgba(27, 122, 74, 0.15);
+    }
 }
 
 /* ===== Word-by-Word Verse Display ===== */
@@ -842,13 +920,13 @@ button, input, select, textarea {
     gap: 6px;
     direction: rtl;
     padding: 8px 6px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     line-height: 1.8;
 }
 
 [data-theme="dark"] .wbw-words {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .wbw-word {
@@ -888,7 +966,7 @@ button, input, select, textarea {
     margin-bottom: 2px;
     animation: wbwEnFadeIn 0.2s ease;
     pointer-events: none;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
@@ -898,18 +976,25 @@ button, input, select, textarea {
 }
 
 @keyframes wbwEnFadeIn {
-    from { opacity: 0; transform: translateY(3px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .wbw-word:hover {
-    background: rgba(255,255,255,0.35);
-    border-color: rgba(0,0,0,0.15);
+    background: rgba(255, 255, 255, 0.35);
+    border-color: rgba(0, 0, 0, 0.15);
 }
 
 [data-theme="dark"] .wbw-word:hover {
-    background: rgba(255,255,255,0.15);
-    border-color: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .wbw-word.wbw-active {
@@ -992,45 +1077,45 @@ button, input, select, textarea {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .verse-dot.active {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     transform: scale(1.3);
 }
 
 /* Dark mode adjustments */
 [data-theme="dark"] .verse-pill {
-    border-color: rgba(255,255,255,0.25);
-    background: rgba(255,255,255,0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .verse-pill.active {
-    background: rgba(255,255,255,0.2);
-    border-color: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 [data-theme="dark"] .verse-nav {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] .verse-nav:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 [data-theme="dark"] .verse-slide-ayah {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .verse-dot {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 [data-theme="dark"] .verse-dot.active {
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
 }
 
 /* Arabic connection tiles */
@@ -1050,7 +1135,7 @@ button, input, select, textarea {
         bottom: calc(100% + 6px);
         left: 50%;
         transform: translateX(-50%);
-        background: rgba(0,0,0,0.85);
+        background: rgba(0, 0, 0, 0.85);
         color: #fff;
         padding: 4px 10px;
         border-radius: 6px;
@@ -1074,7 +1159,7 @@ button, input, select, textarea {
         left: 50%;
         transform: translateX(-50%);
         border: 4px solid transparent;
-        border-top-color: rgba(0,0,0,0.85);
+        border-top-color: rgba(0, 0, 0, 0.85);
         z-index: 50;
         pointer-events: none;
     }
@@ -1084,15 +1169,18 @@ button, input, select, textarea {
         left: 0;
         transform: translateX(0);
     }
+
     .connections-grid .conn-tile-ar:nth-child(4n)[data-tooltip]:hover::after {
         left: auto;
         right: 0;
         transform: translateX(0);
     }
+
     .connections-grid .conn-tile-ar:nth-child(4n+1)[data-tooltip]:hover::before {
         left: 20%;
         transform: translateX(-50%);
     }
+
     .connections-grid .conn-tile-ar:nth-child(4n)[data-tooltip]:hover::before {
         left: auto;
         right: 10%;
@@ -1174,6 +1262,7 @@ button, input, select, textarea {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1200,8 +1289,8 @@ button, input, select, textarea {
     box-shadow: 0 2px 12px rgba(27, 122, 74, 0.25);
 }
 
-/* ============ WORDLE GAME ============ */
-.wordle-board {
+/* ============ HARF GAME ============ */
+.harf-board {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1209,12 +1298,12 @@ button, input, select, textarea {
     margin-bottom: 8px;
 }
 
-.wordle-row {
+.harf-row {
     display: flex;
     gap: 6px;
 }
 
-.wordle-cell {
+.harf-cell {
     width: 56px;
     height: 56px;
     border: 2px solid var(--border);
@@ -1228,38 +1317,46 @@ button, input, select, textarea {
     transition: border-color 0.1s;
 }
 
-.wordle-cell.arabic-cell {
+.harf-cell.arabic-cell {
     font-family: var(--font-arabic);
     font-size: 1.8rem;
     text-transform: none;
 }
 
-.wordle-cell.filled {
+.harf-cell.filled {
     border-color: var(--text-secondary);
     animation: popIn 0.1s ease;
 }
 
 @keyframes popIn {
-    0% { transform: scale(0.9); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
-.wordle-cell.correct {
+.harf-cell.correct {
     background: var(--correct);
     color: white;
     border-color: var(--correct);
     animation: flipIn 0.5s ease;
 }
 
-.wordle-cell.present {
+.harf-cell.present {
     background: var(--present);
     color: white;
     border-color: var(--present);
     animation: flipIn 0.5s ease;
 }
 
-.wordle-cell.absent {
+.harf-cell.absent {
     background: var(--absent);
     color: white;
     border-color: var(--absent);
@@ -1267,11 +1364,16 @@ button, input, select, textarea {
 }
 
 @keyframes flipIn {
-    0% { transform: rotateX(90deg); }
-    100% { transform: rotateX(0); }
+    0% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0);
+    }
 }
 
-.wordle-hint {
+.harf-hint {
     text-align: center;
     margin: 12px 0;
     font-size: 0.85rem;
@@ -1280,7 +1382,7 @@ button, input, select, textarea {
 }
 
 /* Hint button */
-.wordle-hint-btn {
+.harf-hint-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -1297,16 +1399,16 @@ button, input, select, textarea {
     -webkit-tap-highlight-color: transparent;
 }
 
-.wordle-hint-btn:hover:not(:disabled) {
+.harf-hint-btn:hover:not(:disabled) {
     background: var(--accent);
     color: white;
 }
 
-.wordle-hint-btn:active:not(:disabled) {
+.harf-hint-btn:active:not(:disabled) {
     transform: scale(0.95);
 }
 
-.wordle-hint-btn:disabled {
+.harf-hint-btn:disabled {
     opacity: 0.35;
     cursor: not-allowed;
     border-color: var(--text-secondary);
@@ -1324,15 +1426,26 @@ button, input, select, textarea {
 }
 
 /* Hint reveal cell — pulsing glow on the revealed letter */
-.wordle-cell.hint-reveal {
+.harf-cell.hint-reveal {
     animation: hintPulse 0.8s ease;
     box-shadow: 0 0 12px rgba(76, 175, 80, 0.5);
 }
 
 @keyframes hintPulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 rgba(76, 175, 80, 0); }
-    50% { transform: scale(1.12); box-shadow: 0 0 18px rgba(76, 175, 80, 0.6); }
-    100% { transform: scale(1); box-shadow: 0 0 12px rgba(76, 175, 80, 0.3); }
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(76, 175, 80, 0);
+    }
+
+    50% {
+        transform: scale(1.12);
+        box-shadow: 0 0 18px rgba(76, 175, 80, 0.6);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 12px rgba(76, 175, 80, 0.3);
+    }
 }
 
 /* Hint row empty cells — subtle dashed border */
@@ -1398,9 +1511,20 @@ button, input, select, textarea {
     font-size: 0.85rem;
 }
 
-.key.correct { background: var(--correct); color: white; }
-.key.present { background: var(--present); color: white; }
-.key.absent { background: var(--absent); color: white; }
+.key.correct {
+    background: var(--correct);
+    color: white;
+}
+
+.key.present {
+    background: var(--present);
+    color: white;
+}
+
+.key.absent {
+    background: var(--absent);
+    color: white;
+}
 
 /* Center the hint button below the hint text */
 #wordle-game .wordle-hint-btn {
@@ -1488,9 +1612,17 @@ button, input, select, textarea {
 }
 
 @keyframes moonPulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .ded-meter-hint {
@@ -1668,10 +1800,12 @@ button, input, select, textarea {
     font-size: 0.7rem;
     opacity: 0.3;
 }
+
 .scramble-dropzone::before {
     top: 4px;
     left: 8px;
 }
+
 .scramble-dropzone::after {
     bottom: 4px;
     right: 8px;
@@ -1785,6 +1919,7 @@ button, input, select, textarea {
     border: 1px solid var(--border);
     line-height: 1.5;
 }
+
 .scramble-theme-hint .theme-icon {
     margin-right: 4px;
 }
@@ -1798,9 +1933,11 @@ button, input, select, textarea {
     opacity: 0.9;
     position: relative;
 }
+
 .scramble-word.locked:hover {
     transform: none;
 }
+
 .scramble-lock-icon {
     position: absolute;
     top: -6px;
@@ -1813,14 +1950,17 @@ button, input, select, textarea {
 .scramble-word.dragging {
     opacity: 0.3;
 }
+
 .scramble-word.drag-over {
     border-color: var(--accent);
     background: var(--accent-light);
     transform: scale(1.05);
 }
+
 .scramble-word.touch-dragging {
     opacity: 0.3;
 }
+
 .dragging-clone {
     padding: 10px 18px;
     background: var(--bg-card);
@@ -1830,7 +1970,7 @@ button, input, select, textarea {
     font-size: 1.2rem;
     font-weight: 600;
     direction: rtl;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1880,8 +2020,15 @@ button, input, select, textarea {
 }
 
 @keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .modal-close {
@@ -2189,7 +2336,7 @@ button, input, select, textarea {
     transform: translateX(-100%);
 }
 
-.sidebar > * {
+.sidebar>* {
     position: relative;
     z-index: 1;
 }
@@ -2442,6 +2589,7 @@ button, input, select, textarea {
 .sidebar-action-btn.pwa-install-btn.hidden {
     display: none;
 }
+
 .sidebar-action-btn.pwa-install-btn {
     background: linear-gradient(135deg, var(--islamic-green), var(--accent));
     color: white;
@@ -2450,18 +2598,32 @@ button, input, select, textarea {
     position: relative;
     overflow: hidden;
 }
+
 .sidebar-action-btn.pwa-install-btn::after {
     content: '';
     position: absolute;
-    top: 0; left: -100%; width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
     animation: pwa-shimmer 3s ease-in-out infinite;
 }
+
 @keyframes pwa-shimmer {
-    0% { left: -100%; }
-    50% { left: 100%; }
-    100% { left: 100%; }
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
+
 .sidebar-action-btn.pwa-install-btn:hover {
     filter: brightness(1.1);
 }
@@ -2475,7 +2637,7 @@ button, input, select, textarea {
     z-index: 9999;
     background: var(--card-bg);
     border-top: 2px solid var(--islamic-gold);
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
     padding: 12px 16px;
     display: flex;
     align-items: center;
@@ -2485,13 +2647,16 @@ button, input, select, textarea {
     opacity: 0;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
 }
+
 .pwa-banner.hidden {
     display: none;
 }
+
 .pwa-banner.visible {
     transform: translateY(0);
     opacity: 1;
 }
+
 .pwa-banner-content {
     display: flex;
     align-items: center;
@@ -2499,20 +2664,24 @@ button, input, select, textarea {
     flex: 1;
     min-width: 0;
 }
+
 .pwa-banner-icon {
     font-size: 1.6rem;
     flex-shrink: 0;
 }
+
 .pwa-banner-text {
     display: flex;
     flex-direction: column;
     gap: 2px;
     min-width: 0;
 }
+
 .pwa-banner-text strong {
     font-size: 0.9rem;
     color: var(--text-primary);
 }
+
 .pwa-banner-text span {
     font-size: 0.75rem;
     color: var(--text-secondary);
@@ -2520,12 +2689,14 @@ button, input, select, textarea {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .pwa-banner-actions {
     display: flex;
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
 }
+
 .pwa-banner-install {
     background: linear-gradient(135deg, var(--islamic-green), var(--accent));
     color: white;
@@ -2538,9 +2709,11 @@ button, input, select, textarea {
     white-space: nowrap;
     transition: filter 0.2s;
 }
+
 .pwa-banner-install:hover {
     filter: brightness(1.1);
 }
+
 .pwa-banner-dismiss {
     background: none;
     border: none;
@@ -2551,6 +2724,7 @@ button, input, select, textarea {
     line-height: 1;
     transition: color 0.2s;
 }
+
 .pwa-banner-dismiss:hover {
     color: var(--text-primary);
 }
@@ -2864,8 +3038,15 @@ button, input, select, textarea {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .jiggle {
@@ -2873,9 +3054,19 @@ button, input, select, textarea {
 }
 
 @keyframes jiggle {
-    0%, 100% { transform: rotate(0); }
-    25% { transform: rotate(-3deg); }
-    75% { transform: rotate(3deg); }
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-3deg);
+    }
+
+    75% {
+        transform: rotate(3deg);
+    }
 }
 
 /* Toast notifications */
@@ -2898,13 +3089,25 @@ button, input, select, textarea {
 }
 
 @keyframes toastIn {
-    from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
-    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 @keyframes toastOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 /* Scrollbar */
@@ -2943,7 +3146,10 @@ button, input, select, textarea {
 
 /* ===== Accessibility: Reduced Motion ===== */
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
@@ -3248,7 +3454,7 @@ button, input, select, textarea {
 .shukr-section {
     margin-bottom: 20px;
     padding-bottom: 16px;
-    border-bottom: 1px solid var(--border, rgba(255,255,255,0.1));
+    border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.1));
 }
 
 .shukr-section:last-child {
@@ -3302,8 +3508,8 @@ button, input, select, textarea {
 
 .shukr-credit-card {
     display: block;
-    background: var(--card-bg, rgba(255,255,255,0.05));
-    border: 1px solid var(--border, rgba(255,255,255,0.1));
+    background: var(--card-bg, rgba(255, 255, 255, 0.05));
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
     border-radius: 10px;
     padding: 14px 16px;
     text-decoration: none;
@@ -3378,13 +3584,14 @@ button, input, select, textarea {
     align-items: center;
     justify-content: center;
     z-index: 90;
-    box-shadow: -2px 2px 8px rgba(0,0,0,0.15);
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s, opacity 0.2s;
     opacity: 0.6;
     padding: 0;
 }
 
-.bug-nub:hover, .bug-nub:focus-visible {
+.bug-nub:hover,
+.bug-nub:focus-visible {
     opacity: 1;
     transform: translateX(-4px);
 }
@@ -3623,8 +3830,13 @@ button, input, select, textarea {
 }
 
 @keyframes dhikr-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.4); }
-    100% { box-shadow: 0 0 0 20px rgba(201, 162, 39, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(201, 162, 39, 0);
+    }
 }
 
 /* Community dhikr display */
@@ -3676,8 +3888,15 @@ button, input, select, textarea {
 }
 
 @keyframes fadeInHint {
-    from { opacity: 0; transform: translateY(-4px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ===== Connections Result: Listen Button ===== */
@@ -3787,8 +4006,15 @@ button, input, select, textarea {
 }
 
 @keyframes holdingFadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .holding-icon {
@@ -3798,8 +4024,17 @@ button, input, select, textarea {
 }
 
 @keyframes holdingPulse {
-    0%, 100% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.15); opacity: 1; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
 }
 
 .holding-title {
@@ -3831,7 +4066,9 @@ button, input, select, textarea {
 }
 
 @keyframes holdingSpin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .holding-dots-line {
@@ -3851,16 +4088,27 @@ button, input, select, textarea {
 .mode-tab.juz-tab {
     position: relative;
 }
+
 .mode-tab.juz-tab .mode-icon {
     animation: juz-glow 2s ease-in-out infinite;
 }
+
 @keyframes juz-glow {
-    0%, 100% { filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.3)); }
-    50% { filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.7)); }
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.7));
+    }
 }
+
 .juz-sidebar-link {
     position: relative;
 }
+
 .juz-sidebar-link::after {
     content: 'NEW';
     position: absolute;
@@ -3883,18 +4131,29 @@ button, input, select, textarea {
     max-width: 480px;
     margin: 0 auto;
 }
+
 .juz-countdown-header {
     margin-bottom: 28px;
 }
+
 .juz-countdown-crescent {
     font-size: 3rem;
     margin-bottom: 8px;
     animation: juz-float 3s ease-in-out infinite;
 }
+
 @keyframes juz-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
+
 .juz-countdown-title {
     font-size: 1.8rem;
     font-weight: 800;
@@ -3906,10 +4165,17 @@ button, input, select, textarea {
     animation: juz-shimmer 3s linear infinite;
     margin: 0;
 }
+
 @keyframes juz-shimmer {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
 }
+
 .juz-countdown-subtitle {
     color: var(--text-secondary);
     font-size: 0.95rem;
@@ -3924,6 +4190,7 @@ button, input, select, textarea {
     padding: 20px 16px;
     margin-bottom: 24px;
 }
+
 .juz-countdown-label {
     color: var(--text-secondary);
     font-size: 0.85rem;
@@ -3932,18 +4199,21 @@ button, input, select, textarea {
     letter-spacing: 1px;
     font-weight: 600;
 }
+
 .juz-countdown-timer {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
 }
+
 .juz-countdown-unit {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 56px;
 }
+
 .juz-cd-num {
     font-size: 2.2rem;
     font-weight: 800;
@@ -3951,6 +4221,7 @@ button, input, select, textarea {
     line-height: 1;
     font-variant-numeric: tabular-nums;
 }
+
 .juz-cd-label {
     font-size: 0.65rem;
     color: var(--text-secondary);
@@ -3958,6 +4229,7 @@ button, input, select, textarea {
     letter-spacing: 1px;
     margin-top: 4px;
 }
+
 .juz-countdown-sep {
     font-size: 1.8rem;
     font-weight: 700;
@@ -3975,6 +4247,7 @@ button, input, select, textarea {
     padding: 20px 16px;
     margin-bottom: 24px;
 }
+
 .juz-countdown-arabic {
     font-family: 'Amiri', serif;
     font-size: 1.3rem;
@@ -3983,12 +4256,14 @@ button, input, select, textarea {
     margin: 0 0 12px;
     direction: rtl;
 }
+
 .juz-countdown-translation {
     font-size: 0.9rem;
     color: var(--text-secondary);
     line-height: 1.6;
     margin: 0 0 8px;
 }
+
 .juz-countdown-ref {
     font-size: 0.8rem;
     color: var(--text-secondary);
@@ -4003,6 +4278,7 @@ button, input, select, textarea {
     border-radius: 12px;
     padding: 20px 16px;
 }
+
 .juz-coming-badge {
     display: inline-block;
     background: linear-gradient(135deg, var(--islamic-green), var(--accent));
@@ -4015,17 +4291,20 @@ button, input, select, textarea {
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
-.juz-countdown-coming > p {
+
+.juz-countdown-coming>p {
     font-size: 0.9rem;
     color: var(--text-secondary);
     line-height: 1.6;
     margin: 0 0 16px;
 }
+
 .juz-coming-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
 }
+
 .juz-feature {
     display: flex;
     align-items: center;
@@ -4037,6 +4316,7 @@ button, input, select, textarea {
     border-radius: 8px;
     padding: 8px 10px;
 }
+
 .juz-feature span {
     font-size: 1.1rem;
 }
@@ -4047,9 +4327,23 @@ button, input, select, textarea {
 }
 
 @media (max-width: 400px) {
-    .juz-cd-num { font-size: 1.6rem; }
-    .juz-countdown-unit { min-width: 44px; }
-    .juz-countdown-sep { font-size: 1.4rem; }
-    .juz-countdown-arabic { font-size: 1.1rem; }
-    .juz-coming-features { grid-template-columns: 1fr; }
+    .juz-cd-num {
+        font-size: 1.6rem;
+    }
+
+    .juz-countdown-unit {
+        min-width: 44px;
+    }
+
+    .juz-countdown-sep {
+        font-size: 1.4rem;
+    }
+
+    .juz-countdown-arabic {
+        font-size: 1.1rem;
+    }
+
+    .juz-coming-features {
+        grid-template-columns: 1fr;
+    }
 }

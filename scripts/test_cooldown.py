@@ -32,7 +32,7 @@ def test(name, condition, detail=""):
 def make_empty_history():
     return {
         "connections": {"themes": set(), "verses": set(), "words": set()},
-        "wordle": {"words": set(), "verses": set(), "hints": set(), "verseRefs": set(), "surahs": set()},
+        "harf": {"words": set(), "verses": set(), "hints": set(), "verseRefs": set(), "surahs": set()},
         "deduction": {"titles": set(), "characters": set(), "verseRefs": set(), "surahs": set()},
         "scramble": {"verses": set(), "references": set(), "surahs": set()},
         "juz": {"juz_numbers": set(), "verses": set()},
@@ -87,7 +87,7 @@ def make_test_connections():
     }
 
 
-def make_test_wordle():
+def make_test_harf():
     return {
         "word": "رحمة",
         "display": "رَحْمَة",
@@ -225,38 +225,36 @@ test("Prompt contains violation block", "PREVIOUS ATTEMPT REUSED THESE" in promp
 test("Prompt contains specific violation", "2:255 reused" in prompt)
 
 
-# ═══════════════════════════════════════════════════════════════
-# WORDLE TESTS
-# ═══════════════════════════════════════════════════════════════
+# HARF TESTS
 print("\n" + "="*50)
-print("WORDLE TESTS")
+print("HARF TESTS")
 print("="*50)
 
-print("\n8. Validate wordle with empty history")
+print("\n8. Validate harf with empty history")
 history = make_empty_history()
-puzzle = make_test_wordle()
-errors, cooldown, warnings = gen.validate_wordle(puzzle, history)
+puzzle = make_test_harf()
+errors, cooldown, warnings = gen.validate_harf(puzzle, history)
 test("No structural errors", len(errors) == 0, f"errors={errors}")
 test("No cooldown violations", len(cooldown) == 0, f"cooldown={cooldown}")
 
-print("\n9. Validate wordle with word in cooldown")
+print("\n9. Validate harf with word in cooldown")
 history = make_empty_history()
-history["wordle"]["words"].add("رحمة")
-puzzle = make_test_wordle()
-errors, cooldown, warnings = gen.validate_wordle(puzzle, history)
+history["harf"]["words"].add("رحمة")
+puzzle = make_test_harf()
+errors, cooldown, warnings = gen.validate_harf(puzzle, history)
 test("Cooldown violation for word", any("رحمة" in v for v in cooldown), f"cooldown={cooldown}")
 
-print("\n10. Validate wordle with missing fields")
+print("\n10. Validate harf with missing fields")
 history = make_empty_history()
 bad_puzzle = {"word": "رحمة"}
-errors, cooldown, warnings = gen.validate_wordle(bad_puzzle, history)
+errors, cooldown, warnings = gen.validate_harf(bad_puzzle, history)
 test("Structural errors for missing fields", len(errors) >= 3, f"errors={errors}")
 
-print("\n11. Validate wordle word length")
+print("\n11. Validate harf word length")
 history = make_empty_history()
-long_puzzle = make_test_wordle()
+long_puzzle = make_test_harf()
 long_puzzle["word"] = "استغفار"  # 7 letters, too long
-errors, cooldown, warnings = gen.validate_wordle(long_puzzle, history)
+errors, cooldown, warnings = gen.validate_harf(long_puzzle, history)
 test("Error for word too long", any("letters" in e for e in errors), f"errors={errors}")
 
 
@@ -398,7 +396,7 @@ try:
     yesterday = (datetime.utcnow() - timedelta(days=1)).strftime("%Y-%m-%d")
     test_history_data = {
         "connections": make_test_connections(),
-        "wordle": make_test_wordle(),
+        "harf": make_test_harf(),
         "deduction": make_test_deduction(),
         "scramble": make_test_scramble(),
     }
@@ -415,8 +413,8 @@ try:
          f"themes={history['connections']['themes']}")
     test("Connections verses loaded", "2:255" in history["connections"]["verses"],
          f"verses={history['connections']['verses']}")
-    test("Harf by Harf words loaded", "رحمة" in history["wordle"]["words"],
-         f"words={history['wordle']['words']}")
+    test("Harf by Harf words loaded", "رحمة" in history["harf"]["words"],
+         f"words={history['harf']['words']}")
     test("Deduction titles loaded", "the test mystery" in history["deduction"]["titles"],
          f"titles={history['deduction']['titles']}")
     test("Scramble references loaded", "Surah Al-Fatiha (1:1)" in history["scramble"]["references"],

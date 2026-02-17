@@ -4,27 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuranIQ - Daily Quranic Puzzle Game</title>
+    <title>QuranIQ - Daily Quranic Challenge</title>
     <meta name="description"
-        content="Test your Quranic knowledge daily with 4 unique puzzle modes: Ayah Connections, Harf by Harf, Who Am I?, and Ayah Scramble. Play free every day!">
+        content="Engage with the Quran daily through 4 unique interactive challenges: Ayah Connections, Harf by Harf, Who Am I?, and Ayah Scramble. Start your journey today!">
     <meta name="theme-color" content="#1B5E20">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sudosar.github.io/quraniq/">
-    <meta property="og:title" content="QuranIQ - Daily Quranic Puzzle Game">
+    <meta property="og:title" content="QuranIQ - Daily Quranic Challenge">
     <meta property="og:description"
-        content="Test your Quranic knowledge daily with 4 unique puzzle modes. Play free every day!">
+        content="Engage with the Quran daily through 4 unique interactive challenges. Start your journey today!">
     <meta property="og:image" content="https://sudosar.github.io/quraniq/icons/og-preview.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="QuranIQ - Daily Quranic Challenge Logo">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="QuranIQ - Daily Quranic Puzzle Game">
+    <meta name="twitter:title" content="QuranIQ - Daily Quranic Challenge">
     <meta name="twitter:description"
-        content="Test your Quranic knowledge daily with 4 unique puzzle modes. Play free every day!">
+        content="Engage with the Quran daily through 4 unique interactive challenges. Start your journey today!">
     <meta name="twitter:image" content="https://sudosar.github.io/quraniq/icons/og-preview.png">
+    <meta name="twitter:image:alt" content="QuranIQ - Daily Quranic Challenge Logo">
 
     <!-- PWA -->
     <link rel="manifest" href="manifest.json">
@@ -55,7 +58,7 @@
 
 <body>
     <!-- Skip to content link for accessibility -->
-    <a href="#game-area" class="skip-link">Skip to game content</a>
+    <a href="#game-area" class="skip-link">Skip to challenge content</a>
 
     <!-- Live region for screen reader announcements -->
     <div id="sr-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
@@ -114,14 +117,14 @@
     </header>
 
     <!-- Mode Selector -->
-    <nav id="mode-selector" role="tablist" aria-label="Game mode selector">
+    <nav id="mode-selector" role="tablist" aria-label="Challenge selector">
         <button class="mode-tab active" data-mode="connections" role="tab" aria-selected="true"
             aria-controls="connections-game" id="tab-connections">
             <span class="mode-icon" aria-hidden="true">🔗</span>
             <span class="mode-name">Connections</span>
         </button>
-        <button class="mode-tab" data-mode="wordle" role="tab" aria-selected="false" aria-controls="wordle-game"
-            id="tab-wordle">
+        <button class="mode-tab" data-mode="harf" role="tab" aria-selected="false" aria-controls="harf-game"
+            id="tab-harf">
             <span class="mode-icon" aria-hidden="true">🔤</span>
             <span class="mode-name">Harf by Harf</span>
         </button>
@@ -149,7 +152,7 @@
         <section id="connections-game" class="game-mode active" role="tabpanel" aria-labelledby="tab-connections">
             <div class="game-header">
                 <h2>Ayah Connections</h2>
-                <p class="game-desc">Find 4 groups of 4 related Quranic items</p>
+                <p class="game-desc">Identify 4 groups of 4 related Quranic items</p>
             </div>
             <div id="connections-solved" aria-label="Solved groups"></div>
             <div id="connections-grid" class="connections-grid" role="grid" aria-label="Connection tiles"></div>
@@ -167,21 +170,21 @@
         </section>
 
         <!-- ==================== HARF BY HARF MODE ==================== -->
-        <section id="wordle-game" class="game-mode" role="tabpanel" aria-labelledby="tab-wordle">
+        <section id="harf-game" class="game-mode" role="tabpanel" aria-labelledby="tab-harf">
             <div class="game-header">
                 <h2>Harf by Harf</h2>
-                <p class="game-desc">Guess the Quranic word in 6 tries</p>
+                <p class="game-desc">Discover the Quranic word in 6 attempts</p>
             </div>
-            <div id="wordle-board" class="wordle-board" role="grid" aria-label="Harf by Harf game board"></div>
-            <div id="wordle-hint" class="wordle-hint" aria-live="polite"></div>
-            <div id="wordle-keyboard" class="wordle-keyboard" role="group" aria-label="Arabic keyboard"></div>
+            <div id="harf-board" class="harf-board" role="grid" aria-label="Harf by Harf game board"></div>
+            <div id="harf-hint" class="harf-hint" aria-live="polite"></div>
+            <div id="harf-keyboard" class="harf-keyboard" role="group" aria-label="Arabic keyboard"></div>
         </section>
 
         <!-- ==================== DEDUCTION MODE ==================== -->
         <section id="deduction-game" class="game-mode" role="tabpanel" aria-labelledby="tab-deduction">
             <div class="game-header">
                 <h2>Who Am I?</h2>
-                <p class="game-desc">Read clues in first person and guess the Quranic figure</p>
+                <p class="game-desc">Read clues and identify the Quranic figure</p>
             </div>
             <div id="deduction-story" class="deduction-story"></div>
             <div id="ded-crescent-meter" class="ded-crescent-meter" aria-live="polite"></div>
@@ -203,7 +206,8 @@
             <div id="scramble-words" class="scramble-words" role="list" aria-label="Available words"></div>
             <div class="scramble-controls">
                 <div id="scramble-moves" class="moves-display" aria-live="polite">Moves: <span>0</span> /
-                    <span>15</span></div>
+                    <span>15</span>
+                </div>
                 <div class="btn-row">
                     <button id="scramble-hint" class="btn btn-secondary">Hint</button>
                     <button id="scramble-reset" class="btn btn-secondary">Reset</button>
@@ -219,7 +223,7 @@
                 <div class="juz-countdown-header">
                     <div class="juz-countdown-crescent">🌙</div>
                     <h2 class="juz-countdown-title">Juz Journey</h2>
-                    <p class="juz-countdown-subtitle">A Daily Ramadan Quranic Puzzle</p>
+                    <p class="juz-countdown-subtitle">A Daily Ramadan Quranic Journey</p>
                 </div>
                 <div class="juz-countdown-timer-wrap">
                     <p class="juz-countdown-label">Ramadan begins in</p>
@@ -254,7 +258,7 @@
                 </div>
                 <div class="juz-countdown-coming">
                     <div class="juz-coming-badge">Coming Soon</div>
-                    <p>Each day of Ramadan, explore one Juz of the Quran through an interactive 4-round puzzle. Listen
+                    <p>Each day of Ramadan, explore one Juz of the Quran through an interactive 4-round journey. Listen
                         to verses, identify themes, name Surahs, and test your knowledge of the Quran's structure.</p>
                     <div class="juz-coming-features">
                         <div class="juz-feature"><span>🎧</span> Listen &amp; Discover Verses</div>
@@ -296,8 +300,8 @@
                 </div>
                 <div id="share-toast" class="share-toast hidden" role="status">Copied to clipboard!</div>
                 <div class="next-puzzle">
-                    <span>Next puzzle in</span>
-                    <span id="countdown-timer" class="countdown" aria-label="Countdown to next puzzle"></span>
+                    <span>Next challenge in</span>
+                    <span id="countdown-timer" class="countdown" aria-label="Countdown to next challenge"></span>
                 </div>
             </div>
         </div>
@@ -312,7 +316,7 @@
                         aria-selected="false">Insights</button>
                     <button class="stats-tab active" data-stats-mode="connections" role="tab"
                         aria-selected="true">Connections</button>
-                    <button class="stats-tab" data-stats-mode="wordle" role="tab" aria-selected="false">Harf</button>
+                    <button class="stats-tab" data-stats-mode="harf" role="tab" aria-selected="false">Harf</button>
                     <button class="stats-tab" data-stats-mode="deduction" role="tab" aria-selected="false">Who Am
                         I?</button>
                     <button class="stats-tab" data-stats-mode="scramble" role="tab"
@@ -354,7 +358,7 @@
         </div>
 
         <!-- ==================== MENU SIDEBAR ==================== -->
-        <div id="sidebar" class="sidebar hidden" role="navigation" aria-label="Game navigation">
+        <div id="sidebar" class="sidebar hidden" role="navigation" aria-label="App navigation">
             <div class="sidebar-header">
                 <h2>Quran<span style="color: var(--islamic-gold)">IQ</span></h2>
                 <button id="sidebar-close" class="icon-btn" aria-label="Close menu">&times;</button>
@@ -364,7 +368,7 @@
                 <a href="#" data-mode="connections" class="sidebar-link active">
                     <span aria-hidden="true">🔗</span> Ayah Connections
                 </a>
-                <a href="#" data-mode="wordle" class="sidebar-link">
+                <a href="#" data-mode="harf" class="sidebar-link">
                     <span aria-hidden="true">🔤</span> Harf by Harf
                 </a>
                 <a href="#" data-mode="deduction" class="sidebar-link">
@@ -398,7 +402,7 @@
                 </button>
             </div>
             <div class="sidebar-footer">
-                <p>Test your Quranic knowledge daily</p>
+                <p>Engage with the Quran daily</p>
                 <p class="sidebar-verse">"وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ"<br><em>And We have certainly made
                         the Quran easy for remembrance</em> — 54:17</p>
             </div>
@@ -411,7 +415,7 @@
                 <div class="pwa-banner-icon" aria-hidden="true">🕌</div>
                 <div class="pwa-banner-text">
                     <strong>Install QuranIQ</strong>
-                    <span>Play offline &amp; get quick access from your home screen</span>
+                    <span>Use offline &amp; get quick access from your home screen</span>
                 </div>
             </div>
             <div class="pwa-banner-actions">
@@ -553,7 +557,7 @@
 
                 <div class="shukr-section shukr-closing">
                     <p class="shukr-body">If QuranIQ has benefited you in any way, please share it with your family and
-                        friends — especially during Ramadan. Every person who engages with the Quran through this game
+                        friends — especially during Ramadan. Every person who engages with the Quran through this app
                         is, <em>in sha Allah</em>, a reward for all of us.</p>
                     <p class="shukr-arabic" style="font-size:1.1rem;">جَزَاكُمُ اللَّهُ خَيْرًا</p>
                     <p class="shukr-translation"><em>May Allah reward you all with goodness.</em></p>
@@ -570,7 +574,7 @@
     <script src="puzzles.js?v=20260210m"></script>
     <script src="js/utils.js?v=20260215"></script>
     <script src="js/connections.js?v=20260215-fix"></script>
-    <script src="js/wordle.js?v=20260210m"></script>
+    <script src="js/harf.js?v=20260217a"></script>
     <script src="js/deduction.js?v=20260210m"></script>
     <script src="js/scramble.js?v=20260214a"></script>
     <script src="js/onboarding.js?v=20260210m"></script>

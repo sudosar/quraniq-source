@@ -345,7 +345,7 @@
                 </p>
                 <div class="quick-actions">
                     <button onclick="inspectPuzzle('connections')" class="active">Connections</button>
-                    <button onclick="inspectPuzzle('wordle')">Wordle</button>
+                    <button onclick="inspectPuzzle('harf')">Harf</button>
                     <button onclick="inspectPuzzle('deduction')">Deduction</button>
                     <button onclick="inspectPuzzle('scramble')">Scramble</button>
                 </div>
@@ -431,7 +431,7 @@
                 <div class="quick-actions">
                     <button onclick="viewStorage('all')">View All</button>
                     <button onclick="viewStorage('conn')">Connections</button>
-                    <button onclick="viewStorage('wordle')">Wordle</button>
+                    <button onclick="viewStorage('harf')">Harf</button>
                     <button onclick="viewStorage('ded')">Deduction</button>
                     <button onclick="viewStorage('scr')">Scramble</button>
                     <button onclick="viewStorage('juz')">Juz Journey</button>
@@ -444,7 +444,7 @@
                     progress for today:</p>
                 <div class="quick-actions">
                     <button onclick="resetGameState('conn')">🔄 Connections</button>
-                    <button onclick="resetGameState('wordle')">🔄 Harf by Harf</button>
+                    <button onclick="resetGameState('harf')">🔄 Harf by Harf</button>
                     <button onclick="resetGameState('ded')">🔄 Who Am I?</button>
                     <button onclick="resetGameState('scr')">🔄 Scramble</button>
                     <button onclick="resetJuzState()">🌙 Juz Journey</button>
@@ -603,7 +603,7 @@
             resultEl.textContent = 'Loading...';
             const files = {
                 connections: 'data/daily_puzzle.json',
-                wordle: 'data/daily_wordle.json',
+                harf: 'data/daily_harf.json',
                 deduction: 'data/daily_deduction.json',
                 scramble: 'data/daily_scramble.json',
             };
@@ -635,7 +635,7 @@
                 const key = localStorage.key(i);
                 if (filter === 'all' ||
                     (filter === 'conn' && key.includes('conn')) ||
-                    (filter === 'wordle' && (key.includes('wordle') || key.includes('harf'))) ||
+                    (filter === 'harf' && (key.includes('wordle') || key.includes('harf'))) ||
                     (filter === 'ded' && (key.includes('ded') || key.includes('deduction'))) ||
                     (filter === 'scr' && (key.includes('scr') || key.includes('scramble'))) ||
                     (filter === 'juz' && key.includes('juz')) ||
@@ -651,7 +651,7 @@
             // Also look inside quraniq_state for game-specific sub-keys
             try {
                 const state = JSON.parse(localStorage.getItem('quraniq_state') || '{}');
-                const prefixMap = { conn: 'conn_', wordle: 'wordle_', ded: 'ded_', scr: 'scr_', stats: 'stats' };
+                const prefixMap = { conn: 'conn_', harf: 'harf_', wordle: 'harf_', ded: 'ded_', scr: 'scr_', stats: 'stats' };
                 const prefix = prefixMap[filter];
                 if (filter === 'all') {
                     if (Object.keys(state).length > 0) entries['quraniq_state'] = state;
@@ -672,8 +672,8 @@
 
         // ===== Reset Individual Game State =====
         function resetGameState(prefix) {
-            const names = { conn: 'Connections', wordle: 'Harf by Harf', ded: 'Who Am I?', scr: 'Scramble' };
-            const modeMap = { conn: 'connections', wordle: 'wordle', ded: 'deduction', scr: 'scramble' };
+            const names = { conn: 'Connections', harf: 'Harf by Harf', ded: 'Who Am I?', scr: 'Scramble' };
+            const modeMap = { conn: 'connections', harf: 'harf', ded: 'deduction', scr: 'scramble' };
             const name = names[prefix] || prefix;
             const modeName = modeMap[prefix] || prefix;
             if (!confirm(`Reset ${name} progress for today? This will clear your game state and allow a new score submission. Other games are not affected.`)) return;
