@@ -187,6 +187,7 @@ function renderScramble() {
     });
 
     // Update button states
+    document.getElementById('scramble-check').textContent = 'Submit';
     document.getElementById('scramble-check').disabled = scr.available.length > 0 || scr.gameOver;
     document.getElementById('scramble-hint').disabled = scr.gameOver || scr.hintsUsed >= scr.maxHints;
     document.getElementById('scramble-reset').disabled = scr.gameOver;
