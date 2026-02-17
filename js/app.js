@@ -3,8 +3,9 @@
    ============================================ */
 
 // ==================== APP STATE ====================
+const MODE_KEY = 'quraniq_current_mode';
 const app = {
-    currentMode: 'connections',
+    currentMode: localStorage.getItem(MODE_KEY) || 'connections',
     dayNumber: getDayNumber(),
     state: loadState(),
     stats: loadStats(),
@@ -54,6 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // PWA install prompt
     initPWAInstall();
+
+    // Restore saved mode if it's not the default
+    if (app.currentMode !== 'connections') {
+        switchMode(app.currentMode);
+    }
 
     // Track if app is running as installed PWA
     if (window.matchMedia('(display-mode: standalone)').matches) {
@@ -105,6 +111,7 @@ function initModeSelector() {
 
 function switchMode(mode) {
     app.currentMode = mode;
+    localStorage.setItem(MODE_KEY, mode);
     document.querySelectorAll('.mode-tab').forEach(t => {
         const isActive = t.dataset.mode === mode;
         t.classList.toggle('active', isActive);

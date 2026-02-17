@@ -27,7 +27,8 @@ const conn = {
     items: [],
     gameOver: false,
     exploredVerses: new Set(),  // Track verse refs explored this session (audio play or word tap)
-    submittedGuesses: new Set() // Track submitted wrong combinations (sorted keys joined by |)
+    submittedGuesses: new Set(), // Track submitted wrong combinations (sorted keys joined by |)
+    categoriesWithMistakes: new Set() // Track categories that were part of a wrong guess
 };
 
 function initConnections() {
@@ -105,6 +106,7 @@ function setupConnectionsGame() {
         conn.correctCount = saved.correctCount ?? conn.solved.length;
         conn.exploredVerses = new Set(saved.exploredVerses || []);
         conn.submittedGuesses = new Set(saved.submittedGuesses || []);
+        conn.categoriesWithMistakes = new Set(saved.categoriesWithMistakes || []);
     } else {
         // Clear stale state from a different puzzle
         if (saved && !stateValid) {
@@ -118,6 +120,7 @@ function setupConnectionsGame() {
         conn.correctCount = 0;
         conn.exploredVerses = new Set();
         conn.submittedGuesses = new Set();
+        conn.categoriesWithMistakes = new Set();
     }
 
     // Flatten items, removing solved ones
@@ -276,12 +279,20 @@ function submitConnections() {
         // Wrong guess - track it
         conn.submittedGuesses.add(guessKey);
 
-        // Check for one-away
+        // Check for one-away and track mistakes for all categories involved
         let oneAway = false;
+        const currentSelectedKeys = new Set(conn.selected.map(i => getConnItemKey(i)));
+
         conn.puzzle.categories.forEach(cat => {
             if (!conn.solved.some(s => s.name === cat.name)) {
                 const catKeys = new Set(cat.items.map(i => getConnItemKey(i)));
                 const overlap = conn.selected.filter(i => catKeys.has(getConnItemKey(i))).length;
+
+                if (overlap > 0) {
+                    // If even one item from this category was in a wrong guess, it's a "mistaken" category
+                    conn.categoriesWithMistakes.add(cat.nameEn || cat.name);
+                }
+
                 if (overlap === 3) oneAway = true;
             }
         });
@@ -759,6 +770,7 @@ function saveConnState() {
         correctCount: conn.correctCount ?? conn.solved.length,
         exploredVerses: Array.from(conn.exploredVerses),
         submittedGuesses: Array.from(conn.submittedGuesses),
+        categoriesWithMistakes: Array.from(conn.categoriesWithMistakes),
         puzzleSource: conn.puzzleSource || 'unknown'
     };
     saveState(app.state);
@@ -819,9 +831,11 @@ function getConnCrescentData() {
         if (!wasSolved) {
             crescent = '🌑'; // Failed / auto-revealed
         } else if (rowExplored >= rowTotal) {
-            crescent = '🌕'; // Solved + all unique verses explored
+            const catName = s.nameEn || s.name;
+            const hadMistake = conn.categoriesWithMistakes.has(catName);
+            crescent = hadMistake ? '🌗' : '🌕'; // Half Moon if mistake + all explored, else Full Moon
         } else {
-            crescent = '🌙'; // Solved but not all explored
+            crescent = '🌙'; // Solved but not all explored (Crescent)
         }
         perRow.push({ crescent, explored: rowExplored, total: rowTotal, wasSolved });
     });
