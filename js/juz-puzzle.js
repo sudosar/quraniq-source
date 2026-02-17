@@ -254,10 +254,12 @@ function renderJuzPuzzle() {
 }
 
 // ===== Crescent Meter =====
+const MAX_HINT_PENALTY = 2; // Cap penalty so perfect answers still earn 3/5
+
 function renderCrescentMeter() {
   const maxCrescents = 5;
   const rawScore = juzState.scores.round2 + juzState.scores.round3 + juzState.scores.round4;
-  const penalty = juzState.hintPenalty || 0;
+  const penalty = Math.min(juzState.hintPenalty || 0, MAX_HINT_PENALTY);
   const finalScore = Math.max(0, rawScore - penalty);
 
   let moons = '';
@@ -334,7 +336,7 @@ function renderRound1() {
       </div>
 
       <!-- Hint cost notice -->
-      <p class="juz-hint-notice">Discovery: First 3 words free, then 0.5🌙 each</p>
+      <p class="juz-hint-notice">Tap any word to discover its meaning — it's free! 📖</p>
 
       <!-- Continue Button -->
       <button class="btn btn-primary juz-continue-btn" onclick="advanceRound(2)">
@@ -350,12 +352,7 @@ function revealWordTooltip(idx) {
   juzState.tooltipsRevealed.add(idx);
   juzState.hintsUsed++;
 
-  // Scoring: First 3 are free, then 0.5 crescents each
-  if (juzState.hintsUsed > 3) {
-    juzState.hintPenalty += 0.5;
-    updateCrescentMeter();
-  }
-
+  // Word taps are FREE — Round 1 is about discovery, not penalty
   saveJuzState();
 
   const wordEl = document.querySelector(`.juz-wbw-word[data-idx="${idx}"]`);
@@ -1092,7 +1089,8 @@ function showFinalResults() {
   if (!stats.juzCompleted.includes(juzState.puzzle.juz_number)) {
     stats.played++;
     const totalRaw = juzState.scores.round2 + juzState.scores.round3 + juzState.scores.round4;
-    stats.totalScore += Math.max(0, totalRaw - juzState.hintPenalty);
+    const cappedPenalty = Math.min(juzState.hintPenalty || 0, MAX_HINT_PENALTY);
+    stats.totalScore += Math.max(0, totalRaw - cappedPenalty);
     stats.juzCompleted.push(juzState.puzzle.juz_number);
     saveJuzStats(stats);
   }
@@ -1101,7 +1099,8 @@ function showFinalResults() {
   const p = juzState.puzzle;
 
   const totalScore = juzState.scores.round2 + juzState.scores.round3 + juzState.scores.round4;
-  const finalScore = Math.max(0, totalScore - juzState.hintPenalty);
+  const cappedPenalty = Math.min(juzState.hintPenalty || 0, MAX_HINT_PENALTY);
+  const finalScore = Math.max(0, totalScore - cappedPenalty);
 
   // Build moon string
   let moonStr = '';
@@ -1121,7 +1120,8 @@ function showFinalResults() {
   }
 
   // Build share text
-  const shareText = `QuranIQ Juz Journey — Juz ${p.juz_number} (${p.juz_name_ar})\n${moonStr} ${finalScore}/5\n\nTheme: ${juzState.scores.round2 > 0 ? '✅' : '❌'} | Surah: ${juzState.scores.round3 > 0 ? '✅' : '❌'} | Order: ${juzState.scores.round4 > 0 ? '✅' : '❌'}\nPenalty: -${juzState.hintPenalty}🌙\n\nhttps://sudosar.github.io/quraniq`;
+  const penaltyStr = cappedPenalty > 0 ? `\nHints: -${cappedPenalty}🌙` : '';
+  const shareText = `QuranIQ Juz Journey — Juz ${p.juz_number} (${p.juz_name_ar})\n${moonStr} ${finalScore}/5\n\nTheme: ${juzState.scores.round2 > 0 ? '✅' : '❌'} | Surah: ${juzState.scores.round3 > 0 ? '✅' : '❌'} | Order: ${juzState.scores.round4 > 0 ? '✅' : '❌'}${penaltyStr}\n\nhttps://sudosar.github.io/quraniq`;
 
   container.innerHTML = `
     <div class="juz-puzzle">
@@ -1137,8 +1137,8 @@ function showFinalResults() {
 
         <div class="juz-results-breakdown">
           <div class="juz-result-row">
-            <span class="juz-result-label">📖 Discovery Penalty</span>
-            <span class="juz-result-value">${juzState.hintPenalty > 0 ? `−${juzState.hintPenalty}🌙` : 'None'}</span>
+            <span class="juz-result-label">💡 Hint Penalty</span>
+            <span class="juz-result-value">${cappedPenalty > 0 ? `−${cappedPenalty}🌙` : 'None'}</span>
           </div>
           <div class="juz-result-row">
             <span class="juz-result-label">🎯 Theme</span>
