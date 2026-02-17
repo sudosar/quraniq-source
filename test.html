@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <meta name="robots" content="noindex, nofollow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/juz-puzzle.css">
     <style>
@@ -23,15 +26,18 @@
             top: 0;
             z-index: 100;
         }
+
         .test-lab-header h1 {
             font-family: var(--font-main);
             font-size: 1.1rem;
             font-weight: 700;
             color: var(--text);
         }
+
         .test-lab-header h1 span {
             color: var(--islamic-gold);
         }
+
         .test-lab-header .badge {
             background: var(--islamic-gold);
             color: #000;
@@ -42,11 +48,13 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
         .test-lab-controls {
             display: flex;
             gap: 8px;
             align-items: center;
         }
+
         .test-lab-controls button {
             background: var(--bg-hover);
             border: 1px solid var(--border);
@@ -57,16 +65,19 @@
             font-size: 0.8rem;
             font-family: var(--font-main);
         }
+
         .test-lab-controls button:hover {
             background: var(--accent);
             color: #fff;
             border-color: var(--accent);
         }
+
         .test-container {
             max-width: var(--max-width);
             margin: 0 auto;
             padding: 20px 16px;
         }
+
         .test-section {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -74,6 +85,7 @@
             margin-bottom: 20px;
             overflow: hidden;
         }
+
         .test-section-header {
             background: var(--bg-hover);
             padding: 12px 16px;
@@ -84,22 +96,27 @@
             cursor: pointer;
             user-select: none;
         }
+
         .test-section-header h2 {
             font-size: 0.95rem;
             font-weight: 600;
             color: var(--text);
         }
+
         .test-section-header .toggle {
             font-size: 1.2rem;
             color: var(--text-secondary);
             transition: transform 0.2s;
         }
+
         .test-section-header.collapsed .toggle {
             transform: rotate(-90deg);
         }
+
         .test-section-body {
             padding: 16px;
         }
+
         .test-section-body.hidden {
             display: none;
         }
@@ -118,9 +135,18 @@
             white-space: pre-wrap;
             word-break: break-all;
         }
-        .test-console .log-info { color: #a0ffa0; }
-        .test-console .log-warn { color: #f1c40f; }
-        .test-console .log-error { color: #e74c3c; }
+
+        .test-console .log-info {
+            color: #a0ffa0;
+        }
+
+        .test-console .log-warn {
+            color: #f1c40f;
+        }
+
+        .test-console .log-error {
+            color: #e74c3c;
+        }
 
         /* Sandbox game area */
         #sandbox-game {
@@ -131,15 +157,18 @@
             text-align: center;
             position: relative;
         }
+
         #sandbox-game.active {
             border-style: solid;
             border-color: var(--accent);
         }
+
         .sandbox-placeholder {
             color: var(--text-secondary);
             font-size: 0.9rem;
             padding: 60px 20px;
         }
+
         .sandbox-placeholder p {
             margin-bottom: 8px;
         }
@@ -151,6 +180,7 @@
             gap: 8px;
             margin-bottom: 16px;
         }
+
         .quick-actions button {
             background: var(--bg-hover);
             border: 1px solid var(--border);
@@ -162,11 +192,13 @@
             font-family: var(--font-main);
             transition: all 0.15s;
         }
+
         .quick-actions button:hover {
             background: var(--accent);
             color: #fff;
             border-color: var(--accent);
         }
+
         .quick-actions button.active {
             background: var(--accent);
             color: #fff;
@@ -180,6 +212,7 @@
             margin-bottom: 12px;
             flex-wrap: wrap;
         }
+
         .api-test input {
             flex: 1;
             min-width: 200px;
@@ -191,6 +224,7 @@
             font-family: var(--font-main);
             font-size: 0.85rem;
         }
+
         .api-test button {
             padding: 8px 16px;
             background: var(--accent);
@@ -234,11 +268,13 @@
             transition: transform 0.3s ease;
             pointer-events: none;
         }
+
         .test-toast.show {
             transform: translateX(-50%) translateY(0);
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <div class="test-lab-header">
@@ -284,7 +320,8 @@
             </div>
             <div class="test-section-body">
                 <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">
-                    Test Quran API calls. Enter a surah:ayah reference to fetch word-by-word data, translations, and audio.
+                    Test Quran API calls. Enter a surah:ayah reference to fetch word-by-word data, translations, and
+                    audio.
                 </p>
                 <div class="api-test">
                     <input type="text" id="api-ref" placeholder="e.g. 2:255 or 112:1-4" value="1:1">
@@ -343,20 +380,33 @@
                     </div>
                 </div>
 
-                <h3 style="font-size: 0.85rem; margin: 16px 0 8px; color: var(--text-secondary);">Connection Tiles (Arabic)</h3>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; max-width: 400px; margin-bottom: 16px;">
+                <h3 style="font-size: 0.85rem; margin: 16px 0 8px; color: var(--text-secondary);">Connection Tiles
+                    (Arabic)</h3>
+                <div
+                    style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; max-width: 400px; margin-bottom: 16px;">
                     <button class="conn-tile conn-tile-ar" style="padding: 12px 4px; font-size: 1rem;">بِسْمِ</button>
-                    <button class="conn-tile conn-tile-ar selected" style="padding: 12px 4px; font-size: 1rem;">ٱللَّهِ</button>
-                    <button class="conn-tile conn-tile-ar" style="padding: 12px 4px; font-size: 1rem;">ٱلرَّحْمَـٰنِ</button>
-                    <button class="conn-tile conn-tile-ar" style="padding: 12px 4px; font-size: 1rem;">ٱلرَّحِيمِ</button>
+                    <button class="conn-tile conn-tile-ar selected"
+                        style="padding: 12px 4px; font-size: 1rem;">ٱللَّهِ</button>
+                    <button class="conn-tile conn-tile-ar"
+                        style="padding: 12px 4px; font-size: 1rem;">ٱلرَّحْمَـٰنِ</button>
+                    <button class="conn-tile conn-tile-ar"
+                        style="padding: 12px 4px; font-size: 1rem;">ٱلرَّحِيمِ</button>
                 </div>
 
                 <h3 style="font-size: 0.85rem; margin: 16px 0 8px; color: var(--text-secondary);">Solved Row Colors</h3>
                 <div style="max-width: 400px; margin-bottom: 16px;">
-                    <div style="background: var(--conn-yellow); color: var(--conn-yellow-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">Yellow — Easiest</div>
-                    <div style="background: var(--conn-green); color: var(--conn-green-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">Green — Easy</div>
-                    <div style="background: var(--conn-blue); color: var(--conn-blue-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">Blue — Medium</div>
-                    <div style="background: var(--conn-purple); color: var(--conn-purple-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">Purple — Hard</div>
+                    <div
+                        style="background: var(--conn-yellow); color: var(--conn-yellow-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">
+                        Yellow — Easiest</div>
+                    <div
+                        style="background: var(--conn-green); color: var(--conn-green-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">
+                        Green — Easy</div>
+                    <div
+                        style="background: var(--conn-blue); color: var(--conn-blue-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">
+                        Blue — Medium</div>
+                    <div
+                        style="background: var(--conn-purple); color: var(--conn-purple-text); padding: 10px; border-radius: 6px; margin-bottom: 4px; text-align: center; font-weight: 600; font-size: 0.85rem;">
+                        Purple — Hard</div>
                 </div>
 
                 <h3 style="font-size: 0.85rem; margin: 16px 0 8px; color: var(--text-secondary);">Buttons</h3>
@@ -384,15 +434,20 @@
                     <button onclick="viewStorage('wordle')">Wordle</button>
                     <button onclick="viewStorage('ded')">Deduction</button>
                     <button onclick="viewStorage('scr')">Scramble</button>
+                    <button onclick="viewStorage('juz')">Juz Journey</button>
                     <button onclick="viewStorage('stats')">Stats</button>
-                    <button onclick="if(confirm('Clear ALL game state?')) { localStorage.clear(); testLog('Cleared all localStorage', 'warn'); viewStorage('all'); }">⚠ Clear All</button>
+                    <button
+                        onclick="if(confirm('Clear ALL game state?')) { localStorage.clear(); testLog('Cleared all localStorage', 'warn'); viewStorage('all'); }">⚠
+                        Clear All</button>
                 </div>
-                <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 12px 0 8px;">Reset individual game progress for today:</p>
+                <p style="color: var(--text-secondary); font-size: 0.82rem; margin: 12px 0 8px;">Reset individual game
+                    progress for today:</p>
                 <div class="quick-actions">
                     <button onclick="resetGameState('conn')">🔄 Connections</button>
                     <button onclick="resetGameState('wordle')">🔄 Harf by Harf</button>
                     <button onclick="resetGameState('ded')">🔄 Who Am I?</button>
                     <button onclick="resetGameState('scr')">🔄 Scramble</button>
+                    <button onclick="resetJuzState()">🌙 Juz Journey</button>
                 </div>
                 <div id="storage-data" class="data-viewer">Click a button above to inspect storage...</div>
             </div>
@@ -571,7 +626,7 @@
                 const buttons = resultEl.parentElement.querySelectorAll('.quick-actions button:not(:last-child)');
                 buttons.forEach(b => b.classList.remove('active'));
                 if (event && event.target && event.target.tagName === 'BUTTON') event.target.classList.add('active');
-            } catch(e) {}
+            } catch (e) { }
 
             const entries = {};
 
@@ -583,6 +638,7 @@
                     (filter === 'wordle' && (key.includes('wordle') || key.includes('harf'))) ||
                     (filter === 'ded' && (key.includes('ded') || key.includes('deduction'))) ||
                     (filter === 'scr' && (key.includes('scr') || key.includes('scramble'))) ||
+                    (filter === 'juz' && key.includes('juz')) ||
                     (filter === 'stats' && key.includes('stat'))) {
                     try {
                         entries[key] = JSON.parse(localStorage.getItem(key));
@@ -606,7 +662,7 @@
                     }
                     if (Object.keys(filtered).length > 0) entries['quraniq_state (filtered)'] = filtered;
                 }
-            } catch(e) {}
+            } catch (e) { }
 
             resultEl.textContent = Object.keys(entries).length
                 ? JSON.stringify(entries, null, 2)
@@ -671,6 +727,16 @@
             viewStorage(prefix);
         }
 
+        // ===== Reset Juz Journey State =====
+        function resetJuzState() {
+            if (!confirm('Reset Juz Journey progress? This will let you replay today\'s puzzle.')) return;
+            localStorage.removeItem('quraniq_juz');
+            localStorage.removeItem('quraniq_juz_stats');
+            testLog('Cleared Juz Journey state (quraniq_juz, quraniq_juz_stats)', 'warn');
+            showTestToast('Juz Journey reset! Go back to the game and reload.');
+            viewStorage('juz');
+        }
+
         // ===== Init =====
         document.addEventListener('DOMContentLoaded', () => {
             testLog('Test Lab ready. Theme: ' + savedTheme);
@@ -678,85 +744,86 @@
         });
         // ===== Juz 30 Sample Data =====
         const JUZ30_SAMPLE = {
-          date: "2026-03-30",
-          juz_number: 30,
-          juz_name: "Amma",
-          juz_name_ar: "عَمَّ",
-          verse: {
-            surah_number: 93,
-            surah_name: "Ad-Duha",
-            surah_name_ar: "الضحى",
-            ayah_number: 3,
-            arabic_text: "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
-            translation: "Your Lord has not forsaken you, nor has He become displeased.",
-            audio_url: "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1543.mp3"
-          },
-          theme_question: {
-            correct: "Allah's reassurance to the Prophet after a pause in revelation",
-            options: [
-              "Allah's reassurance to the Prophet after a pause in revelation",
-              "The punishment of those who deny the Day of Judgment",
-              "The creation of the heavens and the earth",
-              "The story of Prophet Musa and the burning bush"
-            ]
-          },
-          surah_question: {
-            correct_surah: 93,
-            options: [
-              { num: 91, name: "Ash-Shams", name_ar: "الشمس", name_en: "The Sun" },
-              { num: 93, name: "Ad-Duha", name_ar: "الضحى", name_en: "The Morning Brightness" },
-              { num: 94, name: "Ash-Sharh", name_ar: "الشرح", name_en: "The Relief" },
-              { num: 112, name: "Al-Ikhlas", name_ar: "الإخلاص", name_en: "The Sincerity" }
-            ]
-          },
-          surah_order: {
-            surahs: [
-              { num: 78, name: "An-Naba", name_ar: "النبأ", name_en: "The Tidings" },
-              { num: 79, name: "An-Naziat", name_ar: "النازعات", name_en: "Those Who Drag Forth" },
-              { num: 80, name: "Abasa", name_ar: "عبس", name_en: "He Frowned" },
-              { num: 81, name: "At-Takwir", name_ar: "التكوير", name_en: "The Overthrowing" },
-              { num: 82, name: "Al-Infitar", name_ar: "الانفطار", name_en: "The Cleaving" },
-              { num: 83, name: "Al-Mutaffifin", name_ar: "المطففين", name_en: "The Defrauding" },
-              { num: 84, name: "Al-Inshiqaq", name_ar: "الانشقاق", name_en: "The Splitting Open" },
-              { num: 85, name: "Al-Buruj", name_ar: "البروج", name_en: "The Mansions of the Stars" },
-              { num: 86, name: "At-Tariq", name_ar: "الطارق", name_en: "The Morning Star" },
-              { num: 87, name: "Al-Ala", name_ar: "الأعلى", name_en: "The Most High" },
-              { num: 88, name: "Al-Ghashiyah", name_ar: "الغاشية", name_en: "The Overwhelming" },
-              { num: 89, name: "Al-Fajr", name_ar: "الفجر", name_en: "The Dawn" },
-              { num: 90, name: "Al-Balad", name_ar: "البلد", name_en: "The City" },
-              { num: 91, name: "Ash-Shams", name_ar: "الشمس", name_en: "The Sun" },
-              { num: 92, name: "Al-Layl", name_ar: "الليل", name_en: "The Night" },
-              { num: 93, name: "Ad-Duha", name_ar: "الضحى", name_en: "The Morning Brightness" },
-              { num: 94, name: "Ash-Sharh", name_ar: "الشرح", name_en: "The Relief" },
-              { num: 95, name: "At-Tin", name_ar: "التين", name_en: "The Fig" },
-              { num: 96, name: "Al-Alaq", name_ar: "العلق", name_en: "The Clot" },
-              { num: 97, name: "Al-Qadr", name_ar: "القدر", name_en: "The Night of Decree" },
-              { num: 98, name: "Al-Bayyinah", name_ar: "البينة", name_en: "The Clear Proof" },
-              { num: 99, name: "Az-Zalzalah", name_ar: "الزلزلة", name_en: "The Earthquake" },
-              { num: 100, name: "Al-Adiyat", name_ar: "العاديات", name_en: "The Chargers" },
-              { num: 101, name: "Al-Qariah", name_ar: "القارعة", name_en: "The Calamity" },
-              { num: 102, name: "At-Takathur", name_ar: "التكاثر", name_en: "The Rivalry in Worldly Increase" },
-              { num: 103, name: "Al-Asr", name_ar: "العصر", name_en: "The Declining Day" },
-              { num: 104, name: "Al-Humazah", name_ar: "الهمزة", name_en: "The Traducer" },
-              { num: 105, name: "Al-Fil", name_ar: "الفيل", name_en: "The Elephant" },
-              { num: 106, name: "Quraysh", name_ar: "قريش", name_en: "Quraysh" },
-              { num: 107, name: "Al-Maun", name_ar: "الماعون", name_en: "The Small Kindnesses" },
-              { num: 108, name: "Al-Kawthar", name_ar: "الكوثر", name_en: "The Abundance" },
-              { num: 109, name: "Al-Kafirun", name_ar: "الكافرون", name_en: "The Disbelievers" },
-              { num: 110, name: "An-Nasr", name_ar: "النصر", name_en: "The Divine Support" },
-              { num: 111, name: "Al-Masad", name_ar: "المسد", name_en: "The Palm Fiber" },
-              { num: 112, name: "Al-Ikhlas", name_ar: "الإخلاص", name_en: "The Sincerity" },
-              { num: 113, name: "Al-Falaq", name_ar: "الفلق", name_en: "The Daybreak" },
-              { num: 114, name: "An-Nas", name_ar: "الناس", name_en: "Mankind" }
-            ]
-          },
-          educational_notes: {
-            verse_context: "Surah Ad-Duha was revealed after a period when the Prophet Muhammad (peace be upon him) did not receive any revelation, causing him distress. The Quraysh mocked him saying his Lord had abandoned him. This verse is Allah's direct comfort — He has neither forsaken nor become displeased with His Messenger.",
-            theme_explanation: "The theme of divine reassurance runs throughout this surah. Allah reminds the Prophet of His continuous care — from his orphanhood to guidance — and promises that the Hereafter will be better than the present. It teaches us that periods of difficulty are not signs of Allah's displeasure.",
-            surah_overview: "Juz 30 (Amma) contains 37 surahs — the most of any juz. These are mostly short Makkan surahs focused on core beliefs: the Day of Judgment, Allah's power in creation, and moral accountability. They were among the first revelations and are the most memorized portions of the Quran."
-          }
+            date: "2026-03-30",
+            juz_number: 30,
+            juz_name: "Amma",
+            juz_name_ar: "عَمَّ",
+            verse: {
+                surah_number: 93,
+                surah_name: "Ad-Duha",
+                surah_name_ar: "الضحى",
+                ayah_number: 3,
+                arabic_text: "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+                translation: "Your Lord has not forsaken you, nor has He become displeased.",
+                audio_url: "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1543.mp3"
+            },
+            theme_question: {
+                correct: "Allah's reassurance to the Prophet after a pause in revelation",
+                options: [
+                    "Allah's reassurance to the Prophet after a pause in revelation",
+                    "The punishment of those who deny the Day of Judgment",
+                    "The creation of the heavens and the earth",
+                    "The story of Prophet Musa and the burning bush"
+                ]
+            },
+            surah_question: {
+                correct_surah: 93,
+                options: [
+                    { num: 91, name: "Ash-Shams", name_ar: "الشمس", name_en: "The Sun" },
+                    { num: 93, name: "Ad-Duha", name_ar: "الضحى", name_en: "The Morning Brightness" },
+                    { num: 94, name: "Ash-Sharh", name_ar: "الشرح", name_en: "The Relief" },
+                    { num: 112, name: "Al-Ikhlas", name_ar: "الإخلاص", name_en: "The Sincerity" }
+                ]
+            },
+            surah_order: {
+                surahs: [
+                    { num: 78, name: "An-Naba", name_ar: "النبأ", name_en: "The Tidings" },
+                    { num: 79, name: "An-Naziat", name_ar: "النازعات", name_en: "Those Who Drag Forth" },
+                    { num: 80, name: "Abasa", name_ar: "عبس", name_en: "He Frowned" },
+                    { num: 81, name: "At-Takwir", name_ar: "التكوير", name_en: "The Overthrowing" },
+                    { num: 82, name: "Al-Infitar", name_ar: "الانفطار", name_en: "The Cleaving" },
+                    { num: 83, name: "Al-Mutaffifin", name_ar: "المطففين", name_en: "The Defrauding" },
+                    { num: 84, name: "Al-Inshiqaq", name_ar: "الانشقاق", name_en: "The Splitting Open" },
+                    { num: 85, name: "Al-Buruj", name_ar: "البروج", name_en: "The Mansions of the Stars" },
+                    { num: 86, name: "At-Tariq", name_ar: "الطارق", name_en: "The Morning Star" },
+                    { num: 87, name: "Al-Ala", name_ar: "الأعلى", name_en: "The Most High" },
+                    { num: 88, name: "Al-Ghashiyah", name_ar: "الغاشية", name_en: "The Overwhelming" },
+                    { num: 89, name: "Al-Fajr", name_ar: "الفجر", name_en: "The Dawn" },
+                    { num: 90, name: "Al-Balad", name_ar: "البلد", name_en: "The City" },
+                    { num: 91, name: "Ash-Shams", name_ar: "الشمس", name_en: "The Sun" },
+                    { num: 92, name: "Al-Layl", name_ar: "الليل", name_en: "The Night" },
+                    { num: 93, name: "Ad-Duha", name_ar: "الضحى", name_en: "The Morning Brightness" },
+                    { num: 94, name: "Ash-Sharh", name_ar: "الشرح", name_en: "The Relief" },
+                    { num: 95, name: "At-Tin", name_ar: "التين", name_en: "The Fig" },
+                    { num: 96, name: "Al-Alaq", name_ar: "العلق", name_en: "The Clot" },
+                    { num: 97, name: "Al-Qadr", name_ar: "القدر", name_en: "The Night of Decree" },
+                    { num: 98, name: "Al-Bayyinah", name_ar: "البينة", name_en: "The Clear Proof" },
+                    { num: 99, name: "Az-Zalzalah", name_ar: "الزلزلة", name_en: "The Earthquake" },
+                    { num: 100, name: "Al-Adiyat", name_ar: "العاديات", name_en: "The Chargers" },
+                    { num: 101, name: "Al-Qariah", name_ar: "القارعة", name_en: "The Calamity" },
+                    { num: 102, name: "At-Takathur", name_ar: "التكاثر", name_en: "The Rivalry in Worldly Increase" },
+                    { num: 103, name: "Al-Asr", name_ar: "العصر", name_en: "The Declining Day" },
+                    { num: 104, name: "Al-Humazah", name_ar: "الهمزة", name_en: "The Traducer" },
+                    { num: 105, name: "Al-Fil", name_ar: "الفيل", name_en: "The Elephant" },
+                    { num: 106, name: "Quraysh", name_ar: "قريش", name_en: "Quraysh" },
+                    { num: 107, name: "Al-Maun", name_ar: "الماعون", name_en: "The Small Kindnesses" },
+                    { num: 108, name: "Al-Kawthar", name_ar: "الكوثر", name_en: "The Abundance" },
+                    { num: 109, name: "Al-Kafirun", name_ar: "الكافرون", name_en: "The Disbelievers" },
+                    { num: 110, name: "An-Nasr", name_ar: "النصر", name_en: "The Divine Support" },
+                    { num: 111, name: "Al-Masad", name_ar: "المسد", name_en: "The Palm Fiber" },
+                    { num: 112, name: "Al-Ikhlas", name_ar: "الإخلاص", name_en: "The Sincerity" },
+                    { num: 113, name: "Al-Falaq", name_ar: "الفلق", name_en: "The Daybreak" },
+                    { num: 114, name: "An-Nas", name_ar: "الناس", name_en: "Mankind" }
+                ]
+            },
+            educational_notes: {
+                verse_context: "Surah Ad-Duha was revealed after a period when the Prophet Muhammad (peace be upon him) did not receive any revelation, causing him distress. The Quraysh mocked him saying his Lord had abandoned him. This verse is Allah's direct comfort — He has neither forsaken nor become displeased with His Messenger.",
+                theme_explanation: "The theme of divine reassurance runs throughout this surah. Allah reminds the Prophet of His continuous care — from his orphanhood to guidance — and promises that the Hereafter will be better than the present. It teaches us that periods of difficulty are not signs of Allah's displeasure.",
+                surah_overview: "Juz 30 (Amma) contains 37 surahs — the most of any juz. These are mostly short Makkan surahs focused on core beliefs: the Day of Judgment, Allah's power in creation, and moral accountability. They were among the first revelations and are the most memorized portions of the Quran."
+            }
         };
     </script>
     <script src="js/juz-puzzle.js"></script>
 </body>
+
 </html>
