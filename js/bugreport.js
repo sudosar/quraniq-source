@@ -173,7 +173,29 @@ async function submitBugReport() {
         btn.disabled = false;
         return;
     }
-}
+
+    try {
+        const response = await fetch(BUG_REPORT_ENDPOINT, {
+            method: 'POST',
+            mode: 'no-cors', // GAS requires no-cors for simple requests or a custom OPTIONS handler
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify(payload)
+        });
+
+        // Even with no-cors, we can check if the promise resolved
+        status.textContent = '✅ Bug report submitted! Thank you for helping improve QuranIQ.';
+        status.className = 'bug-status bug-status-success';
+        trackBugReportSubmit(true);
+
+        // Close after a delay
+        setTimeout(() => closeBugReportModal(), 2500);
+    } catch (e) {
+        status.textContent = '⚠️ Failed to submit. Please try again later.';
+        status.className = 'bug-status bug-status-error';
+        trackBugReportSubmit(false);
+        btn.textContent = 'Submit Bug Report';
+        btn.disabled = false;
+    }
 }
 
 /**
