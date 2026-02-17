@@ -632,13 +632,16 @@ function toggleCarousel(idx) {
     header.querySelector('.conn-expand-icon').textContent = isExpanded ? '▼' : '▲';
 
     if (isExpanded) {
-        // Collapsing — stop any playing audio and reset all visible English translations
+        // Collapsing — stop any playing audio but KEEP English translations visible
         stopQuranAudio();
+        // user-requested change: do NOT clear active words when collapsing
+        /*
         carousel.querySelectorAll('.wbw-word.wbw-active').forEach(w => {
             w.classList.remove('wbw-active');
             const en = w.querySelector('.wbw-en');
             if (en) { en.textContent = ''; en.style.display = 'none'; }
         });
+        */
     } else {
         // Expanding — autoplay the recitation for the active slide
         const activeSlide = carousel.querySelector('.verse-slide.active');
@@ -703,11 +706,14 @@ function goToSlide(rowIdx, slideIdx) {
     }
 
     // Hide any visible WBW tooltip from previous slide
+    // user-requested change: do NOT clear active words when switching slides
+    /*
     carousel.querySelectorAll('.wbw-word.wbw-active').forEach(w => {
         w.classList.remove('wbw-active');
         const en = w.querySelector('.wbw-en');
         if (en) { en.textContent = ''; en.style.display = 'none'; }
     });
+    */
 }
 
 function navigateCarousel(rowIdx, direction) {
