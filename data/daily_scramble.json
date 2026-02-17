@@ -1,32 +1,33 @@
 {
-  "date": "2026-02-16",
+  "date": "2026-02-17",
   "puzzle": {
-    "verseRef": "17:23",
-    "reference": "Surah Al-Isra (17:23)",
+    "verseRef": "36:82",
+    "reference": "Surah Ya-Sin (36:82)",
     "segments": [
-      "وَقَضَىٰ رَبُّكَ",
-      "أَلَّا تَعْبُدُوا",
-      "إِلَّا إِيَّاهُ",
-      "وَبِالْوَالِدَيْنِ",
-      "إِحْسَانًا"
+      "إِنَّمَا أَمْرُهُ",
+      "إِذَا أَرَادَ شَيْئًا",
+      "أَن يَقُولَ لَهُ",
+      "كُن",
+      "فَيَكُونُ"
     ],
     "translations": [
-      "And has decreed your Lord that (do) not worship except",
-      "Him Alone and to the parents (be) good Whether reach",
-      "with you the old age one of them or both of them",
-      "then (do) not say to both of them a word of disrespect and (do) not",
-      "repel them but speak to them a word noble"
+      "Only His Command",
+      "when He intends",
+      "a thing that",
+      "He says to it",
+      "Be and it is"
     ],
-    "hint": "This verse emphasizes two fundamental commands in Islam: the oneness of God and the importance of showing kindness to one's parents.",
-    "arabic": "۞ وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوٓا۟ إِلَّآ إِيَّاهُ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًا ۚ إِمَّا يَبْلُغَنَّ عِندَكَ ٱلْكِبَرَ أَحَدُهُمَآ أَوْ كِلَاهُمَا فَلَا تَقُل لَّهُمَآ أُفٍّۢ وَلَا تَنْهَرْهُمَا وَقُل لَّهُمَا قَوْلًۭا كَرِيمًۭا",
+    "hint": "This verse highlights Allah's absolute power and the simplicity of His creation.",
+    "arabic": "إِنَّمَآ أَمْرُهُۥٓ إِذَآ أَرَادَ شَيْـًٔا أَن يَقُولَ لَهُۥ كُن فَيَكُونُ",
     "words": [
-      "۞ وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوٓا۟ إِلَّآ",
-      "إِيَّاهُ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًا ۚ إِمَّا يَبْلُغَنَّ",
-      "عِندَكَ ٱلْكِبَرَ أَحَدُهُمَآ أَوْ كِلَاهُمَا",
-      "فَلَا تَقُل لَّهُمَآ أُفٍّۢ وَلَا",
-      "تَنْهَرْهُمَا وَقُل لَّهُمَا قَوْلًۭا كَرِيمًۭا"
+      "إِنَّمَآ أَمْرُهُۥٓ",
+      "إِذَآ أَرَادَ",
+      "شَيْـًٔا أَن",
+      "يَقُولَ لَهُۥ",
+      "كُن فَيَكُونُ"
     ],
-    "verseEn": "And your Lord has decreed that you worship not except Him, and to parents, good treatment. Whether one or both of them reach old age [while] with you, say not to them [so much as], \"uff,\" and do not repel them but speak to them a noble word."
+    "verseEn": "His command is only when He intends a thing that He says to it, \"Be,\" and it is."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
