@@ -13,6 +13,10 @@
  * 5. Copy the Web App URL and set it as BUG_REPORT_ENDPOINT in js/bugreport.js
  */
 
+// ==========================
+// SCRIPT VERSION: 1.1.0 
+// ==========================
+
 // ===== CONFIGURATION =====
 const GITHUB_TOKEN = 'YOUR_GITHUB_PERSONAL_ACCESS_TOKEN'; // Fine-grained PAT with Issues write + Contents write permission
 const REPO_OWNER = 'sudosar';
@@ -24,15 +28,15 @@ const DHIKR_PATH = 'data/dhikr.json';
 function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents);
-    
+
     // Route: dhikr counter
     if (data.action === 'dhikr') {
       return handleDhikr(data);
     }
-    
+
     // Route: bug report (default)
     return handleBugReport(data);
-    
+
   } catch (error) {
     return ContentService
       .createTextOutput(JSON.stringify({ success: false, error: error.message }))
@@ -52,12 +56,12 @@ function handleDhikr(data) {
   const phrase = data.phrase;
   const count = Math.min(Math.max(parseInt(data.count) || 1, 1), 1000); // Cap at 1000
   const validPhrases = ['subhanallah', 'alhamdulillah', 'allahuakbar', 'astaghfirullah', 'lailahaillallah'];
-  
+
   if (!validPhrases.includes(phrase)) {
     return ContentService.createTextOutput(JSON.stringify({ success: false, error: 'Invalid phrase' }))
       .setMimeType(ContentService.MimeType.JSON);
   }
-  
+
   // Read current dhikr.json from repo
   const fileUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${DHIKR_PATH}?ref=${BRANCH}`;
   const getResp = UrlFetchApp.fetch(fileUrl, {
@@ -68,15 +72,15 @@ function handleDhikr(data) {
       'X-GitHub-Api-Version': '2022-11-28'
     }
   });
-  
+
   const fileData = JSON.parse(getResp.getContentText());
   const sha = fileData.sha;
   const content = JSON.parse(Utilities.newBlob(Utilities.base64Decode(fileData.content)).getDataAsString());
-  
+
   // Increment (all-time counter, no daily reset)
   content[phrase] = (content[phrase] || 0) + count;
   content.total = validPhrases.reduce((sum, p) => sum + (content[p] || 0), 0);
-  
+
   // Write back to repo
   const newContent = Utilities.base64Encode(JSON.stringify(content, null, 2) + '\n');
   UrlFetchApp.fetch(fileUrl.split('?')[0], {
@@ -94,7 +98,7 @@ function handleDhikr(data) {
       branch: BRANCH
     })
   });
-  
+
   return ContentService.createTextOutput(JSON.stringify({
     success: true,
     total: content.total,
@@ -119,7 +123,7 @@ function handleBugReport(data) {
   const gameMode = data.gameMode || 'Unknown';
   const theme = data.theme || 'Unknown';
   const screenshot = data.screenshot || null;
-  
+
   let body = `## Bug Report\n\n`;
   body += `**Description:** ${description}\n\n`;
   body += `---\n\n`;
@@ -132,16 +136,20 @@ function handleBugReport(data) {
   body += `| **Screen Size** | ${screenSize} |\n`;
   body += `| **User Agent** | \`${userAgent}\` |\n`;
   body += `| **Timestamp** | ${timestamp} |\n\n`;
-  
+
   if (screenshot) {
-    const imageUrl = uploadScreenshotToRepo(screenshot, timestamp);
-    if (imageUrl) {
-      body += `### Screenshot\n\n![Bug Screenshot](${imageUrl})\n`;
+    const uploadResult = uploadScreenshotToRepo(screenshot, timestamp);
+    if (uploadResult.url) {
+      body += `### Screenshot\n\n![Bug Screenshot](${uploadResult.url})\n`;
+    } else {
+      body += `### Screenshot Status\n\n⚠️ Failed to upload: \`${uploadResult.error}\`\n`;
     }
+  } else {
+    body += `### Screenshot Status\n\n❌ No screenshot data received from frontend.\n`;
   }
-  
+
   body += `\n---\n*Submitted via QuranIQ in-app bug reporter*`;
-  
+
   const issueUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/issues`;
   const response = UrlFetchApp.fetch(issueUrl, {
     method: 'post',
@@ -157,7 +165,7 @@ function handleBugReport(data) {
       labels: ['bug', 'user-reported']
     })
   });
-  
+
   const result = JSON.parse(response.getContentText());
   return ContentService
     .createTextOutput(JSON.stringify({ success: true, issueNumber: result.number, issueUrl: result.html_url }))
@@ -170,7 +178,7 @@ function uploadScreenshotToRepo(base64DataUrl, timestamp) {
     const ext = base64DataUrl.startsWith('data:image/png') ? 'png' : 'jpg';
     const safeTimestamp = timestamp.replace(/[:.]/g, '-').replace(/T/, '_').replace(/Z/, '');
     const filename = `bug-screenshots/${safeTimestamp}.${ext}`;
-    
+
     const uploadUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filename}`;
     const response = UrlFetchApp.fetch(uploadUrl, {
       method: 'put',
@@ -186,11 +194,14 @@ function uploadScreenshotToRepo(base64DataUrl, timestamp) {
         branch: BRANCH
       })
     });
-    
+
     const result = JSON.parse(response.getContentText());
-    return result.content.download_url;
+    if (response.getResponseCode() >= 200 && response.getResponseCode() < 300) {
+      return { url: result.content.download_url, error: null };
+    } else {
+      return { url: null, error: `GitHub API error: ${response.getResponseCode()} ${response.getContentText()}` };
+    }
   } catch (e) {
-    Logger.log('Screenshot upload failed: ' + e.message);
-    return null;
+    return { url: null, error: e.message };
   }
 }

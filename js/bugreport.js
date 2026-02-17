@@ -116,6 +116,7 @@ async function openBugReportModal() {
         preview.innerHTML = '<div class="bug-screenshot-loading">⚠️ Screenshot capture failed (report will still be submitted)</div>';
         modal.style.visibility = 'visible';
         window._bugScreenshot = null;
+        window._bugScreenshotError = e.message;
     }
 
     // Focus the textarea
@@ -148,12 +149,14 @@ async function submitBugReport() {
     const payload = {
         description: description,
         screenshot: window._bugScreenshot || null,
+        screenshotError: window._bugScreenshotError || null,
         userAgent: navigator.userAgent,
         screenSize: `${window.innerWidth}x${window.innerHeight}`,
         url: window.location.href,
         timestamp: new Date().toISOString(),
         gameMode: typeof app !== 'undefined' ? app.currentMode : 'unknown',
-        darkMode: document.documentElement.getAttribute('data-theme') === 'dark'
+        darkMode: document.documentElement.getAttribute('data-theme') === 'dark',
+        scriptVersion: '1.1.0'
     };
 
     if (!BUG_REPORT_ENDPOINT) {
@@ -170,29 +173,7 @@ async function submitBugReport() {
         btn.disabled = false;
         return;
     }
-
-    try {
-        const response = await fetch(BUG_REPORT_ENDPOINT, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'text/plain' },
-            body: JSON.stringify(payload)
-        });
-
-        // no-cors means we can't read the response, so assume success
-        status.textContent = '✅ Bug report submitted! Thank you for helping improve QuranIQ.';
-        status.className = 'bug-status bug-status-success';
-        trackBugReportSubmit(true);
-
-        // Close after a delay
-        setTimeout(() => closeBugReportModal(), 2500);
-    } catch (e) {
-        status.textContent = '⚠️ Failed to submit. Please try again later.';
-        status.className = 'bug-status bug-status-error';
-        trackBugReportSubmit(false);
-        btn.textContent = 'Submit Bug Report';
-        btn.disabled = false;
-    }
+}
 }
 
 /**
