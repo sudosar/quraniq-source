@@ -696,7 +696,7 @@ function showScrResult(cacheOnly) {
     const moons = scr.won ? Math.max(1, 5 - scr.hintsUsed - scr.moves) : 0;
     const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
-    const shareText = `QuranIQ - Ayah Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${moonStr}\nAttempts: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}\n\nhttps://sudosar.github.io/quraniq/`;
+    const shareText = `QuranIQ - Ayah Scramble #${puzzleNum}\n${scr.puzzle.reference}\n${emojiGrid}\n${moonStr}\nAttempts: ${scr.moves}/${scr.maxMoves} | Hints: ${scr.hintsUsed}/${scr.maxHints}\n\nhttps://sudosar.github.io/quraniq/#scramble`;
 
     const translationText = scr.puzzle.verseEn
         || (scr.puzzle.translations ? scr.puzzle.translations.join(' ') : '')

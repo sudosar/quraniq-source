@@ -1121,7 +1121,7 @@ function showFinalResults() {
 
   // Build share text
   const penaltyStr = cappedPenalty > 0 ? `\nHints: -${cappedPenalty}🌙` : '';
-  const shareText = `QuranIQ Juz Journey — Juz ${p.juz_number} (${p.juz_name_ar})\n${moonStr} ${finalScore}/5\n\nTheme: ${juzState.scores.round2 > 0 ? '✅' : '❌'} | Surah: ${juzState.scores.round3 > 0 ? '✅' : '❌'} | Order: ${juzState.scores.round4 > 0 ? '✅' : '❌'}${penaltyStr}\n\nhttps://sudosar.github.io/quraniq`;
+  const shareText = `QuranIQ Juz Journey — Juz ${p.juz_number} (${p.juz_name_ar})\n${moonStr} ${finalScore}/5\n\nTheme: ${juzState.scores.round2 > 0 ? '✅' : '❌'} | Surah: ${juzState.scores.round3 > 0 ? '✅' : '❌'} | Order: ${juzState.scores.round4 > 0 ? '✅' : '❌'}${penaltyStr}\n\nhttps://sudosar.github.io/quraniq/#juz`;
 
   container.innerHTML = `
     <div class="juz-puzzle">

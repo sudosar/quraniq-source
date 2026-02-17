@@ -139,10 +139,10 @@ function renderWordleKeyboard() {
     kb.innerHTML = '';
     kb.setAttribute('dir', 'rtl');
     const rows = [
-        ['ض','ص','ث','ق','ف','غ','ع','ه','خ','ح','ج'],
-        ['ش','س','ي','ب','ل','ا','ت','ن','م','ك'],
-        ['⏎','ئ','ء','ؤ','ر','ى','ة','و','ز','د','ذ','⌫'],
-        ['ظ','ط','أ','إ','آ']
+        ['ض', 'ص', 'ث', 'ق', 'ف', 'غ', 'ع', 'ه', 'خ', 'ح', 'ج'],
+        ['ش', 'س', 'ي', 'ب', 'ل', 'ا', 'ت', 'ن', 'م', 'ك'],
+        ['⏎', 'ئ', 'ء', 'ؤ', 'ر', 'ى', 'ة', 'و', 'ز', 'د', 'ذ', '⌫'],
+        ['ظ', 'ط', 'أ', 'إ', 'آ']
     ];
     rows.forEach(row => {
         const rowEl = document.createElement('div');
@@ -190,8 +190,8 @@ function updateHintButton() {
     if (!btn) return;
 
     const canHint = !wordle.gameOver &&
-                    wordle.currentRow < wordle.maxRows - 1 && // Must have at least 1 row left to play after hint
-                    getUnrevealedPositions().length > 0;
+        wordle.currentRow < wordle.maxRows - 1 && // Must have at least 1 row left to play after hint
+        getUnrevealedPositions().length > 0;
 
     btn.disabled = !canHint;
     btn.innerHTML = `<span class="hint-icon">💡</span> Reveal a Letter <span class="hint-cost">−1 turn, −1 🌙</span>`;
@@ -292,7 +292,7 @@ function useWordleHint() {
                     const priority = { correct: 3, present: 2, absent: 1 };
                     const current = keyBtn.classList.contains('correct') ? 3 :
                         keyBtn.classList.contains('present') ? 2 :
-                        keyBtn.classList.contains('absent') ? 1 : 0;
+                            keyBtn.classList.contains('absent') ? 1 : 0;
                     if (priority['correct'] > current) {
                         keyBtn.classList.remove('correct', 'present', 'absent');
                         keyBtn.classList.add('correct');
@@ -401,7 +401,7 @@ function submitWordleGuess() {
                 const priority = { correct: 3, present: 2, absent: 1 };
                 const current = keyBtn.classList.contains('correct') ? 3 :
                     keyBtn.classList.contains('present') ? 2 :
-                    keyBtn.classList.contains('absent') ? 1 : 0;
+                        keyBtn.classList.contains('absent') ? 1 : 0;
                 if (priority[evaluation[c]] > current) {
                     keyBtn.classList.remove('correct', 'present', 'absent');
                     keyBtn.classList.add(evaluation[c]);
@@ -508,7 +508,7 @@ function replayWordleState() {
                     const priority = { correct: 3, present: 2, absent: 1 };
                     const current = keyBtn.classList.contains('correct') ? 3 :
                         keyBtn.classList.contains('present') ? 2 :
-                        keyBtn.classList.contains('absent') ? 1 : 0;
+                            keyBtn.classList.contains('absent') ? 1 : 0;
                     if (priority[evalResult] > current) {
                         keyBtn.classList.remove('correct', 'present', 'absent');
                         keyBtn.classList.add(evalResult);
@@ -560,7 +560,7 @@ function showWordleResult(won, cacheOnly) {
     const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
     const hintNote = wordle.hintsUsed > 0 ? ` (${wordle.hintsUsed} hint${wordle.hintsUsed > 1 ? 's' : ''})` : '';
-    const shareText = `QuranIQ - Harf by Harf #${puzzleNum}\n${tries}/${wordle.maxRows}${hintNote}\n\n${emojiGrid}${moonStr}\n\nhttps://sudosar.github.io/quraniq/`;
+    const shareText = `QuranIQ - Harf by Harf #${puzzleNum}\n${tries}/${wordle.maxRows}${hintNote}\n\n${emojiGrid}${moonStr}\n\nhttps://sudosar.github.io/quraniq/#wordle`;
 
     const resultData = {
         icon: won ? '🌟' : '📖',

@@ -65,7 +65,7 @@ function renderDeduction() {
     if (meterEl) {
         const totalClues = ded.puzzle.clues.length;
         const currentMoons = moonsForClues(ded.cluesRevealed);
-        const crescents = Array.from({length: 5}, (_, i) =>
+        const crescents = Array.from({ length: 5 }, (_, i) =>
             `<span class="ded-moon ${i < currentMoons ? 'active' : 'spent'}">${i < currentMoons ? '🌙' : '🌑'}</span>`
         ).join('');
 
@@ -229,7 +229,7 @@ function showDedResult(cacheOnly) {
     }
     const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
-    const shareText = `QuranIQ - Who Am I? #${puzzleNum}\n"${ded.puzzle.title}"\n${emojiGrid}${moonStr}\n${correct}/4 correct | ${cluesUsed} clues used\n\nhttps://sudosar.github.io/quraniq/`;
+    const shareText = `QuranIQ - Who Am I? #${puzzleNum}\n"${ded.puzzle.title}"\n${emojiGrid}${moonStr}\n${correct}/4 correct | ${cluesUsed} clues used\n\nhttps://sudosar.github.io/quraniq/#deduction`;
 
     const resultData = {
         icon: ded.won ? '🕵️' : '📖',

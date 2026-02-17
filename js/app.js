@@ -35,12 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
     initLeaderboard();
     showOnboarding();
 
-    // Hash-based deep linking (e.g., #shukr, #help, #stats, #juz, #join=CODE)
+    // Hash-based deep linking (e.g., #connections, #wordle, #deduction, #scramble, #juz, #shukr, #help, #stats, #join=CODE)
     const hash = window.location.hash.replace('#', '');
-    if (hash === 'shukr') openModal('shukr-modal');
+    const GAME_MODES = ['connections', 'wordle', 'deduction', 'scramble', 'juz'];
+    if (GAME_MODES.includes(hash)) {
+        switchMode(hash);
+    } else if (hash === 'shukr') openModal('shukr-modal');
     else if (hash === 'help') openModal('help-modal');
     else if (hash === 'stats') showStatsModal();
-    else if (hash === 'juz') switchMode('juz');
     else if (hash === 'leaderboard') openModal('leaderboard-modal');
     else if (hash.startsWith('join=')) {
         // Auto-join group from invite link: #join=UMBFUF
@@ -1015,7 +1017,7 @@ function generateInsightsShareText(scholar, overallScore, gameInsights, totalPla
     }
     text += `🏆 Best Streak: ${bestStreak}\n`;
     text += `📊 Games Played: ${totalPlayed}\n\n`;
-    text += `https://sudosar.github.io/quraniq/`;
+    text += `https://sudosar.github.io/quraniq/#connections`;
 
     return text;
 }
