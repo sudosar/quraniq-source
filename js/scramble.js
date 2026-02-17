@@ -89,6 +89,31 @@ function setupScrambleGame() {
     document.getElementById('scramble-reset').addEventListener('click', resetScramble);
     document.getElementById('scramble-check').addEventListener('click', checkScramble);
 
+    // Container drop support for dragging into gaps/empty space
+    const dropzone = document.getElementById('scramble-dropzone');
+    const newDropzone = dropzone.cloneNode(false);
+    dropzone.replaceWith(newDropzone);
+
+    newDropzone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+    });
+    newDropzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        const fromIdx = parseInt(e.dataTransfer.getData('text/plain'), 10);
+        if (!isNaN(fromIdx)) {
+            const newIndex = getDropIndex(e.clientX, e.clientY);
+
+            // Adjust index to account for removal shifting positions
+            let actualTarget = newIndex;
+            if (actualTarget > fromIdx) actualTarget--;
+
+            if (actualTarget !== fromIdx && actualTarget >= 0 && actualTarget <= scr.placed.length - 1) {
+                reorderPlaced(fromIdx, actualTarget);
+            }
+        }
+    });
+
     // Restore View Results button for completed games
     if (scr.gameOver && scr.placed.length > 0) {
         showScrResult(true);
@@ -244,6 +269,7 @@ function createWordElement(word, index, isPlaced) {
                 });
                 el.addEventListener('drop', (e) => {
                     e.preventDefault();
+                    e.stopPropagation(); // Handle drop here, don't bubble to container
                     el.classList.remove('drag-over');
                     const fromIdx = parseInt(e.dataTransfer.getData('text/plain'), 10);
                     if (!isNaN(fromIdx) && fromIdx !== index) {
@@ -309,6 +335,61 @@ document.addEventListener('click', (e) => {
     }
 });
 
+/* ---- Helper: Get insertion index based on coordinates ---- */
+function getDropIndex(x, y) {
+    const dropzone = document.getElementById('scramble-dropzone');
+    const kids = Array.from(dropzone.children);
+
+    // If empty, return 0
+    if (kids.length === 0) return 0;
+
+    // Find the item we are hovering over or closest to
+    let closestIndex = -1;
+    let minDist = Infinity;
+
+    kids.forEach((child, i) => {
+        const rect = child.getBoundingClientRect();
+        // Calculate distance from point to horizontal center of child
+        const center = rect.left + rect.width / 2;
+        const dist = Math.abs(x - center);
+
+        // Simple 1D check for now (assuming single line or standard Reflow)
+        // For wrapping flex rows, we might need Y check too, but let's stick to X for primary sort
+        // However, if multiple rows, Y matters.
+        // Let's check if Y is within the row's vertical range
+        const vDist = Math.abs(y - (rect.top + rect.height / 2));
+
+        // Weighted distance
+        const totalDist = dist + (vDist * 2); // Penalize vertical distance to prefer items in same row
+
+        if (totalDist < minDist) {
+            minDist = totalDist;
+            closestIndex = i;
+        }
+    });
+
+    // Refine: Decide if before or after the closest item
+    // RTL: if x > center, we are to the right (before, index i)
+    // LTR: if x < center, we are to the left (before, index i)
+    // Dropzone is RTL.
+    if (closestIndex !== -1) {
+        const child = kids[closestIndex];
+        const rect = child.getBoundingClientRect();
+        const center = rect.left + rect.width / 2;
+
+        // Check direction
+        const isRTL = dropzone.getAttribute('dir') === 'rtl';
+        if (isRTL) {
+            // In RTL, right is "before"
+            return x > center ? closestIndex : closestIndex + 1;
+        } else {
+            return x < center ? closestIndex : closestIndex + 1;
+        }
+    }
+
+    return kids.length;
+}
+
 /* ---- Touch drag support for mobile ---- */
 function setupTouchDrag(el, index) {
     let touchStartY = 0;
@@ -346,16 +427,20 @@ function setupTouchDrag(el, index) {
             clone.style.left = (e.touches[0].clientX - clone.offsetWidth / 2) + 'px';
             clone.style.top = (e.touches[0].clientY - clone.offsetHeight / 2) + 'px';
 
-            // Highlight drop target
-            document.querySelectorAll('#scramble-dropzone .scramble-word').forEach(w => {
-                w.classList.remove('drag-over');
-            });
+            // Visual feedback
+            const dropzone = document.getElementById('scramble-dropzone');
             const target = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY);
-            if (target) {
-                const wordEl = target.closest('.scramble-word.in-zone');
-                if (wordEl && wordEl !== el) {
-                    wordEl.classList.add('drag-over');
-                }
+
+            // Clear previous highlights
+            document.querySelectorAll('.scramble-word.drag-over').forEach(w => w.classList.remove('drag-over'));
+
+            if (target && (target === dropzone || target.closest('#scramble-dropzone'))) {
+                // We are over the zone
+                // Maybe highlight the insertion point? 
+                // For now, let's just highlight the dropzone border or something?
+                // Or highlight the potential neighbor
+                const hoverIdx = getDropIndex(e.touches[0].clientX, e.touches[0].clientY);
+                // Highlight nearest word if appropriate
             }
         }
     }, { passive: false });
@@ -365,36 +450,43 @@ function setupTouchDrag(el, index) {
         el.style.opacity = '';
         el.classList.remove('touch-dragging');
         isDragging = false;
-        document.querySelectorAll('.scramble-word.drag-over').forEach(
-            w => w.classList.remove('drag-over')
-        );
     });
 
     el.addEventListener('touchend', (e) => {
         if (isDragging && clone) {
-            // Find drop target
             const touch = e.changedTouches[0];
+            const dropzone = document.getElementById('scramble-dropzone');
             const target = document.elementFromPoint(touch.clientX, touch.clientY);
-            if (target) {
-                const wordEl = target.closest('.scramble-word.in-zone');
-                if (wordEl && wordEl !== el) {
-                    const dropzoneChildren = Array.from(
-                        document.getElementById('scramble-dropzone').children
-                    );
-                    const toIdx = dropzoneChildren.indexOf(wordEl);
-                    if (toIdx !== -1 && toIdx !== index) {
-                        reorderPlaced(index, toIdx);
-                    }
+
+            if (target && (target === dropzone || target.closest('#scramble-dropzone'))) {
+                const newIndex = getDropIndex(touch.clientX, touch.clientY);
+                // Adjust index if we are moving forward/backward to account for splice
+                // Logic: 
+                // We remove from 'index'. 
+                // If newIndex > index, it means we insert at newIndex (which shifts down by 1 after removal).
+                // Actually splice logic:
+                // If I have [A, B, C] (0, 1, 2)
+                // Move A (0) to after B (index 2 in original array? or insert at 2?)
+                // If getDropIndex returns 2 (after B):
+                // Splice 0 out -> [B, C]. Insert at 2-1 = 1? -> [B, A, C]
+                // It's clearer to just call reorderPlaced and let it handle? 
+                // reorderPlaced does: remove, then insert.
+                // If I remove 0, everything shifts. 
+                // If target index was calculated based on CURRENT positions:
+                // If target > index, we need to decrement target because removal shifts subsequent items up.
+
+                let actualTarget = newIndex;
+                if (actualTarget > index) actualTarget--;
+
+                if (actualTarget !== index && actualTarget >= 0 && actualTarget <= scr.placed.length - 1) {
+                    reorderPlaced(index, actualTarget);
                 }
             }
+
             clone.remove();
             clone = null;
             el.style.opacity = '';
-            document.querySelectorAll('.scramble-word.drag-over').forEach(
-                w => w.classList.remove('drag-over')
-            );
         }
-        // Delay removing touch-dragging flag so click handler can check it
         setTimeout(() => {
             el.classList.remove('touch-dragging');
             isDragging = false;
