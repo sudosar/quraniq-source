@@ -122,6 +122,8 @@ function handleBugReport(data) {
   const timestamp = data.timestamp || new Date().toISOString();
   const gameMode = data.gameMode || 'Unknown';
   const theme = data.theme || 'Unknown';
+  const scriptVersion = data.scriptVersion || '1.0.0';
+  const screenshotError = data.screenshotError || null;
   const screenshot = data.screenshot || null;
 
   let body = `## Bug Report\n\n`;
@@ -135,7 +137,8 @@ function handleBugReport(data) {
   body += `| **Theme** | ${theme} |\n`;
   body += `| **Screen Size** | ${screenSize} |\n`;
   body += `| **User Agent** | \`${userAgent}\` |\n`;
-  body += `| **Timestamp** | ${timestamp} |\n\n`;
+  body += `| **Timestamp** | ${timestamp} |\n`;
+  body += `| **Script Version** | ${scriptVersion} |\n\n`;
 
   if (screenshot) {
     const uploadResult = uploadScreenshotToRepo(screenshot, timestamp);
