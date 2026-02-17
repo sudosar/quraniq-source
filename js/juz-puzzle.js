@@ -1200,9 +1200,9 @@ function shareJuzResults() {
 }
 
 // ===== Production: Juz Journey Initialization =====
-// Ramadan 2026 starts Feb 18 (1 Ramadan 1447 AH)
-const RAMADAN_START = new Date('2026-02-18T00:00:00');
-const RAMADAN_END = new Date('2026-03-20T00:00:00'); // 30 days
+// Ramadan 2026 — Juz Journey launched Feb 17 evening (1 Ramadan 1447 AH)
+const RAMADAN_START = new Date('2026-02-17T00:00:00');
+const RAMADAN_END = new Date('2026-03-19T00:00:00'); // 30 days
 
 function initJuzJourney() {
   const countdownEl = document.getElementById('juz-countdown-container');

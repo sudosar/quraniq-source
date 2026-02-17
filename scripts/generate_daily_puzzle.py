@@ -179,9 +179,9 @@ OUTPUT_FILES = {
     "juz": os.path.join(DATA_DIR, "daily_juz.json"),
 }
 
-# Ramadan 2026 dates (1 Ramadan 1447 AH = Feb 18, 2026)
-RAMADAN_START = datetime(2026, 2, 18)
-RAMADAN_END = datetime(2026, 3, 20)  # 30 days
+# Ramadan 2026 — Juz Journey launched Feb 17 evening (1 Ramadan 1447 AH)
+RAMADAN_START = datetime(2026, 2, 17)
+RAMADAN_END = datetime(2026, 3, 19)  # 30 days
 
 
 # ── Utility: extract surah:ayah ref from various formats ──────────

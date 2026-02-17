@@ -1,7 +1,7 @@
 {
-  "date": "2026-02-18",
+  "date": "2026-02-17",
   "puzzle": {
-    "date": "2026-02-18",
+    "date": "2026-02-17",
     "juz_number": 1,
     "juz_name": "Alif Lam Meem",
     "juz_name_ar": "الم",
@@ -26,16 +26,46 @@
     "surah_question": {
       "correct_surah": 2,
       "options": [
-        { "num": 1, "name": "Al-Fatiha", "name_ar": "الفاتحة", "name_en": "The Opening" },
-        { "num": 2, "name": "Al-Baqarah", "name_ar": "البقرة", "name_en": "The Cow" },
-        { "num": 3, "name": "Aal-E-Imran", "name_ar": "آل عمران", "name_en": "The Family of Imran" },
-        { "num": 4, "name": "An-Nisa", "name_ar": "النساء", "name_en": "The Women" }
+        {
+          "num": 1,
+          "name": "Al-Fatiha",
+          "name_ar": "الفاتحة",
+          "name_en": "The Opening"
+        },
+        {
+          "num": 2,
+          "name": "Al-Baqarah",
+          "name_ar": "البقرة",
+          "name_en": "The Cow"
+        },
+        {
+          "num": 3,
+          "name": "Aal-E-Imran",
+          "name_ar": "آل عمران",
+          "name_en": "The Family of Imran"
+        },
+        {
+          "num": 4,
+          "name": "An-Nisa",
+          "name_ar": "النساء",
+          "name_en": "The Women"
+        }
       ]
     },
     "surah_order": {
       "surahs": [
-        { "num": 1, "name": "Al-Fatiha", "name_ar": "الفاتحة", "name_en": "The Opening" },
-        { "num": 2, "name": "Al-Baqarah", "name_ar": "البقرة", "name_en": "The Cow" }
+        {
+          "num": 1,
+          "name": "Al-Fatiha",
+          "name_ar": "الفاتحة",
+          "name_en": "The Opening"
+        },
+        {
+          "num": 2,
+          "name": "Al-Baqarah",
+          "name_ar": "البقرة",
+          "name_en": "The Cow"
+        }
       ]
     },
     "educational_notes": {
