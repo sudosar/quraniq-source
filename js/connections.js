@@ -782,15 +782,18 @@ function saveConnState() {
     saveState(app.state);
 
     // Update cached result data and sync to Firebase if game is over
-    if (conn.gameOver && app.lastResults['connections']) {
+    // Update cached result data and sync to Firebase if game is over
+    if (conn.gameOver) {
         const { crescentRow, totalExplored, totalVerses } = getConnCrescentData();
-        const res = app.lastResults['connections'];
 
-        // Refresh cache so "View Results" modal is always current
-        res.crescentRow = crescentRow;
-        res.exploredCount = totalExplored;
-        res.totalVerses = totalVerses;
-        res.shareText = getConnShareText(); // Update share text template
+        // Update UI cache if it exists (so "View Results" modal is current)
+        if (app.lastResults['connections']) {
+            const res = app.lastResults['connections'];
+            res.crescentRow = crescentRow;
+            res.exploredCount = totalExplored;
+            res.totalVerses = totalVerses;
+            res.shareText = getConnShareText(); // Update share text template
+        }
 
         // Re-calculate moons for Firebase (count of all solved groups: 🌕 or 🌙)
         if (typeof submitFirebaseScore === 'function') {

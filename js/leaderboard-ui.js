@@ -236,12 +236,16 @@ function renderLeaderboardTable(data, activeCode) {
             ? `<span class="lb-badges">${badges.map(b => `<span class="lb-badge" title="Top ${b.label} ${badgeContext}">${b.icon}</span>`).join('')}</span>`
             : '';
 
+        // Edit icon for self
+        const editIcon = player.isMe ? '<span class="lb-edit-name" title="Edit Name" role="button">✏️</span>' : '';
+
         html += `
             <div class="lb-row ${meClass}" title="${breakdown}">
                 <div class="lb-rank">${rankEmoji}</div>
                 <div class="lb-player">
                     <span class="lb-player-top">
                         <span class="lb-player-name">${escapeHtml(player.displayName)}</span>
+                        ${editIcon}
                         ${player.isMe ? '<span class="lb-you-badge">you</span>' : ''}
                     </span>
                     ${badgesHtml}
@@ -430,6 +434,52 @@ function showAddGroupDialog() {
     document.getElementById('lb-join-btn').addEventListener('click', () => showJoinGroupDialog());
 }
 
+function showRenameDialog() {
+    const content = document.getElementById('leaderboard-content');
+    const currentName = FB_STATE.displayName || localStorage.getItem('quraniq_display_name') || '';
+
+    content.innerHTML = `
+        <div class="lb-dialog">
+            <button class="lb-back-btn" id="lb-back-btn">← Back</button>
+            <h3>Edit Display Name</h3>
+            <p>Update your name as it appears on the leaderboard.</p>
+            <div class="lb-name-input-wrap">
+                <input type="text" id="lb-rename-input" class="lb-name-input" value="${escapeHtml(currentName)}" placeholder="e.g. Dad, Aisha, Ahmed" maxlength="30" autocomplete="off">
+                <button id="lb-rename-save" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    `;
+
+    document.getElementById('lb-back-btn').addEventListener('click', () => renderLeaderboardUI());
+
+    const input = document.getElementById('lb-rename-input');
+    const saveBtn = document.getElementById('lb-rename-save');
+    if (input) input.focus();
+
+    const doSave = async () => {
+        const name = input?.value.trim();
+        if (!name || name.length < 1) {
+            showToast('Please enter a name.');
+            return;
+        }
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Saving...';
+
+        const ok = await setDisplayName(name);
+        if (ok) {
+            showToast(`Name updated to ${name}`);
+            renderLeaderboardUI();
+        } else {
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Save';
+            showToast('Failed to update name. Please try again.');
+        }
+    };
+
+    saveBtn?.addEventListener('click', doSave);
+    input?.addEventListener('keydown', (e) => { if (e.key === 'Enter') doSave(); });
+}
+
 // ==================== EVENT HANDLERS ====================
 
 function attachNoGroupsHandlers() {
@@ -542,7 +592,9 @@ function attachLeaderboardHandlers(activeCode) {
 
     // Row tap for breakdown
     document.querySelectorAll('.lb-row:not(.lb-header)').forEach(row => {
-        row.addEventListener('click', () => {
+        row.addEventListener('click', (e) => {
+            // Don't expand if clicking the edit button
+            if (e.target.closest('.lb-edit-name')) return;
             row.classList.toggle('lb-expanded');
         });
     });
@@ -569,9 +621,20 @@ function attachLeaderboardTableHandlers(container) {
         });
     });
 
+    // Attach edit name handler
+    container.querySelectorAll('.lb-edit-name').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showRenameDialog();
+        });
+    });
+
     // Attach row click handlers
     container.querySelectorAll('.lb-row:not(.lb-header)').forEach(row => {
-        row.addEventListener('click', () => {
+        row.addEventListener('click', (e) => {
+            // Don't expand if clicking edit button
+            if (e.target.closest('.lb-edit-name')) return;
+
             const wasExpanded = row.classList.contains('lb-expanded');
             container.querySelectorAll('.lb-row').forEach(r => r.classList.remove('lb-expanded'));
             if (!wasExpanded) row.classList.toggle('lb-expanded');

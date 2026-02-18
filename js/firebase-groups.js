@@ -59,30 +59,37 @@ async function initFirebase() {
         FB_STATE.auth = firebase.auth();
         FB_STATE.db = firebase.database();
 
-        // Sign in anonymously and wait for auth state
+        // Set persistence to LOCAL (explicitly) to avoid session loss on refresh
+        await FB_STATE.auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+
+        // Wait for auth state to resolve (check for existing session)
         await new Promise((resolve) => {
             let resolved = false;
             const unsubscribe = FB_STATE.auth.onAuthStateChanged((user) => {
                 if (resolved) return;
-                FB_STATE.user = user;
+
                 if (user) {
-                    console.log('[FB] Signed in:', user.uid.substring(0, 8) + '...');
-                    // Load groups in background (don't block init)
+                    // Existing user found - restore session
+                    FB_STATE.user = user;
+                    console.log('[FB] Restored session:', user.uid.substring(0, 8) + '...');
                     loadUserGroups().catch(() => { });
                     resolved = true;
                     unsubscribe();
                     resolve();
+                } else {
+                    // No existing user - create new anonymous session
+                    console.log('[FB] No existing session, signing in anonymously...');
+                    FB_STATE.auth.signInAnonymously().catch((err) => {
+                        console.error('[FB] Anonymous sign-in failed:', err);
+                        if (!resolved) {
+                            resolved = true;
+                            unsubscribe();
+                            resolve();
+                        }
+                    });
                 }
-                // If user is null, don't resolve yet — wait for signInAnonymously to complete
             });
-            FB_STATE.auth.signInAnonymously().catch((err) => {
-                console.error('[FB] Anonymous sign-in failed:', err);
-                if (!resolved) {
-                    resolved = true;
-                    unsubscribe();
-                    resolve();
-                }
-            });
+
             // Timeout after 10 seconds to avoid hanging forever
             setTimeout(() => {
                 if (!resolved) {
