@@ -654,11 +654,68 @@ function useSurahContextHint() {
 }
 
 // ===== ROUND 4: Surah Order =====
+function completeSingleSurahRound() {
+  if (juzState.round4Answered) return;
+
+  // Round 4 is worth 1 point max
+  juzState.scores.round4 = 1;
+  juzState.round4Answered = true;
+  updateCrescentMeter();
+  saveJuzState();
+
+  // Show visual feedback immediately
+  const surah = juzState.surahOrderSubset[0];
+  const surahName = surah.name_en || surah.name;
+
+  showRoundFeedback('juz-order-feedback', true,
+    `Correct! Juz ${juzState.puzzle.juz_number} contains only Surah ${surahName}.`, 1);
+
+  // Re-render to update UI state (hide button etc)
+  renderRound4();
+}
+
 function renderRound4() {
   const content = document.getElementById('juz-round-content');
   const subset = juzState.surahOrderSubset;
   const totalSurahs = juzState.puzzle.surah_order.surahs.length;
   const isSubset = totalSurahs > MAX_ORDER_SURAHS;
+
+  // Handle Single-Surah Juz (e.g. Juz 2)
+  if (subset.length === 1) {
+    const surah = subset[0];
+    const enText = surah.name_en || surah.name;
+    const displayText = `${enText} <span class="juz-surah-translit">(${surah.name})</span>`;
+
+    content.innerHTML = `
+      <div class="juz-round juz-round-4">
+        <h3 class="juz-round-title">Round 4: Surah Order</h3>
+        <p class="juz-round-desc">
+          This Juz contains only one Surah. No ordering is needed!
+        </p>
+        
+        <div class="juz-order-list" style="margin-bottom: 20px;">
+          <div class="juz-order-item correct" style="cursor: default;">
+            <span class="juz-order-num">1</span>
+            <span class="juz-order-name-ar">${surah.name_ar}</span>
+            <span class="juz-order-name-en show">${displayText}</span>
+          </div>
+        </div>
+
+        ${!juzState.round4Answered ? `
+          <div class="juz-order-actions">
+            <button class="btn btn-primary" onclick="completeSingleSurahRound()">
+              Claim Free Point & Finish
+            </button>
+          </div>
+        ` : ''}
+
+        <div id="juz-order-feedback" class="juz-feedback">
+          ${juzState.round4Answered ? renderSavedFeedback('order') : ''}
+        </div>
+      </div>
+    `;
+    return;
+  }
 
   content.innerHTML = `
     <div class="juz-round juz-round-4">
