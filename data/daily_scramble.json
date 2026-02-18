@@ -1,32 +1,36 @@
 {
-  "date": "2026-02-17",
+  "date": "2026-02-18",
   "puzzle": {
-    "verseRef": "36:82",
-    "reference": "Surah Ya-Sin (36:82)",
+    "verseRef": "49:10",
+    "reference": "Surah Al-Hujurat (49:10)",
     "segments": [
-      "إِنَّمَا أَمْرُهُ",
-      "إِذَا أَرَادَ شَيْئًا",
-      "أَن يَقُولَ لَهُ",
-      "كُن",
-      "فَيَكُونُ"
+      "إِنَّمَا الْمُؤْمِنُونَ",
+      "إِخْوَةٌ",
+      "فَأَصْلِحُوا بَيْنَ",
+      "أَخَوَيْكُمْ ۚ",
+      "وَاتَّقُوا اللَّهَ",
+      "لَعَلَّكُمْ تُرْحَمُونَ"
     ],
     "translations": [
-      "Only His Command",
-      "when He intends",
-      "a thing that",
-      "He says to it",
-      "Be and it is"
+      "Only the believers",
+      "(are) brothers so make peace",
+      "between your brothers",
+      "and fear Allah and fear Allah",
+      "so that you may",
+      "receive mercy"
     ],
-    "hint": "This verse highlights Allah's absolute power and the simplicity of His creation.",
-    "arabic": "إِنَّمَآ أَمْرُهُۥٓ إِذَآ أَرَادَ شَيْـًٔا أَن يَقُولَ لَهُۥ كُن فَيَكُونُ",
+    "hint": "This verse emphasizes the spiritual bond among Muslims and the importance of resolving conflicts, connecting it to piety and divine compassion.",
+    "arabic": "إِنَّمَا ٱلْمُؤْمِنُونَ إِخْوَةٌۭ فَأَصْلِحُوا۟ بَيْنَ أَخَوَيْكُمْ ۚ وَٱتَّقُوا۟ ٱللَّهَ لَعَلَّكُمْ تُرْحَمُونَ",
     "words": [
-      "إِنَّمَآ أَمْرُهُۥٓ",
-      "إِذَآ أَرَادَ",
-      "شَيْـًٔا أَن",
-      "يَقُولَ لَهُۥ",
-      "كُن فَيَكُونُ"
+      "إِنَّمَا ٱلْمُؤْمِنُونَ",
+      "إِخْوَةٌۭ فَأَصْلِحُوا۟",
+      "بَيْنَ أَخَوَيْكُمْ ۚ",
+      "وَٱتَّقُوا۟ ٱللَّهَ",
+      "لَعَلَّكُمْ",
+      "تُرْحَمُونَ"
     ],
-    "verseEn": "His command is only when He intends a thing that He says to it, \"Be,\" and it is."
+    "verseEn": "The believers are but brothers, so make settlement between your brothers. And fear Allāh that you may receive mercy."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

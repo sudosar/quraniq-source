@@ -1,65 +1,66 @@
 {
-  "date": "2026-02-17",
+  "date": "2026-02-18",
   "puzzle": {
-    "title": "The Seed of Strife",
-    "intro": "Before the world knew widespread conflict, a profound test of faith and obedience unfolded. This narrative explores the choices made by an individual, whose actions set a precedent for future generations. Prepare to unravel the tale of a soul grappling with immense jealousy and its devastating consequences.",
+    "title": "The Steadfast Witness",
+    "intro": "A profound narrative unfolds, revealing the unwavering resolve of a community in the face of immense tyranny. Their story serves as a testament to faith, even when confronted with the ultimate sacrifice. This account reminds us of the power of belief against overwhelming oppression.",
     "clues": [
-      "I was among the first offspring to walk the earth, a child of the very first human pair.",
-      "My brother and I were commanded to offer a sacrifice to Allah, a test of our sincerity.",
-      "My offering was not accepted, while my brother's was, which filled my heart with a terrible emotion.",
-      "I spoke words of threat to my brother, driven by the bitterness of rejection.",
-      "My brother responded with wisdom and piety, reminding me of Allah's justice and the fear of Him.",
-      "Despite my brother's gentle words and his willingness to forgive, I took a life, becoming one of the losers."
+      "We were a group whose story is recounted in a short, powerful surah, warning against persecution.",
+      "We faced a ruler who wished to eradicate our belief in the One God, the Lord of the Throne, the Praiseworthy.",
+      "We were subjected to a terrible test involving a massive pit dug into the earth.",
+      "We watched as believers, including infants, were cast into a raging inferno within that pit.",
+      "Our tormentors were cursed for their actions, while we were promised immense reward for our steadfastness.",
+      "The ruler's attempt to extinguish our faith only solidified our place as martyrs in the sight of Allah, who is witness to all things."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Adam",
-          "Iblis",
-          "Prophet Nuh",
-          "Qabil (Cain)",
-          "Fir'awn"
+          "People of Thamud",
+          "People of 'Ad",
+          "People of the Ditch",
+          "People of Lut",
+          "People of the Elephant"
         ],
-        "answer": "Qabil (Cain)"
+        "answer": "People of the Ditch"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "The great flood",
-          "The splitting of the sea",
-          "The building of the Kaaba",
-          "The offering of sacrifices",
-          "The temptation in the Garden"
+          "The Great Flood",
+          "The Burning Bush",
+          "The Drowning in the Sea",
+          "The Fiery Pit",
+          "The Earthquake"
         ],
-        "answer": "The offering of sacrifices"
+        "answer": "The Fiery Pit"
       },
       "location": {
         "label": "Key Element",
         "options": [
           "The Ark",
           "The Staff",
-          "The Mountain of Safa",
-          "The Sacrifice",
-          "The Burning Bush"
+          "The Ditch",
+          "The Mountain",
+          "The Well"
         ],
-        "answer": "The Sacrifice"
+        "answer": "The Ditch"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Became a messenger",
-          "Was drowned",
-          "Built a great kingdom",
-          "Became an example of regret",
-          "Was granted immense wealth"
+          "Were granted a kingdom",
+          "Were saved by a miracle",
+          "Achieved martyrdom and Paradise",
+          "Were scattered across lands",
+          "Were given immense wealth"
         ],
-        "answer": "Became an example of regret"
+        "answer": "Achieved martyrdom and Paradise"
       }
     },
-    "verseRef": "5:30",
-    "arabic": "فَطَوَّعَتْ لَهُۥ نَفْسُهُۥ قَتْلَ أَخِيهِ فَقَتَلَهُۥ فَأَصْبَحَ مِنَ ٱلْخَـٰسِرِينَ",
-    "verse": "And his soul permitted to him the murder of his brother, so he killed him and became among the losers. (5:30)"
+    "verseRef": "85:8",
+    "arabic": "وَمَا نَقَمُوا۟ مِنْهُمْ إِلَّآ أَن يُؤْمِنُوا۟ بِٱللَّهِ ٱلْعَزِيزِ ٱلْحَمِيدِ",
+    "verse": "And they resented them not except because they believed in Allāh, the Exalted in Might, the Praiseworthy, (85:8)"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

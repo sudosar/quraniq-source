@@ -1,37 +1,31 @@
 {
-  "date": "2026-02-17",
+  "date": "2026-02-18",
   "puzzle": {
-    "date": "2026-02-17",
-    "juz_number": 1,
-    "juz_name": "Alif Lam Meem",
-    "juz_name_ar": "الم",
+    "date": "2026-02-18",
+    "juz_number": 2,
+    "juz_name": "Sayaqool",
+    "juz_name_ar": "سَيَقُولُ",
     "verse": {
       "surah_number": 2,
       "surah_name": "Al-Baqarah",
       "surah_name_ar": "البقرة",
-      "ayah_number": 185,
-      "arabic_text": "شَهْرُ رَمَضَانَ الَّذِي أُنزِلَ فِيهِ الْقُرْآنُ هُدًى لِّلنَّاسِ وَبَيِّنَاتٍ مِّنَ الْهُدَىٰ وَالْفُرْقَانِ",
-      "translation": "The month of Ramadan in which the Quran was revealed, a guidance for the people and clear proofs of guidance and criterion.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/192.mp3"
+      "ayah_number": 183,
+      "arabic_text": "يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ كَمَا كُتِبَ عَلَى الَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ",
+      "translation": "O you who have believed, decreed upon you is fasting as it was decreed upon those before you that you may become righteous.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/190.mp3"
     },
     "theme_question": {
-      "correct": "The month in which the Quran was revealed as guidance",
+      "correct": "The divine command for fasting to achieve piety (Taqwa).",
       "options": [
-        "The month in which the Quran was revealed as guidance",
-        "The obligation of pilgrimage to Makkah",
-        "The story of Prophet Ibrahim building the Kaaba",
-        "The rules of financial transactions in Islam"
+        "The importance of prayer and charity in Islam.",
+        "The divine command for fasting to achieve piety (Taqwa).",
+        "The history of prophets and their struggles.",
+        "The benefits of seeking knowledge and wisdom."
       ]
     },
     "surah_question": {
       "correct_surah": 2,
       "options": [
-        {
-          "num": 1,
-          "name": "Al-Fatiha",
-          "name_ar": "الفاتحة",
-          "name_en": "The Opening"
-        },
         {
           "num": 2,
           "name": "Al-Baqarah",
@@ -39,8 +33,14 @@
           "name_en": "The Cow"
         },
         {
+          "num": 1,
+          "name": "Al-Fatihah",
+          "name_ar": "الفاتحة",
+          "name_en": "The Opening"
+        },
+        {
           "num": 3,
-          "name": "Aal-E-Imran",
+          "name": "Al-Imran",
           "name_ar": "آل عمران",
           "name_en": "The Family of Imran"
         },
@@ -55,12 +55,6 @@
     "surah_order": {
       "surahs": [
         {
-          "num": 1,
-          "name": "Al-Fatiha",
-          "name_ar": "الفاتحة",
-          "name_en": "The Opening"
-        },
-        {
           "num": 2,
           "name": "Al-Baqarah",
           "name_ar": "البقرة",
@@ -69,11 +63,11 @@
       ]
     },
     "educational_notes": {
-      "verse_context": "This iconic verse establishes the profound connection between Ramadan and the Quran. It was revealed in Madinah as part of the passage prescribing fasting for Muslims. Allah chose to highlight the revelation of the Quran as the primary distinction of this blessed month, even before mentioning the obligation to fast.",
-      "theme_explanation": "Ramadan is not merely a month of abstaining from food and drink — it is fundamentally the month of the Quran. The verse emphasizes that the Quran serves three purposes: it is 'guidance for the people' (hudā lin-nās), it contains 'clear proofs of guidance' (bayyināt min al-hudā), and it is 'the criterion' (al-furqān) that distinguishes truth from falsehood.",
-      "surah_overview": "Al-Baqarah is the longest surah in the Quran with 286 verses. Revealed in Madinah, it establishes the foundational laws of Islamic life including prayer, fasting, Hajj, and financial dealings. It contains Ayat al-Kursi (2:255), the longest verse in the Quran (2:282), and the famous closing verses (2:285-286). Juz 1 covers Al-Fatiha and the first 141 verses of Al-Baqarah."
+      "verse_context": "This verse marks the divine commandment for Muslims to fast during the month of Ramadan. It appears within a section of Surah Al-Baqarah that outlines various laws and regulations for the nascent Muslim community in Madinah, following discussions on the change of Qibla and preceding detailed rules about fasting, including exemptions, compensation, and the importance of supplicating during this sacred month. It emphasizes the continuity of this spiritual practice across previous nations, connecting the Muslim Ummah to a universal tradition of devotion.",
+      "theme_explanation": "The central theme of this verse is the obligation of fasting (Sawm) for believers and its profound spiritual purpose. By stating that fasting was 'decreed upon you as it was decreed upon those before you,' Allah (SWT) highlights the universal wisdom and timeless nature of this act of worship. The ultimate goal, 'that you may become righteous' (لَعَلَّكُمْ تَتَّقُونَ), underscores that fasting is not merely abstaining from food and drink, but a means to cultivate Taqwa – God-consciousness, piety, and self-restraint, leading to a deeper connection with Allah and a more virtuous life.",
+      "surah_overview": "Al-Baqarah (The Cow) is the longest surah in the Quran, comprising 286 verses, and was primarily revealed in Madinah. It serves as a foundational guide for the Muslim community, covering a vast array of topics essential for establishing an Islamic society. Juz 2 specifically encompasses verses 142-252 of Surah Al-Baqarah. This section addresses critical issues such as the change of Qibla (direction of prayer) from Jerusalem to Makkah, establishing a distinct identity for the Muslim Ummah. It also lays down fundamental laws regarding fasting (Sawm) during Ramadan, the pilgrimage (Hajj), financial dealings (prohibition of interest, encouragement of charity), marriage, divorce, and the prohibition of alcohol and gambling. The Juz also includes narratives of prophets like Musa (AS) and the Children of Israel, offering lessons from past communities for the guidance of the believers."
     }
   },
   "generated": true,
-  "model": "manual (launch day)"
+  "model": "auto (chain)"
 }
