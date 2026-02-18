@@ -172,6 +172,23 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* ===== Font Size Accessibility ===== */
+html[data-font-size="0"] {
+    font-size: 100%;
+}
+
+/* Default (16px) */
+html[data-font-size="1"] {
+    font-size: 112.5%;
+}
+
+/* Large (~18px) */
+html[data-font-size="2"] {
+    font-size: 125%;
+}
+
+/* Extra Large (~20px) */
+
 /* Islamic geometric pattern background overlay */
 body::before {
     content: '';

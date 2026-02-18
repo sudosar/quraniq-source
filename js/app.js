@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initSidebar();
     initModals();
     initResetButton();
+    // Font Size Control
+    initFontSizeControl();
     initConnections();
     initHarf();
     initDeduction();
@@ -83,9 +85,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Track if app is running as installed PWA
     if (window.matchMedia('(display-mode: standalone)').matches) {
-        trackEvent('pwa_launch', { mode: 'standalone' });
+        trackEvent('pwa_launch', {
+            mode: 'standalone'
+        });
     }
 });
+
+// ==================== FONT SIZE CONTROL ====================
+function initFontSizeControl() {
+    const btn = document.getElementById('font-size-btn');
+    if (!btn) return;
+
+    // Load saved preference
+    let currentSize = parseInt(localStorage.getItem('quraniq-font-size') || '0');
+    if (isNaN(currentSize) || currentSize < 0 || currentSize > 2) currentSize = 0;
+
+    // Apply initial size
+    applyFontSize(currentSize);
+
+    btn.addEventListener('click', () => {
+        currentSize = (currentSize + 1) % 3;
+        applyFontSize(currentSize);
+        localStorage.setItem('quraniq-font-size', currentSize);
+
+        // Show brief toast/feedback
+        const sizeNames = ['Normal', 'Large', 'Extra Large'];
+        if (typeof showToast === 'function') {
+            showToast(`Text Size: ${sizeNames[currentSize]}`);
+        }
+    });
+}
+
+function applyFontSize(sizeIndex) {
+    document.documentElement.setAttribute('data-font-size', sizeIndex);
+}
 
 // ==================== THEME ====================
 function initTheme() {
