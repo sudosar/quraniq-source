@@ -94,7 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==================== FONT SIZE CONTROL ====================
 function initFontSizeControl() {
     const btn = document.getElementById('font-size-btn');
-    if (!btn) return;
+    if (!btn) {
+        console.warn('Font size button not found');
+        return;
+    }
+
+    console.log('Initializing font size control');
 
     // Load saved preference
     let currentSize = parseInt(localStorage.getItem('quraniq-font-size') || '0');
