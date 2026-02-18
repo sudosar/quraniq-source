@@ -694,6 +694,13 @@ function checkScramble() {
         });
         document.getElementById('scramble-dropzone').classList.add('correct');
         saveScrState();
+
+        // Submit score immediately
+        if (typeof submitFirebaseScore === 'function') {
+            const moons = Math.max(1, 5 - scr.hintsUsed - scr.moves);
+            submitFirebaseScore('scramble', moons).catch(console.error);
+        }
+
         announce('Correct! Verse complete!');
         setTimeout(() => showScrResult(), 800);
     } else {
@@ -723,6 +730,12 @@ function checkScramble() {
         if (scr.moves >= scr.maxMoves) {
             scr.gameOver = true;
             saveScrState();
+
+            // Submit score immediately (0 for loss)
+            if (typeof submitFirebaseScore === 'function') {
+                submitFirebaseScore('scramble', 0).catch(console.error);
+            }
+
             setTimeout(() => showScrResult(), 800);
         } else {
             saveScrState();

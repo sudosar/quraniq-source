@@ -433,6 +433,15 @@ function submitHarfGuess() {
         if (guess === harf.word) {
             harf.gameOver = true;
             saveHarfState();
+
+            // Submit score immediately
+            if (typeof submitFirebaseScore === 'function') {
+                const totalRows = harf.evaluations.length; // includes hint rows
+                const baseMoons = Math.max(1, 6 - totalRows);
+                const moons = Math.max(0, baseMoons - harf.hintsUsed);
+                submitFirebaseScore('harf', moons).catch(console.error);
+            }
+
             announce('Congratulations! You guessed the word!');
             setTimeout(() => showHarfResult(true), 300);
             return;
@@ -445,6 +454,12 @@ function submitHarfGuess() {
             harf.gameOver = true;
             saveHarfState();
             const displayWord = harf.puzzle.display || harf.word;
+
+            // Submit score immediately (0 for loss)
+            if (typeof submitFirebaseScore === 'function') {
+                submitFirebaseScore('harf', 0).catch(console.error);
+            }
+
             showToast(displayWord);
             announce(`Game over. The word was ${displayWord}.`);
             setTimeout(() => showHarfResult(false), 300);

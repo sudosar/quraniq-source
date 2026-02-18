@@ -988,15 +988,38 @@ async function backfillTodayScores() {
         }
 
         // --- Harf by Harf (Wordle) ---
-        const wordleState = state[`wordle_${dayNum}`];
-        if (wordleState && wordleState.gameOver) {
-            const evals = wordleState.evaluations || [];
+        // Try new key first, then old key (migration handled in app.js but safety first)
+        const harfState = state[`harf_${dayNum}`] || state[`wordle_${dayNum}`];
+        if (harfState && harfState.gameOver) {
+            const evals = harfState.evaluations || [];
+            // Check if won
             const lastRow = evals[evals.length - 1] || [];
-            const won = lastRow.every(e => e === 'correct');
+            // In Harf, a win is when the last evaluation is all 'correct'
+            // BUT careful: if lost, the last row isn't all correct.
+            // Check game logic: 
+            // - If won, last row is all correct.
+            // - If lost, maxRows reached and not won.
+
+            // We can trust the state's implicit result or re-verify:
+            // Let's re-verify cleanly:
+            const targetWord = (harfState.word || '').trim(); // Saved state might not have word? 
+            // Actually app.state saves: board, currentRow, gameOver, evaluations, hintsUsed.
+            // It DOES NOT save the target word usually? 
+            // Wait, harf.js setupHarfGame uses harf.puzzle.word.
+            // We can't easily re-verify "won" without the word.
+            // BUT, we can infer "won" if the last evaluation row is all 'correct'.
+
+            const won = lastRow.length > 0 && lastRow.every(e => e === 'correct');
             let moons = 0;
             if (won) {
-                moons = Math.max(1, 6 - evals.length);
+                // Base: 1 try = 5, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1
+                // Minus hints
+                const totalRows = evals.length;
+                const baseMoons = Math.max(1, 6 - totalRows);
+                moons = Math.max(0, baseMoons - (harfState.hintsUsed || 0));
             }
+            // If lost, 0 moons.
+
             if ((current.harf || 0) < moons) {
                 current.harf = moons;
                 changed = true;

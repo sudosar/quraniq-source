@@ -188,6 +188,20 @@ function submitDeduction() {
     saveDedState();
     renderDeduction();
 
+    // Submit score immediately (don't wait for animation/modal)
+    if (typeof submitFirebaseScore === 'function') {
+        let moons = 0;
+        if (ded.won) {
+            const cluesUsed = ded.cluesRevealed;
+            if (cluesUsed <= 1) moons = 5;
+            else if (cluesUsed === 2) moons = 4;
+            else if (cluesUsed === 3) moons = 3;
+            else if (cluesUsed === 4) moons = 2;
+            else moons = 1;
+        }
+        submitFirebaseScore('deduction', moons).catch(console.error);
+    }
+
     announce(ded.won ? 'Correct! All answers are right!' : 'Not quite right. Keep learning!');
     setTimeout(() => showDedResult(), 600);
 }
