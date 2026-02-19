@@ -610,6 +610,7 @@ RULES:
    - **FORBIDDEN**: "Words from the Quran", "Common Nouns", "Verbs", "Words starting with M", "Words from Juz 30".
    - **REQUIRED**: Specific semantic fields like "Rivers in Jannah", "Names of Hellfire", "Fruits mentioned in Quran", "Family of the Prophet", "Attributes of Allah relating to Mercy".
    - If a category is too broad, the puzzle will be REJECTED.
+10. **CRITICAL** Context Check: Ensure the verse's *meaning* supports the category. Do NOT selection verses about punishment, hellfire, or wrath for positive categories (e.g., "Favors", "Blessings", "Mercy"). The word must be used in a context that fits the theme.
 
 DIFFICULTY: 1 easy, 1 medium, 1 hard, 1 tricky group.
 
