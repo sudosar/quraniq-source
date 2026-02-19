@@ -6,25 +6,25 @@
     "juz_name": "Tilka ar-Rusul",
     "juz_name_ar": "تِلْكَ الرُّسُلُ",
     "verse": {
-      "surah_number": 3,
-      "surah_name": "Al Imran",
-      "surah_name_ar": "آل عِمْرَان",
-      "ayah_number": 92,
-      "arabic_text": "لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ ۚ وَمَا تُنفِقُوا مِن شَيْءٍ فَإِنَّ اللَّهَ بِهِ عَلِيمٌ",
-      "translation": "You will never achieve righteousness until you spend from that which you love. And whatever you spend of good, Allah is certainly aware of it.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/385.mp3"
+      "surah_number": 2,
+      "surah_name": "Al-Baqarah",
+      "surah_name_ar": "الْبَقَرَة",
+      "ayah_number": 255,
+      "arabic_text": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌۭ وَلَا نَوْمٌۭ ۚ لَّهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍۢ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ",
+      "translation": "Allāh - there is no deity except Him, the Ever-Living, the Self-Sustaining. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is [presently] before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursī extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/262.mp3"
     },
     "theme_question": {
-      "correct": "The path to true righteousness involves sacrificing what is beloved for Allah's sake.",
+      "correct": "The absolute sovereignty and self-subsistence of Allah (Ayat al-Kursi)",
       "options": [
-        "Righteousness is achieved primarily through ritual prayers and fasting.",
-        "The path to true righteousness involves sacrificing what is beloved for Allah's sake.",
-        "Spending from your wealth is only necessary for the poor.",
-        "Allah only accepts charity given from surplus wealth."
+        "The story of Prophet Ibrahim and the fire",
+        "The absolute sovereignty and self-subsistence of Allah (Ayat al-Kursi)",
+        "The rules of divorce and family life",
+        "The description of the Day of Judgment"
       ]
     },
     "surah_question": {
-      "correct_surah": 3,
+      "correct_surah": 2,
       "options": [
         {
           "num": 3,
@@ -69,9 +69,9 @@
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse (3:92) concludes a section in Surah Al Imran that addresses the People of the Book, particularly the Jews and Christians, and their claims regarding faith and practice. It follows discussions about the true religion being Islam, the importance of following Prophet Muhammad (peace be upon him), and the rejection of false innovations. The verse serves as a universal principle for all believers, emphasizing a core aspect of piety that transcends mere ritual.",
-      "theme_explanation": "The verse highlights a profound principle of attaining 'Al-Birr' (righteousness, piety, goodness, virtue). It teaches that true righteousness is not merely intellectual assent or outward observance, but requires a deeper level of sacrifice: giving from what one loves most. This act demonstrates sincerity, detachment from worldly possessions, and a strong desire to please Allah. The verse implies that the value of charity is not just in the amount given, but in the quality of what is given and the love one has for it, as Allah is fully aware of all intentions and deeds.",
-      "surah_overview": "Surah Al Imran is a Medinan surah, named after the family of Imran, which includes Maryam (Mary) and her son Isa (Jesus). It is the third surah of the Quran and continues many themes from Surah Al-Baqarah, particularly concerning the People of the Book. Key themes include: the unity of God (Tawhid) and the refutation of polytheistic and Christian doctrines regarding Jesus; the importance of steadfastness in faith, especially after the Battle of Uhud (which is discussed in detail); the call to Muslims to unite and adhere to the straight path; and lessons on patience, perseverance, and reliance on Allah. The surah emphasizes the concept of Islam as the universal religion of all prophets and calls for deep reflection on Allah's signs."
+      "verse_context": "Ayat al-Kursi (The Verse of the Throne) is the 255th verse of Surah Al-Baqarah. It is considered the greatest verse in the Quran and is recited for protection. It describes Allah's absolute authority over the heavens and the earth and His attribute of being Ever-Living and Sustainer of existence.",
+      "theme_explanation": "This verse establishes the concept of Tawhid (Oneness of God) in the most comprehensive manner. It negates any weakness, sleep, or fatigue from Allah and affirms His infinite knowledge and power. The 'Kursi' (Footstool/Chair) represents His dominion and authority which extends over the entire universe.",
+      "surah_overview": "Surah Al-Baqarah is the longest surah in the Quran. It covers meaningful laws, stories of past prophets (like Adam, Ibrahim, and Musa), and guidance for the Muslim community. It was revealed in Madinah and contains the longest verse (2:282) and the greatest verse (2:255)."
     }
   },
   "generated": true,
