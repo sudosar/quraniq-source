@@ -146,6 +146,9 @@ async function submitBugReport() {
     status.textContent = '';
     status.className = 'bug-status';
 
+    const themeAttr = document.documentElement.getAttribute('data-theme');
+    const isDarkMode = themeAttr === 'dark';
+
     const payload = {
         description: description,
         screenshot: window._bugScreenshot || null,
@@ -155,7 +158,8 @@ async function submitBugReport() {
         url: window.location.href,
         timestamp: new Date().toISOString(),
         gameMode: typeof app !== 'undefined' ? app.currentMode : 'unknown',
-        darkMode: document.documentElement.getAttribute('data-theme') === 'dark',
+        theme: isDarkMode ? 'Dark' : 'Light',
+        darkMode: isDarkMode,
         scriptVersion: '1.1.0'
     };
 
