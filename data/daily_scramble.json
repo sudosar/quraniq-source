@@ -1,35 +1,30 @@
 {
-  "date": "2026-02-18",
+  "date": "2026-02-19",
   "puzzle": {
-    "verseRef": "49:10",
-    "reference": "Surah Al-Hujurat (49:10)",
+    "verseRef": "68:4",
+    "reference": "Surah Al-Qalam (68:4)",
     "segments": [
-      "إِنَّمَا الْمُؤْمِنُونَ",
-      "إِخْوَةٌ",
-      "فَأَصْلِحُوا بَيْنَ",
-      "أَخَوَيْكُمْ ۚ",
-      "وَاتَّقُوا اللَّهَ",
-      "لَعَلَّكُمْ تُرْحَمُونَ"
+      "وَإِنَّكَ",
+      "لَعَلَىٰ",
+      "خُلُقٍ",
+      "عَظِيمٍ"
     ],
     "translations": [
-      "Only the believers",
-      "(are) brothers so make peace",
-      "between your brothers",
-      "and fear Allah and fear Allah",
-      "so that you may",
-      "receive mercy"
+      "And indeed, you",
+      "surely (are)",
+      "(of) a moral character",
+      "great"
     ],
-    "hint": "This verse emphasizes the spiritual bond among Muslims and the importance of resolving conflicts, connecting it to piety and divine compassion.",
-    "arabic": "إِنَّمَا ٱلْمُؤْمِنُونَ إِخْوَةٌۭ فَأَصْلِحُوا۟ بَيْنَ أَخَوَيْكُمْ ۚ وَٱتَّقُوا۟ ٱللَّهَ لَعَلَّكُمْ تُرْحَمُونَ",
+    "hint": "This verse affirms the sublime moral character of the final Prophet.",
+    "arabic": "وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍۢ",
     "words": [
-      "إِنَّمَا ٱلْمُؤْمِنُونَ",
-      "إِخْوَةٌۭ فَأَصْلِحُوا۟",
-      "بَيْنَ أَخَوَيْكُمْ ۚ",
-      "وَٱتَّقُوا۟ ٱللَّهَ",
-      "لَعَلَّكُمْ",
-      "تُرْحَمُونَ"
+      "وَإِنَّكَ",
+      "لَعَلَىٰ",
+      "خُلُقٍ",
+      "عَظِيمٍۢ"
     ],
-    "verseEn": "The believers are but brothers, so make settlement between your brothers. And fear Allāh that you may receive mercy."
+    "verseEn": "And indeed, you are of a great moral character."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

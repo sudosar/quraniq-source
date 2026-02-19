@@ -1,6 +1,5 @@
 {
-  "date": "2026-02-19",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَوْصَافُ الْقُرْآنِ الْكَرِيمِ",
@@ -164,6 +163,172 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "خير",
+    "display": "خَيْر",
+    "hint": "A quality often contrasted with evil, indicating what is superior or beneficial.",
+    "verseRef": "18:46",
+    "arabicVerse": "ٱلْمَالُ وَٱلْبَنُونَ زِينَةُ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۖ وَٱلْبَـٰقِيَـٰتُ ٱلصَّـٰلِحَـٰتُ خَيْرٌ عِندَ رَبِّكَ ثَوَابًۭا وَخَيْرٌ أَمَلًۭا",
+    "verse": "18:46 — Wealth and children are [but] adornment of the worldly life. But the enduring good deeds are better to your Lord for reward and better for [one's] hope."
+  },
+  "deduction": {
+    "title": "The Folly of Grand Ambition",
+    "intro": "Embark on a journey to uncover the identity of a collective entity whose audacious plans met an unexpected, powerful end. This narrative serves as a profound reminder of divine might and the fragility of worldly power when it opposes the sacred. Unravel the mystery of this group, whose story is etched in the Quran as a warning for all who seek to transgress.",
+    "clues": [
+      "We harbored a grand ambition, believing our might was unmatched, and set forth on a journey with a clear, destructive objective.",
+      "Our leader, filled with arrogance, sought to defile a sacred House revered by many, aiming to divert pilgrimage to a structure built by us.",
+      "From a distant land, we marched with a massive force, confident in our ability to dismantle the ancient edifice in the Holy City.",
+      "Our army was formidable, spearheaded by magnificent creatures, a sight rarely, if ever, witnessed in such a campaign by the inhabitants of the land we invaded.",
+      "When we reached our destination, a divine intervention occurred; small, winged creatures appeared, pelting us with stones of baked clay.",
+      "Our entire expedition met a devastating end, leaving our formidable force utterly annihilated, like chewed-up straw, our grand plan reduced to dust."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "People of Thamud",
+          "People of 'Ad",
+          "People of Sodom",
+          "People of the Elephant",
+          "People of the Garden"
+        ],
+        "answer": "People of the Elephant"
+      },
+      "trial": {
+        "label": "Trial/Event",
+        "options": [
+          "The Great Flood",
+          "The Campaign against the Kaaba",
+          "The Destruction of the Idols",
+          "The Splitting of the Sea",
+          "The Earthquake of Midian"
+        ],
+        "answer": "The Campaign against the Kaaba"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The Ark",
+          "The Staff",
+          "The Kaaba",
+          "The Golden Calf",
+          "The Fire"
+        ],
+        "answer": "The Kaaba"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "Divine salvation",
+          "A long period of prosperity",
+          "Conversion to Islam",
+          "Utter destruction",
+          "Exile from their land"
+        ],
+        "answer": "Utter destruction"
+      }
+    },
+    "verseRef": "105:1",
+    "arabic": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَـٰبِ ٱلْفِيلِ",
+    "verse": "Have you not considered, [O Muḥammad], how your Lord dealt with the companions of the elephant? (105:1)"
+  },
+  "scramble": {
+    "verseRef": "68:4",
+    "reference": "Surah Al-Qalam (68:4)",
+    "segments": [
+      "وَإِنَّكَ",
+      "لَعَلَىٰ",
+      "خُلُقٍ",
+      "عَظِيمٍ"
+    ],
+    "translations": [
+      "And indeed, you",
+      "surely (are)",
+      "(of) a moral character",
+      "great"
+    ],
+    "hint": "This verse affirms the sublime moral character of the final Prophet.",
+    "arabic": "وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍۢ",
+    "words": [
+      "وَإِنَّكَ",
+      "لَعَلَىٰ",
+      "خُلُقٍ",
+      "عَظِيمٍۢ"
+    ],
+    "verseEn": "And indeed, you are of a great moral character."
+  },
+  "juz": {
+    "date": "2026-02-19",
+    "juz_number": 3,
+    "juz_name": "Tilka ar-Rusul",
+    "juz_name_ar": "تِلْكَ الرُّسُلُ",
+    "verse": {
+      "surah_number": 3,
+      "surah_name": "Al Imran",
+      "surah_name_ar": "آل عِمْرَان",
+      "ayah_number": 92,
+      "arabic_text": "لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ ۚ وَمَا تُنفِقُوا مِن شَيْءٍ فَإِنَّ اللَّهَ بِهِ عَلِيمٌ",
+      "translation": "You will never achieve righteousness until you spend from that which you love. And whatever you spend of good, Allah is certainly aware of it.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/385.mp3"
+    },
+    "theme_question": {
+      "correct": "The path to true righteousness involves sacrificing what is beloved for Allah's sake.",
+      "options": [
+        "Righteousness is achieved primarily through ritual prayers and fasting.",
+        "The path to true righteousness involves sacrificing what is beloved for Allah's sake.",
+        "Spending from your wealth is only necessary for the poor.",
+        "Allah only accepts charity given from surplus wealth."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 3,
+      "options": [
+        {
+          "num": 3,
+          "name": "Al Imran",
+          "name_ar": "آل عِمْرَان",
+          "name_en": "The Family of Imran"
+        },
+        {
+          "num": 2,
+          "name": "Al-Baqarah",
+          "name_ar": "الْبَقَرَة",
+          "name_en": "The Cow"
+        },
+        {
+          "num": 4,
+          "name": "An-Nisa",
+          "name_ar": "النِّسَاء",
+          "name_en": "The Women"
+        },
+        {
+          "num": 5,
+          "name": "Al-Ma'idah",
+          "name_ar": "الْمَائِدَة",
+          "name_en": "The Table Spread"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 2,
+          "name": "Al-Baqarah",
+          "name_ar": "الْبَقَرَة",
+          "name_en": "The Cow"
+        },
+        {
+          "num": 3,
+          "name": "Al Imran",
+          "name_ar": "آل عِمْرَان",
+          "name_en": "The Family of Imran"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse (3:92) concludes a section in Surah Al Imran that addresses the People of the Book, particularly the Jews and Christians, and their claims regarding faith and practice. It follows discussions about the true religion being Islam, the importance of following Prophet Muhammad (peace be upon him), and the rejection of false innovations. The verse serves as a universal principle for all believers, emphasizing a core aspect of piety that transcends mere ritual.",
+      "theme_explanation": "The verse highlights a profound principle of attaining 'Al-Birr' (righteousness, piety, goodness, virtue). It teaches that true righteousness is not merely intellectual assent or outward observance, but requires a deeper level of sacrifice: giving from what one loves most. This act demonstrates sincerity, detachment from worldly possessions, and a strong desire to please Allah. The verse implies that the value of charity is not just in the amount given, but in the quality of what is given and the love one has for it, as Allah is fully aware of all intentions and deeds.",
+      "surah_overview": "Surah Al Imran is a Medinan surah, named after the family of Imran, which includes Maryam (Mary) and her son Isa (Jesus). It is the third surah of the Quran and continues many themes from Surah Al-Baqarah, particularly concerning the People of the Book. Key themes include: the unity of God (Tawhid) and the refutation of polytheistic and Christian doctrines regarding Jesus; the importance of steadfastness in faith, especially after the Battle of Uhud (which is discussed in detail); the call to Muslims to unite and adhere to the straight path; and lessons on patience, perseverance, and reliance on Allah. The surah emphasizes the concept of Islam as the universal religion of all prophets and calls for deep reflection on Allah's signs."
+    }
+  }
 }

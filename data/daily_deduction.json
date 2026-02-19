@@ -1,15 +1,15 @@
 {
-  "date": "2026-02-18",
+  "date": "2026-02-19",
   "puzzle": {
-    "title": "The Steadfast Witness",
-    "intro": "A profound narrative unfolds, revealing the unwavering resolve of a community in the face of immense tyranny. Their story serves as a testament to faith, even when confronted with the ultimate sacrifice. This account reminds us of the power of belief against overwhelming oppression.",
+    "title": "The Folly of Grand Ambition",
+    "intro": "Embark on a journey to uncover the identity of a collective entity whose audacious plans met an unexpected, powerful end. This narrative serves as a profound reminder of divine might and the fragility of worldly power when it opposes the sacred. Unravel the mystery of this group, whose story is etched in the Quran as a warning for all who seek to transgress.",
     "clues": [
-      "We were a group whose story is recounted in a short, powerful surah, warning against persecution.",
-      "We faced a ruler who wished to eradicate our belief in the One God, the Lord of the Throne, the Praiseworthy.",
-      "We were subjected to a terrible test involving a massive pit dug into the earth.",
-      "We watched as believers, including infants, were cast into a raging inferno within that pit.",
-      "Our tormentors were cursed for their actions, while we were promised immense reward for our steadfastness.",
-      "The ruler's attempt to extinguish our faith only solidified our place as martyrs in the sight of Allah, who is witness to all things."
+      "We harbored a grand ambition, believing our might was unmatched, and set forth on a journey with a clear, destructive objective.",
+      "Our leader, filled with arrogance, sought to defile a sacred House revered by many, aiming to divert pilgrimage to a structure built by us.",
+      "From a distant land, we marched with a massive force, confident in our ability to dismantle the ancient edifice in the Holy City.",
+      "Our army was formidable, spearheaded by magnificent creatures, a sight rarely, if ever, witnessed in such a campaign by the inhabitants of the land we invaded.",
+      "When we reached our destination, a divine intervention occurred; small, winged creatures appeared, pelting us with stones of baked clay.",
+      "Our entire expedition met a devastating end, leaving our formidable force utterly annihilated, like chewed-up straw, our grand plan reduced to dust."
     ],
     "categories": {
       "identity": {
@@ -17,49 +17,50 @@
         "options": [
           "People of Thamud",
           "People of 'Ad",
-          "People of the Ditch",
-          "People of Lut",
-          "People of the Elephant"
+          "People of Sodom",
+          "People of the Elephant",
+          "People of the Garden"
         ],
-        "answer": "People of the Ditch"
+        "answer": "People of the Elephant"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
           "The Great Flood",
-          "The Burning Bush",
-          "The Drowning in the Sea",
-          "The Fiery Pit",
-          "The Earthquake"
+          "The Campaign against the Kaaba",
+          "The Destruction of the Idols",
+          "The Splitting of the Sea",
+          "The Earthquake of Midian"
         ],
-        "answer": "The Fiery Pit"
+        "answer": "The Campaign against the Kaaba"
       },
       "location": {
         "label": "Key Element",
         "options": [
           "The Ark",
           "The Staff",
-          "The Ditch",
-          "The Mountain",
-          "The Well"
+          "The Kaaba",
+          "The Golden Calf",
+          "The Fire"
         ],
-        "answer": "The Ditch"
+        "answer": "The Kaaba"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Were granted a kingdom",
-          "Were saved by a miracle",
-          "Achieved martyrdom and Paradise",
-          "Were scattered across lands",
-          "Were given immense wealth"
+          "Divine salvation",
+          "A long period of prosperity",
+          "Conversion to Islam",
+          "Utter destruction",
+          "Exile from their land"
         ],
-        "answer": "Achieved martyrdom and Paradise"
+        "answer": "Utter destruction"
       }
     },
-    "verseRef": "85:8",
-    "arabic": "وَمَا نَقَمُوا۟ مِنْهُمْ إِلَّآ أَن يُؤْمِنُوا۟ بِٱللَّهِ ٱلْعَزِيزِ ٱلْحَمِيدِ",
-    "verse": "And they resented them not except because they believed in Allāh, the Exalted in Might, the Praiseworthy, (85:8)"
+    "verseRef": "105:1",
+    "arabic": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَـٰبِ ٱلْفِيلِ",
+    "verse": "Have you not considered, [O Muḥammad], how your Lord dealt with the companions of the elephant? (105:1)"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
