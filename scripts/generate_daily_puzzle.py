@@ -428,7 +428,7 @@ def call_model(prompt, model_config, system_msg=None):
         ],
         "temperature": 0.6,
         "top_p": 0.95,
-        "max_tokens": 8192,
+        "max_tokens": 16384,
     }
 
     # Only GPT models support response_format
@@ -469,7 +469,7 @@ def call_model(prompt, model_config, system_msg=None):
                     ],
                     "temperature": 0.3,
                     "top_p": 0.95,
-                    "max_tokens": 8192,
+                    "max_tokens": 16384,
                 }
                 try:
                     cont_resp = requests.post(api_url, headers=headers, json=cont_payload, timeout=180)
