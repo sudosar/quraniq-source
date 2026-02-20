@@ -1,32 +1,33 @@
 {
-  "date": "2026-02-20",
+  "date": "2026-02-21",
   "puzzle": {
-    "verseRef": "8:24",
-    "reference": "Al-Anfal (8:24)",
+    "verseRef": "6:162",
+    "reference": "Al-An'am (6:162)",
     "segments": [
-      "يَا أَيُّهَا الَّذِينَ آمَنُوا",
-      "اسْتَجِيبُوا لِلَّهِ",
-      "وَلِلرَّسُولِ",
-      "إِذَا دَعَاكُمْ",
-      "لِمَا يُحْيِيكُمْ"
+      "قُلْ إِنَّ",
+      "صَلَاتِي وَنُسُكِي",
+      "وَمَحْيَايَ وَمَمَاتِي",
+      "لِلَّهِ",
+      "رَبِّ الْعَالَمِينَ"
     ],
     "translations": [
-      "O you who believe Respond",
-      "to Allah and His Messenger when he calls you",
-      "to what gives you life And know that",
-      "Allah comes (in) between a man",
-      "and his heart and that to Him you will be gathered"
+      "Say Indeed",
+      "my prayer and my rites of sacrifice",
+      "and my living and my dying",
+      "(are) for Allah Lord",
+      "(of) the worlds"
     ],
-    "hint": "This verse reminds believers to answer a divine call that brings true vitality and spiritual awakening.",
-    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَجِيبُوا۟ لِلَّهِ وَلِلرَّسُولِ إِذَا دَعَاكُمْ لِمَا يُحْيِيكُمْ ۖ وَٱعْلَمُوٓا۟ أَنَّ ٱللَّهَ يَحُولُ بَيْنَ ٱلْمَرْءِ وَقَلْبِهِۦ وَأَنَّهُۥٓ إِلَيْهِ تُحْشَرُونَ",
+    "hint": "A powerful declaration of total devotion and sincerity, stating that every aspect of a believer's life and death belongs solely to Allah.",
+    "arabic": "قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
     "words": [
-      "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَجِيبُوا۟",
-      "لِلَّهِ وَلِلرَّسُولِ إِذَا دَعَاكُمْ",
-      "لِمَا يُحْيِيكُمْ ۖ وَٱعْلَمُوٓا۟ أَنَّ",
-      "ٱللَّهَ يَحُولُ بَيْنَ ٱلْمَرْءِ",
-      "وَقَلْبِهِۦ وَأَنَّهُۥٓ إِلَيْهِ تُحْشَرُونَ"
+      "قُلْ إِنَّ",
+      "صَلَاتِى وَنُسُكِى",
+      "وَمَحْيَاىَ وَمَمَاتِى",
+      "لِلَّهِ رَبِّ",
+      "ٱلْعَـٰلَمِينَ"
     ],
-    "verseEn": "O you who have believed, respond to Allāh and to the Messenger when he calls you to that which gives you life. And know that Allāh intervenes between a man and his heart and that to Him you will be gathered."
+    "verseEn": "Say, \"Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allāh, Lord of the worlds."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
