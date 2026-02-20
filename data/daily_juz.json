@@ -1,53 +1,53 @@
 {
-  "date": "2026-02-21",
+  "date": "2026-02-20",
   "puzzle": {
     "date": "2026-02-20",
     "juz_number": 4,
-    "juz_name": "Lan Tanalu",
-    "juz_name_ar": "لَنْ تَنَالُوا",
+    "juz_name": "Lan Tanālū",
+    "juz_name_ar": "لَن تَنَالُوا",
     "verse": {
       "surah_number": 3,
       "surah_name": "Al-Imran",
-      "surah_name_ar": "آل عِمْرَان",
-      "ayah_number": 133,
-      "arabic_text": "وَسَارِعُوا إِلَىٰ مَغْفِرَةٍ مِّن رَّبِّكُمْ وَجَنَّةٍ عَرْضُهَا السَّمَاوَاتُ وَالْأَرْضُ أُعِدَّتْ لِلْمُتَّقِينَ",
-      "translation": "And hasten to forgiveness from your Lord and a garden as wide as the heavens and earth, prepared for the righteous.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/426.mp3"
+      "surah_name_ar": "آل عمران",
+      "ayah_number": 103,
+      "arabic_text": "وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا ۚ وَاذْكُرُوا نِعْمَتَ اللَّهِ عَلَيْكُمْ إِذْ كُنتُمْ أَعْدَاءً فَأَلَّفَ بَيْنَ قُلُوبِكُمْ فَأَصْبَحْتُم بِنِعْمَتِهِ إِخْوَانًا وَكُنتُمْ عَلَىٰ شَفَا حُفْرَةٍ مِّنَ النَّارِ فَأَنقَذَكُم مِّنْهَا ۗ كَذَٰلِكَ يُبَيِّنُ اللَّهُ لَكُمْ آيَاتِهِ لَعَلَّكُمْ تَهْتَدُونَ",
+      "translation": "And hold firmly to the rope of Allah all together and do not become divided. And remember the favor of Allah upon you when you were enemies and He brought your hearts together and you became, by His favor, brothers. And you were on the edge of a pit of the Fire, and He saved you from it. Thus does Allah make clear to you His verses that you may be guided.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/396.mp3"
     },
     "theme_question": {
-      "correct": "Hastening and competing in seeking Allah's forgiveness and Paradise",
+      "correct": "The paramount importance of unity among Muslims and adherence to Allah's guidance to avoid division.",
       "options": [
-        "Delaying repentance until the end of one's life",
-        "Hastening and competing in seeking Allah's forgiveness and Paradise",
-        "Prioritizing worldly status over spiritual growth",
-        "Waiting for a miraculous sign before practicing faith"
+        "The paramount importance of unity among Muslims and adherence to Allah's guidance to avoid division.",
+        "The necessity of individual worship and devotion as the sole path to salvation.",
+        "The prohibition of innovation in religion and strict adherence to ancestral traditions.",
+        "The rewards for those who struggle in Allah's cause through warfare and conquest."
       ]
     },
     "surah_question": {
       "correct_surah": 3,
       "options": [
         {
-          "num": 2,
-          "name": "Al-Baqarah",
-          "name_ar": "الْبَقَرَة",
-          "name_en": "The Cow"
-        },
-        {
           "num": 3,
           "name": "Al-Imran",
-          "name_ar": "آل عِمْرَان",
-          "name_en": "Family of Imran"
+          "name_ar": "آل عمران",
+          "name_en": "The Family of Imran"
         },
         {
           "num": 4,
           "name": "An-Nisa",
-          "name_ar": "النِّسَاء",
+          "name_ar": "النساء",
           "name_en": "The Women"
+        },
+        {
+          "num": 2,
+          "name": "Al-Baqarah",
+          "name_ar": "البقرة",
+          "name_en": "The Cow"
         },
         {
           "num": 5,
           "name": "Al-Ma'idah",
-          "name_ar": "الْمَائِدَة",
+          "name_ar": "المائدة",
           "name_en": "The Table Spread"
         }
       ]
@@ -57,21 +57,21 @@
         {
           "num": 3,
           "name": "Al-Imran",
-          "name_ar": "آل عِمْرَان",
-          "name_en": "Family of Imran"
+          "name_ar": "آل عمران",
+          "name_en": "The Family of Imran"
         },
         {
           "num": 4,
           "name": "An-Nisa",
-          "name_ar": "النِّسَاء",
+          "name_ar": "النساء",
           "name_en": "The Women"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse was revealed following the Battle of Uhud, a time of great physical and emotional trial for the early Muslim community. It served as a powerful reminder to pivot from worldly setbacks toward the eternal goal of Allah's pleasure.",
-      "theme_explanation": "The word 'Saari'u' (hasten/race) implies that a believer should be proactive and energetic in their spiritual life. It suggests that forgiveness and Paradise are not things to be approached lazily, but are goals worth competing for.",
-      "surah_overview": "Juz 4 completes Surah Al-Imran, which emphasizes steadfastness and the unity of the message of the Prophets, and begins Surah An-Nisa, which shifts the focus toward social justice, the protection of orphans, and the legal rights of women."
+      "verse_context": "This powerful verse from Surah Al-Imran comes after a series of warnings to the People of the Book about their divisions and their deviation from the true path. It directly addresses the Muslim community, urging them to learn from past mistakes and to safeguard their unity. It reminds them of Allah's immense favor in bringing their hearts together, transforming them from enemies into brothers, and saving them from the brink of Hellfire, implying that maintaining this unity is a continuous act of gratitude and a means of guidance.",
+      "theme_explanation": "The 'rope of Allah' (حَبْلِ اللَّهِ) is widely interpreted by scholars as the Quran, the Sunnah of the Prophet Muhammad (peace be upon him), or the religion of Islam itself. Holding firmly to it collectively signifies the absolute necessity of adhering to the divine revelation and prophetic guidance as the foundational basis for Muslim unity. The verse explicitly forbids division (وَلَا تَفَرَّقُوا), highlighting that fragmentation and discord are antithetical to the spirit of Islam and detrimental to the strength and well-being of the Ummah. It emphasizes that true brotherhood and harmony are gifts from Allah, achieved by following His path, and are essential for collective success and salvation.",
+      "surah_overview": "Juz 4 encompasses a significant portion of Surah Al-Imran (from ayah 93 to the end) and the beginning of Surah An-Nisa (up to ayah 23). \n\n**Surah Al-Imran (The Family of Imran)** is a Madani Surah, continuing many themes from Al-Baqarah. It focuses on the Oneness of Allah (Tawhid), refuting the claims of Christians and Jews regarding prophethood and the nature of God, and detailing the stories of prophets like Zakariya, Maryam, and Isa (Jesus). A major part of the Surah addresses the lessons from the Battle of Uhud, emphasizing the importance of patience, steadfastness, and reliance on Allah in times of adversity, and the need for unity within the Muslim community. It also lays down principles for inviting to good and forbidding evil. \n\n**Surah An-Nisa (The Women)** is also a Madani Surah and begins in this Juz. It is distinctive for its detailed legislation concerning women's rights, orphans, inheritance, marriage, family law, and social justice. The Surah emphasizes the importance of upholding the rights of the vulnerable in society and establishes clear guidelines for ethical conduct within the family and community. It also addresses issues of hypocrisy (munafiqeen) and the People of the Book, calling for justice and fairness in all dealings."
     }
   },
   "generated": true,
