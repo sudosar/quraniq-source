@@ -1823,7 +1823,18 @@ def generate_game(game_type, history, today):
 
 
 def main():
+    import sys
     today = datetime.utcnow().strftime("%Y-%m-%d")
+    force_regen = False
+    
+    if "--date" in sys.argv:
+        try:
+            today = sys.argv[sys.argv.index("--date") + 1]
+        except IndexError:
+            pass
+    
+    if "--force" in sys.argv:
+        force_regen = True
 
     # Check if already generated today (supports partial regeneration)
     today_file = os.path.join(HISTORY_DIR, f"{today}.json")
@@ -1836,11 +1847,10 @@ def main():
             existing_puzzles = {}
 
         # Check which core games already exist
-        core_games = ["connections", "harf", "deduction", "scramble"]
+        core_games = ["connections", "harf", "deduction", "scramble", "juz"]
         missing_games = [g for g in core_games if g not in existing_puzzles]
         
-        force_regen = False
-        if not missing_games:
+        if not missing_games and not force_regen:
             # Validate loaded puzzles to ensure they are not corrupted (e.g. empty verses)
             valid_history = True
             for g in core_games:
@@ -1879,7 +1889,7 @@ def main():
                                 }, f, ensure_ascii=False, indent=2)
                 except Exception as e:
                     print(f"Warning: Could not restore output files: {e}")
-                return 0
+                return
 
         if not force_regen:
             print(f"Partial history found for {today}. Missing: {', '.join(missing_games)}")
