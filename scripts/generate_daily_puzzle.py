@@ -869,6 +869,9 @@ RULES:
 6. Include a relevant Quranic verse reference in surah:ayah format
 7. All clues and answers must be Quranically accurate
 8. Vary the character types — don't always use prophets. Include rulers, righteous people, groups, and other Quranic figures
+9. **CRITICAL** All 4 INCORRECT options (distractors) in each category MUST be DEFINITELY FALSE for the chosen character/figure.
+   - Do NOT use facts that are actually true about the character as distractors.
+   - Example (Prophet Ibrahim): If the answer is "Prophet Ibrahim", do NOT use "Built a sacred house" as an incorrect option, because he did build the Kaaba. That makes the puzzle confusing and unfair. Every distractor must unequivocally belong to someone else.
 
 FORBIDDEN titles (used recently): {avoided_titles}
 
