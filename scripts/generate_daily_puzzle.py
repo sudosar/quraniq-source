@@ -480,7 +480,13 @@ def call_model(prompt, model_config, system_msg=None):
                     cont_text = cont_data["choices"][0]["message"]["content"]
                     cont_usage = cont_data.get("usage", {})
                     print(f"  Continuation tokens: {cont_usage.get('completion_tokens', '?')} out")
-                    accumulated += cont_text
+                    
+                    # Clean up continuation text (often models prepend ```json again or add a leading space)
+                    cleaned_cont = cont_text.strip()
+                    if cleaned_cont.startswith("```"):
+                        cleaned_cont = re.sub(r'^```(?:json)?\s*', '', cleaned_cont)
+                    
+                    accumulated += cleaned_cont
                     if not is_json_truncated(accumulated):
                         print(f"  ✓ JSON completed after {cont} continuation(s)")
                         return accumulated
@@ -596,12 +602,12 @@ RULES:
 1. Each group MUST have exactly 4 items
 2. All 4 groups should be from DIFFERENT areas of Islamic knowledge
 3. Items within a group must clearly belong together under the stated theme
-4. **CRITICAL** The EXACT Arabic word (same form, same inflection) MUST appear in the referenced verse.
+4. **CRITICAL** The Arabic word MUST appear in the referenced verse.
    - The word will be verified against the actual Quran API text. If the word is NOT found in the verse, the puzzle is REJECTED.
-   - Example: if you write "ar": "بَيْتٍ" and "ref": "24:28", the word بيت must literally appear in verse 24:28.
-   - Do NOT cite a verse that merely discusses the concept — the exact word form must be present.
-   - BAD: بَابًا ref 4:46 (verse 4:46 does not contain the word بابا)
-   - GOOD: بَابًا ref 23:77 (verse 23:77 contains بابا)
+   - Example: if you write "ar": "بَيْت", the word بيت (or variations like بيتا, بيته) must appear in the verse.
+   - Do NOT cite a verse that merely discusses the concept — the word root must be physically present.
+   - BAD: "ar":"بَابًا", "ref":"4:46" (verse 4:46 does not contain the word بابا or باب)
+   - GOOD: "ar":"بَابًا", "ref":"23:77" (verse 23:77 contains بابا)
 5. Verse references MUST be real and accurate (surah:ayah format like "2:255")
 6. Each group needs a category-level representative verse reference
 7. Make the puzzle challenging but fair
