@@ -1234,8 +1234,17 @@ function showFinalResults() {
         </div>
 
         <!-- Share -->
-        <button class="btn btn-primary juz-share-btn" onclick="shareJuzResults()">Share Results</button>
-      </div>
+        <div class="result-actions" style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <button class="btn btn-primary juz-share-btn" style="flex:1" onclick="shareJuzResults()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="margin-right:4px;vertical-align:middle;">
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                <polyline points="16 6 12 2 8 6" />
+                <line x1="12" y1="2" x2="12" y2="15" />
+            </svg>
+            Share Results
+          </button>
+          <button class="btn btn-secondary juz-copy-btn" style="flex:1" onclick="copyJuzResults()">Copy to Clipboard</button>
+        </div>
     </div>
   `;
 
@@ -1247,17 +1256,23 @@ function shareJuzResults() {
   const container = document.getElementById(JUZ_CONTAINER_ID);
   const text = container.dataset.shareText;
   if (navigator.share) {
-    navigator.share({ text });
+    navigator.share({ text }).catch(e => console.log('Share canceled', e));
   } else {
-    navigator.clipboard.writeText(text).then(() => {
-      // Show toast
-      if (typeof showTestToast === 'function') {
-        showTestToast('Results copied to clipboard!');
-      } else if (typeof showToast === 'function') {
-        showToast('Results copied to clipboard!');
-      }
-    });
+    copyJuzResults();
   }
+}
+
+function copyJuzResults() {
+  const container = document.getElementById(JUZ_CONTAINER_ID);
+  const text = container.dataset.shareText;
+  navigator.clipboard.writeText(text).then(() => {
+    // Show toast
+    if (typeof showTestToast === 'function') {
+      showTestToast('Results copied to clipboard!');
+    } else if (typeof showToast === 'function') {
+      showToast('Results copied to clipboard!');
+    }
+  }).catch(e => console.error('Failed to copy', e));
 }
 
 // ===== Production: Juz Journey Initialization =====
