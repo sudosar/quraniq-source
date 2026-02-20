@@ -150,9 +150,10 @@ OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 
-# Model fallback chain: Gemini 2.5 Flash → DeepSeek-R1 → GPT-4.1
+# Model fallback chain: Gemini 3 Flash Preview → Gemini 2.5 Flash → DeepSeek-R1 → GPT-4.1
 # Benchmark (Feb 2026): Gemini best avoidance+speed, DeepSeek best reasoning, GPT best diversity
 MODEL_CHAIN = [
+    {"id": "gemini-3-flash-preview", "api": "gemini", "label": "Gemini 3 Flash Preview (Google)"},
     {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Google)"},
     {"id": "DeepSeek-R1", "api": "github", "label": "DeepSeek-R1 (GitHub Models)"},
     {"id": "gpt-4.1", "api": "openai", "label": "GPT-4.1 (OpenAI)"},
