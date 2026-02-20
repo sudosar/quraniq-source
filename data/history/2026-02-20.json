@@ -1,6 +1,5 @@
 {
-  "date": "2026-02-20",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "سِجِلُّ الأَعْمَالِ",
@@ -164,6 +163,175 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "علم",
+    "display": "عِلْم",
+    "hint": "What you seek when you say \"Rabbi zidni...\"",
+    "verseRef": "20:114",
+    "arabicVerse": "فَتَعَـٰلَى ٱللَّهُ ٱلْمَلِكُ ٱلْحَقُّ ۗ وَلَا تَعْجَلْ بِٱلْقُرْءَانِ مِن قَبْلِ أَن يُقْضَىٰٓ إِلَيْكَ وَحْيُهُۥ ۖ وَقُل رَّبِّ زِدْنِى عِلْمًۭا",
+    "verse": "20:114 — So high [above all] is Allāh, the Sovereign, the Truth. And, [O Muḥammad], do not hasten with [recitation of] the Qur’ān before its revelation is completed to you, and say, \"My Lord, increase me in knowledge.\""
+  },
+  "deduction": {
+    "title": "The Fire's Witness",
+    "intro": "A profound individual, dedicated to uncovering the ultimate reality, embarked on a journey of spiritual discovery. Their unwavering conviction led them to challenge established norms, facing immense trials that tested the limits of faith. This soul's story is a testament to divine protection and guidance.",
+    "clues": [
+      "I was blessed with a unique title from my Lord, signifying a deep and special bond.",
+      "My early life was spent among a people who bowed down to crafted images, but my heart yearned for the One True God.",
+      "I observed the celestial bodies, the sun, moon, and stars, contemplating their rise and fall, concluding they could not be my Lord.",
+      "In an act of defiance against widespread polytheism, I confronted the false deities, leaving a solitary, larger one intact as a silent accuser.",
+      "My challenge to idolatry led to a severe punishment, as I was condemned to be cast into a raging inferno.",
+      "Yet, by the command of my Creator, the intense flames transformed into a source of coolness and safety, preserving my life."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Prophet Musa",
+          "Prophet Nuh",
+          "Prophet Ibrahim",
+          "Prophet Isa",
+          "Prophet Yusuf"
+        ],
+        "answer": "Prophet Ibrahim"
+      },
+      "trial": {
+        "label": "Trial/Event",
+        "options": [
+          "Crossing the Red Sea",
+          "The Flood",
+          "The Sacrifice of a Son",
+          "The Fiery Ordeal",
+          "The Whale's Belly"
+        ],
+        "answer": "The Fiery Ordeal"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The Ark",
+          "The Staff",
+          "The Kaaba",
+          "The Fire",
+          "The Well"
+        ],
+        "answer": "The Fire"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "Led people to safety",
+          "Built a sacred house",
+          "Was swallowed by a fish",
+          "Was saved from burning",
+          "Received the tablets"
+        ],
+        "answer": "Was saved from burning"
+      }
+    },
+    "verseRef": "37:97",
+    "arabic": "قَالُوا۟ ٱبْنُوا۟ لَهُۥ بُنْيَـٰنًۭا فَأَلْقُوهُ فِى ٱلْجَحِيمِ",
+    "verse": "They said, \"Construct for him a structure [i.e., furnace] and throw him into the burning fire.\" (37:97)"
+  },
+  "scramble": {
+    "verseRef": "8:24",
+    "reference": "Al-Anfal (8:24)",
+    "segments": [
+      "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+      "اسْتَجِيبُوا لِلَّهِ",
+      "وَلِلرَّسُولِ",
+      "إِذَا دَعَاكُمْ",
+      "لِمَا يُحْيِيكُمْ"
+    ],
+    "translations": [
+      "O you who believe Respond",
+      "to Allah and His Messenger when he calls you",
+      "to what gives you life And know that",
+      "Allah comes (in) between a man",
+      "and his heart and that to Him you will be gathered"
+    ],
+    "hint": "This verse reminds believers to answer a divine call that brings true vitality and spiritual awakening.",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَجِيبُوا۟ لِلَّهِ وَلِلرَّسُولِ إِذَا دَعَاكُمْ لِمَا يُحْيِيكُمْ ۖ وَٱعْلَمُوٓا۟ أَنَّ ٱللَّهَ يَحُولُ بَيْنَ ٱلْمَرْءِ وَقَلْبِهِۦ وَأَنَّهُۥٓ إِلَيْهِ تُحْشَرُونَ",
+    "words": [
+      "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَجِيبُوا۟",
+      "لِلَّهِ وَلِلرَّسُولِ إِذَا دَعَاكُمْ",
+      "لِمَا يُحْيِيكُمْ ۖ وَٱعْلَمُوٓا۟ أَنَّ",
+      "ٱللَّهَ يَحُولُ بَيْنَ ٱلْمَرْءِ",
+      "وَقَلْبِهِۦ وَأَنَّهُۥٓ إِلَيْهِ تُحْشَرُونَ"
+    ],
+    "verseEn": "O you who have believed, respond to Allāh and to the Messenger when he calls you to that which gives you life. And know that Allāh intervenes between a man and his heart and that to Him you will be gathered."
+  },
+  "juz": {
+    "date": "2026-02-20",
+    "juz_number": 4,
+    "juz_name": "Lan Tanālū",
+    "juz_name_ar": "لَن تَنَالُوا",
+    "verse": {
+      "surah_number": 3,
+      "surah_name": "Al-Imran",
+      "surah_name_ar": "آل عمران",
+      "ayah_number": 103,
+      "arabic_text": "وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا ۚ وَاذْكُرُوا نِعْمَتَ اللَّهِ عَلَيْكُمْ إِذْ كُنتُمْ أَعْدَاءً فَأَلَّفَ بَيْنَ قُلُوبِكُمْ فَأَصْبَحْتُم بِنِعْمَتِهِ إِخْوَانًا وَكُنتُمْ عَلَىٰ شَفَا حُفْرَةٍ مِّنَ النَّارِ فَأَنقَذَكُم مِّنْهَا ۗ كَذَٰلِكَ يُبَيِّنُ اللَّهُ لَكُمْ آيَاتِهِ لَعَلَّكُمْ تَهْتَدُونَ",
+      "translation": "And hold firmly to the rope of Allah all together and do not become divided. And remember the favor of Allah upon you when you were enemies and He brought your hearts together and you became, by His favor, brothers. And you were on the edge of a pit of the Fire, and He saved you from it. Thus does Allah make clear to you His verses that you may be guided.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/396.mp3"
+    },
+    "theme_question": {
+      "correct": "The paramount importance of unity among Muslims and adherence to Allah's guidance to avoid division.",
+      "options": [
+        "The paramount importance of unity among Muslims and adherence to Allah's guidance to avoid division.",
+        "The necessity of individual worship and devotion as the sole path to salvation.",
+        "The prohibition of innovation in religion and strict adherence to ancestral traditions.",
+        "The rewards for those who struggle in Allah's cause through warfare and conquest."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 3,
+      "options": [
+        {
+          "num": 3,
+          "name": "Al-Imran",
+          "name_ar": "آل عمران",
+          "name_en": "The Family of Imran"
+        },
+        {
+          "num": 4,
+          "name": "An-Nisa",
+          "name_ar": "النساء",
+          "name_en": "The Women"
+        },
+        {
+          "num": 2,
+          "name": "Al-Baqarah",
+          "name_ar": "البقرة",
+          "name_en": "The Cow"
+        },
+        {
+          "num": 5,
+          "name": "Al-Ma'idah",
+          "name_ar": "المائدة",
+          "name_en": "The Table Spread"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 3,
+          "name": "Al-Imran",
+          "name_ar": "آل عمران",
+          "name_en": "The Family of Imran"
+        },
+        {
+          "num": 4,
+          "name": "An-Nisa",
+          "name_ar": "النساء",
+          "name_en": "The Women"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This powerful verse from Surah Al-Imran comes after a series of warnings to the People of the Book about their divisions and their deviation from the true path. It directly addresses the Muslim community, urging them to learn from past mistakes and to safeguard their unity. It reminds them of Allah's immense favor in bringing their hearts together, transforming them from enemies into brothers, and saving them from the brink of Hellfire, implying that maintaining this unity is a continuous act of gratitude and a means of guidance.",
+      "theme_explanation": "The 'rope of Allah' (حَبْلِ اللَّهِ) is widely interpreted by scholars as the Quran, the Sunnah of the Prophet Muhammad (peace be upon him), or the religion of Islam itself. Holding firmly to it collectively signifies the absolute necessity of adhering to the divine revelation and prophetic guidance as the foundational basis for Muslim unity. The verse explicitly forbids division (وَلَا تَفَرَّقُوا), highlighting that fragmentation and discord are antithetical to the spirit of Islam and detrimental to the strength and well-being of the Ummah. It emphasizes that true brotherhood and harmony are gifts from Allah, achieved by following His path, and are essential for collective success and salvation.",
+      "surah_overview": "Juz 4 encompasses a significant portion of Surah Al-Imran (from ayah 93 to the end) and the beginning of Surah An-Nisa (up to ayah 23). \n\n**Surah Al-Imran (The Family of Imran)** is a Madani Surah, continuing many themes from Al-Baqarah. It focuses on the Oneness of Allah (Tawhid), refuting the claims of Christians and Jews regarding prophethood and the nature of God, and detailing the stories of prophets like Zakariya, Maryam, and Isa (Jesus). A major part of the Surah addresses the lessons from the Battle of Uhud, emphasizing the importance of patience, steadfastness, and reliance on Allah in times of adversity, and the need for unity within the Muslim community. It also lays down principles for inviting to good and forbidding evil. \n\n**Surah An-Nisa (The Women)** is also a Madani Surah and begins in this Juz. It is distinctive for its detailed legislation concerning women's rights, orphans, inheritance, marriage, family law, and social justice. The Surah emphasizes the importance of upholding the rights of the vulnerable in society and establishes clear guidelines for ethical conduct within the family and community. It also addresses issues of hypocrisy (munafiqeen) and the People of the Book, calling for justice and fairness in all dealings."
+    }
+  }
 }

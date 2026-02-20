@@ -1,12 +1,12 @@
 {
-  "date": "2026-02-19",
+  "date": "2026-02-20",
   "puzzle": {
-    "word": "خير",
-    "display": "خَيْر",
-    "hint": "A quality often contrasted with evil, indicating what is superior or beneficial.",
-    "verseRef": "18:46",
-    "arabicVerse": "ٱلْمَالُ وَٱلْبَنُونَ زِينَةُ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۖ وَٱلْبَـٰقِيَـٰتُ ٱلصَّـٰلِحَـٰتُ خَيْرٌ عِندَ رَبِّكَ ثَوَابًۭا وَخَيْرٌ أَمَلًۭا",
-    "verse": "18:46 — Wealth and children are [but] adornment of the worldly life. But the enduring good deeds are better to your Lord for reward and better for [one's] hope."
+    "word": "علم",
+    "display": "عِلْم",
+    "hint": "What you seek when you say \"Rabbi zidni...\"",
+    "verseRef": "20:114",
+    "arabicVerse": "فَتَعَـٰلَى ٱللَّهُ ٱلْمَلِكُ ٱلْحَقُّ ۗ وَلَا تَعْجَلْ بِٱلْقُرْءَانِ مِن قَبْلِ أَن يُقْضَىٰٓ إِلَيْكَ وَحْيُهُۥ ۖ وَقُل رَّبِّ زِدْنِى عِلْمًۭا",
+    "verse": "20:114 — So high [above all] is Allāh, the Sovereign, the Truth. And, [O Muḥammad], do not hasten with [recitation of] the Qur’ān before its revelation is completed to you, and say, \"My Lord, increase me in knowledge.\""
   },
   "generated": true,
   "model": "auto (chain)"

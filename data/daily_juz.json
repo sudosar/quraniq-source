@@ -1,53 +1,53 @@
 {
-  "date": "2026-02-19",
+  "date": "2026-02-20",
   "puzzle": {
-    "date": "2026-02-19",
-    "juz_number": 3,
-    "juz_name": "Tilka ar-Rusul",
-    "juz_name_ar": "تِلْكَ الرُّسُلُ",
+    "date": "2026-02-20",
+    "juz_number": 4,
+    "juz_name": "Lan Tanālū",
+    "juz_name_ar": "لَن تَنَالُوا",
     "verse": {
-      "surah_number": 2,
-      "surah_name": "Al-Baqarah",
-      "surah_name_ar": "الْبَقَرَة",
-      "ayah_number": 255,
-      "arabic_text": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌۭ وَلَا نَوْمٌۭ ۚ لَّهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍۢ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ",
-      "translation": "Allāh - there is no deity except Him, the Ever-Living, the Self-Sustaining. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is [presently] before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursī extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/262.mp3"
+      "surah_number": 3,
+      "surah_name": "Al-Imran",
+      "surah_name_ar": "آل عمران",
+      "ayah_number": 103,
+      "arabic_text": "وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا ۚ وَاذْكُرُوا نِعْمَتَ اللَّهِ عَلَيْكُمْ إِذْ كُنتُمْ أَعْدَاءً فَأَلَّفَ بَيْنَ قُلُوبِكُمْ فَأَصْبَحْتُم بِنِعْمَتِهِ إِخْوَانًا وَكُنتُمْ عَلَىٰ شَفَا حُفْرَةٍ مِّنَ النَّارِ فَأَنقَذَكُم مِّنْهَا ۗ كَذَٰلِكَ يُبَيِّنُ اللَّهُ لَكُمْ آيَاتِهِ لَعَلَّكُمْ تَهْتَدُونَ",
+      "translation": "And hold firmly to the rope of Allah all together and do not become divided. And remember the favor of Allah upon you when you were enemies and He brought your hearts together and you became, by His favor, brothers. And you were on the edge of a pit of the Fire, and He saved you from it. Thus does Allah make clear to you His verses that you may be guided.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/396.mp3"
     },
     "theme_question": {
-      "correct": "The absolute sovereignty and self-subsistence of Allah (Ayat al-Kursi)",
+      "correct": "The paramount importance of unity among Muslims and adherence to Allah's guidance to avoid division.",
       "options": [
-        "The story of Prophet Ibrahim and the fire",
-        "The absolute sovereignty and self-subsistence of Allah (Ayat al-Kursi)",
-        "The rules of divorce and family life",
-        "The description of the Day of Judgment"
+        "The paramount importance of unity among Muslims and adherence to Allah's guidance to avoid division.",
+        "The necessity of individual worship and devotion as the sole path to salvation.",
+        "The prohibition of innovation in religion and strict adherence to ancestral traditions.",
+        "The rewards for those who struggle in Allah's cause through warfare and conquest."
       ]
     },
     "surah_question": {
-      "correct_surah": 2,
+      "correct_surah": 3,
       "options": [
         {
           "num": 3,
-          "name": "Al Imran",
-          "name_ar": "آل عِمْرَان",
+          "name": "Al-Imran",
+          "name_ar": "آل عمران",
           "name_en": "The Family of Imran"
-        },
-        {
-          "num": 2,
-          "name": "Al-Baqarah",
-          "name_ar": "الْبَقَرَة",
-          "name_en": "The Cow"
         },
         {
           "num": 4,
           "name": "An-Nisa",
-          "name_ar": "النِّسَاء",
+          "name_ar": "النساء",
           "name_en": "The Women"
+        },
+        {
+          "num": 2,
+          "name": "Al-Baqarah",
+          "name_ar": "البقرة",
+          "name_en": "The Cow"
         },
         {
           "num": 5,
           "name": "Al-Ma'idah",
-          "name_ar": "الْمَائِدَة",
+          "name_ar": "المائدة",
           "name_en": "The Table Spread"
         }
       ]
@@ -55,23 +55,23 @@
     "surah_order": {
       "surahs": [
         {
-          "num": 2,
-          "name": "Al-Baqarah",
-          "name_ar": "الْبَقَرَة",
-          "name_en": "The Cow"
+          "num": 3,
+          "name": "Al-Imran",
+          "name_ar": "آل عمران",
+          "name_en": "The Family of Imran"
         },
         {
-          "num": 3,
-          "name": "Al Imran",
-          "name_ar": "آل عِمْرَان",
-          "name_en": "The Family of Imran"
+          "num": 4,
+          "name": "An-Nisa",
+          "name_ar": "النساء",
+          "name_en": "The Women"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "Ayat al-Kursi (The Verse of the Throne) is the 255th verse of Surah Al-Baqarah. It is considered the greatest verse in the Quran and is recited for protection. It describes Allah's absolute authority over the heavens and the earth and His attribute of being Ever-Living and Sustainer of existence.",
-      "theme_explanation": "This verse establishes the concept of Tawhid (Oneness of God) in the most comprehensive manner. It negates any weakness, sleep, or fatigue from Allah and affirms His infinite knowledge and power. The 'Kursi' (Footstool/Chair) represents His dominion and authority which extends over the entire universe.",
-      "surah_overview": "Surah Al-Baqarah is the longest surah in the Quran. It covers meaningful laws, stories of past prophets (like Adam, Ibrahim, and Musa), and guidance for the Muslim community. It was revealed in Madinah and contains the longest verse (2:282) and the greatest verse (2:255)."
+      "verse_context": "This powerful verse from Surah Al-Imran comes after a series of warnings to the People of the Book about their divisions and their deviation from the true path. It directly addresses the Muslim community, urging them to learn from past mistakes and to safeguard their unity. It reminds them of Allah's immense favor in bringing their hearts together, transforming them from enemies into brothers, and saving them from the brink of Hellfire, implying that maintaining this unity is a continuous act of gratitude and a means of guidance.",
+      "theme_explanation": "The 'rope of Allah' (حَبْلِ اللَّهِ) is widely interpreted by scholars as the Quran, the Sunnah of the Prophet Muhammad (peace be upon him), or the religion of Islam itself. Holding firmly to it collectively signifies the absolute necessity of adhering to the divine revelation and prophetic guidance as the foundational basis for Muslim unity. The verse explicitly forbids division (وَلَا تَفَرَّقُوا), highlighting that fragmentation and discord are antithetical to the spirit of Islam and detrimental to the strength and well-being of the Ummah. It emphasizes that true brotherhood and harmony are gifts from Allah, achieved by following His path, and are essential for collective success and salvation.",
+      "surah_overview": "Juz 4 encompasses a significant portion of Surah Al-Imran (from ayah 93 to the end) and the beginning of Surah An-Nisa (up to ayah 23). \n\n**Surah Al-Imran (The Family of Imran)** is a Madani Surah, continuing many themes from Al-Baqarah. It focuses on the Oneness of Allah (Tawhid), refuting the claims of Christians and Jews regarding prophethood and the nature of God, and detailing the stories of prophets like Zakariya, Maryam, and Isa (Jesus). A major part of the Surah addresses the lessons from the Battle of Uhud, emphasizing the importance of patience, steadfastness, and reliance on Allah in times of adversity, and the need for unity within the Muslim community. It also lays down principles for inviting to good and forbidding evil. \n\n**Surah An-Nisa (The Women)** is also a Madani Surah and begins in this Juz. It is distinctive for its detailed legislation concerning women's rights, orphans, inheritance, marriage, family law, and social justice. The Surah emphasizes the importance of upholding the rights of the vulnerable in society and establishes clear guidelines for ethical conduct within the family and community. It also addresses issues of hypocrisy (munafiqeen) and the People of the Book, calling for justice and fairness in all dealings."
     }
   },
   "generated": true,
