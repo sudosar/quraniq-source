@@ -760,6 +760,7 @@ Choose a completely different word."""
 
     return f"""You are an expert Islamic scholar creating a daily "Harf by Harf" puzzle.
 
+DATE: {today}
 TASK: Generate ONE Arabic Quranic word for a Harf-by-Harf style guessing game.
 
 RULES:
@@ -838,7 +839,7 @@ def validate_harf(puzzle, history):
 # ═══════════════════════════════════════════════════════════════════
 # DEDUCTION GENERATOR (Who Am I?)
 # ═══════════════════════════════════════════════════════════════════
-def build_deduction_prompt(history, previous_violations=None):
+def build_deduction_prompt(history, today, previous_violations=None):
     avoided_titles = ", ".join(sorted(history["deduction"]["titles"])) or "(none)"
     avoided_characters = ", ".join(sorted(history["deduction"].get("characters", set()))) or "(none)"
     # Merge game-specific + global verse refs
@@ -856,6 +857,7 @@ Choose a completely different story/character."""
 
     return f"""You are an expert Islamic scholar creating a daily "Who Am I?" puzzle for QuranIQ.
 
+DATE: {today}
 TASK: Create a mystery-style "Who Am I?" puzzle about ANY figure, character, or group mentioned in the Quran.
 This can be a prophet, a ruler (e.g. Pharaoh, Namrud), a righteous person (e.g. Maryam, Luqman), a group (e.g. People of the Cave, People of the Elephant), or even a notable figure like Qarun, Iblis, etc.
 
@@ -1007,7 +1009,7 @@ def validate_deduction(puzzle, history):
 # ═══════════════════════════════════════════════════════════════════
 # SCRAMBLE GENERATOR
 # ═══════════════════════════════════════════════════════════════════
-def build_scramble_prompt(history, previous_violations=None):
+def build_scramble_prompt(history, today, previous_violations=None):
     # Merge game-specific + global verse refs
     all_avoided = set()
     for ref in history["scramble"]["references"]:
@@ -1029,6 +1031,7 @@ Choose a completely different verse from a DIFFERENT surah."""
 
     return f"""You are an expert Islamic scholar creating a daily "Ayah Scramble" puzzle.
 
+DATE: {today}
 TASK: Choose a significant, well-known Quranic verse for a scramble game.
 Players will rearrange Arabic segments to reconstruct the original verse.
 
@@ -1050,7 +1053,7 @@ RULES:
 3. Split the verse into 4-7 consecutive segments (1-3 words each)
 4. For each segment, provide its English translation
 5. Provide a hint about the verse's theme
-6. The verse MUST be from a surah NOT in the forbidden surahs list below
+6. The verse MUST be from a surah NOT in the forbidden surahs list
 
 FORBIDDEN verse refs (used recently — includes ALL games): {avoided_refs}
 
@@ -1151,9 +1154,8 @@ def get_juz_number_for_today(today_str):
     return max(1, min(30, day_of_ramadan))
 
 
-def build_juz_prompt(history, previous_violations=None):
+def build_juz_prompt(history, today, previous_violations=None):
     """Build the LLM prompt for Juz Journey puzzle generation."""
-    today = datetime.utcnow().strftime("%Y-%m-%d")
     juz_number = get_juz_number_for_today(today)
 
     # Juz Journey only avoids its own used verses (30-day Ramadan window)
@@ -1751,7 +1753,7 @@ def generate_game(game_type, history, today):
             total_attempt += 1
             print(f"\n  Attempt {total_attempt} (retry {retry}/{MAX_RETRIES}) using {model_label}...")
 
-            prompt = config["build_prompt"](history, previous_violations)
+            prompt = config["build_prompt"](history, today, previous_violations)
             raw = call_model(prompt, model_config)
 
             # Rate limited → wait 30s and retry once before falling back

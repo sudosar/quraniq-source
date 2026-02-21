@@ -261,77 +261,71 @@
     "verseEn": "Say, \"Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allāh, Lord of the worlds."
   },
   "juz": {
-    "date": "2026-02-20",
-    "juz_number": 4,
-    "juz_name": "Lan Tanalu",
-    "juz_name_ar": "لَنْ تَنَالُوا",
+    "date": "2026-02-21",
+    "juz_number": 5,
+    "juz_name": "Wal Muhsanat",
+    "juz_name_ar": "وَالْمُحْصَنَاتُ",
     "verse": {
-      "surah_number": 3,
-      "surah_name": "Al-Imran",
-      "surah_name_ar": "آل عِمْرَان",
-      "ayah_number": 133,
-      "arabic_text": "وَسَارِعُوا إِلَىٰ مَغْفِرَةٍ مِّن رَّبِّكُمْ وَجَنَّةٍ عَرْضُهَا السَّمَاوَاتُ وَالْأَرْضُ أُعِدَّتْ لِلْمُتَّقِينَ",
-      "translation": "And hasten to forgiveness from your Lord and a garden as wide as the heavens and earth, prepared for the righteous.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/426.mp3"
+      "surah_number": 4,
+      "surah_name": "An-Nisa",
+      "surah_name_ar": "النساء",
+      "ayah_number": 103,
+      "arabic_text": "فَإِذَا قَضَيْتُمُ الصَّلَاةَ فَاذْكُرُوا اللَّهَ قِيَامًا وَقُعُودًا وَعَلَىٰ جُنُوبِكُمْ ۚ فَإِذَا اطْمَأْنَنْتُمْ فَأَقِيمُوا الصَّلَاةَ ۚ إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا",
+      "translation": "Then when you have finished the prayer, remember Allah standing and sitting and [lying] on your sides. But when you are secure, establish [regular] prayer. Indeed, prayer has been decreed upon the believers a decree of specified times.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/596.mp3"
     },
     "theme_question": {
-      "correct": "Hastening and competing in seeking Allah's forgiveness and Paradise",
+      "correct": "The obligation of performing prayer at its prescribed times and remembering Allah in all states.",
       "options": [
-        "Delaying repentance until the end of one's life",
-        "Hastening and competing in seeking Allah's forgiveness and Paradise",
-        "Prioritizing worldly status over spiritual growth",
-        "Waiting for a miraculous sign before practicing faith"
+        "The obligation of performing prayer at its prescribed times and remembering Allah in all states.",
+        "The rules for seeking permission before entering homes.",
+        "The virtues of giving charity in secret.",
+        "The historical account of the Battle of Badr."
       ]
     },
     "surah_question": {
-      "correct_surah": 3,
+      "correct_surah": 4,
       "options": [
-        {
-          "num": 2,
-          "name": "Al-Baqarah",
-          "name_ar": "الْبَقَرَة",
-          "name_en": "The Cow"
-        },
-        {
-          "num": 3,
-          "name": "Al-Imran",
-          "name_ar": "آل عِمْرَان",
-          "name_en": "Family of Imran"
-        },
         {
           "num": 4,
           "name": "An-Nisa",
-          "name_ar": "النِّسَاء",
+          "name_ar": "النساء",
           "name_en": "The Women"
         },
         {
           "num": 5,
           "name": "Al-Ma'idah",
-          "name_ar": "الْمَائِدَة",
+          "name_ar": "المائدة",
           "name_en": "The Table Spread"
+        },
+        {
+          "num": 3,
+          "name": "Al-Imran",
+          "name_ar": "آل عمران",
+          "name_en": "The Family of Imran"
+        },
+        {
+          "num": 6,
+          "name": "Al-An'am",
+          "name_ar": "الأنعام",
+          "name_en": "The Cattle"
         }
       ]
     },
     "surah_order": {
       "surahs": [
         {
-          "num": 3,
-          "name": "Al-Imran",
-          "name_ar": "آل عِمْرَان",
-          "name_en": "Family of Imran"
-        },
-        {
           "num": 4,
           "name": "An-Nisa",
-          "name_ar": "النِّسَاء",
+          "name_ar": "النساء",
           "name_en": "The Women"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse was revealed following the Battle of Uhud, a time of great physical and emotional trial for the early Muslim community. It served as a powerful reminder to pivot from worldly setbacks toward the eternal goal of Allah's pleasure.",
-      "theme_explanation": "The word 'Saari'u' (hasten/race) implies that a believer should be proactive and energetic in their spiritual life. It suggests that forgiveness and Paradise are not things to be approached lazily, but are goals worth competing for.",
-      "surah_overview": "Juz 4 completes Surah Al-Imran, which emphasizes steadfastness and the unity of the message of the Prophets, and begins Surah An-Nisa, which shifts the focus toward social justice, the protection of orphans, and the legal rights of women."
+      "verse_context": "This verse occurs within the context of instructions for the 'Prayer of Fear' (Salat al-Khawf) during times of danger or battle. It emphasizes that even when the special fear prayer is completed, the remembrance of Allah should continue, and once security is restored, the full regular prayer must be established.",
+      "theme_explanation": "The verse highlights two critical aspects of worship: constant dhikr (remembrance) and the discipline of salah. The phrase 'kitaban mawquta' signifying 'a decree of specified times' underscores that prayer is not just a general obligation but one tied to specific moments of the day, forming a spiritual rhythm for the believer.",
+      "surah_overview": "Juz 5 is entirely contained within Surah An-Nisa. This section of the Surah continues to address themes of social justice, legal rulings concerning marriage and family, inheritance, and the rights of the vulnerable. It also addresses the complexities of dealing with hypocrites and provides guidance on maintaining faith during adversity."
     }
   }
 }
