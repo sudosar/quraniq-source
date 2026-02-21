@@ -1,13 +1,12 @@
 {
-  "date": "2026-02-20",
+  "date": "2026-02-21",
   "puzzle": {
-    "word": "علم",
-    "display": "عِلْم",
-    "hint": "What you seek when you say \"Rabbi zidni...\"",
-    "verseRef": "20:114",
-    "arabicVerse": "فَتَعَـٰلَى ٱللَّهُ ٱلْمَلِكُ ٱلْحَقُّ ۗ وَلَا تَعْجَلْ بِٱلْقُرْءَانِ مِن قَبْلِ أَن يُقْضَىٰٓ إِلَيْكَ وَحْيُهُۥ ۖ وَقُل رَّبِّ زِدْنِى عِلْمًۭا",
-    "verse": "20:114 — So high [above all] is Allāh, the Sovereign, the Truth. And, [O Muḥammad], do not hasten with [recitation of] the Qur’ān before its revelation is completed to you, and say, \"My Lord, increase me in knowledge.\""
+    "word": "لسان",
+    "display": "لِسَان",
+    "hint": "This word means 'tongue' or 'language' and is used in the Quran to describe the clarity of the Arabic message.",
+    "verseRef": "16:103",
+    "arabicVerse": "وَلَقَدْ نَعْلَمُ أَنَّهُمْ يَقُولُونَ إِنَّمَا يُعَلِّمُهُۥ بَشَرٌۭ ۗ لِّسَانُ ٱلَّذِى يُلْحِدُونَ إِلَيْهِ أَعْجَمِىٌّۭ وَهَـٰذَا لِسَانٌ عَرَبِىٌّۭ مُّبِينٌ",
+    "verse": "16:103 — And We certainly know that they say, \"It is only a human being who teaches him [i.e., the Prophet (ﷺ)].\" The tongue of the one they refer to is foreign, and this [recitation, i.e., Qur’ān] is [in] a clear Arabic language."
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "generated": true
 }
