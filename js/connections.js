@@ -923,6 +923,13 @@ function showConnResult(won, cacheOnly) {
         // Just cache the result and show the button, don't open the modal
         app.lastResults['connections'] = resultData;
         showViewResultsButton('connections');
+
+        // Force Firebase score sync on page load for completed games
+        // This ensures the new scoring system (max 8) is applied even for
+        // games completed before the scoring update was deployed.
+        if (typeof submitFirebaseScore === 'function') {
+            submitFirebaseScore('connections', totalScore).catch(() => { });
+        }
         return;
     }
 
