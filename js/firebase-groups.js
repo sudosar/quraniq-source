@@ -523,6 +523,7 @@ async function submitFirebaseScore(gameMode, crescents) {
         const modeMap = {
             connections: 'connections',
             wordle: 'harf',
+            harf: 'harf',
             deduction: 'deduction',
             scramble: 'scramble',
             juz: 'juz'
