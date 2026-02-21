@@ -448,6 +448,8 @@ function showHelpModal() {
             <p>Difficulty increases with each group:</p>
             <p>🟨 Easiest &rarr; 🟩 &rarr; 🟦 &rarr; 🟪 Hardest</p>
             <p>You have 4 mistakes before the session ends. Each incorrect guess costs one attempt.</p>
+            <p><strong>Scoring (max 8 points):</strong></p>
+            <p>🌒 1 point for solving a row &nbsp; | &nbsp; 🌙 2 points for solving + reviewing all verses in that row</p>
         `,
         harf: `
             <h3>Harf by Harf</h3>
@@ -494,9 +496,9 @@ function showHelpModal() {
 }
 
 // ==================== RESULT MODAL ====================
-function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons, verseRef, crescentRow, exploredCount, totalVerses, dynamicShareFn }) {
+function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons, verseRef, crescentRow, connScore, exploredCount, totalVerses, dynamicShareFn }) {
     // Cache the result so it can be re-opened later
-    app.lastResults[app.currentMode] = { icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons, verseRef, crescentRow, exploredCount, totalVerses, dynamicShareFn };
+    app.lastResults[app.currentMode] = { icon, title, verse, arabic, translation, emojiGrid, statsText, shareText, moons, verseRef, crescentRow, connScore, exploredCount, totalVerses, dynamicShareFn };
     // Show the "View Results" button in the game area
     showViewResultsButton(app.currentMode);
 
@@ -505,9 +507,9 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         let fbMoons = 0;
         if (moons !== undefined && moons !== null) {
             fbMoons = moons;
-        } else if (crescentRow) {
-            // Connections: count solved groups (full moons + crescents) in crescent row
-            fbMoons = (crescentRow.match(/[🌕🌙]/g) || []).length;
+        } else if (connScore !== undefined && connScore !== null) {
+            // Connections: use totalScore (🌒=1pt, 🌙=2pts, max 8)
+            fbMoons = connScore;
         }
         submitFirebaseScore(app.currentMode, fbMoons).catch(() => { });
     }
@@ -550,13 +552,13 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
             verseEl.innerHTML = `${titleHtml}${arabicHtml}${transHtml}`;
         }
     } else if (app.currentMode === 'connections' && crescentRow) {
-        // For connections: show exploration stats and encourage more exploration
+        // For connections: show review stats and encourage more review
         verseEl.style.display = 'block';
-        const freshData = typeof getConnCrescentData === 'function' ? getConnCrescentData() : { totalExplored: exploredCount || 0, totalVerses: totalVerses || 16 };
+        const freshData = typeof getConnCrescentData === 'function' ? getConnCrescentData() : { totalExplored: exploredCount || 0, totalVerses: totalVerses || 16, totalScore: connScore || 0 };
         const allExplored = freshData.totalExplored >= freshData.totalVerses;
         verseEl.innerHTML = `<div class="conn-explore-stats" style="cursor:pointer;">
-            <div class="explore-count">Verses explored: <strong>${freshData.totalExplored}/${freshData.totalVerses}</strong></div>
-            ${!allExplored ? '<div class="explore-hint">\uD83C\uDF15 Tap rows below to explore more verses and earn full moons</div>' : '<div class="explore-hint explore-complete">\u2728 All verses explored! Ma sha Allah! \u2728</div>'}
+            <div class="explore-count">Verses reviewed: <strong>${freshData.totalExplored}/${freshData.totalVerses}</strong> | Score: <strong>${freshData.totalScore}/8</strong></div>
+            ${!allExplored ? '<div class="explore-hint">\uD83C\uDF19 Tap rows below to review more verses and earn 2pts per row</div>' : '<div class="explore-hint explore-complete">\u2728 All verses reviewed! Ma sha Allah! \u2728</div>'}
         </div>`;
         if (!allExplored) {
             verseEl.querySelector('.conn-explore-stats').addEventListener('click', () => {
@@ -568,7 +570,7 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
     } else if (app.currentMode === 'connections') {
         // Tappable prompt that closes modal and expands rows
         verseEl.style.display = 'block';
-        verseEl.innerHTML = '<span class="translation conn-explore-tap" style="font-style:italic; cursor:pointer;">Tap to explore the ayahs from today\'s puzzle \u25BC</span>';
+        verseEl.innerHTML = '<span class="translation conn-explore-tap" style="font-style:italic; cursor:pointer;">Tap to review the ayahs from today\'s puzzle \u25BC</span>';
         verseEl.querySelector('.conn-explore-tap').addEventListener('click', () => {
             trackExplorePromptTap();
             closeModal('result-modal');
@@ -583,9 +585,11 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
     // Crescent / Moon display
     const moonsEl = document.getElementById('result-stars');
     if (crescentRow) {
-        // Connections mode: show dynamic crescent row
+        // Connections mode: show dynamic crescent row with score
         const freshData = typeof getConnCrescentData === 'function' ? getConnCrescentData() : null;
-        moonsEl.textContent = freshData ? freshData.crescentRow : crescentRow;
+        const displayRow = freshData ? freshData.crescentRow : crescentRow;
+        const displayScore = freshData ? freshData.totalScore : (connScore || 0);
+        moonsEl.textContent = `${displayRow} ${displayScore}/8`;
         moonsEl.style.display = 'block';
     } else if (moons !== undefined && moons !== null) {
         moonsEl.textContent = '\uD83C\uDF19'.repeat(moons) + '\uD83C\uDF11'.repeat(5 - moons);
@@ -593,7 +597,15 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
     } else {
         moonsEl.style.display = 'none';
     }
-    document.getElementById('result-stats').textContent = statsText || '';
+    // For connections, refresh statsText with current score
+    if (app.currentMode === 'connections' && typeof getConnCrescentData === 'function') {
+        const freshScore = getConnCrescentData();
+        const correctCount = conn.solved.length === 4 && conn.mistakes > 0 ? 4 : (conn.correctCount ?? 0);
+        const mistakesUsed = 4 - conn.mistakes;
+        document.getElementById('result-stats').textContent = `Score: ${freshScore.totalScore}/8 | Groups: ${correctCount}/4 | Mistakes: ${mistakesUsed}/4`;
+    } else {
+        document.getElementById('result-stats').textContent = statsText || '';
+    }
 
     // Ensure share actions are visible (may have been hidden by encouragement modal)
     const actionsEl = document.querySelector('#result-modal .result-actions');

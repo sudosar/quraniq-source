@@ -977,13 +977,35 @@ async function backfillTodayScores() {
         // --- Connections ---
         const connState = state[`conn_${dayNum}`];
         if (connState && connState.gameOver) {
-            // Count any solved row towards the score (max 4)
+            // New scoring: 🌒 1pt per solved row + 🌙 1 bonus pt if all verses in that row reviewed
             const correctCount = connState.correctCount ?? (connState.solved ? connState.solved.length : 0);
-            const connMoons = Math.min(4, correctCount);
-            if ((current.connections || 0) < connMoons) {
-                current.connections = connMoons;
+            const exploredSet = new Set(connState.exploredVerses || []);
+            let connScore = 0;
+            if (connState.solved) {
+                connState.solved.forEach((s, i) => {
+                    if (i < correctCount) {
+                        connScore += 1; // 1pt for solving
+                        // Check if all verses in this row were reviewed
+                        const items = s.items || [];
+                        const uniqueRefs = new Set();
+                        items.forEach(item => {
+                            const ref = typeof item === 'object' ? item.ref : '';
+                            if (ref) uniqueRefs.add(ref);
+                        });
+                        const rowTotal = uniqueRefs.size || items.length;
+                        let rowExplored = 0;
+                        uniqueRefs.forEach(ref => {
+                            if (exploredSet.has(ref)) rowExplored++;
+                        });
+                        if (rowExplored >= rowTotal) connScore += 1; // +1pt for reviewing all
+                    }
+                });
+            }
+            connScore = Math.min(8, connScore); // Max 8 (4 rows × 2pts)
+            if ((current.connections || 0) < connScore) {
+                current.connections = connScore;
                 changed = true;
-                console.log('[FB] Backfill connections:', connMoons);
+                console.log('[FB] Backfill connections:', connScore);
             }
         }
 
