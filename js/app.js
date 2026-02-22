@@ -352,10 +352,26 @@ function initResetButton() {
         tapTimer = setTimeout(() => { tapCount = 0; }, 1500);
         if (tapCount >= 5) {
             tapCount = 0;
-            if (!confirm('🔧 Dev Reset: Clear all challenge state and reload?')) return;
-            localStorage.removeItem(STATE_KEY);
-            app.state = {};
-            location.reload();
+            const stateStr = localStorage.getItem('quraniq_state');
+            const juzStr = localStorage.getItem('quraniq_juz');
+            let output = "=== QURANIQ DEBUG DATA ===\n";
+            if (stateStr) {
+                const s = JSON.parse(stateStr);
+                const day = s.dayNumber;
+                output += "Day: " + day + "\n";
+                output += "Connections: " + JSON.stringify(s['conn_' + day]) + "\n";
+                output += "Deduction: " + JSON.stringify(s['ded_' + day]) + "\n";
+                output += "Scramble: " + JSON.stringify(s['scr_' + day]) + "\n";
+                output += "Harf: " + JSON.stringify(s['harf_' + day] || s['wordle_' + day]) + "\n";
+            }
+            output += "Juz: " + juzStr + "\n";
+
+            navigator.clipboard.writeText(output).then(() => {
+                showToast('Debug data copied to clipboard!');
+            }).catch(e => {
+                showToast('Failed to copy debug data.');
+                console.error(e);
+            });
         }
     });
 }
@@ -576,6 +592,10 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
             closeModal('result-modal');
             setTimeout(() => expandAllConnRows(), 300);
         });
+    } else if (app.currentMode === 'juz') {
+        // For Juz Journey: show educational focus
+        verseEl.style.display = 'block';
+        verseEl.innerHTML = '<div class="juz-results-explorer-hint">🌙 Explore your Juz Journey summary below or share your results!</div>';
     } else {
         verseEl.style.display = 'none';
     }
@@ -739,6 +759,14 @@ function showViewResultsButton(mode) {
     } else if (mode === 'scramble') {
         const controls = container.querySelector('.scramble-controls');
         if (controls) controls.style.display = 'none';
+    } else if (mode === 'juz') {
+        // Juz results are rendered inside juz-puzzle-container, so we append the button there
+        const juzScrollContainer = document.getElementById('juz-puzzle-container');
+        if (juzScrollContainer) {
+            juzScrollContainer.appendChild(btn);
+            // Scroll to it
+            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
     }
 }
 
