@@ -610,11 +610,10 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
         for i, prev_cat in enumerate(accumulated_cats):
             words_list = [item.get("ar", "") for item in prev_cat.get("items", [])]
             refs_list  = [item.get("ref", "") for item in prev_cat.get("items", [])]
-            cat_ref    = prev_cat.get("verse", {}).get("ref", "")
             lines.append(
                 f"  Category {i+1} ({COLORS[i]}, {DIFFICULTY_LABELS[i]}): \"{prev_cat.get('nameEn')}\"\n"
                 f"    Words : {', '.join(words_list)}\n"
-                f"    Refs  : {', '.join(refs_list)}  |  category verse: {cat_ref}"
+                f"    Refs  : {', '.join(refs_list)}"
             )
         chosen_block = (
             "\n\nALREADY CHOSEN CATEGORIES (do NOT reuse their refs, themes, or word roots):\n"
@@ -688,14 +687,12 @@ OUTPUT FORMAT: Return ONLY a valid JSON object for this single category:
     {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
     {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
     {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}}
-  ],
-  "verse": {{"ref": "surah:ayah"}}
+  ]
 }}
 
 IMPORTANT:
 - Return ONLY the JSON object — no markdown, no explanation.
 - Do NOT include verse text in any field — it will be fetched from the Quran API.
-- The category verse ref must differ from all 4 item refs.
 - Arabic words must include full tashkeel/diacritics."""
 
 
@@ -710,8 +707,6 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
 
     if not cat.get("name") or not cat.get("nameEn"):
         errors.append("Missing 'name' or 'nameEn'")
-    if not cat.get("verse", {}).get("ref"):
-        errors.append("Missing category verse ref")
 
     cat["color"] = COLORS[cat_index]
 
@@ -722,9 +717,6 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
 
     for prev_cat in accumulated_cats:
         all_avoided_themes.add(prev_cat.get("nameEn", "").lower().strip())
-        prev_ref = prev_cat.get("verse", {}).get("ref")
-        if prev_ref:
-            all_avoided_verses.add(prev_ref)
         for item in prev_cat.get("items", []):
             if item.get("ref"):
                 all_avoided_verses.add(item["ref"])
@@ -736,18 +728,15 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
     if theme in all_avoided_themes:
         violations.append(f"Theme '{theme}' reused (cooldown or duplicate in puzzle)")
 
-    # Collect all refs in this category
-    cat_ref_list = []
-    cat_verse_ref = cat.get("verse", {}).get("ref", "")
-    if cat_verse_ref:
-        cat_ref_list.append(cat_verse_ref)
+    # Collect the 4 item refs
+    item_refs = []
     for item in items:
         if item.get("ref"):
-            cat_ref_list.append(item["ref"])
+            item_refs.append(item["ref"])
 
     # Duplicates within category
     seen = set()
-    for ref in cat_ref_list:
+    for ref in item_refs:
         if ref in seen:
             violations.append(f"Duplicate ref within category: {ref}")
         seen.add(ref)
@@ -778,12 +767,6 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
         item.setdefault("verse", "")
         item.setdefault("verseEn", "")
 
-    # Ensure category verse dict has required keys
-    if not isinstance(cat.get("verse"), dict):
-        cat["verse"] = {"ref": cat_verse_ref, "ayah": "", "en": ""}
-    cat["verse"].setdefault("ayah", "")
-    cat["verse"].setdefault("en", "")
-
     return errors, violations, warnings
 
 
@@ -803,8 +786,6 @@ def validate_connections(puzzle, history):
             errors.append(f"Category {i+1} has {len(items)} items, expected 4")
         if not cat.get("name") or not cat.get("nameEn"):
             errors.append(f"Category {i+1} missing name or nameEn")
-        if not cat.get("verse", {}).get("ref"):
-            errors.append(f"Category {i+1} missing category verse ref")
 
         cat["color"] = COLORS[i]
 
@@ -812,33 +793,25 @@ def validate_connections(puzzle, history):
         if theme in history["connections"]["themes"]:
             cooldown_violations.append(f"Theme '{theme}' reused (cooldown)")
 
-        # Collect all refs in this category (including duplicates)
-        cat_ref_list = []
-        cat_ref = cat.get("verse", {}).get("ref", "")
-        if cat_ref:
-            cat_ref_list.append(cat_ref)
-        for item in items:
-            if item.get("ref"):
-                cat_ref_list.append(item["ref"])
+        # Collect the 4 item refs
+        item_refs = [item["ref"] for item in items if item.get("ref")]
 
-        # Check for duplicate refs WITHIN this category
+        # Duplicates within category
         seen_in_cat = set()
-        for ref in cat_ref_list:
+        for ref in item_refs:
             if ref in seen_in_cat:
                 cooldown_violations.append(f"Duplicate ref within category {i+1}: {ref}")
             seen_in_cat.add(ref)
 
-        cat_refs = set(cat_ref_list)
-        for ref in cat_refs:
+        # Duplicates across categories + cooldown
+        for ref in seen_in_cat:
             if ref in cross_cat_refs:
                 cooldown_violations.append(f"Duplicate ref across categories: {ref}")
-        # Check against game-specific AND global cooldown
-        for ref in cat_refs:
-            if ref in history["connections"]["verses"]:
+            elif ref in history["connections"]["verses"]:
                 cooldown_violations.append(f"Verse ref {ref} reused (connections cooldown)")
             elif ref in history["all_verses"]:
                 cooldown_violations.append(f"Verse ref {ref} reused (cross-game cooldown)")
-        cross_cat_refs.update(cat_refs)
+        cross_cat_refs.update(seen_in_cat)
 
         for j, item in enumerate(items):
             if not item.get("ar") or not item.get("en"):
@@ -846,7 +819,6 @@ def validate_connections(puzzle, history):
             if not item.get("ref"):
                 errors.append(f"Cat {i+1} item {j+1} missing ref")
             ar = item.get("ar", "")
-            # Check for same-root words across categories
             for prev_word in all_words:
                 if ar and words_share_root(ar, prev_word):
                     cooldown_violations.append(f"Same-root word across categories: '{ar}' shares root with '{prev_word}'")
@@ -854,19 +826,8 @@ def validate_connections(puzzle, history):
             all_words.append(ar)
             if ar in history["connections"]["words"]:
                 warnings.append(f"Word '{ar}' reused (cooldown)")
-            # Ensure optional fields exist for downstream compatibility
-            if "verse" not in item:
-                item["verse"] = ""
-            if "verseEn" not in item:
-                item["verseEn"] = ""
-
-        # Ensure category verse has required fields
-        if "verse" not in cat or not isinstance(cat["verse"], dict):
-            cat["verse"] = {"ref": "", "ayah": "", "en": ""}
-        if "en" not in cat["verse"]:
-            cat["verse"]["en"] = ""
-        if "ayah" not in cat["verse"]:
-            cat["verse"]["ayah"] = ""
+            item.setdefault("verse", "")
+            item.setdefault("verseEn", "")
 
     return errors, cooldown_violations, warnings
 
@@ -1553,12 +1514,11 @@ def fetch_verse_text(ref, max_retries=3):
 
 
 def enrich_single_category(cat):
-    """Fetch verse text for all refs in a single Connections category (4 items + 1 category verse).
+    """Fetch verse text for the 4 item refs in a single Connections category.
 
     Validates word-in-verse for each item immediately after fetching.
     Returns (cat, mismatches) — mismatches is non-empty if any word fails verification.
-    Called per-category inside _generate_single_category so failures only cost 5 API calls,
-    not 20.
+    Called per-category inside _generate_single_category so failures only cost 4 API calls.
     """
     mismatches = []
 
@@ -1585,21 +1545,6 @@ def enrich_single_category(cat):
             item["verse"] = ""
             item["verseEn"] = ""
             mismatches.append(f"Could not fetch verse text for '{item.get('ar')}' ({ref})")
-        time.sleep(0.3)
-
-    # Category-level verse
-    cat_verse = cat.get("verse", {})
-    if isinstance(cat_verse, dict) and cat_verse.get("ref"):
-        verse_data = fetch_verse_text(cat_verse["ref"])
-        if verse_data:
-            cat_verse["ayah"] = verse_data["arabic"]
-            cat_verse["en"] = verse_data["english"]
-        else:
-            cat_verse["ayah"] = ""
-            cat_verse["en"] = ""
-            mismatches.append(
-                f"Could not fetch category verse ({cat_verse['ref']})"
-            )
         time.sleep(0.3)
 
     return cat, mismatches
