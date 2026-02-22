@@ -568,7 +568,7 @@ def parse_json_response(raw):
 # ═══════════════════════════════════════════════════════════════════
 # CONNECTIONS GENERATOR
 # ═══════════════════════════════════════════════════════════════════
-def build_connections_prompt(history, previous_violations=None):
+def build_connections_prompt(history, today, previous_violations=None):
     avoided_themes = ", ".join(sorted(history["connections"]["themes"])) or "(none)"
     # Merge game-specific + global verse refs for maximum dedup
     all_avoided = history["connections"]["verses"] | history["all_verses"]
@@ -743,7 +743,7 @@ def validate_connections(puzzle, history):
 # ═══════════════════════════════════════════════════════════════════
 # WORDLE GENERATOR (Harf by Harf)
 # ═══════════════════════════════════════════════════════════════════
-def build_harf_prompt(history, previous_violations=None):
+def build_harf_prompt(history, today, previous_violations=None):
     avoided_words = ", ".join(sorted(history["harf"]["words"])) or "(none)"
     # Merge game-specific + global verse refs
     all_avoided = history["harf"]["verseRefs"] | history["all_verses"]
