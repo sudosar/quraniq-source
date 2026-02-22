@@ -1074,13 +1074,36 @@ async function backfillTodayScores() {
         if (scrState && scrState.gameOver) {
             let moons = 0;
             if (scrState.won) {
-                moons = Math.max(1, 5 - (scrState.hintsUsed || 0));
+                moons = Math.max(1, 5 - (scrState.hintsUsed || 0) - (scrState.moves || 0));
             }
             if ((current.scramble || 0) < moons) {
                 current.scramble = moons;
                 changed = true;
                 console.log('[FB] Backfill scramble:', moons);
             }
+        }
+
+        // --- Juz Journey ---
+        // Juz Journey saves state separately in localStorage, not in the main state object
+        try {
+            const rawJuz = localStorage.getItem('quraniq_juz');
+            if (rawJuz) {
+                const juzState = JSON.parse(rawJuz);
+                // Verify it belongs to today's puzzle by checking the date
+                if (juzState && juzState.puzzle && juzState.puzzle.date === today && juzState.completed) {
+                    const rawScore = (juzState.scores.round2 || 0) + (juzState.scores.round3 || 0) + (juzState.scores.round4 || 0);
+                    const penalty = Math.min(juzState.hintPenalty || 0, 2); // MAX_HINT_PENALTY is 2
+                    const moons = Math.max(0, rawScore - penalty);
+
+                    if ((current.juz || 0) < moons) {
+                        current.juz = moons;
+                        changed = true;
+                        console.log('[FB] Backfill juz:', moons);
+                    }
+                }
+            }
+        } catch (e) {
+            console.error('[FB] Error reading Juz state for backfill:', e);
         }
 
         // If any scores were backfilled, recalculate total and save
