@@ -1106,10 +1106,17 @@ async function backfillTodayScores() {
             console.error('[FB] Error reading Juz state for backfill:', e);
         }
 
-        // If any scores were backfilled, recalculate total and save
+        // Defensively check if the total is out of sync with individual scores
+        const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
+        const expectedTotal = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
+        if (current.total !== expectedTotal) {
+            current.total = expectedTotal;
+            changed = true;
+            console.log('[FB] Self-healed total score mismatch:', expectedTotal);
+        }
+
+        // If any scores were backfilled or fixed, save
         if (changed) {
-            const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
-            current.total = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
 
             const stats = loadStats();
             const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
