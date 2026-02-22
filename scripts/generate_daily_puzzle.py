@@ -249,10 +249,6 @@ def load_history(exclude_date=None):
                 # Only add theme to history if it's within the theme cooldown window
                 if fdate >= cutoff_theme:
                     history["connections"]["themes"].add(cat.get("nameEn", "").lower().strip())
-                cat_verse_ref = cat.get("verse", {}).get("ref")
-                if cat_verse_ref:
-                    history["connections"]["verses"].add(cat_verse_ref)
-                    history["all_verses"].add(cat_verse_ref)
                 for item in cat.get("items", []):
                     if item.get("ref"):
                         history["connections"]["verses"].add(item["ref"])
