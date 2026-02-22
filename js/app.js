@@ -357,7 +357,7 @@ function initResetButton() {
             let output = "=== QURANIQ DEBUG DATA ===\n";
             if (stateStr) {
                 const s = JSON.parse(stateStr);
-                const day = s.dayNumber;
+                const day = getDayNumber();
                 output += "Day: " + day + "\n";
                 output += "Connections: " + JSON.stringify(s['conn_' + day]) + "\n";
                 output += "Deduction: " + JSON.stringify(s['ded_' + day]) + "\n";
