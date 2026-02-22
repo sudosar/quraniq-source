@@ -1,32 +1,36 @@
 {
-  "date": "2026-02-21",
+  "date": "2026-02-22",
   "puzzle": {
-    "verseRef": "6:162",
-    "reference": "Al-An'am (6:162)",
+    "verseRef": "14:7",
+    "reference": "Surah Ibrahim (14:7)",
     "segments": [
-      "قُلْ إِنَّ",
-      "صَلَاتِي وَنُسُكِي",
-      "وَمَحْيَايَ وَمَمَاتِي",
-      "لِلَّهِ",
-      "رَبِّ الْعَالَمِينَ"
+      "وَإِذْ",
+      "تَأَذَّنَ رَبُّكُمْ",
+      "لَئِن شَكَرْتُمْ",
+      "لَأَزِيدَنَّكُمْ",
+      "وَلَئِن كَفَرْتُمْ",
+      "إِنَّ عَذَابِي لَشَدِيدٌ"
     ],
     "translations": [
-      "Say Indeed",
-      "my prayer and my rites of sacrifice",
-      "and my living and my dying",
-      "(are) for Allah Lord",
-      "(of) the worlds"
+      "And when proclaimed",
+      "your Lord If",
+      "you are thankful surely I will increase you",
+      "but if you are ungrateful",
+      "indeed My punishment",
+      "(is) surely severe"
     ],
-    "hint": "A powerful declaration of total devotion and sincerity, stating that every aspect of a believer's life and death belongs solely to Allah.",
-    "arabic": "قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+    "hint": "A powerful reminder that gratitude leads to increase, while ingratitude has consequences.",
+    "arabic": "وَإِذْ تَأَذَّنَ رَبُّكُمْ لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ ۖ وَلَئِن كَفَرْتُمْ إِنَّ عَذَابِى لَشَدِيدٌۭ",
     "words": [
-      "قُلْ إِنَّ",
-      "صَلَاتِى وَنُسُكِى",
-      "وَمَحْيَاىَ وَمَمَاتِى",
-      "لِلَّهِ رَبِّ",
-      "ٱلْعَـٰلَمِينَ"
+      "وَإِذْ تَأَذَّنَ",
+      "رَبُّكُمْ لَئِن",
+      "شَكَرْتُمْ لَأَزِيدَنَّكُمْ ۖ",
+      "وَلَئِن كَفَرْتُمْ",
+      "إِنَّ عَذَابِى",
+      "لَشَدِيدٌۭ"
     ],
-    "verseEn": "Say, \"Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allāh, Lord of the worlds."
+    "verseEn": "And [remember] when your Lord proclaimed, 'If you are grateful, I will surely increase you [in favor]; but if you deny, indeed, My punishment is severe.'\""
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

@@ -1,12 +1,13 @@
 {
-  "date": "2026-02-21",
+  "date": "2026-02-22",
   "puzzle": {
-    "word": "لسان",
-    "display": "لِسَان",
-    "hint": "This word means 'tongue' or 'language' and is used in the Quran to describe the clarity of the Arabic message.",
-    "verseRef": "16:103",
-    "arabicVerse": "وَلَقَدْ نَعْلَمُ أَنَّهُمْ يَقُولُونَ إِنَّمَا يُعَلِّمُهُۥ بَشَرٌۭ ۗ لِّسَانُ ٱلَّذِى يُلْحِدُونَ إِلَيْهِ أَعْجَمِىٌّۭ وَهَـٰذَا لِسَانٌ عَرَبِىٌّۭ مُّبِينٌ",
-    "verse": "16:103 — And We certainly know that they say, \"It is only a human being who teaches him [i.e., the Prophet (ﷺ)].\" The tongue of the one they refer to is foreign, and this [recitation, i.e., Qur’ān] is [in] a clear Arabic language."
+    "word": "فلك",
+    "display": "فَلَك",
+    "hint": "It describes the celestial path or orbit in which heavenly bodies are said to swim.",
+    "verseRef": "36:40",
+    "arabicVerse": "لَا ٱلشَّمْسُ يَنۢبَغِى لَهَآ أَن تُدْرِكَ ٱلْقَمَرَ وَلَا ٱلَّيْلُ سَابِقُ ٱلنَّهَارِ ۚ وَكُلٌّۭ فِى فَلَكٍۢ يَسْبَحُونَ",
+    "verse": "36:40 — It is not allowable [i.e., possible] for the sun to reach the moon, nor does the night overtake the day, but each, in an orbit, is swimming."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

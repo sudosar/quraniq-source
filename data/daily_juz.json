@@ -1,54 +1,54 @@
 {
-  "date": "2026-02-21",
+  "date": "2026-02-22",
   "puzzle": {
-    "date": "2026-02-21",
-    "juz_number": 5,
-    "juz_name": "Wal Muhsanat",
-    "juz_name_ar": "وَالْمُحْصَنَاتُ",
+    "date": "2026-02-22",
+    "juz_number": 6,
+    "juz_name": "Lā yuḥibbu Allāh",
+    "juz_name_ar": "لَا يُحِبُّ اللَّهُ",
     "verse": {
-      "surah_number": 4,
-      "surah_name": "An-Nisa",
-      "surah_name_ar": "النساء",
-      "ayah_number": 103,
-      "arabic_text": "فَإِذَا قَضَيْتُمُ الصَّلَاةَ فَاذْكُرُوا اللَّهَ قِيَامًا وَقُعُودًا وَعَلَىٰ جُنُوبِكُمْ ۚ فَإِذَا اطْمَأْنَنْتُمْ فَأَقِيمُوا الصَّلَاةَ ۚ إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا",
-      "translation": "Then when you have finished the prayer, remember Allah standing and sitting and [lying] on your sides. But when you are secure, establish [regular] prayer. Indeed, prayer has been decreed upon the believers a decree of specified times.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/596.mp3"
+      "surah_number": 5,
+      "surah_name": "Al-Ma'idah",
+      "surah_name_ar": "الْمَائِدَة",
+      "ayah_number": 35,
+      "arabic_text": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَابْتَغُوا إِلَيْهِ الْوَسِيلَةَ وَجَاهِدُوا فِي سَبِيلِهِ لَعَلَّكُمْ تُفْلِحُونَ",
+      "translation": "O you who have believed, fear Allah and seek the means [of nearness] to Him and strive in His cause that you may succeed.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/704.mp3"
     },
     "theme_question": {
-      "correct": "The obligation of performing prayer at its prescribed times and remembering Allah in all states.",
+      "correct": "Seeking nearness to Allah through Taqwa and righteous deeds",
       "options": [
-        "The obligation of performing prayer at its prescribed times and remembering Allah in all states.",
-        "The rules for seeking permission before entering homes.",
-        "The virtues of giving charity in secret.",
-        "The historical account of the Battle of Badr."
+        "The specific rules of inheritance for orphans",
+        "Seeking nearness to Allah through Taqwa and righteous deeds",
+        "The physical description of the Day of Judgment",
+        "The prohibition of changing the direction of the Qibla"
       ]
     },
     "surah_question": {
-      "correct_surah": 4,
+      "correct_surah": 5,
       "options": [
         {
           "num": 4,
           "name": "An-Nisa",
-          "name_ar": "النساء",
+          "name_ar": "النِّسَاء",
           "name_en": "The Women"
         },
         {
           "num": 5,
           "name": "Al-Ma'idah",
-          "name_ar": "المائدة",
+          "name_ar": "الْمَائِدَة",
           "name_en": "The Table Spread"
-        },
-        {
-          "num": 3,
-          "name": "Al-Imran",
-          "name_ar": "آل عمران",
-          "name_en": "The Family of Imran"
         },
         {
           "num": 6,
           "name": "Al-An'am",
-          "name_ar": "الأنعام",
+          "name_ar": "الْأَنْعَام",
           "name_en": "The Cattle"
+        },
+        {
+          "num": 7,
+          "name": "Al-A'raf",
+          "name_ar": "الْأَعْرَاف",
+          "name_en": "The Heights"
         }
       ]
     },
@@ -57,17 +57,23 @@
         {
           "num": 4,
           "name": "An-Nisa",
-          "name_ar": "النساء",
+          "name_ar": "النِّسَاء",
           "name_en": "The Women"
+        },
+        {
+          "num": 5,
+          "name": "Al-Ma'idah",
+          "name_ar": "الْمَائِدَة",
+          "name_en": "The Table Spread"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse occurs within the context of instructions for the 'Prayer of Fear' (Salat al-Khawf) during times of danger or battle. It emphasizes that even when the special fear prayer is completed, the remembrance of Allah should continue, and once security is restored, the full regular prayer must be established.",
-      "theme_explanation": "The verse highlights two critical aspects of worship: constant dhikr (remembrance) and the discipline of salah. The phrase 'kitaban mawquta' signifying 'a decree of specified times' underscores that prayer is not just a general obligation but one tied to specific moments of the day, forming a spiritual rhythm for the believer.",
-      "surah_overview": "Juz 5 is entirely contained within Surah An-Nisa. This section of the Surah continues to address themes of social justice, legal rulings concerning marriage and family, inheritance, and the rights of the vulnerable. It also addresses the complexities of dealing with hypocrites and provides guidance on maintaining faith during adversity."
+      "verse_context": "This verse (5:35) is a pivotal command in Surah Al-Ma'idah, instructing the believers to combine internal God-consciousness (Taqwa) with active effort (striving) to draw closer to Allah. The 'Wasilah' mentioned refers to seeking means of approach through acts of obedience that please Him.",
+      "theme_explanation": "Juz 6 covers the transition from the legal and social framework of Surah An-Nisa to the dietary laws, covenants, and inter-faith dialogue found in Surah Al-Ma'idah. A recurring theme is the importance of fulfilling contracts—both with people and with Allah.",
+      "surah_overview": "Surah Al-Ma'idah is one of the final major Surahs revealed. It contains the verse declaring the completion of the religion (5:3). It focuses on the 'Halal' and 'Haram', the sanctity of life, and provides a detailed critique of the deviations of previous nations to serve as a guide for the Muslim Ummah."
     }
   },
   "generated": true,
-  "model": "manual (antigravity)"
+  "model": "auto (chain)"
 }
