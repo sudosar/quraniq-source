@@ -150,10 +150,11 @@ OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 
-# Model fallback chain: Gemini 3 Flash Preview → Gemini 2.5 Flash → DeepSeek-R1 → GPT-4.1
-# Benchmark (Feb 2026): Gemini best avoidance+speed, DeepSeek best reasoning, GPT best diversity
+# Model fallback chain: Gemini 2.5 Pro → Gemini 2.5 Flash → DeepSeek-R1 → GPT-4.1
+# Benchmark (Feb 2026): Gemini 2.5 Pro best for Arabic + thinking; DeepSeek-R1 best reasoning;
+# GPT-4.1 best diversity. Connections uses category-by-category generation (4 focused calls).
 MODEL_CHAIN = [
-    {"id": "gemini-3-flash-preview", "api": "gemini", "label": "Gemini 3 Flash Preview (Google)"},
+    {"id": "gemini-2.5-pro", "api": "gemini", "label": "Gemini 2.5 Pro (Google)"},
     {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Google)"},
     {"id": "DeepSeek-R1", "api": "github", "label": "DeepSeek-R1 (GitHub Models)"},
     {"id": "gpt-4.1", "api": "openai", "label": "GPT-4.1 (OpenAI)"},
@@ -566,94 +567,224 @@ def parse_json_response(raw):
 
 
 # ═══════════════════════════════════════════════════════════════════
-# CONNECTIONS GENERATOR
+# CONNECTIONS GENERATOR — category-by-category
 # ═══════════════════════════════════════════════════════════════════
-def build_connections_prompt(history, today, previous_violations=None):
-    avoided_themes = ", ".join(sorted(history["connections"]["themes"])) or "(none)"
-    # Merge game-specific + global verse refs for maximum dedup
-    all_avoided = history["connections"]["verses"] | history["all_verses"]
-    avoided_verses = ", ".join(sorted(all_avoided)) or "(none)"
+DIFFICULTY_LABELS = ["easy", "medium", "hard", "tricky"]
+DIFFICULTY_DESCRIPTIONS = {
+    "easy":   "Straightforward — a clear, well-known connection that most players will find",
+    "medium": "Requires some Quranic knowledge to identify the connection",
+    "hard":   "Requires deeper Islamic knowledge; the link is specific or scholarly",
+    "tricky": "Deliberately misleading — items seem to belong elsewhere; the connection is unexpected",
+}
+
+
+def build_single_category_prompt(history, today, cat_index, accumulated_cats, previous_violations=None):
+    """Build prompt for ONE Connections category (cat_index 0–3)."""
+    color = COLORS[cat_index]
+    difficulty = DIFFICULTY_LABELS[cat_index]
+
+    # Avoidance: history + already-generated categories
+    avoided_themes_set = set(history["connections"]["themes"])
+    all_avoided_verses = history["connections"]["verses"] | history["all_verses"]
+    all_prev_words = list(history["connections"]["words"])
+
+    for prev_cat in accumulated_cats:
+        theme = prev_cat.get("nameEn", "").lower().strip()
+        avoided_themes_set.add(theme)
+        cat_ref = prev_cat.get("verse", {}).get("ref")
+        if cat_ref:
+            all_avoided_verses.add(cat_ref)
+        for item in prev_cat.get("items", []):
+            if item.get("ref"):
+                all_avoided_verses.add(item["ref"])
+            if item.get("ar"):
+                all_prev_words.append(item["ar"])
+
+    avoided_themes = ", ".join(sorted(avoided_themes_set)) or "(none)"
+    avoided_verses = ", ".join(sorted(all_avoided_verses)) or "(none)"
+
+    # Summary of categories already chosen in this puzzle run
+    chosen_block = ""
+    if accumulated_cats:
+        lines = []
+        for i, prev_cat in enumerate(accumulated_cats):
+            words_list = [item.get("ar", "") for item in prev_cat.get("items", [])]
+            refs_list  = [item.get("ref", "") for item in prev_cat.get("items", [])]
+            cat_ref    = prev_cat.get("verse", {}).get("ref", "")
+            lines.append(
+                f"  Category {i+1} ({COLORS[i]}, {DIFFICULTY_LABELS[i]}): \"{prev_cat.get('nameEn')}\"\n"
+                f"    Words : {', '.join(words_list)}\n"
+                f"    Refs  : {', '.join(refs_list)}  |  category verse: {cat_ref}"
+            )
+        chosen_block = (
+            "\n\nALREADY CHOSEN CATEGORIES (do NOT reuse their refs, themes, or word roots):\n"
+            + "\n".join(lines)
+        )
 
     violation_block = ""
     if previous_violations:
-        # Separate word-in-verse mismatches from cooldown violations for clearer feedback
-        verse_mismatches = [v for v in previous_violations if 'NOT found in verse' in v]
-        other_violations = [v for v in previous_violations if 'NOT found in verse' not in v]
+        verse_mismatches = [v for v in previous_violations if "NOT found in verse" in v]
+        other_violations = [v for v in previous_violations if "NOT found in verse" not in v]
         parts = []
         if other_violations:
-            parts.append(f"""CRITICAL — PREVIOUS ATTEMPT REUSED THESE (FORBIDDEN):
-{chr(10).join('  ✗ ' + v for v in other_violations)}
-You MUST NOT use any of the above. Choose completely different verses and themes.""")
+            parts.append(
+                "CRITICAL — PREVIOUS ATTEMPT VIOLATED THESE RULES (FORBIDDEN):\n"
+                + "\n".join("  ✗ " + v for v in other_violations)
+                + "\nYou MUST NOT repeat these. Choose completely different verses and themes."
+            )
         if verse_mismatches:
-            parts.append(f"""CRITICAL — WORD-IN-VERSE VERIFICATION FAILED:
-{chr(10).join('  ✗ ' + v for v in verse_mismatches)}
-The above words were NOT found in their cited verses when checked against the Quran API.
-For each failed word, either:
-  a) Cite a DIFFERENT verse where that EXACT word form actually appears, OR
-  b) Replace the word with a different word that DOES appear in the cited verse.
-Do NOT guess — only cite verses where you are CERTAIN the exact Arabic word form appears.""")
-        violation_block = '\n\n' + '\n\n'.join(parts)
+            parts.append(
+                "CRITICAL — WORD-IN-VERSE VERIFICATION FAILED:\n"
+                + "\n".join("  ✗ " + v for v in verse_mismatches)
+                + "\nFor each failed item: either cite a DIFFERENT verse where the EXACT Arabic word "
+                "form appears, OR replace the word with one that IS present in the cited verse.\n"
+                "Do NOT guess — only use verse refs you are CERTAIN about."
+            )
+        violation_block = "\n\n" + "\n\n".join(parts)
 
-    return f"""You are an expert Islamic scholar creating a daily puzzle game called "Ayah Connections".
+    return f"""You are an expert Islamic scholar and Quran teacher creating ONE category for a daily "Ayah Connections" puzzle.
 
-TASK: Generate exactly 4 groups of 4 related Quranic/Islamic items.
-The goal is to expose players to Quranic verses — each item is a word that appears in a real verse.
+DATE: {today}
 
-RULES:
-1. Each group MUST have exactly 4 items
-2. All 4 groups should be from DIFFERENT areas of Islamic knowledge
-3. Items within a group must clearly belong together under the stated theme
-4. **CRITICAL** The Arabic word MUST appear in the referenced verse.
-   - The word will be verified against the actual Quran API text. If the word is NOT found in the verse, the puzzle is REJECTED.
-   - Example: if you write "ar": "بَيْت", the word بيت (or variations like بيتا, بيته) must appear in the verse.
-   - Do NOT cite a verse that merely discusses the concept — the word root must be physically present.
-   - BAD: "ar":"بَابًا", "ref":"4:46" (verse 4:46 does not contain the word بابا or باب)
-   - GOOD: "ar":"بَابًا", "ref":"23:77" (verse 23:77 contains بابا)
-5. Verse references MUST be real and accurate (surah:ayah format like "2:255")
-6. Each group needs a category-level representative verse reference
-7. Make the puzzle challenging but fair
-8. **CRITICAL** Every Arabic word MUST be unique across ALL 4 categories. No two items in the entire puzzle should share the same root or be forms of the same word (e.g., do NOT use وَعْدَ in one category and مَوْعِدًا in another — they share the root و-ع-د). Each item must be a completely different word from a different root.
-9. **CRITICAL** Category names MUST be specific.
-   - **FORBIDDEN**: "Words from the Quran", "Common Nouns", "Verbs", "Words starting with M", "Words from Juz 30".
-   - **REQUIRED**: Specific semantic fields like "Rivers in Jannah", "Names of Hellfire", "Fruits mentioned in Quran", "Family of the Prophet", "Attributes of Allah relating to Mercy".
-   - If a category is too broad, the puzzle will be REJECTED.
-10. **CRITICAL** Context Check: Ensure the verse's *meaning* supports the category. Do NOT selection verses about punishment, hellfire, or wrath for positive categories (e.g., "Favors", "Blessings", "Mercy"). The word must be used in a context that fits the theme.
+TASK: Generate EXACTLY ONE category of 4 related Quranic/Islamic items.
+This is Category {cat_index + 1} of 4 — color: {color}, difficulty: {difficulty}.
+Difficulty guidance: {DIFFICULTY_DESCRIPTIONS[difficulty]}
 
-DIFFICULTY: 1 easy, 1 medium, 1 hard, 1 tricky group.
+WHAT IS AYAH CONNECTIONS:
+Players see 16 Arabic words (from 4 hidden categories of 4) and must group them correctly.
+Each word is drawn from a real Quranic verse — the word MUST physically appear in the verse text.
 
-FORBIDDEN themes (used recently): {avoided_themes}
+RULES FOR THIS CATEGORY:
+1. Provide EXACTLY 4 items.
+2. The English theme (nameEn) MUST be SPECIFIC — not generic.
+   - FORBIDDEN: "Words from the Quran", "Common Nouns", "Verbs", "Words in Juz 30", "Divine Attributes"
+   - REQUIRED: e.g. "Rivers of Jannah", "Names of Hellfire", "Prophets mentioned in Surah Al-Anbiya",
+     "Objects in the Story of Musa", "Titles given to Prophet Isa in the Quran"
+3. CRITICAL — word-in-verse: each Arabic word MUST actually appear in its cited verse.
+   - The word will be checked against the Quran API. Wrong ref = REJECTED.
+   - BAD: "ar":"بَابًا", "ref":"4:46" — verse 4:46 does not contain بابا
+   - GOOD: "ar":"بَابًا", "ref":"23:77" — verse 23:77 contains بابا
+4. All 5 refs in this category (4 items + 1 category verse) MUST be unique from each other
+   and from every ref in "ALREADY CHOSEN CATEGORIES" and "FORBIDDEN verse refs".
+5. Every Arabic word must come from a COMPLETELY DIFFERENT root than all words in:
+   - The already-chosen categories above
+   - Your own 4 items (no two items in this category share a root either)
+6. Context check: the verse's MEANING must fit the category theme. Do not use a verse
+   about punishment for a "Blessings" category, etc.
+7. Do NOT pick famous/overused verses (e.g. 2:255, 24:35, 36:82) — explore lesser-known verses.
 
-FORBIDDEN verse refs (used recently — includes ALL games): {avoided_verses}
-{violation_block}
+FORBIDDEN themes (used recently — do NOT reuse): {avoided_themes}
 
-OUTPUT FORMAT: Return ONLY a valid JSON object. Do NOT include full verse text — only the reference.
+FORBIDDEN verse refs (used recently + already used in this puzzle run): {avoided_verses}
+{chosen_block}{violation_block}
+
+OUTPUT FORMAT: Return ONLY a valid JSON object for this single category:
 {{
-  "categories": [
-    {{
-      "name": "Arabic group name with tashkeel",
-      "nameEn": "English group name",
-      "color": "yellow",
-      "items": [
-        {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
-        {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
-        {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
-        {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}}
-      ],
-      "verse": {{"ref": "surah:ayah"}}
-    }},
-    ... (4 categories, colors: yellow, green, blue, purple)
-  ]
+  "name": "Arabic category name with tashkeel",
+  "nameEn": "English category name (specific!)",
+  "color": "{color}",
+  "items": [
+    {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
+    {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
+    {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
+    {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}}
+  ],
+  "verse": {{"ref": "surah:ayah"}}
 }}
 
 IMPORTANT:
-- Return ONLY the JSON object, no markdown, no explanation
-- Do NOT include any verse text — only refs. Verse text will be looked up separately.
-- EVERY verse reference MUST be unique across the ENTIRE puzzle — all 16 item refs + 4 category refs = 20 refs, ALL DIFFERENT
-- Do NOT reuse the category-level ref for any item within that category
-- Each of the 16 items MUST reference a DIFFERENT surah:ayah
-- Arabic words must include full tashkeel/diacritics
-- Verify each verse reference is a real Quranic verse
-- Do NOT pick famous/popular verses (e.g. 2:255, 24:35, 36:82) — explore lesser-known verses"""
+- Return ONLY the JSON object — no markdown, no explanation.
+- Do NOT include verse text in any field — it will be fetched from the Quran API.
+- The category verse ref must differ from all 4 item refs.
+- Arabic words must include full tashkeel/diacritics."""
+
+
+def validate_single_category(cat, cat_index, history, accumulated_cats):
+    """Validate one category against history and already-accumulated categories."""
+    errors, violations, warnings = [], [], []
+
+    items = cat.get("items", [])
+    if len(items) != 4:
+        errors.append(f"Expected 4 items, got {len(items)}")
+        return errors, violations, warnings
+
+    if not cat.get("name") or not cat.get("nameEn"):
+        errors.append("Missing 'name' or 'nameEn'")
+    if not cat.get("verse", {}).get("ref"):
+        errors.append("Missing category verse ref")
+
+    cat["color"] = COLORS[cat_index]
+
+    # Build avoidance sets from history + all prior categories in this run
+    all_avoided_verses = history["connections"]["verses"] | history["all_verses"]
+    all_prev_words = list(history["connections"]["words"])
+    all_avoided_themes = set(history["connections"]["themes"])
+
+    for prev_cat in accumulated_cats:
+        all_avoided_themes.add(prev_cat.get("nameEn", "").lower().strip())
+        prev_ref = prev_cat.get("verse", {}).get("ref")
+        if prev_ref:
+            all_avoided_verses.add(prev_ref)
+        for item in prev_cat.get("items", []):
+            if item.get("ref"):
+                all_avoided_verses.add(item["ref"])
+            if item.get("ar"):
+                all_prev_words.append(item["ar"])
+
+    # Theme cooldown
+    theme = cat.get("nameEn", "").lower().strip()
+    if theme in all_avoided_themes:
+        violations.append(f"Theme '{theme}' reused (cooldown or duplicate in puzzle)")
+
+    # Collect all refs in this category
+    cat_ref_list = []
+    cat_verse_ref = cat.get("verse", {}).get("ref", "")
+    if cat_verse_ref:
+        cat_ref_list.append(cat_verse_ref)
+    for item in items:
+        if item.get("ref"):
+            cat_ref_list.append(item["ref"])
+
+    # Duplicates within category
+    seen = set()
+    for ref in cat_ref_list:
+        if ref in seen:
+            violations.append(f"Duplicate ref within category: {ref}")
+        seen.add(ref)
+
+    # Against history + accumulated
+    for ref in seen:
+        if ref in all_avoided_verses:
+            violations.append(f"Verse ref {ref} reused (cooldown or already used in puzzle)")
+
+    # Items
+    new_words = []
+    for j, item in enumerate(items):
+        if not item.get("ar") or not item.get("en"):
+            errors.append(f"Item {j+1} missing 'ar' or 'en'")
+        if not item.get("ref"):
+            errors.append(f"Item {j+1} missing 'ref'")
+        ar = item.get("ar", "")
+        # Same-root check against all previous words (history + accumulated + earlier in this category)
+        for prev_word in all_prev_words + new_words:
+            if ar and words_share_root(ar, prev_word):
+                violations.append(
+                    f"Word '{ar}' shares root with previously used word '{prev_word}'"
+                )
+                break
+        new_words.append(ar)
+        if ar in history["connections"]["words"]:
+            warnings.append(f"Word '{ar}' reused (cooldown)")
+        item.setdefault("verse", "")
+        item.setdefault("verseEn", "")
+
+    # Ensure category verse dict has required keys
+    if not isinstance(cat.get("verse"), dict):
+        cat["verse"] = {"ref": cat_verse_ref, "ayah": "", "en": ""}
+    cat["verse"].setdefault("ayah", "")
+    cat["verse"].setdefault("en", "")
+
+    return errors, violations, warnings
 
 
 def validate_connections(puzzle, history):
@@ -1421,119 +1552,57 @@ def fetch_verse_text(ref, max_retries=3):
     return None
 
 
-def enrich_connections_with_verses(puzzle):
-    """Post-process a Connections puzzle: look up full verse text from Quran API.
-    
-    For each item, fetches the Arabic verse text and English translation
-    using the ref field. Also enriches category-level verses.
-    
-    CRITICAL: Validates that each Arabic word actually appears in its cited verse.
-    Returns (puzzle, mismatches) where mismatches is a list of error strings.
-    If mismatches is non-empty, the puzzle should be rejected and regenerated.
+def enrich_single_category(cat):
+    """Fetch verse text for all refs in a single Connections category (4 items + 1 category verse).
+
+    Validates word-in-verse for each item immediately after fetching.
+    Returns (cat, mismatches) — mismatches is non-empty if any word fails verification.
+    Called per-category inside _generate_single_category so failures only cost 5 API calls,
+    not 20.
     """
-    print("\n  📖 Looking up verse text from Quran API...")
-    cats = puzzle.get("categories", [])
-    total_refs = 0
-    found_refs = 0
     mismatches = []
-    
-    for cat in cats:
-        # Enrich each item's verse
-        for item in cat.get("items", []):
-            ref = item.get("ref", "")
-            if not ref:
-                continue
-            total_refs += 1
-            verse_data = fetch_verse_text(ref)
-            if verse_data:
-                item["verse"] = verse_data["arabic"]
-                item["verseEn"] = verse_data["english"]
-                found_refs += 1
-                # Validate: word must actually appear in the verse
-                ar_word = item.get("ar", "")
-                if ar_word and not word_in_verse(ar_word, verse_data["arabic"]):
-                    # Include a snippet of the verse so the LLM can see what words ARE there
-                    verse_snippet = verse_data['arabic'][:120]
-                    msg = f"Word '{ar_word}' ({item.get('en','')}) NOT found in verse {ref}. Verse text: {verse_snippet}..."
-                    mismatches.append(msg)
-                    print(f"    ✗ {msg}")
-                else:
-                    print(f"    ✓ '{ar_word}' found in {ref}")
-            else:
-                item["verse"] = ""
-                item["verseEn"] = ""
-            # Small delay to be respectful to the API
-            time.sleep(0.3)
-        
-        # Enrich category-level verse
-        cat_verse = cat.get("verse", {})
-        if isinstance(cat_verse, dict) and cat_verse.get("ref"):
-            cat_ref = cat_verse["ref"]
-            verse_data = fetch_verse_text(cat_ref)
-            if verse_data:
-                cat_verse["ayah"] = verse_data["arabic"]
-                cat_verse["en"] = verse_data["english"]
-            else:
-                cat_verse["ayah"] = ""
-                cat_verse["en"] = ""
-            time.sleep(0.3)
-    
-    # Retry pass: attempt to fill any items that still have empty verse text
-    missing_count = 0
-    for cat in cats:
-        for item in cat.get("items", []):
-            if item.get("ref") and not item.get("verse"):
-                missing_count += 1
-        cat_verse = cat.get("verse", {})
-        if isinstance(cat_verse, dict) and cat_verse.get("ref") and not cat_verse.get("ayah"):
-            missing_count += 1
-    
-    if missing_count > 0:
-        print(f"\n  🔄 Retry pass: {missing_count} verses still missing, retrying with longer timeout...")
-        time.sleep(5)  # Wait before retry pass
-        for cat in cats:
-            for item in cat.get("items", []):
-                if item.get("ref") and not item.get("verse"):
-                    verse_data = fetch_verse_text(item["ref"], max_retries=3)
-                    if verse_data:
-                        item["verse"] = verse_data["arabic"]
-                        item["verseEn"] = verse_data["english"]
-                        found_refs += 1
-                        print(f"    ✓ Retry succeeded for {item['ref']}")
-                    else:
-                        print(f"    ✗ Retry failed for {item['ref']}")
-                    time.sleep(1)
-            cat_verse = cat.get("verse", {})
-            if isinstance(cat_verse, dict) and cat_verse.get("ref") and not cat_verse.get("ayah"):
-                verse_data = fetch_verse_text(cat_verse["ref"], max_retries=3)
-                if verse_data:
-                    cat_verse["ayah"] = verse_data["arabic"]
-                    cat_verse["en"] = verse_data["english"]
-                    print(f"    ✓ Retry succeeded for category verse {cat_verse['ref']}")
-                else:
-                    print(f"    ✗ Retry failed for category verse {cat_verse['ref']}")
-                time.sleep(1)
-    
-    # Final validation pass: reject if any verses are still missing
-    for cat in cats:
-        for item in cat.get("items", []):
-            if item.get("ref") and not item.get("verse"):
-                msg = f"Could not fetch verse text for item '{item.get('ar')}' ({item.get('ref')})"
+
+    for item in cat.get("items", []):
+        ref = item.get("ref", "")
+        if not ref:
+            continue
+        verse_data = fetch_verse_text(ref)
+        if verse_data:
+            item["verse"] = verse_data["arabic"]
+            item["verseEn"] = verse_data["english"]
+            ar_word = item.get("ar", "")
+            if ar_word and not word_in_verse(ar_word, verse_data["arabic"]):
+                snippet = verse_data["arabic"][:120]
+                msg = (
+                    f"Word '{ar_word}' ({item.get('en', '')}) NOT found in verse {ref}. "
+                    f"Verse text: {snippet}..."
+                )
                 mismatches.append(msg)
-                print(f"    ✗ {msg}")
-        
-        cat_verse = cat.get("verse", {})
-        if isinstance(cat_verse, dict) and cat_verse.get("ref") and not cat_verse.get("ayah"):
-            msg = f"Could not fetch verse text for category '{cat.get('nameEn')}' ({cat_verse.get('ref')})"
-            mismatches.append(msg)
-            print(f"    ✗ {msg}")
-    
-    if mismatches:
-        print(f"  ✗ Word-in-verse check FAILED: {len(mismatches)} mismatches")
-    else:
-        print(f"  ✓ Word-in-verse check passed: all {found_refs} words verified")
-    print(f"  ✓ Verse lookup complete: {found_refs}/{total_refs} verses found")
-    return puzzle, mismatches
+                print(f"      ✗ {msg}")
+            else:
+                print(f"      ✓ '{ar_word}' found in {ref}")
+        else:
+            item["verse"] = ""
+            item["verseEn"] = ""
+            mismatches.append(f"Could not fetch verse text for '{item.get('ar')}' ({ref})")
+        time.sleep(0.3)
+
+    # Category-level verse
+    cat_verse = cat.get("verse", {})
+    if isinstance(cat_verse, dict) and cat_verse.get("ref"):
+        verse_data = fetch_verse_text(cat_verse["ref"])
+        if verse_data:
+            cat_verse["ayah"] = verse_data["arabic"]
+            cat_verse["en"] = verse_data["english"]
+        else:
+            cat_verse["ayah"] = ""
+            cat_verse["en"] = ""
+            mismatches.append(
+                f"Could not fetch category verse ({cat_verse['ref']})"
+            )
+        time.sleep(0.3)
+
+    return cat, mismatches
 
 
 def enrich_harf_with_verses(puzzle):
@@ -1699,14 +1768,10 @@ def enrich_deduction_with_verses(puzzle):
 
 
 # ═══════════════════════════════════════════════════════════════════
-# UNIFIED GENERATION LOOP
+# UNIFIED GENERATION LOOP (harf / deduction / scramble / juz)
+# Connections uses generate_connections() — its own category-by-category loop.
 # ═══════════════════════════════════════════════════════════════════
 GAME_CONFIGS = {
-    "connections": {
-        "build_prompt": build_connections_prompt,
-        "validate": validate_connections,
-        "label": "Ayah Connections",
-    },
     "harf": {
         "build_prompt": build_harf_prompt,
         "validate": validate_harf,
@@ -1794,19 +1859,8 @@ def generate_game(game_type, history, today):
             if warnings:
                 print(f"  ⚠ Warnings (accepted): {warnings}")
 
-            # For connections: verify words actually appear in cited verses
-            if game_type == "connections":
-                enriched, mismatches = enrich_connections_with_verses(puzzle)
-                if mismatches:
-                    print(f"  ✗ WORD-IN-VERSE MISMATCHES (rejecting):")
-                    for m in mismatches:
-                        print(f"      {m}")
-                    previous_violations = (previous_violations or []) + mismatches
-                    continue  # Retry — the LLM picked wrong verse refs
-                puzzle = enriched
-            
             # For Scramble: verify verse text fetching works (critical)
-            elif game_type == "scramble":
+            if game_type == "scramble":
                 enriched = enrich_scramble_with_verses(puzzle)
                 if not enriched.get("arabic") or not enriched.get("words"):
                     print(f"  ✗ SCRAMBLE ENRICHMENT FAILED (rejecting): Could not fetch verse text")
@@ -1822,6 +1876,135 @@ def generate_game(game_type, history, today):
 
     print(f"\n  ✗ All models failed for {config['label']} after {total_attempt} total attempts.")
     return None
+
+
+# ═══════════════════════════════════════════════════════════════════
+# CONNECTIONS — CATEGORY-BY-CATEGORY GENERATION
+# ═══════════════════════════════════════════════════════════════════
+
+def _generate_single_category(cat_index, accumulated_cats, history, today):
+    """Generate one Connections category with full model-chain + retry logic.
+
+    Immediately validates structure, cooldown, and word-in-verse (5 API calls)
+    before accepting the category.  Returns the enriched category dict, or None
+    if every model and every retry was exhausted.
+    """
+    color = COLORS[cat_index]
+    difficulty = DIFFICULTY_LABELS[cat_index]
+    previous_violations = None
+    total_attempt = 0
+
+    for model_config in MODEL_CHAIN:
+        model_label = model_config["label"]
+        print(f"    Trying: {model_label}")
+
+        for retry in range(1, MAX_RETRIES + 1):
+            total_attempt += 1
+            print(f"    Attempt {total_attempt} (retry {retry}/{MAX_RETRIES})...")
+
+            prompt = build_single_category_prompt(
+                history, today, cat_index, accumulated_cats, previous_violations
+            )
+            raw = call_model(prompt, model_config)
+
+            if raw == "RATE_LIMITED":
+                if retry < MAX_RETRIES:
+                    print(f"    Rate limited on {model_label}, waiting 30s...")
+                    time.sleep(30)
+                    continue
+                else:
+                    print(f"    Rate limited on {model_label} (no retries left), falling back...")
+                    break
+
+            if not raw:
+                print(f"    Failed ({model_label}), trying next model...")
+                break
+
+            try:
+                cat = parse_json_response(raw)
+            except json.JSONDecodeError as e:
+                print(f"    ✗ JSON parse error: {e}")
+                continue
+
+            errors, violations, warnings = validate_single_category(
+                cat, cat_index, history, accumulated_cats
+            )
+
+            if errors:
+                print(f"    ✗ Structural errors: {errors}")
+                continue
+
+            if violations:
+                print(f"    ✗ Violations: {violations}")
+                previous_violations = violations
+                continue
+
+            if warnings:
+                print(f"    ⚠ Warnings (accepted): {warnings}")
+
+            # Verify words appear in their cited verses (only 5 refs — fast feedback)
+            print(f"    📖 Verifying {len(cat.get('items', []))+1} verse refs...")
+            cat, mismatches = enrich_single_category(cat)
+
+            if mismatches:
+                print(f"    ✗ Word-in-verse failed ({len(mismatches)} issue(s)):")
+                for m in mismatches:
+                    print(f"        {m}")
+                previous_violations = (previous_violations or []) + mismatches
+                continue
+
+            print(
+                f"    ✓ Category {cat_index+1} ({color}, {difficulty}) accepted: "
+                f"\"{cat.get('nameEn')}\""
+            )
+            return cat
+
+        print(f"    Exhausted retries for {model_label}")
+
+    print(f"  ✗ All models failed for category {cat_index+1} after {total_attempt} attempts.")
+    return None
+
+
+def generate_connections(history, today):
+    """Generate the full Connections puzzle one category at a time.
+
+    Each category is a focused LLM call (not one-shot for all 16 items).
+    Accumulated context is passed forward so later categories automatically
+    avoid refs, themes, and word-roots already chosen in earlier ones.
+    Word-in-verse verification fires per category (5 API calls) rather than
+    after all 16 items are generated, so bad refs are caught and fixed early.
+    """
+    print(f"\n{'═'*60}")
+    print(f"  Generating: Ayah Connections (category-by-category)")
+    print(f"{'═'*60}")
+
+    accumulated_cats = []
+
+    for cat_index in range(4):
+        color = COLORS[cat_index]
+        difficulty = DIFFICULTY_LABELS[cat_index]
+        print(f"\n  ── Category {cat_index+1}/4 ({color}, {difficulty}) ──")
+
+        cat = _generate_single_category(cat_index, accumulated_cats, history, today)
+        if cat is None:
+            print(f"  ✗ Could not generate category {cat_index+1} — Connections failed.")
+            return None
+
+        accumulated_cats.append(cat)
+
+    puzzle = {"categories": accumulated_cats}
+
+    # Final structural sanity check across all 4 categories
+    errors, cooldown_violations, warnings = validate_connections(puzzle, history)
+    if errors:
+        print(f"  ✗ Final cross-category validation errors: {errors}")
+        return None
+    if cooldown_violations:
+        # Shouldn't happen if per-category validation worked, but log it
+        print(f"  ⚠ Final validation warnings (puzzle accepted): {cooldown_violations}")
+
+    print(f"\n  ✓ Ayah Connections generated successfully (4 categories, 20 verses verified)")
+    return puzzle
 
 
 def main():
@@ -1964,11 +2147,14 @@ def main():
             print(f"\n  ⏳ Waiting 60 seconds before next game (rate limit)...")
             time.sleep(60)
 
-        puzzle = generate_game(game_type, history, today)
+        if game_type == "connections":
+            puzzle = generate_connections(history, today)
+        else:
+            puzzle = generate_game(game_type, history, today)
         generated_count += 1
         if puzzle:
             # Post-process: enrich with verse text from Quran API
-            # Note: connections enrichment is done inside generate_game (word-in-verse validation)
+            # (connections enrichment is done per-category inside generate_connections)
             if game_type == "harf":
                 puzzle = enrich_harf_with_verses(puzzle)
             elif game_type == "deduction":
