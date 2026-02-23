@@ -3,7 +3,7 @@
    Floating bug report button with screenshot capture
    ============================================ */
 
-const BUG_REPORT_ENDPOINT = "https://script.google.com/macros/s/AKfycbzEM-suHaenDfuTqrSWwZpUovSp9yfnUi2clROxJ_w8gmkzTfBvk3XzWcZrrAjv0Fzj/exec";
+const BUG_REPORT_ENDPOINT = "https://script.google.com/macros/s/AKfycbweqp0QSloeKXyHxIAkwCzihJljrJeIrc8XPQBVK8F4oIsJzzbIVnYre976b_rVCRRL/exec";
 
 /**
  * Initialize the bug report nub - a tiny floating button on the edge of the screen.
