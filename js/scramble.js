@@ -108,7 +108,7 @@ function setupScrambleGame() {
             let actualTarget = newIndex;
             if (actualTarget > fromIdx) actualTarget--;
 
-            if (actualTarget !== fromIdx && actualTarget >= 0 && actualTarget <= scr.placed.length - 1) {
+            if (actualTarget !== fromIdx && actualTarget >= 0 && actualTarget <= scr.placed.length) {
                 reorderPlaced(fromIdx, actualTarget);
             }
         }
@@ -122,7 +122,9 @@ function setupScrambleGame() {
 
 function renderScramble() {
     // Reference
-    document.getElementById('scramble-reference').textContent = scr.puzzle.reference;
+    const ref = scr.puzzle.reference;
+    const refLink = refToQuranLink(ref);
+    document.getElementById('scramble-reference').innerHTML = `${ref} <a href="${refLink}" target="_blank" class="context-btn" title="View Context on Quran.com">📖</a>`;
 
     // Free theme hint — always visible
     let themeEl = document.getElementById('scramble-theme-hint');
@@ -478,7 +480,7 @@ function setupTouchDrag(el, index) {
                 let actualTarget = newIndex;
                 if (actualTarget > index) actualTarget--;
 
-                if (actualTarget !== index && actualTarget >= 0 && actualTarget <= scr.placed.length - 1) {
+                if (actualTarget !== index && actualTarget >= 0 && actualTarget <= scr.placed.length) {
                     reorderPlaced(index, actualTarget);
                 }
             }
@@ -502,6 +504,10 @@ function reorderPlaced(fromIdx, toIdx) {
         return;
     }
     const item = scr.placed.splice(fromIdx, 1)[0];
+    if (item === undefined) {
+        renderScramble();
+        return;
+    }
     scr.placed.splice(toIdx, 0, item);
     saveScrState();
     renderScramble();

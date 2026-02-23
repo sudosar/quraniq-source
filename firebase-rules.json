@@ -25,14 +25,30 @@
           ".read": "auth != null",
           "$date": {
             ".validate": "$date.matches(/^\\d{4}-\\d{2}-\\d{2}$/)",
-            "connections": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5" },
-            "harf": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5" },
-            "deduction": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5" },
-            "scramble": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5" },
-            "juz": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5" },
-            "total": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 25" },
-            "streak": { ".validate": "newData.isNumber() && newData.val() >= 0" },
-            "timestamp": { ".validate": "newData.isNumber()" }
+            "connections": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 8"
+            },
+            "harf": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5"
+            },
+            "deduction": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5"
+            },
+            "scramble": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5"
+            },
+            "juz": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5"
+            },
+            "total": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 30"
+            },
+            "streak": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            },
+            "timestamp": {
+              ".validate": "newData.isNumber()"
+            }
           }
         }
       }

@@ -1143,7 +1143,8 @@ function advanceRound(round) {
 
 // ===== Final Results =====
 function showFinalResults() {
-  juzState.completed = true;
+  const wasCompleted = juzState.completed; // Capture state before setting
+  juzState.completed = true; // Still ensure flag is set
   saveJuzState();
 
   // Update stats
@@ -1181,9 +1182,29 @@ function showFinalResults() {
     submitFirebaseScore('juz', finalScore).catch(() => { });
   }
 
-  // Build share text
   const penaltyStr = cappedPenalty > 0 ? `\nHints: -${cappedPenalty}🌙` : '';
   const shareText = `QuranIQ Juz Journey — Juz ${p.juz_number} (${p.juz_name_ar})\n${moonStr} ${finalScore}/5\n\nTheme: ${juzState.scores.round2 > 0 ? '✅' : '❌'} | Surah: ${juzState.scores.round3 > 0 ? '✅' : '❌'} | Order: ${juzState.scores.round4 > 0 ? '✅' : '❌'}${penaltyStr}\n\nhttps://sudosar.github.io/quraniq/#juz`;
+
+  // Prepare standard result data for modal
+  const resultData = {
+    icon: '🌙',
+    title: `Juz ${p.juz_number} Complete`,
+    arabic: p.verse.ayah_ar,
+    translation: p.verse.ayah_en,
+    emojiGrid: '', // Juz doesn't use a grid
+    moons: finalScore,
+    statsText: `Score: ${finalScore}/5 | Theme: ${juzState.scores.round2 > 0 ? '✅' : '❌'} | Surah: ${juzState.scores.round3 > 0 ? '✅' : '❌'} | Order: ${juzState.scores.round4 > 0 ? '✅' : '❌'}`,
+    shareText: shareText,
+    verseRef: `${p.verse.surah_number}:${p.verse.ayah_number}`
+  };
+
+  // Show the standard common modal ONLY if we just finished
+  if (!wasCompleted) {
+    showResultModal(resultData);
+  } else {
+    // Just ensure it's cached for the "View Results" button
+    app.lastResults['juz'] = resultData;
+  }
 
   container.innerHTML = `
     <div class="juz-puzzle">
@@ -1233,47 +1254,15 @@ function showFinalResults() {
           </div>
         </div>
 
-        <!-- Share -->
-        <div class="result-actions" style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-          <button class="btn btn-primary juz-share-btn" style="flex:1" onclick="shareJuzResults()">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="margin-right:4px;vertical-align:middle;">
-                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
-                <polyline points="16 6 12 2 8 6" />
-                <line x1="12" y1="2" x2="12" y2="15" />
-            </svg>
-            Share Results
-          </button>
-          <button class="btn btn-secondary juz-copy-btn" style="flex:1" onclick="copyJuzResults()">Copy to Clipboard</button>
         </div>
     </div>
   `;
 
-  // Store share text for later
-  container.dataset.shareText = shareText;
+  // Show "View Results & Share" button in the tab so they can re-open it
+  // This must be called AFTER setting innerHTML
+  showViewResultsButton('juz');
 }
 
-function shareJuzResults() {
-  const container = document.getElementById(JUZ_CONTAINER_ID);
-  const text = container.dataset.shareText;
-  if (navigator.share) {
-    navigator.share({ text }).catch(e => console.log('Share canceled', e));
-  } else {
-    copyJuzResults();
-  }
-}
-
-function copyJuzResults() {
-  const container = document.getElementById(JUZ_CONTAINER_ID);
-  const text = container.dataset.shareText;
-  navigator.clipboard.writeText(text).then(() => {
-    // Show toast
-    if (typeof showTestToast === 'function') {
-      showTestToast('Results copied to clipboard!');
-    } else if (typeof showToast === 'function') {
-      showToast('Results copied to clipboard!');
-    }
-  }).catch(e => console.error('Failed to copy', e));
-}
 
 // ===== Production: Juz Journey Initialization =====
 // Ramadan 2026 — Juz Journey launched Feb 17 evening (1 Ramadan 1447 AH)

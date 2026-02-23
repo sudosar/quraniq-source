@@ -300,7 +300,7 @@ async function speakArabic(text, ref) {
                 });
 
                 if (match && match.audio_url) {
-                    const audioUrl = `https://audio.quran.com/${match.audio_url}`;
+                    const audioUrl = `https://audio.qurancdn.com/${match.audio_url}`;
                     const audio = new Audio(audioUrl);
                     audio.play().catch(e => {
                         console.warn('WBW audio play failed, falling back to TTS', e);

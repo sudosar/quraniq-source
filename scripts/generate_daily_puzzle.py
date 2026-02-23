@@ -2007,10 +2007,6 @@ def main():
                 if g == "connections":
                     cats = existing_puzzles[g].get("categories", [])
                     for cat in cats:
-                        if not cat.get("verse", {}).get("ayah"):
-                            print(f"  ⚠ Found corrupt data in history (empty category verse): {g}")
-                            valid_history = False
-                            break
                         for item in cat.get("items", []):
                             if not item.get("verse"):
                                 print(f"  ⚠ Found corrupt data in history (empty item verse): {g}")

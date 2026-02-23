@@ -389,9 +389,11 @@ function renderSolvedRows() {
                         <div class="wbw-words" style="display:none;"></div>
                         <div class="wbw-loading" style="display:none;">Loading word-by-word...</div>
                     </div>
+                    ${verseEn ? `<div class="verse-slide-en">${verseEn}</div>` : ''}
                     <div class="wbw-tooltip" style="display:none;"></div>
                     <div class="verse-slide-ref-row">
-                        <button class="verse-play-btn" data-ref="${ref}" aria-label="Play recitation">&#9654;</button>
+                        <button class="verse-play-btn" data-ref="${ref}" title="Play recitation">▶</button>
+                        <a href="${refLink}" target="_blank" class="context-btn" title="View Context on Quran.com">📖</a>
                     </div>
                     <div class="verse-reveal-hint">TAP ANY WORD TO SEE ITS MEANING</div>
                 </div>` : ''}
@@ -488,6 +490,25 @@ function renderSolvedRows() {
         // Touch swipe support
         setupSwipe(row.querySelector('.verse-slides'), idx, items.length);
     });
+
+    // Update theme verses section if game is over or all solved
+    const themeVersesContainer = document.getElementById('connections-theme-verses');
+    if (themeVersesContainer) {
+        if (conn.solved && conn.solved.length > 0) {
+            themeVersesContainer.style.display = 'block';
+            themeVersesContainer.innerHTML = '<h3>Theme Verses</h3>' + conn.solved.map(s => {
+                if (!s.verse) return '';
+                const refLink = refToQuranLink(s.verse.ref);
+                return `<div class="theme-verse-item ${s.color}">
+                    <div class="theme-verse-cat">${s.nameEn || s.name}</div>
+                    <div class="theme-verse-ar">${s.verse.ayah}</div>
+                    <div class="theme-verse-en">${s.verse.en} <a href="${refLink}" target="_blank" class="context-btn" title="View Context on Quran.com">📖</a></div>
+                </div>`;
+            }).join('');
+        } else {
+            themeVersesContainer.style.display = 'none';
+        }
+    }
 }
 
 // Track current slide per row

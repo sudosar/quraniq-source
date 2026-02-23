@@ -563,7 +563,7 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         const arabicHtml = arabic ? `<span class="result-verse-arabic">${arabic}</span>` : '';
         const transHtml = translationHtml ? `<span class="translation">— ${translationHtml}</span>` : '';
         if (quranUrl) {
-            verseEl.innerHTML = `<a href="${quranUrl}" target="_blank" rel="noopener noreferrer" class="result-verse-link" title="Read on Quran.com">${titleHtml}${arabicHtml}${transHtml}</a>`;
+            verseEl.innerHTML = `<a href="${quranUrl}" target="_blank" rel="noopener noreferrer" class="result-verse-link" title="Read on Quran.com"><span class="context-icon">📖</span> ${titleHtml}${arabicHtml}${transHtml}</a>`;
         } else {
             verseEl.innerHTML = `${titleHtml}${arabicHtml}${transHtml}`;
         }
