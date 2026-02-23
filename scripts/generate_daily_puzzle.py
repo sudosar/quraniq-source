@@ -32,6 +32,9 @@ import glob
 import time
 import requests
 from datetime import datetime, timedelta
+from tashaphyne.stemming import ArabicLightStemmer
+
+_stemmer = ArabicLightStemmer()
 
 # ── Arabic text helpers ────────────────────────────────────────────
 def normalize_arabic(text):
@@ -67,42 +70,60 @@ def normalize_arabic(text):
     return text
 
 
-def words_share_root(word1, word2, min_overlap=3):
-    """Check if two Arabic words likely share the same root.
-    
-    Uses multiple strategies:
-    1. Exact normalized match
-    2. One contains the other
-    3. Shared consecutive substring of min_overlap characters
-    
-    This catches cases like وعد/وعدا/وعده/موعدا (all root و-ع-د)
-    and فتنة/فتنة (same word, different diacritics).
+def _extract_root(word):
+    """Extract the Arabic root of a word using Tashaphyne morphological analysis.
+
+    Normalizes the word (strips diacritics, Uthmani marks, etc.) before
+    feeding it to the light stemmer so that both LLM-generated standard
+    Arabic and Quran-API Uthmani script are handled uniformly.
+    """
+    w = normalize_arabic(word)
+    if not w:
+        return ""
+    _stemmer.light_stem(w)
+    return _stemmer.get_root()
+
+
+def words_share_root(word1, word2):
+    """Check if two Arabic words share the same linguistic root.
+
+    Uses a two-tier approach:
+      1. Normalized-form comparison (exact match after stripping the
+         definite article, or one stem contained in the other when both
+         are at least 4 characters — avoids short-word false positives).
+      2. Tashaphyne morphological root extraction — compares the
+         trilateral (or quadrilateral) roots returned by the stemmer.
+
+    This replaces the previous naive 3-character substring heuristic,
+    which produced a high rate of false positives (e.g. سلطان/شيطان,
+    حديد/صديد) and caused excessive LLM retries.
     """
     n1 = normalize_arabic(word1)
     n2 = normalize_arabic(word2)
     if not n1 or not n2:
         return False
-    
+
     # Strip definite article for comparison
     s1 = n1[2:] if n1.startswith('ال') else n1
     s2 = n2[2:] if n2.startswith('ال') else n2
-    
-    # Exact match after stripping article
+
+    # Tier 1a: Exact match after stripping article
     if s1 == s2:
         return True
-    
-    # One contains the other (handles prefixed/suffixed forms)
-    if len(s1) >= 3 and len(s2) >= 3:
-        if s1 in s2 or s2 in s1:
-            return True
-    
-    # Check for shared consecutive substring of min_overlap length
-    shorter, longer = (s1, s2) if len(s1) <= len(s2) else (s2, s1)
-    for i in range(len(shorter) - min_overlap + 1):
-        sub = shorter[i:i + min_overlap]
-        if sub in longer:
-            return True
-    
+
+    # Tier 1b: One stem contained in the other (handles suffixed forms
+    # like عصاه/عصا, متاع/متاعا).  Require the shorter stem to be at
+    # least 4 characters to avoid spurious matches (e.g. ران in قرآن).
+    shorter_len = min(len(s1), len(s2))
+    if shorter_len >= 4 and (s1 in s2 or s2 in s1):
+        return True
+
+    # Tier 2: Morphological root comparison via Tashaphyne
+    root1 = _extract_root(word1)
+    root2 = _extract_root(word2)
+    if root1 and root2 and root1 == root2:
+        return True
+
     return False
 
 
