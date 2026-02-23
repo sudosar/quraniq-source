@@ -1713,6 +1713,9 @@ def enrich_deduction_with_verses(puzzle):
 # Connections uses generate_connections() — its own category-by-category loop.
 # ═══════════════════════════════════════════════════════════════════
 GAME_CONFIGS = {
+    "connections": {
+        "label": "Ayah Connections",
+    },
     "harf": {
         "build_prompt": build_harf_prompt,
         "validate": validate_harf,
