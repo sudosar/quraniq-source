@@ -34,7 +34,6 @@ A special mode coming for Ramadan that takes you through one Juz each day. Explo
 - **Recitations**: Listen to beautiful recitations from Quran.com/EveryAyah.com.
 - **Leaderboards**: Join a group and compete with friends and family in a friendly competition.
 - **Deep Study Links**: Every verse solved includes links to Quran.com for further study and reflection.
-- **AI Learning Insights**: "Soul Mirror" feature generates personalized reflections based on user puzzle completions.
 - **In-App Bug Reporting**: A native client feature that allows users to instantly submit bug reports with automatically captured screenshots and environment data.
 - **Save Progress**: Generate a save code to move your statistics and streaks between devices.
 
