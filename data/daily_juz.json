@@ -3,24 +3,24 @@
   "puzzle": {
     "date": "2026-02-23",
     "juz_number": 7,
-    "juz_name": "Wa Iza Sami'u",
+    "juz_name": "Wa Idza Sami'u",
     "juz_name_ar": "وَإِذَا سَمِعُوا",
     "verse": {
       "surah_number": 6,
       "surah_name": "Al-An'am",
-      "surah_name_ar": "الْأَنْعَام",
-      "ayah_number": 59,
-      "arabic_text": "وَعِندَهُۥ مَفَاتِحُ ٱلْغَيْبِ لَا يَعْلَمُهَآ إِلَّا هُوَ ۚ وَيَعْلَمُ مَا فِى ٱلْبَرِّ وَٱلْبَحْرِ ۚ وَمَا تَسْقُطُ مِن وَرَقَةٍ إِلَّا يَعْلَمُهَا وَلَا حَبَّةٍۢ فِى ظُلُمَـٰتِ ٱلْأَرْضِ وَلَا رَطْبٍۢ وَلَا يَابِسٍ إِلَّا فِى كِتَـٰبٍۢ مُّبِينٍۢ",
-      "translation": "And with Him are the keys of the unseen; none knows them except Him. And He knows what is on the land and in the sea. Not a leaf falls but that He knows it. And no grain is there within the darknesses of the earth and no moist or dry [thing] but that it is [written] in a clear record.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/848.mp3"
+      "surah_name_ar": "ٱلْأَنْعَام",
+      "ayah_number": 32,
+      "arabic_text": "وَمَا ٱلْحَيَوٰةُ ٱلدُّنْيَآ إِلَّا لَعِبٌ وَلَهْوٌ ۖ وَلَلدَّارُ ٱلْءَاخِرَةُ خَيْرٌ لِّلَّذِينَ يَتَّقُونَ ۗ أَفَلَا تَعْقِلُونَ",
+      "translation": "And the worldly life is not but amusement and diversion; but the home of the Hereafter is best for those who fear Allah, so will you not reason?",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/821.mp3"
     },
     "theme_question": {
-      "correct": "The limitlessness of Allah's knowledge, encompassing every detail of the seen and unseen worlds.",
+      "correct": "The true value and permanence of the Hereafter compared to the fleeting nature of worldly life.",
       "options": [
-        "The importance of seeking knowledge from righteous scholars.",
-        "The limitlessness of Allah's knowledge, encompassing every detail of the seen and unseen worlds.",
-        "The specific rewards reserved for those who believe in the unseen.",
-        "A prohibition against trying to predict the future through divination."
+        "The obligation to earn a living and enjoy the lawful pleasures of the world.",
+        "The true value and permanence of the Hereafter compared to the fleeting nature of worldly life.",
+        "The prohibition of specific worldly amusements like music and games.",
+        "A command to completely abandon the world and live in seclusion."
       ]
     },
     "surah_question": {
@@ -29,25 +29,25 @@
         {
           "num": 5,
           "name": "Al-Ma'idah",
-          "name_ar": "الْمَائِدَة",
+          "name_ar": "ٱلْمَائِدَة",
           "name_en": "The Table Spread"
         },
         {
           "num": 7,
           "name": "Al-A'raf",
-          "name_ar": "الْأَعْرَاف",
+          "name_ar": "ٱلْأَعْرَاف",
           "name_en": "The Heights"
         },
         {
           "num": 6,
           "name": "Al-An'am",
-          "name_ar": "الْأَنْعَام",
+          "name_ar": "ٱلْأَنْعَام",
           "name_en": "The Cattle"
         },
         {
           "num": 4,
           "name": "An-Nisa",
-          "name_ar": "النِّسَاء",
+          "name_ar": "ٱلنِّسَاء",
           "name_en": "The Women"
         }
       ]
@@ -57,21 +57,21 @@
         {
           "num": 5,
           "name": "Al-Ma'idah",
-          "name_ar": "الْمَائِدَة",
+          "name_ar": "ٱلْمَائِدَة",
           "name_en": "The Table Spread"
         },
         {
           "num": 6,
           "name": "Al-An'am",
-          "name_ar": "الْأَنْعَام",
+          "name_ar": "ٱلْأَنْعَام",
           "name_en": "The Cattle"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse, from Surah Al-An'am, is a powerful declaration of Allah's absolute omniscience. It appears in a section dedicated to establishing the core principles of Tawhid (monotheism) and refuting polytheism. By highlighting that Allah alone holds the 'keys to the unseen' (Mafatih al-Ghayb), the verse contrasts the limited knowledge of creation with the infinite, all-encompassing knowledge of the Creator.",
-      "theme_explanation": "The central theme is the perfection and totality of Allah's knowledge. The verse uses profound imagery to convey this concept. 'Keys of the unseen' refers to knowledge exclusively held by Allah, such as the time of the Day of Judgment or the future. The verse then moves from the abstract unseen to the tangible seen, using examples like a falling leaf, a hidden grain, or anything 'moist or dry' to illustrate that nothing, no matter how insignificant or concealed, escapes His awareness. This is meant to inspire awe, humility, and complete trust in Allah's divine wisdom and plan.",
-      "surah_overview": "Surah Al-An'am (The Cattle) is the 6th chapter of the Quran and is a Makkan surah, revealed before the Hijrah. Its primary focus is on 'Aqidah (creed), specifically the oneness of Allah (Tawhid) and the rejection of shirk (polytheism). It presents logical arguments against idol worship, drawing evidence from the natural world—the creation of heavens and earth, the alternation of night and day, and the growth of vegetation—as signs of a single, all-powerful Creator. The surah also discusses prophethood, divine revelation, and the reality of the Hereafter."
+      "verse_context": "This verse is part of a larger discourse addressing the disbelievers of Makkah who were engrossed in their worldly life and rejected the Prophet's (ﷺ) message about the Hereafter. It serves as a powerful rhetorical question, urging them to use their intellect to understand the true reality of existence.",
+      "theme_explanation": "The theme is a fundamental Quranic principle: the hierarchy of values between the dunya (this world) and the akhirah (the Hereafter). The verse uses the metaphor of 'amusement and diversion' (لَعِبٌ وَلَهْوٌ) to describe the world's deceptive and temporary nature. True, lasting success and goodness are reserved for those who have Taqwa (God-consciousness, piety) and prioritize the life to come. The final question, 'so will you not reason?' (أَفَلَا تَعْقِلُونَ), challenges the listener to reflect deeply on their priorities.",
+      "surah_overview": "Surah Al-An'am ('The Cattle') is the 6th chapter of the Quran and is unique as it was revealed entirely in Makkah in one sitting. Its central theme is Tawhid (the absolute Oneness of Allah) and the refutation of shirk (polytheism). It addresses core tenets of faith, including Allah's sovereignty, creation, prophethood, and the reality of resurrection and judgment, often using the signs in the natural world as proof of the Creator's power and wisdom. The surah's name comes from the discussion of various pagan superstitions related to cattle (ayahs 136-140)."
     }
   },
   "generated": true,

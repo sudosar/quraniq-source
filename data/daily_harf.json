@@ -1,12 +1,12 @@
 {
   "date": "2026-02-23",
   "puzzle": {
-    "word": "نجم",
-    "display": "نَجْمٌ",
-    "hint": "A celestial body that guides travelers in the darkness; also a prostration.",
-    "verseRef": "53:1",
-    "arabicVerse": "وَٱلنَّجْمِ إِذَا هَوَىٰ",
-    "verse": "53:1 — By the star when it descends,"
+    "word": "ماء",
+    "display": "مَاء",
+    "hint": "A colorless blessing from the sky, essential for purification.",
+    "verseRef": "8:11",
+    "arabicVerse": "إِذْ يُغَشِّيكُمُ ٱلنُّعَاسَ أَمَنَةًۭ مِّنْهُ وَيُنَزِّلُ عَلَيْكُم مِّنَ ٱلسَّمَآءِ مَآءًۭ لِّيُطَهِّرَكُم بِهِۦ وَيُذْهِبَ عَنكُمْ رِجْزَ ٱلشَّيْطَـٰنِ وَلِيَرْبِطَ عَلَىٰ قُلُوبِكُمْ وَيُثَبِّتَ بِهِ ٱلْأَقْدَامَ",
+    "verse": "8:11 — [Remember] when He overwhelmed you with drowsiness [giving] security from Him and sent down upon you from the sky, rain by which to purify you and remove from you the evil [suggestions] of Satan and to make steadfast your hearts and plant firmly thereby your feet."
   },
   "generated": true,
   "model": "auto (chain)"

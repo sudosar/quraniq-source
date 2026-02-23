@@ -1,32 +1,29 @@
 {
   "date": "2026-02-23",
   "puzzle": {
-    "verseRef": "7:23",
-    "reference": "Surah Al-A'raf (7:23)",
+    "verseRef": "21:107",
+    "reference": "Surah Al-Anbiya (21:107)",
     "segments": [
-      "قَالَا رَبَّنَا",
-      "ظَلَمْنَا أَنفُسَنَا",
-      "وَإِن لَّمْ تَغْفِرْ لَنَا",
-      "وَتَرْحَمْنَا",
-      "لَنَكُونَنَّ مِنَ الْخَاسِرِينَ"
+      "وَمَا أَرْسَلْنَاكَ",
+      "إِلَّا",
+      "رَحْمَةً",
+      "لِّلْعَالَمِينَ"
     ],
     "translations": [
-      "Both of them said Our Lord we have wronged",
-      "ourselves and if not",
-      "You forgive [for] us",
-      "and have mercy (on) us surely, we will be",
-      "among the losers"
+      "And not We have sent you",
+      "but",
+      "(as) a mercy",
+      "for the worlds"
     ],
-    "hint": "The supplication of our first parents, Adam and Eve, after their slip.",
-    "arabic": "قَالَا رَبَّنَا ظَلَمْنَآ أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ ٱلْخَـٰسِرِينَ",
+    "hint": "This verse describes the universal purpose of the Prophet Muhammad's (ﷺ) mission to all of creation.",
+    "arabic": "وَمَآ أَرْسَلْنَـٰكَ إِلَّا رَحْمَةًۭ لِّلْعَـٰلَمِينَ",
     "words": [
-      "قَالَا رَبَّنَا ظَلَمْنَآ",
-      "أَنفُسَنَا وَإِن لَّمْ",
-      "تَغْفِرْ لَنَا",
-      "وَتَرْحَمْنَا لَنَكُونَنَّ",
-      "مِنَ ٱلْخَـٰسِرِينَ"
+      "وَمَآ أَرْسَلْنَـٰكَ",
+      "إِلَّا",
+      "رَحْمَةًۭ",
+      "لِّلْعَـٰلَمِينَ"
     ],
-    "verseEn": "They said, \"Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.\""
+    "verseEn": "And We have not sent you, [O Muḥammad], except as a mercy to the worlds."
   },
   "generated": true,
   "model": "auto (chain)"

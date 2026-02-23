@@ -1,65 +1,65 @@
 {
   "date": "2026-02-23",
   "puzzle": {
-    "title": "The Voice of Iron and Psalms",
-    "intro": "A divinely-appointed leader was granted immense wisdom and a unique gift that echoed through the mountains. This individual's story is one of strength, justice, and profound devotion, blending the might of a ruler with the humility of a servant. Can you identify this remarkable figure?",
+    "title": "The Voice of Concealed Conviction",
+    "intro": "In the heart of a tyrannical court, where disbelief was the law of the land, a lone soul walked a tightrope of faith and fear. This individual, close to the center of power, listened as a prophet's message was met with scorn and threats. A moment of truth arrived, forcing this person to choose between silent safety and speaking a dangerous truth. Can you uncover the identity of this courageous advocate?",
     "clues": [
-      "The mountains were commanded to echo my praise, and the birds would gather to join my chorus.",
-      "I was given a sacred book, a guide filled with psalms of devotion.",
-      "Allah made a hard metal pliable in my hands, a special gift for me to use.",
-      "From this softened metal, I fashioned protective coats of mail, linking the rings with precision.",
-      "In a decisive battle for my people, I faced and defeated a towering, tyrannical warrior.",
-      "My kingdom and prophethood were later inherited by my son, who was also blessed with incredible wisdom."
+      "I lived within the very household of a tyrant, witnessing firsthand the arrogance that rejected divine signs.",
+      "I kept my faith a secret, a hidden treasure in a palace of idolatry.",
+      "I heard the leader I served plot to kill a messenger of Allah, a man named Musa.",
+      "I questioned their logic, reminding them of the fate of the people of Nuh, 'Ad, and Thamud.",
+      "I posed a critical question to my people: 'If he is a liar, his lie is upon him; but if he is truthful, some of what he promises will strike you.'",
+      "My story is told as an example of faith in the surah named 'The Forgiver,' where I warned my people against the schemes of the powerful."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Musa (Moses)",
-          "Talut (Saul)",
-          "Prophet Dawud (David)",
-          "Prophet Yusuf (Joseph)",
-          "Dhul-Kifl"
+          "The Believer from Fir'awn's Family",
+          "Haman",
+          "The Magicians of Fir'awn",
+          "Qarun",
+          "The Samiri"
         ],
-        "answer": "Prophet Dawud (David)"
+        "answer": "The Believer from Fir'awn's Family"
       },
       "trial": {
-        "label": "What was my defining confrontation?",
+        "label": "What Was My Trial?",
         "options": [
-          "A contest with the Pharaoh's magicians",
-          "Parting the Red Sea",
-          "Building a great ark before a flood",
-          "Defeating the giant Jalut (Goliath)",
-          "Being thrown into a blazing fire"
+          "Defending Prophet Musa in the tyrant's court",
+          "Building a lofty tower to reach the heavens",
+          "Being cast into a blazing fire",
+          "Being swallowed by a giant fish",
+          "Losing all wealth and health"
         ],
-        "answer": "Defeating the giant Jalut (Goliath)"
+        "answer": "Defending Prophet Musa in the tyrant's court"
       },
       "location": {
-        "label": "What was I given mastery over?",
+        "label": "What Was My Argument's Theme?",
         "options": [
-          "The Wind",
-          "Wood",
-          "Iron",
-          "Clay",
-          "Water"
+          "The consequence of rejecting a prophet's message",
+          "The demand for a sign from a sacred tree",
+          "The creation of a calf from molten jewelry",
+          "The miracle of a camel from rock",
+          "The interpretation of a ruler's dreams"
         ],
-        "answer": "Iron"
+        "answer": "The consequence of rejecting a prophet's message"
       },
       "outcome": {
-        "label": "What was a major blessing I received?",
+        "label": "What Was the Outcome?",
         "options": [
-          "Receiving the Tablets of the Law",
-          "Being granted the Zabur (Psalms)",
-          "Being raised to the heavens alive",
-          "The ability to interpret dreams",
-          "Surviving inside a great fish"
+          "Allah saved this individual from their evil plot",
+          "The entire court immediately accepted Islam",
+          "The tyrant repented at the moment of drowning",
+          "A great flood destroyed the disbelievers",
+          "The individual was exiled to a distant land"
         ],
-        "answer": "Being granted the Zabur (Psalms)"
+        "answer": "Allah saved this individual from their evil plot"
       }
     },
-    "verseRef": "34:10",
-    "arabic": "۞ وَلَقَدْ ءَاتَيْنَا دَاوُۥدَ مِنَّا فَضْلًۭا ۖ يَـٰجِبَالُ أَوِّبِى مَعَهُۥ وَٱلطَّيْرَ ۖ وَأَلَنَّا لَهُ ٱلْحَدِيدَ",
-    "verse": "And We certainly gave David from Us bounty. [We said], \"O mountains, repeat [Our] praises with him, and the birds [as well].\" And We made pliable for him iron, (34:10)"
+    "verseRef": "40:45",
+    "arabic": "فَوَقَىٰهُ ٱللَّهُ سَيِّـَٔاتِ مَا مَكَرُوا۟ ۖ وَحَاقَ بِـَٔالِ فِرْعَوْنَ سُوٓءُ ٱلْعَذَابِ",
+    "verse": "So Allāh protected him from the evils they plotted, and the people of Pharaoh were enveloped by the worst of punishment - (40:45)"
   },
   "generated": true,
   "model": "auto (chain)"

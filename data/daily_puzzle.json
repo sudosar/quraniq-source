@@ -3,142 +3,142 @@
   "puzzle": {
     "categories": [
       {
-        "name": "أَفْرَادُ الْعَائِلَة",
-        "nameEn": "Family Members",
+        "name": "أَجْزَاءُ الشَّجَرَةِ",
+        "nameEn": "Parts of a Tree",
         "color": "yellow",
         "items": [
           {
-            "ar": "لِأَبِيهِ",
-            "en": "to his father",
-            "ref": "6:74",
-            "verse": "۞ وَإِذْ قَالَ إِبْرَٰهِيمُ لِأَبِيهِ ءَازَرَ أَتَتَّخِذُ أَصْنَامًا ءَالِهَةً ۖ إِنِّىٓ أَرَىٰكَ وَقَوْمَكَ فِى ضَلَـٰلٍۢ مُّبِينٍۢ",
-            "verseEn": "And [mention, O Muḥammad], when Abraham said to his father Āzar, \"Do you take idols as deities? Indeed, I see you and your people to be in manifest error.\""
+            "ar": "وَرَقِ",
+            "en": "leaves of",
+            "ref": "7:22",
+            "verse": "فَدَلَّىٰهُمَا بِغُرُورٍۢ ۚ فَلَمَّا ذَاقَا ٱلشَّجَرَةَ بَدَتْ لَهُمَا سَوْءَٰتُهُمَا وَطَفِقَا يَخْصِفَانِ عَلَيْهِمَا مِن وَرَقِ ٱلْجَنَّةِ ۖ وَنَادَىٰهُمَا رَبُّهُمَآ أَلَمْ أَنْهَكُمَا عَن تِلْكُمَا ٱلشَّجَرَةِ وَأَقُل لَّكُمَآ إِنَّ ٱلشَّيْطَـٰنَ لَكُمَا عَدُوٌّۭ مُّبِينٌۭ",
+            "verseEn": "So he made them fall, through deception. And when they tasted of the tree, their private parts became apparent to them, and they began to fasten together over themselves from the leaves of Paradise. And their Lord called to them, \"Did I not forbid you from that tree and tell you that Satan is to you a clear enemy?\""
           },
           {
-            "ar": "ابْنَهُ",
-            "en": "his son",
-            "ref": "11:42",
-            "verse": "وَهِىَ تَجْرِى بِهِمْ فِى مَوْجٍۢ كَٱلْجِبَالِ وَنَادَىٰ نُوحٌ ٱبْنَهُۥ وَكَانَ فِى مَعْزِلٍۢ يَـٰبُنَىَّ ٱرْكَب مَّعَنَا وَلَا تَكُن مَّعَ ٱلْكَـٰفِرِينَ",
-            "verseEn": "And it sailed with them through waves like mountains, and Noah called to his son who was apart [from them], \"O my son, come aboard with us and be not with the disbelievers.\""
+            "ar": "جِذْعِ",
+            "en": "trunk of",
+            "ref": "19:23",
+            "verse": "فَأَجَآءَهَا ٱلْمَخَاضُ إِلَىٰ جِذْعِ ٱلنَّخْلَةِ قَالَتْ يَـٰلَيْتَنِى مِتُّ قَبْلَ هَـٰذَا وَكُنتُ نَسْيًۭا مَّنسِيًّۭا",
+            "verseEn": "And the pains of childbirth drove her to the trunk of a palm tree. She said, \"Oh, I wish I had died before this and was in oblivion, forgotten.\""
           },
           {
-            "ar": "إِخْوَتِكَ",
-            "en": "your brothers",
-            "ref": "12:5",
-            "verse": "قَالَ يَـٰبُنَىَّ لَا تَقْصُصْ رُءْيَاكَ عَلَىٰٓ إِخْوَتِكَ فَيَكِيدُوا۟ لَكَ كَيْدًا ۖ إِنَّ ٱلشَّيْطَـٰنَ لِلْإِنسَـٰنِ عَدُوٌّۭ مُّبِينٌۭ",
-            "verseEn": "He said, \"O my son, do not relate your vision to your brothers or they will contrive against you a plan. Indeed Satan, to man, is a manifest enemy."
+            "ar": "ثَمَرِهِ",
+            "en": "its fruit",
+            "ref": "6:99",
+            "verse": "وَهُوَ ٱلَّذِىٓ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءًۭ فَأَخْرَجْنَا بِهِۦ نَبَاتَ كُلِّ شَىْءٍۢ فَأَخْرَجْنَا مِنْهُ خَضِرًۭا نُّخْرِجُ مِنْهُ حَبًّۭا مُّتَرَاكِبًۭا وَمِنَ ٱلنَّخْلِ مِن طَلْعِهَا قِنْوَانٌۭ دَانِيَةٌۭ وَجَنَّـٰتٍۢ مِّنْ أَعْنَابٍۢ وَٱلزَّيْتُونَ وَٱلرُّمَّانَ مُشْتَبِهًۭا وَغَيْرَ مُتَشَـٰبِهٍ ۗ ٱنظُرُوٓا۟ إِلَىٰ ثَمَرِهِۦٓ إِذَآ أَثْمَرَ وَيَنْعِهِۦٓ ۚ إِنَّ فِى ذَٰلِكُمْ لَـَٔايَـٰتٍۢ لِّقَوْمٍۢ يُؤْمِنُونَ",
+            "verseEn": "And it is He who sends down rain from the sky, and We produce thereby the growth of all things. We produce from it greenery from which We produce grains arranged in layers. And from the palm trees - of its emerging fruit are clusters hanging low. And [We produce] gardens of grapevines and olives and pomegranates, similar yet varied. Look at [each of] its fruit when it yields and [at] its ripening. Indeed in that are signs for a people who believe."
           },
           {
-            "ar": "زَوْجُكَ",
-            "en": "your wife",
-            "ref": "7:19",
-            "verse": "وَيَـٰٓـَٔادَمُ ٱسْكُنْ أَنتَ وَزَوْجُكَ ٱلْجَنَّةَ فَكُلَا مِنْ حَيْثُ شِئْتُمَا وَلَا تَقْرَبَا هَـٰذِهِ ٱلشَّجَرَةَ فَتَكُونَا مِنَ ٱلظَّـٰلِمِينَ",
-            "verseEn": "And \"O Adam, dwell, you and your wife, in Paradise and eat from wherever you will but do not approach this tree, lest you be among the wrongdoers.\""
+            "ar": "أَصْلِ",
+            "en": "base of",
+            "ref": "37:64",
+            "verse": "إِنَّهَا شَجَرَةٌۭ تَخْرُجُ فِىٓ أَصْلِ ٱلْجَحِيمِ",
+            "verseEn": "Indeed, it is a tree issuing from the bottom of the Hellfire,"
           }
         ]
       },
       {
-        "name": "طَعَامُ أَهْلِ النَّارِ",
-        "nameEn": "Foods of the People of Hell",
+        "name": "مَوَادُّ الْبِنَاءِ فِي الْقُرْآنِ",
+        "nameEn": "Quranic Terms for Building Materials",
         "color": "green",
         "items": [
           {
-            "ar": "الزَّقُّومِ",
-            "en": "the tree of Zaqqum",
-            "ref": "44:43",
-            "verse": "إِنَّ شَجَرَتَ ٱلزَّقُّومِ",
-            "verseEn": "Indeed, the tree of zaqqūm"
+            "ar": "الطِّينِ",
+            "en": "The Clay",
+            "ref": "28:38",
+            "verse": "وَقَالَ فِرْعَوْنُ يَـٰٓأَيُّهَا ٱلْمَلَأُ مَا عَلِمْتُ لَكُم مِّنْ إِلَـٰهٍ غَيْرِى فَأَوْقِدْ لِى يَـٰهَـٰمَـٰنُ عَلَى ٱلطِّينِ فَٱجْعَل لِّى صَرْحًۭا لَّعَلِّىٓ أَطَّلِعُ إِلَىٰٓ إِلَـٰهِ مُوسَىٰ وَإِنِّى لَأَظُنُّهُۥ مِنَ ٱلْكَـٰذِبِينَ",
+            "verseEn": "And Pharaoh said, \"O eminent ones, I have not known you to have a god other than me. Then ignite for me, O Hāmān, [a fire] upon the clay and make for me a tower that I may look at the God of Moses. And indeed, I do think he is among the liars.\""
           },
           {
-            "ar": "غِسْلِينٍ",
-            "en": "filth from wounds",
-            "ref": "69:36",
-            "verse": "وَلَا طَعَامٌ إِلَّا مِنْ غِسْلِينٍۢ",
-            "verseEn": "Nor any food except from the discharge of wounds;"
+            "ar": "الْحَدِيدَ",
+            "en": "The Iron",
+            "ref": "34:10",
+            "verse": "۞ وَلَقَدْ ءَاتَيْنَا دَاوُۥدَ مِنَّا فَضْلًۭا ۖ يَـٰجِبَالُ أَوِّبِى مَعَهُۥ وَٱلطَّيْرَ ۖ وَأَلَنَّا لَهُ ٱلْحَدِيدَ",
+            "verseEn": "And We certainly gave David from Us bounty. [We said], \"O mountains, repeat [Our] praises with him, and the birds [as well].\" And We made pliable for him iron,"
           },
           {
-            "ar": "صَدِيدٍ",
-            "en": "foul fluid",
-            "ref": "14:16",
-            "verse": "مِّن وَرَآئِهِۦ جَهَنَّمُ وَيُسْقَىٰ مِن مَّآءٍۢ صَدِيدٍۢ",
-            "verseEn": "Before him is Hell, and he will be given a drink of purulent water."
+            "ar": "قِطْرًا",
+            "en": "Molten Copper",
+            "ref": "18:96",
+            "verse": "ءَاتُونِى زُبَرَ ٱلْحَدِيدِ ۖ حَتَّىٰٓ إِذَا سَاوَىٰ بَيْنَ ٱلصَّدَفَيْنِ قَالَ ٱنفُخُوا۟ ۖ حَتَّىٰٓ إِذَا جَعَلَهُۥ نَارًۭا قَالَ ءَاتُونِىٓ أُفْرِغْ عَلَيْهِ قِطْرًۭا",
+            "verseEn": "Bring me bars of iron\" - until, when he had leveled [them] between the two mountain walls, he said, \"Blow [with bellows],\" until when he had made it [like] fire, he said, \"Bring me, that I may pour over it molten copper.\""
           },
           {
-            "ar": "طَلْعُهَا",
-            "en": "its fruit-spathe",
-            "ref": "37:65",
-            "verse": "طَلْعُهَا كَأَنَّهُۥ رُءُوسُ ٱلشَّيَـٰطِينِ",
-            "verseEn": "Its emerging fruit as if it was heads of the devils."
+            "ar": "الصَّخْرَ",
+            "en": "The Rock",
+            "ref": "89:9",
+            "verse": "وَثَمُودَ ٱلَّذِينَ جَابُوا۟ ٱلصَّخْرَ بِٱلْوَادِ",
+            "verseEn": "And [with] Thamūd, who carved out the rocks in the valley?"
           }
         ]
       },
       {
-        "name": "أَصْنَامٌ ذُكِرَتْ بِأَسْمَائِهَا",
-        "nameEn": "Pre-Islamic Idols Mentioned by Name",
+        "name": "أَسَالِيبُ الشَّيْطَانِ فِي الْإِضْلَالِ",
+        "nameEn": "Shaytan's Methods of Misguidance",
         "color": "blue",
         "items": [
           {
-            "ar": "الْعُزَّىٰ",
-            "en": "Al-Uzza",
-            "ref": "53:19",
-            "verse": "أَفَرَءَيْتُمُ ٱللَّـٰتَ وَٱلْعُزَّىٰ",
-            "verseEn": "So have you considered al-Lāt and al-ʿUzzā?"
+            "ar": "فَوَسْوَسَ",
+            "en": "he whispered",
+            "ref": "20:120",
+            "verse": "فَوَسْوَسَ إِلَيْهِ ٱلشَّيْطَـٰنُ قَالَ يَـٰٓـَٔادَمُ هَلْ أَدُلُّكَ عَلَىٰ شَجَرَةِ ٱلْخُلْدِ وَمُلْكٍۢ لَّا يَبْلَىٰ",
+            "verseEn": "Then Satan whispered to him; he said, \"O Adam, shall I direct you to the tree of eternity and possession that will not deteriorate?\""
           },
           {
-            "ar": "وَمَنَاةَ",
-            "en": "And Manat",
-            "ref": "53:20",
-            "verse": "وَمَنَوٰةَ ٱلثَّالِثَةَ ٱلْأُخْرَىٰٓ",
-            "verseEn": "And Manāt, the third - the other one?"
+            "ar": "يَعِدُكُمُ",
+            "en": "he promises you",
+            "ref": "2:268",
+            "verse": "ٱلشَّيْطَـٰنُ يَعِدُكُمُ ٱلْفَقْرَ وَيَأْمُرُكُم بِٱلْفَحْشَآءِ ۖ وَٱللَّهُ يَعِدُكُم مَّغْفِرَةًۭ مِّنْهُ وَفَضْلًۭا ۗ وَٱللَّهُ وَٰسِعٌ عَلِيمٌۭ",
+            "verseEn": "Satan threatens you with poverty and orders you to immorality, while Allāh promises you forgiveness from Him and bounty. And Allāh is all-Encompassing and Knowing."
           },
           {
-            "ar": "بَعْلًا",
-            "en": "Ba'l",
-            "ref": "37:125",
-            "verse": "أَتَدْعُونَ بَعْلًۭا وَتَذَرُونَ أَحْسَنَ ٱلْخَـٰلِقِينَ",
-            "verseEn": "Do you call upon Baʿl and leave the best of creators -"
+            "ar": "الْمَسِّ",
+            "en": "the touch",
+            "ref": "2:275",
+            "verse": "ٱلَّذِينَ يَأْكُلُونَ ٱلرِّبَوٰا۟ لَا يَقُومُونَ إِلَّا كَمَا يَقُومُ ٱلَّذِى يَتَخَبَّطُهُ ٱلشَّيْطَـٰنُ مِنَ ٱلْمَسِّ ۚ ذَٰلِكَ بِأَنَّهُمْ قَالُوٓا۟ إِنَّمَا ٱلْبَيْعُ مِثْلُ ٱلرِّبَوٰا۟ ۗ وَأَحَلَّ ٱللَّهُ ٱلْبَيْعَ وَحَرَّمَ ٱلرِّبَوٰا۟ ۚ فَمَن جَآءَهُۥ مَوْعِظَةٌۭ مِّن رَّبِّهِۦ فَٱنتَهَىٰ فَلَهُۥ مَا سَلَفَ وَأَمْرُهُۥٓ إِلَى ٱللَّهِ ۖ وَمَنْ عَادَ فَأُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلنَّارِ ۖ هُمْ فِيهَا خَـٰلِدُونَ",
+            "verseEn": "Those who consume interest cannot stand [on the Day of Resurrection] except as one stands who is being beaten by Satan into insanity. That is because they say, \"Trade is [just] like interest.\" But Allāh has permitted trade and has forbidden interest. So whoever has received an admonition from his Lord and desists may have what is past, and his affair rests with Allāh. But whoever returns [to dealing in interest or usury] - those are the companions of the Fire; they will abide eternally therein."
           },
           {
-            "ar": "نَسْرًا",
-            "en": "Nasr",
-            "ref": "71:23",
-            "verse": "وَقَالُوا۟ لَا تَذَرُنَّ ءَالِهَتَكُمْ وَلَا تَذَرُنَّ وَدًّۭا وَلَا سُوَاعًۭا وَلَا يَغُوثَ وَيَعُوقَ وَنَسْرًۭا",
-            "verseEn": "And said, 'Never leave your gods and never leave Wadd or Suwāʿ or Yaghūth and Yaʿūq and Nasr.'"
+            "ar": "يَنزَغُ",
+            "en": "he incites",
+            "ref": "17:53",
+            "verse": "وَقُل لِّعِبَادِى يَقُولُوا۟ ٱلَّتِى هِىَ أَحْسَنُ ۚ إِنَّ ٱلشَّيْطَـٰنَ يَنزَغُ بَيْنَهُمْ ۚ إِنَّ ٱلشَّيْطَـٰنَ كَانَ لِلْإِنسَـٰنِ عَدُوًّۭا مُّبِينًۭا",
+            "verseEn": "And tell My servants to say that which is best. Indeed, Satan induces [dissension] among them. Indeed Satan is ever, to mankind, a clear enemy."
           }
         ]
       },
       {
-        "name": "تحوُّلاتٌ مُعْجِزَةٌ فِي القَصَصِ القُرآنِيَّةِ",
-        "nameEn": "Miraculous Transformations in Quranic Stories",
+        "name": "أَفْعَالٌ مُرْتَبِطَةٌ بِالْيَدِ",
+        "nameEn": "VERBS ASSOCIATED WITH HAND ACTIONS",
         "color": "purple",
         "items": [
           {
-            "ar": "حَيَّةٌ",
-            "en": "snake",
-            "ref": "20:20",
-            "verse": "فَأَلْقَىٰهَا فَإِذَا هِىَ حَيَّةٌۭ تَسْعَىٰ",
-            "verseEn": "So he threw it down, and thereupon it was a snake, moving swiftly."
+            "ar": "قَبَضْتُ",
+            "en": "I grasped",
+            "ref": "20:96",
+            "verse": "قَالَ بَصُرْتُ بِمَا لَمْ يَبْصُرُوا۟ بِهِۦ فَقَبَضْتُ قَبْضَةًۭ مِّنْ أَثَرِ ٱلرَّسُولِ فَنَبَذْتُهَا وَكَذَٰلِكَ سَوَّلَتْ لِى نَفْسِى",
+            "verseEn": "He said, \"I saw what they did not see, so I took a handful [of dust] from the track of the messenger and threw it, and thus did my soul entice me.\""
           },
           {
-            "ar": "بَرْدًا",
-            "en": "coolness",
-            "ref": "21:69",
-            "verse": "قُلْنَا يَـٰنَارُ كُونِى بَرْدًۭا وَسَلَـٰمًا عَلَىٰٓ إِبْرَٰهِيمَ",
-            "verseEn": "We [i.e., Allāh] said, \"O fire, be coolness and safety upon Abraham.\""
+            "ar": "يَبْسُطُ",
+            "en": "He extends",
+            "ref": "13:26",
+            "verse": "ٱللَّهُ يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ وَيَقْدِرُ ۚ وَفَرِحُوا۟ بِٱلْحَيَوٰةِ ٱلدُّنْيَا وَمَا ٱلْحَيَوٰةُ ٱلدُّنْيَا فِى ٱلْـَٔاخِرَةِ إِلَّا مَتَـٰعٌۭ",
+            "verseEn": "Allāh extends provision for whom He wills and restricts [it]. And they rejoice in the worldly life, while the worldly life is not, compared to the Hereafter, except [brief] enjoyment."
           },
           {
-            "ar": "الطَّيْرِ",
-            "en": "birds",
-            "ref": "2:260",
-            "verse": "وَإِذْ قَالَ إِبْرَٰهِـۧمُ رَبِّ أَرِنِى كَيْفَ تُحْىِ ٱلْمَوْتَىٰ ۖ قَالَ أَوَلَمْ تُؤْمِن ۖ قَالَ بَلَىٰ وَلَـٰكِن لِّيَطْمَئِنَّ قَلْبِى ۖ قَالَ فَخُذْ أَرْبَعَةًۭ مِّنَ ٱلطَّيْرِ فَصُرْهُنَّ إِلَيْكَ ثُمَّ ٱجْعَلْ عَلَىٰ كُلِّ جَبَلٍۢ مِّنْهُنَّ جُزْءًۭا ثُمَّ ٱدْعُهُنَّ يَأْتِينَكَ سَعْيًۭا ۚ وَٱعْلَمْ أَنَّ ٱللَّهَ عَزِيزٌ حَكِيمٌۭ",
-            "verseEn": "And [mention] when Abraham said, \"My Lord, show me how You give life to the dead.\" [Allāh] said, \"Have you not believed?\" He said, \"Yes, but [I ask] only that my heart may be satisfied.\" [Allāh] said, \"Take four birds and commit them to yourself. Then [after slaughtering them] put on each hill a portion of them; then call them - they will come [flying] to you in haste. And know that Allāh is Exalted in Might and Wise.\""
+            "ar": "تَلْقَفُ",
+            "en": "it snatches up",
+            "ref": "26:45",
+            "verse": "فَأَلْقَىٰ مُوسَىٰ عَصَاهُ فَإِذَا هِىَ تَلْقَفُ مَا يَأْفِكُونَ",
+            "verseEn": "Then Moses threw his staff, and at once it devoured what they falsified."
           },
           {
-            "ar": "نَاقَةُ",
-            "en": "she-camel",
-            "ref": "7:73",
-            "verse": "وَإِلَىٰ ثَمُودَ أَخَاهُمْ صَـٰلِحًۭا ۗ قَالَ يَـٰقَوْمِ ٱعْبُدُوا۟ ٱللَّهَ مَا لَكُم مِّنْ إِلَـٰهٍ غَيْرُهُۥ ۖ قَدْ جَآءَتْكُم بَيِّنَةٌۭ مِّن رَّبِّكُمْ ۖ هَـٰذِهِۦ نَاقَةُ ٱللَّهِ لَكُمْ ءَايَةًۭ ۖ فَذَرُوهَا تَأْكُلْ فِىٓ أَرْضِ ٱللَّهِ ۖ وَلَا تَمَسُّوهَا بِسُوٓءٍۢ فَيَأْخُذَكُمْ عَذَابٌ أَلِيمٌۭ",
-            "verseEn": "And to the Thamūd [We sent] their brother Ṣāliḥ. He said, \"O my people, worship Allāh; you have no deity other than Him. There has come to you clear evidence from your Lord. This is the she-camel of Allāh [sent] to you as a sign. So leave her to eat within Allāh's land and do not touch her with harm, lest there seize you a painful punishment."
+            "ar": "يُقَلِّبُ",
+            "en": "He alternates",
+            "ref": "24:44",
+            "verse": "يُقَلِّبُ ٱللَّهُ ٱلَّيْلَ وَٱلنَّهَارَ ۚ إِنَّ فِى ذَٰلِكَ لَعِبْرَةًۭ لِّأُو۟لِى ٱلْأَبْصَـٰرِ",
+            "verseEn": "Allāh alternates the night and the day. Indeed in that is a lesson for those who have vision."
           }
         ]
       }
