@@ -1,12 +1,12 @@
 {
-  "date": "2026-02-22",
+  "date": "2026-02-23",
   "puzzle": {
-    "word": "فلك",
-    "display": "فَلَك",
-    "hint": "It describes the celestial path or orbit in which heavenly bodies are said to swim.",
-    "verseRef": "36:40",
-    "arabicVerse": "لَا ٱلشَّمْسُ يَنۢبَغِى لَهَآ أَن تُدْرِكَ ٱلْقَمَرَ وَلَا ٱلَّيْلُ سَابِقُ ٱلنَّهَارِ ۚ وَكُلٌّۭ فِى فَلَكٍۢ يَسْبَحُونَ",
-    "verse": "36:40 — It is not allowable [i.e., possible] for the sun to reach the moon, nor does the night overtake the day, but each, in an orbit, is swimming."
+    "word": "نجم",
+    "display": "نَجْمٌ",
+    "hint": "A celestial body that guides travelers in the darkness; also a prostration.",
+    "verseRef": "53:1",
+    "arabicVerse": "وَٱلنَّجْمِ إِذَا هَوَىٰ",
+    "verse": "53:1 — By the star when it descends,"
   },
   "generated": true,
   "model": "auto (chain)"

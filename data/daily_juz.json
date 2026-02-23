@@ -1,37 +1,59 @@
 {
-  "date": "2026-02-22",
+  "date": "2026-02-23",
   "puzzle": {
-    "date": "2026-02-22",
-    "juz_number": 6,
-    "juz_name": "Lā yuḥibbu Allāh",
-    "juz_name_ar": "لَا يُحِبُّ اللَّهُ",
+    "date": "2026-02-23",
+    "juz_number": 7,
+    "juz_name": "Wa Iza Sami'u",
+    "juz_name_ar": "وَإِذَا سَمِعُوا",
     "verse": {
-      "surah_number": 5,
-      "surah_name": "Al-Ma'idah",
-      "surah_name_ar": "الْمَائِدَة",
-      "ayah_number": 35,
-      "arabic_text": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَابْتَغُوا إِلَيْهِ الْوَسِيلَةَ وَجَاهِدُوا فِي سَبِيلِهِ لَعَلَّكُمْ تُفْلِحُونَ",
-      "translation": "O you who have believed, fear Allah and seek the means [of nearness] to Him and strive in His cause that you may succeed.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/704.mp3"
+      "surah_number": 6,
+      "surah_name": "Al-An'am",
+      "surah_name_ar": "الْأَنْعَام",
+      "ayah_number": 59,
+      "arabic_text": "وَعِندَهُۥ مَفَاتِحُ ٱلْغَيْبِ لَا يَعْلَمُهَآ إِلَّا هُوَ ۚ وَيَعْلَمُ مَا فِى ٱلْبَرِّ وَٱلْبَحْرِ ۚ وَمَا تَسْقُطُ مِن وَرَقَةٍ إِلَّا يَعْلَمُهَا وَلَا حَبَّةٍۢ فِى ظُلُمَـٰتِ ٱلْأَرْضِ وَلَا رَطْبٍۢ وَلَا يَابِسٍ إِلَّا فِى كِتَـٰبٍۢ مُّبِينٍۢ",
+      "translation": "And with Him are the keys of the unseen; none knows them except Him. And He knows what is on the land and in the sea. Not a leaf falls but that He knows it. And no grain is there within the darknesses of the earth and no moist or dry [thing] but that it is [written] in a clear record.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/848.mp3"
     },
     "theme_question": {
-      "correct": "Seeking nearness to Allah through Taqwa and righteous deeds",
+      "correct": "The limitlessness of Allah's knowledge, encompassing every detail of the seen and unseen worlds.",
       "options": [
-        "The specific rules of inheritance for orphans",
-        "Seeking nearness to Allah through Taqwa and righteous deeds",
-        "The physical description of the Day of Judgment",
-        "The prohibition of changing the direction of the Qibla"
+        "The importance of seeking knowledge from righteous scholars.",
+        "The limitlessness of Allah's knowledge, encompassing every detail of the seen and unseen worlds.",
+        "The specific rewards reserved for those who believe in the unseen.",
+        "A prohibition against trying to predict the future through divination."
       ]
     },
     "surah_question": {
-      "correct_surah": 5,
+      "correct_surah": 6,
       "options": [
+        {
+          "num": 5,
+          "name": "Al-Ma'idah",
+          "name_ar": "الْمَائِدَة",
+          "name_en": "The Table Spread"
+        },
+        {
+          "num": 7,
+          "name": "Al-A'raf",
+          "name_ar": "الْأَعْرَاف",
+          "name_en": "The Heights"
+        },
+        {
+          "num": 6,
+          "name": "Al-An'am",
+          "name_ar": "الْأَنْعَام",
+          "name_en": "The Cattle"
+        },
         {
           "num": 4,
           "name": "An-Nisa",
           "name_ar": "النِّسَاء",
           "name_en": "The Women"
-        },
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
         {
           "num": 5,
           "name": "Al-Ma'idah",
@@ -43,35 +65,13 @@
           "name": "Al-An'am",
           "name_ar": "الْأَنْعَام",
           "name_en": "The Cattle"
-        },
-        {
-          "num": 7,
-          "name": "Al-A'raf",
-          "name_ar": "الْأَعْرَاف",
-          "name_en": "The Heights"
-        }
-      ]
-    },
-    "surah_order": {
-      "surahs": [
-        {
-          "num": 4,
-          "name": "An-Nisa",
-          "name_ar": "النِّسَاء",
-          "name_en": "The Women"
-        },
-        {
-          "num": 5,
-          "name": "Al-Ma'idah",
-          "name_ar": "الْمَائِدَة",
-          "name_en": "The Table Spread"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse (5:35) is a pivotal command in Surah Al-Ma'idah, instructing the believers to combine internal God-consciousness (Taqwa) with active effort (striving) to draw closer to Allah. The 'Wasilah' mentioned refers to seeking means of approach through acts of obedience that please Him.",
-      "theme_explanation": "Juz 6 covers the transition from the legal and social framework of Surah An-Nisa to the dietary laws, covenants, and inter-faith dialogue found in Surah Al-Ma'idah. A recurring theme is the importance of fulfilling contracts—both with people and with Allah.",
-      "surah_overview": "Surah Al-Ma'idah is one of the final major Surahs revealed. It contains the verse declaring the completion of the religion (5:3). It focuses on the 'Halal' and 'Haram', the sanctity of life, and provides a detailed critique of the deviations of previous nations to serve as a guide for the Muslim Ummah."
+      "verse_context": "This verse, from Surah Al-An'am, is a powerful declaration of Allah's absolute omniscience. It appears in a section dedicated to establishing the core principles of Tawhid (monotheism) and refuting polytheism. By highlighting that Allah alone holds the 'keys to the unseen' (Mafatih al-Ghayb), the verse contrasts the limited knowledge of creation with the infinite, all-encompassing knowledge of the Creator.",
+      "theme_explanation": "The central theme is the perfection and totality of Allah's knowledge. The verse uses profound imagery to convey this concept. 'Keys of the unseen' refers to knowledge exclusively held by Allah, such as the time of the Day of Judgment or the future. The verse then moves from the abstract unseen to the tangible seen, using examples like a falling leaf, a hidden grain, or anything 'moist or dry' to illustrate that nothing, no matter how insignificant or concealed, escapes His awareness. This is meant to inspire awe, humility, and complete trust in Allah's divine wisdom and plan.",
+      "surah_overview": "Surah Al-An'am (The Cattle) is the 6th chapter of the Quran and is a Makkan surah, revealed before the Hijrah. Its primary focus is on 'Aqidah (creed), specifically the oneness of Allah (Tawhid) and the rejection of shirk (polytheism). It presents logical arguments against idol worship, drawing evidence from the natural world—the creation of heavens and earth, the alternation of night and day, and the growth of vegetation—as signs of a single, all-powerful Creator. The surah also discusses prophethood, divine revelation, and the reality of the Hereafter."
     }
   },
   "generated": true,

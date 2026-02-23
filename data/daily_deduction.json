@@ -1,65 +1,65 @@
 {
-  "date": "2026-02-22",
+  "date": "2026-02-23",
   "puzzle": {
-    "title": "The Patience of the Afflicted Soul",
-    "intro": "In the annals of history, there is a figure whose name is synonymous with endurance. This individual was tested with the loss of every worldly comfort, yet remained a devoted servant of the Creator. Through years of hardship and physical ailment, this soul's heart remained anchored in faith, providing a beacon of hope for all who face adversity.",
+    "title": "The Voice of Iron and Psalms",
+    "intro": "A divinely-appointed leader was granted immense wisdom and a unique gift that echoed through the mountains. This individual's story is one of strength, justice, and profound devotion, blending the might of a ruler with the humility of a servant. Can you identify this remarkable figure?",
     "clues": [
-      "I was a devoted servant of Allah, blessed with abundant wealth, many children, and excellent health.",
-      "My life took a turn when I was stripped of my riches and my family, leaving me with nothing but my faith.",
-      "I was afflicted with a long-lasting and painful illness that tested the very limits of human endurance.",
-      "Throughout my suffering, I refused to complain against my Lord, even when the adversary tried to lead me to despair.",
-      "When I finally called out to my Lord, I did not ask for wealth, but simply acknowledged that distress had touched me.",
-      "I was told to strike the earth with my foot, and from it came a spring of cool water to heal my body and quench my thirst."
+      "The mountains were commanded to echo my praise, and the birds would gather to join my chorus.",
+      "I was given a sacred book, a guide filled with psalms of devotion.",
+      "Allah made a hard metal pliable in my hands, a special gift for me to use.",
+      "From this softened metal, I fashioned protective coats of mail, linking the rings with precision.",
+      "In a decisive battle for my people, I faced and defeated a towering, tyrannical warrior.",
+      "My kingdom and prophethood were later inherited by my son, who was also blessed with incredible wisdom."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Yaqub",
-          "Prophet Ayyub",
-          "Prophet Zakariyyah",
-          "Prophet Yahya",
-          "Prophet Shu'ayb"
+          "Prophet Musa (Moses)",
+          "Talut (Saul)",
+          "Prophet Dawud (David)",
+          "Prophet Yusuf (Joseph)",
+          "Dhul-Kifl"
         ],
-        "answer": "Prophet Ayyub"
+        "answer": "Prophet Dawud (David)"
       },
       "trial": {
-        "label": "Trial/Event",
+        "label": "What was my defining confrontation?",
         "options": [
-          "Years of severe illness and loss",
-          "Being thrown into a deep well",
-          "Being swallowed by a giant fish",
-          "Facing a tyrant in a fire",
-          "A long journey in search of a teacher"
+          "A contest with the Pharaoh's magicians",
+          "Parting the Red Sea",
+          "Building a great ark before a flood",
+          "Defeating the giant Jalut (Goliath)",
+          "Being thrown into a blazing fire"
         ],
-        "answer": "Years of severe illness and loss"
+        "answer": "Defeating the giant Jalut (Goliath)"
       },
       "location": {
-        "label": "Key Element",
+        "label": "What was I given mastery over?",
         "options": [
-          "A staff that parted the sea",
-          "A shirt that smelled of home",
-          "A healing spring of water",
-          "A mountain that crumbled to dust",
-          "A cave of deep sleep"
+          "The Wind",
+          "Wood",
+          "Iron",
+          "Clay",
+          "Water"
         ],
-        "answer": "A healing spring of water"
+        "answer": "Iron"
       },
       "outcome": {
-        "label": "Outcome",
+        "label": "What was a major blessing I received?",
         "options": [
-          "Becoming the governor of a great land",
-          "Leading an army to victory",
-          "Restoration of health and family",
-          "Building a sacred house of worship",
-          "Receiving a table spread from heaven"
+          "Receiving the Tablets of the Law",
+          "Being granted the Zabur (Psalms)",
+          "Being raised to the heavens alive",
+          "The ability to interpret dreams",
+          "Surviving inside a great fish"
         ],
-        "answer": "Restoration of health and family"
+        "answer": "Being granted the Zabur (Psalms)"
       }
     },
-    "verseRef": "38:42",
-    "arabic": "ٱرْكُضْ بِرِجْلِكَ ۖ هَـٰذَا مُغْتَسَلٌۢ بَارِدٌۭ وَشَرَابٌۭ",
-    "verse": "[So he was told], \"Strike [the ground] with your foot; this is a [spring for a] cool bath and drink.\" (38:42)"
+    "verseRef": "34:10",
+    "arabic": "۞ وَلَقَدْ ءَاتَيْنَا دَاوُۥدَ مِنَّا فَضْلًۭا ۖ يَـٰجِبَالُ أَوِّبِى مَعَهُۥ وَٱلطَّيْرَ ۖ وَأَلَنَّا لَهُ ٱلْحَدِيدَ",
+    "verse": "And We certainly gave David from Us bounty. [We said], \"O mountains, repeat [Our] praises with him, and the birds [as well].\" And We made pliable for him iron, (34:10)"
   },
   "generated": true,
   "model": "auto (chain)"

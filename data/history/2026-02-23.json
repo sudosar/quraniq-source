@@ -1,6 +1,5 @@
 {
-  "date": "2026-02-23",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَفْرَادُ الْعَائِلَة",
@@ -144,6 +143,175 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "نجم",
+    "display": "نَجْمٌ",
+    "hint": "A celestial body that guides travelers in the darkness; also a prostration.",
+    "verseRef": "53:1",
+    "arabicVerse": "وَٱلنَّجْمِ إِذَا هَوَىٰ",
+    "verse": "53:1 — By the star when it descends,"
+  },
+  "deduction": {
+    "title": "The Voice of Iron and Psalms",
+    "intro": "A divinely-appointed leader was granted immense wisdom and a unique gift that echoed through the mountains. This individual's story is one of strength, justice, and profound devotion, blending the might of a ruler with the humility of a servant. Can you identify this remarkable figure?",
+    "clues": [
+      "The mountains were commanded to echo my praise, and the birds would gather to join my chorus.",
+      "I was given a sacred book, a guide filled with psalms of devotion.",
+      "Allah made a hard metal pliable in my hands, a special gift for me to use.",
+      "From this softened metal, I fashioned protective coats of mail, linking the rings with precision.",
+      "In a decisive battle for my people, I faced and defeated a towering, tyrannical warrior.",
+      "My kingdom and prophethood were later inherited by my son, who was also blessed with incredible wisdom."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Prophet Musa (Moses)",
+          "Talut (Saul)",
+          "Prophet Dawud (David)",
+          "Prophet Yusuf (Joseph)",
+          "Dhul-Kifl"
+        ],
+        "answer": "Prophet Dawud (David)"
+      },
+      "trial": {
+        "label": "What was my defining confrontation?",
+        "options": [
+          "A contest with the Pharaoh's magicians",
+          "Parting the Red Sea",
+          "Building a great ark before a flood",
+          "Defeating the giant Jalut (Goliath)",
+          "Being thrown into a blazing fire"
+        ],
+        "answer": "Defeating the giant Jalut (Goliath)"
+      },
+      "location": {
+        "label": "What was I given mastery over?",
+        "options": [
+          "The Wind",
+          "Wood",
+          "Iron",
+          "Clay",
+          "Water"
+        ],
+        "answer": "Iron"
+      },
+      "outcome": {
+        "label": "What was a major blessing I received?",
+        "options": [
+          "Receiving the Tablets of the Law",
+          "Being granted the Zabur (Psalms)",
+          "Being raised to the heavens alive",
+          "The ability to interpret dreams",
+          "Surviving inside a great fish"
+        ],
+        "answer": "Being granted the Zabur (Psalms)"
+      }
+    },
+    "verseRef": "34:10",
+    "arabic": "۞ وَلَقَدْ ءَاتَيْنَا دَاوُۥدَ مِنَّا فَضْلًۭا ۖ يَـٰجِبَالُ أَوِّبِى مَعَهُۥ وَٱلطَّيْرَ ۖ وَأَلَنَّا لَهُ ٱلْحَدِيدَ",
+    "verse": "And We certainly gave David from Us bounty. [We said], \"O mountains, repeat [Our] praises with him, and the birds [as well].\" And We made pliable for him iron, (34:10)"
+  },
+  "scramble": {
+    "verseRef": "7:23",
+    "reference": "Surah Al-A'raf (7:23)",
+    "segments": [
+      "قَالَا رَبَّنَا",
+      "ظَلَمْنَا أَنفُسَنَا",
+      "وَإِن لَّمْ تَغْفِرْ لَنَا",
+      "وَتَرْحَمْنَا",
+      "لَنَكُونَنَّ مِنَ الْخَاسِرِينَ"
+    ],
+    "translations": [
+      "Both of them said Our Lord we have wronged",
+      "ourselves and if not",
+      "You forgive [for] us",
+      "and have mercy (on) us surely, we will be",
+      "among the losers"
+    ],
+    "hint": "The supplication of our first parents, Adam and Eve, after their slip.",
+    "arabic": "قَالَا رَبَّنَا ظَلَمْنَآ أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ ٱلْخَـٰسِرِينَ",
+    "words": [
+      "قَالَا رَبَّنَا ظَلَمْنَآ",
+      "أَنفُسَنَا وَإِن لَّمْ",
+      "تَغْفِرْ لَنَا",
+      "وَتَرْحَمْنَا لَنَكُونَنَّ",
+      "مِنَ ٱلْخَـٰسِرِينَ"
+    ],
+    "verseEn": "They said, \"Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.\""
+  },
+  "juz": {
+    "date": "2026-02-23",
+    "juz_number": 7,
+    "juz_name": "Wa Iza Sami'u",
+    "juz_name_ar": "وَإِذَا سَمِعُوا",
+    "verse": {
+      "surah_number": 6,
+      "surah_name": "Al-An'am",
+      "surah_name_ar": "الْأَنْعَام",
+      "ayah_number": 59,
+      "arabic_text": "وَعِندَهُۥ مَفَاتِحُ ٱلْغَيْبِ لَا يَعْلَمُهَآ إِلَّا هُوَ ۚ وَيَعْلَمُ مَا فِى ٱلْبَرِّ وَٱلْبَحْرِ ۚ وَمَا تَسْقُطُ مِن وَرَقَةٍ إِلَّا يَعْلَمُهَا وَلَا حَبَّةٍۢ فِى ظُلُمَـٰتِ ٱلْأَرْضِ وَلَا رَطْبٍۢ وَلَا يَابِسٍ إِلَّا فِى كِتَـٰبٍۢ مُّبِينٍۢ",
+      "translation": "And with Him are the keys of the unseen; none knows them except Him. And He knows what is on the land and in the sea. Not a leaf falls but that He knows it. And no grain is there within the darknesses of the earth and no moist or dry [thing] but that it is [written] in a clear record.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/848.mp3"
+    },
+    "theme_question": {
+      "correct": "The limitlessness of Allah's knowledge, encompassing every detail of the seen and unseen worlds.",
+      "options": [
+        "The importance of seeking knowledge from righteous scholars.",
+        "The limitlessness of Allah's knowledge, encompassing every detail of the seen and unseen worlds.",
+        "The specific rewards reserved for those who believe in the unseen.",
+        "A prohibition against trying to predict the future through divination."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 6,
+      "options": [
+        {
+          "num": 5,
+          "name": "Al-Ma'idah",
+          "name_ar": "الْمَائِدَة",
+          "name_en": "The Table Spread"
+        },
+        {
+          "num": 7,
+          "name": "Al-A'raf",
+          "name_ar": "الْأَعْرَاف",
+          "name_en": "The Heights"
+        },
+        {
+          "num": 6,
+          "name": "Al-An'am",
+          "name_ar": "الْأَنْعَام",
+          "name_en": "The Cattle"
+        },
+        {
+          "num": 4,
+          "name": "An-Nisa",
+          "name_ar": "النِّسَاء",
+          "name_en": "The Women"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 5,
+          "name": "Al-Ma'idah",
+          "name_ar": "الْمَائِدَة",
+          "name_en": "The Table Spread"
+        },
+        {
+          "num": 6,
+          "name": "Al-An'am",
+          "name_ar": "الْأَنْعَام",
+          "name_en": "The Cattle"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse, from Surah Al-An'am, is a powerful declaration of Allah's absolute omniscience. It appears in a section dedicated to establishing the core principles of Tawhid (monotheism) and refuting polytheism. By highlighting that Allah alone holds the 'keys to the unseen' (Mafatih al-Ghayb), the verse contrasts the limited knowledge of creation with the infinite, all-encompassing knowledge of the Creator.",
+      "theme_explanation": "The central theme is the perfection and totality of Allah's knowledge. The verse uses profound imagery to convey this concept. 'Keys of the unseen' refers to knowledge exclusively held by Allah, such as the time of the Day of Judgment or the future. The verse then moves from the abstract unseen to the tangible seen, using examples like a falling leaf, a hidden grain, or anything 'moist or dry' to illustrate that nothing, no matter how insignificant or concealed, escapes His awareness. This is meant to inspire awe, humility, and complete trust in Allah's divine wisdom and plan.",
+      "surah_overview": "Surah Al-An'am (The Cattle) is the 6th chapter of the Quran and is a Makkan surah, revealed before the Hijrah. Its primary focus is on 'Aqidah (creed), specifically the oneness of Allah (Tawhid) and the rejection of shirk (polytheism). It presents logical arguments against idol worship, drawing evidence from the natural world—the creation of heavens and earth, the alternation of night and day, and the growth of vegetation—as signs of a single, all-powerful Creator. The surah also discusses prophethood, divine revelation, and the reality of the Hereafter."
+    }
+  }
 }
