@@ -125,12 +125,13 @@ async function checkTodayHealth() {
 
 function validateGameStructure(type, data) {
     if (!data) return false;
+    const targetData = data.puzzle || data;
     switch (type) {
-        case 'connections': return !!data.categories;
-        case 'harf': return !!data.word || (Array.isArray(data) && data[0].word);
-        case 'deduction': return !!data.clues;
-        case 'scramble': return !!data.arabic;
-        case 'juz': return !!data.juz_number;
+        case 'connections': return !!targetData.categories;
+        case 'harf': return !!targetData.word || (Array.isArray(targetData) && targetData[0].word);
+        case 'deduction': return !!targetData.clues;
+        case 'scramble': return !!targetData.arabic;
+        case 'juz': return !!targetData.juz_number;
         default: return true;
     }
 }
