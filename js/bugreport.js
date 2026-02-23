@@ -3,7 +3,7 @@
    Floating bug report button with screenshot capture
    ============================================ */
 
-const BUG_REPORT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwG2h1-5B6c4m_ERAmNGSTyOvwjVhOyO8Bds5w7_Ba--OmVYHpIYWGcmwlRzrDts4rY/exec'; // Set this to your Google Apps Script Web App URL
+const BUG_REPORT_ENDPOINT = "https://script.google.com/macros/s/AKfycbzEM-suHaenDfuTqrSWwZpUovSp9yfnUi2clROxJ_w8gmkzTfBvk3XzWcZrrAjv0Fzj/exec";
 
 /**
  * Initialize the bug report nub - a tiny floating button on the edge of the screen.
@@ -156,7 +156,12 @@ async function submitBugReport() {
         timestamp: new Date().toISOString(),
         gameMode: typeof app !== 'undefined' ? app.currentMode : 'unknown',
         darkMode: document.documentElement.getAttribute('data-theme') === 'dark',
-        scriptVersion: '1.1.0'
+        scriptVersion: '1.2.0',
+        debugData: {
+            dayNumber: typeof getDayNumber === 'function' ? getDayNumber() : null,
+            state: JSON.parse(localStorage.getItem('quraniq_state') || '{}'),
+            juz: JSON.parse(localStorage.getItem('quraniq_juz') || '{}')
+        }
     };
 
     if (!BUG_REPORT_ENDPOINT) {
