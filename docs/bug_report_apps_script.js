@@ -122,7 +122,7 @@ function handleBugReport(data) {
   const timestamp = data.timestamp || new Date().toISOString();
   const gameMode = data.gameMode || 'Unknown';
   const theme = data.theme || 'Unknown';
-  const scriptVersion = data.scriptVersion || '1.0.0';
+  const scriptVersion = data.scriptVersion || '1.2.0';
   const screenshotError = data.screenshotError || null;
   const screenshot = data.screenshot || null;
 
@@ -139,6 +139,15 @@ function handleBugReport(data) {
   body += `| **User Agent** | \`${userAgent}\` |\n`;
   body += `| **Timestamp** | ${timestamp} |\n`;
   body += `| **Script Version** | ${scriptVersion} |\n\n`;
+
+  const debug = data.debugData || {};
+  if (debug.state || debug.juz) {
+    body += `### Debug Information\n\n`;
+    body += `<details>\n<summary>View Local Storage State (Day ${debug.dayNumber || '?'})</summary>\n\n`;
+    body += `#### Game State\n\`\`\`json\n${JSON.stringify(debug.state || {}, null, 2)}\n\`\`\`\n\n`;
+    body += `#### Juz State\n\`\`\`json\n${JSON.stringify(debug.juz || {}, null, 2)}\n\`\`\`\n`;
+    body += `</details>\n\n`;
+  }
 
   if (screenshot) {
     const uploadResult = uploadScreenshotToRepo(screenshot, timestamp);
@@ -200,7 +209,7 @@ function uploadScreenshotToRepo(base64DataUrl, timestamp) {
 
     const result = JSON.parse(response.getContentText());
     if (response.getResponseCode() >= 200 && response.getResponseCode() < 300) {
-      return { url: result.content.download_url, error: null };
+      return { url: `https://github.com/${REPO_OWNER}/${REPO_NAME}/blob/${BRANCH}/${filename}?raw=true`, error: null };
     } else {
       return { url: null, error: `GitHub API error: ${response.getResponseCode()} ${response.getContentText()}` };
     }
