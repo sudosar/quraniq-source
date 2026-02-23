@@ -60,7 +60,7 @@ A simple word-guessing game with specific constraints.
 | :--- | :--- |
 | **Word Length** | The target word must be 3-5 Arabic letters long (after removing diacritics). |
 | **Content** | Words should be meaningful Quranic concepts, nouns, or verb roots. |
-| **Hint** | A clever but fair English hint must be provided. |
+| **Hint** | A clever but fair English hint must be provided. In the UI, revealing a letter costs 1 turn/row. It is intentionally disabled if the user has < 1 turn left. |
 | **Cooldown** | Enforces a 365-day cooldown on words and hints, and a 30-day cooldown on the Surah of the source verse. |
 
 ### 2.3. Who Am I? (Deduction)
