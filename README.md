@@ -34,6 +34,8 @@ A special mode coming for Ramadan that takes you through one Juz each day. Explo
 - **Recitations**: Listen to beautiful recitations from Quran.com/EveryAyah.com.
 - **Leaderboards**: Join a group and compete with friends and family in a friendly competition.
 - **Deep Study Links**: Every verse solved includes links to Quran.com for further study and reflection.
+- **AI Learning Insights**: "Soul Mirror" feature generates personalized reflections based on user puzzle completions.
+- **In-App Bug Reporting**: A native client feature that allows users to instantly submit bug reports with automatically captured screenshots and environment data.
 - **Save Progress**: Generate a save code to move your statistics and streaks between devices.
 
 ---
@@ -41,7 +43,9 @@ A special mode coming for Ramadan that takes you through one Juz each day. Explo
 ## 🛠️ Technology Stack
 
 - **Frontend**: Vanilla HTML5, CSS3, and JavaScript (ES6+).
-- **Backend/Storage**: Firebase (Realtime Database & Authentication) for leaderboards and user groups.
+- **Backend/Storage**: Firebase (Realtime Database & Authentication) for leaderboards, user groups, and app state persistence.
+- **Generative AI Pipeline**: Python scripts triggered via GitHub Actions use an LLM fallback chain (OpenAI, Gemini, DeepSeek-R1) to automatically generate completely new, valid daily puzzles and dynamic AI study insights.
+- **Feedback Service**: Google Apps Script acts as the backend for the Bug Reporter and Dhikr counters.
 - **Hosting**: GitHub Pages.
 - **PWA**: Service Workers and Web App Manifest for offline support and installation.
 - **Analytics**: Google Analytics 4.
