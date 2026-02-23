@@ -198,8 +198,16 @@ function updateHarfHintButton() {
         harf.currentRow < harf.maxRows - 1 && // Must have at least 1 row left to play after hint
         getUnrevealedHarfPositions().length > 0;
 
+    if (!canHint) {
+        if (harf.currentRow >= harf.maxRows - 1) {
+            btn.innerHTML = `<span class="hint-icon">💡</span> Reveal a Letter <span class="hint-cost">Requires at least 1 turn left</span>`;
+        } else {
+            btn.innerHTML = `<span class="hint-icon">💡</span> Reveal a Letter <span class="hint-cost">−1 turn, −1 🌙</span>`;
+        }
+    } else {
+        btn.innerHTML = `<span class="hint-icon">💡</span> Reveal a Letter <span class="hint-cost">−1 turn, −1 🌙</span>`;
+    }
     btn.disabled = !canHint;
-    btn.innerHTML = `<span class="hint-icon">💡</span> Reveal a Letter <span class="hint-cost">−1 turn, −1 🌙</span>`;
 
     if (harf.gameOver) {
         btn.style.display = 'none';
