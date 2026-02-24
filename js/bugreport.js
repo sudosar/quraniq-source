@@ -95,7 +95,7 @@ async function openBugReportModal() {
         // Hide the modal temporarily for clean screenshot
         modal.style.visibility = 'hidden';
         const canvas = await html2canvas(document.body, {
-            scale: 1, // Increased scale for better resolution (was 0.5)
+            scale: 0.75, // Balance of resolution and payload size limit
             useCORS: true,
             logging: false,
             backgroundColor: null
