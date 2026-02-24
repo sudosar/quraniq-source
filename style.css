@@ -2165,7 +2165,7 @@ textarea {
     font-family: var(--font-main);
     font-size: 0.85rem;
     direction: ltr;
-    color: var(--text-secondary);
+    color: var(--text);
     margin-top: 8px;
     line-height: 1.5;
     font-style: italic;
