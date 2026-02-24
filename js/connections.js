@@ -979,7 +979,7 @@ function showConnEncouragementModal(resultData, won, correctCount, mistakesUsed)
     verseEl.style.display = 'block';
     verseEl.innerHTML = `<span class="translation conn-explore-tap" style="cursor:pointer;">
         <span style="font-size:1.1rem;font-style:normal;">📖 Review the ayahs to earn more points!</span><br>
-        <span style="font-size:0.85rem;color:var(--text-secondary);">🌒 1pt = solved &nbsp; 🌙 2pts = solved + all verses reviewed &nbsp; 🌑 = missed</span><br>
+        <span style="font-size:0.85rem;color:var(--text);">🌒 1pt = solved &nbsp; 🌙 2pts = solved + all verses reviewed &nbsp; 🌑 = missed</span><br>
         <span style="font-size:0.9rem;margin-top:8px;display:inline-block;">Tap to start reviewing ▼</span>
     </span>`;
     verseEl.querySelector('.conn-explore-tap').addEventListener('click', () => {
