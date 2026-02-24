@@ -287,17 +287,47 @@ async function speakArabic(text, ref) {
             const words = await fetchWordByWord(ref);
             if (words && words.length > 0) {
                 const cleanRoot = stripSuffixes(stripPrefixes(cleanText));
+                const tileWords = cleanText.split(/\s+/);
+                const tileRoots = tileWords.map(w => stripSuffixes(stripPrefixes(w)));
 
-                // Find the word in the verse that matches our text
-                const match = words.find(w => {
-                    if (w.isSeparator) return false;
-                    const wNorm = normalizeForMatch(w.arabic);
-                    if (wNorm === cleanText) return true;
+                // 1. Try exact match first
+                let match = words.find(w => !w.isSeparator && normalizeForMatch(w.arabic) === cleanText);
 
-                    // Root-to-root match
-                    const wRoot = stripSuffixes(stripPrefixes(wNorm));
-                    return wRoot === cleanRoot && wRoot.length >= 2;
-                });
+                // 2. Try matching the first word of a multi-word tile
+                if (!match && tileWords.length > 1) {
+                    match = words.find(w => !w.isSeparator && normalizeForMatch(w.arabic) === tileWords[0]);
+                }
+
+                // 3. Try root-to-root match
+                if (!match) {
+                    match = words.find(w => {
+                        if (w.isSeparator) return false;
+                        const wNorm = normalizeForMatch(w.arabic);
+                        const wRoot = stripSuffixes(stripPrefixes(wNorm));
+
+                        // Match entire root
+                        if (wRoot === cleanRoot && wRoot.length >= 2) return true;
+
+                        // Match any word's root in a multi-word sequence
+                        for (const tr of tileRoots) {
+                            if (tr.length >= 2 && (wRoot === tr || wRoot.startsWith(tr) || tr.startsWith(wRoot))) {
+                                return true;
+                            }
+                        }
+
+                        // Deep normalize fallback
+                        const wDeep = deepNormalize(wRoot);
+                        if (wDeep.length >= 2) {
+                            for (const tr of tileRoots) {
+                                const tDeep = deepNormalize(tr);
+                                if (tDeep.length >= 2 && (wDeep === tDeep || wDeep.startsWith(tDeep) || tDeep.startsWith(wDeep))) {
+                                    return true;
+                                }
+                            }
+                        }
+                        return false;
+                    });
+                }
 
                 if (match && match.audio_url) {
                     const audioUrl = `https://audio.qurancdn.com/${match.audio_url}`;

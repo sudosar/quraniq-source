@@ -1,0 +1,219 @@
+generate	Set up job	﻿2026-02-20T09:35:46.9369461Z Current runner version: '2.331.0'
+generate	Set up job	2026-02-20T09:35:46.9406391Z ##[group]Runner Image Provisioner
+generate	Set up job	2026-02-20T09:35:46.9407792Z Hosted Compute Agent
+generate	Set up job	2026-02-20T09:35:46.9409195Z Version: 20260123.484
+generate	Set up job	2026-02-20T09:35:46.9410317Z Commit: 6bd6555ca37d84114959e1c76d2c01448ff61c5d
+generate	Set up job	2026-02-20T09:35:46.9411506Z Build Date: 2026-01-23T19:41:17Z
+generate	Set up job	2026-02-20T09:35:46.9412778Z Worker ID: {6cce1c4b-4222-428b-8792-e9e6957958df}
+generate	Set up job	2026-02-20T09:35:46.9413949Z Azure Region: westus
+generate	Set up job	2026-02-20T09:35:46.9414799Z ##[endgroup]
+generate	Set up job	2026-02-20T09:35:46.9417161Z ##[group]Operating System
+generate	Set up job	2026-02-20T09:35:46.9418177Z Ubuntu
+generate	Set up job	2026-02-20T09:35:46.9419350Z 24.04.3
+generate	Set up job	2026-02-20T09:35:46.9420173Z LTS
+generate	Set up job	2026-02-20T09:35:46.9420951Z ##[endgroup]
+generate	Set up job	2026-02-20T09:35:46.9421898Z ##[group]Runner Image
+generate	Set up job	2026-02-20T09:35:46.9422918Z Image: ubuntu-24.04
+generate	Set up job	2026-02-20T09:35:46.9423862Z Version: 20260201.15.1
+generate	Set up job	2026-02-20T09:35:46.9425849Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260201.15/images/ubuntu/Ubuntu2404-Readme.md
+generate	Set up job	2026-02-20T09:35:46.9429053Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260201.15
+generate	Set up job	2026-02-20T09:35:46.9430956Z ##[endgroup]
+generate	Set up job	2026-02-20T09:35:46.9433130Z ##[group]GITHUB_TOKEN Permissions
+generate	Set up job	2026-02-20T09:35:46.9435935Z Contents: write
+generate	Set up job	2026-02-20T09:35:46.9436903Z Issues: write
+generate	Set up job	2026-02-20T09:35:46.9437769Z Metadata: read
+generate	Set up job	2026-02-20T09:35:46.9439054Z Pages: write
+generate	Set up job	2026-02-20T09:35:46.9439884Z ##[endgroup]
+generate	Set up job	2026-02-20T09:35:46.9443057Z Secret source: Actions
+generate	Set up job	2026-02-20T09:35:46.9444545Z Prepare workflow directory
+generate	Set up job	2026-02-20T09:35:47.0120579Z Prepare all required actions
+generate	Set up job	2026-02-20T09:35:47.0179457Z Getting action download info
+generate	Set up job	2026-02-20T09:35:47.4776557Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+generate	Set up job	2026-02-20T09:35:47.5903795Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+generate	Set up job	2026-02-20T09:35:47.7807468Z Complete job name: generate
+generate	Checkout repository	﻿2026-02-20T09:35:47.8522730Z ##[group]Run actions/checkout@v4
+generate	Checkout repository	2026-02-20T09:35:47.8523631Z with:
+generate	Checkout repository	2026-02-20T09:35:47.8524051Z   ref: main
+generate	Checkout repository	2026-02-20T09:35:47.8524687Z   token: ***
+generate	Checkout repository	2026-02-20T09:35:47.8525118Z   repository: sudosar/quraniq-source
+generate	Checkout repository	2026-02-20T09:35:47.8525652Z   ssh-strict: true
+generate	Checkout repository	2026-02-20T09:35:47.8526071Z   ssh-user: git
+generate	Checkout repository	2026-02-20T09:35:47.8526519Z   persist-credentials: true
+generate	Checkout repository	2026-02-20T09:35:47.8526989Z   clean: true
+generate	Checkout repository	2026-02-20T09:35:47.8527405Z   sparse-checkout-cone-mode: true
+generate	Checkout repository	2026-02-20T09:35:47.8527906Z   fetch-depth: 1
+generate	Checkout repository	2026-02-20T09:35:47.8528320Z   fetch-tags: false
+generate	Checkout repository	2026-02-20T09:35:47.8528908Z   show-progress: true
+generate	Checkout repository	2026-02-20T09:35:47.8529332Z   lfs: false
+generate	Checkout repository	2026-02-20T09:35:47.8529732Z   submodules: false
+generate	Checkout repository	2026-02-20T09:35:47.8530161Z   set-safe-directory: true
+generate	Checkout repository	2026-02-20T09:35:47.8530878Z ##[endgroup]
+generate	Checkout repository	2026-02-20T09:35:47.9834393Z Syncing repository: sudosar/quraniq-source
+generate	Checkout repository	2026-02-20T09:35:47.9837201Z ##[group]Getting Git version info
+generate	Checkout repository	2026-02-20T09:35:47.9839021Z Working directory is '/home/runner/work/quraniq-source/quraniq-source'
+generate	Checkout repository	2026-02-20T09:35:47.9841056Z [command]/usr/bin/git version
+generate	Checkout repository	2026-02-20T09:35:47.9845066Z git version 2.52.0
+generate	Checkout repository	2026-02-20T09:35:47.9850574Z ##[endgroup]
+generate	Checkout repository	2026-02-20T09:35:47.9880118Z Temporarily overriding HOME='/home/runner/work/_temp/04f58d09-aaaf-4a33-b827-a78448a1ae00' before making global git config changes
+generate	Checkout repository	2026-02-20T09:35:47.9883142Z Adding repository directory to the temporary git global config as a safe directory
+generate	Checkout repository	2026-02-20T09:35:47.9887387Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quraniq-source/quraniq-source
+generate	Checkout repository	2026-02-20T09:35:47.9930897Z Deleting the contents of '/home/runner/work/quraniq-source/quraniq-source'
+generate	Checkout repository	2026-02-20T09:35:47.9934018Z ##[group]Initializing the repository
+generate	Checkout repository	2026-02-20T09:35:47.9939696Z [command]/usr/bin/git init /home/runner/work/quraniq-source/quraniq-source
+generate	Checkout repository	2026-02-20T09:35:48.0059192Z hint: Using 'master' as the name for the initial branch. This default branch name
+generate	Checkout repository	2026-02-20T09:35:48.0062403Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+generate	Checkout repository	2026-02-20T09:35:48.0064459Z hint: to use in all of your new repositories, which will suppress this warning,
+generate	Checkout repository	2026-02-20T09:35:48.0065626Z hint: call:
+generate	Checkout repository	2026-02-20T09:35:48.0066794Z hint:
+generate	Checkout repository	2026-02-20T09:35:48.0067734Z hint: 	git config --global init.defaultBranch <name>
+generate	Checkout repository	2026-02-20T09:35:48.0069029Z hint:
+generate	Checkout repository	2026-02-20T09:35:48.0070079Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+generate	Checkout repository	2026-02-20T09:35:48.0071677Z hint: 'development'. The just-created branch can be renamed via this command:
+generate	Checkout repository	2026-02-20T09:35:48.0072919Z hint:
+generate	Checkout repository	2026-02-20T09:35:48.0073648Z hint: 	git branch -m <name>
+generate	Checkout repository	2026-02-20T09:35:48.0074425Z hint:
+generate	Checkout repository	2026-02-20T09:35:48.0075465Z hint: Disable this message with "git config set advice.defaultBranchName false"
+generate	Checkout repository	2026-02-20T09:35:48.0077972Z Initialized empty Git repository in /home/runner/work/quraniq-source/quraniq-source/.git/
+generate	Checkout repository	2026-02-20T09:35:48.0083081Z [command]/usr/bin/git remote add origin https://github.com/sudosar/quraniq-source
+generate	Checkout repository	2026-02-20T09:35:48.0124276Z ##[endgroup]
+generate	Checkout repository	2026-02-20T09:35:48.0125589Z ##[group]Disabling automatic garbage collection
+generate	Checkout repository	2026-02-20T09:35:48.0129196Z [command]/usr/bin/git config --local gc.auto 0
+generate	Checkout repository	2026-02-20T09:35:48.0161962Z ##[endgroup]
+generate	Checkout repository	2026-02-20T09:35:48.0163185Z ##[group]Setting up auth
+generate	Checkout repository	2026-02-20T09:35:48.0169560Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+generate	Checkout repository	2026-02-20T09:35:48.0204147Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+generate	Checkout repository	2026-02-20T09:35:48.1415793Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+generate	Checkout repository	2026-02-20T09:35:48.1423857Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+generate	Checkout repository	2026-02-20T09:35:48.1429389Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+generate	Checkout repository	2026-02-20T09:35:48.1432926Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+generate	Checkout repository	2026-02-20T09:35:48.1436126Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+generate	Checkout repository	2026-02-20T09:35:48.1468098Z ##[endgroup]
+generate	Checkout repository	2026-02-20T09:35:48.1471298Z ##[group]Fetching the repository
+generate	Checkout repository	2026-02-20T09:35:48.1479689Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/main*:refs/remotes/origin/main* +refs/tags/main*:refs/tags/main*
+generate	Checkout repository	2026-02-20T09:35:48.8281937Z From https://github.com/sudosar/quraniq-source
+generate	Checkout repository	2026-02-20T09:35:48.8285832Z  * [new branch]      main       -> origin/main
+generate	Checkout repository	2026-02-20T09:35:48.8290027Z ##[endgroup]
+generate	Checkout repository	2026-02-20T09:35:48.8292827Z ##[group]Determining the checkout info
+generate	Checkout repository	2026-02-20T09:35:48.8295494Z [command]/usr/bin/git branch --list --remote origin/main
+generate	Checkout repository	2026-02-20T09:35:48.8319339Z   origin/main
+generate	Checkout repository	2026-02-20T09:35:48.8328154Z ##[endgroup]
+generate	Checkout repository	2026-02-20T09:35:48.8332067Z [command]/usr/bin/git sparse-checkout disable
+generate	Checkout repository	2026-02-20T09:35:48.8374695Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+generate	Checkout repository	2026-02-20T09:35:48.8408290Z ##[group]Checking out the ref
+generate	Checkout repository	2026-02-20T09:35:48.8411133Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+generate	Checkout repository	2026-02-20T09:35:48.8575350Z Switched to a new branch 'main'
+generate	Checkout repository	2026-02-20T09:35:48.8579991Z branch 'main' set up to track 'origin/main'.
+generate	Checkout repository	2026-02-20T09:35:48.8590489Z ##[endgroup]
+generate	Checkout repository	2026-02-20T09:35:48.8628908Z [command]/usr/bin/git log -1 --format=%H
+generate	Checkout repository	2026-02-20T09:35:48.8654591Z 579c17f8e9aae83de45283c62e20471b060a6a38
+generate	Set up Python	﻿2026-02-20T09:35:48.8973575Z ##[group]Run actions/setup-python@v5
+generate	Set up Python	2026-02-20T09:35:48.8975148Z with:
+generate	Set up Python	2026-02-20T09:35:48.8976055Z   python-version: 3.11
+generate	Set up Python	2026-02-20T09:35:48.8977129Z   check-latest: false
+generate	Set up Python	2026-02-20T09:35:48.8978417Z   token: ***
+generate	Set up Python	2026-02-20T09:35:48.8979503Z   update-environment: true
+generate	Set up Python	2026-02-20T09:35:48.8980839Z   allow-prereleases: false
+generate	Set up Python	2026-02-20T09:35:48.8981902Z   freethreaded: false
+generate	Set up Python	2026-02-20T09:35:48.8982843Z ##[endgroup]
+generate	Set up Python	2026-02-20T09:35:49.1025650Z ##[group]Installed versions
+generate	Set up Python	2026-02-20T09:35:49.1124008Z Successfully set up CPython (3.11.14)
+generate	Set up Python	2026-02-20T09:35:49.1125570Z ##[endgroup]
+generate	Install dependencies	﻿2026-02-20T09:35:49.1250899Z ##[group]Run pip install requests
+generate	Install dependencies	2026-02-20T09:35:49.1251393Z [36;1mpip install requests[0m
+generate	Install dependencies	2026-02-20T09:35:49.1298014Z shell: /usr/bin/bash -e {0}
+generate	Install dependencies	2026-02-20T09:35:49.1298386Z env:
+generate	Install dependencies	2026-02-20T09:35:49.1298937Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Install dependencies	2026-02-20T09:35:49.1299532Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+generate	Install dependencies	2026-02-20T09:35:49.1300109Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Install dependencies	2026-02-20T09:35:49.1300626Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Install dependencies	2026-02-20T09:35:49.1301142Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Install dependencies	2026-02-20T09:35:49.1301688Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+generate	Install dependencies	2026-02-20T09:35:49.1302131Z ##[endgroup]
+generate	Install dependencies	2026-02-20T09:35:50.0090783Z Collecting requests
+generate	Install dependencies	2026-02-20T09:35:50.0939424Z   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+generate	Install dependencies	2026-02-20T09:35:50.1961647Z Collecting charset_normalizer<4,>=2 (from requests)
+generate	Install dependencies	2026-02-20T09:35:50.1999195Z   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+generate	Install dependencies	2026-02-20T09:35:50.2254665Z Collecting idna<4,>=2.5 (from requests)
+generate	Install dependencies	2026-02-20T09:35:50.2286312Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+generate	Install dependencies	2026-02-20T09:35:50.2517344Z Collecting urllib3<3,>=1.21.1 (from requests)
+generate	Install dependencies	2026-02-20T09:35:50.2553234Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+generate	Install dependencies	2026-02-20T09:35:50.2737896Z Collecting certifi>=2017.4.17 (from requests)
+generate	Install dependencies	2026-02-20T09:35:50.2772048Z   Downloading certifi-2026.1.4-py3-none-any.whl.metadata (2.5 kB)
+generate	Install dependencies	2026-02-20T09:35:50.2848875Z Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+generate	Install dependencies	2026-02-20T09:35:50.2947616Z Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+generate	Install dependencies	2026-02-20T09:35:50.3052156Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+generate	Install dependencies	2026-02-20T09:35:50.3110979Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+generate	Install dependencies	2026-02-20T09:35:50.3171956Z Downloading certifi-2026.1.4-py3-none-any.whl (152 kB)
+generate	Install dependencies	2026-02-20T09:35:50.3415530Z Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+generate	Install dependencies	2026-02-20T09:35:50.6406261Z 
+generate	Install dependencies	2026-02-20T09:35:50.6418375Z Successfully installed certifi-2026.1.4 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.6.3
+generate	Install dependencies	2026-02-20T09:35:50.7400903Z 
+generate	Install dependencies	2026-02-20T09:35:50.7417690Z [notice] A new release of pip is available: 26.0 -> 26.0.1
+generate	Install dependencies	2026-02-20T09:35:50.7419067Z [notice] To update, run: pip install --upgrade pip
+generate	Generate daily puzzle	﻿2026-02-20T09:35:50.8095127Z ##[group]Run python scripts/generate_daily_puzzle.py --force --date "2026-02-21"
+generate	Generate daily puzzle	2026-02-20T09:35:50.8096245Z [36;1mpython scripts/generate_daily_puzzle.py --force --date "2026-02-21"[0m
+generate	Generate daily puzzle	2026-02-20T09:35:50.8135505Z shell: /usr/bin/bash -e {0}
+generate	Generate daily puzzle	2026-02-20T09:35:50.8135762Z env:
+generate	Generate daily puzzle	2026-02-20T09:35:50.8136037Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Generate daily puzzle	2026-02-20T09:35:50.8136477Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+generate	Generate daily puzzle	2026-02-20T09:35:50.8136925Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Generate daily puzzle	2026-02-20T09:35:50.8137311Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Generate daily puzzle	2026-02-20T09:35:50.8137723Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Generate daily puzzle	2026-02-20T09:35:50.8138112Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+generate	Generate daily puzzle	2026-02-20T09:35:50.8138757Z   GEMINI_API_KEY: ***
+generate	Generate daily puzzle	2026-02-20T09:35:50.8139749Z   OPENAI_API_KEY: ***
+generate	Generate daily puzzle	2026-02-20T09:35:50.8140287Z   GITHUB_TOKEN: ***
+generate	Generate daily puzzle	2026-02-20T09:35:50.8140492Z ##[endgroup]
+generate	Generate daily puzzle	2026-02-20T09:35:50.9428214Z All puzzles for 2026-02-20 already exist and are valid. Skipping generation.
+generate	Check if puzzle was generated	﻿2026-02-20T09:35:50.9646284Z ##[group]Run if [ -f "data/daily_puzzle.json" ]; then
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9646752Z [36;1mif [ -f "data/daily_puzzle.json" ]; then[0m
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9647510Z [36;1m  GENERATED=$(python3 -c "import json; d=json.load(open('data/daily_puzzle.json')); print('true' if d.get('generated') else 'false')")[0m
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9648249Z [36;1m  echo "generated=$GENERATED" >> $GITHUB_OUTPUT[0m
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9648879Z [36;1melse[0m
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9649136Z [36;1m  echo "generated=false" >> $GITHUB_OUTPUT[0m
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9649453Z [36;1mfi[0m
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9683014Z shell: /usr/bin/bash -e {0}
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9683286Z env:
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9683570Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9684067Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9684559Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9684987Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9685472Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9685897Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+generate	Check if puzzle was generated	2026-02-20T09:35:50.9686249Z ##[endgroup]
+generate	Commit and push	﻿2026-02-20T09:35:51.0004728Z ##[group]Run git config user.name "QuranPuzzle Bot"
+generate	Commit and push	2026-02-20T09:35:51.0005171Z [36;1mgit config user.name "QuranPuzzle Bot"[0m
+generate	Commit and push	2026-02-20T09:35:51.0005513Z [36;1mgit config user.email "bot@quranpuzzle.app"[0m
+generate	Commit and push	2026-02-20T09:35:51.0005827Z [36;1mgit add data/[0m
+generate	Commit and push	2026-02-20T09:35:51.0006089Z [36;1mgit diff --staged --quiet || {[0m
+generate	Commit and push	2026-02-20T09:35:51.0006542Z [36;1m  git commit -m "Generate daily puzzles for $(date -u +%Y-%m-%d)" || echo "No changes"[0m
+generate	Commit and push	2026-02-20T09:35:51.0007006Z [36;1m  git pull --rebase origin main[0m
+generate	Commit and push	2026-02-20T09:35:51.0007272Z [36;1m  git push[0m
+generate	Commit and push	2026-02-20T09:35:51.0007466Z [36;1m}[0m
+generate	Commit and push	2026-02-20T09:35:51.0040826Z shell: /usr/bin/bash -e {0}
+generate	Commit and push	2026-02-20T09:35:51.0041110Z env:
+generate	Commit and push	2026-02-20T09:35:51.0041380Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Commit and push	2026-02-20T09:35:51.0041842Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+generate	Commit and push	2026-02-20T09:35:51.0042307Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Commit and push	2026-02-20T09:35:51.0042752Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Commit and push	2026-02-20T09:35:51.0043162Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	Commit and push	2026-02-20T09:35:51.0043569Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+generate	Commit and push	2026-02-20T09:35:51.0043917Z ##[endgroup]
+generate	Post Set up Python	﻿2026-02-20T09:35:51.0317703Z Post job cleanup.
+generate	Post Checkout repository	﻿2026-02-20T09:35:51.2069193Z Post job cleanup.
+generate	Post Checkout repository	2026-02-20T09:35:51.3063813Z [command]/usr/bin/git version
+generate	Post Checkout repository	2026-02-20T09:35:51.3105861Z git version 2.52.0
+generate	Post Checkout repository	2026-02-20T09:35:51.3152855Z Temporarily overriding HOME='/home/runner/work/_temp/eef3301f-dacf-413e-9c66-550da7e5ec77' before making global git config changes
+generate	Post Checkout repository	2026-02-20T09:35:51.3155579Z Adding repository directory to the temporary git global config as a safe directory
+generate	Post Checkout repository	2026-02-20T09:35:51.3160404Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quraniq-source/quraniq-source
+generate	Post Checkout repository	2026-02-20T09:35:51.3208256Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+generate	Post Checkout repository	2026-02-20T09:35:51.3245768Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+generate	Post Checkout repository	2026-02-20T09:35:51.3496798Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+generate	Post Checkout repository	2026-02-20T09:35:51.3532864Z http.https://github.com/.extraheader
+generate	Post Checkout repository	2026-02-20T09:35:51.3540206Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+generate	Post Checkout repository	2026-02-20T09:35:51.3575139Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+generate	Post Checkout repository	2026-02-20T09:35:51.3817499Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+generate	Post Checkout repository	2026-02-20T09:35:51.3852924Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+generate	Complete job	﻿2026-02-20T09:35:51.4202756Z Evaluate and set job outputs
+generate	Complete job	2026-02-20T09:35:51.4208440Z Set output 'generated'
+generate	Complete job	2026-02-20T09:35:51.4210557Z Cleaning up orphan processes

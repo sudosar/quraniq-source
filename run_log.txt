@@ -1,0 +1,515 @@
+generate	UNKNOWN STEP	﻿2026-02-20T00:49:29.8894150Z Current runner version: '2.331.0'
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8927992Z ##[group]Runner Image Provisioner
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8929538Z Hosted Compute Agent
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8930639Z Version: 20260213.493
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8931777Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8933049Z Build Date: 2026-02-13T00:28:41Z
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8934417Z Worker ID: {a2c51d8e-38d8-4b79-9691-e98f33e5ca30}
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8935650Z Azure Region: westus
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8936477Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8939466Z ##[group]Operating System
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8940464Z Ubuntu
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8941375Z 24.04.3
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8942349Z LTS
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8943247Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8944289Z ##[group]Runner Image
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8945496Z Image: ubuntu-24.04
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8946459Z Version: 20260217.30.1
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8948621Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260217.30/images/ubuntu/Ubuntu2404-Readme.md
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8951558Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260217.30
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8953440Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8955896Z ##[group]GITHUB_TOKEN Permissions
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8958658Z Contents: write
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8959798Z Issues: write
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8960636Z Metadata: read
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8961697Z Pages: write
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8962552Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8965583Z Secret source: Actions
+generate	UNKNOWN STEP	2026-02-20T00:49:29.8967044Z Prepare workflow directory
+generate	UNKNOWN STEP	2026-02-20T00:49:29.9640509Z Prepare all required actions
+generate	UNKNOWN STEP	2026-02-20T00:49:29.9699365Z Getting action download info
+generate	UNKNOWN STEP	2026-02-20T00:49:30.4550665Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+generate	UNKNOWN STEP	2026-02-20T00:49:30.5978181Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+generate	UNKNOWN STEP	2026-02-20T00:49:30.8541864Z Complete job name: generate
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9268480Z ##[group]Run actions/checkout@v4
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9269876Z with:
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9270284Z   ref: main
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9270920Z   token: ***
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9271356Z   repository: sudosar/quraniq-source
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9271874Z   ssh-strict: true
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9272293Z   ssh-user: git
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9272724Z   persist-credentials: true
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9273198Z   clean: true
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9273616Z   sparse-checkout-cone-mode: true
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9274124Z   fetch-depth: 1
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9274529Z   fetch-tags: false
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9274940Z   show-progress: true
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9275359Z   lfs: false
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9275744Z   submodules: false
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9276175Z   set-safe-directory: true
+generate	UNKNOWN STEP	2026-02-20T00:49:30.9276867Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0492143Z Syncing repository: sudosar/quraniq-source
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0494818Z ##[group]Getting Git version info
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0496100Z Working directory is '/home/runner/work/quraniq-source/quraniq-source'
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0499520Z [command]/usr/bin/git version
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0507867Z git version 2.53.0
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0536740Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0555042Z Temporarily overriding HOME='/home/runner/work/_temp/d20c5380-2733-4350-8861-096e2de40632' before making global git config changes
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0559096Z Adding repository directory to the temporary git global config as a safe directory
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0575211Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quraniq-source/quraniq-source
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0621403Z Deleting the contents of '/home/runner/work/quraniq-source/quraniq-source'
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0624425Z ##[group]Initializing the repository
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0630451Z [command]/usr/bin/git init /home/runner/work/quraniq-source/quraniq-source
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0738404Z hint: Using 'master' as the name for the initial branch. This default branch name
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0742052Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0745071Z hint: to use in all of your new repositories, which will suppress this warning,
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0746704Z hint: call:
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0747421Z hint:
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0748337Z hint: 	git config --global init.defaultBranch <name>
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0749739Z hint:
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0750789Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0752536Z hint: 'development'. The just-created branch can be renamed via this command:
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0753828Z hint:
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0754514Z hint: 	git branch -m <name>
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0755291Z hint:
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0756692Z hint: Disable this message with "git config set advice.defaultBranchName false"
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0759199Z Initialized empty Git repository in /home/runner/work/quraniq-source/quraniq-source/.git/
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0763421Z [command]/usr/bin/git remote add origin https://github.com/sudosar/quraniq-source
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0814298Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0815613Z ##[group]Disabling automatic garbage collection
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0818731Z [command]/usr/bin/git config --local gc.auto 0
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0853740Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0855022Z ##[group]Setting up auth
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0861377Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+generate	UNKNOWN STEP	2026-02-20T00:49:31.0904572Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+generate	UNKNOWN STEP	2026-02-20T00:49:31.1271673Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+generate	UNKNOWN STEP	2026-02-20T00:49:31.1307373Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+generate	UNKNOWN STEP	2026-02-20T00:49:31.1556220Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+generate	UNKNOWN STEP	2026-02-20T00:49:31.1597214Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+generate	UNKNOWN STEP	2026-02-20T00:49:31.1855871Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+generate	UNKNOWN STEP	2026-02-20T00:49:31.1894963Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:31.1897564Z ##[group]Fetching the repository
+generate	UNKNOWN STEP	2026-02-20T00:49:31.1905199Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/main*:refs/remotes/origin/main* +refs/tags/main*:refs/tags/main*
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9332323Z From https://github.com/sudosar/quraniq-source
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9466664Z  * [new branch]      main       -> origin/main
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9471908Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9473756Z ##[group]Determining the checkout info
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9475450Z [command]/usr/bin/git branch --list --remote origin/main
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9477302Z   origin/main
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9481986Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9483209Z [command]/usr/bin/git sparse-checkout disable
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9531490Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9565937Z ##[group]Checking out the ref
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9570879Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9734187Z Switched to a new branch 'main'
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9740533Z branch 'main' set up to track 'origin/main'.
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9750551Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9795573Z [command]/usr/bin/git log -1 --format=%H
+generate	UNKNOWN STEP	2026-02-20T00:49:31.9823518Z 0f5331e4a244d8ab91bdde07b3dfff9be328afe1
+generate	UNKNOWN STEP	2026-02-20T00:49:32.0153103Z ##[group]Run actions/setup-python@v5
+generate	UNKNOWN STEP	2026-02-20T00:49:32.0154265Z with:
+generate	UNKNOWN STEP	2026-02-20T00:49:32.0155032Z   python-version: 3.11
+generate	UNKNOWN STEP	2026-02-20T00:49:32.0155967Z   check-latest: false
+generate	UNKNOWN STEP	2026-02-20T00:49:32.0157138Z   token: ***
+generate	UNKNOWN STEP	2026-02-20T00:49:32.0157970Z   update-environment: true
+generate	UNKNOWN STEP	2026-02-20T00:49:32.0159329Z   allow-prereleases: false
+generate	UNKNOWN STEP	2026-02-20T00:49:32.0160285Z   freethreaded: false
+generate	UNKNOWN STEP	2026-02-20T00:49:32.0161134Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:32.2292515Z ##[group]Installed versions
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3259498Z Successfully set up CPython (3.11.14)
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3261331Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3395749Z ##[group]Run pip install requests
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3396416Z [36;1mpip install requests[0m
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3522319Z shell: /usr/bin/bash -e {0}
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3522814Z env:
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3523307Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3524014Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3524698Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3525309Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3525931Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3526586Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+generate	UNKNOWN STEP	2026-02-20T00:49:32.3527135Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T00:49:35.4009126Z Collecting requests
+generate	UNKNOWN STEP	2026-02-20T00:49:35.4580965Z   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.5550930Z Collecting charset_normalizer<4,>=2 (from requests)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.5594672Z   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.5886975Z Collecting idna<4,>=2.5 (from requests)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.5927466Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.6141602Z Collecting urllib3<3,>=1.21.1 (from requests)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.6189719Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.6364522Z Collecting certifi>=2017.4.17 (from requests)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.6400302Z   Downloading certifi-2026.1.4-py3-none-any.whl.metadata (2.5 kB)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.6476176Z Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.6567819Z Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.6655362Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.6723486Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.6803414Z Downloading certifi-2026.1.4-py3-none-any.whl (152 kB)
+generate	UNKNOWN STEP	2026-02-20T00:49:35.8137002Z Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+generate	UNKNOWN STEP	2026-02-20T00:49:36.0570038Z 
+generate	UNKNOWN STEP	2026-02-20T00:49:36.0576509Z Successfully installed certifi-2026.1.4 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.6.3
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2099392Z ##[group]Run python scripts/generate_daily_puzzle.py
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2100115Z [36;1mpython scripts/generate_daily_puzzle.py[0m
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2156913Z shell: /usr/bin/bash -e {0}
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2157166Z env:
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2157430Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2157897Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2158328Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2158703Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2159319Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2159721Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2160241Z   GEMINI_API_KEY: ***
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2161199Z   OPENAI_API_KEY: ***
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2161743Z   GITHUB_TOKEN: ***
+generate	UNKNOWN STEP	2026-02-20T00:49:36.2161983Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3041517Z Available APIs:
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3042771Z   ✓ OpenAI API (GPT-4.1)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3049665Z   ✓ GitHub Models (DeepSeek-R1, Phi-4)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3050455Z   ✓ Gemini API (gemini-2.5-flash)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3050789Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3050911Z History loaded:
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3051784Z   Connections: 48 themes, 238 verses
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3052439Z   Harf by Harf: 24 words, 12 verse refs, 10 surahs blocked (30-day)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3053244Z   Deduction: 12 titles, 12 characters, 12 verse refs, 10 surahs blocked (30-day)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3054059Z   Scramble: 12 references, 11 surahs blocked (30-day)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3054681Z   Juz Journey: 2 juz, 2 verses
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3055179Z   Global: 273 unique verse refs across ALL games
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3055528Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3055917Z   🌙 Ramadan mode: Generating Juz Journey (Juz 4)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3056299Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3056728Z ════════════════════════════════════════════════════════════
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3057321Z   Generating: Ayah Connections
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3057996Z ════════════════════════════════════════════════════════════
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3058415Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3058583Z   Trying model: Gemini 2.5 Flash (Google)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3059104Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3059355Z   Attempt 1 (retry 1/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3059923Z   Tokens: 3168 in, 785 out, 16262 total
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3060243Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3060541Z   📖 Looking up verse text from Quran API...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3061143Z     ✓ 'فُلْكِ' found in 26:119
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3061695Z     ✓ 'خُشُبٌ' found in 63:4
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3062179Z     ✓ 'مَوْجٍ' found in 11:43
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3062625Z     ✓ 'مَاءٍ' found in 54:12
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3063818Z     ✗ Word 'ثَمَرٌ' (Fruit) NOT found in verse 55:11. Verse text: فِيهَا فَـٰكِهَةٌۭ وَٱلنَّخْلُ ذَاتُ ٱلْأَكْمَامِ...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3064818Z     ✓ 'شَجَرَةٍ' found in 37:62
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3065308Z     ✓ 'نَبَاتَ' found in 18:45
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3065813Z     ✓ 'وَرَقِ' found in 7:22
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3066293Z     ✓ 'شَرِبَ' found in 2:249
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3066761Z     ✓ 'طَعَامًا' found in 76:8
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3067233Z     ✓ 'ذُوقُوا' found in 46:34
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3067699Z     ✓ 'هَنِيئًا' found in 52:19
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3068231Z     ✓ 'ظِلٍّ' found in 25:45
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3068711Z     ✓ 'غُرُورُ' found in 3:185
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3069436Z     ✓ 'لَعِبٌ' found in 6:32
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3069899Z     ✓ 'زِينَةً' found in 10:88
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3070393Z   ✗ Word-in-verse check FAILED: 1 mismatches
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3070982Z   ✓ Verse lookup complete: 16/16 verses found
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3071541Z   ✗ WORD-IN-VERSE MISMATCHES (rejecting):
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3072618Z       Word 'ثَمَرٌ' (Fruit) NOT found in verse 55:11. Verse text: فِيهَا فَـٰكِهَةٌۭ وَٱلنَّخْلُ ذَاتُ ٱلْأَكْمَامِ...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3073331Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3073636Z   Attempt 2 (retry 2/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3075678Z   Tokens: 3326 in, 1000 out, 14068 total
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3076412Z   ✗ COOLDOWN VIOLATIONS (rejecting):
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3077164Z       Same-root word across categories: 'ٱلذَّٰرِيَـٰتِ' shares root with 'ٱلرِّيَـٰحَ'
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3077611Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3077812Z   Attempt 3 (retry 3/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3078140Z   Tokens: 3240 in, 1054 out, 10181 total
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3078577Z   ✗ COOLDOWN VIOLATIONS (rejecting):
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3079119Z       Verse ref 2:185 reused (connections cooldown)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3079633Z       Same-root word across categories: 'بِالنَّذْرِ' shares root with 'وَالنُّورِ'
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3080068Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3080222Z   Attempt 4 (retry 4/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3080578Z   Tokens: 3247 in, 982 out, 15722 total
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3081045Z   ⚠ Warnings (accepted): ["Word 'بَصَائِرُ' reused (cooldown)"]
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3081294Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3081560Z   📖 Looking up verse text from Quran API...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3081887Z     ✓ 'سَفِينَةٌ' found in 18:79
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3082170Z     ✓ 'مَوْجٌ' found in 10:22
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3082543Z     ✓ 'غَرْقٌ' found in 26:66
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3083597Z     ✗ Word 'لُّجِّيٍّ' (Abysmal (deep sea)) NOT found in verse 24:40. Verse text: أَوْ كَظُلُمَـٰتٍۢ فِى بَحْرٍۢ لُّجِّىٍّۢ يَغْشَىٰهُ مَوْجٌۭ مِّن فَوْقِهِۦ مَوْجٌۭ مِّن فَوْقِهِۦ سَحَابٌۭ ۚ ظُلُمَـٰتٌ...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3084956Z     ✓ 'يَتْلُو' found in 2:129
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3085241Z     ✓ 'قَوْلًا' found in 20:44
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3085556Z     ✓ 'هَمْسًا' found in 20:108
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3085900Z     ✓ 'لَغْوِ' found in 23:3
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3086156Z     ✓ 'ظُلُمَاتٍ' found in 14:5
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3086526Z     ✓ 'ضُحَاهَا' found in 79:29
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3086797Z     ✓ 'سُبَاتًا' found in 78:9
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3087056Z     ✓ 'إِشْرَاقٍ' found in 38:18
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3087454Z     ✓ 'يَفْقَهُونَ' found in 4:78
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3087780Z     ✓ 'الْحِكْمَةِ' found in 17:39
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3088258Z     ✓ 'يَتَفَكَّرُونَ' found in 16:69
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3088564Z     ✓ 'بَصَائِرُ' found in 45:20
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3089147Z   ✗ Word-in-verse check FAILED: 1 mismatches
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3089521Z   ✓ Verse lookup complete: 16/16 verses found
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3090001Z   ✗ WORD-IN-VERSE MISMATCHES (rejecting):
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3091325Z       Word 'لُّجِّيٍّ' (Abysmal (deep sea)) NOT found in verse 24:40. Verse text: أَوْ كَظُلُمَـٰتٍۢ فِى بَحْرٍۢ لُّجِّىٍّۢ يَغْشَىٰهُ مَوْجٌۭ مِّن فَوْقِهِۦ مَوْجٌۭ مِّن فَوْقِهِۦ سَحَابٌۭ ۚ ظُلُمَـٰتٌ...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3092399Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3092566Z   Attempt 5 (retry 5/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3092881Z   Tokens: 3463 in, 818 out, 14447 total
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3093299Z   ✗ COOLDOWN VIOLATIONS (rejecting):
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3093762Z       Same-root word across categories: 'وَٱلرُّمَّانَ' shares root with 'حَرَمًا'
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3094383Z   → Exhausted retries for Gemini 2.5 Flash (Google)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3094605Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3094747Z   Trying model: DeepSeek-R1 (GitHub Models)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3095021Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3095171Z   Attempt 6 (retry 1/5) using DeepSeek-R1 (GitHub Models)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3095512Z   Tokens: 2779 in, 8770 out, 11549 total
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3096033Z   ⚠ Warnings (accepted): ["Word 'صُحُفٍ' reused (cooldown)"]
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3096272Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3096509Z   📖 Looking up verse text from Quran API...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3096857Z     ✓ 'سُنْدُسٍ' found in 76:21
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3097136Z     ✓ 'إِسْتَبْرَقٍ' found in 44:53
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3097544Z     ✓ 'حَرِيرٍ' found in 35:33
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3098268Z     ✗ Word 'حُلَلًا' (garments) NOT found in verse 76:12. Verse text: وَجَزَىٰهُم بِمَا صَبَرُوا۟ جَنَّةًۭ وَحَرِيرًۭا...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3099102Z     ✓ 'الْقَلَمِ' found in 96:4
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3099438Z     ✓ 'صُحُفٍ' found in 80:13
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3099959Z     ✓ 'مِدَادًا' found in 18:109
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3100311Z     ✓ 'رَقٍّ' found in 52:3
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3100599Z     ✓ 'الْحُوتِ' found in 68:48
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3100996Z     ✓ 'يَقْطِينٍ' found in 37:146
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3101276Z     ✓ 'الْفُلْكِ' found in 37:140
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3101857Z     ✓ 'قَوْمَ' found in 10:98
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3102117Z     ✓ 'نَاقَةُ' found in 11:64
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3102450Z     ✓ 'عَقَرُوا' found in 91:14
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3102777Z     ✓ 'صَيْحَةُ' found in 11:67
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3103045Z     ✓ 'حِجَارَةً' found in 11:82
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3103458Z   ✗ Word-in-verse check FAILED: 1 mismatches
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3103804Z   ✓ Verse lookup complete: 16/16 verses found
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3104247Z   ✗ WORD-IN-VERSE MISMATCHES (rejecting):
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3105003Z       Word 'حُلَلًا' (garments) NOT found in verse 76:12. Verse text: وَجَزَىٰهُم بِمَا صَبَرُوا۟ جَنَّةًۭ وَحَرِيرًۭا...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3105462Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3105646Z   Attempt 7 (retry 2/5) using DeepSeek-R1 (GitHub Models)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3106165Z   ⚠ Rate limited on DeepSeek-R1 (GitHub Models)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3106722Z   → Rate limited on DeepSeek-R1 (GitHub Models), waiting 30s before retry...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3107020Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3107170Z   Attempt 8 (retry 3/5) using DeepSeek-R1 (GitHub Models)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3107678Z   ⚠ Rate limited on DeepSeek-R1 (GitHub Models)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3108153Z   → Rate limited on DeepSeek-R1 (GitHub Models), waiting 30s before retry...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3108518Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3108660Z   Attempt 9 (retry 4/5) using DeepSeek-R1 (GitHub Models)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3109251Z   Tokens: 2935 in, 10970 out, 13905 total
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3109569Z   ✗ COOLDOWN VIOLATIONS (rejecting):
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3109964Z       Verse ref 54:19 reused (connections cooldown)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3110277Z       Verse ref 41:13 reused (connections cooldown)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3110661Z       Verse ref 57:25 reused (connections cooldown)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3111171Z       Same-root word across categories: 'ذَهَبًا' shares root with 'اذْهَبْ'
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3111580Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3111740Z   Attempt 10 (retry 5/5) using DeepSeek-R1 (GitHub Models)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3112125Z   ⚠ Rate limited on DeepSeek-R1 (GitHub Models)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3112779Z   → Rate limited on DeepSeek-R1 (GitHub Models) (no retries left), falling back to next model...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3113425Z   → Exhausted retries for DeepSeek-R1 (GitHub Models)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3113648Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3113739Z   Trying model: GPT-4.1 (OpenAI)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3114002Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3114127Z   Attempt 11 (retry 1/5) using GPT-4.1 (OpenAI)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3114460Z   ⚠ Rate limited on GPT-4.1 (OpenAI)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3114955Z   → Rate limited on GPT-4.1 (OpenAI), waiting 30s before retry...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3115211Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3115331Z   Attempt 12 (retry 2/5) using GPT-4.1 (OpenAI)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3115931Z   ⚠ Rate limited on GPT-4.1 (OpenAI)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3116374Z   → Rate limited on GPT-4.1 (OpenAI), waiting 30s before retry...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3116704Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3116819Z   Attempt 13 (retry 3/5) using GPT-4.1 (OpenAI)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3117163Z   ⚠ Rate limited on GPT-4.1 (OpenAI)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3117658Z   → Rate limited on GPT-4.1 (OpenAI), waiting 30s before retry...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3117911Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3118088Z   Attempt 14 (retry 4/5) using GPT-4.1 (OpenAI)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3118456Z   ⚠ Rate limited on GPT-4.1 (OpenAI)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3119024Z   → Rate limited on GPT-4.1 (OpenAI), waiting 30s before retry...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3119317Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3119428Z   Attempt 15 (retry 5/5) using GPT-4.1 (OpenAI)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3119754Z   ⚠ Rate limited on GPT-4.1 (OpenAI)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3120180Z   → Rate limited on GPT-4.1 (OpenAI) (no retries left), falling back to next model...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3120793Z   → Exhausted retries for GPT-4.1 (OpenAI)
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3120979Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3121206Z   ✗ All models failed for Ayah Connections after 15 total attempts.
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3121469Z 
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3121651Z   ⏳ Waiting 60 seconds before next game (rate limit)...
+generate	UNKNOWN STEP	2026-02-20T01:01:26.3121869Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9530012Z ════════════════════════════════════════════════════════════
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9532286Z   Generating: Harf by Harf
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9532864Z ════════════════════════════════════════════════════════════
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9533204Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9533356Z   Trying model: Gemini 2.5 Flash (Google)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9533665Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9533883Z   Attempt 1 (retry 1/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9534367Z   Tokens: 2340 in, 53 out, 5930 total
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9534633Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9535021Z   ✓ Harf by Harf generated successfully using Gemini 2.5 Flash (Google)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9535459Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9535787Z   📖 Looking up verse text for Harf by Harf (20:105)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9536323Z   ✓ Verse text fetched from Quran API
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9536596Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9536854Z   ⏳ Waiting 60 seconds before next game (rate limit)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9537199Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9537521Z ════════════════════════════════════════════════════════════
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9538002Z   Generating: Who Am I?
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9538523Z ════════════════════════════════════════════════════════════
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9539006Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9539165Z   Trying model: Gemini 2.5 Flash (Google)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9539451Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9539663Z   Attempt 1 (retry 1/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9540139Z   Tokens: 2975 in, 581 out, 4995 total
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9540397Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9540753Z   ✓ Who Am I? generated successfully using Gemini 2.5 Flash (Google)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9541161Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9541423Z   📖 Looking up verse text for Who Am I? (12:55)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9541952Z   ✓ Verse text fetched from Quran API
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9543915Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9544272Z   ⏳ Waiting 60 seconds before next game (rate limit)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9544646Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9544975Z ════════════════════════════════════════════════════════════
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9545445Z   Generating: Ayah Scramble
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9545966Z ════════════════════════════════════════════════════════════
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9546277Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9546430Z   Trying model: Gemini 2.5 Flash (Google)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9546700Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9546937Z   Attempt 1 (retry 1/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9547443Z   Tokens: 2634 in, 156 out, 6247 total
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9547699Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9547964Z   📖 Looking up verse text for Scramble (73:4)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9548743Z   ✓ Arabic text fetched: أَوْ زِدْ عَلَيْهِ وَرَتِّلِ ٱلْقُرْءَانَ تَرْتِيلًا...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9549569Z   ✓ Built 4 segments from 6 wbw entries
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9550292Z     [0] أَوْ زِدْ → Or add
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9550753Z     [1] عَلَيْهِ وَرَتِّلِ → to it and recite
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9551214Z     [2] ٱلْقُرْءَانَ → the Quran
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9551698Z     [3] تَرْتِيلًا → (with) measured rhythmic recitation
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9552795Z   ✓ Full English translation stored: Or add to it, and recite the Qur’ān with measured recitation....
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9553799Z   ✓ Scramble enriched: 4 segments
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9554048Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9554422Z   ✓ Ayah Scramble generated successfully using Gemini 2.5 Flash (Google)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9554853Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9555170Z   ⏳ Waiting 60 seconds before next game (rate limit)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9555558Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9555930Z ════════════════════════════════════════════════════════════
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9556437Z   Generating: Juz Journey
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9557038Z ════════════════════════════════════════════════════════════
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9557410Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9557603Z   Trying model: Gemini 2.5 Flash (Google)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9557934Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9558177Z   Attempt 1 (retry 1/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9558733Z   Tokens: 939 in, 1320 out, 4205 total
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9560052Z   ⚠ Truncated JSON detected, attempting continuation...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9560712Z   → Continuation 1/3...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9561143Z   Continuation tokens: 1323 out
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9561606Z   → Continuation 2/3...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9562002Z   Continuation tokens: 1323 out
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9562469Z   → Continuation 3/3...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9562849Z   Continuation tokens: 1323 out
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9563389Z   ⚠ Returning accumulated response (18096 chars)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9564178Z   ✗ JSON parse error: Expecting ',' delimiter: line 43 column 2 (char 4521)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9564829Z   Raw (first 500 chars): {
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9565195Z   "date": "2026-02-20",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9565533Z   "juz_number": 4,
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9565968Z   "juz_name": "Lan Tanālu al-Birra",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9566507Z   "juz_name_ar": "لَن تَنَالُوا۟ ٱلْبِرَّ",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9566935Z   "verse": {
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9567232Z     "surah_number": 3,
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9567587Z     "surah_name": "Al-Imran",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9568048Z     "surah_name_ar": "آل عمران",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9568470Z     "ayah_number": 104,
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9569705Z     "arabic_text": "وَلْتَكُن مِّنكُمْ أُمَّةٌۭ يَدْعُونَ إِلَى ٱلْخَيْرِ وَيَأْمُرُونَ بِٱلْمَعْرُوفِ وَيَنْهَوْنَ عَنِ ٱلْمُنكَرِ ۚ وَأُو۟لَٰٓئِكَ هُمُ ٱلْمُفْلِحُونَ",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9570612Z     "translation": "And let there be [arising] from among you a nation inviting 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9571044Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9571251Z   Attempt 2 (retry 2/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9571731Z   Tokens: 939 in, 1492 out, 4323 total
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9572342Z   ⚠ Truncated JSON detected, attempting continuation...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9572906Z   → Continuation 1/3...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9573484Z   Continuation tokens: 1495 out
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9573926Z   → Continuation 2/3...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9574311Z   Continuation tokens: 1 out
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9574838Z   ✓ JSON completed after 2 continuation(s)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9575627Z   ✗ JSON parse error: Expecting ',' delimiter: line 73 column 2 (char 5077)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9576314Z   Raw (first 500 chars): {
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9576701Z   "date": "2026-02-20",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9577055Z   "juz_number": 4,
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9577485Z   "juz_name": "Lan Tanālu al-Birra",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9578048Z   "juz_name_ar": "لَن تَنَالُوا۟ ٱلْبِرَّ",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9578490Z   "verse": {
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9579081Z     "surah_number": 3,
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9579463Z     "surah_name": "Al Imran",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9579953Z     "surah_name_ar": "آل عمران",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9580364Z     "ayah_number": 103,
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9582007Z     "arabic_text": "وَٱعْتَصِمُوا۟ بِحَبْلِ ٱللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا۟ ۚ وَٱذْكُرُوا۟ نِعْمَتَ ٱللَّهِ عَلَيْكُمْ إِذْ كُنتُمْ أَعْدَآءً فَأَلَّفَ بَيْنَ قُلُوبِكُمْ فَأَصْبَحْتُم بِنِعْمَتِهِۦٓ إِخْوَٰنًا وَكُنتُمْ عَلَىٰ شَفَا حُفْرَةٍ مِّ
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9583122Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9583379Z   Attempt 3 (retry 3/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9584146Z   Tokens: 939 in, 1297 out, 4418 total
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9584760Z   ⚠ Truncated JSON detected, attempting continuation...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9585317Z   → Continuation 1/3...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9585689Z   Continuation tokens: 3 out
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9586171Z   ✓ JSON completed after 1 continuation(s)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9586852Z   ✗ JSON parse error: Extra data: line 44 column 1 (char 4382)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9587420Z   Raw (first 500 chars): {
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9587797Z   "date": "2026-02-20",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9588145Z   "juz_number": 4,
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9588584Z   "juz_name": "Lan Tanālū al-Birra",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9589342Z   "juz_name_ar": "لَن تَنَالُوا۟ ٱلۡبِرَّ",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9589796Z   "verse": {
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9590111Z     "surah_number": 3,
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9590482Z     "surah_name": "Al-Imran",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9590951Z     "surah_name_ar": "آل عمران",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9591353Z     "ayah_number": 160,
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9592501Z     "arabic_text": "إِن يَنصُرْكُمُ ٱللَّهُ فَلَا غَالِبَ لَكُمْ ۖ وَإِن يَخْذُلْكُمْ فَمَن ذَا ٱلَّذِى يَنصُرُكُم مِّنۢ بَعْدِهِۦ ۗ وَعَلَى ٱللَّهِ فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ",
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9593609Z     "translation": "If Allah should aid you, no one can overcome you;
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9594048Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9594279Z   Attempt 4 (retry 4/5) using Gemini 2.5 Flash (Google)...
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9594794Z   Tokens: 939 in, 1169 out, 3873 total
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9595070Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9595466Z   ✓ Juz Journey generated successfully using Gemini 2.5 Flash (Google)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9595928Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9596094Z ============================================================
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9596574Z   GENERATION SUMMARY for 2026-02-20
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9597014Z ============================================================
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9597532Z   ✗ FAILED Ayah Connections
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9597917Z   ✓ Harf by Harf
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9598205Z   ✓ Who Am I?
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9598484Z   ✓ Ayah Scramble
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9599034Z   ✓ Juz Journey
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9599197Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9599438Z   ✓ Saved 4 puzzle(s) to history/2026-02-20.json
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9599850Z     Saved: harf, deduction, scramble, juz
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9600345Z     Missing: connections (will retry on next run)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9600710Z 
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9600926Z   ✗ 1 game(s) failed: connections
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9601473Z   ✗ NOT writing output files — page will NOT be updated.
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9602137Z   ✗ Previous day's puzzles remain live until all games succeed.
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9602996Z   ℹ Successful puzzles saved to history — next run will only regenerate failed games.
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9707846Z ##[error]Process completed with exit code 1.
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9783947Z ##[group]Run DATE=$(date -u +%Y-%m-%d)
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9784294Z [36;1mDATE=$(date -u +%Y-%m-%d)[0m
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9784550Z [36;1mgh issue create \[0m
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9784807Z [36;1m  --repo "sudosar/quraniq-source" \[0m
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9785184Z [36;1m  --title "Puzzle generation failed for ${DATE}" \[0m
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9785944Z [36;1m  --body "Puzzle generation failed for ${DATE}. Check the workflow run logs at https://github.com/sudosar/quraniq-source/actions/runs/22206601491 for details." \[0m
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9786665Z [36;1m  --label "bug" 2>/dev/null || \[0m
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9786956Z [36;1mgh issue create \[0m
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9787207Z [36;1m  --repo "sudosar/quraniq-source" \[0m
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9787536Z [36;1m  --title "Puzzle generation failed for ${DATE}" \[0m
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9788025Z [36;1m  --body "Puzzle generation failed for ${DATE}. Check the workflow run logs for details."[0m
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9837599Z shell: /usr/bin/bash -e {0}
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9837838Z env:
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9838083Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9838515Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9839244Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9839617Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9839984Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9840368Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9840887Z   GH_TOKEN: ***
+generate	UNKNOWN STEP	2026-02-20T01:06:59.9841078Z ##[endgroup]
+generate	UNKNOWN STEP	2026-02-20T01:07:01.4816289Z https://github.com/sudosar/quraniq-source/issues/46
+generate	UNKNOWN STEP	2026-02-20T01:07:01.4943871Z Post job cleanup.
+generate	UNKNOWN STEP	2026-02-20T01:07:01.5951934Z [command]/usr/bin/git version
+generate	UNKNOWN STEP	2026-02-20T01:07:01.5999510Z git version 2.53.0
+generate	UNKNOWN STEP	2026-02-20T01:07:01.6049430Z Temporarily overriding HOME='/home/runner/work/_temp/db5bf1a9-923e-4f94-ad7d-5d26c85ff4c7' before making global git config changes
+generate	UNKNOWN STEP	2026-02-20T01:07:01.6052021Z Adding repository directory to the temporary git global config as a safe directory
+generate	UNKNOWN STEP	2026-02-20T01:07:01.6056720Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quraniq-source/quraniq-source
+generate	UNKNOWN STEP	2026-02-20T01:07:01.6107647Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+generate	UNKNOWN STEP	2026-02-20T01:07:01.6148298Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+generate	UNKNOWN STEP	2026-02-20T01:07:01.6420644Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+generate	UNKNOWN STEP	2026-02-20T01:07:01.6446838Z http.https://github.com/.extraheader
+generate	UNKNOWN STEP	2026-02-20T01:07:01.6462365Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+generate	UNKNOWN STEP	2026-02-20T01:07:01.6497938Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+generate	UNKNOWN STEP	2026-02-20T01:07:01.6754898Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+generate	UNKNOWN STEP	2026-02-20T01:07:01.6791661Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+generate	UNKNOWN STEP	2026-02-20T01:07:01.7157553Z Evaluate and set job outputs
+generate	UNKNOWN STEP	2026-02-20T01:07:01.7164269Z Cleaning up orphan processes
