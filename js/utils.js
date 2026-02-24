@@ -288,8 +288,6 @@ async function speakArabic(text, ref) {
             if (words && words.length > 0) {
                 const cleanRoot = stripSuffixes(stripPrefixes(cleanText));
                 const tileWords = cleanText.split(/\s+/);
-                const tileRoots = tileWords.map(w => stripSuffixes(stripPrefixes(w)));
-
                 // 1. Try exact match first
                 let match = words.find(w => !w.isSeparator && normalizeForMatch(w.arabic) === cleanText);
 
@@ -568,6 +566,23 @@ async function fetchWordByWord(ref) {
             translation: w.translation?.text || '',
             audio_url: w.audio_url
         }));
+
+        // [HOTFIX] Quran.com API has a known bug for 10:42 where it skips audio index 005
+        // and shifts all subsequent words by +1 (e.g. 008 plays 009's audio).
+        if (key === '10:42') {
+            words.forEach(w => {
+                if (w.audio_url) {
+                    const matchPos = w.audio_url.match(/_(\d+)\.mp3$/);
+                    if (matchPos) {
+                        let num = parseInt(matchPos[1], 10);
+                        if (num >= 6) {
+                            num -= 1;
+                            w.audio_url = w.audio_url.replace(/\d+\.mp3$/, String(num).padStart(3, '0') + '.mp3');
+                        }
+                    }
+                }
+            });
+        }
 
         // If the verse is short (3 words or fewer), fetch the next verse for context
         if (words.length > 0 && words.length <= 3) {
