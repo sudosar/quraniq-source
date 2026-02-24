@@ -1,29 +1,30 @@
 {
-  "date": "2026-02-23",
+  "date": "2026-02-24",
   "puzzle": {
-    "verseRef": "21:107",
-    "reference": "Surah Al-Anbiya (21:107)",
+    "verseRef": "43:13",
+    "reference": "Surah Az-Zukhruf (43:13)",
     "segments": [
-      "وَمَا أَرْسَلْنَاكَ",
-      "إِلَّا",
-      "رَحْمَةً",
-      "لِّلْعَالَمِينَ"
+      "سُبْحَانَ الَّذِي",
+      "سَخَّرَ لَنَا هَٰذَا",
+      "وَمَا كُنَّا",
+      "لَهُ مُقْرِنِينَ"
     ],
     "translations": [
-      "And not We have sent you",
-      "but",
-      "(as) a mercy",
-      "for the worlds"
+      "That you may sit firmly on their backs then remember",
+      "(the) favor (of) your Lord when you sit firmly on them",
+      "and say Glory be (to) the One Who (has) subjected to us",
+      "this and not we were of it capable"
     ],
-    "hint": "This verse describes the universal purpose of the Prophet Muhammad's (ﷺ) mission to all of creation.",
-    "arabic": "وَمَآ أَرْسَلْنَـٰكَ إِلَّا رَحْمَةًۭ لِّلْعَـٰلَمِينَ",
+    "hint": "This is part of a well-known supplication recited when mounting a means of transport.",
+    "arabic": "لِتَسْتَوُۥا۟ عَلَىٰ ظُهُورِهِۦ ثُمَّ تَذْكُرُوا۟ نِعْمَةَ رَبِّكُمْ إِذَا ٱسْتَوَيْتُمْ عَلَيْهِ وَتَقُولُوا۟ سُبْحَـٰنَ ٱلَّذِى سَخَّرَ لَنَا هَـٰذَا وَمَا كُنَّا لَهُۥ مُقْرِنِينَ",
     "words": [
-      "وَمَآ أَرْسَلْنَـٰكَ",
-      "إِلَّا",
-      "رَحْمَةًۭ",
-      "لِّلْعَـٰلَمِينَ"
+      "لِتَسْتَوُۥا۟ عَلَىٰ ظُهُورِهِۦ ثُمَّ تَذْكُرُوا۟",
+      "نِعْمَةَ رَبِّكُمْ إِذَا ٱسْتَوَيْتُمْ عَلَيْهِ",
+      "وَتَقُولُوا۟ سُبْحَـٰنَ ٱلَّذِى سَخَّرَ لَنَا",
+      "هَـٰذَا وَمَا كُنَّا لَهُۥ مُقْرِنِينَ"
     ],
-    "verseEn": "And We have not sent you, [O Muḥammad], except as a mercy to the worlds."
+    "verseEn": "That you may settle yourselves upon their backs and then remember the favor of your Lord when you have settled upon them and say, \"Exalted is He who has subjected this to us, and we could not have [otherwise] subdued it."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

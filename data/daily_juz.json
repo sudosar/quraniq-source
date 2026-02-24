@@ -1,37 +1,31 @@
 {
-  "date": "2026-02-23",
+  "date": "2026-02-24",
   "puzzle": {
-    "date": "2026-02-23",
-    "juz_number": 7,
-    "juz_name": "Wa Idza Sami'u",
-    "juz_name_ar": "وَإِذَا سَمِعُوا",
+    "date": "2026-02-24",
+    "juz_number": 8,
+    "juz_name": "Wa Law Annana",
+    "juz_name_ar": "وَلَوْ أَنَّنَا",
     "verse": {
       "surah_number": 6,
       "surah_name": "Al-An'am",
       "surah_name_ar": "ٱلْأَنْعَام",
-      "ayah_number": 32,
-      "arabic_text": "وَمَا ٱلْحَيَوٰةُ ٱلدُّنْيَآ إِلَّا لَعِبٌ وَلَهْوٌ ۖ وَلَلدَّارُ ٱلْءَاخِرَةُ خَيْرٌ لِّلَّذِينَ يَتَّقُونَ ۗ أَفَلَا تَعْقِلُونَ",
-      "translation": "And the worldly life is not but amusement and diversion; but the home of the Hereafter is best for those who fear Allah, so will you not reason?",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/821.mp3"
+      "ayah_number": 162,
+      "arabic_text": "قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+      "translation": "Say, 'Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allah, Lord of the worlds.'",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/951.mp3"
     },
     "theme_question": {
-      "correct": "The true value and permanence of the Hereafter compared to the fleeting nature of worldly life.",
+      "correct": "The complete devotion of one's entire life to Allah.",
       "options": [
-        "The obligation to earn a living and enjoy the lawful pleasures of the world.",
-        "The true value and permanence of the Hereafter compared to the fleeting nature of worldly life.",
-        "The prohibition of specific worldly amusements like music and games.",
-        "A command to completely abandon the world and live in seclusion."
+        "The complete devotion of one's entire life to Allah.",
+        "The specific rituals of the annual pilgrimage (Hajj).",
+        "The importance of remembering death to stay humble.",
+        "The obligation of the five daily prayers."
       ]
     },
     "surah_question": {
       "correct_surah": 6,
       "options": [
-        {
-          "num": 5,
-          "name": "Al-Ma'idah",
-          "name_ar": "ٱلْمَائِدَة",
-          "name_en": "The Table Spread"
-        },
         {
           "num": 7,
           "name": "Al-A'raf",
@@ -45,34 +39,41 @@
           "name_en": "The Cattle"
         },
         {
-          "num": 4,
-          "name": "An-Nisa",
-          "name_ar": "ٱلنِّسَاء",
-          "name_en": "The Women"
-        }
-      ]
-    },
-    "surah_order": {
-      "surahs": [
-        {
           "num": 5,
           "name": "Al-Ma'idah",
           "name_ar": "ٱلْمَائِدَة",
           "name_en": "The Table Spread"
         },
         {
+          "num": 8,
+          "name": "Al-Anfal",
+          "name_ar": "ٱلْأَنْفَال",
+          "name_en": "The Spoils of War"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
           "num": 6,
           "name": "Al-An'am",
           "name_ar": "ٱلْأَنْعَام",
           "name_en": "The Cattle"
+        },
+        {
+          "num": 7,
+          "name": "Al-A'raf",
+          "name_ar": "ٱلْأَعْرَاف",
+          "name_en": "The Heights"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse is part of a larger discourse addressing the disbelievers of Makkah who were engrossed in their worldly life and rejected the Prophet's (ﷺ) message about the Hereafter. It serves as a powerful rhetorical question, urging them to use their intellect to understand the true reality of existence.",
-      "theme_explanation": "The theme is a fundamental Quranic principle: the hierarchy of values between the dunya (this world) and the akhirah (the Hereafter). The verse uses the metaphor of 'amusement and diversion' (لَعِبٌ وَلَهْوٌ) to describe the world's deceptive and temporary nature. True, lasting success and goodness are reserved for those who have Taqwa (God-consciousness, piety) and prioritize the life to come. The final question, 'so will you not reason?' (أَفَلَا تَعْقِلُونَ), challenges the listener to reflect deeply on their priorities.",
-      "surah_overview": "Surah Al-An'am ('The Cattle') is the 6th chapter of the Quran and is unique as it was revealed entirely in Makkah in one sitting. Its central theme is Tawhid (the absolute Oneness of Allah) and the refutation of shirk (polytheism). It addresses core tenets of faith, including Allah's sovereignty, creation, prophethood, and the reality of resurrection and judgment, often using the signs in the natural world as proof of the Creator's power and wisdom. The surah's name comes from the discussion of various pagan superstitions related to cattle (ayahs 136-140)."
+      "verse_context": "This verse is a powerful declaration of faith, commanded by Allah for the Prophet Muhammad (ﷺ) and all believers to proclaim. It comes towards the end of Surah Al-An'am, summarizing the core message of the surah after detailed arguments against polytheism and discussions on Allah's absolute sovereignty. It serves as a personal and public pledge of one's entire existence to the Creator.",
+      "theme_explanation": "The central theme is Tawhid al-Uluhiyyah (Oneness of Worship). The verse beautifully encapsulates the concept that a believer's life, in its entirety—from acts of worship like prayer (salati) and sacrifice (nusuki) to the very processes of living (mahyaya) and dying (mamati)—is solely for Allah. It rejects any division of loyalty and affirms that every moment and action should be an act of submission to the Lord of all worlds.",
+      "surah_overview": "Surah Al-An'am ('The Cattle') is the 6th chapter of the Quran and is unique as it was revealed entirely in one night in Makkah. Its primary focus is on establishing the foundations of faith (Aqidah), particularly the oneness of Allah (Tawhid). It refutes the polytheistic beliefs of the Quraysh by presenting logical arguments and drawing attention to Allah's signs in creation. The surah also discusses prophethood, revelation, and the Day of Judgment, without legislating many practical laws, which is characteristic of Makkan surahs."
     }
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

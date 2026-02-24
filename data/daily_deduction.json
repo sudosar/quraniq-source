@@ -1,65 +1,66 @@
 {
-  "date": "2026-02-23",
+  "date": "2026-02-24",
   "puzzle": {
-    "title": "The Voice of Concealed Conviction",
-    "intro": "In the heart of a tyrannical court, where disbelief was the law of the land, a lone soul walked a tightrope of faith and fear. This individual, close to the center of power, listened as a prophet's message was met with scorn and threats. A moment of truth arrived, forcing this person to choose between silent safety and speaking a dangerous truth. Can you uncover the identity of this courageous advocate?",
+    "title": "The Echo of Deceit",
+    "intro": "A bond of kinship was tested by a surge of envy. A secret plan was hatched, setting in motion a chain of events that would span years and cross vast distances. This group's actions led to profound separation and sorrow, but the story did not end there. It is a tale of deception, regret, and the ultimate unfolding of a divine plan. Can you unravel the identity of these individuals whose choices echoed through generations?",
     "clues": [
-      "I lived within the very household of a tyrant, witnessing firsthand the arrogance that rejected divine signs.",
-      "I kept my faith a secret, a hidden treasure in a palace of idolatry.",
-      "I heard the leader I served plot to kill a messenger of Allah, a man named Musa.",
-      "I questioned their logic, reminding them of the fate of the people of Nuh, 'Ad, and Thamud.",
-      "I posed a critical question to my people: 'If he is a liar, his lie is upon him; but if he is truthful, some of what he promises will strike you.'",
-      "My story is told as an example of faith in the surah named 'The Forgiver,' where I warned my people against the schemes of the powerful."
+      "We were consumed by jealousy over the affection shown to one of our own.",
+      "In our envy, we conspired together and cast our sibling into the darkness of a well.",
+      "To conceal our deed, we presented a garment to our father, stained with false blood.",
+      "Years later, a severe famine forced us to travel to Egypt seeking provisions.",
+      "There, we came before a powerful governor who, unknown to us, was the very sibling we had wronged.",
+      "Our final test was to bring our youngest brother, Binyamin, which led to the revelation of our past and our father being Prophet Ya'qub."
     ],
     "categories": {
       "identity": {
-        "label": "Who Am I?",
+        "label": "Who are we?",
         "options": [
-          "The Believer from Fir'awn's Family",
-          "Haman",
-          "The Magicians of Fir'awn",
-          "Qarun",
-          "The Samiri"
+          "The Sons of Adam (Qabil & Habil)",
+          "The Disciples of Prophet Isa",
+          "The Brothers of Prophet Yusuf",
+          "The People of Madyan",
+          "The Magicians of Fir'awn"
         ],
-        "answer": "The Believer from Fir'awn's Family"
+        "answer": "The Brothers of Prophet Yusuf"
       },
       "trial": {
-        "label": "What Was My Trial?",
+        "label": "What was our primary misdeed?",
         "options": [
-          "Defending Prophet Musa in the tyrant's court",
-          "Building a lofty tower to reach the heavens",
-          "Being cast into a blazing fire",
-          "Being swallowed by a giant fish",
-          "Losing all wealth and health"
+          "Building a golden calf for worship",
+          "Demanding to see Allah directly",
+          "Mocking a prophet for building an ark",
+          "Deceiving our father and abandoning our brother",
+          "Breaking the Sabbath by fishing"
         ],
-        "answer": "Defending Prophet Musa in the tyrant's court"
+        "answer": "Deceiving our father and abandoning our brother"
       },
       "location": {
-        "label": "What Was My Argument's Theme?",
+        "label": "What object was central to our deception?",
         "options": [
-          "The consequence of rejecting a prophet's message",
-          "The demand for a sign from a sacred tree",
-          "The creation of a calf from molten jewelry",
-          "The miracle of a camel from rock",
-          "The interpretation of a ruler's dreams"
+          "A set of inscribed tablets",
+          "A shirt stained with false blood",
+          "A golden calf",
+          "A beautiful bird (the Hoopoe)",
+          "A staff that turned into a serpent"
         ],
-        "answer": "The consequence of rejecting a prophet's message"
+        "answer": "A shirt stained with false blood"
       },
       "outcome": {
-        "label": "What Was the Outcome?",
+        "label": "What was the ultimate outcome of our story?",
         "options": [
-          "Allah saved this individual from their evil plot",
-          "The entire court immediately accepted Islam",
-          "The tyrant repented at the moment of drowning",
-          "The tyrant was swallowed by the earth",
-          "The individual was exiled to a distant land"
+          "We were destroyed by a mighty flood",
+          "We were turned into apes",
+          "We were swallowed by the earth",
+          "We were forgiven and reunited with our family",
+          "We were drowned in the sea"
         ],
-        "answer": "Allah saved this individual from their evil plot"
+        "answer": "We were forgiven and reunited with our family"
       }
     },
-    "verseRef": "40:45",
-    "arabic": "فَوَقَىٰهُ ٱللَّهُ سَيِّـَٔاتِ مَا مَكَرُوا۟ ۖ وَحَاقَ بِـَٔالِ فِرْعَوْنَ سُوٓءُ ٱلْعَذَابِ",
-    "verse": "So Allāh protected him from the evils they plotted, and the people of Pharaoh were enveloped by the worst of punishment - (40:45)"
+    "verseRef": "12:91",
+    "arabic": "قَالُوا۟ تَٱللَّهِ لَقَدْ ءَاثَرَكَ ٱللَّهُ عَلَيْنَا وَإِن كُنَّا لَخَـٰطِـِٔينَ",
+    "verse": "They said, \"By Allāh, certainly has Allāh preferred you over us, and indeed, we have been sinners.\" (12:91)"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

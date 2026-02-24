@@ -1,6 +1,5 @@
 {
-  "date": "2026-02-24",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَلْفَاظُ الْقَرَابَةِ",
@@ -144,6 +143,172 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "نفس",
+    "display": "نَفْس",
+    "hint": "It can be tranquil, self-reproaching, or inclined to evil.",
+    "verseRef": "91:7",
+    "arabicVerse": "وَنَفْسٍۢ وَمَا سَوَّىٰهَا",
+    "verse": "91:7 — And [by] the soul and He who proportioned it"
+  },
+  "deduction": {
+    "title": "The Echo of Deceit",
+    "intro": "A bond of kinship was tested by a surge of envy. A secret plan was hatched, setting in motion a chain of events that would span years and cross vast distances. This group's actions led to profound separation and sorrow, but the story did not end there. It is a tale of deception, regret, and the ultimate unfolding of a divine plan. Can you unravel the identity of these individuals whose choices echoed through generations?",
+    "clues": [
+      "We were consumed by jealousy over the affection shown to one of our own.",
+      "In our envy, we conspired together and cast our sibling into the darkness of a well.",
+      "To conceal our deed, we presented a garment to our father, stained with false blood.",
+      "Years later, a severe famine forced us to travel to Egypt seeking provisions.",
+      "There, we came before a powerful governor who, unknown to us, was the very sibling we had wronged.",
+      "Our final test was to bring our youngest brother, Binyamin, which led to the revelation of our past and our father being Prophet Ya'qub."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who are we?",
+        "options": [
+          "The Sons of Adam (Qabil & Habil)",
+          "The Disciples of Prophet Isa",
+          "The Brothers of Prophet Yusuf",
+          "The People of Madyan",
+          "The Magicians of Fir'awn"
+        ],
+        "answer": "The Brothers of Prophet Yusuf"
+      },
+      "trial": {
+        "label": "What was our primary misdeed?",
+        "options": [
+          "Building a golden calf for worship",
+          "Demanding to see Allah directly",
+          "Mocking a prophet for building an ark",
+          "Deceiving our father and abandoning our brother",
+          "Breaking the Sabbath by fishing"
+        ],
+        "answer": "Deceiving our father and abandoning our brother"
+      },
+      "location": {
+        "label": "What object was central to our deception?",
+        "options": [
+          "A set of inscribed tablets",
+          "A shirt stained with false blood",
+          "A golden calf",
+          "A beautiful bird (the Hoopoe)",
+          "A staff that turned into a serpent"
+        ],
+        "answer": "A shirt stained with false blood"
+      },
+      "outcome": {
+        "label": "What was the ultimate outcome of our story?",
+        "options": [
+          "We were destroyed by a mighty flood",
+          "We were turned into apes",
+          "We were swallowed by the earth",
+          "We were forgiven and reunited with our family",
+          "We were drowned in the sea"
+        ],
+        "answer": "We were forgiven and reunited with our family"
+      }
+    },
+    "verseRef": "12:91",
+    "arabic": "قَالُوا۟ تَٱللَّهِ لَقَدْ ءَاثَرَكَ ٱللَّهُ عَلَيْنَا وَإِن كُنَّا لَخَـٰطِـِٔينَ",
+    "verse": "They said, \"By Allāh, certainly has Allāh preferred you over us, and indeed, we have been sinners.\" (12:91)"
+  },
+  "scramble": {
+    "verseRef": "43:13",
+    "reference": "Surah Az-Zukhruf (43:13)",
+    "segments": [
+      "سُبْحَانَ الَّذِي",
+      "سَخَّرَ لَنَا هَٰذَا",
+      "وَمَا كُنَّا",
+      "لَهُ مُقْرِنِينَ"
+    ],
+    "translations": [
+      "That you may sit firmly on their backs then remember",
+      "(the) favor (of) your Lord when you sit firmly on them",
+      "and say Glory be (to) the One Who (has) subjected to us",
+      "this and not we were of it capable"
+    ],
+    "hint": "This is part of a well-known supplication recited when mounting a means of transport.",
+    "arabic": "لِتَسْتَوُۥا۟ عَلَىٰ ظُهُورِهِۦ ثُمَّ تَذْكُرُوا۟ نِعْمَةَ رَبِّكُمْ إِذَا ٱسْتَوَيْتُمْ عَلَيْهِ وَتَقُولُوا۟ سُبْحَـٰنَ ٱلَّذِى سَخَّرَ لَنَا هَـٰذَا وَمَا كُنَّا لَهُۥ مُقْرِنِينَ",
+    "words": [
+      "لِتَسْتَوُۥا۟ عَلَىٰ ظُهُورِهِۦ ثُمَّ تَذْكُرُوا۟",
+      "نِعْمَةَ رَبِّكُمْ إِذَا ٱسْتَوَيْتُمْ عَلَيْهِ",
+      "وَتَقُولُوا۟ سُبْحَـٰنَ ٱلَّذِى سَخَّرَ لَنَا",
+      "هَـٰذَا وَمَا كُنَّا لَهُۥ مُقْرِنِينَ"
+    ],
+    "verseEn": "That you may settle yourselves upon their backs and then remember the favor of your Lord when you have settled upon them and say, \"Exalted is He who has subjected this to us, and we could not have [otherwise] subdued it."
+  },
+  "juz": {
+    "date": "2026-02-24",
+    "juz_number": 8,
+    "juz_name": "Wa Law Annana",
+    "juz_name_ar": "وَلَوْ أَنَّنَا",
+    "verse": {
+      "surah_number": 6,
+      "surah_name": "Al-An'am",
+      "surah_name_ar": "ٱلْأَنْعَام",
+      "ayah_number": 162,
+      "arabic_text": "قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+      "translation": "Say, 'Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allah, Lord of the worlds.'",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/951.mp3"
+    },
+    "theme_question": {
+      "correct": "The complete devotion of one's entire life to Allah.",
+      "options": [
+        "The complete devotion of one's entire life to Allah.",
+        "The specific rituals of the annual pilgrimage (Hajj).",
+        "The importance of remembering death to stay humble.",
+        "The obligation of the five daily prayers."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 6,
+      "options": [
+        {
+          "num": 7,
+          "name": "Al-A'raf",
+          "name_ar": "ٱلْأَعْرَاف",
+          "name_en": "The Heights"
+        },
+        {
+          "num": 6,
+          "name": "Al-An'am",
+          "name_ar": "ٱلْأَنْعَام",
+          "name_en": "The Cattle"
+        },
+        {
+          "num": 5,
+          "name": "Al-Ma'idah",
+          "name_ar": "ٱلْمَائِدَة",
+          "name_en": "The Table Spread"
+        },
+        {
+          "num": 8,
+          "name": "Al-Anfal",
+          "name_ar": "ٱلْأَنْفَال",
+          "name_en": "The Spoils of War"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 6,
+          "name": "Al-An'am",
+          "name_ar": "ٱلْأَنْعَام",
+          "name_en": "The Cattle"
+        },
+        {
+          "num": 7,
+          "name": "Al-A'raf",
+          "name_ar": "ٱلْأَعْرَاف",
+          "name_en": "The Heights"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse is a powerful declaration of faith, commanded by Allah for the Prophet Muhammad (ﷺ) and all believers to proclaim. It comes towards the end of Surah Al-An'am, summarizing the core message of the surah after detailed arguments against polytheism and discussions on Allah's absolute sovereignty. It serves as a personal and public pledge of one's entire existence to the Creator.",
+      "theme_explanation": "The central theme is Tawhid al-Uluhiyyah (Oneness of Worship). The verse beautifully encapsulates the concept that a believer's life, in its entirety—from acts of worship like prayer (salati) and sacrifice (nusuki) to the very processes of living (mahyaya) and dying (mamati)—is solely for Allah. It rejects any division of loyalty and affirms that every moment and action should be an act of submission to the Lord of all worlds.",
+      "surah_overview": "Surah Al-An'am ('The Cattle') is the 6th chapter of the Quran and is unique as it was revealed entirely in one night in Makkah. Its primary focus is on establishing the foundations of faith (Aqidah), particularly the oneness of Allah (Tawhid). It refutes the polytheistic beliefs of the Quraysh by presenting logical arguments and drawing attention to Allah's signs in creation. The surah also discusses prophethood, revelation, and the Day of Judgment, without legislating many practical laws, which is characteristic of Makkan surahs."
+    }
+  }
 }
