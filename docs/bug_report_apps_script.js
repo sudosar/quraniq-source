@@ -144,8 +144,18 @@ function handleBugReport(data) {
   if (debug.state || debug.juz) {
     body += `### Debug Information\n\n`;
     body += `<details>\n<summary>View Local Storage State (Day ${debug.dayNumber || '?'})</summary>\n\n`;
-    body += `#### Game State\n\`\`\`json\n${JSON.stringify(debug.state || {}, null, 2)}\n\`\`\`\n\n`;
-    body += `#### Juz State\n\`\`\`json\n${JSON.stringify(debug.juz || {}, null, 2)}\n\`\`\`\n`;
+    let gameStateStr = JSON.stringify(debug.state || {}, null, 2);
+    if (gameStateStr.length > 15000) {
+      gameStateStr = gameStateStr.substring(0, 15000) + '\n\n... [TRUNCATED DUE TO GITHUB ISSUE BODY LIMIT]';
+    }
+
+    let juzStateStr = JSON.stringify(debug.juz || {}, null, 2);
+    if (juzStateStr.length > 15000) {
+      juzStateStr = juzStateStr.substring(0, 15000) + '\n\n... [TRUNCATED DUE TO GITHUB ISSUE BODY LIMIT]';
+    }
+
+    body += `#### Game State\n\`\`\`json\n${gameStateStr}\n\`\`\`\n\n`;
+    body += `#### Juz State\n\`\`\`json\n${juzStateStr}\n\`\`\`\n`;
     body += `</details>\n\n`;
   }
 

@@ -159,10 +159,29 @@ async function submitBugReport() {
         scriptVersion: '1.2.0',
         debugData: {
             dayNumber: typeof getDayNumber === 'function' ? getDayNumber() : null,
-            state: JSON.parse(localStorage.getItem('quraniq_state') || '{}'),
-            juz: JSON.parse(localStorage.getItem('quraniq_juz') || '{}')
+            state: getSafeDebugState('quraniq_state'),
+            juz: getSafeDebugState('quraniq_juz')
         }
     };
+
+    function getSafeDebugState(key) {
+        try {
+            const item = localStorage.getItem(key);
+            if (!item) return {};
+            const parsed = JSON.parse(item);
+            const str = JSON.stringify(parsed);
+            if (str.length > 15000) {
+                return {
+                    _truncated: true,
+                    message: `State too large (${str.length} chars)`,
+                    warning: "State was truncated to prevent GitHub API payload limits"
+                };
+            }
+            return parsed;
+        } catch (e) {
+            return { _error: `Failed to parse ${key}`, message: e.message };
+        }
+    }
 
     if (!BUG_REPORT_ENDPOINT) {
         // Fallback: copy to clipboard as JSON
