@@ -1,6 +1,5 @@
 {
-  "date": "2026-02-25",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَعْضَاءُ الْوُضُوءِ",
@@ -144,6 +143,172 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "ارض",
+    "display": "أَرْض",
+    "hint": "What prophets walk on and what will one day be inherited by the righteous.",
+    "verseRef": "21:105",
+    "arabicVerse": "وَلَقَدْ كَتَبْنَا فِى ٱلزَّبُورِ مِنۢ بَعْدِ ٱلذِّكْرِ أَنَّ ٱلْأَرْضَ يَرِثُهَا عِبَادِىَ ٱلصَّـٰلِحُونَ",
+    "verse": "21:105 — And We have already written in the book [of Psalms] after the [previous] mention that the land [of Paradise] is inherited by My righteous servants."
+  },
+  "deduction": {
+    "title": "The Test of the Barren Rock",
+    "intro": "A community, skilled and proud, carved their legacy into the very mountains. But when a clear sign was sent to them, a test of faith and restraint, their arrogance led them down a path of no return. Can you identify this group and the consequence of their defiance?",
+    "clues": [
+      "We were masters of stone, carving magnificent dwellings directly into the mountainsides.",
+      "A messenger from among our own people came to us, calling us to worship the One True God.",
+      "We demanded a sign to prove his words, and a unique creature was brought forth as a test for us.",
+      "We were given a simple command: to share our water source with this creature, letting it drink on its designated day.",
+      "In our arrogance, a few among us conspired and we defied the warning, striking down the creature that was meant to be our sign.",
+      "We were given three days before our doom, and then a mighty blast seized us in our homes, leaving us lifeless and overturned."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Are We?",
+        "options": [
+          "People of 'Ad",
+          "People of Madyan",
+          "People of Thamud",
+          "People of Saba",
+          "People of Lut"
+        ],
+        "answer": "People of Thamud"
+      },
+      "trial": {
+        "label": "What Was Our Primary Test?",
+        "options": [
+          "Building an ark to survive a flood",
+          "Resisting the urge to fish on the Sabbath",
+          "Giving up fraudulent business practices",
+          "Protecting a miraculous she-camel",
+          "Enduring a seven-year famine"
+        ],
+        "answer": "Protecting a miraculous she-camel"
+      },
+      "location": {
+        "label": "What Was the Central Element of Our Story?",
+        "options": [
+          "The Golden Calf",
+          "The She-Camel",
+          "The Staff of Prophet Musa",
+          "The Great Dam of Ma'rib",
+          "The Table Spread from Heaven"
+        ],
+        "answer": "The She-Camel"
+      },
+      "outcome": {
+        "label": "What Was Our Ultimate Fate?",
+        "options": [
+          "Drowned in a great deluge",
+          "Turned into apes and swine",
+          "Overwhelmed by a furious wind",
+          "Scattered by the bursting of a dam",
+          "Destroyed by a mighty blast/earthquake"
+        ],
+        "answer": "Destroyed by a mighty blast/earthquake"
+      }
+    },
+    "verseRef": "7:77",
+    "arabic": "فَعَقَرُوا۟ ٱلنَّاقَةَ وَعَتَوْا۟ عَنْ أَمْرِ رَبِّهِمْ وَقَالُوا۟ يَـٰصَـٰلِحُ ٱئْتِنَا بِمَا تَعِدُنَآ إِن كُنتَ مِنَ ٱلْمُرْسَلِينَ",
+    "verse": "So they hamstrung the she-camel and were insolent toward the command of their Lord and said, \"O Ṣāliḥ, bring us what you promise us, if you should be of the messengers.\" (7:77)"
+  },
+  "scramble": {
+    "verseRef": "39:53",
+    "reference": "Surah Az-Zumar (39:53)",
+    "segments": [
+      "قُلْ يَٰعِبَادِىَ ٱلَّذِينَ",
+      "أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ",
+      "لَا تَقْنَطُوا۟",
+      "مِن رَّحْمَةِ ٱللَّهِ"
+    ],
+    "translations": [
+      "Say O My slaves Those who have transgressed against",
+      "themselves (do) not despair of (the) Mercy",
+      "(of) Allah Indeed Allah forgives the sins",
+      "all Indeed He He (is) the Oft-Forgiving the Most Merciful"
+    ],
+    "hint": "A message of immense hope and a call to never lose faith in divine forgiveness, no matter the sin.",
+    "arabic": "۞ قُلْ يَـٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا ۚ إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
+    "words": [
+      "۞ قُلْ يَـٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ",
+      "أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ",
+      "ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ",
+      "جَمِيعًا ۚ إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ"
+    ],
+    "verseEn": "Say, \"O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allāh. Indeed, Allāh forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.\""
+  },
+  "juz": {
+    "date": "2026-02-25",
+    "juz_number": 9,
+    "juz_name": "Qala al-Mala'u",
+    "juz_name_ar": "قَالَ ٱلْمَلَأُ",
+    "verse": {
+      "surah_number": 7,
+      "surah_name": "Al-A'raf",
+      "surah_name_ar": "ٱلْأَعْرَاف",
+      "ayah_number": 180,
+      "arabic_text": "وَلِلَّهِ ٱلْأَسْمَآءُ ٱلْحُsْنَىٰ فَٱدْعُوهُ بِهَا ۖ وَذَرُوا۟ ٱلَّذِينَ يُلْحِدُونَ فِىٓ أَسْمَـٰٓئِهِۦ ۚ سَيُجْزَوْنَ مَا كَانُوا۟ يَعْمَلُونَ",
+      "translation": "And to Allah belong the best names, so invoke Him by them. And leave [the company of] those who practice deviation concerning His names. They will be recompensed for what they have been doing.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1134.mp3"
+    },
+    "theme_question": {
+      "correct": "The importance of calling upon Allah using His most beautiful names.",
+      "options": [
+        "The importance of calling upon Allah using His most beautiful names.",
+        "The obligation of performing pilgrimage (Hajj) once in a lifetime.",
+        "The prohibition of consuming interest (riba) in financial transactions.",
+        "The specific rewards and status reserved for martyrs in battle."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 7,
+      "options": [
+        {
+          "num": 8,
+          "name": "Al-Anfal",
+          "name_ar": "ٱلْأَنْفَال",
+          "name_en": "The Spoils of War"
+        },
+        {
+          "num": 6,
+          "name": "Al-An'am",
+          "name_ar": "ٱلْأَنْعَام",
+          "name_en": "The Cattle"
+        },
+        {
+          "num": 7,
+          "name": "Al-A'raf",
+          "name_ar": "ٱلْأَعْرَاف",
+          "name_en": "The Heights"
+        },
+        {
+          "num": 9,
+          "name": "At-Tawbah",
+          "name_ar": "ٱلتَّوْبَة",
+          "name_en": "The Repentance"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 7,
+          "name": "Al-A'raf",
+          "name_ar": "ٱلْأَعْرَاف",
+          "name_en": "The Heights"
+        },
+        {
+          "num": 8,
+          "name": "Al-Anfal",
+          "name_ar": "ٱلْأَنْفَال",
+          "name_en": "The Spoils of War"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse (7:180) appears in the latter part of Surah Al-A'raf, following detailed narratives of past prophets and their nations. It serves as a direct instruction to believers on the proper etiquette and substance of supplication. The verse emphasizes Tawhid (monotheism) by directing all worship and invocation towards Allah alone, using the beautiful names He has revealed for Himself. The warning against those who \"practice deviation\" (yulhidun) concerning His names refers to those who distort their meanings, deny them, or assign them to idols.",
+      "theme_explanation": "The core theme is the concept of *Asma'ul Husna* (The Most Beautiful Names of Allah). The verse establishes that Allah possesses names of perfect beauty and meaning, and it commands believers to use these names in their du'a (supplication). This act of calling upon Allah by His names, such as Ar-Rahman (The Most Merciful) or Al-Ghafur (The Forgiving), fosters a deeper, more personal connection and understanding of His attributes. It is a fundamental pillar of Islamic theology and a key to meaningful worship.",
+      "surah_overview": "Surah Al-A'raf ('The Heights') is the 7th chapter of the Quran, a Meccan surah that is one of the longest in the Book. It extensively details the stories of numerous prophets, including Adam, Nuh (Noah), Hud, Salih, Lut, Shu'ayb, and Musa (Moses), highlighting the consistent message they brought and the varied responses of their people. A central theme is the consequence of belief versus disbelief, illustrated through the history of past nations. The title 'The Heights' refers to a barrier between Paradise and Hell where people who are evenly balanced in their good and bad deeds will await Allah's mercy."
+    }
+  }
 }

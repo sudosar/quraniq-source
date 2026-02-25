@@ -1,12 +1,13 @@
 {
-  "date": "2026-02-24",
+  "date": "2026-02-25",
   "puzzle": {
-    "word": "نفس",
-    "display": "نَفْس",
-    "hint": "It can be tranquil, self-reproaching, or inclined to evil.",
-    "verseRef": "91:7",
-    "arabicVerse": "وَنَفْسٍۢ وَمَا سَوَّىٰهَا",
-    "verse": "91:7 — And [by] the soul and He who proportioned it"
+    "word": "ارض",
+    "display": "أَرْض",
+    "hint": "What prophets walk on and what will one day be inherited by the righteous.",
+    "verseRef": "21:105",
+    "arabicVerse": "وَلَقَدْ كَتَبْنَا فِى ٱلزَّبُورِ مِنۢ بَعْدِ ٱلذِّكْرِ أَنَّ ٱلْأَرْضَ يَرِثُهَا عِبَادِىَ ٱلصَّـٰلِحُونَ",
+    "verse": "21:105 — And We have already written in the book [of Psalms] after the [previous] mention that the land [of Paradise] is inherited by My righteous servants."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

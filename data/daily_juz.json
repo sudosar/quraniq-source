@@ -1,36 +1,36 @@
 {
-  "date": "2026-02-24",
+  "date": "2026-02-25",
   "puzzle": {
-    "date": "2026-02-24",
-    "juz_number": 8,
-    "juz_name": "Wa Law Annana",
-    "juz_name_ar": "وَلَوْ أَنَّنَا",
+    "date": "2026-02-25",
+    "juz_number": 9,
+    "juz_name": "Qala al-Mala'u",
+    "juz_name_ar": "قَالَ ٱلْمَلَأُ",
     "verse": {
-      "surah_number": 6,
-      "surah_name": "Al-An'am",
-      "surah_name_ar": "ٱلْأَنْعَام",
-      "ayah_number": 162,
-      "arabic_text": "قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
-      "translation": "Say, 'Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allah, Lord of the worlds.'",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/951.mp3"
+      "surah_number": 7,
+      "surah_name": "Al-A'raf",
+      "surah_name_ar": "ٱلْأَعْرَاف",
+      "ayah_number": 180,
+      "arabic_text": "وَلِلَّهِ ٱلْأَسْمَآءُ ٱلْحُsْنَىٰ فَٱدْعُوهُ بِهَا ۖ وَذَرُوا۟ ٱلَّذِينَ يُلْحِدُونَ فِىٓ أَسْمَـٰٓئِهِۦ ۚ سَيُجْزَوْنَ مَا كَانُوا۟ يَعْمَلُونَ",
+      "translation": "And to Allah belong the best names, so invoke Him by them. And leave [the company of] those who practice deviation concerning His names. They will be recompensed for what they have been doing.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1134.mp3"
     },
     "theme_question": {
-      "correct": "The complete devotion of one's entire life to Allah.",
+      "correct": "The importance of calling upon Allah using His most beautiful names.",
       "options": [
-        "The complete devotion of one's entire life to Allah.",
-        "The specific rituals of the annual pilgrimage (Hajj).",
-        "The importance of remembering death to stay humble.",
-        "The obligation of the five daily prayers."
+        "The importance of calling upon Allah using His most beautiful names.",
+        "The obligation of performing pilgrimage (Hajj) once in a lifetime.",
+        "The prohibition of consuming interest (riba) in financial transactions.",
+        "The specific rewards and status reserved for martyrs in battle."
       ]
     },
     "surah_question": {
-      "correct_surah": 6,
+      "correct_surah": 7,
       "options": [
         {
-          "num": 7,
-          "name": "Al-A'raf",
-          "name_ar": "ٱلْأَعْرَاف",
-          "name_en": "The Heights"
+          "num": 8,
+          "name": "Al-Anfal",
+          "name_ar": "ٱلْأَنْفَال",
+          "name_en": "The Spoils of War"
         },
         {
           "num": 6,
@@ -39,10 +39,26 @@
           "name_en": "The Cattle"
         },
         {
-          "num": 5,
-          "name": "Al-Ma'idah",
-          "name_ar": "ٱلْمَائِدَة",
-          "name_en": "The Table Spread"
+          "num": 7,
+          "name": "Al-A'raf",
+          "name_ar": "ٱلْأَعْرَاف",
+          "name_en": "The Heights"
+        },
+        {
+          "num": 9,
+          "name": "At-Tawbah",
+          "name_ar": "ٱلتَّوْبَة",
+          "name_en": "The Repentance"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 7,
+          "name": "Al-A'raf",
+          "name_ar": "ٱلْأَعْرَاف",
+          "name_en": "The Heights"
         },
         {
           "num": 8,
@@ -52,27 +68,12 @@
         }
       ]
     },
-    "surah_order": {
-      "surahs": [
-        {
-          "num": 6,
-          "name": "Al-An'am",
-          "name_ar": "ٱلْأَنْعَام",
-          "name_en": "The Cattle"
-        },
-        {
-          "num": 7,
-          "name": "Al-A'raf",
-          "name_ar": "ٱلْأَعْرَاف",
-          "name_en": "The Heights"
-        }
-      ]
-    },
     "educational_notes": {
-      "verse_context": "This verse is a powerful declaration of faith, commanded by Allah for the Prophet Muhammad (ﷺ) and all believers to proclaim. It comes towards the end of Surah Al-An'am, summarizing the core message of the surah after detailed arguments against polytheism and discussions on Allah's absolute sovereignty. It serves as a personal and public pledge of one's entire existence to the Creator.",
-      "theme_explanation": "The central theme is Tawhid al-Uluhiyyah (Oneness of Worship). The verse beautifully encapsulates the concept that a believer's life, in its entirety—from acts of worship like prayer (salati) and sacrifice (nusuki) to the very processes of living (mahyaya) and dying (mamati)—is solely for Allah. It rejects any division of loyalty and affirms that every moment and action should be an act of submission to the Lord of all worlds.",
-      "surah_overview": "Surah Al-An'am ('The Cattle') is the 6th chapter of the Quran and is unique as it was revealed entirely in one night in Makkah. Its primary focus is on establishing the foundations of faith (Aqidah), particularly the oneness of Allah (Tawhid). It refutes the polytheistic beliefs of the Quraysh by presenting logical arguments and drawing attention to Allah's signs in creation. The surah also discusses prophethood, revelation, and the Day of Judgment, without legislating many practical laws, which is characteristic of Makkan surahs."
+      "verse_context": "This verse (7:180) appears in the latter part of Surah Al-A'raf, following detailed narratives of past prophets and their nations. It serves as a direct instruction to believers on the proper etiquette and substance of supplication. The verse emphasizes Tawhid (monotheism) by directing all worship and invocation towards Allah alone, using the beautiful names He has revealed for Himself. The warning against those who \"practice deviation\" (yulhidun) concerning His names refers to those who distort their meanings, deny them, or assign them to idols.",
+      "theme_explanation": "The core theme is the concept of *Asma'ul Husna* (The Most Beautiful Names of Allah). The verse establishes that Allah possesses names of perfect beauty and meaning, and it commands believers to use these names in their du'a (supplication). This act of calling upon Allah by His names, such as Ar-Rahman (The Most Merciful) or Al-Ghafur (The Forgiving), fosters a deeper, more personal connection and understanding of His attributes. It is a fundamental pillar of Islamic theology and a key to meaningful worship.",
+      "surah_overview": "Surah Al-A'raf ('The Heights') is the 7th chapter of the Quran, a Meccan surah that is one of the longest in the Book. It extensively details the stories of numerous prophets, including Adam, Nuh (Noah), Hud, Salih, Lut, Shu'ayb, and Musa (Moses), highlighting the consistent message they brought and the varied responses of their people. A central theme is the consequence of belief versus disbelief, illustrated through the history of past nations. The title 'The Heights' refers to a barrier between Paradise and Hell where people who are evenly balanced in their good and bad deeds will await Allah's mercy."
     }
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
