@@ -1,29 +1,30 @@
 {
-  "date": "2026-02-24",
+  "date": "2026-02-25",
   "puzzle": {
-    "verseRef": "43:13",
-    "reference": "Surah Az-Zukhruf (43:13)",
+    "verseRef": "39:53",
+    "reference": "Surah Az-Zumar (39:53)",
     "segments": [
-      "سُبْحَانَ الَّذِي",
-      "سَخَّرَ لَنَا هَٰذَا",
-      "وَمَا كُنَّا",
-      "لَهُ مُقْرِنِينَ"
+      "قُلْ يَٰعِبَادِىَ ٱلَّذِينَ",
+      "أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ",
+      "لَا تَقْنَطُوا۟",
+      "مِن رَّحْمَةِ ٱللَّهِ"
     ],
     "translations": [
-      "That you may sit firmly on their backs then remember",
-      "(the) favor (of) your Lord when you sit firmly on them",
-      "and say Glory be (to) the One Who (has) subjected to us",
-      "this and not we were of it capable"
+      "Say O My slaves Those who have transgressed against",
+      "themselves (do) not despair of (the) Mercy",
+      "(of) Allah Indeed Allah forgives the sins",
+      "all Indeed He He (is) the Oft-Forgiving the Most Merciful"
     ],
-    "hint": "This is part of a well-known supplication recited when mounting a means of transport.",
-    "arabic": "لِتَسْتَوُۥا۟ عَلَىٰ ظُهُورِهِۦ ثُمَّ تَذْكُرُوا۟ نِعْمَةَ رَبِّكُمْ إِذَا ٱسْتَوَيْتُمْ عَلَيْهِ وَتَقُولُوا۟ سُبْحَـٰنَ ٱلَّذِى سَخَّرَ لَنَا هَـٰذَا وَمَا كُنَّا لَهُۥ مُقْرِنِينَ",
+    "hint": "A message of immense hope and a call to never lose faith in divine forgiveness, no matter the sin.",
+    "arabic": "۞ قُلْ يَـٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا ۚ إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
     "words": [
-      "لِتَسْتَوُۥا۟ عَلَىٰ ظُهُورِهِۦ ثُمَّ تَذْكُرُوا۟",
-      "نِعْمَةَ رَبِّكُمْ إِذَا ٱسْتَوَيْتُمْ عَلَيْهِ",
-      "وَتَقُولُوا۟ سُبْحَـٰنَ ٱلَّذِى سَخَّرَ لَنَا",
-      "هَـٰذَا وَمَا كُنَّا لَهُۥ مُقْرِنِينَ"
+      "۞ قُلْ يَـٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ",
+      "أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ",
+      "ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ",
+      "جَمِيعًا ۚ إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ"
     ],
-    "verseEn": "That you may settle yourselves upon their backs and then remember the favor of your Lord when you have settled upon them and say, \"Exalted is He who has subjected this to us, and we could not have [otherwise] subdued it."
+    "verseEn": "Say, \"O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allāh. Indeed, Allāh forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.\""
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

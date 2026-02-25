@@ -1,65 +1,66 @@
 {
-  "date": "2026-02-24",
+  "date": "2026-02-25",
   "puzzle": {
-    "title": "The Echo of Deceit",
-    "intro": "A bond of kinship was tested by a surge of envy. A secret plan was hatched, setting in motion a chain of events that would span years and cross vast distances. This group's actions led to profound separation and sorrow, but the story did not end there. It is a tale of deception, regret, and the ultimate unfolding of a divine plan. Can you unravel the identity of these individuals whose choices echoed through generations?",
+    "title": "The Test of the Barren Rock",
+    "intro": "A community, skilled and proud, carved their legacy into the very mountains. But when a clear sign was sent to them, a test of faith and restraint, their arrogance led them down a path of no return. Can you identify this group and the consequence of their defiance?",
     "clues": [
-      "We were consumed by jealousy over the affection shown to one of our own.",
-      "In our envy, we conspired together and cast our sibling into the darkness of a well.",
-      "To conceal our deed, we presented a garment to our father, stained with false blood.",
-      "Years later, a severe famine forced us to travel to Egypt seeking provisions.",
-      "There, we came before a powerful governor who, unknown to us, was the very sibling we had wronged.",
-      "Our final test was to bring our youngest brother, Binyamin, which led to the revelation of our past and our father being Prophet Ya'qub."
+      "We were masters of stone, carving magnificent dwellings directly into the mountainsides.",
+      "A messenger from among our own people came to us, calling us to worship the One True God.",
+      "We demanded a sign to prove his words, and a unique creature was brought forth as a test for us.",
+      "We were given a simple command: to share our water source with this creature, letting it drink on its designated day.",
+      "In our arrogance, a few among us conspired and we defied the warning, striking down the creature that was meant to be our sign.",
+      "We were given three days before our doom, and then a mighty blast seized us in our homes, leaving us lifeless and overturned."
     ],
     "categories": {
       "identity": {
-        "label": "Who are we?",
+        "label": "Who Are We?",
         "options": [
-          "The Sons of Adam (Qabil & Habil)",
-          "The Disciples of Prophet Isa",
-          "The Brothers of Prophet Yusuf",
-          "The People of Madyan",
-          "The Magicians of Fir'awn"
+          "People of 'Ad",
+          "People of Madyan",
+          "People of Thamud",
+          "People of Saba",
+          "People of Lut"
         ],
-        "answer": "The Brothers of Prophet Yusuf"
+        "answer": "People of Thamud"
       },
       "trial": {
-        "label": "What was our primary misdeed?",
+        "label": "What Was Our Primary Test?",
         "options": [
-          "Building a golden calf for worship",
-          "Demanding to see Allah directly",
-          "Mocking a prophet for building an ark",
-          "Deceiving our father and abandoning our brother",
-          "Breaking the Sabbath by fishing"
+          "Building an ark to survive a flood",
+          "Resisting the urge to fish on the Sabbath",
+          "Giving up fraudulent business practices",
+          "Protecting a miraculous she-camel",
+          "Enduring a seven-year famine"
         ],
-        "answer": "Deceiving our father and abandoning our brother"
+        "answer": "Protecting a miraculous she-camel"
       },
       "location": {
-        "label": "What object was central to our deception?",
+        "label": "What Was the Central Element of Our Story?",
         "options": [
-          "A set of inscribed tablets",
-          "A shirt stained with false blood",
-          "A golden calf",
-          "A beautiful bird (the Hoopoe)",
-          "A staff that turned into a serpent"
+          "The Golden Calf",
+          "The She-Camel",
+          "The Staff of Prophet Musa",
+          "The Great Dam of Ma'rib",
+          "The Table Spread from Heaven"
         ],
-        "answer": "A shirt stained with false blood"
+        "answer": "The She-Camel"
       },
       "outcome": {
-        "label": "What was the ultimate outcome of our story?",
+        "label": "What Was Our Ultimate Fate?",
         "options": [
-          "We were destroyed by a mighty flood",
-          "We were turned into apes",
-          "We were swallowed by the earth",
-          "We were forgiven and reunited with our family",
-          "We were drowned in the sea"
+          "Drowned in a great deluge",
+          "Turned into apes and swine",
+          "Overwhelmed by a furious wind",
+          "Scattered by the bursting of a dam",
+          "Destroyed by a mighty blast/earthquake"
         ],
-        "answer": "We were forgiven and reunited with our family"
+        "answer": "Destroyed by a mighty blast/earthquake"
       }
     },
-    "verseRef": "12:91",
-    "arabic": "قَالُوا۟ تَٱللَّهِ لَقَدْ ءَاثَرَكَ ٱللَّهُ عَلَيْنَا وَإِن كُنَّا لَخَـٰطِـِٔينَ",
-    "verse": "They said, \"By Allāh, certainly has Allāh preferred you over us, and indeed, we have been sinners.\" (12:91)"
+    "verseRef": "7:77",
+    "arabic": "فَعَقَرُوا۟ ٱلنَّاقَةَ وَعَتَوْا۟ عَنْ أَمْرِ رَبِّهِمْ وَقَالُوا۟ يَـٰصَـٰلِحُ ٱئْتِنَا بِمَا تَعِدُنَآ إِن كُنتَ مِنَ ٱلْمُرْسَلِينَ",
+    "verse": "So they hamstrung the she-camel and were insolent toward the command of their Lord and said, \"O Ṣāliḥ, bring us what you promise us, if you should be of the messengers.\" (7:77)"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
