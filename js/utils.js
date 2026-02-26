@@ -914,6 +914,11 @@ function normalizeArabic(str) {
     return str.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED]/g, '');
 }
 
+// Common short Arabic particles (normalized) that should only match exactly
+const SHORT_ARABIC_PARTICLES = new Set([
+    'في', 'و', 'ل', 'ب', 'من', 'الى', 'على', 'ان', 'لا', 'ما', 'ثم', 'او', 'كل', 'الا', 'قد', 'هل', 'اذ', 'حتى', 'لكن', 'ام', 'بل', 'غير', 'اي', 'اذا', 'فا', 'ماذا', 'كلما', 'لما', 'انما', 'اينما', 'حيثما', 'كيفما']
+);
+
 // ==================== DAILY PUZZLE LOADING (STALE-TOLERANT) ====================
 
 // Global flag: set to true when serving stale (yesterday's) puzzles.

@@ -551,49 +551,55 @@ async function loadWBW(container) {
             // Check if this WBW word matches any part of the tile word
             let isMatch = false;
             if (tileNorm) {
-                // Direct normalized match
-                if (wordNorm === tileNorm) isMatch = true;
-                // Root-to-root match (stripped of prefixes and suffixes)
-                if (!isMatch && wordRoot.length >= 2) {
-                    const tileFullRoot = stripSuffixes(stripPrefixes(tileNorm));
-                    if (tileFullRoot.length >= 2 && wordRoot === tileFullRoot) isMatch = true;
-                }
-                // Check each tile word individually (for multi-word tiles like "ناقة صالح")
-                if (!isMatch && wordRoot.length >= 2) {
-                    for (const tr of tileRoots) {
-                        if (tr.length >= 2 && wordRoot === tr) {
-                            isMatch = true;
-                            break;
+                // Short particle check: if either word is a short particle, require exact match only
+                if (SHORT_ARABIC_PARTICLES.has(wordNorm) || SHORT_ARABIC_PARTICLES.has(tileNorm)) {
+                    isMatch = wordNorm === tileNorm;
+                } else {
+                    // Original fuzzy matching logic for non‑short particles
+                    // Direct normalized match
+                    if (wordNorm === tileNorm) isMatch = true;
+                    // Root-to-root match (stripped of prefixes and suffixes)
+                    if (!isMatch && wordRoot.length >= 2) {
+                        const tileFullRoot = stripSuffixes(stripPrefixes(tileNorm));
+                        if (tileFullRoot.length >= 2 && wordRoot === tileFullRoot) isMatch = true;
+                    }
+                    // Check each tile word individually (for multi-word tiles like "ناقة صالح")
+                    if (!isMatch && wordRoot.length >= 2) {
+                        for (const tr of tileRoots) {
+                            if (tr.length >= 2 && wordRoot === tr) {
+                                isMatch = true;
+                                break;
+                            }
                         }
                     }
-                }
-                // Substring/startsWith match — only if both roots are 3+ chars
-                if (!isMatch && wordRoot.length >= 3) {
-                    for (const tr of tileRoots) {
-                        if (tr.length >= 3 && (wordRoot.startsWith(tr) || tr.startsWith(wordRoot))) {
-                            isMatch = true;
-                            break;
+                    // Substring/startsWith match — only if both roots are 3+ chars
+                    if (!isMatch && wordRoot.length >= 3) {
+                        for (const tr of tileRoots) {
+                            if (tr.length >= 3 && (wordRoot.startsWith(tr) || tr.startsWith(wordRoot))) {
+                                isMatch = true;
+                                break;
+                            }
                         }
                     }
-                }
-                // Deep normalize fallback: remove all hamza carriers and compare
-                if (!isMatch) {
-                    const wordDeep = deepNormalize(wordRoot);
-                    for (const tr of tileRoots) {
-                        const tileDeep = deepNormalize(tr);
-                        if (tileDeep.length >= 2 && wordDeep.length >= 2 &&
-                            (wordDeep === tileDeep || wordDeep.startsWith(tileDeep) || tileDeep.startsWith(wordDeep))) {
-                            isMatch = true;
-                            break;
-                        }
-                    }
-                    // Also try full normalized forms
+                    // Deep normalize fallback: remove all hamza carriers and compare
                     if (!isMatch) {
-                        const tileDeepFull = deepNormalize(stripPrefixes(tileNorm));
-                        const wordDeepFull = deepNormalize(stripPrefixes(wordNorm));
-                        if (tileDeepFull.length >= 2 && wordDeepFull.length >= 2 &&
-                            (wordDeepFull === tileDeepFull || wordDeepFull.startsWith(tileDeepFull) || tileDeepFull.startsWith(wordDeepFull))) {
-                            isMatch = true;
+                        const wordDeep = deepNormalize(wordRoot);
+                        for (const tr of tileRoots) {
+                            const tileDeep = deepNormalize(tr);
+                            if (tileDeep.length >= 2 && wordDeep.length >= 2 &&
+                                (wordDeep === tileDeep || wordDeep.startsWith(tileDeep) || tileDeep.startsWith(wordDeep))) {
+                                isMatch = true;
+                                break;
+                            }
+                        }
+                        // Also try full normalized forms
+                        if (!isMatch) {
+                            const tileDeepFull = deepNormalize(stripPrefixes(tileNorm));
+                            const wordDeepFull = deepNormalize(stripPrefixes(wordNorm));
+                            if (tileDeepFull.length >= 2 && wordDeepFull.length >= 2 &&
+                                (wordDeepFull === tileDeepFull || wordDeepFull.startsWith(tileDeepFull) || tileDeepFull.startsWith(wordDeepFull))) {
+                                isMatch = true;
+                            }
                         }
                     }
                 }
