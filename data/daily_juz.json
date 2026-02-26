@@ -1,42 +1,36 @@
 {
-  "date": "2026-02-25",
+  "date": "2026-02-26",
   "puzzle": {
-    "date": "2026-02-25",
-    "juz_number": 9,
-    "juz_name": "Qala al-Mala'u",
-    "juz_name_ar": "قَالَ ٱلْمَلَأُ",
+    "date": "2026-02-26",
+    "juz_number": 10,
+    "juz_name": "Wa'lamu",
+    "juz_name_ar": "وَٱعْلَمُوا",
     "verse": {
-      "surah_number": 7,
-      "surah_name": "Al-A'raf",
-      "surah_name_ar": "ٱلْأَعْرَاف",
-      "ayah_number": 180,
-      "arabic_text": "وَلِلَّهِ ٱلْأَسْمَآءُ ٱلْحُsْنَىٰ فَٱدْعُوهُ بِهَا ۖ وَذَرُوا۟ ٱلَّذِينَ يُلْحِدُونَ فِىٓ أَسْمَـٰٓئِهِۦ ۚ سَيُجْزَوْنَ مَا كَانُوا۟ يَعْمَلُونَ",
-      "translation": "And to Allah belong the best names, so invoke Him by them. And leave [the company of] those who practice deviation concerning His names. They will be recompensed for what they have been doing.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1134.mp3"
+      "surah_number": 9,
+      "surah_name": "At-Tawbah",
+      "surah_name_ar": "سُورَةُ ٱلتَّوْبَةِ",
+      "ayah_number": 40,
+      "arabic_text": "…إِذْ يَقُولُ لِصَٰحِبِهِۦ لَا تَحْزَنْ إِنَّ ٱللَّهَ مَعَنَا ۖ…",
+      "translation": "...when he said to his companion, 'Do not grieve; indeed, Allah is with us.'...",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1275.mp3"
     },
     "theme_question": {
-      "correct": "The importance of calling upon Allah using His most beautiful names.",
+      "correct": "Finding solace and strength in the knowledge of Allah's constant presence, even in moments of fear.",
       "options": [
-        "The importance of calling upon Allah using His most beautiful names.",
-        "The obligation of performing pilgrimage (Hajj) once in a lifetime.",
-        "The prohibition of consuming interest (riba) in financial transactions.",
-        "The specific rewards and status reserved for martyrs in battle."
+        "The importance of having many companions for safety.",
+        "Finding solace and strength in the knowledge of Allah's constant presence, even in moments of fear.",
+        "The prohibition of feeling any sadness or grief as a believer.",
+        "The obligation to physically fight in all circumstances."
       ]
     },
     "surah_question": {
-      "correct_surah": 7,
+      "correct_surah": 9,
       "options": [
         {
           "num": 8,
           "name": "Al-Anfal",
           "name_ar": "ٱلْأَنْفَال",
           "name_en": "The Spoils of War"
-        },
-        {
-          "num": 6,
-          "name": "Al-An'am",
-          "name_ar": "ٱلْأَنْعَام",
-          "name_en": "The Cattle"
         },
         {
           "num": 7,
@@ -49,30 +43,37 @@
           "name": "At-Tawbah",
           "name_ar": "ٱلتَّوْبَة",
           "name_en": "The Repentance"
+        },
+        {
+          "num": 10,
+          "name": "Yunus",
+          "name_ar": "يُونُس",
+          "name_en": "Jonah"
         }
       ]
     },
     "surah_order": {
       "surahs": [
         {
-          "num": 7,
-          "name": "Al-A'raf",
-          "name_ar": "ٱلْأَعْرَاف",
-          "name_en": "The Heights"
-        },
-        {
           "num": 8,
           "name": "Al-Anfal",
           "name_ar": "ٱلْأَنْفَال",
           "name_en": "The Spoils of War"
+        },
+        {
+          "num": 9,
+          "name": "At-Tawbah",
+          "name_ar": "ٱلتَّوْبَة",
+          "name_en": "The Repentance"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse (7:180) appears in the latter part of Surah Al-A'raf, following detailed narratives of past prophets and their nations. It serves as a direct instruction to believers on the proper etiquette and substance of supplication. The verse emphasizes Tawhid (monotheism) by directing all worship and invocation towards Allah alone, using the beautiful names He has revealed for Himself. The warning against those who \"practice deviation\" (yulhidun) concerning His names refers to those who distort their meanings, deny them, or assign them to idols.",
-      "theme_explanation": "The core theme is the concept of *Asma'ul Husna* (The Most Beautiful Names of Allah). The verse establishes that Allah possesses names of perfect beauty and meaning, and it commands believers to use these names in their du'a (supplication). This act of calling upon Allah by His names, such as Ar-Rahman (The Most Merciful) or Al-Ghafur (The Forgiving), fosters a deeper, more personal connection and understanding of His attributes. It is a fundamental pillar of Islamic theology and a key to meaningful worship.",
-      "surah_overview": "Surah Al-A'raf ('The Heights') is the 7th chapter of the Quran, a Meccan surah that is one of the longest in the Book. It extensively details the stories of numerous prophets, including Adam, Nuh (Noah), Hud, Salih, Lut, Shu'ayb, and Musa (Moses), highlighting the consistent message they brought and the varied responses of their people. A central theme is the consequence of belief versus disbelief, illustrated through the history of past nations. The title 'The Heights' refers to a barrier between Paradise and Hell where people who are evenly balanced in their good and bad deeds will await Allah's mercy."
+      "verse_context": "This iconic phrase comes from a verse describing the Hijrah (migration) of Prophet Muhammad (ﷺ) and his companion Abu Bakr As-Siddiq (RA) from Makkah to Madinah. While hiding from their persecutors in the Cave of Thawr, Abu Bakr became anxious that they would be discovered. The Prophet (ﷺ) comforted him with these words, expressing complete and unwavering trust in Allah's protection.",
+      "theme_explanation": "The central theme is Tawakkul (absolute reliance on Allah) and Ma'iyyah (the concept of Allah's divine presence and support). It teaches that true security is not found in physical protection or numbers, but in the unwavering conviction that Allah is with the believers. This verse is a powerful remedy for fear and anxiety, reminding us to find strength and tranquility in our connection with Allah, especially during times of immense hardship.",
+      "surah_overview": "Surah At-Tawbah (The Repentance) is the only surah that does not begin with the Bismillah. Revealed in the 9th year of Hijrah, it is a Medinan surah that deals with the final phase of the establishment of the Islamic state. It addresses political and military matters, including the dissolution of treaties with polytheists who repeatedly broke them, the campaign of Tabuk, and a stern warning to the hypocrites. The surah also emphasizes the importance of sincere repentance, charity (Zakat), and striving in the path of Allah."
     }
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
