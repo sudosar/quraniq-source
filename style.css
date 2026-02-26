@@ -9,7 +9,7 @@
     left: 50%;
     transform: translateX(-50%);
     background: var(--accent, #1b7a4a);
-    color: #fff;
+    color: #000;
     padding: 8px 16px;
     border-radius: 0 0 8px 8px;
     z-index: 10000;
@@ -1966,7 +1966,7 @@ textarea {
     font-family: sans-serif;
     font-size: 0.6rem;
     font-weight: 500;
-    color: #fff;
+    color: #000;
     background: var(--accent);
     padding: 2px 8px;
     border-radius: 8px;
