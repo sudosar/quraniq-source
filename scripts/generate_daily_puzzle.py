@@ -165,19 +165,20 @@ def word_in_verse(word, verse_text):
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 
 # API endpoints
 OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 
-# Model fallback chain: Gemini 2.5 Pro → Gemini 2.5 Flash → DeepSeek-R1 → GPT-4.1
-# Benchmark (Feb 2026): Gemini 2.5 Pro best for Arabic + thinking; DeepSeek-R1 best reasoning;
-# GPT-4.1 best diversity. Connections uses category-by-category generation (4 focused calls).
+# Model fallback chain: DeepSeek v3.2 → Gemini 2.5 Flash → Gemini 2.5 Pro → GPT-4.1
+# Updated (Feb 2026): DeepSeek v3.2 first for better Arabic understanding and reliability
 MODEL_CHAIN = [
-    {"id": "gemini-2.5-pro", "api": "gemini", "label": "Gemini 2.5 Pro (Google)"},
+    {"id": "deepseek-chat", "api": "deepseek", "label": "DeepSeek v3.2 (Official)"},
     {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Google)"},
-    {"id": "DeepSeek-R1", "api": "github", "label": "DeepSeek-R1 (GitHub Models)"},
+    {"id": "gemini-2.5-pro", "api": "gemini", "label": "Gemini 2.5 Pro (Google)"},
     {"id": "gpt-4.1", "api": "openai", "label": "GPT-4.1 (OpenAI)"},
 ]
 
@@ -401,7 +402,7 @@ def call_model(prompt, model_config, system_msg=None):
     If the response contains truncated JSON, automatically sends continuation
     requests (up to MAX_CONTINUATIONS) to get the complete output.
     
-    model_config: dict with 'id', 'api' ('openai', 'github', or 'gemini'), 'label'
+    model_config: dict with 'id', 'api' ('openai', 'github', 'gemini', or 'deepseek'), 'label'
     """
     model_id = model_config["id"]
     api_type = model_config["api"]
@@ -425,6 +426,15 @@ def call_model(prompt, model_config, system_msg=None):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {GEMINI_API_KEY}"
         }
+    elif api_type == "deepseek":
+        if not DEEPSEEK_API_KEY:
+            print(f"  ⚠ DEEPSEEK_API_KEY not set, skipping {model_config['label']}")
+            return None
+        api_url = DEEPSEEK_API_URL
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {DEEPSEEK_API_KEY}"
+        }
     else:  # github
         if not GITHUB_TOKEN:
             print(f"  ⚠ GITHUB_TOKEN not set, skipping {model_config['label']}")
@@ -447,11 +457,14 @@ def call_model(prompt, model_config, system_msg=None):
         ],
         "temperature": 0.6,
         "top_p": 0.95,
-        "max_tokens": 16384,
+        "max_tokens": 8192 if api_type == "deepseek" else 16384,
     }
 
     # Only GPT models support response_format
     if model_id.lower().startswith("gpt-"):
+        payload["response_format"] = {"type": "json_object"}
+    # DeepSeek also supports response_format
+    elif api_type == "deepseek":
         payload["response_format"] = {"type": "json_object"}
 
     try:
@@ -488,7 +501,7 @@ def call_model(prompt, model_config, system_msg=None):
                     ],
                     "temperature": 0.3,
                     "top_p": 0.95,
-                    "max_tokens": 16384,
+                    "max_tokens": 8192 if api_type == "deepseek" else 16384,
                 }
                 try:
                     cont_resp = requests.post(api_url, headers=headers, json=cont_payload, timeout=180)
@@ -2044,12 +2057,16 @@ def main():
             print(f"Partial history found for {today}. Missing: {', '.join(missing_games)}")
             print(f"Will regenerate only missing games.")
 
-    if not OPENAI_API_KEY and not GITHUB_TOKEN and not GEMINI_API_KEY:
+    if not OPENAI_API_KEY and not GITHUB_TOKEN and not GEMINI_API_KEY and not DEEPSEEK_API_KEY:
         print("ERROR: No API credentials set.")
-        print("  Set OPENAI_API_KEY, GITHUB_TOKEN, and/or GEMINI_API_KEY.")
+        print("  Set DEEPSEEK_API_KEY, OPENAI_API_KEY, GITHUB_TOKEN, and/or GEMINI_API_KEY.")
         return 1
 
     print(f"Available APIs:")
+    if DEEPSEEK_API_KEY:
+        print(f"  ✓ DeepSeek API (deepseek-chat v3.2)")
+    else:
+        print(f"  ✗ DeepSeek API (DEEPSEEK_API_KEY not set)")
     if OPENAI_API_KEY:
         print(f"  ✓ OpenAI API (GPT-4.1)")
     else:
