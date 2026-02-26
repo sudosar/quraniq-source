@@ -1,29 +1,36 @@
 {
-  "date": "2026-02-25",
+  "date": "2026-02-26",
   "puzzle": {
-    "verseRef": "39:53",
-    "reference": "Surah Az-Zumar (39:53)",
+    "verseRef": "25:74",
+    "reference": "Surah Al-Furqan (25:74)",
     "segments": [
-      "قُلْ يَٰعِبَادِىَ ٱلَّذِينَ",
-      "أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ",
-      "لَا تَقْنَطُوا۟",
-      "مِن رَّحْمَةِ ٱللَّهِ"
+      "وَٱلَّذِينَ يَقُولُونَ",
+      "رَبَّنَا هَبْ لَنَا",
+      "مِنْ أَزْوَٰجِنَا وَذُرِّيَّـٰتِنَا",
+      "قُرَّةَ أَعْيُنٍ",
+      "وَٱجْعَلْنَا",
+      "لِلْمُتَّقِينَ إِمَامًا"
     ],
     "translations": [
-      "Say O My slaves Those who have transgressed against",
-      "themselves (do) not despair of (the) Mercy",
-      "(of) Allah Indeed Allah forgives the sins",
-      "all Indeed He He (is) the Oft-Forgiving the Most Merciful"
+      "And those who say Our Lord",
+      "Grant to us",
+      "from our spouses",
+      "and our offspring comfort",
+      "(to) our eyes and make us",
+      "for the righteous a leader"
     ],
-    "hint": "A message of immense hope and a call to never lose faith in divine forgiveness, no matter the sin.",
-    "arabic": "۞ قُلْ يَـٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا ۚ إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
+    "hint": "A beautiful supplication asking Allah for a righteous family and to be an example for the pious.",
+    "arabic": "وَٱلَّذِينَ يَقُولُونَ رَبَّنَا هَبْ لَنَا مِنْ أَزْوَٰجِنَا وَذُرِّيَّـٰتِنَا قُرَّةَ أَعْيُنٍۢ وَٱجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",
     "words": [
-      "۞ قُلْ يَـٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ",
-      "أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ",
-      "ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ",
-      "جَمِيعًا ۚ إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ"
+      "وَٱلَّذِينَ يَقُولُونَ رَبَّنَا",
+      "هَبْ لَنَا",
+      "مِنْ أَزْوَٰجِنَا",
+      "وَذُرِّيَّـٰتِنَا قُرَّةَ",
+      "أَعْيُنٍۢ وَٱجْعَلْنَا",
+      "لِلْمُتَّقِينَ إِمَامًا"
     ],
-    "verseEn": "Say, \"O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allāh. Indeed, Allāh forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.\""
+    "verseEn": "And those who say, \"Our Lord, grant us from among our wives and offspring comfort to our eyes and make us a leader [i.e., example] for the righteous.\""
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

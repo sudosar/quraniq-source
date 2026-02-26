@@ -1,12 +1,13 @@
 {
-  "date": "2026-02-25",
+  "date": "2026-02-26",
   "puzzle": {
-    "word": "ارض",
-    "display": "أَرْض",
-    "hint": "What prophets walk on and what will one day be inherited by the righteous.",
-    "verseRef": "21:105",
-    "arabicVerse": "وَلَقَدْ كَتَبْنَا فِى ٱلزَّبُورِ مِنۢ بَعْدِ ٱلذِّكْرِ أَنَّ ٱلْأَرْضَ يَرِثُهَا عِبَادِىَ ٱلصَّـٰلِحُونَ",
-    "verse": "21:105 — And We have already written in the book [of Psalms] after the [previous] mention that the land [of Paradise] is inherited by My righteous servants."
+    "word": "ملك",
+    "display": "مَلَك",
+    "hint": "What the women mistook Prophet Yusuf for; a being made of light.",
+    "verseRef": "12:31",
+    "arabicVerse": "فَلَمَّا سَمِعَتْ بِمَكْرِهِنَّ أَرْسَلَتْ إِلَيْهِنَّ وَأَعْتَدَتْ لَهُنَّ مُتَّكَـًۭٔا وَءَاتَتْ كُلَّ وَٰحِدَةٍۢ مِّنْهُنَّ سِكِّينًۭا وَقَالَتِ ٱخْرُجْ عَلَيْهِنَّ ۖ فَلَمَّا رَأَيْنَهُۥٓ أَكْبَرْنَهُۥ وَقَطَّعْنَ أَيْدِيَهُنَّ وَقُلْنَ حَـٰشَ لِلَّهِ مَا هَـٰذَا بَشَرًا إِنْ هَـٰذَآ إِلَّا مَلَكٌۭ كَرِيمٌۭ",
+    "verse": "12:31 — So when she heard of their scheming, she sent for them and prepared for them a banquet and gave each one of them a knife and said [to Joseph], \"Come out before them.\" And when they saw him, they greatly admired him and cut their hands and said, \"Perfect is Allāh! This is not a man; this is none but a noble angel.\""
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
