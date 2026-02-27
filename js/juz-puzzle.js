@@ -331,7 +331,11 @@ function renderRound1() {
 
       <!-- Verse Display -->
       <div class="juz-verse-container">
-        <div class="juz-verse-ref">${v.surah_name_ar} ${v.surah_number}:${v.ayah_number}</div>
+        <div class="juz-verse-ref">
+          <span class="juz-surah-ar">${v.surah_name_ar}</span>
+          <span class="juz-surah-en">${v.surah_name}</span>
+          <span class="juz-verse-numbers">${v.surah_number}:${v.ayah_number}</span>
+        </div>
         ${verseHTML}
       </div>
 
