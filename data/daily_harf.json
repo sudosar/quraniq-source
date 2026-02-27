@@ -1,12 +1,12 @@
 {
-  "date": "2026-02-26",
+  "date": "2026-02-27",
   "puzzle": {
-    "word": "ملك",
-    "display": "مَلَك",
-    "hint": "What the women mistook Prophet Yusuf for; a being made of light.",
-    "verseRef": "12:31",
-    "arabicVerse": "فَلَمَّا سَمِعَتْ بِمَكْرِهِنَّ أَرْسَلَتْ إِلَيْهِنَّ وَأَعْتَدَتْ لَهُنَّ مُتَّكَـًۭٔا وَءَاتَتْ كُلَّ وَٰحِدَةٍۢ مِّنْهُنَّ سِكِّينًۭا وَقَالَتِ ٱخْرُجْ عَلَيْهِنَّ ۖ فَلَمَّا رَأَيْنَهُۥٓ أَكْبَرْنَهُۥ وَقَطَّعْنَ أَيْدِيَهُنَّ وَقُلْنَ حَـٰشَ لِلَّهِ مَا هَـٰذَا بَشَرًا إِنْ هَـٰذَآ إِلَّا مَلَكٌۭ كَرِيمٌۭ",
-    "verse": "12:31 — So when she heard of their scheming, she sent for them and prepared for them a banquet and gave each one of them a knife and said [to Joseph], \"Come out before them.\" And when they saw him, they greatly admired him and cut their hands and said, \"Perfect is Allāh! This is not a man; this is none but a noble angel.\""
+    "word": "سحاب",
+    "display": "سَحَاب",
+    "hint": "A natural phenomenon mentioned in the Quran that brings rain and shade",
+    "verseRef": "27:63",
+    "arabicVerse": "أَمَّن يَهْدِيكُمْ فِى ظُلُمَـٰتِ ٱلْبَرِّ وَٱلْبَحْرِ وَمَن يُرْسِلُ ٱلرِّيَـٰحَ بُشْرًۢا بَيْنَ يَدَىْ رَحْمَتِهِۦٓ ۗ أَءِلَـٰهٌۭ مَّعَ ٱللَّهِ ۚ تَعَـٰلَى ٱللَّهُ عَمَّا يُشْرِكُونَ",
+    "verse": "27:63 — Is He [not best] who guides you through the darknesses of the land and sea and who sends the winds as good tidings before His mercy? Is there a deity with Allāh? High is Allāh above whatever they associate with Him."
   },
   "generated": true,
   "model": "auto (chain)"

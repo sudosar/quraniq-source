@@ -1,26 +1,26 @@
 {
-  "date": "2026-02-26",
+  "date": "2026-02-27",
   "puzzle": {
-    "date": "2026-02-26",
-    "juz_number": 10,
-    "juz_name": "Wa'lamu",
-    "juz_name_ar": "وَٱعْلَمُوا",
+    "date": "2026-02-27",
+    "juz_number": 11,
+    "juz_name": "Yatazeroon",
+    "juz_name_ar": "يَتَذَرَّعُونَ",
     "verse": {
       "surah_number": 9,
       "surah_name": "At-Tawbah",
-      "surah_name_ar": "سُورَةُ ٱلتَّوْبَةِ",
-      "ayah_number": 40,
-      "arabic_text": "…إِذْ يَقُولُ لِصَٰحِبِهِۦ لَا تَحْزَنْ إِنَّ ٱللَّهَ مَعَنَا ۖ…",
-      "translation": "...when he said to his companion, 'Do not grieve; indeed, Allah is with us.'...",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1275.mp3"
+      "surah_name_ar": "التوبة",
+      "ayah_number": 111,
+      "arabic_text": "إِنَّ اللَّهَ اشْتَرَىٰ مِنَ الْمُؤْمِنِينَ أَنْفُسَهُمْ وَأَمْوَالَهُمْ بِأَنَّ لَهُمُ الْجَنَّةَ ۚ يُقَاتِلُونَ فِي سَبِيلِ اللَّهِ فَيَقْتُلُونَ وَيُقْتَلُونَ ۖ وَعْدًا عَلَيْهِ حَقًّا فِي التَّوْرَاةِ وَالْإِنْجِيلِ وَالْقُرْآنِ ۚ وَمَنْ أَوْفَىٰ بِعَهْدِهِ مِنَ اللَّهِ ۚ فَاسْتَبْشِرُوا بِبَيْعِكُمُ الَّذِي بَايَعْتُمْ بِهِ ۚ وَذَٰلِكَ هُوَ الْفَوْزُ الْعَظِيمُ",
+      "translation": "Indeed, Allah has purchased from the believers their lives and their properties [in exchange] for that they will have Paradise. They fight in the cause of Allah, so they kill and are killed. [It is] a true promise [binding] upon Him in the Torah and the Gospel and the Qur'an. And who is truer to his covenant than Allah? So rejoice in your transaction which you have contracted. And it is that which is the great attainment.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1346.mp3"
     },
     "theme_question": {
-      "correct": "Finding solace and strength in the knowledge of Allah's constant presence, even in moments of fear.",
+      "correct": "The divine transaction: Allah's purchase of believers' lives and wealth in exchange for Paradise",
       "options": [
-        "The importance of having many companions for safety.",
-        "Finding solace and strength in the knowledge of Allah's constant presence, even in moments of fear.",
-        "The prohibition of feeling any sadness or grief as a believer.",
-        "The obligation to physically fight in all circumstances."
+        "The importance of charity and zakat in Islam",
+        "The divine transaction: Allah's purchase of believers' lives and wealth in exchange for Paradise",
+        "The prohibition of usury and interest in financial dealings",
+        "The virtues of patience during times of hardship"
       ]
     },
     "surah_question": {
@@ -29,49 +29,55 @@
         {
           "num": 8,
           "name": "Al-Anfal",
-          "name_ar": "ٱلْأَنْفَال",
+          "name_ar": "الأنفال",
           "name_en": "The Spoils of War"
-        },
-        {
-          "num": 7,
-          "name": "Al-A'raf",
-          "name_ar": "ٱلْأَعْرَاف",
-          "name_en": "The Heights"
         },
         {
           "num": 9,
           "name": "At-Tawbah",
-          "name_ar": "ٱلتَّوْبَة",
+          "name_ar": "التوبة",
           "name_en": "The Repentance"
         },
         {
           "num": 10,
           "name": "Yunus",
-          "name_ar": "يُونُس",
+          "name_ar": "يونس",
           "name_en": "Jonah"
+        },
+        {
+          "num": 11,
+          "name": "Hud",
+          "name_ar": "هود",
+          "name_en": "Hud"
         }
       ]
     },
     "surah_order": {
       "surahs": [
         {
-          "num": 8,
-          "name": "Al-Anfal",
-          "name_ar": "ٱلْأَنْفَال",
-          "name_en": "The Spoils of War"
-        },
-        {
           "num": 9,
           "name": "At-Tawbah",
-          "name_ar": "ٱلتَّوْبَة",
+          "name_ar": "التوبة",
           "name_en": "The Repentance"
+        },
+        {
+          "num": 10,
+          "name": "Yunus",
+          "name_ar": "يونس",
+          "name_en": "Jonah"
+        },
+        {
+          "num": 11,
+          "name": "Hud",
+          "name_ar": "هود",
+          "name_en": "Hud"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This iconic phrase comes from a verse describing the Hijrah (migration) of Prophet Muhammad (ﷺ) and his companion Abu Bakr As-Siddiq (RA) from Makkah to Madinah. While hiding from their persecutors in the Cave of Thawr, Abu Bakr became anxious that they would be discovered. The Prophet (ﷺ) comforted him with these words, expressing complete and unwavering trust in Allah's protection.",
-      "theme_explanation": "The central theme is Tawakkul (absolute reliance on Allah) and Ma'iyyah (the concept of Allah's divine presence and support). It teaches that true security is not found in physical protection or numbers, but in the unwavering conviction that Allah is with the believers. This verse is a powerful remedy for fear and anxiety, reminding us to find strength and tranquility in our connection with Allah, especially during times of immense hardship.",
-      "surah_overview": "Surah At-Tawbah (The Repentance) is the only surah that does not begin with the Bismillah. Revealed in the 9th year of Hijrah, it is a Medinan surah that deals with the final phase of the establishment of the Islamic state. It addresses political and military matters, including the dissolution of treaties with polytheists who repeatedly broke them, the campaign of Tabuk, and a stern warning to the hypocrites. The surah also emphasizes the importance of sincere repentance, charity (Zakat), and striving in the path of Allah."
+      "verse_context": "This verse from Surah At-Tawbah (9:111) comes in the context of discussing the rewards for those who strive in the cause of Allah. It follows verses describing the believers who responded to Allah's call and the Prophet's mission. The verse presents a powerful metaphor of a divine transaction where Allah 'purchases' the believers' lives and properties, offering Paradise in return. This concept is particularly significant as it appears in the only surah of the Quran that doesn't begin with 'Bismillah' and deals extensively with themes of warfare, treaties, and the relationship between Muslims and non-believers.",
+      "theme_explanation": "The verse introduces the profound concept of a 'transaction' (bay') between Allah and the believers. Unlike worldly transactions, this divine exchange involves the ultimate sacrifice (life and wealth) for the ultimate reward (Paradise). The theme emphasizes that true success comes from complete submission to Allah's cause, even at the cost of one's life. It validates this promise by noting its presence in all three Abrahamic scriptures (Torah, Gospel, and Quran), highlighting the consistency of divine promise across revelations. The theme encourages believers to find joy and assurance in this eternal covenant.",
+      "surah_overview": "Surah At-Tawbah (The Repentance) is the 9th surah of the Quran and the only one that doesn't begin with 'Bismillah'. It's a Madinan surah consisting of 129 verses. The surah deals with several important themes: the termination of treaties with polytheists, regulations concerning warfare, the importance of jihad, criticism of hypocrites, and the obligation of zakat. It's named 'At-Tawbah' (Repentance) due to its emphasis on Allah's acceptance of repentance. The surah contains stern warnings to those who break covenants and strong encouragement for believers to remain steadfast. Juz 11 contains the latter part of this surah (from verse 93 onward) along with the beginning of Surah Yunus and Surah Hud."
     }
   },
   "generated": true,

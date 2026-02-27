@@ -1,65 +1,65 @@
 {
-  "date": "2026-02-26",
+  "date": "2026-02-27",
   "puzzle": {
-    "title": "The Trial of Thirst",
-    "intro": "A community, yearning for leadership to defend their cause, petitioned for a commander to be appointed over them. When their request was answered, the chosen one was met with skepticism, for this individual did not possess the worldly status they expected. Before the ultimate confrontation, this new leader would test the very discipline of the army with a simple, yet profound, trial of restraint.",
+    "title": "The Voice of the Unseen",
+    "intro": "In the annals of divine communication, a figure stands out whose story is woven with miraculous signs and steadfast faith. This individual received a unique revelation that challenged the norms of their time, speaking from beyond the veil of ordinary perception. Their message came not through conventional means but through a profound connection that defied human understanding, calling people to recognize the truth in unexpected ways. The journey of this servant of Allah serves as a testament to how guidance can manifest in the most extraordinary circumstances, inviting reflection on the nature of revelation itself.",
     "clues": [
-      "I was appointed as a commander after my people demanded a leader to fight in the cause of Allah.",
-      "Many of my own people initially questioned my appointment, citing my lack of wealth and noble lineage.",
-      "I was chosen because Allah had granted me an abundance of knowledge and a powerful physical stature.",
-      "A clear sign of my divine appointment was the return of the Ark of the Covenant, carried by angels, which brought peace to the hearts of the believers.",
-      "As I marched forth with my soldiers, I announced that we would be tested by a river.",
-      "I commanded my army that whoever drank deeply from the river was not of my company, while those who only took a single scoop in their hand would remain."
+      "I was given a message that came through a mysterious voice from an unseen source.",
+      "My people initially rejected my message, demanding more conventional proof of my truthfulness.",
+      "I challenged them to produce something similar to what I had received, but they could not.",
+      "The revelation I brought was described as clear verses that made the truth evident.",
+      "I warned my people of severe punishment if they continued in their disbelief and arrogance.",
+      "My story is mentioned alongside other messengers in a surah that emphasizes the signs of Allah's power."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Jalut (Goliath)",
-          "Talut (Saul)",
-          "Prophet Dawud",
-          "Dhul-Qarnayn",
-          "Namrud (Nimrod)"
+          "Prophet Hud",
+          "Prophet Salih",
+          "Prophet Shu'ayb",
+          "The Believer from Fir'awn's Family",
+          "Prophet Musa"
         ],
-        "answer": "Talut (Saul)"
+        "answer": "Prophet Salih"
       },
       "trial": {
-        "label": "What Was My Main Trial?",
+        "label": "Trial/Event",
         "options": [
-          "Building a barrier against Gog and Magog",
-          "Facing a giant in single combat",
-          "Testing an army's obedience at a river",
-          "Leading an army of jinn and birds",
-          "Surviving being thrown into a fire"
+          "Being thrown into a fiery furnace",
+          "Facing a tyrannical ruler's oppression",
+          "Producing a she-camel as a miraculous sign",
+          "Surviving a great flood",
+          "Being cast into the sea in a chest"
         ],
-        "answer": "Testing an army's obedience at a river"
+        "answer": "Producing a she-camel as a miraculous sign"
       },
       "location": {
-        "label": "What Was a Key Sign of My Authority?",
+        "label": "Key Element",
         "options": [
-          "A staff that turned into a serpent",
-          "A camel that emerged from a rock",
-          "A coat of mail made from softened iron",
-          "The Ark of the Covenant (At-Tabut)",
-          "A table of food from the heavens"
+          "The valley of Tuwa",
+          "The city of Madyan",
+          "The land of Thamud",
+          "The court of Fir'awn",
+          "The cave of Hira"
         ],
-        "answer": "The Ark of the Covenant (At-Tabut)"
+        "answer": "The land of Thamud"
       },
       "outcome": {
-        "label": "What Was the Outcome of My Campaign?",
+        "label": "Outcome",
+        "answer": "My people were destroyed for killing the miraculous she-camel",
         "options": [
-          "Defeating the army of Jalut (Goliath)",
-          "Parting the Red Sea to escape a tyrant",
-          "Establishing a long-lasting dynasty in my name",
-          "Building the sacred Kaaba in Makkah",
-          "Being raised to the heavens without dying"
-        ],
-        "answer": "Defeating the army of Jalut (Goliath)"
+          "My people repented and were saved",
+          "I was taken up to heaven alive",
+          "My people were destroyed for killing the miraculous she-camel",
+          "I became a great ruler",
+          "I was rescued by being put in an ark"
+        ]
       }
     },
-    "verseRef": "2:249",
-    "arabic": "فَلَمَّا فَصَلَ طَالُوتُ بِٱلْجُنُودِ قَالَ إِنَّ ٱللَّهَ مُبْتَلِيكُم بِنَهَرٍۢ فَمَن شَرِبَ مِنْهُ فَلَيْسَ مِنِّى وَمَن لَّمْ يَطْعَمْهُ فَإِنَّهُۥ مِنِّىٓ إِلَّا مَنِ ٱغْتَرَفَ غُرْفَةًۢ بِيَدِهِۦ ۚ فَشَرِبُوا۟ مِنْهُ إِلَّا قَلِيلًۭا مِّنْهُمْ ۚ فَلَمَّا جَاوَزَهُۥ هُوَ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ قَالُوا۟ لَا طَاقَةَ لَنَا ٱلْيَوْمَ بِجَالُوتَ وَجُنُودِهِۦ ۚ قَالَ ٱلَّذِينَ يَظُنُّونَ أَنَّهُم مُّلَـٰقُوا۟ ٱللَّهِ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ۗ وَٱللَّهُ مَعَ ٱلصَّـٰبِرِينَ",
-    "verse": "And when Saul went forth with the soldiers, he said, \"Indeed, Allāh will be testing you with a river. So whoever drinks from it is not of me, and whoever does not taste it is indeed of me, excepting one who takes [from it] in the hollow of his hand.\" But they drank from it, except a [very] few of them. Then when he had crossed it along with those who believed with him, they said, \"There is no power for us today against Goliath and his soldiers.\" But those who were certain that they would meet Allāh said, \"How many a small company has overcome a large company by permission of Allāh. And Allāh is with the patient.\" (2:249)"
+    "verseRef": "26:154",
+    "arabic": "مَآ أَنتَ إِلَّا بَشَرٌۭ مِّثْلُنَا فَأْتِ بِـَٔايَةٍ إِن كُنتَ مِنَ ٱلصَّـٰدِقِينَ",
+    "verse": "You are but a man like ourselves, so bring a sign, if you should be of the truthful.\" (26:154)"
   },
   "generated": true,
   "model": "auto (chain)"

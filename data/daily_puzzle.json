@@ -1,144 +1,144 @@
 {
-  "date": "2026-02-26",
+  "date": "2026-02-27",
   "puzzle": {
     "categories": [
       {
-        "name": "أَفْعَالُ الطَّلَبِ وَالسُّؤَالِ",
-        "nameEn": "Verbs of Asking or Seeking",
+        "name": "أَشْيَاءُ مِنْ قِصَّةِ يُوسُفَ عَلَيْهِ السَّلَام",
+        "nameEn": "Items from the story of Prophet Yusuf (AS)",
         "color": "yellow",
         "items": [
           {
-            "ar": "يَسْـَٔلُونَكَ",
-            "en": "they ask you",
-            "ref": "2:215",
-            "verse": "يَسْـَٔلُونَكَ مَاذَا يُنفِقُونَ ۖ قُلْ مَآ أَنفَقْتُم مِّنْ خَيْرٍۢ فَلِلْوَٰلِدَيْنِ وَٱلْأَقْرَبِينَ وَٱلْيَتَـٰمَىٰ وَٱلْمَسَـٰكِينِ وَٱبْنِ ٱلسَّبِيلِ ۗ وَمَا تَفْعَلُوا۟ مِنْ خَيْرٍۢ فَإِنَّ ٱللَّهَ بِهِۦ عَلِيمٌۭ",
-            "verseEn": "They ask you, [O Muḥammad], what they should spend. Say, \"Whatever you spend of good is [to be] for parents and relatives and orphans and the needy and the traveler. And whatever you do of good - indeed, Allāh is Knowing of it.\""
+            "ar": "الْجُبِّ",
+            "en": "The well/pit",
+            "ref": "12:10",
+            "verse": "قَالَ قَآئِلٌۭ مِّنْهُمْ لَا تَقْتُلُوا۟ يُوسُفَ وَأَلْقُوهُ فِى غَيَـٰبَتِ ٱلْجُبِّ يَلْتَقِطْهُ بَعْضُ ٱلسَّيَّارَةِ إِن كُنتُمْ فَـٰعِلِينَ",
+            "verseEn": "Said a speaker among them, \"Do not kill Joseph but throw him into the bottom of the well; some travelers will pick him up - if you would do [something].\""
           },
           {
-            "ar": "يَسْتَفْتُونَكَ",
-            "en": "they seek a ruling",
-            "ref": "4:176",
-            "verse": "يَسْتَفْتُونَكَ قُلِ ٱللَّهُ يُفْتِيكُمْ فِى ٱلْكَلَـٰلَةِ ۚ إِنِ ٱمْرُؤٌا۟ هَلَكَ لَيْسَ لَهُۥ وَلَدٌۭ وَلَهُۥٓ أُخْتٌۭ فَلَهَا نِصْفُ مَا تَرَكَ ۚ وَهُوَ يَرِثُهَآ إِن لَّمْ يَكُن لَّهَا وَلَدٌۭ ۚ فَإِن كَانَتَا ٱثْنَتَيْنِ فَلَهُمَا ٱلثُّلُثَانِ مِمَّا تَرَكَ ۚ وَإِن كَانُوٓا۟ إِخْوَةًۭ رِّجَالًۭا وَنِسَآءًۭ فَلِلذَّكَرِ مِثْلُ حَظِّ ٱلْأُنثَيَيْنِ ۗ يُبَيِّنُ ٱللَّهُ لَكُمْ أَن تَضِلُّوا۟ ۗ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌۢ",
-            "verseEn": "They request from you a [legal] ruling. Say, \"Allāh gives you a ruling concerning one having neither descendants nor ascendants [as heirs].\" If a man dies, leaving no child but [only] a sister, she will have half of what he left. And he inherits from her if she [dies and] has no child. But if there are two sisters [or more], they will have two thirds of what he left. If there are both brothers and sisters, the male will have the share of two females. Allāh makes clear to you [His law], lest you go astray. And Allāh is Knowing of all things."
+            "ar": "الذِّئْبُ",
+            "en": "The wolf",
+            "ref": "12:13",
+            "verse": "قَالَ إِنِّى لَيَحْزُنُنِىٓ أَن تَذْهَبُوا۟ بِهِۦ وَأَخَافُ أَن يَأْكُلَهُ ٱلذِّئْبُ وَأَنتُمْ عَنْهُ غَـٰفِلُونَ",
+            "verseEn": "[Jacob] said, \"Indeed, it saddens me that you should take him, and I fear that a wolf would eat him while you are of him unaware.\""
           },
           {
-            "ar": "يَدْعُونَ",
-            "en": "they call upon",
-            "ref": "13:14",
-            "verse": "لَهُۥ دَعْوَةُ ٱلْحَقِّ ۖ وَٱلَّذِينَ يَدْعُونَ مِن دُونِهِۦ لَا يَسْتَجِيبُونَ لَهُم بِشَىْءٍ إِلَّا كَبَـٰسِطِ كَفَّيْهِ إِلَى ٱلْمَآءِ لِيَبْلُغَ فَاهُ وَمَا هُوَ بِبَـٰلِغِهِۦ ۚ وَمَا دُعَآءُ ٱلْكَـٰفِرِينَ إِلَّا فِى ضَلَـٰلٍۢ",
-            "verseEn": "To Him [alone] is the supplication of truth. And those they call upon besides Him do not respond to them with a thing, except as one who stretches his hands toward water [from afar, calling it] to reach his mouth, but it will not reach it [thus]. And the supplication of the disbelievers is not but in error [i.e., futility]."
+            "ar": "صُوَاعَ",
+            "en": "The goblet",
+            "ref": "12:72",
+            "verse": "قَالُوا۟ نَفْقِدُ صُوَاعَ ٱلْمَلِكِ وَلِمَن جَآءَ بِهِۦ حِمْلُ بَعِيرٍۢ وَأَنَا۠ بِهِۦ زَعِيمٌۭ",
+            "verseEn": "They said, \"We are missing the measure of the king. And for he who produces it is [the reward of] a camel's load, and I am responsible for it.\""
           },
           {
-            "ar": "فَٱسْتَغَٰثَهُ",
-            "en": "he sought his help",
-            "ref": "28:15",
-            "verse": "وَدَخَلَ ٱلْمَدِينَةَ عَلَىٰ حِينِ غَفْلَةٍۢ مِّنْ أَهْلِهَا فَوَجَدَ فِيهَا رَجُلَيْنِ يَقْتَتِلَانِ هَـٰذَا مِن شِيعَتِهِۦ وَهَـٰذَا مِنْ عَدُوِّهِۦ ۖ فَٱسْتَغَـٰثَهُ ٱلَّذِى مِن شِيعَتِهِۦ عَلَى ٱلَّذِى مِنْ عَدُوِّهِۦ فَوَكَزَهُۥ مُوسَىٰ فَقَضَىٰ عَلَيْهِ ۖ قَالَ هَـٰذَا مِنْ عَمَلِ ٱلشَّيْطَـٰنِ ۖ إِنَّهُۥ عَدُوٌّۭ مُّضِلٌّۭ مُّبِينٌۭ",
-            "verseEn": "And he entered the city at a time of inattention by its people and found therein two men fighting: one from his faction and one from among his enemy. And the one from his faction called for help to him against the one from his enemy, so Moses struck him and [unintentionally] killed him. [Moses] said, \"This is from the work of Satan. Indeed, he is a manifest, misleading enemy.\""
+            "ar": "بَقَرَاتٍ",
+            "en": "Cows",
+            "ref": "12:43",
+            "verse": "وَقَالَ ٱلْمَلِكُ إِنِّىٓ أَرَىٰ سَبْعَ بَقَرَٰتٍۢ سِمَانٍۢ يَأْكُلُهُنَّ سَبْعٌ عِجَافٌۭ وَسَبْعَ سُنۢبُلَـٰتٍ خُضْرٍۢ وَأُخَرَ يَابِسَـٰتٍۢ ۖ يَـٰٓأَيُّهَا ٱلْمَلَأُ أَفْتُونِى فِى رُءْيَـٰىَ إِن كُنتُمْ لِلرُّءْيَا تَعْبُرُونَ",
+            "verseEn": "And [subsequently] the king said, \"Indeed, I have seen [in a dream] seven fat cows being eaten by seven [that were] lean, and seven green spikes [of grain] and others [that were] dry. O eminent ones, explain to me my vision, if you should interpret visions.\""
           }
         ]
       },
       {
-        "name": "أَنْوَاعُ الْجَمَاعَاتِ",
-        "nameEn": "Words for Different Groups of People",
+        "name": "مظاهر العفو والرحمة الإلهية",
+        "nameEn": "Expressions of Divine Forgiveness and Mercy",
         "color": "green",
         "items": [
           {
-            "ar": "أَفْوَاجًا",
-            "en": "in troops",
-            "ref": "110:2",
-            "verse": "وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًۭا",
-            "verseEn": "And you see the people entering into the religion of Allāh in multitudes,"
+            "ar": "مَغْفِرَةٌ",
+            "en": "Forgiveness",
+            "ref": "3:136",
+            "verse": "أُو۟لَـٰٓئِكَ جَزَآؤُهُم مَّغْفِرَةٌۭ مِّن رَّبِّهِمْ وَجَنَّـٰتٌۭ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَا ۚ وَنِعْمَ أَجْرُ ٱلْعَـٰمِلِينَ",
+            "verseEn": "Those - their reward is forgiveness from their Lord and gardens beneath which rivers flow [in Paradise], wherein they will abide eternally; and excellent is the reward of the [righteous] workers."
           },
           {
-            "ar": "زُمَرًا",
-            "en": "in crowds",
-            "ref": "39:71",
-            "verse": "وَسِيقَ ٱلَّذِينَ كَفَرُوٓا۟ إِلَىٰ جَهَنَّمَ زُمَرًا ۖ حَتَّىٰٓ إِذَا جَآءُوهَا فُتِحَتْ أَبْوَٰبُهَا وَقَالَ لَهُمْ خَزَنَتُهَآ أَلَمْ يَأْتِكُمْ رُسُلٌۭ مِّنكُمْ يَتْلُونَ عَلَيْكُمْ ءَايَـٰتِ رَبِّكُمْ وَيُنذِرُونَكُمْ لِقَآءَ يَوْمِكُمْ هَـٰذَا ۚ قَالُوا۟ بَلَىٰ وَلَـٰكِنْ حَقَّتْ كَلِمَةُ ٱلْعَذَابِ عَلَى ٱلْكَـٰفِرِينَ",
-            "verseEn": "And those who disbelieved will be driven to Hell in groups until, when they reach it, its gates are opened and its keepers will say, \"Did there not come to you messengers from yourselves, reciting to you the verses of your Lord and warning you of the meeting of this Day of yours?\" They will say, \"Yes, but the word [i.e., decree] of punishment has come into effect upon the disbelievers.\""
+            "ar": "رَحْمَةٍ",
+            "en": "Mercy",
+            "ref": "11:58",
+            "verse": "وَلَمَّا جَآءَ أَمْرُنَا نَجَّيْنَا هُودًۭا وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ بِرَحْمَةٍۢ مِّنَّا وَنَجَّيْنَـٰهُم مِّنْ عَذَابٍ غَلِيظٍۢ",
+            "verseEn": "And when Our command came, We saved Hūd and those who believed with him, by mercy from Us; and We saved them from a harsh punishment."
           },
           {
-            "ar": "عُصْبَةٌ",
-            "en": "a band",
-            "ref": "12:8",
-            "verse": "إِذْ قَالُوا۟ لَيُوسُفُ وَأَخُوهُ أَحَبُّ إِلَىٰٓ أَبِينَا مِنَّا وَنَحْنُ عُصْبَةٌ إِنَّ أَبَانَا لَفِى ضَلَـٰلٍۢ مُّبِينٍ",
-            "verseEn": "When they said, \"Joseph and his brother are more beloved to our father than we, while we are a clan. Indeed, our father is in clear error."
+            "ar": "تَوْبَةَ",
+            "en": "Repentance (accepted by Allah)",
+            "ref": "9:104",
+            "verse": "أَلَمْ يَعْلَمُوٓا۟ أَنَّ ٱللَّهَ هُوَ يَقْبَلُ ٱلتَّوْبَةَ عَنْ عِبَادِهِۦ وَيَأْخُذُ ٱلصَّدَقَـٰتِ وَأَنَّ ٱللَّهَ هُوَ ٱلتَّوَّابُ ٱلرَّحِيمُ",
+            "verseEn": "Do they not know that it is Allāh who accepts repentance from His servants and receives charities and that it is Allāh who is the Accepting of Repentance, the Merciful?"
           },
           {
-            "ar": "فِئَةٌ",
-            "en": "a company",
-            "ref": "3:13",
-            "verse": "قَدْ كَانَ لَكُمْ ءَايَةٌۭ فِى فِئَتَيْنِ ٱلْتَقَتَا ۖ فِئَةٌۭ تُقَـٰتِلُ فِى سَبِيلِ ٱللَّهِ وَأُخْرَىٰ كَافِرَةٌۭ يَرَوْنَهُم مِّثْلَيْهِمْ رَأْىَ ٱلْعَيْنِ ۚ وَٱللَّهُ يُؤَيِّدُ بِنَصْرِهِۦ مَن يَشَآءُ ۗ إِنَّ فِى ذَٰلِكَ لَعِبْرَةًۭ لِّأُو۟لِى ٱلْأَبْصَـٰرِ",
-            "verseEn": "Already there has been for you a sign in the two armies which met [in combat at Badr] - one fighting in the cause of Allāh and another of disbelievers. They saw them [to be] twice their [own] number by [their] eyesight. But Allāh supports with His victory whom He wills. Indeed in that is a lesson for those of vision."
+            "ar": "عَفُوًّا",
+            "en": "Pardoning (an attribute of Allah)",
+            "ref": "4:149",
+            "verse": "إِن تُبْدُوا۟ خَيْرًا أَوْ تُخْفُوهُ أَوْ تَعْفُوا۟ عَن سُوٓءٍۢ فَإِنَّ ٱللَّهَ كَانَ عَفُوًّۭا قَدِيرًا",
+            "verseEn": "If [instead] you show [some] good or conceal it or pardon an offense - indeed, Allāh is ever Pardoning and Competent."
           }
         ]
       },
       {
-        "name": "مُصْطَلَحَاتٌ مُتَعَلِّقَةٌ بِالْعَرْشِ",
-        "nameEn": "Terms Related to the Throne (ʿArsh) of Allah",
+        "name": "أَفْعَالُ الْخَلْقِ وَالْإِنْبَاتِ",
+        "nameEn": "Divine Actions of Bringing Forth or Causing to Grow",
         "color": "blue",
         "items": [
           {
-            "ar": "ٱلْعَرْشِ",
-            "en": "The Throne",
-            "ref": "27:26",
-            "verse": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ رَبُّ ٱلْعَرْشِ ٱلْعَظِيمِ ۩‏",
-            "verseEn": "Allāh - there is no deity except Him, Lord of the Great Throne.\""
+            "ar": "يُخْرِجُ",
+            "en": "He brings forth",
+            "ref": "10:31",
+            "verse": "قُلْ مَن يَرْزُقُكُم مِّنَ ٱلسَّمَآءِ وَٱلْأَرْضِ أَمَّن يَمْلِكُ ٱلسَّمْعَ وَٱلْأَبْصَـٰرَ وَمَن يُخْرِجُ ٱلْحَىَّ مِنَ ٱلْمَيِّتِ وَيُخْرِجُ ٱلْمَيِّتَ مِنَ ٱلْحَىِّ وَمَن يُدَبِّرُ ٱلْأَمْرَ ۚ فَسَيَقُولُونَ ٱللَّهُ ۚ فَقُلْ أَفَلَا تَتَّقُونَ",
+            "verseEn": "Say, \"Who provides for you from the heaven and the earth? Or who controls hearing and sight and who brings the living out of the dead and brings the dead out of the living and who arranges [every] matter?\" They will say, \"Allāh,\" so say, \"Then will you not fear Him?\""
           },
           {
-            "ar": "يَحْمِلُونَ",
-            "en": "They carry",
-            "ref": "40:7",
-            "verse": "ٱلَّذِينَ يَحْمِلُونَ ٱلْعَرْشَ وَمَنْ حَوْلَهُۥ يُسَبِّحُونَ بِحَمْدِ رَبِّهِمْ وَيُؤْمِنُونَ بِهِۦ وَيَسْتَغْفِرُونَ لِلَّذِينَ ءَامَنُوا۟ رَبَّنَا وَسِعْتَ كُلَّ شَىْءٍۢ رَّحْمَةًۭ وَعِلْمًۭا فَٱغْفِرْ لِلَّذِينَ تَابُوا۟ وَٱتَّبَعُوا۟ سَبِيلَكَ وَقِهِمْ عَذَابَ ٱلْجَحِيمِ",
-            "verseEn": "Those [angels] who carry the Throne and those around it exalt [Allāh] with praise of their Lord and believe in Him and ask forgiveness for those who have believed, [saying], \"Our Lord, You have encompassed all things in mercy and knowledge, so forgive those who have repented and followed Your way and protect them from the punishment of Hellfire."
+            "ar": "أَنبَتَكُم",
+            "en": "He caused you to grow",
+            "ref": "71:17",
+            "verse": "وَٱللَّهُ أَنۢبَتَكُم مِّنَ ٱلْأَرْضِ نَبَاتًۭا",
+            "verseEn": "And Allāh has caused you to grow from the earth a [progressive] growth."
           },
           {
-            "ar": "حَآفِّينَ",
-            "en": "Surrounding",
-            "ref": "39:75",
-            "verse": "وَتَرَى ٱلْمَلَـٰٓئِكَةَ حَآفِّينَ مِنْ حَوْلِ ٱلْعَرْشِ يُسَبِّحُونَ بِحَمْدِ رَبِّهِمْ ۖ وَقُضِىَ بَيْنَهُم بِٱلْحَقِّ وَقِيلَ ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
-            "verseEn": "And you will see the angels surrounding the Throne, exalting [Allāh] with praise of their Lord. And it will be judged between them in truth, and it will be said, \"[All] praise to Allāh, Lord of the worlds.\""
+            "ar": "فَجَّرْنَا",
+            "en": "We caused to gush forth",
+            "ref": "36:34",
+            "verse": "وَجَعَلْنَا فِيهَا جَنَّـٰتٍۢ مِّن نَّخِيلٍۢ وَأَعْنَـٰبٍۢ وَفَجَّرْنَا فِيهَا مِنَ ٱلْعُيُونِ",
+            "verseEn": "And We placed therein gardens of palm trees and grapevines and caused to burst forth therefrom some springs -"
           },
           {
-            "ar": "ثَمَٰنِيَةٌ",
-            "en": "Eight",
-            "ref": "69:17",
-            "verse": "وَٱلْمَلَكُ عَلَىٰٓ أَرْجَآئِهَا ۚ وَيَحْمِلُ عَرْشَ رَبِّكَ فَوْقَهُمْ يَوْمَئِذٍۢ ثَمَـٰنِيَةٌۭ",
-            "verseEn": "And the angels are at its edges. And there will bear the Throne of your Lord above them, that Day, eight [of them]."
+            "ar": "شَقَقْنَا",
+            "en": "We split",
+            "ref": "80:26",
+            "verse": "ثُمَّ شَقَقْنَا ٱلْأَرْضَ شَقًّۭا",
+            "verseEn": "Then We broke open the earth, splitting [it with sprouts],"
           }
         ]
       },
       {
-        "name": "صورٌ مجازيَّةٌ للاستقرار والاضطراب والعدم",
-        "nameEn": "Metaphorical Depictions of Stability, Instability, and Worthlessness",
+        "name": "أَصْوَاتُ الْأَحْدَاثِ الْعَظِيمَةِ",
+        "nameEn": "Sounds of Momentous Events (Divine Decree, Judgment, or Significant Occurrences)",
         "color": "purple",
         "items": [
           {
-            "ar": "حُطَٰمًا",
-            "en": "broken fragments",
-            "ref": "57:20",
-            "verse": "ٱعْلَمُوٓا۟ أَنَّمَا ٱلْحَيَوٰةُ ٱلدُّنْيَا لَعِبٌۭ وَلَهْوٌۭ وَزِينَةٌۭ وَتَفَاخُرٌۢ بَيْنَكُمْ وَتَكَاثُرٌۭ فِى ٱلْأَمْوَٰلِ وَٱلْأَوْلَـٰدِ ۖ كَمَثَلِ غَيْثٍ أَعْجَبَ ٱلْكُفَّارَ نَبَاتُهُۥ ثُمَّ يَهِيجُ فَتَرَىٰهُ مُصْفَرًّۭا ثُمَّ يَكُونُ حُطَـٰمًۭا ۖ وَفِى ٱلْـَٔاخِرَةِ عَذَابٌۭ شَدِيدٌۭ وَمَغْفِرَةٌۭ مِّنَ ٱللَّهِ وَرِضْوَٰنٌۭ ۚ وَمَا ٱلْحَيَوٰةُ ٱلدُّنْيَآ إِلَّا مَتَـٰعُ ٱلْغُرُورِ",
-            "verseEn": "Know that the life of this world is but amusement and diversion and adornment and boasting to one another and competition in increase of wealth and children - like the example of a rain whose [resulting] plant growth pleases the tillers; then it dries and you see it turned yellow; then it becomes [scattered] debris. And in the Hereafter is severe punishment and forgiveness from Allāh and approval. And what is the worldly life except the enjoyment of delusion."
+            "ar": "صَيْحَةً",
+            "en": "a blast (of punishment)",
+            "ref": "15:73",
+            "verse": "فَأَخَذَتْهُمُ ٱلصَّيْحَةُ مُشْرِقِينَ",
+            "verseEn": "So the shriek seized them at sunrise."
           },
           {
-            "ar": "هَبَآءً",
-            "en": "scattered dust",
-            "ref": "25:23",
-            "verse": "وَقَدِمْنَآ إِلَىٰ مَا عَمِلُوا۟ مِنْ عَمَلٍۢ فَجَعَلْنَـٰهُ هَبَآءًۭ مَّنثُورًا",
-            "verseEn": "And We will approach [i.e., regard] what they have done of deeds and make them as dust dispersed."
+            "ar": "نَفْخَةٌ",
+            "en": "a blast (of the Trumpet)",
+            "ref": "36:51",
+            "verse": "وَنُفِخَ فِى ٱلصُّورِ فَإِذَا هُم مِّنَ ٱلْأَجْدَاثِ إِلَىٰ رَبِّهِمْ يَنسِلُونَ",
+            "verseEn": "And the Horn will be blown; and at once from the graves to their Lord they will hasten."
           },
           {
-            "ar": "بُنْيَٰنَهُۥ",
-            "en": "his building/structure",
-            "ref": "9:109",
-            "verse": "أَفَمَنْ أَسَّسَ بُنْيَـٰنَهُۥ عَلَىٰ تَقْوَىٰ مِنَ ٱللَّهِ وَرِضْوَٰنٍ خَيْرٌ أَم مَّنْ أَسَّسَ بُنْيَـٰنَهُۥ عَلَىٰ شَفَا جُرُفٍ هَارٍۢ فَٱنْهَارَ بِهِۦ فِى نَارِ جَهَنَّمَ ۗ وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلظَّـٰلِمِينَ",
-            "verseEn": "Then is one who laid the foundation of his building on righteousness [with fear] from Allāh and [seeking] His approval better or one who laid the foundation of his building on the edge of a bank about to collapse, so it collapsed with him into the fire of Hell? And Allāh does not guide the wrongdoing people."
+            "ar": "حَسِيسًا",
+            "en": "a faint sound",
+            "ref": "21:102",
+            "verse": "لَا يَسْمَعُونَ حَسِيسَهَا ۖ وَهُمْ فِى مَا ٱشْتَهَتْ أَنفُسُهُمْ خَـٰلِدُونَ",
+            "verseEn": "They will not hear its sound, while they are, in that which their souls desire, abiding eternally."
           },
           {
-            "ar": "زُلْزِلُوا۟",
-            "en": "they were shaken",
-            "ref": "2:214",
-            "verse": "أَمْ حَسِبْتُمْ أَن تَدْخُلُوا۟ ٱلْجَنَّةَ وَلَمَّا يَأْتِكُم مَّثَلُ ٱلَّذِينَ خَلَوْا۟ مِن قَبْلِكُم ۖ مَّسَّتْهُمُ ٱلْبَأْسَآءُ وَٱلضَّرَّآءُ وَزُلْزِلُوا۟ حَتَّىٰ يَقُولَ ٱلرَّسُولُ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ مَتَىٰ نَصْرُ ٱللَّهِ ۗ أَلَآ إِنَّ نَصْرَ ٱللَّهِ قَرِيبٌۭ",
-            "verseEn": "Or do you think that you will enter Paradise while such [trial] has not yet come to you as came to those who passed on before you? They were touched by poverty and hardship and were shaken until [even their] messenger and those who believed with him said, \"When is the help of Allāh?\" Unquestionably, the help of Allāh is near."
+            "ar": "صَرَّةٍ",
+            "en": "a shriek",
+            "ref": "51:29",
+            "verse": "فَأَقْبَلَتِ ٱمْرَأَتُهُۥ فِى صَرَّةٍۢ فَصَكَّتْ وَجْهَهَا وَقَالَتْ عَجُوزٌ عَقِيمٌۭ",
+            "verseEn": "And his wife approached with a cry [of alarm] and struck her face and said, \"[I am] a barren old woman!\""
           }
         ]
       }

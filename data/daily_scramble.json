@@ -1,35 +1,29 @@
 {
-  "date": "2026-02-26",
+  "date": "2026-02-27",
   "puzzle": {
-    "verseRef": "25:74",
-    "reference": "Surah Al-Furqan (25:74)",
+    "verseRef": "4:36",
+    "reference": "Surah An-Nisa (4:36)",
     "segments": [
-      "وَٱلَّذِينَ يَقُولُونَ",
-      "رَبَّنَا هَبْ لَنَا",
-      "مِنْ أَزْوَٰجِنَا وَذُرِّيَّـٰتِنَا",
-      "قُرَّةَ أَعْيُنٍ",
-      "وَٱجْعَلْنَا",
-      "لِلْمُتَّقِينَ إِمَامًا"
+      "words 1-2",
+      "words 3-4",
+      "words 5-6",
+      "words 7-8"
     ],
     "translations": [
-      "And those who say Our Lord",
-      "Grant to us",
-      "from our spouses",
-      "and our offspring comfort",
-      "(to) our eyes and make us",
-      "for the righteous a leader"
+      "And worship Allah And (do) not associate with Him anything and to the parents (do) good",
+      "and with the relatives and the orphans and the needy and the neighbor (who is) near and the neighbor",
+      "(who is) farther away and the companion by your side and the traveler and what possess[ed] your right hands",
+      "Indeed Allah (does) not love (the one) who is [a] proud (and) [a] boastful"
     ],
-    "hint": "A beautiful supplication asking Allah for a righteous family and to be an example for the pious.",
-    "arabic": "وَٱلَّذِينَ يَقُولُونَ رَبَّنَا هَبْ لَنَا مِنْ أَزْوَٰجِنَا وَذُرِّيَّـٰتِنَا قُرَّةَ أَعْيُنٍۢ وَٱجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",
+    "hint": "This verse emphasizes the importance of monotheism and social responsibilities, including kindness to family and vulnerable groups.",
+    "arabic": "۞ وَٱعْبُدُوا۟ ٱللَّهَ وَلَا تُشْرِكُوا۟ بِهِۦ شَيْـًۭٔا ۖ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًۭا وَبِذِى ٱلْقُرْبَىٰ وَٱلْيَتَـٰمَىٰ وَٱلْمَسَـٰكِينِ وَٱلْجَارِ ذِى ٱلْقُرْبَىٰ وَٱلْجَارِ ٱلْجُنُبِ وَٱلصَّاحِبِ بِٱلْجَنۢبِ وَٱبْنِ ٱلسَّبِيلِ وَمَا مَلَكَتْ أَيْمَـٰنُكُمْ ۗ إِنَّ ٱللَّهَ لَا يُحِبُّ مَن كَانَ مُخْتَالًۭا فَخُورًا",
     "words": [
-      "وَٱلَّذِينَ يَقُولُونَ رَبَّنَا",
-      "هَبْ لَنَا",
-      "مِنْ أَزْوَٰجِنَا",
-      "وَذُرِّيَّـٰتِنَا قُرَّةَ",
-      "أَعْيُنٍۢ وَٱجْعَلْنَا",
-      "لِلْمُتَّقِينَ إِمَامًا"
+      "۞ وَٱعْبُدُوا۟ ٱللَّهَ وَلَا تُشْرِكُوا۟ بِهِۦ شَيْـًۭٔا ۖ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًۭا",
+      "وَبِذِى ٱلْقُرْبَىٰ وَٱلْيَتَـٰمَىٰ وَٱلْمَسَـٰكِينِ وَٱلْجَارِ ذِى ٱلْقُرْبَىٰ وَٱلْجَارِ",
+      "ٱلْجُنُبِ وَٱلصَّاحِبِ بِٱلْجَنۢبِ وَٱبْنِ ٱلسَّبِيلِ وَمَا مَلَكَتْ أَيْمَـٰنُكُمْ ۗ",
+      "إِنَّ ٱللَّهَ لَا يُحِبُّ مَن كَانَ مُخْتَالًۭا فَخُورًا"
     ],
-    "verseEn": "And those who say, \"Our Lord, grant us from among our wives and offspring comfort to our eyes and make us a leader [i.e., example] for the righteous.\""
+    "verseEn": "Worship Allāh and associate nothing with Him, and to parents do good, and to relatives, orphans, the needy, the near neighbor, the neighbor farther away, the companion at your side, the traveler, and those whom your right hands possess. Indeed, Allāh does not like those who are self-deluding and boastful,"
   },
   "generated": true,
   "model": "auto (chain)"
