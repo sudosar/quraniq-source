@@ -70,62 +70,198 @@ def normalize_arabic(text):
     return text
 
 
-def _extract_root(word):
-    """Extract the Arabic root of a word using Tashaphyne morphological analysis.
-
-    Normalizes the word (strips diacritics, Uthmani marks, etc.) before
-    feeding it to the light stemmer so that both LLM-generated standard
-    Arabic and Quran-API Uthmani script are handled uniformly.
+def extract_reliable_root(word):
     """
-    w = normalize_arabic(word)
-    if not w:
-        return ""
-    _stemmer.light_stem(w)
-    return _stemmer.get_root()
+    Extract reliable root for Arabic word using multiple methods.
+    Returns root string or None if uncertain.
+    """
+    n = normalize_arabic(word)
+    if not n or len(n) < 2:
+        return None
+    
+    # Method 1: Tashaphyne (with filtering)
+    _stemmer.light_stem(n)
+    tash_root = _stemmer.get_root()
+    
+    # Filter obviously bad Tashaphyne results
+    if tash_root:
+        # Check if root looks reasonable
+        arabic_letters = set('ابتثجحخدذرزسشصضطظعغفقكلمنهويءآأإؤئ')
+        clean_root = ''.join(c for c in tash_root if c in arabic_letters)
+        
+        if 2 <= len(clean_root) <= 4:
+            # Known Tashaphyne bugs to ignore
+            buggy_roots = {
+                'توب': None,  # كتاب → توب (wrong)
+                'موء': None,  # ماء/سماء → موء (wrong)
+                'سمم': None,  # سماء → سمم (wrong)
+                'ورض': None,  # أرض → ورض (questionable)
+            }
+            
+            if clean_root not in buggy_roots:
+                return clean_root
+    
+    # Method 2: Pattern matching for common forms
+    # Remove common prefixes/suffixes and see what's left
+    common_affixes = [
+        # Prefixes
+        ('ي', ''), ('ت', ''), ('ن', ''), ('ا', ''), ('ال', ''), ('م', ''), 
+        ('است', ''), ('ان', ''), ('تفع', ''), ('تفاعل', ''),
+        # Suffixes
+        ('', 'ة'), ('', 'ا'), ('', 'ي'), ('', 'ون'), ('', 'ين'), ('', 'ات'),
+        ('', 'ان'), ('', 'تان'), ('', 'ين'), ('', 'ون'), ('', 'ى'),
+    ]
+    
+    for prefix, suffix in common_affixes:
+        if n.startswith(prefix) and n.endswith(suffix):
+            base = n[len(prefix):]
+            if suffix:
+                base = base[:-len(suffix)]
+            if 2 <= len(base) <= 4:
+                # Check if base looks like a root
+                if all(c in arabic_letters for c in base):
+                    return base
+    
+    # Method 3: Manual mapping for common Quranic words
+    common_words = {
+        'كتاب': 'كتب',
+        'يكتب': 'كتب',
+        'مكتب': 'كتب',
+        'كاتب': 'كتب',
+        'ماء': 'ماء',  # Return word itself as fallback
+        'سماء': 'سمو',
+        'أرض': 'أرض',
+        'الأرض': 'أرض',
+        'نور': 'نور',
+        'نار': 'نار',
+        'عين': 'عين',
+        'معين': 'عين',  # Shares root with عين
+        'رحمة': 'رحم',
+        'رحم': 'رحم',
+        'غفران': 'غفر',
+        'غافر': 'غفر',
+    }
+    
+    if n in common_words:
+        return common_words[n]
+    
+    # Method 4: Return first 3 letters if word is short
+    if 3 <= len(n) <= 5:
+        return n[:3]
+    
+    return None
 
-
-def words_share_root(word1, word2):
-    """Check if two Arabic words share the same linguistic root.
-
-    Uses a two-tier approach:
-      1. Normalized-form comparison (exact match after stripping the
-         definite article, or one stem contained in the other when both
-         are at least 4 characters — avoids short-word false positives).
-      2. Tashaphyne morphological root extraction — compares the
-         trilateral (or quadrilateral) roots returned by the stemmer.
-
-    This replaces the previous naive 3-character substring heuristic,
-    which produced a high rate of false positives (e.g. سلطان/شيطان,
-    حديد/صديد) and caused excessive LLM retries.
+def words_are_too_similar(word1, word2):
+    """
+    Check if two Arabic words are too similar for Connections gameplay.
+    
+    Returns True if words should NOT appear in different categories
+    because they would confuse players.
+    
+    FIXED: gameplay_allowed_pairs checked immediately after normalization.
     """
     n1 = normalize_arabic(word1)
     n2 = normalize_arabic(word2)
     if not n1 or not n2:
         return False
-
-    # Strip definite article for comparison
+    
+    # Strip definite article
     s1 = n1[2:] if n1.startswith('ال') else n1
     s2 = n2[2:] if n2.startswith('ال') else n2
-
-    # Tier 1a: Exact match after stripping article
+    
+    # --------------------------------------------------------------------
+    # TIER 0: Gameplay-specific rules (HIGHEST PRIORITY)
+    # --------------------------------------------------------------------
+    # Explicit decisions about which word pairs are allowed/blocked
+    gameplay_allowed_pairs = {
+        ('ماء', 'سماء'): False,  # Different words - ALLOW
+        ('سماء', 'ماء'): False,
+        ('نور', 'نار'): False,   # Different concepts - ALLOW
+        ('نار', 'نور'): False,
+        ('معين', 'عين'): False,  # Related but distinct enough - ALLOW
+        ('عين', 'معين'): False,
+    }
+    
+    for (w1, w2), should_block in gameplay_allowed_pairs.items():
+        if (s1 == w1 or n1 == w1) and (s2 == w2 or n2 == w2):
+            return should_block
+    
+    # --------------------------------------------------------------------
+    # TIER 1: Exact/obvious matches (fast, reliable)
+    # --------------------------------------------------------------------
+    
+    # 1A. Exact same word (after stripping ال)
     if s1 == s2:
-        return True
-
-    # Tier 1b: One stem contained in the other (handles suffixed forms
-    # like عصاه/عصا, متاع/متاعا).  Require the shorter stem to be at
-    # least 4 characters to avoid spurious matches (e.g. ران in قرآن).
-    shorter_len = min(len(s1), len(s2))
-    if shorter_len >= 4 and (s1 in s2 or s2 in s1):
-        return True
-
-    # Tier 2: Morphological root comparison via Tashaphyne
-    root1 = _extract_root(word1)
-    root2 = _extract_root(word2)
+        return True  # أرض vs الأرض
+    
+    # 1B. Clear prefix/suffix derivations
+    common_affixes = [
+        # Verb prefixes
+        ('ي', ''), ('ت', ''), ('ن', ''), ('ا', ''),
+        # Noun prefixes
+        ('م', ''), ('است', ''), ('ان', ''),
+        # Suffixes
+        ('', 'ة'), ('', 'ا'), ('', 'ي'), ('', 'ون'), ('', 'ين'),
+    ]
+    
+    for prefix, suffix in common_affixes:
+        # word1 = prefix + base + suffix, word2 = base
+        if s1.startswith(prefix) and s1.endswith(suffix):
+            base = s1[len(prefix):]
+            if suffix:
+                base = base[:-len(suffix)]
+            if base == s2:
+                return True  # يكتب vs كتب
+        
+        # word2 = prefix + base + suffix, word1 = base
+        if s2.startswith(prefix) and s2.endswith(suffix):
+            base = s2[len(prefix):]
+            if suffix:
+                base = base[:-len(suffix)]
+            if base == s1:
+                return True
+    
+    # --------------------------------------------------------------------
+    # TIER 2: Containment checks (moderate confidence)
+    # --------------------------------------------------------------------
+    
+    # Check if one word contains the other
+    # But only if it's meaningful containment
+    if len(s1) >= 3 and len(s2) >= 3:
+        if s1 in s2 or s2 in s1:
+            # Heuristic: Containment is meaningful if:
+            # 1. Contained word is at least 3 letters
+            # 2. Length difference is small (<= 2 letters)
+            if abs(len(s1) - len(s2)) <= 2:
+                return True  # Default: block meaningful containment
+    
+    # --------------------------------------------------------------------
+    # TIER 3: Root comparison (cautious)
+    # --------------------------------------------------------------------
+    
+    root1 = extract_reliable_root(word1)
+    root2 = extract_reliable_root(word2)
+    
     if root1 and root2 and root1 == root2:
+        # Default: Block if they share reliable roots
         return True
-
+    
+    # --------------------------------------------------------------------
+    # TIER 4: Similarity heuristics (conservative fallback)
+    # --------------------------------------------------------------------
+    
+    # Only block if VERY similar (high overlap AND similar meaning)
+    if len(s1) >= 3 and len(s2) >= 3:
+        # Calculate character overlap
+        set1 = set(s1)
+        set2 = set(s2)
+        overlap = len(set1 & set2) / len(set1 | set2) if (set1 | set2) else 0
+        
+        # Only block if extremely high overlap (>90%) AND same length
+        if overlap > 0.9 and len(s1) == len(s2):
+            return True
+    
     return False
-
 
 def word_in_verse(word, verse_text):
     """Check if an Arabic word appears in a verse, with Uthmani-aware normalization.
@@ -160,6 +296,18 @@ def word_in_verse(word, verse_text):
                 return True
     return False
 
+
+
+def get_roots_for_prompt(words):
+    """
+    Extract roots for display in prompt.
+    Returns list of roots (with None for uncertain).
+    """
+    roots = []
+    for word in words:
+        root = extract_reliable_root(word)
+        roots.append(root)
+    return roots
 
 # ── Configuration ──────────────────────────────────────────────────
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -640,11 +788,9 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
         for i, prev_cat in enumerate(accumulated_cats):
             words_list = [item.get("ar", "") for item in prev_cat.get("items", [])]
             refs_list  = [item.get("ref", "") for item in prev_cat.get("items", [])]
-            # Extract roots for each word
-            roots_list = []
-            for word in words_list:
-                root = _extract_root(word)
-                roots_list.append(root if root else "?")
+                        # Extract roots for each word using reliable method
+            words_list = [item.get("ar", "") for item in prev_cat.get("items", [])]
+            roots_list = get_roots_for_prompt(words_list)
             lines.append(
                 f"  Category {i+1} ({COLORS[i]}, {DIFFICULTY_LABELS[i]}): \"{prev_cat.get('nameEn')}\"\n"
                 f"    Words : {', '.join(words_list)}\n"
@@ -793,7 +939,7 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
         ar = item.get("ar", "")
         # Same-root check against all previous words (history + accumulated + earlier in this category)
         for prev_word in all_prev_words + new_words:
-            if ar and words_share_root(ar, prev_word):
+            if ar and words_are_too_similar(ar, prev_word):
                 violations.append(
                     f"Word '{ar}' shares root with previously used word '{prev_word}'"
                 )
@@ -857,7 +1003,7 @@ def validate_connections(puzzle, history):
                 errors.append(f"Cat {i+1} item {j+1} missing ref")
             ar = item.get("ar", "")
             for prev_word in all_words:
-                if ar and words_share_root(ar, prev_word):
+                if ar and words_are_too_similar(ar, prev_word):
                     cooldown_violations.append(f"Same-root word across categories: '{ar}' shares root with '{prev_word}'")
                     break
             all_words.append(ar)
