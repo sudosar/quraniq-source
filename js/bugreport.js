@@ -160,7 +160,8 @@ async function submitBugReport() {
         debugData: {
             dayNumber: typeof getDayNumber === 'function' ? getDayNumber() : null,
             state: getSafeDebugState('quraniq_state'),
-            juz: getSafeDebugState('quraniq_juz')
+            juz: getSafeDebugState('quraniq_juz'),
+            harf: typeof app !== 'undefined' && app.currentMode === 'harf' && app.state ? getSafeHarfState(app.state[`harf_${app.dayNumber}`]) : null
         }
     };
 
@@ -180,6 +181,23 @@ async function submitBugReport() {
             return parsed;
         } catch (e) {
             return { _error: `Failed to parse ${key}`, message: e.message };
+        }
+    }
+
+    function getSafeHarfState(harfState) {
+        if (!harfState) return null;
+        try {
+            const str = JSON.stringify(harfState);
+            if (str.length > 15000) {
+                return {
+                    _truncated: true,
+                    message: `Harf state too large (${str.length} chars)`,
+                    warning: "State was truncated to prevent GitHub API payload limits"
+                };
+            }
+            return harfState;
+        } catch (e) {
+            return { _error: `Failed to stringify harf state`, message: e.message };
         }
     }
 

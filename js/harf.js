@@ -91,7 +91,12 @@ function setupHarfGame() {
     renderHarfKeyboard();
     renderHarfHintButton();
     const hintEl = document.getElementById('harf-hint');
-    if (hintEl) hintEl.innerHTML = `<strong>Hint:</strong> ${harf.puzzle.hint}`;
+    if (hintEl) {
+        // Show hint with verse reference to avoid confusion
+        const verseRef = harf.puzzle.verseRef || '';
+        const hintText = verseRef ? `${harf.puzzle.hint} (Quran ${verseRef})` : harf.puzzle.hint;
+        hintEl.innerHTML = `<strong>Hint:</strong> ${hintText}`;
+    }
 
     // Replay saved state
     if (saved && harf.evaluations.length > 0) {
