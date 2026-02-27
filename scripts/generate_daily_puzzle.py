@@ -173,11 +173,11 @@ GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 
-# Model fallback chain: DeepSeek v3.2 → Gemini 2.5 Flash → Gemini 2.5 Pro → GPT-4.1
-# Updated (Feb 2026): DeepSeek v3.2 first for better Arabic understanding and reliability
+# Model fallback chain: Gemini 2.5 Flash → DeepSeek v3.2 → Gemini 2.5 Pro → GPT-4.1
+# Temporary fix: Gemini first while debugging DeepSeek API issues
 MODEL_CHAIN = [
-    {"id": "deepseek-chat", "api": "deepseek", "label": "DeepSeek v3.2 (Official)"},
     {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Google)"},
+    {"id": "deepseek-chat", "api": "deepseek", "label": "DeepSeek v3.2 (Official)"},
     {"id": "gemini-2.5-pro", "api": "gemini", "label": "Gemini 2.5 Pro (Google)"},
     {"id": "gpt-4.1", "api": "openai", "label": "GPT-4.1 (OpenAI)"},
 ]
