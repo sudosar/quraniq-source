@@ -393,6 +393,11 @@ function renderRound2() {
 
       <!-- Verse reminder (collapsed) -->
       <div class="juz-verse-reminder">
+        <div class="juz-verse-ref juz-verse-ref-mini">
+          <span class="juz-surah-ar">${juzState.puzzle.verse.surah_name_ar}</span>
+          <span class="juz-surah-en">${juzState.puzzle.verse.surah_name}</span>
+          <span class="juz-verse-numbers">${juzState.puzzle.verse.surah_number}:${juzState.puzzle.verse.ayah_number}</span>
+        </div>
         <div class="juz-verse-mini">${juzState.puzzle.verse.arabic_text}</div>
         <div class="juz-verse-translation ${juzState.round2Answered ? 'show' : ''}" id="juz-verse-translation">
           <em>${juzState.puzzle.verse.translation}</em>
