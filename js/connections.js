@@ -1014,22 +1014,17 @@ function showConnEncouragementModal(resultData, won, correctCount, mistakesUsed)
     openModal('result-modal');
 }
 
-// Expand all solved rows and autoplay first verse (called when closing result modal)
+// Expand all solved rows (called when closing result modal to start review)
 function expandAllConnRows() {
     conn.solved.forEach((_, idx) => {
         const carousel = document.getElementById(`carousel-${idx}`);
         if (carousel && !carousel.classList.contains('expanded')) {
-            // Only toggleCarousel for first row triggers autoplay via its built-in logic
-            // For others, just expand without autoplay to avoid audio overlap
-            if (idx === 0) {
-                toggleCarousel(idx);
-            } else {
-                const header = carousel.parentElement.querySelector('.conn-solved-header');
-                header.setAttribute('aria-expanded', 'true');
-                carousel.setAttribute('aria-hidden', 'false');
-                carousel.classList.add('expanded');
-                header.querySelector('.conn-expand-icon').textContent = '\u25B2';
-            }
+            // Expand all rows without autoplay
+            const header = carousel.parentElement.querySelector('.conn-solved-header');
+            header.setAttribute('aria-expanded', 'true');
+            carousel.setAttribute('aria-hidden', 'false');
+            carousel.classList.add('expanded');
+            header.querySelector('.conn-expand-icon').textContent = '\u25B2';
         }
     });
 }
