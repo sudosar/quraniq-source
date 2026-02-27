@@ -640,14 +640,21 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
         for i, prev_cat in enumerate(accumulated_cats):
             words_list = [item.get("ar", "") for item in prev_cat.get("items", [])]
             refs_list  = [item.get("ref", "") for item in prev_cat.get("items", [])]
+            # Extract roots for each word
+            roots_list = []
+            for word in words_list:
+                root = _extract_root(word)
+                roots_list.append(root if root else "?")
             lines.append(
                 f"  Category {i+1} ({COLORS[i]}, {DIFFICULTY_LABELS[i]}): \"{prev_cat.get('nameEn')}\"\n"
                 f"    Words : {', '.join(words_list)}\n"
+                f"    Roots : {', '.join(roots_list)}\n"
                 f"    Refs  : {', '.join(refs_list)}"
             )
         chosen_block = (
             "\n\nALREADY CHOSEN CATEGORIES (do NOT reuse their refs, themes, or word roots):\n"
             + "\n".join(lines)
+            + "\n\nCRITICAL: Your 4 Arabic words must NOT share roots with ANY of the roots listed above."
         )
 
     violation_block = ""
