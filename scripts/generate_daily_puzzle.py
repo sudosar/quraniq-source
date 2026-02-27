@@ -1738,6 +1738,8 @@ def enrich_harf_with_verses(puzzle):
     
     Fetches the Arabic verse and English translation using the verseRef field,
     replacing any LLM-generated verse text with authoritative Quran API data.
+    Also validates that the puzzle word actually appears in the cited verse.
+    Returns None if word-in-verse validation fails.
     """
     ref = puzzle.get("verseRef", "")
     if not ref:
@@ -1752,6 +1754,24 @@ def enrich_harf_with_verses(puzzle):
         puzzle["arabicVerse"] = verse_data["arabic"]
         puzzle["verse"] = f"{ref} — {verse_data['english']}"
         print(f"  ✓ Verse text fetched from Quran API")
+        
+        # CRITICAL: Validate word-in-verse
+        word = puzzle.get("word", "")
+        if word:
+            if word_in_verse(word, verse_data["arabic"]):
+                print(f"  ✓ Word '{word}' verified in verse {ref}")
+            else:
+                # Also try display field (with diacritics)
+                display_word = puzzle.get("display", "")
+                if display_word and word_in_verse(display_word, verse_data["arabic"]):
+                    print(f"  ✓ Word '{display_word}' (display) verified in verse {ref}")
+                else:
+                    print(f"  ✗ HARF VALIDATION FAILED: Word '{word}' NOT found in verse {ref}")
+                    print(f"  ✗ Verse text: {verse_data['arabic'][:100]}...")
+                    print(f"  ✗ Puzzle rejected — will retry with different word/verse")
+                    return None
+        else:
+            print(f"  ⚠ No 'word' field in puzzle, skipping word-in-verse validation")
     else:
         print(f"  ⚠ Could not fetch verse text for {ref}")
         # Keep any LLM-generated text as fallback
@@ -1761,8 +1781,6 @@ def enrich_harf_with_verses(puzzle):
             puzzle["verse"] = ref
     
     return puzzle
-
-
 def enrich_scramble_with_verses(puzzle):
     """Post-process a Scramble puzzle: look up full verse text from Quran API.
     
@@ -1990,7 +2008,7 @@ def generate_game(game_type, history, today):
             if warnings:
                 print(f"  ⚠ Warnings (accepted): {warnings}")
 
-            # For Scramble: verify verse text fetching works (critical)
+            # Post-process: enrich with authoritative verse text from Quran API
             if game_type == "scramble":
                 enriched = enrich_scramble_with_verses(puzzle)
                 if not enriched.get("arabic") or not enriched.get("words"):
@@ -1998,6 +2016,15 @@ def generate_game(game_type, history, today):
                     previous_violations = (previous_violations or []) + ["Could not fetch verse text from API"]
                     continue
                 puzzle = enriched
+            elif game_type == "harf":
+                enriched = enrich_harf_with_verses(puzzle)
+                if enriched is None:
+                    # Faulty word/verse combination - trigger retry
+                    previous_violations = (previous_violations or []) + ["Word NOT found in cited verse (LLM hallucinated the reference)"]
+                    continue
+                puzzle = enriched
+            elif game_type == "deduction":
+                puzzle = enrich_deduction_with_verses(puzzle)
 
             print(f"\n  ✓ {config['label']} generated successfully using {model_label}")
             return puzzle
@@ -2284,12 +2311,7 @@ def main():
             puzzle = generate_game(game_type, history, today)
         generated_count += 1
         if puzzle:
-            # Post-process: enrich with verse text from Quran API
-            # (connections enrichment is done per-category inside generate_connections)
-            if game_type == "harf":
-                puzzle = enrich_harf_with_verses(puzzle)
-            elif game_type == "deduction":
-                puzzle = enrich_deduction_with_verses(puzzle)
+            # (Enrichment/validation for other games is handled inside generate_game)
 
             all_puzzles[game_type] = puzzle
 
