@@ -823,7 +823,7 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
         parts = []
         if other_violations:
             parts.append(
-                "CRITICAL — PREVIOUS ATTEMPT VIOLATED THESE RULES (FORBIDDEN):\n"
+                "PREVIOUS ATTEMPT REUSED THESE (FORBIDDEN):\n"
                 + "\n".join("  ✗ " + v for v in other_violations)
                 + "\nYou MUST NOT repeat these. Choose completely different verses and themes."
             )
@@ -862,6 +862,7 @@ VERIFICATION STEP (INTERNAL ONLY):
 RULES:
 1. Provide EXACTLY 4 items. {pivot_block}
 2. Theme (nameEn) MUST be specific (e.g., "Attributes of Paradise", not "Attributes").
+   FORBIDDEN themes (used recently — do NOT reuse): {avoided_themes}
 3. CRITICAL: Every word must actually appear in its cited verse. No guessing.
 4. Surah:Ayah refs must be unique and not in: {avoided_verses}.
 5. Words must not share roots with each other or previous categories.
@@ -884,6 +885,14 @@ OUTPUT FORMAT: Return ONLY a valid JSON object for this single category (if not 
 IMPORTANT:
 - Return the JSON object — no markdown (except code fences), no extra text outside JSON or <think> tags.
 - Arabic words must include full tashkeel/diacritics."""
+
+
+def build_connections_prompt(history, previous_violations=None):
+    """Backwards-compatible wrapper: build a prompt for category 0 with no accumulated categories."""
+    today = datetime.utcnow().strftime("%Y-%m-%d")
+    return build_single_category_prompt(
+        history, today, cat_index=0, accumulated_cats=[], previous_violations=previous_violations
+    )
 
 
 def validate_single_category(cat, cat_index, history, accumulated_cats):
@@ -974,7 +983,7 @@ def validate_connections(puzzle, history):
         errors.append(f"Expected 4 categories, got {len(cats)}")
         return errors, cooldown_violations, warnings
 
-        all_word_data = []  # list of (ar, en) tuples seen so far
+    all_word_data = []  # list of (ar, en) tuples seen so far
     cross_cat_refs = set()
 
     for i, cat in enumerate(cats):
@@ -1444,8 +1453,10 @@ def get_juz_number_for_today(today_str):
     return max(1, min(30, day_of_ramadan))
 
 
-def build_juz_prompt(history, today, previous_violations=None):
+def build_juz_prompt(history, today=None, previous_violations=None):
     """Build the LLM prompt for Juz Journey puzzle generation."""
+    if today is None:
+        today = datetime.utcnow().strftime("%Y-%m-%d")
     juz_number = get_juz_number_for_today(today)
 
     # Juz Journey only avoids its own used verses (30-day Ramadan window)
