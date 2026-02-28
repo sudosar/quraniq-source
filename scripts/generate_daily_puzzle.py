@@ -801,8 +801,6 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
         for i, prev_cat in enumerate(accumulated_cats):
             words_list = [item.get("ar", "") for item in prev_cat.get("items", [])]
             refs_list  = [item.get("ref", "") for item in prev_cat.get("items", [])]
-                        # Extract roots for each word using reliable method
-            words_list = [item.get("ar", "") for item in prev_cat.get("items", [])]
             roots_list = [r for r in get_roots_for_prompt(words_list) if r]
             lines.append(
                 f"  Category {i+1} ({COLORS[i]}, {DIFFICULTY_LABELS[i]}): \"{prev_cat.get('nameEn')}\"\n"
@@ -840,7 +838,7 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
     if force_pivot:
         pivot_block = (
             "\n\nCRITICAL: Your previous attempts were rejected multiple times. "
-            "ABANDON YOUR CURRENT THEME AND VERSES. Choose a COMPLETED DIFFERENT theme and different words."
+            "ABANDON YOUR CURRENT THEME AND VERSES. Choose a COMPLETELY DIFFERENT theme and different words."
         )
 
     return f"""You are a precise data engine for Quranic category generation.
