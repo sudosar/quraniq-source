@@ -582,7 +582,7 @@ def call_model(prompt, model_config, system_msg=None):
         }
 
     if system_msg is None:
-        system_msg = ("You are an expert Islamic scholar and Quran teacher. "
+        system_msg = ("You are a precise data engine for Quranic category generation. "
                       "You always respond with valid JSON only, no markdown.")
 
     payload = {
@@ -621,6 +621,7 @@ def call_model(prompt, model_config, system_msg=None):
                 candidates = data.get('candidates', [])
                 if not candidates:
                     print(f"  ✗ Empty candidates for {model_config['label']}")
+                    print(f"    - Raw Response: {resp.text}")
                     # Log prompt feedback or other reasons if present
                     if 'promptFeedback' in data:
                         print(f"    - Prompt Feedback: {data['promptFeedback']}")
@@ -768,7 +769,7 @@ DIFFICULTY_DESCRIPTIONS = {
 }
 
 
-def build_single_category_prompt(history, today, cat_index, accumulated_cats, previous_violations=None):
+def build_single_category_prompt(history, today, cat_index, accumulated_cats, previous_violations=None, force_pivot=False):
     """Build prompt for ONE Connections category (cat_index 0–3)."""
     color = COLORS[cat_index]
     difficulty = DIFFICULTY_LABELS[cat_index]
@@ -828,55 +829,43 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
             )
         if verse_mismatches:
             parts.append(
-                "CRITICAL — WORD-IN-VERSE VERIFICATION FAILED:\n"
+                "CRITICAL — VERIFIED FALSEHOODS (DO NOT USE):\n"
                 + "\n".join("  ✗ " + v for v in verse_mismatches)
-                + "\nFor each failed item: either cite a DIFFERENT verse where the EXACT Arabic word "
-                "form appears, OR replace the word with one that IS present in the cited verse.\n"
-                "Do NOT guess — only use verse refs you are CERTAIN about."
+                + "\nThe word-verse pairs listed above were checked against the Quran database and found to be WRONG. "
+                "Do NOT guess or attempt to use them again. Choose NEW words from NEW verses."
             )
         violation_block = "\n\n" + "\n\n".join(parts)
 
-    return f"""You are an expert Islamic scholar and Quran teacher creating ONE category for a daily "Ayah Connections" puzzle.
+    pivot_block = ""
+    if force_pivot:
+        pivot_block = (
+            "\n\nCRITICAL: Your previous attempts were rejected multiple times. "
+            "ABANDON YOUR CURRENT THEME AND VERSES. Choose a COMPLETED DIFFERENT theme and different words."
+        )
+
+    return f"""You are a precise data engine for Quranic category generation.
 
 DATE: {today}
-
-TASK: Generate EXACTLY ONE category of 4 related Quranic/Islamic items.
-This is Category {cat_index + 1} of 4 — color: {color}, difficulty: {difficulty}.
+TASK: Generate Category {cat_index + 1} of 4 (Color: {color}, Difficulty: {difficulty}).
 Difficulty guidance: {DIFFICULTY_DESCRIPTIONS[difficulty]}
 
 WHAT IS AYAH CONNECTIONS:
-Players see 16 Arabic words (from 4 hidden categories of 4) and must group them correctly.
-Each word is drawn from a real Quranic verse — the word MUST physically appear in the verse text.
+16 Arabic words (4 categories of 4) from real Quranic verses.
+Rule: Each word MUST physically exist in the Uthmani script of the cited verse.
 
-VERIFICATION STEP (CRITICAL):
-Before providing the JSON, you MUST verify each word and verse:
-1. Ensure the theme is specific and reflects the primary meaning of the verses.
-2. For each verse, verify the EXACT Arabic word form (tashkeel, prefixes) exists in the Uthmani script.
-3. Confirm words do not share roots with each other or previously used words.
-4. If using a model with reasoning capabilities, show your internal verification in <think> tags.
+VERIFICATION STEP (INTERNAL ONLY):
+1. Select a specific theme.
+2. Verify each of the 4 words exists in its cited verse.
+3. Ensure no root overlap with: {', '.join(all_prev_words) if all_prev_words else 'None'}.
+4. If using <think> tags, show your internal verse verification.
 
-RULES FOR THIS CATEGORY:
-1. Provide EXACTLY 4 items.
-2. The English theme (nameEn) MUST be SPECIFIC — not generic.
-   - BAD: "Words from the Quran", "Common Nouns", "Verbs", "Words in Juz 30", "Divine Attributes"
-   - GOOD: "Rivers of Jannah", "Names of Hellfire", "Prophets mentioned in Surah Al-Anbiya",
-     "Objects in the Story of Musa", "Titles given to Prophet Isa in the Quran"
-3. CRITICAL — word-in-verse: each Arabic word MUST actually appear in its cited verse.
-   - The word will be checked against the Quran API. Wrong ref = REJECTED.
-   - AVOID HALLUCINATIONS: Do not assume "باب" is in 4:46 just because it's a common word. 
-   - VERIFY: Ensure the word form you provide matches the verse precisely.
-4. All 5 refs in this category (4 items + 1 category verse) MUST be unique from each other
-   and from every ref in "ALREADY CHOSEN CATEGORIES" and "FORBIDDEN verse refs".
-5. Every Arabic word must come from a COMPLETELY DIFFERENT root than all words in:
-   - The already-chosen categories above
-   - Your own 4 items (no two items in this category share a root either)
-6. Context check: the verse's MEANING must fit the category theme. Do not use a verse
-   about punishment for a "Blessings" category, etc.
-7. Do NOT pick famous/overused verses (e.g. 2:255, 24:35, 36:82) — explore lesser-known verses.
+RULES:
+1. Provide EXACTLY 4 items. {pivot_block}
+2. Theme (nameEn) MUST be specific (e.g., "Attributes of Paradise", not "Attributes").
+3. CRITICAL: Every word must actually appear in its cited verse. No guessing.
+4. Surah:Ayah refs must be unique and not in: {avoided_verses}.
+5. Words must not share roots with each other or previous categories.
 
-FORBIDDEN themes (used recently — do NOT reuse): {avoided_themes}
-
-FORBIDDEN verse refs (used recently + already used in this puzzle run): {avoided_verses}
 {chosen_block}{violation_block}
 
 OUTPUT FORMAT: Return ONLY a valid JSON object for this single category (if not using <think> tags):
@@ -2086,17 +2075,10 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
             total_attempt += 1
             print(f"    Attempt {total_attempt} (retry {retry}/{MAX_RETRIES})...")
 
-            # Pivot instruction: if we've failed twice with this model, explicitly tell it to try a new theme.
-            retry_violations = previous_violations
-            if retry > 2:
-                pivot_msg = "The previous theme/verses are not working. TRY A COMPLETELY DIFFERENT THEME AND VERSES."
-                if isinstance(retry_violations, list):
-                    retry_violations = retry_violations + [pivot_msg]
-                else:
-                    retry_violations = [pivot_msg]
-
+            # Inject theme pivot logic if we've failed multiple times
+            force_pivot = (retry > 2)
             prompt = build_single_category_prompt(
-                history, today, cat_index, accumulated_cats, retry_violations
+                history, today, cat_index, accumulated_cats, previous_violations, force_pivot=force_pivot
             )
             raw = call_model(prompt, model_config)
 
