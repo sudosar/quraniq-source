@@ -1,6 +1,5 @@
 {
-  "date": "2026-02-28",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَنْبِيَاءٌ مَذْكُورُونَ بِأَسْمَائِهِمْ",
@@ -144,6 +143,175 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "رحمة",
+    "display": "رَحْمَة",
+    "hint": "A divine attribute that encompasses all of creation.",
+    "verseRef": "19:2",
+    "arabicVerse": "ذِكْرُ رَحْمَتِ رَبِّكَ عَبْدَهُۥ زَكَرِيَّآ",
+    "verse": "19:2 — [This is] a mention of the mercy of your Lord to His servant Zechariah"
+  },
+  "deduction": {
+    "title": "The Call for a Heavenly Feast",
+    "intro": "A group of devoted followers stood by their prophet, their faith tested by a profound request. They sought a sign not from doubt, but to strengthen their hearts, asking for a miracle that would descend from the heavens and serve as a testament for all generations. Who were these companions?",
+    "clues": [
+      "We were the close companions and helpers of a prophet sent to the Children of Israel.",
+      "We famously pledged our allegiance, declaring, 'We are the supporters of Allah'.",
+      "Our prophet was given the ability to perform great miracles, like healing the blind and lepers, and giving life to the dead by Allah's permission.",
+      "Despite our strong belief, we made a bold request for a tangible sign to further reassure our hearts.",
+      "We specifically asked our prophet to pray for a table laden with food to be sent down to us from the heavens.",
+      "Our request was met with a divine promise, but also a stern warning: if any of us disbelieved after this sign, a punishment would come like no other."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Are We?",
+        "options": [
+          "The Companions of the Cave (Ashab al-Kahf)",
+          "The People of the Ditch (Ashab al-Ukhdud)",
+          "The Disciples of 'Isa (Al-Hawariyyun)",
+          "The Ansar of Madinah",
+          "The Companions of Musa"
+        ],
+        "answer": "The Disciples of 'Isa (Al-Hawariyyun)"
+      },
+      "trial": {
+        "label": "What Was Our Request?",
+        "options": [
+          "To see Allah manifestly",
+          "A table spread with food from heaven",
+          "For a she-camel to emerge from a mountain",
+          "To be granted eternal life in this world",
+          "For a river to gush forth from a rock"
+        ],
+        "answer": "A table spread with food from heaven"
+      },
+      "location": {
+        "label": "What Was the Stated Purpose?",
+        "options": [
+          "To hoard provisions for themselves",
+          "To challenge the prophet's authority",
+          "To prove their superiority over other nations",
+          "To reassure their hearts and be witnesses",
+          "To gain worldly power and kingship"
+        ],
+        "answer": "To reassure their hearts and be witnesses"
+      },
+      "outcome": {
+        "label": "What Was the Divine Response?",
+        "options": [
+          "The request was outright denied",
+          "An immediate punishment of a storm",
+          "A promise to send it with a stern warning",
+          "They were turned into apes and swine",
+          "A spring of water was provided instead"
+        ],
+        "answer": "A promise to send it with a stern warning"
+      }
+    },
+    "verseRef": "61:14",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوٓا۟ أَنصَارَ ٱللَّهِ كَمَا قَالَ عِيسَى ٱبْنُ مَرْيَمَ لِلْحَوَارِيِّـۧنَ مَنْ أَنصَارِىٓ إِلَى ٱللَّهِ ۖ قَالَ ٱلْحَوَارِيُّونَ نَحْنُ أَنصَارُ ٱللَّهِ ۖ فَـَٔامَنَت طَّآئِفَةٌۭ مِّنۢ بَنِىٓ إِسْرَٰٓءِيلَ وَكَفَرَت طَّآئِفَةٌۭ ۖ فَأَيَّدْنَا ٱلَّذِينَ ءَامَنُوا۟ عَلَىٰ عَدُوِّهِمْ فَأَصْبَحُوا۟ ظَـٰهِرِينَ",
+    "verse": "O you who have believed, be supporters of Allāh, as when Jesus, the son of Mary, said to the disciples, \"Who are my supporters for Allāh?\" The disciples said, \"We are supporters of Allāh.\" And a faction of the Children of Israel believed and a faction disbelieved. So We supported those who believed against their enemy, and they became dominant. (61:14)"
+  },
+  "scramble": {
+    "verseRef": "57:3",
+    "reference": "Surah Al-Hadid (57:3)",
+    "segments": [
+      "هُوَ ٱلْأَوَّلُ",
+      "وَٱلْـَٔاخِرُ",
+      "وَٱلظَّـٰهِرُ وَٱلْبَاطِنُ",
+      "وَهُوَ بِكُلِّ شَىْءٍ",
+      "عَلِيمٌ"
+    ],
+    "translations": [
+      "He (is) the First",
+      "and the Last and the Apparent",
+      "and the Unapparent and He",
+      "(is) of every thing",
+      "All-Knower"
+    ],
+    "hint": "This verse describes four of Allah's magnificent attributes, encompassing all of time and existence.",
+    "arabic": "هُوَ ٱلْأَوَّلُ وَٱلْـَٔاخِرُ وَٱلظَّـٰهِرُ وَٱلْبَاطِنُ ۖ وَهُوَ بِكُلِّ شَىْءٍ عَلِيمٌ",
+    "words": [
+      "هُوَ ٱلْأَوَّلُ",
+      "وَٱلْـَٔاخِرُ وَٱلظَّـٰهِرُ",
+      "وَٱلْبَاطِنُ ۖ وَهُوَ",
+      "بِكُلِّ شَىْءٍ",
+      "عَلِيمٌ"
+    ],
+    "verseEn": "He is the First and the Last, the Ascendant and the Intimate, and He is, of all things, Knowing."
+  },
+  "juz": {
+    "date": "2026-02-28",
+    "juz_number": 12,
+    "juz_name": "Wa Ma Min Dabbatin",
+    "juz_name_ar": "وَمَا مِنْ دَابَّةٍ",
+    "verse": {
+      "surah_number": 11,
+      "surah_name": "Hud",
+      "surah_name_ar": "هُود",
+      "ayah_number": 6,
+      "arabic_text": "وَمَا مِن دَآبَّةٍ فِى ٱلْأَرْضِ إِلَّا عَلَى ٱللَّهِ رِزْقُهَا وَيَعْلَمُ مُسْتَقَرَّهَا وَمُسْتَوْدَعَهَا ۚ كُلٌّ فِى كِتَٰبٍ مُّبِينٍ",
+      "translation": "There is no moving creature on earth whose provision is not guaranteed by Allah. And He knows where it lives and where it is laid to rest. All is ˹written˺ in a clear Record.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1479.mp3"
+    },
+    "theme_question": {
+      "correct": "Allah's absolute sovereignty and His guarantee of sustenance for every living being.",
+      "options": [
+        "The specific laws of inheritance and family obligations.",
+        "Allah's absolute sovereignty and His guarantee of sustenance for every living being.",
+        "The importance of fasting and pilgrimage for spiritual purification.",
+        "The historical account of the prophets' battles against disbelievers."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 11,
+      "options": [
+        {
+          "num": 12,
+          "name": "Yusuf",
+          "name_ar": "يُوسُف",
+          "name_en": "Joseph"
+        },
+        {
+          "num": 10,
+          "name": "Yunus",
+          "name_ar": "يُونُس",
+          "name_en": "Jonah"
+        },
+        {
+          "num": 11,
+          "name": "Hud",
+          "name_ar": "هُود",
+          "name_en": "Hud"
+        },
+        {
+          "num": 13,
+          "name": "Ar-Ra'd",
+          "name_ar": "ٱلرَّعْد",
+          "name_en": "The Thunder"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 11,
+          "name": "Hud",
+          "name_ar": "هُود",
+          "name_en": "Hud"
+        },
+        {
+          "num": 12,
+          "name": "Yusuf",
+          "name_ar": "يُوسُف",
+          "name_en": "Joseph"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse is the opening statement of Juz 12, setting a powerful tone. It comes within Surah Hud, which addresses the Prophet Muhammad (ﷺ) and the believers, offering solace and strength by recounting the stories of previous prophets who faced rejection. This verse serves as a foundational reminder that the Creator who provides for every creature will surely support His messengers and believers.",
+      "theme_explanation": "The central theme is Tawakkul (trust in Allah) rooted in the understanding of His attribute as Ar-Razzaq (The Provider). The verse negates any doubt about sustenance, affirming that Allah has not only decreed provision for every single creature but also possesses perfect knowledge of its entire life cycle—its dwelling place on earth ('mustaqarraha') and its final resting place after death ('mustawda'aha'). This comprehensive knowledge, recorded in a \"Clear Record\" (Kitabin Mubeen), underscores His absolute control and meticulous planning, encouraging believers to trust His plan without anxiety.",
+      "surah_overview": "Surah Hud, named after the Prophet Hud, is a Meccan surah revealed during a period of intense persecution of the early Muslims, known as the \"Year of Sorrow.\" The surah's primary focus is to console the Prophet Muhammad (ﷺ) and fortify the believers' faith by narrating the struggles of prophets like Nuh (Noah), Hud, Salih, Ibrahim (Abraham), Lut (Lot), Shu'ayb, and Musa (Moses). A recurring theme is the stubborn rejection of divine guidance by their people and the subsequent divine justice. The surah emphasizes the importance of steadfastness (istiqamah) and warns against associating partners with Allah."
+    }
+  }
 }

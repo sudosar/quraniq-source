@@ -1,12 +1,12 @@
 {
-  "date": "2026-02-27",
+  "date": "2026-02-28",
   "puzzle": {
-    "word": "سحاب",
-    "display": "سَحَاب",
-    "hint": "A natural phenomenon mentioned in the Quran that brings rain and shade",
-    "verseRef": "13:12",
-    "arabicVerse": "هُوَ ٱلَّذِى يُرِيكُمُ ٱلْبَرْقَ خَوْفًۭا وَطَمَعًۭا وَيُنشِئُ ٱلسَّحَابَ ٱلثِّقَالَ",
-    "verse": "13:12 — It is He who shows you lightning, [causing] fear and aspiration, and generates the heavy clouds."
+    "word": "رحمة",
+    "display": "رَحْمَة",
+    "hint": "A divine attribute that encompasses all of creation.",
+    "verseRef": "19:2",
+    "arabicVerse": "ذِكْرُ رَحْمَتِ رَبِّكَ عَبْدَهُۥ زَكَرِيَّآ",
+    "verse": "19:2 — [This is] a mention of the mercy of your Lord to His servant Zechariah"
   },
   "generated": true,
   "model": "auto (chain)"
