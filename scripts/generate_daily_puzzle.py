@@ -740,7 +740,7 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
             refs_list  = [item.get("ref", "") for item in prev_cat.get("items", [])]
                         # Extract roots for each word using reliable method
             words_list = [item.get("ar", "") for item in prev_cat.get("items", [])]
-            roots_list = get_roots_for_prompt(words_list)
+            roots_list = [r for r in get_roots_for_prompt(words_list) if r]
             lines.append(
                 f"  Category {i+1} ({COLORS[i]}, {DIFFICULTY_LABELS[i]}): \"{prev_cat.get('nameEn')}\"\n"
                 f"    Words : {', '.join(words_list)}\n"
