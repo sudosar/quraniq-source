@@ -262,20 +262,18 @@ def word_in_verse(word, verse_text):
                 return True
     # 6. Morphological root overlap — matches roots instead of substrings
     w_root = extract_reliable_root(word)
-    if not w_root: return False
-    
-    for vw in v.split():
-        vw_root = extract_reliable_root(vw)
-        if vw_root and vw_root == w_root:
-            return True
-            
-    # 7. Fallback: 3-letter substring match (stricter than before)
-    # Only use if root extraction fails to match but they look similar
+    if w_root:
+        for vw in v.split():
+            vw_root = extract_reliable_root(vw)
+            if vw_root and vw_root == w_root:
+                return True
+
+    # 7. Fallback: 3-letter substring match (always runs; catches same-root words
+    #    whose root extractor returns different-length stems, e.g. صياح vs صيح)
     for vw in v.split():
         for i in range(len(w) - 2):
             sub = w[i:i+3]
             if sub in vw:
-                # Basic check to avoid common false positives like seen/sad
                 return True
     return False
 
@@ -297,19 +295,21 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
+MIMO_API_KEY = os.environ.get("MIMO_API_KEY", "")
 
 # API endpoints
 OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
+MIMO_API_URL = "https://api.xiaomimimo.com/v1/chat/completions"
 
-# Model fallback chain: DeepSeek v3.2 → Gemini 2.5 Flash → Gemini 2.5 Pro → GPT-4.1
-# Updated (Feb 2026): DeepSeek v3.2 first for better Arabic understanding and reliability
+# Model fallback chain: Gemini 2.5 Pro → MIMO → DeepSeek v3.2 → Gemini 2.5 Flash → GPT-4.1
 MODEL_CHAIN = [
+    {"id": "gemini-2.5-pro", "api": "gemini", "label": "Gemini 2.5 Pro (Google)"},
+    {"id": "xiaomi/mimo-v2-flash", "api": "mimo", "label": "Xiaomi MiMo V2 Flash"},
     {"id": "deepseek-chat", "api": "deepseek", "label": "DeepSeek v3.2 (Official)"},
     {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Google)"},
-    {"id": "gemini-2.5-pro", "api": "gemini", "label": "Gemini 2.5 Pro (Google)"},
     {"id": "gpt-4.1", "api": "openai", "label": "GPT-4.1 (OpenAI)"},
 ]
 
@@ -571,6 +571,15 @@ def call_model(prompt, model_config, system_msg=None):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {DEEPSEEK_API_KEY}"
         }
+    elif api_type == "mimo":
+        if not MIMO_API_KEY:
+            print(f"  ⚠ MIMO_API_KEY not set, skipping {model_config['label']}")
+            return None
+        api_url = MIMO_API_URL
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {MIMO_API_KEY}"
+        }
     else:  # github
         if not GITHUB_TOKEN:
             print(f"  ⚠ GITHUB_TOKEN not set, skipping {model_config['label']}")
@@ -596,11 +605,8 @@ def call_model(prompt, model_config, system_msg=None):
         "max_tokens": 8192 if api_type == "deepseek" else 16384,
     }
 
-    # Only GPT models support response_format
-    if model_id.lower().startswith("gpt-"):
-        payload["response_format"] = {"type": "json_object"}
-    # DeepSeek also supports response_format
-    elif api_type == "deepseek":
+    # These APIs support the response_format JSON mode parameter
+    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "mimo"):
         payload["response_format"] = {"type": "json_object"}
 
     try:
@@ -615,32 +621,9 @@ def call_model(prompt, model_config, system_msg=None):
 
         resp.raise_for_status()
         data = resp.json()
-        # Robustly handle Gemini's response format
-        if api_type == "gemini":
-            try:
-                candidates = data.get('candidates', [])
-                if not candidates:
-                    print(f"  ✗ Empty candidates for {model_config['label']}")
-                    print(f"    - Raw Response: {resp.text}")
-                    # Log prompt feedback or other reasons if present
-                    if 'promptFeedback' in data:
-                        print(f"    - Prompt Feedback: {data['promptFeedback']}")
-                    if 'error' in data:
-                        print(f"    - API Error: {data['error'].get('message', 'Unknown error')}")
-                    return None
-                
-                content = candidates[0].get('content', {})
-                parts = content.get('parts', [])
-                if not parts:
-                    print(f"  ✗ Empty parts in {model_config['label']} response")
-                    return None
-                    
-                text = parts[0].get('text', '')
-            except Exception as e:
-                print(f"  ✗ Failed to parse Gemini response structure: {e}")
-                return None
-        else: # For OpenAI, GitHub, DeepSeek
-            text = data["choices"][0]["message"]["content"]
+        # All APIs (OpenAI, GitHub, DeepSeek, Gemini via OpenAI-compatible endpoint) return
+        # the same choices[0].message.content structure.
+        text = data["choices"][0]["message"]["content"]
         usage = data.get("usage", {})
         print(f"  Tokens: {usage.get('prompt_tokens', '?')} in, "
               f"{usage.get('completion_tokens', '?')} out, "
@@ -2282,9 +2265,13 @@ def main():
     else:
         print(f"  ✗ GitHub Models (GITHUB_TOKEN not set)")
     if GEMINI_API_KEY:
-        print(f"  ✓ Gemini API (gemini-2.5-flash)")
+        print(f"  ✓ Gemini API (gemini-2.5-pro, gemini-2.5-flash)")
     else:
         print(f"  ✗ Gemini API (GEMINI_API_KEY not set)")
+    if MIMO_API_KEY:
+        print(f"  ✓ Xiaomi MiMo API (mimo-v2-flash)")
+    else:
+        print(f"  ✗ Xiaomi MiMo API (MIMO_API_KEY not set)")
 
     # Load history for cooldown enforcement (exclude today to allow replacing buggy attempts)
     history = load_history(exclude_date=today)
