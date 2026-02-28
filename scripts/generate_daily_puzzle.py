@@ -130,38 +130,55 @@ def extract_reliable_root(word):
     
     return None
 
+def meanings_are_distinct(en1, en2):
+    """Heuristic to check if two English meanings are conceptually different."""
+    if not en1 or not en2:
+        return False
+    
+    def tokenize(s):
+        s = s.lower()
+        words = re.findall(r'\w+', s)
+        stopwords = {'the', 'a', 'an', 'and', 'of', 'to', 'in', 'is', 'for', 'with', 'from', 'on', 'at', 'by'}
+        return {w for w in words if w not in stopwords and len(w) > 2}
 
-def words_are_too_similar(word1, word2):
+    s1 = tokenize(en1)
+    s2 = tokenize(en2)
+    if not s1 or not s2:
+        return False
+    return len(s1.intersection(s2)) == 0
+
+
+def words_are_too_similar(word1, word2, label1=None, label2=None):
     """Check if two Arabic words are too similar for Connections gameplay.
     
     Returns True if words should NOT appear in different categories.
     Uses a multi-tier approach: manual rules, affixes, containment, and verified roots.
+    Incorporates a 'Semantic Pardon' to allow distinct meanings despite root overlap.
     """
     n1 = normalize_arabic(word1)
     n2 = normalize_arabic(word2)
     if not n1 or not n2:
         return False
     
-    # Strip definite article
-    s1 = n1[2:] if n1.startswith('ال') else n1
-    s2 = n2[2:] if n2.startswith('ال') else n2
-    
-    # TIER 0: Manual overrides (Linguistic "False Friends")
-    gameplay_allowed_pairs = {
-        ('ماء', 'سماء'): False, 
-        ('نور', 'نار'): False, 
-        ('معين', 'عين'): False,
-        ('إبليس', 'إبل'): False,   # Camel vs Satan
-        ('خليل', 'ليل'): False,   # Friend vs Night
-        ('طعام', 'عام'): False,   # Food vs Year
-        ('بابل', 'وبال'): False,  # Babel vs Woe
-    }
-    
-    for (w1, w2), should_block in gameplay_allowed_pairs.items():
-        if (s1 == w1 or n1 == w1) and (s2 == w2 or n2 == w2):
-            return should_block
-        if (s1 == w2 or n1 == w2) and (s2 == w1 or n2 == w1):
-            return should_block
+    # Strip common prefixes (Definite article + prepositions)
+    # Order matters: try compound prefixes first
+    def strip_all_prefixes(s):
+        for p in ['وال', 'فال', 'بال', 'لال', 'ال', 'و', 'ف', 'ب', 'ل']:
+            if s.startswith(p) and len(s) > len(p) + 1: # Ensure we don't strip the whole word
+                return s[len(p):]
+        return s
+
+    s1 = strip_all_prefixes(n1)
+    s2 = strip_all_prefixes(n2)
+
+    def should_pardon():
+        """Returns True if the words are visually similar but have distinct meanings."""
+        if not label1 or not label2:
+            return False
+        if isinstance(label2, (set, list)):
+            # History may have multiple meanings for one Arabic word
+            return all(meanings_are_distinct(label1, l) for l in label2)
+        return meanings_are_distinct(label1, label2)
 
     # TIER 1: Exact matches or common affixes
     if s1 == s2:
@@ -179,6 +196,7 @@ def words_are_too_similar(word1, word2):
             if suffix:
                 base_s1 = base_s1[:-len(suffix)]
             if base_s1 == s2:
+                if should_pardon(): return False
                 return True
         # word2 as derivation of word1
         if s2.startswith(prefix) and s2.endswith(suffix):
@@ -186,12 +204,14 @@ def words_are_too_similar(word1, word2):
             if suffix:
                 base_s2 = base_s2[:-len(suffix)]
             if base_s2 == s1:
+                if should_pardon(): return False
                 return True
 
     # TIER 2: Meaningful containment
     if len(s1) >= 3 and len(s2) >= 3:
         if s1 in s2 or s2 in s1:
             if abs(len(s1) - len(s2)) <= 2:
+                if should_pardon(): return False
                 return True
 
     # TIER 3: Verified Root Comparison
@@ -199,6 +219,7 @@ def words_are_too_similar(word1, word2):
     root2 = extract_reliable_root(word2)
     
     if root1 and root2 and root1 == root2:
+        if should_pardon(): return False
         return True
     
     # TIER 4: Character overlap fallback (Extreme similarity)
@@ -206,6 +227,7 @@ def words_are_too_similar(word1, word2):
         set1, set2 = set(s1), set(s2)
         overlap = len(set1 & set2) / len(set1 | set2)
         if overlap > 0.9:
+            if should_pardon(): return False
             return True
 
     return False
@@ -342,7 +364,7 @@ def load_history(exclude_date=None):
     cutoff_theme = datetime.utcnow() - timedelta(days=THEME_COOLING_DAYS)
 
     history = {
-        "connections": {"themes": set(), "verses": set(), "words": set()},
+        "connections": {"themes": set(), "verses": set(), "words": set(), "meanings": {}},
         "harf": {"words": set(), "verses": set(), "hints": set(), "verseRefs": set(), "surahs": set()},
         "deduction": {"titles": set(), "characters": set(), "verseRefs": set(), "surahs": set()},
         "scramble": {"verses": set(), "references": set(), "surahs": set()},
@@ -385,7 +407,12 @@ def load_history(exclude_date=None):
                         history["connections"]["verses"].add(item["ref"])
                         history["all_verses"].add(item["ref"])
                     if item.get("ar"):
-                        history["connections"]["words"].add(item["ar"])
+                        ar = item["ar"]
+                        history["connections"]["words"].add(ar)
+                        if item.get("en"):
+                            if ar not in history["connections"]["meanings"]:
+                                history["connections"]["meanings"][ar] = set()
+                            history["connections"]["meanings"][ar].add(item["en"].lower().strip())
 
         # Harf history (legacy: wordle)
         wdl = data.get("harf") or data.get("wordle")
@@ -885,8 +912,14 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
 
     # Build avoidance sets from history + all prior categories in this run
     all_avoided_verses = history["connections"]["verses"] | history["all_verses"]
-    all_prev_words = list(history["connections"]["words"])
     all_avoided_themes = set(history["connections"]["themes"])
+
+    # Build list of (arabic, meaning_context) from history + prior categories
+    # History data uses sets of meanings; current categories use strings.
+    all_prev_word_data = []
+    for ar in history["connections"]["words"]:
+        m_set = history["connections"].get("meanings", {}).get(ar, set())
+        all_prev_word_data.append((ar, m_set))
 
     for prev_cat in accumulated_cats:
         all_avoided_themes.add(prev_cat.get("nameEn", "").lower().strip())
@@ -894,7 +927,7 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
             if item.get("ref"):
                 all_avoided_verses.add(item["ref"])
             if item.get("ar"):
-                all_prev_words.append(item["ar"])
+                all_prev_word_data.append((item["ar"], item.get("en", "")))
 
     # Theme cooldown
     theme = cat.get("nameEn", "").lower().strip()
@@ -919,22 +952,23 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
         if ref in all_avoided_verses:
             violations.append(f"Verse ref {ref} reused (cooldown or already used in puzzle)")
 
-    # Items
-    new_words = []
+        # Items
+    new_word_data = []  # List of (ar, en)
     for j, item in enumerate(items):
         if not item.get("ar") or not item.get("en"):
             errors.append(f"Item {j+1} missing 'ar' or 'en'")
         if not item.get("ref"):
             errors.append(f"Item {j+1} missing 'ref'")
         ar = item.get("ar", "")
+        en = item.get("en", "")
         # Same-root check against all previous words (history + accumulated + earlier in this category)
-        for prev_word in all_prev_words + new_words:
-            if ar and words_are_too_similar(ar, prev_word):
+        for prev_ar, prev_en in all_prev_word_data + new_word_data:
+            if ar and words_are_too_similar(ar, prev_ar, en, prev_en):
                 violations.append(
-                    f"Word '{ar}' shares root with previously used word '{prev_word}'"
+                    f"Word '{ar}' ({en}) shares root with previously used word '{prev_ar}'"
                 )
                 break
-        new_words.append(ar)
+        new_word_data.append((ar, en))
         if ar in history["connections"]["words"]:
             warnings.append(f"Word '{ar}' reused (cooldown)")
         item.setdefault("verse", "")
@@ -950,7 +984,7 @@ def validate_connections(puzzle, history):
         errors.append(f"Expected 4 categories, got {len(cats)}")
         return errors, cooldown_violations, warnings
 
-    all_words = []  # list of original Arabic words seen so far
+        all_word_data = []  # list of (ar, en) tuples seen so far
     cross_cat_refs = set()
 
     for i, cat in enumerate(cats):
@@ -992,11 +1026,12 @@ def validate_connections(puzzle, history):
             if not item.get("ref"):
                 errors.append(f"Cat {i+1} item {j+1} missing ref")
             ar = item.get("ar", "")
-            for prev_word in all_words:
-                if ar and words_are_too_similar(ar, prev_word):
-                    cooldown_violations.append(f"Same-root word across categories: '{ar}' shares root with '{prev_word}'")
+            en = item.get("en", "")
+            for prev_ar, prev_en in all_word_data:
+                if ar and words_are_too_similar(ar, prev_ar, en, prev_en):
+                    cooldown_violations.append(f"Same-root word across categories: '{ar}' ({en}) shares root with '{prev_ar}'")
                     break
-            all_words.append(ar)
+            all_word_data.append((ar, en))
             if ar in history["connections"]["words"]:
                 warnings.append(f"Word '{ar}' reused (cooldown)")
             item.setdefault("verse", "")

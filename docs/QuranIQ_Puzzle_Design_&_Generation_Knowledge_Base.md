@@ -29,6 +29,8 @@ To ensure content variety and maximize Quranic coverage, a multi-layered cooldow
 | **Partial History Saving** | If a multi-game generation run fails (e.g., 3 of 4 games succeed), the successful games are saved to history. The next run will only attempt to generate the failed games. |
 | **JSON Continuation** | If a model's JSON output is truncated, the system automatically sends a continuation request with the partial output to complete the response. |
 | **Arabic Normalization** | A `normalize_arabic()` function standardizes different script forms (Uthmani vs. standard) for reliable validation. |
+| **Semantic Pardon** | If words are visually or morphologically similar (e.g., *Al-ibil* vs *Iblis*), they are "pardoned" and allowed if their English meanings are conceptually distinct. |
+| **Prefix Hardening** | Similarity checks strip common Arabic prepositions (`bi`, `wa`, `fa`, `li`) and their combinations with the definite article (`al`) to correctly catch derivations. |
 | **Regeneration Logic** | During generation, the system excludes today's existing history file from cooldown checks. This allows for manual or automatic regenerations of the current day's puzzles without them being blocked by their own previous attempts. |
 | **Validation Handling** | Enhanced validation for root words to account for weak letters (Waw, Ya, Alif) and hamza variations. |
 
@@ -48,8 +50,8 @@ This is the most complex game to generate, requiring strict validation.
 | **Difficulty** | Categories are generated with increasing difficulty: 1 easy, 1 medium, 1 hard, 1 tricky. |
 | **Word-in-Verse (Critical)** | The **exact** Arabic word form for each item must be present in its cited Quranic verse. This is verified against a live Quran API. |
 | **Unique Words** | All 16 words must be unique. Reuse from history triggers a **Warning** (not a hard failure) to allow for common Quranic concepts. |
-| **Unique Roots (Critical)** | All 16 words must come from different Arabic roots. The system prevents variations of the same root (e.g., `وَعْدَ` and `مَوْعِدًا`) within the same puzzle. |
-| **Generation Method** | Puzzles are generated **row-by-row** (one category at a time) to improve reliability. The prompt for each new category is updated with the words, roots, and themes used in the previous categories to ensure uniqueness. |
+| **Unique Roots (Critical)** | All 16 words must come from different Arabic roots. The system prevents variations of the same root (e.g., `وَعْدَ` and `مَوْعِدًا`) within the same puzzle, unless pardoned by the **Semantic Pardon** logic. |
+| **Generation Method** | Puzzles are generated **row-by-row** (one category at a time) to improve reliability. The prompt for each new category is updated with the words, roots, meanings, and themes used in the previous categories to ensure uniqueness. |
 | **Item-Level Repair** | If a generated category has 1-2 items that fail validation (e.g., word-in-verse mismatch), the system attempts to repair only those specific items instead of regenerating the entire category. |
 
 ### 2.2. Harf by Harf (Wordle)
