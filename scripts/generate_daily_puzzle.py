@@ -228,11 +228,11 @@ def word_in_verse(word, verse_text):
         if w in vw or vw in w:
             return True
     # 6. Morphological root overlap — matches roots instead of substrings
-    w_root = _extract_root(word)
+    w_root = extract_reliable_root(word)
     if not w_root: return False
     
     for vw in v.split():
-        vw_root = _extract_root(vw)
+        vw_root = extract_reliable_root(vw)
         if vw_root and vw_root == w_root:
             return True
             
@@ -577,7 +577,26 @@ def call_model(prompt, model_config, system_msg=None):
 
         resp.raise_for_status()
         data = resp.json()
-        text = data["choices"][0]["message"]["content"]
+        # Robustly handle Gemini's response format
+        if api_type == "gemini":
+            try:
+                candidates = data.get('candidates', [])
+                if not candidates:
+                    print(f"  ✗ Empty candidates for {model_config['label']}")
+                    return None
+                
+                content = candidates[0].get('content', {})
+                parts = content.get('parts', [])
+                if not parts:
+                    print(f"  ✗ Empty parts in {model_config['label']} response")
+                    return None
+                    
+                text = parts[0].get('text', '')
+            except Exception as e:
+                print(f"  ✗ Failed to parse Gemini response structure: {e}")
+                return None
+        else: # For OpenAI, GitHub, DeepSeek
+            text = data["choices"][0]["message"]["content"]
         usage = data.get("usage", {})
         print(f"  Tokens: {usage.get('prompt_tokens', '?')} in, "
               f"{usage.get('completion_tokens', '?')} out, "
