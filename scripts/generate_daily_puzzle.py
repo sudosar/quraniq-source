@@ -71,43 +71,37 @@ def normalize_arabic(text):
 
 
 def extract_reliable_root(word):
-    """
-    Extract reliable root for Arabic word using multiple methods.
+    """Extract reliable root for Arabic word using multiple methods.
     Returns root string or None if uncertain.
+    
+    Verified by an ordered subsequence check to ensure the root characters
+    actually appear in the word.
     """
     n = normalize_arabic(word)
     if not n or len(n) < 2:
         return None
     
-    # Method 1: Tashaphyne (with filtering)
+    arabic_letters = set('ابتثجحخدذرزسشصضطظعغفقكلمنهويءآأإؤئ')
+
+    # Helper: ensure root letters appear in word in order
+    def _is_root_in_word(r, w):
+        it = iter(w)
+        return all(c in it for c in r)
+
+    # Method 1: Tashaphyne
     _stemmer.light_stem(n)
     tash_root = _stemmer.get_root()
-    
-    # Filter obviously bad Tashaphyne results
     if tash_root:
-        # Check if root looks reasonable
-        arabic_letters = set('ابتثجحخدذرزسشصضطظعغفقكلمنهويءآأإؤئ')
         clean_root = ''.join(c for c in tash_root if c in arabic_letters)
-        
         if 2 <= len(clean_root) <= 4:
-            # Known Tashaphyne bugs to ignore
-            buggy_roots = {
-                'توب': None,  # كتاب → توب (wrong)
-                'موء': None,  # ماء/سماء → موء (wrong)
-                'سمم': None,  # سماء → سمم (wrong)
-                'ورض': None,  # أرض → ورض (questionable)
-            }
-            
-            if clean_root not in buggy_roots:
+            # ONLY trust if it's an ordered subsequence of the word
+            if _is_root_in_word(clean_root, n):
                 return clean_root
     
     # Method 2: Pattern matching for common forms
-    # Remove common prefixes/suffixes and see what's left
     common_affixes = [
-        # Prefixes
         ('ي', ''), ('ت', ''), ('ن', ''), ('ا', ''), ('ال', ''), ('م', ''), 
         ('است', ''), ('ان', ''), ('تفع', ''), ('تفاعل', ''),
-        # Suffixes
         ('', 'ة'), ('', 'ا'), ('', 'ي'), ('', 'ون'), ('', 'ين'), ('', 'ات'),
         ('', 'ان'), ('', 'تان'), ('', 'ين'), ('', 'ون'), ('', 'ى'),
     ]
@@ -117,48 +111,28 @@ def extract_reliable_root(word):
             base = n[len(prefix):]
             if suffix:
                 base = base[:-len(suffix)]
-            if 2 <= len(base) <= 4:
-                # Check if base looks like a root
-                if all(c in arabic_letters for c in base):
-                    return base
+            if 2 <= len(base) <= 4 and all(c in arabic_letters for c in base):
+                return base
     
-    # Method 3: Manual mapping for common Quranic words
+    # Method 3: Manual mapping for common words (Logical Fallback)
     common_words = {
-        'كتاب': 'كتب',
-        'يكتب': 'كتب',
-        'مكتب': 'كتب',
-        'كاتب': 'كتب',
-        'ماء': 'ماء',  # Return word itself as fallback
-        'سماء': 'سمو',
-        'أرض': 'أرض',
-        'الأرض': 'أرض',
-        'نور': 'نور',
-        'نار': 'نار',
-        'عين': 'عين',
-        'معين': 'عين',  # Shares root with عين
-        'رحمة': 'رحم',
-        'رحم': 'رحم',
-        'غفران': 'غفر',
-        'غافر': 'غفر',
+        'كتاب': 'كتب', 'يكتب': 'كتب', 'مكتب': 'كتب', 'كاتب': 'كتب',
+        'ماء': 'ماء', 'سماء': 'سمو', 'نور': 'نور',
+        'نار': 'نار', 'عين': 'عين', 'معين': 'عين', 'رحمة': 'رحم',
+        'غفران': 'غفر', 'غافر': 'غفر',
     }
     
     if n in common_words:
         return common_words[n]
     
-    # Method 4: Return first 3 letters if word is short
-    if 3 <= len(n) <= 5:
-        return n[:3]
-    
     return None
 
+
 def words_are_too_similar(word1, word2):
-    """
-    Check if two Arabic words are too similar for Connections gameplay.
+    """Check if two Arabic words are too similar for Connections gameplay.
     
-    Returns True if words should NOT appear in different categories
-    because they would confuse players.
-    
-    FIXED: gameplay_allowed_pairs checked immediately after normalization.
+    Returns True if words should NOT appear in different categories.
+    Uses a multi-tier approach: manual rules, affixes, containment, and verified roots.
     """
     n1 = normalize_arabic(word1)
     n2 = normalize_arabic(word2)
@@ -169,98 +143,62 @@ def words_are_too_similar(word1, word2):
     s1 = n1[2:] if n1.startswith('ال') else n1
     s2 = n2[2:] if n2.startswith('ال') else n2
     
-    # --------------------------------------------------------------------
-    # TIER 0: Gameplay-specific rules (HIGHEST PRIORITY)
-    # --------------------------------------------------------------------
-    # Explicit decisions about which word pairs are allowed/blocked
+    # TIER 0: Manual overrides
     gameplay_allowed_pairs = {
-        ('ماء', 'سماء'): False,  # Different words - ALLOW
-        ('سماء', 'ماء'): False,
-        ('نور', 'نار'): False,   # Different concepts - ALLOW
-        ('نار', 'نور'): False,
-        ('معين', 'عين'): False,  # Related but distinct enough - ALLOW
-        ('عين', 'معين'): False,
+        ('ماء', 'سماء'): False, ('نور', 'نار'): False, ('معين', 'عين'): False,
     }
     
     for (w1, w2), should_block in gameplay_allowed_pairs.items():
         if (s1 == w1 or n1 == w1) and (s2 == w2 or n2 == w2):
             return should_block
-    
-    # --------------------------------------------------------------------
-    # TIER 1: Exact/obvious matches (fast, reliable)
-    # --------------------------------------------------------------------
-    
-    # 1A. Exact same word (after stripping ال)
+        if (s1 == w2 or n1 == w2) and (s2 == w1 or n2 == w1):
+            return should_block
+
+    # TIER 1: Exact matches or common affixes
     if s1 == s2:
-        return True  # أرض vs الأرض
+        return True
     
-    # 1B. Clear prefix/suffix derivations
     common_affixes = [
-        # Verb prefixes
-        ('ي', ''), ('ت', ''), ('ن', ''), ('ا', ''),
-        # Noun prefixes
-        ('م', ''), ('است', ''), ('ان', ''),
-        # Suffixes
+        ('ي', ''), ('ت', ''), ('ن', ''), ('ا', ''), ('م', ''), ('است', ''), ('ان', ''),
         ('', 'ة'), ('', 'ا'), ('', 'ي'), ('', 'ون'), ('', 'ين'),
     ]
     
     for prefix, suffix in common_affixes:
-        # word1 = prefix + base + suffix, word2 = base
+        # word1 as derivation of word2
         if s1.startswith(prefix) and s1.endswith(suffix):
-            base = s1[len(prefix):]
+            base_s1 = s1[len(prefix):]
             if suffix:
-                base = base[:-len(suffix)]
-            if base == s2:
-                return True  # يكتب vs كتب
-        
-        # word2 = prefix + base + suffix, word1 = base
-        if s2.startswith(prefix) and s2.endswith(suffix):
-            base = s2[len(prefix):]
-            if suffix:
-                base = base[:-len(suffix)]
-            if base == s1:
+                base_s1 = base_s1[:-len(suffix)]
+            if base_s1 == s2:
                 return True
-    
-    # --------------------------------------------------------------------
-    # TIER 2: Containment checks (moderate confidence)
-    # --------------------------------------------------------------------
-    
-    # Check if one word contains the other
-    # But only if it's meaningful containment
+        # word2 as derivation of word1
+        if s2.startswith(prefix) and s2.endswith(suffix):
+            base_s2 = s2[len(prefix):]
+            if suffix:
+                base_s2 = base_s2[:-len(suffix)]
+            if base_s2 == s1:
+                return True
+
+    # TIER 2: Meaningful containment
     if len(s1) >= 3 and len(s2) >= 3:
         if s1 in s2 or s2 in s1:
-            # Heuristic: Containment is meaningful if:
-            # 1. Contained word is at least 3 letters
-            # 2. Length difference is small (<= 2 letters)
             if abs(len(s1) - len(s2)) <= 2:
-                return True  # Default: block meaningful containment
-    
-    # --------------------------------------------------------------------
-    # TIER 3: Root comparison (cautious)
-    # --------------------------------------------------------------------
-    
+                return True
+
+    # TIER 3: Verified Root Comparison
     root1 = extract_reliable_root(word1)
     root2 = extract_reliable_root(word2)
     
     if root1 and root2 and root1 == root2:
-        # Default: Block if they share reliable roots
         return True
     
-    # --------------------------------------------------------------------
-    # TIER 4: Similarity heuristics (conservative fallback)
-    # --------------------------------------------------------------------
-    
-    # Only block if VERY similar (high overlap AND similar meaning)
-    if len(s1) >= 3 and len(s2) >= 3:
-        # Calculate character overlap
-        set1 = set(s1)
-        set2 = set(s2)
-        overlap = len(set1 & set2) / len(set1 | set2) if (set1 | set2) else 0
-        
-        # Only block if extremely high overlap (>90%) AND same length
-        if overlap > 0.9 and len(s1) == len(s2):
+    # TIER 4: Character overlap fallback (Extreme similarity)
+    if len(s1) >= 4 and len(s2) >= 4 and len(s1) == len(s2):
+        set1, set2 = set(s1), set(s2)
+        overlap = len(set1 & set2) / len(set1 | set2)
+        if overlap > 0.9:
             return True
-    
+
     return False
 
 def word_in_verse(word, verse_text):
@@ -289,10 +227,22 @@ def word_in_verse(word, verse_text):
     for vw in v.split():
         if w in vw or vw in w:
             return True
-    # 6. 3-letter root overlap — catches verb/noun form differences
+    # 6. Morphological root overlap — matches roots instead of substrings
+    w_root = _extract_root(word)
+    if not w_root: return False
+    
+    for vw in v.split():
+        vw_root = _extract_root(vw)
+        if vw_root and vw_root == w_root:
+            return True
+            
+    # 7. Fallback: 3-letter substring match (stricter than before)
+    # Only use if root extraction fails to match but they look similar
     for vw in v.split():
         for i in range(len(w) - 2):
-            if w[i:i+3] in vw:
+            sub = w[i:i+3]
+            if sub in vw:
+                # Basic check to avoid common false positives like seen/sad
                 return True
     return False
 
@@ -836,16 +786,27 @@ WHAT IS AYAH CONNECTIONS:
 Players see 16 Arabic words (from 4 hidden categories of 4) and must group them correctly.
 Each word is drawn from a real Quranic verse — the word MUST physically appear in the verse text.
 
+THINKING STEP (REQUIRED):
+Before providing the JSON, you MUST internalize the following:
+1. Brainstorm 3–4 candidate themes for this difficulty. 
+2. For the best theme, list 6–8 candidate verses that might contain fitting words.
+3. For each candidate verse, verify the EXACT Arabic word form (including prefix/suffix) as it appears in the Uthmani script.
+4. Select the 4 strongest word-verse pairs that:
+   - Definitely contain the word.
+   - Fit the theme logically.
+   - Do not share roots with each other or previously used words.
+5. If using a model with reasoning capabilities, show your thinking in <think> tags.
+
 RULES FOR THIS CATEGORY:
 1. Provide EXACTLY 4 items.
 2. The English theme (nameEn) MUST be SPECIFIC — not generic.
-   - FORBIDDEN: "Words from the Quran", "Common Nouns", "Verbs", "Words in Juz 30", "Divine Attributes"
-   - REQUIRED: e.g. "Rivers of Jannah", "Names of Hellfire", "Prophets mentioned in Surah Al-Anbiya",
+   - BAD: "Words from the Quran", "Common Nouns", "Verbs", "Words in Juz 30", "Divine Attributes"
+   - GOOD: "Rivers of Jannah", "Names of Hellfire", "Prophets mentioned in Surah Al-Anbiya",
      "Objects in the Story of Musa", "Titles given to Prophet Isa in the Quran"
 3. CRITICAL — word-in-verse: each Arabic word MUST actually appear in its cited verse.
    - The word will be checked against the Quran API. Wrong ref = REJECTED.
-   - BAD: "ar":"بَابًا", "ref":"4:46" — verse 4:46 does not contain بابا
-   - GOOD: "ar":"بَابًا", "ref":"23:77" — verse 23:77 contains بابا
+   - AVOID HALLUCINATIONS: Do not assume "باب" is in 4:46 just because it's a common word. 
+   - VERIFY: Ensure the word form you provide matches the verse precisely.
 4. All 5 refs in this category (4 items + 1 category verse) MUST be unique from each other
    and from every ref in "ALREADY CHOSEN CATEGORIES" and "FORBIDDEN verse refs".
 5. Every Arabic word must come from a COMPLETELY DIFFERENT root than all words in:
@@ -860,7 +821,7 @@ FORBIDDEN themes (used recently — do NOT reuse): {avoided_themes}
 FORBIDDEN verse refs (used recently + already used in this puzzle run): {avoided_verses}
 {chosen_block}{violation_block}
 
-OUTPUT FORMAT: Return ONLY a valid JSON object for this single category:
+OUTPUT FORMAT: Return ONLY a valid JSON object for this single category (if not using <think> tags):
 {{
   "name": "Arabic category name with tashkeel",
   "nameEn": "English category name (specific!)",
@@ -874,8 +835,7 @@ OUTPUT FORMAT: Return ONLY a valid JSON object for this single category:
 }}
 
 IMPORTANT:
-- Return ONLY the JSON object — no markdown, no explanation.
-- Do NOT include verse text in any field — it will be fetched from the Quran API.
+- Return the JSON object — no markdown (except code fences), no extra text outside JSON or <think> tags.
 - Arabic words must include full tashkeel/diacritics."""
 
 
@@ -1982,8 +1942,8 @@ def generate_game(game_type, history, today):
 
             # Other failure (timeout, auth, etc.) → try next model
             if not raw:
-                print(f"  → Failed, falling back to next model...")
-                break
+                print(f"  → Failed, trying next attempt/model...")
+                continue # Retry same model if attempts left, else loop finishes
 
             try:
                 puzzle = parse_json_response(raw)
@@ -2060,8 +2020,17 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
             total_attempt += 1
             print(f"    Attempt {total_attempt} (retry {retry}/{MAX_RETRIES})...")
 
+            # Pivot instruction: if we've failed twice with this model, explicitly tell it to try a new theme.
+            retry_violations = previous_violations
+            if retry > 2:
+                pivot_msg = "The previous theme/verses are not working. TRY A COMPLETELY DIFFERENT THEME AND VERSES."
+                if isinstance(retry_violations, list):
+                    retry_violations = retry_violations + [pivot_msg]
+                else:
+                    retry_violations = [pivot_msg]
+
             prompt = build_single_category_prompt(
-                history, today, cat_index, accumulated_cats, previous_violations
+                history, today, cat_index, accumulated_cats, retry_violations
             )
             raw = call_model(prompt, model_config)
 
@@ -2075,8 +2044,8 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
                     break
 
             if not raw:
-                print(f"    Failed ({model_label}), trying next model...")
-                break
+                print(f"    Failed ({model_label}), trying next attempt/model...")
+                continue
 
             try:
                 cat = parse_json_response(raw)
