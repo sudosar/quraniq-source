@@ -112,7 +112,8 @@ def extract_reliable_root(word):
             if suffix:
                 base = base[:-len(suffix)]
             if 2 <= len(base) <= 4 and all(c in arabic_letters for c in base):
-                return base
+                if len(base) >= 3 or base in ['ماء', 'أب']:
+                    return base
     
     # Method 3: Manual mapping for common words (Logical Fallback)
     common_words = {
@@ -123,7 +124,9 @@ def extract_reliable_root(word):
     }
     
     if n in common_words:
-        return common_words[n]
+        res = common_words[n]
+        if len(res) >= 3 or res in ['ماء', 'أب']:
+            return res
     
     return None
 
@@ -143,9 +146,15 @@ def words_are_too_similar(word1, word2):
     s1 = n1[2:] if n1.startswith('ال') else n1
     s2 = n2[2:] if n2.startswith('ال') else n2
     
-    # TIER 0: Manual overrides
+    # TIER 0: Manual overrides (Linguistic "False Friends")
     gameplay_allowed_pairs = {
-        ('ماء', 'سماء'): False, ('نور', 'نار'): False, ('معين', 'عين'): False,
+        ('ماء', 'سماء'): False, 
+        ('نور', 'نار'): False, 
+        ('معين', 'عين'): False,
+        ('إبليس', 'إبل'): False,   # Camel vs Satan
+        ('خليل', 'ليل'): False,   # Friend vs Night
+        ('طعام', 'عام'): False,   # Food vs Year
+        ('بابل', 'وبال'): False,  # Babel vs Woe
     }
     
     for (w1, w2), should_block in gameplay_allowed_pairs.items():
@@ -223,10 +232,12 @@ def word_in_verse(word, verse_text):
     # 4. Try without trailing alef (tanween accusative marker كتابًا → كتاب)
     if w.endswith('\u0627') and w[:-1] in v:
         return True
-    # 5. Check if any verse word contains the search word or vice versa
-    for vw in v.split():
-        if w in vw or vw in w:
-            return True
+    # 5. Check if any verse word contains the search word (more specific than verse-wide)
+    # Avoid tiny words matching as substrings (e.g. 'am' in 'ta'am')
+    if len(w) >= 3:
+        for vw in v.split():
+            if w == vw or (len(w) >= 4 and w in vw):
+                return True
     # 6. Morphological root overlap — matches roots instead of substrings
     w_root = extract_reliable_root(word)
     if not w_root: return False
