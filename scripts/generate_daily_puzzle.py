@@ -621,6 +621,11 @@ def call_model(prompt, model_config, system_msg=None):
                 candidates = data.get('candidates', [])
                 if not candidates:
                     print(f"  ✗ Empty candidates for {model_config['label']}")
+                    # Log prompt feedback or other reasons if present
+                    if 'promptFeedback' in data:
+                        print(f"    - Prompt Feedback: {data['promptFeedback']}")
+                    if 'error' in data:
+                        print(f"    - API Error: {data['error'].get('message', 'Unknown error')}")
                     return None
                 
                 content = candidates[0].get('content', {})
@@ -843,16 +848,12 @@ WHAT IS AYAH CONNECTIONS:
 Players see 16 Arabic words (from 4 hidden categories of 4) and must group them correctly.
 Each word is drawn from a real Quranic verse — the word MUST physically appear in the verse text.
 
-THINKING STEP (REQUIRED):
-Before providing the JSON, you MUST internalize the following:
-1. Brainstorm 3–4 candidate themes for this difficulty. 
-2. For the best theme, list 6–8 candidate verses that might contain fitting words.
-3. For each candidate verse, verify the EXACT Arabic word form (including prefix/suffix) as it appears in the Uthmani script.
-4. Select the 4 strongest word-verse pairs that:
-   - Definitely contain the word.
-   - Fit the theme logically.
-   - Do not share roots with each other or previously used words.
-5. If using a model with reasoning capabilities, show your thinking in <think> tags.
+VERIFICATION STEP (CRITICAL):
+Before providing the JSON, you MUST verify each word and verse:
+1. Ensure the theme is specific and reflects the primary meaning of the verses.
+2. For each verse, verify the EXACT Arabic word form (tashkeel, prefixes) exists in the Uthmani script.
+3. Confirm words do not share roots with each other or previously used words.
+4. If using a model with reasoning capabilities, show your internal verification in <think> tags.
 
 RULES FOR THIS CATEGORY:
 1. Provide EXACTLY 4 items.
