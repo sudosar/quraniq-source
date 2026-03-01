@@ -186,6 +186,34 @@ function renderScramble() {
         wordsEl.appendChild(el);
     });
 
+    // Completed Verse Display
+    const completedVerseEl = document.getElementById('scramble-completed-verse');
+    if (scr.gameOver && scr.won) {
+        // Build translation text similar to showScrResult
+        const translationText = scr.puzzle.verseEn
+            || (scr.puzzle.translations ? scr.puzzle.translations.join(' ') : '')
+            || scr.puzzle.english
+            || scr.puzzle.words.join(' ');
+
+        const surahTitle = scr.puzzle.reference || '';
+        const arabicHtml = scr.puzzle.arabic ? `<span class="result-verse-arabic" style="font-size: 1.4rem;">${scr.puzzle.arabic}</span>` : '';
+        const transHtml = translationText ? `<span class="translation" style="font-size: 0.95rem;">— ${translationText}</span>` : '';
+
+        // Optional clickable link to Quran.com
+        const parsedNode = parseQuranRef(scr.puzzle.verseRef || scr.puzzle.reference);
+        const quranUrl = parsedNode ? `https://quran.com/${parsedNode.surah}/${parsedNode.ayah}` : null;
+
+        let contentHtml = `<div class="result-verse-title">${surahTitle}</div>${arabicHtml}${transHtml}`;
+        if (quranUrl) {
+            contentHtml = `<a href="${quranUrl}" target="_blank" rel="noopener noreferrer" class="result-verse-link" title="Read on Quran.com"><span class="context-icon">📖</span> ${contentHtml}</a>`;
+        }
+
+        completedVerseEl.innerHTML = contentHtml;
+        completedVerseEl.style.display = 'block';
+    } else {
+        completedVerseEl.style.display = 'none';
+    }
+
     // Update button states
     document.getElementById('scramble-check').textContent = 'Submit';
     document.getElementById('scramble-check').disabled = scr.available.length > 0 || scr.gameOver;
