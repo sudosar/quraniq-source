@@ -879,11 +879,14 @@ function getConnCrescentData() {
             rowScore = 1;
         }
         totalScore += rowScore;
-        perRow.push({ crescent, explored: rowExplored, total: rowTotal, wasSolved, rowScore });
+        perRow.push(crescent); // Push the crescent string here
     });
 
-    const crescentRow = perRow.map(r => r.crescent).join('');
-    return { crescentRow, totalExplored, totalVerses, totalScore, perRow };
+    // Deduct 1 point for every mistake made (min score 0)
+    const mistakesUsed = 4 - conn.mistakes;
+    totalScore = Math.max(0, totalScore - mistakesUsed);
+
+    return { crescentRow: perRow.join(''), totalScore, totalExplored, totalVerses };
 }
 
 /**
