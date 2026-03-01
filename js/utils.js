@@ -537,7 +537,8 @@ function playVerseAudio(ref, btn) {
     audio.play().then(() => {
         // Track this verse as actively explored (user heard the recitation)
         trackVerses([ref]);
-    }).catch(() => {
+    }).catch(e => {
+        console.error('Audio play failed:', e, 'URL:', url);
         quranAudio.playing = false;
         if (btn) btn.textContent = '▶';
     });
@@ -637,7 +638,10 @@ function loadVerseTracker() {
         const data = JSON.parse(localStorage.getItem(VERSES_KEY));
         if (data && Array.isArray(data.refs)) return data;
         return { refs: [] };
-    } catch { return { refs: [] }; }
+    } catch (e) {
+        console.warn('Load verse tracker failed:', e);
+        return { refs: [] };
+    }
 }
 
 /**
@@ -661,7 +665,11 @@ function trackVerses(newRefs) {
     });
     if (added > 0) {
         tracker.refs = Array.from(existing);
-        localStorage.setItem(VERSES_KEY, JSON.stringify(tracker));
+        try {
+            localStorage.setItem(VERSES_KEY, JSON.stringify(tracker));
+        } catch (e) {
+            console.warn('Save verse tracker failed (storage quota likely exceeded):', e);
+        }
     }
     return { total: existing.size, added };
 }

@@ -1189,13 +1189,13 @@ function showFinalResults() {
   const resultData = {
     icon: '🌙',
     title: `Juz ${p.juz_number} Complete`,
-    arabic: p.verse.ayah_ar,
-    translation: p.verse.ayah_en,
+    arabic: p.verse.arabic_text || p.verse.ayah_ar || '',
+    translation: p.verse.translation || p.verse.ayah_en || '',
     emojiGrid: '', // Juz doesn't use a grid
     moons: finalScore,
     statsText: `Score: ${finalScore}/5 | Theme: ${juzState.scores.round2 > 0 ? '✅' : '❌'} | Surah: ${juzState.scores.round3 > 0 ? '✅' : '❌'} | Order: ${juzState.scores.round4 > 0 ? '✅' : '❌'}`,
     shareText: shareText,
-    verseRef: `${p.verse.surah_number}:${p.verse.ayah_number}`
+    verseRef: p.verse.verse_key || `${p.verse.surah_number}:${p.verse.ayah_number}`
   };
 
   // Show the standard common modal ONLY if we just finished
