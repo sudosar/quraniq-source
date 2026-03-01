@@ -847,6 +847,7 @@ RULES:
 3. CRITICAL: Every word must actually appear in its cited verse. No guessing.
 4. Surah:Ayah refs must be unique and not in: {avoided_verses}.
 5. Words must not share roots with each other or previous categories.
+6. If a word is a proper noun (e.g., a Prophet's name or place), use its standard English equivalent (e.g., "Moses", "Noah", "Lot") instead of its Arabic transliteration (like "Musa" or "Nuh").
 
 {chosen_block}{violation_block}
 
