@@ -1,65 +1,65 @@
 {
-  "date": "2026-02-28",
+  "date": "2026-03-01",
   "puzzle": {
-    "title": "The Call for a Heavenly Feast",
-    "intro": "A group of devoted followers stood by their prophet, their faith tested by a profound request. They sought a sign not from doubt, but to strengthen their hearts, asking for a miracle that would descend from the heavens and serve as a testament for all generations. Who were these companions?",
+    "title": "The Shadow of Betrayal",
+    "intro": "In a city teetering on the edge of moral collapse, one soul stood apart from their righteous family. While a prophet delivered a divine warning, this individual clung to the ways of the condemned, their loyalty secretly pledged to the very people destined for ruin. Their choice would seal their fate, leaving behind a cautionary tale for all time.",
     "clues": [
-      "We were the close companions and helpers of a prophet sent to the Children of Israel.",
-      "We famously pledged our allegiance, declaring, 'We are the supporters of Allah'.",
-      "Our prophet was given the ability to perform great miracles, like healing the blind and lepers, and giving life to the dead by Allah's permission.",
-      "Despite our strong belief, we made a bold request for a tangible sign to further reassure our hearts.",
-      "We specifically asked our prophet to pray for a table laden with food to be sent down to us from the heavens.",
-      "Our request was met with a divine promise, but also a stern warning: if any of us disbelieved after this sign, a punishment would come like no other."
+      "I lived in a city whose people committed acts of unprecedented wickedness.",
+      "My household was host to divine messengers who appeared as handsome young men.",
+      "While my spouse pleaded with our people to abandon their sins, my heart remained with them.",
+      "When the angels arrived at my home, I secretly signaled their presence to the wicked townspeople.",
+      "I was commanded to leave the city at night with my family and not to look back.",
+      "But I lingered behind, and so I was overtaken by the same punishment that befell the transgressors."
     ],
     "categories": {
       "identity": {
-        "label": "Who Are We?",
+        "label": "Who Am I?",
         "options": [
-          "The Companions of the Cave (Ashab al-Kahf)",
-          "The People of the Ditch (Ashab al-Ukhdud)",
-          "The Disciples of 'Isa (Al-Hawariyyun)",
-          "The Ansar of Madinah",
-          "The Companions of Musa"
+          "The wife of Prophet Nuh",
+          "The wife of Fir'awn",
+          "The wife of Prophet Lut",
+          "The wife of Al-'Aziz",
+          "The mother of Prophet Musa"
         ],
-        "answer": "The Disciples of 'Isa (Al-Hawariyyun)"
+        "answer": "The wife of Prophet Lut"
       },
       "trial": {
-        "label": "What Was Our Request?",
+        "label": "What was the event?",
         "options": [
-          "To see Allah manifestly",
-          "A table spread with food from heaven",
-          "For a she-camel to emerge from a mountain",
-          "To be granted eternal life in this world",
-          "For a river to gush forth from a rock"
+          "The Great Flood",
+          "The Parting of the Red Sea",
+          "The Destruction of Sodom",
+          "The Year of the Elephant",
+          "The Trial of the Golden Calf"
         ],
-        "answer": "A table spread with food from heaven"
+        "answer": "The Destruction of Sodom"
       },
       "location": {
-        "label": "What Was the Stated Purpose?",
+        "label": "What was my sin?",
         "options": [
-          "To hoard provisions for themselves",
-          "To challenge the prophet's authority",
-          "To prove their superiority over other nations",
-          "To reassure their hearts and be witnesses",
-          "To gain worldly power and kingship"
+          "Refusing to prostrate to Adam",
+          "Building a tower to reach the heavens",
+          "Accusing a prophet of theft",
+          "Betraying the angelic guests",
+          "Mocking a prophet for building an ark"
         ],
-        "answer": "To reassure their hearts and be witnesses"
+        "answer": "Betraying the angelic guests"
       },
       "outcome": {
-        "label": "What Was the Divine Response?",
+        "label": "What was my fate?",
         "options": [
-          "The request was outright denied",
-          "An immediate punishment of a storm",
-          "A promise to send it with a stern warning",
-          "They were turned into apes and swine",
-          "A spring of water was provided instead"
+          "Swallowed by the earth with great wealth",
+          "Destroyed along with the wrongdoers",
+          "Drowned in a worldwide flood",
+          "Saved and given a palace in Paradise",
+          "Exiled from a heavenly garden"
         ],
-        "answer": "A promise to send it with a stern warning"
+        "answer": "Destroyed along with the wrongdoers"
       }
     },
-    "verseRef": "61:14",
-    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوٓا۟ أَنصَارَ ٱللَّهِ كَمَا قَالَ عِيسَى ٱبْنُ مَرْيَمَ لِلْحَوَارِيِّـۧنَ مَنْ أَنصَارِىٓ إِلَى ٱللَّهِ ۖ قَالَ ٱلْحَوَارِيُّونَ نَحْنُ أَنصَارُ ٱللَّهِ ۖ فَـَٔامَنَت طَّآئِفَةٌۭ مِّنۢ بَنِىٓ إِسْرَٰٓءِيلَ وَكَفَرَت طَّآئِفَةٌۭ ۖ فَأَيَّدْنَا ٱلَّذِينَ ءَامَنُوا۟ عَلَىٰ عَدُوِّهِمْ فَأَصْبَحُوا۟ ظَـٰهِرِينَ",
-    "verse": "O you who have believed, be supporters of Allāh, as when Jesus, the son of Mary, said to the disciples, \"Who are my supporters for Allāh?\" The disciples said, \"We are supporters of Allāh.\" And a faction of the Children of Israel believed and a faction disbelieved. So We supported those who believed against their enemy, and they became dominant. (61:14)"
+    "verseRef": "66:10",
+    "arabic": "ضَرَبَ ٱللَّهُ مَثَلًۭا لِّلَّذِينَ كَفَرُوا۟ ٱمْرَأَتَ نُوحٍۢ وَٱمْرَأَتَ لُوطٍۢ ۖ كَانَتَا تَحْتَ عَبْدَيْنِ مِنْ عِبَادِنَا صَـٰلِحَيْنِ فَخَانَتَاهُمَا فَلَمْ يُغْنِيَا عَنْهُمَا مِنَ ٱللَّهِ شَيْـًۭٔا وَقِيلَ ٱدْخُلَا ٱلنَّارَ مَعَ ٱلدَّٰخِلِينَ",
+    "verse": "Allāh presents an example of those who disbelieved: the wife of Noah and the wife of Lot. They were under two of Our righteous servants but betrayed them, so they [i.e., those prophets] did not avail them from Allāh at all, and it was said, \"Enter the Fire with those who enter.\" (66:10)"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,6 +1,5 @@
 {
-  "date": "2026-03-01",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَنْبِيَاءُ ذُكِرُوا فِي سُورَةِ هُود",
@@ -144,6 +143,181 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "بحر",
+    "display": "بَحْر",
+    "hint": "He let them loose to meet, with a barrier between.",
+    "verseRef": "55:19",
+    "arabicVerse": "مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ",
+    "verse": "55:19 — He released the two seas, meeting [one another];"
+  },
+  "deduction": {
+    "title": "The Shadow of Betrayal",
+    "intro": "In a city teetering on the edge of moral collapse, one soul stood apart from their righteous family. While a prophet delivered a divine warning, this individual clung to the ways of the condemned, their loyalty secretly pledged to the very people destined for ruin. Their choice would seal their fate, leaving behind a cautionary tale for all time.",
+    "clues": [
+      "I lived in a city whose people committed acts of unprecedented wickedness.",
+      "My household was host to divine messengers who appeared as handsome young men.",
+      "While my spouse pleaded with our people to abandon their sins, my heart remained with them.",
+      "When the angels arrived at my home, I secretly signaled their presence to the wicked townspeople.",
+      "I was commanded to leave the city at night with my family and not to look back.",
+      "But I lingered behind, and so I was overtaken by the same punishment that befell the transgressors."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "The wife of Prophet Nuh",
+          "The wife of Fir'awn",
+          "The wife of Prophet Lut",
+          "The wife of Al-'Aziz",
+          "The mother of Prophet Musa"
+        ],
+        "answer": "The wife of Prophet Lut"
+      },
+      "trial": {
+        "label": "What was the event?",
+        "options": [
+          "The Great Flood",
+          "The Parting of the Red Sea",
+          "The Destruction of Sodom",
+          "The Year of the Elephant",
+          "The Trial of the Golden Calf"
+        ],
+        "answer": "The Destruction of Sodom"
+      },
+      "location": {
+        "label": "What was my sin?",
+        "options": [
+          "Refusing to prostrate to Adam",
+          "Building a tower to reach the heavens",
+          "Accusing a prophet of theft",
+          "Betraying the angelic guests",
+          "Mocking a prophet for building an ark"
+        ],
+        "answer": "Betraying the angelic guests"
+      },
+      "outcome": {
+        "label": "What was my fate?",
+        "options": [
+          "Swallowed by the earth with great wealth",
+          "Destroyed along with the wrongdoers",
+          "Drowned in a worldwide flood",
+          "Saved and given a palace in Paradise",
+          "Exiled from a heavenly garden"
+        ],
+        "answer": "Destroyed along with the wrongdoers"
+      }
+    },
+    "verseRef": "66:10",
+    "arabic": "ضَرَبَ ٱللَّهُ مَثَلًۭا لِّلَّذِينَ كَفَرُوا۟ ٱمْرَأَتَ نُوحٍۢ وَٱمْرَأَتَ لُوطٍۢ ۖ كَانَتَا تَحْتَ عَبْدَيْنِ مِنْ عِبَادِنَا صَـٰلِحَيْنِ فَخَانَتَاهُمَا فَلَمْ يُغْنِيَا عَنْهُمَا مِنَ ٱللَّهِ شَيْـًۭٔا وَقِيلَ ٱدْخُلَا ٱلنَّارَ مَعَ ٱلدَّٰخِلِينَ",
+    "verse": "Allāh presents an example of those who disbelieved: the wife of Noah and the wife of Lot. They were under two of Our righteous servants but betrayed them, so they [i.e., those prophets] did not avail them from Allāh at all, and it was said, \"Enter the Fire with those who enter.\" (66:10)"
+  },
+  "scramble": {
+    "verseRef": "59:21",
+    "reference": "Surah Al-Hashr (59:21)",
+    "segments": [
+      "لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ",
+      "عَلَىٰ جَبَلٍ",
+      "لَّرَأَيْتَهُ خَاشِعًا",
+      "مُّتَصَدِّعًا",
+      "مِّنْ خَشْيَةِ اللَّهِ"
+    ],
+    "translations": [
+      "If We (had) sent down this Quran",
+      "on a mountain surely you (would) have seen it humbled",
+      "breaking asunder from (the) fear (of) Allah",
+      "And these examples We present them",
+      "to the people so that they may give thought"
+    ],
+    "hint": "This verse describes the profound effect the Quran would have on one of Allah's mightiest creations.",
+    "arabic": "لَوْ أَنزَلْنَا هَـٰذَا ٱلْقُرْءَانَ عَلَىٰ جَبَلٍۢ لَّرَأَيْتَهُۥ خَـٰشِعًۭا مُّتَصَدِّعًۭا مِّنْ خَشْيَةِ ٱللَّهِ ۚ وَتِلْكَ ٱلْأَمْثَـٰلُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ",
+    "words": [
+      "لَوْ أَنزَلْنَا هَـٰذَا ٱلْقُرْءَانَ",
+      "عَلَىٰ جَبَلٍۢ لَّرَأَيْتَهُۥ خَـٰشِعًۭا",
+      "مُّتَصَدِّعًۭا مِّنْ خَشْيَةِ ٱللَّهِ ۚ",
+      "وَتِلْكَ ٱلْأَمْثَـٰلُ نَضْرِبُهَا",
+      "لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ"
+    ],
+    "verseEn": "If We had sent down this Qur’ān upon a mountain, you would have seen it humbled and splitting from fear of Allāh. And these examples We present to the people that perhaps they will give thought."
+  },
+  "juz": {
+    "date": "2026-03-01",
+    "juz_number": 13,
+    "juz_name": "Wa Ma Ubri'u",
+    "juz_name_ar": "وَمَا أُبَرِّئُ",
+    "verse": {
+      "surah_number": 13,
+      "surah_name": "Ar-Ra'd",
+      "surah_name_ar": "سورة الرعد",
+      "ayah_number": 11,
+      "arabic_text": "إِنَّ ٱللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ۗ",
+      "translation": "Indeed, Allah will not change the condition of a people until they change what is in themselves.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1718.mp3"
+    },
+    "theme_question": {
+      "correct": "Personal responsibility and inner change are prerequisites for societal change.",
+      "options": [
+        "Personal responsibility and inner change are prerequisites for societal change.",
+        "Divine decree is fixed and human effort is irrelevant.",
+        "Material wealth is the primary sign of God's favor.",
+        "Only prophets can bring about significant change in a community."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 13,
+      "options": [
+        {
+          "num": 12,
+          "name": "Yusuf",
+          "name_ar": "سورة يوسف",
+          "name_en": "Joseph"
+        },
+        {
+          "num": 13,
+          "name": "Ar-Ra'd",
+          "name_ar": "سورة الرعد",
+          "name_en": "The Thunder"
+        },
+        {
+          "num": 14,
+          "name": "Ibrahim",
+          "name_ar": "سورة ابراهيم",
+          "name_en": "Abraham"
+        },
+        {
+          "num": 15,
+          "name": "Al-Hijr",
+          "name_ar": "سورة الحجر",
+          "name_en": "The Rocky Tract"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 12,
+          "name": "Yusuf",
+          "name_ar": "سورة يوسف",
+          "name_en": "Joseph"
+        },
+        {
+          "num": 13,
+          "name": "Ar-Ra'd",
+          "name_ar": "سورة الرعد",
+          "name_en": "The Thunder"
+        },
+        {
+          "num": 14,
+          "name": "Ibrahim",
+          "name_ar": "سورة ابراهيم",
+          "name_en": "Abraham"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This powerful statement comes within a passage discussing Allah's absolute knowledge and power. It is preceded by a mention of guardian angels who protect humans by Allah's command and record their deeds. The verse thus connects divine oversight with human accountability, establishing a crucial principle of cause and effect in the spiritual and social realms.",
+      "theme_explanation": "The central theme is the unbreakable link between inner transformation and external circumstances. It establishes a fundamental law of Allah (Sunnatullah) that the fate of a community is tied to its collective moral and spiritual state. This verse empowers individuals and societies by placing the impetus for positive change in their own hands. It refutes fatalism and encourages proactive self-reform, clarifying that divine help and blessings follow sincere human effort to improve.",
+      "surah_overview": "Surah Ar-Ra'd (The Thunder) is a Makkan surah that powerfully argues for the truth of Allah's oneness (Tawhid), the Quran, and the Resurrection. It contrasts truth and falsehood using vivid parables, such as fertile rain versus useless scum, and draws attention to Allah's signs in nature—like thunder, lightning, and the intricate systems of the universe. The surah challenges the deniers, comforts the believers, and emphasizes that true peace of the heart is found only in the remembrance of Allah."
+    }
+  }
 }

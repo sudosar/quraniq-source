@@ -1,12 +1,12 @@
 {
-  "date": "2026-02-28",
+  "date": "2026-03-01",
   "puzzle": {
-    "word": "رحمة",
-    "display": "رَحْمَة",
-    "hint": "A divine attribute that encompasses all of creation.",
-    "verseRef": "19:2",
-    "arabicVerse": "ذِكْرُ رَحْمَتِ رَبِّكَ عَبْدَهُۥ زَكَرِيَّآ",
-    "verse": "19:2 — [This is] a mention of the mercy of your Lord to His servant Zechariah"
+    "word": "بحر",
+    "display": "بَحْر",
+    "hint": "He let them loose to meet, with a barrier between.",
+    "verseRef": "55:19",
+    "arabicVerse": "مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ",
+    "verse": "55:19 — He released the two seas, meeting [one another];"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,32 +1,32 @@
 {
-  "date": "2026-02-28",
+  "date": "2026-03-01",
   "puzzle": {
-    "verseRef": "57:3",
-    "reference": "Surah Al-Hadid (57:3)",
+    "verseRef": "59:21",
+    "reference": "Surah Al-Hashr (59:21)",
     "segments": [
-      "هُوَ ٱلْأَوَّلُ",
-      "وَٱلْـَٔاخِرُ",
-      "وَٱلظَّـٰهِرُ وَٱلْبَاطِنُ",
-      "وَهُوَ بِكُلِّ شَىْءٍ",
-      "عَلِيمٌ"
+      "لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ",
+      "عَلَىٰ جَبَلٍ",
+      "لَّرَأَيْتَهُ خَاشِعًا",
+      "مُّتَصَدِّعًا",
+      "مِّنْ خَشْيَةِ اللَّهِ"
     ],
     "translations": [
-      "He (is) the First",
-      "and the Last and the Apparent",
-      "and the Unapparent and He",
-      "(is) of every thing",
-      "All-Knower"
+      "If We (had) sent down this Quran",
+      "on a mountain surely you (would) have seen it humbled",
+      "breaking asunder from (the) fear (of) Allah",
+      "And these examples We present them",
+      "to the people so that they may give thought"
     ],
-    "hint": "This verse describes four of Allah's magnificent attributes, encompassing all of time and existence.",
-    "arabic": "هُوَ ٱلْأَوَّلُ وَٱلْـَٔاخِرُ وَٱلظَّـٰهِرُ وَٱلْبَاطِنُ ۖ وَهُوَ بِكُلِّ شَىْءٍ عَلِيمٌ",
+    "hint": "This verse describes the profound effect the Quran would have on one of Allah's mightiest creations.",
+    "arabic": "لَوْ أَنزَلْنَا هَـٰذَا ٱلْقُرْءَانَ عَلَىٰ جَبَلٍۢ لَّرَأَيْتَهُۥ خَـٰشِعًۭا مُّتَصَدِّعًۭا مِّنْ خَشْيَةِ ٱللَّهِ ۚ وَتِلْكَ ٱلْأَمْثَـٰلُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ",
     "words": [
-      "هُوَ ٱلْأَوَّلُ",
-      "وَٱلْـَٔاخِرُ وَٱلظَّـٰهِرُ",
-      "وَٱلْبَاطِنُ ۖ وَهُوَ",
-      "بِكُلِّ شَىْءٍ",
-      "عَلِيمٌ"
+      "لَوْ أَنزَلْنَا هَـٰذَا ٱلْقُرْءَانَ",
+      "عَلَىٰ جَبَلٍۢ لَّرَأَيْتَهُۥ خَـٰشِعًۭا",
+      "مُّتَصَدِّعًۭا مِّنْ خَشْيَةِ ٱللَّهِ ۚ",
+      "وَتِلْكَ ٱلْأَمْثَـٰلُ نَضْرِبُهَا",
+      "لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ"
     ],
-    "verseEn": "He is the First and the Last, the Ascendant and the Intimate, and He is, of all things, Knowing."
+    "verseEn": "If We had sent down this Qur’ān upon a mountain, you would have seen it humbled and splitting from fear of Allāh. And these examples We present to the people that perhaps they will give thought."
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,77 +1,83 @@
 {
-  "date": "2026-02-28",
+  "date": "2026-03-01",
   "puzzle": {
-    "date": "2026-02-28",
-    "juz_number": 12,
-    "juz_name": "Wa Ma Min Dabbatin",
-    "juz_name_ar": "وَمَا مِنْ دَابَّةٍ",
+    "date": "2026-03-01",
+    "juz_number": 13,
+    "juz_name": "Wa Ma Ubri'u",
+    "juz_name_ar": "وَمَا أُبَرِّئُ",
     "verse": {
-      "surah_number": 11,
-      "surah_name": "Hud",
-      "surah_name_ar": "هُود",
-      "ayah_number": 6,
-      "arabic_text": "وَمَا مِن دَآبَّةٍ فِى ٱلْأَرْضِ إِلَّا عَلَى ٱللَّهِ رِزْقُهَا وَيَعْلَمُ مُسْتَقَرَّهَا وَمُسْتَوْدَعَهَا ۚ كُلٌّ فِى كِتَٰبٍ مُّبِينٍ",
-      "translation": "There is no moving creature on earth whose provision is not guaranteed by Allah. And He knows where it lives and where it is laid to rest. All is ˹written˺ in a clear Record.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1479.mp3"
+      "surah_number": 13,
+      "surah_name": "Ar-Ra'd",
+      "surah_name_ar": "سورة الرعد",
+      "ayah_number": 11,
+      "arabic_text": "إِنَّ ٱللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ۗ",
+      "translation": "Indeed, Allah will not change the condition of a people until they change what is in themselves.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1718.mp3"
     },
     "theme_question": {
-      "correct": "Allah's absolute sovereignty and His guarantee of sustenance for every living being.",
+      "correct": "Personal responsibility and inner change are prerequisites for societal change.",
       "options": [
-        "The specific laws of inheritance and family obligations.",
-        "Allah's absolute sovereignty and His guarantee of sustenance for every living being.",
-        "The importance of fasting and pilgrimage for spiritual purification.",
-        "The historical account of the prophets' battles against disbelievers."
+        "Personal responsibility and inner change are prerequisites for societal change.",
+        "Divine decree is fixed and human effort is irrelevant.",
+        "Material wealth is the primary sign of God's favor.",
+        "Only prophets can bring about significant change in a community."
       ]
     },
     "surah_question": {
-      "correct_surah": 11,
+      "correct_surah": 13,
       "options": [
         {
           "num": 12,
           "name": "Yusuf",
-          "name_ar": "يُوسُف",
+          "name_ar": "سورة يوسف",
           "name_en": "Joseph"
-        },
-        {
-          "num": 10,
-          "name": "Yunus",
-          "name_ar": "يُونُس",
-          "name_en": "Jonah"
-        },
-        {
-          "num": 11,
-          "name": "Hud",
-          "name_ar": "هُود",
-          "name_en": "Hud"
         },
         {
           "num": 13,
           "name": "Ar-Ra'd",
-          "name_ar": "ٱلرَّعْد",
+          "name_ar": "سورة الرعد",
           "name_en": "The Thunder"
+        },
+        {
+          "num": 14,
+          "name": "Ibrahim",
+          "name_ar": "سورة ابراهيم",
+          "name_en": "Abraham"
+        },
+        {
+          "num": 15,
+          "name": "Al-Hijr",
+          "name_ar": "سورة الحجر",
+          "name_en": "The Rocky Tract"
         }
       ]
     },
     "surah_order": {
       "surahs": [
         {
-          "num": 11,
-          "name": "Hud",
-          "name_ar": "هُود",
-          "name_en": "Hud"
-        },
-        {
           "num": 12,
           "name": "Yusuf",
-          "name_ar": "يُوسُف",
+          "name_ar": "سورة يوسف",
           "name_en": "Joseph"
+        },
+        {
+          "num": 13,
+          "name": "Ar-Ra'd",
+          "name_ar": "سورة الرعد",
+          "name_en": "The Thunder"
+        },
+        {
+          "num": 14,
+          "name": "Ibrahim",
+          "name_ar": "سورة ابراهيم",
+          "name_en": "Abraham"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse is the opening statement of Juz 12, setting a powerful tone. It comes within Surah Hud, which addresses the Prophet Muhammad (ﷺ) and the believers, offering solace and strength by recounting the stories of previous prophets who faced rejection. This verse serves as a foundational reminder that the Creator who provides for every creature will surely support His messengers and believers.",
-      "theme_explanation": "The central theme is Tawakkul (trust in Allah) rooted in the understanding of His attribute as Ar-Razzaq (The Provider). The verse negates any doubt about sustenance, affirming that Allah has not only decreed provision for every single creature but also possesses perfect knowledge of its entire life cycle—its dwelling place on earth ('mustaqarraha') and its final resting place after death ('mustawda'aha'). This comprehensive knowledge, recorded in a \"Clear Record\" (Kitabin Mubeen), underscores His absolute control and meticulous planning, encouraging believers to trust His plan without anxiety.",
-      "surah_overview": "Surah Hud, named after the Prophet Hud, is a Meccan surah revealed during a period of intense persecution of the early Muslims, known as the \"Year of Sorrow.\" The surah's primary focus is to console the Prophet Muhammad (ﷺ) and fortify the believers' faith by narrating the struggles of prophets like Nuh (Noah), Hud, Salih, Ibrahim (Abraham), Lut (Lot), Shu'ayb, and Musa (Moses). A recurring theme is the stubborn rejection of divine guidance by their people and the subsequent divine justice. The surah emphasizes the importance of steadfastness (istiqamah) and warns against associating partners with Allah."
+      "verse_context": "This powerful statement comes within a passage discussing Allah's absolute knowledge and power. It is preceded by a mention of guardian angels who protect humans by Allah's command and record their deeds. The verse thus connects divine oversight with human accountability, establishing a crucial principle of cause and effect in the spiritual and social realms.",
+      "theme_explanation": "The central theme is the unbreakable link between inner transformation and external circumstances. It establishes a fundamental law of Allah (Sunnatullah) that the fate of a community is tied to its collective moral and spiritual state. This verse empowers individuals and societies by placing the impetus for positive change in their own hands. It refutes fatalism and encourages proactive self-reform, clarifying that divine help and blessings follow sincere human effort to improve.",
+      "surah_overview": "Surah Ar-Ra'd (The Thunder) is a Makkan surah that powerfully argues for the truth of Allah's oneness (Tawhid), the Quran, and the Resurrection. It contrasts truth and falsehood using vivid parables, such as fertile rain versus useless scum, and draws attention to Allah's signs in nature—like thunder, lightning, and the intricate systems of the universe. The surah challenges the deniers, comforts the believers, and emphasizes that true peace of the heart is found only in the remembrance of Allah."
     }
   },
   "generated": true,
