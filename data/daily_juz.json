@@ -1,84 +1,79 @@
 {
-  "date": "2026-03-01",
+  "date": "2026-03-02",
   "puzzle": {
-    "date": "2026-03-01",
-    "juz_number": 13,
-    "juz_name": "Wa Ma Ubri'u",
-    "juz_name_ar": "وَمَا أُبَرِّئُ",
+    "date": "2026-03-02",
+    "juz_number": 14,
+    "juz_name": "Rubama",
+    "juz_name_ar": "رُبَمَا",
     "verse": {
-      "surah_number": 13,
-      "surah_name": "Ar-Ra'd",
-      "surah_name_ar": "سورة الرعد",
-      "ayah_number": 11,
-      "arabic_text": "إِنَّ ٱللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ۗ",
-      "translation": "Indeed, Allah will not change the condition of a people until they change what is in themselves.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1718.mp3"
+      "surah_number": 15,
+      "surah_name": "Al-Hijr",
+      "surah_name_ar": "ٱلْحِجْر",
+      "ayah_number": 9,
+      "arabic_text": "إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَٰفِظُونَ",
+      "translation": "Indeed, it is We who sent down the Qur'an and indeed, We will be its guardian.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1811.mp3"
     },
     "theme_question": {
-      "correct": "Personal responsibility and inner change are prerequisites for societal change.",
+      "correct": "The divine promise to protect the Quran from corruption.",
       "options": [
-        "Personal responsibility and inner change are prerequisites for societal change.",
-        "Divine decree is fixed and human effort is irrelevant.",
-        "Material wealth is the primary sign of God's favor.",
-        "Only prophets can bring about significant change in a community."
+        "The divine promise to protect the Quran from corruption.",
+        "The command for believers to memorize the entire Quran.",
+        "The challenge to produce a chapter like the Quran.",
+        "The description of the Quran as a cure for the heart."
       ]
     },
     "surah_question": {
-      "correct_surah": 13,
+      "correct_surah": 15,
       "options": [
-        {
-          "num": 12,
-          "name": "Yusuf",
-          "name_ar": "سورة يوسف",
-          "name_en": "Joseph"
-        },
-        {
-          "num": 13,
-          "name": "Ar-Ra'd",
-          "name_ar": "سورة الرعد",
-          "name_en": "The Thunder"
-        },
         {
           "num": 14,
           "name": "Ibrahim",
-          "name_ar": "سورة ابراهيم",
+          "name_ar": "إِبْرَاهِيم",
           "name_en": "Abraham"
         },
         {
           "num": 15,
           "name": "Al-Hijr",
-          "name_ar": "سورة الحجر",
+          "name_ar": "ٱلْحِجْر",
           "name_en": "The Rocky Tract"
+        },
+        {
+          "num": 16,
+          "name": "An-Nahl",
+          "name_ar": "ٱلنَّحْل",
+          "name_en": "The Bee"
+        },
+        {
+          "num": 17,
+          "name": "Al-Isra",
+          "name_ar": "ٱلْإِسْرَاء",
+          "name_en": "The Night Journey"
         }
       ]
     },
     "surah_order": {
       "surahs": [
         {
-          "num": 12,
-          "name": "Yusuf",
-          "name_ar": "سورة يوسف",
-          "name_en": "Joseph"
+          "num": 15,
+          "name": "Al-Hijr",
+          "name_ar": "ٱلْحِجْر",
+          "name_en": "The Rocky Tract"
         },
         {
-          "num": 13,
-          "name": "Ar-Ra'd",
-          "name_ar": "سورة الرعد",
-          "name_en": "The Thunder"
-        },
-        {
-          "num": 14,
-          "name": "Ibrahim",
-          "name_ar": "سورة ابراهيم",
-          "name_en": "Abraham"
+          "num": 16,
+          "name": "An-Nahl",
+          "name_ar": "ٱلنَّحْل",
+          "name_en": "The Bee"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This powerful statement comes within a passage discussing Allah's absolute knowledge and power. It is preceded by a mention of guardian angels who protect humans by Allah's command and record their deeds. The verse thus connects divine oversight with human accountability, establishing a crucial principle of cause and effect in the spiritual and social realms.",
-      "theme_explanation": "The central theme is the unbreakable link between inner transformation and external circumstances. It establishes a fundamental law of Allah (Sunnatullah) that the fate of a community is tied to its collective moral and spiritual state. This verse empowers individuals and societies by placing the impetus for positive change in their own hands. It refutes fatalism and encourages proactive self-reform, clarifying that divine help and blessings follow sincere human effort to improve.",
-      "surah_overview": "Surah Ar-Ra'd (The Thunder) is a Makkan surah that powerfully argues for the truth of Allah's oneness (Tawhid), the Quran, and the Resurrection. It contrasts truth and falsehood using vivid parables, such as fertile rain versus useless scum, and draws attention to Allah's signs in nature—like thunder, lightning, and the intricate systems of the universe. The surah challenges the deniers, comforts the believers, and emphasizes that true peace of the heart is found only in the remembrance of Allah."
+      "verse_context": "This verse was revealed in Makkah as a direct response to the disbelievers who were mocking the Prophet (ﷺ) and casting doubt on the divine origin of the Quran. It is a powerful declaration from Allah Himself, affirming that He is both the source of the revelation and its ultimate protector against any alteration or loss.",
+      "theme_explanation": "The central theme is the miraculous and divine preservation of the Quran (Hifdh). Unlike previous scriptures, which were entrusted to people and subsequently altered, Allah takes personal responsibility for guarding the final revelation. This divine promise has been fulfilled for over 14 centuries through the dual methods of mass memorization (oral tradition) and meticulous written preservation, ensuring its purity for all time.",
+      "surah_overview": "Surah Al-Hijr is a Makkan surah that takes its name from the 'Rocky Tract' inhabited by the people of Thamud. The surah warns the Quraysh by recounting the stories of previous nations who rejected their prophets. It emphasizes the truth of the revelation, the signs of Allah in creation, the certainty of the Day of Judgment, and offers comfort and strength to the Prophet Muhammad (ﷺ) in the face of rejection."
     }
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

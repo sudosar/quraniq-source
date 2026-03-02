@@ -1,12 +1,13 @@
 {
-  "date": "2026-03-01",
+  "date": "2026-03-02",
   "puzzle": {
-    "word": "بحر",
-    "display": "بَحْر",
-    "hint": "He let them loose to meet, with a barrier between.",
-    "verseRef": "55:19",
-    "arabicVerse": "مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ",
-    "verse": "55:19 — He released the two seas, meeting [one another];"
+    "word": "سمع",
+    "display": "سَمْع",
+    "hint": "A sense used to listen to the Quran.",
+    "verseRef": "67:23",
+    "arabicVerse": "قُلْ هُوَ ٱلَّذِىٓ أَنشَأَكُمْ وَجَعَلَ لَكُمُ ٱلسَّمْعَ وَٱلْأَبْصَـٰرَ وَٱلْأَفْـِٔدَةَ ۖ قَلِيلًۭا مَّا تَشْكُرُونَ",
+    "verse": "67:23 — Say, \"It is He who has produced you and made for you hearing and vision and hearts [i.e., intellect]; little are you grateful.\""
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
