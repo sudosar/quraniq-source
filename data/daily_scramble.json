@@ -1,32 +1,33 @@
 {
-  "date": "2026-03-02",
+  "date": "2026-03-03",
   "puzzle": {
-    "verseRef": "13:28",
-    "reference": "Surah Ar-Ra'd (13:28)",
+    "verseRef": "16:18",
+    "reference": "Surah An-Nahl (16:18)",
     "segments": [
-      "ٱلَّذِينَ ءَامَنُوا۟",
-      "وَتَطْمَئِنُّ قُلُوبُهُم",
-      "بِذِكْرِ ٱللَّهِ ۗ",
-      "أَلَا بِذِكْرِ ٱللَّهِ",
-      "تَطْمَئِنُّ ٱلْقُلُوبُ"
+      "وَإِن تَعُدُّوا۟",
+      "نِعْمَةَ ٱللَّهِ",
+      "لَا تُحْصُوهَآ",
+      "إِنَّ ٱللَّهَ",
+      "لَغَفُورٌ رَّحِيمٌ"
     ],
     "translations": [
-      "Those who believed and find satisfaction",
-      "their hearts in the remembrance",
-      "(of) Allah No doubt",
-      "in the remembrance (of) Allah",
-      "find satisfaction the hearts"
+      "And if you should count",
+      "the Favors of Allah the Favors of Allah",
+      "not you could enumerate them",
+      "Indeed Allah",
+      "(is) Oft-Forgiving Most Merciful"
     ],
-    "hint": "This verse reveals the ultimate source of tranquility and peace for the heart.",
-    "arabic": "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ ۗ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+    "hint": "This verse speaks of the impossibility of quantifying Allah's countless blessings upon creation.",
+    "arabic": "وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌۭ رَّحِيمٌۭ",
     "words": [
-      "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ",
-      "قُلُوبُهُم بِذِكْرِ",
-      "ٱللَّهِ ۗ أَلَا",
-      "بِذِكْرِ ٱللَّهِ",
-      "تَطْمَئِنُّ ٱلْقُلُوبُ"
+      "وَإِن تَعُدُّوا۟",
+      "نِعْمَةَ ٱللَّهِ",
+      "لَا تُحْصُوهَآ ۗ",
+      "إِنَّ ٱللَّهَ",
+      "لَغَفُورٌۭ رَّحِيمٌۭ"
     ],
-    "verseEn": "Those who have believed and whose hearts are assured by the remembrance of Allāh. Unquestionably, by the remembrance of Allāh hearts are assured.\""
+    "verseEn": "And if you should count the favors of Allāh, you could not enumerate them. Indeed, Allāh is Forgiving and Merciful."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

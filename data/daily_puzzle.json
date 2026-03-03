@@ -1,148 +1,149 @@
 {
-  "date": "2026-03-02",
+  "date": "2026-03-03",
   "puzzle": {
     "categories": [
       {
-        "name": "ثَرَاءٌ وَكُنُوزٌ",
-        "nameEn": "Wealth and Treasure",
+        "name": "أَنْوَاعُ ٱلْمَلَابِسِ",
+        "nameEn": "Types of Clothing",
         "color": "yellow",
         "items": [
           {
-            "ar": "مَالًا",
-            "en": "wealth",
-            "ref": "104:2",
-            "verse": "ٱلَّذِى جَمَعَ مَالًۭا وَعَدَّدَهُۥ",
-            "verseEn": "Who collects wealth and [continuously] counts it."
+            "ar": "سَرَابِيلَ",
+            "en": "Garments",
+            "ref": "16:81",
+            "verse": "وَٱللَّهُ جَعَلَ لَكُم مِّمَّا خَلَقَ ظِلَـٰلًۭا وَجَعَلَ لَكُم مِّنَ ٱلْجِبَالِ أَكْنَـٰنًۭا وَجَعَلَ لَكُمْ سَرَٰبِيلَ تَقِيكُمُ ٱلْحَرَّ وَسَرَٰبِيلَ تَقِيكُم بَأْسَكُمْ ۚ كَذَٰلِكَ يُتِمُّ نِعْمَتَهُۥ عَلَيْكُمْ لَعَلَّكُمْ تُسْلِمُونَ",
+            "verseEn": "And Allāh has made for you, from that which He has created, shadows [i.e., shade] and has made for you from the mountains, shelters and has made for you garments which protect you from the heat and garments [i.e., coats of mail] which protect you from your [enemy in] battle. Thus does He complete His favor upon you that you might submit [to Him]."
           },
           {
-            "ar": "خَيْرًا",
-            "en": "good/wealth",
-            "ref": "2:180",
-            "verse": "كُتِبَ عَلَيْكُمْ إِذَا حَضَرَ أَحَدَكُمُ ٱلْمَوْتُ إِن تَرَكَ خَيْرًا ٱلْوَصِيَّةُ لِلْوَٰلِدَيْنِ وَٱلْأَقْرَبِينَ بِٱلْمَعْرُوفِ ۖ حَقًّا عَلَى ٱلْمُتَّقِينَ",
-            "verseEn": "Prescribed for you when death approaches [any] one of you if he leaves wealth [is that he should make] a bequest for the parents and near relatives according to what is acceptable - a duty upon the righteous."
+            "ar": "جَلَٰبِيبِهِنَّ",
+            "en": "Their outer garments",
+            "ref": "33:59",
+            "verse": "يَـٰٓأَيُّهَا ٱلنَّبِىُّ قُل لِّأَزْوَٰجِكَ وَبَنَاتِكَ وَنِسَآءِ ٱلْمُؤْمِنِينَ يُدْنِينَ عَلَيْهِنَّ مِن جَلَـٰبِيبِهِنَّ ۚ ذَٰلِكَ أَدْنَىٰٓ أَن يُعْرَفْنَ فَلَا يُؤْذَيْنَ ۗ وَكَانَ ٱللَّهُ غَفُورًۭا رَّحِيمًۭا",
+            "verseEn": "O Prophet, tell your wives and your daughters and the women of the believers to bring down over themselves [part] of their outer garments. That is more suitable that they will be known and not be abused. And ever is Allāh Forgiving and Merciful."
           },
           {
-            "ar": "قِنطَارًا",
-            "en": "a great amount",
-            "ref": "4:20",
-            "verse": "وَإِنْ أَرَدتُّمُ ٱسْتِبْدَالَ زَوْجٍۢ مَّكَانَ زَوْجٍۢ وَءَاتَيْتُمْ إِحْدَىٰهُنَّ قِنطَارًۭا فَلَا تَأْخُذُوا۟ مِنْهُ شَيْـًٔا ۚ أَتَأْخُذُونَهُۥ بُهْتَـٰنًۭا وَإِثْمًۭا مُّبِينًۭا",
-            "verseEn": "But if you want to replace one wife with another and you have given one of them a great amount [in gifts], do not take [back] from it anything. Would you take it in injustice and manifest sin?"
+            "ar": "ثِيَابٌ",
+            "en": "Clothes",
+            "ref": "22:19",
+            "verse": "۞ هَـٰذَانِ خَصْمَانِ ٱخْتَصَمُوا۟ فِى رَبِّهِمْ ۖ فَٱلَّذِينَ كَفَرُوا۟ قُطِّعَتْ لَهُمْ ثِيَابٌۭ مِّن نَّارٍۢ يُصَبُّ مِن فَوْقِ رُءُوسِهِمُ ٱلْحَمِيمُ",
+            "verseEn": "These are two adversaries who have disputed over their Lord. But those who disbelieved will have cut out for them garments of fire. Poured upon their heads will be scalding water"
           },
           {
-            "ar": "كَنزٌ",
-            "en": "a treasure",
-            "ref": "18:82",
-            "verse": "وَأَمَّا ٱلْجِدَارُ فَكَانَ لِغُلَـٰمَيْنِ يَتِيمَيْنِ فِى ٱلْمَدِينَةِ وَكَانَ تَحْتَهُۥ كَنزٌۭ لَّهُمَا وَكَانَ أَبُوهُمَا صَـٰلِحًۭا فَأَرَادَ رَبُّكَ أَن يَبْلُغَآ أَشُدَّهُمَا وَيَسْتَخْرِجَا كَنزَهُمَا رَحْمَةًۭ مِّن رَّبِّكَ ۚ وَمَا فَعَلْتُهُۥ عَنْ أَمْرِى ۚ ذَٰلِكَ تَأْوِيلُ مَا لَمْ تَسْطِع عَّلَيْهِ صَبْرًۭا",
-            "verseEn": "And as for the wall, it belonged to two orphan boys in the city, and there was beneath it a treasure for them, and their father had been righteous. So your Lord intended that they reach maturity and extract their treasure, as a mercy from your Lord. And I did it not of my own accord. That is the interpretation of that about which you could not have patience.\""
+            "ar": "حَرِيرًا",
+            "en": "Silk",
+            "ref": "76:12",
+            "verse": "وَجَزَىٰهُم بِمَا صَبَرُوا۟ جَنَّةًۭ وَحَرِيرًۭا",
+            "verseEn": "And will reward them for what they patiently endured [with] a garden [in Paradise] and silk [garments]."
           }
         ]
       },
       {
-        "name": "أَقْسَامٌ فِي بِدَايَاتِ السُّوَرِ",
-        "nameEn": "Oaths at the Beginning of Surahs",
+        "name": "أَسْمَاءُ النَّارِ",
+        "nameEn": "Names for Hellfire",
         "color": "green",
         "items": [
           {
-            "ar": "وَٱلضُّحَىٰ",
-            "en": "By the morning brightness",
-            "ref": "93:1",
-            "verse": "وَٱلضُّحَىٰ",
-            "verseEn": "By the morning brightness"
+            "ar": "جَحِيمٍ",
+            "en": "Jaheem",
+            "ref": "82:14",
+            "verse": "وَإِنَّ ٱلْفُجَّارَ لَفِى جَحِيمٍۢ",
+            "verseEn": "And indeed, the wicked will be in Hellfire."
           },
           {
-            "ar": "وَٱلتِّينِ",
-            "en": "By the fig",
-            "ref": "95:1",
-            "verse": "وَٱلتِّينِ وَٱلزَّيْتُونِ",
-            "verseEn": "By the fig and the olive"
+            "ar": "سَعِيرًا",
+            "en": "Sa'eer",
+            "ref": "4:10",
+            "verse": "إِنَّ ٱلَّذِينَ يَأْكُلُونَ أَمْوَٰلَ ٱلْيَتَـٰمَىٰ ظُلْمًا إِنَّمَا يَأْكُلُونَ فِى بُطُونِهِمْ نَارًۭا ۖ وَسَيَصْلَوْنَ سَعِيرًۭا",
+            "verseEn": "Indeed, those who devour the property of orphans unjustly are only consuming into their bellies fire. And they will be burned in a Blaze [i.e., Hellfire]."
           },
           {
-            "ar": "وَٱلْعَصْرِ",
-            "en": "By time",
-            "ref": "103:1",
-            "verse": "وَٱلْعَصْرِ",
-            "verseEn": "By time,"
+            "ar": "لَظَىٰ",
+            "en": "Latha",
+            "ref": "70:15",
+            "verse": "كَلَّآ ۖ إِنَّهَا لَظَىٰ",
+            "verseEn": "No! Indeed, it is the Flame [of Hell],"
           },
           {
-            "ar": "وَٱلذَّٰرِيَـٰتِ",
-            "en": "By the scattering winds",
-            "ref": "51:1",
-            "verse": "وَٱلذَّٰرِيَـٰتِ ذَرْوًۭا",
-            "verseEn": "By the [winds] scattering [dust], dispersing [it]"
+            "ar": "سَقَرُ",
+            "en": "Saqar",
+            "ref": "74:27",
+            "verse": "وَمَآ أَدْرَىٰكَ مَا سَقَرُ",
+            "verseEn": "And what can make you know what is Saqar?"
           }
         ]
       },
       {
-        "name": "مُصْطَلَحَاتٌ فِقْهِيَّةٌ",
-        "nameEn": "Quranic Legal Terminology",
+        "name": "أَسْمَاءٌ لِأَهْوَالٍ مُهْلِكَةٍ",
+        "nameEn": "Proper Nouns for Apocalyptic Events",
         "color": "blue",
         "items": [
           {
-            "ar": "فَرِيضَةً",
-            "en": "An ordinance",
-            "ref": "4:11",
-            "verse": "يُوصِيكُمُ ٱللَّهُ فِىٓ أَوْلَـٰدِكُمْ ۖ لِلذَّكَرِ مِثْلُ حَظِّ ٱلْأُنثَيَيْنِ ۚ فَإِن كُنَّ نِسَآءًۭ فَوْقَ ٱثْنَتَيْنِ فَلَهُنَّ ثُلُثَا مَا تَرَكَ ۖ وَإِن كَانَتْ وَٰحِدَةًۭ فَلَهَا ٱلنِّصْفُ ۚ وَلِأَبَوَيْهِ لِكُلِّ وَٰحِدٍۢ مِّنْهُمَا ٱلسُّدُسُ مِمَّا تَرَكَ إِن كَانَ لَهُۥ وَلَدٌۭ ۚ فَإِن لَّمْ يَكُن لَّهُۥ وَلَدٌۭ وَوَرِثَهُۥٓ أَبَوَاهُ فَلِأُمِّهِ ٱلثُّلُثُ ۚ فَإِن كَانَ لَهُۥٓ إِخْوَةٌۭ فَلِأُمِّهِ ٱلسُّدُسُ ۚ مِنۢ بَعْدِ وَصِيَّةٍۢ يُوصِى بِهَآ أَوْ دَيْنٍ ۗ ءَابَآؤُكُمْ وَأَبْنَآؤُكُمْ لَا تَدْرُونَ أَيُّهُمْ أَقْرَبُ لَكُمْ نَفْعًۭا ۚ فَرِيضَةًۭ مِّنَ ٱللَّهِ ۗ إِنَّ ٱللَّهَ كَانَ عَلِيمًا حَكِيمًۭا",
-            "verseEn": "Allāh instructs you concerning your children [i.e., their portions of inheritance]: for the male, what is equal to the share of two females. But if there are [only] daughters, two or more, for them is two thirds of one's estate. And if there is only one, for her is half. And for one's parents, to each one of them is a sixth of his estate if he left children. But if he had no children and the parents [alone] inherit from him, then for his mother is one third. And if he had brothers [and/or sisters], for his mother is a sixth, after any bequest he [may have] made or debt. Your parents or your children - you know not which of them are nearest to you in benefit. [These shares are] an obligation [imposed] by Allāh. Indeed, Allāh is ever Knowing and Wise."
+            "ar": "ٱلطَّاغِيَةِ",
+            "en": "The Overwhelming Event",
+            "ref": "69:5",
+            "verse": "فَأَمَّا ثَمُودُ فَأُهْلِكُوا۟ بِٱلطَّاغِيَةِ",
+            "verseEn": "So as for Thamūd, they were destroyed by the overpowering [blast]."
           },
           {
-            "ar": "قِصَاصٌ",
-            "en": "Legal retribution",
-            "ref": "5:45",
-            "verse": "وَكَتَبْنَا عَلَيْهِمْ فِيهَآ أَنَّ ٱلنَّفْسَ بِٱلنَّفْسِ وَٱلْعَيْنَ بِٱلْعَيْنِ وَٱلْأَنفَ بِٱلْأَنفِ وَٱلْأُذُنَ بِٱلْأُذُنِ وَٱلسِّنَّ بِٱلسِّنِّ وَٱلْجُرُوحَ قِصَاصٌۭ ۚ فَمَن تَصَدَّقَ بِهِۦ فَهُوَ كَفَّارَةٌۭ لَّهُۥ ۚ وَمَن لَّمْ يَحْكُم بِمَآ أَنزَلَ ٱللَّهُ فَأُو۟لَـٰٓئِكَ هُمُ ٱلظَّـٰلِمُونَ",
-            "verseEn": "And We ordained for them therein a life for a life, an eye for an eye, a nose for a nose, an ear for an ear, a tooth for a tooth, and for wounds is legal retribution. But whoever gives [up his right as] charity, it is an expiation for him. And whoever does not judge by what Allāh has revealed - then it is those who are the wrongdoers [i.e., the unjust]."
+            "ar": "ٱلْقَارِعَةُ",
+            "en": "The Striking Calamity",
+            "ref": "101:1",
+            "verse": "ٱلْقَارِعَةُ",
+            "verseEn": "The Striking Calamity -"
           },
           {
-            "ar": "دِيَةٌ",
-            "en": "Blood money",
-            "ref": "4:92",
-            "verse": "وَمَا كَانَ لِمُؤْمِنٍ أَن يَقْتُلَ مُؤْمِنًا إِلَّا خَطَـًۭٔا ۚ وَمَن قَتَلَ مُؤْمِنًا خَطَـًۭٔا فَتَحْرِيرُ رَقَبَةٍۢ مُّؤْمِنَةٍۢ وَدِيَةٌۭ مُّسَلَّمَةٌ إِلَىٰٓ أَهْلِهِۦٓ إِلَّآ أَن يَصَّدَّقُوا۟ ۚ فَإِن كَانَ مِن قَوْمٍ عَدُوٍّۢ لَّكُمْ وَهُوَ مُؤْمِنٌۭ فَتَحْرِيرُ رَقَبَةٍۢ مُّؤْمِنَةٍۢ ۖ وَإِن كَانَ مِن قَوْمٍۭ بَيْنَكُمْ وَبَيْنَهُم مِّيثَـٰقٌۭ فَدِيَةٌۭ مُّسَلَّمَةٌ إِلَىٰٓ أَهْلِهِۦ وَتَحْرِيرُ رَقَبَةٍۢ مُّؤْمِنَةٍۢ ۖ فَمَن لَّمْ يَجِدْ فَصِيَامُ شَهْرَيْنِ مُتَتَابِعَيْنِ تَوْبَةًۭ مِّنَ ٱللَّهِ ۗ وَكَانَ ٱللَّهُ عَلِيمًا حَكِيمًۭا",
-            "verseEn": "And never is it for a believer to kill a believer except by mistake. And whoever kills a believer by mistake - then the freeing of a believing slave and a compensation payment [diyah] presented to his [i.e., the deceased's] family [is required], unless they give [up their right as] charity. But if he [i.e., the deceased] was from a people at war with you and he was a believer - then [only] the freeing of a believing slave; and if he was from a people with whom you have a treaty - then a compensation payment presented to his family and the freeing of a believing slave. And whoever does not find [one or cannot afford to buy one] - then [instead], a fast for two months consecutively, [seeking] acceptance of repentance from Allāh. And Allāh is ever Knowing and Wise."
+            "ar": "ٱلْآزِفَةِ",
+            "en": "The Imminent Event",
+            "ref": "53:57",
+            "verse": "أَزِفَتِ ٱلْـَٔازِفَةُ",
+            "verseEn": "The Approaching Day has approached."
           },
           {
-            "ar": "كَفَّٰرَةٌ",
-            "en": "Expiation",
-            "ref": "5:95",
-            "verse": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تَقْتُلُوا۟ ٱلصَّيْدَ وَأَنتُمْ حُرُمٌۭ ۚ وَمَن قَتَلَهُۥ مِنكُم مُّتَعَمِّدًۭا فَجَزَآءٌۭ مِّثْلُ مَا قَتَلَ مِنَ ٱلنَّعَمِ يَحْكُمُ بِهِۦ ذَوَا عَدْلٍۢ مِّنكُمْ هَدْيًۢا بَـٰلِغَ ٱلْكَعْبَةِ أَوْ كَفَّـٰرَةٌۭ طَعَامُ مَسَـٰكِينَ أَوْ عَدْلُ ذَٰلِكَ صِيَامًۭا لِّيَذُوقَ وَبَالَ أَمْرِهِۦ ۗ عَفَا ٱللَّهُ عَمَّا سَلَفَ ۚ وَمَنْ عَادَ فَيَنتَقِمُ ٱللَّهُ مِنْهُ ۗ وَٱللَّهُ عَزِيزٌۭ ذُو ٱنتِقَامٍ",
-            "verseEn": "O you who have believed, do not kill game while you are in the state of iḥrām. And whoever of you kills it intentionally - the penalty is an equivalent from sacrificial animals to what he killed, as judged by two just men among you as an offering [to Allāh] delivered to the Kaʿbah, or an expiation: the feeding of needy people or the equivalent of that in fasting, that he may taste the consequence of his matter [i.e., deed]. Allāh has pardoned what is past; but whoever returns [to violation], then Allāh will take retribution from him. And Allāh is Exalted in Might and Owner of Retribution."
+            "ar": "ٱلصَّاخَّةُ",
+            "en": "The Deafening Blast",
+            "ref": "80:33",
+            "verse": "فَإِذَا جَآءَتِ ٱلصَّآخَّةُ",
+            "verseEn": "But when there comes the Deafening Blast"
           }
         ]
       },
       {
-        "name": "مَفَاهِيمُ رُوحِيَّةٌ بِأَلْفَاظٍ مَادِّيَّةٍ",
-        "nameEn": "Metaphors for Spiritual Ascent and Adherence",
+        "name": "أَوْعِيَة وَحَاوِيَات",
+        "nameEn": "Things that Contain or Enclose",
         "color": "purple",
         "items": [
           {
-            "ar": "بِٱلْعُرْوَةِ",
-            "en": "the handhold",
-            "ref": "2:256",
-            "verse": "لَآ إِكْرَاهَ فِى ٱلدِّينِ ۖ قَد تَّبَيَّنَ ٱلرُّشْدُ مِنَ ٱلْغَىِّ ۚ فَمَن يَكْفُرْ بِٱلطَّـٰغُوتِ وَيُؤْمِنۢ بِٱللَّهِ فَقَدِ ٱسْتَمْسَكَ بِٱلْعُرْوَةِ ٱلْوُثْقَىٰ لَا ٱنفِصَامَ لَهَا ۗ وَٱللَّهُ سَمِيعٌ عَلِيمٌ",
-            "verseEn": "There shall be no compulsion in [acceptance of] the religion. The right course has become distinct from the wrong. So whoever disbelieves in ṭāghūt and believes in Allāh has grasped the most trustworthy handhold with no break in it. And Allāh is Hearing and Knowing."
+            "ar": "دَلْوَهُۥ",
+            "en": "his bucket",
+            "ref": "12:19",
+            "verse": "وَجَآءَتْ سَيَّارَةٌۭ فَأَرْسَلُوا۟ وَارِدَهُمْ فَأَدْلَىٰ دَلْوَهُۥ ۖ قَالَ يَـٰبُشْرَىٰ هَـٰذَا غُلَـٰمٌۭ ۚ وَأَسَرُّوهُ بِضَـٰعَةًۭ ۚ وَٱللَّهُ عَلِيمٌۢ بِمَا يَعْمَلُونَ",
+            "verseEn": "And there came a company of travelers; then they sent their water drawer, and he let down his bucket. He said, \"Good news! Here is a boy.\" And they concealed him, [taking him] as merchandise; and Allāh was Knowing of what they did."
           },
           {
-            "ar": "ٱلْأَسْبَابَ",
-            "en": "the ways",
-            "ref": "40:36",
-            "verse": "وَقَالَ فِرْعَوْنُ يَـٰهَـٰمَـٰنُ ٱبْنِ لِى صَرْحًۭا لَّعَلِّىٓ أَبْلُغُ ٱلْأَسْبَـٰبَ",
-            "verseEn": "And Pharaoh said, \"O Hāmān, construct for me a tower that I might reach the ways -"
+            "ar": "ٱلْمَهْدِ",
+            "en": "the cradle",
+            "ref": "19:29",
+            "verse": "فَأَشَارَتْ إِلَيْهِ ۖ قَالُوا۟ كَيْفَ نُكَلِّمُ مَن كَانَ فِى ٱلْمَهْدِ صَبِيًّۭا",
+            "verseEn": "So she pointed to him. They said, \"How can we speak to one who is in the cradle a child?\""
           },
           {
-            "ar": "ٱلْمَعَارِجِ",
-            "en": "the ways of ascent",
-            "ref": "70:3",
-            "verse": "مِّنَ ٱللَّهِ ذِى ٱلْمَعَارِجِ",
-            "verseEn": "[It is] from Allāh, owner of the ways of ascent."
+            "ar": "ٱلصُّدُورِ",
+            "en": "the chests",
+            "ref": "35:38",
+            "verse": "إِنَّ ٱللَّهَ عَـٰلِمُ غَيْبِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ إِنَّهُۥ عَلِيمٌۢ بِذَاتِ ٱلصُّدُورِ",
+            "verseEn": "Indeed, Allāh is Knower of the unseen [aspects] of the heavens and earth. Indeed, He is Knowing of that within the breasts."
           },
           {
-            "ar": "دَرَجَٰتٍ",
-            "en": "ranks",
-            "ref": "4:96",
-            "verse": "دَرَجَـٰتٍۢ مِّنْهُ وَمَغْفِرَةًۭ وَرَحْمَةًۭ ۚ وَكَانَ ٱللَّهُ غَفُورًۭا رَّحِيمًا",
-            "verseEn": "Degrees [of high position] from Him and forgiveness and mercy. And Allāh is ever Forgiving and Merciful."
+            "ar": "أَكْمَامِهَا",
+            "en": "its sheaths",
+            "ref": "41:47",
+            "verse": "۞ إِلَيْهِ يُرَدُّ عِلْمُ ٱلسَّاعَةِ ۚ وَمَا تَخْرُجُ مِن ثَمَرَٰتٍۢ مِّنْ أَكْمَامِهَا وَمَا تَحْمِلُ مِنْ أُنثَىٰ وَلَا تَضَعُ إِلَّا بِعِلْمِهِۦ ۚ وَيَوْمَ يُنَادِيهِمْ أَيْنَ شُرَكَآءِى قَالُوٓا۟ ءَاذَنَّـٰكَ مَا مِنَّا مِن شَهِيدٍۢ",
+            "verseEn": "To Him [alone] is attributed knowledge of the Hour. And fruits emerge not from their coverings nor does a female conceive or give birth except with His knowledge. And the Day He will call to them, \"Where are My 'partners'?\" they will say, \"We announce to You that there is [no longer] among us any witness [to that].\""
           }
         ]
       }
     ]
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

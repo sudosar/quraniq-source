@@ -1,78 +1,79 @@
 {
-  "date": "2026-03-02",
+  "date": "2026-03-03",
   "puzzle": {
-    "date": "2026-03-02",
-    "juz_number": 14,
-    "juz_name": "Rubama",
-    "juz_name_ar": "رُبَمَا",
+    "date": "2026-03-03",
+    "juz_number": 15,
+    "juz_name": "Subhanalladhi",
+    "juz_name_ar": "سُبْحَانَ الَّذِي",
     "verse": {
-      "surah_number": 15,
-      "surah_name": "Al-Hijr",
-      "surah_name_ar": "ٱلْحِجْر",
-      "ayah_number": 9,
-      "arabic_text": "إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَٰفِظُونَ",
-      "translation": "Indeed, it is We who sent down the Qur'an and indeed, We will be its guardian.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1811.mp3"
+      "surah_number": 17,
+      "surah_name": "Al-Isra",
+      "surah_name_ar": "الْإِسْرَاء",
+      "ayah_number": 23,
+      "arabic_text": "وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُdُآا۟ إِلَّآ إِيَّاهُ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًا",
+      "translation": "And your Lord has decreed that you worship none but Him, and to be good to your parents.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2001.mp3"
     },
     "theme_question": {
-      "correct": "The divine promise to protect the Quran from corruption.",
+      "correct": "The inseparable duties of worshipping Allah alone and showing excellent kindness to parents.",
       "options": [
-        "The divine promise to protect the Quran from corruption.",
-        "The command for believers to memorize the entire Quran.",
-        "The challenge to produce a chapter like the Quran.",
-        "The description of the Quran as a cure for the heart."
+        "The inseparable duties of worshipping Allah alone and showing excellent kindness to parents.",
+        "The specific rules of inheritance for elderly parents.",
+        "The obligation of financial charity towards all relatives.",
+        "The historical account of Prophet Ibrahim's relationship with his father."
       ]
     },
     "surah_question": {
-      "correct_surah": 15,
+      "correct_surah": 17,
       "options": [
         {
-          "num": 14,
-          "name": "Ibrahim",
-          "name_ar": "إِبْرَاهِيم",
-          "name_en": "Abraham"
-        },
-        {
-          "num": 15,
-          "name": "Al-Hijr",
-          "name_ar": "ٱلْحِجْر",
-          "name_en": "The Rocky Tract"
-        },
-        {
-          "num": 16,
-          "name": "An-Nahl",
-          "name_ar": "ٱلنَّحْل",
-          "name_en": "The Bee"
+          "num": 18,
+          "name": "Al-Kahf",
+          "name_ar": "الْكَهْف",
+          "name_en": "The Cave"
         },
         {
           "num": 17,
           "name": "Al-Isra",
-          "name_ar": "ٱلْإِسْرَاء",
+          "name_ar": "الْإِسْرَاء",
           "name_en": "The Night Journey"
+        },
+        {
+          "num": 16,
+          "name": "An-Nahl",
+          "name_ar": "النَّحْل",
+          "name_en": "The Bee"
+        },
+        {
+          "num": 20,
+          "name": "Taha",
+          "name_ar": "طه",
+          "name_en": "Ta-Ha"
         }
       ]
     },
     "surah_order": {
       "surahs": [
         {
-          "num": 15,
-          "name": "Al-Hijr",
-          "name_ar": "ٱلْحِجْر",
-          "name_en": "The Rocky Tract"
+          "num": 17,
+          "name": "Al-Isra",
+          "name_ar": "الْإِسْرَاء",
+          "name_en": "The Night Journey"
         },
         {
-          "num": 16,
-          "name": "An-Nahl",
-          "name_ar": "ٱلنَّحْل",
-          "name_en": "The Bee"
+          "num": 18,
+          "name": "Al-Kahf",
+          "name_ar": "الْكَهْف",
+          "name_en": "The Cave"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse was revealed in Makkah as a direct response to the disbelievers who were mocking the Prophet (ﷺ) and casting doubt on the divine origin of the Quran. It is a powerful declaration from Allah Himself, affirming that He is both the source of the revelation and its ultimate protector against any alteration or loss.",
-      "theme_explanation": "The central theme is the miraculous and divine preservation of the Quran (Hifdh). Unlike previous scriptures, which were entrusted to people and subsequently altered, Allah takes personal responsibility for guarding the final revelation. This divine promise has been fulfilled for over 14 centuries through the dual methods of mass memorization (oral tradition) and meticulous written preservation, ensuring its purity for all time.",
-      "surah_overview": "Surah Al-Hijr is a Makkan surah that takes its name from the 'Rocky Tract' inhabited by the people of Thamud. The surah warns the Quraysh by recounting the stories of previous nations who rejected their prophets. It emphasizes the truth of the revelation, the signs of Allah in creation, the certainty of the Day of Judgment, and offers comfort and strength to the Prophet Muhammad (ﷺ) in the face of rejection."
+      "verse_context": "This verse is part of a series of foundational commandments in Surah Al-Isra that outline a comprehensive moral and social code for believers. It comes immediately after the prohibition of shirk (associating partners with Allah), placing the duty to parents at the highest level of importance right after the duty to God Himself.",
+      "theme_explanation": "The theme is the profound and direct link between Tawhid (the Oneness of Allah) and 'Birr al-Walidayn' (excellent kindness to parents). By placing these two commands together in a single decree ('qada' - He has decreed), Allah elevates the status of parents and establishes that honoring them is not merely a social courtesy but a fundamental act of worship and obedience.",
+      "surah_overview": "Surah Al-Isra, also known as Bani Isra'il (The Children of Israel), is a Meccan surah that begins by mentioning the miraculous Night Journey of Prophet Muhammad (ﷺ) from Makkah to Jerusalem. The surah addresses the history of the Children of Israel as a lesson, and lays down essential principles of faith, morality, and social conduct, including the rights of parents, orphans, and the needy, and warns against arrogance and transgression."
     }
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

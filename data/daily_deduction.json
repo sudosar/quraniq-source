@@ -1,65 +1,66 @@
 {
-  "date": "2026-03-02",
+  "date": "2026-03-03",
   "puzzle": {
-    "title": "The Honor of a Mentioned Name",
-    "intro": "A life of devotion and proximity to the final Prophet marked this individual's journey. Once bound by earthly ties, they were freed and elevated to a status of immense love and trust. Their personal story became so pivotal that it addressed a societal norm, and their name was uniquely immortalized in the divine text, a distinction no other companion received. Who is this honored soul whose name is etched in revelation?",
+    "title": "The Architect of Arrogance",
+    "intro": "A prominent figure in a powerful court, this individual was tasked with a monumental, yet blasphemous, project. Driven by loyalty to a tyrannical leader, their story is a stark warning about the heights of human pride and the inevitable fall that follows.",
     "clues": [
-      "I was once a captive, but found freedom and a new family in the household of the most beloved of creation.",
-      "The Prophet of Allah loved me so dearly that people began to call me by his family's name, as if I were his own child.",
-      "My personal life became the subject of divine revelation, clarifying a matter of adoption and marriage for the entire community to follow.",
-      "The marriage that followed my divorce was ordained by Allah to abolish a pre-Islamic custom regarding adopted children.",
-      "I was entrusted with command in the Battle of Mu'tah, a responsibility I carried until my final moments.",
-      "I am the only companion of the Prophet Muhammad ﷺ whose name is explicitly mentioned in the Quran."
+      "I served in the court of a ruler who was blinded by power, and my counsel only deepened that darkness.",
+      "My name is forever linked with that of my leader and another wealthy contemporary, a trio of rebellion against the divine.",
+      "My expertise was in construction and administration, skills I used not for good, but for the grand designs of my master.",
+      "My leader commanded me to build a towering structure, a project born of pure arrogance.",
+      "The goal was audacious and foolish: to build a tower so high that it could reach the heavens and allow my master to see the God of Musa.",
+      "My master, Fir'awn, commanded me by name to kindle a fire upon the clay and make for him a lofty tower."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Abu Bakr As-Siddiq",
-          "Salman Al-Farsi",
-          "Zayd ibn Harithah",
-          "Bilal ibn Rabah",
-          "'Abdullah ibn Umm Maktum"
+          "Haman",
+          "Aziz of Egypt",
+          "Namrud",
+          "Qarun",
+          "Samiri"
         ],
-        "answer": "Zayd ibn Harithah"
+        "answer": "Haman"
       },
       "trial": {
-        "label": "The Divine Decree",
+        "label": "What Was My Grand Project?",
         "options": [
-          "Accusation of slander against a Prophet's spouse",
-          "Marriage and divorce addressed to abolish a taboo",
-          "Suggesting the digging of a trench for defense",
-          "Being the first martyr in a major battle",
-          "Leading the project to compile the Quran"
+          "Building a lofty tower to the sky",
+          "Constructing a dam to divert a river",
+          "Erecting idols for a whole city",
+          "Forging a golden calf for worship",
+          "Assembling an army of elephants"
         ],
-        "answer": "Marriage and divorce addressed to abolish a taboo"
+        "answer": "Building a lofty tower to the sky"
       },
       "location": {
-        "label": "The Social Custom Addressed",
+        "label": "What Was I Commanded to Use?",
         "options": [
-          "The rules of inheritance for orphans",
-          "The prohibition of interest (Riba)",
-          "The establishment of the Hijri calendar",
-          "The status of an adopted son",
-          "The rituals of the Hajj pilgrimage"
+          "Clay, baked into bricks",
+          "Iron and molten copper",
+          "Hewn stones from the mountains",
+          "Gold and precious jewels",
+          "Timber from sacred trees"
         ],
-        "answer": "The status of an adopted son"
+        "answer": "Clay, baked into bricks"
       },
       "outcome": {
-        "label": "The Ultimate Honor",
+        "label": "What Was Our Ultimate Fate?",
         "options": [
-          "Being the only companion named in the Quran",
-          "Becoming the first Caliph after the Prophet's death",
-          "Being given the title 'The Sword of Allah'",
-          "Being promised Paradise while building a mosque",
-          "Being the first Muezzin of Islam"
+          "We were drowned by the command of Allah",
+          "We were swallowed by the earth",
+          "We were destroyed by a mighty blast",
+          "We were turned into apes",
+          "We were granted forgiveness and guidance"
         ],
-        "answer": "Being the only companion named in the Quran"
+        "answer": "We were drowned by the command of Allah"
       }
     },
-    "verseRef": "33:37",
-    "arabic": "وَإِذْ تَقُولُ لِلَّذِىٓ أَنْعَمَ ٱللَّهُ عَلَيْهِ وَأَنْعَمْتَ عَلَيْهِ أَمْسِكْ عَلَيْكَ زَوْجَكَ وَٱتَّقِ ٱللَّهَ وَتُخْفِى فِى نَفْسِكَ مَا ٱللَّهُ مُبْدِيهِ وَتَخْشَى ٱلنَّاسَ وَٱللَّهُ أَحَقُّ أَن تَخْشَىٰهُ ۖ فَلَمَّا قَضَىٰ زَيْدٌۭ مِّنْهَا وَطَرًۭا زَوَّجْنَـٰكَهَا لِكَىْ لَا يَكُونَ عَلَى ٱلْمُؤْمِنِينَ حَرَجٌۭ فِىٓ أَزْوَٰجِ أَدْعِيَآئِهِمْ إِذَا قَضَوْا۟ مِنْهُنَّ وَطَرًۭا ۚ وَكَانَ أَمْرُ ٱللَّهِ مَفْعُولًۭا",
-    "verse": "And [remember, O Muḥammad], when you said to the one on whom Allāh bestowed favor and you bestowed favor, \"Keep your wife and fear Allāh,\" while you concealed within yourself that which Allāh is to disclose. And you feared the people, while Allāh has more right that you fear Him. So when Zayd had no longer any need for her, We married her to you in order that there not be upon the believers any discomfort [i.e., guilt] concerning the wives of their claimed [i.e., adopted] sons when they no longer have need of them. And ever is the command [i.e., decree] of Allāh accomplished. (33:37)"
+    "verseRef": "29:39",
+    "arabic": "وَقَـٰرُونَ وَفِرْعَوْنَ وَهَـٰمَـٰنَ ۖ وَلَقَدْ جَآءَهُم مُّوسَىٰ بِٱلْبَيِّنَـٰتِ فَٱسْتَكْبَرُوا۟ فِى ٱلْأَرْضِ وَمَا كَانُوا۟ سَـٰبِقِينَ",
+    "verse": "And [We destroyed] Qārūn and Pharaoh and Hāmān. And Moses had already come to them with clear evidences, and they were arrogant in the land, but they were not outrunners [of Our punishment]. (29:39)"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
