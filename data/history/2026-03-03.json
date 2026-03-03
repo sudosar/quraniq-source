@@ -1,0 +1,317 @@
+{
+  "connections": {
+    "categories": [
+      {
+        "name": "أَنْوَاعُ ٱلْمَلَابِسِ",
+        "nameEn": "Types of Clothing",
+        "color": "yellow",
+        "items": [
+          {
+            "ar": "سَرَابِيلَ",
+            "en": "Garments",
+            "ref": "16:81",
+            "verse": "وَٱللَّهُ جَعَلَ لَكُم مِّمَّا خَلَقَ ظِلَـٰلًۭا وَجَعَلَ لَكُم مِّنَ ٱلْجِبَالِ أَكْنَـٰنًۭا وَجَعَلَ لَكُمْ سَرَٰبِيلَ تَقِيكُمُ ٱلْحَرَّ وَسَرَٰبِيلَ تَقِيكُم بَأْسَكُمْ ۚ كَذَٰلِكَ يُتِمُّ نِعْمَتَهُۥ عَلَيْكُمْ لَعَلَّكُمْ تُسْلِمُونَ",
+            "verseEn": "And Allāh has made for you, from that which He has created, shadows [i.e., shade] and has made for you from the mountains, shelters and has made for you garments which protect you from the heat and garments [i.e., coats of mail] which protect you from your [enemy in] battle. Thus does He complete His favor upon you that you might submit [to Him]."
+          },
+          {
+            "ar": "جَلَٰبِيبِهِنَّ",
+            "en": "Their outer garments",
+            "ref": "33:59",
+            "verse": "يَـٰٓأَيُّهَا ٱلنَّبِىُّ قُل لِّأَزْوَٰجِكَ وَبَنَاتِكَ وَنِسَآءِ ٱلْمُؤْمِنِينَ يُدْنِينَ عَلَيْهِنَّ مِن جَلَـٰبِيبِهِنَّ ۚ ذَٰلِكَ أَدْنَىٰٓ أَن يُعْرَفْنَ فَلَا يُؤْذَيْنَ ۗ وَكَانَ ٱللَّهُ غَفُورًۭا رَّحِيمًۭا",
+            "verseEn": "O Prophet, tell your wives and your daughters and the women of the believers to bring down over themselves [part] of their outer garments. That is more suitable that they will be known and not be abused. And ever is Allāh Forgiving and Merciful."
+          },
+          {
+            "ar": "ثِيَابٌ",
+            "en": "Clothes",
+            "ref": "22:19",
+            "verse": "۞ هَـٰذَانِ خَصْمَانِ ٱخْتَصَمُوا۟ فِى رَبِّهِمْ ۖ فَٱلَّذِينَ كَفَرُوا۟ قُطِّعَتْ لَهُمْ ثِيَابٌۭ مِّن نَّارٍۢ يُصَبُّ مِن فَوْقِ رُءُوسِهِمُ ٱلْحَمِيمُ",
+            "verseEn": "These are two adversaries who have disputed over their Lord. But those who disbelieved will have cut out for them garments of fire. Poured upon their heads will be scalding water"
+          },
+          {
+            "ar": "حَرِيرًا",
+            "en": "Silk",
+            "ref": "76:12",
+            "verse": "وَجَزَىٰهُم بِمَا صَبَرُوا۟ جَنَّةًۭ وَحَرِيرًۭا",
+            "verseEn": "And will reward them for what they patiently endured [with] a garden [in Paradise] and silk [garments]."
+          }
+        ]
+      },
+      {
+        "name": "أَسْمَاءُ النَّارِ",
+        "nameEn": "Names for Hellfire",
+        "color": "green",
+        "items": [
+          {
+            "ar": "جَحِيمٍ",
+            "en": "Jaheem",
+            "ref": "82:14",
+            "verse": "وَإِنَّ ٱلْفُجَّارَ لَفِى جَحِيمٍۢ",
+            "verseEn": "And indeed, the wicked will be in Hellfire."
+          },
+          {
+            "ar": "سَعِيرًا",
+            "en": "Sa'eer",
+            "ref": "4:10",
+            "verse": "إِنَّ ٱلَّذِينَ يَأْكُلُونَ أَمْوَٰلَ ٱلْيَتَـٰمَىٰ ظُلْمًا إِنَّمَا يَأْكُلُونَ فِى بُطُونِهِمْ نَارًۭا ۖ وَسَيَصْلَوْنَ سَعِيرًۭا",
+            "verseEn": "Indeed, those who devour the property of orphans unjustly are only consuming into their bellies fire. And they will be burned in a Blaze [i.e., Hellfire]."
+          },
+          {
+            "ar": "لَظَىٰ",
+            "en": "Latha",
+            "ref": "70:15",
+            "verse": "كَلَّآ ۖ إِنَّهَا لَظَىٰ",
+            "verseEn": "No! Indeed, it is the Flame [of Hell],"
+          },
+          {
+            "ar": "سَقَرُ",
+            "en": "Saqar",
+            "ref": "74:27",
+            "verse": "وَمَآ أَدْرَىٰكَ مَا سَقَرُ",
+            "verseEn": "And what can make you know what is Saqar?"
+          }
+        ]
+      },
+      {
+        "name": "أَسْمَاءٌ لِأَهْوَالٍ مُهْلِكَةٍ",
+        "nameEn": "Proper Nouns for Apocalyptic Events",
+        "color": "blue",
+        "items": [
+          {
+            "ar": "ٱلطَّاغِيَةِ",
+            "en": "The Overwhelming Event",
+            "ref": "69:5",
+            "verse": "فَأَمَّا ثَمُودُ فَأُهْلِكُوا۟ بِٱلطَّاغِيَةِ",
+            "verseEn": "So as for Thamūd, they were destroyed by the overpowering [blast]."
+          },
+          {
+            "ar": "ٱلْقَارِعَةُ",
+            "en": "The Striking Calamity",
+            "ref": "101:1",
+            "verse": "ٱلْقَارِعَةُ",
+            "verseEn": "The Striking Calamity -"
+          },
+          {
+            "ar": "ٱلْآزِفَةِ",
+            "en": "The Imminent Event",
+            "ref": "53:57",
+            "verse": "أَزِفَتِ ٱلْـَٔازِفَةُ",
+            "verseEn": "The Approaching Day has approached."
+          },
+          {
+            "ar": "ٱلصَّاخَّةُ",
+            "en": "The Deafening Blast",
+            "ref": "80:33",
+            "verse": "فَإِذَا جَآءَتِ ٱلصَّآخَّةُ",
+            "verseEn": "But when there comes the Deafening Blast"
+          }
+        ]
+      },
+      {
+        "name": "أَوْعِيَة وَحَاوِيَات",
+        "nameEn": "Things that Contain or Enclose",
+        "color": "purple",
+        "items": [
+          {
+            "ar": "دَلْوَهُۥ",
+            "en": "his bucket",
+            "ref": "12:19",
+            "verse": "وَجَآءَتْ سَيَّارَةٌۭ فَأَرْسَلُوا۟ وَارِدَهُمْ فَأَدْلَىٰ دَلْوَهُۥ ۖ قَالَ يَـٰبُشْرَىٰ هَـٰذَا غُلَـٰمٌۭ ۚ وَأَسَرُّوهُ بِضَـٰعَةًۭ ۚ وَٱللَّهُ عَلِيمٌۢ بِمَا يَعْمَلُونَ",
+            "verseEn": "And there came a company of travelers; then they sent their water drawer, and he let down his bucket. He said, \"Good news! Here is a boy.\" And they concealed him, [taking him] as merchandise; and Allāh was Knowing of what they did."
+          },
+          {
+            "ar": "ٱلْمَهْدِ",
+            "en": "the cradle",
+            "ref": "19:29",
+            "verse": "فَأَشَارَتْ إِلَيْهِ ۖ قَالُوا۟ كَيْفَ نُكَلِّمُ مَن كَانَ فِى ٱلْمَهْدِ صَبِيًّۭا",
+            "verseEn": "So she pointed to him. They said, \"How can we speak to one who is in the cradle a child?\""
+          },
+          {
+            "ar": "ٱلصُّدُورِ",
+            "en": "the chests",
+            "ref": "35:38",
+            "verse": "إِنَّ ٱللَّهَ عَـٰلِمُ غَيْبِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ إِنَّهُۥ عَلِيمٌۢ بِذَاتِ ٱلصُّدُورِ",
+            "verseEn": "Indeed, Allāh is Knower of the unseen [aspects] of the heavens and earth. Indeed, He is Knowing of that within the breasts."
+          },
+          {
+            "ar": "أَكْمَامِهَا",
+            "en": "its sheaths",
+            "ref": "41:47",
+            "verse": "۞ إِلَيْهِ يُرَدُّ عِلْمُ ٱلسَّاعَةِ ۚ وَمَا تَخْرُجُ مِن ثَمَرَٰتٍۢ مِّنْ أَكْمَامِهَا وَمَا تَحْمِلُ مِنْ أُنثَىٰ وَلَا تَضَعُ إِلَّا بِعِلْمِهِۦ ۚ وَيَوْمَ يُنَادِيهِمْ أَيْنَ شُرَكَآءِى قَالُوٓا۟ ءَاذَنَّـٰكَ مَا مِنَّا مِن شَهِيدٍۢ",
+            "verseEn": "To Him [alone] is attributed knowledge of the Hour. And fruits emerge not from their coverings nor does a female conceive or give birth except with His knowledge. And the Day He will call to them, \"Where are My 'partners'?\" they will say, \"We announce to You that there is [no longer] among us any witness [to that].\""
+          }
+        ]
+      }
+    ]
+  },
+  "harf": {
+    "word": "نعمة",
+    "display": "نِعْمَة",
+    "hint": "A divine favor that calls for gratitude.",
+    "verseRef": "5:3",
+    "arabicVerse": "حُرِّمَتْ عَلَيْكُمُ ٱلْمَيْتَةُ وَٱلدَّمُ وَلَحْمُ ٱلْخِنزِيرِ وَمَآ أُهِلَّ لِغَيْرِ ٱللَّهِ بِهِۦ وَٱلْمُنْخَنِقَةُ وَٱلْمَوْقُوذَةُ وَٱلْمُتَرَدِّيَةُ وَٱلنَّطِيحَةُ وَمَآ أَكَلَ ٱلسَّبُعُ إِلَّا مَا ذَكَّيْتُمْ وَمَا ذُبِحَ عَلَى ٱلنُّصُبِ وَأَن تَسْتَقْسِمُوا۟ بِٱلْأَزْلَـٰمِ ۚ ذَٰلِكُمْ فِسْقٌ ۗ ٱلْيَوْمَ يَئِسَ ٱلَّذِينَ كَفَرُوا۟ مِن دِينِكُمْ فَلَا تَخْشَوْهُمْ وَٱخْشَوْنِ ۚ ٱلْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِى وَرَضِيتُ لَكُمُ ٱلْإِسْلَـٰمَ دِينًۭا ۚ فَمَنِ ٱضْطُرَّ فِى مَخْمَصَةٍ غَيْرَ مُتَجَانِفٍۢ لِّإِثْمٍۢ ۙ فَإِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ",
+    "verse": "5:3 — Prohibited to you are dead animals, blood, the flesh of swine, and that which has been dedicated to other than Allāh, and [those animals] killed by strangling or by a violent blow or by a head-long fall or by the goring of horns, and those from which a wild animal has eaten, except what you [are able to] slaughter [before its death], and those which are sacrificed on stone altars, and [prohibited is] that you seek decision through divining arrows. That is grave disobedience. This day those who disbelieve have despaired of [defeating] your religion; so fear them not, but fear Me. This day I have perfected for you your religion and completed My favor upon you and have approved for you Islām as religion. But whoever is forced by severe hunger with no inclination to sin - then indeed, Allāh is Forgiving and Merciful."
+  },
+  "deduction": {
+    "title": "The Architect of Arrogance",
+    "intro": "A prominent figure in a powerful court, this individual was tasked with a monumental, yet blasphemous, project. Driven by loyalty to a tyrannical leader, their story is a stark warning about the heights of human pride and the inevitable fall that follows.",
+    "clues": [
+      "I served in the court of a ruler who was blinded by power, and my counsel only deepened that darkness.",
+      "My name is forever linked with that of my leader and another wealthy contemporary, a trio of rebellion against the divine.",
+      "My expertise was in construction and administration, skills I used not for good, but for the grand designs of my master.",
+      "My leader commanded me to build a towering structure, a project born of pure arrogance.",
+      "The goal was audacious and foolish: to build a tower so high that it could reach the heavens and allow my master to see the God of Musa.",
+      "My master, Fir'awn, commanded me by name to kindle a fire upon the clay and make for him a lofty tower."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Haman",
+          "Aziz of Egypt",
+          "Namrud",
+          "Qarun",
+          "Samiri"
+        ],
+        "answer": "Haman"
+      },
+      "trial": {
+        "label": "What Was My Grand Project?",
+        "options": [
+          "Building a lofty tower to the sky",
+          "Constructing a dam to divert a river",
+          "Erecting idols for a whole city",
+          "Forging a golden calf for worship",
+          "Assembling an army of elephants"
+        ],
+        "answer": "Building a lofty tower to the sky"
+      },
+      "location": {
+        "label": "What Was I Commanded to Use?",
+        "options": [
+          "Clay, baked into bricks",
+          "Iron and molten copper",
+          "Hewn stones from the mountains",
+          "Gold and precious jewels",
+          "Timber from sacred trees"
+        ],
+        "answer": "Clay, baked into bricks"
+      },
+      "outcome": {
+        "label": "What Was Our Ultimate Fate?",
+        "options": [
+          "We were drowned by the command of Allah",
+          "We were swallowed by the earth",
+          "We were destroyed by a mighty blast",
+          "We were turned into apes",
+          "We were granted forgiveness and guidance"
+        ],
+        "answer": "We were drowned by the command of Allah"
+      }
+    },
+    "verseRef": "29:39",
+    "arabic": "وَقَـٰرُونَ وَفِرْعَوْنَ وَهَـٰمَـٰنَ ۖ وَلَقَدْ جَآءَهُم مُّوسَىٰ بِٱلْبَيِّنَـٰتِ فَٱسْتَكْبَرُوا۟ فِى ٱلْأَرْضِ وَمَا كَانُوا۟ سَـٰبِقِينَ",
+    "verse": "And [We destroyed] Qārūn and Pharaoh and Hāmān. And Moses had already come to them with clear evidences, and they were arrogant in the land, but they were not outrunners [of Our punishment]. (29:39)"
+  },
+  "scramble": {
+    "verseRef": "16:18",
+    "reference": "Surah An-Nahl (16:18)",
+    "segments": [
+      "وَإِن تَعُدُّوا۟",
+      "نِعْمَةَ ٱللَّهِ",
+      "لَا تُحْصُوهَآ",
+      "إِنَّ ٱللَّهَ",
+      "لَغَفُورٌ رَّحِيمٌ"
+    ],
+    "translations": [
+      "And if you should count",
+      "the Favors of Allah the Favors of Allah",
+      "not you could enumerate them",
+      "Indeed Allah",
+      "(is) Oft-Forgiving Most Merciful"
+    ],
+    "hint": "This verse speaks of the impossibility of quantifying Allah's countless blessings upon creation.",
+    "arabic": "وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌۭ رَّحِيمٌۭ",
+    "words": [
+      "وَإِن تَعُدُّوا۟",
+      "نِعْمَةَ ٱللَّهِ",
+      "لَا تُحْصُوهَآ ۗ",
+      "إِنَّ ٱللَّهَ",
+      "لَغَفُورٌۭ رَّحِيمٌۭ"
+    ],
+    "verseEn": "And if you should count the favors of Allāh, you could not enumerate them. Indeed, Allāh is Forgiving and Merciful."
+  },
+  "juz": {
+    "date": "2026-03-03",
+    "juz_number": 15,
+    "juz_name": "Subhanalladhi",
+    "juz_name_ar": "سُبْحَانَ الَّذِي",
+    "verse": {
+      "surah_number": 17,
+      "surah_name": "Al-Isra",
+      "surah_name_ar": "الْإِسْرَاء",
+      "ayah_number": 23,
+      "arabic_text": "وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُdُآا۟ إِلَّآ إِيَّاهُ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًا",
+      "translation": "And your Lord has decreed that you worship none but Him, and to be good to your parents.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2001.mp3"
+    },
+    "theme_question": {
+      "correct": "The inseparable duties of worshipping Allah alone and showing excellent kindness to parents.",
+      "options": [
+        "The inseparable duties of worshipping Allah alone and showing excellent kindness to parents.",
+        "The specific rules of inheritance for elderly parents.",
+        "The obligation of financial charity towards all relatives.",
+        "The historical account of Prophet Ibrahim's relationship with his father."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 17,
+      "options": [
+        {
+          "num": 18,
+          "name": "Al-Kahf",
+          "name_ar": "الْكَهْف",
+          "name_en": "The Cave"
+        },
+        {
+          "num": 17,
+          "name": "Al-Isra",
+          "name_ar": "الْإِسْرَاء",
+          "name_en": "The Night Journey"
+        },
+        {
+          "num": 16,
+          "name": "An-Nahl",
+          "name_ar": "النَّحْل",
+          "name_en": "The Bee"
+        },
+        {
+          "num": 20,
+          "name": "Taha",
+          "name_ar": "طه",
+          "name_en": "Ta-Ha"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 17,
+          "name": "Al-Isra",
+          "name_ar": "الْإِسْرَاء",
+          "name_en": "The Night Journey"
+        },
+        {
+          "num": 18,
+          "name": "Al-Kahf",
+          "name_ar": "الْكَهْف",
+          "name_en": "The Cave"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse is part of a series of foundational commandments in Surah Al-Isra that outline a comprehensive moral and social code for believers. It comes immediately after the prohibition of shirk (associating partners with Allah), placing the duty to parents at the highest level of importance right after the duty to God Himself.",
+      "theme_explanation": "The theme is the profound and direct link between Tawhid (the Oneness of Allah) and 'Birr al-Walidayn' (excellent kindness to parents). By placing these two commands together in a single decree ('qada' - He has decreed), Allah elevates the status of parents and establishes that honoring them is not merely a social courtesy but a fundamental act of worship and obedience.",
+      "surah_overview": "Surah Al-Isra, also known as Bani Isra'il (The Children of Israel), is a Meccan surah that begins by mentioning the miraculous Night Journey of Prophet Muhammad (ﷺ) from Makkah to Jerusalem. The surah addresses the history of the Children of Israel as a lesson, and lays down essential principles of faith, morality, and social conduct, including the rights of parents, orphans, and the needy, and warns against arrogance and transgression."
+    }
+  }
+}

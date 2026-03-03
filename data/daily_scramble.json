@@ -1,32 +1,32 @@
 {
-  "date": "2026-03-01",
+  "date": "2026-03-03",
   "puzzle": {
-    "verseRef": "59:21",
-    "reference": "Surah Al-Hashr (59:21)",
+    "verseRef": "16:18",
+    "reference": "Surah An-Nahl (16:18)",
     "segments": [
-      "لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ",
-      "عَلَىٰ جَبَلٍ",
-      "لَّرَأَيْتَهُ خَاشِعًا",
-      "مُّتَصَدِّعًا",
-      "مِّنْ خَشْيَةِ اللَّهِ"
+      "وَإِن تَعُدُّوا۟",
+      "نِعْمَةَ ٱللَّهِ",
+      "لَا تُحْصُوهَآ",
+      "إِنَّ ٱللَّهَ",
+      "لَغَفُورٌ رَّحِيمٌ"
     ],
     "translations": [
-      "If We (had) sent down this Quran",
-      "on a mountain surely you (would) have seen it humbled",
-      "breaking asunder from (the) fear (of) Allah",
-      "And these examples We present them",
-      "to the people so that they may give thought"
+      "And if you should count",
+      "the Favors of Allah the Favors of Allah",
+      "not you could enumerate them",
+      "Indeed Allah",
+      "(is) Oft-Forgiving Most Merciful"
     ],
-    "hint": "This verse describes the profound effect the Quran would have on one of Allah's mightiest creations.",
-    "arabic": "لَوْ أَنزَلْنَا هَـٰذَا ٱلْقُرْءَانَ عَلَىٰ جَبَلٍۢ لَّرَأَيْتَهُۥ خَـٰشِعًۭا مُّتَصَدِّعًۭا مِّنْ خَشْيَةِ ٱللَّهِ ۚ وَتِلْكَ ٱلْأَمْثَـٰلُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ",
+    "hint": "This verse speaks of the impossibility of quantifying Allah's countless blessings upon creation.",
+    "arabic": "وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌۭ رَّحِيمٌۭ",
     "words": [
-      "لَوْ أَنزَلْنَا هَـٰذَا ٱلْقُرْءَانَ",
-      "عَلَىٰ جَبَلٍۢ لَّرَأَيْتَهُۥ خَـٰشِعًۭا",
-      "مُّتَصَدِّعًۭا مِّنْ خَشْيَةِ ٱللَّهِ ۚ",
-      "وَتِلْكَ ٱلْأَمْثَـٰلُ نَضْرِبُهَا",
-      "لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ"
+      "وَإِن تَعُدُّوا۟",
+      "نِعْمَةَ ٱللَّهِ",
+      "لَا تُحْصُوهَآ ۗ",
+      "إِنَّ ٱللَّهَ",
+      "لَغَفُورٌۭ رَّحِيمٌۭ"
     ],
-    "verseEn": "If We had sent down this Qur’ān upon a mountain, you would have seen it humbled and splitting from fear of Allāh. And these examples We present to the people that perhaps they will give thought."
+    "verseEn": "And if you should count the favors of Allāh, you could not enumerate them. Indeed, Allāh is Forgiving and Merciful."
   },
   "generated": true
 }

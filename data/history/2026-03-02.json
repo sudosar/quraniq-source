@@ -1,0 +1,317 @@
+{
+  "connections": {
+    "categories": [
+      {
+        "name": "ثَرَاءٌ وَكُنُوزٌ",
+        "nameEn": "Wealth and Treasure",
+        "color": "yellow",
+        "items": [
+          {
+            "ar": "مَالًا",
+            "en": "wealth",
+            "ref": "104:2",
+            "verse": "ٱلَّذِى جَمَعَ مَالًۭا وَعَدَّدَهُۥ",
+            "verseEn": "Who collects wealth and [continuously] counts it."
+          },
+          {
+            "ar": "خَيْرًا",
+            "en": "good/wealth",
+            "ref": "2:180",
+            "verse": "كُتِبَ عَلَيْكُمْ إِذَا حَضَرَ أَحَدَكُمُ ٱلْمَوْتُ إِن تَرَكَ خَيْرًا ٱلْوَصِيَّةُ لِلْوَٰلِدَيْنِ وَٱلْأَقْرَبِينَ بِٱلْمَعْرُوفِ ۖ حَقًّا عَلَى ٱلْمُتَّقِينَ",
+            "verseEn": "Prescribed for you when death approaches [any] one of you if he leaves wealth [is that he should make] a bequest for the parents and near relatives according to what is acceptable - a duty upon the righteous."
+          },
+          {
+            "ar": "قِنطَارًا",
+            "en": "a great amount",
+            "ref": "4:20",
+            "verse": "وَإِنْ أَرَدتُّمُ ٱسْتِبْدَالَ زَوْجٍۢ مَّكَانَ زَوْجٍۢ وَءَاتَيْتُمْ إِحْدَىٰهُنَّ قِنطَارًۭا فَلَا تَأْخُذُوا۟ مِنْهُ شَيْـًٔا ۚ أَتَأْخُذُونَهُۥ بُهْتَـٰنًۭا وَإِثْمًۭا مُّبِينًۭا",
+            "verseEn": "But if you want to replace one wife with another and you have given one of them a great amount [in gifts], do not take [back] from it anything. Would you take it in injustice and manifest sin?"
+          },
+          {
+            "ar": "كَنزٌ",
+            "en": "a treasure",
+            "ref": "18:82",
+            "verse": "وَأَمَّا ٱلْجِدَارُ فَكَانَ لِغُلَـٰمَيْنِ يَتِيمَيْنِ فِى ٱلْمَدِينَةِ وَكَانَ تَحْتَهُۥ كَنزٌۭ لَّهُمَا وَكَانَ أَبُوهُمَا صَـٰلِحًۭا فَأَرَادَ رَبُّكَ أَن يَبْلُغَآ أَشُدَّهُمَا وَيَسْتَخْرِجَا كَنزَهُمَا رَحْمَةًۭ مِّن رَّبِّكَ ۚ وَمَا فَعَلْتُهُۥ عَنْ أَمْرِى ۚ ذَٰلِكَ تَأْوِيلُ مَا لَمْ تَسْطِع عَّلَيْهِ صَبْرًۭا",
+            "verseEn": "And as for the wall, it belonged to two orphan boys in the city, and there was beneath it a treasure for them, and their father had been righteous. So your Lord intended that they reach maturity and extract their treasure, as a mercy from your Lord. And I did it not of my own accord. That is the interpretation of that about which you could not have patience.\""
+          }
+        ]
+      },
+      {
+        "name": "أَقْسَامٌ فِي بِدَايَاتِ السُّوَرِ",
+        "nameEn": "Oaths at the Beginning of Surahs",
+        "color": "green",
+        "items": [
+          {
+            "ar": "وَٱلضُّحَىٰ",
+            "en": "By the morning brightness",
+            "ref": "93:1",
+            "verse": "وَٱلضُّحَىٰ",
+            "verseEn": "By the morning brightness"
+          },
+          {
+            "ar": "وَٱلتِّينِ",
+            "en": "By the fig",
+            "ref": "95:1",
+            "verse": "وَٱلتِّينِ وَٱلزَّيْتُونِ",
+            "verseEn": "By the fig and the olive"
+          },
+          {
+            "ar": "وَٱلْعَصْرِ",
+            "en": "By time",
+            "ref": "103:1",
+            "verse": "وَٱلْعَصْرِ",
+            "verseEn": "By time,"
+          },
+          {
+            "ar": "وَٱلذَّٰرِيَـٰتِ",
+            "en": "By the scattering winds",
+            "ref": "51:1",
+            "verse": "وَٱلذَّٰرِيَـٰتِ ذَرْوًۭا",
+            "verseEn": "By the [winds] scattering [dust], dispersing [it]"
+          }
+        ]
+      },
+      {
+        "name": "مُصْطَلَحَاتٌ فِقْهِيَّةٌ",
+        "nameEn": "Quranic Legal Terminology",
+        "color": "blue",
+        "items": [
+          {
+            "ar": "فَرِيضَةً",
+            "en": "An ordinance",
+            "ref": "4:11",
+            "verse": "يُوصِيكُمُ ٱللَّهُ فِىٓ أَوْلَـٰدِكُمْ ۖ لِلذَّكَرِ مِثْلُ حَظِّ ٱلْأُنثَيَيْنِ ۚ فَإِن كُنَّ نِسَآءًۭ فَوْقَ ٱثْنَتَيْنِ فَلَهُنَّ ثُلُثَا مَا تَرَكَ ۖ وَإِن كَانَتْ وَٰحِدَةًۭ فَلَهَا ٱلنِّصْفُ ۚ وَلِأَبَوَيْهِ لِكُلِّ وَٰحِدٍۢ مِّنْهُمَا ٱلسُّدُسُ مِمَّا تَرَكَ إِن كَانَ لَهُۥ وَلَدٌۭ ۚ فَإِن لَّمْ يَكُن لَّهُۥ وَلَدٌۭ وَوَرِثَهُۥٓ أَبَوَاهُ فَلِأُمِّهِ ٱلثُّلُثُ ۚ فَإِن كَانَ لَهُۥٓ إِخْوَةٌۭ فَلِأُمِّهِ ٱلسُّدُسُ ۚ مِنۢ بَعْدِ وَصِيَّةٍۢ يُوصِى بِهَآ أَوْ دَيْنٍ ۗ ءَابَآؤُكُمْ وَأَبْنَآؤُكُمْ لَا تَدْرُونَ أَيُّهُمْ أَقْرَبُ لَكُمْ نَفْعًۭا ۚ فَرِيضَةًۭ مِّنَ ٱللَّهِ ۗ إِنَّ ٱللَّهَ كَانَ عَلِيمًا حَكِيمًۭا",
+            "verseEn": "Allāh instructs you concerning your children [i.e., their portions of inheritance]: for the male, what is equal to the share of two females. But if there are [only] daughters, two or more, for them is two thirds of one's estate. And if there is only one, for her is half. And for one's parents, to each one of them is a sixth of his estate if he left children. But if he had no children and the parents [alone] inherit from him, then for his mother is one third. And if he had brothers [and/or sisters], for his mother is a sixth, after any bequest he [may have] made or debt. Your parents or your children - you know not which of them are nearest to you in benefit. [These shares are] an obligation [imposed] by Allāh. Indeed, Allāh is ever Knowing and Wise."
+          },
+          {
+            "ar": "قِصَاصٌ",
+            "en": "Legal retribution",
+            "ref": "5:45",
+            "verse": "وَكَتَبْنَا عَلَيْهِمْ فِيهَآ أَنَّ ٱلنَّفْسَ بِٱلنَّفْسِ وَٱلْعَيْنَ بِٱلْعَيْنِ وَٱلْأَنفَ بِٱلْأَنفِ وَٱلْأُذُنَ بِٱلْأُذُنِ وَٱلسِّنَّ بِٱلسِّنِّ وَٱلْجُرُوحَ قِصَاصٌۭ ۚ فَمَن تَصَدَّقَ بِهِۦ فَهُوَ كَفَّارَةٌۭ لَّهُۥ ۚ وَمَن لَّمْ يَحْكُم بِمَآ أَنزَلَ ٱللَّهُ فَأُو۟لَـٰٓئِكَ هُمُ ٱلظَّـٰلِمُونَ",
+            "verseEn": "And We ordained for them therein a life for a life, an eye for an eye, a nose for a nose, an ear for an ear, a tooth for a tooth, and for wounds is legal retribution. But whoever gives [up his right as] charity, it is an expiation for him. And whoever does not judge by what Allāh has revealed - then it is those who are the wrongdoers [i.e., the unjust]."
+          },
+          {
+            "ar": "دِيَةٌ",
+            "en": "Blood money",
+            "ref": "4:92",
+            "verse": "وَمَا كَانَ لِمُؤْمِنٍ أَن يَقْتُلَ مُؤْمِنًا إِلَّا خَطَـًۭٔا ۚ وَمَن قَتَلَ مُؤْمِنًا خَطَـًۭٔا فَتَحْرِيرُ رَقَبَةٍۢ مُّؤْمِنَةٍۢ وَدِيَةٌۭ مُّسَلَّمَةٌ إِلَىٰٓ أَهْلِهِۦٓ إِلَّآ أَن يَصَّدَّقُوا۟ ۚ فَإِن كَانَ مِن قَوْمٍ عَدُوٍّۢ لَّكُمْ وَهُوَ مُؤْمِنٌۭ فَتَحْرِيرُ رَقَبَةٍۢ مُّؤْمِنَةٍۢ ۖ وَإِن كَانَ مِن قَوْمٍۭ بَيْنَكُمْ وَبَيْنَهُم مِّيثَـٰقٌۭ فَدِيَةٌۭ مُّسَلَّمَةٌ إِلَىٰٓ أَهْلِهِۦ وَتَحْرِيرُ رَقَبَةٍۢ مُّؤْمِنَةٍۢ ۖ فَمَن لَّمْ يَجِدْ فَصِيَامُ شَهْرَيْنِ مُتَتَابِعَيْنِ تَوْبَةًۭ مِّنَ ٱللَّهِ ۗ وَكَانَ ٱللَّهُ عَلِيمًا حَكِيمًۭا",
+            "verseEn": "And never is it for a believer to kill a believer except by mistake. And whoever kills a believer by mistake - then the freeing of a believing slave and a compensation payment [diyah] presented to his [i.e., the deceased's] family [is required], unless they give [up their right as] charity. But if he [i.e., the deceased] was from a people at war with you and he was a believer - then [only] the freeing of a believing slave; and if he was from a people with whom you have a treaty - then a compensation payment presented to his family and the freeing of a believing slave. And whoever does not find [one or cannot afford to buy one] - then [instead], a fast for two months consecutively, [seeking] acceptance of repentance from Allāh. And Allāh is ever Knowing and Wise."
+          },
+          {
+            "ar": "كَفَّٰرَةٌ",
+            "en": "Expiation",
+            "ref": "5:95",
+            "verse": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تَقْتُلُوا۟ ٱلصَّيْدَ وَأَنتُمْ حُرُمٌۭ ۚ وَمَن قَتَلَهُۥ مِنكُم مُّتَعَمِّدًۭا فَجَزَآءٌۭ مِّثْلُ مَا قَتَلَ مِنَ ٱلنَّعَمِ يَحْكُمُ بِهِۦ ذَوَا عَدْلٍۢ مِّنكُمْ هَدْيًۢا بَـٰلِغَ ٱلْكَعْبَةِ أَوْ كَفَّـٰرَةٌۭ طَعَامُ مَسَـٰكِينَ أَوْ عَدْلُ ذَٰلِكَ صِيَامًۭا لِّيَذُوقَ وَبَالَ أَمْرِهِۦ ۗ عَفَا ٱللَّهُ عَمَّا سَلَفَ ۚ وَمَنْ عَادَ فَيَنتَقِمُ ٱللَّهُ مِنْهُ ۗ وَٱللَّهُ عَزِيزٌۭ ذُو ٱنتِقَامٍ",
+            "verseEn": "O you who have believed, do not kill game while you are in the state of iḥrām. And whoever of you kills it intentionally - the penalty is an equivalent from sacrificial animals to what he killed, as judged by two just men among you as an offering [to Allāh] delivered to the Kaʿbah, or an expiation: the feeding of needy people or the equivalent of that in fasting, that he may taste the consequence of his matter [i.e., deed]. Allāh has pardoned what is past; but whoever returns [to violation], then Allāh will take retribution from him. And Allāh is Exalted in Might and Owner of Retribution."
+          }
+        ]
+      },
+      {
+        "name": "مَفَاهِيمُ رُوحِيَّةٌ بِأَلْفَاظٍ مَادِّيَّةٍ",
+        "nameEn": "Metaphors for Spiritual Ascent and Adherence",
+        "color": "purple",
+        "items": [
+          {
+            "ar": "بِٱلْعُرْوَةِ",
+            "en": "the handhold",
+            "ref": "2:256",
+            "verse": "لَآ إِكْرَاهَ فِى ٱلدِّينِ ۖ قَد تَّبَيَّنَ ٱلرُّشْدُ مِنَ ٱلْغَىِّ ۚ فَمَن يَكْفُرْ بِٱلطَّـٰغُوتِ وَيُؤْمِنۢ بِٱللَّهِ فَقَدِ ٱسْتَمْسَكَ بِٱلْعُرْوَةِ ٱلْوُثْقَىٰ لَا ٱنفِصَامَ لَهَا ۗ وَٱللَّهُ سَمِيعٌ عَلِيمٌ",
+            "verseEn": "There shall be no compulsion in [acceptance of] the religion. The right course has become distinct from the wrong. So whoever disbelieves in ṭāghūt and believes in Allāh has grasped the most trustworthy handhold with no break in it. And Allāh is Hearing and Knowing."
+          },
+          {
+            "ar": "ٱلْأَسْبَابَ",
+            "en": "the ways",
+            "ref": "40:36",
+            "verse": "وَقَالَ فِرْعَوْنُ يَـٰهَـٰمَـٰنُ ٱبْنِ لِى صَرْحًۭا لَّعَلِّىٓ أَبْلُغُ ٱلْأَسْبَـٰبَ",
+            "verseEn": "And Pharaoh said, \"O Hāmān, construct for me a tower that I might reach the ways -"
+          },
+          {
+            "ar": "ٱلْمَعَارِجِ",
+            "en": "the ways of ascent",
+            "ref": "70:3",
+            "verse": "مِّنَ ٱللَّهِ ذِى ٱلْمَعَارِجِ",
+            "verseEn": "[It is] from Allāh, owner of the ways of ascent."
+          },
+          {
+            "ar": "دَرَجَٰتٍ",
+            "en": "ranks",
+            "ref": "4:96",
+            "verse": "دَرَجَـٰتٍۢ مِّنْهُ وَمَغْفِرَةًۭ وَرَحْمَةًۭ ۚ وَكَانَ ٱللَّهُ غَفُورًۭا رَّحِيمًا",
+            "verseEn": "Degrees [of high position] from Him and forgiveness and mercy. And Allāh is ever Forgiving and Merciful."
+          }
+        ]
+      }
+    ]
+  },
+  "harf": {
+    "word": "سمع",
+    "display": "سَمْع",
+    "hint": "A sense used to listen to the Quran.",
+    "verseRef": "67:23",
+    "arabicVerse": "قُلْ هُوَ ٱلَّذِىٓ أَنشَأَكُمْ وَجَعَلَ لَكُمُ ٱلسَّمْعَ وَٱلْأَبْصَـٰرَ وَٱلْأَفْـِٔدَةَ ۖ قَلِيلًۭا مَّا تَشْكُرُونَ",
+    "verse": "67:23 — Say, \"It is He who has produced you and made for you hearing and vision and hearts [i.e., intellect]; little are you grateful.\""
+  },
+  "deduction": {
+    "title": "The Honor of a Mentioned Name",
+    "intro": "A life of devotion and proximity to the final Prophet marked this individual's journey. Once bound by earthly ties, they were freed and elevated to a status of immense love and trust. Their personal story became so pivotal that it addressed a societal norm, and their name was uniquely immortalized in the divine text, a distinction no other companion received. Who is this honored soul whose name is etched in revelation?",
+    "clues": [
+      "I was once a captive, but found freedom and a new family in the household of the most beloved of creation.",
+      "The Prophet of Allah loved me so dearly that people began to call me by his family's name, as if I were his own child.",
+      "My personal life became the subject of divine revelation, clarifying a matter of adoption and marriage for the entire community to follow.",
+      "The marriage that followed my divorce was ordained by Allah to abolish a pre-Islamic custom regarding adopted children.",
+      "I was entrusted with command in the Battle of Mu'tah, a responsibility I carried until my final moments.",
+      "I am the only companion of the Prophet Muhammad ﷺ whose name is explicitly mentioned in the Quran."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Abu Bakr As-Siddiq",
+          "Salman Al-Farsi",
+          "Zayd ibn Harithah",
+          "Bilal ibn Rabah",
+          "'Abdullah ibn Umm Maktum"
+        ],
+        "answer": "Zayd ibn Harithah"
+      },
+      "trial": {
+        "label": "The Divine Decree",
+        "options": [
+          "Accusation of slander against a Prophet's spouse",
+          "Marriage and divorce addressed to abolish a taboo",
+          "Suggesting the digging of a trench for defense",
+          "Being the first martyr in a major battle",
+          "Leading the project to compile the Quran"
+        ],
+        "answer": "Marriage and divorce addressed to abolish a taboo"
+      },
+      "location": {
+        "label": "The Social Custom Addressed",
+        "options": [
+          "The rules of inheritance for orphans",
+          "The prohibition of interest (Riba)",
+          "The establishment of the Hijri calendar",
+          "The status of an adopted son",
+          "The rituals of the Hajj pilgrimage"
+        ],
+        "answer": "The status of an adopted son"
+      },
+      "outcome": {
+        "label": "The Ultimate Honor",
+        "options": [
+          "Being the only companion named in the Quran",
+          "Becoming the first Caliph after the Prophet's death",
+          "Being given the title 'The Sword of Allah'",
+          "Being promised Paradise while building a mosque",
+          "Being the first Muezzin of Islam"
+        ],
+        "answer": "Being the only companion named in the Quran"
+      }
+    },
+    "verseRef": "33:37",
+    "arabic": "وَإِذْ تَقُولُ لِلَّذِىٓ أَنْعَمَ ٱللَّهُ عَلَيْهِ وَأَنْعَمْتَ عَلَيْهِ أَمْسِكْ عَلَيْكَ زَوْجَكَ وَٱتَّقِ ٱللَّهَ وَتُخْفِى فِى نَفْسِكَ مَا ٱللَّهُ مُبْدِيهِ وَتَخْشَى ٱلنَّاسَ وَٱللَّهُ أَحَقُّ أَن تَخْشَىٰهُ ۖ فَلَمَّا قَضَىٰ زَيْدٌۭ مِّنْهَا وَطَرًۭا زَوَّجْنَـٰكَهَا لِكَىْ لَا يَكُونَ عَلَى ٱلْمُؤْمِنِينَ حَرَجٌۭ فِىٓ أَزْوَٰجِ أَدْعِيَآئِهِمْ إِذَا قَضَوْا۟ مِنْهُنَّ وَطَرًۭا ۚ وَكَانَ أَمْرُ ٱللَّهِ مَفْعُولًۭا",
+    "verse": "And [remember, O Muḥammad], when you said to the one on whom Allāh bestowed favor and you bestowed favor, \"Keep your wife and fear Allāh,\" while you concealed within yourself that which Allāh is to disclose. And you feared the people, while Allāh has more right that you fear Him. So when Zayd had no longer any need for her, We married her to you in order that there not be upon the believers any discomfort [i.e., guilt] concerning the wives of their claimed [i.e., adopted] sons when they no longer have need of them. And ever is the command [i.e., decree] of Allāh accomplished. (33:37)"
+  },
+  "scramble": {
+    "verseRef": "13:28",
+    "reference": "Surah Ar-Ra'd (13:28)",
+    "segments": [
+      "ٱلَّذِينَ ءَامَنُوا۟",
+      "وَتَطْمَئِنُّ قُلُوبُهُم",
+      "بِذِكْرِ ٱللَّهِ ۗ",
+      "أَلَا بِذِكْرِ ٱللَّهِ",
+      "تَطْمَئِنُّ ٱلْقُلُوبُ"
+    ],
+    "translations": [
+      "Those who believed and find satisfaction",
+      "their hearts in the remembrance",
+      "(of) Allah No doubt",
+      "in the remembrance (of) Allah",
+      "find satisfaction the hearts"
+    ],
+    "hint": "This verse reveals the ultimate source of tranquility and peace for the heart.",
+    "arabic": "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ ۗ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+    "words": [
+      "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ",
+      "قُلُوبُهُم بِذِكْرِ",
+      "ٱللَّهِ ۗ أَلَا",
+      "بِذِكْرِ ٱللَّهِ",
+      "تَطْمَئِنُّ ٱلْقُلُوبُ"
+    ],
+    "verseEn": "Those who have believed and whose hearts are assured by the remembrance of Allāh. Unquestionably, by the remembrance of Allāh hearts are assured.\""
+  },
+  "juz": {
+    "date": "2026-03-02",
+    "juz_number": 14,
+    "juz_name": "Rubama",
+    "juz_name_ar": "رُبَمَا",
+    "verse": {
+      "surah_number": 15,
+      "surah_name": "Al-Hijr",
+      "surah_name_ar": "ٱلْحِجْر",
+      "ayah_number": 9,
+      "arabic_text": "إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَٰفِظُونَ",
+      "translation": "Indeed, it is We who sent down the Qur'an and indeed, We will be its guardian.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1811.mp3"
+    },
+    "theme_question": {
+      "correct": "The divine promise to protect the Quran from corruption.",
+      "options": [
+        "The divine promise to protect the Quran from corruption.",
+        "The command for believers to memorize the entire Quran.",
+        "The challenge to produce a chapter like the Quran.",
+        "The description of the Quran as a cure for the heart."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 15,
+      "options": [
+        {
+          "num": 14,
+          "name": "Ibrahim",
+          "name_ar": "إِبْرَاهِيم",
+          "name_en": "Abraham"
+        },
+        {
+          "num": 15,
+          "name": "Al-Hijr",
+          "name_ar": "ٱلْحِجْر",
+          "name_en": "The Rocky Tract"
+        },
+        {
+          "num": 16,
+          "name": "An-Nahl",
+          "name_ar": "ٱلنَّحْل",
+          "name_en": "The Bee"
+        },
+        {
+          "num": 17,
+          "name": "Al-Isra",
+          "name_ar": "ٱلْإِسْرَاء",
+          "name_en": "The Night Journey"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 15,
+          "name": "Al-Hijr",
+          "name_ar": "ٱلْحِجْر",
+          "name_en": "The Rocky Tract"
+        },
+        {
+          "num": 16,
+          "name": "An-Nahl",
+          "name_ar": "ٱلنَّحْل",
+          "name_en": "The Bee"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse was revealed in Makkah as a direct response to the disbelievers who were mocking the Prophet (ﷺ) and casting doubt on the divine origin of the Quran. It is a powerful declaration from Allah Himself, affirming that He is both the source of the revelation and its ultimate protector against any alteration or loss.",
+      "theme_explanation": "The central theme is the miraculous and divine preservation of the Quran (Hifdh). Unlike previous scriptures, which were entrusted to people and subsequently altered, Allah takes personal responsibility for guarding the final revelation. This divine promise has been fulfilled for over 14 centuries through the dual methods of mass memorization (oral tradition) and meticulous written preservation, ensuring its purity for all time.",
+      "surah_overview": "Surah Al-Hijr is a Makkan surah that takes its name from the 'Rocky Tract' inhabited by the people of Thamud. The surah warns the Quraysh by recounting the stories of previous nations who rejected their prophets. It emphasizes the truth of the revelation, the signs of Allah in creation, the certainty of the Day of Judgment, and offers comfort and strength to the Prophet Muhammad (ﷺ) in the face of rejection."
+    }
+  }
+}

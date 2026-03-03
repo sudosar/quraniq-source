@@ -1,144 +1,144 @@
 {
-  "date": "2026-03-01",
+  "date": "2026-03-03",
   "puzzle": {
     "categories": [
       {
-        "name": "أَنْبِيَاءُ ذُكِرُوا فِي سُورَةِ هُود",
-        "nameEn": "Prophets Mentioned in Surah Hud",
+        "name": "أَنْوَاعُ ٱلْمَلَابِسِ",
+        "nameEn": "Types of Clothing",
         "color": "yellow",
         "items": [
           {
-            "ar": "هُودًا",
-            "en": "Hud",
-            "ref": "11:50",
-            "verse": "وَإِلَىٰ عَادٍ أَخَاهُمْ هُودًۭا ۚ قَالَ يَـٰقَوْمِ ٱعْبُدُوا۟ ٱللَّهَ مَا لَكُم مِّنْ إِلَـٰهٍ غَيْرُهُۥٓ ۖ إِنْ أَنتُمْ إِلَّا مُفْتَرُونَ",
-            "verseEn": "And to ʿAad [We sent] their brother Hūd. He said, \"O my people, worship Allāh; you have no deity other than Him. You are not but inventors [of falsehood]."
+            "ar": "سَرَابِيلَ",
+            "en": "Garments",
+            "ref": "16:81",
+            "verse": "وَٱللَّهُ جَعَلَ لَكُم مِّمَّا خَلَقَ ظِلَـٰلًۭا وَجَعَلَ لَكُم مِّنَ ٱلْجِبَالِ أَكْنَـٰنًۭا وَجَعَلَ لَكُمْ سَرَٰبِيلَ تَقِيكُمُ ٱلْحَرَّ وَسَرَٰبِيلَ تَقِيكُم بَأْسَكُمْ ۚ كَذَٰلِكَ يُتِمُّ نِعْمَتَهُۥ عَلَيْكُمْ لَعَلَّكُمْ تُسْلِمُونَ",
+            "verseEn": "And Allāh has made for you, from that which He has created, shadows [i.e., shade] and has made for you from the mountains, shelters and has made for you garments which protect you from the heat and garments [i.e., coats of mail] which protect you from your [enemy in] battle. Thus does He complete His favor upon you that you might submit [to Him]."
           },
           {
-            "ar": "صَـٰلِحًا",
-            "en": "Salih",
-            "ref": "11:61",
-            "verse": "۞ وَإِلَىٰ ثَمُودَ أَخَاهُمْ صَـٰلِحًۭا ۚ قَالَ يَـٰقَوْمِ ٱعْبُدُوا۟ ٱللَّهَ مَا لَكُم مِّنْ إِلَـٰهٍ غَيْرُهُۥ ۖ هُوَ أَنشَأَكُم مِّنَ ٱلْأَرْضِ وَٱسْتَعْمَرَكُمْ فِيهَا فَٱسْتَغْفِرُوهُ ثُمَّ تُوبُوٓا۟ إِلَيْهِ ۚ إِنَّ رَبِّى قَرِيبٌۭ مُّجِيبٌۭ",
-            "verseEn": "And to Thamūd [We sent] their brother Ṣāliḥ. He said, \"O my people, worship Allāh; you have no deity other than Him. He has produced you from the earth and settled you in it, so ask forgiveness of Him and then repent to Him. Indeed, my Lord is near and responsive.\""
+            "ar": "جَلَٰبِيبِهِنَّ",
+            "en": "Their outer garments",
+            "ref": "33:59",
+            "verse": "يَـٰٓأَيُّهَا ٱلنَّبِىُّ قُل لِّأَزْوَٰجِكَ وَبَنَاتِكَ وَنِسَآءِ ٱلْمُؤْمِنِينَ يُدْنِينَ عَلَيْهِنَّ مِن جَلَـٰبِيبِهِنَّ ۚ ذَٰلِكَ أَدْنَىٰٓ أَن يُعْرَفْنَ فَلَا يُؤْذَيْنَ ۗ وَكَانَ ٱللَّهُ غَفُورًۭا رَّحِيمًۭا",
+            "verseEn": "O Prophet, tell your wives and your daughters and the women of the believers to bring down over themselves [part] of their outer garments. That is more suitable that they will be known and not be abused. And ever is Allāh Forgiving and Merciful."
           },
           {
-            "ar": "شُعَيْبًا",
-            "en": "Shu'ayb",
-            "ref": "11:84",
-            "verse": "۞ وَإِلَىٰ مَدْيَنَ أَخَاهُمْ شُعَيْبًۭا ۚ قَالَ يَـٰقَوْمِ ٱعْبُدُوا۟ ٱللَّهَ مَا لَكُم مِّنْ إِلَـٰهٍ غَيْرُهُۥ ۖ وَلَا تَنقُصُوا۟ ٱلْمِكْيَالَ وَٱلْمِيزَانَ ۚ إِنِّىٓ أَرَىٰكُم بِخَيْرٍۢ وَإِنِّىٓ أَخَافُ عَلَيْكُمْ عَذَابَ يَوْمٍۢ مُّحِيطٍۢ",
-            "verseEn": "And to Madyan [We sent] their brother Shuʿayb. He said, \"O my people, worship Allāh; you have no deity other than Him. And do not decrease from the measure and the scale. Indeed, I see you in prosperity, but indeed, I fear for you the punishment of an all-encompassing Day."
+            "ar": "ثِيَابٌ",
+            "en": "Clothes",
+            "ref": "22:19",
+            "verse": "۞ هَـٰذَانِ خَصْمَانِ ٱخْتَصَمُوا۟ فِى رَبِّهِمْ ۖ فَٱلَّذِينَ كَفَرُوا۟ قُطِّعَتْ لَهُمْ ثِيَابٌۭ مِّن نَّارٍۢ يُصَبُّ مِن فَوْقِ رُءُوسِهِمُ ٱلْحَمِيمُ",
+            "verseEn": "These are two adversaries who have disputed over their Lord. But those who disbelieved will have cut out for them garments of fire. Poured upon their heads will be scalding water"
           },
           {
-            "ar": "لُوطًا",
-            "en": "Lut",
-            "ref": "11:77",
-            "verse": "وَلَمَّا جَآءَتْ رُسُلُنَا لُوطًۭا سِىٓءَ بِهِمْ وَضَاقَ بِهِمْ ذَرْعًۭا وَقَالَ هَـٰذَا يَوْمٌ عَصِيبٌۭ",
-            "verseEn": "And when Our messengers, [the angels], came to Lot, he was anguished for them and felt for them great discomfort and said, \"This is a trying day.\""
+            "ar": "حَرِيرًا",
+            "en": "Silk",
+            "ref": "76:12",
+            "verse": "وَجَزَىٰهُم بِمَا صَبَرُوا۟ جَنَّةًۭ وَحَرِيرًۭا",
+            "verseEn": "And will reward them for what they patiently endured [with] a garden [in Paradise] and silk [garments]."
           }
         ]
       },
       {
-        "name": "أَفْعَالُ الْخَلْقِ وَالْإِيجَادِ",
-        "nameEn": "Verbs of Creation and Origination",
+        "name": "أَسْمَاءُ النَّارِ",
+        "nameEn": "Names for Hellfire",
         "color": "green",
         "items": [
           {
-            "ar": "أَنشَأَ",
-            "en": "He brought forth",
-            "ref": "23:78",
-            "verse": "وَهُوَ ٱلَّذِىٓ أَنشَأَ لَكُمُ ٱلسَّمْعَ وَٱلْأَبْصَـٰرَ وَٱلْأَفْـِٔدَةَ ۚ قَلِيلًۭا مَّا تَشْكُرُونَ",
-            "verseEn": "And it is He who produced for you hearing and vision and hearts [i.e., intellect]; little are you grateful."
+            "ar": "جَحِيمٍ",
+            "en": "Jaheem",
+            "ref": "82:14",
+            "verse": "وَإِنَّ ٱلْفُجَّارَ لَفِى جَحِيمٍۢ",
+            "verseEn": "And indeed, the wicked will be in Hellfire."
           },
           {
-            "ar": "بَدَأَ",
-            "en": "He began",
-            "ref": "29:20",
-            "verse": "قُلْ سِيرُوا۟ فِى ٱلْأَرْضِ فَٱنظُرُوا۟ كَيْفَ بَدَأَ ٱلْخَلْقَ ۚ ثُمَّ ٱللَّهُ يُنشِئُ ٱلنَّشْأَةَ ٱلْـَٔاخِرَةَ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ",
-            "verseEn": "Say, [O Muḥammad], \"Travel through the land and observe how He began creation. Then Allāh will produce the final creation [i.e., development]. Indeed Allāh, over all things, is competent.\""
+            "ar": "سَعِيرًا",
+            "en": "Sa'eer",
+            "ref": "4:10",
+            "verse": "إِنَّ ٱلَّذِينَ يَأْكُلُونَ أَمْوَٰلَ ٱلْيَتَـٰمَىٰ ظُلْمًا إِنَّمَا يَأْكُلُونَ فِى بُطُونِهِمْ نَارًۭا ۖ وَسَيَصْلَوْنَ سَعِيرًۭا",
+            "verseEn": "Indeed, those who devour the property of orphans unjustly are only consuming into their bellies fire. And they will be burned in a Blaze [i.e., Hellfire]."
           },
           {
-            "ar": "ذَرَأَ",
-            "en": "He created/multiplied",
-            "ref": "23:79",
-            "verse": "وَهُوَ ٱلَّذِى ذَرَأَكُمْ فِى ٱلْأَرْضِ وَإِلَيْهِ تُحْشَرُونَ",
-            "verseEn": "And it is He who has multiplied you throughout the earth, and to Him you will be gathered."
+            "ar": "لَظَىٰ",
+            "en": "Latha",
+            "ref": "70:15",
+            "verse": "كَلَّآ ۖ إِنَّهَا لَظَىٰ",
+            "verseEn": "No! Indeed, it is the Flame [of Hell],"
           },
           {
-            "ar": "جَعَلَ",
-            "en": "He made",
-            "ref": "42:11",
-            "verse": "فَاطِرُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ جَعَلَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًۭا وَمِنَ ٱلْأَنْعَـٰمِ أَزْوَٰجًۭا ۖ يَذْرَؤُكُمْ فِيهِ ۚ لَيْسَ كَمِثْلِهِۦ شَىْءٌۭ ۖ وَهُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
-            "verseEn": "[He is] Creator of the heavens and the earth. He has made for you from yourselves, mates, and among the cattle, mates; He multiplies you thereby. There is nothing like unto Him, and He is the Hearing, the Seeing."
+            "ar": "سَقَرُ",
+            "en": "Saqar",
+            "ref": "74:27",
+            "verse": "وَمَآ أَدْرَىٰكَ مَا سَقَرُ",
+            "verseEn": "And what can make you know what is Saqar?"
           }
         ]
       },
       {
-        "name": "مَوَادُ الْخَلْقِ الْأَوَّلِ",
-        "nameEn": "Substances of Primordial Creation",
+        "name": "أَسْمَاءٌ لِأَهْوَالٍ مُهْلِكَةٍ",
+        "nameEn": "Proper Nouns for Apocalyptic Events",
         "color": "blue",
         "items": [
           {
-            "ar": "صَلْصَٰلٍ",
-            "en": "sounding clay",
-            "ref": "15:26",
-            "verse": "وَلَقَدْ خَلَقْنَا ٱلْإِنسَـٰنَ مِن صَلْصَـٰلٍۢ مِّنْ حَمَإٍۢ مَّسْنُونٍۢ",
-            "verseEn": "And We did certainly create man out of clay from an altered black mud."
+            "ar": "ٱلطَّاغِيَةِ",
+            "en": "The Overwhelming Event",
+            "ref": "69:5",
+            "verse": "فَأَمَّا ثَمُودُ فَأُهْلِكُوا۟ بِٱلطَّاغِيَةِ",
+            "verseEn": "So as for Thamūd, they were destroyed by the overpowering [blast]."
           },
           {
-            "ar": "حَمَإٍ",
-            "en": "dark mud",
-            "ref": "15:28",
-            "verse": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَـٰٓئِكَةِ إِنِّى خَـٰلِقٌۢ بَشَرًۭا مِّن صَلْصَـٰلٍۢ مِّنْ حَمَإٍۢ مَّسْنُونٍۢ",
-            "verseEn": "And [mention, O Muḥammad], when your Lord said to the angels, \"I will create a human being out of clay from an altered black mud."
+            "ar": "ٱلْقَارِعَةُ",
+            "en": "The Striking Calamity",
+            "ref": "101:1",
+            "verse": "ٱلْقَارِعَةُ",
+            "verseEn": "The Striking Calamity -"
           },
           {
-            "ar": "مَّسْنُونٍ",
-            "en": "aged/altered",
-            "ref": "15:33",
-            "verse": "قَالَ لَمْ أَكُن لِّأَسْجُدَ لِبَشَرٍ خَلَقْتَهُۥ مِن صَلْصَـٰلٍۢ مِّنْ حَمَإٍۢ مَّسْنُونٍۢ",
-            "verseEn": "He said, \"Never would I prostrate to a human whom You created out of clay from an altered black mud.\""
+            "ar": "ٱلْآزِفَةِ",
+            "en": "The Imminent Event",
+            "ref": "53:57",
+            "verse": "أَزِفَتِ ٱلْـَٔازِفَةُ",
+            "verseEn": "The Approaching Day has approached."
           },
           {
-            "ar": "ٱلسَّمُومِ",
-            "en": "the scorching fire",
-            "ref": "15:27",
-            "verse": "وَٱلْجَآنَّ خَلَقْنَـٰهُ مِن قَبْلُ مِن نَّارِ ٱلسَّمُومِ",
-            "verseEn": "And the jinn We created before from scorching fire."
+            "ar": "ٱلصَّاخَّةُ",
+            "en": "The Deafening Blast",
+            "ref": "80:33",
+            "verse": "فَإِذَا جَآءَتِ ٱلصَّآخَّةُ",
+            "verseEn": "But when there comes the Deafening Blast"
           }
         ]
       },
       {
-        "name": "كَلِمَاتٌ لَمْ تَرِدْ إِلَّا مَرَّةً وَاحِدَةً",
-        "nameEn": "Words Used Only Once in the Quran",
+        "name": "أَوْعِيَة وَحَاوِيَات",
+        "nameEn": "Things that Contain or Enclose",
         "color": "purple",
         "items": [
           {
-            "ar": "ٱلصَّمَدُ",
-            "en": "The Absolute, Eternal",
-            "ref": "112:2",
-            "verse": "ٱللَّهُ ٱلصَّمَدُ",
-            "verseEn": "Allāh, the Eternal Refuge."
+            "ar": "دَلْوَهُۥ",
+            "en": "his bucket",
+            "ref": "12:19",
+            "verse": "وَجَآءَتْ سَيَّارَةٌۭ فَأَرْسَلُوا۟ وَارِدَهُمْ فَأَدْلَىٰ دَلْوَهُۥ ۖ قَالَ يَـٰبُشْرَىٰ هَـٰذَا غُلَـٰمٌۭ ۚ وَأَسَرُّوهُ بِضَـٰعَةًۭ ۚ وَٱللَّهُ عَلِيمٌۢ بِمَا يَعْمَلُونَ",
+            "verseEn": "And there came a company of travelers; then they sent their water drawer, and he let down his bucket. He said, \"Good news! Here is a boy.\" And they concealed him, [taking him] as merchandise; and Allāh was Knowing of what they did."
           },
           {
-            "ar": "شَوْبًا",
-            "en": "A mixture",
-            "ref": "37:67",
-            "verse": "ثُمَّ إِنَّ لَهُمْ عَلَيْهَا لَشَوْبًۭا مِّنْ حَمِيمٍۢ",
-            "verseEn": "Then indeed, they will have after it a mixture of scalding water."
+            "ar": "ٱلْمَهْدِ",
+            "en": "the cradle",
+            "ref": "19:29",
+            "verse": "فَأَشَارَتْ إِلَيْهِ ۖ قَالُوا۟ كَيْفَ نُكَلِّمُ مَن كَانَ فِى ٱلْمَهْدِ صَبِيًّۭا",
+            "verseEn": "So she pointed to him. They said, \"How can we speak to one who is in the cradle a child?\""
           },
           {
-            "ar": "ٱلْجِبْتِ",
-            "en": "Idolatry/Sorcery",
-            "ref": "4:51",
-            "verse": "أَلَمْ تَرَ إِلَى ٱلَّذِينَ أُوتُوا۟ نَصِيبًۭا مِّنَ ٱلْكِتَـٰبِ يُؤْمِنُونَ بِٱلْجِبْتِ وَٱلطَّـٰغُوتِ وَيَقُولُونَ لِلَّذِينَ كَفَرُوا۟ هَـٰٓؤُلَآءِ أَهْدَىٰ مِنَ ٱلَّذِينَ ءَامَنُوا۟ سَبِيلًا",
-            "verseEn": "Have you not seen those who were given a portion of the Scripture, who believe in jibt [superstition] and ṭāghūt [false objects of worship] and say about the disbelievers, \"These are better guided than the believers as to the way\"?"
+            "ar": "ٱلصُّدُورِ",
+            "en": "the chests",
+            "ref": "35:38",
+            "verse": "إِنَّ ٱللَّهَ عَـٰلِمُ غَيْبِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ إِنَّهُۥ عَلِيمٌۢ بِذَاتِ ٱلصُّدُورِ",
+            "verseEn": "Indeed, Allāh is Knower of the unseen [aspects] of the heavens and earth. Indeed, He is Knowing of that within the breasts."
           },
           {
-            "ar": "أَبَابِيلَ",
-            "en": "In flocks",
-            "ref": "105:3",
-            "verse": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ",
-            "verseEn": "And He sent against them birds in flocks,"
+            "ar": "أَكْمَامِهَا",
+            "en": "its sheaths",
+            "ref": "41:47",
+            "verse": "۞ إِلَيْهِ يُرَدُّ عِلْمُ ٱلسَّاعَةِ ۚ وَمَا تَخْرُجُ مِن ثَمَرَٰتٍۢ مِّنْ أَكْمَامِهَا وَمَا تَحْمِلُ مِنْ أُنثَىٰ وَلَا تَضَعُ إِلَّا بِعِلْمِهِۦ ۚ وَيَوْمَ يُنَادِيهِمْ أَيْنَ شُرَكَآءِى قَالُوٓا۟ ءَاذَنَّـٰكَ مَا مِنَّا مِن شَهِيدٍۢ",
+            "verseEn": "To Him [alone] is attributed knowledge of the Hour. And fruits emerge not from their coverings nor does a female conceive or give birth except with His knowledge. And the Day He will call to them, \"Where are My 'partners'?\" they will say, \"We announce to You that there is [no longer] among us any witness [to that].\""
           }
         ]
       }

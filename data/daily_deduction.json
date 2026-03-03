@@ -1,65 +1,65 @@
 {
-  "date": "2026-03-01",
+  "date": "2026-03-03",
   "puzzle": {
-    "title": "The Shadow of Betrayal",
-    "intro": "In a city teetering on the edge of moral collapse, one soul stood apart from their righteous family. While a prophet delivered a divine warning, this individual clung to the ways of the condemned, their loyalty secretly pledged to the very people destined for ruin. Their choice would seal their fate, leaving behind a cautionary tale for all time.",
+    "title": "The Architect of Arrogance",
+    "intro": "A prominent figure in a powerful court, this individual was tasked with a monumental, yet blasphemous, project. Driven by loyalty to a tyrannical leader, their story is a stark warning about the heights of human pride and the inevitable fall that follows.",
     "clues": [
-      "I lived in a city whose people committed acts of unprecedented wickedness.",
-      "My household was host to divine messengers who appeared as handsome young men.",
-      "While my spouse pleaded with our people to abandon their sins, my heart remained with them.",
-      "When the angels arrived at my home, I secretly signaled their presence to the wicked townspeople.",
-      "I was commanded to leave the city at night with my family and not to look back.",
-      "But I lingered behind, and so I was overtaken by the same punishment that befell the transgressors."
+      "I served in the court of a ruler who was blinded by power, and my counsel only deepened that darkness.",
+      "My name is forever linked with that of my leader and another wealthy contemporary, a trio of rebellion against the divine.",
+      "My expertise was in construction and administration, skills I used not for good, but for the grand designs of my master.",
+      "My leader commanded me to build a towering structure, a project born of pure arrogance.",
+      "The goal was audacious and foolish: to build a tower so high that it could reach the heavens and allow my master to see the God of Musa.",
+      "My master, Fir'awn, commanded me by name to kindle a fire upon the clay and make for him a lofty tower."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The wife of Prophet Nuh",
-          "The wife of Fir'awn",
-          "The wife of Prophet Lut",
-          "The wife of Al-'Aziz",
-          "The mother of Prophet Musa"
+          "Haman",
+          "Aziz of Egypt",
+          "Namrud",
+          "Qarun",
+          "Samiri"
         ],
-        "answer": "The wife of Prophet Lut"
+        "answer": "Haman"
       },
       "trial": {
-        "label": "What was the event?",
+        "label": "What Was My Grand Project?",
         "options": [
-          "The Great Flood",
-          "The Parting of the Red Sea",
-          "The Destruction of Sodom",
-          "The Year of the Elephant",
-          "The Trial of the Golden Calf"
+          "Building a lofty tower to the sky",
+          "Constructing a dam to divert a river",
+          "Erecting idols for a whole city",
+          "Forging a golden calf for worship",
+          "Assembling an army of elephants"
         ],
-        "answer": "The Destruction of Sodom"
+        "answer": "Building a lofty tower to the sky"
       },
       "location": {
-        "label": "What was my sin?",
+        "label": "What Was I Commanded to Use?",
         "options": [
-          "Refusing to prostrate to Adam",
-          "Building a tower to reach the heavens",
-          "Accusing a prophet of theft",
-          "Betraying the angelic guests",
-          "Mocking a prophet for building an ark"
+          "Clay, baked into bricks",
+          "Iron and molten copper",
+          "Hewn stones from the mountains",
+          "Gold and precious jewels",
+          "Timber from sacred trees"
         ],
-        "answer": "Betraying the angelic guests"
+        "answer": "Clay, baked into bricks"
       },
       "outcome": {
-        "label": "What was my fate?",
+        "label": "What Was Our Ultimate Fate?",
         "options": [
-          "Swallowed by the earth with great wealth",
-          "Destroyed along with the wrongdoers",
-          "Drowned in a worldwide flood",
-          "Saved and given a palace in Paradise",
-          "Exiled from a heavenly garden"
+          "We were drowned by the command of Allah",
+          "We were swallowed by the earth",
+          "We were destroyed by a mighty blast",
+          "We were turned into apes",
+          "We were granted forgiveness and guidance"
         ],
-        "answer": "Destroyed along with the wrongdoers"
+        "answer": "We were drowned by the command of Allah"
       }
     },
-    "verseRef": "66:10",
-    "arabic": "ضَرَبَ ٱللَّهُ مَثَلًۭا لِّلَّذِينَ كَفَرُوا۟ ٱمْرَأَتَ نُوحٍۢ وَٱمْرَأَتَ لُوطٍۢ ۖ كَانَتَا تَحْتَ عَبْدَيْنِ مِنْ عِبَادِنَا صَـٰلِحَيْنِ فَخَانَتَاهُمَا فَلَمْ يُغْنِيَا عَنْهُمَا مِنَ ٱللَّهِ شَيْـًۭٔا وَقِيلَ ٱدْخُلَا ٱلنَّارَ مَعَ ٱلدَّٰخِلِينَ",
-    "verse": "Allāh presents an example of those who disbelieved: the wife of Noah and the wife of Lot. They were under two of Our righteous servants but betrayed them, so they [i.e., those prophets] did not avail them from Allāh at all, and it was said, \"Enter the Fire with those who enter.\" (66:10)"
+    "verseRef": "29:39",
+    "arabic": "وَقَـٰرُونَ وَفِرْعَوْنَ وَهَـٰمَـٰنَ ۖ وَلَقَدْ جَآءَهُم مُّوسَىٰ بِٱلْبَيِّنَـٰتِ فَٱسْتَكْبَرُوا۟ فِى ٱلْأَرْضِ وَمَا كَانُوا۟ سَـٰبِقِينَ",
+    "verse": "And [We destroyed] Qārūn and Pharaoh and Hāmān. And Moses had already come to them with clear evidences, and they were arrogant in the land, but they were not outrunners [of Our punishment]. (29:39)"
   },
   "generated": true
 }

@@ -1,83 +1,77 @@
 {
-  "date": "2026-03-01",
+  "date": "2026-03-03",
   "puzzle": {
-    "date": "2026-03-01",
-    "juz_number": 13,
-    "juz_name": "Wa Ma Ubri'u",
-    "juz_name_ar": "وَمَا أُبَرِّئُ",
+    "date": "2026-03-03",
+    "juz_number": 15,
+    "juz_name": "Subhanalladhi",
+    "juz_name_ar": "سُبْحَانَ الَّذِي",
     "verse": {
-      "surah_number": 13,
-      "surah_name": "Ar-Ra'd",
-      "surah_name_ar": "سورة الرعد",
-      "ayah_number": 11,
-      "arabic_text": "إِنَّ ٱللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ۗ",
-      "translation": "Indeed, Allah will not change the condition of a people until they change what is in themselves.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1718.mp3"
+      "surah_number": 17,
+      "surah_name": "Al-Isra",
+      "surah_name_ar": "الْإِسْرَاء",
+      "ayah_number": 23,
+      "arabic_text": "وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُdُآا۟ إِلَّآ إِيَّاهُ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًا",
+      "translation": "And your Lord has decreed that you worship none but Him, and to be good to your parents.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2001.mp3"
     },
     "theme_question": {
-      "correct": "Personal responsibility and inner change are prerequisites for societal change.",
+      "correct": "The inseparable duties of worshipping Allah alone and showing excellent kindness to parents.",
       "options": [
-        "Personal responsibility and inner change are prerequisites for societal change.",
-        "Divine decree is fixed and human effort is irrelevant.",
-        "Material wealth is the primary sign of God's favor.",
-        "Only prophets can bring about significant change in a community."
+        "The inseparable duties of worshipping Allah alone and showing excellent kindness to parents.",
+        "The specific rules of inheritance for elderly parents.",
+        "The obligation of financial charity towards all relatives.",
+        "The historical account of Prophet Ibrahim's relationship with his father."
       ]
     },
     "surah_question": {
-      "correct_surah": 13,
+      "correct_surah": 17,
       "options": [
         {
-          "num": 12,
-          "name": "Yusuf",
-          "name_ar": "سورة يوسف",
-          "name_en": "Joseph"
+          "num": 18,
+          "name": "Al-Kahf",
+          "name_ar": "الْكَهْف",
+          "name_en": "The Cave"
         },
         {
-          "num": 13,
-          "name": "Ar-Ra'd",
-          "name_ar": "سورة الرعد",
-          "name_en": "The Thunder"
+          "num": 17,
+          "name": "Al-Isra",
+          "name_ar": "الْإِسْرَاء",
+          "name_en": "The Night Journey"
         },
         {
-          "num": 14,
-          "name": "Ibrahim",
-          "name_ar": "سورة ابراهيم",
-          "name_en": "Abraham"
+          "num": 16,
+          "name": "An-Nahl",
+          "name_ar": "النَّحْل",
+          "name_en": "The Bee"
         },
         {
-          "num": 15,
-          "name": "Al-Hijr",
-          "name_ar": "سورة الحجر",
-          "name_en": "The Rocky Tract"
+          "num": 20,
+          "name": "Taha",
+          "name_ar": "طه",
+          "name_en": "Ta-Ha"
         }
       ]
     },
     "surah_order": {
       "surahs": [
         {
-          "num": 12,
-          "name": "Yusuf",
-          "name_ar": "سورة يوسف",
-          "name_en": "Joseph"
+          "num": 17,
+          "name": "Al-Isra",
+          "name_ar": "الْإِسْرَاء",
+          "name_en": "The Night Journey"
         },
         {
-          "num": 13,
-          "name": "Ar-Ra'd",
-          "name_ar": "سورة الرعد",
-          "name_en": "The Thunder"
-        },
-        {
-          "num": 14,
-          "name": "Ibrahim",
-          "name_ar": "سورة ابراهيم",
-          "name_en": "Abraham"
+          "num": 18,
+          "name": "Al-Kahf",
+          "name_ar": "الْكَهْف",
+          "name_en": "The Cave"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This powerful statement comes within a passage discussing Allah's absolute knowledge and power. It is preceded by a mention of guardian angels who protect humans by Allah's command and record their deeds. The verse thus connects divine oversight with human accountability, establishing a crucial principle of cause and effect in the spiritual and social realms.",
-      "theme_explanation": "The central theme is the unbreakable link between inner transformation and external circumstances. It establishes a fundamental law of Allah (Sunnatullah) that the fate of a community is tied to its collective moral and spiritual state. This verse empowers individuals and societies by placing the impetus for positive change in their own hands. It refutes fatalism and encourages proactive self-reform, clarifying that divine help and blessings follow sincere human effort to improve.",
-      "surah_overview": "Surah Ar-Ra'd (The Thunder) is a Makkan surah that powerfully argues for the truth of Allah's oneness (Tawhid), the Quran, and the Resurrection. It contrasts truth and falsehood using vivid parables, such as fertile rain versus useless scum, and draws attention to Allah's signs in nature—like thunder, lightning, and the intricate systems of the universe. The surah challenges the deniers, comforts the believers, and emphasizes that true peace of the heart is found only in the remembrance of Allah."
+      "verse_context": "This verse is part of a series of foundational commandments in Surah Al-Isra that outline a comprehensive moral and social code for believers. It comes immediately after the prohibition of shirk (associating partners with Allah), placing the duty to parents at the highest level of importance right after the duty to God Himself.",
+      "theme_explanation": "The theme is the profound and direct link between Tawhid (the Oneness of Allah) and 'Birr al-Walidayn' (excellent kindness to parents). By placing these two commands together in a single decree ('qada' - He has decreed), Allah elevates the status of parents and establishes that honoring them is not merely a social courtesy but a fundamental act of worship and obedience.",
+      "surah_overview": "Surah Al-Isra, also known as Bani Isra'il (The Children of Israel), is a Meccan surah that begins by mentioning the miraculous Night Journey of Prophet Muhammad (ﷺ) from Makkah to Jerusalem. The surah addresses the history of the Children of Israel as a lesson, and lays down essential principles of faith, morality, and social conduct, including the rights of parents, orphans, and the needy, and warns against arrogance and transgression."
     }
   },
   "generated": true
