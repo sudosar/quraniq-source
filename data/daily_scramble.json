@@ -1,32 +1,30 @@
 {
-  "date": "2026-03-03",
+  "date": "2026-03-04",
   "puzzle": {
-    "verseRef": "16:18",
-    "reference": "Surah An-Nahl (16:18)",
+    "verseRef": "55:60",
+    "reference": "Surah Ar-Rahman (55:60)",
     "segments": [
-      "وَإِن تَعُدُّوا۟",
-      "نِعْمَةَ ٱللَّهِ",
-      "لَا تُحْصُوهَآ",
-      "إِنَّ ٱللَّهَ",
-      "لَغَفُورٌ رَّحِيمٌ"
+      "هَلْ جَزَآءُ",
+      "ٱلْإِحْسَـٰنِ",
+      "إِلَّا",
+      "ٱلْإِحْسَـٰنُ"
     ],
     "translations": [
-      "And if you should count",
-      "the Favors of Allah the Favors of Allah",
-      "not you could enumerate them",
-      "Indeed Allah",
-      "(is) Oft-Forgiving Most Merciful"
+      "Is (the) reward",
+      "for the good",
+      "but",
+      "good"
     ],
-    "hint": "This verse speaks of the impossibility of quantifying Allah's countless blessings upon creation.",
-    "arabic": "وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌۭ رَّحِيمٌۭ",
+    "hint": "This verse asks a rhetorical question about the ultimate reward for righteous actions.",
+    "arabic": "هَلْ جَزَآءُ ٱلْإِحْسَـٰنِ إِلَّا ٱلْإِحْسَـٰنُ",
     "words": [
-      "وَإِن تَعُدُّوا۟",
-      "نِعْمَةَ ٱللَّهِ",
-      "لَا تُحْصُوهَآ ۗ",
-      "إِنَّ ٱللَّهَ",
-      "لَغَفُورٌۭ رَّحِيمٌۭ"
+      "هَلْ جَزَآءُ",
+      "ٱلْإِحْسَـٰنِ",
+      "إِلَّا",
+      "ٱلْإِحْسَـٰنُ"
     ],
-    "verseEn": "And if you should count the favors of Allāh, you could not enumerate them. Indeed, Allāh is Forgiving and Merciful."
+    "verseEn": "Is the reward for good [anything] but good?"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

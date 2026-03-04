@@ -1,65 +1,66 @@
 {
-  "date": "2026-03-03",
+  "date": "2026-03-04",
   "puzzle": {
-    "title": "The Architect of Arrogance",
-    "intro": "A prominent figure in a powerful court, this individual was tasked with a monumental, yet blasphemous, project. Driven by loyalty to a tyrannical leader, their story is a stark warning about the heights of human pride and the inevitable fall that follows.",
+    "title": "The Scorners of the Wind's Warning",
+    "intro": "A nation arose from the earth, blessed with immense strength and unmatched skill in construction. Their pride swelled with their accomplishments, causing them to dismiss the warnings of a messenger sent to guide them. Their story is a powerful reminder that no might on Earth can stand against the will of the Divine.",
     "clues": [
-      "I served in the court of a ruler who was blinded by power, and my counsel only deepened that darkness.",
-      "My name is forever linked with that of my leader and another wealthy contemporary, a trio of rebellion against the divine.",
-      "My expertise was in construction and administration, skills I used not for good, but for the grand designs of my master.",
-      "My leader commanded me to build a towering structure, a project born of pure arrogance.",
-      "The goal was audacious and foolish: to build a tower so high that it could reach the heavens and allow my master to see the God of Musa.",
-      "My master, Fir'awn, commanded me by name to kindle a fire upon the clay and make for him a lofty tower."
+      "We were made successors on the earth after a great flood had cleansed it.",
+      "We were known for our towering structures, the likes of which had not been created in the lands before.",
+      "A prophet from among our own people was sent to us, but we accused him of being a liar.",
+      "We boasted of our physical power, asking aloud, 'Who is mightier than us in strength?'",
+      "We arrogantly challenged our messenger to bring upon us the divine punishment he warned of.",
+      "Our end came as a furious, roaring wind that raged for seven nights and eight consecutive days, leaving us like hollow palm trunks."
     ],
     "categories": {
       "identity": {
-        "label": "Who Am I?",
+        "label": "Who Are We?",
         "options": [
-          "Haman",
-          "Aziz of Egypt",
-          "Namrud",
-          "Qarun",
-          "Samiri"
+          "People of Thamud",
+          "People of Madyan",
+          "People of 'Ad",
+          "People of Saba'",
+          "People of Rass"
         ],
-        "answer": "Haman"
+        "answer": "People of 'Ad"
       },
       "trial": {
-        "label": "What Was My Grand Project?",
+        "label": "What Was Our Primary Sin?",
         "options": [
-          "Building a lofty tower to the sky",
-          "Constructing a dam to divert a river",
-          "Erecting idols for a whole city",
-          "Forging a golden calf for worship",
-          "Assembling an army of elephants"
+          "Cheating in weights and measures",
+          "Building a tower to reach the heavens",
+          "Arrogance and idol worship",
+          "Plotting to kill a prophet in a well",
+          "Breaking the Sabbath"
         ],
-        "answer": "Building a lofty tower to the sky"
+        "answer": "Arrogance and idol worship"
       },
       "location": {
-        "label": "What Was I Commanded to Use?",
+        "label": "Who Was Our Prophet?",
         "options": [
-          "Clay, baked into bricks",
-          "Iron and molten copper",
-          "Hewn stones from the mountains",
-          "Gold and precious jewels",
-          "Timber from sacred trees"
+          "Prophet Salih",
+          "Prophet Hud",
+          "Prophet Shua'yb",
+          "Prophet Lut",
+          "Prophet Nuh"
         ],
-        "answer": "Clay, baked into bricks"
+        "answer": "Prophet Hud"
       },
       "outcome": {
-        "label": "What Was Our Ultimate Fate?",
+        "label": "What Was Our Punishment?",
         "options": [
-          "We were drowned by the command of Allah",
-          "We were swallowed by the earth",
-          "We were destroyed by a mighty blast",
-          "We were turned into apes",
-          "We were granted forgiveness and guidance"
+          "A great flood",
+          "A mighty blast and earthquake",
+          "Being turned into apes",
+          "A furious, destructive wind",
+          "A shower of stones of baked clay"
         ],
-        "answer": "We were drowned by the command of Allah"
+        "answer": "A furious, destructive wind"
       }
     },
-    "verseRef": "29:39",
-    "arabic": "وَقَـٰرُونَ وَفِرْعَوْنَ وَهَـٰمَـٰنَ ۖ وَلَقَدْ جَآءَهُم مُّوسَىٰ بِٱلْبَيِّنَـٰتِ فَٱسْتَكْبَرُوا۟ فِى ٱلْأَرْضِ وَمَا كَانُوا۟ سَـٰبِقِينَ",
-    "verse": "And [We destroyed] Qārūn and Pharaoh and Hāmān. And Moses had already come to them with clear evidences, and they were arrogant in the land, but they were not outrunners [of Our punishment]. (29:39)"
+    "verseRef": "41:15",
+    "arabic": "فَأَمَّا عَادٌۭ فَٱسْتَكْبَرُوا۟ فِى ٱلْأَرْضِ بِغَيْرِ ٱلْحَقِّ وَقَالُوا۟ مَنْ أَشَدُّ مِنَّا قُوَّةً ۖ أَوَلَمْ يَرَوْا۟ أَنَّ ٱللَّهَ ٱلَّذِى خَلَقَهُمْ هُوَ أَشَدُّ مِنْهُمْ قُوَّةًۭ ۖ وَكَانُوا۟ بِـَٔايَـٰتِنَا يَجْحَدُونَ",
+    "verse": "As for ʿAad, they were arrogant upon the earth without right and said, \"Who is greater than us in strength?\" Did they not consider that Allāh who created them was greater than them in strength? But they were rejecting Our signs. (41:15)"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

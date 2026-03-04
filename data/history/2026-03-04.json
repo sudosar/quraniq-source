@@ -1,6 +1,5 @@
 {
-  "date": "2026-03-04",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَوْقَاتُ الْيَوْمِ",
@@ -144,6 +143,178 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "وجه",
+    "display": "وَجْه",
+    "hint": "Everything will perish except His.",
+    "verseRef": "28:88",
+    "arabicVerse": "وَلَا تَدْعُ مَعَ ٱللَّهِ إِلَـٰهًا ءَاخَرَ ۘ لَآ إِلَـٰهَ إِلَّا هُوَ ۚ كُلُّ شَىْءٍ هَالِكٌ إِلَّا وَجْهَهُۥ ۚ لَهُ ٱلْحُكْمُ وَإِلَيْهِ تُرْجَعُونَ",
+    "verse": "28:88 — And do not invoke with Allāh another deity. There is no deity except Him. Everything will be destroyed except His Face. His is the judgement, and to Him you will be returned."
+  },
+  "deduction": {
+    "title": "The Scorners of the Wind's Warning",
+    "intro": "A nation arose from the earth, blessed with immense strength and unmatched skill in construction. Their pride swelled with their accomplishments, causing them to dismiss the warnings of a messenger sent to guide them. Their story is a powerful reminder that no might on Earth can stand against the will of the Divine.",
+    "clues": [
+      "We were made successors on the earth after a great flood had cleansed it.",
+      "We were known for our towering structures, the likes of which had not been created in the lands before.",
+      "A prophet from among our own people was sent to us, but we accused him of being a liar.",
+      "We boasted of our physical power, asking aloud, 'Who is mightier than us in strength?'",
+      "We arrogantly challenged our messenger to bring upon us the divine punishment he warned of.",
+      "Our end came as a furious, roaring wind that raged for seven nights and eight consecutive days, leaving us like hollow palm trunks."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Are We?",
+        "options": [
+          "People of Thamud",
+          "People of Madyan",
+          "People of 'Ad",
+          "People of Saba'",
+          "People of Rass"
+        ],
+        "answer": "People of 'Ad"
+      },
+      "trial": {
+        "label": "What Was Our Primary Sin?",
+        "options": [
+          "Cheating in weights and measures",
+          "Building a tower to reach the heavens",
+          "Arrogance and idol worship",
+          "Plotting to kill a prophet in a well",
+          "Breaking the Sabbath"
+        ],
+        "answer": "Arrogance and idol worship"
+      },
+      "location": {
+        "label": "Who Was Our Prophet?",
+        "options": [
+          "Prophet Salih",
+          "Prophet Hud",
+          "Prophet Shua'yb",
+          "Prophet Lut",
+          "Prophet Nuh"
+        ],
+        "answer": "Prophet Hud"
+      },
+      "outcome": {
+        "label": "What Was Our Punishment?",
+        "options": [
+          "A great flood",
+          "A mighty blast and earthquake",
+          "Being turned into apes",
+          "A furious, destructive wind",
+          "A shower of stones of baked clay"
+        ],
+        "answer": "A furious, destructive wind"
+      }
+    },
+    "verseRef": "41:15",
+    "arabic": "فَأَمَّا عَادٌۭ فَٱسْتَكْبَرُوا۟ فِى ٱلْأَرْضِ بِغَيْرِ ٱلْحَقِّ وَقَالُوا۟ مَنْ أَشَدُّ مِنَّا قُوَّةً ۖ أَوَلَمْ يَرَوْا۟ أَنَّ ٱللَّهَ ٱلَّذِى خَلَقَهُمْ هُوَ أَشَدُّ مِنْهُمْ قُوَّةًۭ ۖ وَكَانُوا۟ بِـَٔايَـٰتِنَا يَجْحَدُونَ",
+    "verse": "As for ʿAad, they were arrogant upon the earth without right and said, \"Who is greater than us in strength?\" Did they not consider that Allāh who created them was greater than them in strength? But they were rejecting Our signs. (41:15)"
+  },
+  "scramble": {
+    "verseRef": "55:60",
+    "reference": "Surah Ar-Rahman (55:60)",
+    "segments": [
+      "هَلْ جَزَآءُ",
+      "ٱلْإِحْسَـٰنِ",
+      "إِلَّا",
+      "ٱلْإِحْسَـٰنُ"
+    ],
+    "translations": [
+      "Is (the) reward",
+      "for the good",
+      "but",
+      "good"
+    ],
+    "hint": "This verse asks a rhetorical question about the ultimate reward for righteous actions.",
+    "arabic": "هَلْ جَزَآءُ ٱلْإِحْسَـٰنِ إِلَّا ٱلْإِحْسَـٰنُ",
+    "words": [
+      "هَلْ جَزَآءُ",
+      "ٱلْإِحْسَـٰنِ",
+      "إِلَّا",
+      "ٱلْإِحْسَـٰنُ"
+    ],
+    "verseEn": "Is the reward for good [anything] but good?"
+  },
+  "juz": {
+    "date": "2026-03-04",
+    "juz_number": 16,
+    "juz_name": "Qala Alam",
+    "juz_name_ar": "قَالَ أَلَمْ",
+    "verse": {
+      "surah_number": 20,
+      "surah_name": "Ta-Ha",
+      "surah_name_ar": "طه",
+      "ayah_number": 25,
+      "arabic_text": "قَالَ رَبِّ ٱشْرَحْ لِى صَدْرِى",
+      "translation": "[Moses] said, \"My Lord, expand for me my breast [with assurance]\"",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2373.mp3"
+    },
+    "theme_question": {
+      "correct": "Seeking Divine assistance and confidence before a monumental task",
+      "options": [
+        "Seeking Divine assistance and confidence before a monumental task",
+        "A prayer for material wealth and prosperity",
+        "A request for forgiveness for past sins",
+        "An expression of gratitude after a victory"
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 20,
+      "options": [
+        {
+          "num": 18,
+          "name": "Al-Kahf",
+          "name_ar": "الكهف",
+          "name_en": "The Cave"
+        },
+        {
+          "num": 19,
+          "name": "Maryam",
+          "name_ar": "مريم",
+          "name_en": "Mary"
+        },
+        {
+          "num": 20,
+          "name": "Ta-Ha",
+          "name_ar": "طه",
+          "name_en": "Ta-Ha"
+        },
+        {
+          "num": 21,
+          "name": "Al-Anbiya",
+          "name_ar": "الأنبياء",
+          "name_en": "The Prophets"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 18,
+          "name": "Al-Kahf",
+          "name_ar": "الكهف",
+          "name_en": "The Cave"
+        },
+        {
+          "num": 19,
+          "name": "Maryam",
+          "name_ar": "مريم",
+          "name_en": "Mary"
+        },
+        {
+          "num": 20,
+          "name": "Ta-Ha",
+          "name_ar": "طه",
+          "name_en": "Ta-Ha"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse is the opening line of a powerful supplication made by Prophet Musa (Moses) right after Allah commanded him to go to the tyrannical Pharaoh. Recognizing the immense difficulty of the mission, Musa immediately turned to Allah, asking for the inner strength, clarity, and support needed to succeed.",
+      "theme_explanation": "The core theme is absolute reliance on Allah when facing daunting challenges. Musa's prayer teaches us that the first step in any difficult endeavor is to seek divine aid. 'Expanding the breast' is a metaphor for granting courage, confidence, and reassurance. This du'a is a timeless model for anyone feeling overwhelmed, whether by a public speaking engagement, a difficult conversation, or a major life project.",
+      "surah_overview": "Surah Ta-Ha, named after the two letters that begin it, is a Makkan surah. It was revealed to comfort and strengthen the Prophet Muhammad (ﷺ) during a period of difficulty. The surah's central narrative is the detailed story of Prophet Musa, from his miraculous infancy to his confrontation with Pharaoh and the journey of the Israelites. It powerfully illustrates Allah's mercy, His control over all affairs, and the ultimate victory of faith over arrogance and disbelief."
+    }
+  }
 }
