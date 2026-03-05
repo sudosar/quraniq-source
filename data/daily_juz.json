@@ -1,84 +1,79 @@
 {
-  "date": "2026-03-04",
+  "date": "2026-03-05",
   "puzzle": {
-    "date": "2026-03-04",
-    "juz_number": 16,
-    "juz_name": "Qala Alam",
-    "juz_name_ar": "قَالَ أَلَمْ",
+    "date": "2026-03-05",
+    "juz_number": 17,
+    "juz_name": "Iqtaraba lin-nasi",
+    "juz_name_ar": "اقْتَرَبَ لِلنَّاسِ",
     "verse": {
-      "surah_number": 20,
-      "surah_name": "Ta-Ha",
-      "surah_name_ar": "طه",
-      "ayah_number": 25,
-      "arabic_text": "قَالَ رَبِّ ٱشْرَحْ لِى صَدْرِى",
-      "translation": "[Moses] said, \"My Lord, expand for me my breast [with assurance]\"",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2373.mp3"
+      "surah_number": 21,
+      "surah_name": "Al-Anbiya",
+      "surah_name_ar": "الْأَنْبِيَاء",
+      "ayah_number": 87,
+      "arabic_text": "وَذَا النُّونِ إِذ ذَّهَبَ مُغَاضِبًا فَظَنَّ أَن لَّن نَّقْدِرَ عَلَيْهِ فَنَادَىٰ فِي الظُّلُمَاتِ أَن لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
+      "translation": "And [mention] the man of the fish, when he went off in anger and thought that We would not decree [anything] upon him. And he called out within the darknesses, 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.'",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2570.mp3"
     },
     "theme_question": {
-      "correct": "Seeking Divine assistance and confidence before a monumental task",
+      "correct": "The power of sincere repentance and acknowledging Allah's Oneness in times of distress.",
       "options": [
-        "Seeking Divine assistance and confidence before a monumental task",
-        "A prayer for material wealth and prosperity",
-        "A request for forgiveness for past sins",
-        "An expression of gratitude after a victory"
+        "The power of sincere repentance and acknowledging Allah's Oneness in times of distress.",
+        "The importance of physical strength in overcoming challenges.",
+        "The prohibition of consuming fish from the sea.",
+        "A detailed guide on navigating the ocean depths."
       ]
     },
     "surah_question": {
-      "correct_surah": 20,
+      "correct_surah": 21,
       "options": [
         {
-          "num": 18,
-          "name": "Al-Kahf",
-          "name_ar": "الكهف",
-          "name_en": "The Cave"
-        },
-        {
-          "num": 19,
-          "name": "Maryam",
-          "name_ar": "مريم",
-          "name_en": "Mary"
-        },
-        {
-          "num": 20,
-          "name": "Ta-Ha",
-          "name_ar": "طه",
-          "name_en": "Ta-Ha"
+          "num": 22,
+          "name": "Al-Hajj",
+          "name_ar": "الْحَجّ",
+          "name_en": "The Pilgrimage"
         },
         {
           "num": 21,
           "name": "Al-Anbiya",
-          "name_ar": "الأنبياء",
+          "name_ar": "الْأَنْبِيَاء",
           "name_en": "The Prophets"
+        },
+        {
+          "num": 23,
+          "name": "Al-Mu'minun",
+          "name_ar": "الْمُؤْمِنُوْن",
+          "name_en": "The Believers"
+        },
+        {
+          "num": 20,
+          "name": "Taha",
+          "name_ar": "طه",
+          "name_en": "Ta-Ha"
         }
       ]
     },
     "surah_order": {
       "surahs": [
         {
-          "num": 18,
-          "name": "Al-Kahf",
-          "name_ar": "الكهف",
-          "name_en": "The Cave"
+          "num": 21,
+          "name": "Al-Anbiya",
+          "name_ar": "الْأَنْبِيَاء",
+          "name_en": "The Prophets"
         },
         {
-          "num": 19,
-          "name": "Maryam",
-          "name_ar": "مريم",
-          "name_en": "Mary"
-        },
-        {
-          "num": 20,
-          "name": "Ta-Ha",
-          "name_ar": "طه",
-          "name_en": "Ta-Ha"
+          "num": 22,
+          "name": "Al-Hajj",
+          "name_ar": "الْحَجّ",
+          "name_en": "The Pilgrimage"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse is the opening line of a powerful supplication made by Prophet Musa (Moses) right after Allah commanded him to go to the tyrannical Pharaoh. Recognizing the immense difficulty of the mission, Musa immediately turned to Allah, asking for the inner strength, clarity, and support needed to succeed.",
-      "theme_explanation": "The core theme is absolute reliance on Allah when facing daunting challenges. Musa's prayer teaches us that the first step in any difficult endeavor is to seek divine aid. 'Expanding the breast' is a metaphor for granting courage, confidence, and reassurance. This du'a is a timeless model for anyone feeling overwhelmed, whether by a public speaking engagement, a difficult conversation, or a major life project.",
-      "surah_overview": "Surah Ta-Ha, named after the two letters that begin it, is a Makkan surah. It was revealed to comfort and strengthen the Prophet Muhammad (ﷺ) during a period of difficulty. The surah's central narrative is the detailed story of Prophet Musa, from his miraculous infancy to his confrontation with Pharaoh and the journey of the Israelites. It powerfully illustrates Allah's mercy, His control over all affairs, and the ultimate victory of faith over arrogance and disbelief."
+      "verse_context": "This verse contains the powerful supplication of Prophet Yunus (Jonah) when he was in the belly of the whale. After leaving his people in anger without Allah's permission, he was swallowed by a great fish. In the triple darkness—of the night, the sea, and the whale's belly—he called out to Allah, acknowledging his mistake and affirming Allah's absolute perfection and Oneness.",
+      "theme_explanation": "The theme is profound repentance (Tawbah) and the centrality of Tawhid (Oneness of Allah). The dua of Yunus (a.s.) is a comprehensive formula for seeking forgiveness. It begins with affirming Tawhid ('La ilaha illa Anta'), glorifying Allah ('Subhanak'), and admitting one's own wrongdoing ('inni kuntu minaz-zalimin'). The Prophet Muhammad (ﷺ) said that no Muslim supplicates with this dua for anything, except that Allah will answer him.",
+      "surah_overview": "Surah Al-Anbiya (The Prophets), a Meccan surah, emphasizes the fundamental message of all prophets: the Oneness of Allah (Tawhid). It recounts the stories of numerous prophets, including Ibrahim, Lut, Ishaq, Yaqub, Nuh, Dawud, Sulaiman, Ayyub, Ismail, Idris, Dhul-Kifl, Yunus, Zakariyya, and Yahya, highlighting their struggles and their unwavering faith. The surah serves as a reminder that the Day of Judgment is near and people are heedless."
     }
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

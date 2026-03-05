@@ -1,29 +1,33 @@
 {
-  "date": "2026-03-04",
+  "date": "2026-03-05",
   "puzzle": {
-    "verseRef": "55:60",
-    "reference": "Surah Ar-Rahman (55:60)",
+    "verseRef": "28:24",
+    "reference": "Surah Al-Qasas (28:24)",
     "segments": [
-      "هَلْ جَزَآءُ",
-      "ٱلْإِحْسَـٰنِ",
-      "إِلَّا",
-      "ٱلْإِحْسَـٰنُ"
+      "فَسَقَىٰ لَهُمَا",
+      "ثُمَّ تَوَلَّىٰٓ إِلَى ٱلظِّلِّ",
+      "فَقَالَ رَبِّ إِنِّى",
+      "لِمَآ أَنزَلْتَ إِلَىَّ",
+      "مِنْ خَيْرٍۢ فَقِيرٌۭ"
     ],
     "translations": [
-      "Is (the) reward",
-      "for the good",
-      "but",
-      "good"
+      "So he watered for them Then",
+      "he turned back to the shade",
+      "and said My Lord Indeed, I am",
+      "of whatever You send to me",
+      "of good (in) need"
     ],
-    "hint": "This verse asks a rhetorical question about the ultimate reward for righteous actions.",
-    "arabic": "هَلْ جَزَآءُ ٱلْإِحْسَـٰنِ إِلَّا ٱلْإِحْسَـٰنُ",
+    "hint": "A prophet's humble supplication for any good after performing a selfless act in a foreign land.",
+    "arabic": "فَسَقَىٰ لَهُمَا ثُمَّ تَوَلَّىٰٓ إِلَى ٱلظِّلِّ فَقَالَ رَبِّ إِنِّى لِمَآ أَنزَلْتَ إِلَىَّ مِنْ خَيْرٍۢ فَقِيرٌۭ",
     "words": [
-      "هَلْ جَزَآءُ",
-      "ٱلْإِحْسَـٰنِ",
-      "إِلَّا",
-      "ٱلْإِحْسَـٰنُ"
+      "فَسَقَىٰ لَهُمَا ثُمَّ",
+      "تَوَلَّىٰٓ إِلَى ٱلظِّلِّ",
+      "فَقَالَ رَبِّ إِنِّى",
+      "لِمَآ أَنزَلْتَ إِلَىَّ",
+      "مِنْ خَيْرٍۢ فَقِيرٌۭ"
     ],
-    "verseEn": "Is the reward for good [anything] but good?"
+    "verseEn": "So he watered [their flocks] for them; then he went back to the shade and said, \"My Lord, indeed I am, for whatever good You would send down to me, in need.\""
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

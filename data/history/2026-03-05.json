@@ -1,6 +1,5 @@
 {
-  "date": "2026-03-05",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "مُصْطَلَحَاتٌ لِلثَّوَابِ وَالْفَضْلِ",
@@ -144,6 +143,175 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "قمر",
+    "display": "قَمَر",
+    "hint": "The celestial body that governs the Islamic calendar.",
+    "verseRef": "41:37",
+    "arabicVerse": "وَمِنْ ءَايَـٰتِهِ ٱلَّيْلُ وَٱلنَّهَارُ وَٱلشَّمْسُ وَٱلْقَمَرُ ۚ لَا تَسْجُدُوا۟ لِلشَّمْسِ وَلَا لِلْقَمَرِ وَٱسْجُدُوا۟ لِلَّهِ ٱلَّذِى خَلَقَهُنَّ إِن كُنتُمْ إِيَّاهُ تَعْبُدُونَ",
+    "verse": "41:37 — And of His signs are the night and day and the sun and moon. Do not prostrate to the sun or to the moon, but prostrate to Allāh, who created them, if it should be Him that you worship."
+  },
+  "deduction": {
+    "title": "The Vow of Devotion",
+    "intro": "Within a household known for its piety, a devoted soul made a solemn promise to Allah. This pledge, born from a deep desire, would set in motion a miraculous chain of events, leading to the birth of one of the most honored individuals in history. Can you uncover the identity of this person whose sincere vow was accepted and answered in an unexpected way?",
+    "clues": [
+      "I was part of a blessed and chosen family, known for our righteousness.",
+      "I longed for a child and made a heartfelt plea to my Lord to grant me one.",
+      "In my gratitude, I made a vow to dedicate whatever was in my womb entirely to the service of Allah.",
+      "When I gave birth, I was surprised, for my child was not what I had expected for the role I envisioned.",
+      "I delivered a female, and I named her Maryam, seeking Allah's protection for her and her descendants from the accursed Shaytan.",
+      "My Lord accepted my offering with a beautiful acceptance and caused my daughter to grow in a beautiful manner, placing her under the care of Zakariyya."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "The wife of Zakariyya",
+          "The mother of Musa",
+          "The wife of 'Imran",
+          "The wife of Prophet Ibrahim (Sarah)",
+          "The wife of Fir'awn (Asiya)"
+        ],
+        "answer": "The wife of 'Imran"
+      },
+      "trial": {
+        "label": "What was my central act?",
+        "options": [
+          "Making a vow to dedicate my child to Allah",
+          "Hiding my child in a basket in the river",
+          "Patiently enduring a severe illness",
+          "Building a sacred house with my son",
+          "Arguing with angels about my people's fate"
+        ],
+        "answer": "Making a vow to dedicate my child to Allah"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The child I expected to be a male",
+          "The staff that turned into a serpent",
+          "The clay birds that came to life",
+          "The ark that saved all the believers",
+          "The coat of many colors"
+        ],
+        "answer": "The child I expected to be a male"
+      },
+      "outcome": {
+        "label": "What was the result of my vow?",
+        "options": [
+          "My son was saved from being sacrificed",
+          "My daughter Maryam was accepted into Allah's service",
+          "My husband was struck silent for three days",
+          "My child was given the ability to speak from the cradle",
+          "My child became a king with a vast army"
+        ],
+        "answer": "My daughter Maryam was accepted into Allah's service"
+      }
+    },
+    "verseRef": "3:35",
+    "arabic": "إِذْ قَالَتِ ٱمْرَأَتُ عِمْرَٰنَ رَبِّ إِنِّى نَذَرْتُ لَكَ مَا فِى بَطْنِى مُحَرَّرًۭا فَتَقَبَّلْ مِنِّىٓ ۖ إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
+    "verse": "[Mention, O Muḥammad], when the wife of ʿImrān said, \"My Lord, indeed I have pledged to You what is in my womb, consecrated [for Your service], so accept this from me. Indeed, You are the Hearing, the Knowing.\" (3:35)"
+  },
+  "scramble": {
+    "verseRef": "28:24",
+    "reference": "Surah Al-Qasas (28:24)",
+    "segments": [
+      "فَسَقَىٰ لَهُمَا",
+      "ثُمَّ تَوَلَّىٰٓ إِلَى ٱلظِّلِّ",
+      "فَقَالَ رَبِّ إِنِّى",
+      "لِمَآ أَنزَلْتَ إِلَىَّ",
+      "مِنْ خَيْرٍۢ فَقِيرٌۭ"
+    ],
+    "translations": [
+      "So he watered for them Then",
+      "he turned back to the shade",
+      "and said My Lord Indeed, I am",
+      "of whatever You send to me",
+      "of good (in) need"
+    ],
+    "hint": "A prophet's humble supplication for any good after performing a selfless act in a foreign land.",
+    "arabic": "فَسَقَىٰ لَهُمَا ثُمَّ تَوَلَّىٰٓ إِلَى ٱلظِّلِّ فَقَالَ رَبِّ إِنِّى لِمَآ أَنزَلْتَ إِلَىَّ مِنْ خَيْرٍۢ فَقِيرٌۭ",
+    "words": [
+      "فَسَقَىٰ لَهُمَا ثُمَّ",
+      "تَوَلَّىٰٓ إِلَى ٱلظِّلِّ",
+      "فَقَالَ رَبِّ إِنِّى",
+      "لِمَآ أَنزَلْتَ إِلَىَّ",
+      "مِنْ خَيْرٍۢ فَقِيرٌۭ"
+    ],
+    "verseEn": "So he watered [their flocks] for them; then he went back to the shade and said, \"My Lord, indeed I am, for whatever good You would send down to me, in need.\""
+  },
+  "juz": {
+    "date": "2026-03-05",
+    "juz_number": 17,
+    "juz_name": "Iqtaraba lin-nasi",
+    "juz_name_ar": "اقْتَرَبَ لِلنَّاسِ",
+    "verse": {
+      "surah_number": 21,
+      "surah_name": "Al-Anbiya",
+      "surah_name_ar": "الْأَنْبِيَاء",
+      "ayah_number": 87,
+      "arabic_text": "وَذَا النُّونِ إِذ ذَّهَبَ مُغَاضِبًا فَظَنَّ أَن لَّن نَّقْدِرَ عَلَيْهِ فَنَادَىٰ فِي الظُّلُمَاتِ أَن لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
+      "translation": "And [mention] the man of the fish, when he went off in anger and thought that We would not decree [anything] upon him. And he called out within the darknesses, 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.'",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2570.mp3"
+    },
+    "theme_question": {
+      "correct": "The power of sincere repentance and acknowledging Allah's Oneness in times of distress.",
+      "options": [
+        "The power of sincere repentance and acknowledging Allah's Oneness in times of distress.",
+        "The importance of physical strength in overcoming challenges.",
+        "The prohibition of consuming fish from the sea.",
+        "A detailed guide on navigating the ocean depths."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 21,
+      "options": [
+        {
+          "num": 22,
+          "name": "Al-Hajj",
+          "name_ar": "الْحَجّ",
+          "name_en": "The Pilgrimage"
+        },
+        {
+          "num": 21,
+          "name": "Al-Anbiya",
+          "name_ar": "الْأَنْبِيَاء",
+          "name_en": "The Prophets"
+        },
+        {
+          "num": 23,
+          "name": "Al-Mu'minun",
+          "name_ar": "الْمُؤْمِنُوْن",
+          "name_en": "The Believers"
+        },
+        {
+          "num": 20,
+          "name": "Taha",
+          "name_ar": "طه",
+          "name_en": "Ta-Ha"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 21,
+          "name": "Al-Anbiya",
+          "name_ar": "الْأَنْبِيَاء",
+          "name_en": "The Prophets"
+        },
+        {
+          "num": 22,
+          "name": "Al-Hajj",
+          "name_ar": "الْحَجّ",
+          "name_en": "The Pilgrimage"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse contains the powerful supplication of Prophet Yunus (Jonah) when he was in the belly of the whale. After leaving his people in anger without Allah's permission, he was swallowed by a great fish. In the triple darkness—of the night, the sea, and the whale's belly—he called out to Allah, acknowledging his mistake and affirming Allah's absolute perfection and Oneness.",
+      "theme_explanation": "The theme is profound repentance (Tawbah) and the centrality of Tawhid (Oneness of Allah). The dua of Yunus (a.s.) is a comprehensive formula for seeking forgiveness. It begins with affirming Tawhid ('La ilaha illa Anta'), glorifying Allah ('Subhanak'), and admitting one's own wrongdoing ('inni kuntu minaz-zalimin'). The Prophet Muhammad (ﷺ) said that no Muslim supplicates with this dua for anything, except that Allah will answer him.",
+      "surah_overview": "Surah Al-Anbiya (The Prophets), a Meccan surah, emphasizes the fundamental message of all prophets: the Oneness of Allah (Tawhid). It recounts the stories of numerous prophets, including Ibrahim, Lut, Ishaq, Yaqub, Nuh, Dawud, Sulaiman, Ayyub, Ismail, Idris, Dhul-Kifl, Yunus, Zakariyya, and Yahya, highlighting their struggles and their unwavering faith. The surah serves as a reminder that the Day of Judgment is near and people are heedless."
+    }
+  }
 }

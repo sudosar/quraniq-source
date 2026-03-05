@@ -1,12 +1,13 @@
 {
-  "date": "2026-03-04",
+  "date": "2026-03-05",
   "puzzle": {
-    "word": "وجه",
-    "display": "وَجْه",
-    "hint": "Everything will perish except His.",
-    "verseRef": "28:88",
-    "arabicVerse": "وَلَا تَدْعُ مَعَ ٱللَّهِ إِلَـٰهًا ءَاخَرَ ۘ لَآ إِلَـٰهَ إِلَّا هُوَ ۚ كُلُّ شَىْءٍ هَالِكٌ إِلَّا وَجْهَهُۥ ۚ لَهُ ٱلْحُكْمُ وَإِلَيْهِ تُرْجَعُونَ",
-    "verse": "28:88 — And do not invoke with Allāh another deity. There is no deity except Him. Everything will be destroyed except His Face. His is the judgement, and to Him you will be returned."
+    "word": "قمر",
+    "display": "قَمَر",
+    "hint": "The celestial body that governs the Islamic calendar.",
+    "verseRef": "41:37",
+    "arabicVerse": "وَمِنْ ءَايَـٰتِهِ ٱلَّيْلُ وَٱلنَّهَارُ وَٱلشَّمْسُ وَٱلْقَمَرُ ۚ لَا تَسْجُدُوا۟ لِلشَّمْسِ وَلَا لِلْقَمَرِ وَٱسْجُدُوا۟ لِلَّهِ ٱلَّذِى خَلَقَهُنَّ إِن كُنتُمْ إِيَّاهُ تَعْبُدُونَ",
+    "verse": "41:37 — And of His signs are the night and day and the sun and moon. Do not prostrate to the sun or to the moon, but prostrate to Allāh, who created them, if it should be Him that you worship."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
