@@ -1,12 +1,13 @@
 {
-  "date": "2026-03-05",
+  "date": "2026-03-06",
   "puzzle": {
-    "word": "قمر",
-    "display": "قَمَر",
-    "hint": "The celestial body that governs the Islamic calendar.",
-    "verseRef": "41:37",
-    "arabicVerse": "وَمِنْ ءَايَـٰتِهِ ٱلَّيْلُ وَٱلنَّهَارُ وَٱلشَّمْسُ وَٱلْقَمَرُ ۚ لَا تَسْجُدُوا۟ لِلشَّمْسِ وَلَا لِلْقَمَرِ وَٱسْجُدُوا۟ لِلَّهِ ٱلَّذِى خَلَقَهُنَّ إِن كُنتُمْ إِيَّاهُ تَعْبُدُونَ",
-    "verse": "41:37 — And of His signs are the night and day and the sun and moon. Do not prostrate to the sun or to the moon, but prostrate to Allāh, who created them, if it should be Him that you worship."
+    "word": "ذهب",
+    "display": "ذَهَب",
+    "hint": "A precious metal often used for adornment in this life and the next.",
+    "verseRef": "43:71",
+    "arabicVerse": "يُطَافُ عَلَيْهِم بِصِحَافٍۢ مِّن ذَهَبٍۢ وَأَكْوَابٍۢ ۖ وَفِيهَا مَا تَشْتَهِيهِ ٱلْأَنفُسُ وَتَلَذُّ ٱلْأَعْيُنُ ۖ وَأَنتُمْ فِيهَا خَـٰلِدُونَ",
+    "verse": "43:71 — Circulated among them will be plates and vessels of gold. And therein is whatever the souls desire and [what] delights the eyes, and you will abide therein eternally."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

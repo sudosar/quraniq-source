@@ -1,78 +1,85 @@
 {
-  "date": "2026-03-05",
+  "date": "2026-03-06",
   "puzzle": {
-    "date": "2026-03-05",
-    "juz_number": 17,
-    "juz_name": "Iqtaraba lin-nasi",
-    "juz_name_ar": "اقْتَرَبَ لِلنَّاسِ",
+    "date": "2026-03-06",
+    "juz_number": 18,
+    "juz_name": "Qad Aflaha",
+    "juz_name_ar": "قَدْ أَفْلَحَ",
     "verse": {
-      "surah_number": 21,
-      "surah_name": "Al-Anbiya",
-      "surah_name_ar": "الْأَنْبِيَاء",
-      "ayah_number": 87,
-      "arabic_text": "وَذَا النُّونِ إِذ ذَّهَبَ مُغَاضِبًا فَظَنَّ أَن لَّن نَّقْدِرَ عَلَيْهِ فَنَادَىٰ فِي الظُّلُمَاتِ أَن لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
-      "translation": "And [mention] the man of the fish, when he went off in anger and thought that We would not decree [anything] upon him. And he called out within the darknesses, 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.'",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2570.mp3"
+      "surah_number": 24,
+      "surah_name": "An-Nur",
+      "surah_name_ar": "ٱلنُّور",
+      "ayah_number": 35,
+      "arabic_text": "ٱللَّهُ نُورُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ",
+      "translation": "Allah is the Light of the heavens and the earth.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2826.mp3"
     },
     "theme_question": {
-      "correct": "The power of sincere repentance and acknowledging Allah's Oneness in times of distress.",
+      "correct": "The nature of divine guidance, described metaphorically as a brilliant light.",
       "options": [
-        "The power of sincere repentance and acknowledging Allah's Oneness in times of distress.",
-        "The importance of physical strength in overcoming challenges.",
-        "The prohibition of consuming fish from the sea.",
-        "A detailed guide on navigating the ocean depths."
+        "The nature of divine guidance, described metaphorically as a brilliant light.",
+        "The scientific properties of physical light.",
+        "The prohibition of usury and interest.",
+        "The detailed rules for fasting during Ramadan."
       ]
     },
     "surah_question": {
-      "correct_surah": 21,
+      "correct_surah": 24,
       "options": [
-        {
-          "num": 22,
-          "name": "Al-Hajj",
-          "name_ar": "الْحَجّ",
-          "name_en": "The Pilgrimage"
-        },
-        {
-          "num": 21,
-          "name": "Al-Anbiya",
-          "name_ar": "الْأَنْبِيَاء",
-          "name_en": "The Prophets"
-        },
         {
           "num": 23,
           "name": "Al-Mu'minun",
-          "name_ar": "الْمُؤْمِنُوْن",
+          "name_ar": "ٱلْمُؤْمِنُونَ",
           "name_en": "The Believers"
         },
         {
-          "num": 20,
-          "name": "Taha",
-          "name_ar": "طه",
-          "name_en": "Ta-Ha"
+          "num": 24,
+          "name": "An-Nur",
+          "name_ar": "ٱلنُّور",
+          "name_en": "The Light"
+        },
+        {
+          "num": 25,
+          "name": "Al-Furqan",
+          "name_ar": "ٱلْفُرْقَان",
+          "name_en": "The Criterion"
+        },
+        {
+          "num": 22,
+          "name": "Al-Hajj",
+          "name_ar": "ٱلْحَجّ",
+          "name_en": "The Pilgrimage"
         }
       ]
     },
     "surah_order": {
       "surahs": [
         {
-          "num": 21,
-          "name": "Al-Anbiya",
-          "name_ar": "الْأَنْبِيَاء",
-          "name_en": "The Prophets"
+          "num": 23,
+          "name": "Al-Mu'minun",
+          "name_ar": "ٱلْمُؤْمِنُونَ",
+          "name_en": "The Believers"
         },
         {
-          "num": 22,
-          "name": "Al-Hajj",
-          "name_ar": "الْحَجّ",
-          "name_en": "The Pilgrimage"
+          "num": 24,
+          "name": "An-Nur",
+          "name_ar": "ٱلنُّور",
+          "name_en": "The Light"
+        },
+        {
+          "num": 25,
+          "name": "Al-Furqan",
+          "name_ar": "ٱلْفُرْقَان",
+          "name_en": "The Criterion"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse contains the powerful supplication of Prophet Yunus (Jonah) when he was in the belly of the whale. After leaving his people in anger without Allah's permission, he was swallowed by a great fish. In the triple darkness—of the night, the sea, and the whale's belly—he called out to Allah, acknowledging his mistake and affirming Allah's absolute perfection and Oneness.",
-      "theme_explanation": "The theme is profound repentance (Tawbah) and the centrality of Tawhid (Oneness of Allah). The dua of Yunus (a.s.) is a comprehensive formula for seeking forgiveness. It begins with affirming Tawhid ('La ilaha illa Anta'), glorifying Allah ('Subhanak'), and admitting one's own wrongdoing ('inni kuntu minaz-zalimin'). The Prophet Muhammad (ﷺ) said that no Muslim supplicates with this dua for anything, except that Allah will answer him.",
-      "surah_overview": "Surah Al-Anbiya (The Prophets), a Meccan surah, emphasizes the fundamental message of all prophets: the Oneness of Allah (Tawhid). It recounts the stories of numerous prophets, including Ibrahim, Lut, Ishaq, Yaqub, Nuh, Dawud, Sulaiman, Ayyub, Ismail, Idris, Dhul-Kifl, Yunus, Zakariyya, and Yahya, highlighting their struggles and their unwavering faith. The surah serves as a reminder that the Day of Judgment is near and people are heedless."
+      "verse_context": "This verse, known as 'Ayat an-Nur' (The Verse of Light), is one of the most profound and widely discussed verses in the Quran. It comes in a surah that deals extensively with social ethics, family law, and modesty. This verse elevates the discussion by grounding all righteous conduct in the ultimate reality: Allah, who is the source of all guidance and clarity, illuminating the path for believers.",
+      "theme_explanation": "The theme is the absolute and encompassing nature of Allah's guidance. The metaphor of 'light' is used to explain something beyond human comprehension. Just as physical light makes the unseen visible and provides clarity, Allah's divine light (His revelation, guidance, and truth) illuminates hearts and minds, dispelling the darkness of ignorance, doubt, and disbelief. The verse continues with a beautiful parable of this light being like a niche with a lamp, symbolizing the pure heart of a believer containing the light of faith.",
+      "surah_overview": "Surah An-Nur (The Light), a Madani surah, is named after this pivotal 35th verse. The surah is a comprehensive guide to establishing a chaste and dignified society. It legislates severe punishments for adultery and false accusations, outlines rules of modesty (hijab), privacy, and etiquette for entering homes. It contrasts the state of believers, who are guided by Allah's light, with that of the disbelievers, who are lost in layers of darkness. The surah emphasizes that all authority and law ultimately belong to Allah."
     }
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

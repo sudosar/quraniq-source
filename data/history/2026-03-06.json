@@ -1,6 +1,5 @@
 {
-  "date": "2026-03-06",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "مَصَادِرُ الضَّوْءِ",
@@ -144,6 +143,181 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "ذهب",
+    "display": "ذَهَب",
+    "hint": "A precious metal often used for adornment in this life and the next.",
+    "verseRef": "43:71",
+    "arabicVerse": "يُطَافُ عَلَيْهِم بِصِحَافٍۢ مِّن ذَهَبٍۢ وَأَكْوَابٍۢ ۖ وَفِيهَا مَا تَشْتَهِيهِ ٱلْأَنفُسُ وَتَلَذُّ ٱلْأَعْيُنُ ۖ وَأَنتُمْ فِيهَا خَـٰلِدُونَ",
+    "verse": "43:71 — Circulated among them will be plates and vessels of gold. And therein is whatever the souls desire and [what] delights the eyes, and you will abide therein eternally."
+  },
+  "deduction": {
+    "title": "The Harvest of Regret",
+    "intro": "A lush inheritance, a legacy of generosity, was passed down. Yet, the new inheritors saw this bounty not as a blessing to be shared, but as a treasure to be hoarded. They made a secret pact, a plan to be executed under the cover of darkness, believing they could outwit providence. Their story serves as a stark reminder of the consequences of ingratitude and avarice.",
+    "clues": [
+      "We inherited a beautiful and fruitful property from a righteous predecessor.",
+      "Our predecessor was known for sharing the harvest with the poor and needy, an act we viewed as a loss.",
+      "We conspired together to change this tradition, deciding to keep all the profits for ourselves.",
+      "We made an oath to go out early in the morning to harvest our garden before anyone could ask for their share.",
+      "When we arrived, we found our lush garden reduced to a barren, blackened ruin, as if completely reaped.",
+      "We initially blamed each other, but soon realized our ruin was a punishment from our Lord for our selfish plan, and we turned to Him in repentance."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Are We?",
+        "options": [
+          "The People of Saba",
+          "The Two Men with Two Gardens",
+          "The Companions of the Garden",
+          "The Brothers of Prophet Yusuf",
+          "The People of Madyan"
+        ],
+        "answer": "The Companions of the Garden"
+      },
+      "trial": {
+        "label": "What Was Our Sin?",
+        "options": [
+          "Plotting to deprive the poor of their share",
+          "Denying the message of a Prophet",
+          "Building a rival mosque to create division",
+          "Breaking the Sabbath by fishing",
+          "Mocking a Prophet for building an ark"
+        ],
+        "answer": "Plotting to deprive the poor of their share"
+      },
+      "location": {
+        "label": "What Happened to Our Property?",
+        "options": [
+          "It was flooded by a burst dam",
+          "It was consumed by a fire sent from heaven",
+          "It was seized by a tyrannical king",
+          "It was destroyed by a calamity from Allah overnight",
+          "It withered due to a severe drought"
+        ],
+        "answer": "It was destroyed by a calamity from Allah overnight"
+      },
+      "outcome": {
+        "label": "What Was Our Ultimate Response?",
+        "options": [
+          "We arrogantly blamed a Prophet for our misfortune",
+          "We scattered in fear and never returned",
+          "We admitted our transgression and glorified Allah",
+          "We demanded that Allah restore our property immediately",
+          "We continued in our disbelief until we were destroyed"
+        ],
+        "answer": "We admitted our transgression and glorified Allah"
+      }
+    },
+    "verseRef": "68:20",
+    "arabic": "فَأَصْبَحَتْ كَٱلصَّرِيمِ",
+    "verse": "And it became as though reaped. (68:20)"
+  },
+  "scramble": {
+    "verseRef": "35:15",
+    "reference": "Fatir (35:15)",
+    "segments": [
+      "يَا أَيُّهَا النَّاسُ",
+      "أَنتُمُ الْفُقَرَاءُ",
+      "إِلَى اللَّهِ",
+      "وَاللَّهُ هُوَ",
+      "الْغَنِيُّ الْحَمِيدُ"
+    ],
+    "translations": [
+      "O mankind",
+      "You (are) those in need",
+      "of Allah",
+      "while Allah He",
+      "(is) Free of need the Praiseworthy"
+    ],
+    "hint": "This verse addresses all of humanity, reminding them of their inherent need for the Creator, who is free of all needs.",
+    "arabic": "۞ يَـٰٓأَيُّهَا ٱلنَّاسُ أَنتُمُ ٱلْفُقَرَآءُ إِلَى ٱللَّهِ ۖ وَٱللَّهُ هُوَ ٱلْغَنِىُّ ٱلْحَمِيدُ",
+    "words": [
+      "۞ يَـٰٓأَيُّهَا ٱلنَّاسُ",
+      "أَنتُمُ ٱلْفُقَرَآءُ",
+      "إِلَى ٱللَّهِ ۖ",
+      "وَٱللَّهُ هُوَ",
+      "ٱلْغَنِىُّ ٱلْحَمِيدُ"
+    ],
+    "verseEn": "O mankind, you are those in need of Allāh, while Allāh is the Free of need, the Praiseworthy."
+  },
+  "juz": {
+    "date": "2026-03-06",
+    "juz_number": 18,
+    "juz_name": "Qad Aflaha",
+    "juz_name_ar": "قَدْ أَفْلَحَ",
+    "verse": {
+      "surah_number": 24,
+      "surah_name": "An-Nur",
+      "surah_name_ar": "ٱلنُّور",
+      "ayah_number": 35,
+      "arabic_text": "ٱللَّهُ نُورُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ",
+      "translation": "Allah is the Light of the heavens and the earth.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2826.mp3"
+    },
+    "theme_question": {
+      "correct": "The nature of divine guidance, described metaphorically as a brilliant light.",
+      "options": [
+        "The nature of divine guidance, described metaphorically as a brilliant light.",
+        "The scientific properties of physical light.",
+        "The prohibition of usury and interest.",
+        "The detailed rules for fasting during Ramadan."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 24,
+      "options": [
+        {
+          "num": 23,
+          "name": "Al-Mu'minun",
+          "name_ar": "ٱلْمُؤْمِنُونَ",
+          "name_en": "The Believers"
+        },
+        {
+          "num": 24,
+          "name": "An-Nur",
+          "name_ar": "ٱلنُّور",
+          "name_en": "The Light"
+        },
+        {
+          "num": 25,
+          "name": "Al-Furqan",
+          "name_ar": "ٱلْفُرْقَان",
+          "name_en": "The Criterion"
+        },
+        {
+          "num": 22,
+          "name": "Al-Hajj",
+          "name_ar": "ٱلْحَجّ",
+          "name_en": "The Pilgrimage"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 23,
+          "name": "Al-Mu'minun",
+          "name_ar": "ٱلْمُؤْمِنُونَ",
+          "name_en": "The Believers"
+        },
+        {
+          "num": 24,
+          "name": "An-Nur",
+          "name_ar": "ٱلنُّور",
+          "name_en": "The Light"
+        },
+        {
+          "num": 25,
+          "name": "Al-Furqan",
+          "name_ar": "ٱلْفُرْقَان",
+          "name_en": "The Criterion"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse, known as 'Ayat an-Nur' (The Verse of Light), is one of the most profound and widely discussed verses in the Quran. It comes in a surah that deals extensively with social ethics, family law, and modesty. This verse elevates the discussion by grounding all righteous conduct in the ultimate reality: Allah, who is the source of all guidance and clarity, illuminating the path for believers.",
+      "theme_explanation": "The theme is the absolute and encompassing nature of Allah's guidance. The metaphor of 'light' is used to explain something beyond human comprehension. Just as physical light makes the unseen visible and provides clarity, Allah's divine light (His revelation, guidance, and truth) illuminates hearts and minds, dispelling the darkness of ignorance, doubt, and disbelief. The verse continues with a beautiful parable of this light being like a niche with a lamp, symbolizing the pure heart of a believer containing the light of faith.",
+      "surah_overview": "Surah An-Nur (The Light), a Madani surah, is named after this pivotal 35th verse. The surah is a comprehensive guide to establishing a chaste and dignified society. It legislates severe punishments for adultery and false accusations, outlines rules of modesty (hijab), privacy, and etiquette for entering homes. It contrasts the state of believers, who are guided by Allah's light, with that of the disbelievers, who are lost in layers of darkness. The surah emphasizes that all authority and law ultimately belong to Allah."
+    }
+  }
 }

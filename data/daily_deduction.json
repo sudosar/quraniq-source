@@ -1,65 +1,66 @@
 {
-  "date": "2026-03-05",
+  "date": "2026-03-06",
   "puzzle": {
-    "title": "The Vow of Devotion",
-    "intro": "Within a household known for its piety, a devoted soul made a solemn promise to Allah. This pledge, born from a deep desire, would set in motion a miraculous chain of events, leading to the birth of one of the most honored individuals in history. Can you uncover the identity of this person whose sincere vow was accepted and answered in an unexpected way?",
+    "title": "The Harvest of Regret",
+    "intro": "A lush inheritance, a legacy of generosity, was passed down. Yet, the new inheritors saw this bounty not as a blessing to be shared, but as a treasure to be hoarded. They made a secret pact, a plan to be executed under the cover of darkness, believing they could outwit providence. Their story serves as a stark reminder of the consequences of ingratitude and avarice.",
     "clues": [
-      "I was part of a blessed and chosen family, known for our righteousness.",
-      "I longed for a child and made a heartfelt plea to my Lord to grant me one.",
-      "In my gratitude, I made a vow to dedicate whatever was in my womb entirely to the service of Allah.",
-      "When I gave birth, I was surprised, for my child was not what I had expected for the role I envisioned.",
-      "I delivered a female, and I named her Maryam, seeking Allah's protection for her and her descendants from the accursed Shaytan.",
-      "My Lord accepted my offering with a beautiful acceptance and caused my daughter to grow in a beautiful manner, placing her under the care of Zakariyya."
+      "We inherited a beautiful and fruitful property from a righteous predecessor.",
+      "Our predecessor was known for sharing the harvest with the poor and needy, an act we viewed as a loss.",
+      "We conspired together to change this tradition, deciding to keep all the profits for ourselves.",
+      "We made an oath to go out early in the morning to harvest our garden before anyone could ask for their share.",
+      "When we arrived, we found our lush garden reduced to a barren, blackened ruin, as if completely reaped.",
+      "We initially blamed each other, but soon realized our ruin was a punishment from our Lord for our selfish plan, and we turned to Him in repentance."
     ],
     "categories": {
       "identity": {
-        "label": "Who Am I?",
+        "label": "Who Are We?",
         "options": [
-          "The wife of Zakariyya",
-          "The mother of Musa",
-          "The wife of 'Imran",
-          "The wife of Prophet Ibrahim (Sarah)",
-          "The wife of Fir'awn (Asiya)"
+          "The People of Saba",
+          "The Two Men with Two Gardens",
+          "The Companions of the Garden",
+          "The Brothers of Prophet Yusuf",
+          "The People of Madyan"
         ],
-        "answer": "The wife of 'Imran"
+        "answer": "The Companions of the Garden"
       },
       "trial": {
-        "label": "What was my central act?",
+        "label": "What Was Our Sin?",
         "options": [
-          "Making a vow to dedicate my child to Allah",
-          "Hiding my child in a basket in the river",
-          "Patiently enduring a severe illness",
-          "Building a sacred house with my son",
-          "Arguing with angels about my people's fate"
+          "Plotting to deprive the poor of their share",
+          "Denying the message of a Prophet",
+          "Building a rival mosque to create division",
+          "Breaking the Sabbath by fishing",
+          "Mocking a Prophet for building an ark"
         ],
-        "answer": "Making a vow to dedicate my child to Allah"
+        "answer": "Plotting to deprive the poor of their share"
       },
       "location": {
-        "label": "Key Element",
+        "label": "What Happened to Our Property?",
         "options": [
-          "The child I expected to be a male",
-          "The staff that turned into a serpent",
-          "The clay birds that came to life",
-          "The ark that saved all the believers",
-          "The coat of many colors"
+          "It was flooded by a burst dam",
+          "It was consumed by a fire sent from heaven",
+          "It was seized by a tyrannical king",
+          "It was destroyed by a calamity from Allah overnight",
+          "It withered due to a severe drought"
         ],
-        "answer": "The child I expected to be a male"
+        "answer": "It was destroyed by a calamity from Allah overnight"
       },
       "outcome": {
-        "label": "What was the result of my vow?",
+        "label": "What Was Our Ultimate Response?",
         "options": [
-          "My son was saved from being sacrificed",
-          "My daughter Maryam was accepted into Allah's service",
-          "My husband was struck silent for three days",
-          "My child was given the ability to speak from the cradle",
-          "My child became a king with a vast army"
+          "We arrogantly blamed a Prophet for our misfortune",
+          "We scattered in fear and never returned",
+          "We admitted our transgression and glorified Allah",
+          "We demanded that Allah restore our property immediately",
+          "We continued in our disbelief until we were destroyed"
         ],
-        "answer": "My daughter Maryam was accepted into Allah's service"
+        "answer": "We admitted our transgression and glorified Allah"
       }
     },
-    "verseRef": "3:35",
-    "arabic": "إِذْ قَالَتِ ٱمْرَأَتُ عِمْرَٰنَ رَبِّ إِنِّى نَذَرْتُ لَكَ مَا فِى بَطْنِى مُحَرَّرًۭا فَتَقَبَّلْ مِنِّىٓ ۖ إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
-    "verse": "[Mention, O Muḥammad], when the wife of ʿImrān said, \"My Lord, indeed I have pledged to You what is in my womb, consecrated [for Your service], so accept this from me. Indeed, You are the Hearing, the Knowing.\" (3:35)"
+    "verseRef": "68:20",
+    "arabic": "فَأَصْبَحَتْ كَٱلصَّرِيمِ",
+    "verse": "And it became as though reaped. (68:20)"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
