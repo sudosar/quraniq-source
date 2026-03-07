@@ -1,32 +1,33 @@
 {
-  "date": "2026-03-06",
+  "date": "2026-03-07",
   "puzzle": {
-    "verseRef": "35:15",
-    "reference": "Fatir (35:15)",
+    "verseRef": "61:4",
+    "reference": "As-Saff (61:4)",
     "segments": [
-      "يَا أَيُّهَا النَّاسُ",
-      "أَنتُمُ الْفُقَرَاءُ",
-      "إِلَى اللَّهِ",
-      "وَاللَّهُ هُوَ",
-      "الْغَنِيُّ الْحَمِيدُ"
+      "إِنَّ اللَّهَ يُحِبُّ",
+      "الَّذِينَ يُقَاتِلُونَ",
+      "فِي سَبِيلِهِ صَفًّا",
+      "كَأَنَّهُم بُنْيَانٌ",
+      "مَّرْصُوصٌ"
     ],
     "translations": [
-      "O mankind",
-      "You (are) those in need",
-      "of Allah",
-      "while Allah He",
-      "(is) Free of need the Praiseworthy"
+      "Indeed Allah loves",
+      "those who fight",
+      "in His Way",
+      "(in) a row as if they",
+      "(were) a structure joined firmly"
     ],
-    "hint": "This verse addresses all of humanity, reminding them of their inherent need for the Creator, who is free of all needs.",
-    "arabic": "۞ يَـٰٓأَيُّهَا ٱلنَّاسُ أَنتُمُ ٱلْفُقَرَآءُ إِلَى ٱللَّهِ ۖ وَٱللَّهُ هُوَ ٱلْغَنِىُّ ٱلْحَمِيدُ",
+    "hint": "A metaphor for the strength and unity of believers whom Allah loves, comparing them to a solid building.",
+    "arabic": "إِنَّ ٱللَّهَ يُحِبُّ ٱلَّذِينَ يُقَـٰتِلُونَ فِى سَبِيلِهِۦ صَفًّۭا كَأَنَّهُم بُنْيَـٰنٌۭ مَّرْصُوصٌۭ",
     "words": [
-      "۞ يَـٰٓأَيُّهَا ٱلنَّاسُ",
-      "أَنتُمُ ٱلْفُقَرَآءُ",
-      "إِلَى ٱللَّهِ ۖ",
-      "وَٱللَّهُ هُوَ",
-      "ٱلْغَنِىُّ ٱلْحَمِيدُ"
+      "إِنَّ ٱللَّهَ يُحِبُّ",
+      "ٱلَّذِينَ يُقَـٰتِلُونَ",
+      "فِى سَبِيلِهِۦ",
+      "صَفًّۭا كَأَنَّهُم",
+      "بُنْيَـٰنٌۭ مَّرْصُوصٌۭ"
     ],
-    "verseEn": "O mankind, you are those in need of Allāh, while Allāh is the Free of need, the Praiseworthy."
+    "verseEn": "Indeed, Allāh loves those who fight in His cause in a row as though they are a [single] structure joined firmly."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

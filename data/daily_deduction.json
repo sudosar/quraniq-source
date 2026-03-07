@@ -1,65 +1,66 @@
 {
-  "date": "2026-03-06",
+  "date": "2026-03-07",
   "puzzle": {
-    "title": "The Harvest of Regret",
-    "intro": "A lush inheritance, a legacy of generosity, was passed down. Yet, the new inheritors saw this bounty not as a blessing to be shared, but as a treasure to be hoarded. They made a secret pact, a plan to be executed under the cover of darkness, believing they could outwit providence. Their story serves as a stark reminder of the consequences of ingratitude and avarice.",
+    "title": "The Harmony of Iron and Praise",
+    "intro": "A divinely favored soul was granted both wisdom and dominion, leading a nation with justice. This unique individual possessed a voice that could command nature and hands that could shape the hardest of materials. Yet, their greatest strength was found in constant remembrance and praise of their Lord. Can you identify this servant of Allah?",
     "clues": [
-      "We inherited a beautiful and fruitful property from a righteous predecessor.",
-      "Our predecessor was known for sharing the harvest with the poor and needy, an act we viewed as a loss.",
-      "We conspired together to change this tradition, deciding to keep all the profits for ourselves.",
-      "We made an oath to go out early in the morning to harvest our garden before anyone could ask for their share.",
-      "When we arrived, we found our lush garden reduced to a barren, blackened ruin, as if completely reaped.",
-      "We initially blamed each other, but soon realized our ruin was a punishment from our Lord for our selfish plan, and we turned to Him in repentance."
+      "The mountains and birds were commanded to join me in my glorification of Allah.",
+      "I was given a book of scripture, a guide for my people.",
+      "In a dispute over a flock of sheep, my judgment was guided by a wisdom that even my own child recognized as superior.",
+      "Allah softened iron for me, allowing me to fashion it with my own hands into coats of mail.",
+      "I was tested concerning two litigants who climbed over the wall of my private chamber to seek my judgment.",
+      "My son, Sulayman, inherited my kingdom and my wisdom, continuing a legacy of prophecy and rule."
     ],
     "categories": {
       "identity": {
-        "label": "Who Are We?",
+        "label": "Who Am I?",
         "options": [
-          "The People of Saba",
-          "The Two Men with Two Gardens",
-          "The Companions of the Garden",
-          "The Brothers of Prophet Yusuf",
-          "The People of Madyan"
+          "Prophet Musa",
+          "Prophet 'Isa",
+          "Prophet Dawud",
+          "Dhul-Qarnayn",
+          "Talut (Saul)"
         ],
-        "answer": "The Companions of the Garden"
+        "answer": "Prophet Dawud"
       },
       "trial": {
-        "label": "What Was Our Sin?",
+        "label": "What Was My Significant Event?",
         "options": [
-          "Plotting to deprive the poor of their share",
-          "Denying the message of a Prophet",
-          "Building a rival mosque to create division",
-          "Breaking the Sabbath by fishing",
-          "Mocking a Prophet for building an ark"
+          "Building a wall against Gog and Magog",
+          "Being tested by two litigants",
+          "Leading an army across the sea",
+          "Being raised to the heavens",
+          "Confronting a tyrant who claimed to give life and death"
         ],
-        "answer": "Plotting to deprive the poor of their share"
+        "answer": "Being tested by two litigants"
       },
       "location": {
-        "label": "What Happened to Our Property?",
+        "label": "What Was a Key Element?",
         "options": [
-          "It was flooded by a burst dam",
-          "It was consumed by a fire sent from heaven",
-          "It was seized by a tyrannical king",
-          "It was destroyed by a calamity from Allah overnight",
-          "It withered due to a severe drought"
+          "A staff that turned into a serpent",
+          "A wooden ark",
+          "Softened Iron",
+          "A transported throne",
+          "A clay bird brought to life"
         ],
-        "answer": "It was destroyed by a calamity from Allah overnight"
+        "answer": "Softened Iron"
       },
       "outcome": {
-        "label": "What Was Our Ultimate Response?",
+        "label": "What Was the Outcome?",
         "options": [
-          "We arrogantly blamed a Prophet for our misfortune",
-          "We scattered in fear and never returned",
-          "We admitted our transgression and glorified Allah",
-          "We demanded that Allah restore our property immediately",
-          "We continued in our disbelief until we were destroyed"
+          "I was swallowed by a giant fish",
+          "My son Sulayman inherited the kingdom",
+          "I was sold into slavery in Egypt",
+          "My people were destroyed by a wind",
+          "I was thrown into a fire"
         ],
-        "answer": "We admitted our transgression and glorified Allah"
+        "answer": "My son Sulayman inherited the kingdom"
       }
     },
-    "verseRef": "68:20",
-    "arabic": "فَأَصْبَحَتْ كَٱلصَّرِيمِ",
-    "verse": "And it became as though reaped. (68:20)"
+    "verseRef": "34:11",
+    "arabic": "أَنِ ٱعْمَلْ سَـٰبِغَـٰتٍۢ وَقَدِّرْ فِى ٱلسَّرْدِ ۖ وَٱعْمَلُوا۟ صَـٰلِحًا ۖ إِنِّى بِمَا تَعْمَلُونَ بَصِيرٌۭ",
+    "verse": "[Commanding him], \"Make full coats of mail and calculate [precisely] the links, and work [all of you] righteousness. Indeed I, of what you do, am Seeing.\" (34:11)"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

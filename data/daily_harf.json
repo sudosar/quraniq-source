@@ -1,12 +1,13 @@
 {
-  "date": "2026-03-06",
+  "date": "2026-03-07",
   "puzzle": {
-    "word": "ذهب",
-    "display": "ذَهَب",
-    "hint": "A precious metal often used for adornment in this life and the next.",
-    "verseRef": "43:71",
-    "arabicVerse": "يُطَافُ عَلَيْهِم بِصِحَافٍۢ مِّن ذَهَبٍۢ وَأَكْوَابٍۢ ۖ وَفِيهَا مَا تَشْتَهِيهِ ٱلْأَنفُسُ وَتَلَذُّ ٱلْأَعْيُنُ ۖ وَأَنتُمْ فِيهَا خَـٰلِدُونَ",
-    "verse": "43:71 — Circulated among them will be plates and vessels of gold. And therein is whatever the souls desire and [what] delights the eyes, and you will abide therein eternally."
+    "word": "ريح",
+    "display": "رِيح",
+    "hint": "It can be a gentle mercy or a furious punishment.",
+    "verseRef": "30:51",
+    "arabicVerse": "وَلَئِنْ أَرْسَلْنَا رِيحًۭا فَرَأَوْهُ مُصْفَرًّۭا لَّظَلُّوا۟ مِنۢ بَعْدِهِۦ يَكْفُرُونَ",
+    "verse": "30:51 — But if We should send a [bad] wind and they saw [their crops] turned yellow, they would remain thereafter disbelievers."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

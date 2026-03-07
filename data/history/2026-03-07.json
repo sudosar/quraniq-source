@@ -1,6 +1,5 @@
 {
-  "date": "2026-03-07",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "مُصْطَلَحَاتٌ تِجَارِيَّة",
@@ -144,6 +143,181 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "ريح",
+    "display": "رِيح",
+    "hint": "It can be a gentle mercy or a furious punishment.",
+    "verseRef": "30:51",
+    "arabicVerse": "وَلَئِنْ أَرْسَلْنَا رِيحًۭا فَرَأَوْهُ مُصْفَرًّۭا لَّظَلُّوا۟ مِنۢ بَعْدِهِۦ يَكْفُرُونَ",
+    "verse": "30:51 — But if We should send a [bad] wind and they saw [their crops] turned yellow, they would remain thereafter disbelievers."
+  },
+  "deduction": {
+    "title": "The Harmony of Iron and Praise",
+    "intro": "A divinely favored soul was granted both wisdom and dominion, leading a nation with justice. This unique individual possessed a voice that could command nature and hands that could shape the hardest of materials. Yet, their greatest strength was found in constant remembrance and praise of their Lord. Can you identify this servant of Allah?",
+    "clues": [
+      "The mountains and birds were commanded to join me in my glorification of Allah.",
+      "I was given a book of scripture, a guide for my people.",
+      "In a dispute over a flock of sheep, my judgment was guided by a wisdom that even my own child recognized as superior.",
+      "Allah softened iron for me, allowing me to fashion it with my own hands into coats of mail.",
+      "I was tested concerning two litigants who climbed over the wall of my private chamber to seek my judgment.",
+      "My son, Sulayman, inherited my kingdom and my wisdom, continuing a legacy of prophecy and rule."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Prophet Musa",
+          "Prophet 'Isa",
+          "Prophet Dawud",
+          "Dhul-Qarnayn",
+          "Talut (Saul)"
+        ],
+        "answer": "Prophet Dawud"
+      },
+      "trial": {
+        "label": "What Was My Significant Event?",
+        "options": [
+          "Building a wall against Gog and Magog",
+          "Being tested by two litigants",
+          "Leading an army across the sea",
+          "Being raised to the heavens",
+          "Confronting a tyrant who claimed to give life and death"
+        ],
+        "answer": "Being tested by two litigants"
+      },
+      "location": {
+        "label": "What Was a Key Element?",
+        "options": [
+          "A staff that turned into a serpent",
+          "A wooden ark",
+          "Softened Iron",
+          "A transported throne",
+          "A clay bird brought to life"
+        ],
+        "answer": "Softened Iron"
+      },
+      "outcome": {
+        "label": "What Was the Outcome?",
+        "options": [
+          "I was swallowed by a giant fish",
+          "My son Sulayman inherited the kingdom",
+          "I was sold into slavery in Egypt",
+          "My people were destroyed by a wind",
+          "I was thrown into a fire"
+        ],
+        "answer": "My son Sulayman inherited the kingdom"
+      }
+    },
+    "verseRef": "34:11",
+    "arabic": "أَنِ ٱعْمَلْ سَـٰبِغَـٰتٍۢ وَقَدِّرْ فِى ٱلسَّرْدِ ۖ وَٱعْمَلُوا۟ صَـٰلِحًا ۖ إِنِّى بِمَا تَعْمَلُونَ بَصِيرٌۭ",
+    "verse": "[Commanding him], \"Make full coats of mail and calculate [precisely] the links, and work [all of you] righteousness. Indeed I, of what you do, am Seeing.\" (34:11)"
+  },
+  "scramble": {
+    "verseRef": "61:4",
+    "reference": "As-Saff (61:4)",
+    "segments": [
+      "إِنَّ اللَّهَ يُحِبُّ",
+      "الَّذِينَ يُقَاتِلُونَ",
+      "فِي سَبِيلِهِ صَفًّا",
+      "كَأَنَّهُم بُنْيَانٌ",
+      "مَّرْصُوصٌ"
+    ],
+    "translations": [
+      "Indeed Allah loves",
+      "those who fight",
+      "in His Way",
+      "(in) a row as if they",
+      "(were) a structure joined firmly"
+    ],
+    "hint": "A metaphor for the strength and unity of believers whom Allah loves, comparing them to a solid building.",
+    "arabic": "إِنَّ ٱللَّهَ يُحِبُّ ٱلَّذِينَ يُقَـٰتِلُونَ فِى سَبِيلِهِۦ صَفًّۭا كَأَنَّهُم بُنْيَـٰنٌۭ مَّرْصُوصٌۭ",
+    "words": [
+      "إِنَّ ٱللَّهَ يُحِبُّ",
+      "ٱلَّذِينَ يُقَـٰتِلُونَ",
+      "فِى سَبِيلِهِۦ",
+      "صَفًّۭا كَأَنَّهُم",
+      "بُنْيَـٰنٌۭ مَّرْصُوصٌۭ"
+    ],
+    "verseEn": "Indeed, Allāh loves those who fight in His cause in a row as though they are a [single] structure joined firmly."
+  },
+  "juz": {
+    "date": "2026-03-07",
+    "juz_number": 19,
+    "juz_name": "Wa Qala Allatheena",
+    "juz_name_ar": "وَقَالَ ٱلَّذِينَ",
+    "verse": {
+      "surah_number": 26,
+      "surah_name": "Ash-Shu'ara",
+      "surah_name_ar": "سُورَةُ الشُّعَرَاءِ",
+      "ayah_number": 89,
+      "arabic_text": "إِلَّا مَنْ أَتَى ٱللَّهَ بِقَلْبٍۢ سَلِيمٍۢ",
+      "translation": "Except for one who comes to Allah with a sound heart.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3021.mp3"
+    },
+    "theme_question": {
+      "correct": "The ultimate currency on the Day of Judgment is a pure and sound heart.",
+      "options": [
+        "Salvation is achieved through accumulating vast wealth for charity.",
+        "Having many righteous children guarantees one's success in the afterlife.",
+        "The ultimate currency on the Day of Judgment is a pure and sound heart.",
+        "Intercession from the prophets is the only way to attain paradise."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 26,
+      "options": [
+        {
+          "num": 25,
+          "name": "Al-Furqan",
+          "name_ar": "ٱلْفُرْقَان",
+          "name_en": "The Criterion"
+        },
+        {
+          "num": 26,
+          "name": "Ash-Shu'ara",
+          "name_ar": "ٱلشُّعَرَاء",
+          "name_en": "The Poets"
+        },
+        {
+          "num": 27,
+          "name": "An-Naml",
+          "name_ar": "ٱلنَّمْل",
+          "name_en": "The Ant"
+        },
+        {
+          "num": 28,
+          "name": "Al-Qasas",
+          "name_ar": "ٱلْقَصَص",
+          "name_en": "The Stories"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 25,
+          "name": "Al-Furqan",
+          "name_ar": "ٱلْفُرْقَان",
+          "name_en": "The Criterion"
+        },
+        {
+          "num": 26,
+          "name": "Ash-Shu'ara",
+          "name_ar": "ٱلشُّعَرَاء",
+          "name_en": "The Poets"
+        },
+        {
+          "num": 27,
+          "name": "An-Naml",
+          "name_ar": "ٱلنَّمْل",
+          "name_en": "The Ant"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse is part of a powerful supplication by Prophet Ibrahim (Abraham). It directly follows ayah 88, which states, 'The Day when neither wealth nor sons will be of any benefit.' Together, these verses clarify that on the Day of Judgment, all worldly status and possessions become worthless.",
+      "theme_explanation": "The theme centers on the 'Qalb Saleem' (قَلْب سَلِيم), the 'sound heart.' This is the ultimate currency for the Hereafter. It signifies a heart that is pure, free from associating partners with Allah (shirk), and cleansed of spiritual ills like envy, pride, and hypocrisy. The verse teaches that our eternal success depends not on our material or social standing, but on the spiritual condition in which we meet our Lord.",
+      "surah_overview": "Surah Ash-Shu'ara ('The Poets') is a Meccan surah focused on divine revelation and the consistent pattern of its rejection by arrogant people. It consoles the Prophet Muhammad (ﷺ) by detailing the struggles of earlier prophets, including Moses, Abraham, Noah, and others. The surah repeatedly emphasizes Allah's power and justice, showing how He saved the believers and destroyed the deniers, reinforcing the message that truth will ultimately prevail."
+    }
+  }
 }
