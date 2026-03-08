@@ -1,43 +1,31 @@
 {
-  "date": "2026-03-07",
+  "date": "2026-03-08",
   "puzzle": {
-    "date": "2026-03-07",
-    "juz_number": 19,
-    "juz_name": "Wa Qala Allatheena",
-    "juz_name_ar": "وَقَالَ ٱلَّذِينَ",
+    "date": "2026-03-08",
+    "juz_number": 20,
+    "juz_name": "A'man Khalaqa",
+    "juz_name_ar": "أَمَّنْ خَلَقَ",
     "verse": {
-      "surah_number": 26,
-      "surah_name": "Ash-Shu'ara",
-      "surah_name_ar": "سُورَةُ الشُّعَرَاءِ",
-      "ayah_number": 89,
-      "arabic_text": "إِلَّا مَنْ أَتَى ٱللَّهَ بِقَلْبٍۢ سَلِيمٍۢ",
-      "translation": "Except for one who comes to Allah with a sound heart.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3021.mp3"
+      "surah_number": 28,
+      "surah_name": "Al-Qasas",
+      "surah_name_ar": "سُورَةُ الْقَصَصِ",
+      "ayah_number": 83,
+      "arabic_text": "تِلْكَ ٱلدَّارُ ٱلْـَٔاخِرَةُ نَجْعَلُهَا لِلَّذِينَ لَا يُرِيدُونَ عُلُوًّا فِى ٱلْأَرْضِ وَلَا فَسَادًا ۚ وَٱلْعَـٰقِبَةُ لِلْمُتَّقِينَ",
+      "translation": "That home of the Hereafter We assign to those who do not desire exaltedness upon the earth or corruption. And the [best] outcome is for the righteous.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3335.mp3"
     },
     "theme_question": {
-      "correct": "The ultimate currency on the Day of Judgment is a pure and sound heart.",
+      "correct": "Humility and righteousness are the keys to the Hereafter.",
       "options": [
-        "Salvation is achieved through accumulating vast wealth for charity.",
-        "Having many righteous children guarantees one's success in the afterlife.",
-        "The ultimate currency on the Day of Judgment is a pure and sound heart.",
-        "Intercession from the prophets is the only way to attain paradise."
+        "Humility and righteousness are the keys to the Hereafter.",
+        "Worldly success is a sign of God's favor.",
+        "Seeking power is necessary to establish justice.",
+        "Only prophets and messengers are guaranteed Paradise."
       ]
     },
     "surah_question": {
-      "correct_surah": 26,
+      "correct_surah": 28,
       "options": [
-        {
-          "num": 25,
-          "name": "Al-Furqan",
-          "name_ar": "ٱلْفُرْقَان",
-          "name_en": "The Criterion"
-        },
-        {
-          "num": 26,
-          "name": "Ash-Shu'ara",
-          "name_ar": "ٱلشُّعَرَاء",
-          "name_en": "The Poets"
-        },
         {
           "num": 27,
           "name": "An-Naml",
@@ -49,36 +37,49 @@
           "name": "Al-Qasas",
           "name_ar": "ٱلْقَصَص",
           "name_en": "The Stories"
+        },
+        {
+          "num": 29,
+          "name": "Al-Ankabut",
+          "name_ar": "ٱلْعَنْكَبُوت",
+          "name_en": "The Spider"
+        },
+        {
+          "num": 31,
+          "name": "Luqman",
+          "name_ar": "لُقْمَان",
+          "name_en": "Luqman"
         }
       ]
     },
     "surah_order": {
       "surahs": [
         {
-          "num": 25,
-          "name": "Al-Furqan",
-          "name_ar": "ٱلْفُرْقَان",
-          "name_en": "The Criterion"
-        },
-        {
-          "num": 26,
-          "name": "Ash-Shu'ara",
-          "name_ar": "ٱلشُّعَرَاء",
-          "name_en": "The Poets"
-        },
-        {
           "num": 27,
           "name": "An-Naml",
           "name_ar": "ٱلنَّمْل",
           "name_en": "The Ant"
+        },
+        {
+          "num": 28,
+          "name": "Al-Qasas",
+          "name_ar": "ٱلْقَصَص",
+          "name_en": "The Stories"
+        },
+        {
+          "num": 29,
+          "name": "Al-Ankabut",
+          "name_ar": "ٱلْعَنْكَبُوت",
+          "name_en": "The Spider"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse is part of a powerful supplication by Prophet Ibrahim (Abraham). It directly follows ayah 88, which states, 'The Day when neither wealth nor sons will be of any benefit.' Together, these verses clarify that on the Day of Judgment, all worldly status and possessions become worthless.",
-      "theme_explanation": "The theme centers on the 'Qalb Saleem' (قَلْب سَلِيم), the 'sound heart.' This is the ultimate currency for the Hereafter. It signifies a heart that is pure, free from associating partners with Allah (shirk), and cleansed of spiritual ills like envy, pride, and hypocrisy. The verse teaches that our eternal success depends not on our material or social standing, but on the spiritual condition in which we meet our Lord.",
-      "surah_overview": "Surah Ash-Shu'ara ('The Poets') is a Meccan surah focused on divine revelation and the consistent pattern of its rejection by arrogant people. It consoles the Prophet Muhammad (ﷺ) by detailing the struggles of earlier prophets, including Moses, Abraham, Noah, and others. The surah repeatedly emphasizes Allah's power and justice, showing how He saved the believers and destroyed the deniers, reinforcing the message that truth will ultimately prevail."
+      "verse_context": "This verse concludes a major theme in Surah Al-Qasas. It follows the detailed stories of Prophet Musa (Moses) confronting the arrogant Pharaoh, and the cautionary tale of Qarun (Korah), a man from Musa's people who became arrogant due to his immense wealth. Qarun's pride led to his destruction. This verse serves as the universal principle derived from these stories: the ultimate reward of the Hereafter is not for those who seek power, status, or dominance on earth, but for the humble and righteous.",
+      "theme_explanation": "The verse identifies two key negative traits that disqualify a person from the ultimate success of the Hereafter: the desire for 'uluww' (exaltedness, arrogance, superiority over others) and 'fasad' (corruption, mischief, wrongdoing). It teaches that true worth in the sight of Allah is tied to humility and piety. The final phrase, 'And the [best] outcome is for the righteous (al-muttaqin),' is a recurring Quranic promise, affirming that steadfast God-consciousness is the path to eternal success.",
+      "surah_overview": "Surah Al-Qasas, meaning 'The Stories,' is a Meccan surah that primarily narrates the detailed life story of Prophet Musa (Moses). It covers his miraculous birth, his upbringing in Pharaoh's palace, his escape to Madyan, his call to prophethood, and his struggle against the tyranny of Pharaoh. The surah highlights Allah's supreme power and meticulous planning in protecting His messengers and fulfilling His divine will. It serves to comfort Prophet Muhammad ﷺ and the early Muslims, assuring them that just as Musa was victorious over a powerful tyrant, they too would be victorious with Allah's help."
     }
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

@@ -1,6 +1,5 @@
 {
-  "date": "2026-03-08",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "مَوَادٌّ ثَمِينَةٌ",
@@ -144,6 +143,181 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "نذير",
+    "display": "نَذِير",
+    "hint": "A messenger's role is not just to bring good news, but also this.",
+    "verseRef": "35:23",
+    "arabicVerse": "إِنْ أَنتَ إِلَّا نَذِيرٌ",
+    "verse": "35:23 — You, [O Muḥammad], are not but a warner."
+  },
+  "deduction": {
+    "title": "The Voice from the City's Edge",
+    "intro": "When messengers of truth arrived in a city, they were met with denial and threats. From the outskirts, a lone figure emerged, their heart filled with conviction. This individual raced to defend the messengers and call their own people to guidance, a courageous act that would seal their fate. Can you identify this soul and the message they championed?",
+    "clues": [
+      "I lived in a city that was visited by divine messengers, but my people were skeptical and hostile towards them.",
+      "I heard of the messengers' plight and their message of worshipping the One Creator.",
+      "From the farthest part of the city, I came running to support them.",
+      "I addressed my people directly, questioning why they wouldn't worship the One who created them and to whom they would return.",
+      "I declared my own faith openly, saying, 'Indeed, I have believed in your Lord, so listen to me.'",
+      "My people responded to my plea with violence, but my reward was immediate. Upon my death, it was said to me, 'Enter Paradise.'"
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "The Believer from Fir'awn's Family",
+          "Luqman the Wise",
+          "The Believer of Ya-Sin",
+          "A Disciple of 'Isa",
+          "Zayd ibn Harithah"
+        ],
+        "answer": "The Believer of Ya-Sin"
+      },
+      "trial": {
+        "label": "What Was My Primary Action?",
+        "options": [
+          "Concealing my faith in a tyrant's palace",
+          "Rushing to defend messengers and advise my people",
+          "Interpreting the dreams of a ruler",
+          "Building a great wall to contain a corrupting force",
+          "Debating a king about the power of my Lord"
+        ],
+        "answer": "Rushing to defend messengers and advise my people"
+      },
+      "location": {
+        "label": "Key Context",
+        "options": [
+          "A city visited by three messengers",
+          "The court of the Pharaoh of Egypt",
+          "A cave where we slept for centuries",
+          "The valley of Tuwa by a sacred fire",
+          "The city of Makkah during an elephant attack"
+        ],
+        "answer": "A city visited by three messengers"
+      },
+      "outcome": {
+        "label": "What Was My Immediate Reward?",
+        "options": [
+          "Being given wisdom and knowledge",
+          "Being raised to a high station",
+          "Being saved from a fire that became cool",
+          "Being told 'Enter Paradise'",
+          "Being reunited with my long-lost family"
+        ],
+        "answer": "Being told 'Enter Paradise'"
+      }
+    },
+    "verseRef": "36:26",
+    "arabic": "قِيلَ ٱدْخُلِ ٱلْجَنَّةَ ۖ قَالَ يَـٰلَيْتَ قَوْمِى يَعْلَمُونَ",
+    "verse": "It was said, \"Enter Paradise.\" He said, \"I wish my people could know (36:26)"
+  },
+  "scramble": {
+    "verseRef": "23:29",
+    "reference": "Al-Mu'minun (23:29)",
+    "segments": [
+      "وَقُل رَّبِّ",
+      "أَنزِلْنِي مُنزَلًا",
+      "مُّبَارَكًا",
+      "وَأَنتَ خَيْرُ",
+      "الْمُنزِلِينَ"
+    ],
+    "translations": [
+      "And say My Lord",
+      "cause me to land (at) a landing place",
+      "blessed and You",
+      "(are) the Best",
+      "(of) those who cause to land.'"
+    ],
+    "hint": "A supplication taught to Prophet Nuh (Noah) for seeking a blessed place to settle after the great flood.",
+    "arabic": "وَقُل رَّبِّ أَنزِلْنِى مُنزَلًۭا مُّبَارَكًۭا وَأَنتَ خَيْرُ ٱلْمُنزِلِينَ",
+    "words": [
+      "وَقُل رَّبِّ",
+      "أَنزِلْنِى مُنزَلًۭا",
+      "مُّبَارَكًۭا وَأَنتَ",
+      "خَيْرُ",
+      "ٱلْمُنزِلِينَ"
+    ],
+    "verseEn": "And say, 'My Lord, let me land at a blessed landing place, and You are the best to accommodate [us].'\""
+  },
+  "juz": {
+    "date": "2026-03-08",
+    "juz_number": 20,
+    "juz_name": "A'man Khalaqa",
+    "juz_name_ar": "أَمَّنْ خَلَقَ",
+    "verse": {
+      "surah_number": 28,
+      "surah_name": "Al-Qasas",
+      "surah_name_ar": "سُورَةُ الْقَصَصِ",
+      "ayah_number": 83,
+      "arabic_text": "تِلْكَ ٱلدَّارُ ٱلْـَٔاخِرَةُ نَجْعَلُهَا لِلَّذِينَ لَا يُرِيدُونَ عُلُوًّا فِى ٱلْأَرْضِ وَلَا فَسَادًا ۚ وَٱلْعَـٰقِبَةُ لِلْمُتَّقِينَ",
+      "translation": "That home of the Hereafter We assign to those who do not desire exaltedness upon the earth or corruption. And the [best] outcome is for the righteous.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3335.mp3"
+    },
+    "theme_question": {
+      "correct": "Humility and righteousness are the keys to the Hereafter.",
+      "options": [
+        "Humility and righteousness are the keys to the Hereafter.",
+        "Worldly success is a sign of God's favor.",
+        "Seeking power is necessary to establish justice.",
+        "Only prophets and messengers are guaranteed Paradise."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 28,
+      "options": [
+        {
+          "num": 27,
+          "name": "An-Naml",
+          "name_ar": "ٱلنَّمْل",
+          "name_en": "The Ant"
+        },
+        {
+          "num": 28,
+          "name": "Al-Qasas",
+          "name_ar": "ٱلْقَصَص",
+          "name_en": "The Stories"
+        },
+        {
+          "num": 29,
+          "name": "Al-Ankabut",
+          "name_ar": "ٱلْعَنْكَبُوت",
+          "name_en": "The Spider"
+        },
+        {
+          "num": 31,
+          "name": "Luqman",
+          "name_ar": "لُقْمَان",
+          "name_en": "Luqman"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 27,
+          "name": "An-Naml",
+          "name_ar": "ٱلنَّمْل",
+          "name_en": "The Ant"
+        },
+        {
+          "num": 28,
+          "name": "Al-Qasas",
+          "name_ar": "ٱلْقَصَص",
+          "name_en": "The Stories"
+        },
+        {
+          "num": 29,
+          "name": "Al-Ankabut",
+          "name_ar": "ٱلْعَنْكَبُوت",
+          "name_en": "The Spider"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse concludes a major theme in Surah Al-Qasas. It follows the detailed stories of Prophet Musa (Moses) confronting the arrogant Pharaoh, and the cautionary tale of Qarun (Korah), a man from Musa's people who became arrogant due to his immense wealth. Qarun's pride led to his destruction. This verse serves as the universal principle derived from these stories: the ultimate reward of the Hereafter is not for those who seek power, status, or dominance on earth, but for the humble and righteous.",
+      "theme_explanation": "The verse identifies two key negative traits that disqualify a person from the ultimate success of the Hereafter: the desire for 'uluww' (exaltedness, arrogance, superiority over others) and 'fasad' (corruption, mischief, wrongdoing). It teaches that true worth in the sight of Allah is tied to humility and piety. The final phrase, 'And the [best] outcome is for the righteous (al-muttaqin),' is a recurring Quranic promise, affirming that steadfast God-consciousness is the path to eternal success.",
+      "surah_overview": "Surah Al-Qasas, meaning 'The Stories,' is a Meccan surah that primarily narrates the detailed life story of Prophet Musa (Moses). It covers his miraculous birth, his upbringing in Pharaoh's palace, his escape to Madyan, his call to prophethood, and his struggle against the tyranny of Pharaoh. The surah highlights Allah's supreme power and meticulous planning in protecting His messengers and fulfilling His divine will. It serves to comfort Prophet Muhammad ﷺ and the early Muslims, assuring them that just as Musa was victorious over a powerful tyrant, they too would be victorious with Allah's help."
+    }
+  }
 }

@@ -1,12 +1,13 @@
 {
-  "date": "2026-03-07",
+  "date": "2026-03-08",
   "puzzle": {
-    "word": "ريح",
-    "display": "رِيح",
-    "hint": "It can be a gentle mercy or a furious punishment.",
-    "verseRef": "30:51",
-    "arabicVerse": "وَلَئِنْ أَرْسَلْنَا رِيحًۭا فَرَأَوْهُ مُصْفَرًّۭا لَّظَلُّوا۟ مِنۢ بَعْدِهِۦ يَكْفُرُونَ",
-    "verse": "30:51 — But if We should send a [bad] wind and they saw [their crops] turned yellow, they would remain thereafter disbelievers."
+    "word": "نذير",
+    "display": "نَذِير",
+    "hint": "A messenger's role is not just to bring good news, but also this.",
+    "verseRef": "35:23",
+    "arabicVerse": "إِنْ أَنتَ إِلَّا نَذِيرٌ",
+    "verse": "35:23 — You, [O Muḥammad], are not but a warner."
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

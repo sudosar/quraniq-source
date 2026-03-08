@@ -1,65 +1,66 @@
 {
-  "date": "2026-03-07",
+  "date": "2026-03-08",
   "puzzle": {
-    "title": "The Harmony of Iron and Praise",
-    "intro": "A divinely favored soul was granted both wisdom and dominion, leading a nation with justice. This unique individual possessed a voice that could command nature and hands that could shape the hardest of materials. Yet, their greatest strength was found in constant remembrance and praise of their Lord. Can you identify this servant of Allah?",
+    "title": "The Voice from the City's Edge",
+    "intro": "When messengers of truth arrived in a city, they were met with denial and threats. From the outskirts, a lone figure emerged, their heart filled with conviction. This individual raced to defend the messengers and call their own people to guidance, a courageous act that would seal their fate. Can you identify this soul and the message they championed?",
     "clues": [
-      "The mountains and birds were commanded to join me in my glorification of Allah.",
-      "I was given a book of scripture, a guide for my people.",
-      "In a dispute over a flock of sheep, my judgment was guided by a wisdom that even my own child recognized as superior.",
-      "Allah softened iron for me, allowing me to fashion it with my own hands into coats of mail.",
-      "I was tested concerning two litigants who climbed over the wall of my private chamber to seek my judgment.",
-      "My son, Sulayman, inherited my kingdom and my wisdom, continuing a legacy of prophecy and rule."
+      "I lived in a city that was visited by divine messengers, but my people were skeptical and hostile towards them.",
+      "I heard of the messengers' plight and their message of worshipping the One Creator.",
+      "From the farthest part of the city, I came running to support them.",
+      "I addressed my people directly, questioning why they wouldn't worship the One who created them and to whom they would return.",
+      "I declared my own faith openly, saying, 'Indeed, I have believed in your Lord, so listen to me.'",
+      "My people responded to my plea with violence, but my reward was immediate. Upon my death, it was said to me, 'Enter Paradise.'"
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Musa",
-          "Prophet 'Isa",
-          "Prophet Dawud",
-          "Dhul-Qarnayn",
-          "Talut (Saul)"
+          "The Believer from Fir'awn's Family",
+          "Luqman the Wise",
+          "The Believer of Ya-Sin",
+          "A Disciple of 'Isa",
+          "Zayd ibn Harithah"
         ],
-        "answer": "Prophet Dawud"
+        "answer": "The Believer of Ya-Sin"
       },
       "trial": {
-        "label": "What Was My Significant Event?",
+        "label": "What Was My Primary Action?",
         "options": [
-          "Building a wall against Gog and Magog",
-          "Being tested by two litigants",
-          "Leading an army across the sea",
-          "Being raised to the heavens",
-          "Confronting a tyrant who claimed to give life and death"
+          "Concealing my faith in a tyrant's palace",
+          "Rushing to defend messengers and advise my people",
+          "Interpreting the dreams of a ruler",
+          "Building a great wall to contain a corrupting force",
+          "Debating a king about the power of my Lord"
         ],
-        "answer": "Being tested by two litigants"
+        "answer": "Rushing to defend messengers and advise my people"
       },
       "location": {
-        "label": "What Was a Key Element?",
+        "label": "Key Context",
         "options": [
-          "A staff that turned into a serpent",
-          "A wooden ark",
-          "Softened Iron",
-          "A transported throne",
-          "A clay bird brought to life"
+          "A city visited by three messengers",
+          "The court of the Pharaoh of Egypt",
+          "A cave where we slept for centuries",
+          "The valley of Tuwa by a sacred fire",
+          "The city of Makkah during an elephant attack"
         ],
-        "answer": "Softened Iron"
+        "answer": "A city visited by three messengers"
       },
       "outcome": {
-        "label": "What Was the Outcome?",
+        "label": "What Was My Immediate Reward?",
         "options": [
-          "I was swallowed by a giant fish",
-          "My son Sulayman inherited the kingdom",
-          "I was sold into slavery in Egypt",
-          "My people were destroyed by a wind",
-          "I was thrown into a fire"
+          "Being given wisdom and knowledge",
+          "Being raised to a high station",
+          "Being saved from a fire that became cool",
+          "Being told 'Enter Paradise'",
+          "Being reunited with my long-lost family"
         ],
-        "answer": "My son Sulayman inherited the kingdom"
+        "answer": "Being told 'Enter Paradise'"
       }
     },
-    "verseRef": "34:11",
-    "arabic": "أَنِ ٱعْمَلْ سَـٰبِغَـٰتٍۢ وَقَدِّرْ فِى ٱلسَّرْدِ ۖ وَٱعْمَلُوا۟ صَـٰلِحًا ۖ إِنِّى بِمَا تَعْمَلُونَ بَصِيرٌۭ",
-    "verse": "[Commanding him], \"Make full coats of mail and calculate [precisely] the links, and work [all of you] righteousness. Indeed I, of what you do, am Seeing.\" (34:11)"
+    "verseRef": "36:26",
+    "arabic": "قِيلَ ٱدْخُلِ ٱلْجَنَّةَ ۖ قَالَ يَـٰلَيْتَ قَوْمِى يَعْلَمُونَ",
+    "verse": "It was said, \"Enter Paradise.\" He said, \"I wish my people could know (36:26)"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }

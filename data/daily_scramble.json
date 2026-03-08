@@ -1,32 +1,33 @@
 {
-  "date": "2026-03-07",
+  "date": "2026-03-08",
   "puzzle": {
-    "verseRef": "61:4",
-    "reference": "As-Saff (61:4)",
+    "verseRef": "23:29",
+    "reference": "Al-Mu'minun (23:29)",
     "segments": [
-      "إِنَّ اللَّهَ يُحِبُّ",
-      "الَّذِينَ يُقَاتِلُونَ",
-      "فِي سَبِيلِهِ صَفًّا",
-      "كَأَنَّهُم بُنْيَانٌ",
-      "مَّرْصُوصٌ"
+      "وَقُل رَّبِّ",
+      "أَنزِلْنِي مُنزَلًا",
+      "مُّبَارَكًا",
+      "وَأَنتَ خَيْرُ",
+      "الْمُنزِلِينَ"
     ],
     "translations": [
-      "Indeed Allah loves",
-      "those who fight",
-      "in His Way",
-      "(in) a row as if they",
-      "(were) a structure joined firmly"
+      "And say My Lord",
+      "cause me to land (at) a landing place",
+      "blessed and You",
+      "(are) the Best",
+      "(of) those who cause to land.'"
     ],
-    "hint": "A metaphor for the strength and unity of believers whom Allah loves, comparing them to a solid building.",
-    "arabic": "إِنَّ ٱللَّهَ يُحِبُّ ٱلَّذِينَ يُقَـٰتِلُونَ فِى سَبِيلِهِۦ صَفًّۭا كَأَنَّهُم بُنْيَـٰنٌۭ مَّرْصُوصٌۭ",
+    "hint": "A supplication taught to Prophet Nuh (Noah) for seeking a blessed place to settle after the great flood.",
+    "arabic": "وَقُل رَّبِّ أَنزِلْنِى مُنزَلًۭا مُّبَارَكًۭا وَأَنتَ خَيْرُ ٱلْمُنزِلِينَ",
     "words": [
-      "إِنَّ ٱللَّهَ يُحِبُّ",
-      "ٱلَّذِينَ يُقَـٰتِلُونَ",
-      "فِى سَبِيلِهِۦ",
-      "صَفًّۭا كَأَنَّهُم",
-      "بُنْيَـٰنٌۭ مَّرْصُوصٌۭ"
+      "وَقُل رَّبِّ",
+      "أَنزِلْنِى مُنزَلًۭا",
+      "مُّبَارَكًۭا وَأَنتَ",
+      "خَيْرُ",
+      "ٱلْمُنزِلِينَ"
     ],
-    "verseEn": "Indeed, Allāh loves those who fight in His cause in a row as though they are a [single] structure joined firmly."
+    "verseEn": "And say, 'My Lord, let me land at a blessed landing place, and You are the best to accommodate [us].'\""
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
