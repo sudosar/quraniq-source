@@ -280,83 +280,60 @@ def word_in_verse(word, verse_text):
 def is_vague_category(name_en):
     """Check if a category name is too vague.
     
-    Vague category names like 'Attributes', 'Properties', 'Things' without
-    specification should be rejected. Acceptable names include 'Attributes of Allah',
-    'Properties of Paradise', 'Types of Clothing', etc.
+    The core principle: If a category groups words by a shared property, characteristic,
+    or thing, the category name MUST state exactly WHAT that shared property/characteristic/thing IS.
     
-    Also rejects phrases with vague modifiers like 'unique', 'special', 'particular'
-    without clear specification of what makes them unique/special/particular.
+    Examples of vague names (REJECT):
+    - "Attributes" (doesn't say whose attributes or what kind)
+    - "Words with unique grammatical properties" (doesn't say what the properties are)
+    - "Things with special characteristics" (doesn't say what characteristics)
+    - "Properties" (doesn't say what properties or of what)
+    
+    Examples of specific names (ACCEPT):
+    - "Attributes of Allah" (states whose attributes)
+    - "Words that are grammatically feminine" (states what the property is)
+    - "Things mentioned in the story of Prophet Musa" (states what the shared thing is)
+    - "Properties of Paradise" (states what properties and of what)
+    
+    Simple heuristic: Check if the category name actually describes the shared characteristic
+    rather than just hinting at it with vague terms.
     """
     if not name_en:
         return True
     
     name_lower = name_en.lower().strip()
     
-    # List of vague terms that should not stand alone
-    vague_standalone_terms = [
-        'attributes', 'properties', 'characteristics', 'features', 
-        'qualities', 'aspects', 'traits', 'elements', 'components',
-        'parts', 'things', 'items', 'objects', 'entities', 'concepts',
-        'ideas', 'notions', 'terms', 'words', 'names', 'titles',
-        'labels', 'descriptions', 'examples', 'instances', 'cases',
-        'occurrences', 'manifestations', 'expressions', 'forms',
-        'types', 'kinds', 'sorts', 'varieties', 'classes', 'categories',
-        'groups', 'sets', 'collections', 'assemblies', 'aggregations'
-    ]
+    # Very simple check: If the name is just 1-2 words and contains vague terms,
+    # it's likely too vague. But we rely more on the LLM prompt to enforce specificity.
+    # This function is now a lightweight sanity check.
     
-    # Check if the name is just a vague term
-    if name_lower in vague_standalone_terms:
-        return True
+    # Single word categories are almost always too vague (except maybe proper nouns)
+    words = name_lower.split()
+    if len(words) <= 2:
+        # Check for obviously vague single/dual words
+        vague_single_words = {
+            'attributes', 'properties', 'characteristics', 'features', 'qualities',
+            'things', 'items', 'objects', 'concepts', 'ideas', 'types', 'kinds',
+            'groups', 'sets', 'categories', 'words', 'names'
+        }
+        if any(word in vague_single_words for word in words):
+            return True
     
-    # Check if name starts with a vague term followed by 'of' or 'for'
-    # This is okay: 'Attributes of Allah' is specific
-    # Not okay: 'Attributes' alone is vague
-    for vague_term in vague_standalone_terms:
-        if name_lower.startswith(vague_term + ' of ') or name_lower.startswith(vague_term + ' for '):
-            return False
-    
-    # Check for other patterns that might be vague
+    # Check for patterns that indicate vagueness without specifying WHAT
     import re
-    vague_patterns = [
-        r'^various\s+',
-        r'^different\s+',
-        r'^several\s+',
-        r'^many\s+',
-        r'^multiple\s+',
-        r'^assorted\s+',
-        r'^sundry\s+',
-        r'^miscellaneous\s+',
-        r'^general\s+',
-        r'^common\s+',
-        r'unique\s+',
-        r'special\s+',
-        r'particular\s+',
-        r'distinct\s+',
-        r'distinctive\s+',
-        r'specific\s+',
-        r'certain\s+',
+    
+    # Patterns that hint at a property/characteristic without stating what it is
+    vague_hint_patterns = [
+        r'\bwith (?:unique|special|particular|distinct|certain|specific)\b',
+        r'\bhaving (?:unique|special|particular|distinct|certain|specific)\b',
+        r'\b(?:unique|special|particular|distinct|certain|specific) (?:properties|characteristics|features|qualities|aspects|traits)\b',
     ]
     
-    for pattern in vague_patterns:
+    for pattern in vague_hint_patterns:
         if re.search(pattern, name_lower):
             return True
     
-    # Check for phrases like 'with unique properties', 'having special characteristics'
-    vague_phrases = [
-        'with unique',
-        'with special',
-        'with particular',
-        'with distinct',
-        'having unique',
-        'having special',
-        'having particular',
-        'having distinct',
-    ]
-    
-    for phrase in vague_phrases:
-        if phrase in name_lower:
-            return True
-    
+    # If it passes these simple checks, trust the LLM prompt to enforce specificity
     return False
 
 
@@ -924,21 +901,38 @@ VERIFICATION STEP (INTERNAL ONLY):
 
 RULES:
 1. Provide EXACTLY 4 items. {pivot_block}
-2. Theme (nameEn) MUST be specific (e.g., "Attributes of Paradise", not "Attributes").
-   - REJECTED: Single vague words like "Attributes", "Properties", "Things", "Types", "Names", "Words", "Elements", "Concepts", etc.
-   - ACCEPTED: Specific phrases like "Attributes of Allah", "Properties of Paradise", "Types of Clothing", "Names of Hellfire", "Words for Prayer"
+2. CRITICAL PRINCIPLE FOR CATEGORY NAMES:
+   - If your category groups words by a shared property, characteristic, or thing,
+     the category name MUST state EXACTLY WHAT that shared property/characteristic/thing IS.
+   - DO NOT use vague hints like "unique", "special", "particular", "distinct" without specifying WHAT.
+   - DO NOT use standalone vague terms like "Attributes", "Properties", "Things" without specifying OF WHAT or WHAT KIND.
+
+   EXAMPLES OF VAGUE NAMES (REJECTED):
+   - "Words with unique grammatical properties" (VAGUE: doesn't say what the properties are)
+   - "Attributes" (VAGUE: doesn't say whose attributes or what kind)
+   - "Things with special characteristics" (VAGUE: doesn't say what characteristics)
+   - "Properties" (VAGUE: doesn't say what properties or of what)
+
+   EXAMPLES OF SPECIFIC NAMES (ACCEPTED):
+   - "Words that are grammatically feminine" (SPECIFIC: states what the property is)
+   - "Attributes of Allah" (SPECIFIC: states whose attributes)
+   - "Things mentioned in the story of Prophet Musa" (SPECIFIC: states what the shared thing is)
+   - "Properties of Paradise" (SPECIFIC: states what properties and of what)
+   - "Names of angels mentioned in the Quran" (SPECIFIC: states what names and where)
+
+3. Theme (nameEn) MUST follow the principle above. Be SPECIFIC.
    FORBIDDEN themes (used recently — do NOT reuse): {avoided_themes}
-3. CRITICAL: Every word must actually appear in its cited verse. No guessing.
-4. Surah:Ayah refs must be unique and not in: {avoided_verses}.
-5. Words must not share roots with each other or previous categories.
-6. If a word is a proper noun (e.g., a Prophet's name or place), use its standard English equivalent (e.g., "Moses", "Noah", "Lot") instead of its Arabic transliteration (like "Musa" or "Nuh").
+4. CRITICAL: Every word must actually appear in its cited verse. No guessing.
+5. Surah:Ayah refs must be unique and not in: {avoided_verses}.
+6. Words must not share roots with each other or previous categories.
+7. If a word is a proper noun (e.g., a Prophet's name or place), use its standard English equivalent (e.g., "Moses", "Noah", "Lot") instead of its Arabic transliteration (like "Musa" or "Nuh").
 
 {chosen_block}{violation_block}
 
 OUTPUT FORMAT: Return ONLY a valid JSON object for this single category (if not using <think> tags):
 {{
   "name": "Arabic category name with tashkeel",
-  "nameEn": "English category name (specific!)",
+  "nameEn": "English category name (MUST be specific - state WHAT the shared property/characteristic/thing IS)",
   "color": "{color}",
   "items": [
     {{"ar": "Arabic word with tashkeel", "en": "English meaning", "ref": "surah:ayah"}},
@@ -950,7 +944,8 @@ OUTPUT FORMAT: Return ONLY a valid JSON object for this single category (if not 
 
 IMPORTANT:
 - Return the JSON object — no markdown (except code fences), no extra text outside JSON or <think> tags.
-- Arabic words must include full tashkeel/diacritics."""
+- Arabic words must include full tashkeel/diacritics.
+- Remember: Category name MUST state WHAT the shared property/characteristic/thing IS, not just hint at it."""
 
 
 def build_connections_prompt(history, previous_violations=None):
@@ -1001,7 +996,7 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
     
     # Check for vague category names
     if is_vague_category(cat.get("nameEn", "")):
-        violations.append(f"Category name '{cat.get('nameEn')}' is too vague. Be specific (e.g., 'Attributes of Allah', not 'Attributes').")
+        violations.append(f"Category name '{cat.get('nameEn')}' is too vague. If grouping by a shared property/characteristic/thing, the name MUST state EXACTLY WHAT that shared element is (e.g., 'Words that are grammatically feminine', not 'Words with unique grammatical properties').")
 
     # Collect the 4 item refs
     item_refs = []
@@ -1071,7 +1066,7 @@ def validate_connections(puzzle, history):
         
         # Check for vague category names
         if is_vague_category(cat.get("nameEn", "")):
-            cooldown_violations.append(f"Category name '{cat.get('nameEn')}' is too vague. Be specific (e.g., 'Attributes of Allah', not 'Attributes').")
+            cooldown_violations.append(f"Category name '{cat.get('nameEn')}' is too vague. If grouping by a shared property/characteristic/thing, the name MUST state EXACTLY WHAT that shared element is (e.g., 'Words that are grammatically feminine', not 'Words with unique grammatical properties').")
 
         # Collect the 4 item refs
         item_refs = [item["ref"] for item in items if item.get("ref")]
