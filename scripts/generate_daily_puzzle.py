@@ -277,6 +277,62 @@ def word_in_verse(word, verse_text):
                 return True
     return False
 
+def is_vague_category(name_en):
+    """Check if a category name is too vague.
+    
+    Vague category names like 'Attributes', 'Properties', 'Things' without
+    specification should be rejected. Acceptable names include 'Attributes of Allah',
+    'Properties of Paradise', 'Types of Clothing', etc.
+    """
+    if not name_en:
+        return True
+    
+    name_lower = name_en.lower().strip()
+    
+    # List of vague terms that should not stand alone
+    vague_standalone_terms = [
+        'attributes', 'properties', 'characteristics', 'features', 
+        'qualities', 'aspects', 'traits', 'elements', 'components',
+        'parts', 'things', 'items', 'objects', 'entities', 'concepts',
+        'ideas', 'notions', 'terms', 'words', 'names', 'titles',
+        'labels', 'descriptions', 'examples', 'instances', 'cases',
+        'occurrences', 'manifestations', 'expressions', 'forms',
+        'types', 'kinds', 'sorts', 'varieties', 'classes', 'categories',
+        'groups', 'sets', 'collections', 'assemblies', 'aggregations'
+    ]
+    
+    # Check if the name is just a vague term
+    if name_lower in vague_standalone_terms:
+        return True
+    
+    # Check if name starts with a vague term followed by 'of' or 'for'
+    # This is okay: 'Attributes of Allah' is specific
+    # Not okay: 'Attributes' alone is vague
+    for vague_term in vague_standalone_terms:
+        if name_lower.startswith(vague_term + ' of ') or name_lower.startswith(vague_term + ' for '):
+            return False
+    
+    # Check for other patterns that might be vague
+    import re
+    vague_patterns = [
+        r'^various\s+',
+        r'^different\s+',
+        r'^several\s+',
+        r'^many\s+',
+        r'^multiple\s+',
+        r'^assorted\s+',
+        r'^sundry\s+',
+        r'^miscellaneous\s+',
+        r'^general\s+',
+        r'^common\s+',
+    ]
+    
+    for pattern in vague_patterns:
+        if re.search(pattern, name_lower):
+            return True
+    
+    return False
+
 
 
 def get_roots_for_prompt(words):
@@ -843,6 +899,8 @@ VERIFICATION STEP (INTERNAL ONLY):
 RULES:
 1. Provide EXACTLY 4 items. {pivot_block}
 2. Theme (nameEn) MUST be specific (e.g., "Attributes of Paradise", not "Attributes").
+   - REJECTED: Single vague words like "Attributes", "Properties", "Things", "Types", "Names", "Words", "Elements", "Concepts", etc.
+   - ACCEPTED: Specific phrases like "Attributes of Allah", "Properties of Paradise", "Types of Clothing", "Names of Hellfire", "Words for Prayer"
    FORBIDDEN themes (used recently — do NOT reuse): {avoided_themes}
 3. CRITICAL: Every word must actually appear in its cited verse. No guessing.
 4. Surah:Ayah refs must be unique and not in: {avoided_verses}.
@@ -914,6 +972,10 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
     theme = cat.get("nameEn", "").lower().strip()
     if theme in all_avoided_themes:
         violations.append(f"Theme '{theme}' reused (cooldown or duplicate in puzzle)")
+    
+    # Check for vague category names
+    if is_vague_category(cat.get("nameEn", "")):
+        violations.append(f"Category name '{cat.get('nameEn')}' is too vague. Be specific (e.g., 'Attributes of Allah', not 'Attributes').")
 
     # Collect the 4 item refs
     item_refs = []
@@ -980,6 +1042,10 @@ def validate_connections(puzzle, history):
         theme = cat.get("nameEn", "").lower().strip()
         if theme in history["connections"]["themes"]:
             cooldown_violations.append(f"Theme '{theme}' reused (cooldown)")
+        
+        # Check for vague category names
+        if is_vague_category(cat.get("nameEn", "")):
+            cooldown_violations.append(f"Category name '{cat.get('nameEn')}' is too vague. Be specific (e.g., 'Attributes of Allah', not 'Attributes').")
 
         # Collect the 4 item refs
         item_refs = [item["ref"] for item in items if item.get("ref")]
