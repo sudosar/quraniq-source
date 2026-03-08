@@ -283,6 +283,9 @@ def is_vague_category(name_en):
     Vague category names like 'Attributes', 'Properties', 'Things' without
     specification should be rejected. Acceptable names include 'Attributes of Allah',
     'Properties of Paradise', 'Types of Clothing', etc.
+    
+    Also rejects phrases with vague modifiers like 'unique', 'special', 'particular'
+    without clear specification of what makes them unique/special/particular.
     """
     if not name_en:
         return True
@@ -325,10 +328,33 @@ def is_vague_category(name_en):
         r'^miscellaneous\s+',
         r'^general\s+',
         r'^common\s+',
+        r'unique\s+',
+        r'special\s+',
+        r'particular\s+',
+        r'distinct\s+',
+        r'distinctive\s+',
+        r'specific\s+',
+        r'certain\s+',
     ]
     
     for pattern in vague_patterns:
         if re.search(pattern, name_lower):
+            return True
+    
+    # Check for phrases like 'with unique properties', 'having special characteristics'
+    vague_phrases = [
+        'with unique',
+        'with special',
+        'with particular',
+        'with distinct',
+        'having unique',
+        'having special',
+        'having particular',
+        'having distinct',
+    ]
+    
+    for phrase in vague_phrases:
+        if phrase in name_lower:
             return True
     
     return False
