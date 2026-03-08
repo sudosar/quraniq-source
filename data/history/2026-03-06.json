@@ -1,0 +1,323 @@
+{
+  "connections": {
+    "categories": [
+      {
+        "name": "مَصَادِرُ الضَّوْءِ",
+        "nameEn": "Sources of Light",
+        "color": "yellow",
+        "items": [
+          {
+            "ar": "ضِيَآءً",
+            "en": "Illumination",
+            "ref": "10:5",
+            "verse": "هُوَ ٱلَّذِى جَعَلَ ٱلشَّمْسَ ضِيَآءًۭ وَٱلْقَمَرَ نُورًۭا وَقَدَّرَهُۥ مَنَازِلَ لِتَعْلَمُوا۟ عَدَدَ ٱلسِّنِينَ وَٱلْحِسَابَ ۚ مَا خَلَقَ ٱللَّهُ ذَٰلِكَ إِلَّا بِٱلْحَقِّ ۚ يُفَصِّلُ ٱلْـَٔايَـٰتِ لِقَوْمٍۢ يَعْلَمُونَ",
+            "verseEn": "It is He who made the sun a shining light and the moon a derived light and determined for it phases - that you may know the number of years and account [of time]. Allāh has not created this except in truth. He details the signs for a people who know."
+          },
+          {
+            "ar": "سِرَاجًا",
+            "en": "A Lamp",
+            "ref": "25:61",
+            "verse": "تَبَارَكَ ٱلَّذِى جَعَلَ فِى ٱلسَّمَآءِ بُرُوجًۭا وَجَعَلَ فِيهَا سِرَٰجًۭا وَقَمَرًۭا مُّنِيرًۭا",
+            "verseEn": "Blessed is He who has placed in the sky great stars and placed therein a [burning] lamp and luminous moon."
+          },
+          {
+            "ar": "شِهَابٍ",
+            "en": "A Flame",
+            "ref": "27:7",
+            "verse": "إِذْ قَالَ مُوسَىٰ لِأَهْلِهِۦٓ إِنِّىٓ ءَانَسْتُ نَارًۭا سَـَٔاتِيكُم مِّنْهَا بِخَبَرٍ أَوْ ءَاتِيكُم بِشِهَابٍۢ قَبَسٍۢ لَّعَلَّكُمْ تَصْطَلُونَ",
+            "verseEn": "[Mention] when Moses said to his family, \"Indeed, I have perceived a fire. I will bring you from there information or will bring you a burning torch that you may warm yourselves.\""
+          },
+          {
+            "ar": "كَوْكَبًا",
+            "en": "A Star",
+            "ref": "6:76",
+            "verse": "فَلَمَّا جَنَّ عَلَيْهِ ٱلَّيْلُ رَءَا كَوْكَبًۭا ۖ قَالَ هَـٰذَا رَبِّى ۖ فَلَمَّآ أَفَلَ قَالَ لَآ أُحِبُّ ٱلْـَٔافِلِينَ",
+            "verseEn": "So when the night covered him [with darkness], he saw a star. He said, \"This is my lord.\" But when it set, he said, \"I like not those that set [i.e., disappear].\""
+          }
+        ]
+      },
+      {
+        "name": "أَنْوَاعُ الْكَلامِ وَالصَّوْتِ",
+        "nameEn": "Forms of Speech and Sound",
+        "color": "green",
+        "items": [
+          {
+            "ar": "هَمْسًا",
+            "en": "a faint sound",
+            "ref": "20:108",
+            "verse": "يَوْمَئِذٍۢ يَتَّبِعُونَ ٱلدَّاعِىَ لَا عِوَجَ لَهُۥ ۖ وَخَشَعَتِ ٱلْأَصْوَاتُ لِلرَّحْمَـٰنِ فَلَا تَسْمَعُ إِلَّا هَمْسًۭا",
+            "verseEn": "That Day, they [i.e., everyone] will follow [the call of] the Caller [with] no deviation therefrom, and [all] voices will be stilled before the Most Merciful, so you will not hear except a whisper [of footsteps]."
+          },
+          {
+            "ar": "ٱلنَّجْوَىٰ",
+            "en": "private conversation",
+            "ref": "58:9",
+            "verse": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا تَنَـٰجَيْتُمْ فَلَا تَتَنَـٰجَوْا۟ بِٱلْإِثْمِ وَٱلْعُدْوَٰنِ وَمَعْصِيَتِ ٱلرَّسُولِ وَتَنَـٰجَوْا۟ بِٱلْبِرِّ وَٱلتَّقْوَىٰ ۖ وَٱتَّقُوا۟ ٱللَّهَ ٱلَّذِىٓ إِلَيْهِ تُحْشَرُونَ",
+            "verseEn": "O you who have believed, when you converse privately, do not converse about sin and aggression and disobedience to the Messenger but converse about righteousness and piety. And fear Allāh, to whom you will be gathered."
+          },
+          {
+            "ar": "لَغْوًا",
+            "en": "ill speech",
+            "ref": "78:35",
+            "verse": "لَّا يَسْمَعُونَ فِيهَا لَغْوًۭا وَلَا كِذَّٰبًۭا",
+            "verseEn": "No ill speech will they hear therein or any falsehood -"
+          },
+          {
+            "ar": "حَدِيثٍ",
+            "en": "conversation",
+            "ref": "4:140",
+            "verse": "وَقَدْ نَزَّلَ عَلَيْكُمْ فِى ٱلْكِتَـٰبِ أَنْ إِذَا سَمِعْتُمْ ءَايَـٰتِ ٱللَّهِ يُكْفَرُ بِهَا وَيُسْتَهْزَأُ بِهَا فَلَا تَقْعُدُوا۟ مَعَهُمْ حَتَّىٰ يَخُوضُوا۟ فِى حَدِيثٍ غَيْرِهِۦٓ ۚ إِنَّكُمْ إِذًۭا مِّثْلُهُمْ ۗ إِنَّ ٱللَّهَ جَامِعُ ٱلْمُنَـٰفِقِينَ وَٱلْكَـٰفِرِينَ فِى جَهَنَّمَ جَمِيعًا",
+            "verseEn": "And it has already come down to you in the Book [i.e., the Qur’ān] that when you hear the verses of Allāh [recited], they are denied [by them] and ridiculed; so do not sit with them until they enter into another conversation. Indeed, you would then be like them. Indeed, Allāh will gather the hypocrites and disbelievers in Hell all together -"
+          }
+        ]
+      },
+      {
+        "name": "مَفَاهِيمُ الشَّفَاعَةِ وَالْقُرْبِ",
+        "nameEn": "Concepts of Intercession and Proximity",
+        "color": "blue",
+        "items": [
+          {
+            "ar": "شَفَٰعَةٌ",
+            "en": "Intercession",
+            "ref": "2:48",
+            "verse": "وَٱتَّقُوا۟ يَوْمًۭا لَّا تَجْزِى نَفْسٌ عَن نَّفْسٍۢ شَيْـًۭٔا وَلَا يُقْبَلُ مِنْهَا شَفَـٰعَةٌۭ وَلَا يُؤْخَذُ مِنْهَا عَدْلٌۭ وَلَا هُمْ يُنصَرُونَ",
+            "verseEn": "And fear a Day when no soul will suffice for another soul at all, nor will intercession be accepted from it, nor will compensation be taken from it, nor will they be aided."
+          },
+          {
+            "ar": "ٱلْوَسِيلَةَ",
+            "en": "The means of approach",
+            "ref": "5:35",
+            "verse": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَٱبْتَغُوٓا۟ إِلَيْهِ ٱلْوَسِيلَةَ وَجَـٰهِدُوا۟ فِى سَبِيلِهِۦ لَعَلَّكُمْ تُفْلِحُونَ",
+            "verseEn": "O you who have believed, fear Allāh and seek the means [of nearness] to Him and strive in His cause that you may succeed."
+          },
+          {
+            "ar": "زُلْفَىٰ",
+            "en": "Nearness",
+            "ref": "38:40",
+            "verse": "وَإِنَّ لَهُۥ عِندَنَا لَزُلْفَىٰ وَحُسْنَ مَـَٔابٍۢ",
+            "verseEn": "And indeed, for him is nearness to Us and a good place of return."
+          },
+          {
+            "ar": "ظَهِيرًا",
+            "en": "A supporter",
+            "ref": "25:55",
+            "verse": "وَيَعْبُدُونَ مِن دُونِ ٱللَّهِ مَا لَا يَنفَعُهُمْ وَلَا يَضُرُّهُمْ ۗ وَكَانَ ٱلْكَافِرُ عَلَىٰ رَبِّهِۦ ظَهِيرًۭا",
+            "verseEn": "But they worship rather than Allāh that which does not benefit them or harm them, and the disbeliever is ever, against his Lord, an assistant [to Satan]."
+          }
+        ]
+      },
+      {
+        "name": "كَلِمَاتٌ هِيَ أَسْمَاءُ سُوَرٍ",
+        "nameEn": "Words that are also names of Surahs",
+        "color": "purple",
+        "items": [
+          {
+            "ar": "زُخْرُفًا",
+            "en": "gold adornment",
+            "ref": "43:35",
+            "verse": "وَزُخْرُفًۭا ۚ وَإِن كُلُّ ذَٰلِكَ لَمَّا مَتَـٰعُ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۚ وَٱلْـَٔاخِرَةُ عِندَ رَبِّكَ لِلْمُتَّقِينَ",
+            "verseEn": "And gold ornament. But all that is not but the enjoyment of worldly life. And the Hereafter with your Lord is for the righteous."
+          },
+          {
+            "ar": "ٱلْإِنسَٰنَ",
+            "en": "the man",
+            "ref": "96:6",
+            "verse": "كَلَّآ إِنَّ ٱلْإِنسَـٰنَ لَيَطْغَىٰٓ",
+            "verseEn": "No! [But] indeed, man transgresses"
+          },
+          {
+            "ar": "دُخَانٍ",
+            "en": "smoke",
+            "ref": "44:10",
+            "verse": "فَٱرْتَقِبْ يَوْمَ تَأْتِى ٱلسَّمَآءُ بِدُخَانٍۢ مُّبِينٍۢ",
+            "verseEn": "Then watch for the Day when the sky will bring a visible smoke"
+          },
+          {
+            "ar": "ٱلرُّومُ",
+            "en": "The Romans",
+            "ref": "30:2",
+            "verse": "غُلِبَتِ ٱلرُّومُ",
+            "verseEn": "The Byzantines have been defeated"
+          }
+        ]
+      }
+    ]
+  },
+  "harf": {
+    "word": "ذهب",
+    "display": "ذَهَب",
+    "hint": "A precious metal often used for adornment in this life and the next.",
+    "verseRef": "43:71",
+    "arabicVerse": "يُطَافُ عَلَيْهِم بِصِحَافٍۢ مِّن ذَهَبٍۢ وَأَكْوَابٍۢ ۖ وَفِيهَا مَا تَشْتَهِيهِ ٱلْأَنفُسُ وَتَلَذُّ ٱلْأَعْيُنُ ۖ وَأَنتُمْ فِيهَا خَـٰلِدُونَ",
+    "verse": "43:71 — Circulated among them will be plates and vessels of gold. And therein is whatever the souls desire and [what] delights the eyes, and you will abide therein eternally."
+  },
+  "deduction": {
+    "title": "The Harvest of Regret",
+    "intro": "A lush inheritance, a legacy of generosity, was passed down. Yet, the new inheritors saw this bounty not as a blessing to be shared, but as a treasure to be hoarded. They made a secret pact, a plan to be executed under the cover of darkness, believing they could outwit providence. Their story serves as a stark reminder of the consequences of ingratitude and avarice.",
+    "clues": [
+      "We inherited a beautiful and fruitful property from a righteous predecessor.",
+      "Our predecessor was known for sharing the harvest with the poor and needy, an act we viewed as a loss.",
+      "We conspired together to change this tradition, deciding to keep all the profits for ourselves.",
+      "We made an oath to go out early in the morning to harvest our garden before anyone could ask for their share.",
+      "When we arrived, we found our lush garden reduced to a barren, blackened ruin, as if completely reaped.",
+      "We initially blamed each other, but soon realized our ruin was a punishment from our Lord for our selfish plan, and we turned to Him in repentance."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Are We?",
+        "options": [
+          "The People of Saba",
+          "The Two Men with Two Gardens",
+          "The Companions of the Garden",
+          "The Brothers of Prophet Yusuf",
+          "The People of Madyan"
+        ],
+        "answer": "The Companions of the Garden"
+      },
+      "trial": {
+        "label": "What Was Our Sin?",
+        "options": [
+          "Plotting to deprive the poor of their share",
+          "Denying the message of a Prophet",
+          "Building a rival mosque to create division",
+          "Breaking the Sabbath by fishing",
+          "Mocking a Prophet for building an ark"
+        ],
+        "answer": "Plotting to deprive the poor of their share"
+      },
+      "location": {
+        "label": "What Happened to Our Property?",
+        "options": [
+          "It was flooded by a burst dam",
+          "It was consumed by a fire sent from heaven",
+          "It was seized by a tyrannical king",
+          "It was destroyed by a calamity from Allah overnight",
+          "It withered due to a severe drought"
+        ],
+        "answer": "It was destroyed by a calamity from Allah overnight"
+      },
+      "outcome": {
+        "label": "What Was Our Ultimate Response?",
+        "options": [
+          "We arrogantly blamed a Prophet for our misfortune",
+          "We scattered in fear and never returned",
+          "We admitted our transgression and glorified Allah",
+          "We demanded that Allah restore our property immediately",
+          "We continued in our disbelief until we were destroyed"
+        ],
+        "answer": "We admitted our transgression and glorified Allah"
+      }
+    },
+    "verseRef": "68:20",
+    "arabic": "فَأَصْبَحَتْ كَٱلصَّرِيمِ",
+    "verse": "And it became as though reaped. (68:20)"
+  },
+  "scramble": {
+    "verseRef": "35:15",
+    "reference": "Fatir (35:15)",
+    "segments": [
+      "يَا أَيُّهَا النَّاسُ",
+      "أَنتُمُ الْفُقَرَاءُ",
+      "إِلَى اللَّهِ",
+      "وَاللَّهُ هُوَ",
+      "الْغَنِيُّ الْحَمِيدُ"
+    ],
+    "translations": [
+      "O mankind",
+      "You (are) those in need",
+      "of Allah",
+      "while Allah He",
+      "(is) Free of need the Praiseworthy"
+    ],
+    "hint": "This verse addresses all of humanity, reminding them of their inherent need for the Creator, who is free of all needs.",
+    "arabic": "۞ يَـٰٓأَيُّهَا ٱلنَّاسُ أَنتُمُ ٱلْفُقَرَآءُ إِلَى ٱللَّهِ ۖ وَٱللَّهُ هُوَ ٱلْغَنِىُّ ٱلْحَمِيدُ",
+    "words": [
+      "۞ يَـٰٓأَيُّهَا ٱلنَّاسُ",
+      "أَنتُمُ ٱلْفُقَرَآءُ",
+      "إِلَى ٱللَّهِ ۖ",
+      "وَٱللَّهُ هُوَ",
+      "ٱلْغَنِىُّ ٱلْحَمِيدُ"
+    ],
+    "verseEn": "O mankind, you are those in need of Allāh, while Allāh is the Free of need, the Praiseworthy."
+  },
+  "juz": {
+    "date": "2026-03-06",
+    "juz_number": 18,
+    "juz_name": "Qad Aflaha",
+    "juz_name_ar": "قَدْ أَفْلَحَ",
+    "verse": {
+      "surah_number": 24,
+      "surah_name": "An-Nur",
+      "surah_name_ar": "ٱلنُّور",
+      "ayah_number": 35,
+      "arabic_text": "ٱللَّهُ نُورُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ",
+      "translation": "Allah is the Light of the heavens and the earth.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2826.mp3"
+    },
+    "theme_question": {
+      "correct": "The nature of divine guidance, described metaphorically as a brilliant light.",
+      "options": [
+        "The nature of divine guidance, described metaphorically as a brilliant light.",
+        "The scientific properties of physical light.",
+        "The prohibition of usury and interest.",
+        "The detailed rules for fasting during Ramadan."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 24,
+      "options": [
+        {
+          "num": 23,
+          "name": "Al-Mu'minun",
+          "name_ar": "ٱلْمُؤْمِنُونَ",
+          "name_en": "The Believers"
+        },
+        {
+          "num": 24,
+          "name": "An-Nur",
+          "name_ar": "ٱلنُّور",
+          "name_en": "The Light"
+        },
+        {
+          "num": 25,
+          "name": "Al-Furqan",
+          "name_ar": "ٱلْفُرْقَان",
+          "name_en": "The Criterion"
+        },
+        {
+          "num": 22,
+          "name": "Al-Hajj",
+          "name_ar": "ٱلْحَجّ",
+          "name_en": "The Pilgrimage"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 23,
+          "name": "Al-Mu'minun",
+          "name_ar": "ٱلْمُؤْمِنُونَ",
+          "name_en": "The Believers"
+        },
+        {
+          "num": 24,
+          "name": "An-Nur",
+          "name_ar": "ٱلنُّور",
+          "name_en": "The Light"
+        },
+        {
+          "num": 25,
+          "name": "Al-Furqan",
+          "name_ar": "ٱلْفُرْقَان",
+          "name_en": "The Criterion"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse, known as 'Ayat an-Nur' (The Verse of Light), is one of the most profound and widely discussed verses in the Quran. It comes in a surah that deals extensively with social ethics, family law, and modesty. This verse elevates the discussion by grounding all righteous conduct in the ultimate reality: Allah, who is the source of all guidance and clarity, illuminating the path for believers.",
+      "theme_explanation": "The theme is the absolute and encompassing nature of Allah's guidance. The metaphor of 'light' is used to explain something beyond human comprehension. Just as physical light makes the unseen visible and provides clarity, Allah's divine light (His revelation, guidance, and truth) illuminates hearts and minds, dispelling the darkness of ignorance, doubt, and disbelief. The verse continues with a beautiful parable of this light being like a niche with a lamp, symbolizing the pure heart of a believer containing the light of faith.",
+      "surah_overview": "Surah An-Nur (The Light), a Madani surah, is named after this pivotal 35th verse. The surah is a comprehensive guide to establishing a chaste and dignified society. It legislates severe punishments for adultery and false accusations, outlines rules of modesty (hijab), privacy, and etiquette for entering homes. It contrasts the state of believers, who are guided by Allah's light, with that of the disbelievers, who are lost in layers of darkness. The surah emphasizes that all authority and law ultimately belong to Allah."
+    }
+  }
+}

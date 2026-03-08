@@ -1,32 +1,32 @@
 {
-  "date": "2026-03-03",
+  "date": "2026-03-08",
   "puzzle": {
-    "verseRef": "16:18",
-    "reference": "Surah An-Nahl (16:18)",
+    "verseRef": "23:29",
+    "reference": "Al-Mu'minun (23:29)",
     "segments": [
-      "وَإِن تَعُدُّوا۟",
-      "نِعْمَةَ ٱللَّهِ",
-      "لَا تُحْصُوهَآ",
-      "إِنَّ ٱللَّهَ",
-      "لَغَفُورٌ رَّحِيمٌ"
+      "وَقُل رَّبِّ",
+      "أَنزِلْنِي مُنزَلًا",
+      "مُّبَارَكًا",
+      "وَأَنتَ خَيْرُ",
+      "الْمُنزِلِينَ"
     ],
     "translations": [
-      "And if you should count",
-      "the Favors of Allah the Favors of Allah",
-      "not you could enumerate them",
-      "Indeed Allah",
-      "(is) Oft-Forgiving Most Merciful"
+      "And say My Lord",
+      "cause me to land (at) a landing place",
+      "blessed and You",
+      "(are) the Best",
+      "(of) those who cause to land.'"
     ],
-    "hint": "This verse speaks of the impossibility of quantifying Allah's countless blessings upon creation.",
-    "arabic": "وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌۭ رَّحِيمٌۭ",
+    "hint": "A supplication taught to Prophet Nuh (Noah) for seeking a blessed place to settle after the great flood.",
+    "arabic": "وَقُل رَّبِّ أَنزِلْنِى مُنزَلًۭا مُّبَارَكًۭا وَأَنتَ خَيْرُ ٱلْمُنزِلِينَ",
     "words": [
-      "وَإِن تَعُدُّوا۟",
-      "نِعْمَةَ ٱللَّهِ",
-      "لَا تُحْصُوهَآ ۗ",
-      "إِنَّ ٱللَّهَ",
-      "لَغَفُورٌۭ رَّحِيمٌۭ"
+      "وَقُل رَّبِّ",
+      "أَنزِلْنِى مُنزَلًۭا",
+      "مُّبَارَكًۭا وَأَنتَ",
+      "خَيْرُ",
+      "ٱلْمُنزِلِينَ"
     ],
-    "verseEn": "And if you should count the favors of Allāh, you could not enumerate them. Indeed, Allāh is Forgiving and Merciful."
+    "verseEn": "And say, 'My Lord, let me land at a blessed landing place, and You are the best to accommodate [us].'\""
   },
   "generated": true
 }

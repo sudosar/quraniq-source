@@ -1,0 +1,323 @@
+{
+  "connections": {
+    "categories": [
+      {
+        "name": "مُصْطَلَحَاتٌ تِجَارِيَّة",
+        "nameEn": "Terms related to Commerce",
+        "color": "yellow",
+        "items": [
+          {
+            "ar": "بِدِينَارٍ",
+            "en": "a dinar",
+            "ref": "3:75",
+            "verse": "۞ وَمِنْ أَهْلِ ٱلْكِتَـٰبِ مَنْ إِن تَأْمَنْهُ بِقِنطَارٍۢ يُؤَدِّهِۦٓ إِلَيْكَ وَمِنْهُم مَّنْ إِن تَأْمَنْهُ بِدِينَارٍۢ لَّا يُؤَدِّهِۦٓ إِلَيْكَ إِلَّا مَا دُمْتَ عَلَيْهِ قَآئِمًۭا ۗ ذَٰلِكَ بِأَنَّهُمْ قَالُوا۟ لَيْسَ عَلَيْنَا فِى ٱلْأُمِّيِّـۧنَ سَبِيلٌۭ وَيَقُولُونَ عَلَى ٱللَّهِ ٱلْكَذِبَ وَهُمْ يَعْلَمُونَ",
+            "verseEn": "And among the People of the Scripture is he who, if you entrust him with a great amount [of wealth], he will return it to you. And among them is he who, if you entrust him with a [single] coin, he will not return it to you unless you are constantly standing over him [demanding it]. That is because they say, \"There is no blame upon us concerning the unlearned.\" And they speak untruth about Allāh while they know [it]."
+          },
+          {
+            "ar": "دَرَٰهِمَ",
+            "en": "dirhams",
+            "ref": "12:20",
+            "verse": "وَشَرَوْهُ بِثَمَنٍۭ بَخْسٍۢ دَرَٰهِمَ مَعْدُودَةٍۢ وَكَانُوا۟ فِيهِ مِنَ ٱلزَّٰهِدِينَ",
+            "verseEn": "And they sold him for a reduced price - a few dirhams - and they were, concerning him, of those content with little."
+          },
+          {
+            "ar": "تِجَٰرَةً",
+            "en": "commerce",
+            "ref": "62:11",
+            "verse": "وَإِذَا رَأَوْا۟ تِجَـٰرَةً أَوْ لَهْوًا ٱنفَضُّوٓا۟ إِلَيْهَا وَتَرَكُوكَ قَآئِمًۭا ۚ قُلْ مَا عِندَ ٱللَّهِ خَيْرٌۭ مِّنَ ٱللَّهْوِ وَمِنَ ٱلتِّجَـٰرَةِ ۚ وَٱللَّهُ خَيْرُ ٱلرَّٰزِقِينَ",
+            "verseEn": "But [on one occasion] when they saw a transaction or a diversion, [O Muḥammad], they rushed to it and left you standing. Say, \"What is with Allāh is better than diversion and than a transaction, and Allāh is the best of providers.\""
+          },
+          {
+            "ar": "بَيْعٌ",
+            "en": "trade",
+            "ref": "2:254",
+            "verse": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ أَنفِقُوا۟ مِمَّا رَزَقْنَـٰكُم مِّن قَبْلِ أَن يَأْتِىَ يَوْمٌۭ لَّا بَيْعٌۭ فِيهِ وَلَا خُلَّةٌۭ وَلَا شَفَـٰعَةٌۭ ۗ وَٱلْكَـٰفِرُونَ هُمُ ٱلظَّـٰلِمُونَ",
+            "verseEn": "O you who have believed, spend from that which We have provided for you before there comes a Day in which there is no exchange [i.e., ransom] and no friendship and no intercession. And the disbelievers - they are the wrongdoers."
+          }
+        ]
+      },
+      {
+        "name": "كَلِمَاتٌ تَدُلُّ عَلَىٰ العَاقِبَةِ وَالمَآلِ",
+        "nameEn": "Words Denoting a Consequence or Outcome",
+        "color": "green",
+        "items": [
+          {
+            "ar": "عَاقِبَةُ",
+            "en": "The outcome",
+            "ref": "28:37",
+            "verse": "وَقَالَ مُوسَىٰ رَبِّىٓ أَعْلَمُ بِمَن جَآءَ بِٱلْهُدَىٰ مِنْ عِندِهِۦ وَمَن تَكُونُ لَهُۥ عَـٰقِبَةُ ٱلدَّارِ ۖ إِنَّهُۥ لَا يُفْلِحُ ٱلظَّـٰلِمُونَ",
+            "verseEn": "And Moses said, \"My Lord is more knowing [than we or you] of who has come with guidance from Him and to whom will be succession in the home. Indeed, wrongdoers do not succeed.\""
+          },
+          {
+            "ar": "حِسَابًا",
+            "en": "A reckoning",
+            "ref": "65:8",
+            "verse": "وَكَأَيِّن مِّن قَرْيَةٍ عَتَتْ عَنْ أَمْرِ رَبِّهَا وَرُسُلِهِۦ فَحَاسَبْنَـٰهَا حِسَابًۭا شَدِيدًۭا وَعَذَّبْنَـٰهَا عَذَابًۭا نُّكْرًۭا",
+            "verseEn": "And how many a city was insolent toward the command of its Lord and His messengers, so We took it to severe account and punished it with a terrible punishment."
+          },
+          {
+            "ar": "جَزَاءً",
+            "en": "A recompense",
+            "ref": "78:26",
+            "verse": "جَزَآءًۭ وِفَاقًا",
+            "verseEn": "An appropriate recompense."
+          },
+          {
+            "ar": "مَثْوًى",
+            "en": "An abode",
+            "ref": "29:68",
+            "verse": "وَمَنْ أَظْلَمُ مِمَّنِ ٱفْتَرَىٰ عَلَى ٱللَّهِ كَذِبًا أَوْ كَذَّبَ بِٱلْحَقِّ لَمَّا جَآءَهُۥٓ ۚ أَلَيْسَ فِى جَهَنَّمَ مَثْوًۭى لِّلْكَـٰفِرِينَ",
+            "verseEn": "And who is more unjust than one who invents a lie about Allāh or denies the truth when it has come to him? Is there not in Hell a [sufficient] residence for the disbelievers?"
+          }
+        ]
+      },
+      {
+        "name": "مُصْطَلَحَاتٌ مُتَعَلِّقَةٌ بِالنَّسِيجِ وَالزِّينَةِ",
+        "nameEn": "Terms Related to Textiles and Adornment",
+        "color": "blue",
+        "items": [
+          {
+            "ar": "غَزْلَهَا",
+            "en": "her thread/spinning",
+            "ref": "16:92",
+            "verse": "وَلَا تَكُونُوا۟ كَٱلَّتِى نَقَضَتْ غَزْلَهَا مِنۢ بَعْدِ قُوَّةٍ أَنكَـٰثًۭا تَتَّخِذُونَ أَيْمَـٰنَكُمْ دَخَلًۢا بَيْنَكُمْ أَن تَكُونَ أُمَّةٌ هِىَ أَرْبَىٰ مِنْ أُمَّةٍ ۚ إِنَّمَا يَبْلُوكُمُ ٱللَّهُ بِهِۦ ۚ وَلَيُبَيِّنَنَّ لَكُمْ يَوْمَ ٱلْقِيَـٰمَةِ مَا كُنتُمْ فِيهِ تَخْتَلِفُونَ",
+            "verseEn": "And do not be like she who untwisted her spun thread after it was strong [by] taking your oaths as [means of] deceit between you because one community is more plentiful [in number or wealth] than another community. Allāh only tries you thereby. And He will surely make clear to you on the Day of Resurrection that over which you used to differ."
+          },
+          {
+            "ar": "ٱلْمَخِيطِ",
+            "en": "the needle",
+            "ref": "7:40",
+            "verse": "إِنَّ ٱلَّذِينَ كَذَّبُوا۟ بِـَٔايَـٰتِنَا وَٱسْتَكْبَرُوا۟ عَنْهَا لَا تُفَتَّحُ لَهُمْ أَبْوَٰبُ ٱلسَّمَآءِ وَلَا يَدْخُلُونَ ٱلْجَنَّةَ حَتَّىٰ يَلِجَ ٱلْجَمَلُ فِى سَمِّ ٱلْخِيَاطِ ۚ وَكَذَٰلِكَ نَجْزِى ٱلْمُجْرِمِينَ",
+            "verseEn": "Indeed, those who deny Our verses and are arrogant toward them - the gates of Heaven will not be opened for them, nor will they enter Paradise until a camel enters into the eye of a needle [i.e., never]. And thus do We recompense the criminals."
+          },
+          {
+            "ar": "يَخْصِفَانِ",
+            "en": "they began to fasten",
+            "ref": "20:121",
+            "verse": "فَأَكَلَا مِنْهَا فَبَدَتْ لَهُمَا سَوْءَٰتُهُمَا وَطَفِقَا يَخْصِفَانِ عَلَيْهِمَا مِن وَرَقِ ٱلْجَنَّةِ ۚ وَعَصَىٰٓ ءَادَمُ رَبَّهُۥ فَغَوَىٰ",
+            "verseEn": "And they [i.e., Adam and his wife] ate of it, and their private parts became apparent to them, and they began to fasten over themselves from the leaves of Paradise. And Adam disobeyed his Lord and erred."
+          },
+          {
+            "ar": "يُحْبَرُونَ",
+            "en": "they are made to rejoice",
+            "ref": "30:15",
+            "verse": "فَأَمَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فَهُمْ فِى رَوْضَةٍۢ يُحْبَرُونَ",
+            "verseEn": "And as for those who had believed and done righteous deeds, they will be in a garden [of Paradise], delighted."
+          }
+        ]
+      },
+      {
+        "name": "أَسَالِيبُ التَّدْمِيرِ الْإِلَٰهِيِّ",
+        "nameEn": "Methods of Divine Destruction",
+        "color": "purple",
+        "items": [
+          {
+            "ar": "فَدَمَّرْنَٰهَا",
+            "en": "So We destroyed it",
+            "ref": "17:16",
+            "verse": "وَإِذَآ أَرَدْنَآ أَن نُّهْلِكَ قَرْيَةً أَمَرْنَا مُتْرَفِيهَا فَفَسَقُوا۟ فِيهَا فَحَقَّ عَلَيْهَا ٱلْقَوْلُ فَدَمَّرْنَـٰهَا تَدْمِيرًۭا",
+            "verseEn": "And when We intend to destroy a city, We command its affluent but they defiantly disobey therein; so the word [i.e., deserved decree] comes into effect upon it, and We destroy it with [complete] destruction."
+          },
+          {
+            "ar": "خَسَفْنَا",
+            "en": "We caused to swallow",
+            "ref": "29:40",
+            "verse": "فَكُلًّا أَخَذْنَا بِذَنۢبِهِۦ ۖ فَمِنْهُم مَّنْ أَرْسَلْنَا عَلَيْهِ حَاصِبًۭا وَمِنْهُم مَّنْ أَخَذَتْهُ ٱلصَّيْحَةُ وَمِنْهُم مَّنْ خَسَفْنَا بِهِ ٱلْأَرْضَ وَمِنْهُم مَّنْ أَغْرَقْنَا ۚ وَمَا كَانَ ٱللَّهُ لِيَظْلِمَهُمْ وَلَـٰكِن كَانُوٓا۟ أَنفُسَهُمْ يَظْلِمُونَ",
+            "verseEn": "So each We seized for his sin; and among them were those upon whom We sent a storm of stones, and among them were those who were seized by the blast [from the sky], and among them were those whom We caused the earth to swallow, and among them were those whom We drowned. And Allāh would not have wronged them, but it was they who were wronging themselves."
+          },
+          {
+            "ar": "نَّطْمِسَ",
+            "en": "We obliterate",
+            "ref": "4:47",
+            "verse": "يَـٰٓأَيُّهَا ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ ءَامِنُوا۟ بِمَا نَزَّلْنَا مُصَدِّقًۭا لِّمَا مَعَكُم مِّن قَبْلِ أَن نَّطْمِسَ وُجُوهًۭا فَنَرُدَّهَا عَلَىٰٓ أَدْبَارِهَآ أَوْ نَلْعَنَهُمْ كَمَا لَعَنَّآ أَصْحَـٰبَ ٱلسَّبْتِ ۚ وَكَانَ أَمْرُ ٱللَّهِ مَفْعُولًا",
+            "verseEn": "O you who were given the Scripture, believe in what We have sent down [to Prophet Muḥammad (ﷺ)], confirming that which is with you, before We obliterate faces and turn them toward their backs or curse them as We cursed the sabbath-breakers. And ever is the matter [i.e., decree] of Allāh accomplished."
+          },
+          {
+            "ar": "دَكًّا",
+            "en": "as rubble",
+            "ref": "7:143",
+            "verse": "وَلَمَّا جَآءَ مُوسَىٰ لِمِيقَـٰتِنَا وَكَلَّمَهُۥ رَبُّهُۥ قَالَ رَبِّ أَرِنِىٓ أَنظُرْ إِلَيْكَ ۚ قَالَ لَن تَرَىٰنِى وَلَـٰكِنِ ٱنظُرْ إِلَى ٱلْجَبَلِ فَإِنِ ٱسْتَقَرَّ مَكَانَهُۥ فَسَوْفَ تَرَىٰنِى ۚ فَلَمَّا تَجَلَّىٰ رَبُّهُۥ لِلْجَبَلِ جَعَلَهُۥ دَكًّۭا وَخَرَّ مُوسَىٰ صَعِقًۭا ۚ فَلَمَّآ أَفَاقَ قَالَ سُبْحَـٰنَكَ تُبْتُ إِلَيْكَ وَأَنَا۠ أَوَّلُ ٱلْمُؤْمِنِينَ",
+            "verseEn": "And when Moses arrived at Our appointed time and his Lord spoke to him, he said, \"My Lord, show me [Yourself] that I may look at You.\" [Allāh] said, \"You will not see Me, but look at the mountain; if it should remain in place, then you will see Me.\" But when his Lord appeared to the mountain, He rendered it level, and Moses fell unconscious. And when he awoke, he said, \"Exalted are You! I have repented to You, and I am the first [among my people] of the believers.\""
+          }
+        ]
+      }
+    ]
+  },
+  "harf": {
+    "word": "ريح",
+    "display": "رِيح",
+    "hint": "It can be a gentle mercy or a furious punishment.",
+    "verseRef": "30:51",
+    "arabicVerse": "وَلَئِنْ أَرْسَلْنَا رِيحًۭا فَرَأَوْهُ مُصْفَرًّۭا لَّظَلُّوا۟ مِنۢ بَعْدِهِۦ يَكْفُرُونَ",
+    "verse": "30:51 — But if We should send a [bad] wind and they saw [their crops] turned yellow, they would remain thereafter disbelievers."
+  },
+  "deduction": {
+    "title": "The Harmony of Iron and Praise",
+    "intro": "A divinely favored soul was granted both wisdom and dominion, leading a nation with justice. This unique individual possessed a voice that could command nature and hands that could shape the hardest of materials. Yet, their greatest strength was found in constant remembrance and praise of their Lord. Can you identify this servant of Allah?",
+    "clues": [
+      "The mountains and birds were commanded to join me in my glorification of Allah.",
+      "I was given a book of scripture, a guide for my people.",
+      "In a dispute over a flock of sheep, my judgment was guided by a wisdom that even my own child recognized as superior.",
+      "Allah softened iron for me, allowing me to fashion it with my own hands into coats of mail.",
+      "I was tested concerning two litigants who climbed over the wall of my private chamber to seek my judgment.",
+      "My son, Sulayman, inherited my kingdom and my wisdom, continuing a legacy of prophecy and rule."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Prophet Musa",
+          "Prophet 'Isa",
+          "Prophet Dawud",
+          "Dhul-Qarnayn",
+          "Talut (Saul)"
+        ],
+        "answer": "Prophet Dawud"
+      },
+      "trial": {
+        "label": "What Was My Significant Event?",
+        "options": [
+          "Building a wall against Gog and Magog",
+          "Being tested by two litigants",
+          "Leading an army across the sea",
+          "Being raised to the heavens",
+          "Confronting a tyrant who claimed to give life and death"
+        ],
+        "answer": "Being tested by two litigants"
+      },
+      "location": {
+        "label": "What Was a Key Element?",
+        "options": [
+          "A staff that turned into a serpent",
+          "A wooden ark",
+          "Softened Iron",
+          "A transported throne",
+          "A clay bird brought to life"
+        ],
+        "answer": "Softened Iron"
+      },
+      "outcome": {
+        "label": "What Was the Outcome?",
+        "options": [
+          "I was swallowed by a giant fish",
+          "My son Sulayman inherited the kingdom",
+          "I was sold into slavery in Egypt",
+          "My people were destroyed by a wind",
+          "I was thrown into a fire"
+        ],
+        "answer": "My son Sulayman inherited the kingdom"
+      }
+    },
+    "verseRef": "34:11",
+    "arabic": "أَنِ ٱعْمَلْ سَـٰبِغَـٰتٍۢ وَقَدِّرْ فِى ٱلسَّرْدِ ۖ وَٱعْمَلُوا۟ صَـٰلِحًا ۖ إِنِّى بِمَا تَعْمَلُونَ بَصِيرٌۭ",
+    "verse": "[Commanding him], \"Make full coats of mail and calculate [precisely] the links, and work [all of you] righteousness. Indeed I, of what you do, am Seeing.\" (34:11)"
+  },
+  "scramble": {
+    "verseRef": "61:4",
+    "reference": "As-Saff (61:4)",
+    "segments": [
+      "إِنَّ اللَّهَ يُحِبُّ",
+      "الَّذِينَ يُقَاتِلُونَ",
+      "فِي سَبِيلِهِ صَفًّا",
+      "كَأَنَّهُم بُنْيَانٌ",
+      "مَّرْصُوصٌ"
+    ],
+    "translations": [
+      "Indeed Allah loves",
+      "those who fight",
+      "in His Way",
+      "(in) a row as if they",
+      "(were) a structure joined firmly"
+    ],
+    "hint": "A metaphor for the strength and unity of believers whom Allah loves, comparing them to a solid building.",
+    "arabic": "إِنَّ ٱللَّهَ يُحِبُّ ٱلَّذِينَ يُقَـٰتِلُونَ فِى سَبِيلِهِۦ صَفًّۭا كَأَنَّهُم بُنْيَـٰنٌۭ مَّرْصُوصٌۭ",
+    "words": [
+      "إِنَّ ٱللَّهَ يُحِبُّ",
+      "ٱلَّذِينَ يُقَـٰتِلُونَ",
+      "فِى سَبِيلِهِۦ",
+      "صَفًّۭا كَأَنَّهُم",
+      "بُنْيَـٰنٌۭ مَّرْصُوصٌۭ"
+    ],
+    "verseEn": "Indeed, Allāh loves those who fight in His cause in a row as though they are a [single] structure joined firmly."
+  },
+  "juz": {
+    "date": "2026-03-07",
+    "juz_number": 19,
+    "juz_name": "Wa Qala Allatheena",
+    "juz_name_ar": "وَقَالَ ٱلَّذِينَ",
+    "verse": {
+      "surah_number": 26,
+      "surah_name": "Ash-Shu'ara",
+      "surah_name_ar": "سُورَةُ الشُّعَرَاءِ",
+      "ayah_number": 89,
+      "arabic_text": "إِلَّا مَنْ أَتَى ٱللَّهَ بِقَلْبٍۢ سَلِيمٍۢ",
+      "translation": "Except for one who comes to Allah with a sound heart.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3021.mp3"
+    },
+    "theme_question": {
+      "correct": "The ultimate currency on the Day of Judgment is a pure and sound heart.",
+      "options": [
+        "Salvation is achieved through accumulating vast wealth for charity.",
+        "Having many righteous children guarantees one's success in the afterlife.",
+        "The ultimate currency on the Day of Judgment is a pure and sound heart.",
+        "Intercession from the prophets is the only way to attain paradise."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 26,
+      "options": [
+        {
+          "num": 25,
+          "name": "Al-Furqan",
+          "name_ar": "ٱلْفُرْقَان",
+          "name_en": "The Criterion"
+        },
+        {
+          "num": 26,
+          "name": "Ash-Shu'ara",
+          "name_ar": "ٱلشُّعَرَاء",
+          "name_en": "The Poets"
+        },
+        {
+          "num": 27,
+          "name": "An-Naml",
+          "name_ar": "ٱلنَّمْل",
+          "name_en": "The Ant"
+        },
+        {
+          "num": 28,
+          "name": "Al-Qasas",
+          "name_ar": "ٱلْقَصَص",
+          "name_en": "The Stories"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 25,
+          "name": "Al-Furqan",
+          "name_ar": "ٱلْفُرْقَان",
+          "name_en": "The Criterion"
+        },
+        {
+          "num": 26,
+          "name": "Ash-Shu'ara",
+          "name_ar": "ٱلشُّعَرَاء",
+          "name_en": "The Poets"
+        },
+        {
+          "num": 27,
+          "name": "An-Naml",
+          "name_ar": "ٱلنَّمْل",
+          "name_en": "The Ant"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse is part of a powerful supplication by Prophet Ibrahim (Abraham). It directly follows ayah 88, which states, 'The Day when neither wealth nor sons will be of any benefit.' Together, these verses clarify that on the Day of Judgment, all worldly status and possessions become worthless.",
+      "theme_explanation": "The theme centers on the 'Qalb Saleem' (قَلْب سَلِيم), the 'sound heart.' This is the ultimate currency for the Hereafter. It signifies a heart that is pure, free from associating partners with Allah (shirk), and cleansed of spiritual ills like envy, pride, and hypocrisy. The verse teaches that our eternal success depends not on our material or social standing, but on the spiritual condition in which we meet our Lord.",
+      "surah_overview": "Surah Ash-Shu'ara ('The Poets') is a Meccan surah focused on divine revelation and the consistent pattern of its rejection by arrogant people. It consoles the Prophet Muhammad (ﷺ) by detailing the struggles of earlier prophets, including Moses, Abraham, Noah, and others. The surah repeatedly emphasizes Allah's power and justice, showing how He saved the believers and destroyed the deniers, reinforcing the message that truth will ultimately prevail."
+    }
+  }
+}

@@ -1,77 +1,83 @@
 {
-  "date": "2026-03-03",
+  "date": "2026-03-08",
   "puzzle": {
-    "date": "2026-03-03",
-    "juz_number": 15,
-    "juz_name": "Subhanalladhi",
-    "juz_name_ar": "سُبْحَانَ الَّذِي",
+    "date": "2026-03-08",
+    "juz_number": 20,
+    "juz_name": "A'man Khalaqa",
+    "juz_name_ar": "أَمَّنْ خَلَقَ",
     "verse": {
-      "surah_number": 17,
-      "surah_name": "Al-Isra",
-      "surah_name_ar": "الْإِسْرَاء",
-      "ayah_number": 23,
-      "arabic_text": "وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُdُآا۟ إِلَّآ إِيَّاهُ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًا",
-      "translation": "And your Lord has decreed that you worship none but Him, and to be good to your parents.",
-      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2001.mp3"
+      "surah_number": 28,
+      "surah_name": "Al-Qasas",
+      "surah_name_ar": "سُورَةُ الْقَصَصِ",
+      "ayah_number": 83,
+      "arabic_text": "تِلْكَ ٱلدَّارُ ٱلْـَٔاخِرَةُ نَجْعَلُهَا لِلَّذِينَ لَا يُرِيدُونَ عُلُوًّا فِى ٱلْأَرْضِ وَلَا فَسَادًا ۚ وَٱلْعَـٰقِبَةُ لِلْمُتَّقِينَ",
+      "translation": "That home of the Hereafter We assign to those who do not desire exaltedness upon the earth or corruption. And the [best] outcome is for the righteous.",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3335.mp3"
     },
     "theme_question": {
-      "correct": "The inseparable duties of worshipping Allah alone and showing excellent kindness to parents.",
+      "correct": "Humility and righteousness are the keys to the Hereafter.",
       "options": [
-        "The inseparable duties of worshipping Allah alone and showing excellent kindness to parents.",
-        "The specific rules of inheritance for elderly parents.",
-        "The obligation of financial charity towards all relatives.",
-        "The historical account of Prophet Ibrahim's relationship with his father."
+        "Humility and righteousness are the keys to the Hereafter.",
+        "Worldly success is a sign of God's favor.",
+        "Seeking power is necessary to establish justice.",
+        "Only prophets and messengers are guaranteed Paradise."
       ]
     },
     "surah_question": {
-      "correct_surah": 17,
+      "correct_surah": 28,
       "options": [
         {
-          "num": 18,
-          "name": "Al-Kahf",
-          "name_ar": "الْكَهْف",
-          "name_en": "The Cave"
+          "num": 27,
+          "name": "An-Naml",
+          "name_ar": "ٱلنَّمْل",
+          "name_en": "The Ant"
         },
         {
-          "num": 17,
-          "name": "Al-Isra",
-          "name_ar": "الْإِسْرَاء",
-          "name_en": "The Night Journey"
+          "num": 28,
+          "name": "Al-Qasas",
+          "name_ar": "ٱلْقَصَص",
+          "name_en": "The Stories"
         },
         {
-          "num": 16,
-          "name": "An-Nahl",
-          "name_ar": "النَّحْل",
-          "name_en": "The Bee"
+          "num": 29,
+          "name": "Al-Ankabut",
+          "name_ar": "ٱلْعَنْكَبُوت",
+          "name_en": "The Spider"
         },
         {
-          "num": 20,
-          "name": "Taha",
-          "name_ar": "طه",
-          "name_en": "Ta-Ha"
+          "num": 31,
+          "name": "Luqman",
+          "name_ar": "لُقْمَان",
+          "name_en": "Luqman"
         }
       ]
     },
     "surah_order": {
       "surahs": [
         {
-          "num": 17,
-          "name": "Al-Isra",
-          "name_ar": "الْإِسْرَاء",
-          "name_en": "The Night Journey"
+          "num": 27,
+          "name": "An-Naml",
+          "name_ar": "ٱلنَّمْل",
+          "name_en": "The Ant"
         },
         {
-          "num": 18,
-          "name": "Al-Kahf",
-          "name_ar": "الْكَهْف",
-          "name_en": "The Cave"
+          "num": 28,
+          "name": "Al-Qasas",
+          "name_ar": "ٱلْقَصَص",
+          "name_en": "The Stories"
+        },
+        {
+          "num": 29,
+          "name": "Al-Ankabut",
+          "name_ar": "ٱلْعَنْكَبُوت",
+          "name_en": "The Spider"
         }
       ]
     },
     "educational_notes": {
-      "verse_context": "This verse is part of a series of foundational commandments in Surah Al-Isra that outline a comprehensive moral and social code for believers. It comes immediately after the prohibition of shirk (associating partners with Allah), placing the duty to parents at the highest level of importance right after the duty to God Himself.",
-      "theme_explanation": "The theme is the profound and direct link between Tawhid (the Oneness of Allah) and 'Birr al-Walidayn' (excellent kindness to parents). By placing these two commands together in a single decree ('qada' - He has decreed), Allah elevates the status of parents and establishes that honoring them is not merely a social courtesy but a fundamental act of worship and obedience.",
-      "surah_overview": "Surah Al-Isra, also known as Bani Isra'il (The Children of Israel), is a Meccan surah that begins by mentioning the miraculous Night Journey of Prophet Muhammad (ﷺ) from Makkah to Jerusalem. The surah addresses the history of the Children of Israel as a lesson, and lays down essential principles of faith, morality, and social conduct, including the rights of parents, orphans, and the needy, and warns against arrogance and transgression."
+      "verse_context": "This verse concludes a major theme in Surah Al-Qasas. It follows the detailed stories of Prophet Musa (Moses) confronting the arrogant Pharaoh, and the cautionary tale of Qarun (Korah), a man from Musa's people who became arrogant due to his immense wealth. Qarun's pride led to his destruction. This verse serves as the universal principle derived from these stories: the ultimate reward of the Hereafter is not for those who seek power, status, or dominance on earth, but for the humble and righteous.",
+      "theme_explanation": "The verse identifies two key negative traits that disqualify a person from the ultimate success of the Hereafter: the desire for 'uluww' (exaltedness, arrogance, superiority over others) and 'fasad' (corruption, mischief, wrongdoing). It teaches that true worth in the sight of Allah is tied to humility and piety. The final phrase, 'And the [best] outcome is for the righteous (al-muttaqin),' is a recurring Quranic promise, affirming that steadfast God-consciousness is the path to eternal success.",
+      "surah_overview": "Surah Al-Qasas, meaning 'The Stories,' is a Meccan surah that primarily narrates the detailed life story of Prophet Musa (Moses). It covers his miraculous birth, his upbringing in Pharaoh's palace, his escape to Madyan, his call to prophethood, and his struggle against the tyranny of Pharaoh. The surah highlights Allah's supreme power and meticulous planning in protecting His messengers and fulfilling His divine will. It serves to comfort Prophet Muhammad ﷺ and the early Muslims, assuring them that just as Musa was victorious over a powerful tyrant, they too would be victorious with Allah's help."
     }
   },
   "generated": true

@@ -1,0 +1,317 @@
+{
+  "connections": {
+    "categories": [
+      {
+        "name": "مُصْطَلَحَاتٌ لِلثَّوَابِ وَالْفَضْلِ",
+        "nameEn": "Terms for Divine Rewards and Bounties",
+        "color": "yellow",
+        "items": [
+          {
+            "ar": "ٱلْفَوْزُ",
+            "en": "The Triumph",
+            "ref": "9:72",
+            "verse": "وَعَدَ ٱللَّهُ ٱلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ جَنَّـٰتٍۢ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَا وَمَسَـٰكِنَ طَيِّبَةًۭ فِى جَنَّـٰتِ عَدْنٍۢ ۚ وَرِضْوَٰنٌۭ مِّنَ ٱللَّهِ أَكْبَرُ ۚ ذَٰلِكَ هُوَ ٱلْفَوْزُ ٱلْعَظِيمُ",
+            "verseEn": "Allāh has promised the believing men and believing women gardens beneath which rivers flow, wherein they abide eternally, and pleasant dwellings in gardens of perpetual residence; but approval from Allāh is greater. It is that which is the great attainment."
+          },
+          {
+            "ar": "أَجْرًا",
+            "en": "A Reward",
+            "ref": "18:2",
+            "verse": "قَيِّمًۭا لِّيُنذِرَ بَأْسًۭا شَدِيدًۭا مِّن لَّدُنْهُ وَيُبَشِّرَ ٱلْمُؤْمِنِينَ ٱلَّذِينَ يَعْمَلُونَ ٱلصَّـٰلِحَـٰتِ أَنَّ لَهُمْ أَجْرًا حَسَنًۭا",
+            "verseEn": "[He has made it] straight, to warn of severe punishment from Him and to give good tidings to the believers who do righteous deeds that they will have a good reward [i.e., Paradise]."
+          },
+          {
+            "ar": "نَعِيمٍ",
+            "en": "Bliss",
+            "ref": "82:13",
+            "verse": "إِنَّ ٱلْأَبْرَارَ لَفِى نَعِيمٍۢ",
+            "verseEn": "Indeed, the righteous will be in pleasure,"
+          },
+          {
+            "ar": "فَضْلًا",
+            "en": "Bounty",
+            "ref": "17:12",
+            "verse": "وَجَعَلْنَا ٱلَّيْلَ وَٱلنَّهَارَ ءَايَتَيْنِ ۖ فَمَحَوْنَآ ءَايَةَ ٱلَّيْلِ وَجَعَلْنَآ ءَايَةَ ٱلنَّهَارِ مُبْصِرَةًۭ لِّتَبْتَغُوا۟ فَضْلًۭا مِّن رَّبِّكُمْ وَلِتَعْلَمُوا۟ عَدَدَ ٱلسِّنِينَ وَٱلْحِسَابَ ۚ وَكُلَّ شَىْءٍۢ فَصَّلْنَـٰهُ تَفْصِيلًۭا",
+            "verseEn": "And We have made the night and day two signs, and We erased the sign of the night and made the sign of the day visible that you may seek bounty from your Lord and may know the number of years and the account [of time]. And everything We have set out in detail."
+          }
+        ]
+      },
+      {
+        "name": "مُصْطَلَحَاتُ الْوَحْيِ وَالْإِلْهَامِ",
+        "nameEn": "Terms for Revelation and Inspiration",
+        "color": "green",
+        "items": [
+          {
+            "ar": "أَلْهَمَهَا",
+            "en": "inspired it",
+            "ref": "91:8",
+            "verse": "فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَىٰهَا",
+            "verseEn": "And inspired it [with discernment of] its wickedness and its righteousness,"
+          },
+          {
+            "ar": "نَّبَإِ",
+            "en": "news of",
+            "ref": "6:34",
+            "verse": "وَلَقَدْ كُذِّبَتْ رُسُلٌۭ مِّن قَبْلِكَ فَصَبَرُوا۟ عَلَىٰ مَا كُذِّبُوا۟ وَأُوذُوا۟ حَتَّىٰٓ أَتَىٰهُمْ نَصْرُنَا ۚ وَلَا مُبَدِّلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ وَلَقَدْ جَآءَكَ مِن نَّبَإِى۟ ٱلْمُرْسَلِينَ",
+            "verseEn": "And certainly were messengers denied before you, but they were patient over the denial, and they were harmed until Our victory came to them. And none can alter the words [i.e., decrees] of Allāh. And there has certainly come to you some information about the [previous] messengers."
+          },
+          {
+            "ar": "ٱلْبُشْرَىٰ",
+            "en": "the good tidings",
+            "ref": "10:64",
+            "verse": "لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ ذَٰلِكَ هُوَ ٱلْفَوْزُ ٱلْعَظِيمُ",
+            "verseEn": "For them are good tidings in the worldly life and in the Hereafter. No change is there in the words [i.e., decrees] of Allāh. That is what is the great attainment."
+          },
+          {
+            "ar": "تَنزِيلُ",
+            "en": "a revelation",
+            "ref": "26:192",
+            "verse": "وَإِنَّهُۥ لَتَنزِيلُ رَبِّ ٱلْعَـٰلَمِينَ",
+            "verseEn": "And indeed, it [i.e., the Qur’ān] is the revelation of the Lord of the worlds."
+          }
+        ]
+      },
+      {
+        "name": "مُمَارَسَاتٌ جَاهِلِيَّةٌ مَذْمُومَةٌ",
+        "nameEn": "Practices of Jahiliyyah Condemned in the Qur'an",
+        "color": "blue",
+        "items": [
+          {
+            "ar": "ٱلْمَيْسِرِ",
+            "en": "Gambling",
+            "ref": "2:219",
+            "verse": "۞ يَسْـَٔلُونَكَ عَنِ ٱلْخَمْرِ وَٱلْمَيْسِرِ ۖ قُلْ فِيهِمَآ إِثْمٌۭ كَبِيرٌۭ وَمَنَـٰفِعُ لِلنَّاسِ وَإِثْمُهُمَآ أَكْبَرُ مِن نَّفْعِهِمَا ۗ وَيَسْـَٔلُونَكَ مَاذَا يُنفِقُونَ قُلِ ٱلْعَفْوَ ۗ كَذَٰلِكَ يُبَيِّنُ ٱللَّهُ لَكُمُ ٱلْـَٔايَـٰتِ لَعَلَّكُمْ تَتَفَكَّرُونَ",
+            "verseEn": "They ask you about wine and gambling. Say, \"In them is great sin and [yet, some] benefit for people. But their sin is greater than their benefit.\" And they ask you what they should spend. Say, \"The excess [beyond needs].\" Thus Allāh makes clear to you the verses [of revelation] that you might give thought"
+          },
+          {
+            "ar": "ٱلْأَزْلَٰمُ",
+            "en": "Divining Arrows",
+            "ref": "5:90",
+            "verse": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِنَّمَا ٱلْخَمْرُ وَٱلْمَيْسِرُ وَٱلْأَنصَابُ وَٱلْأَزْلَـٰمُ رِجْسٌۭ مِّنْ عَمَلِ ٱلشَّيْطَـٰنِ فَٱجْتَنِبُوهُ لَعَلَّكُمْ تُفْلِحُونَ",
+            "verseEn": "O you who have believed, indeed, intoxicants, gambling, [sacrificing on] stone alters [to other than Allāh], and divining arrows are but defilement from the work of Satan, so avoid it that you may be successful."
+          },
+          {
+            "ar": "وَصِيلَةٍ",
+            "en": "Wasilah (a she-camel)",
+            "ref": "5:103",
+            "verse": "مَا جَعَلَ ٱللَّهُ مِنۢ بَحِيرَةٍۢ وَلَا سَآئِبَةٍۢ وَلَا وَصِيلَةٍۢ وَلَا حَامٍۢ ۙ وَلَـٰكِنَّ ٱلَّذِينَ كَفَرُوا۟ يَفْتَرُونَ عَلَى ٱللَّهِ ٱلْكَذِبَ ۖ وَأَكْثَرُهُمْ لَا يَعْقِلُونَ",
+            "verseEn": "Allāh has not appointed [such innovations as] baḥīrah or sā’ibah or waṣīlah or ḥām. But those who disbelieve invent falsehood about Allāh, and most of them do not reason."
+          },
+          {
+            "ar": "تَبَرُّجَ",
+            "en": "Immodest Display",
+            "ref": "33:33",
+            "verse": "وَقَرْنَ فِى بُيُوتِكُنَّ وَلَا تَبَرَّجْنَ تَبَرُّجَ ٱلْجَـٰهِلِيَّةِ ٱلْأُولَىٰ ۖ وَأَقِمْنَ ٱلصَّلَوٰةَ وَءَاتِينَ ٱلزَّكَوٰةَ وَأَطِعْنَ ٱللَّهَ وَرَسُولَهُۥٓ ۚ إِنَّمَا يُرِيدُ ٱللَّهُ لِيُذْهِبَ عَنكُمُ ٱلرِّجْسَ أَهْلَ ٱلْبَيْتِ وَيُطَهِّرَكُمْ تَطْهِيرًۭا",
+            "verseEn": "And abide in your houses and do not display yourselves as [was] the display of the former times of ignorance. And establish prayer and give zakāh and obey Allāh and His Messenger. Allāh intends only to remove from you the impurity [of sin], O people of the [Prophet's] household, and to purify you with [extensive] purification."
+          }
+        ]
+      },
+      {
+        "name": "مَوَانِعُ الْقَلْبِ الرُّوحِيَّةُ",
+        "nameEn": "Spiritual Obstructions of the Heart",
+        "color": "purple",
+        "items": [
+          {
+            "ar": "وَقْرٌ",
+            "en": "a deafness",
+            "ref": "41:5",
+            "verse": "وَقَالُوا۟ قُلُوبُنَا فِىٓ أَكِنَّةٍۢ مِّمَّا تَدْعُونَآ إِلَيْهِ وَفِىٓ ءَاذَانِنَا وَقْرٌۭ وَمِنۢ بَيْنِنَا وَبَيْنِكَ حِجَابٌۭ فَٱعْمَلْ إِنَّنَا عَـٰمِلُونَ",
+            "verseEn": "And they say, \"Our hearts are within coverings [i.e., screened] from that to which you invite us, and in our ears is deafness, and between us and you is a partition, so work; indeed, we are working.\""
+          },
+          {
+            "ar": "طَبَعَ",
+            "en": "He sealed",
+            "ref": "47:16",
+            "verse": "وَمِنْهُم مَّن يَسْتَمِعُ إِلَيْكَ حَتَّىٰٓ إِذَا خَرَجُوا۟ مِنْ عِندِكَ قَالُوا۟ لِلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ مَاذَا قَالَ ءَانِفًا ۚ أُو۟لَـٰٓئِكَ ٱلَّذِينَ طَبَعَ ٱللَّهُ عَلَىٰ قُلُوبِهِمْ وَٱتَّبَعُوٓا۟ أَهْوَآءَهُمْ",
+            "verseEn": "And among them, [O Muḥammad], are those who listen to you, until when they depart from you, they say to those who were given knowledge, \"What has he said just now?\" Those are the ones of whom Allāh has sealed over their hearts and who have followed their [own] desires."
+          },
+          {
+            "ar": "فَقَسَتْ",
+            "en": "so they hardened",
+            "ref": "57:16",
+            "verse": "۞ أَلَمْ يَأْنِ لِلَّذِينَ ءَامَنُوٓا۟ أَن تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ ٱللَّهِ وَمَا نَزَلَ مِنَ ٱلْحَقِّ وَلَا يَكُونُوا۟ كَٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ مِن قَبْلُ فَطَالَ عَلَيْهِمُ ٱلْأَمَدُ فَقَسَتْ قُلُوبُهُمْ ۖ وَكَثِيرٌۭ مِّنْهُمْ فَـٰسِقُونَ",
+            "verseEn": "Has the time not come for those who have believed that their hearts should become humbly submissive at the remembrance of Allāh and what has come down of the truth? And let them not be like those who were given the Scripture before, and a long period passed over them, so their hearts hardened; and many of them are defiantly disobedient."
+          },
+          {
+            "ar": "أَغْفَلْنَا",
+            "en": "We made heedless",
+            "ref": "18:28",
+            "verse": "وَٱصْبِرْ نَفْسَكَ مَعَ ٱلَّذِينَ يَدْعُونَ رَبَّهُم بِٱلْغَدَوٰةِ وَٱلْعَشِىِّ يُرِيدُونَ وَجْهَهُۥ ۖ وَلَا تَعْدُ عَيْنَاكَ عَنْهُمْ تُرِيدُ زِينَةَ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۖ وَلَا تُطِعْ مَنْ أَغْفَلْنَا قَلْبَهُۥ عَن ذِكْرِنَا وَٱتَّبَعَ هَوَىٰهُ وَكَانَ أَمْرُهُۥ فُرُطًۭا",
+            "verseEn": "And keep yourself patient [by being] with those who call upon their Lord in the morning and the evening, seeking His face [i.e., acceptance]. And let not your eyes pass beyond them, desiring adornments of the worldly life, and do not obey one whose heart We have made heedless of Our remembrance and who follows his desire and whose affair is ever [in] neglect."
+          }
+        ]
+      }
+    ]
+  },
+  "harf": {
+    "word": "قمر",
+    "display": "قَمَر",
+    "hint": "The celestial body that governs the Islamic calendar.",
+    "verseRef": "41:37",
+    "arabicVerse": "وَمِنْ ءَايَـٰتِهِ ٱلَّيْلُ وَٱلنَّهَارُ وَٱلشَّمْسُ وَٱلْقَمَرُ ۚ لَا تَسْجُدُوا۟ لِلشَّمْسِ وَلَا لِلْقَمَرِ وَٱسْجُدُوا۟ لِلَّهِ ٱلَّذِى خَلَقَهُنَّ إِن كُنتُمْ إِيَّاهُ تَعْبُدُونَ",
+    "verse": "41:37 — And of His signs are the night and day and the sun and moon. Do not prostrate to the sun or to the moon, but prostrate to Allāh, who created them, if it should be Him that you worship."
+  },
+  "deduction": {
+    "title": "The Vow of Devotion",
+    "intro": "Within a household known for its piety, a devoted soul made a solemn promise to Allah. This pledge, born from a deep desire, would set in motion a miraculous chain of events, leading to the birth of one of the most honored individuals in history. Can you uncover the identity of this person whose sincere vow was accepted and answered in an unexpected way?",
+    "clues": [
+      "I was part of a blessed and chosen family, known for our righteousness.",
+      "I longed for a child and made a heartfelt plea to my Lord to grant me one.",
+      "In my gratitude, I made a vow to dedicate whatever was in my womb entirely to the service of Allah.",
+      "When I gave birth, I was surprised, for my child was not what I had expected for the role I envisioned.",
+      "I delivered a female, and I named her Maryam, seeking Allah's protection for her and her descendants from the accursed Shaytan.",
+      "My Lord accepted my offering with a beautiful acceptance and caused my daughter to grow in a beautiful manner, placing her under the care of Zakariyya."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "The wife of Zakariyya",
+          "The mother of Musa",
+          "The wife of 'Imran",
+          "The wife of Prophet Ibrahim (Sarah)",
+          "The wife of Fir'awn (Asiya)"
+        ],
+        "answer": "The wife of 'Imran"
+      },
+      "trial": {
+        "label": "What was my central act?",
+        "options": [
+          "Making a vow to dedicate my child to Allah",
+          "Hiding my child in a basket in the river",
+          "Patiently enduring a severe illness",
+          "Building a sacred house with my son",
+          "Arguing with angels about my people's fate"
+        ],
+        "answer": "Making a vow to dedicate my child to Allah"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The child I expected to be a male",
+          "The staff that turned into a serpent",
+          "The clay birds that came to life",
+          "The ark that saved all the believers",
+          "The coat of many colors"
+        ],
+        "answer": "The child I expected to be a male"
+      },
+      "outcome": {
+        "label": "What was the result of my vow?",
+        "options": [
+          "My son was saved from being sacrificed",
+          "My daughter Maryam was accepted into Allah's service",
+          "My husband was struck silent for three days",
+          "My child was given the ability to speak from the cradle",
+          "My child became a king with a vast army"
+        ],
+        "answer": "My daughter Maryam was accepted into Allah's service"
+      }
+    },
+    "verseRef": "3:35",
+    "arabic": "إِذْ قَالَتِ ٱمْرَأَتُ عِمْرَٰنَ رَبِّ إِنِّى نَذَرْتُ لَكَ مَا فِى بَطْنِى مُحَرَّرًۭا فَتَقَبَّلْ مِنِّىٓ ۖ إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
+    "verse": "[Mention, O Muḥammad], when the wife of ʿImrān said, \"My Lord, indeed I have pledged to You what is in my womb, consecrated [for Your service], so accept this from me. Indeed, You are the Hearing, the Knowing.\" (3:35)"
+  },
+  "scramble": {
+    "verseRef": "28:24",
+    "reference": "Surah Al-Qasas (28:24)",
+    "segments": [
+      "فَسَقَىٰ لَهُمَا",
+      "ثُمَّ تَوَلَّىٰٓ إِلَى ٱلظِّلِّ",
+      "فَقَالَ رَبِّ إِنِّى",
+      "لِمَآ أَنزَلْتَ إِلَىَّ",
+      "مِنْ خَيْرٍۢ فَقِيرٌۭ"
+    ],
+    "translations": [
+      "So he watered for them Then",
+      "he turned back to the shade",
+      "and said My Lord Indeed, I am",
+      "of whatever You send to me",
+      "of good (in) need"
+    ],
+    "hint": "A prophet's humble supplication for any good after performing a selfless act in a foreign land.",
+    "arabic": "فَسَقَىٰ لَهُمَا ثُمَّ تَوَلَّىٰٓ إِلَى ٱلظِّلِّ فَقَالَ رَبِّ إِنِّى لِمَآ أَنزَلْتَ إِلَىَّ مِنْ خَيْرٍۢ فَقِيرٌۭ",
+    "words": [
+      "فَسَقَىٰ لَهُمَا ثُمَّ",
+      "تَوَلَّىٰٓ إِلَى ٱلظِّلِّ",
+      "فَقَالَ رَبِّ إِنِّى",
+      "لِمَآ أَنزَلْتَ إِلَىَّ",
+      "مِنْ خَيْرٍۢ فَقِيرٌۭ"
+    ],
+    "verseEn": "So he watered [their flocks] for them; then he went back to the shade and said, \"My Lord, indeed I am, for whatever good You would send down to me, in need.\""
+  },
+  "juz": {
+    "date": "2026-03-05",
+    "juz_number": 17,
+    "juz_name": "Iqtaraba lin-nasi",
+    "juz_name_ar": "اقْتَرَبَ لِلنَّاسِ",
+    "verse": {
+      "surah_number": 21,
+      "surah_name": "Al-Anbiya",
+      "surah_name_ar": "الْأَنْبِيَاء",
+      "ayah_number": 87,
+      "arabic_text": "وَذَا النُّونِ إِذ ذَّهَبَ مُغَاضِبًا فَظَنَّ أَن لَّن نَّقْدِرَ عَلَيْهِ فَنَادَىٰ فِي الظُّلُمَاتِ أَن لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
+      "translation": "And [mention] the man of the fish, when he went off in anger and thought that We would not decree [anything] upon him. And he called out within the darknesses, 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.'",
+      "audio_url": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2570.mp3"
+    },
+    "theme_question": {
+      "correct": "The power of sincere repentance and acknowledging Allah's Oneness in times of distress.",
+      "options": [
+        "The power of sincere repentance and acknowledging Allah's Oneness in times of distress.",
+        "The importance of physical strength in overcoming challenges.",
+        "The prohibition of consuming fish from the sea.",
+        "A detailed guide on navigating the ocean depths."
+      ]
+    },
+    "surah_question": {
+      "correct_surah": 21,
+      "options": [
+        {
+          "num": 22,
+          "name": "Al-Hajj",
+          "name_ar": "الْحَجّ",
+          "name_en": "The Pilgrimage"
+        },
+        {
+          "num": 21,
+          "name": "Al-Anbiya",
+          "name_ar": "الْأَنْبِيَاء",
+          "name_en": "The Prophets"
+        },
+        {
+          "num": 23,
+          "name": "Al-Mu'minun",
+          "name_ar": "الْمُؤْمِنُوْن",
+          "name_en": "The Believers"
+        },
+        {
+          "num": 20,
+          "name": "Taha",
+          "name_ar": "طه",
+          "name_en": "Ta-Ha"
+        }
+      ]
+    },
+    "surah_order": {
+      "surahs": [
+        {
+          "num": 21,
+          "name": "Al-Anbiya",
+          "name_ar": "الْأَنْبِيَاء",
+          "name_en": "The Prophets"
+        },
+        {
+          "num": 22,
+          "name": "Al-Hajj",
+          "name_ar": "الْحَجّ",
+          "name_en": "The Pilgrimage"
+        }
+      ]
+    },
+    "educational_notes": {
+      "verse_context": "This verse contains the powerful supplication of Prophet Yunus (Jonah) when he was in the belly of the whale. After leaving his people in anger without Allah's permission, he was swallowed by a great fish. In the triple darkness—of the night, the sea, and the whale's belly—he called out to Allah, acknowledging his mistake and affirming Allah's absolute perfection and Oneness.",
+      "theme_explanation": "The theme is profound repentance (Tawbah) and the centrality of Tawhid (Oneness of Allah). The dua of Yunus (a.s.) is a comprehensive formula for seeking forgiveness. It begins with affirming Tawhid ('La ilaha illa Anta'), glorifying Allah ('Subhanak'), and admitting one's own wrongdoing ('inni kuntu minaz-zalimin'). The Prophet Muhammad (ﷺ) said that no Muslim supplicates with this dua for anything, except that Allah will answer him.",
+      "surah_overview": "Surah Al-Anbiya (The Prophets), a Meccan surah, emphasizes the fundamental message of all prophets: the Oneness of Allah (Tawhid). It recounts the stories of numerous prophets, including Ibrahim, Lut, Ishaq, Yaqub, Nuh, Dawud, Sulaiman, Ayyub, Ismail, Idris, Dhul-Kifl, Yunus, Zakariyya, and Yahya, highlighting their struggles and their unwavering faith. The surah serves as a reminder that the Day of Judgment is near and people are heedless."
+    }
+  }
+}
