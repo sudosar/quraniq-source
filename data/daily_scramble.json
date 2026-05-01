@@ -1,29 +1,29 @@
 {
-  "date": "2026-02-27",
+  "date": "2026-05-01",
   "puzzle": {
-    "verseRef": "4:36",
-    "reference": "Surah An-Nisa (4:36)",
+    "verseRef": "51:47",
+    "reference": "Adh-Dhariyat (51:47)",
     "segments": [
-      "words 1-2",
-      "words 3-4",
-      "words 5-6",
-      "words 7-8"
+      "وَٱلسَّمَآءَ بَنَيْنَـٰهَا",
+      "بِأَيْي۟دٍ",
+      "وَإِنَّا",
+      "لَمُوسِعُونَ"
     ],
     "translations": [
-      "And worship Allah And (do) not associate with Him anything and to the parents (do) good",
-      "and with the relatives and the orphans and the needy and the neighbor (who is) near and the neighbor",
-      "(who is) farther away and the companion by your side and the traveler and what possess[ed] your right hands",
-      "Indeed Allah (does) not love (the one) who is [a] proud (and) [a] boastful"
+      "And the heaven We constructed it",
+      "with strength",
+      "and indeed, We",
+      "(are) surely (its) Expanders"
     ],
-    "hint": "This verse emphasizes the importance of monotheism and social responsibilities, including kindness to family and vulnerable groups.",
-    "arabic": "۞ وَٱعْبُدُوا۟ ٱللَّهَ وَلَا تُشْرِكُوا۟ بِهِۦ شَيْـًۭٔا ۖ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًۭا وَبِذِى ٱلْقُرْبَىٰ وَٱلْيَتَـٰمَىٰ وَٱلْمَسَـٰكِينِ وَٱلْجَارِ ذِى ٱلْقُرْبَىٰ وَٱلْجَارِ ٱلْجُنُبِ وَٱلصَّاحِبِ بِٱلْجَنۢبِ وَٱبْنِ ٱلسَّبِيلِ وَمَا مَلَكَتْ أَيْمَـٰنُكُمْ ۗ إِنَّ ٱللَّهَ لَا يُحِبُّ مَن كَانَ مُخْتَالًۭا فَخُورًا",
+    "hint": "This verse describes the immense power used to build the cosmos and a scientific concept about its nature.",
+    "arabic": "وَٱلسَّمَآءَ بَنَيْنَـٰهَا بِأَيْي۟دٍۢ وَإِنَّا لَمُوسِعُونَ",
     "words": [
-      "۞ وَٱعْبُدُوا۟ ٱللَّهَ وَلَا تُشْرِكُوا۟ بِهِۦ شَيْـًۭٔا ۖ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًۭا",
-      "وَبِذِى ٱلْقُرْبَىٰ وَٱلْيَتَـٰمَىٰ وَٱلْمَسَـٰكِينِ وَٱلْجَارِ ذِى ٱلْقُرْبَىٰ وَٱلْجَارِ",
-      "ٱلْجُنُبِ وَٱلصَّاحِبِ بِٱلْجَنۢبِ وَٱبْنِ ٱلسَّبِيلِ وَمَا مَلَكَتْ أَيْمَـٰنُكُمْ ۗ",
-      "إِنَّ ٱللَّهَ لَا يُحِبُّ مَن كَانَ مُخْتَالًۭا فَخُورًا"
+      "وَٱلسَّمَآءَ بَنَيْنَـٰهَا",
+      "بِأَيْي۟دٍۢ",
+      "وَإِنَّا",
+      "لَمُوسِعُونَ"
     ],
-    "verseEn": "Worship Allāh and associate nothing with Him, and to parents do good, and to relatives, orphans, the needy, the near neighbor, the neighbor farther away, the companion at your side, the traveler, and those whom your right hands possess. Indeed, Allāh does not like those who are self-deluding and boastful,"
+    "verseEn": "And the heaven We constructed with strength, and indeed, We are [its] expander."
   },
   "generated": true,
   "model": "auto (chain)"
