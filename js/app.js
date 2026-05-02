@@ -554,7 +554,7 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
             ? `Surah ${surahName} (${linkParsed.surah}:${linkParsed.ayah})`
             : (linkRef || '');
         const quranUrl = linkParsed
-            ? `https://quran.com/${linkParsed.surah}/${linkParsed.ayah}`
+            ? `https://sabaq.net/?s=${linkParsed.surah}&v=${linkParsed.ayah}`
             : null;
         // Build the verse card as a clickable link
         const titleHtml = surahTitle
@@ -563,7 +563,7 @@ function showResultModal({ icon, title, verse, arabic, translation, emojiGrid, s
         const arabicHtml = arabic ? `<span class="result-verse-arabic">${arabic}</span>` : '';
         const transHtml = translationHtml ? `<span class="translation">— ${translationHtml}</span>` : '';
         if (quranUrl) {
-            verseEl.innerHTML = `<a href="${quranUrl}" target="_blank" rel="noopener noreferrer" class="result-verse-link" title="Read on Quran.com"><span class="context-icon">📖</span> ${titleHtml}${arabicHtml}${transHtml}</a>`;
+            verseEl.innerHTML = `<a href="${quranUrl}" target="_blank" rel="noopener noreferrer" class="result-verse-link" title="Read on Sabaq.net"><span class="context-icon">📖</span> ${titleHtml}${arabicHtml}${transHtml}</a>`;
         } else {
             verseEl.innerHTML = `${titleHtml}${arabicHtml}${transHtml}`;
         }
