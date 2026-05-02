@@ -2,19 +2,19 @@
    QURANIQ - CONNECTIONS GAME
    ============================================ */
 
-/* Convert a Quranic reference like "7:26" or "18:95-96" to a quran.com URL */
+/* Convert a Quranic reference like "7:26" or "18:95-96" to a sabaq.net URL */
 function refToQuranLink(ref) {
     if (!ref) return '#';
     // Handle range refs like "18:95-96" → link to first verse "18:95"
     // Handle multi-verse refs like "112:1-4" → link to first verse "112:1"
     const match = ref.match(/(\d+):(\d+)/);
     if (match) {
-        return `https://quran.com/${match[1]}/${match[2]}`;
+        return `https://sabaq.net/?s=${match[1]}&v=${match[2]}`;
     }
     // Fallback: just the surah number
     const surahMatch = ref.match(/(\d+)/);
     if (surahMatch) {
-        return `https://quran.com/${surahMatch[1]}`;
+        return `https://sabaq.net/?s=${surahMatch[1]}`;
     }
     return '#';
 }
@@ -393,7 +393,7 @@ function renderSolvedRows() {
                     <div class="wbw-tooltip" style="display:none;"></div>
                     <div class="verse-slide-ref-row">
                         <button class="verse-play-btn" data-ref="${ref}" title="Play recitation">▶</button>
-                        <a href="${refLink}" target="_blank" class="context-btn" title="View Context on Quran.com">📖</a>
+                        <a href="${refLink}" target="_blank" class="context-btn" title="View Context on Sabaq.net">📖</a>
                     </div>
                     <div class="verse-reveal-hint">TAP ANY WORD TO SEE ITS MEANING</div>
                 </div>` : ''}
@@ -502,7 +502,7 @@ function renderSolvedRows() {
                 return `<div class="theme-verse-item ${s.color}">
                     <div class="theme-verse-cat">${s.nameEn || s.name}</div>
                     <div class="theme-verse-ar">${s.verse.ayah}</div>
-                    <div class="theme-verse-en">${s.verse.en} <a href="${refLink}" target="_blank" class="context-btn" title="View Context on Quran.com">📖</a></div>
+                    <div class="theme-verse-en">${s.verse.en} <a href="${refLink}" target="_blank" class="context-btn" title="View Context on Sabaq.net">📖</a></div>
                 </div>`;
             }).join('');
         } else {

@@ -124,7 +124,7 @@ function renderScramble() {
     // Reference
     const ref = scr.puzzle.reference;
     const refLink = refToQuranLink(ref);
-    document.getElementById('scramble-reference').innerHTML = `${ref} <a href="${refLink}" target="_blank" class="context-btn" title="View Context on Quran.com">📖</a>`;
+    document.getElementById('scramble-reference').innerHTML = `${ref} <a href="${refLink}" target="_blank" class="context-btn" title="View Context on Sabaq.net">📖</a>`;
 
     // Free theme hint — always visible
     let themeEl = document.getElementById('scramble-theme-hint');
