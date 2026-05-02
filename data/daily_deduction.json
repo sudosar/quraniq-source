@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-01",
+  "date": "2026-05-02",
   "puzzle": {
-    "title": "The Throne of Truth",
-    "intro": "A powerful ruler, known for their great wisdom and magnificent throne, receives a mysterious message from an unknown source. This unexpected communication challenges their beliefs and authority, setting them on a diplomatic journey that will test their intellect and ultimately lead to a profound spiritual awakening. Can you uncover the identity of this sovereign and the events that transformed their entire kingdom?",
+    "title": "The Bearer of a Grave Message",
+    "intro": "A righteous soul was sent to guide a people lost in unprecedented transgressions. This messenger stood firm, delivering a stark warning against a corruption that defied the natural order. Despite earnest pleas, the community plunged deeper into darkness, setting the stage for a divine reckoning unlike any other. Can you identify this steadfast servant of Allah?",
     "clues": [
-      "My people and I worshipped the sun, following the ways of our ancestors.",
-      "A bird, a hoopoe, was the unlikely messenger that brought me a letter from a powerful leader.",
-      "To test the sender's wisdom, I sent valuable gifts, but they were returned, as the sender possessed far greater wealth from Allah.",
-      "Before I even arrived at the sender's court, my magnificent throne was miraculously transported there in the blink of an eye.",
-      "Upon my arrival, I was asked if the transported throne was mine, and I answered, 'It is as though it is the very one.'",
-      "I entered a great hall with a floor I mistook for a pool of water, and in that moment of awe, I submitted myself alongside Prophet Sulaiman to Allah, the Lord of the worlds."
+      "I was a relative of another great prophet, and I migrated with him, leaving our homeland behind.",
+      "I was sent to a people whose wickedness was unique, a transgression no creation had committed before them.",
+      "My own household was divided; a close family member secretly sided with the disbelievers.",
+      "Angels, in the form of handsome young men, came to my home as guests, causing me great distress for their safety.",
+      "I offered my own daughters in marriage to my people in a desperate attempt to turn them away from their shameful acts.",
+      "My people were destroyed by a terrible cry and a rain of stones of baked clay, while I and my family, except for one, were saved by leaving in the dead of night."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Queen of Sheba",
-          "Zulaikha (Wife of Al-Aziz)",
-          "Asiya (Wife of Pharaoh)",
-          "The Mother of Musa",
-          "Maryam (Mother of Isa)"
+          "Prophet Shu'ayb",
+          "Prophet Salih",
+          "Prophet Lut",
+          "Prophet Hud",
+          "Prophet Nuh"
         ],
-        "answer": "The Queen of Sheba"
+        "answer": "Prophet Lut"
       },
       "trial": {
-        "label": "The Central Event",
+        "label": "What Was My Primary Trial?",
         "options": [
-          "Receiving a letter from Prophet Sulaiman",
-          "Being thrown into a fire",
-          "Building an ark to survive a flood",
-          "Parting the Red Sea",
-          "Being accused of immodesty"
+          "Convincing a tyrant king not to burn me in a fire.",
+          "Dealing with my brothers' jealousy and being thrown into a well.",
+          "Confronting a people engaged in unprecedented sexual immorality.",
+          "Leading my people out of bondage from a powerful pharaoh.",
+          "Building a massive ship to save the believers from a great flood."
         ],
-        "answer": "Receiving a letter from Prophet Sulaiman"
+        "answer": "Confronting a people engaged in unprecedented sexual immorality."
       },
       "location": {
-        "label": "The Key Object",
+        "label": "What Was the Location of My Mission?",
         "options": [
-          "A magnificent throne",
-          "A golden calf",
-          "A coat of many colors",
-          "A staff that turned into a serpent",
-          "A ship made of planks and nails"
+          "The city of Madyan",
+          "The ancient city of Iram",
+          "The land of Egypt under Pharaoh",
+          "The cities of Sodom and Gomorrah",
+          "The city of Nineveh"
         ],
-        "answer": "A magnificent throne"
+        "answer": "The cities of Sodom and Gomorrah"
       },
       "outcome": {
-        "label": "The Ultimate Outcome",
+        "label": "What Was the Ultimate Outcome?",
         "options": [
-          "Submitting to the one true God (Allah)",
-          "Being turned into a pillar of salt",
-          "Building a high tower to reach God",
-          "Being swallowed by a great fish",
-          "Losing immense wealth as a punishment"
+          "The cities were overturned and showered with stones of baked clay.",
+          "My people were swallowed by the earth along with their wealthy leader.",
+          "My people were destroyed by a violent wind for seven nights and eight days.",
+          "My people were afflicted with plagues like locusts, lice, and frogs.",
+          "A giant fish swallowed me after I abandoned my mission."
         ],
-        "answer": "Submitting to the one true God (Allah)"
+        "answer": "The cities were overturned and showered with stones of baked clay."
       }
     },
-    "verseRef": "27:44",
-    "arabic": "قِيلَ لَهَا ٱدْخُلِى ٱلصَّرْحَ ۖ فَلَمَّا رَأَتْهُ حَسِبَتْهُ لُجَّةًۭ وَكَشَفَتْ عَن سَاقَيْهَا ۚ قَالَ إِنَّهُۥ صَرْحٌۭ مُّمَرَّدٌۭ مِّن قَوَارِيرَ ۗ قَالَتْ رَبِّ إِنِّى ظَلَمْتُ نَفْسِى وَأَسْلَمْتُ مَعَ سُلَيْمَـٰنَ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
-    "verse": "She was told, \"Enter the palace.\" But when she saw it, she thought it was a body of water and uncovered her shins [to wade through]. He said, \"Indeed, it is a palace [whose floor is] made smooth with glass.\" She said, \"My Lord, indeed I have wronged myself, and I submit with Solomon to Allāh, Lord of the worlds.\" (27:44)"
+    "verseRef": "11:82",
+    "arabic": "فَلَمَّا جَآءَ أَمْرُنَا جَعَلْنَا عَـٰلِيَهَا سَافِلَهَا وَأَمْطَرْنَا عَلَيْهَا حِجَارَةًۭ مِّن سِجِّيلٍۢ مَّنضُودٍۢ",
+    "verse": "So when Our command came, We made the highest part [of the city] its lowest and rained upon them stones of layered hard clay, [which were] (11:82)"
   },
   "generated": true,
   "model": "auto (chain)"
