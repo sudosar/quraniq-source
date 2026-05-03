@@ -303,14 +303,16 @@ GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 MIMO_API_URL = "https://api.xiaomimimo.com/v1/chat/completions"
+MINIMAX_API_URL = "https://api.minimax.chat/v1/chat/completions"
 
-# Model fallback chain: Gemini 2.5 Pro → MIMO → DeepSeek v3.2 → Gemini 2.5 Flash → GPT-4.1
+MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
+
+# Model fallback chain (priority order)
 MODEL_CHAIN = [
-    {"id": "gemini-2.5-pro", "api": "gemini", "label": "Gemini 2.5 Pro (Google)"},
+    {"id": "minimax/minimax-v2-0524", "api": "minimax", "label": "Minimax (Primary)"},
+    {"id": "deepseek/deepseek-chat-v3-0324", "api": "deepseek", "label": "DeepSeek V4 Flash"},
     {"id": "xiaomi/mimo-v2-flash", "api": "mimo", "label": "Xiaomi MiMo V2 Flash"},
-    {"id": "deepseek-chat", "api": "deepseek", "label": "DeepSeek v3.2 (Official)"},
-    {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Google)"},
-    {"id": "gpt-4.1", "api": "openai", "label": "GPT-4.1 (OpenAI)"},
+    {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Last Resort)"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -580,6 +582,15 @@ def call_model(prompt, model_config, system_msg=None):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {MIMO_API_KEY}"
         }
+    elif api_type == "minimax":
+        if not MINIMAX_API_KEY:
+            print(f"  ⚠ MINIMAX_API_KEY not set, skipping {model_config['label']}")
+            return None
+        api_url = MINIMAX_API_URL
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {MINIMAX_API_KEY}"
+        }
     else:  # github
         if not GITHUB_TOKEN:
             print(f"  ⚠ GITHUB_TOKEN not set, skipping {model_config['label']}")
@@ -606,7 +617,7 @@ def call_model(prompt, model_config, system_msg=None):
     }
 
     # These APIs support the response_format JSON mode parameter
-    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "mimo"):
+    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "mimo", "minimax"):
         payload["response_format"] = {"type": "json_object"}
 
     try:
