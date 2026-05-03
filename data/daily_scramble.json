@@ -1,32 +1,32 @@
 {
-  "date": "2026-05-02",
+  "date": "2026-05-03",
   "puzzle": {
-    "verseRef": "59:21",
-    "reference": "Surah Al-Hashr (59:21)",
+    "verseRef": "2:153",
+    "reference": "Al-Baqarah (2:153)",
     "segments": [
-      "لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ",
-      "عَلَىٰ جَبَلٍ",
-      "لَّرَأَيْتَهُ خَاشِعًا",
-      "مُّتَصَدِّعًا",
-      "مِّنْ خَشْيَةِ اللَّهِ"
+      "يا أيها الذين آمنوا",
+      "استعينوا بالصبر",
+      "والصلاة",
+      "إن الله",
+      "مع الصابرين"
     ],
     "translations": [
-      "If We (had) sent down this Quran",
-      "on a mountain surely you (would) have seen it humbled",
-      "breaking asunder from (the) fear (of) Allah",
-      "And these examples We present them",
-      "to the people so that they may give thought"
+      "O you who",
+      "believe[d] Seek help",
+      "through patience and the prayer",
+      "Indeed Allah",
+      "(is) with the patient ones"
     ],
-    "hint": "This verse describes the immense power of the Quran's revelation, using a mountain as an example of its potential impact.",
-    "arabic": "لَوْ أَنزَلْنَا هَـٰذَا ٱلْقُرْءَانَ عَلَىٰ جَبَلٍۢ لَّرَأَيْتَهُۥ خَـٰشِعًۭا مُّتَصَدِّعًۭا مِّنْ خَشْيَةِ ٱللَّهِ ۚ وَتِلْكَ ٱلْأَمْثَـٰلُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ",
+    "hint": "This verse encourages believers to find strength and support in two fundamental acts of worship during difficulties.",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ ۚ إِنَّ ٱللَّهَ مَعَ ٱلصَّـٰبِرِينَ",
     "words": [
-      "لَوْ أَنزَلْنَا هَـٰذَا ٱلْقُرْءَانَ",
-      "عَلَىٰ جَبَلٍۢ لَّرَأَيْتَهُۥ خَـٰشِعًۭا",
-      "مُّتَصَدِّعًۭا مِّنْ خَشْيَةِ ٱللَّهِ ۚ",
-      "وَتِلْكَ ٱلْأَمْثَـٰلُ نَضْرِبُهَا",
-      "لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ"
+      "يَـٰٓأَيُّهَا ٱلَّذِينَ",
+      "ءَامَنُوا۟ ٱسْتَعِينُوا۟",
+      "بِٱلصَّبْرِ وَٱلصَّلَوٰةِ ۚ",
+      "إِنَّ ٱللَّهَ",
+      "مَعَ ٱلصَّـٰبِرِينَ"
     ],
-    "verseEn": "If We had sent down this Qur’ān upon a mountain, you would have seen it humbled and splitting from fear of Allāh. And these examples We present to the people that perhaps they will give thought."
+    "verseEn": "O you who have believed, seek help through patience and prayer. Indeed, Allāh is with the patient."
   },
   "generated": true,
   "model": "auto (chain)"

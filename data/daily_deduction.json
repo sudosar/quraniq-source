@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-02",
+  "date": "2026-05-03",
   "puzzle": {
-    "title": "The Bearer of a Grave Message",
-    "intro": "A righteous soul was sent to guide a people lost in unprecedented transgressions. This messenger stood firm, delivering a stark warning against a corruption that defied the natural order. Despite earnest pleas, the community plunged deeper into darkness, setting the stage for a divine reckoning unlike any other. Can you identify this steadfast servant of Allah?",
+    "title": "The Slumbering Seekers of Truth",
+    "intro": "Imagine a time when belief was challenged, and a group of souls chose unwavering conviction over worldly comfort. Faced with a daunting choice, they sought refuge, embarking on a journey that led to an extraordinary slumber. Their story is a testament to divine protection and the power of faith against oppression. Can you discern the identity of these remarkable individuals?",
     "clues": [
-      "I was a relative of another great prophet, and I migrated with him, leaving our homeland behind.",
-      "I was sent to a people whose wickedness was unique, a transgression no creation had committed before them.",
-      "My own household was divided; a close family member secretly sided with the disbelievers.",
-      "Angels, in the form of handsome young men, came to my home as guests, causing me great distress for their safety.",
-      "I offered my own daughters in marriage to my people in a desperate attempt to turn them away from their shameful acts.",
-      "My people were destroyed by a terrible cry and a rain of stones of baked clay, while I and my family, except for one, were saved by leaving in the dead of night."
+      "We were a small assembly, united by a profound belief in the One Creator.",
+      "We lived in a time when a powerful ruler demanded worship of other than Allah.",
+      "To preserve our faith, we decided to abandon our homes and flee the oppression.",
+      "A loyal companion, a creature of the earth, accompanied us on our journey.",
+      "We found sanctuary in a secluded place, where Allah caused us to enter a deep, prolonged sleep.",
+      "When we awoke, we believed only a day or part of a day had passed, but centuries had truly gone by."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Shu'ayb",
-          "Prophet Salih",
-          "Prophet Lut",
-          "Prophet Hud",
-          "Prophet Nuh"
+          "The People of the Ditch",
+          "The People of Thamud",
+          "The People of Saba'",
+          "The People of the Cave",
+          "The People of Madyan"
         ],
-        "answer": "Prophet Lut"
+        "answer": "The People of the Cave"
       },
       "trial": {
-        "label": "What Was My Primary Trial?",
+        "label": "Trial/Event",
         "options": [
-          "Convincing a tyrant king not to burn me in a fire.",
-          "Dealing with my brothers' jealousy and being thrown into a well.",
-          "Confronting a people engaged in unprecedented sexual immorality.",
-          "Leading my people out of bondage from a powerful pharaoh.",
-          "Building a massive ship to save the believers from a great flood."
+          "Being tested with a barren land",
+          "Facing a great flood",
+          "Seeking refuge from a tyrannical ruler",
+          "Being cast into a burning fire",
+          "Challenging a sorcerer's magic"
         ],
-        "answer": "Confronting a people engaged in unprecedented sexual immorality."
+        "answer": "Seeking refuge from a tyrannical ruler"
       },
       "location": {
-        "label": "What Was the Location of My Mission?",
+        "label": "Key Element",
         "options": [
-          "The city of Madyan",
-          "The ancient city of Iram",
-          "The land of Egypt under Pharaoh",
-          "The cities of Sodom and Gomorrah",
-          "The city of Nineveh"
+          "A grand palace",
+          "A ship/ark",
+          "A deep well",
+          "A cave",
+          "A towering mountain"
         ],
-        "answer": "The cities of Sodom and Gomorrah"
+        "answer": "A cave"
       },
       "outcome": {
-        "label": "What Was the Ultimate Outcome?",
+        "label": "Outcome",
         "options": [
-          "The cities were overturned and showered with stones of baked clay.",
-          "My people were swallowed by the earth along with their wealthy leader.",
-          "My people were destroyed by a violent wind for seven nights and eight days.",
-          "My people were afflicted with plagues like locusts, lice, and frogs.",
-          "A giant fish swallowed me after I abandoned my mission."
+          "Being granted a kingdom",
+          "A miraculous slumber for centuries",
+          "Being swallowed by the earth",
+          "Being saved from a destructive storm",
+          "Being provided with a heavenly table"
         ],
-        "answer": "The cities were overturned and showered with stones of baked clay."
+        "answer": "A miraculous slumber for centuries"
       }
     },
-    "verseRef": "11:82",
-    "arabic": "فَلَمَّا جَآءَ أَمْرُنَا جَعَلْنَا عَـٰلِيَهَا سَافِلَهَا وَأَمْطَرْنَا عَلَيْهَا حِجَارَةًۭ مِّن سِجِّيلٍۢ مَّنضُودٍۢ",
-    "verse": "So when Our command came, We made the highest part [of the city] its lowest and rained upon them stones of layered hard clay, [which were] (11:82)"
+    "verseRef": "18:25",
+    "arabic": "وَلَبِثُوا۟ فِى كَهْفِهِمْ ثَلَـٰثَ مِا۟ئَةٍۢ سِنِينَ وَٱزْدَادُوا۟ تِسْعًۭا",
+    "verse": "And they remained in their cave for three hundred years and exceeded by nine. (18:25)"
   },
   "generated": true,
   "model": "auto (chain)"
