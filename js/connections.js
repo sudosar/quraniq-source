@@ -516,7 +516,7 @@ const carouselState = {};
 
 /**
  * Load word-by-word data for a verse container.
- * Fetches from Quran.com API, replaces the static verse text
+ * Fetches from api.quran.com (Quran.com API), replaces the static verse text
  * with individually tappable Arabic words.
  */
 async function loadWBW(container) {
