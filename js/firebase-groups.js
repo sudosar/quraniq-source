@@ -571,14 +571,17 @@ async function submitFirebaseScore(gameMode, crescents) {
  * the user plays a stale puzzle between midnight UTC and puzzle deployment.
  */
 function getTodayDateString() {
-    // Use the puzzle date if available (set by loadDailyWithHolding)
+    // Primary: use the wall-clock date so scores match what the user perceives as "today"
+    const now = new Date();
+    const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    // Fallback: only use puzzle date if it matches today's date
+    // (puzzles are generated hours before the calendar flips over, so puzzle date
+    // may slightly lag real date — only trust it if it matches today)
     if (typeof getActivePuzzleDate === 'function') {
         const pd = getActivePuzzleDate();
-        if (pd) return pd;
+        if (pd === today) return pd;
     }
-    // Fallback to UTC date (e.g., before puzzle loads)
-    const now = new Date();
-    return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}-${String(now.getUTCDate()).padStart(2, '0')}`;
+    return today;
 }
 
 // ==================== LEADERBOARD ====================
