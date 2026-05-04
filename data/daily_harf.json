@@ -1,12 +1,12 @@
 {
-  "date": "2026-05-03",
+  "date": "2026-05-04",
   "puzzle": {
-    "word": "نار",
-    "display": "نَار",
-    "hint": "A source of both warmth and severe consequence.",
-    "verseRef": "3:131",
-    "arabicVerse": "وَٱتَّقُوا۟ ٱلنَّارَ ٱلَّتِىٓ أُعِدَّتْ لِلْكَـٰفِرِينَ",
-    "verse": "3:131 — And fear the Fire, which has been prepared for the disbelievers."
+    "word": "سبيل",
+    "display": "سَبِيل",
+    "hint": "It refers to a path or way, often associated with the divine or a cause.",
+    "verseRef": "2:154",
+    "arabicVerse": "وَلَا تَقُولُوا۟ لِمَن يُقْتَلُ فِى سَبِيلِ ٱللَّهِ أَمْوَٰتٌۢ ۚ بَلْ أَحْيَآءٌۭ وَلَـٰكِن لَّا تَشْعُرُونَ",
+    "verse": "2:154 — And do not say about those who are killed in the way of Allāh, \"They are dead.\" Rather, they are alive, but you perceive [it] not."
   },
   "generated": true,
   "model": "auto (chain)"

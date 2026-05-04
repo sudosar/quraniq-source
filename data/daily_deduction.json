@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-03",
+  "date": "2026-05-04",
   "puzzle": {
-    "title": "The Slumbering Seekers of Truth",
-    "intro": "Imagine a time when belief was challenged, and a group of souls chose unwavering conviction over worldly comfort. Faced with a daunting choice, they sought refuge, embarking on a journey that led to an extraordinary slumber. Their story is a testament to divine protection and the power of faith against oppression. Can you discern the identity of these remarkable individuals?",
+    "title": "The Architect of Arrogance",
+    "intro": "In an ancient land ruled by a defiant power, a key individual held a position of influence. This soul was instrumental in the ruler's grand schemes, contributing to their oppressive reign and challenging the divine message. Their legacy is intertwined with a pursuit of worldly might and a denial of truth.",
     "clues": [
-      "We were a small assembly, united by a profound belief in the One Creator.",
-      "We lived in a time when a powerful ruler demanded worship of other than Allah.",
-      "To preserve our faith, we decided to abandon our homes and flee the oppression.",
-      "A loyal companion, a creature of the earth, accompanied us on our journey.",
-      "We found sanctuary in a secluded place, where Allah caused us to enter a deep, prolonged sleep.",
-      "When we awoke, we believed only a day or part of a day had passed, but centuries had truly gone by."
+      "I served a formidable ruler who oppressed a people for generations.",
+      "My name is frequently mentioned in the Divine Book alongside this powerful leader.",
+      "I was tasked with a grand construction project, a towering structure meant to reach the heavens.",
+      "I advised my master to slay the sons of the Children of Israel and spare their daughters.",
+      "I was involved in plots and conspiracies against a mighty messenger of Allah.",
+      "My end, along with my master and his army, came in the waters of a vast sea."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The People of the Ditch",
-          "The People of Thamud",
-          "The People of Saba'",
-          "The People of the Cave",
-          "The People of Madyan"
+          "Nimrod",
+          "Abrahah",
+          "Goliath",
+          "Iblis",
+          "Haman"
         ],
-        "answer": "The People of the Cave"
+        "answer": "Haman"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Being tested with a barren land",
-          "Facing a great flood",
-          "Seeking refuge from a tyrannical ruler",
-          "Being cast into a burning fire",
-          "Challenging a sorcerer's magic"
+          "Being tested with immense wealth",
+          "Leading an army against a sacred house",
+          "Building a tower to reach God",
+          "Being thrown into a fire for their belief",
+          "Being cast into a well by siblings"
         ],
-        "answer": "Seeking refuge from a tyrannical ruler"
+        "answer": "Building a tower to reach God"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A grand palace",
-          "A ship/ark",
-          "A deep well",
-          "A cave",
-          "A towering mountain"
+          "The Ark",
+          "The Staff",
+          "The Mountain",
+          "The Tower",
+          "The Whale"
         ],
-        "answer": "A cave"
+        "answer": "The Tower"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Being granted a kingdom",
-          "A miraculous slumber for centuries",
+          "Being granted immense wisdom",
+          "Becoming a prophet",
           "Being swallowed by the earth",
-          "Being saved from a destructive storm",
-          "Being provided with a heavenly table"
+          "Being granted a kingdom",
+          "Drowning in the sea"
         ],
-        "answer": "A miraculous slumber for centuries"
+        "answer": "Drowning in the sea"
       }
     },
-    "verseRef": "18:25",
-    "arabic": "وَلَبِثُوا۟ فِى كَهْفِهِمْ ثَلَـٰثَ مِا۟ئَةٍۢ سِنِينَ وَٱزْدَادُوا۟ تِسْعًۭا",
-    "verse": "And they remained in their cave for three hundred years and exceeded by nine. (18:25)"
+    "verseRef": "40:36-37",
+    "arabic": "",
+    "verse": "40:36-37"
   },
   "generated": true,
   "model": "auto (chain)"
