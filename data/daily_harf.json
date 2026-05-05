@@ -1,12 +1,12 @@
 {
-  "date": "2026-05-04",
+  "date": "2026-05-05",
   "puzzle": {
-    "word": "سبيل",
-    "display": "سَبِيل",
-    "hint": "It refers to a path or way, often associated with the divine or a cause.",
-    "verseRef": "2:154",
-    "arabicVerse": "وَلَا تَقُولُوا۟ لِمَن يُقْتَلُ فِى سَبِيلِ ٱللَّهِ أَمْوَٰتٌۢ ۚ بَلْ أَحْيَآءٌۭ وَلَـٰكِن لَّا تَشْعُرُونَ",
-    "verse": "2:154 — And do not say about those who are killed in the way of Allāh, \"They are dead.\" Rather, they are alive, but you perceive [it] not."
+    "word": "جناح",
+    "display": "جَنَاح",
+    "hint": "A part of a bird, often symbolizing protection or humility towards parents.",
+    "verseRef": "17:24",
+    "arabicVerse": "وَٱخْفِضْ لَهُمَا جَنَاحَ ٱلذُّلِّ مِنَ ٱلرَّحْمَةِ وَقُل رَّبِّ ٱرْحَمْهُمَا كَمَا رَبَّيَانِى صَغِيرًۭا",
+    "verse": "17:24 — And lower to them the wing of humility out of mercy and say, \"My Lord, have mercy upon them as they brought me up [when I was] small.\""
   },
   "generated": true,
   "model": "auto (chain)"

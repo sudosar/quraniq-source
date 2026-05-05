@@ -1,35 +1,32 @@
 {
-  "date": "2026-05-04",
+  "date": "2026-05-05",
   "puzzle": {
-    "verseRef": "61:4",
-    "reference": "As-Saff (61:4)",
+    "verseRef": "1:7",
+    "reference": "Al-Fatihah (1:7)",
     "segments": [
-      "إِنَّ اللَّهَ",
-      "يُحِبُّ الَّذِينَ",
-      "يُقَاتِلُونَ فِي",
-      "سَبِيلِهِ صَفًّا",
-      "كَأَنَّهُم",
-      "بُنْيَانٌ مَّرْصُوصٌ"
+      "صِرَاطَ الَّذِينَ",
+      "أَنْعَمْتَ عَلَيْهِمْ",
+      "غَيْرِ الْمَغْضُوبِ",
+      "عَلَيْهِمْ",
+      "وَلَا الضَّالِّينَ"
     ],
     "translations": [
-      "Indeed Allah",
-      "loves those who",
-      "fight in",
-      "His Way (in) a row",
-      "as if they (were) a structure",
-      "joined firmly"
+      "(The) path (of) those",
+      "You have bestowed (Your) Favors on them",
+      "not (of) those who earned (Your) wrath",
+      "on themselves and not",
+      "(of) those who go astray"
     ],
-    "hint": "This verse describes the beloved quality of unity and steadfastness in striving for a noble cause.",
-    "arabic": "إِنَّ ٱللَّهَ يُحِبُّ ٱلَّذِينَ يُقَـٰتِلُونَ فِى سَبِيلِهِۦ صَفًّۭا كَأَنَّهُم بُنْيَـٰنٌۭ مَّرْصُوصٌۭ",
+    "hint": "This verse concludes a foundational prayer, distinguishing between the guided and those who went astray.",
+    "arabic": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ",
     "words": [
-      "إِنَّ ٱللَّهَ",
-      "يُحِبُّ ٱلَّذِينَ",
-      "يُقَـٰتِلُونَ فِى",
-      "سَبِيلِهِۦ صَفًّۭا",
-      "كَأَنَّهُم بُنْيَـٰنٌۭ",
-      "مَّرْصُوصٌۭ"
+      "صِرَٰطَ ٱلَّذِينَ",
+      "أَنْعَمْتَ عَلَيْهِمْ",
+      "غَيْرِ ٱلْمَغْضُوبِ",
+      "عَلَيْهِمْ وَلَا",
+      "ٱلضَّآلِّينَ"
     ],
-    "verseEn": "Indeed, Allāh loves those who fight in His cause in a row as though they are a [single] structure joined firmly."
+    "verseEn": "The path of those upon whom You have bestowed favor, not of those who have earned [Your] anger or of those who are astray."
   },
   "generated": true,
   "model": "auto (chain)"
