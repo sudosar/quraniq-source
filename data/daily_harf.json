@@ -1,12 +1,12 @@
 {
-  "date": "2026-05-05",
+  "date": "2026-05-06",
   "puzzle": {
-    "word": "جناح",
-    "display": "جَنَاح",
-    "hint": "A part of a bird, often symbolizing protection or humility towards parents.",
-    "verseRef": "17:24",
-    "arabicVerse": "وَٱخْفِضْ لَهُمَا جَنَاحَ ٱلذُّلِّ مِنَ ٱلرَّحْمَةِ وَقُل رَّبِّ ٱرْحَمْهُمَا كَمَا رَبَّيَانِى صَغِيرًۭا",
-    "verse": "17:24 — And lower to them the wing of humility out of mercy and say, \"My Lord, have mercy upon them as they brought me up [when I was] small.\""
+    "word": "قوم",
+    "display": "قَوْم",
+    "hint": "A collective term for a group of people or a nation, often addressed by prophets.",
+    "verseRef": "7:65",
+    "arabicVerse": "۞ وَإِلَىٰ عَادٍ أَخَاهُمْ هُودًۭا ۗ قَالَ يَـٰقَوْمِ ٱعْبُدُوا۟ ٱللَّهَ مَا لَكُم مِّنْ إِلَـٰهٍ غَيْرُهُۥٓ ۚ أَفَلَا تَتَّقُونَ",
+    "verse": "7:65 — And to the ʿAad [We sent] their brother Hūd. He said, \"O my people, worship Allāh; you have no deity other than Him. Then will you not fear Him?\""
   },
   "generated": true,
   "model": "auto (chain)"
