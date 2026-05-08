@@ -1,12 +1,12 @@
 {
-  "date": "2026-05-07",
+  "date": "2026-05-08",
   "puzzle": {
-    "word": "نبا",
-    "display": "نَبَأٌ",
-    "hint": "It can be great or important, often revealed or announced.",
-    "verseRef": "38:67",
-    "arabicVerse": "قُلْ هُوَ نَبَؤٌا۟ عَظِيمٌ",
-    "verse": "38:67 — Say, \"It is great news"
+    "word": "روح",
+    "display": "رُوح",
+    "hint": "It was sent to Mary in the form of a perfect man.",
+    "verseRef": "19:17",
+    "arabicVerse": "فَٱتَّخَذَتْ مِن دُونِهِمْ حِجَابًۭا فَأَرْسَلْنَآ إِلَيْهَا رُوحَنَا فَتَمَثَّلَ لَهَا بَشَرًۭا سَوِيًّۭا",
+    "verse": "19:17 — And she took, in seclusion from them, a screen. Then We sent to her Our Angel [i.e., Gabriel], and he represented himself to her as a well-proportioned man."
   },
   "generated": true,
   "model": "auto (chain)"
