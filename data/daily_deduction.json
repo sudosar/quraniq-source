@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-08",
+  "date": "2026-05-09",
   "puzzle": {
-    "title": "The Steadfast Seeker of Truth",
-    "intro": "In a time shrouded by ignorance and the worship of false deities, a profound journey of faith unfolded. This individual challenged the norms of their society, seeking the One True Creator with unwavering conviction. Prepare to uncover the identity of a soul whose legacy continues to inspire millions.",
+    "title": "The Fading Gardens of Prosperity",
+    "intro": "In a land blessed with abundant bounty, a community flourished, living amidst signs of divine grace. Their prosperity was a testament to their Lord's favor, a gift meant to inspire gratitude and obedience. Yet, despite the clear indications of their blessings, a turning point arrived, challenging their appreciation for the source of their immense wealth and comfort.",
     "clues": [
-      "I questioned the celestial bodies, seeking the true Lord who creates and sustains all.",
-      "I was commanded to leave my homeland, journeying to a land blessed by Allah.",
-      "I challenged the idols of my people, confronting their futility directly by breaking them.",
-      "I was cast into a raging fire by my people, yet it became cool and peaceful for me by Allah's command.",
-      "I was tested with the command to sacrifice my beloved firstborn son, a trial of ultimate submission.",
-      "I, along with my son, raised the foundations of the first House of Worship on Earth, a sanctuary for all humanity."
+      "We were blessed with two gardens, one on the right and one on the left, abundant with produce.",
+      "We were commanded to eat from the provision of our Lord and be grateful to Him for a good land and a forgiving Lord.",
+      "We grew arrogant and turned away from the path of gratitude, boasting of our wealth and power.",
+      "We demanded that our Lord increase the distance between our journeys, showing disdain for the ease He had provided.",
+      "We were warned by a messenger, but we rejected the message and continued in our heedlessness.",
+      "Our great dam, which sustained our prosperity, was ultimately broken, leading to a devastating flood."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Nuh",
-          "Prophet Yusuf",
-          "Prophet Salih",
-          "Prophet Ibrahim",
-          "Prophet Isa"
+          "People of Thamud",
+          "People of Midian",
+          "People of 'Aad",
+          "People of Lut",
+          "People of Saba"
         ],
-        "answer": "Prophet Ibrahim"
+        "answer": "People of Saba"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "The great flood",
-          "The splitting of the sea",
-          "The destruction of Thamud",
-          "The command to sacrifice a son",
-          "The journey through the desert with the Ark"
+          "Famine and drought",
+          "Invasion by a mighty army",
+          "A devastating earthquake",
+          "A destructive flood from a broken dam",
+          "Oppression by a tyrannical ruler"
         ],
-        "answer": "The command to sacrifice a son"
+        "answer": "A destructive flood from a broken dam"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Staff",
-          "The Mountain of Tur",
-          "The Ark",
-          "The Kaaba",
-          "The Golden Calf"
+          "A golden calf",
+          "A miraculous she-camel",
+          "A great dam",
+          "A towering edifice",
+          "A deep well"
         ],
-        "answer": "The Kaaba"
+        "answer": "A great dam"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Became a ruler of Egypt",
-          "His people were drowned",
-          "Was granted wisdom and a righteous lineage",
-          "Was swallowed by a whale",
-          "His city was overturned"
+          "We were transformed into apes and pigs",
+          "We were saved and migrated to a new land",
+          "We were scattered and our land became barren",
+          "We ascended to the heavens",
+          "We built a new, more prosperous kingdom"
         ],
-        "answer": "Was granted wisdom and a righteous lineage"
+        "answer": "We were scattered and our land became barren"
       }
     },
-    "verseRef": "21:69",
-    "arabic": "قُلْنَا يَـٰنَارُ كُونِى بَرْدًۭا وَسَلَـٰمًا عَلَىٰٓ إِبْرَٰهِيمَ",
-    "verse": "We [i.e., Allāh] said, \"O fire, be coolness and safety upon Abraham.\" (21:69)"
+    "verseRef": "34:16",
+    "arabic": "فَأَعْرَضُوا۟ فَأَرْسَلْنَا عَلَيْهِمْ سَيْلَ ٱلْعَرِمِ وَبَدَّلْنَـٰهُم بِجَنَّتَيْهِمْ جَنَّتَيْنِ ذَوَاتَىْ أُكُلٍ خَمْطٍۢ وَأَثْلٍۢ وَشَىْءٍۢ مِّن سِدْرٍۢ قَلِيلٍۢ",
+    "verse": "But they turned away [refusing], so We sent upon them the flood of the dam, and We replaced their two [fields of] gardens with gardens of bitter fruit, tamarisks and something of sparse lote trees. (34:16)"
   },
   "generated": true,
   "model": "auto (chain)"

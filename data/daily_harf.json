@@ -1,12 +1,12 @@
 {
-  "date": "2026-05-08",
+  "date": "2026-05-09",
   "puzzle": {
-    "word": "روح",
-    "display": "رُوح",
-    "hint": "It was sent to Mary in the form of a perfect man.",
-    "verseRef": "19:17",
-    "arabicVerse": "فَٱتَّخَذَتْ مِن دُونِهِمْ حِجَابًۭا فَأَرْسَلْنَآ إِلَيْهَا رُوحَنَا فَتَمَثَّلَ لَهَا بَشَرًۭا سَوِيًّۭا",
-    "verse": "19:17 — And she took, in seclusion from them, a screen. Then We sent to her Our Angel [i.e., Gabriel], and he represented himself to her as a well-proportioned man."
+    "word": "نعمة",
+    "display": "نِعْمَة",
+    "hint": "A divine gift or favor, often uncountable.",
+    "verseRef": "16:18",
+    "arabicVerse": "وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌۭ رَّحِيمٌۭ",
+    "verse": "16:18 — And if you should count the favors of Allāh, you could not enumerate them. Indeed, Allāh is Forgiving and Merciful."
   },
   "generated": true,
   "model": "auto (chain)"

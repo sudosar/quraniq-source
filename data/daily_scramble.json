@@ -1,29 +1,29 @@
 {
-  "date": "2026-05-08",
+  "date": "2026-05-09",
   "puzzle": {
-    "verseRef": "89:28",
-    "reference": "Surah Al-Fajr (89:28)",
+    "verseRef": "16:128",
+    "reference": "An-Nahl (16:128)",
     "segments": [
-      "ارْجِعِي",
-      "إِلَىٰ رَبِّكِ",
-      "رَاضِيَةً",
-      "مَّرْضِيَّةً"
+      "إِنَّ اللَّهَ",
+      "مَعَ الَّذِينَ اتَّقَوْا",
+      "وَالَّذِينَ",
+      "هُم مُّحْسِنُونَ"
     ],
     "translations": [
-      "Return to",
-      "your Lord",
-      "well pleased",
-      "and pleasing"
+      "Indeed Allah",
+      "(is) with those who",
+      "fear (Him) and those who",
+      "[they] (are) good-doers"
     ],
-    "hint": "This verse speaks to the tranquil soul's ultimate journey and its state upon returning to its Creator.",
-    "arabic": "ٱرْجِعِىٓ إِلَىٰ رَبِّكِ رَاضِيَةًۭ مَّرْضِيَّةًۭ",
+    "hint": "This verse describes Allah's companionship and support for believers who possess two key qualities: piety and excellence in deeds.",
+    "arabic": "إِنَّ ٱللَّهَ مَعَ ٱلَّذِينَ ٱتَّقَوا۟ وَّٱلَّذِينَ هُم مُّحْسِنُونَ",
     "words": [
-      "ٱرْجِعِىٓ إِلَىٰ",
-      "رَبِّكِ",
-      "رَاضِيَةًۭ",
-      "مَّرْضِيَّةًۭ"
+      "إِنَّ ٱللَّهَ",
+      "مَعَ ٱلَّذِينَ",
+      "ٱتَّقَوا۟ وَّٱلَّذِينَ",
+      "هُم مُّحْسِنُونَ"
     ],
-    "verseEn": "Return to your Lord, well-pleased and pleasing [to Him],"
+    "verseEn": "Indeed, Allāh is with those who fear Him and those who are doers of good."
   },
   "generated": true,
   "model": "auto (chain)"
