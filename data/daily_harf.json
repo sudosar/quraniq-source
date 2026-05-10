@@ -1,12 +1,12 @@
 {
-  "date": "2026-05-09",
+  "date": "2026-05-10",
   "puzzle": {
-    "word": "نعمة",
-    "display": "نِعْمَة",
-    "hint": "A divine gift or favor, often uncountable.",
-    "verseRef": "16:18",
-    "arabicVerse": "وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌۭ رَّحِيمٌۭ",
-    "verse": "16:18 — And if you should count the favors of Allāh, you could not enumerate them. Indeed, Allāh is Forgiving and Merciful."
+    "word": "رحمن",
+    "display": "رَحْمَٰن",
+    "hint": "A divine attribute, often paired with 'Raheem', signifying vast and encompassing mercy.",
+    "verseRef": "55:1",
+    "arabicVerse": "ٱلرَّحْمَـٰنُ",
+    "verse": "55:1 — The Most Merciful"
   },
   "generated": true,
   "model": "auto (chain)"

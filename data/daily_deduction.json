@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-09",
+  "date": "2026-05-10",
   "puzzle": {
-    "title": "The Fading Gardens of Prosperity",
-    "intro": "In a land blessed with abundant bounty, a community flourished, living amidst signs of divine grace. Their prosperity was a testament to their Lord's favor, a gift meant to inspire gratitude and obedience. Yet, despite the clear indications of their blessings, a turning point arrived, challenging their appreciation for the source of their immense wealth and comfort.",
+    "title": "The Builders of Towers",
+    "intro": "In a time long past, a mighty civilization rose, distinguished by its impressive feats of construction and formidable strength. This collective entity was granted abundant resources and physical prowess, yet they chose a path of defiance against the divine message sent to guide them. Their story serves as a profound lesson in the annals of history, a testament to the consequences of rejecting truth.",
     "clues": [
-      "We were blessed with two gardens, one on the right and one on the left, abundant with produce.",
-      "We were commanded to eat from the provision of our Lord and be grateful to Him for a good land and a forgiving Lord.",
-      "We grew arrogant and turned away from the path of gratitude, boasting of our wealth and power.",
-      "We demanded that our Lord increase the distance between our journeys, showing disdain for the ease He had provided.",
-      "We were warned by a messenger, but we rejected the message and continued in our heedlessness.",
-      "Our great dam, which sustained our prosperity, was ultimately broken, leading to a devastating flood."
+      "We were granted immense physical strength and stature, unlike any other people of our time.",
+      "We were known for building grand structures and lofty pillars in every high place, thinking we would live forever.",
+      "A messenger from among us was sent to warn us, calling us to worship Allah alone and to abandon our idols.",
+      "We arrogantly questioned our messenger, asking if they came to us only to make us worship Allah and abandon what our ancestors worshipped.",
+      "Our land was blessed with gardens, springs, and fertile fields, but we attributed our prosperity to our own might, not to our Creator.",
+      "For our persistent disbelief and mockery, we were ultimately annihilated by a terrifying, furious wind that raged for many days and nights."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
           "People of Thamud",
-          "People of Midian",
-          "People of 'Aad",
-          "People of Lut",
-          "People of Saba"
+          "People of Fir'aun",
+          "People of Nuh",
+          "People of Madyan",
+          "People of 'Ad"
         ],
-        "answer": "People of Saba"
+        "answer": "People of 'Ad"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Famine and drought",
-          "Invasion by a mighty army",
-          "A devastating earthquake",
-          "A destructive flood from a broken dam",
-          "Oppression by a tyrannical ruler"
+          "Being asked to sacrifice a specific camel",
+          "Being challenged to produce ten surahs like the Quran",
+          "Being shown the splitting of the sea",
+          "Being warned by a prophet about the impending flood",
+          "Rejecting a prophet who warned against building excessively and worshipping idols"
         ],
-        "answer": "A destructive flood from a broken dam"
+        "answer": "Rejecting a prophet who warned against building excessively and worshipping idols"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A golden calf",
-          "A miraculous she-camel",
-          "A great dam",
-          "A towering edifice",
-          "A deep well"
+          "The Ark",
+          "The Staff",
+          "The Fire",
+          "The City of Sodom",
+          "Lofty pillars and strong dwellings"
         ],
-        "answer": "A great dam"
+        "answer": "Lofty pillars and strong dwellings"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "We were transformed into apes and pigs",
-          "We were saved and migrated to a new land",
-          "We were scattered and our land became barren",
-          "We ascended to the heavens",
-          "We built a new, more prosperous kingdom"
+          "Drowned in a great flood",
+          "Swallowed by the earth",
+          "Transformed into apes and swine",
+          "Destroyed by a thunderous blast",
+          "Annihilated by a furious, devastating wind"
         ],
-        "answer": "We were scattered and our land became barren"
+        "answer": "Annihilated by a furious, devastating wind"
       }
     },
-    "verseRef": "34:16",
-    "arabic": "فَأَعْرَضُوا۟ فَأَرْسَلْنَا عَلَيْهِمْ سَيْلَ ٱلْعَرِمِ وَبَدَّلْنَـٰهُم بِجَنَّتَيْهِمْ جَنَّتَيْنِ ذَوَاتَىْ أُكُلٍ خَمْطٍۢ وَأَثْلٍۢ وَشَىْءٍۢ مِّن سِدْرٍۢ قَلِيلٍۢ",
-    "verse": "But they turned away [refusing], so We sent upon them the flood of the dam, and We replaced their two [fields of] gardens with gardens of bitter fruit, tamarisks and something of sparse lote trees. (34:16)"
+    "verseRef": "41:15",
+    "arabic": "فَأَمَّا عَادٌۭ فَٱسْتَكْبَرُوا۟ فِى ٱلْأَرْضِ بِغَيْرِ ٱلْحَقِّ وَقَالُوا۟ مَنْ أَشَدُّ مِنَّا قُوَّةً ۖ أَوَلَمْ يَرَوْا۟ أَنَّ ٱللَّهَ ٱلَّذِى خَلَقَهُمْ هُوَ أَشَدُّ مِنْهُمْ قُوَّةًۭ ۖ وَكَانُوا۟ بِـَٔايَـٰتِنَا يَجْحَدُونَ",
+    "verse": "As for ʿAad, they were arrogant upon the earth without right and said, \"Who is greater than us in strength?\" Did they not consider that Allāh who created them was greater than them in strength? But they were rejecting Our signs. (41:15)"
   },
   "generated": true,
   "model": "auto (chain)"
