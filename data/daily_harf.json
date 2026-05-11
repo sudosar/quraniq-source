@@ -1,12 +1,12 @@
 {
-  "date": "2026-05-10",
+  "date": "2026-05-11",
   "puzzle": {
-    "word": "رحمن",
-    "display": "رَحْمَٰن",
-    "hint": "A divine attribute, often paired with 'Raheem', signifying vast and encompassing mercy.",
-    "verseRef": "55:1",
-    "arabicVerse": "ٱلرَّحْمَـٰنُ",
-    "verse": "55:1 — The Most Merciful"
+    "word": "عدل",
+    "display": "عَدْل",
+    "hint": "A fundamental principle of fairness and equity, commanded by God.",
+    "verseRef": "4:58",
+    "arabicVerse": "۞ إِنَّ ٱللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا۟ ٱلْأَمَـٰنَـٰتِ إِلَىٰٓ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ ٱلنَّاسِ أَن تَحْكُمُوا۟ بِٱلْعَدْلِ ۚ إِنَّ ٱللَّهَ نِعِمَّا يَعِظُكُم بِهِۦٓ ۗ إِنَّ ٱللَّهَ كَانَ سَمِيعًۢا بَصِيرًۭا",
+    "verse": "4:58 — Indeed, Allāh commands you to render trusts to whom they are due and when you judge between people to judge with justice. Excellent is that which Allāh instructs you. Indeed, Allāh is ever Hearing and Seeing."
   },
   "generated": true,
   "model": "auto (chain)"

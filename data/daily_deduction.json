@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-10",
+  "date": "2026-05-11",
   "puzzle": {
-    "title": "The Builders of Towers",
-    "intro": "In a time long past, a mighty civilization rose, distinguished by its impressive feats of construction and formidable strength. This collective entity was granted abundant resources and physical prowess, yet they chose a path of defiance against the divine message sent to guide them. Their story serves as a profound lesson in the annals of history, a testament to the consequences of rejecting truth.",
+    "title": "The Steadfast Witnesses",
+    "intro": "Imagine a time when belief was tested by fire, and unwavering conviction became the ultimate defiance. You are tasked with uncovering the identity of a group whose story is recounted in the Quran, a narrative of profound faith against overwhelming tyranny. Unravel the clues to discover who these souls were, and the extraordinary circumstances they faced.",
     "clues": [
-      "We were granted immense physical strength and stature, unlike any other people of our time.",
-      "We were known for building grand structures and lofty pillars in every high place, thinking we would live forever.",
-      "A messenger from among us was sent to warn us, calling us to worship Allah alone and to abandon our idols.",
-      "We arrogantly questioned our messenger, asking if they came to us only to make us worship Allah and abandon what our ancestors worshipped.",
-      "Our land was blessed with gardens, springs, and fertile fields, but we attributed our prosperity to our own might, not to our Creator.",
-      "For our persistent disbelief and mockery, we were ultimately annihilated by a terrifying, furious wind that raged for many days and nights."
+      "We stood firm in our conviction, despite immense pressure to renounce our faith.",
+      "We were targeted by a powerful ruler who sought to extinguish the light of monotheism.",
+      "We witnessed great signs and miracles, yet our oppressors remained heedless.",
+      "We endured a gruesome method of persecution designed to terrorize others into submission.",
+      "We were cast into a blazing inferno, yet our steadfastness earned us a lofty station with Allah.",
+      "Our story is recounted in a Surah named after celestial constellations, warning of the fate of those who persecute believers."
     ],
     "categories": {
       "identity": {
-        "label": "Who Am I?",
+        "label": "Who Are We?",
         "options": [
-          "People of Thamud",
-          "People of Fir'aun",
-          "People of Nuh",
-          "People of Madyan",
-          "People of 'Ad"
+          "The People of Thamud",
+          "The People of 'Ad",
+          "The People of the Ditch",
+          "The People of Midian",
+          "The People of the Elephant"
         ],
-        "answer": "People of 'Ad"
+        "answer": "The People of the Ditch"
       },
       "trial": {
-        "label": "Trial/Event",
+        "label": "Our Persecution",
         "options": [
-          "Being asked to sacrifice a specific camel",
-          "Being challenged to produce ten surahs like the Quran",
-          "Being shown the splitting of the sea",
-          "Being warned by a prophet about the impending flood",
-          "Rejecting a prophet who warned against building excessively and worshipping idols"
+          "Being drowned in a flood",
+          "Being consumed by a scorching wind",
+          "Being cast into a fiery trench",
+          "Being swallowed by the earth",
+          "Being transformed into apes"
         ],
-        "answer": "Rejecting a prophet who warned against building excessively and worshipping idols"
+        "answer": "Being cast into a fiery trench"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Ark",
-          "The Staff",
-          "The Fire",
-          "The City of Sodom",
-          "Lofty pillars and strong dwellings"
+          "A massive flood",
+          "A great earthquake",
+          "A deep, burning trench",
+          "A powerful idol",
+          "A devastating drought"
         ],
-        "answer": "Lofty pillars and strong dwellings"
+        "answer": "A deep, burning trench"
       },
       "outcome": {
-        "label": "Outcome",
+        "label": "Our Ultimate Fate",
         "options": [
-          "Drowned in a great flood",
-          "Swallowed by the earth",
-          "Transformed into apes and swine",
-          "Destroyed by a thunderous blast",
-          "Annihilated by a furious, devastating wind"
+          "They were granted a kingdom on earth.",
+          "They were saved by a miraculous escape.",
+          "They achieved martyrdom and eternal reward.",
+          "They were transformed into a different species.",
+          "They were given immense wealth and prosperity."
         ],
-        "answer": "Annihilated by a furious, devastating wind"
+        "answer": "They achieved martyrdom and eternal reward."
       }
     },
-    "verseRef": "41:15",
-    "arabic": "فَأَمَّا عَادٌۭ فَٱسْتَكْبَرُوا۟ فِى ٱلْأَرْضِ بِغَيْرِ ٱلْحَقِّ وَقَالُوا۟ مَنْ أَشَدُّ مِنَّا قُوَّةً ۖ أَوَلَمْ يَرَوْا۟ أَنَّ ٱللَّهَ ٱلَّذِى خَلَقَهُمْ هُوَ أَشَدُّ مِنْهُمْ قُوَّةًۭ ۖ وَكَانُوا۟ بِـَٔايَـٰتِنَا يَجْحَدُونَ",
-    "verse": "As for ʿAad, they were arrogant upon the earth without right and said, \"Who is greater than us in strength?\" Did they not consider that Allāh who created them was greater than them in strength? But they were rejecting Our signs. (41:15)"
+    "verseRef": "85:8",
+    "arabic": "وَمَا نَقَمُوا۟ مِنْهُمْ إِلَّآ أَن يُؤْمِنُوا۟ بِٱللَّهِ ٱلْعَزِيزِ ٱلْحَمِيدِ",
+    "verse": "And they resented them not except because they believed in Allāh, the Exalted in Might, the Praiseworthy, (85:8)"
   },
   "generated": true,
   "model": "auto (chain)"
