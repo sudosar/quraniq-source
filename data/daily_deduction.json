@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-11",
+  "date": "2026-05-12",
   "puzzle": {
-    "title": "The Steadfast Witnesses",
-    "intro": "Imagine a time when belief was tested by fire, and unwavering conviction became the ultimate defiance. You are tasked with uncovering the identity of a group whose story is recounted in the Quran, a narrative of profound faith against overwhelming tyranny. Unravel the clues to discover who these souls were, and the extraordinary circumstances they faced.",
+    "title": "The Unyielding Authority",
+    "intro": "Across ancient lands, a powerful authority once held sway, commanding immense resources and the lives of countless individuals. Despite clear signs and warnings, this ruler chose a path of defiance, leading to a profound confrontation that would echo through time.",
     "clues": [
-      "We stood firm in our conviction, despite immense pressure to renounce our faith.",
-      "We were targeted by a powerful ruler who sought to extinguish the light of monotheism.",
-      "We witnessed great signs and miracles, yet our oppressors remained heedless.",
-      "We endured a gruesome method of persecution designed to terrorize others into submission.",
-      "We were cast into a blazing inferno, yet our steadfastness earned us a lofty station with Allah.",
-      "Our story is recounted in a Surah named after celestial constellations, warning of the fate of those who persecute believers."
+      "I claimed ultimate power and authority over a vast domain.",
+      "I challenged a humble messenger sent by the Lord of all realms.",
+      "My people were known for their mastery of grand structures and the river that sustained our civilization.",
+      "I was witness to many miraculous signs, including a staff turning into a serpent and a hand glowing bright.",
+      "I refused to let a group of enslaved people leave my land, despite divine commands.",
+      "My pursuit of the departing people led me and my armies into the heart of a divided sea."
     ],
     "categories": {
       "identity": {
-        "label": "Who Are We?",
+        "label": "Who Am I?",
         "options": [
-          "The People of Thamud",
-          "The People of 'Ad",
-          "The People of the Ditch",
-          "The People of Midian",
-          "The People of the Elephant"
+          "Prophet Yusuf",
+          "King Talut",
+          "Fir'awn (Pharaoh)",
+          "Prophet Dawud",
+          "Namrud"
         ],
-        "answer": "The People of the Ditch"
+        "answer": "Fir'awn (Pharaoh)"
       },
       "trial": {
-        "label": "Our Persecution",
+        "label": "Key Confrontation",
         "options": [
-          "Being drowned in a flood",
-          "Being consumed by a scorching wind",
-          "Being cast into a fiery trench",
-          "Being swallowed by the earth",
-          "Being transformed into apes"
+          "The flood that engulfed the land",
+          "The splitting of the sea",
+          "The burning bush",
+          "The construction of the Kaaba",
+          "The destruction by a mighty wind"
         ],
-        "answer": "Being cast into a fiery trench"
+        "answer": "The splitting of the sea"
       },
       "location": {
-        "label": "Key Element",
+        "label": "Defining Aspect",
         "options": [
-          "A massive flood",
-          "A great earthquake",
-          "A deep, burning trench",
-          "A powerful idol",
-          "A devastating drought"
+          "A talking animal",
+          "A staff and a glowing hand",
+          "A miraculous birth",
+          "A flying carpet",
+          "A majestic throne on water"
         ],
-        "answer": "A deep, burning trench"
+        "answer": "A staff and a glowing hand"
       },
       "outcome": {
-        "label": "Our Ultimate Fate",
+        "label": "Ultimate Fate",
         "options": [
-          "They were granted a kingdom on earth.",
-          "They were saved by a miraculous escape.",
-          "They achieved martyrdom and eternal reward.",
-          "They were transformed into a different species.",
-          "They were given immense wealth and prosperity."
+          "Ascended to the heavens",
+          "Swallowed by the earth",
+          "Drowned in the sea",
+          "Transformed into an ape",
+          "Given immense wealth and power"
         ],
-        "answer": "They achieved martyrdom and eternal reward."
+        "answer": "Drowned in the sea"
       }
     },
-    "verseRef": "85:8",
-    "arabic": "وَمَا نَقَمُوا۟ مِنْهُمْ إِلَّآ أَن يُؤْمِنُوا۟ بِٱللَّهِ ٱلْعَزِيزِ ٱلْحَمِيدِ",
-    "verse": "And they resented them not except because they believed in Allāh, the Exalted in Might, the Praiseworthy, (85:8)"
+    "verseRef": "7:136",
+    "arabic": "فَٱنتَقَمْنَا مِنْهُمْ فَأَغْرَقْنَـٰهُمْ فِى ٱلْيَمِّ بِأَنَّهُمْ كَذَّبُوا۟ بِـَٔايَـٰتِنَا وَكَانُوا۟ عَنْهَا غَـٰفِلِينَ",
+    "verse": "So We took retribution from them, and We drowned them in the sea because they denied Our signs and were heedless of them. (7:136)"
   },
   "generated": true,
   "model": "auto (chain)"

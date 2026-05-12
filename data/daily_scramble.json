@@ -1,32 +1,38 @@
 {
-  "date": "2026-05-11",
+  "date": "2026-05-12",
   "puzzle": {
-    "verseRef": "4:78",
-    "reference": "An-Nisa (4:78)",
+    "verseRef": "64:11",
+    "reference": "At-Taghabun (64:11)",
     "segments": [
-      "أَيْنَمَا تَكُونُوا",
-      "يُدْرِككُّمُ الْمَوْتُ",
-      "وَلَوْ كُنتُمْ",
-      "فِي بُرُوجٍ",
-      "مُّشَيَّدَةٍ"
+      "مَا أَصَابَ مِن مُّصِيبَةٍ",
+      "إِلَّا بِإِذْنِ اللَّهِ",
+      "وَمَن يُؤْمِن بِاللَّهِ",
+      "يَهْدِ قَلْبَهُ",
+      "وَاللَّهُ",
+      "بِكُلِّ شَيْءٍ",
+      "عَلِيمٌ"
     ],
     "translations": [
-      "Wherever you be will overtake you [the] death even if you are in towers",
-      "lofty And if befalls them any good they say This (is)",
-      "from Allah And if befalls them any evil they say This",
-      "(is) (from) you Say All (is) from Allah",
-      "So what (is wrong) (with) these [the] people not do they seem (to) understand any statement"
+      "Not strikes any",
+      "disaster except by (the) permission",
+      "(of) Allah And whoever",
+      "believes in Allah",
+      "He guides his heart",
+      "And Allah of every",
+      "thing (is) All-Knowing"
     ],
-    "hint": "This verse speaks to the inescapable reality of mortality, regardless of protection.",
-    "arabic": "أَيْنَمَا تَكُونُوا۟ يُدْرِككُّمُ ٱلْمَوْتُ وَلَوْ كُنتُمْ فِى بُرُوجٍۢ مُّشَيَّدَةٍۢ ۗ وَإِن تُصِبْهُمْ حَسَنَةٌۭ يَقُولُوا۟ هَـٰذِهِۦ مِنْ عِندِ ٱللَّهِ ۖ وَإِن تُصِبْهُمْ سَيِّئَةٌۭ يَقُولُوا۟ هَـٰذِهِۦ مِنْ عِندِكَ ۚ قُلْ كُلٌّۭ مِّنْ عِندِ ٱللَّهِ ۖ فَمَالِ هَـٰٓؤُلَآءِ ٱلْقَوْمِ لَا يَكَادُونَ يَفْقَهُونَ حَدِيثًۭا",
+    "hint": "This verse speaks about the divine decree in times of hardship and the guidance granted to those who truly believe.",
+    "arabic": "مَآ أَصَابَ مِن مُّصِيبَةٍ إِلَّا بِإِذْنِ ٱللَّهِ ۗ وَمَن يُؤْمِنۢ بِٱللَّهِ يَهْدِ قَلْبَهُۥ ۚ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌۭ",
     "words": [
-      "أَيْنَمَا تَكُونُوا۟ يُدْرِككُّمُ ٱلْمَوْتُ وَلَوْ كُنتُمْ فِى بُرُوجٍۢ",
-      "مُّشَيَّدَةٍۢ ۗ وَإِن تُصِبْهُمْ حَسَنَةٌۭ يَقُولُوا۟ هَـٰذِهِۦ مِنْ",
-      "عِندِ ٱللَّهِ ۖ وَإِن تُصِبْهُمْ سَيِّئَةٌۭ يَقُولُوا۟ هَـٰذِهِۦ",
-      "مِنْ عِندِكَ ۚ قُلْ كُلٌّۭ مِّنْ عِندِ ٱللَّهِ ۖ",
-      "فَمَالِ هَـٰٓؤُلَآءِ ٱلْقَوْمِ لَا يَكَادُونَ يَفْقَهُونَ حَدِيثًۭا"
+      "مَآ أَصَابَ مِن",
+      "مُّصِيبَةٍ إِلَّا بِإِذْنِ",
+      "ٱللَّهِ ۗ وَمَن",
+      "يُؤْمِنۢ بِٱللَّهِ",
+      "يَهْدِ قَلْبَهُۥ ۚ",
+      "وَٱللَّهُ بِكُلِّ",
+      "شَىْءٍ عَلِيمٌۭ"
     ],
-    "verseEn": "Wherever you may be, death will overtake you, even if you should be within towers of lofty construction. But if good comes to them, they say, \"This is from Allāh\"; and if evil befalls them, they say, \"This is from you.\" Say, \"All [things] are from Allāh.\" So what is [the matter] with those people that they can hardly understand any statement?"
+    "verseEn": "No disaster strikes except by permission of Allāh. And whoever believes in Allāh - He will guide his heart. And Allāh is Knowing of all things."
   },
   "generated": true,
   "model": "auto (chain)"
