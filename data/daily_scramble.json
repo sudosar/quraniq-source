@@ -1,38 +1,32 @@
 {
-  "date": "2026-05-12",
+  "date": "2026-05-14",
   "puzzle": {
-    "verseRef": "64:11",
-    "reference": "At-Taghabun (64:11)",
+    "verseRef": "7:55",
+    "reference": "Al-A'raf (7:55)",
     "segments": [
-      "مَا أَصَابَ مِن مُّصِيبَةٍ",
-      "إِلَّا بِإِذْنِ اللَّهِ",
-      "وَمَن يُؤْمِن بِاللَّهِ",
-      "يَهْدِ قَلْبَهُ",
-      "وَاللَّهُ",
-      "بِكُلِّ شَيْءٍ",
-      "عَلِيمٌ"
+      "ادْعُوا رَبَّكُمْ",
+      "تَضَرُّعًا وَخُفْيَةً",
+      "إِنَّهُ",
+      "لَا يُحِبُّ",
+      "الْمُعْتَدِينَ"
     ],
     "translations": [
-      "Not strikes any",
-      "disaster except by (the) permission",
-      "(of) Allah And whoever",
-      "believes in Allah",
-      "He guides his heart",
-      "And Allah of every",
-      "thing (is) All-Knowing"
+      "Call upon your Lord",
+      "humbly and privately",
+      "Indeed, He (does) not",
+      "love",
+      "the transgressors"
     ],
-    "hint": "This verse speaks about the divine decree in times of hardship and the guidance granted to those who truly believe.",
-    "arabic": "مَآ أَصَابَ مِن مُّصِيبَةٍ إِلَّا بِإِذْنِ ٱللَّهِ ۗ وَمَن يُؤْمِنۢ بِٱللَّهِ يَهْدِ قَلْبَهُۥ ۚ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌۭ",
+    "hint": "This verse encourages a specific manner of supplication and warns against exceeding limits in prayer.",
+    "arabic": "ٱدْعُوا۟ رَبَّكُمْ تَضَرُّعًۭا وَخُفْيَةً ۚ إِنَّهُۥ لَا يُحِبُّ ٱلْمُعْتَدِينَ",
     "words": [
-      "مَآ أَصَابَ مِن",
-      "مُّصِيبَةٍ إِلَّا بِإِذْنِ",
-      "ٱللَّهِ ۗ وَمَن",
-      "يُؤْمِنۢ بِٱللَّهِ",
-      "يَهْدِ قَلْبَهُۥ ۚ",
-      "وَٱللَّهُ بِكُلِّ",
-      "شَىْءٍ عَلِيمٌۭ"
+      "ٱدْعُوا۟ رَبَّكُمْ",
+      "تَضَرُّعًۭا وَخُفْيَةً ۚ",
+      "إِنَّهُۥ لَا",
+      "يُحِبُّ",
+      "ٱلْمُعْتَدِينَ"
     ],
-    "verseEn": "No disaster strikes except by permission of Allāh. And whoever believes in Allāh - He will guide his heart. And Allāh is Knowing of all things."
+    "verseEn": "Call upon your Lord in humility and privately; indeed, He does not like transgressors."
   },
   "generated": true,
   "model": "auto (chain)"

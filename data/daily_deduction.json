@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-12",
+  "date": "2026-05-14",
   "puzzle": {
-    "title": "The Unyielding Authority",
-    "intro": "Across ancient lands, a powerful authority once held sway, commanding immense resources and the lives of countless individuals. Despite clear signs and warnings, this ruler chose a path of defiance, leading to a profound confrontation that would echo through time.",
+    "title": "The Dispenser of Timeless Wisdom",
+    "intro": "A revered figure, known for their profound insights and sagacious advice, once imparted counsel that transcends generations. Their words, recorded in sacred scripture, guide individuals towards gratitude, patience, and righteous conduct.",
     "clues": [
-      "I claimed ultimate power and authority over a vast domain.",
-      "I challenged a humble messenger sent by the Lord of all realms.",
-      "My people were known for their mastery of grand structures and the river that sustained our civilization.",
-      "I was witness to many miraculous signs, including a staff turning into a serpent and a hand glowing bright.",
-      "I refused to let a group of enslaved people leave my land, despite divine commands.",
-      "My pursuit of the departing people led me and my armies into the heart of a divided sea."
+      "I was blessed with wisdom, not prophethood.",
+      "I advised my child on the greatest of sins: associating partners with Allah.",
+      "I taught about the weight of deeds, even a mustard seed's worth, and how Allah will bring it forth.",
+      "I emphasized gratitude to Allah and to one's parents, acknowledging the struggles of raising a child.",
+      "My counsel included establishing prayer, enjoining good, forbidding evil, and enduring patiently what befalls one.",
+      "A chapter in the Quran is named after me, containing my teachings and the lessons I shared."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Yusuf",
-          "King Talut",
-          "Fir'awn (Pharaoh)",
+          "Prophet Sulaiman",
           "Prophet Dawud",
-          "Namrud"
+          "Prophet Yahya",
+          "Luqman",
+          "Prophet Musa"
         ],
-        "answer": "Fir'awn (Pharaoh)"
+        "answer": "Luqman"
       },
       "trial": {
-        "label": "Key Confrontation",
+        "label": "Central Theme",
         "options": [
-          "The flood that engulfed the land",
-          "The splitting of the sea",
-          "The burning bush",
-          "The construction of the Kaaba",
-          "The destruction by a mighty wind"
+          "Building the Kaaba",
+          "Splitting the sea",
+          "Imparting wisdom",
+          "Surviving a flood",
+          "Being swallowed by a fish"
         ],
-        "answer": "The splitting of the sea"
+        "answer": "Imparting wisdom"
       },
       "location": {
-        "label": "Defining Aspect",
+        "label": "Key Element",
         "options": [
-          "A talking animal",
-          "A staff and a glowing hand",
-          "A miraculous birth",
-          "A flying carpet",
-          "A majestic throne on water"
+          "The Ark",
+          "The Staff",
+          "The Mountain of Tur",
+          "His Son",
+          "The Golden Calf"
         ],
-        "answer": "A staff and a glowing hand"
+        "answer": "His Son"
       },
       "outcome": {
-        "label": "Ultimate Fate",
+        "label": "Outcome",
         "options": [
-          "Ascended to the heavens",
-          "Swallowed by the earth",
-          "Drowned in the sea",
-          "Transformed into an ape",
-          "Given immense wealth and power"
+          "His people were destroyed",
+          "His wisdom became a guide",
+          "He was granted a kingdom",
+          "He was raised to the heavens",
+          "He was granted immense wealth"
         ],
-        "answer": "Drowned in the sea"
+        "answer": "His wisdom became a guide"
       }
     },
-    "verseRef": "7:136",
-    "arabic": "فَٱنتَقَمْنَا مِنْهُمْ فَأَغْرَقْنَـٰهُمْ فِى ٱلْيَمِّ بِأَنَّهُمْ كَذَّبُوا۟ بِـَٔايَـٰتِنَا وَكَانُوا۟ عَنْهَا غَـٰفِلِينَ",
-    "verse": "So We took retribution from them, and We drowned them in the sea because they denied Our signs and were heedless of them. (7:136)"
+    "verseRef": "31:12",
+    "arabic": "وَلَقَدْ ءَاتَيْنَا لُقْمَـٰنَ ٱلْحِكْمَةَ أَنِ ٱشْكُرْ لِلَّهِ ۚ وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِۦ ۖ وَمَن كَفَرَ فَإِنَّ ٱللَّهَ غَنِىٌّ حَمِيدٌۭ",
+    "verse": "And We had certainly given Luqmān wisdom [and said], \"Be grateful to Allāh.\" And whoever is grateful is grateful for [the benefit of] himself. And whoever denies [His favor] - then indeed, Allāh is Free of need and Praiseworthy. (31:12)"
   },
   "generated": true,
   "model": "auto (chain)"
