@@ -1,32 +1,35 @@
 {
-  "date": "2026-05-14",
+  "date": "2026-05-15",
   "puzzle": {
-    "verseRef": "7:55",
-    "reference": "Al-A'raf (7:55)",
+    "verseRef": "10:62",
+    "reference": "Surah Yunus (10:62)",
     "segments": [
-      "ادْعُوا رَبَّكُمْ",
-      "تَضَرُّعًا وَخُفْيَةً",
-      "إِنَّهُ",
-      "لَا يُحِبُّ",
-      "الْمُعْتَدِينَ"
+      "أَلَا إِنَّ",
+      "أَوْلِيَاءَ اللَّهِ",
+      "لَا خَوْفٌ",
+      "عَلَيْهِمْ",
+      "وَلَا هُمْ",
+      "يَحْزَنُونَ"
     ],
     "translations": [
-      "Call upon your Lord",
-      "humbly and privately",
-      "Indeed, He (does) not",
-      "love",
-      "the transgressors"
+      "No doubt Indeed",
+      "(the) friends (of) Allah",
+      "(there will be) no fear",
+      "upon then and not",
+      "they",
+      "will grieve"
     ],
-    "hint": "This verse encourages a specific manner of supplication and warns against exceeding limits in prayer.",
-    "arabic": "ٱدْعُوا۟ رَبَّكُمْ تَضَرُّعًۭا وَخُفْيَةً ۚ إِنَّهُۥ لَا يُحِبُّ ٱلْمُعْتَدِينَ",
+    "hint": "This verse describes the peace and security granted to those who are truly close to their Creator.",
+    "arabic": "أَلَآ إِنَّ أَوْلِيَآءَ ٱللَّهِ لَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ",
     "words": [
-      "ٱدْعُوا۟ رَبَّكُمْ",
-      "تَضَرُّعًۭا وَخُفْيَةً ۚ",
-      "إِنَّهُۥ لَا",
-      "يُحِبُّ",
-      "ٱلْمُعْتَدِينَ"
+      "أَلَآ إِنَّ",
+      "أَوْلِيَآءَ ٱللَّهِ",
+      "لَا خَوْفٌ",
+      "عَلَيْهِمْ وَلَا",
+      "هُمْ",
+      "يَحْزَنُونَ"
     ],
-    "verseEn": "Call upon your Lord in humility and privately; indeed, He does not like transgressors."
+    "verseEn": "Unquestionably, [for] the allies of Allāh there will be no fear concerning them, nor will they grieve -"
   },
   "generated": true,
   "model": "auto (chain)"
