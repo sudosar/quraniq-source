@@ -1,35 +1,29 @@
 {
-  "date": "2026-05-15",
+  "date": "2026-05-16",
   "puzzle": {
-    "verseRef": "10:62",
-    "reference": "Surah Yunus (10:62)",
+    "verseRef": "94:5",
+    "reference": "Ash-Sharh (94:5)",
     "segments": [
-      "أَلَا إِنَّ",
-      "أَوْلِيَاءَ اللَّهِ",
-      "لَا خَوْفٌ",
-      "عَلَيْهِمْ",
-      "وَلَا هُمْ",
-      "يَحْزَنُونَ"
+      "فَإِنَّ",
+      "مَعَ",
+      "الْعُسْرِ",
+      "يُسْرًا"
     ],
     "translations": [
-      "No doubt Indeed",
-      "(the) friends (of) Allah",
-      "(there will be) no fear",
-      "upon then and not",
-      "they",
-      "will grieve"
+      "So indeed",
+      "with",
+      "the hardship",
+      "(is) ease"
     ],
-    "hint": "This verse describes the peace and security granted to those who are truly close to their Creator.",
-    "arabic": "أَلَآ إِنَّ أَوْلِيَآءَ ٱللَّهِ لَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ",
+    "hint": "This verse offers a profound reassurance regarding the nature of challenges and the promise of relief.",
+    "arabic": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
     "words": [
-      "أَلَآ إِنَّ",
-      "أَوْلِيَآءَ ٱللَّهِ",
-      "لَا خَوْفٌ",
-      "عَلَيْهِمْ وَلَا",
-      "هُمْ",
-      "يَحْزَنُونَ"
+      "فَإِنَّ",
+      "مَعَ",
+      "ٱلْعُسْرِ",
+      "يُسْرًا"
     ],
-    "verseEn": "Unquestionably, [for] the allies of Allāh there will be no fear concerning them, nor will they grieve -"
+    "verseEn": "For indeed, with hardship [will be] ease [i.e., relief]."
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-15",
+  "date": "2026-05-16",
   "puzzle": {
-    "title": "The Custodian of a Divine Sign",
-    "intro": "Deep within a sacred sanctuary, a blessed soul was nurtured under divine care. This individual was destined to play a pivotal role in a miraculous event, becoming a testament to Allah's boundless power and wisdom. Their journey unveiled a profound truth, challenging perceptions and establishing a unique sign for all humanity.",
+    "title": "The Steadfast Builder of Salvation",
+    "intro": "A figure of immense patience and unwavering conviction, this individual dedicated countless years to a divine mission, facing relentless scorn and rejection. Their story is a powerful testament to faith in the face of overwhelming disbelief, culminating in a momentous event that reshaped the world.",
     "clues": [
-      "I was chosen and purified by Allah above all women of my time.",
-      "I was placed under the guardianship of a righteous prophet, who found sustenance miraculously provided in my prayer chamber.",
-      "I secluded myself from my family to a private place to worship Allah.",
-      "An angel appeared to me in the form of a perfect man, bringing tidings of a pure son, though I had known no male.",
-      "After the pangs of childbirth, I was instructed to shake the trunk of a palm tree to find fresh sustenance.",
-      "When I returned to my people carrying my newborn, they questioned me, but my infant son miraculously spoke from the cradle in my defense."
+      "I dedicated an incredibly long period of my life calling my people to the worship of Allah.",
+      "My people mocked me and accused me of manifest error and madness.",
+      "I was commanded to build something that seemed unusual for my landlocked community.",
+      "Only a few believed and joined me and my family on this unique construction.",
+      "I carried pairs of every living creature on board, as instructed by Allah.",
+      "A great flood engulfed the earth, saving only those who were with me in my vessel, while my own son perished for his disbelief."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Sarah (wife of Prophet Ibrahim)",
-          "Hajar (mother of Prophet Ismail)",
-          "Bilqis (Queen of Sheba)",
-          "Asiya (wife of Pharaoh)",
-          "Maryam (Mary)"
+          "Prophet Salih",
+          "Prophet Hud",
+          "Prophet Nuh",
+          "Prophet Dawud",
+          "Prophet Sulayman"
         ],
-        "answer": "Maryam (Mary)"
+        "answer": "Prophet Nuh"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "A great flood that destroyed a disbelieving nation",
-          "Being thrown into a blazing fire for denying idols",
-          "The miraculous birth of a child without a father",
-          "Being swallowed by a whale for abandoning a mission",
-          "The destruction of a city for immoral practices"
+          "The destruction by an earthquake",
+          "The splitting of the sea",
+          "The great flood",
+          "The fire of Nimrod",
+          "The plague of frogs"
         ],
-        "answer": "The miraculous birth of a child without a father"
+        "answer": "The great flood"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A golden calf",
-          "The Ark of the Covenant",
-          "A sacred prayer chamber (Mihrab)",
-          "A talking bird (Hudhud)",
-          "A staff that turned into a serpent"
+          "The burning bush",
+          "The ark",
+          "The well of water",
+          "The golden calf",
+          "The mountain of Tur"
         ],
-        "answer": "A sacred prayer chamber (Mihrab)"
+        "answer": "The ark"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "The construction of a magnificent temple",
-          "The splitting of the sea for a people to cross",
-          "A child who spoke from the cradle in defense of their parent",
-          "The revelation of a divine book to guide humanity",
-          "A kingdom blessed with wind and jinn"
+          "Received a kingdom",
+          "His people were transformed into apes",
+          "His people were saved by a miracle",
+          "His people were drowned",
+          "His people were struck by a thunderbolt"
         ],
-        "answer": "A child who spoke from the cradle in defense of their parent"
+        "answer": "His people were drowned"
       }
     },
-    "verseRef": "3:42",
-    "arabic": "وَإِذْ قَالَتِ ٱلْمَلَـٰٓئِكَةُ يَـٰمَرْيَمُ إِنَّ ٱللَّهَ ٱصْطَفَىٰكِ وَطَهَّرَكِ وَٱصْطَفَىٰكِ عَلَىٰ نِسَآءِ ٱلْعَـٰلَمِينَ",
-    "verse": "And [mention] when the angels said, \"O Mary, indeed Allāh has chosen you and purified you and chosen you above the women of the worlds. (3:42)"
+    "verseRef": "71:25",
+    "arabic": "مِّمَّا خَطِيٓـَٔـٰتِهِمْ أُغْرِقُوا۟ فَأُدْخِلُوا۟ نَارًۭا فَلَمْ يَجِدُوا۟ لَهُم مِّن دُونِ ٱللَّهِ أَنصَارًۭا",
+    "verse": "Because of their sins they were drowned and put into the Fire, and they found not for themselves besides Allāh [any] helpers. (71:25)"
   },
   "generated": true,
   "model": "auto (chain)"

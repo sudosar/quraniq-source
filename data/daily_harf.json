@@ -1,12 +1,12 @@
 {
-  "date": "2026-05-15",
+  "date": "2026-05-16",
   "puzzle": {
-    "word": "نهر",
-    "display": "نَهَر",
-    "hint": "A flowing body of water, often promised in Paradise.",
-    "verseRef": "54:54",
-    "arabicVerse": "إِنَّ ٱلْمُتَّقِينَ فِى جَنَّـٰتٍۢ وَنَهَرٍۢ",
-    "verse": "54:54 — Indeed, the righteous will be among gardens and rivers,"
+    "word": "يوم",
+    "display": "يَوْم",
+    "hint": "A period of 24 hours, often associated with judgment in the Quran.",
+    "verseRef": "51:12",
+    "arabicVerse": "يَسْـَٔلُونَ أَيَّانَ يَوْمُ ٱلدِّينِ",
+    "verse": "51:12 — They ask, \"When is the Day of Recompense?\""
   },
   "generated": true,
   "model": "auto (chain)"
