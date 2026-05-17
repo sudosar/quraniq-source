@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-16",
+  "date": "2026-05-17",
   "puzzle": {
-    "title": "The Steadfast Builder of Salvation",
-    "intro": "A figure of immense patience and unwavering conviction, this individual dedicated countless years to a divine mission, facing relentless scorn and rejection. Their story is a powerful testament to faith in the face of overwhelming disbelief, culminating in a momentous event that reshaped the world.",
+    "title": "The Architects of Stone",
+    "intro": "Imagine a powerful civilization, gifted with strength and skill, carving grand dwellings into mountainsides. This collective possessed immense prosperity and a unique architectural prowess. Yet, despite receiving clear warnings, they chose a path that would lead to a dramatic and unforgettable conclusion. Can you identify this group whose story serves as a profound lesson for all who reflect?",
     "clues": [
-      "I dedicated an incredibly long period of my life calling my people to the worship of Allah.",
-      "My people mocked me and accused me of manifest error and madness.",
-      "I was commanded to build something that seemed unusual for my landlocked community.",
-      "Only a few believed and joined me and my family on this unique construction.",
-      "I carried pairs of every living creature on board, as instructed by Allah.",
-      "A great flood engulfed the earth, saving only those who were with me in my vessel, while my own son perished for his disbelief."
+      "We were granted strength and skill, enabling us to carve magnificent homes directly into the mountains.",
+      "We were given a clear sign from Allah, a unique creature that was to be left undisturbed to graze.",
+      "Our community became arrogant, challenging the divine message brought by a messenger from among us.",
+      "We conspired to harm the miraculous sign, despite the warnings of severe punishment.",
+      "We defied the command to let the special creature drink from our well on alternate days.",
+      "We met a devastating end, struck down by a single, terrifying blast after our act of transgression."
     ],
     "categories": {
       "identity": {
-        "label": "Who Am I?",
+        "label": "Who Are We?",
         "options": [
-          "Prophet Salih",
-          "Prophet Hud",
-          "Prophet Nuh",
-          "Prophet Dawud",
-          "Prophet Sulayman"
+          "People of 'Ad",
+          "People of Midian",
+          "People of the Elephant",
+          "People of Thamud",
+          "People of Lut"
         ],
-        "answer": "Prophet Nuh"
+        "answer": "People of Thamud"
       },
       "trial": {
-        "label": "Trial/Event",
+        "label": "Our Major Trial/Event",
         "options": [
-          "The destruction by an earthquake",
+          "The flood that engulfed the land",
           "The splitting of the sea",
-          "The great flood",
-          "The fire of Nimrod",
-          "The plague of frogs"
+          "The destruction by a single blast/shout",
+          "The burning of a city",
+          "The turning of a mountain into dust"
         ],
-        "answer": "The great flood"
+        "answer": "The destruction by a single blast/shout"
       },
       "location": {
-        "label": "Key Element",
+        "label": "A Key Element in Our Story",
         "options": [
-          "The burning bush",
-          "The ark",
-          "The well of water",
-          "The golden calf",
-          "The mountain of Tur"
+          "A golden calf",
+          "A miraculous she-camel",
+          "A burning bush",
+          "A talking bird",
+          "A majestic throne"
         ],
-        "answer": "The ark"
+        "answer": "A miraculous she-camel"
       },
       "outcome": {
-        "label": "Outcome",
+        "label": "Our Ultimate Outcome",
         "options": [
-          "Received a kingdom",
-          "His people were transformed into apes",
-          "His people were saved by a miracle",
-          "His people were drowned",
-          "His people were struck by a thunderbolt"
+          "Granted immense wealth and power",
+          "Elevated to prophethood",
+          "Utter annihilation by a divine punishment",
+          "Forgiven after sincere repentance",
+          "Scattered across the earth to wander"
         ],
-        "answer": "His people were drowned"
+        "answer": "Utter annihilation by a divine punishment"
       }
     },
-    "verseRef": "71:25",
-    "arabic": "مِّمَّا خَطِيٓـَٔـٰتِهِمْ أُغْرِقُوا۟ فَأُدْخِلُوا۟ نَارًۭا فَلَمْ يَجِدُوا۟ لَهُم مِّن دُونِ ٱللَّهِ أَنصَارًۭا",
-    "verse": "Because of their sins they were drowned and put into the Fire, and they found not for themselves besides Allāh [any] helpers. (71:25)"
+    "verseRef": "26:158",
+    "arabic": "فَأَخَذَهُمُ ٱلْعَذَابُ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةًۭ ۖ وَمَا كَانَ أَكْثَرُهُم مُّؤْمِنِينَ",
+    "verse": "And the punishment seized them. Indeed in that is a sign, but most of them were not to be believers. (26:158)"
   },
   "generated": true,
   "model": "auto (chain)"

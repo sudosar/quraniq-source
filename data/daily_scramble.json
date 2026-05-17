@@ -1,29 +1,29 @@
 {
-  "date": "2026-05-16",
+  "date": "2026-05-17",
   "puzzle": {
-    "verseRef": "94:5",
-    "reference": "Ash-Sharh (94:5)",
+    "verseRef": "29:45",
+    "reference": "Al-Ankabut (29:45)",
     "segments": [
-      "فَإِنَّ",
-      "مَعَ",
-      "الْعُسْرِ",
-      "يُسْرًا"
+      "إِنَّ الصَّلَاةَ",
+      "تَنْهَىٰ عَنِ",
+      "الْفَحْشَاءِ",
+      "وَالْمُنكَرِ"
     ],
     "translations": [
-      "So indeed",
-      "with",
-      "the hardship",
-      "(is) ease"
+      "Recite what has been revealed to you of the Book",
+      "and establish the prayer Indeed the prayer prevents",
+      "from the immorality and evil deeds and surely (the) remembrance (of) Allah",
+      "(is) greatest And Allah knows what you do"
     ],
-    "hint": "This verse offers a profound reassurance regarding the nature of challenges and the promise of relief.",
-    "arabic": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+    "hint": "This verse highlights a primary spiritual benefit and purpose of performing the daily prayers.",
+    "arabic": "ٱتْلُ مَآ أُوحِىَ إِلَيْكَ مِنَ ٱلْكِتَـٰبِ وَأَقِمِ ٱلصَّلَوٰةَ ۖ إِنَّ ٱلصَّلَوٰةَ تَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ ۗ وَلَذِكْرُ ٱللَّهِ أَكْبَرُ ۗ وَٱللَّهُ يَعْلَمُ مَا تَصْنَعُونَ",
     "words": [
-      "فَإِنَّ",
-      "مَعَ",
-      "ٱلْعُسْرِ",
-      "يُسْرًا"
+      "ٱتْلُ مَآ أُوحِىَ إِلَيْكَ مِنَ ٱلْكِتَـٰبِ",
+      "وَأَقِمِ ٱلصَّلَوٰةَ ۖ إِنَّ ٱلصَّلَوٰةَ تَنْهَىٰ",
+      "عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ ۗ وَلَذِكْرُ ٱللَّهِ",
+      "أَكْبَرُ ۗ وَٱللَّهُ يَعْلَمُ مَا تَصْنَعُونَ"
     ],
-    "verseEn": "For indeed, with hardship [will be] ease [i.e., relief]."
+    "verseEn": "Recite, [O Muḥammad], what has been revealed to you of the Book and establish prayer. Indeed, prayer prohibits immorality and wrongdoing, and the remembrance of Allāh is greater. And Allāh knows that which you do."
   },
   "generated": true,
   "model": "auto (chain)"
