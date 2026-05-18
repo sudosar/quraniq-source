@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Daily Puzzle Generator for QuranIQ — All 4 Games
+Daily Puzzle Generator for QuranIQ - All 4 Games
 Generates daily puzzles for:
   1. Connections (Ayah Connections)
   2. Harf by Harf (Word Guessing)
@@ -9,9 +9,9 @@ Generates daily puzzles for:
 
 Model fallback chain (based on Feb 2026 benchmark)
 ──────────────────────────────────────────────────
-1. Gemini 2.5 Flash (Google Gemini API — fastest, best verse avoidance)
-2. DeepSeek-R1      (GitHub Models — perfect avoidance, slow but thorough)
-3. GPT-4.1          (OpenAI — fast, great diversity, weaker avoidance)
+1. Gemini 2.5 Flash (Google Gemini API - fastest, best verse avoidance)
+2. DeepSeek-R1      (GitHub Models - perfect avoidance, slow but thorough)
+3. GPT-4.1          (OpenAI - fast, great diversity, weaker avoidance)
 
 Each game uses 1 API call (up to 5 retries), so worst case = 25 calls/day.
 A 60-second pause between games respects rate limits.
@@ -38,8 +38,8 @@ _stemmer = ArabicLightStemmer()
 
 # ── Arabic text helpers ────────────────────────────────────────────
 def normalize_arabic(text):
-    """Normalize Arabic text for comparison — handles Uthmani vs standard script.
-    
+    """Normalize Arabic text for comparison - handles Uthmani vs standard script.
+
     The Quran API returns Uthmani script which uses special Unicode characters
     (superscript alef, small waw/ya, alef wasla, etc.) that differ from the
     standard Arabic script that LLMs typically generate.
@@ -73,14 +73,14 @@ def normalize_arabic(text):
 def extract_reliable_root(word):
     """Extract reliable root for Arabic word using multiple methods.
     Returns root string or None if uncertain.
-    
+
     Verified by an ordered subsequence check to ensure the root characters
     actually appear in the word.
     """
     n = normalize_arabic(word)
     if not n or len(n) < 2:
         return None
-    
+
     arabic_letters = set('ابتثجحخدذرزسشصضطظعغفقكلمنهويءآأإؤئ')
 
     # Helper: ensure root letters appear in word in order
@@ -97,15 +97,15 @@ def extract_reliable_root(word):
             # ONLY trust if it's an ordered subsequence of the word
             if _is_root_in_word(clean_root, n):
                 return clean_root
-    
+
     # Method 2: Pattern matching for common forms
     common_affixes = [
-        ('ي', ''), ('ت', ''), ('ن', ''), ('ا', ''), ('ال', ''), ('م', ''), 
+        ('ي', ''), ('ت', ''), ('ن', ''), ('ا', ''), ('ال', ''), ('م', ''),
         ('است', ''), ('ان', ''), ('تفع', ''), ('تفاعل', ''),
         ('', 'ة'), ('', 'ا'), ('', 'ي'), ('', 'ون'), ('', 'ين'), ('', 'ات'),
         ('', 'ان'), ('', 'تان'), ('', 'ين'), ('', 'ون'), ('', 'ى'),
     ]
-    
+
     for prefix, suffix in common_affixes:
         if n.startswith(prefix) and n.endswith(suffix):
             base = n[len(prefix):]
@@ -114,7 +114,7 @@ def extract_reliable_root(word):
             if 2 <= len(base) <= 4 and all(c in arabic_letters for c in base):
                 if len(base) >= 3 or base in ['ماء', 'أب']:
                     return base
-    
+
     # Method 3: Manual mapping for common words (Logical Fallback)
     common_words = {
         'كتاب': 'كتب', 'يكتب': 'كتب', 'مكتب': 'كتب', 'كاتب': 'كتب',
@@ -122,19 +122,19 @@ def extract_reliable_root(word):
         'نار': 'نار', 'عين': 'عين', 'معين': 'عين', 'رحمة': 'رحم',
         'غفران': 'غفر', 'غافر': 'غفر',
     }
-    
+
     if n in common_words:
         res = common_words[n]
         if len(res) >= 3 or res in ['ماء', 'أب']:
             return res
-    
+
     return None
 
 def meanings_are_distinct(en1, en2):
     """Heuristic to check if two English meanings are conceptually different."""
     if not en1 or not en2:
         return False
-    
+
     def tokenize(s):
         s = s.lower()
         words = re.findall(r'\w+', s)
@@ -150,7 +150,7 @@ def meanings_are_distinct(en1, en2):
 
 def words_are_too_similar(word1, word2, label1=None, label2=None):
     """Check if two Arabic words are too similar for Connections gameplay.
-    
+
     Returns True if words should NOT appear in different categories.
     Uses a multi-tier approach: manual rules, affixes, containment, and verified roots.
     Incorporates a 'Semantic Pardon' to allow distinct meanings despite root overlap.
@@ -159,7 +159,7 @@ def words_are_too_similar(word1, word2, label1=None, label2=None):
     n2 = normalize_arabic(word2)
     if not n1 or not n2:
         return False
-    
+
     # Strip common prefixes (Definite article + prepositions)
     # Order matters: try compound prefixes first
     def strip_all_prefixes(s):
@@ -183,12 +183,12 @@ def words_are_too_similar(word1, word2, label1=None, label2=None):
     # TIER 1: Exact matches or common affixes
     if s1 == s2:
         return True
-    
+
     common_affixes = [
         ('ي', ''), ('ت', ''), ('ن', ''), ('ا', ''), ('م', ''), ('است', ''), ('ان', ''),
         ('', 'ة'), ('', 'ا'), ('', 'ي'), ('', 'ون'), ('', 'ين'),
     ]
-    
+
     for prefix, suffix in common_affixes:
         # word1 as derivation of word2
         if s1.startswith(prefix) and s1.endswith(suffix):
@@ -217,11 +217,11 @@ def words_are_too_similar(word1, word2, label1=None, label2=None):
     # TIER 3: Verified Root Comparison
     root1 = extract_reliable_root(word1)
     root2 = extract_reliable_root(word2)
-    
+
     if root1 and root2 and root1 == root2:
         if should_pardon(): return False
         return True
-    
+
     # TIER 4: Character overlap fallback (Extreme similarity)
     if len(s1) >= 4 and len(s2) >= 4 and len(s1) == len(s2):
         set1, set2 = set(s1), set(s2)
@@ -234,7 +234,7 @@ def words_are_too_similar(word1, word2, label1=None, label2=None):
 
 def word_in_verse(word, verse_text):
     """Check if an Arabic word appears in a verse, with Uthmani-aware normalization.
-    
+
     Uses multiple strategies to match LLM-generated standard Arabic words
     against Uthmani script verse text from the Quran API.
     """
@@ -260,7 +260,7 @@ def word_in_verse(word, verse_text):
         for vw in v.split():
             if w == vw or (len(w) >= 4 and w in vw):
                 return True
-    # 6. Morphological root overlap — matches roots instead of substrings
+    # 6. Morphological root overlap - matches roots instead of substrings
     w_root = extract_reliable_root(word)
     if w_root:
         for vw in v.split():
@@ -336,7 +336,7 @@ OUTPUT_FILES = {
     "juz": os.path.join(DATA_DIR, "daily_juz.json"),
 }
 
-# Ramadan 2026 — Juz Journey launched Feb 17 evening (1 Ramadan 1447 AH)
+# Ramadan 2026 - Juz Journey launched Feb 17 evening (1 Ramadan 1447 AH)
 RAMADAN_START = datetime(2026, 2, 17)
 RAMADAN_END = datetime(2026, 3, 19)  # 30 days
 
@@ -427,7 +427,7 @@ def load_history(exclude_date=None):
                 history["harf"]["hints"].add(wdl.get("hint", "").lower().strip())
             if wdl.get("verse"):
                 history["harf"]["verses"].add(wdl.get("verse", ""))
-            
+
             wdl_ref = wdl.get("verseRef") or extract_ref(wdl.get("verse", ""))
             if wdl_ref:
                 history["harf"]["verseRefs"].add(wdl_ref)
@@ -436,7 +436,7 @@ def load_history(exclude_date=None):
                     surah_num = wdl_ref.split(":")[0]
                     history["harf"]["surahs"].add(surah_num)
 
-        # Deduction history (60-day cooldown — only load within deduction window)
+        # Deduction history (60-day cooldown - only load within deduction window)
         ded = data.get("deduction")
         if ded and fdate >= cutoff_deduction:
             if ded.get("title"):
@@ -536,10 +536,10 @@ def is_json_truncated(text):
 
 def call_model(prompt, model_config, system_msg=None):
     """Call an LLM API and return the response text.
-    
+
     If the response contains truncated JSON, automatically sends continuation
     requests (up to MAX_CONTINUATIONS) to get the complete output.
-    
+
     model_config: dict with 'id', 'api' ('openai', 'github', 'gemini', or 'deepseek'), 'label'
     """
     model_id = model_config["id"]
@@ -667,12 +667,12 @@ def call_model(prompt, model_config, system_msg=None):
                     cont_text = cont_data["choices"][0]["message"]["content"]
                     cont_usage = cont_data.get("usage", {})
                     print(f"  Continuation tokens: {cont_usage.get('completion_tokens', '?')} out")
-                    
+
                     # Clean up continuation text (often models prepend ```json again or add a leading space)
                     cleaned_cont = cont_text.strip()
                     if cleaned_cont.startswith("```"):
                         cleaned_cont = re.sub(r'^```(?:json)?\s*', '', cleaned_cont)
-                    
+
                     accumulated += cleaned_cont
                     if not is_json_truncated(accumulated):
                         print(f"  ✓ JSON completed after {cont} continuation(s)")
@@ -752,19 +752,19 @@ def parse_json_response(raw):
 
 
 # ═══════════════════════════════════════════════════════════════════
-# CONNECTIONS GENERATOR — category-by-category
+# CONNECTIONS GENERATOR - category-by-category
 # ═══════════════════════════════════════════════════════════════════
 DIFFICULTY_LABELS = ["easy", "medium", "hard", "tricky"]
 DIFFICULTY_DESCRIPTIONS = {
-    "easy":   "Straightforward — a clear, well-known connection that most players will find",
+    "easy":   "Straightforward - a clear, well-known connection that most players will find",
     "medium": "Requires some Quranic knowledge to identify the connection",
     "hard":   "Requires deeper Islamic knowledge; the link is specific or scholarly",
-    "tricky": "Deliberately misleading — items seem to belong elsewhere; the connection is unexpected",
+    "tricky": "Deliberately misleading - items seem to belong elsewhere; the connection is unexpected",
 }
 
 
 def build_single_category_prompt(history, today, cat_index, accumulated_cats, previous_violations=None, force_pivot=False):
-    """Build prompt for ONE Connections category (cat_index 0–3)."""
+    """Build prompt for ONE Connections category (cat_index 0-3)."""
     color = COLORS[cat_index]
     difficulty = DIFFICULTY_LABELS[cat_index]
 
@@ -821,7 +821,7 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
             )
         if verse_mismatches:
             parts.append(
-                "CRITICAL — VERIFIED FALSEHOODS (DO NOT USE):\n"
+                "CRITICAL - VERIFIED FALSEHOODS (DO NOT USE):\n"
                 + "\n".join("  ✗ " + v for v in verse_mismatches)
                 + "\nThe word-verse pairs listed above were checked against the Quran database and found to be WRONG. "
                 "Do NOT guess or attempt to use them again. Choose NEW words from NEW verses."
@@ -854,7 +854,7 @@ VERIFICATION STEP (INTERNAL ONLY):
 RULES:
 1. Provide EXACTLY 4 items. {pivot_block}
 2. Theme (nameEn) MUST be specific (e.g., "Attributes of Paradise", not "Attributes").
-   FORBIDDEN themes (used recently — do NOT reuse): {avoided_themes}
+   FORBIDDEN themes (used recently - do NOT reuse): {avoided_themes}
 3. CRITICAL: Every word must actually appear in its cited verse. No guessing.
 4. Surah:Ayah refs must be unique and not in: {avoided_verses}.
 5. Words must not share roots with each other or previous categories.
@@ -875,7 +875,7 @@ OUTPUT FORMAT: Return ONLY a valid JSON object for this single category (if not 
 }}
 
 IMPORTANT:
-- Return the JSON object — no markdown (except code fences), no extra text outside JSON or <think> tags.
+- Return the JSON object - no markdown (except code fences), no extra text outside JSON or <think> tags.
 - Arabic words must include full tashkeel/diacritics."""
 
 
@@ -885,6 +885,165 @@ def build_connections_prompt(history, previous_violations=None):
     return build_single_category_prompt(
         history, today, cat_index=0, accumulated_cats=[], previous_violations=previous_violations
     )
+
+# ── Semantic field networks ────────────────────────────────────────
+# Each field is a cluster of related concepts. Items in the same field
+# share a coherent Quranic theme even if they use different words.
+# The LLM picks 4 words from verses, finds a common theme among them,
+# and this check verifies that theme actually fits the words.
+SEMANTIC_FIELDS = {
+    'paradise': {
+        'keywords': [
+            'paradise', 'heaven', 'jannah', 'gardens', 'garden', 'eternal', 'eternity',
+            'bliss', 'reward', 'everlasting', 'lasting', 'forever', 'immortal',
+            'mercy', 'comfort', 'peace', 'light', 'fruit', 'shade',
+            'rivers', 'river', 'wine', 'honey', 'silk', 'golden', 'crystal',
+            'palace', 'throne', 'crown', 'servant', 'mate', 'companion',
+            'أجر', 'جنة', 'فردوس', 'نعي', 'خالد', 'باق', 'دائم', 'خلود',
+            'جَنَّات', 'نَعِيم', 'رَحْمَة', 'غُرْفة', 'حَوْض', 'كَأْس', 'عَسَل',
+        ],
+    },
+    'hell': {
+        'keywords': [
+            'hell', 'fire', 'torment', 'chastisement', 'punishment', 'chains',
+            'shackles', 'boiling', 'scalding', 'smoke', 'burn', 'fuel',
+            'عذاب', 'نار', 'جهنم', 'عقوبة', 'قيد', 'حَدِيد',
+            'حر', 'سموم', 'غسلين', 'زقوم', 'حميم', 'غساق',
+        ],
+    },
+    'divine': {
+        'keywords': [
+            'god', 'lord', 'almighty', 'deity', 'divine', 'creator',
+            'merciful', 'compassion', 'gracious', 'forgiving', 'generous',
+            'wise', 'knowing', 'all-seeing', 'all-hearing', 'mighty',
+            'رحم', 'غفر', 'عفو', 'لطف', 'كرم', 'غفور', 'رحيم',
+            'حكيم', 'عليم', 'سميع', 'بصير', 'عزيز', 'قوي',
+        ],
+    },
+    'prayer': {
+        'keywords': [
+            'prayer', 'pray', 'worship', 'prostrate', 'bow', 'kneel', 'sujud',
+            'صلو', 'سجد', 'ركع', 'عبادة', 'حمد', 'سبح', 'دعاء', 'تضرع',
+            'praise', 'glorify', 'thank', 'remember', 'ذكرو', 'استغفار',
+        ],
+    },
+    'trial': {
+        'keywords': [
+            'trial', 'test', 'prove', 'examine', 'challenge', 'hardship',
+            'affliction', 'suffering', 'patience', 'perseverance',
+            'امتح', 'ختبر', 'بلا', 'فتن', 'عسرة', 'ضراء', 'بلاء',
+            'صبر', 'ابتلاء', 'مصيبة', 'رزق', 'فقر',
+        ],
+    },
+    'guidance': {
+        'keywords': [
+            'guidance', 'guide', 'straight', 'path', 'way', 'هُدًى', 'اهتد',
+            'سبيل', 'صراط', 'نور', 'ضياء', 'آية', 'دليل', 'برهان',
+            'تذكير', 'موعظة', 'understand', 'know', 'realize', 'learn',
+            'علم', 'عرف', 'فهم', 'اعتبر', 'اتعظ',
+        ],
+    },
+    'creation': {
+        'keywords': [
+            'create', 'creation', 'make', 'form', 'shape', 'design',
+            'خالق', 'صور', 'خلق', 'كون', 'صنع',
+            'earth', 'sky', 'heaven', 'sun', 'moon', 'star', 'mountain',
+            'أرض', 'سماء', 'شمس', 'قمر', 'نجم', 'جبل', 'بحر',
+            'vegetation', 'plant', 'rain', 'water', 'life', 'نبات', 'ماء', 'مطر',
+        ],
+    },
+    'revelation': {
+        'keywords': [
+            'revelation', 'reveal', 'send', 'scripture', 'book', 'quran',
+            'torah', 'psalms', 'gospel', 'أنزل', 'كشف', 'رسل', 'كتب',
+            'قرآن', 'توراة', 'زبور', 'انجيل',
+            'messenger', 'prophet', 'apostle', 'warn',
+            'رسول', 'نبي', 'مرسل', 'أنذر', 'بلّغ',
+        ],
+    },
+    'mercy': {
+        'keywords': [
+            'mercy', 'merciful', 'compassion', 'forgive', 'pardon', 'gracious',
+            'رحم', 'غفر', 'عفو', 'لطف', 'كرم', 'غفور', 'رحيم',
+            'راض', 'رضوان', 'محبة', 'إنعام',
+        ],
+    },
+    'earth': {
+        'keywords': [
+            'earth', 'land', 'ground', 'soil', 'dust', 'mountain',
+            'valley', 'plain', 'desert', 'island', 'city',
+            'أرض', 'تراب', 'طين', 'جبل', 'واد', 'صحراء', 'بلدة',
+            'settle', 'dwell', 'habitat', 'foundation', 'استقر', 'سكن', 'ملك',
+        ],
+    },
+    'water': {
+        'keywords': [
+            'water', 'rain', 'sea', 'river', 'ocean', 'wave', 'foam',
+            'ماء', 'مطر', 'بحر', 'نهر', 'محيط', 'موج', 'زبد',
+            'life', 'living', 'drink', 'thirst', 'quench', 'حياة', 'عطش', 'ري',
+        ],
+    },
+    'food': {
+        'keywords': [
+            'food', 'eat', 'drink', 'fruit', 'meat', 'bread', 'grain',
+            'date', 'honey', 'milk', 'طعام', 'أكل', 'شرب', 'فاكهة',
+            'لحم', 'خبز', 'تمر', 'عسل', 'حليب',
+        ],
+    },
+    'signs': {
+        'keywords': [
+            'sign', 'signs', 'proof', 'evidence', 'wonder', 'creation',
+            'آية', 'دليل', 'برهان', 'علامة', 'حجة', 'عجب', 'عظمة', 'تمجيد',
+        ],
+    },
+    'light': {
+        'keywords': [
+            'light', 'illumination', 'radiance', 'gleam', 'shining',
+            'نور', 'ضياء', 'بدع', 'إشراق', 'مشع', 'ضيء',
+            'guidance', 'proof', 'clear', 'manifest',
+        ],
+    },
+    'heart': {
+        'keywords': [
+            'heart', 'hearts', 'soul', 'spirit', 'chest', 'breast',
+            'قلب', 'صدور', 'نفس', 'روح', 'ضمير',
+            'firm', 'steadfast', 'certain', 'submit',
+            '确信', 'يَقِين', 'خشي', 'أناب',
+        ],
+    },
+    'authority': {
+        'keywords': [
+            'kingdom', 'kingship', 'rule', 'reign', 'sovereignty',
+            'ملك', 'ملَك', 'سلطان', 'حكم', 'تصرف',
+            'king', 'ruler', 'master', 'lord', 'ملك', 'سلطان',
+            'submission', 'servant', 'slave', 'عبادة', 'عبد',
+        ],
+    },
+    'time': {
+        'keywords': [
+            'time', 'moment', 'period', 'hour', 'day', 'night',
+            'زمان', 'وقت', 'أوان', 'ساعة', 'يوم', 'ليلة',
+            'last', 'later', 'after', 'before', 'beginning', 'end',
+            'أول', 'آخر', 'قبل', 'بعد', 'منتصف',
+        ],
+    },
+    'speech': {
+        'keywords': [
+            'say', 'speak', 'call', 'command', 'promise', 'reveal',
+            'قال', 'كلم', 'حمد', 'دعا', 'أمر', 'نهي', 'وعد', 'هدد',
+            'order', 'forbid', 'permit', 'allow',
+            'أمر', 'نهي', 'أحل', 'حرم',
+        ],
+    },
+    'journey': {
+        'keywords': [
+            'travel', 'journey', 'depart', 'arrive', 'departure', 'arrival',
+            'سفر', 'رحيل', 'قدوم', 'المسير', 'رحبة',
+            'move', 'go', 'come', 'enter', 'exit',
+            'ذهب', 'جاء', 'دخل', 'خرج', 'انتقل',
+        ],
+    },
+}
 
 
 def _strip_tashkeel(text):
@@ -899,7 +1058,6 @@ def _fuzzy_english_match(word, meaning):
     m = meaning.lower()
     if w in m:
         return True
-    # Irregular past -> base form map
     IRREGULAR = {
         'took': 'take', 'gave': 'give', 'found': 'find',
         'got': 'get', 'spent': 'spend', 'sent': 'send',
@@ -933,180 +1091,134 @@ def _fuzzy_english_match(word, meaning):
     return False
 
 
+def _item_in_field(item, field_keywords):
+    """Return True if item matches any keyword in the field."""
+    import re
+    meaning = item.get('en', '').lower()
+    ar_word = _strip_tashkeel(item.get('ar', ''))
+    tokens = set(re.findall(r'\w+', meaning))
+    for kw in field_keywords:
+        if len(kw) < 3:
+            continue
+        if kw in tokens or kw in meaning or _fuzzy_english_match(kw, meaning):
+            return True
+        if kw in ar_word:
+            return True
+    return False
+
+
+def _count_field_matches(items, field_keywords):
+    """Count how many of the 4 items match this field."""
+    return sum(1 for item in items if _item_in_field(item, field_keywords))
+
+
 def semantic_coherence_check(cat):
-    """Check if all 4 items genuinely fit their declared theme.
-    
-    Validates that the category name and its 4 items are coherent — the theme
-    name and items must belong to the same Quranic concept, not randomly grouped.
-    
-    Approach:
-    - Extract semantic signal from theme name (what type of category is it?)
-    - For thematic categories: verify items share a coherent Quranic concept
-    - For structural categories (surah/juz names): verify items all share that property
-    - Uses keyword detection + lightweight LLM check for hard cases
+    """Check if the 4 items coherently fit the category theme.
+
+    Layer 1 — Explicit theme claim: If the theme name says "Verbs of X/Y/Z",
+    "Attributes of X", "Words from [Surah/Juz]", or uses descriptive semantic
+    keywords, verify items actually match those claims. Prevents "random
+    grouping under a fancy name" bug.
+
+    Layer 2 — Coherent group: If no explicit claim, verify items share a
+    semantic field (3+ match a field) or don't scatter across 3+ unrelated fields.
     """
     import re
-    import unicodedata
-    
-    theme_en = cat.get("nameEn", "").lower().strip()
-    items = cat.get("items", [])
-    theme_words = re.findall(r'\w+', theme_en)
-    
-    # Detect what KIND of theme this is
-    IS_VERB_THEME = any(kw in theme_words for kw in [
+    theme_en = cat.get('nameEn', '').lower().strip()
+    items = cat.get('items', [])
+
+    if not items:
+        return True, None
+
+    theme_words = set(re.findall(r'\w+', theme_en))
+
+    # ── Detect theme type ─────────────────────────────────────────
+    # Structural: "Words from Surah X", "Verses of Juz Y" — accept as-is
+    if any(kw in theme_words for kw in ['surah', 'juz', 'hizb', 'para', 'juz\'']):
+        return True, None
+
+    # Verb theme: "Verbs of X, Y, Z" — collect all semantic keywords in the name
+    IS_VERB_THEME = any(t in theme_words for t in [
         'verb', 'verbs', 'action', 'actions', 'doing', 'act'
     ])
-    IS_ATTRIBUTE_THEME = any(kw in theme_words for kw in [
+    IS_ATTR_THEME = any(t in theme_words for t in [
         'attribute', 'attributes', 'quality', 'qualities', 'trait', 'traits',
-        'property', 'properties', 'characteristic', 'characteristics'
+        'property', 'properties'
     ])
-    IS_PLACE_THEME = any(kw in theme_words for kw in [
-        'place', 'places', 'location', 'land', 'region', 'city',
-        'mountain', 'river', 'sea', 'ocean', 'valley', 'desert'
-    ])
-    IS_CONCEPT_THEME = any(kw in theme_words for kw in [
-        'concept', 'concepts', 'idea', 'notion', 'theme', 'category',
-        'type', 'types', 'class', 'group', 'domain'
-    ])
-    IS_STATE_THEME = any(kw in theme_words for kw in [
-        'state', 'states', 'condition', 'conditions', 'situation',
-        'being', 'existence', 'nature', 'character'
-    ])
-    
-    # Broad semantic buckets — cover most Quranic category themes
-    VERB_BUCKETS = {
-        'acquisition': ['acquisition', 'receive', 'receiving', 'gain', 'gaining', 'take', 'taking',
-                        'obtain', 'obtaining', 'get', 'getting', 'earn', 'earning', 'أخذ', 'اكتسب', 'حصل', 'نال', 'فاز'],
-        'bestowal': ['bestowal', 'bestow', 'give', 'giving', 'grant', 'granting',
-                     'provide', 'providing', 'endow', 'endowing', 'gift', 'offer',
-                     'أعطى', 'آت', 'منح', 'هبة', 'رزق', 'أعطي'],
-        'duration': ['duration', 'remain', 'remaining', 'stay', 'staying', 'dwell',
-                     'dwelling', 'linger', 'reside', 'abide', 'permanence', 'time',
-                     'continue', 'continued', 'continuing',
-                     'لبث', 'مكث', 'أقام', 'استمر', 'tinggal', 'duration'],
-        'motion': ['move', 'moving', 'motion', 'come', 'coming', 'go', 'going',
-                   'travel', 'traveling', 'depart', 'departing', 'arrive', 'arriving',
-                   'goto', 'going to', 'enter', 'entering', 'exit', 'exiting',
-                   'مشي', 'ذهب', 'جاء', 'أتى', 'ذهب', 'سار'],
-        'knowledge': ['know', 'knowing', 'knowledge', 'learn', 'learning',
-                      'knowing', 'understand', 'understanding', 'realize', 'realizing',
-                      'remember', 'remembering', 'forget', 'forgetting',
-                      'علم', 'عرف', 'ذكر', 'نسي', 'أعلم'],
-        'speech': ['say', 'saying', 'speak', 'speaking', 'call', 'calling',
-                   'command', 'commanding', 'promise', 'promising', 'reveal', 'revealing',
-                   'قال', 'كلم', 'حمد', 'دعا', 'أمر', 'نهي'],
-        'creation': ['create', 'creating', 'creation', 'make', 'making',
-                     'form', 'forming', 'shape', 'shaping', 'design',
-                     'خالق', 'صور', 'خلق', 'كون', 'صنع'],
-        'mercy': ['mercy', 'merciful', 'compassion', 'forgive', 'forgiving',
-                  'pardon', 'pardoning', 'gracious', 'lord', 'gentle',
-                  'رحم', 'غفر', 'عفو', 'لطف', 'كرم'],
-        'trial': ['test', 'testing', 'trial', 'trials', 'prove', 'proving',
-                  'examine', 'examining', 'challenge', 'destiny', 'fate',
-                  'امتح', 'ختبر', 'بلا', 'فتن'],
-        'worship': ['worship', 'worshipping', 'pray', 'praying', 'praise',
-                     'praising', 'glorify', 'glorifying', 'prostrate', 'prostrating',
-                     'صلو', 'سجد', 'ركع', 'عبادة', 'حمد', 'سبح'],
-    }
-    
-    ATTRIBUTE_BUCKETS = {
-        'divine': ['divine', 'god', 'lord', 'lord\'s', 'almighty', 'deity',
-                   'ilahi', 'rabbani', 'god\'s', 'الله', 'الهي', 'الإلهي'],
-        'spiritual': ['spiritual', 'spirit', 'soul', 'heart', 'inner',
-                      'souls', 'minds', 'conscience', 'روحي', 'قلوب', 'أنفس'],
-        'moral': ['moral', 'morality', 'virtue', 'good', 'righteous', 'righteousness',
-                  'noble', 'noblity', 'ethical', '善良', 'أخلاق', 'بر', 'خير'],
-        'physical': ['physical', 'material', 'worldly', 'earthly', 'body',
-                     'form', 'shape', 'جسدي', 'مادي', 'دنيوي'],
-        'paradise': ['paradise', 'heaven', 'jannah', 'gardens', 'garden', 'eternal',
-                     'eternity', 'bliss', 'reward', 'everlasting', 'last', 'lasting',
-                     'أجر', 'جنة', 'فردوس', 'نعي', 'خالد', 'باق', 'دائم'],
-        'punishment': ['punishment', 'hell', 'fire', 'torment', 'chastisement',
-                       'عذاب', 'نار', 'جهنم', 'عقوبة', 'خلود'],
-        'natural': ['natural', 'nature', 'creation', 'world', 'universe',
-                    'earth', 'sky', 'heaven', 'sun', 'moon', 'star',
-                    'طبيعة', 'كون', 'أرض', 'سماء', 'شمس', 'قمر'],
-        'knowledge': ['know', 'knowledge', 'learned', 'wise', 'wisdom', 'understanding',
-                     'عليم', 'حكيم', 'عليم', 'nadhir', 'hakeem'],
-        'mercy': ['merciful', 'compassion', 'forgiving', 'gracious', 'gentle',
-                  'رحم', 'غفر', 'عفو', 'لطف', 'كرم', 'غفور', 'رحيم'],
-        'power': ['mighty', 'powerful', 'strong', 'great', 'glorious',
-                  'عزيز', 'قوي', 'عظيم', 'جليل', 'majid', 'aziz'],
-    }
-    
-    STATE_BUCKETS = {
-        'existence': ['existence', 'exist', 'existing', 'being', 'live', 'living',
-                       'survive', 'survival', 'كون', 'وجود', 'حياة', 'عيش'],
-        'change': ['change', 'changing', 'transform', 'transforming', 'alter',
-                    'تحول', 'تغير', 'بدل', 'تحول'],
-        'magnitude': ['great', 'greatness', 'big', 'large', 'small', 'tiny',
-                       'magnitude', 'great', 'mighty', 'immense',
-                       'كبير', 'صغير', 'عظيم', 'ضخم'],
-        'certainty': ['certain', 'certainty', 'sure', 'surely', 'definite',
-                      'know', 'known', 'unknown', 'apparent', 'hidden',
-                      'يقين', ' certitude', 'معلوم', 'مجهول', 'بَيِّن', 'خفي'],
-    }
-    
-    # Determine which bucket type applies based on theme type
-    if IS_VERB_THEME:
-        buckets = VERB_BUCKETS
-    elif IS_ATTRIBUTE_THEME:
-        buckets = ATTRIBUTE_BUCKETS
-    elif IS_STATE_THEME:
-        buckets = STATE_BUCKETS
-    elif IS_PLACE_THEME or IS_CONCEPT_THEME:
-        # Structural themes — these need different validation
-        # Check if the theme explicitly describes what items should have
-        # e.g. "Words from Surah Al-Baqarah" -> items should all be from that surah
-        # For now, accept these as-is since the LLM prompt already enforces them
-        return True, None
-    else:
-        # Theme doesn't fall into a known category type — 
-        # try to find semantic buckets from theme keywords directly
-        claimed = set()
-        for tw in theme_words:
-            for bucket_dict in [VERB_BUCKETS, ATTRIBUTE_BUCKETS, STATE_BUCKETS]:
-                for bucket_name, kws in bucket_dict.items():
-                    if tw in kws:
-                        claimed.add(bucket_name)
-        if not claimed:
-            return True, None  # Can't determine — let it pass (prompt should handle)
-        buckets = {k: v for d in [VERB_BUCKETS, ATTRIBUTE_BUCKETS, STATE_BUCKETS] for k, v in d.items()}
-        # Filter to only claimed
-        full_buckets = buckets
-        buckets = {k: full_buckets[k] for k in claimed}
-    
-    # Check each item against applicable buckets
-    unmatched = []
-    for item in items:
-        meaning = item.get('en', '').lower()
-        ar_word = _strip_tashkeel(item.get('ar', ''))
-        matched = False
-        for bucket_name, kws in buckets.items():
-            for kw in kws:
-                if len(kw) > 2:
-                    # Check English meaning
-                    if kw in meaning or _fuzzy_english_match(kw, meaning):
-                        matched = True
-                        break
-                    # Check Arabic word
-                    if kw in ar_word:
-                        matched = True
-                        break
-            if matched:
-                break
-        if not matched:
-            unmatched.append(meaning)
-    
-    if unmatched:
-        return False, (
-            f"Items do not match theme '{theme_en}': "
-            f"unmatched: {unmatched}, theme type: "
-            f"{'verb' if IS_VERB_THEME else 'attribute' if IS_ATTRIBUTE_THEME else 'state' if IS_STATE_THEME else 'general'}. "
-            f"All items must coherently fit the theme."
-        )
-    return True, None
 
+    if IS_VERB_THEME or IS_ATTR_THEME:
+        # Theme explicitly claims semantic fields — collect all semantic keyword
+        # triggers from the theme name itself
+        SEMANTIC_TRIGGERS = {
+            'acquisition': ['acquisition', 'acquire', 'receiving', 'receive', 'gain', 'taking', 'take'],
+            'bestowal': ['bestowal', 'bestow', 'giving', 'give', 'grant', 'gift'],
+            'duration': ['duration', 'remain', 'remain', 'stay', 'linger', 'dwell', 'abide'],
+            'motion': ['motion', 'move', 'movement', 'travel', 'journey'],
+            'knowledge': ['knowledge', 'knowing', 'learn', 'understand'],
+            'speech': ['speech', 'speaking', 'say', 'speak'],
+            'creation': ['creation', 'create', 'making', 'make'],
+            'worship': ['worship', 'worshipping', 'pray', 'praise'],
+            'trial': ['trial', 'test', 'testing', 'prove'],
+            'guidance': ['guidance', 'guide', 'direct', 'lead'],
+            'paradise': ['paradise', 'heaven', 'jannah'],
+            'hell': ['hell', 'fire', 'punishment'],
+            'divine': ['divine', 'god', 'lord', 'lord\'s', 'almighty'],
+            'mercy': ['mercy', 'merciful', 'compassion', 'forgive'],
+            'creation': ['create', 'creation', 'earth', 'sky', 'heaven', 'cosmic'],
+            'heart': ['heart', 'soul', 'spirit', 'inner'],
+            'authority': ['kingdom', 'rule', 'sovereignty', 'kingship'],
+        }
+        # Collect claimed fields from theme name
+        claimed = []
+        for field_name, triggers in SEMANTIC_TRIGGERS.items():
+            if any(tw in triggers for tw in theme_words):
+                claimed.append(field_name)
+
+        if claimed:
+            # Verify every item matches at least one claimed field
+            for item in items:
+                item_ok = False
+                for cf in claimed:
+                    kws = SEMANTIC_FIELDS.get(cf, {}).get('keywords', [])
+                    if _item_in_field(item, kws):
+                        item_ok = True
+                        break
+                    # Also check trigger words directly in item
+                    for trigger in SEMANTIC_TRIGGERS.get(cf, []):
+                        if trigger in item.get('en', '').lower():
+                            item_ok = True
+                            break
+                    if item_ok:
+                        break
+                if not item_ok:
+                    return False, (
+                        f"Item '{item.get('en', '')}' does not fit theme '{theme_en}'. "
+                        f"Theme claims: {claimed}. All items must match the declared semantic."
+                    )
+            return True, None
+
+    # ── Layer 2: No explicit claim — verify coherent grouping ──
+    field_counts = []
+    for field_name, field_data in SEMANTIC_FIELDS.items():
+        count = _count_field_matches(items, field_data['keywords'])
+        if count >= 1:
+            field_counts.append((field_name, count))
+
+    if not field_counts:
+        return True, None  # No matches — can't verify, pass
+
+    field_counts.sort(key=lambda x: x[1], reverse=True)
+    best_field, best_count = field_counts[0]
+
+    # Reject if items scatter across 3+ fields with no dominant field
+    if len(field_counts) >= 3 and best_count < 3:
+        return False, (
+            f"Items scatter across {len(field_counts)} unrelated fields "
+            f"({[f for f, c in field_counts[:5]]}) with no dominant field ({best_field}={best_count}/4). "
+            f"Items must share a common Quranic concept."
+        )
+
+    return True, None
 
 def validate_single_category(cat, cat_index, history, accumulated_cats):
     """Validate one category against history and already-accumulated categories."""
@@ -1147,7 +1259,7 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
     if theme in all_avoided_themes:
         violations.append(f"Theme '{theme}' reused (cooldown or duplicate in puzzle)")
 
-    # Semantic coherence check — items must actually fit the theme
+    # Semantic coherence check - items must actually fit the theme
     is_coherent, coherence_violation = semantic_coherence_check(cat)
     if not is_coherent:
         violations.append(coherence_violation)
@@ -1272,7 +1384,7 @@ def build_harf_prompt(history, today, previous_violations=None):
     if previous_violations:
         violation_block = f"""
 
-CRITICAL — PREVIOUS ATTEMPT FAILED:
+CRITICAL - PREVIOUS ATTEMPT FAILED:
 {chr(10).join('  ✗ ' + v for v in previous_violations)}
 Choose a completely different word."""
 
@@ -1291,9 +1403,9 @@ RULES:
 
 FORBIDDEN words (used recently): {avoided_words}
 
-FORBIDDEN verse refs (used recently — includes ALL games): {avoided_refs}
+FORBIDDEN verse refs (used recently - includes ALL games): {avoided_refs}
 
-FORBIDDEN surahs (used in last 30 days — pick a DIFFERENT surah): {avoided_surahs}
+FORBIDDEN surahs (used in last 30 days - pick a DIFFERENT surah): {avoided_surahs}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -1310,7 +1422,7 @@ IMPORTANT:
 - The hint should be clever but not too obscure
 - Choose words that are meaningful Islamic concepts
 - The verse MUST be from a surah NOT in the forbidden surahs list
-- Do NOT include full verse text — only the ref. Verse text will be looked up separately."""
+- Do NOT include full verse text - only the ref. Verse text will be looked up separately."""
 
 
 def validate_harf(puzzle, history):
@@ -1369,7 +1481,7 @@ def build_deduction_prompt(history, today, previous_violations=None):
     if previous_violations:
         violation_block = f"""
 
-CRITICAL — PREVIOUS ATTEMPT FAILED:
+CRITICAL - PREVIOUS ATTEMPT FAILED:
 {chr(10).join('  ✗ ' + v for v in previous_violations)}
 Choose a completely different story/character."""
 
@@ -1395,7 +1507,7 @@ RULES:
 5. The 4 categories should cover: the identity (who am I?), the trial/event, a key element (place/object), and the outcome
 6. Include a relevant Quranic verse reference in surah:ayah format
 7. All clues and answers must be Quranically accurate
-8. Vary the character types — don't always use prophets. Include rulers, righteous people, groups, and other Quranic figures
+8. Vary the character types - don't always use prophets. Include rulers, righteous people, groups, and other Quranic figures
 9. **CRITICAL** All 4 INCORRECT options (distractors) in each category MUST be DEFINITELY FALSE for the chosen character/figure.
    - Do NOT use facts that are actually true about the character as distractors.
    - Example (Prophet Ibrahim): If the answer is "Prophet Ibrahim", do NOT use "Built a sacred house" as an incorrect option, because he did build the Kaaba. That makes the puzzle confusing and unfair. Every distractor must unequivocally belong to someone else.
@@ -1404,9 +1516,9 @@ FORBIDDEN titles (used recently): {avoided_titles}
 
 FORBIDDEN characters (used recently): {avoided_characters}
 
-FORBIDDEN verse refs (used recently — includes ALL games): {avoided_refs}
+FORBIDDEN verse refs (used recently - includes ALL games): {avoided_refs}
 
-FORBIDDEN surahs (used in last 30 days — pick a DIFFERENT surah): {avoided_surahs}
+FORBIDDEN surahs (used in last 30 days - pick a DIFFERENT surah): {avoided_surahs}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -1425,8 +1537,8 @@ OUTPUT FORMAT: Return a valid JSON object:
 
 IMPORTANT:
 - Return ONLY the JSON object, no markdown
-- Do NOT include full verse text — only the ref. Verse text will be looked up separately.
-- ALL clues MUST be in first person ("I was...", "I did...", "My people...") — the character is speaking
+- Do NOT include full verse text - only the ref. Verse text will be looked up separately.
+- ALL clues MUST be in first person ("I was...", "I did...", "My people...") - the character is speaking
 - For groups, use "We" instead of "I"
 - Clues must go from vague to specific (early clues should be solvable by scholars, later clues by beginners)
 - Each category must have exactly 5 plausible options
@@ -1468,7 +1580,7 @@ def validate_deduction(puzzle, history):
         elif cat["answer"] not in opts:
             errors.append(f"Category '{key}' answer '{cat['answer']}' not in options")
 
-    # Require verseRef (new format) — accept verse field for backwards compat
+    # Require verseRef (new format) - accept verse field for backwards compat
     verse_ref = puzzle.get("verseRef", "")
     if not verse_ref:
         # Try to extract from legacy 'verse' field
@@ -1543,7 +1655,7 @@ def build_scramble_prompt(history, today, previous_violations=None):
     if previous_violations:
         violation_block = f"""
 
-CRITICAL — PREVIOUS ATTEMPT FAILED:
+CRITICAL - PREVIOUS ATTEMPT FAILED:
 {chr(10).join('  ✗ ' + v for v in previous_violations)}
 Choose a completely different verse from a DIFFERENT surah."""
 
@@ -1554,7 +1666,7 @@ TASK: Choose a significant, well-known Quranic verse for a scramble game.
 Players will rearrange Arabic segments to reconstruct the original verse.
 
 VERSE SELECTION GUIDANCE:
-Pick verses of significance — ones that Muslims commonly memorize, reflect upon, or cite.
+Pick verses of significance - ones that Muslims commonly memorize, reflect upon, or cite.
 Examples of the kind of verses to choose (DO NOT use these exact ones if forbidden):
 - Verses about Allah's attributes (e.g. Ayat al-Kursi style, Surah Ikhlas style)
 - Verses with powerful promises or warnings
@@ -1573,9 +1685,9 @@ RULES:
 5. Provide a hint about the verse's theme
 6. The verse MUST be from a surah NOT in the forbidden surahs list
 
-FORBIDDEN verse refs (used recently — includes ALL games): {avoided_refs}
+FORBIDDEN verse refs (used recently - includes ALL games): {avoided_refs}
 
-FORBIDDEN surahs (used in last 30 days — pick a DIFFERENT surah): {avoided_surahs}
+FORBIDDEN surahs (used in last 30 days - pick a DIFFERENT surah): {avoided_surahs}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -1589,9 +1701,9 @@ OUTPUT FORMAT: Return a valid JSON object:
 
 IMPORTANT:
 - Return ONLY the JSON object, no markdown
-- Do NOT include full Arabic verse text — it will be looked up from the Quran API
+- Do NOT include full Arabic verse text - it will be looked up from the Quran API
 - The "segments" array describes how to split the verse (e.g. ["words 1-2", "words 3-4", "words 5-7"])
-  OR provide the Arabic segments directly — they will be verified against the API
+  OR provide the Arabic segments directly - they will be verified against the API
 - translations array must have same length as segments array
 - The verse reference must be real and accurate
 - The verse MUST be from a surah NOT in the forbidden surahs list"""
@@ -1606,7 +1718,7 @@ def validate_scramble(puzzle, history):
         verse_ref = extract_ref(puzzle.get("reference", ""))
         if verse_ref:
             puzzle["verseRef"] = verse_ref
-    
+
     if not verse_ref and not puzzle.get("reference"):
         errors.append("Missing 'verseRef' or 'reference'")
     if not puzzle.get("hint"):
@@ -1620,7 +1732,7 @@ def validate_scramble(puzzle, history):
     if segments and (len(segments) < 4 or len(segments) > 7):
         errors.append(f"Scramble must have 4-7 segments, got {len(segments)}")
 
-    # Cooldown — check both game-specific and global
+    # Cooldown - check both game-specific and global
     ref_str = puzzle.get("reference", "")
     if ref_str in history["scramble"]["references"]:
         cooldown_violations.append(f"Reference '{ref_str}' reused (scramble cooldown)")
@@ -1685,7 +1797,7 @@ def build_juz_prompt(history, today=None, previous_violations=None):
     if previous_violations:
         violation_block = f"""
 
-CRITICAL — PREVIOUS ATTEMPT FAILED:
+CRITICAL - PREVIOUS ATTEMPT FAILED:
 {chr(10).join('  ✗ ' + v for v in previous_violations)}
 Fix these issues in your next attempt."""
 
@@ -1695,7 +1807,7 @@ TASK: Generate a puzzle for JUZ {juz_number} of the Quran.
 
 RULES:
 1. Choose a short, impactful, representative verse from Juz {juz_number}
-2. The verse MUST actually be in Juz {juz_number} — verify the surah and ayah numbers
+2. The verse MUST actually be in Juz {juz_number} - verify the surah and ayah numbers
 3. Arabic text MUST have full diacritics (tashkeel)
 4. Create a theme question with 1 correct answer and 3 plausible distractors
 5. Create a surah identification question with the correct surah and 3 distractors
@@ -1709,7 +1821,7 @@ RULES:
    https://cdn.islamic.network/quran/audio/128/ar.alafasy/ABSOLUTE_AYAH.mp3
    where ABSOLUTE_AYAH is the sequential ayah number across the entire Quran
 
-FORBIDDEN verse refs (used recently — includes ALL games): {avoided_verses}
+FORBIDDEN verse refs (used recently - includes ALL games): {avoided_verses}
 {violation_block}
 
 OUTPUT FORMAT: Return a valid JSON object:
@@ -1851,7 +1963,7 @@ def validate_juz(puzzle, history):
             if not notes.get(field):
                 errors.append(f"educational_notes missing '{field}'")
 
-    # Cooldown — verse reuse check (game-specific only)
+    # Cooldown - verse reuse check (game-specific only)
     if verse.get("surah_number") and verse.get("ayah_number"):
         ref = f"{verse['surah_number']}:{verse['ayah_number']}"
         if ref in history["juz"]["verses"]:
@@ -1864,18 +1976,18 @@ def validate_juz(puzzle, history):
 
 
 # ═══════════════════════════════════════════════════════════════════
-# QURAN API — VERSE TEXT LOOKUP
+# QURAN API - VERSE TEXT LOOKUP
 # ═══════════════════════════════════════════════════════════════════
 QURAN_API_BASE = "https://api.quran.com/api/v4"
 
 
 def fetch_verse_text(ref, max_retries=3):
     """Fetch the Arabic text (Uthmani script) and English translation for a verse ref.
-    
+
     Uses the Quran.com API to get:
     - Arabic text from word-by-word endpoint (Uthmani script)
     - English from Sahih International translation (resource_id=20)
-    
+
     Args:
         ref: Verse reference in "surah:ayah" format (e.g. "2:255")
         max_retries: Number of retry attempts on failure (default 3)
@@ -1883,7 +1995,7 @@ def fetch_verse_text(ref, max_retries=3):
         dict with 'arabic' and 'english' keys, or None on failure
     """
     key = ref.strip()
-    
+
     for attempt in range(max_retries):
         try:
             # Fetch Arabic (Uthmani) + Sahih International translation in one call
@@ -1896,15 +2008,15 @@ def fetch_verse_text(ref, max_retries=3):
             data = resp.json()
             verse_data = data.get("verse", {})
             words = verse_data.get("words", [])
-            
+
             if not words:
                 print(f"    ⚠ No words returned for {ref} (attempt {attempt+1}/{max_retries})")
                 time.sleep(2 * (attempt + 1))
                 continue
-            
+
             # Build Arabic text from Uthmani script words
             arabic = " ".join(w.get("text_uthmani", "") for w in words if w.get("text_uthmani"))
-            
+
             # Get proper English translation (Sahih International)
             english = ""
             translations = verse_data.get("translations", [])
@@ -1913,15 +2025,15 @@ def fetch_verse_text(ref, max_retries=3):
                 # Strip footnote <sup> tags and their content, then any remaining HTML tags
                 cleaned = re.sub(r'<sup[^>]*>[^<]*</sup>', '', raw_en)  # remove footnotes entirely
                 english = re.sub(r'<[^>]+>', '', cleaned).strip()  # remove any remaining HTML tags
-            
+
             if not arabic:
                 print(f"    ⚠ Empty Arabic text for {ref} (attempt {attempt+1}/{max_retries})")
                 time.sleep(2 * (attempt + 1))
                 continue
-            
+
             # Strip verse number markers (e.g. ١٥٢) that the API appends at the end
             arabic = re.sub(r'\s*[\u0660-\u0669]+\s*$', '', arabic).strip()
-            
+
             # Build word-by-word translations list (excluding end markers)
             wbw = []
             for w in words:
@@ -1931,12 +2043,12 @@ def fetch_verse_text(ref, max_retries=3):
                 trans = w.get("translation", {})
                 en_text = trans.get("text", "") if isinstance(trans, dict) else ""
                 wbw.append({"arabic": text, "english": en_text})
-            
+
             return {"arabic": arabic, "english": english, "wbw": wbw}
         except Exception as e:
             print(f"    ⚠ Quran API error for {ref} (attempt {attempt+1}/{max_retries}): {e}")
             time.sleep(2 * (attempt + 1))
-    
+
     print(f"    ✗ Failed to fetch verse {ref} after {max_retries} attempts")
     return None
 
@@ -1945,7 +2057,7 @@ def enrich_single_category(cat):
     """Fetch verse text for the 4 item refs in a single Connections category.
 
     Validates word-in-verse for each item immediately after fetching.
-    Returns (cat, mismatches) — mismatches is non-empty if any word fails verification.
+    Returns (cat, mismatches) - mismatches is non-empty if any word fails verification.
     Called per-category inside _generate_single_category so failures only cost 4 API calls.
     """
     mismatches = []
@@ -1980,7 +2092,7 @@ def enrich_single_category(cat):
 
 def enrich_harf_with_verses(puzzle):
     """Post-process a Harf puzzle: look up full verse text from Quran API.
-    
+
     Fetches the Arabic verse and English translation using the verseRef field,
     replacing any LLM-generated verse text with authoritative Quran API data.
     Also validates that the puzzle word actually appears in the cited verse.
@@ -1990,16 +2102,16 @@ def enrich_harf_with_verses(puzzle):
     if not ref:
         print("  ⚠ No verseRef in harf puzzle, skipping verse lookup")
         return puzzle
-    
+
     print(f"\n  📖 Looking up verse text for Harf by Harf ({ref})...")
     verse_data = fetch_verse_text(ref)
     if verse_data:
         # Extract surah name from ref for display
         surah_num = ref.split(":")[0]
         puzzle["arabicVerse"] = verse_data["arabic"]
-        puzzle["verse"] = f"{ref} — {verse_data['english']}"
+        puzzle["verse"] = f"{ref} - {verse_data['english']}"
         print(f"  ✓ Verse text fetched from Quran API")
-        
+
         # CRITICAL: Validate word-in-verse
         word = puzzle.get("word", "")
         if word:
@@ -2013,7 +2125,7 @@ def enrich_harf_with_verses(puzzle):
                 else:
                     print(f"  ✗ HARF VALIDATION FAILED: Word '{word}' NOT found in verse {ref}")
                     print(f"  ✗ Verse text: {verse_data['arabic'][:100]}...")
-                    print(f"  ✗ Puzzle rejected — will retry with different word/verse")
+                    print(f"  ✗ Puzzle rejected - will retry with different word/verse")
                     return None
         else:
             print(f"  ⚠ No 'word' field in puzzle, skipping word-in-verse validation")
@@ -2024,11 +2136,11 @@ def enrich_harf_with_verses(puzzle):
             puzzle["arabicVerse"] = ""
         if not puzzle.get("verse"):
             puzzle["verse"] = ref
-    
+
     return puzzle
 def enrich_scramble_with_verses(puzzle):
     """Post-process a Scramble puzzle: look up full verse text from Quran API.
-    
+
     Fetches the Arabic verse from the Quran API and splits it into segments,
     replacing any LLM-generated Arabic text with authoritative data.
     """
@@ -2037,32 +2149,32 @@ def enrich_scramble_with_verses(puzzle):
         ref = extract_ref(puzzle.get("reference", ""))
         if ref:
             puzzle["verseRef"] = ref
-    
+
     if not ref:
         print("  ⚠ No verse ref in scramble puzzle, skipping verse lookup")
         return puzzle
-    
+
     print(f"\n  📖 Looking up verse text for Scramble ({ref})...")
     verse_data = fetch_verse_text(ref)
     if not verse_data:
         print(f"  ⚠ Could not fetch verse text for {ref}")
         return puzzle
-    
+
     arabic_from_api = verse_data["arabic"]
     print(f"  ✓ Arabic text fetched: {arabic_from_api[:80]}...")
-    
+
     # Use word-by-word data from API for both segments and translations
     # This ensures perfect 1:1 alignment between Arabic chunks and English tooltips
     wbw = verse_data.get("wbw", [])
     translations_llm = puzzle.get("translations", [])
     target_segments = len(translations_llm) if translations_llm else 5
-    
+
     if wbw and len(wbw) >= 3:
         num_words = len(wbw)
         target_segments = max(3, min(7, target_segments, num_words))
         base_size = num_words // target_segments
         remainder = num_words % target_segments
-        
+
         segments = []
         segment_translations = []
         idx = 0
@@ -2074,11 +2186,11 @@ def enrich_scramble_with_verses(puzzle):
                 segments.append(" ".join(ar_parts))
                 segment_translations.append(" ".join(en_parts))
                 idx += size
-        
+
         puzzle["arabic"] = arabic_from_api
         puzzle["words"] = segments
         puzzle["translations"] = segment_translations
-        
+
         print(f"  ✓ Built {len(segments)} segments from {num_words} wbw entries")
         for i, (seg, trans) in enumerate(zip(segments, segment_translations)):
             print(f"    [{i}] {seg[:50]} → {trans[:60]}")
@@ -2087,17 +2199,17 @@ def enrich_scramble_with_verses(puzzle):
         print(f"  ⚠ No word-by-word data, falling back to raw text split")
         arabic_words = arabic_from_api.split()
         num_words = len(arabic_words)
-        
+
         if num_words < 3:
             print(f"  ⚠ Verse too short ({num_words} words), keeping as-is")
             puzzle["arabic"] = arabic_from_api
             puzzle["words"] = [arabic_from_api]
             return puzzle
-        
+
         target_segments = max(3, min(7, target_segments, num_words))
         base_size = num_words // target_segments
         remainder = num_words % target_segments
-        
+
         segments = []
         idx = 0
         for i in range(target_segments):
@@ -2105,7 +2217,7 @@ def enrich_scramble_with_verses(puzzle):
             if size > 0:
                 segments.append(" ".join(arabic_words[idx:idx + size]))
                 idx += size
-        
+
         puzzle["arabic"] = arabic_from_api
         puzzle["words"] = segments
         # Adjust LLM translations to match segment count
@@ -2116,20 +2228,20 @@ def enrich_scramble_with_verses(puzzle):
                 while len(translations_llm) < len(segments):
                     translations_llm.append("")
                 puzzle["translations"] = translations_llm
-    
+
     # Store full English translation from API for result display
     english_from_api = verse_data.get("english", "")
     if english_from_api:
         puzzle["verseEn"] = english_from_api
         print(f"  ✓ Full English translation stored: {english_from_api[:80]}...")
-    
+
     print(f"  ✓ Scramble enriched: {len(segments)} segments")
     return puzzle
 
 
 def enrich_deduction_with_verses(puzzle):
     """Post-process a Deduction puzzle: look up full verse text from Quran API.
-    
+
     Fetches the Arabic verse and English translation using the verseRef field.
     """
     ref = puzzle.get("verseRef", "")
@@ -2137,11 +2249,11 @@ def enrich_deduction_with_verses(puzzle):
         ref = extract_ref(puzzle.get("verse", ""))
         if ref:
             puzzle["verseRef"] = ref
-    
+
     if not ref:
         print("  ⚠ No verse ref in deduction puzzle, skipping verse lookup")
         return puzzle
-    
+
     print(f"\n  📖 Looking up verse text for Who Am I? ({ref})...")
     verse_data = fetch_verse_text(ref)
     if verse_data:
@@ -2154,13 +2266,13 @@ def enrich_deduction_with_verses(puzzle):
             puzzle["arabic"] = ""
         if not puzzle.get("verse"):
             puzzle["verse"] = ref
-    
+
     return puzzle
 
 
 # ═══════════════════════════════════════════════════════════════════
 # UNIFIED GENERATION LOOP (harf / deduction / scramble / juz)
-# Connections uses generate_connections() — its own category-by-category loop.
+# Connections uses generate_connections() - its own category-by-category loop.
 # ═══════════════════════════════════════════════════════════════════
 GAME_CONFIGS = {
     "connections": {
@@ -2191,7 +2303,7 @@ GAME_CONFIGS = {
 
 def generate_game(game_type, history, today):
     """Generate a single game puzzle with retries and model fallback chain.
-    
+
     Fallback chain: GPT-4.1 → DeepSeek-R1 → Gemini Flash → Phi-4
     Each model gets up to MAX_RETRIES attempts before falling back.
     Rate limiting immediately triggers fallback to the next model.
@@ -2282,7 +2394,7 @@ def generate_game(game_type, history, today):
 
 
 # ═══════════════════════════════════════════════════════════════════
-# CONNECTIONS — CATEGORY-BY-CATEGORY GENERATION
+# CONNECTIONS - CATEGORY-BY-CATEGORY GENERATION
 # ═══════════════════════════════════════════════════════════════════
 
 def _generate_single_category(cat_index, accumulated_cats, history, today):
@@ -2347,7 +2459,7 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
             if warnings:
                 print(f"    ⚠ Warnings (accepted): {warnings}")
 
-            # Verify words appear in their cited verses (only 5 refs — fast feedback)
+            # Verify words appear in their cited verses (only 5 refs - fast feedback)
             print(f"    📖 Verifying {len(cat.get('items', []))+1} verse refs...")
             cat, mismatches = enrich_single_category(cat)
 
@@ -2392,7 +2504,7 @@ def generate_connections(history, today):
 
         cat = _generate_single_category(cat_index, accumulated_cats, history, today)
         if cat is None:
-            print(f"  ✗ Could not generate category {cat_index+1} — Connections failed.")
+            print(f"  ✗ Could not generate category {cat_index+1} - Connections failed.")
             return None
 
         accumulated_cats.append(cat)
@@ -2416,13 +2528,13 @@ def main():
     import sys
     today = datetime.utcnow().strftime("%Y-%m-%d")
     force_regen = False
-    
+
     if "--date" in sys.argv:
         try:
             today = sys.argv[sys.argv.index("--date") + 1]
         except IndexError:
             pass
-    
+
     if "--force" in sys.argv:
         force_regen = True
 
@@ -2439,7 +2551,7 @@ def main():
         # Check which core games already exist
         core_games = ["connections", "harf", "deduction", "scramble", "juz"]
         missing_games = [g for g in core_games if g not in existing_puzzles]
-        
+
         if not missing_games and not force_regen:
             # Validate loaded puzzles to ensure they are not corrupted (e.g. empty verses)
             valid_history = True
@@ -2454,7 +2566,7 @@ def main():
                                 break
                         if not valid_history: break
                 if not valid_history: break
-            
+
             if not valid_history:
                 print("  ⚠ History contains corrupted data. Will regenerate affected games.")
                 existing_puzzles = {} # Force full regeneration
@@ -2614,12 +2726,12 @@ def main():
     # ALL games must succeed before writing output files and deploying
     if failed_games:
         print(f"\n  \u2717 {len(failed_games)} game(s) failed: {', '.join(failed_games)}")
-        print(f"  \u2717 NOT writing output files — page will NOT be updated.")
+        print(f"  \u2717 NOT writing output files - page will NOT be updated.")
         print(f"  \u2717 Previous day's puzzles remain live until all games succeed.")
-        print(f"  ℹ Successful puzzles saved to history — next run will only regenerate failed games.")
+        print(f"  i Successful puzzles saved to history - next run will only regenerate failed games.")
         return 1
 
-    # All games succeeded — write output files
+    # All games succeeded - write output files
     for game_type, puzzle in all_puzzles.items():
         output_path = OUTPUT_FILES[game_type]
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
