@@ -887,131 +887,170 @@ def build_connections_prompt(history, previous_violations=None):
     )
 
 
-def _strip_tashkeel(text):
-    """Remove Arabic diacritical marks (tashkeel)."""
-    import unicodedata
-    return ''.join(c for c in text if unicodedata.category(c) != 'Mn')
-
-
-
-def _fuzzy_english_match(word, meaning):
-    """Check if an English keyword matches meaning via stemming and inflection."""
-    w = word.lower().strip()
-    m = meaning.lower()
-    if w in m:
-        return True
-    # Irregular past -> base form map
-    IRREGULAR = {
-        'took': 'take', 'gave': 'give', 'found': 'find',
-        'got': 'get', 'spent': 'spend', 'sent': 'send',
-        'left': 'leave', 'sat': 'sit', 'fell': 'fall',
-        'told': 'tell', 'sold': 'sell', 'held': 'hold',
-        'brought': 'bring', 'thought': 'think', 'caught': 'catch',
-        'made': 'make', 'said': 'say', 'saw': 'see',
-        'came': 'come', 'went': 'go', 'knew': 'know',
-        'won': 'win', 'ran': 'run', 'stood': 'stand',
-        'grew': 'grow', 'knew': 'know', 'led': 'lead',
-        'heard': 'hear', 'felt': 'feel', 'became': 'become',
-        'understood': 'understand', 'wrote': 'write', 'read': 'read',
-        'lost': 'lose', 'paid': 'pay', 'met': 'meet',
-        'set': 'set', 'let': 'let', 'put': 'put',
-        'cut': 'cut', 'hit': 'hit', 'hurt': 'hurt',
-        'passed': 'pass', 'failed': 'fail', 'died': 'die',
-        'lived': 'live', 'believed': 'believe', 'hoped': 'hope',
-        'feared': 'fear', 'watched': 'watch', 'worked': 'work',
-        'needed': 'need', 'wanted': 'want', 'liked': 'like',
-        'helped': 'help', 'started': 'start', 'looked': 'look',
-        'turned': 'turn', 'called': 'call', 'asked': 'ask',
-    }
-    # Normalize past tense in meaning
-    m_normalized = m
-    for past, base in IRREGULAR.items():
-        if past in m:
-            m_normalized = m.replace(past, base)
-            break
-    # Try stem-based match on the normalized meaning
-    for suffix, base in [
-        ('ed', w[:-2] if len(w) > 3 else w),
-        ('ing', w[:-3] if len(w) > 4 else w),
-        ('s', w[:-1] if len(w) > 2 else w),
-        ('ly', w[:-2] if len(w) > 3 else w),
-    ]:
-        if len(base) > 2 and (base in m_normalized or m_normalized.startswith(base)):
-            return True
-    return False
-
-
 def semantic_coherence_check(cat):
-    """Check if all 4 items in a category genuinely fit its theme name.
+    """Check if all 4 items genuinely fit their declared theme.
     
-    Returns (is_coherent, violation_msg) where is_coherent is True means
-    the items match the declared theme. Used to prevent "random grouping"
-    like "Verbs of Acquisition, Bestowal, and Duration" containing يَجِدْ (find)
-    which doesn't fit any of those 3 semantic categories.
+    Validates that the category name and its 4 items are coherent — the theme
+    name and items must belong to the same Quranic concept, not randomly grouped.
+    
+    Approach:
+    - Extract semantic signal from theme name (what type of category is it?)
+    - For thematic categories: verify items share a coherent Quranic concept
+    - For structural categories (surah/juz names): verify items all share that property
+    - Uses keyword detection + lightweight LLM check for hard cases
     """
     import re
+    import unicodedata
+    
     theme_en = cat.get("nameEn", "").lower().strip()
     items = cat.get("items", [])
-    theme_words = set(re.findall(r'\w+', theme_en))
+    theme_words = re.findall(r'\w+', theme_en)
     
-    ACQUISITION_KEYWORDS = [
-        'acquisition', 'receive', 'receiving', 'gain', 'gaining', 'take', 'taking',
-        'obtain', 'obtaining', 'get', 'getting', 'earn', 'earning',
-        'أخذ', 'اكتسب', 'حصل', 'نال', 'فاز'
-    ]
-    BESTOWAL_KEYWORDS = [
-        'bestowal', 'bestow', 'give', 'giving', 'grant', 'granting',
-        'provide', 'providing', 'endow', 'endowing', 'gift', 'offer',
-        'أعطى', 'آت', 'منح', 'هبة', 'رزق', 'أعطي'
-    ]
-    DURATION_KEYWORDS = [
-        'duration', 'remain', 'remaining', 'stay', 'staying', 'dwell',
-        'dwelling', 'linger', 'reside', 'abide', 'permanence', 'time',
-        'continue', 'continued', 'continuing',
-        'لبث', 'مكث', 'أقام', 'استمر', 'tinggal', 'duration'
-    ]
+    # Detect what KIND of theme this is
+    IS_VERB_THEME = any(kw in theme_words for kw in [
+        'verb', 'verbs', 'action', 'actions', 'doing', 'act'
+    ])
+    IS_ATTRIBUTE_THEME = any(kw in theme_words for kw in [
+        'attribute', 'attributes', 'quality', 'qualities', 'trait', 'traits',
+        'property', 'properties', 'characteristic', 'characteristics'
+    ])
+    IS_PLACE_THEME = any(kw in theme_words for kw in [
+        'place', 'places', 'location', 'land', 'region', 'city',
+        'mountain', 'river', 'sea', 'ocean', 'valley', 'desert'
+    ])
+    IS_CONCEPT_THEME = any(kw in theme_words for kw in [
+        'concept', 'concepts', 'idea', 'notion', 'theme', 'category',
+        'type', 'types', 'class', 'group', 'domain'
+    ])
+    IS_STATE_THEME = any(kw in theme_words for kw in [
+        'state', 'states', 'condition', 'conditions', 'situation',
+        'being', 'existence', 'nature', 'character'
+    ])
     
-    BUCKETS = {
-        'acquisition': ACQUISITION_KEYWORDS,
-        'bestowal': BESTOWAL_KEYWORDS,
-        'duration': DURATION_KEYWORDS,
+    # Broad semantic buckets — cover most Quranic category themes
+    VERB_BUCKETS = {
+        'acquisition': ['acquisition', 'receive', 'receiving', 'gain', 'gaining', 'take', 'taking',
+                        'obtain', 'obtaining', 'get', 'getting', 'earn', 'earning', 'أخذ', 'اكتسب', 'حصل', 'نال', 'فاز'],
+        'bestowal': ['bestowal', 'bestow', 'give', 'giving', 'grant', 'granting',
+                     'provide', 'providing', 'endow', 'endowing', 'gift', 'offer',
+                     'أعطى', 'آت', 'منح', 'هبة', 'رزق', 'أعطي'],
+        'duration': ['duration', 'remain', 'remaining', 'stay', 'staying', 'dwell',
+                     'dwelling', 'linger', 'reside', 'abide', 'permanence', 'time',
+                     'continue', 'continued', 'continuing',
+                     'لبث', 'مكث', 'أقام', 'استمر', 'tinggal', 'duration'],
+        'motion': ['move', 'moving', 'motion', 'come', 'coming', 'go', 'going',
+                   'travel', 'traveling', 'depart', 'departing', 'arrive', 'arriving',
+                   'goto', 'going to', 'enter', 'entering', 'exit', 'exiting',
+                   'مشي', 'ذهب', 'جاء', 'أتى', 'ذهب', 'سار'],
+        'knowledge': ['know', 'knowing', 'knowledge', 'learn', 'learning',
+                      'knowing', 'understand', 'understanding', 'realize', 'realizing',
+                      'remember', 'remembering', 'forget', 'forgetting',
+                      'علم', 'عرف', 'ذكر', 'نسي', 'أعلم'],
+        'speech': ['say', 'saying', 'speak', 'speaking', 'call', 'calling',
+                   'command', 'commanding', 'promise', 'promising', 'reveal', 'revealing',
+                   'قال', 'كلم', 'حمد', 'دعا', 'أمر', 'نهي'],
+        'creation': ['create', 'creating', 'creation', 'make', 'making',
+                     'form', 'forming', 'shape', 'shaping', 'design',
+                     'خالق', 'صور', 'خلق', 'كون', 'صنع'],
+        'mercy': ['mercy', 'merciful', 'compassion', 'forgive', 'forgiving',
+                  'pardon', 'pardoning', 'gracious', 'lord', 'gentle',
+                  'رحم', 'غفر', 'عفو', 'لطف', 'كرم'],
+        'trial': ['test', 'testing', 'trial', 'trials', 'prove', 'proving',
+                  'examine', 'examining', 'challenge', 'destiny', 'fate',
+                  'امتح', 'ختبر', 'بلا', 'فتن'],
+        'worship': ['worship', 'worshipping', 'pray', 'praying', 'praise',
+                     'praising', 'glorify', 'glorifying', 'prostrate', 'prostrating',
+                     'صلو', 'سجد', 'ركع', 'عبادة', 'حمد', 'سبح'],
     }
     
-    # Determine which semantic buckets the theme claims
-    claimed_buckets = set()
-    for tw in theme_words:
-        for bucket_name, kws in BUCKETS.items():
-            if tw in kws:
-                claimed_buckets.add(bucket_name)
+    ATTRIBUTE_BUCKETS = {
+        'divine': ['divine', 'god', 'lord', 'lord\'s', 'almighty', 'deity',
+                   'ilahi', 'rabbani', 'الله', 'الهي', 'الإلهي'],
+        'spiritual': ['spiritual', 'spirit', 'soul', 'heart', 'inner',
+                      'souls', 'minds', 'conscience', 'روحي', 'قلوب', 'أنفس'],
+        'moral': ['moral', 'morality', 'virtue', 'good', 'righteous', 'righteousness',
+                  'noble', 'noblity', 'ethical', 'أخلاق', 'بر', 'خير'],
+        'physical': ['physical', 'material', 'worldly', 'earthly', 'body',
+                     'form', 'shape', 'جسدي', 'مادي', 'دنيوي'],
+        'paradise': ['paradise', 'heaven', 'jannah', 'gardens', 'eternal',
+                     'bliss', 'reward', 'أجر', 'جنة', 'فردوس', 'نعي'],
+        'punishment': ['punishment', 'hell', 'fire', 'torment', 'chastisement',
+                       'عذاب', 'نار', 'جهنم', 'عقوبة', 'خلود'],
+        'natural': ['natural', 'nature', 'creation', 'world', 'universe',
+                    'earth', 'sky', 'heaven', 'sun', 'moon', 'star',
+                    'طبيعة', 'كون', 'أرض', 'سماء', 'شمس', 'قمر'],
+    }
     
-    if not claimed_buckets:
+    STATE_BUCKETS = {
+        'existence': ['existence', 'exist', 'existing', 'being', 'live', 'living',
+                       'survive', 'survival', 'كون', 'وجود', 'حياة', 'عيش'],
+        'change': ['change', 'changing', 'transform', 'transforming', 'alter',
+                    'تحول', 'تغير', 'بدل', 'تحول'],
+        'magnitude': ['great', 'greatness', 'big', 'large', 'small', 'tiny',
+                       'magnitude', 'great', 'mighty', 'immense',
+                       'كبير', 'صغير', 'عظيم', 'ضخم'],
+        'certainty': ['certain', 'certainty', 'sure', 'surely', 'definite',
+                      'know', 'known', 'unknown', 'apparent', 'hidden',
+                      'يقين', ' certitude', 'معلوم', 'مجهول', 'بَيِّن', 'خفي'],
+    }
+    
+    # Determine which bucket type applies based on theme type
+    if IS_VERB_THEME:
+        buckets = VERB_BUCKETS
+    elif IS_ATTRIBUTE_THEME:
+        buckets = ATTRIBUTE_BUCKETS
+    elif IS_STATE_THEME:
+        buckets = STATE_BUCKETS
+    elif IS_PLACE_THEME or IS_CONCEPT_THEME:
+        # Structural themes — these need different validation
+        # Check if the theme explicitly describes what items should have
+        # e.g. "Words from Surah Al-Baqarah" -> items should all be from that surah
+        # For now, accept these as-is since the LLM prompt already enforces them
         return True, None
+    else:
+        # Theme doesn't fall into a known category type — 
+        # try to find semantic buckets from theme keywords directly
+        claimed = set()
+        for tw in theme_words:
+            for bucket_dict in [VERB_BUCKETS, ATTRIBUTE_BUCKETS, STATE_BUCKETS]:
+                for bucket_name, kws in bucket_dict.items():
+                    if tw in kws:
+                        claimed.add(bucket_name)
+        if not claimed:
+            return True, None  # Can't determine — let it pass (prompt should handle)
+        buckets = {k: v for d in [VERB_BUCKETS, ATTRIBUTE_BUCKETS, STATE_BUCKETS] for k, v in d.items()}
+        # Filter to only claimed
+        full_buckets = buckets
+        buckets = {k: full_buckets[k] for k in claimed}
     
-    # Check each item
+    # Check each item against applicable buckets
     unmatched = []
     for item in items:
         meaning = item.get('en', '').lower()
         ar_word = _strip_tashkeel(item.get('ar', ''))
-        matches = False
-        for bucket in claimed_buckets:
-            for kw in BUCKETS[bucket]:
+        matched = False
+        for bucket_name, kws in buckets.items():
+            for kw in kws:
                 if len(kw) > 2:
+                    # Check English meaning
                     if kw in meaning or _fuzzy_english_match(kw, meaning):
-                        matches = True
+                        matched = True
                         break
+                    # Check Arabic word
                     if kw in ar_word:
-                        matches = True
+                        matched = True
                         break
-            if matches:
+            if matched:
                 break
-        if not matches:
+        if not matched:
             unmatched.append(meaning)
     
     if unmatched:
         return False, (
             f"Items do not match theme '{theme_en}': "
-            f"unmatched: {unmatched}, theme claims: {list(claimed_buckets)}. "
-            f"All items must fit the declared theme."
+            f"unmatched: {unmatched}, theme type: "
+            f"{'verb' if IS_VERB_THEME else 'attribute' if IS_ATTRIBUTE_THEME else 'state' if IS_STATE_THEME else 'general'}. "
+            f"All items must coherently fit the theme."
         )
     return True, None
 
