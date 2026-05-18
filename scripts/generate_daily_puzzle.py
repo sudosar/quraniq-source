@@ -887,6 +887,52 @@ def build_connections_prompt(history, previous_violations=None):
     )
 
 
+def _strip_tashkeel(text):
+    """Remove Arabic diacritical marks (tashkeel) for comparison."""
+    import unicodedata
+    return ''.join(c for c in text if unicodedata.category(c) != 'Mn')
+
+
+def _fuzzy_english_match(word, meaning):
+    """Check if an English keyword matches meaning via inflection normalization."""
+    w = word.lower().strip()
+    m = meaning.lower()
+    if w in m:
+        return True
+    # Irregular past -> base form map
+    IRREGULAR = {
+        'took': 'take', 'gave': 'give', 'found': 'find',
+        'got': 'get', 'spent': 'spend', 'sent': 'send',
+        'left': 'leave', 'sat': 'sit', 'fell': 'fall',
+        'told': 'tell', 'sold': 'sell', 'held': 'hold',
+        'brought': 'bring', 'thought': 'think', 'caught': 'catch',
+        'made': 'make', 'said': 'say', 'saw': 'see',
+        'came': 'come', 'went': 'go', 'knew': 'know',
+        'won': 'win', 'ran': 'run', 'stood': 'stand',
+        'grew': 'grow', 'led': 'lead',
+        'heard': 'hear', 'felt': 'feel', 'became': 'become',
+        'understood': 'understand', 'wrote': 'write', 'read': 'read',
+        'lost': 'lose', 'paid': 'pay', 'met': 'meet',
+        'passed': 'pass', 'failed': 'fail', 'died': 'die',
+        'lived': 'live', 'believed': 'believe', 'hoped': 'hope',
+        'feared': 'fear', 'watched': 'watch', 'worked': 'work',
+        'needed': 'need', 'wanted': 'want', 'liked': 'like',
+        'helped': 'help', 'started': 'start', 'looked': 'look',
+        'turned': 'turn', 'called': 'call', 'asked': 'ask',
+    }
+    m_normalized = m
+    for past, base in IRREGULAR.items():
+        if past in m:
+            m_normalized = m.replace(past, base)
+            break
+    for suffix in ['ed', 'ing', 's', 'ly']:
+        if len(w) > 3 and w.endswith(suffix):
+            base = w[:-len(suffix)]
+            if len(base) > 2 and (base in m_normalized or m_normalized.startswith(base)):
+                return True
+    return False
+
+
 def semantic_coherence_check(cat):
     """Check if all 4 items genuinely fit their declared theme.
     
@@ -965,20 +1011,27 @@ def semantic_coherence_check(cat):
     
     ATTRIBUTE_BUCKETS = {
         'divine': ['divine', 'god', 'lord', 'lord\'s', 'almighty', 'deity',
-                   'ilahi', 'rabbani', 'الله', 'الهي', 'الإلهي'],
+                   'ilahi', 'rabbani', 'god\'s', 'الله', 'الهي', 'الإلهي'],
         'spiritual': ['spiritual', 'spirit', 'soul', 'heart', 'inner',
                       'souls', 'minds', 'conscience', 'روحي', 'قلوب', 'أنفس'],
         'moral': ['moral', 'morality', 'virtue', 'good', 'righteous', 'righteousness',
-                  'noble', 'noblity', 'ethical', 'أخلاق', 'بر', 'خير'],
+                  'noble', 'noblity', 'ethical', '善良', 'أخلاق', 'بر', 'خير'],
         'physical': ['physical', 'material', 'worldly', 'earthly', 'body',
                      'form', 'shape', 'جسدي', 'مادي', 'دنيوي'],
-        'paradise': ['paradise', 'heaven', 'jannah', 'gardens', 'eternal',
-                     'bliss', 'reward', 'أجر', 'جنة', 'فردوس', 'نعي'],
+        'paradise': ['paradise', 'heaven', 'jannah', 'gardens', 'garden', 'eternal',
+                     'eternity', 'bliss', 'reward', 'everlasting', 'last', 'lasting',
+                     'أجر', 'جنة', 'فردوس', 'نعي', 'خالد', 'باق', 'دائم'],
         'punishment': ['punishment', 'hell', 'fire', 'torment', 'chastisement',
                        'عذاب', 'نار', 'جهنم', 'عقوبة', 'خلود'],
         'natural': ['natural', 'nature', 'creation', 'world', 'universe',
                     'earth', 'sky', 'heaven', 'sun', 'moon', 'star',
                     'طبيعة', 'كون', 'أرض', 'سماء', 'شمس', 'قمر'],
+        'knowledge': ['know', 'knowledge', 'learned', 'wise', 'wisdom', 'understanding',
+                     'عليم', 'حكيم', 'عليم', 'nadhir', 'hakeem'],
+        'mercy': ['merciful', 'compassion', 'forgiving', 'gracious', 'gentle',
+                  'رحم', 'غفر', 'عفو', 'لطف', 'كرم', 'غفور', 'رحيم'],
+        'power': ['mighty', 'powerful', 'strong', 'great', 'glorious',
+                  'عزيز', 'قوي', 'عظيم', 'جليل', 'majid', 'aziz'],
     }
     
     STATE_BUCKETS = {
