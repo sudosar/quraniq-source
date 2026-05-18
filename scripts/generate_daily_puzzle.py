@@ -887,6 +887,135 @@ def build_connections_prompt(history, previous_violations=None):
     )
 
 
+def _strip_tashkeel(text):
+    """Remove Arabic diacritical marks (tashkeel)."""
+    import unicodedata
+    return ''.join(c for c in text if unicodedata.category(c) != 'Mn')
+
+
+
+def _fuzzy_english_match(word, meaning):
+    """Check if an English keyword matches meaning via stemming and inflection."""
+    w = word.lower().strip()
+    m = meaning.lower()
+    if w in m:
+        return True
+    # Irregular past -> base form map
+    IRREGULAR = {
+        'took': 'take', 'gave': 'give', 'found': 'find',
+        'got': 'get', 'spent': 'spend', 'sent': 'send',
+        'left': 'leave', 'sat': 'sit', 'fell': 'fall',
+        'told': 'tell', 'sold': 'sell', 'held': 'hold',
+        'brought': 'bring', 'thought': 'think', 'caught': 'catch',
+        'made': 'make', 'said': 'say', 'saw': 'see',
+        'came': 'come', 'went': 'go', 'knew': 'know',
+        'won': 'win', 'ran': 'run', 'stood': 'stand',
+        'grew': 'grow', 'knew': 'know', 'led': 'lead',
+        'heard': 'hear', 'felt': 'feel', 'became': 'become',
+        'understood': 'understand', 'wrote': 'write', 'read': 'read',
+        'lost': 'lose', 'paid': 'pay', 'met': 'meet',
+        'set': 'set', 'let': 'let', 'put': 'put',
+        'cut': 'cut', 'hit': 'hit', 'hurt': 'hurt',
+        'passed': 'pass', 'failed': 'fail', 'died': 'die',
+        'lived': 'live', 'believed': 'believe', 'hoped': 'hope',
+        'feared': 'fear', 'watched': 'watch', 'worked': 'work',
+        'needed': 'need', 'wanted': 'want', 'liked': 'like',
+        'helped': 'help', 'started': 'start', 'looked': 'look',
+        'turned': 'turn', 'called': 'call', 'asked': 'ask',
+    }
+    # Normalize past tense in meaning
+    m_normalized = m
+    for past, base in IRREGULAR.items():
+        if past in m:
+            m_normalized = m.replace(past, base)
+            break
+    # Try stem-based match on the normalized meaning
+    for suffix, base in [
+        ('ed', w[:-2] if len(w) > 3 else w),
+        ('ing', w[:-3] if len(w) > 4 else w),
+        ('s', w[:-1] if len(w) > 2 else w),
+        ('ly', w[:-2] if len(w) > 3 else w),
+    ]:
+        if len(base) > 2 and (base in m_normalized or m_normalized.startswith(base)):
+            return True
+    return False
+
+
+def semantic_coherence_check(cat):
+    """Check if all 4 items in a category genuinely fit its theme name.
+    
+    Returns (is_coherent, violation_msg) where is_coherent is True means
+    the items match the declared theme. Used to prevent "random grouping"
+    like "Verbs of Acquisition, Bestowal, and Duration" containing يَجِدْ (find)
+    which doesn't fit any of those 3 semantic categories.
+    """
+    import re
+    theme_en = cat.get("nameEn", "").lower().strip()
+    items = cat.get("items", [])
+    theme_words = set(re.findall(r'\w+', theme_en))
+    
+    ACQUISITION_KEYWORDS = [
+        'acquisition', 'receive', 'receiving', 'gain', 'gaining', 'take', 'taking',
+        'obtain', 'obtaining', 'get', 'getting', 'earn', 'earning',
+        'أخذ', 'اكتسب', 'حصل', 'نال', 'فاز'
+    ]
+    BESTOWAL_KEYWORDS = [
+        'bestowal', 'bestow', 'give', 'giving', 'grant', 'granting',
+        'provide', 'providing', 'endow', 'endowing', 'gift', 'offer',
+        'أعطى', 'آت', 'منح', 'هبة', 'رزق', 'أعطي'
+    ]
+    DURATION_KEYWORDS = [
+        'duration', 'remain', 'remaining', 'stay', 'staying', 'dwell',
+        'dwelling', 'linger', 'reside', 'abide', 'permanence', 'time',
+        'continue', 'continued', 'continuing',
+        'لبث', 'مكث', 'أقام', 'استمر', 'tinggal', 'duration'
+    ]
+    
+    BUCKETS = {
+        'acquisition': ACQUISITION_KEYWORDS,
+        'bestowal': BESTOWAL_KEYWORDS,
+        'duration': DURATION_KEYWORDS,
+    }
+    
+    # Determine which semantic buckets the theme claims
+    claimed_buckets = set()
+    for tw in theme_words:
+        for bucket_name, kws in BUCKETS.items():
+            if tw in kws:
+                claimed_buckets.add(bucket_name)
+    
+    if not claimed_buckets:
+        return True, None
+    
+    # Check each item
+    unmatched = []
+    for item in items:
+        meaning = item.get('en', '').lower()
+        ar_word = _strip_tashkeel(item.get('ar', ''))
+        matches = False
+        for bucket in claimed_buckets:
+            for kw in BUCKETS[bucket]:
+                if len(kw) > 2:
+                    if kw in meaning or _fuzzy_english_match(kw, meaning):
+                        matches = True
+                        break
+                    if kw in ar_word:
+                        matches = True
+                        break
+            if matches:
+                break
+        if not matches:
+            unmatched.append(meaning)
+    
+    if unmatched:
+        return False, (
+            f"Items do not match theme '{theme_en}': "
+            f"unmatched: {unmatched}, theme claims: {list(claimed_buckets)}. "
+            f"All items must fit the declared theme."
+        )
+    return True, None
+
+
 def validate_single_category(cat, cat_index, history, accumulated_cats):
     """Validate one category against history and already-accumulated categories."""
     errors, violations, warnings = [], [], []
@@ -898,6 +1027,7 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
 
     if not cat.get("name") or not cat.get("nameEn"):
         errors.append("Missing 'name' or 'nameEn'")
+        return errors, violations, warnings
 
     cat["color"] = COLORS[cat_index]
 
@@ -924,6 +1054,11 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
     theme = cat.get("nameEn", "").lower().strip()
     if theme in all_avoided_themes:
         violations.append(f"Theme '{theme}' reused (cooldown or duplicate in puzzle)")
+
+    # Semantic coherence check — items must actually fit the theme
+    is_coherent, coherence_violation = semantic_coherence_check(cat)
+    if not is_coherent:
+        violations.append(coherence_violation)
 
     # Collect the 4 item refs
     item_refs = []
