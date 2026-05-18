@@ -23,6 +23,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArabicLetter } from '@/lib/curriculum';
 import { getLetterForms, formLabels, arabicLetterForms } from '@/lib/letterForms';
 import { speakArabic, speakArabicIfAllowed, playCorrectSound, playWrongSound } from '@/lib/gameEngine';
+import LetterTracing from '@/components/LetterTracing';
 
 interface Props {
   letter: ArabicLetter;
@@ -106,6 +107,7 @@ export default function FindInWordGame({ letter, onComplete }: Props) {
   const [wrongIndex, setWrongIndex] = useState<number | null>(null);
   const [interacting, setInteracting] = useState(false);
   const [showFormGuide, setShowFormGuide] = useState(false);
+  const [showTracing, setShowTracing] = useState(false);
   const [replayHighlight, setReplayHighlight] = useState<number | null>(null);
   const [isReplaying, setIsReplaying] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -158,6 +160,7 @@ export default function FindInWordGame({ letter, onComplete }: Props) {
     setWrongIndex(null);
     setInteracting(false);
     setShowFormGuide(false);
+    setShowTracing(false);
     setReplayHighlight(null);
     setIsReplaying(false);
     // Clear any pending replay timeouts
@@ -501,7 +504,17 @@ export default function FindInWordGame({ letter, onComplete }: Props) {
                 </div>
 
                 {/* Action buttons after form guide */}
-                <div className="flex gap-2 justify-center">
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => { setShowFormGuide(false); setShowTracing(true); }}
+                    className="flex items-center gap-1.5 px-4 py-2 bg-purple-50 text-purple-700 rounded-full border border-purple-200 text-sm font-medium"
+                    style={{ fontFamily: 'var(--font-body)' }}
+                  >
+                    <span>✍️</span>
+                    Trace It
+                  </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -523,6 +536,26 @@ export default function FindInWordGame({ letter, onComplete }: Props) {
                   </motion.button>
                 </div>
               </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Trace the Shape mini-game */}
+          <AnimatePresence>
+            {showTracing && letterForms && (
+              <LetterTracing
+                letterForm={letterForms[targetPositionInWord]}
+                formLabel={formLabels[targetPositionInWord].en}
+                letterName={letter.name}
+                letterColor={letter.color}
+                onComplete={() => {
+                  setShowTracing(false);
+                  advanceToNext();
+                }}
+                onSkip={() => {
+                  setShowTracing(false);
+                  advanceToNext();
+                }}
+              />
             )}
           </AnimatePresence>
 
