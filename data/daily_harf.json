@@ -1,12 +1,12 @@
 {
-  "date": "2026-05-19",
+  "date": "2026-05-21",
   "puzzle": {
-    "word": "عرش",
-    "display": "عَرْش",
-    "hint": "A majestic seat of authority, often associated with divine power.",
-    "verseRef": "20:5",
-    "arabicVerse": "ٱلرَّحْمَـٰنُ عَلَى ٱلْعَرْشِ ٱسْتَوَىٰ",
-    "verse": "20:5 - The Most Merciful [who is] above the Throne established."
+    "word": "ويل",
+    "display": "وَيْلٌ",
+    "hint": "A strong expression of sorrow or misfortune, often a warning.",
+    "verseRef": "104:1",
+    "arabicVerse": "وَيْلٌۭ لِّكُلِّ هُمَزَةٍۢ لُّمَزَةٍ",
+    "verse": "104:1 - Woe to every scorner and mocker"
   },
   "generated": true,
   "model": "auto (chain)"

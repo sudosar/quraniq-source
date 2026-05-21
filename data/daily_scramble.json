@@ -1,29 +1,35 @@
 {
-  "date": "2026-05-19",
+  "date": "2026-05-21",
   "puzzle": {
-    "verseRef": "11:115",
-    "reference": "Hud (11:115)",
+    "verseRef": "22:77",
+    "reference": "Al-Hajj (22:77)",
     "segments": [
-      "وَاصْبِرْ",
-      "فَإِنَّ اللَّهَ",
-      "لَا يُضِيعُ",
-      "أَجْرَ الْمُحْسِنِينَ"
+      "يَا أَيُّهَا الَّذِينَ",
+      "آمَنُوا ارْكَعُوا",
+      "وَاسْجُدُوا وَاعْبُدُوا",
+      "رَبَّكُمْ وَافْعَلُوا",
+      "الْخَيْرَ لَعَلَّكُمْ",
+      "تُفْلِحُونَ"
     ],
     "translations": [
-      "And be patient for indeed",
-      "Allah (does) not",
-      "let go waste (the) reward",
-      "(of) the good-doers"
+      "O you who believe O you who believe",
+      "O you who believe Bow",
+      "and prostrate and worship",
+      "your Lord and do",
+      "[the] good so that you may",
+      "be successful"
     ],
-    "hint": "This verse encourages perseverance and assures believers of divine recompense for their righteous deeds.",
-    "arabic": "وَٱصْبِرْ فَإِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ",
+    "hint": "This verse calls believers to fundamental acts of worship and righteous deeds for ultimate success.",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱرْكَعُوا۟ وَٱسْجُدُوا۟ وَٱعْبُدُوا۟ رَبَّكُمْ وَٱفْعَلُوا۟ ٱلْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ ۩",
     "words": [
-      "وَٱصْبِرْ فَإِنَّ",
-      "ٱللَّهَ لَا",
-      "يُضِيعُ أَجْرَ",
-      "ٱلْمُحْسِنِينَ"
+      "يَـٰٓأَيُّهَا ٱلَّذِينَ",
+      "ءَامَنُوا۟ ٱرْكَعُوا۟",
+      "وَٱسْجُدُوا۟ وَٱعْبُدُوا۟",
+      "رَبَّكُمْ وَٱفْعَلُوا۟",
+      "ٱلْخَيْرَ لَعَلَّكُمْ",
+      "تُفْلِحُونَ ۩"
     ],
-    "verseEn": "And be patient, for indeed, Allāh does not allow to be lost the reward of those who do good."
+    "verseEn": "O you who have believed, bow and prostrate and worship your Lord and do good - that you may succeed."
   },
   "generated": true,
   "model": "auto (chain)"

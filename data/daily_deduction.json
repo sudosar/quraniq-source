@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-19",
+  "date": "2026-05-21",
   "puzzle": {
-    "title": "The Appointed Leader of a Nation",
-    "intro": "In a time of great challenge and despair for a people, a divine appointment was made. This individual, initially overlooked by many, was chosen by Allah to lead a nation against a formidable adversary. Their story is a testament to the power of faith and the wisdom behind divine decree, showing that true leadership is not always found in expected places.",
+    "title": "The Adopted Soul's Journey",
+    "intro": "In a time when societal norms held sway, a unique individual experienced a profound transformation within a blessed household. Their story, marked by a bond of affection and a divine decree, illustrates the breaking of old traditions and the establishment of new, righteous principles. This narrative highlights the importance of truth over convention and the wisdom behind Allah's commands.",
     "clues": [
-      "I was chosen by Allah to be a leader for my people when they sought a ruler to fight in His cause.",
-      "My people initially questioned my appointment, feeling that others were more deserving due to their wealth or lineage.",
-      "A sign of my rightful leadership was the return of a sacred chest, containing relics from previous prophets, which brought tranquility.",
-      "I led my army to a river, where I tested their obedience by forbidding them to drink more than a single scoop of water.",
-      "Despite the small number of those who remained steadfast after the test, we faced a mighty warrior and their army.",
-      "Under my command, a young individual from my army, who was not a renowned fighter, bravely confronted and defeated the formidable enemy champion."
+      "I was once a captive, but through divine arrangement, I found a new home and family.",
+      "I was so beloved that when given a choice between my biological family and my adopted guardian, I chose to remain with the latter.",
+      "My name was once associated with my adopted guardian, a practice that was common in my society.",
+      "I am the only companion of the final Prophet whose name is explicitly mentioned by Allah in the Quran.",
+      "I married a noble woman who was a cousin of the Prophet, but our marriage did not last.",
+      "After my divorce, Allah Himself decreed that my former wife would marry the Prophet, thereby nullifying an ancient custom regarding adoption."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Yusuf",
-          "Prophet Musa",
-          "Prophet Dawud",
-          "Prophet Sulaiman",
-          "Talut"
+          "Bilal ibn Rabah",
+          "Salman al-Farsi",
+          "Abu Bakr as-Siddiq",
+          "Zayd ibn Harithah",
+          "Usama ibn Zayd"
         ],
-        "answer": "Talut"
+        "answer": "Zayd ibn Harithah"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "The splitting of the sea",
-          "The challenge of the sorcerers",
-          "The appointment as a leader against a giant",
-          "The flood that engulfed the land",
-          "The building of the Kaaba"
+          "Leading an army at a young age",
+          "Enduring torture for faith",
+          "The Battle of the Trench",
+          "The divine decree regarding my marriage and divorce",
+          "Migration to Abyssinia"
         ],
-        "answer": "The appointment as a leader against a giant"
+        "answer": "The divine decree regarding my marriage and divorce"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The burning bush",
-          "The Ark (Tabut)",
-          "The staff ( عصا )",
-          "The golden calf",
-          "The well of Zamzam"
+          "The practice of usury",
+          "The worship of idols",
+          "The custom of adoption and its implications",
+          "The prohibition of alcohol",
+          "The treatment of orphans"
         ],
-        "answer": "The Ark (Tabut)"
+        "answer": "The custom of adoption and its implications"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "A kingdom was established with immense wealth and power.",
-          "The people were drowned in a great flood.",
-          "The enemy's champion was defeated, and Allah granted victory.",
-          "A great drought afflicted the land for years.",
-          "The leader was swallowed by a large creature."
+          "Becoming the first muezzin of Islam",
+          "The establishment of the Kaaba",
+          "The abolition of the pre-Islamic practice of 'calling adopted sons as biological sons'",
+          "The revelation of Surah Al-Fatiha",
+          "The appointment of a successor to the Prophet"
         ],
-        "answer": "The enemy's champion was defeated, and Allah granted victory."
+        "answer": "The abolition of the pre-Islamic practice of 'calling adopted sons as biological sons'"
       }
     },
-    "verseRef": "2:249",
-    "arabic": "فَلَمَّا فَصَلَ طَالُوتُ بِٱلْجُنُودِ قَالَ إِنَّ ٱللَّهَ مُبْتَلِيكُم بِنَهَرٍۢ فَمَن شَرِبَ مِنْهُ فَلَيْسَ مِنِّى وَمَن لَّمْ يَطْعَمْهُ فَإِنَّهُۥ مِنِّىٓ إِلَّا مَنِ ٱغْتَرَفَ غُرْفَةًۢ بِيَدِهِۦ ۚ فَشَرِبُوا۟ مِنْهُ إِلَّا قَلِيلًۭا مِّنْهُمْ ۚ فَلَمَّا جَاوَزَهُۥ هُوَ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ قَالُوا۟ لَا طَاقَةَ لَنَا ٱلْيَوْمَ بِجَالُوتَ وَجُنُودِهِۦ ۚ قَالَ ٱلَّذِينَ يَظُنُّونَ أَنَّهُم مُّلَـٰقُوا۟ ٱللَّهِ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ۗ وَٱللَّهُ مَعَ ٱلصَّـٰبِرِينَ",
-    "verse": "And when Saul went forth with the soldiers, he said, \"Indeed, Allāh will be testing you with a river. So whoever drinks from it is not of me, and whoever does not taste it is indeed of me, excepting one who takes [from it] in the hollow of his hand.\" But they drank from it, except a [very] few of them. Then when he had crossed it along with those who believed with him, they said, \"There is no power for us today against Goliath and his soldiers.\" But those who were certain that they would meet Allāh said, \"How many a small company has overcome a large company by permission of Allāh. And Allāh is with the patient.\" (2:249)"
+    "verseRef": "33:37",
+    "arabic": "وَإِذْ تَقُولُ لِلَّذِىٓ أَنْعَمَ ٱللَّهُ عَلَيْهِ وَأَنْعَمْتَ عَلَيْهِ أَمْسِكْ عَلَيْكَ زَوْجَكَ وَٱتَّقِ ٱللَّهَ وَتُخْفِى فِى نَفْسِكَ مَا ٱللَّهُ مُبْدِيهِ وَتَخْشَى ٱلنَّاسَ وَٱللَّهُ أَحَقُّ أَن تَخْشَىٰهُ ۖ فَلَمَّا قَضَىٰ زَيْدٌۭ مِّنْهَا وَطَرًۭا زَوَّجْنَـٰكَهَا لِكَىْ لَا يَكُونَ عَلَى ٱلْمُؤْمِنِينَ حَرَجٌۭ فِىٓ أَزْوَٰجِ أَدْعِيَآئِهِمْ إِذَا قَضَوْا۟ مِنْهُنَّ وَطَرًۭا ۚ وَكَانَ أَمْرُ ٱللَّهِ مَفْعُولًۭا",
+    "verse": "And [remember, O Muḥammad], when you said to the one on whom Allāh bestowed favor and you bestowed favor, \"Keep your wife and fear Allāh,\" while you concealed within yourself that which Allāh is to disclose. And you feared the people, while Allāh has more right that you fear Him. So when Zayd had no longer any need for her, We married her to you in order that there not be upon the believers any discomfort [i.e., guilt] concerning the wives of their claimed [i.e., adopted] sons when they no longer have need of them. And ever is the command [i.e., decree] of Allāh accomplished. (33:37)"
   },
   "generated": true,
   "model": "auto (chain)"
