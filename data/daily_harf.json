@@ -1,12 +1,12 @@
 {
-  "date": "2026-05-21",
+  "date": "2026-05-22",
   "puzzle": {
-    "word": "ويل",
-    "display": "وَيْلٌ",
-    "hint": "A strong expression of sorrow or misfortune, often a warning.",
-    "verseRef": "104:1",
-    "arabicVerse": "وَيْلٌۭ لِّكُلِّ هُمَزَةٍۢ لُّمَزَةٍ",
-    "verse": "104:1 - Woe to every scorner and mocker"
+    "word": "جبل",
+    "display": "جَبَل",
+    "hint": "A prominent natural elevation of the earth's surface.",
+    "verseRef": "21:79",
+    "arabicVerse": "فَفَهَّمْنَـٰهَا سُلَيْمَـٰنَ ۚ وَكُلًّا ءَاتَيْنَا حُكْمًۭا وَعِلْمًۭا ۚ وَسَخَّرْنَا مَعَ دَاوُۥدَ ٱلْجِبَالَ يُسَبِّحْنَ وَٱلطَّيْرَ ۚ وَكُنَّا فَـٰعِلِينَ",
+    "verse": "21:79 - And We gave understanding of it [i.e., the case] to Solomon, and to each [of them] We gave judgement and knowledge. And We subjected the mountains to exalt [Us], along with David and [also] the birds. And We were doing [that]."
   },
   "generated": true,
   "model": "auto (chain)"

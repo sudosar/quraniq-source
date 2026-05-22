@@ -1,35 +1,29 @@
 {
-  "date": "2026-05-21",
+  "date": "2026-05-22",
   "puzzle": {
-    "verseRef": "22:77",
-    "reference": "Al-Hajj (22:77)",
+    "verseRef": "44:4",
+    "reference": "Ad-Dukhan (44:4)",
     "segments": [
-      "يَا أَيُّهَا الَّذِينَ",
-      "آمَنُوا ارْكَعُوا",
-      "وَاسْجُدُوا وَاعْبُدُوا",
-      "رَبَّكُمْ وَافْعَلُوا",
-      "الْخَيْرَ لَعَلَّكُمْ",
-      "تُفْلِحُونَ"
+      "فِيهَا",
+      "يُفْرَقُ",
+      "كُلُّ أَمْرٍ",
+      "حَكِيمٍ"
     ],
     "translations": [
-      "O you who believe O you who believe",
-      "O you who believe Bow",
-      "and prostrate and worship",
-      "your Lord and do",
-      "[the] good so that you may",
-      "be successful"
+      "Therein is made distinct",
+      "every",
+      "affair",
+      "wise"
     ],
-    "hint": "This verse calls believers to fundamental acts of worship and righteous deeds for ultimate success.",
-    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱرْكَعُوا۟ وَٱسْجُدُوا۟ وَٱعْبُدُوا۟ رَبَّكُمْ وَٱفْعَلُوا۟ ٱلْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ ۩",
+    "hint": "This verse refers to a blessed night when divine decrees are determined.",
+    "arabic": "فِيهَا يُفْرَقُ كُلُّ أَمْرٍ حَكِيمٍ",
     "words": [
-      "يَـٰٓأَيُّهَا ٱلَّذِينَ",
-      "ءَامَنُوا۟ ٱرْكَعُوا۟",
-      "وَٱسْجُدُوا۟ وَٱعْبُدُوا۟",
-      "رَبَّكُمْ وَٱفْعَلُوا۟",
-      "ٱلْخَيْرَ لَعَلَّكُمْ",
-      "تُفْلِحُونَ ۩"
+      "فِيهَا يُفْرَقُ",
+      "كُلُّ",
+      "أَمْرٍ",
+      "حَكِيمٍ"
     ],
-    "verseEn": "O you who have believed, bow and prostrate and worship your Lord and do good - that you may succeed."
+    "verseEn": "Therein [i.e., on that night] is made distinct every precise matter -"
   },
   "generated": true,
   "model": "auto (chain)"
