@@ -106,7 +106,7 @@ function HighlightedArabicWord({ word, targetLetter, letterColor }: { word: stri
     <span 
       className="arabic-text block text-center" 
       dir="rtl" 
-      style={{ fontFamily: '"Amiri", "Noto Naskh Arabic", serif', fontSize: '1rem', lineHeight: 1.6 }}
+      style={{ fontFamily: '"Amiri", "Noto Naskh Arabic", serif', fontSize: '1.8rem', lineHeight: 1.6 }}
     >
       {graphemes.map((g, i) => {
         const normalizedG = normalizeArabicLetter(g);
@@ -131,7 +131,7 @@ function HighlightedArabicWord({ word, targetLetter, letterColor }: { word: stri
         <span 
           className="block text-center mt-0.5"
           style={{ 
-            fontSize: '0.6rem', 
+            fontSize: '0.7rem', 
             color: letterColor, 
             fontFamily: 'var(--font-body)',
             direction: 'ltr',
@@ -377,7 +377,7 @@ export default function DragToMatchGame({ letter, distractorLetters, onComplete 
                   <span 
                     className="arabic-text block text-center" 
                     dir="rtl"
-                    style={{ fontFamily: '"Amiri", "Noto Naskh Arabic", serif', fontSize: '1rem', color: '#1f2937' }}
+                    style={{ fontFamily: '"Amiri", "Noto Naskh Arabic", serif', fontSize: '1.8rem', color: '#1f2937' }}
                   >
                     {target.word}
                   </span>
