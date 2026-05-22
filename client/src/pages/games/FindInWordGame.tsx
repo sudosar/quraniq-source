@@ -445,40 +445,64 @@ export default function FindInWordGame({ letter, onComplete }: Props) {
                         <motion.div
                           key={form}
                           initial={{ scale: 0, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
+                          animate={isActiveForm 
+                            ? { scale: [0, 1.2, 1], opacity: 1 }
+                            : { scale: 1, opacity: 1 }
+                          }
                           transition={{ delay: form === 'isolated' ? 0.1 : form === 'initial' ? 0.25 : form === 'medial' ? 0.4 : 0.55, type: 'spring', stiffness: 300 }}
-                          className="flex flex-col items-center"
+                          className="flex flex-col items-center relative"
                         >
-                          <div 
-                            className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-1 transition-all"
+                          {/* Arrow pointing to active form */}
+                          {isActiveForm && (
+                            <motion.div
+                              initial={{ opacity: 0, y: -5 }}
+                              animate={{ opacity: 1, y: [0, -4, 0] }}
+                              transition={{ delay: 0.7, duration: 1.2, repeat: Infinity }}
+                              className="absolute -top-5 text-center"
+                              style={{ fontSize: '0.9rem' }}
+                            >
+                              👇
+                            </motion.div>
+                          )}
+                          <motion.div 
+                            className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-1"
+                            animate={isActiveForm ? {
+                              boxShadow: [
+                                `0 0 0px ${letter.color}40, 0 4px 8px rgba(0,0,0,0.1)`,
+                                `0 0 20px ${letter.color}60, 0 4px 12px rgba(0,0,0,0.15)`,
+                                `0 0 0px ${letter.color}40, 0 4px 8px rgba(0,0,0,0.1)`,
+                              ]
+                            } : {}}
+                            transition={isActiveForm ? { duration: 1.5, repeat: Infinity, ease: 'easeInOut' } : {}}
                             style={{ 
-                              backgroundColor: isActiveForm ? letter.color + '15' : 'white',
+                              backgroundColor: isActiveForm ? letter.color + '20' : 'white',
                               border: isActiveForm 
                                 ? `3px solid ${letter.color}` 
-                                : `2px solid ${letter.color}30`,
+                                : `2px solid ${letter.color}20`,
                               boxShadow: isActiveForm 
-                                ? `0 0 12px ${letter.color}30, 0 4px 8px rgba(0,0,0,0.1)` 
+                                ? `0 0 12px ${letter.color}40, 0 4px 8px rgba(0,0,0,0.1)` 
                                 : '0 1px 3px rgba(0,0,0,0.05)',
-                              transform: isActiveForm ? 'scale(1.1)' : 'scale(1)',
+                              transform: isActiveForm ? 'scale(1.15)' : 'scale(0.9)',
+                              opacity: isActiveForm ? 1 : 0.5,
                             }}
                           >
                             <span 
                               className="arabic-text"
                               style={{ 
-                                fontSize: isActiveForm ? '1.8rem' : '1.5rem',
-                                color: isActiveForm ? letter.color : '#999',
+                                fontSize: isActiveForm ? '2rem' : '1.3rem',
+                                color: isActiveForm ? letter.color : '#BBB',
                                 fontWeight: isActiveForm ? 700 : 400,
                                 fontFamily: '"Amiri", "Noto Naskh Arabic", serif',
                               }}
                             >
                               {letterForms[form]}
                             </span>
-                          </div>
+                          </motion.div>
                           <span 
                             className="text-[10px] font-medium"
                             style={{ 
-                              color: isActiveForm ? letter.color : '#6B7280',
-                              fontWeight: isActiveForm ? 700 : 500,
+                              color: isActiveForm ? letter.color : '#9CA3AF',
+                              fontWeight: isActiveForm ? 700 : 400,
                             }}
                           >
                             {formLabels[form].en}
@@ -488,7 +512,7 @@ export default function FindInWordGame({ letter, onComplete }: Props) {
                             className="text-[10px] arabic-text" 
                             style={{ 
                               fontFamily: '"Amiri", serif',
-                              color: isActiveForm ? letter.color : '#9CA3AF',
+                              color: isActiveForm ? letter.color : '#D1D5DB',
                             }}
                           >
                             {formLabels[form].ar}
