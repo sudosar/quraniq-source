@@ -796,16 +796,20 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
             words_list = [item.get("ar", "") for item in prev_cat.get("items", [])]
             refs_list  = [item.get("ref", "") for item in prev_cat.get("items", [])]
             roots_list = [r for r in get_roots_for_prompt(words_list) if r]
+            prev_items = prev_cat.get("items", [])
+            dom_field, dom_count = _get_dominant_field(prev_items)
+            dom_str = f" (dominant field: {dom_field})" if dom_field else ""
             lines.append(
-                f"  Category {i+1} ({COLORS[i]}, {DIFFICULTY_LABELS[i]}): \"{prev_cat.get('nameEn')}\"\n"
+                f"  Category {i+1} ({COLORS[i]}, {DIFFICULTY_LABELS[i]}): \"{prev_cat.get('nameEn')}\"{dom_str}\n"
                 f"    Words : {', '.join(words_list)}\n"
                 f"    Roots : {', '.join(roots_list)}\n"
                 f"    Refs  : {', '.join(refs_list)}"
             )
         chosen_block = (
             "\n\nALREADY CHOSEN CATEGORIES (do NOT reuse their refs, themes, or word roots):\n"
-            + "\n".join(lines)
-            + "\n\nCRITICAL: Your 4 Arabic words must NOT share roots with ANY of the roots listed above."
+            + "\n\n".join(lines)
+            + "\n\nDo NOT pick a theme whose items overlap in dominant semantic field with any previous category."
+            + "\nCRITICAL: Your 4 Arabic words must NOT share roots with ANY of the roots listed above."
         )
 
     violation_block = ""
@@ -1307,6 +1311,25 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
     return errors, violations, warnings
 
 
+def _get_dominant_field(items):
+    """Return the dominant semantic field for a category's items, or None if no dominant field.
+    
+    Dominant = top field with count >= 2. Returns (field_name, count) or (None, 0).
+    """
+    field_counts = []
+    for field_name, field_data in SEMANTIC_FIELDS.items():
+        count = _count_field_matches(items, field_data['keywords'])
+        if count >= 1:
+            field_counts.append((field_name, count))
+    if not field_counts:
+        return None, 0
+    field_counts.sort(key=lambda x: x[1], reverse=True)
+    best_field, best_count = field_counts[0]
+    if best_count >= 2:
+        return best_field, best_count
+    return None, 0
+
+
 def validate_connections(puzzle, history):
     errors, cooldown_violations, warnings = [], [], []
     cats = puzzle.get("categories", [])
@@ -1316,6 +1339,7 @@ def validate_connections(puzzle, history):
 
     all_word_data = []  # list of (ar, en) tuples seen so far
     cross_cat_refs = set()
+    cat_dominant_fields = []  # [(field_name, count), ...] per category
 
     for i, cat in enumerate(cats):
         items = cat.get("items", [])
@@ -1366,6 +1390,22 @@ def validate_connections(puzzle, history):
                 warnings.append(f"Word '{ar}' reused (cooldown)")
             item.setdefault("verse", "")
             item.setdefault("verseEn", "")
+
+        # Track dominant field for cross-category overlap check
+        dom_field, dom_count = _get_dominant_field(items)
+        cat_dominant_fields.append((dom_field, dom_count))
+
+    # ── Cross-category semantic overlap check ──────────────────────
+    # Reject if any two categories share the same dominant field
+    for i in range(len(cats)):
+        for j in range(i + 1, len(cats)):
+            field_i, count_i = cat_dominant_fields[i]
+            field_j, count_j = cat_dominant_fields[j]
+            if field_i and field_i == field_j:
+                cooldown_violations.append(
+                    f"Categories {i+1} and {j+1} both focus on '{field_i}' "
+                    f"({count_i}/4 and {count_j}/4 items) — choose different themes."
+                )
 
     return errors, cooldown_violations, warnings
 
