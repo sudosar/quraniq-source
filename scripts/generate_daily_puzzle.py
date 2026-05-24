@@ -303,14 +303,14 @@ GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 MIMO_API_URL = "https://api.xiaomimimo.com/v1/chat/completions"
-MINIMAX_API_URL = "https://api.minimax.chat/v1/chat/completions"
+MINIMAX_API_URL = "https://api.minimax.io/v1/chat/completions"
 
 MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
 
 # Model fallback chain (priority order)
 MODEL_CHAIN = [
+    {"id": "MiniMax-M2.7", "api": "minimax", "label": "MiniMax (Primary)"},
     {"id": "deepseek-v4-flash", "api": "deepseek", "label": "DeepSeek V4 Flash"},
-    {"id": "minimax-v2-0524", "api": "minimax", "label": "Minimax (Primary)"},
     {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Last Resort)"},
 ]
 
