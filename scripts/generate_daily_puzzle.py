@@ -309,9 +309,8 @@ MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
 
 # Model fallback chain (priority order)
 MODEL_CHAIN = [
-    {"id": "minimax/minimax-v2-0524", "api": "minimax", "label": "Minimax (Primary)"},
-    {"id": "deepseek/deepseek-v4-flash", "api": "deepseek", "label": "DeepSeek V4 Flash"},
-    {"id": "xiaomi/mimo-v2-flash", "api": "mimo", "label": "Xiaomi MiMo V2 Flash"},
+    {"id": "deepseek-v4-flash", "api": "deepseek", "label": "DeepSeek V4 Flash"},
+    {"id": "minimax-v2-0524", "api": "minimax", "label": "Minimax (Primary)"},
     {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Last Resort)"},
 ]
 
