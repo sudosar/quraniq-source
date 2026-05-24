@@ -48,6 +48,7 @@ export type GameType =
   | 'harakat'         // Teach fatha/kasra/damma recitation + quiz
   | 'combine-letters' // Blend letter sounds together (ba + a = baa)
   | 'word-building'   // Build Quranic words from syllable blends
+  | 'sentence-reading' // Read Quranic phrases word by word
   | 'catch-game'      // Letters fall, catch the correct one
   | 'memory-match'    // Flip cards to match letter pairs
 
@@ -75,6 +76,7 @@ const allGames: GameConfig[] = [
   { type: 'harakat', title: 'Letter Sounds', description: 'Learn fatha, kasra & damma!', icon: '🎵', difficulty: 1, requiresDistractors: false, minDistractors: 0 },
   { type: 'combine-letters', title: 'Combine Letters', description: 'Blend sounds together!', icon: '🔗', difficulty: 1, requiresDistractors: false, minDistractors: 0 },
   { type: 'word-building', title: 'Build Words', description: 'Build Quranic words from syllables!', icon: '🏗️', difficulty: 1, requiresDistractors: false, minDistractors: 0 },
+  { type: 'sentence-reading', title: 'Read the Quran', description: 'Read Quranic phrases word by word!', icon: '📖', difficulty: 1, requiresDistractors: false, minDistractors: 0 },
   { type: 'catch-game', title: 'Letter Catch', description: 'Catch the falling letters!', icon: '🎪', difficulty: 2, requiresDistractors: true, minDistractors: 2 },
   { type: 'memory-match', title: 'Memory Match', description: 'Find the matching pairs!', icon: '🃏', difficulty: 2, requiresDistractors: true, minDistractors: 2 },
 ];
