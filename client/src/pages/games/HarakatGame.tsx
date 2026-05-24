@@ -4,14 +4,13 @@
  * Design: Celestial Garden theme
  * 
  * PEDAGOGY:
- * Phase 1 (Teaching): Show the letter with each haraka (fatha, kasra, damma)
- *   - Display: بَ = "ba", بِ = "bi", بُ = "bu"
- *   - Play the sound for each one so child hears the difference
+ * Level 1 (Basic): Fatha, Kasra, Damma
+ *   - Teaching: Show the letter with each haraka (بَ = "ba", بِ = "bi", بُ = "bu")
+ *   - Quiz: Play sound, child picks correct letter+haraka from 3 options
  * 
- * Phase 2 (Quiz): Play a sound (e.g., "baa") and show 3 options
- *   - Options are the SAME letter with different harakaat
- *   - OR different letters (from previously learned) with the same haraka
- *   - Child must identify the correct letter+haraka combination
+ * Level 2 (Advanced): Sukoon + Tanween (fathatain, kasratain, dammatain)
+ *   - Teaching: Show sukoon (بْ = no vowel), tanween forms
+ *   - Quiz: Same format with advanced diacritics
  * 
  * ONLY uses letters the child has already learned as distractors.
  */
@@ -36,18 +35,26 @@ interface Haraka {
   name: string;
   nameAr: string;
   symbol: string;     // Unicode combining character
-  sound: string;      // Phonetic suffix (a, i, u)
+  sound: string;      // Phonetic suffix
   color: string;
+  description: string; // Brief explanation for kids
 }
 
-const HARAKAAT: Haraka[] = [
-  { name: 'Fatha', nameAr: 'فَتْحَة', symbol: '\u064E', sound: 'a', color: '#E53E3E' },   // َ
-  { name: 'Kasra', nameAr: 'كَسْرَة', symbol: '\u0650', sound: 'i', color: '#2B6CB0' },   // ِ
-  { name: 'Damma', nameAr: 'ضَمَّة', symbol: '\u064F', sound: 'u', color: '#38A169' },    // ُ
+const BASIC_HARAKAAT: Haraka[] = [
+  { name: 'Fatha', nameAr: 'فَتْحَة', symbol: '\u064E', sound: 'a', color: '#E53E3E', description: 'Opens the mouth — "ah" sound' },
+  { name: 'Kasra', nameAr: 'كَسْرَة', symbol: '\u0650', sound: 'i', color: '#2B6CB0', description: 'Lowers the jaw — "ee" sound' },
+  { name: 'Damma', nameAr: 'ضَمَّة', symbol: '\u064F', sound: 'u', color: '#38A169', description: 'Rounds the lips — "oo" sound' },
+];
+
+const ADVANCED_HARAKAAT: Haraka[] = [
+  { name: 'Sukoon', nameAr: 'سُكُون', symbol: '\u0652', sound: '', color: '#6B46C1', description: 'No vowel — letter stops' },
+  { name: 'Fathatain', nameAr: 'فَتْحَتَين', symbol: '\u064B', sound: 'an', color: '#D69E2E', description: 'Double fatha — "an" ending' },
+  { name: 'Kasratain', nameAr: 'كَسْرَتَين', symbol: '\u064D', sound: 'in', color: '#3182CE', description: 'Double kasra — "in" ending' },
+  { name: 'Dammatain', nameAr: 'ضَمَّتَين', symbol: '\u064C', sound: 'un', color: '#2F855A', description: 'Double damma — "un" ending' },
 ];
 
 interface QuizOption {
-  letterWithHaraka: string;  // e.g., "بَ"
+  letterWithHaraka: string;
   letterObj: ArabicLetter;
   haraka: Haraka;
   isCorrect: boolean;
@@ -56,15 +63,16 @@ interface QuizOption {
 interface QuizRound {
   target: { letterObj: ArabicLetter; haraka: Haraka; letterWithHaraka: string };
   options: QuizOption[];
-  spokenText: string;  // What to speak aloud
+  spokenText: string;
 }
 
-type GamePhase = 'teaching' | 'quiz';
+type GamePhase = 'level-select' | 'teaching' | 'quiz' | 'level-complete';
 
 const QUIZ_ROUNDS = 4;
 
 export default function HarakatGame({ letter, distractorLetters, onComplete }: Props) {
-  const [phase, setPhase] = useState<GamePhase>('teaching');
+  const [level, setLevel] = useState<'basic' | 'advanced'>('basic');
+  const [phase, setPhase] = useState<GamePhase>('teaching'); // Start directly with basic teaching
   const [teachingStep, setTeachingStep] = useState(0);
   const [currentRound, setCurrentRound] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
@@ -73,6 +81,9 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
   const [showResult, setShowResult] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [teachingAutoPlay, setTeachingAutoPlay] = useState(false);
+  const [basicCompleted, setBasicCompleted] = useState(false);
+
+  const currentHarakaat = level === 'basic' ? BASIC_HARAKAAT : ADVANCED_HARAKAAT;
 
   // Build the letter+haraka display
   const getLetterWithHaraka = (letterChar: string, haraka: Haraka) => {
@@ -81,32 +92,34 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
 
   // Get the pronunciation text for speech synthesis
   const getPronunciation = (letterObj: ArabicLetter, haraka: Haraka) => {
-    // Speak the letter with the haraka attached
     return letterObj.letter + haraka.symbol;
   };
 
-  // Teaching data: show current letter with all 3 harakaat
+  // Teaching data
   const teachingCards = useMemo(() => {
-    return HARAKAAT.map(h => ({
+    return currentHarakaat.map(h => ({
       haraka: h,
       letterWithHaraka: getLetterWithHaraka(letter.letter, h),
       pronunciation: getPronunciation(letter, h),
-      transliteration: letter.transliteration.replace(/[aeiou].*$/i, '') + h.sound,
+      transliteration: h.sound 
+        ? letter.transliteration.replace(/[aeiou].*$/i, '') + h.sound
+        : letter.transliteration.replace(/[aeiou].*$/i, '') + ' (stop)',
     }));
-  }, [letter]);
+  }, [letter, currentHarakaat]);
 
   // Build quiz rounds
   const quizRounds = useMemo(() => {
     const rounds: QuizRound[] = [];
+    const harakaat = currentHarakaat;
     
     for (let i = 0; i < QUIZ_ROUNDS; i++) {
-      const targetHaraka = HARAKAAT[i % 3]; // Cycle through fatha, kasra, damma
+      const targetHaraka = harakaat[i % harakaat.length];
       
-      // Decide round type: same letter different harakaat, or different letters same haraka
-      const roundType = i < 3 ? 'same-letter' : 'different-letters';
+      // For basic: 3 options (same letter, different harakaat)
+      // For advanced: 3-4 options depending on available harakaat
+      const roundType = (i < harakaat.length || distractorLetters.length === 0) ? 'same-letter' : 'different-letters';
       
-      if (roundType === 'same-letter' || distractorLetters.length === 0) {
-        // Show the same letter with 3 different harakaat
+      if (roundType === 'same-letter') {
         const targetOption: QuizOption = {
           letterWithHaraka: getLetterWithHaraka(letter.letter, targetHaraka),
           letterObj: letter,
@@ -114,8 +127,9 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
           isCorrect: true,
         };
         
-        const distractorHarakaat = HARAKAAT.filter(h => h.name !== targetHaraka.name);
-        const distractorOptions: QuizOption[] = distractorHarakaat.map(h => ({
+        const distractorHarakaat = harakaat.filter(h => h.name !== targetHaraka.name);
+        const selectedDistractors = shuffleArray(distractorHarakaat).slice(0, 2);
+        const distractorOptions: QuizOption[] = selectedDistractors.map(h => ({
           letterWithHaraka: getLetterWithHaraka(letter.letter, h),
           letterObj: letter,
           haraka: h,
@@ -128,7 +142,6 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
           spokenText: getPronunciation(letter, targetHaraka),
         });
       } else {
-        // Show different letters with the same haraka — child must pick the right letter
         const targetOption: QuizOption = {
           letterWithHaraka: getLetterWithHaraka(letter.letter, targetHaraka),
           letterObj: letter,
@@ -153,11 +166,11 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
     }
     
     return rounds;
-  }, [letter, distractorLetters]);
+  }, [letter, distractorLetters, currentHarakaat]);
 
   const currentQuizRound = quizRounds[currentRound];
 
-  // Teaching phase: auto-play sound for each haraka
+  // Teaching phase: auto-play sound
   useEffect(() => {
     if (phase === 'teaching' && teachingAutoPlay) {
       const timer = setTimeout(() => {
@@ -192,13 +205,12 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
 
   const handleTeachingNext = useCallback(() => {
     setTeachingAutoPlay(true);
-    if (teachingStep < 2) {
+    if (teachingStep < currentHarakaat.length - 1) {
       setTeachingStep(prev => prev + 1);
     } else {
-      // Move to quiz phase
       setPhase('quiz');
     }
-  }, [teachingStep]);
+  }, [teachingStep, currentHarakaat.length]);
 
   const handleQuizSelect = useCallback((optionIndex: number) => {
     if (selected !== null || !currentQuizRound) return;
@@ -225,7 +237,17 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
         setShowResult(true);
         const finalScore = correct ? score + 1 : score;
         if (finalScore >= 3) {
-          setTimeout(() => onComplete(finalScore >= 4 ? 2 : 1), 1500);
+          if (level === 'basic') {
+            // Show level complete, offer advanced
+            setTimeout(() => {
+              setBasicCompleted(true);
+              setPhase('level-complete');
+              setShowResult(false);
+            }, 1500);
+          } else {
+            // All done
+            setTimeout(() => onComplete(finalScore >= 4 ? 2 : 1), 1500);
+          }
         } else {
           // Retry
           setTimeout(() => {
@@ -238,30 +260,102 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
         }
       }
     }, 1500);
-  }, [selected, currentQuizRound, currentRound, score, onComplete]);
+  }, [selected, currentQuizRound, currentRound, score, onComplete, level]);
+
+  const startAdvancedLevel = useCallback(() => {
+    setLevel('advanced');
+    setPhase('teaching');
+    setTeachingStep(0);
+    setTeachingAutoPlay(false);
+    setCurrentRound(0);
+    setSelected(null);
+    setIsCorrect(null);
+    setScore(0);
+    setShowResult(false);
+  }, []);
+
+  const finishAfterBasic = useCallback(() => {
+    onComplete(2);
+  }, [onComplete]);
+
+  // ============ LEVEL COMPLETE (between basic and advanced) ============
+  if (phase === 'level-complete') {
+    return (
+      <div className="h-full flex flex-col items-center justify-center px-6 py-6">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ type: 'spring', stiffness: 200 }}
+          className="text-center"
+        >
+          <span className="text-6xl block mb-4">🌟</span>
+          <h3 className="text-2xl font-bold text-gray-700 mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+            Basic Sounds Mastered!
+          </h3>
+          <p className="text-gray-500 mb-2">
+            You learned Fatha, Kasra & Damma for {letter.name}!
+          </p>
+          <p className="text-sm text-gray-400 mb-8">
+            Ready for advanced sounds? (Sukoon & Tanween)
+          </p>
+
+          <div className="flex flex-col gap-3 w-full max-w-xs mx-auto">
+            <motion.button
+              onClick={startAdvancedLevel}
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold text-lg shadow-lg"
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              Learn Sukoon & Tanween ✨
+            </motion.button>
+            
+            <motion.button
+              onClick={finishAfterBasic}
+              className="px-6 py-3 rounded-full bg-gray-100 text-gray-600 font-medium"
+              whileTap={{ scale: 0.95 }}
+            >
+              Continue to next game →
+            </motion.button>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
 
   // ============ TEACHING PHASE ============
   if (phase === 'teaching') {
     const card = teachingCards[teachingStep];
+    const isAdvanced = level === 'advanced';
     
     return (
       <div className="h-full flex flex-col items-center justify-center px-6 py-6 relative">
+        {/* Level badge */}
+        {isAdvanced && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="absolute top-4 right-4 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold"
+          >
+            ⭐ Advanced
+          </motion.div>
+        )}
+
         {/* Header */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-5">
           <h3 className="text-xl font-bold text-gray-700 mb-1" style={{ fontFamily: 'var(--font-heading)' }}>
-            Learn the Sounds of {letter.name}
+            {isAdvanced ? `Advanced Sounds of ${letter.name}` : `Learn the Sounds of ${letter.name}`}
           </h3>
           <p className="text-sm text-gray-500">
-            Each mark changes how the letter sounds!
+            {isAdvanced ? 'These marks change the ending sound!' : 'Each mark changes how the letter sounds!'}
           </p>
         </div>
 
         {/* Step indicator */}
-        <div className="flex items-center gap-3 mb-8">
-          {HARAKAAT.map((h, i) => (
+        <div className="flex items-center gap-2 mb-6 flex-wrap justify-center">
+          {currentHarakaat.map((h, i) => (
             <div
               key={h.name}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all ${
+              className={`flex items-center gap-1 px-2.5 py-1 rounded-full transition-all ${
                 i === teachingStep 
                   ? 'bg-white shadow-lg scale-110 border-2' 
                   : i < teachingStep 
@@ -279,7 +373,7 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
         {/* Main teaching card */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={teachingStep}
+            key={`${level}-${teachingStep}`}
             initial={{ opacity: 0, y: 30, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -30, scale: 0.9 }}
@@ -288,7 +382,7 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
             style={{ borderColor: card.haraka.color + '40' }}
           >
             {/* Haraka name */}
-            <div className="mb-4">
+            <div className="mb-3">
               <span 
                 className="inline-block px-4 py-1 rounded-full text-sm font-bold text-white"
                 style={{ backgroundColor: card.haraka.color }}
@@ -297,10 +391,15 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
               </span>
             </div>
 
+            {/* Description */}
+            <p className="text-xs text-gray-500 mb-3 italic">
+              {card.haraka.description}
+            </p>
+
             {/* Letter with haraka — BIG */}
             <motion.div
               className="mb-4"
-              animate={isSpeaking && teachingStep === teachingStep ? { scale: [1, 1.1, 1] } : {}}
+              animate={isSpeaking ? { scale: [1, 1.1, 1] } : {}}
               transition={{ duration: 0.4, repeat: isSpeaking ? 2 : 0 }}
             >
               <span 
@@ -324,7 +423,7 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
             {/* Sound button */}
             <motion.button
               onClick={() => playTeachingSound(teachingStep)}
-              className="mt-4 w-16 h-16 rounded-full shadow-lg flex items-center justify-center mx-auto"
+              className="mt-4 w-16 h-16 rounded-full shadow-lg flex items-center justify-center mx-auto text-white"
               style={{ backgroundColor: card.haraka.color }}
               whileTap={{ scale: 0.9 }}
               animate={isSpeaking ? { scale: [1, 1.15, 1] } : {}}
@@ -339,12 +438,12 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
         {/* Next button */}
         <motion.button
           onClick={handleTeachingNext}
-          className="mt-8 px-8 py-3 rounded-full text-white font-bold text-lg shadow-lg"
+          className="mt-6 px-8 py-3 rounded-full text-white font-bold text-lg shadow-lg"
           style={{ backgroundColor: card.haraka.color }}
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.05 }}
         >
-          {teachingStep < 2 ? 'Next Sound →' : "Let's Practice! 🎯"}
+          {teachingStep < currentHarakaat.length - 1 ? 'Next Sound →' : "Let's Practice! 🎯"}
         </motion.button>
       </div>
     );
@@ -355,6 +454,17 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
 
   return (
     <div className="h-full flex flex-col items-center justify-center px-6 py-6 relative">
+      {/* Level badge */}
+      {level === 'advanced' && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="absolute top-4 right-4 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold"
+        >
+          ⭐ Advanced
+        </motion.div>
+      )}
+
       {/* Round indicator */}
       <div className="flex items-center gap-2 mb-4">
         {Array.from({ length: QUIZ_ROUNDS }).map((_, i) => (
@@ -389,7 +499,7 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
       </motion.button>
       <p className="text-xs text-gray-400 mb-6">Tap to hear again</p>
 
-      {/* Options — 3 choices */}
+      {/* Options */}
       <div className="grid grid-cols-3 gap-3 w-full max-w-md">
         {currentQuizRound.options.map((option, i) => {
           const isSelected = selected === i;
@@ -403,7 +513,7 @@ export default function HarakatGame({ letter, distractorLetters, onComplete }: P
 
           return (
             <motion.button
-              key={`${currentRound}-${i}`}
+              key={`${level}-${currentRound}-${i}`}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ 
                 opacity: 1, 
