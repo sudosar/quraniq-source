@@ -28,6 +28,7 @@ import MemoryMatchGame from './games/MemoryMatchGame';
 import HarakatGame from './games/HarakatGame';
 import CombineLettersGame from './games/CombineLettersGame';
 import WordBuildingGame from './games/WordBuildingGame';
+import SentenceReadingGame from './games/SentenceReadingGame';
 
 const MASCOT = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663317811558/JhGQquPdHPqw2LEAWe34js/mascot-moon-4TKGwbdD2xAUvRBjLqdhwG.webp';
 
@@ -151,6 +152,8 @@ export default function LetterPlay() {
         return <CombineLettersGame {...gameProps} />;
       case 'word-building':
         return <WordBuildingGame {...gameProps} />;
+      case 'sentence-reading':
+        return <SentenceReadingGame {...gameProps} />;
       default:
         return <LetterIntroGame {...gameProps} />;
     }
