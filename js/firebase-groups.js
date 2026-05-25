@@ -565,23 +565,19 @@ async function submitFirebaseScore(gameMode, crescents) {
 
 /**
  * Get today's date string in YYYY-MM-DD format.
- * Prefers the active puzzle date (from the loaded puzzle file) so that
- * scores are always keyed to the puzzle's date, not the wall-clock UTC date.
- * This prevents yesterday's scores from appearing under today's date when
- * the user plays a stale puzzle between midnight UTC and puzzle deployment.
+ * Always uses the active puzzle date (from the loaded puzzle file) when available.
+ * This ensures scores are always keyed to the puzzle the user actually played,
+ * not the wall-clock date — critical when a stale puzzle is served between
+ * midnight and the next puzzle deployment.
  */
 function getTodayDateString() {
-    // Primary: use the wall-clock date so scores match what the user perceives as "today"
-    const now = new Date();
-    const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
-    // Fallback: only use puzzle date if it matches today's date
-    // (puzzles are generated hours before the calendar flips over, so puzzle date
-    // may slightly lag real date — only trust it if it matches today)
     if (typeof getActivePuzzleDate === 'function') {
         const pd = getActivePuzzleDate();
-        if (pd === today) return pd;
+        if (pd) return pd;
     }
-    return today;
+    // Fallback to wall-clock only when no puzzle date is set (e.g., before any puzzle loaded)
+    const now = new Date();
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
 }
 
 // ==================== LEADERBOARD ====================
