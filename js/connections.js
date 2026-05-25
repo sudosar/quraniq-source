@@ -103,7 +103,6 @@ function setupConnectionsGame() {
         conn.mistakes = saved.mistakes ?? 4;
         conn.gameOver = saved.gameOver || false;
         conn.correctCount = saved.correctCount ?? conn.solved.length;
-        conn.correctCount = saved.correctCount ?? conn.solved.length;
         conn.exploredVerses = new Set(saved.exploredVerses || []);
         conn.submittedGuesses = new Set(saved.submittedGuesses || []);
         conn.categoriesWithMistakes = new Set(saved.categoriesWithMistakes || []);
@@ -116,7 +115,6 @@ function setupConnectionsGame() {
         conn.solved = [];
         conn.mistakes = 4;
         conn.gameOver = false;
-        conn.correctCount = 0;
         conn.correctCount = 0;
         conn.exploredVerses = new Set();
         conn.submittedGuesses = new Set();
