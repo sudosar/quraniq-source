@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-22",
+  "date": "2026-05-25",
   "puzzle": {
-    "title": "The Dreamer's Ascent",
-    "intro": "A soul destined for greatness, yet tested by severe trials, embarked on an extraordinary journey. This individual's path was marked by jealousy, separation, and unjust suffering, only to culminate in a position of immense responsibility and profound reunion. Can you identify this remarkable figure from the Quran?",
+    "title": "The Appointed Successor",
+    "intro": "A figure from ages past stands ready to step into history. When the path seemed unclear and doubt spread among the people, this servant was chosen to take up the mantle of guidance. With the weight of a sacred mission on their shoulders, they stepped forward to lead where others hesitated to follow.",
     "clues": [
-      "I was once envied by those closest to me, leading to a profound separation from my parent and home.",
-      "I experienced a period of great difficulty, including being sold for a meager price by travelers.",
-      "I was unjustly accused of wrongdoing and spent years in confinement, yet my faith remained unwavering.",
-      "I was granted a unique ability to interpret complex visions, which proved instrumental in my path to freedom.",
-      "My wisdom and integrity eventually led me to a position of great authority and trust in a foreign land.",
-      "Through a series of events, I was reunited with my elderly parent and siblings after a long and painful absence."
+      "I was chosen to accompany a prophet and learned from their wisdom",
+      "I stood before the Ark when the promise of our Sustainer drew near, and I saw the people beginning to doubt",
+      "I was made to stand at the edge of what was promised while our leader grieved and supplicated to Allah for us",
+      "I was appointed to continue a mission that had been given to another before me",
+      "I was granted divine authority to lead the people to their destination",
+      "I succeeded in completing what was begun before me, and I received the people's affirmation of my guidance"
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Sulaiman",
-          "Prophet Isa",
-          "Prophet Yusuf",
-          "Prophet Dawud",
-          "Prophet Yahya"
+          "Yusha ibn Nun",
+          "Caleb son of Yefunneh",
+          "Eldad and Medad",
+          "Prophet Ezekiel (Hizqiyyal)",
+          "Prophet Harun (Aaron)"
         ],
-        "answer": "Prophet Yusuf"
+        "answer": "Yusha ibn Nun"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Being swallowed by a large fish",
-          "Building an Ark to save creation",
-          "Enduring false accusations and imprisonment",
-          "Confronting a tyrannical ruler with miracles",
-          "Being tested with severe illness and loss"
+          "Refusing to enter the promised Holy Land",
+          "Pharaoh's armies pursuing us through the sea",
+          "The worship of the golden calf",
+          "Doubt upon hearing the Torah's command",
+          "The rebellion of Dathan and Abiram"
         ],
-        "answer": "Enduring false accusations and imprisonment"
+        "answer": "Refusing to enter the promised Holy Land"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A burning bush",
-          "A talking bird",
-          "A well",
-          "A staff turning into a serpent",
-          "A she-camel as a sign"
+          "The Torah scroll given to Musa",
+          "The Ark of the Covenant in battle",
+          "The Jordan River crossing",
+          "The desert of forty years",
+          "Mount Sinai's revelation"
         ],
-        "answer": "A well"
+        "answer": "The Torah scroll given to Musa"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Leading a migration to a promised land",
-          "Becoming a powerful minister in Egypt",
-          "Receiving divine judgment upon an arrogant people",
-          "Ruling a vast kingdom with wisdom and justice",
-          "Ascending to the heavens"
+          "Entering the promised Holy Land",
+          "Building a protective wall against invaders",
+          "Constructing a sacred house of worship",
+          "Drowning in pursuit of those who denied the truth",
+          "Breaking the idols of a corrupt people"
         ],
-        "answer": "Becoming a powerful minister in Egypt"
+        "answer": "Entering the promised Holy Land"
       }
     },
-    "verseRef": "12:4",
-    "arabic": "إِذْ قَالَ يُوسُفُ لِأَبِيهِ يَـٰٓأَبَتِ إِنِّى رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًۭا وَٱلشَّمْسَ وَٱلْقَمَرَ رَأَيْتُهُمْ لِى سَـٰجِدِينَ",
-    "verse": "[Of these stories mention] when Joseph said to his father, \"O my father, indeed I have seen [in a dream] eleven stars and the sun and the moon; I saw them prostrating to me.\" (12:4)"
+    "verseRef": "5:21",
+    "arabic": "يَـٰقَوْمِ ٱدْخُلُوا۟ ٱلْأَرْضَ ٱلْمُقَدَّسَةَ ٱلَّتِى كَتَبَ ٱللَّهُ لَكُمْ وَلَا تَرْتَدُّوا۟ عَلَىٰٓ أَدْبَارِكُمْ فَتَنقَلِبُوا۟ خَـٰسِرِينَ",
+    "verse": "O my people, enter the blessed land [i.e., Palestine] which Allāh has assigned to you and do not turn back [from fighting in Allāh's cause] and [thus] become losers.\" (5:21)"
   },
   "generated": true,
   "model": "auto (chain)"
