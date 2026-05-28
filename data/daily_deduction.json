@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-25",
+  "date": "2026-05-28",
   "puzzle": {
-    "title": "The Appointed Successor",
-    "intro": "A figure from ages past stands ready to step into history. When the path seemed unclear and doubt spread among the people, this servant was chosen to take up the mantle of guidance. With the weight of a sacred mission on their shoulders, they stepped forward to lead where others hesitated to follow.",
+    "title": "The Unwavering Patient One",
+    "intro": "In the annals of prophetic history, few have endured such profound loss and physical affliction with unshakeable faith. This figure's story is a timeless lesson in patience and trust in divine wisdom. Who is this soul?",
     "clues": [
-      "I was chosen to accompany a prophet and learned from their wisdom",
-      "I stood before the Ark when the promise of our Sustainer drew near, and I saw the people beginning to doubt",
-      "I was made to stand at the edge of what was promised while our leader grieved and supplicated to Allah for us",
-      "I was appointed to continue a mission that had been given to another before me",
-      "I was granted divine authority to lead the people to their destination",
-      "I succeeded in completing what was begun before me, and I received the people's affirmation of my guidance"
+      "I was chosen by Allah to deliver a message, but my greatest test came not through rejection, but through personal calamity.",
+      "My wealth, my livestock, and my children were taken from me, one after another.",
+      "My body was covered with sores, and I was left alone except for the support of my spouse.",
+      "I cried out to my Lord, acknowledging my suffering and seeking His mercy.",
+      "I was instructed to strike the ground with my foot, and a refreshing spring gushed forth.",
+      "Allah restored my health and gave me a new family and even more wealth than I had before."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Yusha ibn Nun",
-          "Caleb son of Yefunneh",
-          "Eldad and Medad",
-          "Prophet Ezekiel (Hizqiyyal)",
-          "Prophet Harun (Aaron)"
+          "Prophet Ayyub",
+          "Prophet Ibrahim",
+          "Prophet Musa",
+          "Prophet Isa",
+          "Prophet Nuh"
         ],
-        "answer": "Yusha ibn Nun"
+        "answer": "Prophet Ayyub"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Refusing to enter the promised Holy Land",
-          "Pharaoh's armies pursuing us through the sea",
-          "The worship of the golden calf",
-          "Doubt upon hearing the Torah's command",
-          "The rebellion of Dathan and Abiram"
+          "Loss of wealth and family",
+          "Being thrown into a fire",
+          "Being swallowed by a fish",
+          "Being separated from family and sold into slavery",
+          "Being tested with a golden calf"
         ],
-        "answer": "Refusing to enter the promised Holy Land"
+        "answer": "Loss of wealth and family"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Torah scroll given to Musa",
-          "The Ark of the Covenant in battle",
-          "The Jordan River crossing",
-          "The desert of forty years",
-          "Mount Sinai's revelation"
+          "A spring of water",
+          "A staff that turned into a serpent",
+          "A wooden ark",
+          "A molten calf",
+          "A palm tree"
         ],
-        "answer": "The Torah scroll given to Musa"
+        "answer": "A spring of water"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Entering the promised Holy Land",
-          "Building a protective wall against invaders",
-          "Constructing a sacred house of worship",
-          "Drowning in pursuit of those who denied the truth",
-          "Breaking the idols of a corrupt people"
+          "Restoration of family and wealth",
+          "Ascension to heaven",
+          "Becoming a king",
+          "Being saved from a whale",
+          "Receiving a son in old age"
         ],
-        "answer": "Entering the promised Holy Land"
+        "answer": "Restoration of family and wealth"
       }
     },
-    "verseRef": "5:21",
-    "arabic": "يَـٰقَوْمِ ٱدْخُلُوا۟ ٱلْأَرْضَ ٱلْمُقَدَّسَةَ ٱلَّتِى كَتَبَ ٱللَّهُ لَكُمْ وَلَا تَرْتَدُّوا۟ عَلَىٰٓ أَدْبَارِكُمْ فَتَنقَلِبُوا۟ خَـٰسِرِينَ",
-    "verse": "O my people, enter the blessed land [i.e., Palestine] which Allāh has assigned to you and do not turn back [from fighting in Allāh's cause] and [thus] become losers.\" (5:21)"
+    "verseRef": "38:41",
+    "arabic": "وَٱذْكُرْ عَبْدَنَآ أَيُّوبَ إِذْ نَادَىٰ رَبَّهُۥٓ أَنِّى مَسَّنِىَ ٱلشَّيْطَـٰنُ بِنُصْبٍۢ وَعَذَابٍ",
+    "verse": "And remember Our servant Job, when he called to his Lord, \"Indeed, Satan has touched me with hardship and torment.\" (38:41)"
   },
   "generated": true,
   "model": "auto (chain)"

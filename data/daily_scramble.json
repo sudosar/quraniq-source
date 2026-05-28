@@ -1,38 +1,29 @@
 {
-  "date": "2026-05-25",
+  "date": "2026-05-28",
   "puzzle": {
-    "verseRef": "13:11",
-    "reference": "Surah Ar-Ra'd (13:11)",
+    "verseRef": "9:105",
+    "reference": "At-Tawbah (9:105)",
     "segments": [
-      "InnaAllahu la yughayiru",
-      "maa bihai laa'ummin",
-      "hayataa'umul-laazibin",
-      "hattaa yughayiru maa bishai'oin",
-      "wa izaa araada",
-      "shai'am min khairin fahuwa lakum",
-      "wa yuuthakkiru ba'dakum ba'dan"
+      "وَقُلِ اعْمَلُوا",
+      "فَسَيَرَى اللَّهُ عَمَلَكُمْ",
+      "وَرَسُولُهُ",
+      "وَالْمُؤْمِنُونَ"
     ],
     "translations": [
-      "For him (are) successive (Angels) from (before) (him)",
-      "and from and behind him who guard him by (the) command",
-      "(of) Allah Indeed Allah (does) not change",
-      "(the condition) of a people until they change what",
-      "(is) in themselves And when wills Allah for a people",
-      "misfortune then (there is) no turning away of it and not",
-      "for them from besides Him any protector"
+      "And say Do then Allah will see then Allah will see",
+      "your deed and His Messenger and the believers And you will be brought back",
+      "to (the) Knower (of) the unseen and the seen",
+      "then He will inform you of what you used (to) do"
     ],
-    "hint": "This verse addresses the relationship between divine decree and human agency, emphasizing that Allah does not alter people's circumstances until they first transform themselves from within.",
-    "arabic": "لَهُۥ مُعَقِّبَـٰتٌۭ مِّنۢ بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِۦ يَحْفَظُونَهُۥ مِنْ أَمْرِ ٱللَّهِ ۗ إِنَّ ٱللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ۗ وَإِذَآ أَرَادَ ٱللَّهُ بِقَوْمٍۢ سُوٓءًۭا فَلَا مَرَدَّ لَهُۥ ۚ وَمَا لَهُم مِّن دُونِهِۦ مِن وَالٍ",
+    "hint": "This verse motivates believers to engage in good deeds, reminding them that their actions are witnessed by Allah, His Prophet, and the faithful community.",
+    "arabic": "وَقُلِ ٱعْمَلُوا۟ فَسَيَرَى ٱللَّهُ عَمَلَكُمْ وَرَسُولُهُۥ وَٱلْمُؤْمِنُونَ ۖ وَسَتُرَدُّونَ إِلَىٰ عَـٰلِمِ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ فَيُنَبِّئُكُم بِمَا كُنتُمْ تَعْمَلُونَ",
     "words": [
-      "لَهُۥ مُعَقِّبَـٰتٌۭ مِّنۢ بَيْنِ يَدَيْهِ",
-      "وَمِنْ خَلْفِهِۦ يَحْفَظُونَهُۥ مِنْ أَمْرِ",
-      "ٱللَّهِ ۗ إِنَّ ٱللَّهَ لَا يُغَيِّرُ",
-      "مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا۟ مَا",
-      "بِأَنفُسِهِمْ ۗ وَإِذَآ أَرَادَ ٱللَّهُ بِقَوْمٍۢ",
-      "سُوٓءًۭا فَلَا مَرَدَّ لَهُۥ ۚ وَمَا",
-      "لَهُم مِّن دُونِهِۦ مِن وَالٍ"
+      "وَقُلِ ٱعْمَلُوا۟ فَسَيَرَى ٱللَّهُ",
+      "عَمَلَكُمْ وَرَسُولُهُۥ وَٱلْمُؤْمِنُونَ ۖ وَسَتُرَدُّونَ",
+      "إِلَىٰ عَـٰلِمِ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ",
+      "فَيُنَبِّئُكُم بِمَا كُنتُمْ تَعْمَلُونَ"
     ],
-    "verseEn": "For him [i.e., each one] are successive [angels] before and behind him who protect him by the decree of Allāh. Indeed, Allāh will not change the condition of a people until they change what is in themselves. And when Allāh intends for a people ill, there is no repelling it. And there is not for them besides Him any patron."
+    "verseEn": "And say, \"Do [as you will], for Allāh will see your deeds, and [so will] His Messenger and the believers. And you will be returned to the Knower of the unseen and the witnessed, and He will inform you of what you used to do.\""
   },
   "generated": true,
   "model": "auto (chain)"
