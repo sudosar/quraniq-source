@@ -531,8 +531,13 @@ async function submitFirebaseScore(gameMode, crescents) {
         const field = modeMap[gameMode];
         if (!field) return;
 
-        // Update the specific game score
-        current[field] = crescents;
+        // Only update if the new score is higher (prevents lower re-scores from overwriting better ones)
+        if ((current[field] || 0) < crescents) {
+            current[field] = crescents;
+        } else {
+            // Score didn't improve — still write to update timestamp and trigger leaderboard refresh
+            console.log('[FB] Score unchanged for', gameMode, 'current:', current[field], 'new:', crescents);
+        }
 
         // Recalculate total
         const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
@@ -718,8 +723,9 @@ async function fetchGroupLeaderboard(groupCode) {
             console.log(`[FB] Dedup: name "${name}" has ${entries.length} entries — keeping UID ${keeper.uid.substring(0, 8)}, removing ${ghosts.length} ghost(s)`);
             // Merge ghost scores into keeper
             for (const ghost of ghosts) {
+                // Only take ghost scores that improve the keeper's totals
                 if (ghost.ramadanTotal > keeper.ramadanTotal) keeper.ramadanTotal = ghost.ramadanTotal;
-                if (ghost.todayTotal > keeper.todayTotal) { keeper.todayTotal = ghost.todayTotal; keeper.todayScores = ghost.todayScores; }
+                if ((ghost.todayTotal || 0) > (keeper.todayTotal || 0)) { keeper.todayTotal = ghost.todayTotal; keeper.todayScores = ghost.todayScores; }
                 if ((ghost.quranPercent || 0) > (keeper.quranPercent || 0)) { keeper.quranPercent = ghost.quranPercent; keeper.versesExplored = ghost.versesExplored; }
                 if (ghost.streak > keeper.streak) keeper.streak = ghost.streak;
                 if (ghost.allTimeScores && keeper.allTimeScores) {
