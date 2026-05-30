@@ -721,8 +721,9 @@ async function fetchGroupLeaderboard(groupCode) {
             console.log(`[FB] Dedup: name "${name}" has ${entries.length} entries — keeping UID ${keeper.uid.substring(0, 8)}, removing ${ghosts.length} ghost(s)`);
             // Merge ghost scores into keeper — SUM all totals (not MAX)
             // Each ghost UID has scores for different days; add them all up
-            keeper.ramadanTotal += ghost.ramadanTotal;
-            keeper.daysPlayed = (keeper.daysPlayed || 0) + (ghost.daysPlayed || 0);
+            for (const ghost of ghosts) {
+                keeper.ramadanTotal += ghost.ramadanTotal;
+                keeper.daysPlayed = (keeper.daysPlayed || 0) + (ghost.daysPlayed || 0);
                 if ((ghost.todayTotal || 0) > (keeper.todayTotal || 0)) { keeper.todayTotal = ghost.todayTotal; keeper.todayScores = ghost.todayScores; }
                 if ((ghost.quranPercent || 0) > (keeper.quranPercent || 0)) { keeper.quranPercent = ghost.quranPercent; keeper.versesExplored = ghost.versesExplored; }
                 if (ghost.streak > keeper.streak) keeper.streak = ghost.streak;
@@ -1071,10 +1072,13 @@ async function backfillTodayScores() {
             });
             console.log('[FB] Backfill complete — total:', computed.connections + computed.harf + computed.deduction + computed.scramble + computed.juz);
         }
+    } catch (err) {
+        console.error('[FB] Backfill failed:', err);
+    }
 
-        // Invalidate leaderboard cache
-        Object.keys(FB_STATE.leaderboardCache).forEach(k => { delete FB_STATE.leaderboardCache[k]; });
-        syncVerseStatsToFirebase();
+    // Always invalidate leaderboard cache and sync stats, regardless of backfill result
+    Object.keys(FB_STATE.leaderboardCache).forEach(k => { delete FB_STATE.leaderboardCache[k]; });
+    syncVerseStatsToFirebase();
 }
 
 // ==================== VERSE STATS SYNC ====================
