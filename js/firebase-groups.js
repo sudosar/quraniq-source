@@ -515,46 +515,41 @@ async function submitFirebaseScore(gameMode, crescents) {
     const scorePath = `users/${uid}/scores/${today}`;
 
     try {
-        // Read current scores for today
-        const snap = await FB_STATE.db.ref(scorePath).once('value');
-        const current = snap.val() || {};
+        await FB_STATE.db.ref(scorePath).transaction((current) => {
+            current = current || {};
 
-        // Map game mode to score field
-        const modeMap = {
-            connections: 'connections',
-            wordle: 'harf',
-            harf: 'harf',
-            deduction: 'deduction',
-            scramble: 'scramble',
-            juz: 'juz'
-        };
-        const field = modeMap[gameMode];
-        if (!field) return;
+            const modeMap = {
+                connections: 'connections',
+                wordle: 'harf',
+                harf: 'harf',
+                deduction: 'deduction',
+                scramble: 'scramble',
+                juz: 'juz'
+            };
+            const field = modeMap[gameMode];
+            if (!field) return; // abort transaction
 
-        // Only update if the new score is higher (prevents lower re-scores from overwriting better ones)
-        if ((current[field] || 0) < crescents) {
-            current[field] = crescents;
-        } else {
-            // Score didn't improve — still write to update timestamp and trigger leaderboard refresh
-            console.log('[FB] Score unchanged for', gameMode, 'current:', current[field], 'new:', crescents);
-        }
+            // Only update if the new score is higher
+            if ((current[field] || 0) < crescents) {
+                current[field] = crescents;
+            }
 
-        // Recalculate total
-        const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
-        current.total = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
+            // Recalculate total
+            const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
+            current.total = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
 
-        // Add streak info
-        const stats = loadStats();
-        const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
-        let bestStreak = 0;
-        allModes.forEach(m => {
-            if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak);
+            // Add streak info
+            const stats = loadStats();
+            const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
+            let bestStreak = 0;
+            allModes.forEach(m => {
+                if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak);
+            });
+            current.streak = bestStreak;
+            current.timestamp = firebase.database.ServerValue.TIMESTAMP;
+
+            return current;
         });
-        current.streak = bestStreak;
-        current.timestamp = firebase.database.ServerValue.TIMESTAMP;
-
-        await FB_STATE.db.ref(scorePath).set(current);
-        console.log('[FB] Score submitted:', gameMode, crescents);
 
         // Sync verse exploration stats to Firebase profile
         syncVerseStatsToFirebase();
@@ -721,10 +716,10 @@ async function fetchGroupLeaderboard(groupCode) {
             const keeper = entries[0];
             const ghosts = entries.slice(1);
             console.log(`[FB] Dedup: name "${name}" has ${entries.length} entries — keeping UID ${keeper.uid.substring(0, 8)}, removing ${ghosts.length} ghost(s)`);
-            // Merge ghost scores into keeper
-            for (const ghost of ghosts) {
-                // Only take ghost scores that improve the keeper's totals
-                if (ghost.ramadanTotal > keeper.ramadanTotal) keeper.ramadanTotal = ghost.ramadanTotal;
+            // Merge ghost scores into keeper — SUM all totals (not MAX)
+            // Each ghost UID has scores for different days; add them all up
+            keeper.ramadanTotal += ghost.ramadanTotal;
+            keeper.daysPlayed = (keeper.daysPlayed || 0) + (ghost.daysPlayed || 0);
                 if ((ghost.todayTotal || 0) > (keeper.todayTotal || 0)) { keeper.todayTotal = ghost.todayTotal; keeper.todayScores = ghost.todayScores; }
                 if ((ghost.quranPercent || 0) > (keeper.quranPercent || 0)) { keeper.quranPercent = ghost.quranPercent; keeper.versesExplored = ghost.versesExplored; }
                 if (ghost.streak > keeper.streak) keeper.streak = ghost.streak;
@@ -737,30 +732,31 @@ async function fetchGroupLeaderboard(groupCode) {
             }
         }
 
-        // Background cleanup: merge ghost scores into Firebase and remove from group
-        (async () => {
-            for (const { ghost, keeper, isCurrentUserGhost } of ghostsToRemove) {
-                try {
-                    const ghostScoresSnap = await FB_STATE.db.ref(`users/${ghost.uid}/scores`).once('value');
-                    const ghostScores = ghostScoresSnap.val();
-                    if (ghostScores) {
-                        const myScoresSnap = await FB_STATE.db.ref(`users/${keeper.uid}/scores`).once('value');
-                        const myScores = myScoresSnap.val() || {};
-                        for (const [date, gs] of Object.entries(ghostScores)) {
-                            if (!myScores[date] || (gs.total || 0) > (myScores[date].total || 0)) myScores[date] = gs;
+        // Merge ghost scores synchronously BEFORE returning leaderboard
+        // This ensures the leaderboard shows the correct merged score immediately
+        for (const { ghost, keeper } of ghostsToRemove) {
+            try {
+                const ghostScoresSnap = await FB_STATE.db.ref(`users/${ghost.uid}/scores`).once('value');
+                const ghostScores = ghostScoresSnap.val();
+                if (ghostScores) {
+                    const myScoresSnap = await FB_STATE.db.ref(`users/${keeper.uid}/scores`).once('value');
+                    const myScores = myScoresSnap.val() || {};
+                    for (const [date, gs] of Object.entries(ghostScores)) {
+                        if (!myScores[date] || (gs.total || 0) > (myScores[date].total || 0)) {
+                            myScores[date] = gs;
                         }
-                        await FB_STATE.db.ref(`users/${keeper.uid}/scores`).set(myScores);
                     }
-                    await FB_STATE.db.ref(`groups/${groupCode}/members/${ghost.uid}`).remove();
-                    await FB_STATE.db.ref(`users/${ghost.uid}/groups/${groupCode}`).remove();
-                    const countSnap = await FB_STATE.db.ref(`groups/${groupCode}/memberCount`).once('value');
-                    await FB_STATE.db.ref(`groups/${groupCode}/memberCount`).set(Math.max(0, (countSnap.val() || 1) - 1));
-                    console.log(`[FB] Dedup: ghost UID ${ghost.uid.substring(0, 8)} removed from group (isCurrentUserGhost=${isCurrentUserGhost})`);
-                } catch (err) {
-                    console.error('[FB] Dedup cleanup failed:', err);
+                    await FB_STATE.db.ref(`users/${keeper.uid}/scores`).set(myScores);
                 }
+                await FB_STATE.db.ref(`groups/${groupCode}/members/${ghost.uid}`).remove();
+                await FB_STATE.db.ref(`users/${ghost.uid}/groups/${groupCode}`).remove();
+                const countSnap = await FB_STATE.db.ref(`groups/${groupCode}/memberCount`).once('value');
+                await FB_STATE.db.ref(`groups/${groupCode}/memberCount`).set(Math.max(0, (countSnap.val() || 1) - 1));
+                console.log(`[FB] Dedup: ghost UID ${ghost.uid.substring(0, 8)} removed from group`);
+            } catch (err) {
+                console.error('[FB] Dedup cleanup failed:', err);
             }
-        })();
+        }
 
         // Remove all ghosts from display
         const ghostUids = new Set(ghostsToRemove.map(g => g.ghost.uid));
