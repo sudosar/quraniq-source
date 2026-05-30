@@ -515,7 +515,7 @@ async function submitFirebaseScore(gameMode, crescents) {
     const scorePath = `users/${uid}/scores/${today}`;
 
     try {
-        await FB_STATE.db.ref(scorePath).transaction((current) => {
+        const txnResult = await FB_STATE.db.ref(scorePath).transaction((current) => {
             current = current || {};
 
             const modeMap = {
@@ -538,18 +538,21 @@ async function submitFirebaseScore(gameMode, crescents) {
             const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
             current.total = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
 
-            // Add streak info
+            return current;
+        });
+
+        // Set streak and timestamp via update() AFTER transaction —
+        // ServerValue.TIMESTAMP cannot be set inside a transaction callback
+        if (txnResult && txnResult.committed) {
             const stats = loadStats();
             const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
             let bestStreak = 0;
-            allModes.forEach(m => {
-                if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak);
+            allModes.forEach(m => { if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak); });
+            await FB_STATE.db.ref(scorePath).update({
+                streak: bestStreak,
+                timestamp: firebase.database.ServerValue.TIMESTAMP
             });
-            current.streak = bestStreak;
-            current.timestamp = firebase.database.ServerValue.TIMESTAMP;
-
-            return current;
-        });
+        }
 
         // Sync verse exploration stats to Firebase profile
         syncVerseStatsToFirebase();
@@ -967,183 +970,111 @@ async function backfillTodayScores() {
     const scorePath = `users/${uid}/scores/${today}`;
 
     try {
-        // Read current Firebase scores for today
-        const snap = await FB_STATE.db.ref(scorePath).once('value');
-        const current = snap.val() || {};
-
-        // Read local game state
-        // Use app.dayNumber (which tracks the puzzle's day, not wall-clock)
-        // so the local state key matches the Firebase date key.
+        // Read local game state and compute desired scores BEFORE transaction
         const state = loadState();
         const dayNum = (typeof app !== 'undefined' && app.dayNumber) ? app.dayNumber : getDayNumber();
-        let changed = false;
+
+        // Compute what we'd write — transaction needs this up front
+        const computed = { connections: 0, harf: 0, deduction: 0, scramble: 0, juz: 0 };
 
         // --- Connections ---
         const connState = state[`conn_${dayNum}`];
         if (connState && connState.gameOver) {
-            // New scoring: 🌒 1pt per solved row + 🌙 1 bonus pt if all verses in that row reviewed
             const correctCount = connState.correctCount ?? (connState.solved ? connState.solved.length : 0);
             const exploredSet = new Set(connState.exploredVerses || []);
             let connScore = 0;
             if (connState.solved) {
                 connState.solved.forEach((s, i) => {
                     if (i < correctCount) {
-                        connScore += 1; // 1pt for solving
-                        // Check if all verses in this row were reviewed
+                        connScore += 1;
                         const items = s.items || [];
-                        const uniqueRefs = new Set();
-                        items.forEach(item => {
-                            const ref = typeof item === 'object' ? item.ref : '';
-                            if (ref) uniqueRefs.add(ref);
-                        });
+                        const uniqueRefs = new Set(items.map(item => typeof item === 'object' ? item.ref : '').filter(Boolean));
                         const rowTotal = uniqueRefs.size || items.length;
                         let rowExplored = 0;
-                        uniqueRefs.forEach(ref => {
-                            if (exploredSet.has(ref)) rowExplored++;
-                        });
-                        if (rowExplored >= rowTotal) connScore += 1; // +1pt for reviewing all
+                        uniqueRefs.forEach(ref => { if (exploredSet.has(ref)) rowExplored++; });
+                        if (rowExplored >= rowTotal) connScore += 1;
                     }
                 });
             }
-            connScore = Math.min(8, connScore); // Max 8 (4 rows × 2pts)
-            if ((current.connections || 0) < connScore) {
-                current.connections = connScore;
-                changed = true;
-                console.log('[FB] Backfill connections:', connScore);
-            }
+            computed.connections = Math.min(8, connScore);
         }
 
-        // --- Harf by Harf (Wordle) ---
-        // Try new key first, then old key (migration handled in app.js but safety first)
+        // --- Harf by Harf ---
         const harfState = state[`harf_${dayNum}`] || state[`wordle_${dayNum}`];
         if (harfState && harfState.gameOver) {
             const evals = harfState.evaluations || [];
-            // Check if won
             const lastRow = evals[evals.length - 1] || [];
-            // In Harf, a win is when the last evaluation is all 'correct'
-            // BUT careful: if lost, the last row isn't all correct.
-            // Check game logic: 
-            // - If won, last row is all correct.
-            // - If lost, maxRows reached and not won.
-
-            // We can trust the state's implicit result or re-verify:
-            // Let's re-verify cleanly:
-            const targetWord = (harfState.word || '').trim(); // Saved state might not have word? 
-            // Actually app.state saves: board, currentRow, gameOver, evaluations, hintsUsed.
-            // It DOES NOT save the target word usually? 
-            // Wait, harf.js setupHarfGame uses harf.puzzle.word.
-            // We can't easily re-verify "won" without the word.
-            // BUT, we can infer "won" if the last evaluation row is all 'correct'.
-
             const won = lastRow.length > 0 && lastRow.every(e => e === 'correct');
-            let moons = 0;
             if (won) {
-                // Base: 1 try = 5, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1
-                // Minus hints
                 const totalRows = evals.length;
-                const baseMoons = Math.max(1, 6 - totalRows);
-                moons = Math.max(0, baseMoons - (harfState.hintsUsed || 0));
-            }
-            // If lost, 0 moons.
-
-            if ((current.harf || 0) < moons) {
-                current.harf = moons;
-                changed = true;
-                console.log('[FB] Backfill harf:', moons);
+                computed.harf = Math.max(0, Math.max(1, 6 - totalRows) - (harfState.hintsUsed || 0));
             }
         }
 
-        // --- Who Am I? (Deduction) ---
+        // --- Deduction ---
         const dedState = state[`ded_${dayNum}`];
-        if (dedState && dedState.gameOver) {
-            let moons = 0;
-            if (dedState.won) {
-                const clues = dedState.cluesRevealed || 0;
-                if (clues <= 1) moons = 5;
-                else if (clues === 2) moons = 4;
-                else if (clues === 3) moons = 3;
-                else if (clues === 4) moons = 2;
-                else moons = 1;
-            }
-            if ((current.deduction || 0) < moons) {
-                current.deduction = moons;
-                changed = true;
-                console.log('[FB] Backfill deduction:', moons);
-            }
+        if (dedState && dedState.gameOver && dedState.won) {
+            const clues = dedState.cluesRevealed || 0;
+            if (clues <= 1) computed.deduction = 5;
+            else if (clues === 2) computed.deduction = 4;
+            else if (clues === 3) computed.deduction = 3;
+            else if (clues === 4) computed.deduction = 2;
+            else computed.deduction = 1;
         }
 
         // --- Scramble ---
         const scrState = state[`scr_${dayNum}`];
-        if (scrState && scrState.gameOver) {
-            let moons = 0;
-            if (scrState.won) {
-                moons = Math.max(1, 5 - (scrState.hintsUsed || 0) - (scrState.moves || 0));
-            }
-            if ((current.scramble || 0) < moons) {
-                current.scramble = moons;
-                changed = true;
-                console.log('[FB] Backfill scramble:', moons);
-            }
+        if (scrState && scrState.gameOver && scrState.won) {
+            computed.scramble = Math.max(1, 5 - (scrState.hintsUsed || 0) - (scrState.moves || 0));
         }
 
-        // --- Juz Journey ---
-        // Juz Journey saves state separately in localStorage, not in the main state object
+        // --- Juz ---
         try {
             const rawJuz = localStorage.getItem('quraniq_juz');
             if (rawJuz) {
                 const juzState = JSON.parse(rawJuz);
-                // Verify it belongs to today's puzzle by checking the date
                 if (juzState && juzState.puzzle && juzState.puzzle.date === today && juzState.completed) {
                     const rawScore = (juzState.scores.round2 || 0) + (juzState.scores.round3 || 0) + (juzState.scores.round4 || 0);
-                    const penalty = Math.min(juzState.hintPenalty || 0, 2); // MAX_HINT_PENALTY is 2
-                    const moons = Math.max(0, rawScore - penalty);
-
-                    if ((current.juz || 0) < moons) {
-                        current.juz = moons;
-                        changed = true;
-                        console.log('[FB] Backfill juz:', moons);
-                    }
+                    computed.juz = Math.max(0, rawScore - Math.min(juzState.hintPenalty || 0, 2));
                 }
             }
-        } catch (e) {
-            console.error('[FB] Error reading Juz state for backfill:', e);
-        }
+        } catch (e) { /* skip Juz on error */ }
 
-        // Defensively check if the total is out of sync with individual scores
-        const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
-        const expectedTotal = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
-        if (current.total !== expectedTotal) {
-            current.total = expectedTotal;
-            changed = true;
-            console.log('[FB] Self-healed total score mismatch:', expectedTotal);
-        }
+        // Use transaction so concurrent writes don't clobber each other
+        const txnResult = await FB_STATE.db.ref(scorePath).transaction((current) => {
+            current = current || {};
+            // Only update individual game scores if local computed is higher
+            const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
+            let didChange = false;
+            for (const f of fields) {
+                if ((current[f] || 0) < computed[f]) {
+                    current[f] = computed[f];
+                    didChange = true;
+                }
+            }
+            if (!didChange) return; // abort — nothing to update
+            // Recalculate total
+            current.total = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
+            return current;
+        });
 
-        // If any scores were backfilled or fixed, save
-        if (changed) {
-
+        // After transaction, update streak and timestamp separately
+        // (ServerValue.TIMESTAMP can't be set inside a transaction callback)
+        if (txnResult && txnResult.committed) {
             const stats = loadStats();
             const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
             let bestStreak = 0;
-            allModes.forEach(m => {
-                if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak);
+            allModes.forEach(m => { if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak); });
+            await FB_STATE.db.ref(scorePath).update({
+                streak: bestStreak,
+                timestamp: firebase.database.ServerValue.TIMESTAMP
             });
-            current.streak = bestStreak;
-            current.timestamp = firebase.database.ServerValue.TIMESTAMP;
-
-            await FB_STATE.db.ref(scorePath).set(current);
-            console.log('[FB] Backfill complete — total:', current.total);
-
-            // Invalidate leaderboard cache
-            Object.keys(FB_STATE.leaderboardCache).forEach(k => {
-                delete FB_STATE.leaderboardCache[k];
-            });
-
-            // Also sync verse stats
-            syncVerseStatsToFirebase();
+            console.log('[FB] Backfill complete — total:', computed.connections + computed.harf + computed.deduction + computed.scramble + computed.juz);
         }
-    } catch (err) {
-        console.error('[FB] Score backfill failed:', err);
-    }
+
+        // Invalidate leaderboard cache
+        Object.keys(FB_STATE.leaderboardCache).forEach(k => { delete FB_STATE.leaderboardCache[k]; });
+        syncVerseStatsToFirebase();
 }
 
 // ==================== VERSE STATS SYNC ====================
