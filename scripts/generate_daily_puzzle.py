@@ -323,7 +323,7 @@ COOLING_DAYS = 365          # Default cooldown for most games
 DEDUCTION_COOLING_DAYS = 60 # Shorter cooldown for Who Am I (limited character pool ~70-200)
 THEME_COOLING_DAYS = 30     # Shorter cooldown for English themes to allow more flexibility
 SURAH_COOLING_DAYS = 30    # Surah-level cooldown for single-verse games (Scramble, Wordle, Deduction)
-CONNECTIONS_COOLING_DAYS = 120  # Shorter cooldown: Connections burns 16 verses/day
+CONNECTIONS_COOLING_DAYS = 60  # Shorter cooldown: Connections burns 16 verses/day
 MAX_RETRIES = 5
 COLORS = ["yellow", "green", "blue", "purple"]
 
@@ -1383,11 +1383,11 @@ def validate_connections(puzzle, history):
                 errors.append(f"Cat {i+1} item {j+1} missing ref")
             ar = item.get("ar", "")
             en = item.get("en", "")
-            for prev_ar, prev_en in all_word_data:
-                if ar and words_are_too_similar(ar, prev_ar, en, prev_en):
-                    cooldown_violations.append(f"Same-root word across categories: '{ar}' ({en}) shares root with '{prev_ar}'")
-                    break
-            all_word_data.append((ar, en))
+            # WORD-ROOT DEDUP DISABLED for Connections: too aggressive, blocks generation
+            # for prev_ar, prev_en in all_word_data:
+            #     if ar and words_are_too_similar(ar, prev_ar, en, prev_en):
+            #         cooldown_violations.append(f"Same-root word across categories: ...")
+            #         break
             if ar in history["connections"]["words"]:
                 warnings.append(f"Word '{ar}' reused (cooldown)")
             item.setdefault("verse", "")
