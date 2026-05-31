@@ -1,12 +1,12 @@
 {
-  "date": "2026-05-28",
+  "date": "2026-05-31",
   "puzzle": {
-    "word": "غاشية",
-    "display": "غَٰشِيَة",
-    "hint": "An overwhelming event that covers and engulfs all creation on the Day of Judgment",
-    "verseRef": "88:1",
-    "arabicVerse": "هَلْ أَتَىٰكَ حَدِيثُ ٱلْغَـٰشِيَةِ",
-    "verse": "88:1 - Has there reached you the report of the Overwhelming [event]?"
+    "word": "صراط",
+    "display": "صِرَاط",
+    "hint": "The straight path in Islamic context",
+    "verseRef": "1:6",
+    "arabicVerse": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+    "verse": "1:6 - Guide us to the straight path -"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,29 +1,32 @@
 {
-  "date": "2026-05-28",
+  "date": "2026-05-31",
   "puzzle": {
-    "verseRef": "9:105",
-    "reference": "At-Tawbah (9:105)",
+    "verseRef": "67:1",
+    "reference": "Surah Al-Mulk (67:1)",
     "segments": [
-      "وَقُلِ اعْمَلُوا",
-      "فَسَيَرَى اللَّهُ عَمَلَكُمْ",
-      "وَرَسُولُهُ",
-      "وَالْمُؤْمِنُونَ"
+      "Tabāraka alladhī",
+      "biyadihi l-mulku",
+      "wa-huwa ʿalā",
+      "kulli shayʾin",
+      "qadīr"
     ],
     "translations": [
-      "And say Do then Allah will see then Allah will see",
-      "your deed and His Messenger and the believers And you will be brought back",
-      "to (the) Knower (of) the unseen and the seen",
-      "then He will inform you of what you used (to) do"
+      "Blessed is He",
+      "in Whose Hand (is) the Dominion",
+      "and He (is) over",
+      "every thing",
+      "All-Powerful"
     ],
-    "hint": "This verse motivates believers to engage in good deeds, reminding them that their actions are witnessed by Allah, His Prophet, and the faithful community.",
-    "arabic": "وَقُلِ ٱعْمَلُوا۟ فَسَيَرَى ٱللَّهُ عَمَلَكُمْ وَرَسُولُهُۥ وَٱلْمُؤْمِنُونَ ۖ وَسَتُرَدُّونَ إِلَىٰ عَـٰلِمِ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ فَيُنَبِّئُكُم بِمَا كُنتُمْ تَعْمَلُونَ",
+    "hint": "This verse praises Allah's absolute sovereignty and power over all creation.",
+    "arabic": "تَبَـٰرَكَ ٱلَّذِى بِيَدِهِ ٱلْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ",
     "words": [
-      "وَقُلِ ٱعْمَلُوا۟ فَسَيَرَى ٱللَّهُ",
-      "عَمَلَكُمْ وَرَسُولُهُۥ وَٱلْمُؤْمِنُونَ ۖ وَسَتُرَدُّونَ",
-      "إِلَىٰ عَـٰلِمِ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ",
-      "فَيُنَبِّئُكُم بِمَا كُنتُمْ تَعْمَلُونَ"
+      "تَبَـٰرَكَ ٱلَّذِى",
+      "بِيَدِهِ ٱلْمُلْكُ",
+      "وَهُوَ عَلَىٰ",
+      "كُلِّ شَىْءٍۢ",
+      "قَدِيرٌ"
     ],
-    "verseEn": "And say, \"Do [as you will], for Allāh will see your deeds, and [so will] His Messenger and the believers. And you will be returned to the Knower of the unseen and the witnessed, and He will inform you of what you used to do.\""
+    "verseEn": "Blessed is He in whose hand is dominion, and He is over all things competent -"
   },
   "generated": true,
   "model": "auto (chain)"
