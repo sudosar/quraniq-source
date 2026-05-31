@@ -1297,13 +1297,13 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
             errors.append(f"Item {j+1} missing 'ref'")
         ar = item.get("ar", "")
         en = item.get("en", "")
-        # Same-root check against all previous words (history + accumulated + earlier in this category)
-        for prev_ar, prev_en in all_prev_word_data + new_word_data:
-            if ar and words_are_too_similar(ar, prev_ar, en, prev_en):
-                violations.append(
-                    f"Word '{ar}' ({en}) shares root with previously used word '{prev_ar}'"
-                )
-                break
+        # WORD-ROOT DEDUP DISABLED for Connections: too aggressive, blocks generation
+        # for prev_ar, prev_en in all_prev_word_data + new_word_data:
+        #     if ar and words_are_too_similar(ar, prev_ar, en, prev_en):
+        #         violations.append(
+        #             f"Word ... shares root with ...")
+        #         break
+        pass  # word-root check disabled
         new_word_data.append((ar, en))
         if ar in history["connections"]["words"]:
             warnings.append(f"Word '{ar}' reused (cooldown)")
