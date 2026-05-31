@@ -323,6 +323,7 @@ COOLING_DAYS = 365          # Default cooldown for most games
 DEDUCTION_COOLING_DAYS = 60 # Shorter cooldown for Who Am I (limited character pool ~70-200)
 THEME_COOLING_DAYS = 30     # Shorter cooldown for English themes to allow more flexibility
 SURAH_COOLING_DAYS = 30    # Surah-level cooldown for single-verse games (Scramble, Wordle, Deduction)
+CONNECTIONS_COOLING_DAYS = 120  # Shorter cooldown: Connections burns 16 verses/day
 MAX_RETRIES = 5
 COLORS = ["yellow", "green", "blue", "purple"]
 
@@ -363,6 +364,7 @@ def load_history(exclude_date=None):
     cutoff_deduction = datetime.utcnow() - timedelta(days=DEDUCTION_COOLING_DAYS)
     cutoff_surah = datetime.utcnow() - timedelta(days=SURAH_COOLING_DAYS)
     cutoff_theme = datetime.utcnow() - timedelta(days=THEME_COOLING_DAYS)
+    cutoff_connections = datetime.utcnow() - timedelta(days=CONNECTIONS_COOLING_DAYS)
 
     history = {
         "connections": {"themes": set(), "verses": set(), "words": set(), "meanings": {}},
@@ -396,7 +398,7 @@ def load_history(exclude_date=None):
         except (json.JSONDecodeError, KeyError):
             continue
 
-        # Connections history (365-day cooldown)
+        # Connections history (120-day cooldown)
         conn = data.get("connections")
         if conn:
             for cat in conn.get("categories", []):
@@ -405,7 +407,8 @@ def load_history(exclude_date=None):
                     history["connections"]["themes"].add(cat.get("nameEn", "").lower().strip())
                 for item in cat.get("items", []):
                     if item.get("ref"):
-                        history["connections"]["verses"].add(item["ref"])
+                        if fdate >= cutoff_connections:
+                            history["connections"]["verses"].add(item["ref"])
                         history["all_verses"].add(item["ref"])
                     if item.get("ar"):
                         ar = item["ar"]
@@ -1369,9 +1372,9 @@ def validate_connections(puzzle, history):
                 cooldown_violations.append(f"Duplicate ref across categories: {ref}")
             elif ref in history["connections"]["verses"]:
                 cooldown_violations.append(f"Verse ref {ref} reused (connections cooldown)")
-            elif ref in history["all_verses"]:
-                cooldown_violations.append(f"Verse ref {ref} reused (cross-game cooldown)")
-        cross_cat_refs.update(seen_in_cat)
+            # CROSS-GAME COOLDOWN RELAXED for Connections (other games still block Connections)
+            # elif ref in history["all_verses"]:
+            #     cooldown_violations.append(f"Verse ref {ref} reused (cross-game cooldown)")
 
         for j, item in enumerate(items):
             if not item.get("ar") or not item.get("en"):
