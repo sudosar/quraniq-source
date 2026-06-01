@@ -1,32 +1,29 @@
 {
-  "date": "2026-05-31",
+  "date": "2026-06-01",
   "puzzle": {
-    "verseRef": "67:1",
-    "reference": "Surah Al-Mulk (67:1)",
+    "verseRef": "31:34",
+    "reference": "Surah Luqman (31:34)",
     "segments": [
-      "Tabāraka alladhī",
-      "biyadihi l-mulku",
-      "wa-huwa ʿalā",
-      "kulli shayʾin",
-      "qadīr"
+      "إِنَّ اللَّهَ عَندَهُ",
+      "عِلْمُ السَّاعَةِ",
+      "وَيُنَزِّلُ الْغَيْثَ",
+      "وَيَعْلَمُ مَا فِي الْأَرْحَامِ"
     ],
     "translations": [
-      "Blessed is He",
-      "in Whose Hand (is) the Dominion",
-      "and He (is) over",
-      "every thing",
-      "All-Powerful"
+      "Indeed Allah with Him (is the) knowledge (of) the Hour and He sends down the rain",
+      "and knows what (is) in the wombs And not knows any soul",
+      "what it will earn tomorrow and not knows any soul in what",
+      "land it will die Indeed Allah (is) All-Knower All-Aware"
     ],
-    "hint": "This verse praises Allah's absolute sovereignty and power over all creation.",
-    "arabic": "تَبَـٰرَكَ ٱلَّذِى بِيَدِهِ ٱلْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ",
+    "hint": "This verse speaks about Allah's perfect knowledge of unseen matters - the timing of the Hour, provision of rain, and knowledge of what is in mothers' wombs.",
+    "arabic": "إِنَّ ٱللَّهَ عِندَهُۥ عِلْمُ ٱلسَّاعَةِ وَيُنَزِّلُ ٱلْغَيْثَ وَيَعْلَمُ مَا فِى ٱلْأَرْحَامِ ۖ وَمَا تَدْرِى نَفْسٌۭ مَّاذَا تَكْسِبُ غَدًۭا ۖ وَمَا تَدْرِى نَفْسٌۢ بِأَىِّ أَرْضٍۢ تَمُوتُ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌۢ",
     "words": [
-      "تَبَـٰرَكَ ٱلَّذِى",
-      "بِيَدِهِ ٱلْمُلْكُ",
-      "وَهُوَ عَلَىٰ",
-      "كُلِّ شَىْءٍۢ",
-      "قَدِيرٌ"
+      "إِنَّ ٱللَّهَ عِندَهُۥ عِلْمُ ٱلسَّاعَةِ وَيُنَزِّلُ ٱلْغَيْثَ",
+      "وَيَعْلَمُ مَا فِى ٱلْأَرْحَامِ ۖ وَمَا تَدْرِى نَفْسٌۭ",
+      "مَّاذَا تَكْسِبُ غَدًۭا ۖ وَمَا تَدْرِى نَفْسٌۢ بِأَىِّ",
+      "أَرْضٍۢ تَمُوتُ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌۢ"
     ],
-    "verseEn": "Blessed is He in whose hand is dominion, and He is over all things competent -"
+    "verseEn": "Indeed, Allāh [alone] has knowledge of the Hour and sends down the rain and knows what is in the wombs. And no soul perceives what it will earn tomorrow, and no soul perceives in what land it will die. Indeed, Allāh is Knowing and Aware."
   },
   "generated": true,
   "model": "auto (chain)"

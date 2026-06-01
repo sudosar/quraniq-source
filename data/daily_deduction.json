@@ -1,65 +1,65 @@
 {
-  "date": "2026-05-31",
+  "date": "2026-06-01",
   "puzzle": {
-    "title": "The Perished Witnesses",
-    "intro": "In an age long past, a community dwelled in a land crossroads between empires. Their prophet called them toward the path of truth, yet they clung to disbelief and oppression. This story ends in divine retribution. Can you identify this nation and their fate from the clues below?",
+    "title": "The Gentle Soul Among the Prophets",
+    "intro": "A voice calling to righteousness echoes through the verses of the Noble Quran. This blessed soul was granted prophecy and divine scripture during a time when guidance was desperately needed among the Children of Israel. This individual spoke directly to their people, urging them toward remembrance of their Lord. Through patience and devotion, they became a beacon of light whose story illuminates pages of sacred scripture. Can you identify this remarkable figure whose name is honored in both Quran and Gospel?",
     "clues": [
-      "A people rejected the warning brought by one of their own messengers.",
-      "The messenger called us to worship Allah alone and warned against corruption.",
-      "Our transgression was rejecting the prophet sent among us with righteousness.",
-      "We doubted the messenger's authority and accused him of deception.",
-      "The punishment overtook us while we were dwelling securely in our homes.",
-      "We were destroyed for denying our prophet and persecuting the believers."
+      "I was honored with prophethood and a heavenly book during my people's time of need.",
+      "My mother gave birth to me in a remarkable manner, through Allah's divine command alone.",
+      "I addressed my people, saying 'O Children of Israel! I am the messenger of Allah to you, confirming what came before me.'",
+      "I came with clear signs from your Lord, bringing glad tidings of a prophet whose name would be Ahmad.",
+      "My mother was a righteous woman who devoted me to Allah's service from my youth.",
+      "Allah taught me the Quran and made me compassionate and dutiful to my mother, and I was not arrogant or disobedient."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Shu'aib",
-          "Ibrahim",
-          "Lut",
-          "Nuh",
-          "Musa"
+          "Prophet Zakariyya",
+          "Prophet Isa ibn Maryam",
+          "Prophet Muhammad ﷺ",
+          "Prophet Dawud",
+          "Prophet Yunus"
         ],
-        "answer": "Shu'aib"
+        "answer": "Prophet Isa ibn Maryam"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Receiving a prophet who called to righteousness",
-          "Being tested with a famine",
-          "Having a dream interpreted",
-          "Receiving the Torah",
-          "Journeying through the sea"
+          "Built the Temple in Jerusalem",
+          "Spoke in the cradle as an infant",
+          "Carried the Ark of the Covenant",
+          "Led the people of Midian",
+          "Traveled to Nineveh"
         ],
-        "answer": "Receiving a prophet who called to righteousness"
+        "answer": "Spoke in the cradle as an infant"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Midian",
-          "Babylon",
-          "Sodom",
-          "The Red Sea",
-          "The Ark"
+          "The city of Jerusalem",
+          "The region of Bethlehem",
+          "The household of Zakariyya",
+          "Mount Sinai",
+          "The valley of Baca"
         ],
-        "answer": "Midian"
+        "answer": "The household of Zakariyya"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "The people were destroyed for disbelief",
-          "The people repented and were guided",
-          "The people entered Paradise",
-          "The people survived and prospered",
-          "The people migrated to a new land"
+          "Was taken up to the heavens bodily",
+          "Was tested with leprosy for years",
+          "Built a great temple for worship",
+          "Led the Israelites back to faith",
+          "Divided the sea with a staff"
         ],
-        "answer": "The people were destroyed for disbelief"
+        "answer": "Was taken up to the heavens bodily"
       }
     },
-    "verseRef": "29:36",
-    "arabic": "وَإِلَىٰ مَدْيَنَ أَخَاهُمْ شُعَيْبًۭا فَقَالَ يَـٰقَوْمِ ٱعْبُدُوا۟ ٱللَّهَ وَٱرْجُوا۟ ٱلْيَوْمَ ٱلْـَٔاخِرَ وَلَا تَعْثَوْا۟ فِى ٱلْأَرْضِ مُفْسِدِينَ",
-    "verse": "And to Madyan [We sent] their brother Shuʿayb, and he said, \"O my people, worship Allāh and expect the Last Day and do not commit abuse on the earth, spreading corruption.\" (29:36)"
+    "verseRef": "61:6",
+    "arabic": "وَإِذْ قَالَ عِيسَى ٱبْنُ مَرْيَمَ يَـٰبَنِىٓ إِسْرَٰٓءِيلَ إِنِّى رَسُولُ ٱللَّهِ إِلَيْكُم مُّصَدِّقًۭا لِّمَا بَيْنَ يَدَىَّ مِنَ ٱلتَّوْرَىٰةِ وَمُبَشِّرًۢا بِرَسُولٍۢ يَأْتِى مِنۢ بَعْدِى ٱسْمُهُۥٓ أَحْمَدُ ۖ فَلَمَّا جَآءَهُم بِٱلْبَيِّنَـٰتِ قَالُوا۟ هَـٰذَا سِحْرٌۭ مُّبِينٌۭ",
+    "verse": "And [mention] when Jesus, the son of Mary, said, \"O Children of Israel, indeed I am the messenger of Allāh to you confirming what came before me of the Torah and bringing good tidings of a messenger to come after me, whose name is Aḥmad.\" But when he came to them with clear evidences, they said, \"This is obvious magic.\" (61:6)"
   },
   "generated": true,
   "model": "auto (chain)"
