@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-01",
+  "date": "2026-06-02",
   "puzzle": {
-    "word": "عليم",
-    "display": "عَلِيم",
-    "hint": "Divine attribute describing the One who has complete knowledge of all things",
-    "verseRef": "41:40",
-    "arabicVerse": "إِنَّ ٱلَّذِينَ يُلْحِدُونَ فِىٓ ءَايَـٰتِنَا لَا يَخْفَوْنَ عَلَيْنَآ ۗ أَفَمَن يُلْقَىٰ فِى ٱلنَّارِ خَيْرٌ أَم مَّن يَأْتِىٓ ءَامِنًۭا يَوْمَ ٱلْقِيَـٰمَةِ ۚ ٱعْمَلُوا۟ مَا شِئْتُمْ ۖ إِنَّهُۥ بِمَا تَعْمَلُونَ بَصِيرٌ",
-    "verse": "41:40 - Indeed, those who inject deviation into Our verses are not concealed from Us. So, is he who is cast into the Fire better or he who comes secure on the Day of Resurrection? Do whatever you will; indeed, He is Seeing of what you do."
+    "word": "خلق",
+    "display": "خَلْق",
+    "hint": "The act of bringing into existence from nothing, a divine attribute.",
+    "verseRef": "35:1",
+    "arabicVerse": "ٱلْحَمْدُ لِلَّهِ فَاطِرِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ جَاعِلِ ٱلْمَلَـٰٓئِكَةِ رُسُلًا أُو۟لِىٓ أَجْنِحَةٍۢ مَّثْنَىٰ وَثُلَـٰثَ وَرُبَـٰعَ ۚ يَزِيدُ فِى ٱلْخَلْقِ مَا يَشَآءُ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ",
+    "verse": "35:1 - [All] praise is [due] to Allāh, Creator of the heavens and the earth, [who] made the angels messengers having wings, two or three or four. He increases in creation what He wills. Indeed, Allāh is over all things competent."
   },
   "generated": true,
   "model": "auto (chain)"

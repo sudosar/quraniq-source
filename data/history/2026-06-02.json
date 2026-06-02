@@ -1,6 +1,5 @@
 {
-  "date": "2026-06-02",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَجْزَاءُ جِسْمِ الإِنْسَانِ",
@@ -144,6 +143,101 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "خلق",
+    "display": "خَلْق",
+    "hint": "The act of bringing into existence from nothing, a divine attribute.",
+    "verseRef": "35:1",
+    "arabicVerse": "ٱلْحَمْدُ لِلَّهِ فَاطِرِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ جَاعِلِ ٱلْمَلَـٰٓئِكَةِ رُسُلًا أُو۟لِىٓ أَجْنِحَةٍۢ مَّثْنَىٰ وَثُلَـٰثَ وَرُبَـٰعَ ۚ يَزِيدُ فِى ٱلْخَلْقِ مَا يَشَآءُ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ",
+    "verse": "35:1 - [All] praise is [due] to Allāh, Creator of the heavens and the earth, [who] made the angels messengers having wings, two or three or four. He increases in creation what He wills. Indeed, Allāh is over all things competent."
+  },
+  "deduction": {
+    "title": "The Keeper of the Gate of the Rising Sun",
+    "intro": "Throughout the Quran, certain souls traverse the earth leaving trails of wisdom and wonder. One such figure traveled to the furthest points of creation—where the sun rises and sets, where a barrier holds back chaos itself. This servant of Allah was granted a kingdom that none would ever possess again. Through three distinct journeys, this individual's purpose became clear. Can you identify this legendary wanderer from among the shadows of history?",
+    "clues": [
+      "I was granted authority by the Most Merciful to rule over the earth in a way no one else has ever achieved.",
+      "I traveled westward until I reached the place where the sun sets, finding it setting in a murky spring, and I witnessed a people there.",
+      "I journeyed eastward until I reached the place where the sun rises, finding it rising upon a people for whom We had provided no shelter from it.",
+      "I journeyed between those two extreme points until I arrived at a valley between two mountains, where I found a people who could barely understand speech.",
+      "I found on the mountain two hard barriers of iron reaching to right and left, and between them, a narrow passage. These people asked me to break through the barrier holding back chaos.",
+      "I took my provision and said: 'When the barrier breaks through, this will be a clear separation between us and this people.' And when the appointed time arrived, I watched as the barrier was finally breached."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Dhu al-Qarnayn",
+          "Prophet Sulayman",
+          "Prophet Ibrahim",
+          "The King of Ghassaniyah",
+          "Dhul-Qarnain the Wanderer"
+        ],
+        "answer": "Dhu al-Qarnayn"
+      },
+      "trial": {
+        "label": "Trial/Event",
+        "options": [
+          "Breaking through the iron barrier for the people of Yajuj and Majuj",
+          "Building the Ship under the command of a prophet",
+          "Constructing a temple in Jerusalem",
+          "Crossing the Red Sea with the believing people",
+          "Constructing a dam to protect a righteous nation"
+        ],
+        "answer": "Breaking through the iron barrier for the people of Yajuj and Majuj"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The barrier of iron between two mountains",
+          "The ship anchored on a mountain",
+          "The sacred house of worship in Jerusalem",
+          "The river in the land of Egypt",
+          "The well of blessings in Madyan"
+        ],
+        "answer": "The barrier of iron between two mountains"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "The barrier was breached when the appointed time came, and chaos poured forth",
+          "The disbelievers were drowned while the believers were saved",
+          "The righteous were guided to eternal paradise",
+          "The city was destroyed by a screaming wind",
+          "The idols were shattered and the people repented"
+        ],
+        "answer": "The barrier was breached when the appointed time came, and chaos poured forth"
+      }
+    },
+    "verseRef": "18:94",
+    "arabic": "قَالُوا۟ يَـٰذَا ٱلْقَرْنَيْنِ إِنَّ يَأْجُوجَ وَمَأْجُوجَ مُفْسِدُونَ فِى ٱلْأَرْضِ فَهَلْ نَجْعَلُ لَكَ خَرْجًا عَلَىٰٓ أَن تَجْعَلَ بَيْنَنَا وَبَيْنَهُمْ سَدًّۭا",
+    "verse": "They said, \"O Dhul-Qarnayn, indeed Gog and Magog are [great] corrupters in the land. So may we assign for you an expenditure that you might make between us and them a barrier?\" (18:94)"
+  },
+  "scramble": {
+    "verseRef": "39:9",
+    "reference": "Surah Az-Zumar (39:9)",
+    "segments": [
+      "أَمَّنْ هُوَ قَانِتٌ",
+      "أَنَآءَ اللَّيْلِ",
+      "سَاجِدًا وَقَائِمًا",
+      "يَرْجُو رَحْمَةَ رَبِّهِ",
+      "وَاعْتَدَالَ يَوْمٍ"
+    ],
+    "translations": [
+      "Is (one) who [he] (is) devoutly obedient  (during) hours (of) the night",
+      "prostrating and standing fearing the Hereafter and hoping",
+      "(for the) Mercy (of) his Lord Say Are equal",
+      "those who know and those who (do) not know",
+      "Only will take heed those of understanding those of understanding"
+    ],
+    "hint": "A verse contrasting the devoted worshipper with those indifferent to faith, highlighting the difference between hope and fear in one's relationship with Allah.",
+    "arabic": "أَمَّنْ هُوَ قَـٰنِتٌ ءَانَآءَ ٱلَّيْلِ سَاجِدًۭا وَقَآئِمًۭا يَحْذَرُ ٱلْـَٔاخِرَةَ وَيَرْجُوا۟ رَحْمَةَ رَبِّهِۦ ۗ قُلْ هَلْ يَسْتَوِى ٱلَّذِينَ يَعْلَمُونَ وَٱلَّذِينَ لَا يَعْلَمُونَ ۗ إِنَّمَا يَتَذَكَّرُ أُو۟لُوا۟ ٱلْأَلْبَـٰبِ",
+    "words": [
+      "أَمَّنْ هُوَ قَـٰنِتٌ ءَانَآءَ ٱلَّيْلِ",
+      "سَاجِدًۭا وَقَآئِمًۭا يَحْذَرُ ٱلْـَٔاخِرَةَ وَيَرْجُوا۟",
+      "رَحْمَةَ رَبِّهِۦ ۗ قُلْ هَلْ يَسْتَوِى",
+      "ٱلَّذِينَ يَعْلَمُونَ وَٱلَّذِينَ لَا يَعْلَمُونَ ۗ",
+      "إِنَّمَا يَتَذَكَّرُ أُو۟لُوا۟ ٱلْأَلْبَـٰبِ"
+    ],
+    "verseEn": "Is one who is devoutly obedient during periods of the night, prostrating and standing [in prayer], fearing the Hereafter and hoping for the mercy of his Lord, [like one who does not]? Say, \"Are those who know equal to those who do not know?\" Only they will remember [who are] people of understanding."
+  }
 }

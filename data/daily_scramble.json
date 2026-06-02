@@ -1,29 +1,32 @@
 {
-  "date": "2026-06-01",
+  "date": "2026-06-02",
   "puzzle": {
-    "verseRef": "31:34",
-    "reference": "Surah Luqman (31:34)",
+    "verseRef": "39:9",
+    "reference": "Surah Az-Zumar (39:9)",
     "segments": [
-      "إِنَّ اللَّهَ عَندَهُ",
-      "عِلْمُ السَّاعَةِ",
-      "وَيُنَزِّلُ الْغَيْثَ",
-      "وَيَعْلَمُ مَا فِي الْأَرْحَامِ"
+      "أَمَّنْ هُوَ قَانِتٌ",
+      "أَنَآءَ اللَّيْلِ",
+      "سَاجِدًا وَقَائِمًا",
+      "يَرْجُو رَحْمَةَ رَبِّهِ",
+      "وَاعْتَدَالَ يَوْمٍ"
     ],
     "translations": [
-      "Indeed Allah with Him (is the) knowledge (of) the Hour and He sends down the rain",
-      "and knows what (is) in the wombs And not knows any soul",
-      "what it will earn tomorrow and not knows any soul in what",
-      "land it will die Indeed Allah (is) All-Knower All-Aware"
+      "Is (one) who [he] (is) devoutly obedient  (during) hours (of) the night",
+      "prostrating and standing fearing the Hereafter and hoping",
+      "(for the) Mercy (of) his Lord Say Are equal",
+      "those who know and those who (do) not know",
+      "Only will take heed those of understanding those of understanding"
     ],
-    "hint": "This verse speaks about Allah's perfect knowledge of unseen matters - the timing of the Hour, provision of rain, and knowledge of what is in mothers' wombs.",
-    "arabic": "إِنَّ ٱللَّهَ عِندَهُۥ عِلْمُ ٱلسَّاعَةِ وَيُنَزِّلُ ٱلْغَيْثَ وَيَعْلَمُ مَا فِى ٱلْأَرْحَامِ ۖ وَمَا تَدْرِى نَفْسٌۭ مَّاذَا تَكْسِبُ غَدًۭا ۖ وَمَا تَدْرِى نَفْسٌۢ بِأَىِّ أَرْضٍۢ تَمُوتُ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌۢ",
+    "hint": "A verse contrasting the devoted worshipper with those indifferent to faith, highlighting the difference between hope and fear in one's relationship with Allah.",
+    "arabic": "أَمَّنْ هُوَ قَـٰنِتٌ ءَانَآءَ ٱلَّيْلِ سَاجِدًۭا وَقَآئِمًۭا يَحْذَرُ ٱلْـَٔاخِرَةَ وَيَرْجُوا۟ رَحْمَةَ رَبِّهِۦ ۗ قُلْ هَلْ يَسْتَوِى ٱلَّذِينَ يَعْلَمُونَ وَٱلَّذِينَ لَا يَعْلَمُونَ ۗ إِنَّمَا يَتَذَكَّرُ أُو۟لُوا۟ ٱلْأَلْبَـٰبِ",
     "words": [
-      "إِنَّ ٱللَّهَ عِندَهُۥ عِلْمُ ٱلسَّاعَةِ وَيُنَزِّلُ ٱلْغَيْثَ",
-      "وَيَعْلَمُ مَا فِى ٱلْأَرْحَامِ ۖ وَمَا تَدْرِى نَفْسٌۭ",
-      "مَّاذَا تَكْسِبُ غَدًۭا ۖ وَمَا تَدْرِى نَفْسٌۢ بِأَىِّ",
-      "أَرْضٍۢ تَمُوتُ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌۢ"
+      "أَمَّنْ هُوَ قَـٰنِتٌ ءَانَآءَ ٱلَّيْلِ",
+      "سَاجِدًۭا وَقَآئِمًۭا يَحْذَرُ ٱلْـَٔاخِرَةَ وَيَرْجُوا۟",
+      "رَحْمَةَ رَبِّهِۦ ۗ قُلْ هَلْ يَسْتَوِى",
+      "ٱلَّذِينَ يَعْلَمُونَ وَٱلَّذِينَ لَا يَعْلَمُونَ ۗ",
+      "إِنَّمَا يَتَذَكَّرُ أُو۟لُوا۟ ٱلْأَلْبَـٰبِ"
     ],
-    "verseEn": "Indeed, Allāh [alone] has knowledge of the Hour and sends down the rain and knows what is in the wombs. And no soul perceives what it will earn tomorrow, and no soul perceives in what land it will die. Indeed, Allāh is Knowing and Aware."
+    "verseEn": "Is one who is devoutly obedient during periods of the night, prostrating and standing [in prayer], fearing the Hereafter and hoping for the mercy of his Lord, [like one who does not]? Say, \"Are those who know equal to those who do not know?\" Only they will remember [who are] people of understanding."
   },
   "generated": true,
   "model": "auto (chain)"
