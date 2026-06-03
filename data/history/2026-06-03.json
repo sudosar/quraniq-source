@@ -1,6 +1,5 @@
 {
-  "date": "2026-06-03",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَوْقَاتُ النَّهَارِ وَاللَّيْلِ",
@@ -144,6 +143,101 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "نجد",
+    "display": "نَجْد",
+    "hint": "Elevated terrain associated with spiritual awakening and Divine favor",
+    "verseRef": "89:31",
+    "arabicVerse": "",
+    "verse": "89:31"
+  },
+  "deduction": {
+    "title": "The Nation That Challenged the Sacred House",
+    "intro": "In ancient times, a powerful nation decided to attack a sanctuary revered by believers. This group was wealthy, mighty, and confident in their military strength. They brought with them a massive creature that would serve as their weapon of war. Their goal was clear: to demolish the sacred house and crush the faith of its people. But their arrogance was about to meet a devastating response from above. This historical event became a sign and a lesson for all who came after. Can you identify this group from the clues?",
+    "clues": [
+      "We were a nation blessed with wealth and military prowess.",
+      "We gathered our forces and brought a massive beast to use in our campaign.",
+      "Our target was a sacred sanctuary that we wished to destroy completely.",
+      "We believed our strength would be enough to overcome any divine protection.",
+      "But the Lord sent upon us a punishment from the sky we did not expect.",
+      "We were destroyed in an instant, scattered like broken straw."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "The People of the Elephant",
+          "The People of Thamud",
+          "The People of 'Ad",
+          "The Companions of the Cave",
+          "The Nation of Prophet Hud"
+        ],
+        "answer": "The People of the Elephant"
+      },
+      "trial": {
+        "label": "Trial/Event",
+        "options": [
+          "Marching an elephant towards the sacred house to destroy it",
+          "Building a tower to reach the heavens",
+          "Constructing a golden idol for worship",
+          "Refusing to listen to Allah's messenger",
+          "Digging a well to harm believers"
+        ],
+        "answer": "Marching an elephant towards the sacred house to destroy it"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The Elephant",
+          "The Golden Calf",
+          "The Staff of Musa",
+          "The Fish of Yunus",
+          "The Iron of Dawud"
+        ],
+        "answer": "The Elephant"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "They were destroyed by flocks of birds with stones",
+          "They were drowned in a great flood",
+          "They were transformed into apes and pigs",
+          "They were buried under falling stones from a mountain",
+          "They were burned by fire from the sky"
+        ],
+        "answer": "They were destroyed by flocks of birds with stones"
+      }
+    },
+    "verseRef": "105:1-5",
+    "arabic": "",
+    "verse": "105:1-5"
+  },
+  "scramble": {
+    "verseRef": "28:16",
+    "reference": "Surah Al-Qasas (28:16)",
+    "segments": [
+      "قَالَ رَبِّ إِنِّي",
+      "ظَلَمْتُ نَفْسِي",
+      "فَاغْفِرْ لِي",
+      "فَغَفَرَ لَهُ إِنَّهُ",
+      "هُوَ الْغَفُورُ الرَّحِيمُ"
+    ],
+    "translations": [
+      "He said My Lord Indeed, I",
+      "[I] have wronged my soul so forgive",
+      "[for] me Then He forgave [for] him",
+      "Indeed He He (is)",
+      "the Oft-Forgiving the Most Merciful"
+    ],
+    "hint": "This is Prophet Moses (peace be upon him) asking Allah for forgiveness after making a mistake while trying to help someone - a powerful lesson about tawbah (repentance) and Allah's mercy.",
+    "arabic": "قَالَ رَبِّ إِنِّى ظَلَمْتُ نَفْسِى فَٱغْفِرْ لِى فَغَفَرَ لَهُۥٓ ۚ إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
+    "words": [
+      "قَالَ رَبِّ إِنِّى",
+      "ظَلَمْتُ نَفْسِى فَٱغْفِرْ",
+      "لِى فَغَفَرَ لَهُۥٓ ۚ",
+      "إِنَّهُۥ هُوَ",
+      "ٱلْغَفُورُ ٱلرَّحِيمُ"
+    ],
+    "verseEn": "He said, \"My Lord, indeed I have wronged myself, so forgive me,\" and He forgave him. Indeed, He is the Forgiving, the Merciful."
+  }
 }

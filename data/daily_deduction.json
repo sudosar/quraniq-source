@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-02",
+  "date": "2026-06-03",
   "puzzle": {
-    "title": "The Keeper of the Gate of the Rising Sun",
-    "intro": "Throughout the Quran, certain souls traverse the earth leaving trails of wisdom and wonder. One such figure traveled to the furthest points of creation—where the sun rises and sets, where a barrier holds back chaos itself. This servant of Allah was granted a kingdom that none would ever possess again. Through three distinct journeys, this individual's purpose became clear. Can you identify this legendary wanderer from among the shadows of history?",
+    "title": "The Nation That Challenged the Sacred House",
+    "intro": "In ancient times, a powerful nation decided to attack a sanctuary revered by believers. This group was wealthy, mighty, and confident in their military strength. They brought with them a massive creature that would serve as their weapon of war. Their goal was clear: to demolish the sacred house and crush the faith of its people. But their arrogance was about to meet a devastating response from above. This historical event became a sign and a lesson for all who came after. Can you identify this group from the clues?",
     "clues": [
-      "I was granted authority by the Most Merciful to rule over the earth in a way no one else has ever achieved.",
-      "I traveled westward until I reached the place where the sun sets, finding it setting in a murky spring, and I witnessed a people there.",
-      "I journeyed eastward until I reached the place where the sun rises, finding it rising upon a people for whom We had provided no shelter from it.",
-      "I journeyed between those two extreme points until I arrived at a valley between two mountains, where I found a people who could barely understand speech.",
-      "I found on the mountain two hard barriers of iron reaching to right and left, and between them, a narrow passage. These people asked me to break through the barrier holding back chaos.",
-      "I took my provision and said: 'When the barrier breaks through, this will be a clear separation between us and this people.' And when the appointed time arrived, I watched as the barrier was finally breached."
+      "We were a nation blessed with wealth and military prowess.",
+      "We gathered our forces and brought a massive beast to use in our campaign.",
+      "Our target was a sacred sanctuary that we wished to destroy completely.",
+      "We believed our strength would be enough to overcome any divine protection.",
+      "But the Lord sent upon us a punishment from the sky we did not expect.",
+      "We were destroyed in an instant, scattered like broken straw."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Dhu al-Qarnayn",
-          "Prophet Sulayman",
-          "Prophet Ibrahim",
-          "The King of Ghassaniyah",
-          "Dhul-Qarnain the Wanderer"
+          "The People of the Elephant",
+          "The People of Thamud",
+          "The People of 'Ad",
+          "The Companions of the Cave",
+          "The Nation of Prophet Hud"
         ],
-        "answer": "Dhu al-Qarnayn"
+        "answer": "The People of the Elephant"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Breaking through the iron barrier for the people of Yajuj and Majuj",
-          "Building the Ship under the command of a prophet",
-          "Constructing a temple in Jerusalem",
-          "Crossing the Red Sea with the believing people",
-          "Constructing a dam to protect a righteous nation"
+          "Marching an elephant towards the sacred house to destroy it",
+          "Building a tower to reach the heavens",
+          "Constructing a golden idol for worship",
+          "Refusing to listen to Allah's messenger",
+          "Digging a well to harm believers"
         ],
-        "answer": "Breaking through the iron barrier for the people of Yajuj and Majuj"
+        "answer": "Marching an elephant towards the sacred house to destroy it"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The barrier of iron between two mountains",
-          "The ship anchored on a mountain",
-          "The sacred house of worship in Jerusalem",
-          "The river in the land of Egypt",
-          "The well of blessings in Madyan"
+          "The Elephant",
+          "The Golden Calf",
+          "The Staff of Musa",
+          "The Fish of Yunus",
+          "The Iron of Dawud"
         ],
-        "answer": "The barrier of iron between two mountains"
+        "answer": "The Elephant"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "The barrier was breached when the appointed time came, and chaos poured forth",
-          "The disbelievers were drowned while the believers were saved",
-          "The righteous were guided to eternal paradise",
-          "The city was destroyed by a screaming wind",
-          "The idols were shattered and the people repented"
+          "They were destroyed by flocks of birds with stones",
+          "They were drowned in a great flood",
+          "They were transformed into apes and pigs",
+          "They were buried under falling stones from a mountain",
+          "They were burned by fire from the sky"
         ],
-        "answer": "The barrier was breached when the appointed time came, and chaos poured forth"
+        "answer": "They were destroyed by flocks of birds with stones"
       }
     },
-    "verseRef": "18:94",
-    "arabic": "قَالُوا۟ يَـٰذَا ٱلْقَرْنَيْنِ إِنَّ يَأْجُوجَ وَمَأْجُوجَ مُفْسِدُونَ فِى ٱلْأَرْضِ فَهَلْ نَجْعَلُ لَكَ خَرْجًا عَلَىٰٓ أَن تَجْعَلَ بَيْنَنَا وَبَيْنَهُمْ سَدًّۭا",
-    "verse": "They said, \"O Dhul-Qarnayn, indeed Gog and Magog are [great] corrupters in the land. So may we assign for you an expenditure that you might make between us and them a barrier?\" (18:94)"
+    "verseRef": "105:1-5",
+    "arabic": "",
+    "verse": "105:1-5"
   },
   "generated": true,
   "model": "auto (chain)"
