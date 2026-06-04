@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-03",
+  "date": "2026-06-04",
   "puzzle": {
-    "word": "نجد",
-    "display": "نَجْد",
-    "hint": "Elevated terrain associated with spiritual awakening and Divine favor",
-    "verseRef": "89:31",
-    "arabicVerse": "",
-    "verse": "89:31"
+    "word": "كذب",
+    "display": "كَذِبَ",
+    "hint": "A morally wrong action of saying what is not true",
+    "verseRef": "2:10",
+    "arabicVerse": "فِى قُلُوبِهِم مَّرَضٌۭ فَزَادَهُمُ ٱللَّهُ مَرَضًۭا ۖ وَلَهُمْ عَذَابٌ أَلِيمٌۢ بِمَا كَانُوا۟ يَكْذِبُونَ",
+    "verse": "2:10 - In their hearts is disease, so Allāh has increased their disease; and for them is a painful punishment because they [habitually] used to lie."
   },
   "generated": true,
   "model": "auto (chain)"

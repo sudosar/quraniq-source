@@ -1,32 +1,32 @@
 {
-  "date": "2026-06-03",
+  "date": "2026-06-04",
   "puzzle": {
-    "verseRef": "28:16",
-    "reference": "Surah Al-Qasas (28:16)",
+    "verseRef": "57:3",
+    "reference": "Surah Al-Hadid (57:3)",
     "segments": [
-      "قَالَ رَبِّ إِنِّي",
-      "ظَلَمْتُ نَفْسِي",
-      "فَاغْفِرْ لِي",
-      "فَغَفَرَ لَهُ إِنَّهُ",
-      "هُوَ الْغَفُورُ الرَّحِيمُ"
+      "هُوَ الْأَوَّلُ",
+      "وَالْآخِرُ",
+      "وَالظَّاهِرُ",
+      "وَالْبَاطِنُ",
+      "وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ"
     ],
     "translations": [
-      "He said My Lord Indeed, I",
-      "[I] have wronged my soul so forgive",
-      "[for] me Then He forgave [for] him",
-      "Indeed He He (is)",
-      "the Oft-Forgiving the Most Merciful"
+      "He (is) the First",
+      "and the Last and the Apparent",
+      "and the Unapparent and He",
+      "(is) of every thing",
+      "All-Knower"
     ],
-    "hint": "This is Prophet Moses (peace be upon him) asking Allah for forgiveness after making a mistake while trying to help someone - a powerful lesson about tawbah (repentance) and Allah's mercy.",
-    "arabic": "قَالَ رَبِّ إِنِّى ظَلَمْتُ نَفْسِى فَٱغْفِرْ لِى فَغَفَرَ لَهُۥٓ ۚ إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
+    "hint": "This verse describes four of Allah's most profound attributes: His pre-existence, eternity, manifestness, and hiddenness.",
+    "arabic": "هُوَ ٱلْأَوَّلُ وَٱلْـَٔاخِرُ وَٱلظَّـٰهِرُ وَٱلْبَاطِنُ ۖ وَهُوَ بِكُلِّ شَىْءٍ عَلِيمٌ",
     "words": [
-      "قَالَ رَبِّ إِنِّى",
-      "ظَلَمْتُ نَفْسِى فَٱغْفِرْ",
-      "لِى فَغَفَرَ لَهُۥٓ ۚ",
-      "إِنَّهُۥ هُوَ",
-      "ٱلْغَفُورُ ٱلرَّحِيمُ"
+      "هُوَ ٱلْأَوَّلُ",
+      "وَٱلْـَٔاخِرُ وَٱلظَّـٰهِرُ",
+      "وَٱلْبَاطِنُ ۖ وَهُوَ",
+      "بِكُلِّ شَىْءٍ",
+      "عَلِيمٌ"
     ],
-    "verseEn": "He said, \"My Lord, indeed I have wronged myself, so forgive me,\" and He forgave him. Indeed, He is the Forgiving, the Merciful."
+    "verseEn": "He is the First and the Last, the Ascendant and the Intimate, and He is, of all things, Knowing."
   },
   "generated": true,
   "model": "auto (chain)"
