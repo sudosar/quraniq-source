@@ -1,32 +1,38 @@
 {
-  "date": "2026-06-04",
+  "date": "2026-06-05",
   "puzzle": {
-    "verseRef": "57:3",
-    "reference": "Surah Al-Hadid (57:3)",
+    "verseRef": "2:151",
+    "reference": "Surah Al-Baqarah (2:151)",
     "segments": [
-      "هُوَ الْأَوَّلُ",
-      "وَالْآخِرُ",
-      "وَالظَّاهِرُ",
-      "وَالْبَاطِنُ",
-      "وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ"
+      "كَمَا أَرْسَلْنَا",
+      "فِيكُمْ رَسُولًا",
+      "مِنْهُ يَتْلُو عَلَيْكُمْ",
+      "آيَاتِنَا وَيُزَكِّيكُمْ",
+      "وَيُعَلِّمُكُمُ",
+      "مَا لَمْ تَكُونُوا",
+      "تَعْلَمُونَ"
     ],
     "translations": [
-      "He (is) the First",
-      "and the Last and the Apparent",
-      "and the Unapparent and He",
-      "(is) of every thing",
-      "All-Knower"
+      "As We sent among you",
+      "a Messenger from you (who) recites",
+      "to you Our verses and purifies you",
+      "and teaches you the Book",
+      "and the wisdom and teaches you",
+      "what not",
+      "you were knowing"
     ],
-    "hint": "This verse describes four of Allah's most profound attributes: His pre-existence, eternity, manifestness, and hiddenness.",
-    "arabic": "هُوَ ٱلْأَوَّلُ وَٱلْـَٔاخِرُ وَٱلظَّـٰهِرُ وَٱلْبَاطِنُ ۖ وَهُوَ بِكُلِّ شَىْءٍ عَلِيمٌ",
+    "hint": "This verse describes how Allah sent Prophet Muhammad ﷺ with a sacred mission to teach, purify, and guide believers—perfect for memorizing.",
+    "arabic": "كَمَآ أَرْسَلْنَا فِيكُمْ رَسُولًۭا مِّنكُمْ يَتْلُوا۟ عَلَيْكُمْ ءَايَـٰتِنَا وَيُزَكِّيكُمْ وَيُعَلِّمُكُمُ ٱلْكِتَـٰبَ وَٱلْحِكْمَةَ وَيُعَلِّمُكُم مَّا لَمْ تَكُونُوا۟ تَعْلَمُونَ",
     "words": [
-      "هُوَ ٱلْأَوَّلُ",
-      "وَٱلْـَٔاخِرُ وَٱلظَّـٰهِرُ",
-      "وَٱلْبَاطِنُ ۖ وَهُوَ",
-      "بِكُلِّ شَىْءٍ",
-      "عَلِيمٌ"
+      "كَمَآ أَرْسَلْنَا فِيكُمْ",
+      "رَسُولًۭا مِّنكُمْ يَتْلُوا۟",
+      "عَلَيْكُمْ ءَايَـٰتِنَا وَيُزَكِّيكُمْ",
+      "وَيُعَلِّمُكُمُ ٱلْكِتَـٰبَ",
+      "وَٱلْحِكْمَةَ وَيُعَلِّمُكُم",
+      "مَّا لَمْ",
+      "تَكُونُوا۟ تَعْلَمُونَ"
     ],
-    "verseEn": "He is the First and the Last, the Ascendant and the Intimate, and He is, of all things, Knowing."
+    "verseEn": "Just as We have sent among you a messenger from yourselves reciting to you Our verses and purifying you and teaching you the Book and wisdom and teaching you that which you did not know."
   },
   "generated": true,
   "model": "auto (chain)"

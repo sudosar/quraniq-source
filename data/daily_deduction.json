@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-04",
+  "date": "2026-06-05",
   "puzzle": {
-    "title": "The Sign Among the Stones",
-    "intro": "In a land where mountains were carved into homes, a messenger arrived with a miraculous sign from Allah. The people demanded proof, and they received a creature from solid rock. But their arrogance led them to defy the warning, sealing their fate.",
+    "title": "The Humble Truth Seekers",
+    "intro": "In a land of ancient power and sorcery, a great confrontation unfolds. One side wields the authority of divine signs, while the other attempts to match the impossible. The outcome will forever change the course of history. Can you uncover the identity of those who witnessed the ultimate truth and humbled themselves before it?",
     "clues": [
-      "I was sent to a people who lived in dwellings carved out of mountains.",
-      "They challenged me to bring a sign, so I produced a camel from a rock.",
-      "I commanded them to let the camel drink freely and not harm it.",
-      "They disobeyed and hamstrung the camel, defying my warning.",
-      "I announced that punishment would come after three days.",
-      "At morning, a mighty blast destroyed them, but I and my followers were saved."
+      "We witnessed signs that went beyond the tricks of sorcery",
+      "We all fell in prostration, unable to deny the truth",
+      "We recognized that these signs came from the One True God",
+      "We were the first community to embrace faith in such a dramatic way",
+      "We were promised paradise as our recompense for our belief",
+      "Our ropes and staffs became serpents before our eyes, yet we chose submission"
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Salih",
-          "Prophet Hud",
-          "Prophet Lut",
-          "Prophet Shu'ayb",
-          "Prophet Ibrahim"
+          "Pharaoh's magicians",
+          "Prophet Ibrahim's people",
+          "The humble truth seekers",
+          "The People of the Cave",
+          "The nation of Queen Bilqis"
         ],
-        "answer": "Prophet Salih"
+        "answer": "Pharaoh's magicians"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Demand for a she-camel from a rock",
-          "Demand for a golden calf",
-          "Demand for a table spread from heaven",
-          "Demand for a flood",
-          "Demand for a staff to become a serpent"
+          "The encounter with Prophet Musa's staff",
+          "The trial of Prophet Hud's wind",
+          "The challenge from Prophet Salih's she-camel",
+          "The great flood sent upon a prophet",
+          "The journey of a prophet inside a whale"
         ],
-        "answer": "Demand for a she-camel from a rock"
+        "answer": "The encounter with Prophet Musa's staff"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The she-camel and her calf",
-          "The Ark of Noah",
-          "The Staff of Moses",
-          "The Golden Calf",
-          "The Fire of Ibrahim"
+          "Ancient Egypt",
+          "The sacred house in Makkah",
+          "The city of Midian",
+          "The desert of Thamud",
+          "The cave of ancient sleepers"
         ],
-        "answer": "The she-camel and her calf"
+        "answer": "Ancient Egypt"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Destroyed by a mighty blast",
-          "Drowned in the flood",
-          "Swallowed by the earth",
-          "Turned into apes",
-          "Destroyed by a fierce wind"
+          "Paradise as their recompense",
+          "Punishment in the grave",
+          "Loss of their bountiful gardens",
+          "Destruction by a sudden earthquake",
+          "Rescue from a great whale"
         ],
-        "answer": "Destroyed by a mighty blast"
+        "answer": "Paradise as their recompense"
       }
     },
-    "verseRef": "27:45",
-    "arabic": "وَلَقَدْ أَرْسَلْنَآ إِلَىٰ ثَمُودَ أَخَاهُمْ صَـٰلِحًا أَنِ ٱعْبُدُوا۟ ٱللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ",
-    "verse": "And We had certainly sent to Thamūd their brother Ṣāliḥ, [saying], \"Worship Allāh,\" and at once they were two parties conflicting. (27:45)"
+    "verseRef": "20:70",
+    "arabic": "فَأُلْقِىَ ٱلسَّحَرَةُ سُجَّدًۭا قَالُوٓا۟ ءَامَنَّا بِرَبِّ هَـٰرُونَ وَمُوسَىٰ",
+    "verse": "So the magicians fell down in prostration. They said, \"We have believed in the Lord of Aaron and Moses.\" (20:70)"
   },
   "generated": true,
   "model": "auto (chain)"

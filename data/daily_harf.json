@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-04",
+  "date": "2026-06-05",
   "puzzle": {
-    "word": "كذب",
-    "display": "كَذِبَ",
-    "hint": "A morally wrong action of saying what is not true",
-    "verseRef": "2:10",
-    "arabicVerse": "فِى قُلُوبِهِم مَّرَضٌۭ فَزَادَهُمُ ٱللَّهُ مَرَضًۭا ۖ وَلَهُمْ عَذَابٌ أَلِيمٌۢ بِمَا كَانُوا۟ يَكْذِبُونَ",
-    "verse": "2:10 - In their hearts is disease, so Allāh has increased their disease; and for them is a painful punishment because they [habitually] used to lie."
+    "word": "الليل",
+    "display": "اللَّيْلِ",
+    "hint": "The night that covers, mentioned in the opening verse of its surah",
+    "verseRef": "92:1",
+    "arabicVerse": "وَٱلَّيْلِ إِذَا يَغْشَىٰ",
+    "verse": "92:1 - By the night when it covers"
   },
   "generated": true,
   "model": "auto (chain)"
