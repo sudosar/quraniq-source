@@ -736,7 +736,13 @@ async function fetchGroupLeaderboard(groupCode) {
             try {
                 const [nameSnap, scoresSnap, verseSnap, pctSnap] = await Promise.all([
                     FB_STATE.db.ref(`users/${uid}/displayName`).once('value'),
-                    FB_STATE.db.ref(`users/${uid}/scores`).orderByKey().limitToLast(30).once('value'),
+                    // Fetch ALL score dates, not just the last 30.
+                    // The old `.orderByKey().limitToLast(30)` truncated users with
+                    // >30 days of history (e.g. Aray has 87 dates) and the
+                    // dedup then summed only the truncated snapshots — so
+                    // anyone playing for more than a month was showing the
+                    // wrong total on the leaderboard.
+                    FB_STATE.db.ref(`users/${uid}/scores`).once('value'),
                     FB_STATE.db.ref(`users/${uid}/versesExplored`).once('value'),
                     FB_STATE.db.ref(`users/${uid}/quranPercent`).once('value')
                 ]);
