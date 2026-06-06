@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-05",
+  "date": "2026-06-06",
   "puzzle": {
-    "word": "الليل",
-    "display": "اللَّيْلِ",
-    "hint": "The night that covers, mentioned in the opening verse of its surah",
-    "verseRef": "92:1",
-    "arabicVerse": "وَٱلَّيْلِ إِذَا يَغْشَىٰ",
-    "verse": "92:1 - By the night when it covers"
+    "word": "عفو",
+    "display": "عَفْو",
+    "hint": "Forgiveness; something that is easy or extra.",
+    "verseRef": "7:199",
+    "arabicVerse": "خُذِ ٱلْعَفْوَ وَأْمُرْ بِٱلْعُرْفِ وَأَعْرِضْ عَنِ ٱلْجَـٰهِلِينَ",
+    "verse": "7:199 - Take what is given freely, enjoin what is good, and turn away from the ignorant."
   },
   "generated": true,
   "model": "auto (chain)"

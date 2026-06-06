@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-05",
+  "date": "2026-06-06",
   "puzzle": {
-    "title": "The Humble Truth Seekers",
-    "intro": "In a land of ancient power and sorcery, a great confrontation unfolds. One side wields the authority of divine signs, while the other attempts to match the impossible. The outcome will forever change the course of history. Can you uncover the identity of those who witnessed the ultimate truth and humbled themselves before it?",
+    "title": "The Elevated Servant of Allah",
+    "intro": "You hear whispers of a figure from ancient times, a servant of Allah who was raised to a station above the ordinary. This individual was known for unwavering patience and absolute truthfulness, and was sent to a people who turned away from the message. Who is this exalted soul?",
     "clues": [
-      "We witnessed signs that went beyond the tricks of sorcery",
-      "We all fell in prostration, unable to deny the truth",
-      "We recognized that these signs came from the One True God",
-      "We were the first community to embrace faith in such a dramatic way",
-      "We were promised paradise as our recompense for our belief",
-      "Our ropes and staffs became serpents before our eyes, yet we chose submission"
+      "I was chosen by Allah as a prophet and am mentioned in the Holy Quran.",
+      "I was known for my patience and truthfulness, qualities that Allah praises.",
+      "I called my people to worship the One God, but many rejected me.",
+      "My station was elevated by Allah, and I was granted a lofty rank.",
+      "I am often mentioned alongside other prophets such as Ismail and Dhul-Kifl.",
+      "Allah says about me: 'And We raised him to a high station.' (19:57)"
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Pharaoh's magicians",
-          "Prophet Ibrahim's people",
-          "The humble truth seekers",
-          "The People of the Cave",
-          "The nation of Queen Bilqis"
+          "Prophet Idris",
+          "Prophet Elias",
+          "Prophet Dhu al-Kifl",
+          "Prophet Al-Yasa",
+          "Prophet Hud"
         ],
-        "answer": "Pharaoh's magicians"
+        "answer": "Prophet Idris"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "The encounter with Prophet Musa's staff",
-          "The trial of Prophet Hud's wind",
-          "The challenge from Prophet Salih's she-camel",
-          "The great flood sent upon a prophet",
-          "The journey of a prophet inside a whale"
+          "Called people to worship Allah",
+          "Built the ark",
+          "Fought against Pharaoh",
+          "Was tested with severe illness",
+          "Was thrown into fire"
         ],
-        "answer": "The encounter with Prophet Musa's staff"
+        "answer": "Called people to worship Allah"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Ancient Egypt",
-          "The sacred house in Makkah",
-          "The city of Midian",
-          "The desert of Thamud",
-          "The cave of ancient sleepers"
+          "Lofty rank/high station",
+          "The ark",
+          "The staff",
+          "The fire",
+          "The well"
         ],
-        "answer": "Ancient Egypt"
+        "answer": "Lofty rank/high station"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Paradise as their recompense",
-          "Punishment in the grave",
-          "Loss of their bountiful gardens",
-          "Destruction by a sudden earthquake",
-          "Rescue from a great whale"
+          "Elevated to high status",
+          "Drowned in the flood",
+          "Swallowed by a whale",
+          "Saved from the fire",
+          "Became a king"
         ],
-        "answer": "Paradise as their recompense"
+        "answer": "Elevated to high status"
       }
     },
-    "verseRef": "20:70",
-    "arabic": "فَأُلْقِىَ ٱلسَّحَرَةُ سُجَّدًۭا قَالُوٓا۟ ءَامَنَّا بِرَبِّ هَـٰرُونَ وَمُوسَىٰ",
-    "verse": "So the magicians fell down in prostration. They said, \"We have believed in the Lord of Aaron and Moses.\" (20:70)"
+    "verseRef": "19:57",
+    "arabic": "وَرَفَعْنَـٰهُ مَكَانًا عَلِيًّا",
+    "verse": "And We raised him to a high station. (19:57)"
   },
   "generated": true,
   "model": "auto (chain)"

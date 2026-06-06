@@ -1,38 +1,35 @@
 {
-  "date": "2026-06-05",
+  "date": "2026-06-06",
   "puzzle": {
-    "verseRef": "2:151",
-    "reference": "Surah Al-Baqarah (2:151)",
+    "verseRef": "18:30",
+    "reference": "Al-Kahf (18:30)",
     "segments": [
-      "كَمَا أَرْسَلْنَا",
-      "فِيكُمْ رَسُولًا",
-      "مِنْهُ يَتْلُو عَلَيْكُمْ",
-      "آيَاتِنَا وَيُزَكِّيكُمْ",
-      "وَيُعَلِّمُكُمُ",
-      "مَا لَمْ تَكُونُوا",
-      "تَعْلَمُونَ"
+      "إِنَّ الَّذِينَ",
+      "آمَنُوا وَعَمِلُوا",
+      "الصَّالِحَاتِ",
+      "إِنَّا لَا",
+      "نُضِيعُ أَجْرَ",
+      "مَنْ أَحْسَنَ عَمَلًا"
     ],
     "translations": [
-      "As We sent among you",
-      "a Messenger from you (who) recites",
-      "to you Our verses and purifies you",
-      "and teaches you the Book",
-      "and the wisdom and teaches you",
-      "what not",
-      "you were knowing"
+      "Indeed those who",
+      "believed and did",
+      "the good deeds indeed, We",
+      "will not let go waste will not let go waste",
+      "(the) reward (of one) who",
+      "does good deeds"
     ],
-    "hint": "This verse describes how Allah sent Prophet Muhammad ﷺ with a sacred mission to teach, purify, and guide believers—perfect for memorizing.",
-    "arabic": "كَمَآ أَرْسَلْنَا فِيكُمْ رَسُولًۭا مِّنكُمْ يَتْلُوا۟ عَلَيْكُمْ ءَايَـٰتِنَا وَيُزَكِّيكُمْ وَيُعَلِّمُكُمُ ٱلْكِتَـٰبَ وَٱلْحِكْمَةَ وَيُعَلِّمُكُم مَّا لَمْ تَكُونُوا۟ تَعْلَمُونَ",
+    "hint": "A promise of reward for believers who do good works.",
+    "arabic": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ إِنَّا لَا نُضِيعُ أَجْرَ مَنْ أَحْسَنَ عَمَلًا",
     "words": [
-      "كَمَآ أَرْسَلْنَا فِيكُمْ",
-      "رَسُولًۭا مِّنكُمْ يَتْلُوا۟",
-      "عَلَيْكُمْ ءَايَـٰتِنَا وَيُزَكِّيكُمْ",
-      "وَيُعَلِّمُكُمُ ٱلْكِتَـٰبَ",
-      "وَٱلْحِكْمَةَ وَيُعَلِّمُكُم",
-      "مَّا لَمْ",
-      "تَكُونُوا۟ تَعْلَمُونَ"
+      "إِنَّ ٱلَّذِينَ",
+      "ءَامَنُوا۟ وَعَمِلُوا۟",
+      "ٱلصَّـٰلِحَـٰتِ إِنَّا",
+      "لَا نُضِيعُ",
+      "أَجْرَ مَنْ",
+      "أَحْسَنَ عَمَلًا"
     ],
-    "verseEn": "Just as We have sent among you a messenger from yourselves reciting to you Our verses and purifying you and teaching you the Book and wisdom and teaching you that which you did not know."
+    "verseEn": "Indeed, those who have believed and done righteous deeds - indeed, We will not allow to be lost the reward of any who did well in deeds."
   },
   "generated": true,
   "model": "auto (chain)"
