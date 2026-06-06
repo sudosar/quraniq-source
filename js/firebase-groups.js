@@ -110,6 +110,10 @@ async function initFirebase() {
         // Check for pending group migration (after save code restore)
         processPendingMigration();
 
+        // Drain any scores queued while auth was resolving or on a previous load
+        // (covers games that completed before Firebase was ready)
+        drainPendingScores().catch((err) => console.error('[FB] Initial drain failed:', err));
+
         return true;
     } catch (err) {
         console.error('[FB] Init failed:', err);
@@ -503,66 +507,183 @@ async function leaveGroup(code) {
 
 // ==================== SCORE SUBMISSION ====================
 
+const PENDING_SCORES_KEY = 'quraniq_pending_scores_v1';
+const MAX_PENDING_SCORES = 50; // Keep queue bounded
+
 /**
- * Submit today's scores to Firebase.
- * Called after each game completion.
+ * Persist a score to the pending queue (localStorage) so it's never lost
+ * even if Firebase isn't ready or a write fails. The queue is drained on
+ * auth success, on every page load, and when the leaderboard is opened.
+ *
+ * Queue entry shape: { gameMode, crescents, date, ts }
  */
-async function submitFirebaseScore(gameMode, crescents) {
-    if (!FB_STATE.user || !FB_STATE.initialized) return;
-
-    const today = getTodayDateString();
-    const uid = FB_STATE.user.uid;
-    const scorePath = `users/${uid}/scores/${today}`;
-
+function enqueuePendingScore(gameMode, crescents, dateStr) {
     try {
-        const txnResult = await FB_STATE.db.ref(scorePath).transaction((current) => {
-            current = current || {};
-
-            const modeMap = {
-                connections: 'connections',
-                wordle: 'harf',
-                harf: 'harf',
-                deduction: 'deduction',
-                scramble: 'scramble',
-                juz: 'juz'
-            };
-            const field = modeMap[gameMode];
-            if (!field) return; // abort transaction
-
-            // Only update if the new score is higher
-            if ((current[field] || 0) < crescents) {
-                current[field] = crescents;
+        const raw = localStorage.getItem(PENDING_SCORES_KEY);
+        const queue = raw ? JSON.parse(raw) : [];
+        // Coalesce: if a pending entry already exists for the same (date, gameMode)
+        // keep the HIGHER crescents so re-plays don't lower the queued value.
+        const idx = queue.findIndex(e => e && e.date === dateStr && e.gameMode === gameMode);
+        if (idx >= 0) {
+            if ((queue[idx].crescents || 0) < crescents) {
+                queue[idx] = { gameMode, crescents, date: dateStr, ts: Date.now() };
             }
+        } else {
+            queue.push({ gameMode, crescents, date: dateStr, ts: Date.now() });
+        }
+        // Trim oldest if over cap
+        while (queue.length > MAX_PENDING_SCORES) queue.shift();
+        localStorage.setItem(PENDING_SCORES_KEY, JSON.stringify(queue));
+    } catch (err) {
+        console.error('[FB] Failed to enqueue score:', err);
+    }
+}
 
-            // Recalculate total
-            const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
-            current.total = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
+function readPendingScores() {
+    try {
+        const raw = localStorage.getItem(PENDING_SCORES_KEY);
+        const arr = raw ? JSON.parse(raw) : [];
+        return Array.isArray(arr) ? arr.filter(e => e && e.gameMode != null && e.date) : [];
+    } catch {
+        return [];
+    }
+}
 
-            return current;
-        });
+function clearPendingScore(dateStr, gameMode) {
+    try {
+        const raw = localStorage.getItem(PENDING_SCORES_KEY);
+        if (!raw) return;
+        const queue = JSON.parse(raw) || [];
+        const filtered = queue.filter(e => !(e && e.date === dateStr && e.gameMode === gameMode));
+        localStorage.setItem(PENDING_SCORES_KEY, JSON.stringify(filtered));
+    } catch (err) {
+        console.error('[FB] Failed to clear pending score:', err);
+    }
+}
 
-        // Set streak and timestamp via update() AFTER transaction —
-        // ServerValue.TIMESTAMP cannot be set inside a transaction callback
-        if (txnResult && txnResult.committed) {
-            const stats = loadStats();
+/**
+ * Drain all pending scores to Firebase. Safe to call repeatedly.
+ * Called on auth success, on page load, and before leaderboard fetch.
+ */
+async function drainPendingScores() {
+    if (!FB_STATE.user || !FB_STATE.initialized) return;
+    const queue = readPendingScores();
+    if (queue.length === 0) return;
+    console.log(`[FB] Draining ${queue.length} pending score(s)...`);
+
+    // Snapshot current uid so we don't drain into a different identity
+    const currentUid = FB_STATE.user.uid;
+
+    for (const entry of queue) {
+        try {
+            await submitFirebaseScoreRaw(entry.gameMode, entry.crescents, entry.date, currentUid);
+            clearPendingScore(entry.date, entry.gameMode);
+        } catch (err) {
+            console.error('[FB] Drain failed for entry, will retry later:', entry, err);
+            // Stop on first failure to avoid hammering Firebase
+            break;
+        }
+    }
+}
+
+/**
+ * Low-level Firebase score write. Bypasses the pending-queue logic.
+ * @param {string} gameMode - one of: connections, harf, deduction, scramble, juz
+ * @param {number} crescents - score in crescents
+ * @param {string} [dateStr] - YYYY-MM-DD; defaults to today
+ * @param {string} [uid] - target uid; defaults to current user
+ */
+async function submitFirebaseScoreRaw(gameMode, crescents, dateStr, uid) {
+    if (!FB_STATE.db) throw new Error('DB not ready');
+    const targetUid = uid || (FB_STATE.user && FB_STATE.user.uid);
+    if (!targetUid) throw new Error('No user');
+    const today = dateStr || getTodayDateString();
+    const scorePath = `users/${targetUid}/scores/${today}`;
+
+    const txnResult = await FB_STATE.db.ref(scorePath).transaction((current) => {
+        current = current || {};
+
+        const modeMap = {
+            connections: 'connections',
+            wordle: 'harf',
+            harf: 'harf',
+            deduction: 'deduction',
+            scramble: 'scramble',
+            juz: 'juz'
+        };
+        const field = modeMap[gameMode];
+        if (!field) return; // abort transaction
+
+        // Only update if the new score is higher
+        if ((current[field] || 0) < crescents) {
+            current[field] = crescents;
+        }
+
+        // Recalculate total
+        const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
+        current.total = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
+
+        return current;
+    });
+
+    // Set streak and timestamp via update() AFTER transaction —
+    // ServerValue.TIMESTAMP cannot be set inside a transaction callback
+    if (txnResult && txnResult.committed) {
+        try {
+            const stats = (typeof loadStats === 'function') ? loadStats() : null;
             const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
             let bestStreak = 0;
-            allModes.forEach(m => { if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak); });
+            if (stats) {
+                allModes.forEach(m => { if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak); });
+            }
             await FB_STATE.db.ref(scorePath).update({
                 streak: bestStreak,
                 timestamp: firebase.database.ServerValue.TIMESTAMP
             });
-        }
+        } catch (e) { /* streak update is best-effort */ }
+    }
 
-        // Sync verse exploration stats to Firebase profile
-        syncVerseStatsToFirebase();
-
-        // Invalidate leaderboard cache
+    // Invalidate leaderboard cache (only if current user)
+    if (targetUid === (FB_STATE.user && FB_STATE.user.uid)) {
         Object.keys(FB_STATE.leaderboardCache).forEach(k => {
             delete FB_STATE.leaderboardCache[k];
         });
+    }
+
+    return txnResult;
+}
+
+/**
+ * Submit today's scores to Firebase.
+ * Called after each game completion.
+ *
+ * Robust against:
+ *  - Firebase not yet initialized (queues locally, drained on auth)
+ *  - Auth not yet resolved (queues locally)
+ *  - Network/transient errors (queue remains, retried on next drain)
+ *  - User playing multiple games in one session (coalesced in queue)
+ */
+async function submitFirebaseScore(gameMode, crescents) {
+    const dateStr = (typeof getTodayDateString === 'function') ? getTodayDateString() : null;
+
+    // Always persist to the pending queue first — this is the source of truth
+    // for "we owe Firebase a write." If Firebase is ready we'll drain it below.
+    if (dateStr) enqueuePendingScore(gameMode, crescents, dateStr);
+
+    if (!FB_STATE.user || !FB_STATE.initialized || !FB_STATE.db) {
+        // Firebase not ready; the queued entry will be drained on auth/load
+        return;
+    }
+
+    try {
+        await submitFirebaseScoreRaw(gameMode, crescents, dateStr);
+        // Success — remove from queue
+        if (dateStr) clearPendingScore(dateStr, gameMode);
+        // Sync verse exploration stats to Firebase profile
+        syncVerseStatsToFirebase();
     } catch (err) {
-        console.error('[FB] Score submit failed:', err);
+        console.error('[FB] Score submit failed (will retry on next drain):', err);
+        // Leave it in the queue; drainPendingScores() will retry
     }
 }
 
@@ -1079,6 +1200,10 @@ async function backfillTodayScores() {
     // Always invalidate leaderboard cache and sync stats, regardless of backfill result
     Object.keys(FB_STATE.leaderboardCache).forEach(k => { delete FB_STATE.leaderboardCache[k]; });
     syncVerseStatsToFirebase();
+
+    // Also drain any pending scores queued from earlier (different dates, or
+    // games submitted before this backfill). Best-effort.
+    drainPendingScores().catch((err) => console.error('[FB] Drain after backfill failed:', err));
 }
 
 // ==================== VERSE STATS SYNC ====================

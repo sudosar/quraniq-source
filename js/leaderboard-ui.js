@@ -19,6 +19,20 @@ async function initLeaderboard() {
         return;
     }
 
+    // Drain any queued scores from a previous session/page-load where
+    // Firebase auth wasn't ready (or a transient write failed).
+    // initFirebase already drains on first init; this catches the
+    // "FB_STATE.initialized was already true" path on subsequent loads.
+    if (typeof drainPendingScores === 'function') {
+        drainPendingScores().catch((err) => console.error('[LB] Initial drain failed:', err));
+    }
+
+    // Backfill any locally-completed game scores that didn't reach Firebase
+    // (covers the symptom where a user scored today but their total didn't update).
+    if (typeof backfillTodayScores === 'function') {
+        backfillTodayScores().catch((err) => console.error('[LB] Backfill failed:', err));
+    }
+
     // Show the leaderboard icon in the header
     const lbBtn = document.getElementById('leaderboard-btn');
     if (lbBtn) lbBtn.classList.remove('lb-hidden');
@@ -44,8 +58,12 @@ async function initLeaderboard() {
 function openLeaderboard() {
     const modal = document.getElementById('leaderboard-modal');
     if (!modal) return;
-    // Backfill any local scores that weren't submitted to Firebase
+    // Drain any scores that were queued (Firebase not ready, transient errors)
+    // and backfill any local scores that weren't submitted to Firebase
     // (e.g., games completed before joining a group)
+    if (typeof drainPendingScores === 'function') {
+        drainPendingScores().catch((err) => console.error('[LB] Drain failed:', err));
+    }
     if (typeof backfillTodayScores === 'function') backfillTodayScores();
     // Sync verse stats to Firebase when opening leaderboard
     if (typeof syncVerseStatsToFirebase === 'function') syncVerseStatsToFirebase();
