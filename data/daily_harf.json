@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-06",
+  "date": "2026-06-07",
   "puzzle": {
-    "word": "عفو",
-    "display": "عَفْو",
-    "hint": "Forgiveness; something that is easy or extra.",
-    "verseRef": "7:199",
-    "arabicVerse": "خُذِ ٱلْعَفْوَ وَأْمُرْ بِٱلْعُرْفِ وَأَعْرِضْ عَنِ ٱلْجَـٰهِلِينَ",
-    "verse": "7:199 - Take what is given freely, enjoin what is good, and turn away from the ignorant."
+    "word": "اية",
+    "display": "آيَة",
+    "hint": "A divine sign or miracle from Allah",
+    "verseRef": "10:92",
+    "arabicVerse": "فَٱلْيَوْمَ نُنَجِّيكَ بِبَدَنِكَ لِتَكُونَ لِمَنْ خَلْفَكَ ءَايَةًۭ ۚ وَإِنَّ كَثِيرًۭا مِّنَ ٱلنَّاسِ عَنْ ءَايَـٰتِنَا لَغَـٰفِلُونَ",
+    "verse": "10:92 - So today We will save you in body that you may be to those who succeed you a sign. And indeed, many among the people, of Our signs, are heedless."
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,35 +1,32 @@
 {
-  "date": "2026-06-06",
+  "date": "2026-06-07",
   "puzzle": {
-    "verseRef": "18:30",
-    "reference": "Al-Kahf (18:30)",
+    "verseRef": "14:37",
+    "reference": "Surah Ibrahim (14:37)",
     "segments": [
-      "إِنَّ الَّذِينَ",
-      "آمَنُوا وَعَمِلُوا",
-      "الصَّالِحَاتِ",
-      "إِنَّا لَا",
-      "نُضِيعُ أَجْرَ",
-      "مَنْ أَحْسَنَ عَمَلًا"
+      "Rabbanā innahū",
+      "mākānā wa-banūnā",
+      "lil̄-jāhillīn",
+      "ghāfirīna wa-anta",
+      "rabbunā"
     ],
     "translations": [
-      "Indeed those who",
-      "believed and did",
-      "the good deeds indeed, We",
-      "will not let go waste will not let go waste",
-      "(the) reward (of one) who",
-      "does good deeds"
+      "Our Lord Indeed, I [I] have settled (some) of my offsprings in a valley",
+      "not with cultivation near Your Sacred House",
+      "Your Sacred House our Lord That they may establish the prayers So make",
+      "hearts of the men incline towards them",
+      "and provide them with the fruits so that they may be grateful"
     ],
-    "hint": "A promise of reward for believers who do good works.",
-    "arabic": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ إِنَّا لَا نُضِيعُ أَجْرَ مَنْ أَحْسَنَ عَمَلًا",
+    "hint": "A prophet made this dua about his family and home, asking Allah to forgive them",
+    "arabic": "رَّبَّنَآ إِنِّىٓ أَسْكَنتُ مِن ذُرِّيَّتِى بِوَادٍ غَيْرِ ذِى زَرْعٍ عِندَ بَيْتِكَ ٱلْمُحَرَّمِ رَبَّنَا لِيُقِيمُوا۟ ٱلصَّلَوٰةَ فَٱجْعَلْ أَفْـِٔدَةًۭ مِّنَ ٱلنَّاسِ تَهْوِىٓ إِلَيْهِمْ وَٱرْزُقْهُم مِّنَ ٱلثَّمَرَٰتِ لَعَلَّهُمْ يَشْكُرُونَ",
     "words": [
-      "إِنَّ ٱلَّذِينَ",
-      "ءَامَنُوا۟ وَعَمِلُوا۟",
-      "ٱلصَّـٰلِحَـٰتِ إِنَّا",
-      "لَا نُضِيعُ",
-      "أَجْرَ مَنْ",
-      "أَحْسَنَ عَمَلًا"
+      "رَّبَّنَآ إِنِّىٓ أَسْكَنتُ مِن ذُرِّيَّتِى بِوَادٍ",
+      "غَيْرِ ذِى زَرْعٍ عِندَ بَيْتِكَ",
+      "ٱلْمُحَرَّمِ رَبَّنَا لِيُقِيمُوا۟ ٱلصَّلَوٰةَ فَٱجْعَلْ",
+      "أَفْـِٔدَةًۭ مِّنَ ٱلنَّاسِ تَهْوِىٓ إِلَيْهِمْ",
+      "وَٱرْزُقْهُم مِّنَ ٱلثَّمَرَٰتِ لَعَلَّهُمْ يَشْكُرُونَ"
     ],
-    "verseEn": "Indeed, those who have believed and done righteous deeds - indeed, We will not allow to be lost the reward of any who did well in deeds."
+    "verseEn": "Our Lord, I have settled some of my descendants in an uncultivated valley near Your sacred House, our Lord, that they may establish prayer. So make hearts among the people incline toward them and provide for them from the fruits that they might be grateful."
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-06",
+  "date": "2026-06-07",
   "puzzle": {
-    "title": "The Elevated Servant of Allah",
-    "intro": "You hear whispers of a figure from ancient times, a servant of Allah who was raised to a station above the ordinary. This individual was known for unwavering patience and absolute truthfulness, and was sent to a people who turned away from the message. Who is this exalted soul?",
+    "title": "The Tormented Soul of the Nile",
+    "intro": "In an age of great oppression, when a tyrant ruled the land with absolute cruelty, one soul chose the path of faith over the comfort of royalty. This figure dwelled in the heart of power yet found truth in the message of a humble prophet. Their journey would become a timeless lesson in patience, sacrifice, and unwavering conviction. Can you identify this remarkable individual who preferred divine pleasure over worldly status?",
     "clues": [
-      "I was chosen by Allah as a prophet and am mentioned in the Holy Quran.",
-      "I was known for my patience and truthfulness, qualities that Allah praises.",
-      "I called my people to worship the One God, but many rejected me.",
-      "My station was elevated by Allah, and I was granted a lofty rank.",
-      "I am often mentioned alongside other prophets such as Ismail and Dhul-Kifl.",
-      "Allah says about me: 'And We raised him to a high station.' (19:57)"
+      "I lived in a palace of great power, yet my heart found truth in a humble message.",
+      "I chose to follow the guidance of Musa, knowing the consequences I would face.",
+      "I was married to the most powerful tyrant of my time, yet I rejected his false gods.",
+      "My suffering was severe, as I was punished for my belief in the One God.",
+      "I never wavered in my faith, even when faced with the harshest torment.",
+      "My Lord was pleased with my patience and chose me for an honored place in Paradise."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Idris",
-          "Prophet Elias",
-          "Prophet Dhu al-Kifl",
-          "Prophet Al-Yasa",
-          "Prophet Hud"
+          "The mother of Prophet Musa",
+          "The wife of Pharaoh",
+          "The sister of Prophet Musa",
+          "A queen of ancient Egypt",
+          "A servant of the Israelites"
         ],
-        "answer": "Prophet Idris"
+        "answer": "The wife of Pharaoh"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Called people to worship Allah",
-          "Built the ark",
-          "Fought against Pharaoh",
-          "Was tested with severe illness",
-          "Was thrown into fire"
+          "Fighting in Allah's cause with an army",
+          "Confronting Pharaoh and declaring faith",
+          "Building places of worship in Egypt",
+          "Traveling across the sea with Musa",
+          "Receiving revelation from Allah"
         ],
-        "answer": "Called people to worship Allah"
+        "answer": "Confronting Pharaoh and declaring faith"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Lofty rank/high station",
-          "The ark",
-          "The staff",
-          "The fire",
-          "The well"
+          "The wilderness of Midian",
+          "The royal palace of Egypt",
+          "The banks of the Nile River",
+          "The mountain of Sinai",
+          "The land of Canaan"
         ],
-        "answer": "Lofty rank/high station"
+        "answer": "The royal palace of Egypt"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Elevated to high status",
-          "Drowned in the flood",
-          "Swallowed by a whale",
-          "Saved from the fire",
-          "Became a king"
+          "Became a prophet after many years",
+          "Led the Israelites out of Egypt",
+          "Was given sovereignty over Egypt",
+          "Was martyred and honored by Allah",
+          "Lived to old age in comfort"
         ],
-        "answer": "Elevated to high status"
+        "answer": "Was martyred and honored by Allah"
       }
     },
-    "verseRef": "19:57",
-    "arabic": "وَرَفَعْنَـٰهُ مَكَانًا عَلِيًّا",
-    "verse": "And We raised him to a high station. (19:57)"
+    "verseRef": "66:11",
+    "arabic": "وَضَرَبَ ٱللَّهُ مَثَلًۭا لِّلَّذِينَ ءَامَنُوا۟ ٱمْرَأَتَ فِرْعَوْنَ إِذْ قَالَتْ رَبِّ ٱبْنِ لِى عِندَكَ بَيْتًۭا فِى ٱلْجَنَّةِ وَنَجِّنِى مِن فِرْعَوْنَ وَعَمَلِهِۦ وَنَجِّنِى مِنَ ٱلْقَوْمِ ٱلظَّـٰلِمِينَ",
+    "verse": "And Allāh presents an example of those who believed: the wife of Pharaoh, when she said, \"My Lord, build for me near You a house in Paradise and save me from Pharaoh and his deeds and save me from the wrongdoing people.\" (66:11)"
   },
   "generated": true,
   "model": "auto (chain)"
