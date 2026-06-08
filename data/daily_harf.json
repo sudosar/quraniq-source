@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-07",
+  "date": "2026-06-08",
   "puzzle": {
-    "word": "اية",
-    "display": "آيَة",
-    "hint": "A divine sign or miracle from Allah",
-    "verseRef": "10:92",
-    "arabicVerse": "فَٱلْيَوْمَ نُنَجِّيكَ بِبَدَنِكَ لِتَكُونَ لِمَنْ خَلْفَكَ ءَايَةًۭ ۚ وَإِنَّ كَثِيرًۭا مِّنَ ٱلنَّاسِ عَنْ ءَايَـٰتِنَا لَغَـٰفِلُونَ",
-    "verse": "10:92 - So today We will save you in body that you may be to those who succeed you a sign. And indeed, many among the people, of Our signs, are heedless."
+    "word": "سبح",
+    "display": "سَبِّحِ",
+    "hint": "A command to glorify, found in a short surah about the Most High.",
+    "verseRef": "87:1",
+    "arabicVerse": "سَبِّحِ ٱسْمَ رَبِّكَ ٱلْأَعْلَى",
+    "verse": "87:1 - Exalt the name of your Lord, the Most High,"
   },
   "generated": true,
   "model": "auto (chain)"

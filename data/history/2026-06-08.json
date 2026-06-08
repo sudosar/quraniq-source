@@ -1,6 +1,5 @@
 {
-  "date": "2026-06-08",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَسْمَاءُ الْأَنْبِيَاءِ",
@@ -144,6 +143,101 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "سبح",
+    "display": "سَبِّحِ",
+    "hint": "A command to glorify, found in a short surah about the Most High.",
+    "verseRef": "87:1",
+    "arabicVerse": "سَبِّحِ ٱسْمَ رَبِّكَ ٱلْأَعْلَى",
+    "verse": "87:1 - Exalt the name of your Lord, the Most High,"
+  },
+  "deduction": {
+    "title": "The Supplicant of the Sanctuary",
+    "intro": "In the quiet hours of the night, a devoted soul called out to the Most Merciful within the hallowed walls of a sacred place. Years of unwavering faith and patience were about to be rewarded with a miracle that would bring joy and a legacy of prophethood.",
+    "clues": [
+      "I spent my days and nights in devotion within a holy sanctuary, constantly supplicating to my Lord.",
+      "I grew old, and my wife was barren, yet I never lost hope in Allah's mercy.",
+      "I was granted a son, named Yahya, who became a prophet and a beacon of righteousness.",
+      "I was a prophet myself, sent to guide the Children of Israel.",
+      "I was a descendant of Prophet Harun and served as a priest in the Temple.",
+      "I was entrusted with the care of Maryam, the mother of Isa, and witnessed her miracles."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Prophet Zakariyya",
+          "Prophet Yahya",
+          "Prophet Ilyas",
+          "Prophet Ishaq",
+          "Prophet Ya'qub"
+        ],
+        "answer": "Prophet Zakariyya"
+      },
+      "trial": {
+        "label": "Trial/Event",
+        "options": [
+          "Bestowed a son in old age",
+          "Saved from a blazing fire",
+          "Rescued from the belly of a fish",
+          "Survived a great flood",
+          "Cured of a severe illness"
+        ],
+        "answer": "Bestowed a son in old age"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The Mihrab (prayer niche)",
+          "The Kaaba",
+          "The Burning Bush",
+          "The Ark of the Covenant",
+          "The Cave of the Seven Sleepers"
+        ],
+        "answer": "The Mihrab (prayer niche)"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "Granted a righteous son who became a prophet",
+          "Destroyed by a violent storm",
+          "Drowned in the sea",
+          "Spared from being burned",
+          "Returned to their people after being saved from a fish"
+        ],
+        "answer": "Granted a righteous son who became a prophet"
+      }
+    },
+    "verseRef": "6:85",
+    "arabic": "وَزَكَرِيَّا وَيَحْيَىٰ وَعِيسَىٰ وَإِلْيَاسَ ۖ كُلٌّۭ مِّنَ ٱلصَّـٰلِحِينَ",
+    "verse": "And Zechariah and John and Jesus and Elias - and all were of the righteous. (6:85)"
+  },
+  "scramble": {
+    "verseRef": "85:11",
+    "reference": "Surah Al-Buruj (85:11)",
+    "segments": [
+      "إِنَّ الَّذِينَ آمَنُوا",
+      "وَعَمِلُوا الصَّالِحَاتِ",
+      "لَهُمْ جَنَّاتٌ",
+      "تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ",
+      "ذَٰلِكَ الْفَوْزُ الْكَبِيرُ"
+    ],
+    "translations": [
+      "Indeed those who believe",
+      "and do the righteous deeds for them",
+      "(will be) Gardens flow from",
+      "underneath it the rivers That",
+      "(is) the success the great"
+    ],
+    "hint": "This verse describes the ultimate reward for believers in Paradise.",
+    "arabic": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ جَنَّـٰتٌۭ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْكَبِيرُ",
+    "words": [
+      "إِنَّ ٱلَّذِينَ ءَامَنُوا۟",
+      "وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ",
+      "جَنَّـٰتٌۭ تَجْرِى مِن",
+      "تَحْتِهَا ٱلْأَنْهَـٰرُ ۚ ذَٰلِكَ",
+      "ٱلْفَوْزُ ٱلْكَبِيرُ"
+    ],
+    "verseEn": "Indeed, those who have believed and done righteous deeds will have gardens beneath which rivers flow. That is the great attainment."
+  }
 }
