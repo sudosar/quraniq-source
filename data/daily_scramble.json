@@ -1,32 +1,25 @@
 {
-  "date": "2026-06-08",
+  "date": "2026-06-09",
   "puzzle": {
-    "verseRef": "85:11",
-    "reference": "Surah Al-Buruj (85:11)",
+    "verseRef": "83:9",
+    "reference": "Al-Mutaffifin (83:9)",
     "segments": [
-      "إِنَّ الَّذِينَ آمَنُوا",
-      "وَعَمِلُوا الصَّالِحَاتِ",
-      "لَهُمْ جَنَّاتٌ",
-      "تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ",
-      "ذَٰلِكَ الْفَوْزُ الْكَبِيرُ"
+      "الَّذِينَ إِذَا",
+      "اقْتَالُوا",
+      "عَلَى النَّاسِ",
+      "يَسْتَوْفُونَ"
     ],
     "translations": [
-      "Indeed those who believe",
-      "and do the righteous deeds for them",
-      "(will be) Gardens flow from",
-      "underneath it the rivers That",
-      "(is) the success the great"
+      "Those who when",
+      "they measure",
+      "from the people",
+      "they take full"
     ],
-    "hint": "This verse describes the ultimate reward for believers in Paradise.",
-    "arabic": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ جَنَّـٰتٌۭ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْكَبِيرُ",
+    "hint": "A verse about honesty in transactions and fair dealing with others",
+    "arabic": "كِتَـٰبٌۭ مَّرْقُومٌۭ",
     "words": [
-      "إِنَّ ٱلَّذِينَ ءَامَنُوا۟",
-      "وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ",
-      "جَنَّـٰتٌۭ تَجْرِى مِن",
-      "تَحْتِهَا ٱلْأَنْهَـٰرُ ۚ ذَٰلِكَ",
-      "ٱلْفَوْزُ ٱلْكَبِيرُ"
-    ],
-    "verseEn": "Indeed, those who have believed and done righteous deeds will have gardens beneath which rivers flow. That is the great attainment."
+      "كِتَـٰبٌۭ مَّرْقُومٌۭ"
+    ]
   },
   "generated": true,
   "model": "auto (chain)"
