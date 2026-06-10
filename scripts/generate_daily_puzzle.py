@@ -837,7 +837,9 @@ Rule: Each word MUST physically exist in the Uthmani script of the cited verse.
 VERIFICATION STEP (INTERNAL ONLY):
 1. Select a specific theme.
 2. Verify each of the 4 words exists in its cited verse.
-3. Ensure no root overlap with: {', '.join(all_prev_words) if all_prev_words else 'None'}.
+3. Avoid root overlap with already-used Arabic words: {', '.join(all_prev_words) if all_prev_words else 'None'}.
+   Exception: same-root words ARE allowed if their English meanings are clearly distinct
+   (e.g. كِتَاب "book" vs كَتَبَ "to write" — different meanings, same root, allowed).
 4. If using <think> tags, show your internal verse verification.
 
 RULES:
@@ -939,6 +941,12 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
             errors.append(f"Item {j+1} missing 'ar' or 'en'")
         if not item.get("ref"):
             errors.append(f"Item {j+1} missing 'ref'")
+        else:
+            _m = re.match(r'^(\d{1,3}):(\d{1,3})$', item["ref"])
+            if not _m:
+                errors.append(f"Item {j+1} has malformed ref '{item['ref']}' (expected 'surah:ayah')")
+            elif not (1 <= int(_m.group(1)) <= 114):
+                errors.append(f"Item {j+1} ref '{item['ref']}' has invalid surah number")
         ar = item.get("ar", "")
         en = item.get("en", "")
         # Same-root check against all previous words (history + accumulated + earlier in this category)
@@ -2067,8 +2075,11 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
             total_attempt += 1
             print(f"    Attempt {total_attempt} (retry {retry}/{MAX_RETRIES})...")
 
-            # Inject theme pivot logic if we've failed multiple times
-            force_pivot = (retry > 2)
+            # Inject theme pivot logic if we've failed multiple times or the last failure was a theme violation
+            force_pivot = (retry > 2) or bool(
+                previous_violations and
+                any("theme" in str(v).lower() for v in previous_violations)
+            )
             prompt = build_single_category_prompt(
                 history, today, cat_index, accumulated_cats, previous_violations, force_pivot=force_pivot
             )
@@ -2117,7 +2128,8 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
                 print(f"    ✗ Word-in-verse failed ({len(mismatches)} issue(s)):")
                 for m in mismatches:
                     print(f"        {m}")
-                previous_violations = (previous_violations or []) + mismatches
+                _seen = set(previous_violations or [])
+                previous_violations = (previous_violations or []) + [v for v in mismatches if v not in _seen]
                 continue
 
             print(
