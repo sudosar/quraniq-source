@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-09",
+  "date": "2026-06-10",
   "puzzle": {
-    "word": "نُورُهُمْ",
-    "display": "نُورُهُمْ",
-    "hint": "Their light - a divine illumination believers will see on the Day of Victory",
-    "verseRef": "57:12",
-    "arabicVerse": "يَوْمَ تَرَى ٱلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ يَسْعَىٰ نُورُهُم بَيْنَ أَيْدِيهِمْ وَبِأَيْمَـٰنِهِم بُشْرَىٰكُمُ ٱلْيَوْمَ جَنَّـٰتٌۭ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَا ۚ ذَٰلِكَ هُوَ ٱلْفَوْزُ ٱلْعَظِيمُ",
-    "verse": "57:12 - On the Day you see the believing men and believing women, their light proceeding before them and on their right, [it will be said], \"Your good tidings today are [of] gardens beneath which rivers flow, wherein you will abide eternally.\" That is what is the great attainment."
+    "word": "توبة",
+    "display": "تَوْبَةً",
+    "hint": "Repentance; a sincere turning back to God.",
+    "verseRef": "66:8",
+    "arabicVerse": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ تُوبُوٓا۟ إِلَى ٱللَّهِ تَوْبَةًۭ نَّصُوحًا عَسَىٰ رَبُّكُمْ أَن يُكَفِّرَ عَنكُمْ سَيِّـَٔاتِكُمْ وَيُدْخِلَكُمْ جَنَّـٰتٍۢ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ يَوْمَ لَا يُخْزِى ٱللَّهُ ٱلنَّبِىَّ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ ۖ نُورُهُمْ يَسْعَىٰ بَيْنَ أَيْدِيهِمْ وَبِأَيْمَـٰنِهِمْ يَقُولُونَ رَبَّنَآ أَتْمِمْ لَنَا نُورَنَا وَٱغْفِرْ لَنَآ ۖ إِنَّكَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ",
+    "verse": "66:8 - O you who have believed, repent to Allāh with sincere repentance. Perhaps your Lord will remove from you your misdeeds and admit you into gardens beneath which rivers flow [on] the Day when Allāh will not disgrace the Prophet and those who believed with him. Their light will proceed before them and on their right; they will say, \"Our Lord, perfect for us our light and forgive us. Indeed, You are over all things competent.\""
   },
   "generated": true,
   "model": "auto (chain)"

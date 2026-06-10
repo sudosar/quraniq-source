@@ -1,25 +1,29 @@
 {
-  "date": "2026-06-09",
+  "date": "2026-06-10",
   "puzzle": {
-    "verseRef": "83:9",
-    "reference": "Al-Mutaffifin (83:9)",
+    "verseRef": "109:6",
+    "reference": "Al-Kafirun (109:6)",
     "segments": [
-      "الَّذِينَ إِذَا",
-      "اقْتَالُوا",
-      "عَلَى النَّاسِ",
-      "يَسْتَوْفُونَ"
+      "To you",
+      "be your religion",
+      "and to me",
+      "my religion"
     ],
     "translations": [
-      "Those who when",
-      "they measure",
-      "from the people",
-      "they take full"
+      "For you",
+      "(is) your religion",
+      "and for me",
+      "(is) my religion"
     ],
-    "hint": "A verse about honesty in transactions and fair dealing with others",
-    "arabic": "كِتَـٰبٌۭ مَّرْقُومٌۭ",
+    "hint": "This verse from a short Surah proclaims a fundamental Islamic principle of religious freedom and tolerance - that no one should be compelled in matters of faith.",
+    "arabic": "لَكُمْ دِينُكُمْ وَلِىَ دِينِ",
     "words": [
-      "كِتَـٰبٌۭ مَّرْقُومٌۭ"
-    ]
+      "لَكُمْ",
+      "دِينُكُمْ",
+      "وَلِىَ",
+      "دِينِ"
+    ],
+    "verseEn": "For you is your religion, and for me is my religion.\""
   },
   "generated": true,
   "model": "auto (chain)"
