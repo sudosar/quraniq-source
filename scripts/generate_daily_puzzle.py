@@ -295,22 +295,22 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
-MIMO_API_KEY = os.environ.get("MIMO_API_KEY", "")
+MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
 
 # API endpoints
 OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
-MIMO_API_URL = "https://api.xiaomimimo.com/v1/chat/completions"
+MINIMAX_API_URL = "https://api.minimax.io/v1/chat/completions"
 
-# Model fallback chain: Gemini 2.5 Pro → MIMO → DeepSeek v3.2 → Gemini 2.5 Flash → GPT-4.1
+# Model fallback chain: MiniMax M2.7 → MiniMax M3 → DeepSeek V4 Flash → DeepSeek V4 Pro → Gemini 3.5 Flash
 MODEL_CHAIN = [
-    {"id": "gemini-2.5-pro", "api": "gemini", "label": "Gemini 2.5 Pro (Google)"},
-    {"id": "xiaomi/mimo-v2-flash", "api": "mimo", "label": "Xiaomi MiMo V2 Flash"},
-    {"id": "deepseek-chat", "api": "deepseek", "label": "DeepSeek v3.2 (Official)"},
-    {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Google)"},
-    {"id": "gpt-4.1", "api": "openai", "label": "GPT-4.1 (OpenAI)"},
+    {"id": "MiniMax-M2.7",      "api": "minimax",  "label": "MiniMax M2.7"},
+    {"id": "MiniMax-M3",        "api": "minimax",  "label": "MiniMax M3"},
+    {"id": "deepseek-v4-flash", "api": "deepseek", "label": "DeepSeek V4 Flash"},
+    {"id": "deepseek-v4-pro",   "api": "deepseek", "label": "DeepSeek V4 Pro"},
+    {"id": "gemini-3.5-flash",  "api": "gemini",   "label": "Gemini 3.5 Flash (last resort)"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -571,14 +571,14 @@ def call_model(prompt, model_config, system_msg=None):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {DEEPSEEK_API_KEY}"
         }
-    elif api_type == "mimo":
-        if not MIMO_API_KEY:
-            print(f"  ⚠ MIMO_API_KEY not set, skipping {model_config['label']}")
+    elif api_type == "minimax":
+        if not MINIMAX_API_KEY:
+            print(f"  ⚠ MINIMAX_API_KEY not set, skipping {model_config['label']}")
             return None
-        api_url = MIMO_API_URL
+        api_url = MINIMAX_API_URL
         headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {MIMO_API_KEY}"
+            "Authorization": f"Bearer {MINIMAX_API_KEY}"
         }
     else:  # github
         if not GITHUB_TOKEN:
@@ -606,7 +606,7 @@ def call_model(prompt, model_config, system_msg=None):
     }
 
     # These APIs support the response_format JSON mode parameter
-    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "mimo"):
+    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax"):
         payload["response_format"] = {"type": "json_object"}
 
     try:
@@ -2258,32 +2258,24 @@ def main():
             print(f"Partial history found for {today}. Missing: {', '.join(missing_games)}")
             print(f"Will regenerate only missing games.")
 
-    if not OPENAI_API_KEY and not GITHUB_TOKEN and not GEMINI_API_KEY and not DEEPSEEK_API_KEY:
+    if not MINIMAX_API_KEY and not DEEPSEEK_API_KEY and not GEMINI_API_KEY:
         print("ERROR: No API credentials set.")
-        print("  Set DEEPSEEK_API_KEY, OPENAI_API_KEY, GITHUB_TOKEN, and/or GEMINI_API_KEY.")
+        print("  Set MINIMAX_API_KEY, DEEPSEEK_API_KEY, and/or GEMINI_API_KEY.")
         return 1
 
     print(f"Available APIs:")
     if DEEPSEEK_API_KEY:
-        print(f"  ✓ DeepSeek API (deepseek-chat v3.2)")
+        print(f"  ✓ DeepSeek API (deepseek-v4-flash, deepseek-v4-pro)")
     else:
         print(f"  ✗ DeepSeek API (DEEPSEEK_API_KEY not set)")
-    if OPENAI_API_KEY:
-        print(f"  ✓ OpenAI API (GPT-4.1)")
-    else:
-        print(f"  ✗ OpenAI API (OPENAI_API_KEY not set)")
-    if GITHUB_TOKEN:
-        print(f"  ✓ GitHub Models (DeepSeek-R1, Phi-4)")
-    else:
-        print(f"  ✗ GitHub Models (GITHUB_TOKEN not set)")
     if GEMINI_API_KEY:
-        print(f"  ✓ Gemini API (gemini-2.5-pro, gemini-2.5-flash)")
+        print(f"  ✓ Gemini API (gemini-3.5-flash)")
     else:
         print(f"  ✗ Gemini API (GEMINI_API_KEY not set)")
-    if MIMO_API_KEY:
-        print(f"  ✓ Xiaomi MiMo API (mimo-v2-flash)")
+    if MINIMAX_API_KEY:
+        print(f"  ✓ MiniMax API (M2.7, M3)")
     else:
-        print(f"  ✗ Xiaomi MiMo API (MIMO_API_KEY not set)")
+        print(f"  ✗ MiniMax API (MINIMAX_API_KEY not set)")
 
     # Load history for cooldown enforcement (exclude today to allow replacing buggy attempts)
     history = load_history(exclude_date=today)

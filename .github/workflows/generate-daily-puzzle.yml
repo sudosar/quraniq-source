@@ -38,10 +38,9 @@ jobs:
       - name: Generate daily puzzle
         id: generate
         env:
+          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.MODELS_PAT }}
         run: python scripts/generate_daily_puzzle.py
 
       - name: Check if puzzle was generated
