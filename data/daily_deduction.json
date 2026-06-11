@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-10",
+  "date": "2026-06-11",
   "puzzle": {
-    "title": "The Garden's Guardians",
-    "intro": "In a lush garden, a community made a solemn vow. But their resolve was tested when divine will intervened, transforming their bounty into a barren land.",
+    "title": "The Village on the Shores of Trial",
+    "intro": "You find yourself in a coastal village, where the sound of waves mixes with whispers of a forgotten people. They were given a command of rest, but their greed led to a punishment that is still spoken of in hushed tones. Can you uncover who they were?",
     "clues": [
-      "We were blessed with a bountiful garden, but we became arrogant.",
-      "We made a plan to harvest without sharing with the poor.",
-      "We set out early in the morning, confident in our scheme.",
-      "But when we arrived, we found our garden had been destroyed overnight.",
-      "We realized our mistake and began to blame each other.",
-      "We finally repented, but the lesson was learned too late."
+      "We lived by the shore and were given a command to observe a day of rest.",
+      "On that day, fish would come to us in abundance, but we were forbidden to take them.",
+      "Some among us warned against transgression, but others conspired to fish anyway.",
+      "We violated the sacred command and brought upon ourselves a severe punishment.",
+      "Our punishment was a transformation that left us disfigured and disgraced.",
+      "We were turned into apes, a sign for all who would come after."
     ],
     "categories": {
       "identity": {
-        "label": "Who Are We?",
+        "label": "Who Am I?",
         "options": [
-          "People of the Garden",
-          "People of the Cave",
-          "People of the Elephant",
+          "People of the Sabbath",
           "People of Thamud",
-          "People of 'Ad"
+          "People of 'Ad",
+          "People of the Cave",
+          "People of the Elephant"
         ],
-        "answer": "People of the Garden"
+        "answer": "People of the Sabbath"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "A garden turned to ashes",
-          "A flood that destroyed everything",
-          "A famine that struck the land",
-          "An army of birds attacking",
-          "A great wind that uprooted trees"
+          "Fishing on the Sabbath",
+          "Worshipping a golden calf",
+          "Denying the message of Hud",
+          "Killing the she-camel",
+          "Building a tower to heaven"
         ],
-        "answer": "A garden turned to ashes"
+        "answer": "Fishing on the Sabbath"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A garden",
-          "A cave",
-          "A ship",
-          "A mountain",
-          "A palace"
+          "The fish",
+          "A she-camel",
+          "A staff",
+          "A boat",
+          "A garden"
         ],
-        "answer": "A garden"
+        "answer": "The fish"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "They repented but lost their garden",
-          "They were destroyed completely",
-          "They were turned into apes",
-          "They were saved by faith",
-          "They became rulers"
+          "Turned into apes",
+          "Destroyed by a flood",
+          "Destroyed by a blazing fire",
+          "Swallowed by the earth",
+          "Scattered by a wind"
         ],
-        "answer": "They repented but lost their garden"
+        "answer": "Turned into apes"
       }
     },
-    "verseRef": "68:17",
-    "arabic": "إِنَّا بَلَوْنَـٰهُمْ كَمَا بَلَوْنَآ أَصْحَـٰبَ ٱلْجَنَّةِ إِذْ أَقْسَمُوا۟ لَيَصْرِمُنَّهَا مُصْبِحِينَ",
-    "verse": "Indeed, We have tried them as We tried the companions of the garden, when they swore to cut its fruit in the [early] morning (68:17)"
+    "verseRef": "7:163",
+    "arabic": "وَسْـَٔلْهُمْ عَنِ ٱلْقَرْيَةِ ٱلَّتِى كَانَتْ حَاضِرَةَ ٱلْبَحْرِ إِذْ يَعْدُونَ فِى ٱلسَّبْتِ إِذْ تَأْتِيهِمْ حِيتَانُهُمْ يَوْمَ سَبْتِهِمْ شُرَّعًۭا وَيَوْمَ لَا يَسْبِتُونَ ۙ لَا تَأْتِيهِمْ ۚ كَذَٰلِكَ نَبْلُوهُم بِمَا كَانُوا۟ يَفْسُقُونَ",
+    "verse": "And ask them about the town that was by the sea - when they transgressed in [the matter of] the sabbath - when their fish came to them openly on their sabbath day, and the day they had no sabbath they did not come to them. Thus did We give them trial because they were defiantly disobedient. (7:163)"
   },
   "generated": true,
   "model": "auto (chain)"

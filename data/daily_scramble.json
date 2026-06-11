@@ -1,29 +1,32 @@
 {
-  "date": "2026-06-10",
+  "date": "2026-06-11",
   "puzzle": {
-    "verseRef": "109:6",
-    "reference": "Al-Kafirun (109:6)",
+    "verseRef": "33:56",
+    "reference": "Surah Al-Ahzab (33:56)",
     "segments": [
-      "To you",
-      "be your religion",
-      "and to me",
-      "my religion"
+      "إِنَّ اللَّهَ وَمَلَائِكَتَهُ",
+      "يُصَلُّونَ عَلَى النَّبِيِّ",
+      "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+      "صَلُّوا عَلَيْهِ",
+      "وَسَلِّمُوا تَسْلِيمًا"
     ],
     "translations": [
-      "For you",
-      "(is) your religion",
-      "and for me",
-      "(is) my religion"
+      "Indeed Allah and His Angels",
+      "send blessings upon the Prophet",
+      "O you who believe O you who believe O you who believe",
+      "Send blessings on him",
+      "and greet him (with) greetings"
     ],
-    "hint": "This verse from a short Surah proclaims a fundamental Islamic principle of religious freedom and tolerance - that no one should be compelled in matters of faith.",
-    "arabic": "لَكُمْ دِينُكُمْ وَلِىَ دِينِ",
+    "hint": "A verse commanding believers to send salutations upon the Prophet Muhammad (peace be upon him).",
+    "arabic": "إِنَّ ٱللَّهَ وَمَلَـٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ ۚ يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
     "words": [
-      "لَكُمْ",
-      "دِينُكُمْ",
-      "وَلِىَ",
-      "دِينِ"
+      "إِنَّ ٱللَّهَ وَمَلَـٰٓئِكَتَهُۥ",
+      "يُصَلُّونَ عَلَى ٱلنَّبِىِّ ۚ",
+      "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟",
+      "صَلُّوا۟ عَلَيْهِ",
+      "وَسَلِّمُوا۟ تَسْلِيمًا"
     ],
-    "verseEn": "For you is your religion, and for me is my religion.\""
+    "verseEn": "Indeed, Allāh confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allāh to confer] blessing upon him and ask [Allāh to grant him] peace."
   },
   "generated": true,
   "model": "auto (chain)"
