@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-11",
+  "date": "2026-06-12",
   "puzzle": {
-    "word": "تراب",
-    "display": "تُرَاب",
-    "hint": "The original material of humankind",
-    "verseRef": "30:20",
-    "arabicVerse": "وَمِنْ ءَايَـٰتِهِۦٓ أَنْ خَلَقَكُم مِّن تُرَابٍۢ ثُمَّ إِذَآ أَنتُم بَشَرٌۭ تَنتَشِرُونَ",
-    "verse": "30:20 - And of His signs is that He created you from dust; then, suddenly you were human beings dispersing [throughout the earth]."
+    "word": "بينات",
+    "display": "بَيِّنَاتٍ",
+    "hint": "Clear evidence or manifest signs",
+    "verseRef": "3:86",
+    "arabicVerse": "كَيْفَ يَهْدِى ٱللَّهُ قَوْمًۭا كَفَرُوا۟ بَعْدَ إِيمَـٰنِهِمْ وَشَهِدُوٓا۟ أَنَّ ٱلرَّسُولَ حَقٌّۭ وَجَآءَهُمُ ٱلْبَيِّنَـٰتُ ۚ وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلظَّـٰلِمِينَ",
+    "verse": "3:86 - How shall Allāh guide a people who disbelieved after their belief and had witnessed that the Messenger is true and clear signs had come to them? And Allāh does not guide the wrongdoing people."
   },
   "generated": true,
   "model": "auto (chain)"
