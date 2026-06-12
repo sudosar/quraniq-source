@@ -295,23 +295,22 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
-MIMO_API_KEY = os.environ.get("MIMO_API_KEY", "")
+MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
 
 # API endpoints
 OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
-MIMO_API_URL = "https://api.xiaomimimo.com/v1/chat/completions"
 MINIMAX_API_URL = "https://api.minimax.io/v1/chat/completions"
 
-MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
-
-# Model fallback chain (priority order)
+# Model fallback chain: MiniMax M2.7 → MiniMax M3 → DeepSeek V4 Flash → DeepSeek V4 Pro → Gemini 3.5 Flash
 MODEL_CHAIN = [
-    {"id": "MiniMax-M2.7", "api": "minimax", "label": "MiniMax (Primary)"},
+    {"id": "MiniMax-M2.7",      "api": "minimax",  "label": "MiniMax M2.7"},
+    {"id": "MiniMax-M3",        "api": "minimax",  "label": "MiniMax M3"},
     {"id": "deepseek-v4-flash", "api": "deepseek", "label": "DeepSeek V4 Flash"},
-    {"id": "gemini-2.5-flash", "api": "gemini", "label": "Gemini 2.5 Flash (Last Resort)"},
+    {"id": "deepseek-v4-pro",   "api": "deepseek", "label": "DeepSeek V4 Pro"},
+    {"id": "gemini-3.5-flash",  "api": "gemini",   "label": "Gemini 3.5 Flash (last resort)"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -575,15 +574,6 @@ def call_model(prompt, model_config, system_msg=None):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {DEEPSEEK_API_KEY}"
         }
-    elif api_type == "mimo":
-        if not MIMO_API_KEY:
-            print(f"  ⚠ MIMO_API_KEY not set, skipping {model_config['label']}")
-            return None
-        api_url = MIMO_API_URL
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {MIMO_API_KEY}"
-        }
     elif api_type == "minimax":
         if not MINIMAX_API_KEY:
             print(f"  ⚠ MINIMAX_API_KEY not set, skipping {model_config['label']}")
@@ -619,7 +609,7 @@ def call_model(prompt, model_config, system_msg=None):
     }
 
     # These APIs support the response_format JSON mode parameter
-    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "mimo", "minimax"):
+    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax"):
         payload["response_format"] = {"type": "json_object"}
 
     try:
@@ -854,7 +844,9 @@ Rule: Each word MUST physically exist in the Uthmani script of the cited verse.
 VERIFICATION STEP (INTERNAL ONLY):
 1. Select a specific theme.
 2. Verify each of the 4 words exists in its cited verse.
-3. Ensure no root overlap with: {', '.join(all_prev_words) if all_prev_words else 'None'}.
+3. Avoid root overlap with already-used Arabic words: {', '.join(all_prev_words) if all_prev_words else 'None'}.
+   Exception: same-root words ARE allowed if their English meanings are clearly distinct
+   (e.g. كِتَاب "book" vs كَتَبَ "to write" — different meanings, same root, allowed).
 4. If using <think> tags, show your internal verse verification.
 
 RULES:
@@ -1295,6 +1287,12 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
             errors.append(f"Item {j+1} missing 'ar' or 'en'")
         if not item.get("ref"):
             errors.append(f"Item {j+1} missing 'ref'")
+        else:
+            _m = re.match(r'^(\d{1,3}):(\d{1,3})$', item["ref"])
+            if not _m:
+                errors.append(f"Item {j+1} has malformed ref '{item['ref']}' (expected 'surah:ayah')")
+            elif not (1 <= int(_m.group(1)) <= 114):
+                errors.append(f"Item {j+1} ref '{item['ref']}' has invalid surah number")
         ar = item.get("ar", "")
         en = item.get("en", "")
         # WORD-ROOT DEDUP DISABLED for Connections: too aggressive, blocks generation
@@ -2459,8 +2457,11 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
             total_attempt += 1
             print(f"    Attempt {total_attempt} (retry {retry}/{MAX_RETRIES})...")
 
-            # Inject theme pivot logic if we've failed multiple times
-            force_pivot = (retry > 2)
+            # Inject theme pivot logic if we've failed multiple times or the last failure was a theme violation
+            force_pivot = (retry > 2) or bool(
+                previous_violations and
+                any("theme" in str(v).lower() for v in previous_violations)
+            )
             prompt = build_single_category_prompt(
                 history, today, cat_index, accumulated_cats, previous_violations, force_pivot=force_pivot
             )
@@ -2509,7 +2510,8 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
                 print(f"    ✗ Word-in-verse failed ({len(mismatches)} issue(s)):")
                 for m in mismatches:
                     print(f"        {m}")
-                previous_violations = (previous_violations or []) + mismatches
+                _seen = set(previous_violations or [])
+                previous_violations = (previous_violations or []) + [v for v in mismatches if v not in _seen]
                 continue
 
             print(
@@ -2638,32 +2640,24 @@ def main():
             print(f"Partial history found for {today}. Missing: {', '.join(missing_games)}")
             print(f"Will regenerate only missing games.")
 
-    if not OPENAI_API_KEY and not GITHUB_TOKEN and not GEMINI_API_KEY and not DEEPSEEK_API_KEY:
+    if not MINIMAX_API_KEY and not DEEPSEEK_API_KEY and not GEMINI_API_KEY:
         print("ERROR: No API credentials set.")
-        print("  Set DEEPSEEK_API_KEY, OPENAI_API_KEY, GITHUB_TOKEN, and/or GEMINI_API_KEY.")
+        print("  Set MINIMAX_API_KEY, DEEPSEEK_API_KEY, and/or GEMINI_API_KEY.")
         return 1
 
     print(f"Available APIs:")
+    if MINIMAX_API_KEY:
+        print(f"  ✓ MiniMax API (M2.7, M3)")
+    else:
+        print(f"  ✗ MiniMax API (MINIMAX_API_KEY not set)")
     if DEEPSEEK_API_KEY:
-        print(f"  ✓ DeepSeek API (deepseek-chat v3.2)")
+        print(f"  ✓ DeepSeek API (deepseek-v4-flash, deepseek-v4-pro)")
     else:
         print(f"  ✗ DeepSeek API (DEEPSEEK_API_KEY not set)")
-    if OPENAI_API_KEY:
-        print(f"  ✓ OpenAI API (GPT-4.1)")
-    else:
-        print(f"  ✗ OpenAI API (OPENAI_API_KEY not set)")
-    if GITHUB_TOKEN:
-        print(f"  ✓ GitHub Models (DeepSeek-R1, Phi-4)")
-    else:
-        print(f"  ✗ GitHub Models (GITHUB_TOKEN not set)")
     if GEMINI_API_KEY:
-        print(f"  ✓ Gemini API (gemini-2.5-pro, gemini-2.5-flash)")
+        print(f"  ✓ Gemini API (gemini-3.5-flash)")
     else:
         print(f"  ✗ Gemini API (GEMINI_API_KEY not set)")
-    if MIMO_API_KEY:
-        print(f"  ✓ Xiaomi MiMo API (mimo-v2-flash)")
-    else:
-        print(f"  ✗ Xiaomi MiMo API (MIMO_API_KEY not set)")
 
     # Load history for cooldown enforcement (exclude today to allow replacing buggy attempts)
     history = load_history(exclude_date=today)
