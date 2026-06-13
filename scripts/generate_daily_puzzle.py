@@ -766,8 +766,9 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
     difficulty = DIFFICULTY_LABELS[cat_index]
 
     # Avoidance: history + already-generated categories
+    # Prompt only shows connections-specific cooldown (validation enforces cross-game separately)
     avoided_themes_set = set(history["connections"]["themes"])
-    all_avoided_verses = history["connections"]["verses"] | history["all_verses"]
+    all_avoided_verses = history["connections"]["verses"]
     all_prev_words = list(history["connections"]["words"])
 
     for prev_cat in accumulated_cats:
@@ -1178,26 +1179,26 @@ def semantic_coherence_check(cat):
                 claimed.append(field_name)
 
         if claimed:
-            # Verify every item matches at least one claimed field
+            # Reject only if NO items match any claimed field (fully off-topic category)
+            matched = 0
             for item in items:
-                item_ok = False
                 for cf in claimed:
                     kws = SEMANTIC_FIELDS.get(cf, {}).get('keywords', [])
                     if _item_in_field(item, kws):
-                        item_ok = True
+                        matched += 1
                         break
-                    # Also check trigger words directly in item
                     for trigger in SEMANTIC_TRIGGERS.get(cf, []):
                         if trigger in item.get('en', '').lower():
-                            item_ok = True
+                            matched += 1
                             break
-                    if item_ok:
-                        break
-                if not item_ok:
-                    return False, (
-                        f"Item '{item.get('en', '')}' does not fit theme '{theme_en}'. "
-                        f"Theme claims: {claimed}. All items must match the declared semantic."
-                    )
+                    else:
+                        continue
+                    break
+            if matched == 0:
+                return False, (
+                    f"No items match theme '{theme_en}' (claimed fields: {claimed}). "
+                    f"Category appears entirely off-topic."
+                )
             return True, None
 
     # ── Layer 2: No explicit claim — verify coherent grouping ──
@@ -1213,8 +1214,8 @@ def semantic_coherence_check(cat):
     field_counts.sort(key=lambda x: x[1], reverse=True)
     best_field, best_count = field_counts[0]
 
-    # Reject if items scatter across 3+ fields with no dominant field
-    if len(field_counts) >= 3 and best_count < 3:
+    # Reject if items scatter across 4+ fields with no dominant field (2+ items in one field)
+    if len(field_counts) >= 4 and best_count < 2:
         return False, (
             f"Items scatter across {len(field_counts)} unrelated fields "
             f"({[f for f, c in field_counts[:5]]}) with no dominant field ({best_field}={best_count}/4). "
