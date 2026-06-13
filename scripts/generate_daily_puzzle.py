@@ -769,7 +769,9 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
     # Prompt only shows connections-specific cooldown (validation enforces cross-game separately)
     avoided_themes_set = set(history["connections"]["themes"])
     all_avoided_verses = history["connections"]["verses"]
-    all_prev_words = list(history["connections"]["words"])
+    # Only pass current-puzzle words in the prompt — 806-word history list bloats the prompt
+    # to 12k+ tokens (causes MiniMax timeouts). Validation still enforces historical root overlap.
+    all_prev_words = []
 
     for prev_cat in accumulated_cats:
         theme = prev_cat.get("nameEn", "").lower().strip()
@@ -784,7 +786,13 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
                 all_prev_words.append(item["ar"])
 
     avoided_themes = ", ".join(sorted(avoided_themes_set)) or "(none)"
-    avoided_verses = ", ".join(sorted(all_avoided_verses)) or "(none)"
+    # Cap verse list in prompt at 150 most recent refs to keep prompt under ~7k tokens.
+    # Validation still enforces the full 528-ref cooldown set.
+    _verse_sample = sorted(all_avoided_verses)[-150:]
+    avoided_verses = ", ".join(_verse_sample) + (
+        f" (+ {len(all_avoided_verses) - len(_verse_sample)} more — avoid ALL recently used refs)"
+        if len(all_avoided_verses) > 150 else ""
+    )
 
     # Summary of categories already chosen in this puzzle run
     chosen_block = ""
