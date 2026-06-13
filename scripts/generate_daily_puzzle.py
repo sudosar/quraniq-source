@@ -786,12 +786,17 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
                 all_prev_words.append(item["ar"])
 
     avoided_themes = ", ".join(sorted(avoided_themes_set)) or "(none)"
-    # Cap verse list in prompt at 150 most recent refs to keep prompt under ~7k tokens.
-    # Validation still enforces the full 528-ref cooldown set.
-    _verse_sample = sorted(all_avoided_verses)[-150:]
-    avoided_verses = ", ".join(_verse_sample) + (
-        f" (+ {len(all_avoided_verses) - len(_verse_sample)} more — avoid ALL recently used refs)"
-        if len(all_avoided_verses) > 150 else ""
+    # Sort numerically and show first 200 (low-numbered surahs the LLM tends to pick).
+    # Validation still enforces the full 60-day cooldown set.
+    def _ref_key(r):
+        try: s, a = r.split(":"); return (int(s), int(a))
+        except: return (999, 999)
+    _sorted_verses = sorted(all_avoided_verses, key=_ref_key)
+    _shown = _sorted_verses[:200]
+    _extra = len(all_avoided_verses) - len(_shown)
+    avoided_verses = ", ".join(_shown) + (
+        f" (+ {_extra} more from higher surahs — all recently used refs are forbidden)"
+        if _extra > 0 else ""
     )
 
     # Summary of categories already chosen in this puzzle run
@@ -869,6 +874,7 @@ RULES:
    FORBIDDEN themes (used recently - do NOT reuse): {avoided_themes}
 3. CRITICAL: Every word must actually appear in its cited verse. No guessing.
 4. Surah:Ayah refs must be unique and not in: {avoided_verses}.
+   TIP: Surahs 2-24 and 55-114 are heavily used. Prefer surahs 25-54 for fresh material.
 5. Words must not share roots with each other or previous categories.
 
 {chosen_block}{violation_block}
