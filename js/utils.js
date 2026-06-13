@@ -77,9 +77,6 @@ function loadState() {
 }
 
 function saveState(state) {
-    // Don't persist game state when serving yesterday's stale puzzle.
-    // This prevents stale data from conflicting when the fresh puzzle arrives.
-    if (typeof isServingStale === 'function' && isServingStale()) return;
     localStorage.setItem(STATE_KEY, JSON.stringify(state));
 }
 
@@ -971,13 +968,11 @@ function loadDailyWithHolding(dataFile, sectionId, gameName, onLoaded, extractPu
                 // Fresh puzzle — serve normally
                 onLoaded(puzzle, false);
             } else {
-                // Stale puzzle — override dayNumber to match the puzzle's date
-                // so the state key (e.g., conn_407) matches yesterday's saved state.
-                // This preserves the user's completed game instead of resetting it.
+                // Stale puzzle — serve it but do NOT override app.dayNumber.
+                // State is keyed by the REAL day the user played, not the puzzle date.
+                // This ensures a user's state from day N is never lost when a stale
+                // puzzle from an earlier day is served (e.g. generation is down).
                 _servingStale = true;
-                if (typeof app !== 'undefined') {
-                    app.dayNumber = dateToDayNumber(data.date);
-                }
                 onLoaded(puzzle, true);
                 startStalePoll(dataFile, today);
             }

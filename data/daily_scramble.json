@@ -1,29 +1,35 @@
 {
-  "date": "2026-02-27",
+  "date": "2026-06-12",
   "puzzle": {
-    "verseRef": "4:36",
-    "reference": "Surah An-Nisa (4:36)",
+    "verseRef": "3:200",
+    "reference": "Surah Al-Imran (3:200)",
     "segments": [
-      "words 1-2",
-      "words 3-4",
-      "words 5-6",
-      "words 7-8"
+      "يَا أَيُّهَا الَّذِينَ",
+      "آمَنُوا",
+      "اصْبِرُوا وَصَابِرُوا",
+      "وَرَابِطُوا",
+      "وَاتَّقُوا اللَّهَ",
+      "لَعَلَّكُمْ تُفْلِحُونَ"
     ],
     "translations": [
-      "And worship Allah And (do) not associate with Him anything and to the parents (do) good",
-      "and with the relatives and the orphans and the needy and the neighbor (who is) near and the neighbor",
-      "(who is) farther away and the companion by your side and the traveler and what possess[ed] your right hands",
-      "Indeed Allah (does) not love (the one) who is [a] proud (and) [a] boastful"
+      "O you who",
+      "believe[d] Be steadfast",
+      "and [be] patient and [be] constant",
+      "and fear Allah",
+      "so that you may",
+      "(be) successful"
     ],
-    "hint": "This verse emphasizes the importance of monotheism and social responsibilities, including kindness to family and vulnerable groups.",
-    "arabic": "۞ وَٱعْبُدُوا۟ ٱللَّهَ وَلَا تُشْرِكُوا۟ بِهِۦ شَيْـًۭٔا ۖ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًۭا وَبِذِى ٱلْقُرْبَىٰ وَٱلْيَتَـٰمَىٰ وَٱلْمَسَـٰكِينِ وَٱلْجَارِ ذِى ٱلْقُرْبَىٰ وَٱلْجَارِ ٱلْجُنُبِ وَٱلصَّاحِبِ بِٱلْجَنۢبِ وَٱبْنِ ٱلسَّبِيلِ وَمَا مَلَكَتْ أَيْمَـٰنُكُمْ ۗ إِنَّ ٱللَّهَ لَا يُحِبُّ مَن كَانَ مُخْتَالًۭا فَخُورًا",
+    "hint": "The closing verse of Surah Al-Imran, commanding believers to practice patience, perseverance, steadfastness, and taqwa to attain true success.",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱصْبِرُوا۟ وَصَابِرُوا۟ وَرَابِطُوا۟ وَٱتَّقُوا۟ ٱللَّهَ لَعَلَّكُمْ تُفْلِحُونَ",
     "words": [
-      "۞ وَٱعْبُدُوا۟ ٱللَّهَ وَلَا تُشْرِكُوا۟ بِهِۦ شَيْـًۭٔا ۖ وَبِٱلْوَٰلِدَيْنِ إِحْسَـٰنًۭا",
-      "وَبِذِى ٱلْقُرْبَىٰ وَٱلْيَتَـٰمَىٰ وَٱلْمَسَـٰكِينِ وَٱلْجَارِ ذِى ٱلْقُرْبَىٰ وَٱلْجَارِ",
-      "ٱلْجُنُبِ وَٱلصَّاحِبِ بِٱلْجَنۢبِ وَٱبْنِ ٱلسَّبِيلِ وَمَا مَلَكَتْ أَيْمَـٰنُكُمْ ۗ",
-      "إِنَّ ٱللَّهَ لَا يُحِبُّ مَن كَانَ مُخْتَالًۭا فَخُورًا"
+      "يَـٰٓأَيُّهَا ٱلَّذِينَ",
+      "ءَامَنُوا۟ ٱصْبِرُوا۟",
+      "وَصَابِرُوا۟ وَرَابِطُوا۟",
+      "وَٱتَّقُوا۟ ٱللَّهَ",
+      "لَعَلَّكُمْ",
+      "تُفْلِحُونَ"
     ],
-    "verseEn": "Worship Allāh and associate nothing with Him, and to parents do good, and to relatives, orphans, the needy, the near neighbor, the neighbor farther away, the companion at your side, the traveler, and those whom your right hands possess. Indeed, Allāh does not like those who are self-deluding and boastful,"
+    "verseEn": "O you who have believed, persevere and endure and remain stationed and fear Allāh that you may be successful."
   },
   "generated": true,
   "model": "auto (chain)"

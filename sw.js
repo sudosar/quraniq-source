@@ -1,5 +1,5 @@
-// QuranIQ Service Worker — v36 (Periodic Background Sync)
-const CACHE_NAME = 'quraniq-v43';
+// QuranIQ Service Worker — v44 (Score-queue reliability fix)
+const CACHE_NAME = 'quraniq-v44';
 const PUZZLE_CHECK_TAG = 'quraniq-puzzle-check';
 
 // Assets to pre-cache on install

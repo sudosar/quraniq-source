@@ -66,10 +66,10 @@ def make_test_connections():
             {
                 "name": "تست٣", "nameEn": "Test Theme Gamma", "color": "blue",
                 "items": [
-                    {"ar": "جبل", "en": "Mountain", "verse": "verse text", "ref": "4:1", "verseEn": ""},
-                    {"ar": "بحر", "en": "Sea", "verse": "verse text", "ref": "4:2", "verseEn": ""},
-                    {"ar": "وادي", "en": "Valley", "verse": "verse text", "ref": "4:3", "verseEn": ""},
-                    {"ar": "نهر", "en": "River", "verse": "verse text", "ref": "4:4", "verseEn": ""},
+                    {"ar": "صلاة", "en": "Prayer", "verse": "verse text", "ref": "4:1", "verseEn": ""},
+                    {"ar": "صوم", "en": "Fasting", "verse": "verse text", "ref": "4:2", "verseEn": ""},
+                    {"ar": "حج", "en": "Pilgrimage", "verse": "verse text", "ref": "4:3", "verseEn": ""},
+                    {"ar": "زكاة", "en": "Almsgiving", "verse": "verse text", "ref": "4:4", "verseEn": ""},
                 ],
                 "verse": {"ayah": "test", "en": "test", "ref": "1:3"}
             },

@@ -32,6 +32,8 @@
     max-width: 480px;
     max-height: 85vh;
     overflow-y: auto;
+    /* Safe area for bottom nav buttons so they don't get clipped by system nav bar */
+    padding-bottom: env(safe-area-inset-bottom, 8px);
 }
 
 #leaderboard-content {

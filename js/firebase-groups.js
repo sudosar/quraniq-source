@@ -110,6 +110,10 @@ async function initFirebase() {
         // Check for pending group migration (after save code restore)
         processPendingMigration();
 
+        // Drain any scores queued while auth was resolving or on a previous load
+        // (covers games that completed before Firebase was ready)
+        drainPendingScores().catch((err) => console.error('[FB] Initial drain failed:', err));
+
         return true;
     } catch (err) {
         console.error('[FB] Init failed:', err);
@@ -503,23 +507,102 @@ async function leaveGroup(code) {
 
 // ==================== SCORE SUBMISSION ====================
 
+const PENDING_SCORES_KEY = 'quraniq_pending_scores_v1';
+const MAX_PENDING_SCORES = 50; // Keep queue bounded
+
 /**
- * Submit today's scores to Firebase.
- * Called after each game completion.
+ * Persist a score to the pending queue (localStorage) so it's never lost
+ * even if Firebase isn't ready or a write fails. The queue is drained on
+ * auth success, on every page load, and when the leaderboard is opened.
+ *
+ * Queue entry shape: { gameMode, crescents, date, ts }
  */
-async function submitFirebaseScore(gameMode, crescents) {
-    if (!FB_STATE.user || !FB_STATE.initialized) return;
-
-    const today = getTodayDateString();
-    const uid = FB_STATE.user.uid;
-    const scorePath = `users/${uid}/scores/${today}`;
-
+function enqueuePendingScore(gameMode, crescents, dateStr) {
     try {
-        // Read current scores for today
-        const snap = await FB_STATE.db.ref(scorePath).once('value');
-        const current = snap.val() || {};
+        const raw = localStorage.getItem(PENDING_SCORES_KEY);
+        const queue = raw ? JSON.parse(raw) : [];
+        // Coalesce: if a pending entry already exists for the same (date, gameMode)
+        // keep the HIGHER crescents so re-plays don't lower the queued value.
+        const idx = queue.findIndex(e => e && e.date === dateStr && e.gameMode === gameMode);
+        if (idx >= 0) {
+            if ((queue[idx].crescents || 0) < crescents) {
+                queue[idx] = { gameMode, crescents, date: dateStr, ts: Date.now() };
+            }
+        } else {
+            queue.push({ gameMode, crescents, date: dateStr, ts: Date.now() });
+        }
+        // Trim oldest if over cap
+        while (queue.length > MAX_PENDING_SCORES) queue.shift();
+        localStorage.setItem(PENDING_SCORES_KEY, JSON.stringify(queue));
+    } catch (err) {
+        console.error('[FB] Failed to enqueue score:', err);
+    }
+}
 
-        // Map game mode to score field
+function readPendingScores() {
+    try {
+        const raw = localStorage.getItem(PENDING_SCORES_KEY);
+        const arr = raw ? JSON.parse(raw) : [];
+        return Array.isArray(arr) ? arr.filter(e => e && e.gameMode != null && e.date) : [];
+    } catch {
+        return [];
+    }
+}
+
+function clearPendingScore(dateStr, gameMode) {
+    try {
+        const raw = localStorage.getItem(PENDING_SCORES_KEY);
+        if (!raw) return;
+        const queue = JSON.parse(raw) || [];
+        const filtered = queue.filter(e => !(e && e.date === dateStr && e.gameMode === gameMode));
+        localStorage.setItem(PENDING_SCORES_KEY, JSON.stringify(filtered));
+    } catch (err) {
+        console.error('[FB] Failed to clear pending score:', err);
+    }
+}
+
+/**
+ * Drain all pending scores to Firebase. Safe to call repeatedly.
+ * Called on auth success, on page load, and before leaderboard fetch.
+ */
+async function drainPendingScores() {
+    if (!FB_STATE.user || !FB_STATE.initialized) return;
+    const queue = readPendingScores();
+    if (queue.length === 0) return;
+    console.log(`[FB] Draining ${queue.length} pending score(s)...`);
+
+    // Snapshot current uid so we don't drain into a different identity
+    const currentUid = FB_STATE.user.uid;
+
+    for (const entry of queue) {
+        try {
+            await submitFirebaseScoreRaw(entry.gameMode, entry.crescents, entry.date, currentUid);
+            clearPendingScore(entry.date, entry.gameMode);
+        } catch (err) {
+            console.error('[FB] Drain failed for entry, will retry later:', entry, err);
+            // Stop on first failure to avoid hammering Firebase
+            break;
+        }
+    }
+}
+
+/**
+ * Low-level Firebase score write. Bypasses the pending-queue logic.
+ * @param {string} gameMode - one of: connections, harf, deduction, scramble, juz
+ * @param {number} crescents - score in crescents
+ * @param {string} [dateStr] - YYYY-MM-DD; defaults to today
+ * @param {string} [uid] - target uid; defaults to current user
+ */
+async function submitFirebaseScoreRaw(gameMode, crescents, dateStr, uid) {
+    if (!FB_STATE.db) throw new Error('DB not ready');
+    const targetUid = uid || (FB_STATE.user && FB_STATE.user.uid);
+    if (!targetUid) throw new Error('No user');
+    const today = dateStr || getTodayDateString();
+    const scorePath = `users/${targetUid}/scores/${today}`;
+
+    const txnResult = await FB_STATE.db.ref(scorePath).transaction((current) => {
+        current = current || {};
+
         const modeMap = {
             connections: 'connections',
             wordle: 'harf',
@@ -529,56 +612,96 @@ async function submitFirebaseScore(gameMode, crescents) {
             juz: 'juz'
         };
         const field = modeMap[gameMode];
-        if (!field) return;
+        if (!field) return; // abort transaction
 
-        // Update the specific game score
-        current[field] = crescents;
+        // Only update if the new score is higher
+        if ((current[field] || 0) < crescents) {
+            current[field] = crescents;
+        }
 
         // Recalculate total
         const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
         current.total = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
 
-        // Add streak info
-        const stats = loadStats();
-        const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
-        let bestStreak = 0;
-        allModes.forEach(m => {
-            if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak);
-        });
-        current.streak = bestStreak;
-        current.timestamp = firebase.database.ServerValue.TIMESTAMP;
+        return current;
+    });
 
-        await FB_STATE.db.ref(scorePath).set(current);
-        console.log('[FB] Score submitted:', gameMode, crescents);
+    // Set streak and timestamp via update() AFTER transaction —
+    // ServerValue.TIMESTAMP cannot be set inside a transaction callback
+    if (txnResult && txnResult.committed) {
+        try {
+            const stats = (typeof loadStats === 'function') ? loadStats() : null;
+            const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
+            let bestStreak = 0;
+            if (stats) {
+                allModes.forEach(m => { if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak); });
+            }
+            await FB_STATE.db.ref(scorePath).update({
+                streak: bestStreak,
+                timestamp: firebase.database.ServerValue.TIMESTAMP
+            });
+        } catch (e) { /* streak update is best-effort */ }
+    }
 
-        // Sync verse exploration stats to Firebase profile
-        syncVerseStatsToFirebase();
-
-        // Invalidate leaderboard cache
+    // Invalidate leaderboard cache (only if current user)
+    if (targetUid === (FB_STATE.user && FB_STATE.user.uid)) {
         Object.keys(FB_STATE.leaderboardCache).forEach(k => {
             delete FB_STATE.leaderboardCache[k];
         });
+    }
+
+    return txnResult;
+}
+
+/**
+ * Submit today's scores to Firebase.
+ * Called after each game completion.
+ *
+ * Robust against:
+ *  - Firebase not yet initialized (queues locally, drained on auth)
+ *  - Auth not yet resolved (queues locally)
+ *  - Network/transient errors (queue remains, retried on next drain)
+ *  - User playing multiple games in one session (coalesced in queue)
+ */
+async function submitFirebaseScore(gameMode, crescents) {
+    const dateStr = (typeof getTodayDateString === 'function') ? getTodayDateString() : null;
+
+    // Always persist to the pending queue first — this is the source of truth
+    // for "we owe Firebase a write." If Firebase is ready we'll drain it below.
+    if (dateStr) enqueuePendingScore(gameMode, crescents, dateStr);
+
+    if (!FB_STATE.user || !FB_STATE.initialized || !FB_STATE.db) {
+        // Firebase not ready; the queued entry will be drained on auth/load
+        return;
+    }
+
+    try {
+        await submitFirebaseScoreRaw(gameMode, crescents, dateStr);
+        // Success — remove from queue
+        if (dateStr) clearPendingScore(dateStr, gameMode);
+        // Sync verse exploration stats to Firebase profile
+        syncVerseStatsToFirebase();
     } catch (err) {
-        console.error('[FB] Score submit failed:', err);
+        console.error('[FB] Score submit failed (will retry on next drain):', err);
+        // Leave it in the queue; drainPendingScores() will retry
     }
 }
 
 /**
  * Get today's date string in YYYY-MM-DD format.
- * Prefers the active puzzle date (from the loaded puzzle file) so that
- * scores are always keyed to the puzzle's date, not the wall-clock UTC date.
- * This prevents yesterday's scores from appearing under today's date when
- * the user plays a stale puzzle between midnight UTC and puzzle deployment.
+ * Always uses the active puzzle date (from the loaded puzzle file) when available.
+ * This ensures scores are always keyed to the puzzle the user actually played,
+ * not the wall-clock date — critical when a stale puzzle is served between
+ * midnight and the next puzzle deployment.
  */
 function getTodayDateString() {
-    // Use the puzzle date if available (set by loadDailyWithHolding)
     if (typeof getActivePuzzleDate === 'function') {
         const pd = getActivePuzzleDate();
         if (pd) return pd;
     }
-    // Fallback to UTC date (e.g., before puzzle loads)
+    // Fallback to wall-clock only when no puzzle date is set (e.g., before any puzzle loaded)
     const now = new Date();
-    return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}-${String(now.getUTCDate()).padStart(2, '0')}`;
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
 }
 
 // ==================== LEADERBOARD ====================
@@ -613,7 +736,13 @@ async function fetchGroupLeaderboard(groupCode) {
             try {
                 const [nameSnap, scoresSnap, verseSnap, pctSnap] = await Promise.all([
                     FB_STATE.db.ref(`users/${uid}/displayName`).once('value'),
-                    FB_STATE.db.ref(`users/${uid}/scores`).orderByKey().limitToLast(30).once('value'),
+                    // Fetch ALL score dates, not just the last 30.
+                    // The old `.orderByKey().limitToLast(30)` truncated users with
+                    // >30 days of history (e.g. Aray has 87 dates) and the
+                    // dedup then summed only the truncated snapshots — so
+                    // anyone playing for more than a month was showing the
+                    // wrong total on the leaderboard.
+                    FB_STATE.db.ref(`users/${uid}/scores`).once('value'),
                     FB_STATE.db.ref(`users/${uid}/versesExplored`).once('value'),
                     FB_STATE.db.ref(`users/${uid}/quranPercent`).once('value')
                 ]);
@@ -693,71 +822,76 @@ async function fetchGroupLeaderboard(groupCode) {
         const results = await Promise.all(promises);
         let validResults = results.filter(r => r !== null);
 
-        // Dedup: detect ghost UIDs (same display name as current user but different UID)
-        // This happens when a user clears cache, gets a new anonymous UID, and re-joins
-        const myEntry = validResults.find(r => r.isMe);
-        if (myEntry) {
-            const ghosts = validResults.filter(r =>
-                !r.isMe &&
-                r.displayName === myEntry.displayName &&
-                r.uid !== myEntry.uid
-            );
-            for (const ghost of ghosts) {
-                console.log('[FB] Dedup: merging ghost UID', ghost.uid.substring(0, 8), 'into', myEntry.uid.substring(0, 8));
-                // Merge scores: keep the higher totals
-                if (ghost.ramadanTotal > myEntry.ramadanTotal) {
-                    myEntry.ramadanTotal = ghost.ramadanTotal;
-                }
-                if (ghost.todayTotal > myEntry.todayTotal) {
-                    myEntry.todayTotal = ghost.todayTotal;
-                    myEntry.todayScores = ghost.todayScores;
-                }
-                if ((ghost.quranPercent || 0) > (myEntry.quranPercent || 0)) {
-                    myEntry.quranPercent = ghost.quranPercent;
-                    myEntry.versesExplored = ghost.versesExplored;
-                }
-                if (ghost.streak > myEntry.streak) {
-                    myEntry.streak = ghost.streak;
-                }
-                // Merge per-game all-time totals (keep higher of each)
-                if (ghost.allTimeScores && myEntry.allTimeScores) {
-                    for (const g of Object.keys(ghost.allTimeScores)) {
-                        if ((ghost.allTimeScores[g] || 0) > (myEntry.allTimeScores[g] || 0)) {
-                            myEntry.allTimeScores[g] = ghost.allTimeScores[g];
-                        }
-                    }
-                }
-                // Remove ghost from group in background (don't block UI)
-                (async () => {
-                    try {
-                        // Merge ghost scores into current user in Firebase
-                        const ghostScoresSnap = await FB_STATE.db.ref(`users/${ghost.uid}/scores`).once('value');
-                        const ghostScores = ghostScoresSnap.val();
-                        if (ghostScores) {
-                            const myScoresSnap = await FB_STATE.db.ref(`users/${myEntry.uid}/scores`).once('value');
-                            const myScores = myScoresSnap.val() || {};
-                            // Merge: for each date, keep the higher total
-                            for (const [date, gs] of Object.entries(ghostScores)) {
-                                if (!myScores[date] || (gs.total || 0) > (myScores[date].total || 0)) {
-                                    myScores[date] = gs;
-                                }
-                            }
-                            await FB_STATE.db.ref(`users/${myEntry.uid}/scores`).set(myScores);
-                        }
-                        // Remove ghost from group
-                        await FB_STATE.db.ref(`groups/${groupCode}/members/${ghost.uid}`).remove();
-                        await FB_STATE.db.ref(`users/${ghost.uid}/groups/${groupCode}`).remove();
-                        const countSnap = await FB_STATE.db.ref(`groups/${groupCode}/memberCount`).once('value');
-                        await FB_STATE.db.ref(`groups/${groupCode}/memberCount`).set(Math.max(0, (countSnap.val() || 1) - 1));
-                        console.log('[FB] Dedup: ghost UID removed from group');
-                    } catch (err) {
-                        console.error('[FB] Dedup cleanup failed:', err);
-                    }
-                })();
-            }
-            // Remove ghosts from display
-            validResults = validResults.filter(r => !ghosts.includes(r));
+        // === COMPREHENSIVE NAME DEDUP ===
+        // Detect ghost UIDs across ALL display names, not just the current user.
+        // Ghost UIDs happen when someone clears cache, gets a new anonymous UID, and re-joins.
+        // We keep the entry with the highest ramadanTotal and clean up the rest.
+
+        // Group entries by display name
+        const byName = {};
+        for (const entry of validResults) {
+            const name = entry.displayName || 'Anonymous';
+            if (!byName[name]) byName[name] = [];
+            byName[name].push(entry);
         }
+
+        const ghostsToRemove = [];
+        for (const [name, entries] of Object.entries(byName)) {
+            if (entries.length < 2) continue;
+            // Sort by ramadanTotal desc, todayTotal desc — best entry first
+            entries.sort((a, b) => {
+                if (b.ramadanTotal !== a.ramadanTotal) return b.ramadanTotal - a.ramadanTotal;
+                return b.todayTotal - a.todayTotal;
+            });
+            const keeper = entries[0];
+            const ghosts = entries.slice(1);
+            console.log(`[FB] Dedup: name "${name}" has ${entries.length} entries — keeping UID ${keeper.uid.substring(0, 8)}, removing ${ghosts.length} ghost(s)`);
+            // Merge ghost scores into keeper — SUM all totals (not MAX)
+            // Each ghost UID has scores for different days; add them all up
+            for (const ghost of ghosts) {
+                keeper.ramadanTotal += ghost.ramadanTotal;
+                keeper.daysPlayed = (keeper.daysPlayed || 0) + (ghost.daysPlayed || 0);
+                if ((ghost.todayTotal || 0) > (keeper.todayTotal || 0)) { keeper.todayTotal = ghost.todayTotal; keeper.todayScores = ghost.todayScores; }
+                if ((ghost.quranPercent || 0) > (keeper.quranPercent || 0)) { keeper.quranPercent = ghost.quranPercent; keeper.versesExplored = ghost.versesExplored; }
+                if (ghost.streak > keeper.streak) keeper.streak = ghost.streak;
+                if (ghost.allTimeScores && keeper.allTimeScores) {
+                    for (const g of Object.keys(ghost.allTimeScores)) {
+                        if ((ghost.allTimeScores[g] || 0) > (keeper.allTimeScores[g] || 0)) keeper.allTimeScores[g] = ghost.allTimeScores[g];
+                    }
+                }
+                ghostsToRemove.push({ ghost, keeper, isCurrentUserGhost: keeper.isMe });
+            }
+        }
+
+        // Merge ghost scores synchronously BEFORE returning leaderboard
+        // This ensures the leaderboard shows the correct merged score immediately
+        for (const { ghost, keeper } of ghostsToRemove) {
+            try {
+                const ghostScoresSnap = await FB_STATE.db.ref(`users/${ghost.uid}/scores`).once('value');
+                const ghostScores = ghostScoresSnap.val();
+                if (ghostScores) {
+                    const myScoresSnap = await FB_STATE.db.ref(`users/${keeper.uid}/scores`).once('value');
+                    const myScores = myScoresSnap.val() || {};
+                    for (const [date, gs] of Object.entries(ghostScores)) {
+                        if (!myScores[date] || (gs.total || 0) > (myScores[date].total || 0)) {
+                            myScores[date] = gs;
+                        }
+                    }
+                    await FB_STATE.db.ref(`users/${keeper.uid}/scores`).set(myScores);
+                }
+                await FB_STATE.db.ref(`groups/${groupCode}/members/${ghost.uid}`).remove();
+                await FB_STATE.db.ref(`users/${ghost.uid}/groups/${groupCode}`).remove();
+                const countSnap = await FB_STATE.db.ref(`groups/${groupCode}/memberCount`).once('value');
+                await FB_STATE.db.ref(`groups/${groupCode}/memberCount`).set(Math.max(0, (countSnap.val() || 1) - 1));
+                console.log(`[FB] Dedup: ghost UID ${ghost.uid.substring(0, 8)} removed from group`);
+            } catch (err) {
+                console.error('[FB] Dedup cleanup failed:', err);
+            }
+        }
+
+        // Remove all ghosts from display
+        const ghostUids = new Set(ghostsToRemove.map(g => g.ghost.uid));
+        validResults = validResults.filter(r => !ghostUids.has(r.uid));
 
         // Sort by Total (primary), Today (secondary), Quran % (tertiary)
         validResults.sort((a, b) => {
@@ -964,183 +1098,118 @@ async function backfillTodayScores() {
     const scorePath = `users/${uid}/scores/${today}`;
 
     try {
-        // Read current Firebase scores for today
-        const snap = await FB_STATE.db.ref(scorePath).once('value');
-        const current = snap.val() || {};
-
-        // Read local game state
-        // Use app.dayNumber (which tracks the puzzle's day, not wall-clock)
-        // so the local state key matches the Firebase date key.
+        // Read local game state and compute desired scores BEFORE transaction
         const state = loadState();
         const dayNum = (typeof app !== 'undefined' && app.dayNumber) ? app.dayNumber : getDayNumber();
-        let changed = false;
+
+        // Compute what we'd write — transaction needs this up front
+        const computed = { connections: 0, harf: 0, deduction: 0, scramble: 0, juz: 0 };
 
         // --- Connections ---
         const connState = state[`conn_${dayNum}`];
         if (connState && connState.gameOver) {
-            // New scoring: 🌒 1pt per solved row + 🌙 1 bonus pt if all verses in that row reviewed
             const correctCount = connState.correctCount ?? (connState.solved ? connState.solved.length : 0);
             const exploredSet = new Set(connState.exploredVerses || []);
             let connScore = 0;
             if (connState.solved) {
                 connState.solved.forEach((s, i) => {
                     if (i < correctCount) {
-                        connScore += 1; // 1pt for solving
-                        // Check if all verses in this row were reviewed
+                        connScore += 1;
                         const items = s.items || [];
-                        const uniqueRefs = new Set();
-                        items.forEach(item => {
-                            const ref = typeof item === 'object' ? item.ref : '';
-                            if (ref) uniqueRefs.add(ref);
-                        });
+                        const uniqueRefs = new Set(items.map(item => typeof item === 'object' ? item.ref : '').filter(Boolean));
                         const rowTotal = uniqueRefs.size || items.length;
                         let rowExplored = 0;
-                        uniqueRefs.forEach(ref => {
-                            if (exploredSet.has(ref)) rowExplored++;
-                        });
-                        if (rowExplored >= rowTotal) connScore += 1; // +1pt for reviewing all
+                        uniqueRefs.forEach(ref => { if (exploredSet.has(ref)) rowExplored++; });
+                        if (rowExplored >= rowTotal) connScore += 1;
                     }
                 });
             }
-            connScore = Math.min(8, connScore); // Max 8 (4 rows × 2pts)
-            if ((current.connections || 0) < connScore) {
-                current.connections = connScore;
-                changed = true;
-                console.log('[FB] Backfill connections:', connScore);
-            }
+            computed.connections = Math.min(8, connScore);
         }
 
-        // --- Harf by Harf (Wordle) ---
-        // Try new key first, then old key (migration handled in app.js but safety first)
+        // --- Harf by Harf ---
         const harfState = state[`harf_${dayNum}`] || state[`wordle_${dayNum}`];
         if (harfState && harfState.gameOver) {
             const evals = harfState.evaluations || [];
-            // Check if won
             const lastRow = evals[evals.length - 1] || [];
-            // In Harf, a win is when the last evaluation is all 'correct'
-            // BUT careful: if lost, the last row isn't all correct.
-            // Check game logic: 
-            // - If won, last row is all correct.
-            // - If lost, maxRows reached and not won.
-
-            // We can trust the state's implicit result or re-verify:
-            // Let's re-verify cleanly:
-            const targetWord = (harfState.word || '').trim(); // Saved state might not have word? 
-            // Actually app.state saves: board, currentRow, gameOver, evaluations, hintsUsed.
-            // It DOES NOT save the target word usually? 
-            // Wait, harf.js setupHarfGame uses harf.puzzle.word.
-            // We can't easily re-verify "won" without the word.
-            // BUT, we can infer "won" if the last evaluation row is all 'correct'.
-
             const won = lastRow.length > 0 && lastRow.every(e => e === 'correct');
-            let moons = 0;
             if (won) {
-                // Base: 1 try = 5, 2 = 4, 3 = 3, 4 = 2, 5-6 = 1
-                // Minus hints
                 const totalRows = evals.length;
-                const baseMoons = Math.max(1, 6 - totalRows);
-                moons = Math.max(0, baseMoons - (harfState.hintsUsed || 0));
-            }
-            // If lost, 0 moons.
-
-            if ((current.harf || 0) < moons) {
-                current.harf = moons;
-                changed = true;
-                console.log('[FB] Backfill harf:', moons);
+                computed.harf = Math.max(0, Math.max(1, 6 - totalRows) - (harfState.hintsUsed || 0));
             }
         }
 
-        // --- Who Am I? (Deduction) ---
+        // --- Deduction ---
         const dedState = state[`ded_${dayNum}`];
-        if (dedState && dedState.gameOver) {
-            let moons = 0;
-            if (dedState.won) {
-                const clues = dedState.cluesRevealed || 0;
-                if (clues <= 1) moons = 5;
-                else if (clues === 2) moons = 4;
-                else if (clues === 3) moons = 3;
-                else if (clues === 4) moons = 2;
-                else moons = 1;
-            }
-            if ((current.deduction || 0) < moons) {
-                current.deduction = moons;
-                changed = true;
-                console.log('[FB] Backfill deduction:', moons);
-            }
+        if (dedState && dedState.gameOver && dedState.won) {
+            const clues = dedState.cluesRevealed || 0;
+            if (clues <= 1) computed.deduction = 5;
+            else if (clues === 2) computed.deduction = 4;
+            else if (clues === 3) computed.deduction = 3;
+            else if (clues === 4) computed.deduction = 2;
+            else computed.deduction = 1;
         }
 
         // --- Scramble ---
         const scrState = state[`scr_${dayNum}`];
-        if (scrState && scrState.gameOver) {
-            let moons = 0;
-            if (scrState.won) {
-                moons = Math.max(1, 5 - (scrState.hintsUsed || 0) - (scrState.moves || 0));
-            }
-            if ((current.scramble || 0) < moons) {
-                current.scramble = moons;
-                changed = true;
-                console.log('[FB] Backfill scramble:', moons);
-            }
+        if (scrState && scrState.gameOver && scrState.won) {
+            computed.scramble = Math.max(1, 5 - (scrState.hintsUsed || 0) - (scrState.moves || 0));
         }
 
-        // --- Juz Journey ---
-        // Juz Journey saves state separately in localStorage, not in the main state object
+        // --- Juz ---
         try {
             const rawJuz = localStorage.getItem('quraniq_juz');
             if (rawJuz) {
                 const juzState = JSON.parse(rawJuz);
-                // Verify it belongs to today's puzzle by checking the date
                 if (juzState && juzState.puzzle && juzState.puzzle.date === today && juzState.completed) {
                     const rawScore = (juzState.scores.round2 || 0) + (juzState.scores.round3 || 0) + (juzState.scores.round4 || 0);
-                    const penalty = Math.min(juzState.hintPenalty || 0, 2); // MAX_HINT_PENALTY is 2
-                    const moons = Math.max(0, rawScore - penalty);
-
-                    if ((current.juz || 0) < moons) {
-                        current.juz = moons;
-                        changed = true;
-                        console.log('[FB] Backfill juz:', moons);
-                    }
+                    computed.juz = Math.max(0, rawScore - Math.min(juzState.hintPenalty || 0, 2));
                 }
             }
-        } catch (e) {
-            console.error('[FB] Error reading Juz state for backfill:', e);
-        }
+        } catch (e) { /* skip Juz on error */ }
 
-        // Defensively check if the total is out of sync with individual scores
-        const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
-        const expectedTotal = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
-        if (current.total !== expectedTotal) {
-            current.total = expectedTotal;
-            changed = true;
-            console.log('[FB] Self-healed total score mismatch:', expectedTotal);
-        }
+        // Use transaction so concurrent writes don't clobber each other
+        const txnResult = await FB_STATE.db.ref(scorePath).transaction((current) => {
+            current = current || {};
+            // Only update individual game scores if local computed is higher
+            const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
+            let didChange = false;
+            for (const f of fields) {
+                if ((current[f] || 0) < computed[f]) {
+                    current[f] = computed[f];
+                    didChange = true;
+                }
+            }
+            if (!didChange) return; // abort — nothing to update
+            // Recalculate total
+            current.total = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
+            return current;
+        });
 
-        // If any scores were backfilled or fixed, save
-        if (changed) {
-
+        // After transaction, update streak and timestamp separately
+        // (ServerValue.TIMESTAMP can't be set inside a transaction callback)
+        if (txnResult && txnResult.committed) {
             const stats = loadStats();
             const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
             let bestStreak = 0;
-            allModes.forEach(m => {
-                if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak);
+            allModes.forEach(m => { if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak); });
+            await FB_STATE.db.ref(scorePath).update({
+                streak: bestStreak,
+                timestamp: firebase.database.ServerValue.TIMESTAMP
             });
-            current.streak = bestStreak;
-            current.timestamp = firebase.database.ServerValue.TIMESTAMP;
-
-            await FB_STATE.db.ref(scorePath).set(current);
-            console.log('[FB] Backfill complete — total:', current.total);
-
-            // Invalidate leaderboard cache
-            Object.keys(FB_STATE.leaderboardCache).forEach(k => {
-                delete FB_STATE.leaderboardCache[k];
-            });
-
-            // Also sync verse stats
-            syncVerseStatsToFirebase();
+            console.log('[FB] Backfill complete — total:', computed.connections + computed.harf + computed.deduction + computed.scramble + computed.juz);
         }
     } catch (err) {
-        console.error('[FB] Score backfill failed:', err);
+        console.error('[FB] Backfill failed:', err);
     }
+
+    // Always invalidate leaderboard cache and sync stats, regardless of backfill result
+    Object.keys(FB_STATE.leaderboardCache).forEach(k => { delete FB_STATE.leaderboardCache[k]; });
+    syncVerseStatsToFirebase();
+
+    // Also drain any pending scores queued from earlier (different dates, or
+    // games submitted before this backfill). Best-effort.
+    drainPendingScores().catch((err) => console.error('[FB] Drain after backfill failed:', err));
 }
 
 // ==================== VERSE STATS SYNC ====================
