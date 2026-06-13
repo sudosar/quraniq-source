@@ -302,13 +302,14 @@ OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
-MINIMAX_API_URL = "https://api.minimax.io/v1/text/chatcompletion_v2"
+MINIMAX_M27_API_URL = "https://api.minimax.io/v1/text/chatcompletion_v2"  # native, max_completion_tokens
+MINIMAX_M3_API_URL  = "https://api.minimax.io/v1/chat/completions"        # OpenAI-compat, max_tokens
 
 # Model fallback chain: MiniMax M2.7 → MiniMax M3 → DeepSeek V4 Pro
 MODEL_CHAIN = [
-    {"id": "MiniMax-M2.7",    "api": "minimax",  "label": "MiniMax M2.7"},
-    {"id": "MiniMax-M3",      "api": "minimax",  "label": "MiniMax M3"},
-    {"id": "deepseek-v4-pro", "api": "deepseek", "label": "DeepSeek V4 Pro"},
+    {"id": "MiniMax-M2.7",    "api": "minimax_m27", "label": "MiniMax M2.7"},
+    {"id": "MiniMax-M3",      "api": "minimax_m3",  "label": "MiniMax M3"},
+    {"id": "deepseek-v4-pro", "api": "deepseek",    "label": "DeepSeek V4 Pro"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -572,11 +573,11 @@ def call_model(prompt, model_config, system_msg=None):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {DEEPSEEK_API_KEY}"
         }
-    elif api_type == "minimax":
+    elif api_type in ("minimax_m27", "minimax_m3"):
         if not MINIMAX_API_KEY:
             print(f"  ⚠ MINIMAX_API_KEY not set, skipping {model_config['label']}")
             return None
-        api_url = MINIMAX_API_URL
+        api_url = MINIMAX_M27_API_URL if api_type == "minimax_m27" else MINIMAX_M3_API_URL
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {MINIMAX_API_KEY}"
@@ -604,14 +605,14 @@ def call_model(prompt, model_config, system_msg=None):
         "temperature": 0.6,
         "top_p": 0.95,
     }
-    # MiniMax uses max_completion_tokens; DeepSeek needed a higher cap to avoid truncation
-    if api_type == "minimax":
+    # M2.7 native endpoint uses max_completion_tokens; M3 + others use max_tokens
+    if api_type == "minimax_m27":
         payload["max_completion_tokens"] = 16384
     else:
         payload["max_tokens"] = 16384
 
     # These APIs support the response_format JSON mode parameter
-    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax"):
+    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m27", "minimax_m3"):
         payload["response_format"] = {"type": "json_object"}
 
     try:
@@ -651,7 +652,7 @@ def call_model(prompt, model_config, system_msg=None):
                     "temperature": 0.3,
                     "top_p": 0.95,
                 }
-                if api_type == "minimax":
+                if api_type == "minimax_m27":
                     cont_payload["max_completion_tokens"] = 16384
                 else:
                     cont_payload["max_tokens"] = 16384
