@@ -304,13 +304,11 @@ GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/c
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 MINIMAX_API_URL = "https://api.minimax.io/v1/text/chatcompletion_v2"
 
-# Model fallback chain: MiniMax M2.7 → MiniMax M3 → DeepSeek V4 Flash → DeepSeek V4 Pro → Gemini 3.5 Flash
+# Model fallback chain: MiniMax M2.7 → MiniMax M3 → DeepSeek V4 Pro
 MODEL_CHAIN = [
-    {"id": "MiniMax-M2.7",      "api": "minimax",  "label": "MiniMax M2.7"},
-    {"id": "MiniMax-M3",        "api": "minimax",  "label": "MiniMax M3"},
-    {"id": "deepseek-v4-flash", "api": "deepseek", "label": "DeepSeek V4 Flash"},
-    {"id": "deepseek-v4-pro",   "api": "deepseek", "label": "DeepSeek V4 Pro"},
-    {"id": "gemini-3.5-flash",  "api": "gemini",   "label": "Gemini 3.5 Flash (last resort)"},
+    {"id": "MiniMax-M2.7",    "api": "minimax",  "label": "MiniMax M2.7"},
+    {"id": "MiniMax-M3",      "api": "minimax",  "label": "MiniMax M3"},
+    {"id": "deepseek-v4-pro", "api": "deepseek", "label": "DeepSeek V4 Pro"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -2647,9 +2645,9 @@ def main():
             print(f"Partial history found for {today}. Missing: {', '.join(missing_games)}")
             print(f"Will regenerate only missing games.")
 
-    if not MINIMAX_API_KEY and not DEEPSEEK_API_KEY and not GEMINI_API_KEY:
+    if not MINIMAX_API_KEY and not DEEPSEEK_API_KEY:
         print("ERROR: No API credentials set.")
-        print("  Set MINIMAX_API_KEY, DEEPSEEK_API_KEY, and/or GEMINI_API_KEY.")
+        print("  Set MINIMAX_API_KEY and/or DEEPSEEK_API_KEY.")
         return 1
 
     print(f"Available APIs:")
@@ -2658,13 +2656,9 @@ def main():
     else:
         print(f"  ✗ MiniMax API (MINIMAX_API_KEY not set)")
     if DEEPSEEK_API_KEY:
-        print(f"  ✓ DeepSeek API (deepseek-v4-flash, deepseek-v4-pro)")
+        print(f"  ✓ DeepSeek API (deepseek-v4-pro)")
     else:
         print(f"  ✗ DeepSeek API (DEEPSEEK_API_KEY not set)")
-    if GEMINI_API_KEY:
-        print(f"  ✓ Gemini API (gemini-3.5-flash)")
-    else:
-        print(f"  ✗ Gemini API (GEMINI_API_KEY not set)")
 
     # Load history for cooldown enforcement (exclude today to allow replacing buggy attempts)
     history = load_history(exclude_date=today)
