@@ -1,32 +1,35 @@
 {
-  "date": "2026-06-11",
+  "date": "2026-06-12",
   "puzzle": {
-    "verseRef": "33:56",
-    "reference": "Surah Al-Ahzab (33:56)",
+    "verseRef": "3:200",
+    "reference": "Surah Al-Imran (3:200)",
     "segments": [
-      "إِنَّ اللَّهَ وَمَلَائِكَتَهُ",
-      "يُصَلُّونَ عَلَى النَّبِيِّ",
-      "يَا أَيُّهَا الَّذِينَ آمَنُوا",
-      "صَلُّوا عَلَيْهِ",
-      "وَسَلِّمُوا تَسْلِيمًا"
+      "يَا أَيُّهَا الَّذِينَ",
+      "آمَنُوا",
+      "اصْبِرُوا وَصَابِرُوا",
+      "وَرَابِطُوا",
+      "وَاتَّقُوا اللَّهَ",
+      "لَعَلَّكُمْ تُفْلِحُونَ"
     ],
     "translations": [
-      "Indeed Allah and His Angels",
-      "send blessings upon the Prophet",
-      "O you who believe O you who believe O you who believe",
-      "Send blessings on him",
-      "and greet him (with) greetings"
+      "O you who",
+      "believe[d] Be steadfast",
+      "and [be] patient and [be] constant",
+      "and fear Allah",
+      "so that you may",
+      "(be) successful"
     ],
-    "hint": "A verse commanding believers to send salutations upon the Prophet Muhammad (peace be upon him).",
-    "arabic": "إِنَّ ٱللَّهَ وَمَلَـٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ ۚ يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ صَلُّوا۟ عَلَيْهِ وَسَلِّمُوا۟ تَسْلِيمًا",
+    "hint": "The closing verse of Surah Al-Imran, commanding believers to practice patience, perseverance, steadfastness, and taqwa to attain true success.",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱصْبِرُوا۟ وَصَابِرُوا۟ وَرَابِطُوا۟ وَٱتَّقُوا۟ ٱللَّهَ لَعَلَّكُمْ تُفْلِحُونَ",
     "words": [
-      "إِنَّ ٱللَّهَ وَمَلَـٰٓئِكَتَهُۥ",
-      "يُصَلُّونَ عَلَى ٱلنَّبِىِّ ۚ",
-      "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟",
-      "صَلُّوا۟ عَلَيْهِ",
-      "وَسَلِّمُوا۟ تَسْلِيمًا"
+      "يَـٰٓأَيُّهَا ٱلَّذِينَ",
+      "ءَامَنُوا۟ ٱصْبِرُوا۟",
+      "وَصَابِرُوا۟ وَرَابِطُوا۟",
+      "وَٱتَّقُوا۟ ٱللَّهَ",
+      "لَعَلَّكُمْ",
+      "تُفْلِحُونَ"
     ],
-    "verseEn": "Indeed, Allāh confers blessing upon the Prophet, and His angels [ask Him to do so]. O you who have believed, ask [Allāh to confer] blessing upon him and ask [Allāh to grant him] peace."
+    "verseEn": "O you who have believed, persevere and endure and remain stationed and fear Allāh that you may be successful."
   },
   "generated": true,
   "model": "auto (chain)"

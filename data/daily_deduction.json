@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-11",
+  "date": "2026-06-12",
   "puzzle": {
-    "title": "The Village on the Shores of Trial",
-    "intro": "You find yourself in a coastal village, where the sound of waves mixes with whispers of a forgotten people. They were given a command of rest, but their greed led to a punishment that is still spoken of in hushed tones. Can you uncover who they were?",
+    "title": "The Willing Sacrifice",
+    "intro": "In a time of divine tests, a soul was called to the ultimate act of submission. Raised in a barren land, this figure grew to embody faith and patience. When a vision commanded a sacrifice, they did not waver. Their story is a cornerstone of devotion.",
     "clues": [
-      "We lived by the shore and were given a command to observe a day of rest.",
-      "On that day, fish would come to us in abundance, but we were forbidden to take them.",
-      "Some among us warned against transgression, but others conspired to fish anyway.",
-      "We violated the sacred command and brought upon ourselves a severe punishment.",
-      "Our punishment was a transformation that left us disfigured and disgraced.",
-      "We were turned into apes, a sign for all who would come after."
+      "I was the answer to a long-awaited prayer of a great prophet.",
+      "My mother and I were left in a desolate valley with only provisions of dates and water.",
+      "I grew up to become a prophet known for my truthfulness and patience.",
+      "I helped my father raise the foundations of a sacred house dedicated to Allah.",
+      "When my father told me of a dream to sacrifice me, I replied, 'Do as you are commanded.'",
+      "Allah honored my submission by sending a ram from the sky to ransom me."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "People of the Sabbath",
-          "People of Thamud",
-          "People of 'Ad",
-          "People of the Cave",
-          "People of the Elephant"
+          "Prophet Isma'il",
+          "Prophet Ishaq",
+          "Prophet Ya'qub",
+          "Prophet Ibrahim",
+          "Prophet Yusuf"
         ],
-        "answer": "People of the Sabbath"
+        "answer": "Prophet Isma'il"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Fishing on the Sabbath",
-          "Worshipping a golden calf",
-          "Denying the message of Hud",
-          "Killing the she-camel",
-          "Building a tower to heaven"
+          "Willingly submitting to be sacrificed",
+          "Being thrown into a blazing fire",
+          "Being swallowed by a great fish",
+          "Being sold into slavery",
+          "Being tested with a severe illness"
         ],
-        "answer": "Fishing on the Sabbath"
+        "answer": "Willingly submitting to be sacrificed"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The fish",
-          "A she-camel",
-          "A staff",
-          "A boat",
-          "A garden"
+          "Well of Zamzam",
+          "The Ark of Nuh",
+          "The Fire of Nimrod",
+          "The Golden Calf",
+          "The Staff of Musa"
         ],
-        "answer": "The fish"
+        "answer": "Well of Zamzam"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Turned into apes",
-          "Destroyed by a flood",
-          "Destroyed by a blazing fire",
-          "Swallowed by the earth",
-          "Scattered by a wind"
+          "Was ransomed with a great ram",
+          "Was saved from the fire",
+          "Was saved from the flood",
+          "Was taken out of the whale",
+          "Was given a kingdom and wisdom"
         ],
-        "answer": "Turned into apes"
+        "answer": "Was ransomed with a great ram"
       }
     },
-    "verseRef": "7:163",
-    "arabic": "وَسْـَٔلْهُمْ عَنِ ٱلْقَرْيَةِ ٱلَّتِى كَانَتْ حَاضِرَةَ ٱلْبَحْرِ إِذْ يَعْدُونَ فِى ٱلسَّبْتِ إِذْ تَأْتِيهِمْ حِيتَانُهُمْ يَوْمَ سَبْتِهِمْ شُرَّعًۭا وَيَوْمَ لَا يَسْبِتُونَ ۙ لَا تَأْتِيهِمْ ۚ كَذَٰلِكَ نَبْلُوهُم بِمَا كَانُوا۟ يَفْسُقُونَ",
-    "verse": "And ask them about the town that was by the sea - when they transgressed in [the matter of] the sabbath - when their fish came to them openly on their sabbath day, and the day they had no sabbath they did not come to them. Thus did We give them trial because they were defiantly disobedient. (7:163)"
+    "verseRef": "37:102",
+    "arabic": "فَلَمَّا بَلَغَ مَعَهُ ٱلسَّعْىَ قَالَ يَـٰبُنَىَّ إِنِّىٓ أَرَىٰ فِى ٱلْمَنَامِ أَنِّىٓ أَذْبَحُكَ فَٱنظُرْ مَاذَا تَرَىٰ ۚ قَالَ يَـٰٓأَبَتِ ٱفْعَلْ مَا تُؤْمَرُ ۖ سَتَجِدُنِىٓ إِن شَآءَ ٱللَّهُ مِنَ ٱلصَّـٰبِرِينَ",
+    "verse": "And when he reached with him [the age of] exertion, he said, \"O my son, indeed I have seen in a dream that I [must] sacrifice you, so see what you think.\" He said, \"O my father, do as you are commanded. You will find me, if Allāh wills, of the steadfast.\" (37:102)"
   },
   "generated": true,
   "model": "auto (chain)"
