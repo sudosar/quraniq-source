@@ -605,9 +605,12 @@ def call_model(prompt, model_config, system_msg=None):
         "temperature": 0.6,
         "top_p": 0.95,
     }
-    # M2.7 native endpoint uses max_completion_tokens; M3 + others use max_tokens
+    # M2.7 native endpoint uses max_completion_tokens; M3 + others use max_tokens.
+    # DeepSeek V4 Pro uses chain-of-thought reasoning tokens, needs higher ceiling.
     if api_type == "minimax_m27":
         payload["max_completion_tokens"] = 16384
+    elif api_type == "deepseek":
+        payload["max_tokens"] = 32768
     else:
         payload["max_tokens"] = 16384
 
@@ -615,8 +618,10 @@ def call_model(prompt, model_config, system_msg=None):
     if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m27", "minimax_m3"):
         payload["response_format"] = {"type": "json_object"}
 
+    # M3 needs more time — it runs extended reasoning passes
+    request_timeout = 300 if api_type == "minimax_m3" else 180
     try:
-        resp = requests.post(api_url, headers=headers, json=payload, timeout=180)
+        resp = requests.post(api_url, headers=headers, json=payload, timeout=request_timeout)
 
         if resp.status_code == 429:
             print(f"  ⚠ Rate limited on {model_config['label']}")
@@ -654,10 +659,12 @@ def call_model(prompt, model_config, system_msg=None):
                 }
                 if api_type == "minimax_m27":
                     cont_payload["max_completion_tokens"] = 16384
+                elif api_type == "deepseek":
+                    cont_payload["max_tokens"] = 32768
                 else:
                     cont_payload["max_tokens"] = 16384
                 try:
-                    cont_resp = requests.post(api_url, headers=headers, json=cont_payload, timeout=180)
+                    cont_resp = requests.post(api_url, headers=headers, json=cont_payload, timeout=request_timeout)
                     if cont_resp.status_code != 200:
                         print(f"  ✗ Continuation failed (HTTP {cont_resp.status_code})")
                         break
@@ -767,9 +774,9 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
     difficulty = DIFFICULTY_LABELS[cat_index]
 
     # Avoidance: history + already-generated categories
-    # Prompt only shows connections-specific cooldown (validation enforces cross-game separately)
+    # Use same verse set as validation (connections + all cross-game refs).
     avoided_themes_set = set(history["connections"]["themes"])
-    all_avoided_verses = history["connections"]["verses"]
+    all_avoided_verses = history["connections"]["verses"] | history["all_verses"]
     # Only pass current-puzzle words in the prompt — 806-word history list bloats the prompt
     # to 12k+ tokens (causes MiniMax timeouts). Validation still enforces historical root overlap.
     all_prev_words = []
@@ -787,18 +794,12 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
                 all_prev_words.append(item["ar"])
 
     avoided_themes = ", ".join(sorted(avoided_themes_set)) or "(none)"
-    # Sort numerically and show first 200 (low-numbered surahs the LLM tends to pick).
-    # Validation still enforces the full 60-day cooldown set.
+    # Show ALL forbidden verses sorted numerically so the model sees every ref it must avoid.
     def _ref_key(r):
         try: s, a = r.split(":"); return (int(s), int(a))
         except: return (999, 999)
     _sorted_verses = sorted(all_avoided_verses, key=_ref_key)
-    _shown = _sorted_verses[:200]
-    _extra = len(all_avoided_verses) - len(_shown)
-    avoided_verses = ", ".join(_shown) + (
-        f" (+ {_extra} more from higher surahs — all recently used refs are forbidden)"
-        if _extra > 0 else ""
-    )
+    avoided_verses = ", ".join(_sorted_verses)
 
     # Summary of categories already chosen in this puzzle run
     chosen_block = ""
@@ -874,8 +875,7 @@ RULES:
 2. Theme (nameEn) MUST be specific (e.g., "Attributes of Paradise", not "Attributes").
    FORBIDDEN themes (used recently - do NOT reuse): {avoided_themes}
 3. CRITICAL: Every word must actually appear in its cited verse. No guessing.
-4. Surah:Ayah refs must be unique and not in: {avoided_verses}.
-   TIP: Surahs 2-24 and 55-114 are heavily used. Prefer surahs 25-54 for fresh material.
+4. Surah:Ayah refs must be unique and not in this forbidden list: {avoided_verses}.
 5. Words must not share roots with each other or previous categories.
 
 {chosen_block}{violation_block}
