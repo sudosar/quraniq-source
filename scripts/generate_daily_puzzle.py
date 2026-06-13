@@ -302,7 +302,7 @@ OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
-MINIMAX_API_URL = "https://api.minimax.io/v1/chat/completions"
+MINIMAX_API_URL = "https://api.minimax.io/v1/text/chatcompletion_v2"
 
 # Model fallback chain: MiniMax M2.7 → MiniMax M3 → DeepSeek V4 Flash → DeepSeek V4 Pro → Gemini 3.5 Flash
 MODEL_CHAIN = [
@@ -605,8 +605,12 @@ def call_model(prompt, model_config, system_msg=None):
         ],
         "temperature": 0.6,
         "top_p": 0.95,
-        "max_tokens": 8192 if api_type == "deepseek" else 16384,
     }
+    # MiniMax uses max_completion_tokens; DeepSeek needed a higher cap to avoid truncation
+    if api_type == "minimax":
+        payload["max_completion_tokens"] = 16384
+    else:
+        payload["max_tokens"] = 16384
 
     # These APIs support the response_format JSON mode parameter
     if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax"):
@@ -648,8 +652,11 @@ def call_model(prompt, model_config, system_msg=None):
                     ],
                     "temperature": 0.3,
                     "top_p": 0.95,
-                    "max_tokens": 8192 if api_type == "deepseek" else 16384,
                 }
+                if api_type == "minimax":
+                    cont_payload["max_completion_tokens"] = 16384
+                else:
+                    cont_payload["max_tokens"] = 16384
                 try:
                     cont_resp = requests.post(api_url, headers=headers, json=cont_payload, timeout=180)
                     if cont_resp.status_code != 200:
