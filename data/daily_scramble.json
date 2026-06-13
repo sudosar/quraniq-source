@@ -1,35 +1,28 @@
 {
-  "date": "2026-06-12",
+  "date": "2026-06-13",
   "puzzle": {
-    "verseRef": "3:200",
-    "reference": "Surah Al-Imran (3:200)",
+    "verseRef": "68:8",
+    "reference": "Surah Al-Qalam (68:8)",
     "segments": [
-      "يَا أَيُّهَا الَّذِينَ",
-      "آمَنُوا",
-      "اصْبِرُوا وَصَابِرُوا",
-      "وَرَابِطُوا",
-      "وَاتَّقُوا اللَّهَ",
-      "لَعَلَّكُمْ تُفْلِحُونَ"
+      "فَلَوْلَا إِذْ",
+      "بَلَغَ",
+      "الْحُلْقُومَ",
+      "وَأَنتُمْ",
+      "تَنظُرُونَ"
     ],
     "translations": [
-      "O you who",
-      "believe[d] Be steadfast",
-      "and [be] patient and [be] constant",
-      "and fear Allah",
-      "so that you may",
-      "(be) successful"
+      "So (do) not",
+      "obey",
+      "the deniers"
     ],
-    "hint": "The closing verse of Surah Al-Imran, commanding believers to practice patience, perseverance, steadfastness, and taqwa to attain true success.",
-    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱصْبِرُوا۟ وَصَابِرُوا۟ وَرَابِطُوا۟ وَٱتَّقُوا۟ ٱللَّهَ لَعَلَّكُمْ تُفْلِحُونَ",
+    "hint": "This verse describes the moment of death when the soul reaches the throat, while witnesses watch helplessly - a reminder of mortality and the appointed term.",
+    "arabic": "فَلَا تُطِعِ ٱلْمُكَذِّبِينَ",
     "words": [
-      "يَـٰٓأَيُّهَا ٱلَّذِينَ",
-      "ءَامَنُوا۟ ٱصْبِرُوا۟",
-      "وَصَابِرُوا۟ وَرَابِطُوا۟",
-      "وَٱتَّقُوا۟ ٱللَّهَ",
-      "لَعَلَّكُمْ",
-      "تُفْلِحُونَ"
+      "فَلَا",
+      "تُطِعِ",
+      "ٱلْمُكَذِّبِينَ"
     ],
-    "verseEn": "O you who have believed, persevere and endure and remain stationed and fear Allāh that you may be successful."
+    "verseEn": "Then do not obey the deniers."
   },
   "generated": true,
   "model": "auto (chain)"

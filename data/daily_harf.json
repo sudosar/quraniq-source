@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-12",
+  "date": "2026-06-13",
   "puzzle": {
-    "word": "بينات",
-    "display": "بَيِّنَاتٍ",
-    "hint": "Clear evidence or manifest signs",
-    "verseRef": "3:86",
-    "arabicVerse": "كَيْفَ يَهْدِى ٱللَّهُ قَوْمًۭا كَفَرُوا۟ بَعْدَ إِيمَـٰنِهِمْ وَشَهِدُوٓا۟ أَنَّ ٱلرَّسُولَ حَقٌّۭ وَجَآءَهُمُ ٱلْبَيِّنَـٰتُ ۚ وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلظَّـٰلِمِينَ",
-    "verse": "3:86 - How shall Allāh guide a people who disbelieved after their belief and had witnessed that the Messenger is true and clear signs had come to them? And Allāh does not guide the wrongdoing people."
+    "word": "حور",
+    "display": "حُور",
+    "hint": "Wide-eyed companions promised to the righteous in Paradise",
+    "verseRef": "44:54",
+    "arabicVerse": "كَذَٰلِكَ وَزَوَّجْنَـٰهُم بِحُورٍ عِينٍۢ",
+    "verse": "44:54 - Thus. And We will marry them to fair women with large, [beautiful] eyes."
   },
   "generated": true,
   "model": "auto (chain)"
