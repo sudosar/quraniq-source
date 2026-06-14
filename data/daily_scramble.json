@@ -1,28 +1,38 @@
 {
-  "date": "2026-06-13",
+  "date": "2026-06-14",
   "puzzle": {
-    "verseRef": "68:8",
-    "reference": "Surah Al-Qalam (68:8)",
+    "verseRef": "58:11",
+    "reference": "Surah Al-Mujadilah (58:11)",
     "segments": [
-      "فَلَوْلَا إِذْ",
-      "بَلَغَ",
-      "الْحُلْقُومَ",
-      "وَأَنتُمْ",
-      "تَنظُرُونَ"
+      "wa-l-ladhina",
+      "ja't-hum",
+      "al-il'mu",
+      "yaqūlūna",
+      "āmanā",
+      "wa-yaqūlūna",
+      "namūduka"
     ],
     "translations": [
-      "So (do) not",
-      "obey",
-      "the deniers"
+      "O you who believe O you who believe O you who believe When it is said",
+      "to you Make room in the assemblies then make room",
+      "Allah will make room Allah will make room for you And when",
+      "it is said Rise up then rise up Allah will raise",
+      "Allah will raise those who believe among you",
+      "and those who were given the knowledge (in) degrees",
+      "And Allah of what you do (is) All-Aware"
     ],
-    "hint": "This verse describes the moment of death when the soul reaches the throat, while witnesses watch helplessly - a reminder of mortality and the appointed term.",
-    "arabic": "فَلَا تُطِعِ ٱلْمُكَذِّبِينَ",
+    "hint": "A divine promise about knowledge expansion and a call to supplicate for increased understanding",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا قِيلَ لَكُمْ تَفَسَّحُوا۟ فِى ٱلْمَجَـٰلِسِ فَٱفْسَحُوا۟ يَفْسَحِ ٱللَّهُ لَكُمْ ۖ وَإِذَا قِيلَ ٱنشُزُوا۟ فَٱنشُزُوا۟ يَرْفَعِ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ مِنكُمْ وَٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ دَرَجَـٰتٍۢ ۚ وَٱللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌۭ",
     "words": [
-      "فَلَا",
-      "تُطِعِ",
-      "ٱلْمُكَذِّبِينَ"
+      "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا قِيلَ",
+      "لَكُمْ تَفَسَّحُوا۟ فِى ٱلْمَجَـٰلِسِ فَٱفْسَحُوا۟",
+      "يَفْسَحِ ٱللَّهُ لَكُمْ ۖ وَإِذَا",
+      "قِيلَ ٱنشُزُوا۟ فَٱنشُزُوا۟ يَرْفَعِ",
+      "ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ مِنكُمْ",
+      "وَٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ دَرَجَـٰتٍۢ ۚ",
+      "وَٱللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌۭ"
     ],
-    "verseEn": "Then do not obey the deniers."
+    "verseEn": "O you who have believed, when you are told, \"Space yourselves\" in assemblies, then make space; Allāh will make space for you. And when you are told, \"Arise,\" then arise; Allāh will raise those who have believed among you and those who were given knowledge, by degrees. And Allāh is Aware of what you do."
   },
   "generated": true,
   "model": "auto (chain)"

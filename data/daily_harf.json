@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-13",
+  "date": "2026-06-14",
   "puzzle": {
-    "word": "حور",
-    "display": "حُور",
-    "hint": "Wide-eyed companions promised to the righteous in Paradise",
-    "verseRef": "44:54",
-    "arabicVerse": "كَذَٰلِكَ وَزَوَّجْنَـٰهُم بِحُورٍ عِينٍۢ",
-    "verse": "44:54 - Thus. And We will marry them to fair women with large, [beautiful] eyes."
+    "word": "عجيب",
+    "display": "عَجِيب",
+    "hint": "Sarah's reaction when told she would have a child in her old age - expressing profound amazement",
+    "verseRef": "11:72",
+    "arabicVerse": "قَالَتْ يَـٰوَيْلَتَىٰٓ ءَأَلِدُ وَأَنَا۠ عَجُوزٌۭ وَهَـٰذَا بَعْلِى شَيْخًا ۖ إِنَّ هَـٰذَا لَشَىْءٌ عَجِيبٌۭ",
+    "verse": "11:72 - She said, \"Woe to me! Shall I give birth while I am an old woman and this, my husband, is an old man? Indeed, this is an amazing thing!\""
   },
   "generated": true,
   "model": "auto (chain)"

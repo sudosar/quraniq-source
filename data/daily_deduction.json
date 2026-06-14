@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-13",
+  "date": "2026-06-14",
   "puzzle": {
-    "title": "The Truthful Ones of Makkah",
-    "intro": "In the early days of revelation, when the message of truth faced fierce opposition, certain souls stood unwavering in their conviction. These believers faced unimaginable cruelty from those who sought to extinguish the light of faith. Their torment was severe, their suffering immense—yet their tongues never ceased to proclaim the Oneness of Allah. Even when cast into the depths of despair, divine protection surrounded them, transforming their trial into an eternal testament of faith. Let us explore the journey of these remarkable souls.",
+    "title": "The Flame That Bared a Legacy",
+    "intro": "In the annals of resistance, there stands a figure whose very name became a warning unto the end of time. This person chose enmity over kinship, defiance over submission, and stood in opposition to a call of mercy. Listen carefully to the echoes of an ancient proclamation as we uncover the identity of this notorious soul.",
     "clues": [
-      "We were tested with severe punishment for refusing to abandon our faith in the One God",
-      "Our people could not break our resolve, no matter how creative their cruelty became",
-      "We were suspended from a well by day, yet divine assistance was always near",
-      "Our steadfastness amazed even those who witnessed our endurance",
-      "Many in Makkah sought to force us to recant, but we remained resolute",
-      "When all seemed lost, our freedom arrived through miraculous divine intervention"
+      "I was born into the same clan as the final messenger of Allah, yet I stood against them at every turn.",
+      "My name carried meaning—a name meaning 'father of flame,' a name that would foreshadow my eternal destiny.",
+      "I unleashed harm against the bearer of truth, and even my own household joined in this campaign of cruelty.",
+      "I used my wealth and influence to silence the call to Allah, believing that money could extinguish divine light.",
+      "Allah dedicated an entire chapter to me—a chapter so brief that it can be recited in seconds, yet its weight remains till the Day of Judgment.",
+      "My companion in the Hereafter walks behind me, bound by a rope of fiber around the neck, carrying the very thorns they used to spread."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Bilal al-Habashi",
-          "Ammar ibn Yasir",
-          "Miqdad ibn al-Aswad",
-          "Khabbab ibn al-Aratt",
-          "Salman al-Farsi"
+          "Abu Lahab",
+          "Abu Jahl",
+          "Waraqah ibn Nawfal",
+          "Umayyah ibn Khalaf",
+          "Uqbah ibn Abi Mu'ayt"
         ],
-        "answer": "Bilal al-Habashi"
+        "answer": "Abu Lahab"
       },
       "trial": {
-        "label": "Trial/Event",
+        "label": "Defining Confrontation",
         "options": [
-          "Battle against the Prophet",
-          "Persecution for refusing to worship idols",
-          "Test of faith regarding the fire incident",
-          "Trial of the split night journey",
-          "Test of the garden's destruction"
+          "Leading the opposition against the Prophet in Mecca",
+          "Migrating to Abyssinia to escape persecution",
+          "Building the Kaaba with Prophet Ibrahim",
+          "Accepting Islam on the deathbed",
+          "Forging the Treaty of Hudaybiyyah"
         ],
-        "answer": "Persecution for refusing to worship idols"
+        "answer": "Leading the opposition against the Prophet in Mecca"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The mountain of Uhud",
-          "The sacred precinct of the Kabah",
-          "The well of Abu Sufyan",
-          "The palace of the Quraysh",
-          "The city of Madinah"
+          "A wife who carried thorns and firewood",
+          "A staff that transformed into a serpent",
+          "A ring bearing the seal of Solomon",
+          "A golden calf worshipped by the people",
+          "A spring that gushed forth water"
         ],
-        "answer": "The well of Abu Sufyan"
+        "answer": "A wife who carried thorns and firewood"
       },
       "outcome": {
-        "label": "Outcome",
+        "label": "Final Reckoning",
         "options": [
-          "Victory in a great battle",
-          "Liberation through divine intervention",
-          "Martyrdom in the path of Allah",
-          "Acceptance into paradise directly",
-          "Migration to a blessed land"
+          "An entire surah revealed declaring total ruin",
+          "Became the leader of the Muslim community",
+          "Received forgiveness at the moment of death",
+          "Built a great mosque in Medina",
+          "Was resurrected among the righteous"
         ],
-        "answer": "Liberation through divine intervention"
+        "answer": "An entire surah revealed declaring total ruin"
       }
     },
-    "verseRef": "85:4-6",
-    "arabic": "",
-    "verse": "85:4-6"
+    "verseRef": "111:2",
+    "arabic": "مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ",
+    "verse": "His wealth will not avail him or that which he gained. (111:2)"
   },
   "generated": true,
   "model": "auto (chain)"
