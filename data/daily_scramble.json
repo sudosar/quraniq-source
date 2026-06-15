@@ -1,38 +1,29 @@
 {
-  "date": "2026-06-14",
+  "date": "2026-06-15",
   "puzzle": {
-    "verseRef": "58:11",
-    "reference": "Surah Al-Mujadilah (58:11)",
+    "verseRef": "17:1",
+    "reference": "Surah Al-Isra (17:1)",
     "segments": [
-      "wa-l-ladhina",
-      "ja't-hum",
-      "al-il'mu",
-      "yaqūlūna",
-      "āmanā",
-      "wa-yaqūlūna",
-      "namūduka"
+      "Glorified",
+      "is He who",
+      "took His servant",
+      "by night"
     ],
     "translations": [
-      "O you who believe O you who believe O you who believe When it is said",
-      "to you Make room in the assemblies then make room",
-      "Allah will make room Allah will make room for you And when",
-      "it is said Rise up then rise up Allah will raise",
-      "Allah will raise those who believe among you",
-      "and those who were given the knowledge (in) degrees",
-      "And Allah of what you do (is) All-Aware"
+      "Exalted (is) the One Who took His servant (by) night from",
+      "Al-Masjid Al-Haraam Al-Masjid Al-Haraam to Al-Masjid Al-Aqsa Al-Masjid Al-Aqsa",
+      "which We blessed its surroundings that We may show him of",
+      "Our Signs Indeed He He (is) the All-Hearer the All-Seer"
     ],
-    "hint": "A divine promise about knowledge expansion and a call to supplicate for increased understanding",
-    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا قِيلَ لَكُمْ تَفَسَّحُوا۟ فِى ٱلْمَجَـٰلِسِ فَٱفْسَحُوا۟ يَفْسَحِ ٱللَّهُ لَكُمْ ۖ وَإِذَا قِيلَ ٱنشُزُوا۟ فَٱنشُزُوا۟ يَرْفَعِ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ مِنكُمْ وَٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ دَرَجَـٰتٍۢ ۚ وَٱللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌۭ",
+    "hint": "This verse describes the Prophet Muhammad's miraculous nighttime journey from the Sacred Mosque to the Farthest Mosque.",
+    "arabic": "سُبْحَـٰنَ ٱلَّذِىٓ أَسْرَىٰ بِعَبْدِهِۦ لَيْلًۭا مِّنَ ٱلْمَسْجِدِ ٱلْحَرَامِ إِلَى ٱلْمَسْجِدِ ٱلْأَقْصَا ٱلَّذِى بَـٰرَكْنَا حَوْلَهُۥ لِنُرِيَهُۥ مِنْ ءَايَـٰتِنَآ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
     "words": [
-      "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا قِيلَ",
-      "لَكُمْ تَفَسَّحُوا۟ فِى ٱلْمَجَـٰلِسِ فَٱفْسَحُوا۟",
-      "يَفْسَحِ ٱللَّهُ لَكُمْ ۖ وَإِذَا",
-      "قِيلَ ٱنشُزُوا۟ فَٱنشُزُوا۟ يَرْفَعِ",
-      "ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ مِنكُمْ",
-      "وَٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ دَرَجَـٰتٍۢ ۚ",
-      "وَٱللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌۭ"
+      "سُبْحَـٰنَ ٱلَّذِىٓ أَسْرَىٰ بِعَبْدِهِۦ لَيْلًۭا مِّنَ",
+      "ٱلْمَسْجِدِ ٱلْحَرَامِ إِلَى ٱلْمَسْجِدِ ٱلْأَقْصَا",
+      "ٱلَّذِى بَـٰرَكْنَا حَوْلَهُۥ لِنُرِيَهُۥ مِنْ",
+      "ءَايَـٰتِنَآ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ"
     ],
-    "verseEn": "O you who have believed, when you are told, \"Space yourselves\" in assemblies, then make space; Allāh will make space for you. And when you are told, \"Arise,\" then arise; Allāh will raise those who have believed among you and those who were given knowledge, by degrees. And Allāh is Aware of what you do."
+    "verseEn": "Exalted is He who took His Servant [i.e., Prophet Muḥammad (ﷺ)] by night from al-Masjid al-Ḥarām to al-Masjid al-Aqṣā, whose surroundings We have blessed, to show him of Our signs. Indeed, He is the Hearing, the Seeing."
   },
   "generated": true,
   "model": "auto (chain)"

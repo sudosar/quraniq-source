@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-14",
+  "date": "2026-06-15",
   "puzzle": {
-    "title": "The Flame That Bared a Legacy",
-    "intro": "In the annals of resistance, there stands a figure whose very name became a warning unto the end of time. This person chose enmity over kinship, defiance over submission, and stood in opposition to a call of mercy. Listen carefully to the echoes of an ancient proclamation as we uncover the identity of this notorious soul.",
+    "title": "The Dominion of Wind and Flame",
+    "intro": "Picture a dominion where the wind itself answered to a single ruler, where the voices of the smallest creatures carried weight, and where forces unseen to ordinary eyes were held in careful service. This figure inherited an extraordinary kingdom from a beloved predecessor, wielding power over the elements and the jinn. But great authority came with great tests — and a final moment would reveal something astonishing about the nature of life and death itself.",
     "clues": [
-      "I was born into the same clan as the final messenger of Allah, yet I stood against them at every turn.",
-      "My name carried meaning—a name meaning 'father of flame,' a name that would foreshadow my eternal destiny.",
-      "I unleashed harm against the bearer of truth, and even my own household joined in this campaign of cruelty.",
-      "I used my wealth and influence to silence the call to Allah, believing that money could extinguish divine light.",
-      "Allah dedicated an entire chapter to me—a chapter so brief that it can be recited in seconds, yet its weight remains till the Day of Judgment.",
-      "My companion in the Hereafter walks behind me, bound by a rope of fiber around the neck, carrying the very thorns they used to spread."
+      "I inherited a great kingdom from a beloved parent who was also a prophet and servant of Allah.",
+      "Allah gave me authority over the wind, sending it on errands of a month's journey in a single morning.",
+      "Even the smallest of creatures would speak of my approach, and I would pause to marvel at their awareness.",
+      "I commanded a vast army of jinn, humans, and birds, all arranged in orderly ranks before me.",
+      "A distant ruler came to test me with a difficult challenge, and I had that ruler's throne brought to my court before the visitor could even rise from a seat.",
+      "I remained standing, leaning on a staff, until a small creature of the earth gnawed it through — and only then did those around me realize I had passed."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Abu Lahab",
-          "Abu Jahl",
-          "Waraqah ibn Nawfal",
-          "Umayyah ibn Khalaf",
-          "Uqbah ibn Abi Mu'ayt"
+          "Prophet Sulayman (Solomon)",
+          "Prophet Dawud (David)",
+          "Prophet Isa (Jesus)",
+          "Prophet Muhammad ﷺ",
+          "Prophet Musa (Moses)"
         ],
-        "answer": "Abu Lahab"
+        "answer": "Prophet Sulayman (Solomon)"
       },
       "trial": {
-        "label": "Defining Confrontation",
+        "label": "Trial/Event",
         "options": [
-          "Leading the opposition against the Prophet in Mecca",
-          "Migrating to Abyssinia to escape persecution",
-          "Building the Kaaba with Prophet Ibrahim",
-          "Accepting Islam on the deathbed",
-          "Forging the Treaty of Hudaybiyyah"
+          "Bringing a distant queen's throne by supernatural means",
+          "Being lowered into a deep well as a child",
+          "Confronting a tyrant's magicians with miraculous signs",
+          "Speaking from the cradle to defend a mother's honor",
+          "Receiving the final revealed scripture on a holy mount"
         ],
-        "answer": "Leading the opposition against the Prophet in Mecca"
+        "answer": "Bringing a distant queen's throne by supernatural means"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A wife who carried thorns and firewood",
-          "A staff that transformed into a serpent",
-          "A ring bearing the seal of Solomon",
-          "A golden calf worshipped by the people",
-          "A spring that gushed forth water"
+          "A wooden staff gnawed through by a termite",
+          "A great ark built to ride out a worldwide flood",
+          "A rod that transformed into a serpent before a tyrant",
+          "A piece of cloth used to heal the blind",
+          "A sacred cave where a revelation was first received"
         ],
-        "answer": "A wife who carried thorns and firewood"
+        "answer": "A wooden staff gnawed through by a termite"
       },
       "outcome": {
-        "label": "Final Reckoning",
+        "label": "Outcome",
         "options": [
-          "An entire surah revealed declaring total ruin",
-          "Became the leader of the Muslim community",
-          "Received forgiveness at the moment of death",
-          "Built a great mosque in Medina",
-          "Was resurrected among the righteous"
+          "A noble visiting ruler embraced faith after witnessing signs",
+          "A great flood destroyed all but the faithful on an ark",
+          "A pharaoh and his army perished in the sea",
+          "A righteous companion was lifted to the heavens",
+          "A tyrant king and his city were overturned and destroyed"
         ],
-        "answer": "An entire surah revealed declaring total ruin"
+        "answer": "A noble visiting ruler embraced faith after witnessing signs"
       }
     },
-    "verseRef": "111:2",
-    "arabic": "مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ",
-    "verse": "His wealth will not avail him or that which he gained. (111:2)"
+    "verseRef": "21:81",
+    "arabic": "وَلِسُلَيْمَـٰنَ ٱلرِّيحَ عَاصِفَةًۭ تَجْرِى بِأَمْرِهِۦٓ إِلَى ٱلْأَرْضِ ٱلَّتِى بَـٰرَكْنَا فِيهَا ۚ وَكُنَّا بِكُلِّ شَىْءٍ عَـٰلِمِينَ",
+    "verse": "And to Solomon [We subjected] the wind, blowing forcefully, proceeding by his command toward the land which We had blessed. And We are ever, of all things, Knowing. (21:81)"
   },
   "generated": true,
   "model": "auto (chain)"
