@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-15",
+  "date": "2026-06-16",
   "puzzle": {
-    "word": "إيمان",
-    "display": "إِيمَان",
-    "hint": "The opposite of disbelief, this spiritual state combines faith, trust, and conviction in one's heart",
-    "verseRef": "9:124",
-    "arabicVerse": "وَإِذَا مَآ أُنزِلَتْ سُورَةٌۭ فَمِنْهُم مَّن يَقُولُ أَيُّكُمْ زَادَتْهُ هَـٰذِهِۦٓ إِيمَـٰنًۭا ۚ فَأَمَّا ٱلَّذِينَ ءَامَنُوا۟ فَزَادَتْهُمْ إِيمَـٰنًۭا وَهُمْ يَسْتَبْشِرُونَ",
-    "verse": "9:124 - And whenever a sūrah is revealed, there are among them [i.e., the hypocrites] those who say, \"Which of you has this increased in faith?\" As for those who believed, it has increased them in faith, while they are rejoicing."
+    "word": "صلاة",
+    "display": "صَلَاة",
+    "hint": "A daily ritual that is one of the five pillars of Islam.",
+    "verseRef": "70:23",
+    "arabicVerse": "ٱلَّذِينَ هُمْ عَلَىٰ صَلَاتِهِمْ دَآئِمُونَ",
+    "verse": "70:23 - Those who are constant in their prayer"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-15",
+  "date": "2026-06-16",
   "puzzle": {
-    "title": "The Dominion of Wind and Flame",
-    "intro": "Picture a dominion where the wind itself answered to a single ruler, where the voices of the smallest creatures carried weight, and where forces unseen to ordinary eyes were held in careful service. This figure inherited an extraordinary kingdom from a beloved predecessor, wielding power over the elements and the jinn. But great authority came with great tests — and a final moment would reveal something astonishing about the nature of life and death itself.",
+    "title": "The Voice That Called to Righteousness",
+    "intro": "In the ancient land of Midian, where trade flourished and caravans traveled through vast deserts, a prophet of Allah rose among the people who had strayed from the path of justice. This servant of Allah was sent with a divine mission that would test the faith of an entire community. Through trials of patience and perseverance, this soul stood firm in delivering a warning that would echo through history. Can you unravel the mystery of this steadfast messenger?",
     "clues": [
-      "I inherited a great kingdom from a beloved parent who was also a prophet and servant of Allah.",
-      "Allah gave me authority over the wind, sending it on errands of a month's journey in a single morning.",
-      "Even the smallest of creatures would speak of my approach, and I would pause to marvel at their awareness.",
-      "I commanded a vast army of jinn, humans, and birds, all arranged in orderly ranks before me.",
-      "A distant ruler came to test me with a difficult challenge, and I had that ruler's throne brought to my court before the visitor could even rise from a seat.",
-      "I remained standing, leaning on a staff, until a small creature of the earth gnawed it through — and only then did those around me realize I had passed."
+      "I was chosen by Allah to guide a people who had forgotten the principles of fairness and honesty in their dealings.",
+      "I delivered a message calling my community to worship none but Allah and to speak with truth in all matters.",
+      "I specifically warned against the corrupt practice of consuming wealth through unlawful means and emphasized the importance of just weights and measures.",
+      "My people responded to my warnings with mockery, threatening to expel me from their land if I continued my message.",
+      "I remained resolute in my mission despite their hostility, declaring that my reward is with Allah alone.",
+      "My people were seized by a devastating punishment while I was saved by the mercy of my Lord, as my mission was fulfilled."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Sulayman (Solomon)",
-          "Prophet Dawud (David)",
-          "Prophet Isa (Jesus)",
-          "Prophet Muhammad ﷺ",
-          "Prophet Musa (Moses)"
+          "Prophet Shu'aib",
+          "Prophet Hud",
+          "Prophet Salih",
+          "Prophet Lut",
+          "Prophet Muhammad ﷺ"
         ],
-        "answer": "Prophet Sulayman (Solomon)"
+        "answer": "Prophet Shu'aib"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Bringing a distant queen's throne by supernatural means",
-          "Being lowered into a deep well as a child",
-          "Confronting a tyrant's magicians with miraculous signs",
-          "Speaking from the cradle to defend a mother's honor",
-          "Receiving the final revealed scripture on a holy mount"
+          "Facing a people who rejected truth and threatened punishment for delivering Allah's message",
+          "Witnessing the Great Flood that destroyed the disbelievers of a nation",
+          "Receiving revelation while traveling through the valley of笃",
+          "The trial of faith when an oppressive ruler attempted to silence the call to monotheism",
+          "A nation商asking for rain during a severe drought after years of disobedience"
         ],
-        "answer": "Bringing a distant queen's throne by supernatural means"
+        "answer": "Facing a people who rejected truth and threatened punishment for delivering Allah's message"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A wooden staff gnawed through by a termite",
-          "A great ark built to ride out a worldwide flood",
-          "A rod that transformed into a serpent before a tyrant",
-          "A piece of cloth used to heal the blind",
-          "A sacred cave where a revelation was first received"
+          "The land of Midian, where my people conducted their trade and commerce",
+          "The deck of a great ship that saved the believers from a catastrophic flood",
+          "A cave in a rocky mountain where seven youths sought refuge from persecution",
+          "The sacred city of Jerusalem where I was taken for a nightly journey",
+          "A palace in Sheba where a great kingdom prepared to witness a divine sign"
         ],
-        "answer": "A wooden staff gnawed through by a termite"
+        "answer": "The land of Midian, where my people conducted their trade and commerce"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "A noble visiting ruler embraced faith after witnessing signs",
-          "A great flood destroyed all but the faithful on an ark",
-          "A pharaoh and his army perished in the sea",
-          "A righteous companion was lifted to the heavens",
-          "A tyrant king and his city were overturned and destroyed"
+          "My people were seized by a terrible punishment while I was saved, for I had fulfilled my duty to Allah",
+          "The disbelievers were turned into apes as they violated the sacred boundaries of Allah",
+          "My enemies embraced faith after witnessing a miraculous transformation",
+          "The land was blessed with abundant rain and prosperity after the people repented",
+          "I was martyred by my own people for refusing to abandon my mission"
         ],
-        "answer": "A noble visiting ruler embraced faith after witnessing signs"
+        "answer": "My people were seized by a terrible punishment while I was saved, for I had fulfilled my duty to Allah"
       }
     },
-    "verseRef": "21:81",
-    "arabic": "وَلِسُلَيْمَـٰنَ ٱلرِّيحَ عَاصِفَةًۭ تَجْرِى بِأَمْرِهِۦٓ إِلَى ٱلْأَرْضِ ٱلَّتِى بَـٰرَكْنَا فِيهَا ۚ وَكُنَّا بِكُلِّ شَىْءٍ عَـٰلِمِينَ",
-    "verse": "And to Solomon [We subjected] the wind, blowing forcefully, proceeding by his command toward the land which We had blessed. And We are ever, of all things, Knowing. (21:81)"
+    "verseRef": "26:177",
+    "arabic": "إِذْ قَالَ لَهُمْ شُعَيْبٌ أَلَا تَتَّقُونَ",
+    "verse": "When Shuʿayb said to them, \"Will you not fear Allāh? (26:177)"
   },
   "generated": true,
   "model": "auto (chain)"
