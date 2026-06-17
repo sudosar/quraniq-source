@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-16",
+  "date": "2026-06-17",
   "puzzle": {
-    "title": "The Voice That Called to Righteousness",
-    "intro": "In the ancient land of Midian, where trade flourished and caravans traveled through vast deserts, a prophet of Allah rose among the people who had strayed from the path of justice. This servant of Allah was sent with a divine mission that would test the faith of an entire community. Through trials of patience and perseverance, this soul stood firm in delivering a warning that would echo through history. Can you unravel the mystery of this steadfast messenger?",
+    "title": "The Echo from the Edge of the City",
+    "intro": "In a city that turned away from divine guidance, a solitary figure emerged from the outskirts, racing with a message of hope and warning. This forgotten soul would become an eternal symbol of steadfast faith.",
     "clues": [
-      "I was chosen by Allah to guide a people who had forgotten the principles of fairness and honesty in their dealings.",
-      "I delivered a message calling my community to worship none but Allah and to speak with truth in all matters.",
-      "I specifically warned against the corrupt practice of consuming wealth through unlawful means and emphasized the importance of just weights and measures.",
-      "My people responded to my warnings with mockery, threatening to expel me from their land if I continued my message.",
-      "I remained resolute in my mission despite their hostility, declaring that my reward is with Allah alone.",
-      "My people were seized by a devastating punishment while I was saved by the mercy of my Lord, as my mission was fulfilled."
+      "I witnessed messengers being sent to my city, but my people dismissed them as ordinary humans.",
+      "I believed in their message and felt the truth resonate within my being.",
+      "I called upon my people to obey the messengers who asked for no reward.",
+      "I ran from the farthest end of the city, urgently trying to make them see reason.",
+      "My people rose up against me, and I was slain, but I found eternal peace.",
+      "Allah said to me, 'Enter Paradise,' and I wished my people could witness the honor bestowed upon me."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Shu'aib",
-          "Prophet Hud",
-          "Prophet Salih",
-          "Prophet Lut",
-          "Prophet Muhammad ﷺ"
+          "The Believer of Ya-Sin",
+          "Uzair the Questioner",
+          "Al-Khidr the Guide",
+          "The Believer of Pharaoh’s Family",
+          "Namrud the Tyrant"
         ],
-        "answer": "Prophet Shu'aib"
+        "answer": "The Believer of Ya-Sin"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Facing a people who rejected truth and threatened punishment for delivering Allah's message",
-          "Witnessing the Great Flood that destroyed the disbelievers of a nation",
-          "Receiving revelation while traveling through the valley of笃",
-          "The trial of faith when an oppressive ruler attempted to silence the call to monotheism",
-          "A nation商asking for rain during a severe drought after years of disobedience"
+          "Confronting a disbelieving people who slew him",
+          "Being thrown into a blazing fire",
+          "Being swallowed by a great fish",
+          "Constructing a massive ark",
+          "Fleeing from a tyrant’s army"
         ],
-        "answer": "Facing a people who rejected truth and threatened punishment for delivering Allah's message"
+        "answer": "Confronting a disbelieving people who slew him"
       },
       "location": {
-        "label": "Key Element",
+        "label": "Key Location",
         "options": [
-          "The land of Midian, where my people conducted their trade and commerce",
-          "The deck of a great ship that saved the believers from a catastrophic flood",
-          "A cave in a rocky mountain where seven youths sought refuge from persecution",
-          "The sacred city of Jerusalem where I was taken for a nightly journey",
-          "A palace in Sheba where a great kingdom prepared to witness a divine sign"
+          "The farthest end of the city",
+          "The mountain of Tur",
+          "The Valley of Ants",
+          "The banks of the Nile",
+          "The cavern of the cave"
         ],
-        "answer": "The land of Midian, where my people conducted their trade and commerce"
+        "answer": "The farthest end of the city"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "My people were seized by a terrible punishment while I was saved, for I had fulfilled my duty to Allah",
-          "The disbelievers were turned into apes as they violated the sacred boundaries of Allah",
-          "My enemies embraced faith after witnessing a miraculous transformation",
-          "The land was blessed with abundant rain and prosperity after the people repented",
-          "I was martyred by my own people for refusing to abandon my mission"
+          "Martyrdom and immediate entry into Paradise",
+          "Escape and salvation",
+          "Ascension to the heavens",
+          "Drowning in the sea",
+          "Turning into stone"
         ],
-        "answer": "My people were seized by a terrible punishment while I was saved, for I had fulfilled my duty to Allah"
+        "answer": "Martyrdom and immediate entry into Paradise"
       }
     },
-    "verseRef": "26:177",
-    "arabic": "إِذْ قَالَ لَهُمْ شُعَيْبٌ أَلَا تَتَّقُونَ",
-    "verse": "When Shuʿayb said to them, \"Will you not fear Allāh? (26:177)"
+    "verseRef": "36:26",
+    "arabic": "قِيلَ ٱدْخُلِ ٱلْجَنَّةَ ۖ قَالَ يَـٰلَيْتَ قَوْمِى يَعْلَمُونَ",
+    "verse": "It was said, \"Enter Paradise.\" He said, \"I wish my people could know (36:26)"
   },
   "generated": true,
   "model": "auto (chain)"
