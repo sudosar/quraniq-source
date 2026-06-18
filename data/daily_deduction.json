@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-17",
+  "date": "2026-06-18",
   "puzzle": {
-    "title": "The Echo from the Edge of the City",
-    "intro": "In a city that turned away from divine guidance, a solitary figure emerged from the outskirts, racing with a message of hope and warning. This forgotten soul would become an eternal symbol of steadfast faith.",
+    "title": "The First to Seek Forgiveness",
+    "intro": "Step back to a time before the first sunrise, before any mortal walked the earth. A figure was fashioned from the humblest of materials, given a station above the angels, and placed in a sacred garden with a clear warning. Yet in a single moment, a choice was made — one that would echo through all of human history. Who is this figure?",
     "clues": [
-      "I witnessed messengers being sent to my city, but my people dismissed them as ordinary humans.",
-      "I believed in their message and felt the truth resonate within my being.",
-      "I called upon my people to obey the messengers who asked for no reward.",
-      "I ran from the farthest end of the city, urgently trying to make them see reason.",
-      "My people rose up against me, and I was slain, but I found eternal peace.",
-      "Allah said to me, 'Enter Paradise,' and I wished my people could witness the honor bestowed upon me."
+      "I was brought into being in a way unlike any other — fashioned from the dust of the earth and given a living soul by the hand of the Creator.",
+      "I was granted knowledge so profound that even the angels above marveled at it.",
+      "All of heaven was commanded to bow before me, and they all submitted — except one, who refused out of pride.",
+      "I was placed in a sacred garden, a place of eternal comfort and provision — but with one strict prohibition.",
+      "I forgot, I slipped, and I disobeyed — and I felt the weight of my error deeply.",
+      "I turned to my Lord with heartfelt words, and He accepted my repentance, for He is the Most Forgiving."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Believer of Ya-Sin",
-          "Uzair the Questioner",
-          "Al-Khidr the Guide",
-          "The Believer of Pharaoh’s Family",
-          "Namrud the Tyrant"
+          "Prophet Adam",
+          "Prophet Dawud",
+          "Prophet Muhammad",
+          "Iblis",
+          "Prophet Yaqub"
         ],
-        "answer": "The Believer of Ya-Sin"
+        "answer": "Prophet Adam"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Confronting a disbelieving people who slew him",
-          "Being thrown into a blazing fire",
-          "Being swallowed by a great fish",
-          "Constructing a massive ark",
-          "Fleeing from a tyrant’s army"
+          "The angels were commanded to prostrate",
+          "The Great Flood was sent",
+          "A great fire was made cool and safe",
+          "An arrogant ruler was drowned in the sea",
+          "An army of elephants was destroyed"
         ],
-        "answer": "Confronting a disbelieving people who slew him"
+        "answer": "The angels were commanded to prostrate"
       },
       "location": {
-        "label": "Key Location",
+        "label": "Key Element",
         "options": [
-          "The farthest end of the city",
-          "The mountain of Tur",
-          "The Valley of Ants",
-          "The banks of the Nile",
-          "The cavern of the cave"
+          "The Garden of Bliss",
+          "Mount Sinai",
+          "The Sacred Mosque",
+          "The Nile River",
+          "The Cave"
         ],
-        "answer": "The farthest end of the city"
+        "answer": "The Garden of Bliss"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Martyrdom and immediate entry into Paradise",
-          "Escape and salvation",
-          "Ascension to the heavens",
-          "Drowning in the sea",
-          "Turning into stone"
+          "Repentance was accepted by Allah",
+          "Drowned in the sea",
+          "Swallowed by a great fish",
+          "The nation was struck by a mighty blast",
+          "Burned by a scorching wind"
         ],
-        "answer": "Martyrdom and immediate entry into Paradise"
+        "answer": "Repentance was accepted by Allah"
       }
     },
-    "verseRef": "36:26",
-    "arabic": "قِيلَ ٱدْخُلِ ٱلْجَنَّةَ ۖ قَالَ يَـٰلَيْتَ قَوْمِى يَعْلَمُونَ",
-    "verse": "It was said, \"Enter Paradise.\" He said, \"I wish my people could know (36:26)"
+    "verseRef": "2:37",
+    "arabic": "فَتَلَقَّىٰٓ ءَادَمُ مِن رَّبِّهِۦ كَلِمَـٰتٍۢ فَتَابَ عَلَيْهِ ۚ إِنَّهُۥ هُوَ ٱلتَّوَّابُ ٱلرَّحِيمُ",
+    "verse": "Then Adam received from his Lord [some] words, and He accepted his repentance. Indeed, it is He who is the Accepting of Repentance, the Merciful. (2:37)"
   },
   "generated": true,
   "model": "auto (chain)"

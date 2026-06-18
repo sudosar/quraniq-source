@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-17",
+  "date": "2026-06-18",
   "puzzle": {
-    "word": "رحمة",
-    "display": "رَحْمَة",
-    "hint": "A divine attribute derived from the word for 'womb', often paired with forgiveness.",
-    "verseRef": "6:12",
-    "arabicVerse": "قُل لِّمَن مَّا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ قُل لِّلَّهِ ۚ كَتَبَ عَلَىٰ نَفْسِهِ ٱلرَّحْمَةَ ۚ لَيَجْمَعَنَّكُمْ إِلَىٰ يَوْمِ ٱلْقِيَـٰمَةِ لَا رَيْبَ فِيهِ ۚ ٱلَّذِينَ خَسِرُوٓا۟ أَنفُسَهُمْ فَهُمْ لَا يُؤْمِنُونَ",
-    "verse": "6:12 - Say, \"To whom belongs whatever is in the heavens and earth?\" Say, \"To Allāh.\" He has decreed upon Himself mercy. He will surely assemble you for the Day of Resurrection, about which there is no doubt. Those who will lose themselves [that Day] do not believe."
+    "word": "تقوى",
+    "display": "تَقْوَى",
+    "hint": "Inner shield; a key Islamic concept meaning God-consciousness and self-restraint from sin",
+    "verseRef": "22:32",
+    "arabicVerse": "ذَٰلِكَ وَمَن يُعَظِّمْ شَعَـٰٓئِرَ ٱللَّهِ فَإِنَّهَا مِن تَقْوَى ٱلْقُلُوبِ",
+    "verse": "22:32 - That [is so]. And whoever honors the symbols [i.e., rites] of Allāh - indeed, it is from the piety of hearts."
   },
   "generated": true,
   "model": "auto (chain)"

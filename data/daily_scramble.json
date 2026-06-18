@@ -1,32 +1,38 @@
 {
-  "date": "2026-06-17",
+  "date": "2026-06-18",
   "puzzle": {
-    "verseRef": "95:4",
-    "reference": "Surah At-Tin (95:4)",
+    "verseRef": "36:79",
+    "reference": "Surah Ya-Sin (36:79)",
     "segments": [
-      "لَقَدْ",
-      "خَلَقْنَا",
-      "الْإِنسَانَ",
-      "فِي",
-      "أَحْسَنِ تَقْوِيمٍ"
+      "قُلْ يُحْيِيهَا",
+      "الَّذِي",
+      "أَنشَأَكُمْ",
+      "أَوَّلَ مَرَّةٍ",
+      "وَلَيْسَ",
+      "بِأَعْجَزَ",
+      "مِنْهُ"
     ],
     "translations": [
-      "Indeed We created",
-      "man",
-      "in",
-      "(the) best",
-      "mould"
+      "Say He will give them life",
+      "Who produced them",
+      "(the) first time",
+      "and He",
+      "(is) of every",
+      "creation",
+      "All-Knower"
     ],
-    "hint": "This verse highlights the beautiful and flawless design with which Allah created humans.",
-    "arabic": "لَقَدْ خَلَقْنَا ٱلْإِنسَـٰنَ فِىٓ أَحْسَنِ تَقْوِيمٍۢ",
+    "hint": "A verse where Allah tells Prophet Muhammad (SAW) what to respond to those who doubt resurrection - about the One who created humanity initially being fully capable of reviving them.",
+    "arabic": "قُلْ يُحْيِيهَا ٱلَّذِىٓ أَنشَأَهَآ أَوَّلَ مَرَّةٍۢ ۖ وَهُوَ بِكُلِّ خَلْقٍ عَلِيمٌ",
     "words": [
-      "لَقَدْ خَلَقْنَا",
-      "ٱلْإِنسَـٰنَ",
-      "فِىٓ",
-      "أَحْسَنِ",
-      "تَقْوِيمٍۢ"
+      "قُلْ يُحْيِيهَا",
+      "ٱلَّذِىٓ أَنشَأَهَآ",
+      "أَوَّلَ مَرَّةٍۢ ۖ",
+      "وَهُوَ",
+      "بِكُلِّ",
+      "خَلْقٍ",
+      "عَلِيمٌ"
     ],
-    "verseEn": "We have certainly created man in the best of stature;"
+    "verseEn": "Say, \"He will give them life who produced them the first time; and He is, of all creation, Knowing.\""
   },
   "generated": true,
   "model": "auto (chain)"
