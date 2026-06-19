@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-18",
+  "date": "2026-06-19",
   "puzzle": {
-    "word": "تقوى",
-    "display": "تَقْوَى",
-    "hint": "Inner shield; a key Islamic concept meaning God-consciousness and self-restraint from sin",
-    "verseRef": "22:32",
-    "arabicVerse": "ذَٰلِكَ وَمَن يُعَظِّمْ شَعَـٰٓئِرَ ٱللَّهِ فَإِنَّهَا مِن تَقْوَى ٱلْقُلُوبِ",
-    "verse": "22:32 - That [is so]. And whoever honors the symbols [i.e., rites] of Allāh - indeed, it is from the piety of hearts."
+    "word": "حسنة",
+    "display": "حَسَنَة",
+    "hint": "A good deed",
+    "verseRef": "4:85",
+    "arabicVerse": "مَّن يَشْفَعْ شَفَـٰعَةً حَسَنَةًۭ يَكُن لَّهُۥ نَصِيبٌۭ مِّنْهَا ۖ وَمَن يَشْفَعْ شَفَـٰعَةًۭ سَيِّئَةًۭ يَكُن لَّهُۥ كِفْلٌۭ مِّنْهَا ۗ وَكَانَ ٱللَّهُ عَلَىٰ كُلِّ شَىْءٍۢ مُّقِيتًۭا",
+    "verse": "4:85 - Whoever intercedes for a good cause will have a share [i.e., reward] therefrom; and whoever intercedes for an evil cause will have a portion [i.e., burden] therefrom. And ever is Allāh, over all things, a Keeper."
   },
   "generated": true,
   "model": "auto (chain)"

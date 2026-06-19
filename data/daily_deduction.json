@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-18",
+  "date": "2026-06-19",
   "puzzle": {
-    "title": "The First to Seek Forgiveness",
-    "intro": "Step back to a time before the first sunrise, before any mortal walked the earth. A figure was fashioned from the humblest of materials, given a station above the angels, and placed in a sacred garden with a clear warning. Yet in a single moment, a choice was made — one that would echo through all of human history. Who is this figure?",
+    "title": "The Persistent Soul's Trial",
+    "intro": "A soul stands at a moment of divine testing, seeking guidance with humble persistence. The One who knows all turns this seeker away, only to reveal later that this was a trial of the heart. Through this mysterious exchange, a lesson about divine wisdom unfolds before those who reflect. Can you identify this figure from the Quranic narrative?",
     "clues": [
-      "I was brought into being in a way unlike any other — fashioned from the dust of the earth and given a living soul by the hand of the Creator.",
-      "I was granted knowledge so profound that even the angels above marveled at it.",
-      "All of heaven was commanded to bow before me, and they all submitted — except one, who refused out of pride.",
-      "I was placed in a sacred garden, a place of eternal comfort and provision — but with one strict prohibition.",
-      "I forgot, I slipped, and I disobeyed — and I felt the weight of my error deeply.",
-      "I turned to my Lord with heartfelt words, and He accepted my repentance, for He is the Most Forgiving."
+      "I sought knowledge and guidance from the beloved messenger of Allah",
+      "I came seeking truth, calling upon the Prophet with earnest desire",
+      "I was rebuked and turned away, for Allah's wisdom had other plans for that moment",
+      "Yet I did not despair—instead, I pressed forward in my seeking",
+      "The One who knows all declared this was a trial of the heart and a warning",
+      "I was among those about whom the Quran reveals: 'He frowned and turned away, because there came to him the blind man'"
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Adam",
-          "Prophet Dawud",
-          "Prophet Muhammad",
-          "Iblis",
-          "Prophet Yaqub"
+          "The Hypocrite Seeking Doubt",
+          "The Blind Seeker of Truth",
+          "The Idol-Worshipper of Makkah",
+          "The Unbeliever Mocking the Prophet",
+          "The Traveler from Yemen"
         ],
-        "answer": "Prophet Adam"
+        "answer": "The Blind Seeker of Truth"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "The angels were commanded to prostrate",
-          "The Great Flood was sent",
-          "A great fire was made cool and safe",
-          "An arrogant ruler was drowned in the sea",
-          "An army of elephants was destroyed"
+          "Being rebuked by the Prophet Muhammad during prayer",
+          "Being tested with drought and famine in Makkah",
+          "Being turned away at the gates of paradise",
+          "Being rejected by one's own people for faith",
+          "Being tested with wealth and children"
         ],
-        "answer": "The angels were commanded to prostrate"
+        "answer": "Being rebuked by the Prophet Muhammad during prayer"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Garden of Bliss",
-          "Mount Sinai",
-          "The Sacred Mosque",
-          "The Nile River",
-          "The Cave"
+          "Inside the Kaaba during pilgrimage season",
+          "In the presence of the Prophet during recitation",
+          "Atop Mount Safa during morning hours",
+          "In the marketplace of Makkah surrounded by disbelievers",
+          "Near the well of Zamzam during Hajj"
         ],
-        "answer": "The Garden of Bliss"
+        "answer": "In the presence of the Prophet during recitation"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Repentance was accepted by Allah",
-          "Drowned in the sea",
-          "Swallowed by a great fish",
-          "The nation was struck by a mighty blast",
-          "Burned by a scorching wind"
+          "The seeker was martyred by Quraysh for faith",
+          "The incident was recorded as a trial and lesson for the Ummah",
+          "The seeker became a companion and leader",
+          "The seeker's wealth was multiplied tenfold",
+          "The seeker returned to disbelief"
         ],
-        "answer": "Repentance was accepted by Allah"
+        "answer": "The incident was recorded as a trial and lesson for the Ummah"
       }
     },
-    "verseRef": "2:37",
-    "arabic": "فَتَلَقَّىٰٓ ءَادَمُ مِن رَّبِّهِۦ كَلِمَـٰتٍۢ فَتَابَ عَلَيْهِ ۚ إِنَّهُۥ هُوَ ٱلتَّوَّابُ ٱلرَّحِيمُ",
-    "verse": "Then Adam received from his Lord [some] words, and He accepted his repentance. Indeed, it is He who is the Accepting of Repentance, the Merciful. (2:37)"
+    "verseRef": "80:1-2",
+    "arabic": "",
+    "verse": "80:1-2"
   },
   "generated": true,
   "model": "auto (chain)"

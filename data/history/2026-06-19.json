@@ -1,6 +1,5 @@
 {
-  "date": "2026-06-19",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَفْعَالُ التَّوَاصُلِ",
@@ -144,6 +143,98 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "حسنة",
+    "display": "حَسَنَة",
+    "hint": "A good deed",
+    "verseRef": "4:85",
+    "arabicVerse": "مَّن يَشْفَعْ شَفَـٰعَةً حَسَنَةًۭ يَكُن لَّهُۥ نَصِيبٌۭ مِّنْهَا ۖ وَمَن يَشْفَعْ شَفَـٰعَةًۭ سَيِّئَةًۭ يَكُن لَّهُۥ كِفْلٌۭ مِّنْهَا ۗ وَكَانَ ٱللَّهُ عَلَىٰ كُلِّ شَىْءٍۢ مُّقِيتًۭا",
+    "verse": "4:85 - Whoever intercedes for a good cause will have a share [i.e., reward] therefrom; and whoever intercedes for an evil cause will have a portion [i.e., burden] therefrom. And ever is Allāh, over all things, a Keeper."
+  },
+  "deduction": {
+    "title": "The Persistent Soul's Trial",
+    "intro": "A soul stands at a moment of divine testing, seeking guidance with humble persistence. The One who knows all turns this seeker away, only to reveal later that this was a trial of the heart. Through this mysterious exchange, a lesson about divine wisdom unfolds before those who reflect. Can you identify this figure from the Quranic narrative?",
+    "clues": [
+      "I sought knowledge and guidance from the beloved messenger of Allah",
+      "I came seeking truth, calling upon the Prophet with earnest desire",
+      "I was rebuked and turned away, for Allah's wisdom had other plans for that moment",
+      "Yet I did not despair—instead, I pressed forward in my seeking",
+      "The One who knows all declared this was a trial of the heart and a warning",
+      "I was among those about whom the Quran reveals: 'He frowned and turned away, because there came to him the blind man'"
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "The Hypocrite Seeking Doubt",
+          "The Blind Seeker of Truth",
+          "The Idol-Worshipper of Makkah",
+          "The Unbeliever Mocking the Prophet",
+          "The Traveler from Yemen"
+        ],
+        "answer": "The Blind Seeker of Truth"
+      },
+      "trial": {
+        "label": "Trial/Event",
+        "options": [
+          "Being rebuked by the Prophet Muhammad during prayer",
+          "Being tested with drought and famine in Makkah",
+          "Being turned away at the gates of paradise",
+          "Being rejected by one's own people for faith",
+          "Being tested with wealth and children"
+        ],
+        "answer": "Being rebuked by the Prophet Muhammad during prayer"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "Inside the Kaaba during pilgrimage season",
+          "In the presence of the Prophet during recitation",
+          "Atop Mount Safa during morning hours",
+          "In the marketplace of Makkah surrounded by disbelievers",
+          "Near the well of Zamzam during Hajj"
+        ],
+        "answer": "In the presence of the Prophet during recitation"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "The seeker was martyred by Quraysh for faith",
+          "The incident was recorded as a trial and lesson for the Ummah",
+          "The seeker became a companion and leader",
+          "The seeker's wealth was multiplied tenfold",
+          "The seeker returned to disbelief"
+        ],
+        "answer": "The incident was recorded as a trial and lesson for the Ummah"
+      }
+    },
+    "verseRef": "80:1-2",
+    "arabic": "",
+    "verse": "80:1-2"
+  },
+  "scramble": {
+    "verseRef": "7:56",
+    "reference": "Surah Al-A'raf (7:56)",
+    "segments": [
+      "Do not make corruption",
+      "in the land",
+      "after its reform",
+      "and call upon Him"
+    ],
+    "translations": [
+      "And (do) not cause corruption in the earth",
+      "after its reformation And call Him (in) fear",
+      "and hope Indeed (the) Mercy (of) Allah",
+      "(is) near for the good-doers"
+    ],
+    "hint": "A guidance verse about maintaining moral order and sincere worship to Allah",
+    "arabic": "وَلَا تُفْسِدُوا۟ فِى ٱلْأَرْضِ بَعْدَ إِصْلَـٰحِهَا وَٱدْعُوهُ خَوْفًۭا وَطَمَعًا ۚ إِنَّ رَحْمَتَ ٱللَّهِ قَرِيبٌۭ مِّنَ ٱلْمُحْسِنِينَ",
+    "words": [
+      "وَلَا تُفْسِدُوا۟ فِى ٱلْأَرْضِ",
+      "بَعْدَ إِصْلَـٰحِهَا وَٱدْعُوهُ خَوْفًۭا",
+      "وَطَمَعًا ۚ إِنَّ رَحْمَتَ ٱللَّهِ",
+      "قَرِيبٌۭ مِّنَ ٱلْمُحْسِنِينَ"
+    ],
+    "verseEn": "And cause not corruption upon the earth after its reformation. And invoke Him in fear and aspiration. Indeed, the mercy of Allāh is near to the doers of good."
+  }
 }

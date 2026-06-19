@@ -1,38 +1,29 @@
 {
-  "date": "2026-06-18",
+  "date": "2026-06-19",
   "puzzle": {
-    "verseRef": "36:79",
-    "reference": "Surah Ya-Sin (36:79)",
+    "verseRef": "7:56",
+    "reference": "Surah Al-A'raf (7:56)",
     "segments": [
-      "قُلْ يُحْيِيهَا",
-      "الَّذِي",
-      "أَنشَأَكُمْ",
-      "أَوَّلَ مَرَّةٍ",
-      "وَلَيْسَ",
-      "بِأَعْجَزَ",
-      "مِنْهُ"
+      "Do not make corruption",
+      "in the land",
+      "after its reform",
+      "and call upon Him"
     ],
     "translations": [
-      "Say He will give them life",
-      "Who produced them",
-      "(the) first time",
-      "and He",
-      "(is) of every",
-      "creation",
-      "All-Knower"
+      "And (do) not cause corruption in the earth",
+      "after its reformation And call Him (in) fear",
+      "and hope Indeed (the) Mercy (of) Allah",
+      "(is) near for the good-doers"
     ],
-    "hint": "A verse where Allah tells Prophet Muhammad (SAW) what to respond to those who doubt resurrection - about the One who created humanity initially being fully capable of reviving them.",
-    "arabic": "قُلْ يُحْيِيهَا ٱلَّذِىٓ أَنشَأَهَآ أَوَّلَ مَرَّةٍۢ ۖ وَهُوَ بِكُلِّ خَلْقٍ عَلِيمٌ",
+    "hint": "A guidance verse about maintaining moral order and sincere worship to Allah",
+    "arabic": "وَلَا تُفْسِدُوا۟ فِى ٱلْأَرْضِ بَعْدَ إِصْلَـٰحِهَا وَٱدْعُوهُ خَوْفًۭا وَطَمَعًا ۚ إِنَّ رَحْمَتَ ٱللَّهِ قَرِيبٌۭ مِّنَ ٱلْمُحْسِنِينَ",
     "words": [
-      "قُلْ يُحْيِيهَا",
-      "ٱلَّذِىٓ أَنشَأَهَآ",
-      "أَوَّلَ مَرَّةٍۢ ۖ",
-      "وَهُوَ",
-      "بِكُلِّ",
-      "خَلْقٍ",
-      "عَلِيمٌ"
+      "وَلَا تُفْسِدُوا۟ فِى ٱلْأَرْضِ",
+      "بَعْدَ إِصْلَـٰحِهَا وَٱدْعُوهُ خَوْفًۭا",
+      "وَطَمَعًا ۚ إِنَّ رَحْمَتَ ٱللَّهِ",
+      "قَرِيبٌۭ مِّنَ ٱلْمُحْسِنِينَ"
     ],
-    "verseEn": "Say, \"He will give them life who produced them the first time; and He is, of all creation, Knowing.\""
+    "verseEn": "And cause not corruption upon the earth after its reformation. And invoke Him in fear and aspiration. Indeed, the mercy of Allāh is near to the doers of good."
   },
   "generated": true,
   "model": "auto (chain)"
