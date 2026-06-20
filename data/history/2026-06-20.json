@@ -1,6 +1,5 @@
 {
-  "date": "2026-06-20",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَعْدَاءُ الْحَقِّ",
@@ -144,6 +143,98 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "ذكر",
+    "display": "ذِكْر",
+    "hint": "A spiritual practice said to bring peace to the heart of believers",
+    "verseRef": "13:28",
+    "arabicVerse": "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ ۗ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+    "verse": "13:28 - Those who have believed and whose hearts are assured by the remembrance of Allāh. Unquestionably, by the remembrance of Allāh hearts are assured.\""
+  },
+  "deduction": {
+    "title": "The Outcast from the Garden",
+    "intro": "A mysterious being once dwelled in the highest ranks of creation, closer to the Divine than many could fathom. Yet pride took root, and a single act of defiance altered the course of existence. Now, this being wanders as a sworn enemy, whispering and scheming until a promised day arrives. Can you uncover the identity of this fallen one?",
+    "clues": [
+      "I was once among those closest to the Divine presence, elevated above much of creation.",
+      "I was created from a scorching element, not from earth or clay.",
+      "When commanded to bow before a new creation, I refused — driven by what I believed was my own superiority.",
+      "I was cast out and cursed, but ultimately granted a reprieve until a known, appointed time.",
+      "I vowed to misguide as many as I could, approaching the offspring of Adam from every direction.",
+      "I am the open, declared enemy of all of humanity, ever plotting and whispering until the appointed end."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Iblis",
+          "Harut",
+          "Samiri",
+          "Prophet Ilyas",
+          "Abu Lahab"
+        ],
+        "answer": "Iblis"
+      },
+      "trial": {
+        "label": "Trial / Event",
+        "options": [
+          "Refusal to prostrate before Adam",
+          "Building a golden calf for the people to worship",
+          "Teaching sorcery to the people of Babylon",
+          "Splitting the sea with a staff",
+          "Carrying the Queen of Sheba's throne in an instant"
+        ],
+        "answer": "Refusal to prostrate before Adam"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The Garden of Eden",
+          "The mountain of Tur",
+          "The well of Rass",
+          "The palace of Pharaoh",
+          "The cave of the sleepers"
+        ],
+        "answer": "The Garden of Eden"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "Respite granted until the Day of Judgment",
+          "Drowned in the sea with an army",
+          "Buried alive under a collapsing palace",
+          "Transformed into an ape or monkey",
+          "Raised to a higher rank"
+        ],
+        "answer": "Respite granted until the Day of Judgment"
+      }
+    },
+    "verseRef": "15:39",
+    "arabic": "قَالَ رَبِّ بِمَآ أَغْوَيْتَنِى لَأُزَيِّنَنَّ لَهُمْ فِى ٱلْأَرْضِ وَلَأُغْوِيَنَّهُمْ أَجْمَعِينَ",
+    "verse": "[Iblees] said, \"My Lord, because You have put me in error, I will surely make [disobedience] attractive to them [i.e., mankind] on earth, and I will mislead them all (15:39)"
+  },
+  "scramble": {
+    "verseRef": "49:13",
+    "reference": "Surah Al-Hujurat (49:13)",
+    "segments": [
+      "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُمْ",
+      "مِنْ ذَكَرٍ وَأُنْثَى وَجَعَلْنَاكُمْ",
+      "شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا",
+      "إِنَّ أَكْرَمَكُمْ عِنْدَ اللَّهِ أَتْقَاكُمْ"
+    ],
+    "translations": [
+      "O mankind O mankind Indeed, We created you from",
+      "a male and a female and We made you nations and tribes",
+      "that you may know one another Indeed (the) most noble of you near Allah",
+      "(is the) most righteous of you Indeed Allah (is) All-Knower All-Aware"
+    ],
+    "hint": "A powerful verse about human equality and the true measure of nobility being piety, not lineage or status",
+    "arabic": "يَـٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقْنَـٰكُم مِّن ذَكَرٍۢ وَأُنثَىٰ وَجَعَلْنَـٰكُمْ شُعُوبًۭا وَقَبَآئِلَ لِتَعَارَفُوٓا۟ ۚ إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌۭ",
+    "words": [
+      "يَـٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقْنَـٰكُم مِّن",
+      "ذَكَرٍۢ وَأُنثَىٰ وَجَعَلْنَـٰكُمْ شُعُوبًۭا وَقَبَآئِلَ",
+      "لِتَعَارَفُوٓا۟ ۚ إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ",
+      "أَتْقَىٰكُمْ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌۭ"
+    ],
+    "verseEn": "O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allāh is the most righteous of you. Indeed, Allāh is Knowing and Aware."
+  }
 }

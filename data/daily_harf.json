@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-19",
+  "date": "2026-06-20",
   "puzzle": {
-    "word": "حسنة",
-    "display": "حَسَنَة",
-    "hint": "A good deed",
-    "verseRef": "4:85",
-    "arabicVerse": "مَّن يَشْفَعْ شَفَـٰعَةً حَسَنَةًۭ يَكُن لَّهُۥ نَصِيبٌۭ مِّنْهَا ۖ وَمَن يَشْفَعْ شَفَـٰعَةًۭ سَيِّئَةًۭ يَكُن لَّهُۥ كِفْلٌۭ مِّنْهَا ۗ وَكَانَ ٱللَّهُ عَلَىٰ كُلِّ شَىْءٍۢ مُّقِيتًۭا",
-    "verse": "4:85 - Whoever intercedes for a good cause will have a share [i.e., reward] therefrom; and whoever intercedes for an evil cause will have a portion [i.e., burden] therefrom. And ever is Allāh, over all things, a Keeper."
+    "word": "ذكر",
+    "display": "ذِكْر",
+    "hint": "A spiritual practice said to bring peace to the heart of believers",
+    "verseRef": "13:28",
+    "arabicVerse": "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ ۗ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+    "verse": "13:28 - Those who have believed and whose hearts are assured by the remembrance of Allāh. Unquestionably, by the remembrance of Allāh hearts are assured.\""
   },
   "generated": true,
   "model": "auto (chain)"

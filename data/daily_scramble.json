@@ -1,29 +1,29 @@
 {
-  "date": "2026-06-19",
+  "date": "2026-06-20",
   "puzzle": {
-    "verseRef": "7:56",
-    "reference": "Surah Al-A'raf (7:56)",
+    "verseRef": "49:13",
+    "reference": "Surah Al-Hujurat (49:13)",
     "segments": [
-      "Do not make corruption",
-      "in the land",
-      "after its reform",
-      "and call upon Him"
+      "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُمْ",
+      "مِنْ ذَكَرٍ وَأُنْثَى وَجَعَلْنَاكُمْ",
+      "شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا",
+      "إِنَّ أَكْرَمَكُمْ عِنْدَ اللَّهِ أَتْقَاكُمْ"
     ],
     "translations": [
-      "And (do) not cause corruption in the earth",
-      "after its reformation And call Him (in) fear",
-      "and hope Indeed (the) Mercy (of) Allah",
-      "(is) near for the good-doers"
+      "O mankind O mankind Indeed, We created you from",
+      "a male and a female and We made you nations and tribes",
+      "that you may know one another Indeed (the) most noble of you near Allah",
+      "(is the) most righteous of you Indeed Allah (is) All-Knower All-Aware"
     ],
-    "hint": "A guidance verse about maintaining moral order and sincere worship to Allah",
-    "arabic": "وَلَا تُفْسِدُوا۟ فِى ٱلْأَرْضِ بَعْدَ إِصْلَـٰحِهَا وَٱدْعُوهُ خَوْفًۭا وَطَمَعًا ۚ إِنَّ رَحْمَتَ ٱللَّهِ قَرِيبٌۭ مِّنَ ٱلْمُحْسِنِينَ",
+    "hint": "A powerful verse about human equality and the true measure of nobility being piety, not lineage or status",
+    "arabic": "يَـٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقْنَـٰكُم مِّن ذَكَرٍۢ وَأُنثَىٰ وَجَعَلْنَـٰكُمْ شُعُوبًۭا وَقَبَآئِلَ لِتَعَارَفُوٓا۟ ۚ إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌۭ",
     "words": [
-      "وَلَا تُفْسِدُوا۟ فِى ٱلْأَرْضِ",
-      "بَعْدَ إِصْلَـٰحِهَا وَٱدْعُوهُ خَوْفًۭا",
-      "وَطَمَعًا ۚ إِنَّ رَحْمَتَ ٱللَّهِ",
-      "قَرِيبٌۭ مِّنَ ٱلْمُحْسِنِينَ"
+      "يَـٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقْنَـٰكُم مِّن",
+      "ذَكَرٍۢ وَأُنثَىٰ وَجَعَلْنَـٰكُمْ شُعُوبًۭا وَقَبَآئِلَ",
+      "لِتَعَارَفُوٓا۟ ۚ إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ",
+      "أَتْقَىٰكُمْ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌۭ"
     ],
-    "verseEn": "And cause not corruption upon the earth after its reformation. And invoke Him in fear and aspiration. Indeed, the mercy of Allāh is near to the doers of good."
+    "verseEn": "O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allāh is the most righteous of you. Indeed, Allāh is Knowing and Aware."
   },
   "generated": true,
   "model": "auto (chain)"
