@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-20",
+  "date": "2026-06-21",
   "puzzle": {
-    "word": "ذكر",
-    "display": "ذِكْر",
-    "hint": "A spiritual practice said to bring peace to the heart of believers",
-    "verseRef": "13:28",
-    "arabicVerse": "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ ۗ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
-    "verse": "13:28 - Those who have believed and whose hearts are assured by the remembrance of Allāh. Unquestionably, by the remembrance of Allāh hearts are assured.\""
+    "word": "حافظ",
+    "display": "حَافِظٌ",
+    "hint": "One who preserves, protects, or keeps watch - a caretaker or guardian",
+    "verseRef": "12:12",
+    "arabicVerse": "أَرْسِلْهُ مَعَنَا غَدًۭا يَرْتَعْ وَيَلْعَبْ وَإِنَّا لَهُۥ لَحَـٰفِظُونَ",
+    "verse": "12:12 - Send him with us tomorrow that he may eat well and play. And indeed, we will be his guardians.\""
   },
   "generated": true,
   "model": "auto (chain)"

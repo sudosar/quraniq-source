@@ -1,29 +1,29 @@
 {
-  "date": "2026-06-20",
+  "date": "2026-06-21",
   "puzzle": {
-    "verseRef": "49:13",
-    "reference": "Surah Al-Hujurat (49:13)",
+    "verseRef": "6:147",
+    "reference": "Surah Al-An'am (6:147)",
     "segments": [
-      "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُمْ",
-      "مِنْ ذَكَرٍ وَأُنْثَى وَجَعَلْنَاكُمْ",
-      "شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا",
-      "إِنَّ أَكْرَمَكُمْ عِنْدَ اللَّهِ أَتْقَاكُمْ"
+      "وَإِنْ تَكْذِّبُوا",
+      "فَإِنَّ اللَّهَ",
+      "غَنِيٌّ عَنِ",
+      "الْعَالَمِينَ"
     ],
     "translations": [
-      "O mankind O mankind Indeed, We created you from",
-      "a male and a female and We made you nations and tribes",
-      "that you may know one another Indeed (the) most noble of you near Allah",
-      "(is the) most righteous of you Indeed Allah (is) All-Knower All-Aware"
+      "But if they deny you then say Your Lord",
+      "(is the) Possessor (of) Mercy Vast",
+      "but not will be turned back His wrath",
+      "from the people (who are) criminals"
     ],
-    "hint": "A powerful verse about human equality and the true measure of nobility being piety, not lineage or status",
-    "arabic": "يَـٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقْنَـٰكُم مِّن ذَكَرٍۢ وَأُنثَىٰ وَجَعَلْنَـٰكُمْ شُعُوبًۭا وَقَبَآئِلَ لِتَعَارَفُوٓا۟ ۚ إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌۭ",
+    "hint": "A verse about Allah's self-sufficiency and independence from His creation",
+    "arabic": "فَإِن كَذَّبُوكَ فَقُل رَّبُّكُمْ ذُو رَحْمَةٍۢ وَٰسِعَةٍۢ وَلَا يُرَدُّ بَأْسُهُۥ عَنِ ٱلْقَوْمِ ٱلْمُجْرِمِينَ",
     "words": [
-      "يَـٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقْنَـٰكُم مِّن",
-      "ذَكَرٍۢ وَأُنثَىٰ وَجَعَلْنَـٰكُمْ شُعُوبًۭا وَقَبَآئِلَ",
-      "لِتَعَارَفُوٓا۟ ۚ إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ",
-      "أَتْقَىٰكُمْ ۚ إِنَّ ٱللَّهَ عَلِيمٌ خَبِيرٌۭ"
+      "فَإِن كَذَّبُوكَ فَقُل رَّبُّكُمْ",
+      "ذُو رَحْمَةٍۢ وَٰسِعَةٍۢ",
+      "وَلَا يُرَدُّ بَأْسُهُۥ",
+      "عَنِ ٱلْقَوْمِ ٱلْمُجْرِمِينَ"
     ],
-    "verseEn": "O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allāh is the most righteous of you. Indeed, Allāh is Knowing and Aware."
+    "verseEn": "So if they deny you, [O Muḥammad], say, \"Your Lord is the possessor of vast mercy; but His punishment cannot be repelled from the people who are criminals.\""
   },
   "generated": true,
   "model": "auto (chain)"
