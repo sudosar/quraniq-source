@@ -1,29 +1,29 @@
 {
-  "date": "2026-06-21",
+  "date": "2026-06-22",
   "puzzle": {
-    "verseRef": "6:147",
-    "reference": "Surah Al-An'am (6:147)",
+    "verseRef": "11:69",
+    "reference": "Surah Hud (11:69)",
     "segments": [
-      "وَإِنْ تَكْذِّبُوا",
-      "فَإِنَّ اللَّهَ",
-      "غَنِيٌّ عَنِ",
-      "الْعَالَمِينَ"
+      "Indeed Allah and His angels",
+      "bless the Prophet",
+      "O you who believe",
+      "invoke blessings upon him"
     ],
     "translations": [
-      "But if they deny you then say Your Lord",
-      "(is the) Possessor (of) Mercy Vast",
-      "but not will be turned back His wrath",
-      "from the people (who are) criminals"
+      "And certainly came Our messengers (to) Ibrahim",
+      "with glad tidings they said Peace He said",
+      "Peace and not he delayed and not he delayed to",
+      "bring a calf roasted"
     ],
-    "hint": "A verse about Allah's self-sufficiency and independence from His creation",
-    "arabic": "فَإِن كَذَّبُوكَ فَقُل رَّبُّكُمْ ذُو رَحْمَةٍۢ وَٰسِعَةٍۢ وَلَا يُرَدُّ بَأْسُهُۥ عَنِ ٱلْقَوْمِ ٱلْمُجْرِمِينَ",
+    "hint": "This verse connects Prophet Ibrahim's prayer to his descendants in Makkah, asking Allah to send blessings upon Prophet Muhammad and the believers - it's why we send blessings on the Prophet after each prayer.",
+    "arabic": "وَلَقَدْ جَآءَتْ رُسُلُنَآ إِبْرَٰهِيمَ بِٱلْبُشْرَىٰ قَالُوا۟ سَلَـٰمًۭا ۖ قَالَ سَلَـٰمٌۭ ۖ فَمَا لَبِثَ أَن جَآءَ بِعِجْلٍ حَنِيذٍۢ",
     "words": [
-      "فَإِن كَذَّبُوكَ فَقُل رَّبُّكُمْ",
-      "ذُو رَحْمَةٍۢ وَٰسِعَةٍۢ",
-      "وَلَا يُرَدُّ بَأْسُهُۥ",
-      "عَنِ ٱلْقَوْمِ ٱلْمُجْرِمِينَ"
+      "وَلَقَدْ جَآءَتْ رُسُلُنَآ إِبْرَٰهِيمَ",
+      "بِٱلْبُشْرَىٰ قَالُوا۟ سَلَـٰمًۭا ۖ قَالَ",
+      "سَلَـٰمٌۭ ۖ فَمَا لَبِثَ أَن",
+      "جَآءَ بِعِجْلٍ حَنِيذٍۢ"
     ],
-    "verseEn": "So if they deny you, [O Muḥammad], say, \"Your Lord is the possessor of vast mercy; but His punishment cannot be repelled from the people who are criminals.\""
+    "verseEn": "And certainly did Our messengers [i.e., angels] come to Abraham with good tidings; they said, \"Peace.\" He said, \"Peace,\" and did not delay in bringing [them] a roasted calf."
   },
   "generated": true,
   "model": "auto (chain)"

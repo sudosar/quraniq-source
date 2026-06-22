@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-21",
+  "date": "2026-06-22",
   "puzzle": {
-    "word": "حافظ",
-    "display": "حَافِظٌ",
-    "hint": "One who preserves, protects, or keeps watch - a caretaker or guardian",
-    "verseRef": "12:12",
-    "arabicVerse": "أَرْسِلْهُ مَعَنَا غَدًۭا يَرْتَعْ وَيَلْعَبْ وَإِنَّا لَهُۥ لَحَـٰفِظُونَ",
-    "verse": "12:12 - Send him with us tomorrow that he may eat well and play. And indeed, we will be his guardians.\""
+    "word": "نصر",
+    "display": "نَصْر",
+    "hint": "Divine support and victory promised to believers who stand firm",
+    "verseRef": "8:10",
+    "arabicVerse": "وَمَا جَعَلَهُ ٱللَّهُ إِلَّا بُشْرَىٰ وَلِتَطْمَئِنَّ بِهِۦ قُلُوبُكُمْ ۚ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ عَزِيزٌ حَكِيمٌ",
+    "verse": "8:10 - And Allāh made it not but good tidings and so that your hearts would be assured thereby. And victory is not but from Allāh. Indeed, Allāh is Exalted in Might and Wise."
   },
   "generated": true,
   "model": "auto (chain)"
