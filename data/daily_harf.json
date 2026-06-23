@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-22",
+  "date": "2026-06-23",
   "puzzle": {
-    "word": "نصر",
-    "display": "نَصْر",
-    "hint": "Divine support and victory promised to believers who stand firm",
-    "verseRef": "8:10",
-    "arabicVerse": "وَمَا جَعَلَهُ ٱللَّهُ إِلَّا بُشْرَىٰ وَلِتَطْمَئِنَّ بِهِۦ قُلُوبُكُمْ ۚ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ عَزِيزٌ حَكِيمٌ",
-    "verse": "8:10 - And Allāh made it not but good tidings and so that your hearts would be assured thereby. And victory is not but from Allāh. Indeed, Allāh is Exalted in Might and Wise."
+    "word": "نخل",
+    "display": "النَّخْلُ",
+    "hint": "A tall desert tree that produces clusters of fruit, mentioned in descriptions of Paradise",
+    "verseRef": "55:11",
+    "arabicVerse": "فِيهَا فَـٰكِهَةٌۭ وَٱلنَّخْلُ ذَاتُ ٱلْأَكْمَامِ",
+    "verse": "55:11 - Therein is fruit and palm trees having sheaths [of dates]"
   },
   "generated": true,
   "model": "auto (chain)"

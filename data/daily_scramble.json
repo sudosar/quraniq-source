@@ -1,29 +1,29 @@
 {
-  "date": "2026-06-22",
+  "date": "2026-06-23",
   "puzzle": {
-    "verseRef": "11:69",
-    "reference": "Surah Hud (11:69)",
+    "verseRef": "87:14",
+    "reference": "Surah Al-A'la (87:14)",
     "segments": [
-      "Indeed Allah and His angels",
-      "bless the Prophet",
-      "O you who believe",
-      "invoke blessings upon him"
+      "Indeed, I am",
+      "submitting to Allah",
+      "and I am",
+      "of those who believe"
     ],
     "translations": [
-      "And certainly came Our messengers (to) Ibrahim",
-      "with glad tidings they said Peace He said",
-      "Peace and not he delayed and not he delayed to",
-      "bring a calf roasted"
+      "Certainly",
+      "has succeeded",
+      "(one) who",
+      "purifies (himself)"
     ],
-    "hint": "This verse connects Prophet Ibrahim's prayer to his descendants in Makkah, asking Allah to send blessings upon Prophet Muhammad and the believers - it's why we send blessings on the Prophet after each prayer.",
-    "arabic": "وَلَقَدْ جَآءَتْ رُسُلُنَآ إِبْرَٰهِيمَ بِٱلْبُشْرَىٰ قَالُوا۟ سَلَـٰمًۭا ۖ قَالَ سَلَـٰمٌۭ ۖ فَمَا لَبِثَ أَن جَآءَ بِعِجْلٍ حَنِيذٍۢ",
+    "hint": "This verse expresses a declaration of faith, emphasizing complete surrender to Allah and belief in His guidance.",
+    "arabic": "قَدْ أَفْلَحَ مَن تَزَكَّىٰ",
     "words": [
-      "وَلَقَدْ جَآءَتْ رُسُلُنَآ إِبْرَٰهِيمَ",
-      "بِٱلْبُشْرَىٰ قَالُوا۟ سَلَـٰمًۭا ۖ قَالَ",
-      "سَلَـٰمٌۭ ۖ فَمَا لَبِثَ أَن",
-      "جَآءَ بِعِجْلٍ حَنِيذٍۢ"
+      "قَدْ",
+      "أَفْلَحَ",
+      "مَن",
+      "تَزَكَّىٰ"
     ],
-    "verseEn": "And certainly did Our messengers [i.e., angels] come to Abraham with good tidings; they said, \"Peace.\" He said, \"Peace,\" and did not delay in bringing [them] a roasted calf."
+    "verseEn": "He has certainly succeeded who purifies himself"
   },
   "generated": true,
   "model": "auto (chain)"
