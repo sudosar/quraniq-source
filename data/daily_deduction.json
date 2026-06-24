@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-23",
+  "date": "2026-06-24",
   "puzzle": {
-    "title": "The Guardian by the River's Edge",
-    "intro": "In a land where a tyrant's decree brought sorrow to many homes, a soul received a message that defied all fear. With a heart filled with trust, they embarked on an act of faith that would change the course of a nation. As the waters carried a precious cargo, hope mingled with the currents.",
+    "title": "The Warden of the Unquenchable Flame",
+    "intro": "A figure stands at the threshold of the most feared place in the unseen, entrusted with a duty no other being desires. When suffering souls cry out for mercy, a stern response echoes through the chambers of fire. Can you uncover the identity of this eternal guardian?",
     "clues": [
-      "I lived in a time of oppression and fear.",
-      "I received divine inspiration that gave me courage.",
-      "I was commanded not to fear or grieve.",
-      "I placed my child in a chest and set it upon the water.",
-      "My child was found by the household of the ruler, but my other child followed.",
-      "I was reunited with my child to nurse him, just as Allah promised."
+      "I stand at the entrance of a terrifying place of punishment in the unseen.",
+      "A blazing, unquenchable fire is the centerpiece of my solemn duty.",
+      "Suffering souls call out my name, begging for relief from their endless torment.",
+      "When they plead, I declare that they shall not leave, ever.",
+      "I am not human, nor jinn — I am a created being of pure obedience.",
+      "I am the chief angel appointed as the eternal guardian of the Hellfire."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Mother of Moses",
-          "The Wife of Pharaoh",
-          "The Sister of Moses",
-          "The Mother of Jesus",
-          "The Queen of Sheba"
+          "Malik",
+          "Jibreel",
+          "Mikael",
+          "Harut",
+          "Marut"
         ],
-        "answer": "The Mother of Moses"
+        "answer": "Malik"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Being inspired to cast a child into a river",
-          "Being challenged to a duel of magic",
-          "Being pursued by an army",
-          "Crossing a sea that parted",
-          "Building a sacred house"
+          "The people of Hell plead for their torment to be ended",
+          "The trumpet is blown to signal the Day of Judgment",
+          "The Quran is revealed to the Prophet's heart",
+          "A Prophet is cast into a great fire by their people",
+          "A mighty wall is built to contain a corrupted nation"
         ],
-        "answer": "Being inspired to cast a child into a river"
+        "answer": "The people of Hell plead for their torment to be ended"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A chest placed in the river",
-          "A burning bush",
-          "A staff that turned into a snake",
-          "A golden calf",
-          "A throne"
+          "The Hellfire (Jahannam)",
+          "The Lote Tree at the boundary of Paradise",
+          "A piercing trumpet",
+          "A staff that transforms into a serpent",
+          "A magnificent divine throne"
         ],
-        "answer": "A chest placed in the river"
+        "answer": "The Hellfire (Jahannam)"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "The child was safely returned to nurse",
-          "The child was lost forever",
-          "The child was taken to a faraway land",
-          "The child became a ruler immediately",
-          "The child was adopted by a wealthy merchant"
+          "The dwellers of Hell are told they will remain eternally",
+          "The dwellers of Hell are forgiven and released",
+          "The dwellers of Hell are granted a second chance at faith",
+          "The dwellers of Hell are moved to a place of coolness",
+          "The dwellers of Hell are completely destroyed by a thunderbolt"
         ],
-        "answer": "The child was safely returned to nurse"
+        "answer": "The dwellers of Hell are told they will remain eternally"
       }
     },
-    "verseRef": "28:7",
-    "arabic": "وَأَوْحَيْنَآ إِلَىٰٓ أُمِّ مُوسَىٰٓ أَنْ أَرْضِعِيهِ ۖ فَإِذَا خِفْتِ عَلَيْهِ فَأَلْقِيهِ فِى ٱلْيَمِّ وَلَا تَخَافِى وَلَا تَحْزَنِىٓ ۖ إِنَّا رَآدُّوهُ إِلَيْكِ وَجَاعِلُوهُ مِنَ ٱلْمُرْسَلِينَ",
-    "verse": "And We inspired to the mother of Moses, \"Suckle him; but when you fear for him, cast him into the river and do not fear and do not grieve. Indeed, We will return him to you and will make him [one] of the messengers.\" (28:7)"
+    "verseRef": "43:77",
+    "arabic": "وَنَادَوْا۟ يَـٰمَـٰلِكُ لِيَقْضِ عَلَيْنَا رَبُّكَ ۖ قَالَ إِنَّكُم مَّـٰكِثُونَ",
+    "verse": "And they will call, \"O Mālik, let your Lord put an end to us!\" He will say, \"Indeed, you will remain.\" (43:77)"
   },
   "generated": true,
   "model": "auto (chain)"

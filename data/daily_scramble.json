@@ -1,29 +1,27 @@
 {
-  "date": "2026-06-23",
+  "date": "2026-06-24",
   "puzzle": {
-    "verseRef": "87:14",
-    "reference": "Surah Al-A'la (87:14)",
+    "verseRef": "51:5",
+    "reference": "Adh-Dhariyat (51:5)",
     "segments": [
-      "Indeed, I am",
-      "submitting to Allah",
-      "and I am",
-      "of those who believe"
+      "وَالْأَرْضَ",
+      "مَدَدْنَاهَا",
+      "وَالْجِبَالَ",
+      "أَوْتَادًا"
     ],
     "translations": [
-      "Certainly",
-      "has succeeded",
-      "(one) who",
-      "purifies (himself)"
+      "Indeed, what",
+      "you are promised",
+      "(is) surely true"
     ],
-    "hint": "This verse expresses a declaration of faith, emphasizing complete surrender to Allah and belief in His guidance.",
-    "arabic": "قَدْ أَفْلَحَ مَن تَزَكَّىٰ",
+    "hint": "This verse describes elements of Allah's creation - the spreading of the earth and the anchoring of mountains",
+    "arabic": "إِنَّمَا تُوعَدُونَ لَصَادِقٌۭ",
     "words": [
-      "قَدْ",
-      "أَفْلَحَ",
-      "مَن",
-      "تَزَكَّىٰ"
+      "إِنَّمَا",
+      "تُوعَدُونَ",
+      "لَصَادِقٌۭ"
     ],
-    "verseEn": "He has certainly succeeded who purifies himself"
+    "verseEn": "Indeed, what you are promised is true."
   },
   "generated": true,
   "model": "auto (chain)"
