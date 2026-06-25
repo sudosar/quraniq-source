@@ -1,27 +1,31 @@
 {
-  "date": "2026-06-24",
+  "date": "2026-06-25",
   "puzzle": {
-    "verseRef": "51:5",
-    "reference": "Adh-Dhariyat (51:5)",
+    "verseRef": "52:2",
+    "reference": "Surah At-Tur (52:2)",
     "segments": [
-      "وَالْأَرْضَ",
-      "مَدَدْنَاهَا",
-      "وَالْجِبَالَ",
-      "أَوْتَادًا"
+      "wali-ayyi al-darabi",
+      "darabtum",
+      "wal-jabili",
+      "sawaaqi al-kawkabi",
+      "wa ja'ilu al-saba'a",
+      "al-kawakiba",
+      "zayyalan"
     ],
     "translations": [
-      "Indeed, what",
-      "you are promised",
-      "(is) surely true"
+      "I swear by the spreading stars",
+      "you place (your oaths)",
+      "and by the mountains as milestones",
+      "and by the meteors",
+      "and He placed the seven",
+      "the stars",
+      "in disarray"
     ],
-    "hint": "This verse describes elements of Allah's creation - the spreading of the earth and the anchoring of mountains",
-    "arabic": "إِنَّمَا تُوعَدُونَ لَصَادِقٌۭ",
+    "hint": "This verse contains celestial imagery from a Meccan surah, describing how the heavens were stripped of their stars - a verse that invokes cosmic signs to swear by Allah's power.",
+    "arabic": "وَكِتَـٰبٍۢ مَّسْطُورٍۢ",
     "words": [
-      "إِنَّمَا",
-      "تُوعَدُونَ",
-      "لَصَادِقٌۭ"
-    ],
-    "verseEn": "Indeed, what you are promised is true."
+      "وَكِتَـٰبٍۢ مَّسْطُورٍۢ"
+    ]
   },
   "generated": true,
   "model": "auto (chain)"

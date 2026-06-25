@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-24",
+  "date": "2026-06-25",
   "puzzle": {
-    "word": "سماء",
-    "display": "سَمَاء",
-    "hint": "What Allah created above us that contains stars and rain",
-    "verseRef": "86:11",
-    "arabicVerse": "وَٱلسَّمَآءِ ذَاتِ ٱلرَّجْعِ",
-    "verse": "86:11 - By the sky which sends back"
+    "word": "غيب",
+    "display": "غَيْب",
+    "hint": "The unseen realm known only to Allah",
+    "verseRef": "39:46",
+    "arabicVerse": "قُلِ ٱللَّهُمَّ فَاطِرَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ عَـٰلِمَ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ أَنتَ تَحْكُمُ بَيْنَ عِبَادِكَ فِى مَا كَانُوا۟ فِيهِ يَخْتَلِفُونَ",
+    "verse": "39:46 - Say, \"O Allāh, Creator of the heavens and the earth, Knower of the unseen and the witnessed, You will judge between your servants concerning that over which they used to differ.\""
   },
   "generated": true,
   "model": "auto (chain)"
