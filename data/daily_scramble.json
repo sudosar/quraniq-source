@@ -1,31 +1,32 @@
 {
-  "date": "2026-06-25",
+  "date": "2026-06-26",
   "puzzle": {
-    "verseRef": "52:2",
-    "reference": "Surah At-Tur (52:2)",
+    "verseRef": "23:3",
+    "reference": "Surah Al-Mu'minun (23:3)",
     "segments": [
-      "wali-ayyi al-darabi",
-      "darabtum",
-      "wal-jabili",
-      "sawaaqi al-kawkabi",
-      "wa ja'ilu al-saba'a",
-      "al-kawakiba",
-      "zayyalan"
+      "خَلَقَ الْإِنسَانَ مِنْ نُطْفَةٍ",
+      "فَجَعَلَهُ نُطْفَةً",
+      "ثُمَّ خَلَقَ فَسَوَّىٰهُ",
+      "فَجَعَلَ لَهُ سَمْعًا وَبَصَرًا",
+      "وَقَدْ خَصَّ بِذَٰلِكَ قَلْبًا فَهَلْ مِن مُّدَّكِرِ"
     ],
     "translations": [
-      "I swear by the spreading stars",
-      "you place (your oaths)",
-      "and by the mountains as milestones",
-      "and by the meteors",
-      "and He placed the seven",
-      "the stars",
-      "in disarray"
+      "Those who",
+      "[they]",
+      "from",
+      "the vain talk",
+      "turn away"
     ],
-    "hint": "This verse contains celestial imagery from a Meccan surah, describing how the heavens were stripped of their stars - a verse that invokes cosmic signs to swear by Allah's power.",
-    "arabic": "وَكِتَـٰبٍۢ مَّسْطُورٍۢ",
+    "hint": "An early Makkan revelation describing the stages of human creation from a drop until receiving hearing and sight",
+    "arabic": "وَٱلَّذِينَ هُمْ عَنِ ٱللَّغْوِ مُعْرِضُونَ",
     "words": [
-      "وَكِتَـٰبٍۢ مَّسْطُورٍۢ"
-    ]
+      "وَٱلَّذِينَ",
+      "هُمْ",
+      "عَنِ",
+      "ٱللَّغْوِ",
+      "مُعْرِضُونَ"
+    ],
+    "verseEn": "And they who turn away from ill speech"
   },
   "generated": true,
   "model": "auto (chain)"

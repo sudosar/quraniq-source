@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-25",
+  "date": "2026-06-26",
   "puzzle": {
-    "word": "غيب",
-    "display": "غَيْب",
-    "hint": "The unseen realm known only to Allah",
-    "verseRef": "39:46",
-    "arabicVerse": "قُلِ ٱللَّهُمَّ فَاطِرَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ عَـٰلِمَ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ أَنتَ تَحْكُمُ بَيْنَ عِبَادِكَ فِى مَا كَانُوا۟ فِيهِ يَخْتَلِفُونَ",
-    "verse": "39:46 - Say, \"O Allāh, Creator of the heavens and the earth, Knower of the unseen and the witnessed, You will judge between your servants concerning that over which they used to differ.\""
+    "word": "إيلاف",
+    "display": "إِيلَاف",
+    "hint": "The accustomed security and protection granted to the Quraysh tribe",
+    "verseRef": "106:1",
+    "arabicVerse": "لِإِيلَـٰفِ قُرَيْشٍ",
+    "verse": "106:1 - For the accustomed security of the Quraysh -"
   },
   "generated": true,
   "model": "auto (chain)"
