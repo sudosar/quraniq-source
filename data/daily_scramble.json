@@ -1,32 +1,30 @@
 {
-  "date": "2026-06-26",
+  "date": "2026-06-27",
   "puzzle": {
-    "verseRef": "23:3",
-    "reference": "Surah Al-Mu'minun (23:3)",
+    "verseRef": "19:88",
+    "reference": "Surah Maryam (19:88)",
     "segments": [
-      "خَلَقَ الْإِنسَانَ مِنْ نُطْفَةٍ",
-      "فَجَعَلَهُ نُطْفَةً",
-      "ثُمَّ خَلَقَ فَسَوَّىٰهُ",
-      "فَجَعَلَ لَهُ سَمْعًا وَبَصَرًا",
-      "وَقَدْ خَصَّ بِذَٰلِكَ قَلْبًا فَهَلْ مِن مُّدَّكِرِ"
+      "قَالُواْ",
+      "سَمِعْنَا",
+      "فَاطِمٌ",
+      "يَقُولُهَا",
+      "إِنَّهُ لَكَافِرٌ"
     ],
     "translations": [
-      "Those who",
-      "[they]",
-      "from",
-      "the vain talk",
-      "turn away"
+      "And they say",
+      "Has taken",
+      "the Most Gracious",
+      "a son"
     ],
-    "hint": "An early Makkan revelation describing the stages of human creation from a drop until receiving hearing and sight",
-    "arabic": "وَٱلَّذِينَ هُمْ عَنِ ٱللَّغْوِ مُعْرِضُونَ",
+    "hint": "This verse describes the reaction of disbelievers to a sign from Allah, showing how they reject truth out of arrogance.",
+    "arabic": "وَقَالُوا۟ ٱتَّخَذَ ٱلرَّحْمَـٰنُ وَلَدًۭا",
     "words": [
-      "وَٱلَّذِينَ",
-      "هُمْ",
-      "عَنِ",
-      "ٱللَّغْوِ",
-      "مُعْرِضُونَ"
+      "وَقَالُوا۟",
+      "ٱتَّخَذَ",
+      "ٱلرَّحْمَـٰنُ",
+      "وَلَدًۭا"
     ],
-    "verseEn": "And they who turn away from ill speech"
+    "verseEn": "And they say, \"The Most Merciful has taken [for Himself] a son.\""
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-26",
+  "date": "2026-06-27",
   "puzzle": {
-    "title": "The Burden of a Refused Gift",
-    "intro": "In the dawn of human history, when the earth was still young and the world held its first breath, a soul stood before the Creator with a humble offering. That offering was weighed in the balance of divine acceptance — and found wanting. What followed was not a story of forgiveness, but of a heart consumed by jealousy, leading to an irreversible act that would echo through all of time. This is the story of one whose name became synonymous with the first grave injustice ever committed.",
+    "title": "The Sacred Absence",
+    "intro": "Beyond the dunes of time, there lies a tale of unwavering devotion and a trust so heavy that the soul carrying it could have broken. In a moment when the people turned toward folly and gold, one figure stood firm—calling them back, pleading for patience, and bearing the weight of a sacred promise. This is the story of one who was chosen as a helper, a vizier, and a guardian of faith during a sacred absence. Can you uncover the identity of this steadfast soul?",
     "clues": [
-      "I came into existence as one of the very first children ever born, born to a parent whose story you know well.",
-      "I once offered a sacrifice to Allah, but it was not accepted from me — though my sibling's offering was received with grace.",
-      "Envy and rage took root in my heart, and I threatened to end the life of my own kin.",
-      "My sibling warned me to fear Allah, but my pride would not let me listen.",
-      "In a moment of terrible weakness, I carried out an unspeakable act upon my own brother.",
-      "Afterward, I did not even know how to conceal what I had done — until a creature of the earth was sent to teach me."
+      "I share the blood of a great prophet who was chosen to speak with Allah directly upon a sacred mount.",
+      "My sibling once pleaded with Allah for assistance in speaking clearly to a great oppressor.",
+      "I was chosen by Allah to stand beside my sibling as a helper and vizier.",
+      "Together we faced a tyrannical ruler who demanded to be called the highest of gods.",
+      "While my sibling communed with Allah upon the mountain, our people fashioned for themselves an idol from their gold.",
+      "I am the brother of Moses, appointed by Allah as his vizier, mentioned by name in the Quran."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Qabil (Cain)",
-          "Habil (Abel)",
-          "The son of Prophet Nuh",
-          "Prophet Isma'il",
-          "Prophet Yusuf"
+          "Prophet Harun (Aaron)",
+          "Prophet Musa",
+          "Prophet Dawud",
+          "Prophet Yaqub",
+          "Prophet Ishaq"
         ],
-        "answer": "Qabil (Cain)"
+        "answer": "Prophet Harun (Aaron)"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Offering a sacrifice that was rejected, leading to the first murder",
-          "Building a lofty tower to reach the heavens",
-          "Being cast into a raging fire for one's faith",
-          "Sacrificing one's own son in obedience to Allah",
-          "Being swallowed by a great fish for fleeing one's duty"
+          "The Calf Worship Crisis",
+          "The Great Flood of Nuh",
+          "The Battle of Badr",
+          "The Destruction of Thamud",
+          "The Destruction of Sodom"
         ],
-        "answer": "Offering a sacrifice that was rejected, leading to the first murder"
+        "answer": "The Calf Worship Crisis"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A crow sent by Allah to demonstrate burial",
-          "A great flood that drowned an entire people",
-          "A staff that turned into a living serpent",
-          "A she-camel that emerged from a mountain of rock",
-          "A magnificent throne carried by mighty winds"
+          "The Golden Calf",
+          "Noah's Ark",
+          "The Burning Bush",
+          "The Cave of Hira",
+          "The Throne of Sheba"
         ],
-        "answer": "A crow sent by Allah to demonstrate burial"
+        "answer": "The Golden Calf"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Became of the regretful, burdened by the first crime ever committed",
-          "Was forgiven by Allah and granted eternal Paradise",
-          "Was raised to a high station of prophecy and wisdom",
-          "Was saved by divine mercy after calling out from the depths of darkness",
-          "Was given dominion over the jinn, the wind, and the seas"
+          "Innocence Confirmed by Allah",
+          "Drowning of Pharaoh",
+          "The Building of the Kaaba",
+          "Safe Crossing of the Sea",
+          "Ascension to the Heavens"
         ],
-        "answer": "Became of the regretful, burdened by the first crime ever committed"
+        "answer": "Innocence Confirmed by Allah"
       }
     },
-    "verseRef": "5:30",
-    "arabic": "فَطَوَّعَتْ لَهُۥ نَفْسُهُۥ قَتْلَ أَخِيهِ فَقَتَلَهُۥ فَأَصْبَحَ مِنَ ٱلْخَـٰسِرِينَ",
-    "verse": "And his soul permitted to him the murder of his brother, so he killed him and became among the losers. (5:30)"
+    "verseRef": "25:35",
+    "arabic": "وَلَقَدْ ءَاتَيْنَا مُوسَى ٱلْكِتَـٰبَ وَجَعَلْنَا مَعَهُۥٓ أَخَاهُ هَـٰرُونَ وَزِيرًۭا",
+    "verse": "And We had certainly given Moses the Scripture and appointed with him his brother Aaron as an assistant. (25:35)"
   },
   "generated": true,
   "model": "auto (chain)"
