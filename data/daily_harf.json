@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-27",
+  "date": "2026-06-28",
   "puzzle": {
-    "word": "سلطان",
-    "display": "سُلْطَانٍ",
-    "hint": "Authority or clear proof granted by God to His messengers",
-    "verseRef": "14:10",
-    "arabicVerse": "۞ قَالَتْ رُسُلُهُمْ أَفِى ٱللَّهِ شَكٌّۭ فَاطِرِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ يَدْعُوكُمْ لِيَغْفِرَ لَكُم مِّن ذُنُوبِكُمْ وَيُؤَخِّرَكُمْ إِلَىٰٓ أَجَلٍۢ مُّسَمًّۭى ۚ قَالُوٓا۟ إِنْ أَنتُمْ إِلَّا بَشَرٌۭ مِّثْلُنَا تُرِيدُونَ أَن تَصُدُّونَا عَمَّا كَانَ يَعْبُدُ ءَابَآؤُنَا فَأْتُونَا بِسُلْطَـٰنٍۢ مُّبِينٍۢ",
-    "verse": "14:10 - Their messengers said, \"Can there be doubt about Allāh, Creator of the heavens and earth? He invites you that He may forgive you of your sins, and He delays you [i.e., your death] for a specified term.\" They said, \"You are not but men like us who wish to avert us from what our fathers were worshipping. So bring us a clear authority [i.e., evidence].\""
+    "word": "شمس",
+    "display": "شَمْس",
+    "hint": "A massive star whose light brightens our daytime sky",
+    "verseRef": "27:24",
+    "arabicVerse": "وَجَدتُّهَا وَقَوْمَهَا يَسْجُدُونَ لِلشَّمْسِ مِن دُونِ ٱللَّهِ وَزَيَّنَ لَهُمُ ٱلشَّيْطَـٰنُ أَعْمَـٰلَهُمْ فَصَدَّهُمْ عَنِ ٱلسَّبِيلِ فَهُمْ لَا يَهْتَدُونَ",
+    "verse": "27:24 - I found her and her people prostrating to the sun instead of Allāh, and Satan has made their deeds pleasing to them and averted them from [His] way, so they are not guided,"
   },
   "generated": true,
   "model": "auto (chain)"

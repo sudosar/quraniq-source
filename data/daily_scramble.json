@@ -1,30 +1,35 @@
 {
-  "date": "2026-06-27",
+  "date": "2026-06-28",
   "puzzle": {
-    "verseRef": "19:88",
-    "reference": "Surah Maryam (19:88)",
+    "verseRef": "30:22",
+    "reference": "Surah Ar-Rum (30:22)",
     "segments": [
-      "قَالُواْ",
-      "سَمِعْنَا",
-      "فَاطِمٌ",
-      "يَقُولُهَا",
-      "إِنَّهُ لَكَافِرٌ"
+      "وَمِنْ آيَاتِهِ",
+      "خَلْقُ السَّمَاوَاتِ وَالْأَرْضِ",
+      "وَاخْتِلَافُ أَلْسِنَتِكُمْ",
+      "وَأَلْوَانِكُمْ",
+      "إِنَّ فِي ذَٰلِكَ لَآيَاتٍ",
+      "لِّلْعَالِمِينَ"
     ],
     "translations": [
-      "And they say",
-      "Has taken",
-      "the Most Gracious",
-      "a son"
+      "And among His Signs (is the) creation",
+      "(of) the heavens and the earth",
+      "and the diversity (of) your languages",
+      "and your colors Indeed",
+      "in that",
+      "surely (are) Signs for those of knowledge"
     ],
-    "hint": "This verse describes the reaction of disbelievers to a sign from Allah, showing how they reject truth out of arrogance.",
-    "arabic": "وَقَالُوا۟ ٱتَّخَذَ ٱلرَّحْمَـٰنُ وَلَدًۭا",
+    "hint": "A verse reflecting on the signs of Allah in the diversity of creation, including the heavens, earth, languages, and colors.",
+    "arabic": "وَمِنْ ءَايَـٰتِهِۦ خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍۢ لِّلْعَـٰلِمِينَ",
     "words": [
-      "وَقَالُوا۟",
-      "ٱتَّخَذَ",
-      "ٱلرَّحْمَـٰنُ",
-      "وَلَدًۭا"
+      "وَمِنْ ءَايَـٰتِهِۦ خَلْقُ",
+      "ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ",
+      "وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ",
+      "وَأَلْوَٰنِكُمْ ۚ إِنَّ",
+      "فِى ذَٰلِكَ",
+      "لَـَٔايَـٰتٍۢ لِّلْعَـٰلِمِينَ"
     ],
-    "verseEn": "And they say, \"The Most Merciful has taken [for Himself] a son.\""
+    "verseEn": "And of His signs is the creation of the heavens and the earth and the diversity of your languages and your colors. Indeed in that are signs for those of knowledge."
   },
   "generated": true,
   "model": "auto (chain)"
