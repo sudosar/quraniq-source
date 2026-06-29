@@ -1,35 +1,32 @@
 {
-  "date": "2026-06-28",
+  "date": "2026-06-29",
   "puzzle": {
-    "verseRef": "30:22",
-    "reference": "Surah Ar-Rum (30:22)",
+    "verseRef": "9:51",
+    "reference": "Surah At-Tawbah (9:51)",
     "segments": [
-      "وَمِنْ آيَاتِهِ",
-      "خَلْقُ السَّمَاوَاتِ وَالْأَرْضِ",
-      "وَاخْتِلَافُ أَلْسِنَتِكُمْ",
-      "وَأَلْوَانِكُمْ",
-      "إِنَّ فِي ذَٰلِكَ لَآيَاتٍ",
-      "لِّلْعَالِمِينَ"
+      "قُل",
+      "لَّن يُصِيبَنَا إِلَّا مَا",
+      "كَتَبَ اللَّهُ لَنَا",
+      "هُوَ مَوْلَانَا",
+      "وَعَلَى اللَّهِ فَلْيَتَوَكَّلِ الْمُؤْمِنُونَ"
     ],
     "translations": [
-      "And among His Signs (is the) creation",
-      "(of) the heavens and the earth",
-      "and the diversity (of) your languages",
-      "and your colors Indeed",
-      "in that",
-      "surely (are) Signs for those of knowledge"
+      "Say Never will befall us",
+      "except what Allah has decreed",
+      "Allah has decreed for us He",
+      "(is) our Protector And on Allah",
+      "[so] let the believers put (their) trust [so] let the believers put (their) trust"
     ],
-    "hint": "A verse reflecting on the signs of Allah in the diversity of creation, including the heavens, earth, languages, and colors.",
-    "arabic": "وَمِنْ ءَايَـٰتِهِۦ خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍۢ لِّلْعَـٰلِمِينَ",
+    "hint": "A foundational verse on tawakkul (reliance on Allah) — affirming that nothing reaches us except what He has decreed, so the believers place their trust in Him alone.",
+    "arabic": "قُل لَّن يُصِيبَنَآ إِلَّا مَا كَتَبَ ٱللَّهُ لَنَا هُوَ مَوْلَىٰنَا ۚ وَعَلَى ٱللَّهِ فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ",
     "words": [
-      "وَمِنْ ءَايَـٰتِهِۦ خَلْقُ",
-      "ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ",
-      "وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ",
-      "وَأَلْوَٰنِكُمْ ۚ إِنَّ",
-      "فِى ذَٰلِكَ",
-      "لَـَٔايَـٰتٍۢ لِّلْعَـٰلِمِينَ"
+      "قُل لَّن يُصِيبَنَآ",
+      "إِلَّا مَا كَتَبَ",
+      "ٱللَّهُ لَنَا هُوَ",
+      "مَوْلَىٰنَا ۚ وَعَلَى ٱللَّهِ",
+      "فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ"
     ],
-    "verseEn": "And of His signs is the creation of the heavens and the earth and the diversity of your languages and your colors. Indeed in that are signs for those of knowledge."
+    "verseEn": "Say, \"Never will we be struck except by what Allāh has decreed for us; He is our protector.\" And upon Allāh let the believers rely."
   },
   "generated": true,
   "model": "auto (chain)"

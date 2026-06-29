@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-28",
+  "date": "2026-06-29",
   "puzzle": {
-    "title": "The Elder's Unexpected Nourishment",
-    "intro": "In the sacred precincts of the House of Allah, an elderly servant of God experienced a profound mystery that defied all expectation. This devoted individual, long past the years of natural parenthood, witnessed something extraordinary that revealed the boundless mercy of the Divine. The puzzle lies in uncovering this forgotten moment from the lives of the prophets.",
+    "title": "The Patient Soul",
+    "intro": "In the annals of prophethood, there existed a soul whose patience was etched into the very fabric of their being. Through tears and time, they held fast to hope, becoming a timeless example of trust in divine wisdom. Can you unravel the mystery of this unwavering figure?",
     "clues": [
-      "My people were known as Israel, descendants of a great patriarch of old.",
-      "I spent my nights in prayer, prostrating before my Lord in the temple.",
-      "I was granted a son in my old age, a gift I never ceased to glorify Allah for.",
-      "My trial involved discovering a sustenance that appeared for a young soul under my care.",
-      "I was a prophet named Zakariyya, tasked with caring for Maryam in the Bayt al-Maqdis.",
-      "The answer lies in the verse where Allah accepted Maryam and provided sustenance for her."
+      "I was born into a family of prophets, yet my greatest test came through the child I loved most.",
+      "I received a warning of jealousy from a dream my son shared, and I feared for his safety.",
+      "My eyes turned white with sorrow, yet I never lost faith in Allah's mercy.",
+      "The scent of my missing child reached me from afar, and I knew then that reunion was near.",
+      "My family bowed in gratitude when the vision of old was fulfilled, and my eyesight was restored.",
+      "I am the one who was presented with a blood-stained shirt, only to later receive a shirt that healed my sight."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The prophet who cared for Maryam in the temple",
-          "The prophet who built the sacred house",
-          "The prophet swallowed by a great fish",
-          "The prophet who fled from his people",
-          "The prophet who spoke to Allah directly"
+          "Prophet Ibrahim",
+          "Prophet Ishaq",
+          "Prophet Yaqub",
+          "Prophet Yusuf",
+          "Prophet Ayyub"
         ],
-        "answer": "The prophet who cared for Maryam in the temple"
+        "answer": "Prophet Yaqub"
       },
       "trial": {
-        "label": "Trial/Event",
+        "label": "The Crucial Trial",
         "options": [
-          "Being tested with years of drought",
-          "Finding sustenance mysteriously provided for a young ward",
-          "Preaching to a nation that rejected divine guidance",
-          "Being thrown into a pit by one's own people",
-          "Receiving revelation through visions"
+          "Separation from a beloved child and loss of sight",
+          "Being cast into a blazing fire",
+          "Being swallowed by a great fish",
+          "Enduring losing wealth, children, and health",
+          "Being betrayed by his brothers and thrown into a well"
         ],
-        "answer": "Finding sustenance mysteriously provided for a young ward"
+        "answer": "Separation from a beloved child and loss of sight"
       },
       "location": {
-        "label": "Key Element",
+        "label": "The Symbolic Object",
         "options": [
-          "A ship built from planks and nails",
-          "The sacred temple of Jerusalem",
-          "A garden that was destroyed",
-          "A city built by a righteous king",
-          "The depths of the ocean"
+          "A shirt that first hid truth then revealed it",
+          "A staff that became a serpent",
+          "A whale that swallowed a prophet",
+          "A fire that turned cool",
+          "A pair of sandals at the burning bush"
         ],
-        "answer": "The sacred temple of Jerusalem"
+        "answer": "A shirt that first hid truth then revealed it"
       },
       "outcome": {
-        "label": "Outcome",
+        "label": "The Divine Resolution",
         "options": [
-          "The people believed and followed the messenger",
-          "Divine acceptance and mercy for those devoted to worship",
-          "The punishment came upon the disbelievers",
-          "A son was born in old age as promised",
-          "Safe passage through the wilderness"
+          "Reunion with a lost loved one and restoration of sight",
+          "Rescue from a nation of oppression",
+          "Deliverance from the belly of a fish",
+          "Salvation from a blazing fire",
+          "Ascension to a great throne"
         ],
-        "answer": "Divine acceptance and mercy for those devoted to worship"
+        "answer": "Reunion with a lost loved one and restoration of sight"
       }
     },
-    "verseRef": "3:37",
-    "arabic": "فَتَقَبَّلَهَا رَبُّهَا بِقَبُولٍ حَسَنٍۢ وَأَنۢبَتَهَا نَبَاتًا حَسَنًۭا وَكَفَّلَهَا زَكَرِيَّا ۖ كُلَّمَا دَخَلَ عَلَيْهَا زَكَرِيَّا ٱلْمِحْرَابَ وَجَدَ عِندَهَا رِزْقًۭا ۖ قَالَ يَـٰمَرْيَمُ أَنَّىٰ لَكِ هَـٰذَا ۖ قَالَتْ هُوَ مِنْ عِندِ ٱللَّهِ ۖ إِنَّ ٱللَّهَ يَرْزُقُ مَن يَشَآءُ بِغَيْرِ حِسَابٍ",
-    "verse": "So her Lord accepted her with good acceptance and caused her to grow in a good manner and put her in the care of Zechariah. Every time Zechariah entered upon her in the prayer chamber, he found with her provision. He said, \"O Mary, from where is this [coming] to you?\" She said, \"It is from Allāh. Indeed, Allāh provides for whom He wills without account.\" (3:37)"
+    "verseRef": "12:86",
+    "arabic": "قَالَ إِنَّمَآ أَشْكُوا۟ بَثِّى وَحُزْنِىٓ إِلَى ٱللَّهِ وَأَعْلَمُ مِنَ ٱللَّهِ مَا لَا تَعْلَمُونَ",
+    "verse": "He said, \"I only complain of my suffering and my grief to Allāh, and I know from Allāh that which you do not know. (12:86)"
   },
   "generated": true,
   "model": "auto (chain)"
