@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-29",
+  "date": "2026-06-30",
   "puzzle": {
-    "word": "فتح",
-    "display": "فَتْحٌ",
-    "hint": "A decisive triumph or opening that Allah grants to those who strive in His cause",
-    "verseRef": "61:13",
-    "arabicVerse": "وَأُخْرَىٰ تُحِبُّونَهَا ۖ نَصْرٌۭ مِّنَ ٱللَّهِ وَفَتْحٌۭ قَرِيبٌۭ ۗ وَبَشِّرِ ٱلْمُؤْمِنِينَ",
-    "verse": "61:13 - And [you will obtain] another [favor] that you love - victory from Allāh and an imminent conquest; and give good tidings to the believers."
+    "word": "خالد",
+    "display": "خَالِد",
+    "hint": "One of God's beautiful names describing those who will abide forever in Paradise",
+    "verseRef": "33:65",
+    "arabicVerse": "خَـٰلِدِينَ فِيهَآ أَبَدًۭا ۖ لَّا يَجِدُونَ وَلِيًّۭا وَلَا نَصِيرًۭا",
+    "verse": "33:65 - Abiding therein forever, they will not find a protector or a helper."
   },
   "generated": true,
   "model": "auto (chain)"

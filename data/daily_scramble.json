@@ -1,32 +1,29 @@
 {
-  "date": "2026-06-29",
+  "date": "2026-06-30",
   "puzzle": {
-    "verseRef": "9:51",
-    "reference": "Surah At-Tawbah (9:51)",
+    "verseRef": "67:3",
+    "reference": "Surah Al-Mulk (67:3)",
     "segments": [
-      "قُل",
-      "لَّن يُصِيبَنَا إِلَّا مَا",
-      "كَتَبَ اللَّهُ لَنَا",
-      "هُوَ مَوْلَانَا",
-      "وَعَلَى اللَّهِ فَلْيَتَوَكَّلِ الْمُؤْمِنُونَ"
+      "خَلَقَ سَبْعَ سَمَاوَاتٍ",
+      "طِبَاقًا",
+      "مِّنَ الْأَرْضِ",
+      "مِثْلَهُنَّ"
     ],
     "translations": [
-      "Say Never will befall us",
-      "except what Allah has decreed",
-      "Allah has decreed for us He",
-      "(is) our Protector And on Allah",
-      "[so] let the believers put (their) trust [so] let the believers put (their) trust"
+      "The One Who created seven heavens one above another",
+      "Not you see in (the) creation (of) the Most Gracious",
+      "any fault So return the vision",
+      "can you see any flaw"
     ],
-    "hint": "A foundational verse on tawakkul (reliance on Allah) — affirming that nothing reaches us except what He has decreed, so the believers place their trust in Him alone.",
-    "arabic": "قُل لَّن يُصِيبَنَآ إِلَّا مَا كَتَبَ ٱللَّهُ لَنَا هُوَ مَوْلَىٰنَا ۚ وَعَلَى ٱللَّهِ فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ",
+    "hint": "This verse describes the creation of the seven heavens, showing how the heavens and earth mirror each other in Allah's perfect design",
+    "arabic": "ٱلَّذِى خَلَقَ سَبْعَ سَمَـٰوَٰتٍۢ طِبَاقًۭا ۖ مَّا تَرَىٰ فِى خَلْقِ ٱلرَّحْمَـٰنِ مِن تَفَـٰوُتٍۢ ۖ فَٱرْجِعِ ٱلْبَصَرَ هَلْ تَرَىٰ مِن فُطُورٍۢ",
     "words": [
-      "قُل لَّن يُصِيبَنَآ",
-      "إِلَّا مَا كَتَبَ",
-      "ٱللَّهُ لَنَا هُوَ",
-      "مَوْلَىٰنَا ۚ وَعَلَى ٱللَّهِ",
-      "فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ"
+      "ٱلَّذِى خَلَقَ سَبْعَ سَمَـٰوَٰتٍۢ طِبَاقًۭا ۖ",
+      "مَّا تَرَىٰ فِى خَلْقِ ٱلرَّحْمَـٰنِ",
+      "مِن تَفَـٰوُتٍۢ ۖ فَٱرْجِعِ ٱلْبَصَرَ",
+      "هَلْ تَرَىٰ مِن فُطُورٍۢ"
     ],
-    "verseEn": "Say, \"Never will we be struck except by what Allāh has decreed for us; He is our protector.\" And upon Allāh let the believers rely."
+    "verseEn": "[And] who created seven heavens in layers. You do not see in the creation of the Most Merciful any inconsistency. So return [your] vision [to the sky]; do you see any breaks?"
   },
   "generated": true,
   "model": "auto (chain)"
