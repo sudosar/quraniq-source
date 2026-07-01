@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-30",
+  "date": "2026-07-01",
   "puzzle": {
-    "title": "The Treasured Soul Who Questioned Authority",
-    "intro": "In the annals of the Quran, there lived a figure whose wealth and knowledge became legendary. This soul emerged from the earth with ornaments and riches that dazzled onlookers, yet their heart grew arrogant with pride. Join us as we unravel the mystery of one of the Quran's most cautionary tales, where material grandeur meets a humbling end beneath the very ground that birthed their fortune.",
+    "title": "The Unnamed Soul Who Stood Against an Unrighteous Nation",
+    "intro": "In the pages of the Quran, there are figures whose names were withheld for us to reflect upon their lessons. One such soul was born among a nation that had rejected its messengers, yet this individual possessed a hidden faith that set them apart. When destruction loomed, this person stood firm in their secret belief. Can you uncover the identity of this mysterious figure who warns their people before the final decree descends?",
     "clues": [
-      "I emerged from the earth adorned with ornaments that captured everyone's gaze.",
-      "I possessed both vast riches and deep knowledge that set me apart from others.",
-      "When a messenger came calling people to Allah, I questioned their authority with pride.",
-      "Those around me whispered that Allah's favor was not the source of my wealth.",
-      "My people marveled at my grandeur and wished for a fate similar to mine.",
-      "My magnificent structures were swallowed whole into the earth as divine punishment."
+      "I lived among a people who had repeatedly denied the messengers sent to them by Allah.",
+      "Unlike my nation, I recognized the truth when a messenger arrived with clear signs from my Lord.",
+      "I concealed my faith from my oppressors, knowing they would harm me if they discovered my belief.",
+      "When the command of punishment drew near, I openly declared my allegiance and warned my people to save themselves.",
+      "I reminded them that I am a trusted messenger, no different from those sent before, and that they should not worship except Allah.",
+      "My people accused me of sorcery and madness, yet the punishment they were warned of ultimately overtook them."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Shu'aib",
-          "Qarun (Korah)",
-          "The wealthy companion of Prophet Musa",
-          "Bal'am ibn Ba'ura",
-          "Zul-Qarnain's minister"
+          "Prophet Hud, the messenger to the people of Aad",
+          "A believing man from the nation of Prophet Hud who was martyred",
+          "The ruler of the people of Aad who rejected the truth",
+          "A companion of Prophet Salih who doubted the divine signs",
+          "An angel sent to destroy the people of Aad"
         ],
-        "answer": "Qarun (Korah)"
+        "answer": "A believing man from the nation of Prophet Hud who was martyred"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Building the golden calf for worship",
-          "Arrogantly questioning a prophet's authority",
-          "Hoarding wealth from a famine-stricken nation",
-          "Refusing to share knowledge with scholars",
-          "Asking a prophet for visual proof of resurrection"
+          "The trial of drought and famine that tested their patience",
+          "The trial of declaring faith before an oppressive disbelieving nation",
+          "The trial of building a ship to escape a great flood",
+          "The trial of being thrown into fire for belief in Allah",
+          "The trial of being tested with wealth and prosperity"
         ],
-        "answer": "Arrogantly questioning a prophet's authority"
+        "answer": "The trial of declaring faith before an oppressive disbelieving nation"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The city of Midian",
-          "Palaces submerged in the sea",
-          "Ornaments and treasures",
-          "The burning bush of Mount Sinai",
-          "The sandy plains of ancient Egypt"
+          "The city of Makkah where the sacred house was built",
+          "The desert plains of the nation that denied their messenger",
+          "The mountains of Midian where Prophet Shu'aib was sent",
+          "The riverbank of Egypt where Prophet Musa was found",
+          "The valley of the people of Aad, struck by a fierce wind"
         ],
-        "answer": "Ornaments and treasures"
+        "answer": "The desert plains of the nation that denied their messenger"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Transformed into a pillar of salt",
-          "Cast into the sea amid thunder and waves",
-          "Swallowed by the earth with all possessions",
-          "Raised alive to the heavens as a sign",
-          "Devoured by the earth with a lasting regret"
+          "I was saved in a ship and lived until Allah willed",
+          "My people believed after me and were guided to the straight path",
+          "I was killed by my people but my soul was taken by Allah's mercy",
+          "I repented after being tested and Allah accepted my repentance",
+          "I was transformed into an idol worshipped by my people after my death"
         ],
-        "answer": "Swallowed by the earth with all possessions"
+        "answer": "I was killed by my people but my soul was taken by Allah's mercy"
       }
     },
-    "verseRef": "29:39",
-    "arabic": "وَقَـٰرُونَ وَفِرْعَوْنَ وَهَـٰمَـٰنَ ۖ وَلَقَدْ جَآءَهُم مُّوسَىٰ بِٱلْبَيِّنَـٰتِ فَٱسْتَكْبَرُوا۟ فِى ٱلْأَرْضِ وَمَا كَانُوا۟ سَـٰبِقِينَ",
-    "verse": "And [We destroyed] Qārūn and Pharaoh and Hāmān. And Moses had already come to them with clear evidences, and they were arrogant in the land, but they were not outrunners [of Our punishment]. (29:39)"
+    "verseRef": "11:96",
+    "arabic": "وَلَقَدْ أَرْسَلْنَا مُوسَىٰ بِـَٔايَـٰتِنَا وَسُلْطَـٰنٍۢ مُّبِينٍ",
+    "verse": "And We did certainly send Moses with Our signs and a clear authority (11:96)"
   },
   "generated": true,
   "model": "auto (chain)"

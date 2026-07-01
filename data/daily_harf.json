@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-30",
+  "date": "2026-07-01",
   "puzzle": {
-    "word": "خالد",
-    "display": "خَالِد",
-    "hint": "One of God's beautiful names describing those who will abide forever in Paradise",
-    "verseRef": "33:65",
-    "arabicVerse": "خَـٰلِدِينَ فِيهَآ أَبَدًۭا ۖ لَّا يَجِدُونَ وَلِيًّۭا وَلَا نَصِيرًۭا",
-    "verse": "33:65 - Abiding therein forever, they will not find a protector or a helper."
+    "word": "فوز",
+    "display": "فَوْز",
+    "hint": "Great success or triumph, especially in the Hereafter",
+    "verseRef": "48:5",
+    "arabicVerse": "لِّيُدْخِلَ ٱلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ جَنَّـٰتٍۢ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَا وَيُكَفِّرَ عَنْهُمْ سَيِّـَٔاتِهِمْ ۚ وَكَانَ ذَٰلِكَ عِندَ ٱللَّهِ فَوْزًا عَظِيمًۭا",
+    "verse": "48:5 - [And] that He may admit the believing men and the believing women to gardens beneath which rivers flow to abide therein eternally and remove from them their misdeeds - and ever is that, in the sight of Allāh, a great attainment"
   },
   "generated": true,
   "model": "auto (chain)"

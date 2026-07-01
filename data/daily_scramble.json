@@ -1,29 +1,29 @@
 {
-  "date": "2026-06-30",
+  "date": "2026-07-01",
   "puzzle": {
-    "verseRef": "67:3",
-    "reference": "Surah Al-Mulk (67:3)",
+    "verseRef": "55:13",
+    "reference": "Surah Ar-Rahman (55:13)",
     "segments": [
-      "خَلَقَ سَبْعَ سَمَاوَاتٍ",
-      "طِبَاقًا",
-      "مِّنَ الْأَرْضِ",
-      "مِثْلَهُنَّ"
+      "فبأي",
+      "آلاء",
+      "ربكما",
+      "تكذبان"
     ],
     "translations": [
-      "The One Who created seven heavens one above another",
-      "Not you see in (the) creation (of) the Most Gracious",
-      "any fault So return the vision",
-      "can you see any flaw"
+      "So which",
+      "(of the) favors",
+      "(of) your Lord",
+      "will you both deny"
     ],
-    "hint": "This verse describes the creation of the seven heavens, showing how the heavens and earth mirror each other in Allah's perfect design",
-    "arabic": "ٱلَّذِى خَلَقَ سَبْعَ سَمَـٰوَٰتٍۢ طِبَاقًۭا ۖ مَّا تَرَىٰ فِى خَلْقِ ٱلرَّحْمَـٰنِ مِن تَفَـٰوُتٍۢ ۖ فَٱرْجِعِ ٱلْبَصَرَ هَلْ تَرَىٰ مِن فُطُورٍۢ",
+    "hint": "The famous refrain repeated throughout Surah Ar-Rahman, challenging humanity to recognize Allah's countless blessings",
+    "arabic": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
     "words": [
-      "ٱلَّذِى خَلَقَ سَبْعَ سَمَـٰوَٰتٍۢ طِبَاقًۭا ۖ",
-      "مَّا تَرَىٰ فِى خَلْقِ ٱلرَّحْمَـٰنِ",
-      "مِن تَفَـٰوُتٍۢ ۖ فَٱرْجِعِ ٱلْبَصَرَ",
-      "هَلْ تَرَىٰ مِن فُطُورٍۢ"
+      "فَبِأَىِّ",
+      "ءَالَآءِ",
+      "رَبِّكُمَا",
+      "تُكَذِّبَانِ"
     ],
-    "verseEn": "[And] who created seven heavens in layers. You do not see in the creation of the Most Merciful any inconsistency. So return [your] vision [to the sky]; do you see any breaks?"
+    "verseEn": "So which of the favors of your Lord would you deny?"
   },
   "generated": true,
   "model": "auto (chain)"
