@@ -1,29 +1,29 @@
 {
-  "date": "2026-07-01",
+  "date": "2026-07-02",
   "puzzle": {
-    "verseRef": "55:13",
-    "reference": "Surah Ar-Rahman (55:13)",
+    "verseRef": "64:2",
+    "reference": "Surah At-Taghabun (64:2)",
     "segments": [
-      "فبأي",
-      "آلاء",
-      "ربكما",
-      "تكذبان"
+      "يعلم ما في السماوات",
+      "والأرض ويعلم ما",
+      "تعملون ويوم يرجعون",
+      "إليه يخبرهم بما عملوا"
     ],
     "translations": [
-      "So which",
-      "(of the) favors",
-      "(of) your Lord",
-      "will you both deny"
+      "He (is) the One Who created you",
+      "and among you (is) a disbeliever and among you",
+      "(is) a believer And Allah of what",
+      "you do (is) All-Seer"
     ],
-    "hint": "The famous refrain repeated throughout Surah Ar-Rahman, challenging humanity to recognize Allah's countless blessings",
-    "arabic": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+    "hint": "A verse about Allah's perfect knowledge of all deeds and the Day of Return",
+    "arabic": "هُوَ ٱلَّذِى خَلَقَكُمْ فَمِنكُمْ كَافِرٌۭ وَمِنكُم مُّؤْمِنٌۭ ۚ وَٱللَّهُ بِمَا تَعْمَلُونَ بَصِيرٌ",
     "words": [
-      "فَبِأَىِّ",
-      "ءَالَآءِ",
-      "رَبِّكُمَا",
-      "تُكَذِّبَانِ"
+      "هُوَ ٱلَّذِى خَلَقَكُمْ",
+      "فَمِنكُمْ كَافِرٌۭ وَمِنكُم",
+      "مُّؤْمِنٌۭ ۚ وَٱللَّهُ بِمَا",
+      "تَعْمَلُونَ بَصِيرٌ"
     ],
-    "verseEn": "So which of the favors of your Lord would you deny?"
+    "verseEn": "It is He who created you, and among you is the disbeliever, and among you is the believer. And Allāh, of what you do, is Seeing."
   },
   "generated": true,
   "model": "auto (chain)"

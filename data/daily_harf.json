@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-01",
+  "date": "2026-07-02",
   "puzzle": {
-    "word": "فوز",
-    "display": "فَوْز",
-    "hint": "Great success or triumph, especially in the Hereafter",
-    "verseRef": "48:5",
-    "arabicVerse": "لِّيُدْخِلَ ٱلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ جَنَّـٰتٍۢ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَا وَيُكَفِّرَ عَنْهُمْ سَيِّـَٔاتِهِمْ ۚ وَكَانَ ذَٰلِكَ عِندَ ٱللَّهِ فَوْزًا عَظِيمًۭا",
-    "verse": "48:5 - [And] that He may admit the believing men and the believing women to gardens beneath which rivers flow to abide therein eternally and remove from them their misdeeds - and ever is that, in the sight of Allāh, a great attainment"
+    "word": "سورة",
+    "display": "سُورَةٌ",
+    "hint": "The fundamental unit of Quranic division",
+    "verseRef": "24:1",
+    "arabicVerse": "سُورَةٌ أَنزَلْنَـٰهَا وَفَرَضْنَـٰهَا وَأَنزَلْنَا فِيهَآ ءَايَـٰتٍۭ بَيِّنَـٰتٍۢ لَّعَلَّكُمْ تَذَكَّرُونَ",
+    "verse": "24:1 - [This is] a sūrah which We have sent down and made [that within it] obligatory and revealed therein verses of clear evidence that you might remember."
   },
   "generated": true,
   "model": "auto (chain)"

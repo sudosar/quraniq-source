@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-01",
+  "date": "2026-07-02",
   "puzzle": {
-    "title": "The Unnamed Soul Who Stood Against an Unrighteous Nation",
-    "intro": "In the pages of the Quran, there are figures whose names were withheld for us to reflect upon their lessons. One such soul was born among a nation that had rejected its messengers, yet this individual possessed a hidden faith that set them apart. When destruction loomed, this person stood firm in their secret belief. Can you uncover the identity of this mysterious figure who warns their people before the final decree descends?",
+    "title": "The Servant of Hidden Wisdom",
+    "intro": "In the vast tapestry of Quranic narratives, there stands an enigmatic figure, a servant of Allah graced with divine knowledge and mercy. This mysterious individual crossed paths with one of the greatest prophets, leading to a journey filled with perplexing actions that challenged the limits of human comprehension. Each act, though seemingly unjust, concealed profound lessons about fate, patience, and the unseen wisdom behind divine decree. Who is this shadowy figure, and what truths did they unveil?",
     "clues": [
-      "I lived among a people who had repeatedly denied the messengers sent to them by Allah.",
-      "Unlike my nation, I recognized the truth when a messenger arrived with clear signs from my Lord.",
-      "I concealed my faith from my oppressors, knowing they would harm me if they discovered my belief.",
-      "When the command of punishment drew near, I openly declared my allegiance and warned my people to save themselves.",
-      "I reminded them that I am a trusted messenger, no different from those sent before, and that they should not worship except Allah.",
-      "My people accused me of sorcery and madness, yet the punishment they were warned of ultimately overtook them."
+      "I was a servant of Allah, chosen for special knowledge and mercy.",
+      "A great prophet sought to learn from me, and I agreed under strict conditions.",
+      "During our meeting, I performed three actions that seemed unjust to my companion.",
+      "I damaged a boat belonging to poor people, yet it was a hidden mercy.",
+      "I took the life of a young boy, though it appeared cruel, it was to spare his parents grief.",
+      "I rebuilt a wall in a town that denied us hospitality, revealing a treasure beneath it."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Hud, the messenger to the people of Aad",
-          "A believing man from the nation of Prophet Hud who was martyred",
-          "The ruler of the people of Aad who rejected the truth",
-          "A companion of Prophet Salih who doubted the divine signs",
-          "An angel sent to destroy the people of Aad"
+          "Al-Khidr (the righteous servant)",
+          "The owner of the two gardens",
+          "One of the People of the Cave",
+          "The king who argued with Ibrahim",
+          "The man who slept for 100 years"
         ],
-        "answer": "A believing man from the nation of Prophet Hud who was martyred"
+        "answer": "Al-Khidr (the righteous servant)"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "The trial of drought and famine that tested their patience",
-          "The trial of declaring faith before an oppressive disbelieving nation",
-          "The trial of building a ship to escape a great flood",
-          "The trial of being thrown into fire for belief in Allah",
-          "The trial of being tested with wealth and prosperity"
+          "Meeting Prophet Musa at the junction of the two seas",
+          "Building a barrier against Gog and Magog",
+          "Being thrown into a great fire",
+          "Splitting the sea into two halves",
+          "Receiving the tablets of the Torah"
         ],
-        "answer": "The trial of declaring faith before an oppressive disbelieving nation"
+        "answer": "Meeting Prophet Musa at the junction of the two seas"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The city of Makkah where the sacred house was built",
-          "The desert plains of the nation that denied their messenger",
-          "The mountains of Midian where Prophet Shu'aib was sent",
-          "The riverbank of Egypt where Prophet Musa was found",
-          "The valley of the people of Aad, struck by a fierce wind"
+          "The junction of the two seas",
+          "Mount Sinai",
+          "The cave of Thawr",
+          "The valley of Tuwa",
+          "The well of Zamzam"
         ],
-        "answer": "The desert plains of the nation that denied their messenger"
+        "answer": "The junction of the two seas"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "I was saved in a ship and lived until Allah willed",
-          "My people believed after me and were guided to the straight path",
-          "I was killed by my people but my soul was taken by Allah's mercy",
-          "I repented after being tested and Allah accepted my repentance",
-          "I was transformed into an idol worshipped by my people after my death"
+          "He explained the divine wisdom behind his puzzling actions and parted ways with Musa",
+          "He was granted prophethood after the journey",
+          "The boat was destroyed by a storm",
+          "The boy was brought back to life",
+          "He built a mosque in the inhospitable town"
         ],
-        "answer": "I was killed by my people but my soul was taken by Allah's mercy"
+        "answer": "He explained the divine wisdom behind his puzzling actions and parted ways with Musa"
       }
     },
-    "verseRef": "11:96",
-    "arabic": "وَلَقَدْ أَرْسَلْنَا مُوسَىٰ بِـَٔايَـٰتِنَا وَسُلْطَـٰنٍۢ مُّبِينٍ",
-    "verse": "And We did certainly send Moses with Our signs and a clear authority (11:96)"
+    "verseRef": "18:65",
+    "arabic": "فَوَجَدَا عَبْدًۭا مِّنْ عِبَادِنَآ ءَاتَيْنَـٰهُ رَحْمَةًۭ مِّنْ عِندِنَا وَعَلَّمْنَـٰهُ مِن لَّدُنَّا عِلْمًۭا",
+    "verse": "And they found a servant from among Our servants [i.e., al-Khiḍr] to whom We had given mercy from Us and had taught him from Us a [certain] knowledge. (18:65)"
   },
   "generated": true,
   "model": "auto (chain)"
