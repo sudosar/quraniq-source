@@ -988,18 +988,23 @@ textarea {
 
 .wbw-container {
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .wbw-words {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     gap: 6px;
     direction: rtl;
     padding: 8px 6px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     line-height: 1.8;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 [data-theme="dark"] .wbw-words {
