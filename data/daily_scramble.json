@@ -1,29 +1,32 @@
 {
-  "date": "2026-07-02",
+  "date": "2026-07-03",
   "puzzle": {
-    "verseRef": "64:2",
-    "reference": "Surah At-Taghabun (64:2)",
+    "verseRef": "8:28",
+    "reference": "Al-Anfal (8:28)",
     "segments": [
-      "يعلم ما في السماوات",
-      "والأرض ويعلم ما",
-      "تعملون ويوم يرجعون",
-      "إليه يخبرهم بما عملوا"
+      "وَاعْلَمُوا أَنَّمَا",
+      "أَمْوَالُكُمْ وَأَوْلَادُكُمْ",
+      "فِتْنَةٌ",
+      "وَأَنَّ اللَّهَ عِندَهُ",
+      "أَجْرٌ عَظِيمٌ"
     ],
     "translations": [
-      "He (is) the One Who created you",
-      "and among you (is) a disbeliever and among you",
-      "(is) a believer And Allah of what",
-      "you do (is) All-Seer"
+      "And know that",
+      "your wealth and your children",
+      "(are) a trial And that",
+      "Allah  with Him",
+      "(is) a reward great"
     ],
-    "hint": "A verse about Allah's perfect knowledge of all deeds and the Day of Return",
-    "arabic": "هُوَ ٱلَّذِى خَلَقَكُمْ فَمِنكُمْ كَافِرٌۭ وَمِنكُم مُّؤْمِنٌۭ ۚ وَٱللَّهُ بِمَا تَعْمَلُونَ بَصِيرٌ",
+    "hint": "A reminder that wealth and loved ones are a trial and test from Allah, who holds an immense reward for the patient.",
+    "arabic": "وَٱعْلَمُوٓا۟ أَنَّمَآ أَمْوَٰلُكُمْ وَأَوْلَـٰدُكُمْ فِتْنَةٌۭ وَأَنَّ ٱللَّهَ عِندَهُۥٓ أَجْرٌ عَظِيمٌۭ",
     "words": [
-      "هُوَ ٱلَّذِى خَلَقَكُمْ",
-      "فَمِنكُمْ كَافِرٌۭ وَمِنكُم",
-      "مُّؤْمِنٌۭ ۚ وَٱللَّهُ بِمَا",
-      "تَعْمَلُونَ بَصِيرٌ"
+      "وَٱعْلَمُوٓا۟ أَنَّمَآ",
+      "أَمْوَٰلُكُمْ وَأَوْلَـٰدُكُمْ",
+      "فِتْنَةٌۭ وَأَنَّ",
+      "ٱللَّهَ عِندَهُۥٓ",
+      "أَجْرٌ عَظِيمٌۭ"
     ],
-    "verseEn": "It is He who created you, and among you is the disbeliever, and among you is the believer. And Allāh, of what you do, is Seeing."
+    "verseEn": "And know that your properties and your children are but a trial and that Allāh has with Him a great reward."
   },
   "generated": true,
   "model": "auto (chain)"

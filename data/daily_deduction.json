@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-02",
+  "date": "2026-07-03",
   "puzzle": {
-    "title": "The Servant of Hidden Wisdom",
-    "intro": "In the vast tapestry of Quranic narratives, there stands an enigmatic figure, a servant of Allah graced with divine knowledge and mercy. This mysterious individual crossed paths with one of the greatest prophets, leading to a journey filled with perplexing actions that challenged the limits of human comprehension. Each act, though seemingly unjust, concealed profound lessons about fate, patience, and the unseen wisdom behind divine decree. Who is this shadowy figure, and what truths did they unveil?",
+    "title": "The Herald of an Unprecedented Sin",
+    "intro": "Some stories in the Quran reveal the depth of corruption an entire society can fall into. This messenger stood alone, pleading with a people drowned in a perversion that no nation before them had ever pursued. Despite years of warning, hearts remained hardened, and the divine decree arrived in a most terrifying manner. Can you identify this noble messenger of Allah?",
     "clues": [
-      "I was a servant of Allah, chosen for special knowledge and mercy.",
-      "A great prophet sought to learn from me, and I agreed under strict conditions.",
-      "During our meeting, I performed three actions that seemed unjust to my companion.",
-      "I damaged a boat belonging to poor people, yet it was a hidden mercy.",
-      "I took the life of a young boy, though it appeared cruel, it was to spare his parents grief.",
-      "I rebuilt a wall in a town that denied us hospitality, revealing a treasure beneath it."
+      "I was sent as a warner to a people consumed by a perversion that no nation before them had ever committed.",
+      "My people called me a liar and threatened to expel my followers and me from the land.",
+      "Honored visitors came to my home in the form of striking young men, and I felt deep distress for their safety.",
+      "My people demanded I surrender my guests to them, unaware that these visitors were angels sent by Allah.",
+      "My own spouse did not share in my faith and chose to remain behind with the doomed.",
+      "I was saved with my daughters at dawn, as a devastating rain of stones fell and our cities were overturned."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Al-Khidr (the righteous servant)",
-          "The owner of the two gardens",
-          "One of the People of the Cave",
-          "The king who argued with Ibrahim",
-          "The man who slept for 100 years"
+          "Prophet Lut",
+          "Prophet Shu'aib",
+          "Prophet Hud",
+          "Prophet Nuh",
+          "Prophet Salih"
         ],
-        "answer": "Al-Khidr (the righteous servant)"
+        "answer": "Prophet Lut"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Meeting Prophet Musa at the junction of the two seas",
-          "Building a barrier against Gog and Magog",
-          "Being thrown into a great fire",
-          "Splitting the sea into two halves",
-          "Receiving the tablets of the Torah"
+          "A great flood engulfing the earth",
+          "Loss of eyesight from long suffering",
+          "A tyrant claiming divinity",
+          "Being thrown into a blazing fire",
+          "Being demanded to surrender honored guests"
         ],
-        "answer": "Meeting Prophet Musa at the junction of the two seas"
+        "answer": "Being demanded to surrender honored guests"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The junction of the two seas",
-          "Mount Sinai",
-          "The cave of Thawr",
-          "The valley of Tuwa",
-          "The well of Zamzam"
+          "A great ark built by hand",
+          "A staff that split the sea",
+          "A miraculous she-camel",
+          "A blazing fire",
+          "Overturned cities"
         ],
-        "answer": "The junction of the two seas"
+        "answer": "Overturned cities"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "He explained the divine wisdom behind his puzzling actions and parted ways with Musa",
-          "He was granted prophethood after the journey",
-          "The boat was destroyed by a storm",
-          "The boy was brought back to life",
-          "He built a mosque in the inhospitable town"
+          "Drowned while pursuing the believers",
+          "Saved from a furnace of fire unharmed",
+          "Lifted up to the heavens alive",
+          "Family perished in a great flood",
+          "Family saved except for an unfaithful wife"
         ],
-        "answer": "He explained the divine wisdom behind his puzzling actions and parted ways with Musa"
+        "answer": "Family saved except for an unfaithful wife"
       }
     },
-    "verseRef": "18:65",
-    "arabic": "فَوَجَدَا عَبْدًۭا مِّنْ عِبَادِنَآ ءَاتَيْنَـٰهُ رَحْمَةًۭ مِّنْ عِندِنَا وَعَلَّمْنَـٰهُ مِن لَّدُنَّا عِلْمًۭا",
-    "verse": "And they found a servant from among Our servants [i.e., al-Khiḍr] to whom We had given mercy from Us and had taught him from Us a [certain] knowledge. (18:65)"
+    "verseRef": "51:36",
+    "arabic": "فَمَا وَجَدْنَا فِيهَا غَيْرَ بَيْتٍۢ مِّنَ ٱلْمُسْلِمِينَ",
+    "verse": "And We found not within them other than a [single] house of Muslims. (51:36)"
   },
   "generated": true,
   "model": "auto (chain)"

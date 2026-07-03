@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-02",
+  "date": "2026-07-03",
   "puzzle": {
-    "word": "سورة",
-    "display": "سُورَةٌ",
-    "hint": "The fundamental unit of Quranic division",
-    "verseRef": "24:1",
-    "arabicVerse": "سُورَةٌ أَنزَلْنَـٰهَا وَفَرَضْنَـٰهَا وَأَنزَلْنَا فِيهَآ ءَايَـٰتٍۭ بَيِّنَـٰتٍۢ لَّعَلَّكُمْ تَذَكَّرُونَ",
-    "verse": "24:1 - [This is] a sūrah which We have sent down and made [that within it] obligatory and revealed therein verses of clear evidence that you might remember."
+    "word": "ربك",
+    "display": "رَبَّكَ",
+    "hint": "To Him belongs everything that exists",
+    "verseRef": "73:8",
+    "arabicVerse": "وَٱذْكُرِ ٱسْمَ رَبِّكَ وَتَبَتَّلْ إِلَيْهِ تَبْتِيلًۭا",
+    "verse": "73:8 - And remember the name of your Lord and devote yourself to Him with [complete] devotion."
   },
   "generated": true,
   "model": "auto (chain)"
