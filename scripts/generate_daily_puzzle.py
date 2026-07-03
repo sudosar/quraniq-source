@@ -2350,9 +2350,30 @@ def enrich_deduction_with_verses(puzzle):
     if verse_data:
         puzzle["arabic"] = verse_data["arabic"]
         puzzle["verse"] = f"{verse_data['english']} ({ref})"
-        print(f"  ✓ Verse text fetched from Quran API")
+        print(f"  ✓ Verse text fetched from Quran.com API")
     else:
-        print(f"  ⚠ Could not fetch verse text for {ref}")
+        # Fallback: try alquran.cloud (supports range refs like 40:36-37)
+        print(f"  ⚠ Quran.com failed for {ref}, trying alquran.cloud fallback...")
+        try:
+            alt_resp = requests.get(
+                f"https://api.alquran.cloud/v1/ayah/{ref}/en.sahih",
+                timeout=20
+            )
+            if alt_resp.status_code == 200:
+                alt_data = alt_resp.json()
+                ayah_data = alt_data.get("data", {})
+                # alquran.cloud returns English in 'text' for en.sahih edition
+                english = ayah_data.get("text", "") or ayah_data.get("translation", "") or ""
+                if english:
+                    puzzle["verse"] = f"{english} ({ref})"
+                    print(f"  ✓ Verse text fetched from alquran.cloud fallback")
+                else:
+                    raise ValueError("Empty english from alquran.cloud")
+            else:
+                raise ValueError(f"alquran.cloud returned {alt_resp.status_code}")
+        except Exception as e:
+            print(f"  ⚠ All verse APIs failed for {ref}: {e}")
+        # Last resort: at minimum, store the ref so the UI shows something
         if not puzzle.get("arabic"):
             puzzle["arabic"] = ""
         if not puzzle.get("verse"):
