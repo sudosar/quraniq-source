@@ -1481,6 +1481,7 @@ IMPORTANT:
 - Return ONLY the JSON object, no markdown
 - The word without diacritics must be 3-5 letters
 - The hint should be clever but not too obscure
+- The hint MUST NOT directly reveal or contain the Arabic word (e.g. if the word is "hear", the hint must not be "hear" or "the word is hear")
 - Choose words that are meaningful Islamic concepts
 - The verse MUST be from a surah NOT in the forbidden surahs list
 - Do NOT include full verse text - only the ref. Verse text will be looked up separately."""
@@ -1513,6 +1514,13 @@ def validate_harf(puzzle, history):
         cooldown_violations.append(f"Word '{word}' reused (cooldown)")
     if hint.lower().strip() in history["harf"]["hints"]:
         cooldown_violations.append(f"Hint reused (cooldown)")
+    # Hint must not directly reveal the word or contain it as a substring
+    hint_lower = hint.lower().strip()
+    word_stripped = re.sub(r'[\u064B-\u065F\u0670\u06D6-\u06ED]', '', word).lower()
+    if hint_lower == word_stripped:
+        cooldown_violations.append(f"Hint directly reveals the word '{word_stripped}'")
+    elif hint_lower in word_stripped or word_stripped in hint_lower:
+        cooldown_violations.append(f"Hint '{hint_lower}' contains or is contained by word '{word_stripped}'")
     # Check verse ref against game-specific AND global cooldown
     if verse_ref:
         if verse_ref in history["harf"]["verseRefs"]:
@@ -1636,6 +1644,10 @@ def validate_deduction(puzzle, history):
         opts = cat.get("options", [])
         if len(opts) != 5:
             errors.append(f"Category '{key}' has {len(opts)} options, expected 5")
+        # Reject empty or blank options (LLM sometimes generates null/empty slots)
+        for i, opt in enumerate(opts):
+            if not opt or not str(opt).strip():
+                errors.append(f"Category '{key}' has empty/whitespace option at position {i+1}")
         if not cat.get("answer"):
             errors.append(f"Category '{key}' missing answer")
         elif cat["answer"] not in opts:
