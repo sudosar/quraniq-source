@@ -2143,7 +2143,25 @@ def enrich_single_category(cat):
         if verse_data:
             item["verse"] = verse_data["arabic"]
             item["verseEn"] = verse_data["english"]
+            # Overwrite LLM-generated en with authoritative word-by-word translation
+            # from the Quran API. This fixes hallucinated/wrong word meanings.
             ar_word = item.get("ar", "")
+            if ar_word and verse_data.get("wbw"):
+                wbw = verse_data["wbw"]
+                # Find the best matching wbw entry for this word
+                from difflib import SequenceMatcher
+                best_en = None
+                best_score = 0.0
+                norm_ar = normalize_arabic(ar_word)
+                for wbw_entry in wbw:
+                    wbw_ar_norm = normalize_arabic(wbw_entry.get("arabic", ""))
+                    if wbw_ar_norm and len(wbw_ar_norm) >= 3 and len(norm_ar) >= 3:
+                        score = SequenceMatcher(None, wbw_ar_norm, norm_ar).ratio()
+                        if score > best_score and score >= 0.75:
+                            best_score = score
+                            best_en = wbw_entry.get("english", "")
+                if best_en:
+                    item["en"] = best_en
             if ar_word and not word_in_verse(ar_word, verse_data["arabic"]):
                 snippet = verse_data["arabic"][:120]
                 msg = (
