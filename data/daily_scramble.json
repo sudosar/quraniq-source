@@ -1,32 +1,32 @@
 {
-  "date": "2026-07-03",
+  "date": "2026-07-04",
   "puzzle": {
-    "verseRef": "8:28",
-    "reference": "Al-Anfal (8:28)",
+    "verseRef": "29:2",
+    "reference": "Surah Al-Ankabut (29:2)",
     "segments": [
-      "وَاعْلَمُوا أَنَّمَا",
-      "أَمْوَالُكُمْ وَأَوْلَادُكُمْ",
-      "فِتْنَةٌ",
-      "وَأَنَّ اللَّهَ عِندَهُ",
-      "أَجْرٌ عَظِيمٌ"
+      "الَّذِينَ آمَنُواْ",
+      "يَسْتَعِينُونَ بِاللَّهِ",
+      "وَعَدَ اللَّهُ",
+      "لَأَهْدِيَّنَّهُمْ",
+      "إِلَى صِرَاطٍ مُّسْتَقِيمٍ"
     ],
     "translations": [
-      "And know that",
-      "your wealth and your children",
-      "(are) a trial And that",
-      "Allah  with Him",
-      "(is) a reward great"
+      "Do think the people",
+      "that they will be left",
+      "because they say",
+      "We believe and they",
+      "will not be tested will not be tested"
     ],
-    "hint": "A reminder that wealth and loved ones are a trial and test from Allah, who holds an immense reward for the patient.",
-    "arabic": "وَٱعْلَمُوٓا۟ أَنَّمَآ أَمْوَٰلُكُمْ وَأَوْلَـٰدُكُمْ فِتْنَةٌۭ وَأَنَّ ٱللَّهَ عِندَهُۥٓ أَجْرٌ عَظِيمٌۭ",
+    "hint": "A verse about reliance on Allah (tawakkul) and His promise to support those who turn to Him in faith",
+    "arabic": "أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ",
     "words": [
-      "وَٱعْلَمُوٓا۟ أَنَّمَآ",
-      "أَمْوَٰلُكُمْ وَأَوْلَـٰدُكُمْ",
-      "فِتْنَةٌۭ وَأَنَّ",
-      "ٱللَّهَ عِندَهُۥٓ",
-      "أَجْرٌ عَظِيمٌۭ"
+      "أَحَسِبَ ٱلنَّاسُ",
+      "أَن يُتْرَكُوٓا۟",
+      "أَن يَقُولُوٓا۟",
+      "ءَامَنَّا وَهُمْ",
+      "لَا يُفْتَنُونَ"
     ],
-    "verseEn": "And know that your properties and your children are but a trial and that Allāh has with Him a great reward."
+    "verseEn": "Do the people think that they will be left to say, \"We believe\" and they will not be tried?"
   },
   "generated": true,
   "model": "auto (chain)"

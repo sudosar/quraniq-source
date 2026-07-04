@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-03",
+  "date": "2026-07-04",
   "puzzle": {
-    "word": "ربك",
-    "display": "رَبَّكَ",
-    "hint": "To Him belongs everything that exists",
-    "verseRef": "73:8",
-    "arabicVerse": "وَٱذْكُرِ ٱسْمَ رَبِّكَ وَتَبَتَّلْ إِلَيْهِ تَبْتِيلًۭا",
-    "verse": "73:8 - And remember the name of your Lord and devote yourself to Him with [complete] devotion."
+    "word": "حكمة",
+    "display": "حِكْمَة",
+    "hint": "A divine attribute paired with strengthened kingship and decisive speech in describing Prophet Solomon",
+    "verseRef": "38:20",
+    "arabicVerse": "وَشَدَدْنَا مُلْكَهُۥ وَءَاتَيْنَـٰهُ ٱلْحِكْمَةَ وَفَصْلَ ٱلْخِطَابِ",
+    "verse": "38:20 - And We strengthened his kingdom and gave him wisdom and discernment in speech."
   },
   "generated": true,
   "model": "auto (chain)"
