@@ -1,32 +1,38 @@
 {
-  "date": "2026-07-04",
+  "date": "2026-07-05",
   "puzzle": {
-    "verseRef": "29:2",
-    "reference": "Surah Al-Ankabut (29:2)",
+    "verseRef": "40:60",
+    "reference": "Surah Ghafir (40:60)",
     "segments": [
-      "الَّذِينَ آمَنُواْ",
-      "يَسْتَعِينُونَ بِاللَّهِ",
-      "وَعَدَ اللَّهُ",
-      "لَأَهْدِيَّنَّهُمْ",
-      "إِلَى صِرَاطٍ مُّسْتَقِيمٍ"
+      "وَقَالَ رَبُّكُمُ",
+      "ادْعُونِي أَسْتَجِبْ",
+      "لَكُمْ",
+      "إِنَّ الَّذِينَ يَسْتَكْبِرُونَ",
+      "عَنْ عِبَادَتِي",
+      "سَيَدْخُلُونَ جَهَنَّمَ",
+      "دَاخِرِينَ"
     ],
     "translations": [
-      "Do think the people",
-      "that they will be left",
-      "because they say",
-      "We believe and they",
-      "will not be tested will not be tested"
+      "And said your Lord",
+      "Call upon Me I will respond",
+      "to you Indeed",
+      "those who (are) proud",
+      "to worship Me",
+      "will enter Hell",
+      "(in) humiliation"
     ],
-    "hint": "A verse about reliance on Allah (tawakkul) and His promise to support those who turn to Him in faith",
-    "arabic": "أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ",
+    "hint": "A beloved verse about the power of making dua and Allah's promise to answer the one who calls upon Him.",
+    "arabic": "وَقَالَ رَبُّكُمُ ٱدْعُونِىٓ أَسْتَجِبْ لَكُمْ ۚ إِنَّ ٱلَّذِينَ يَسْتَكْبِرُونَ عَنْ عِبَادَتِى سَيَدْخُلُونَ جَهَنَّمَ دَاخِرِينَ",
     "words": [
-      "أَحَسِبَ ٱلنَّاسُ",
-      "أَن يُتْرَكُوٓا۟",
-      "أَن يَقُولُوٓا۟",
-      "ءَامَنَّا وَهُمْ",
-      "لَا يُفْتَنُونَ"
+      "وَقَالَ رَبُّكُمُ",
+      "ٱدْعُونِىٓ أَسْتَجِبْ",
+      "لَكُمْ ۚ إِنَّ",
+      "ٱلَّذِينَ يَسْتَكْبِرُونَ",
+      "عَنْ عِبَادَتِى",
+      "سَيَدْخُلُونَ جَهَنَّمَ",
+      "دَاخِرِينَ"
     ],
-    "verseEn": "Do the people think that they will be left to say, \"We believe\" and they will not be tried?"
+    "verseEn": "And your Lord says, \"Call upon Me; I will respond to you.\" Indeed, those who disdain My worship will enter Hell [rendered] contemptible."
   },
   "generated": true,
   "model": "auto (chain)"
