@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-05",
+  "date": "2026-07-06",
   "puzzle": {
-    "word": "صدور",
-    "display": "صُدُور",
-    "hint": "Where the whisperer whispers.",
-    "verseRef": "114:5",
-    "arabicVerse": "ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ",
-    "verse": "114:5 - Who whispers [evil] into the breasts of mankind -"
+    "word": "مغفرة",
+    "display": "مَغْفِرَة",
+    "hint": "Divine forgiveness — the merciful pardon that erases past sins, promised to those who believe and do good deeds",
+    "verseRef": "5:9",
+    "arabicVerse": "وَعَدَ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ ۙ لَهُم مَّغْفِرَةٌۭ وَأَجْرٌ عَظِيمٌۭ",
+    "verse": "5:9 - Allāh has promised those who believe and do righteous deeds [that] for them there is forgiveness and great reward."
   },
   "generated": true,
   "model": "auto (chain)"
