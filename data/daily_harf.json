@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-06",
+  "date": "2026-07-07",
   "puzzle": {
-    "word": "مغفرة",
-    "display": "مَغْفِرَة",
-    "hint": "Divine forgiveness — the merciful pardon that erases past sins, promised to those who believe and do good deeds",
-    "verseRef": "5:9",
-    "arabicVerse": "وَعَدَ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ ۙ لَهُم مَّغْفِرَةٌۭ وَأَجْرٌ عَظِيمٌۭ",
-    "verse": "5:9 - Allāh has promised those who believe and do righteous deeds [that] for them there is forgiveness and great reward."
+    "word": "قدر",
+    "display": "قَدْر",
+    "hint": "A concept of divine preordainment; both a blessed night and an entire surah are named after it",
+    "verseRef": "97:1",
+    "arabicVerse": "إِنَّآ أَنزَلْنَـٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
+    "verse": "97:1 - Indeed, We sent it [i.e., the Qur’ān] down during the Night of Decree."
   },
   "generated": true,
   "model": "auto (chain)"

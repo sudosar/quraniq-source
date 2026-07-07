@@ -1,35 +1,35 @@
 {
-  "date": "2026-07-06",
+  "date": "2026-07-07",
   "puzzle": {
-    "verseRef": "2:201",
-    "reference": "Surah Al-Baqarah (2:201)",
+    "verseRef": "76:29",
+    "reference": "Surah Al-Insan (76:29)",
     "segments": [
-      "رَبَّنَا",
-      "آتِنَا",
-      "فِي الدُّنْيَا حَسَنَةً",
-      "وَفِي الْآخِرَةِ حَسَنَةً",
-      "وَقِنَا",
-      "عَذَابَ النَّارِ"
+      "إِنَّ هَٰذِهِ",
+      "تَذْكِرَةٌ",
+      "فَمَن شَاءَ",
+      "اتَّخَذَ",
+      "إِلَىٰ رَبِّهِ",
+      "سَبِيلًا"
     ],
     "translations": [
-      "And from those who say",
-      "Our Lord Grant us in",
-      "the world good",
-      "and in the Hereafter",
-      "good and save us",
-      "(from the) punishment (of) the Fire"
+      "Indeed this",
+      "(is) a reminder so whoever",
+      "wills let him take",
+      "to",
+      "his Lord",
+      "a way"
     ],
-    "hint": "A beloved, oft-repeated supplication asking Allah for goodness in both this life and the Hereafter, and protection from Hellfire — the du'a of those who hope for Allah's mercy.",
-    "arabic": "وَمِنْهُم مَّن يَقُولُ رَبَّنَآ ءَاتِنَا فِى ٱلدُّنْيَا حَسَنَةًۭ وَفِى ٱلْـَٔاخِرَةِ حَسَنَةًۭ وَقِنَا عَذَابَ ٱلنَّارِ",
+    "hint": "A universal invitation from Allah—about choice, guidance, and the straight path to one's Lord",
+    "arabic": "إِنَّ هَـٰذِهِۦ تَذْكِرَةٌۭ ۖ فَمَن شَآءَ ٱتَّخَذَ إِلَىٰ رَبِّهِۦ سَبِيلًۭا",
     "words": [
-      "وَمِنْهُم مَّن يَقُولُ",
-      "رَبَّنَآ ءَاتِنَا فِى",
-      "ٱلدُّنْيَا حَسَنَةًۭ",
-      "وَفِى ٱلْـَٔاخِرَةِ",
-      "حَسَنَةًۭ وَقِنَا",
-      "عَذَابَ ٱلنَّارِ"
+      "إِنَّ هَـٰذِهِۦ",
+      "تَذْكِرَةٌۭ ۖ فَمَن",
+      "شَآءَ ٱتَّخَذَ",
+      "إِلَىٰ",
+      "رَبِّهِۦ",
+      "سَبِيلًۭا"
     ],
-    "verseEn": "But among them is he who says, \"Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.\""
+    "verseEn": "Indeed, this is a reminder, so he who wills may take to his Lord a way."
   },
   "generated": true,
   "model": "auto (chain)"
