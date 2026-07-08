@@ -1,35 +1,32 @@
 {
-  "date": "2026-07-07",
+  "date": "2026-07-08",
   "puzzle": {
-    "verseRef": "76:29",
-    "reference": "Surah Al-Insan (76:29)",
+    "verseRef": "28:88",
+    "reference": "Al-Qasas (28:88)",
     "segments": [
-      "إِنَّ هَٰذِهِ",
-      "تَذْكِرَةٌ",
-      "فَمَن شَاءَ",
-      "اتَّخَذَ",
-      "إِلَىٰ رَبِّهِ",
-      "سَبِيلًا"
+      "كُلُّ شَيْءٍ",
+      "هَالِكٌ",
+      "إِلَّا وَجْهَهُ",
+      "لَهُ الْحُكْمُ",
+      "وَإِلَيْهِ تُرْجَعُونَ"
     ],
     "translations": [
-      "Indeed this",
-      "(is) a reminder so whoever",
-      "wills let him take",
-      "to",
-      "his Lord",
-      "a way"
+      "And (do) not invoke with Allah",
+      "god other (There is) no god",
+      "except Him Every thing",
+      "(will be) destroyed except His Face To Him",
+      "(is) the Decision and to Him you will be returned"
     ],
-    "hint": "A universal invitation from Allah—about choice, guidance, and the straight path to one's Lord",
-    "arabic": "إِنَّ هَـٰذِهِۦ تَذْكِرَةٌۭ ۖ فَمَن شَآءَ ٱتَّخَذَ إِلَىٰ رَبِّهِۦ سَبِيلًۭا",
+    "hint": "This verse reminds believers that only Allah's eternal essence endures, while all of creation will ultimately perish and return to Him.",
+    "arabic": "وَلَا تَدْعُ مَعَ ٱللَّهِ إِلَـٰهًا ءَاخَرَ ۘ لَآ إِلَـٰهَ إِلَّا هُوَ ۚ كُلُّ شَىْءٍ هَالِكٌ إِلَّا وَجْهَهُۥ ۚ لَهُ ٱلْحُكْمُ وَإِلَيْهِ تُرْجَعُونَ",
     "words": [
-      "إِنَّ هَـٰذِهِۦ",
-      "تَذْكِرَةٌۭ ۖ فَمَن",
-      "شَآءَ ٱتَّخَذَ",
-      "إِلَىٰ",
-      "رَبِّهِۦ",
-      "سَبِيلًۭا"
+      "وَلَا تَدْعُ مَعَ ٱللَّهِ",
+      "إِلَـٰهًا ءَاخَرَ ۘ لَآ إِلَـٰهَ",
+      "إِلَّا هُوَ ۚ كُلُّ شَىْءٍ",
+      "هَالِكٌ إِلَّا وَجْهَهُۥ ۚ لَهُ",
+      "ٱلْحُكْمُ وَإِلَيْهِ تُرْجَعُونَ"
     ],
-    "verseEn": "Indeed, this is a reminder, so he who wills may take to his Lord a way."
+    "verseEn": "And do not invoke with Allāh another deity. There is no deity except Him. Everything will be destroyed except His Face. His is the judgement, and to Him you will be returned."
   },
   "generated": true,
   "model": "auto (chain)"

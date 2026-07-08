@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-07",
+  "date": "2026-07-08",
   "puzzle": {
-    "word": "قدر",
-    "display": "قَدْر",
-    "hint": "A concept of divine preordainment; both a blessed night and an entire surah are named after it",
-    "verseRef": "97:1",
-    "arabicVerse": "إِنَّآ أَنزَلْنَـٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
-    "verse": "97:1 - Indeed, We sent it [i.e., the Qur’ān] down during the Night of Decree."
+    "word": "نذر",
+    "display": "نَذْر",
+    "hint": "A solemn religious vow or pledge, often made to God",
+    "verseRef": "76:7",
+    "arabicVerse": "يُوفُونَ بِٱلنَّذْرِ وَيَخَافُونَ يَوْمًۭا كَانَ شَرُّهُۥ مُسْتَطِيرًۭا",
+    "verse": "76:7 - They [are those who] fulfill [their] vows and fear a Day whose evil will be widespread."
   },
   "generated": true,
   "model": "auto (chain)"
