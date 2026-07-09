@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-08",
+  "date": "2026-07-09",
   "puzzle": {
-    "title": "The Betrayers of the Chosen",
-    "intro": "Throughout history, divine messengers walked among humanity, and some of the closest to them failed to recognize the light. This account revolves around two souls whose proximity to prophethood became their test, and their legacy a timeless lesson.",
+    "title": "The surrendered soul of sacred flame",
+    "intro": "Before you lies a tale of extraordinary courage, where one individual dared to challenge the most entrenched beliefs of an entire civilization. Follow these whispers from the past, and you will uncover a life marked by unyielding faith, miraculous survival, and the laying of foundations that would shape the spiritual journey of billions. Trace each clue carefully — the sacred fire still remembers.",
     "clues": [
-      "We lived in times of great prophets, yet our eyes remained closed to the truth they brought.",
-      "Our homes were filled with divine revelation, but our hearts were hardened.",
-      "We were married to men who were chosen to warn their people.",
-      "When punishment came, we did not seek shelter in the ark nor flee the burning rain, because we mocked the warnings.",
-      "We are mentioned in the Quran as an example for those who disbelieve, showing that even close relationship with a prophet does not save.",
-      "We are the wives of Nuh and Lut, who betrayed them and thus were condemned."
+      "I was born into a household that revered celestial bodies and carved idols, yet something deep within me rejected what they worshipped.",
+      "I stood against the mightiest ruler of my land, shattering the very idols my people bowed to, and declaring that only the Creator of the heavens deserved devotion.",
+      "A blazing pyre was ordered in my name, but I proclaimed that the One I served alone would save me — and the flames were commanded to become cool and safe.",
+      "I left behind everything familiar on a divine command, wandering through arid valleys with my family, trusting in a provision I could not yet see.",
+      "Standing beside my firstborn son in a barren valley, we raised together the foundations of a sacred house, a sanctuary destined for all who submit.",
+      "I am known as Khalilullah — the intimate friend of the Most Merciful — and my name became forever linked with the faith of surrender and submission."
     ],
     "categories": {
       "identity": {
-        "label": "Who Are We?",
+        "label": "Who Am I?",
         "options": [
-          "The wives of Nuh and Lut",
-          "The wives of Ibrahim and Isma'il",
-          "The wives of Musa and Harun",
-          "The wives of Dawud and Sulayman",
-          "The wives of Ayyub and Yunus"
+          "Prophet Ibrahim (Abraham)",
+          "Prophet Musa (Moses)",
+          "Prophet Nuh (Noah)",
+          "Prophet Isa (Jesus)",
+          "Prophet Muhammad ﷺ"
         ],
-        "answer": "The wives of Nuh and Lut"
+        "answer": "Prophet Ibrahim (Abraham)"
       },
       "trial": {
-        "label": "What was their trial?",
+        "label": "Trial/Event",
         "options": [
-          "They were married to prophets but disbelieved",
-          "They were barren and blamed the prophets",
-          "They were wealthy and arrogant",
-          "They were tempted by Iblis to leave their homes",
-          "They worshipped the Golden Calf"
+          "Being thrown into a blazing fire by a tyrant",
+          "Being swallowed inside a great fish at sea",
+          "Being lowered into a pit by jealous brothers",
+          "Being carried aloft upon a winged creature",
+          "Enduring a great flood inside a vessel of wood"
         ],
-        "answer": "They were married to prophets but disbelieved"
+        "answer": "Being thrown into a blazing fire by a tyrant"
       },
       "location": {
-        "label": "What was their fate tied to?",
+        "label": "Key Element",
         "options": [
-          "The flood and the rain of stones",
-          "A fierce wind",
-          "An earthquake",
-          "The plague of locusts",
-          "The splitting of the sea"
+          "The Sacred House (Kaaba)",
+          "A great wooden vessel built upon a mount",
+          "A staff that could split open the sea",
+          "A cave of long slumber with a loyal hound",
+          "A scroll of revealed law bestowed upon a mount"
         ],
-        "answer": "The flood and the rain of stones"
+        "answer": "The Sacred House (Kaaba)"
       },
       "outcome": {
-        "label": "What was their end?",
+        "label": "Outcome",
         "options": [
-          "They perished with the disbelievers",
-          "They repented and were saved",
-          "They were left childless",
-          "They were exiled forever",
-          "They were transformed into monkeys and pigs"
+          "Became known as Khalilullah, the intimate friend of Allah",
+          "Led a people across a parted sea to safety",
+          "Was granted mastery over winds and unseen forces",
+          "Became a healer blessed with miraculous cures",
+          "United twelve scattered tribes under one covenant"
         ],
-        "answer": "They perished with the disbelievers"
+        "answer": "Became known as Khalilullah, the intimate friend of Allah"
       }
     },
-    "verseRef": "66:10",
-    "arabic": "ضَرَبَ ٱللَّهُ مَثَلًۭا لِّلَّذِينَ كَفَرُوا۟ ٱمْرَأَتَ نُوحٍۢ وَٱمْرَأَتَ لُوطٍۢ ۖ كَانَتَا تَحْتَ عَبْدَيْنِ مِنْ عِبَادِنَا صَـٰلِحَيْنِ فَخَانَتَاهُمَا فَلَمْ يُغْنِيَا عَنْهُمَا مِنَ ٱللَّهِ شَيْـًۭٔا وَقِيلَ ٱدْخُلَا ٱلنَّارَ مَعَ ٱلدَّٰخِلِينَ",
-    "verse": "Allāh presents an example of those who disbelieved: the wife of Noah and the wife of Lot. They were under two of Our righteous servants but betrayed them, so they [i.e., those prophets] did not avail them from Allāh at all, and it was said, \"Enter the Fire with those who enter.\" (66:10)"
+    "verseRef": "6:79",
+    "arabic": "إِنِّى وَجَّهْتُ وَجْهِىَ لِلَّذِى فَطَرَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ حَنِيفًۭا ۖ وَمَآ أَنَا۠ مِنَ ٱلْمُشْرِكِينَ",
+    "verse": "Indeed, I have turned my face [i.e., self] toward He who created the heavens and the earth, inclining toward truth, and I am not of those who associate others with Allāh.\" (6:79)"
   },
   "generated": true,
   "model": "auto (chain)"

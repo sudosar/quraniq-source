@@ -1,32 +1,29 @@
 {
-  "date": "2026-07-08",
+  "date": "2026-07-09",
   "puzzle": {
-    "verseRef": "28:88",
-    "reference": "Al-Qasas (28:88)",
+    "verseRef": "65:2",
+    "reference": "Surah At-Talaq (65:2)",
     "segments": [
-      "كُلُّ شَيْءٍ",
-      "هَالِكٌ",
-      "إِلَّا وَجْهَهُ",
-      "لَهُ الْحُكْمُ",
-      "وَإِلَيْهِ تُرْجَعُونَ"
+      "word 1",
+      "words 2-3",
+      "words 4-6",
+      "words 7-9"
     ],
     "translations": [
-      "And (do) not invoke with Allah",
-      "god other (There is) no god",
-      "except Him Every thing",
-      "(will be) destroyed except His Face To Him",
-      "(is) the Decision and to Him you will be returned"
+      "Then when they have reached their term then retain them with kindness or part with them with kindness",
+      "And take witness two men just among you and establish the testimony for Allah That",
+      "is instructed with it whoever [is] believes in Allah and the Day",
+      "the Last And whoever fears Allah He will make for him a way out"
     ],
-    "hint": "This verse reminds believers that only Allah's eternal essence endures, while all of creation will ultimately perish and return to Him.",
-    "arabic": "وَلَا تَدْعُ مَعَ ٱللَّهِ إِلَـٰهًا ءَاخَرَ ۘ لَآ إِلَـٰهَ إِلَّا هُوَ ۚ كُلُّ شَىْءٍ هَالِكٌ إِلَّا وَجْهَهُۥ ۚ لَهُ ٱلْحُكْمُ وَإِلَيْهِ تُرْجَعُونَ",
+    "hint": "This verse provides guidance about maintaining marital relations while observing oaths, and reminds us of Allah's promise to ease difficulties for the pious.",
+    "arabic": "فَإِذَا بَلَغْنَ أَجَلَهُنَّ فَأَمْسِكُوهُنَّ بِمَعْرُوفٍ أَوْ فَارِقُوهُنَّ بِمَعْرُوفٍۢ وَأَشْهِدُوا۟ ذَوَىْ عَدْلٍۢ مِّنكُمْ وَأَقِيمُوا۟ ٱلشَّهَـٰدَةَ لِلَّهِ ۚ ذَٰلِكُمْ يُوعَظُ بِهِۦ مَن كَانَ يُؤْمِنُ بِٱللَّهِ وَٱلْيَوْمِ ٱلْـَٔاخِرِ ۚ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا",
     "words": [
-      "وَلَا تَدْعُ مَعَ ٱللَّهِ",
-      "إِلَـٰهًا ءَاخَرَ ۘ لَآ إِلَـٰهَ",
-      "إِلَّا هُوَ ۚ كُلُّ شَىْءٍ",
-      "هَالِكٌ إِلَّا وَجْهَهُۥ ۚ لَهُ",
-      "ٱلْحُكْمُ وَإِلَيْهِ تُرْجَعُونَ"
+      "فَإِذَا بَلَغْنَ أَجَلَهُنَّ فَأَمْسِكُوهُنَّ بِمَعْرُوفٍ أَوْ فَارِقُوهُنَّ بِمَعْرُوفٍۢ",
+      "وَأَشْهِدُوا۟ ذَوَىْ عَدْلٍۢ مِّنكُمْ وَأَقِيمُوا۟ ٱلشَّهَـٰدَةَ لِلَّهِ ۚ ذَٰلِكُمْ",
+      "يُوعَظُ بِهِۦ مَن كَانَ يُؤْمِنُ بِٱللَّهِ وَٱلْيَوْمِ",
+      "ٱلْـَٔاخِرِ ۚ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا"
     ],
-    "verseEn": "And do not invoke with Allāh another deity. There is no deity except Him. Everything will be destroyed except His Face. His is the judgement, and to Him you will be returned."
+    "verseEn": "And when they have [nearly] fulfilled their term, either retain them according to acceptable terms or part with them according to acceptable terms. And bring to witness two just men from among you and establish the testimony for [the acceptance of] Allāh. That is instructed to whoever should believe in Allāh and the Last Day. And whoever fears Allāh - He will make for him a way out"
   },
   "generated": true,
   "model": "auto (chain)"
