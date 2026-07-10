@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-09",
+  "date": "2026-07-10",
   "puzzle": {
-    "title": "The surrendered soul of sacred flame",
-    "intro": "Before you lies a tale of extraordinary courage, where one individual dared to challenge the most entrenched beliefs of an entire civilization. Follow these whispers from the past, and you will uncover a life marked by unyielding faith, miraculous survival, and the laying of foundations that would shape the spiritual journey of billions. Trace each clue carefully — the sacred fire still remembers.",
+    "title": "The Bearer of Nine Signs",
+    "intro": "A figure rose from the humblest of beginnings, with a destiny written in divine will. Hidden away in infancy and raised within the walls of the very ruler who sought to destroy their people, this soul was eventually called to a mighty mission. Equipped with nothing but faith and a humble shepherd's staff, they stood before the most powerful ruler of the age and demanded freedom for those who were enslaved. The world itself seemed to move at their command — waters parted, the heavens spoke, and a kingdom fell.",
     "clues": [
-      "I was born into a household that revered celestial bodies and carved idols, yet something deep within me rejected what they worshipped.",
-      "I stood against the mightiest ruler of my land, shattering the very idols my people bowed to, and declaring that only the Creator of the heavens deserved devotion.",
-      "A blazing pyre was ordered in my name, but I proclaimed that the One I served alone would save me — and the flames were commanded to become cool and safe.",
-      "I left behind everything familiar on a divine command, wandering through arid valleys with my family, trusting in a provision I could not yet see.",
-      "Standing beside my firstborn son in a barren valley, we raised together the foundations of a sacred house, a sanctuary destined for all who submit.",
-      "I am known as Khalilullah — the intimate friend of the Most Merciful — and my name became forever linked with the faith of surrender and submission."
+      "My earliest days were marked by fear — infants like me were hunted at birth by a merciless ruler who feared the future.",
+      "I was rescued by water and raised within the palace of the very ruler who sought my destruction.",
+      "I fled my homeland after a sudden incident, becoming a humble shepherd in a distant land.",
+      "I returned to confront that powerful ruler with a simple staff and a clear message, demanding the freedom of my people.",
+      "I parted a great body of water for those who followed me, and watched as those waters swallowed my enemy whole.",
+      "I climbed a sacred mount to receive divine guidance from Allah, and I was granted nine clear signs as proof of truth."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Ibrahim (Abraham)",
-          "Prophet Musa (Moses)",
-          "Prophet Nuh (Noah)",
-          "Prophet Isa (Jesus)",
-          "Prophet Muhammad ﷺ"
+          "Prophet Musa",
+          "Prophet Nuh",
+          "Prophet Ibrahim",
+          "Prophet Yusuf",
+          "Prophet Lut"
         ],
-        "answer": "Prophet Ibrahim (Abraham)"
+        "answer": "Prophet Musa"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Being thrown into a blazing fire by a tyrant",
-          "Being swallowed inside a great fish at sea",
-          "Being lowered into a pit by jealous brothers",
-          "Being carried aloft upon a winged creature",
-          "Enduring a great flood inside a vessel of wood"
+          "Confronting the Pharaoh at his court",
+          "Building the Ark to survive a great flood",
+          "Being cast into a blazing fire by idol-makers",
+          "Being lowered into a deep well by my brothers",
+          "Trying to stop my people from immoral conduct"
         ],
-        "answer": "Being thrown into a blazing fire by a tyrant"
+        "answer": "Confronting the Pharaoh at his court"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Sacred House (Kaaba)",
-          "A great wooden vessel built upon a mount",
-          "A staff that could split open the sea",
-          "A cave of long slumber with a loyal hound",
-          "A scroll of revealed law bestowed upon a mount"
+          "The Staff that turned into a serpent",
+          "The Ark of Nuh",
+          "The Throne of Bilqis",
+          "The Ring that controlled wind and jinn",
+          "Keys to hoarded treasures so heavy"
         ],
-        "answer": "The Sacred House (Kaaba)"
+        "answer": "The Staff that turned into a serpent"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Became known as Khalilullah, the intimate friend of Allah",
-          "Led a people across a parted sea to safety",
-          "Was granted mastery over winds and unseen forces",
-          "Became a healer blessed with miraculous cures",
-          "United twelve scattered tribes under one covenant"
+          "Led my people across parted waters to freedom",
+          "Was saved from a great flood inside an Ark",
+          "Was restored to health and family after deep suffering",
+          "Was cast out of a great fish alive",
+          "Built the foundations of the Sacred House"
         ],
-        "answer": "Became known as Khalilullah, the intimate friend of Allah"
+        "answer": "Led my people across parted waters to freedom"
       }
     },
-    "verseRef": "6:79",
-    "arabic": "إِنِّى وَجَّهْتُ وَجْهِىَ لِلَّذِى فَطَرَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ حَنِيفًۭا ۖ وَمَآ أَنَا۠ مِنَ ٱلْمُشْرِكِينَ",
-    "verse": "Indeed, I have turned my face [i.e., self] toward He who created the heavens and the earth, inclining toward truth, and I am not of those who associate others with Allāh.\" (6:79)"
+    "verseRef": "17:101",
+    "arabic": "وَلَقَدْ ءَاتَيْنَا مُوسَىٰ تِسْعَ ءَايَـٰتٍۭ بَيِّنَـٰتٍۢ ۖ فَسْـَٔلْ بَنِىٓ إِسْرَٰٓءِيلَ إِذْ جَآءَهُمْ فَقَالَ لَهُۥ فِرْعَوْنُ إِنِّى لَأَظُنُّكَ يَـٰمُوسَىٰ مَسْحُورًۭا",
+    "verse": "And We had certainly given Moses nine evident signs, so ask the Children of Israel [about] when he came to them and Pharaoh said to him, \"Indeed I think, O Moses, that you are affected by magic.\" (17:101)"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,29 +1,32 @@
 {
-  "date": "2026-07-09",
+  "date": "2026-07-10",
   "puzzle": {
-    "verseRef": "65:2",
-    "reference": "Surah At-Talaq (65:2)",
+    "verseRef": "96:1",
+    "reference": "Surah Al-'Alaq (96:1)",
     "segments": [
-      "word 1",
-      "words 2-3",
-      "words 4-6",
-      "words 7-9"
+      "Iqra'",
+      "bi-smi",
+      "rabbika",
+      "alladhi",
+      "khalaqa"
     ],
     "translations": [
-      "Then when they have reached their term then retain them with kindness or part with them with kindness",
-      "And take witness two men just among you and establish the testimony for Allah That",
-      "is instructed with it whoever [is] believes in Allah and the Day",
-      "the Last And whoever fears Allah He will make for him a way out"
+      "Read",
+      "in (the) name",
+      "(of) your Lord",
+      "the One Who",
+      "created "
     ],
-    "hint": "This verse provides guidance about maintaining marital relations while observing oaths, and reminds us of Allah's promise to ease difficulties for the pious.",
-    "arabic": "فَإِذَا بَلَغْنَ أَجَلَهُنَّ فَأَمْسِكُوهُنَّ بِمَعْرُوفٍ أَوْ فَارِقُوهُنَّ بِمَعْرُوفٍۢ وَأَشْهِدُوا۟ ذَوَىْ عَدْلٍۢ مِّنكُمْ وَأَقِيمُوا۟ ٱلشَّهَـٰدَةَ لِلَّهِ ۚ ذَٰلِكُمْ يُوعَظُ بِهِۦ مَن كَانَ يُؤْمِنُ بِٱللَّهِ وَٱلْيَوْمِ ٱلْـَٔاخِرِ ۚ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا",
+    "hint": "The very first verse revealed to Prophet Muhammad ﷺ in the Cave of Hira, marking the beginning of the Quranic revelation.",
+    "arabic": "ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ",
     "words": [
-      "فَإِذَا بَلَغْنَ أَجَلَهُنَّ فَأَمْسِكُوهُنَّ بِمَعْرُوفٍ أَوْ فَارِقُوهُنَّ بِمَعْرُوفٍۢ",
-      "وَأَشْهِدُوا۟ ذَوَىْ عَدْلٍۢ مِّنكُمْ وَأَقِيمُوا۟ ٱلشَّهَـٰدَةَ لِلَّهِ ۚ ذَٰلِكُمْ",
-      "يُوعَظُ بِهِۦ مَن كَانَ يُؤْمِنُ بِٱللَّهِ وَٱلْيَوْمِ",
-      "ٱلْـَٔاخِرِ ۚ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا"
+      "ٱقْرَأْ",
+      "بِٱسْمِ",
+      "رَبِّكَ",
+      "ٱلَّذِى",
+      "خَلَقَ"
     ],
-    "verseEn": "And when they have [nearly] fulfilled their term, either retain them according to acceptable terms or part with them according to acceptable terms. And bring to witness two just men from among you and establish the testimony for [the acceptance of] Allāh. That is instructed to whoever should believe in Allāh and the Last Day. And whoever fears Allāh - He will make for him a way out"
+    "verseEn": "Recite in the name of your Lord who created"
   },
   "generated": true,
   "model": "auto (chain)"

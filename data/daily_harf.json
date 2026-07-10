@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-09",
+  "date": "2026-07-10",
   "puzzle": {
-    "word": "شفاعة",
-    "display": "شَفَاعَة",
-    "hint": "A plea made on someone else's behalf — only of value when permitted by the One in whose court it is made",
-    "verseRef": "34:23",
-    "arabicVerse": "وَلَا تَنفَعُ ٱلشَّفَـٰعَةُ عِندَهُۥٓ إِلَّا لِمَنْ أَذِنَ لَهُۥ ۚ حَتَّىٰٓ إِذَا فُزِّعَ عَن قُلُوبِهِمْ قَالُوا۟ مَاذَا قَالَ رَبُّكُمْ ۖ قَالُوا۟ ٱلْحَقَّ ۖ وَهُوَ ٱلْعَلِىُّ ٱلْكَبِيرُ",
-    "verse": "34:23 - And intercession does not benefit with Him except for one whom He permits. [And those wait] until, when terror is removed from their hearts, they will say [to one another], \"What has your Lord said?\" They will say, \"The truth.\" And He is the Most High, the Grand."
+    "word": "قمر",
+    "display": "قَمَرَ",
+    "hint": "Earth's faithful celestial companion that waxes and wanes, marking the months of the Islamic calendar",
+    "verseRef": "36:39",
+    "arabicVerse": "وَٱلْقَمَرَ قَدَّرْنَـٰهُ مَنَازِلَ حَتَّىٰ عَادَ كَٱلْعُرْجُونِ ٱلْقَدِيمِ",
+    "verse": "36:39 - And the moon - We have determined for it phases, until it returns [appearing] like the old date stalk."
   },
   "generated": true,
   "model": "auto (chain)"
