@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-10",
+  "date": "2026-07-11",
   "puzzle": {
-    "word": "قمر",
-    "display": "قَمَرَ",
-    "hint": "Earth's faithful celestial companion that waxes and wanes, marking the months of the Islamic calendar",
-    "verseRef": "36:39",
-    "arabicVerse": "وَٱلْقَمَرَ قَدَّرْنَـٰهُ مَنَازِلَ حَتَّىٰ عَادَ كَٱلْعُرْجُونِ ٱلْقَدِيمِ",
-    "verse": "36:39 - And the moon - We have determined for it phases, until it returns [appearing] like the old date stalk."
+    "word": "واحد",
+    "display": "وَاحِد",
+    "hint": "A number that signifies the oneness of God.",
+    "verseRef": "37:4",
+    "arabicVerse": "إِنَّ إِلَـٰهَكُمْ لَوَٰحِدٌۭ",
+    "verse": "37:4 - Indeed, your God is One,"
   },
   "generated": true,
   "model": "auto (chain)"

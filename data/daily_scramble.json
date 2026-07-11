@@ -1,32 +1,29 @@
 {
-  "date": "2026-07-10",
+  "date": "2026-07-11",
   "puzzle": {
-    "verseRef": "96:1",
-    "reference": "Surah Al-'Alaq (96:1)",
+    "verseRef": "33:41",
+    "reference": "Surah Al-Ahzab (33:41)",
     "segments": [
-      "Iqra'",
-      "bi-smi",
-      "rabbika",
-      "alladhi",
-      "khalaqa"
+      "يَا أَيُّهَا",
+      "الَّذِينَ آمَنُوا",
+      "اذْكُرُوا اللَّهَ",
+      "ذِكْرًا كَثِيرًا"
     ],
     "translations": [
-      "Read",
-      "in (the) name",
-      "(of) your Lord",
-      "the One Who",
-      "created "
+      "O you who believe O you who believe",
+      "O you who believe Remember",
+      "Allah (with) remembrance",
+      "much"
     ],
-    "hint": "The very first verse revealed to Prophet Muhammad ﷺ in the Cave of Hira, marking the beginning of the Quranic revelation.",
-    "arabic": "ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ",
+    "hint": "A beloved call to abundant remembrance of Allah — a foundational verse about dhikr.",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱذْكُرُوا۟ ٱللَّهَ ذِكْرًۭا كَثِيرًۭا",
     "words": [
-      "ٱقْرَأْ",
-      "بِٱسْمِ",
-      "رَبِّكَ",
-      "ٱلَّذِى",
-      "خَلَقَ"
+      "يَـٰٓأَيُّهَا ٱلَّذِينَ",
+      "ءَامَنُوا۟ ٱذْكُرُوا۟",
+      "ٱللَّهَ ذِكْرًۭا",
+      "كَثِيرًۭا"
     ],
-    "verseEn": "Recite in the name of your Lord who created"
+    "verseEn": "O you who have believed, remember Allāh with much remembrance"
   },
   "generated": true,
   "model": "auto (chain)"

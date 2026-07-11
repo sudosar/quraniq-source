@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-10",
+  "date": "2026-07-11",
   "puzzle": {
-    "title": "The Bearer of Nine Signs",
-    "intro": "A figure rose from the humblest of beginnings, with a destiny written in divine will. Hidden away in infancy and raised within the walls of the very ruler who sought to destroy their people, this soul was eventually called to a mighty mission. Equipped with nothing but faith and a humble shepherd's staff, they stood before the most powerful ruler of the age and demanded freedom for those who were enslaved. The world itself seemed to move at their command — waters parted, the heavens spoke, and a kingdom fell.",
+    "title": "The travelers of the verdant field",
+    "intro": "In an ancient time, two individuals tended neighboring lands. Their paths were intertwined, yet their hearts led them toward vastly different destinations. One walked the straight path, while the other strayed into the darkness of denial. Can you unravel the mystery of these two keepers of the harvest?",
     "clues": [
-      "My earliest days were marked by fear — infants like me were hunted at birth by a merciless ruler who feared the future.",
-      "I was rescued by water and raised within the palace of the very ruler who sought my destruction.",
-      "I fled my homeland after a sudden incident, becoming a humble shepherd in a distant land.",
-      "I returned to confront that powerful ruler with a simple staff and a clear message, demanding the freedom of my people.",
-      "I parted a great body of water for those who followed me, and watched as those waters swallowed my enemy whole.",
-      "I climbed a sacred mount to receive divine guidance from Allah, and I was granted nine clear signs as proof of truth."
+      "I possessed abundant crops, luxuriant harvests that dazzled the eyes of onlookers.",
+      "My neighbor possessed even greater bounty than I did, yet I coveted their portion more than my own.",
+      "I suggested we destroy their crops entirely, to consolidate everything under my control.",
+      "I brought ruin upon my own harvest as well, destroying everything in my foolish scheming.",
+      "I stood helpless as my crops withered and my wealth turned to dust in a single night.",
+      "I had no share in the Hereafter, and my final abode became a pit of blazing fire."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Musa",
-          "Prophet Nuh",
-          "Prophet Ibrahim",
-          "Prophet Yusuf",
-          "Prophet Lut"
+          "The man who denied resurrection and judgment",
+          "The ruler who oppressed the righteous farmer",
+          "The wealthy landowner who lacked gratitude",
+          "The farmer who coveted their neighbor's land",
+          "The treacherous partner who plotted destruction"
         ],
-        "answer": "Prophet Musa"
+        "answer": "The farmer who coveted their neighbor's land"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Confronting the Pharaoh at his court",
-          "Building the Ark to survive a great flood",
-          "Being cast into a blazing fire by idol-makers",
-          "Being lowered into a deep well by my brothers",
-          "Trying to stop my people from immoral conduct"
+          "The test of receiving divine revelation",
+          "The challenge of wealth and patience",
+          "The temptation to destroy a righteous person's livelihood",
+          "The command to divide inheritance fairly",
+          "The struggle against a tyrant's oppression"
         ],
-        "answer": "Confronting the Pharaoh at his court"
+        "answer": "The temptation to destroy a righteous person's livelihood"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Staff that turned into a serpent",
-          "The Ark of Nuh",
-          "The Throne of Bilqis",
-          "The Ring that controlled wind and jinn",
-          "Keys to hoarded treasures so heavy"
+          "The verdant gardens of paradise",
+          "Two neighboring fields of crops",
+          "The mountains that witnessed destruction",
+          "The sacred sanctuary of Makkah",
+          "The riverbanks of a blessed land"
         ],
-        "answer": "The Staff that turned into a serpent"
+        "answer": "Two neighboring fields of crops"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Led my people across parted waters to freedom",
-          "Was saved from a great flood inside an Ark",
-          "Was restored to health and family after deep suffering",
-          "Was cast out of a great fish alive",
-          "Built the foundations of the Sacred House"
+          "Eternal paradise as a reward for righteousness",
+          "Complete destruction of both harvests in this life",
+          "Exile and wandering until death",
+          "Temporary prosperity followed by eternal fire",
+          "A miraculous restoration and doubled bounty"
         ],
-        "answer": "Led my people across parted waters to freedom"
+        "answer": "Complete destruction of both harvests in this life"
       }
     },
-    "verseRef": "17:101",
-    "arabic": "وَلَقَدْ ءَاتَيْنَا مُوسَىٰ تِسْعَ ءَايَـٰتٍۭ بَيِّنَـٰتٍۢ ۖ فَسْـَٔلْ بَنِىٓ إِسْرَٰٓءِيلَ إِذْ جَآءَهُمْ فَقَالَ لَهُۥ فِرْعَوْنُ إِنِّى لَأَظُنُّكَ يَـٰمُوسَىٰ مَسْحُورًۭا",
-    "verse": "And We had certainly given Moses nine evident signs, so ask the Children of Israel [about] when he came to them and Pharaoh said to him, \"Indeed I think, O Moses, that you are affected by magic.\" (17:101)"
+    "verseRef": "68:30",
+    "arabic": "فَأَقْبَلَ بَعْضُهُمْ عَلَىٰ بَعْضٍۢ يَتَلَـٰوَمُونَ",
+    "verse": "Then they approached one another, blaming each other. (68:30)"
   },
   "generated": true,
   "model": "auto (chain)"
