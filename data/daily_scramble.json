@@ -1,29 +1,29 @@
 {
-  "date": "2026-07-11",
+  "date": "2026-07-12",
   "puzzle": {
-    "verseRef": "33:41",
-    "reference": "Surah Al-Ahzab (33:41)",
+    "verseRef": "4:19",
+    "reference": "Surah An-Nisa (4:19)",
     "segments": [
-      "يَا أَيُّهَا",
-      "الَّذِينَ آمَنُوا",
-      "اذْكُرُوا اللَّهَ",
-      "ذِكْرًا كَثِيرًا"
+      "يَا أَيُّهَا الَّذِينَ",
+      "آمَنُوا لَا",
+      "تَأْكُلُوا أَمْوَالَكُمْ",
+      "بَيْنَكُمْ بِالْبَاطِلِ"
     ],
     "translations": [
-      "O you who believe O you who believe",
-      "O you who believe Remember",
-      "Allah (with) remembrance",
-      "much"
+      "O you who believe[d] Not (is) lawful for you that you inherit the women",
+      "(by) force And not you constraint them so that you may take a part (of) what you have given them except that",
+      "they commit immorality open And live with them in kindness But if you dislike them then perhaps",
+      "that you dislike a thing and has placed Allah in it good much"
     ],
-    "hint": "A beloved call to abundant remembrance of Allah — a foundational verse about dhikr.",
-    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱذْكُرُوا۟ ٱللَّهَ ذِكْرًۭا كَثِيرًۭا",
+    "hint": "This verse addresses proper conduct regarding wealth and property in Islamic society, forbidding wrongful taking of others' resources.",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا يَحِلُّ لَكُمْ أَن تَرِثُوا۟ ٱلنِّسَآءَ كَرْهًۭا ۖ وَلَا تَعْضُلُوهُنَّ لِتَذْهَبُوا۟ بِبَعْضِ مَآ ءَاتَيْتُمُوهُنَّ إِلَّآ أَن يَأْتِينَ بِفَـٰحِشَةٍۢ مُّبَيِّنَةٍۢ ۚ وَعَاشِرُوهُنَّ بِٱلْمَعْرُوفِ ۚ فَإِن كَرِهْتُمُوهُنَّ فَعَسَىٰٓ أَن تَكْرَهُوا۟ شَيْـًۭٔا وَيَجْعَلَ ٱللَّهُ فِيهِ خَيْرًۭا كَثِيرًۭا",
     "words": [
-      "يَـٰٓأَيُّهَا ٱلَّذِينَ",
-      "ءَامَنُوا۟ ٱذْكُرُوا۟",
-      "ٱللَّهَ ذِكْرًۭا",
-      "كَثِيرًۭا"
+      "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا يَحِلُّ لَكُمْ أَن تَرِثُوا۟ ٱلنِّسَآءَ",
+      "كَرْهًۭا ۖ وَلَا تَعْضُلُوهُنَّ لِتَذْهَبُوا۟ بِبَعْضِ مَآ ءَاتَيْتُمُوهُنَّ إِلَّآ أَن",
+      "يَأْتِينَ بِفَـٰحِشَةٍۢ مُّبَيِّنَةٍۢ ۚ وَعَاشِرُوهُنَّ بِٱلْمَعْرُوفِ ۚ فَإِن كَرِهْتُمُوهُنَّ فَعَسَىٰٓ",
+      "أَن تَكْرَهُوا۟ شَيْـًۭٔا وَيَجْعَلَ ٱللَّهُ فِيهِ خَيْرًۭا كَثِيرًۭا"
     ],
-    "verseEn": "O you who have believed, remember Allāh with much remembrance"
+    "verseEn": "O you who have believed, it is not lawful for you to inherit women by compulsion. And do not make difficulties for them in order to take [back] part of what you gave them unless they commit a clear immorality [i.e., adultery]. And live with them in kindness. For if you dislike them - perhaps you dislike a thing and Allāh makes therein much good."
   },
   "generated": true,
   "model": "auto (chain)"

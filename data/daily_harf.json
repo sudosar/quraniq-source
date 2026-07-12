@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-11",
+  "date": "2026-07-12",
   "puzzle": {
-    "word": "واحد",
-    "display": "وَاحِد",
-    "hint": "A number that signifies the oneness of God.",
-    "verseRef": "37:4",
-    "arabicVerse": "إِنَّ إِلَـٰهَكُمْ لَوَٰحِدٌۭ",
-    "verse": "37:4 - Indeed, your God is One,"
+    "word": "مجيد",
+    "display": "مَّجِيدٌ",
+    "hint": "A description of the Quran as glorious, also an attribute of Allah.",
+    "verseRef": "85:21",
+    "arabicVerse": "بَلْ هُوَ قُرْءَانٌۭ مَّجِيدٌۭ",
+    "verse": "85:21 - But this is an honored Qur’ān"
   },
   "generated": true,
   "model": "auto (chain)"
