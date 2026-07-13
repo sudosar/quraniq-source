@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-12",
+  "date": "2026-07-13",
   "puzzle": {
-    "word": "مجيد",
-    "display": "مَّجِيدٌ",
-    "hint": "A description of the Quran as glorious, also an attribute of Allah.",
-    "verseRef": "85:21",
-    "arabicVerse": "بَلْ هُوَ قُرْءَانٌۭ مَّجِيدٌۭ",
-    "verse": "85:21 - But this is an honored Qur’ān"
+    "word": "صدق",
+    "display": "صِدْق",
+    "hint": "Truthfulness, a quality of the prophets and believers",
+    "verseRef": "10:2",
+    "arabicVerse": "أَكَانَ لِلنَّاسِ عَجَبًا أَنْ أَوْحَيْنَآ إِلَىٰ رَجُلٍۢ مِّنْهُمْ أَنْ أَنذِرِ ٱلنَّاسَ وَبَشِّرِ ٱلَّذِينَ ءَامَنُوٓا۟ أَنَّ لَهُمْ قَدَمَ صِدْقٍ عِندَ رَبِّهِمْ ۗ قَالَ ٱلْكَـٰفِرُونَ إِنَّ هَـٰذَا لَسَـٰحِرٌۭ مُّبِينٌ",
+    "verse": "10:2 - Have the people been amazed that We revealed [revelation] to a man from among them, [saying], \"Warn mankind and give good tidings to those who believe that they will have a [firm] precedence of honor with their Lord\"? [But] the disbelievers say, \"Indeed, this is an obvious magician.\""
   },
   "generated": true,
   "model": "auto (chain)"

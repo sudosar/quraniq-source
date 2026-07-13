@@ -1,29 +1,29 @@
 {
-  "date": "2026-07-12",
+  "date": "2026-07-13",
   "puzzle": {
-    "verseRef": "4:19",
-    "reference": "Surah An-Nisa (4:19)",
+    "verseRef": "39:10",
+    "reference": "Surah Az-Zumar (39:10)",
     "segments": [
-      "يَا أَيُّهَا الَّذِينَ",
-      "آمَنُوا لَا",
-      "تَأْكُلُوا أَمْوَالَكُمْ",
-      "بَيْنَكُمْ بِالْبَاطِلِ"
+      "إِنَّمَا",
+      "يُوَفَّى الصَّابِرُونَ",
+      "أَجْرَهُم",
+      "بِغَيْرِ حِسَابٍ"
     ],
     "translations": [
-      "O you who believe[d] Not (is) lawful for you that you inherit the women",
-      "(by) force And not you constraint them so that you may take a part (of) what you have given them except that",
-      "they commit immorality open And live with them in kindness But if you dislike them then perhaps",
-      "that you dislike a thing and has placed Allah in it good much"
+      "Say O My slaves [those] who believe Fear your Lord",
+      "For those who do good in this world",
+      "(is) good and the earth (of) Allah (is) spacious Only",
+      "will be paid back in full the patient ones their reward without account"
     ],
-    "hint": "This verse addresses proper conduct regarding wealth and property in Islamic society, forbidding wrongful taking of others' resources.",
-    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا يَحِلُّ لَكُمْ أَن تَرِثُوا۟ ٱلنِّسَآءَ كَرْهًۭا ۖ وَلَا تَعْضُلُوهُنَّ لِتَذْهَبُوا۟ بِبَعْضِ مَآ ءَاتَيْتُمُوهُنَّ إِلَّآ أَن يَأْتِينَ بِفَـٰحِشَةٍۢ مُّبَيِّنَةٍۢ ۚ وَعَاشِرُوهُنَّ بِٱلْمَعْرُوفِ ۚ فَإِن كَرِهْتُمُوهُنَّ فَعَسَىٰٓ أَن تَكْرَهُوا۟ شَيْـًۭٔا وَيَجْعَلَ ٱللَّهُ فِيهِ خَيْرًۭا كَثِيرًۭا",
+    "hint": "A powerful promise about the boundless reward awaiting those who persevere with patience through life's trials.",
+    "arabic": "قُلْ يَـٰعِبَادِ ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ رَبَّكُمْ ۚ لِلَّذِينَ أَحْسَنُوا۟ فِى هَـٰذِهِ ٱلدُّنْيَا حَسَنَةٌۭ ۗ وَأَرْضُ ٱللَّهِ وَٰسِعَةٌ ۗ إِنَّمَا يُوَفَّى ٱلصَّـٰبِرُونَ أَجْرَهُم بِغَيْرِ حِسَابٍۢ",
     "words": [
-      "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا يَحِلُّ لَكُمْ أَن تَرِثُوا۟ ٱلنِّسَآءَ",
-      "كَرْهًۭا ۖ وَلَا تَعْضُلُوهُنَّ لِتَذْهَبُوا۟ بِبَعْضِ مَآ ءَاتَيْتُمُوهُنَّ إِلَّآ أَن",
-      "يَأْتِينَ بِفَـٰحِشَةٍۢ مُّبَيِّنَةٍۢ ۚ وَعَاشِرُوهُنَّ بِٱلْمَعْرُوفِ ۚ فَإِن كَرِهْتُمُوهُنَّ فَعَسَىٰٓ",
-      "أَن تَكْرَهُوا۟ شَيْـًۭٔا وَيَجْعَلَ ٱللَّهُ فِيهِ خَيْرًۭا كَثِيرًۭا"
+      "قُلْ يَـٰعِبَادِ ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ رَبَّكُمْ ۚ",
+      "لِلَّذِينَ أَحْسَنُوا۟ فِى هَـٰذِهِ ٱلدُّنْيَا",
+      "حَسَنَةٌۭ ۗ وَأَرْضُ ٱللَّهِ وَٰسِعَةٌ ۗ إِنَّمَا",
+      "يُوَفَّى ٱلصَّـٰبِرُونَ أَجْرَهُم بِغَيْرِ حِسَابٍۢ"
     ],
-    "verseEn": "O you who have believed, it is not lawful for you to inherit women by compulsion. And do not make difficulties for them in order to take [back] part of what you gave them unless they commit a clear immorality [i.e., adultery]. And live with them in kindness. For if you dislike them - perhaps you dislike a thing and Allāh makes therein much good."
+    "verseEn": "Say, \"O My servants who have believed, fear your Lord. For those who do good in this world is good, and the earth of Allāh is spacious. Indeed, the patient will be given their reward without account [i.e., limit].\""
   },
   "generated": true,
   "model": "auto (chain)"
