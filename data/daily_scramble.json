@@ -1,29 +1,29 @@
 {
-  "date": "2026-07-13",
+  "date": "2026-07-14",
   "puzzle": {
-    "verseRef": "39:10",
-    "reference": "Surah Az-Zumar (39:10)",
+    "verseRef": "10:65",
+    "reference": "Surah Yunus (10:65)",
     "segments": [
-      "إِنَّمَا",
-      "يُوَفَّى الصَّابِرُونَ",
-      "أَجْرَهُم",
-      "بِغَيْرِ حِسَابٍ"
+      "لَا تَحْزَنُوا",
+      "وَأَنْتُمْ",
+      "الْآنَ",
+      "وَهُوَ الرَّحِيمُ"
     ],
     "translations": [
-      "Say O My slaves [those] who believe Fear your Lord",
-      "For those who do good in this world",
-      "(is) good and the earth (of) Allah (is) spacious Only",
-      "will be paid back in full the patient ones their reward without account"
+      "And (let) not grieve you their speech",
+      "Indeed the honor (belongs) to Allah",
+      "all He",
+      "(is) the All-Hearer the All-Knower"
     ],
-    "hint": "A powerful promise about the boundless reward awaiting those who persevere with patience through life's trials.",
-    "arabic": "قُلْ يَـٰعِبَادِ ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ رَبَّكُمْ ۚ لِلَّذِينَ أَحْسَنُوا۟ فِى هَـٰذِهِ ٱلدُّنْيَا حَسَنَةٌۭ ۗ وَأَرْضُ ٱللَّهِ وَٰسِعَةٌ ۗ إِنَّمَا يُوَفَّى ٱلصَّـٰبِرُونَ أَجْرَهُم بِغَيْرِ حِسَابٍۢ",
+    "hint": "A verse of hope and comfort during times of hardship, reminding believers that Allah's mercy overcomes all sorrow",
+    "arabic": "وَلَا يَحْزُنكَ قَوْلُهُمْ ۘ إِنَّ ٱلْعِزَّةَ لِلَّهِ جَمِيعًا ۚ هُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
     "words": [
-      "قُلْ يَـٰعِبَادِ ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ رَبَّكُمْ ۚ",
-      "لِلَّذِينَ أَحْسَنُوا۟ فِى هَـٰذِهِ ٱلدُّنْيَا",
-      "حَسَنَةٌۭ ۗ وَأَرْضُ ٱللَّهِ وَٰسِعَةٌ ۗ إِنَّمَا",
-      "يُوَفَّى ٱلصَّـٰبِرُونَ أَجْرَهُم بِغَيْرِ حِسَابٍۢ"
+      "وَلَا يَحْزُنكَ قَوْلُهُمْ ۘ",
+      "إِنَّ ٱلْعِزَّةَ لِلَّهِ",
+      "جَمِيعًا ۚ هُوَ",
+      "ٱلسَّمِيعُ ٱلْعَلِيمُ"
     ],
-    "verseEn": "Say, \"O My servants who have believed, fear your Lord. For those who do good in this world is good, and the earth of Allāh is spacious. Indeed, the patient will be given their reward without account [i.e., limit].\""
+    "verseEn": "And let not their speech grieve you. Indeed, honor [due to power] belongs to Allāh entirely. He is the Hearing, the Knowing."
   },
   "generated": true,
   "model": "auto (chain)"
