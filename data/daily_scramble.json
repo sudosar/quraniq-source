@@ -1,29 +1,38 @@
 {
-  "date": "2026-07-14",
+  "date": "2026-07-15",
   "puzzle": {
-    "verseRef": "10:65",
-    "reference": "Surah Yunus (10:65)",
+    "verseRef": "3:169",
+    "reference": "Surah Ali 'Imran (3:169)",
     "segments": [
-      "لَا تَحْزَنُوا",
-      "وَأَنْتُمْ",
-      "الْآنَ",
-      "وَهُوَ الرَّحِيمُ"
+      "Wa la tahsabanna",
+      "alladhina qutilu",
+      "fi sabili Allahi",
+      "amwatan",
+      "bal ahyahun",
+      "'inda rabbihim",
+      "yurzaquna"
     ],
     "translations": [
-      "And (let) not grieve you their speech",
-      "Indeed the honor (belongs) to Allah",
-      "all He",
-      "(is) the All-Hearer the All-Knower"
+      "And (do) not think",
+      "(of) those who are killed",
+      "in (the) way",
+      "(of) Allah (as) dead",
+      "Nay They are alive",
+      "near their Lord",
+      "they are given provision"
     ],
-    "hint": "A verse of hope and comfort during times of hardship, reminding believers that Allah's mercy overcomes all sorrow",
-    "arabic": "وَلَا يَحْزُنكَ قَوْلُهُمْ ۘ إِنَّ ٱلْعِزَّةَ لِلَّهِ جَمِيعًا ۚ هُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
+    "hint": "The honored status of those who sacrifice their lives for the sake of Allah - they are not gone, but alive with their Lord, receiving their reward.",
+    "arabic": "وَلَا تَحْسَبَنَّ ٱلَّذِينَ قُتِلُوا۟ فِى سَبِيلِ ٱللَّهِ أَمْوَٰتًۢا ۚ بَلْ أَحْيَآءٌ عِندَ رَبِّهِمْ يُرْزَقُونَ",
     "words": [
-      "وَلَا يَحْزُنكَ قَوْلُهُمْ ۘ",
-      "إِنَّ ٱلْعِزَّةَ لِلَّهِ",
-      "جَمِيعًا ۚ هُوَ",
-      "ٱلسَّمِيعُ ٱلْعَلِيمُ"
+      "وَلَا تَحْسَبَنَّ",
+      "ٱلَّذِينَ قُتِلُوا۟",
+      "فِى سَبِيلِ",
+      "ٱللَّهِ أَمْوَٰتًۢا ۚ",
+      "بَلْ أَحْيَآءٌ",
+      "عِندَ رَبِّهِمْ",
+      "يُرْزَقُونَ"
     ],
-    "verseEn": "And let not their speech grieve you. Indeed, honor [due to power] belongs to Allāh entirely. He is the Hearing, the Knowing."
+    "verseEn": "And never think of those who have been killed in the cause of Allāh as dead. Rather, they are alive with their Lord, receiving provision,"
   },
   "generated": true,
   "model": "auto (chain)"

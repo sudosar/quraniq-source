@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-14",
+  "date": "2026-07-15",
   "puzzle": {
-    "word": "ساهون",
-    "display": "سَاهُونَ",
-    "hint": "Describes one who is heedless or neglectful, particularly regarding religious obligations",
-    "verseRef": "107:5",
-    "arabicVerse": "ٱلَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
-    "verse": "107:5 - [But] who are heedless of their prayer -"
+    "word": "غافر",
+    "display": "غَافِرٌ",
+    "hint": "An attribute of Allah describing the One who forgives sins and conceals faults",
+    "verseRef": "40:3",
+    "arabicVerse": "غَافِرِ ٱلذَّنۢبِ وَقَابِلِ ٱلتَّوْبِ شَدِيدِ ٱلْعِقَابِ ذِى ٱلطَّوْلِ ۖ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ إِلَيْهِ ٱلْمَصِيرُ",
+    "verse": "40:3 - The forgiver of sin, acceptor of repentance, severe in punishment, owner of abundance. There is no deity except Him; to Him is the destination."
   },
   "generated": true,
   "model": "auto (chain)"
