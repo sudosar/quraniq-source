@@ -1,6 +1,5 @@
 {
-  "date": "2026-07-16",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَسْمَاءُ الْأَنْبِيَاءِ فِي سُورَةِ الصَّافَّاتِ",
@@ -144,6 +143,101 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "سراج",
+    "display": "سِرَاج",
+    "hint": "The sun is described as this blazing source of light in the Quran",
+    "verseRef": "78:13",
+    "arabicVerse": "وَجَعَلْنَا سِرَاجًۭا وَهَّاجًۭا",
+    "verse": "78:13 - And made [therein] a burning lamp"
+  },
+  "deduction": {
+    "title": "The Voice That Challenged an Idol's Reign",
+    "intro": "Among the messengers of the Almighty was a steadfast servant who rose among a stubborn nation to deliver the truth. Their people had adopted a fabricated deity, turning away from the Creator of all that exists. With unwavering resolve, this individual called them back — but the message was met with denial and rejection. Step through the clues to discover who this devoted servant was.",
+    "clues": [
+      "I was sent as a messenger to a stubborn people who had wandered far from the straight path.",
+      "I came to remind my nation of the One who created all that exists — the best of all creators.",
+      "My people had turned to a false idol they venerated and called upon day and night.",
+      "I boldly challenged them, asking why they would worship a fabricated deity and abandon their true Lord.",
+      "They denied me, refused to listen, and held fast to their falsehood — yet my Lord preserved me.",
+      "I am Ilyas — and peace was granted upon me, and I was counted among the believing servants of the Most Merciful."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Prophet Ilyas",
+          "Prophet Idris",
+          "Prophet Alyasa",
+          "Prophet Dhul-Kifl",
+          "Prophet Nuh"
+        ],
+        "answer": "Prophet Ilyas"
+      },
+      "trial": {
+        "label": "Trial/Event",
+        "options": [
+          "Calling a people away from the worship of Ba'al",
+          "Confronting a tyrant who claimed to be a god",
+          "Warning a people about an impending flood",
+          "Being thrown into a great blazing fire",
+          "Leading an exodus from the land of bondage"
+        ],
+        "answer": "Calling a people away from the worship of Ba'al"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The idol named Ba'al",
+          "A great ark built from sturdy wood",
+          "A staff that parted a vast sea",
+          "A sacred garment stained with blood",
+          "A burning bush on a holy mount"
+        ],
+        "answer": "The idol named Ba'al"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "Granted peace and counted among the chosen servants of Allah",
+          "Led into paradise while all others were destroyed",
+          "Rescued from a great fire that became cool and safe",
+          "Given dominion over jinn, humanity, and the wind",
+          "Body preserved as a lasting sign for the ages"
+        ],
+        "answer": "Granted peace and counted among the chosen servants of Allah"
+      }
+    },
+    "verseRef": "37:130",
+    "arabic": "سَلَـٰمٌ عَلَىٰٓ إِلْ يَاسِينَ",
+    "verse": "\"Peace upon Elias.\" (37:130)"
+  },
+  "scramble": {
+    "verseRef": "5:32",
+    "reference": "Surah Al-Ma'idah (5:32)",
+    "segments": [
+      "مَن قَتَلَ نَفْسًا",
+      "بِغَيْرِ نَفْسٍ",
+      "أَوْ فَسَادٍ فِي الْأَرْضِ",
+      "فَكَأَنَّمَا قَتَلَ النَّاسَ",
+      "جَمِيعًا"
+    ],
+    "translations": [
+      "From time that We ordained on (the) Children (of) Israel that he",
+      "who kills a soul other than (for) a soul or (for) spreading corruption in",
+      "the earth then (it) is as if he has killed mankind all and whoever saves it then (it) is as if",
+      "he has saved mankind all And surely came to them Our Messengers with clear Signs yet",
+      "indeed many of them after that in the earth (are) surely those who commit excesses"
+    ],
+    "hint": "The sanctity of human life — the gravity of taking one innocent life is as if one had killed all of humanity.",
+    "arabic": "مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِىٓ إِسْرَٰٓءِيلَ أَنَّهُۥ مَن قَتَلَ نَفْسًۢا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍۢ فِى ٱلْأَرْضِ فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعًۭا وَمَنْ أَحْيَاهَا فَكَأَنَّمَآ أَحْيَا ٱلنَّاسَ جَمِيعًۭا ۚ وَلَقَدْ جَآءَتْهُمْ رُسُلُنَا بِٱلْبَيِّنَـٰتِ ثُمَّ إِنَّ كَثِيرًۭا مِّنْهُم بَعْدَ ذَٰلِكَ فِى ٱلْأَرْضِ لَمُسْرِفُونَ",
+    "words": [
+      "مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِىٓ إِسْرَٰٓءِيلَ أَنَّهُۥ",
+      "مَن قَتَلَ نَفْسًۢا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍۢ فِى",
+      "ٱلْأَرْضِ فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعًۭا وَمَنْ أَحْيَاهَا فَكَأَنَّمَآ",
+      "أَحْيَا ٱلنَّاسَ جَمِيعًۭا ۚ وَلَقَدْ جَآءَتْهُمْ رُسُلُنَا بِٱلْبَيِّنَـٰتِ ثُمَّ",
+      "إِنَّ كَثِيرًۭا مِّنْهُم بَعْدَ ذَٰلِكَ فِى ٱلْأَرْضِ لَمُسْرِفُونَ"
+    ],
+    "verseEn": "Because of that, We decreed upon the Children of Israel that whoever kills a soul unless for a soul or for corruption [done] in the land - it is as if he had slain mankind entirely. And whoever saves one - it is as if he had saved mankind entirely. And Our messengers had certainly come to them with clear proofs. Then indeed many of them, [even] after that, throughout the land, were transgressors."
+  }
 }

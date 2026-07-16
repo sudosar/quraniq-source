@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-15",
+  "date": "2026-07-16",
   "puzzle": {
-    "word": "غافر",
-    "display": "غَافِرٌ",
-    "hint": "An attribute of Allah describing the One who forgives sins and conceals faults",
-    "verseRef": "40:3",
-    "arabicVerse": "غَافِرِ ٱلذَّنۢبِ وَقَابِلِ ٱلتَّوْبِ شَدِيدِ ٱلْعِقَابِ ذِى ٱلطَّوْلِ ۖ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ إِلَيْهِ ٱلْمَصِيرُ",
-    "verse": "40:3 - The forgiver of sin, acceptor of repentance, severe in punishment, owner of abundance. There is no deity except Him; to Him is the destination."
+    "word": "سراج",
+    "display": "سِرَاج",
+    "hint": "The sun is described as this blazing source of light in the Quran",
+    "verseRef": "78:13",
+    "arabicVerse": "وَجَعَلْنَا سِرَاجًۭا وَهَّاجًۭا",
+    "verse": "78:13 - And made [therein] a burning lamp"
   },
   "generated": true,
   "model": "auto (chain)"

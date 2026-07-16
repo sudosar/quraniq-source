@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-15",
+  "date": "2026-07-16",
   "puzzle": {
-    "title": "The Solitary Retreat",
-    "intro": "In the annals of divine favor, there exists a soul of unparalleled purity, set apart from their people to seek solitude in a sacred direction. Little did they know that this seclusion would bring forth a sign for all worlds, a trial of faith that would be spoken of for eternity.",
+    "title": "The Voice That Challenged an Idol's Reign",
+    "intro": "Among the messengers of the Almighty was a steadfast servant who rose among a stubborn nation to deliver the truth. Their people had adopted a fabricated deity, turning away from the Creator of all that exists. With unwavering resolve, this individual called them back — but the message was met with denial and rejection. Step through the clues to discover who this devoted servant was.",
     "clues": [
-      "I was dedicated to a life of service before my birth.",
-      "I was placed under the guardianship of a noble prophet.",
-      "I was sustained with provisions from Allah that amazed my guardian.",
-      "I withdrew from my family to an eastern place.",
-      "An angel appeared to me in the form of a perfect man, bringing news of a pure son.",
-      "When I returned with my newborn, my people accused me, but the infant spoke in my defense."
+      "I was sent as a messenger to a stubborn people who had wandered far from the straight path.",
+      "I came to remind my nation of the One who created all that exists — the best of all creators.",
+      "My people had turned to a false idol they venerated and called upon day and night.",
+      "I boldly challenged them, asking why they would worship a fabricated deity and abandon their true Lord.",
+      "They denied me, refused to listen, and held fast to their falsehood — yet my Lord preserved me.",
+      "I am Ilyas — and peace was granted upon me, and I was counted among the believing servants of the Most Merciful."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Maryam (Mary)",
-          "Asiyah (wife of Pharaoh)",
-          "Hajar (mother of Ismail)",
-          "Sarah (wife of Ibrahim)",
-          "The mother of Musa"
+          "Prophet Ilyas",
+          "Prophet Idris",
+          "Prophet Alyasa",
+          "Prophet Dhul-Kifl",
+          "Prophet Nuh"
         ],
-        "answer": "Maryam (Mary)"
+        "answer": "Prophet Ilyas"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Miraculous conception and birth of a son",
-          "Being thrown into a fire",
-          "Being swallowed by a giant fish",
-          "Building a great ark",
-          "Crossing the sea"
+          "Calling a people away from the worship of Ba'al",
+          "Confronting a tyrant who claimed to be a god",
+          "Warning a people about an impending flood",
+          "Being thrown into a great blazing fire",
+          "Leading an exodus from the land of bondage"
         ],
-        "answer": "Miraculous conception and birth of a son"
+        "answer": "Calling a people away from the worship of Ba'al"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A secluded eastern place",
-          "The burning bush",
-          "The Red Sea",
-          "The rock from which water gushed",
-          "The whale"
+          "The idol named Ba'al",
+          "A great ark built from sturdy wood",
+          "A staff that parted a vast sea",
+          "A sacred garment stained with blood",
+          "A burning bush on a holy mount"
         ],
-        "answer": "A secluded eastern place"
+        "answer": "The idol named Ba'al"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "An infant spoke in defense of a mother",
-          "The sea was parted",
-          "The fire became cool and safe",
-          "The whale vomited onto the shore",
-          "The ark landed on a mountain"
+          "Granted peace and counted among the chosen servants of Allah",
+          "Led into paradise while all others were destroyed",
+          "Rescued from a great fire that became cool and safe",
+          "Given dominion over jinn, humanity, and the wind",
+          "Body preserved as a lasting sign for the ages"
         ],
-        "answer": "An infant spoke in defense of a mother"
+        "answer": "Granted peace and counted among the chosen servants of Allah"
       }
     },
-    "verseRef": "19:16",
-    "arabic": "وَٱذْكُرْ فِى ٱلْكِتَـٰبِ مَرْيَمَ إِذِ ٱنتَبَذَتْ مِنْ أَهْلِهَا مَكَانًۭا شَرْقِيًّۭا",
-    "verse": "And mention, [O Muḥammad], in the Book [the story of] Mary, when she withdrew from her family to a place toward the east. (19:16)"
+    "verseRef": "37:130",
+    "arabic": "سَلَـٰمٌ عَلَىٰٓ إِلْ يَاسِينَ",
+    "verse": "\"Peace upon Elias.\" (37:130)"
   },
   "generated": true,
   "model": "auto (chain)"

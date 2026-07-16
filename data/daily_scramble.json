@@ -1,38 +1,32 @@
 {
-  "date": "2026-07-15",
+  "date": "2026-07-16",
   "puzzle": {
-    "verseRef": "3:169",
-    "reference": "Surah Ali 'Imran (3:169)",
+    "verseRef": "5:32",
+    "reference": "Surah Al-Ma'idah (5:32)",
     "segments": [
-      "Wa la tahsabanna",
-      "alladhina qutilu",
-      "fi sabili Allahi",
-      "amwatan",
-      "bal ahyahun",
-      "'inda rabbihim",
-      "yurzaquna"
+      "مَن قَتَلَ نَفْسًا",
+      "بِغَيْرِ نَفْسٍ",
+      "أَوْ فَسَادٍ فِي الْأَرْضِ",
+      "فَكَأَنَّمَا قَتَلَ النَّاسَ",
+      "جَمِيعًا"
     ],
     "translations": [
-      "And (do) not think",
-      "(of) those who are killed",
-      "in (the) way",
-      "(of) Allah (as) dead",
-      "Nay They are alive",
-      "near their Lord",
-      "they are given provision"
+      "From time that We ordained on (the) Children (of) Israel that he",
+      "who kills a soul other than (for) a soul or (for) spreading corruption in",
+      "the earth then (it) is as if he has killed mankind all and whoever saves it then (it) is as if",
+      "he has saved mankind all And surely came to them Our Messengers with clear Signs yet",
+      "indeed many of them after that in the earth (are) surely those who commit excesses"
     ],
-    "hint": "The honored status of those who sacrifice their lives for the sake of Allah - they are not gone, but alive with their Lord, receiving their reward.",
-    "arabic": "وَلَا تَحْسَبَنَّ ٱلَّذِينَ قُتِلُوا۟ فِى سَبِيلِ ٱللَّهِ أَمْوَٰتًۢا ۚ بَلْ أَحْيَآءٌ عِندَ رَبِّهِمْ يُرْزَقُونَ",
+    "hint": "The sanctity of human life — the gravity of taking one innocent life is as if one had killed all of humanity.",
+    "arabic": "مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِىٓ إِسْرَٰٓءِيلَ أَنَّهُۥ مَن قَتَلَ نَفْسًۢا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍۢ فِى ٱلْأَرْضِ فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعًۭا وَمَنْ أَحْيَاهَا فَكَأَنَّمَآ أَحْيَا ٱلنَّاسَ جَمِيعًۭا ۚ وَلَقَدْ جَآءَتْهُمْ رُسُلُنَا بِٱلْبَيِّنَـٰتِ ثُمَّ إِنَّ كَثِيرًۭا مِّنْهُم بَعْدَ ذَٰلِكَ فِى ٱلْأَرْضِ لَمُسْرِفُونَ",
     "words": [
-      "وَلَا تَحْسَبَنَّ",
-      "ٱلَّذِينَ قُتِلُوا۟",
-      "فِى سَبِيلِ",
-      "ٱللَّهِ أَمْوَٰتًۢا ۚ",
-      "بَلْ أَحْيَآءٌ",
-      "عِندَ رَبِّهِمْ",
-      "يُرْزَقُونَ"
+      "مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِىٓ إِسْرَٰٓءِيلَ أَنَّهُۥ",
+      "مَن قَتَلَ نَفْسًۢا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍۢ فِى",
+      "ٱلْأَرْضِ فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعًۭا وَمَنْ أَحْيَاهَا فَكَأَنَّمَآ",
+      "أَحْيَا ٱلنَّاسَ جَمِيعًۭا ۚ وَلَقَدْ جَآءَتْهُمْ رُسُلُنَا بِٱلْبَيِّنَـٰتِ ثُمَّ",
+      "إِنَّ كَثِيرًۭا مِّنْهُم بَعْدَ ذَٰلِكَ فِى ٱلْأَرْضِ لَمُسْرِفُونَ"
     ],
-    "verseEn": "And never think of those who have been killed in the cause of Allāh as dead. Rather, they are alive with their Lord, receiving provision,"
+    "verseEn": "Because of that, We decreed upon the Children of Israel that whoever kills a soul unless for a soul or for corruption [done] in the land - it is as if he had slain mankind entirely. And whoever saves one - it is as if he had saved mankind entirely. And Our messengers had certainly come to them with clear proofs. Then indeed many of them, [even] after that, throughout the land, were transgressors."
   },
   "generated": true,
   "model": "auto (chain)"
