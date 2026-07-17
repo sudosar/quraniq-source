@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-16",
+  "date": "2026-07-17",
   "puzzle": {
-    "word": "سراج",
-    "display": "سِرَاج",
-    "hint": "The sun is described as this blazing source of light in the Quran",
-    "verseRef": "78:13",
-    "arabicVerse": "وَجَعَلْنَا سِرَاجًۭا وَهَّاجًۭا",
-    "verse": "78:13 - And made [therein] a burning lamp"
+    "word": "توابا",
+    "display": "تَوَّابًا",
+    "hint": "An attribute of Allah meaning He constantly accepts repentance",
+    "verseRef": "110:3",
+    "arabicVerse": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ ۚ إِنَّهُۥ كَانَ تَوَّابًۢا",
+    "verse": "110:3 - Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever Accepting of Repentance."
   },
   "generated": true,
   "model": "auto (chain)"

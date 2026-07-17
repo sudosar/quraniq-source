@@ -1,32 +1,35 @@
 {
-  "date": "2026-07-16",
+  "date": "2026-07-17",
   "puzzle": {
-    "verseRef": "5:32",
-    "reference": "Surah Al-Ma'idah (5:32)",
+    "verseRef": "17:110",
+    "reference": "Surah Al-Isra (17:110)",
     "segments": [
-      "مَن قَتَلَ نَفْسًا",
-      "بِغَيْرِ نَفْسٍ",
-      "أَوْ فَسَادٍ فِي الْأَرْضِ",
-      "فَكَأَنَّمَا قَتَلَ النَّاسَ",
-      "جَمِيعًا"
+      "قُلِ",
+      "ادْعُوا",
+      "اللَّهَ",
+      "أَوِ",
+      "ادْعُوا",
+      "الرَّحْمَٰنَ"
     ],
     "translations": [
-      "From time that We ordained on (the) Children (of) Israel that he",
-      "who kills a soul other than (for) a soul or (for) spreading corruption in",
-      "the earth then (it) is as if he has killed mankind all and whoever saves it then (it) is as if",
-      "he has saved mankind all And surely came to them Our Messengers with clear Signs yet",
-      "indeed many of them after that in the earth (are) surely those who commit excesses"
+      "Say Invoke Allah or",
+      "invoke the Most Gracious By whatever (name) By whatever (name)",
+      "you invoke to Him (belongs) the Most Beautiful Names the Most Beautiful Names",
+      "And (do) not be loud in your prayers and not",
+      "be silent therein but seek",
+      "between that a way"
     ],
-    "hint": "The sanctity of human life — the gravity of taking one innocent life is as if one had killed all of humanity.",
-    "arabic": "مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِىٓ إِسْرَٰٓءِيلَ أَنَّهُۥ مَن قَتَلَ نَفْسًۢا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍۢ فِى ٱلْأَرْضِ فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعًۭا وَمَنْ أَحْيَاهَا فَكَأَنَّمَآ أَحْيَا ٱلنَّاسَ جَمِيعًۭا ۚ وَلَقَدْ جَآءَتْهُمْ رُسُلُنَا بِٱلْبَيِّنَـٰتِ ثُمَّ إِنَّ كَثِيرًۭا مِّنْهُم بَعْدَ ذَٰلِكَ فِى ٱلْأَرْضِ لَمُسْرِفُونَ",
+    "hint": "This verse gives Prophet Muhammad ﷺ a direct command from Allah about how to call upon God - addressing one of the 99 Names of Allah.",
+    "arabic": "قُلِ ٱدْعُوا۟ ٱللَّهَ أَوِ ٱدْعُوا۟ ٱلرَّحْمَـٰنَ ۖ أَيًّۭا مَّا تَدْعُوا۟ فَلَهُ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ ۚ وَلَا تَجْهَرْ بِصَلَاتِكَ وَلَا تُخَافِتْ بِهَا وَٱبْتَغِ بَيْنَ ذَٰلِكَ سَبِيلًۭا",
     "words": [
-      "مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِىٓ إِسْرَٰٓءِيلَ أَنَّهُۥ",
-      "مَن قَتَلَ نَفْسًۢا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍۢ فِى",
-      "ٱلْأَرْضِ فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعًۭا وَمَنْ أَحْيَاهَا فَكَأَنَّمَآ",
-      "أَحْيَا ٱلنَّاسَ جَمِيعًۭا ۚ وَلَقَدْ جَآءَتْهُمْ رُسُلُنَا بِٱلْبَيِّنَـٰتِ ثُمَّ",
-      "إِنَّ كَثِيرًۭا مِّنْهُم بَعْدَ ذَٰلِكَ فِى ٱلْأَرْضِ لَمُسْرِفُونَ"
+      "قُلِ ٱدْعُوا۟ ٱللَّهَ أَوِ",
+      "ٱدْعُوا۟ ٱلرَّحْمَـٰنَ ۖ أَيًّۭا مَّا",
+      "تَدْعُوا۟ فَلَهُ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ ۚ",
+      "وَلَا تَجْهَرْ بِصَلَاتِكَ وَلَا",
+      "تُخَافِتْ بِهَا وَٱبْتَغِ",
+      "بَيْنَ ذَٰلِكَ سَبِيلًۭا"
     ],
-    "verseEn": "Because of that, We decreed upon the Children of Israel that whoever kills a soul unless for a soul or for corruption [done] in the land - it is as if he had slain mankind entirely. And whoever saves one - it is as if he had saved mankind entirely. And Our messengers had certainly come to them with clear proofs. Then indeed many of them, [even] after that, throughout the land, were transgressors."
+    "verseEn": "Say, \"Call upon Allāh or call upon the Most Merciful [ar-Raḥmān]. Whichever [name] you call - to Him belong the best names.\" And do not recite [too] loudly in your prayer or [too] quietly but seek between that an [intermediate] way."
   },
   "generated": true,
   "model": "auto (chain)"
