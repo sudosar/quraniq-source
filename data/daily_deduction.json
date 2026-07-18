@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-17",
+  "date": "2026-07-18",
   "puzzle": {
-    "title": "The Pledged Devotees",
-    "intro": "A revered prophet walked among the people, calling them toward the truth. Many turned away in stubbornness, but a small devoted circle answered the call and pledged themselves wholeheartedly. They were tested with doubts and dared to seek heavenly sustenance. Their unwavering devotion became a timeless lesson in faith. Who were they?",
+    "title": "The One Excluded by Water's Test",
+    "intro": "In the annals of ancient scripture, there exists a fascinating figure whose story begins not with a dramatic miracle or a thunderous revelation, but with a simple yet profound trial of faith. A nation stood at a crossroads, seeking divine guidance for leadership. What unfolded was a test so clever that it would reveal the true believers among them. Can you unravel this mystery from the clues left behind?",
     "clues": [
-      "We were a small group who rose to support a divine mission in a time of widespread disbelief.",
-      "A revered prophet came and called upon us to stand as allies in the cause of Allah.",
-      "When the prophet asked who would be supporters of the Divine, we answered without hesitation.",
-      "We dared to request a miraculous feast sent down from the heavens to strengthen our hearts.",
-      "Our prophet reminded us to revere Allah if we were true believers, yet our humble request was honored.",
-      "We were the devoted inner circle who pledged unwavering faith alongside Isa, son of Maryam."
+      "I came from a lineage the people admired, and Allah chose me for a sacred purpose they could not comprehend.",
+      "My body carried a mark of distinction that others lacked, making me stand apart among my people.",
+      "When the river was declared the test, most turned back—but I pressed forward, driven by unwavering faith in Allah's promise.",
+      "I was commanded to never drink from forbidden waters, yet one drop escaped my lips—a sin that haunted my heart forever.",
+      "Allah destined me to meet a young shepherd who would one day become legendary for slaying a mighty adversary.",
+      "When the armies clashed, I fell not by the enemy's hand, but by divine decree as punishment for my disobedience at the river."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Hawariyyun (Disciples of Isa)",
-          "Ashab al-Kahf (People of the Cave)",
-          "The People of Madyan",
-          "The People of Thamud",
-          "The Companions of Talut (Saul)"
+          "Talut (Saul) – The First King of Bani Israel",
+          "Prophet Dawud (David) – The Shepherd King",
+          "Goliath (Jalut) – The Giant of Bani Israel",
+          "Prophet Sulayman (Solomon) – The Master of Wind and Jinn",
+          "King Saul's General Who Carried the Ark"
         ],
-        "answer": "The Hawariyyun (Disciples of Isa)"
+        "answer": "Talut (Saul) – The First King of Bani Israel"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Being asked to be supporters of Allah's cause",
-          "Witnessing a ruler's debate with a prophet",
-          "Being commanded to spare a miraculous she-camel",
-          "Fleeing into a cave to escape persecution",
-          "Crossing a river to test obedience"
+          "Refusing to drink from the Nile River during Exodus",
+          "Testing the army by commanding them not to drink from a sacred river",
+          "Building the Temple of Jerusalem in forty years",
+          "Fighting the Amalekites with Prophet Musa",
+          "Constructing a palace for Bilqis – Queen of Sheba"
         ],
-        "answer": "Being asked to be supporters of Allah's cause"
+        "answer": "Testing the army by commanding them not to drink from a sacred river"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A table spread from heaven (Mawlidah)",
-          "The great Ark on flood waters",
-          "A she-camel that emerged from a rock",
-          "A staff that transformed into a serpent",
-          "An elevated palace reaching the sky"
+          "The River Jordan near Jerusalem",
+          "The river at the border of the Promised Land",
+          "The Euphrates River in Babylon",
+          "The Nile River in Egypt",
+          "The waters surrounding the city of Jericho"
         ],
-        "answer": "A table spread from heaven (Mawlidah)"
+        "answer": "The river at the border of the Promised Land"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "We became steadfast and triumphant believers",
-          "We were destroyed by a punishment from above",
-          "We were drowned in a mighty flood",
-          "We slept in a cave for hundreds of years",
-          "We were barred from entering the holy land"
+          "I became the greatest king and built Jerusalem's temple",
+          "I fell in battle as punishment for my one act of disobedience",
+          "I was saved by my faith and became a prophet",
+          "My army conquered the entire known world",
+          "I lived to see my son Solomon inherit my kingdom"
         ],
-        "answer": "We became steadfast and triumphant believers"
+        "answer": "I fell in battle as punishment for my one act of disobedience"
       }
     },
-    "verseRef": "61:14",
-    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوٓا۟ أَنصَارَ ٱللَّهِ كَمَا قَالَ عِيسَى ٱبْنُ مَرْيَمَ لِلْحَوَارِيِّـۧنَ مَنْ أَنصَارِىٓ إِلَى ٱللَّهِ ۖ قَالَ ٱلْحَوَارِيُّونَ نَحْنُ أَنصَارُ ٱللَّهِ ۖ فَـَٔامَنَت طَّآئِفَةٌۭ مِّنۢ بَنِىٓ إِسْرَٰٓءِيلَ وَكَفَرَت طَّآئِفَةٌۭ ۖ فَأَيَّدْنَا ٱلَّذِينَ ءَامَنُوا۟ عَلَىٰ عَدُوِّهِمْ فَأَصْبَحُوا۟ ظَـٰهِرِينَ",
-    "verse": "O you who have believed, be supporters of Allāh, as when Jesus, the son of Mary, said to the disciples, \"Who are my supporters for Allāh?\" The disciples said, \"We are supporters of Allāh.\" And a faction of the Children of Israel believed and a faction disbelieved. So We supported those who believed against their enemy, and they became dominant. (61:14)"
+    "verseRef": "2:249",
+    "arabic": "فَلَمَّا فَصَلَ طَالُوتُ بِٱلْجُنُودِ قَالَ إِنَّ ٱللَّهَ مُبْتَلِيكُم بِنَهَرٍۢ فَمَن شَرِبَ مِنْهُ فَلَيْسَ مِنِّى وَمَن لَّمْ يَطْعَمْهُ فَإِنَّهُۥ مِنِّىٓ إِلَّا مَنِ ٱغْتَرَفَ غُرْفَةًۢ بِيَدِهِۦ ۚ فَشَرِبُوا۟ مِنْهُ إِلَّا قَلِيلًۭا مِّنْهُمْ ۚ فَلَمَّا جَاوَزَهُۥ هُوَ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ قَالُوا۟ لَا طَاقَةَ لَنَا ٱلْيَوْمَ بِجَالُوتَ وَجُنُودِهِۦ ۚ قَالَ ٱلَّذِينَ يَظُنُّونَ أَنَّهُم مُّلَـٰقُوا۟ ٱللَّهِ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ۗ وَٱللَّهُ مَعَ ٱلصَّـٰبِرِينَ",
+    "verse": "And when Saul went forth with the soldiers, he said, \"Indeed, Allāh will be testing you with a river. So whoever drinks from it is not of me, and whoever does not taste it is indeed of me, excepting one who takes [from it] in the hollow of his hand.\" But they drank from it, except a [very] few of them. Then when he had crossed it along with those who believed with him, they said, \"There is no power for us today against Goliath and his soldiers.\" But those who were certain that they would meet Allāh said, \"How many a small company has overcome a large company by permission of Allāh. And Allāh is with the patient.\" (2:249)"
   },
   "generated": true,
   "model": "auto (chain)"
