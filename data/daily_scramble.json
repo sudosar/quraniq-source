@@ -1,33 +1,32 @@
 {
-  "date": "2026-07-18",
+  "date": "2026-07-19",
   "puzzle": {
-    "verseRef": "97:2",
-    "reference": "Surah Al-Qadr (97:2)",
+    "verseRef": "7:180",
+    "reference": "Surah Al-A'raf (7:180)",
     "segments": [
-      "لَيْلَةُ",
-      "الْقَدْرِ",
-      "خَيْرٌ",
-      "مِنْ",
-      "أَلْفِ",
-      "شَهْرٍ"
+      "وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَىٰ",
+      "فَادْعُوهُ بِهَا",
+      "وَذَرُوا الَّذِينَ يُلْحِدُونَ",
+      "فِي أَسْمَائِهِ",
+      "سَيُجْزَوْنَ مَا كَانُوا يَعْمَلُونَ"
     ],
     "translations": [
-      "And what",
-      "can make you know",
-      "what",
-      "(the) Night",
-      "(of) Power (is)"
+      "And for Allah (are) the names  the most beautiful",
+      "so invoke Him by them And leave",
+      "those who deviate concerning",
+      "His names They will be recompensed for what",
+      "they used to do"
     ],
-    "hint": "This verse describes the immense value of Laylatul Qadr, the blessed night in the last ten nights of Ramadan, which is better than a thousand months of worship.",
-    "arabic": "وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ",
+    "hint": "This verse invites believers to call upon Allah using His most beautiful names (Al-Asma' al-Husna), while warning against those who distort their meaning.",
+    "arabic": "وَلِلَّهِ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ فَٱدْعُوهُ بِهَا ۖ وَذَرُوا۟ ٱلَّذِينَ يُلْحِدُونَ فِىٓ أَسْمَـٰٓئِهِۦ ۚ سَيُجْزَوْنَ مَا كَانُوا۟ يَعْمَلُونَ",
     "words": [
-      "وَمَآ",
-      "أَدْرَىٰكَ",
-      "مَا",
-      "لَيْلَةُ",
-      "ٱلْقَدْرِ"
+      "وَلِلَّهِ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ",
+      "فَٱدْعُوهُ بِهَا ۖ وَذَرُوا۟",
+      "ٱلَّذِينَ يُلْحِدُونَ فِىٓ",
+      "أَسْمَـٰٓئِهِۦ ۚ سَيُجْزَوْنَ مَا",
+      "كَانُوا۟ يَعْمَلُونَ"
     ],
-    "verseEn": "And what can make you know what is the Night of Decree?"
+    "verseEn": "And to Allāh belong the best names, so invoke Him by them. And leave [the company of] those who practice deviation concerning His names. They will be recompensed for what they have been doing."
   },
   "generated": true,
   "model": "auto (chain)"

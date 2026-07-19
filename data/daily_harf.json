@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-18",
+  "date": "2026-07-19",
   "puzzle": {
-    "word": "سجود",
-    "display": "سُجُود",
-    "hint": "The act of placing the forehead on the ground in worship.",
-    "verseRef": "50:40",
-    "arabicVerse": "وَمِنَ ٱلَّيْلِ فَسَبِّحْهُ وَأَدْبَـٰرَ ٱلسُّجُودِ",
-    "verse": "50:40 - And [in part] of the night exalt Him and after prostration [i.e., prayer]."
+    "word": "خالص",
+    "display": "خَالِص",
+    "hint": "A purifying quality of the heart, free from hypocrisy - describes deeds done with complete sincerity to Allah",
+    "verseRef": "2:139",
+    "arabicVerse": "قُلْ أَتُحَآجُّونَنَا فِى ٱللَّهِ وَهُوَ رَبُّنَا وَرَبُّكُمْ وَلَنَآ أَعْمَـٰلُنَا وَلَكُمْ أَعْمَـٰلُكُمْ وَنَحْنُ لَهُۥ مُخْلِصُونَ",
+    "verse": "2:139 - Say, [O Muḥammad], \"Do you argue with us about Allāh while He is our Lord and your Lord? For us are our deeds, and for you are your deeds. And we are sincere [in deed and intention] to Him.\""
   },
   "generated": true,
   "model": "auto (chain)"

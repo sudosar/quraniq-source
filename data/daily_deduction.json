@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-18",
+  "date": "2026-07-19",
   "puzzle": {
-    "title": "The One Excluded by Water's Test",
-    "intro": "In the annals of ancient scripture, there exists a fascinating figure whose story begins not with a dramatic miracle or a thunderous revelation, but with a simple yet profound trial of faith. A nation stood at a crossroads, seeking divine guidance for leadership. What unfolded was a test so clever that it would reveal the true believers among them. Can you unravel this mystery from the clues left behind?",
+    "title": "The Unheeded Voice of Centuries",
+    "intro": "In a time long before the great cities rose, a lone soul rose among a people who had turned away from the truth. Their stubbornness was matched only by the patience of this solitary caller, who pleaded through generations without losing resolve. When all warnings fell on deaf ears, an unprecedented reckoning reshaped the very earth itself. Today, the echoes of that story still ripple through every recitation. Can you identify this resolute soul?",
     "clues": [
-      "I came from a lineage the people admired, and Allah chose me for a sacred purpose they could not comprehend.",
-      "My body carried a mark of distinction that others lacked, making me stand apart among my people.",
-      "When the river was declared the test, most turned back—but I pressed forward, driven by unwavering faith in Allah's promise.",
-      "I was commanded to never drink from forbidden waters, yet one drop escaped my lips—a sin that haunted my heart forever.",
-      "Allah destined me to meet a young shepherd who would one day become legendary for slaying a mighty adversary.",
-      "When the armies clashed, I fell not by the enemy's hand, but by divine decree as punishment for my disobedience at the river."
+      "I was raised among a people who worshipped false idols and ignored the signs around them, yet I was chosen to awaken them from their heedlessness.",
+      "I called out to my people again and again, but they accused me of being nothing but a person like them, mocking my message and covering their ears.",
+      "Night and day, I entreated them with wisdom and gentle reminders, but my words seemed to vanish into the air, unheard and unheeded.",
+      "Under divine instruction, I constructed a vast vessel of timber and planks on dry land, and my people laughed at me as one who had lost reason.",
+      "When the great flood came as promised, my own son refused to board the vessel with me, believing a mountain would shelter him from the rising waters.",
+      "I became the patriarch of a new beginning upon the earth, and my story is preserved in a chapter of the Quran that bears my very name."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Talut (Saul) – The First King of Bani Israel",
-          "Prophet Dawud (David) – The Shepherd King",
-          "Goliath (Jalut) – The Giant of Bani Israel",
-          "Prophet Sulayman (Solomon) – The Master of Wind and Jinn",
-          "King Saul's General Who Carried the Ark"
+          "Prophet Nuh",
+          "Prophet Ibrahim",
+          "Prophet Musa",
+          "Prophet Lut",
+          "Prophet Hud"
         ],
-        "answer": "Talut (Saul) – The First King of Bani Israel"
+        "answer": "Prophet Nuh"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Refusing to drink from the Nile River during Exodus",
-          "Testing the army by commanding them not to drink from a sacred river",
-          "Building the Temple of Jerusalem in forty years",
-          "Fighting the Amalekites with Prophet Musa",
-          "Constructing a palace for Bilqis – Queen of Sheba"
+          "The Great Flood that reshaped the earth",
+          "Being cast into a blazing fire by the idolaters",
+          "Confrontation with Pharaoh's magicians at the palace",
+          "The destruction of the prosperous gardens by a heavenly storm",
+          "The overturning of the trench dwellers"
         ],
-        "answer": "Testing the army by commanding them not to drink from a sacred river"
+        "answer": "The Great Flood that reshaped the earth"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The River Jordan near Jerusalem",
-          "The river at the border of the Promised Land",
-          "The Euphrates River in Babylon",
-          "The Nile River in Egypt",
-          "The waters surrounding the city of Jericho"
+          "The Ark built from timber and planks",
+          "The sacred house built upon ancient foundations",
+          "The staff that transformed into a serpent",
+          "The cave of the sleeping youths",
+          "The throne carried by a mighty creature"
         ],
-        "answer": "The river at the border of the Promised Land"
+        "answer": "The Ark built from timber and planks"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "I became the greatest king and built Jerusalem's temple",
-          "I fell in battle as punishment for my one act of disobedience",
-          "I was saved by my faith and became a prophet",
-          "My army conquered the entire known world",
-          "I lived to see my son Solomon inherit my kingdom"
+          "The disbelievers drowned while the believers were saved aboard the vessel",
+          "The fire became cool and safe, and the caller emerged unharmed",
+          "The magicians fell prostrate and embraced faith",
+          "The garden was granted to the righteous neighbor in its place",
+          "The sleepers awoke after centuries, transformed"
         ],
-        "answer": "I fell in battle as punishment for my one act of disobedience"
+        "answer": "The disbelievers drowned while the believers were saved aboard the vessel"
       }
     },
-    "verseRef": "2:249",
-    "arabic": "فَلَمَّا فَصَلَ طَالُوتُ بِٱلْجُنُودِ قَالَ إِنَّ ٱللَّهَ مُبْتَلِيكُم بِنَهَرٍۢ فَمَن شَرِبَ مِنْهُ فَلَيْسَ مِنِّى وَمَن لَّمْ يَطْعَمْهُ فَإِنَّهُۥ مِنِّىٓ إِلَّا مَنِ ٱغْتَرَفَ غُرْفَةًۢ بِيَدِهِۦ ۚ فَشَرِبُوا۟ مِنْهُ إِلَّا قَلِيلًۭا مِّنْهُمْ ۚ فَلَمَّا جَاوَزَهُۥ هُوَ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ قَالُوا۟ لَا طَاقَةَ لَنَا ٱلْيَوْمَ بِجَالُوتَ وَجُنُودِهِۦ ۚ قَالَ ٱلَّذِينَ يَظُنُّونَ أَنَّهُم مُّلَـٰقُوا۟ ٱللَّهِ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ۗ وَٱللَّهُ مَعَ ٱلصَّـٰبِرِينَ",
-    "verse": "And when Saul went forth with the soldiers, he said, \"Indeed, Allāh will be testing you with a river. So whoever drinks from it is not of me, and whoever does not taste it is indeed of me, excepting one who takes [from it] in the hollow of his hand.\" But they drank from it, except a [very] few of them. Then when he had crossed it along with those who believed with him, they said, \"There is no power for us today against Goliath and his soldiers.\" But those who were certain that they would meet Allāh said, \"How many a small company has overcome a large company by permission of Allāh. And Allāh is with the patient.\" (2:249)"
+    "verseRef": "71:5",
+    "arabic": "قَالَ رَبِّ إِنِّى دَعَوْتُ قَوْمِى لَيْلًۭا وَنَهَارًۭا",
+    "verse": "He said, \"My Lord, indeed I invited my people [to truth] night and day. (71:5)"
   },
   "generated": true,
   "model": "auto (chain)"
