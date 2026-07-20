@@ -1,32 +1,29 @@
 {
-  "date": "2026-07-19",
+  "date": "2026-07-20",
   "puzzle": {
-    "verseRef": "7:180",
-    "reference": "Surah Al-A'raf (7:180)",
+    "verseRef": "26:117",
+    "reference": "Ash-Shu'ara (26:117)",
     "segments": [
-      "وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَىٰ",
-      "فَادْعُوهُ بِهَا",
-      "وَذَرُوا الَّذِينَ يُلْحِدُونَ",
-      "فِي أَسْمَائِهِ",
-      "سَيُجْزَوْنَ مَا كَانُوا يَعْمَلُونَ"
+      "إِنَّهُ لَنْ يُؤْمِنَ",
+      "مِنْ قَوْمِكَ",
+      "إِلَّا مَنْ قَدْ آمَنَ",
+      "فَلَا تَكُنْ فِي مَريْثَةٍ"
     ],
     "translations": [
-      "And for Allah (are) the names  the most beautiful",
-      "so invoke Him by them And leave",
-      "those who deviate concerning",
-      "His names They will be recompensed for what",
-      "they used to do"
+      "He said My Lord",
+      "Indeed",
+      "my people",
+      "have denied me"
     ],
-    "hint": "This verse invites believers to call upon Allah using His most beautiful names (Al-Asma' al-Husna), while warning against those who distort their meaning.",
-    "arabic": "وَلِلَّهِ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ فَٱدْعُوهُ بِهَا ۖ وَذَرُوا۟ ٱلَّذِينَ يُلْحِدُونَ فِىٓ أَسْمَـٰٓئِهِۦ ۚ سَيُجْزَوْنَ مَا كَانُوا۟ يَعْمَلُونَ",
+    "hint": "A prophet's warning to his people about disbelief and Allah's punishment - from the story of Noah, peace be upon him",
+    "arabic": "قَالَ رَبِّ إِنَّ قَوْمِى كَذَّبُونِ",
     "words": [
-      "وَلِلَّهِ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ",
-      "فَٱدْعُوهُ بِهَا ۖ وَذَرُوا۟",
-      "ٱلَّذِينَ يُلْحِدُونَ فِىٓ",
-      "أَسْمَـٰٓئِهِۦ ۚ سَيُجْزَوْنَ مَا",
-      "كَانُوا۟ يَعْمَلُونَ"
+      "قَالَ رَبِّ",
+      "إِنَّ",
+      "قَوْمِى",
+      "كَذَّبُونِ"
     ],
-    "verseEn": "And to Allāh belong the best names, so invoke Him by them. And leave [the company of] those who practice deviation concerning His names. They will be recompensed for what they have been doing."
+    "verseEn": "He said, \"My Lord, indeed my people have denied me."
   },
   "generated": true,
   "model": "auto (chain)"
