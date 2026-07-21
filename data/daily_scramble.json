@@ -1,29 +1,35 @@
 {
-  "date": "2026-07-20",
+  "date": "2026-07-21",
   "puzzle": {
-    "verseRef": "26:117",
-    "reference": "Ash-Shu'ara (26:117)",
+    "verseRef": "14:40",
+    "reference": "Surah Ibrahim (14:40)",
     "segments": [
-      "إِنَّهُ لَنْ يُؤْمِنَ",
-      "مِنْ قَوْمِكَ",
-      "إِلَّا مَنْ قَدْ آمَنَ",
-      "فَلَا تَكُنْ فِي مَريْثَةٍ"
+      "رَبِّ",
+      "اجْعَلْنِي",
+      "مُقِيمَ الصَّلَاةِ",
+      "وَمِن ذُرِّيَّتِي",
+      "رَبَّنَا",
+      "وَتَقَبَّلْ دُعْوَةٍ"
     ],
     "translations": [
-      "He said My Lord",
-      "Indeed",
-      "my people",
-      "have denied me"
+      "My Lord Make me",
+      "an establisher (of) the prayer",
+      "and from my offsprings",
+      "Our Lord",
+      "and accept",
+      "my prayer"
     ],
-    "hint": "A prophet's warning to his people about disbelief and Allah's punishment - from the story of Noah, peace be upon him",
-    "arabic": "قَالَ رَبِّ إِنَّ قَوْمِى كَذَّبُونِ",
+    "hint": "A heartfelt supplication of Prophet Ibrahim (Abraham) asking Allah to make him and his descendants steadfast in prayer.",
+    "arabic": "رَبِّ ٱجْعَلْنِى مُقِيمَ ٱلصَّلَوٰةِ وَمِن ذُرِّيَّتِى ۚ رَبَّنَا وَتَقَبَّلْ دُعَآءِ",
     "words": [
-      "قَالَ رَبِّ",
-      "إِنَّ",
-      "قَوْمِى",
-      "كَذَّبُونِ"
+      "رَبِّ ٱجْعَلْنِى",
+      "مُقِيمَ ٱلصَّلَوٰةِ",
+      "وَمِن ذُرِّيَّتِى ۚ",
+      "رَبَّنَا",
+      "وَتَقَبَّلْ",
+      "دُعَآءِ"
     ],
-    "verseEn": "He said, \"My Lord, indeed my people have denied me."
+    "verseEn": "My Lord, make me an establisher of prayer, and [many] from my descendants. Our Lord, and accept my supplication."
   },
   "generated": true,
   "model": "auto (chain)"

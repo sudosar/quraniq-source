@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-20",
+  "date": "2026-07-21",
   "puzzle": {
-    "word": "غفور",
-    "display": "غَفُور",
-    "hint": "One of Allah's beautiful names describing His generous forgiveness",
-    "verseRef": "25:6",
-    "arabicVerse": "قُلْ أَنزَلَهُ ٱلَّذِى يَعْلَمُ ٱلسِّرَّ فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ إِنَّهُۥ كَانَ غَفُورًۭا رَّحِيمًۭا",
-    "verse": "25:6 - Say, [O Muḥammad], \"It has been revealed by He who knows [every] secret within the heavens and the earth. Indeed, He is ever Forgiving and Merciful.\""
+    "word": "ريحان",
+    "display": "رِيحَان",
+    "hint": "An aromatic herb mentioned alongside the reward of Paradise - 'ryhan' in transliteration",
+    "verseRef": "56:89",
+    "arabicVerse": "فَرَوْحٌۭ وَرَيْحَانٌۭ وَجَنَّتُ نَعِيمٍۢ",
+    "verse": "56:89 - Then [for him is] rest and bounty and a garden of pleasure."
   },
   "generated": true,
   "model": "auto (chain)"
