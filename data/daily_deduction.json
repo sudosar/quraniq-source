@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-21",
+  "date": "2026-07-22",
   "puzzle": {
-    "title": "The Curse of Abundant Harvest",
-    "intro": "In an ancient land, a certain soul stood among the wealthiest of their community. Twice the blessings of the earth had come to them in consecutive years, a double harvest that should have filled their heart with gratitude. Yet when tragedy struck and everything they possessed was taken in a single night, their response revealed the true nature of their soul. Can you uncover the identity of this figure whose story serves as a warning against disbelief in Allah's blessings?",
+    "title": "From the Depths of the Well",
+    "intro": "A young soul's journey began with a powerful vision of celestial bodies bowing in reverence. This individual's life was marked by the deepest betrayal from those closest, followed by years of enslavement and wrongful imprisonment. Yet through unwavering faith and divine guidance, this figure rose from the lowest pit to become one of the most powerful people in a great empire. Can you uncover the identity of this remarkable servant of Allah?",
     "clues": [
-      "I was among the most fortunate souls in all the land, blessed with abundant provisions.",
-      "Twice the harvest came to me over two years, yet my heart remained ungrateful to my Lord.",
-      "I possessed a great garden with vines, olives, and palm trees—a testament to Allah's favor.",
-      "When my garden was destroyed, I stood in its ruins with hands outstretched to the heavens, cursing my fate.",
-      "I denied that Allah could have caused such loss, even as I crushed my palms in despair.",
-      "My punishment was not merely the loss of my garden, but being left utterly helpless in its ruins, unable to invoke any helper."
+      "I was shown a vision of eleven stars, the sun, and the moon prostrating before me",
+      "I was the deeply beloved child of my parent, which bred jealousy among my brothers",
+      "I was seized by my own brothers, stripped of my garment, and cast into a deep, dark well",
+      "I was sold as a commodity in a marketplace and carried far from my homeland",
+      "A powerful woman attempted to compromise my honor, and I was thrown into prison for refusing her advances",
+      "I was blessed with the gift of dream interpretation, and rose from a forgotten prisoner to the chief minister of Egypt"
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The owner of the garden in Surah 26",
-          "The owner of two gardens from a distant land",
-          "A wealthy soul from the city of prosperity",
-          "The farmer mentioned in Surah Al-Kahf",
-          "A vineyard keeper from the time of Prophet Shu'aib"
+          "Prophet Yusuf",
+          "Prophet Musa",
+          "Prophet Dawud",
+          "Prophet Ayyub",
+          "Prophet Sulayman"
         ],
-        "answer": "The owner of the garden in Surah 26"
+        "answer": "Prophet Yusuf"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Loss of a garden destroyed in a single night",
-          "The great flood that covered the earth",
-          "Being tested with true and false prophets",
-          "The trial of being thrown into fire",
-          "The trial of being swallowed by the earth"
+          "Cast into a deep well by one's own brothers",
+          "Surviving a great worldwide flood",
+          "Being thrown into a blazing furnace",
+          "Battling a giant warrior on a battlefield",
+          "Being swallowed by a great fish"
         ],
-        "answer": "Loss of a garden destroyed in a single night"
+        "answer": "Cast into a deep well by one's own brothers"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A garden with vines, olives, and palm trees destroyed over two years",
-          "A ship built upon a high mountain",
-          "The city of a transgressing nation",
-          "A well in ancient Midian",
-          "The river of paradise"
+          "A deep, dry well in the wilderness",
+          "A great wooden ark atop a mountain",
+          "A staff that transformed into a serpent",
+          "A magnificent throne of great splendor",
+          "A sling and five smooth stones"
         ],
-        "answer": "A garden with vines, olives, and palm trees destroyed over two years"
+        "answer": "A deep, dry well in the wilderness"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Utter helplessness—destroyed with no helper",
-          "Resurrection to enter paradise",
-          "Becoming a prophet of Allah",
-          "Leadership of a great nation",
-          "Eternal punishment in the fire"
+          "Rose to chief minister of Egypt and reunited with beloved family",
+          "Built a great ship and called people to faith",
+          "Led an entire nation out of bondage in Egypt",
+          "Was granted a kingdom and dominion over the unseen",
+          "Was given patience through severe illness and healed"
         ],
-        "answer": "Utter helplessness—destroyed with no helper"
+        "answer": "Rose to chief minister of Egypt and reunited with beloved family"
       }
     },
-    "verseRef": "26:42-44",
-    "verse": "He said, \"Yes, and indeed, you will then be of those near [to me].\" (26:42-44)",
-    "arabic": ""
+    "verseRef": "40:34",
+    "arabic": "وَلَقَدْ جَآءَكُمْ يُوسُفُ مِن قَبْلُ بِٱلْبَيِّنَـٰتِ فَمَا زِلْتُمْ فِى شَكٍّۢ مِّمَّا جَآءَكُم بِهِۦ ۖ حَتَّىٰٓ إِذَا هَلَكَ قُلْتُمْ لَن يَبْعَثَ ٱللَّهُ مِنۢ بَعْدِهِۦ رَسُولًۭا ۚ كَذَٰلِكَ يُضِلُّ ٱللَّهُ مَنْ هُوَ مُسْرِفٌۭ مُّرْتَابٌ",
+    "verse": "And Joseph had already come to you before with clear proofs, but you remained in doubt of that which he brought to you, until when he died, you said, 'Never will Allāh send a messenger after him.' Thus does Allāh leave astray he who is a transgressor and skeptic.\" (40:34)"
   },
   "generated": true,
   "model": "auto (chain)"

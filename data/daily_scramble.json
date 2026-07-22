@@ -1,35 +1,32 @@
 {
-  "date": "2026-07-21",
+  "date": "2026-07-22",
   "puzzle": {
-    "verseRef": "14:40",
-    "reference": "Surah Ibrahim (14:40)",
+    "verseRef": "13:20",
+    "reference": "Surah Ar-Ra'd (13:20)",
     "segments": [
-      "رَبِّ",
-      "اجْعَلْنِي",
-      "مُقِيمَ الصَّلَاةِ",
-      "وَمِن ذُرِّيَّتِي",
-      "رَبَّنَا",
-      "وَتَقَبَّلْ دُعْوَةٍ"
+      "أُولَٰئِكَ الَّذِينَ يَعْلَمُونَ",
+      "أَنَّ اللَّهَ هُوَ الْحَقُّ",
+      "وَأَنَّ هَٰؤُلَاءِ مُسْتَكْبِرُونَ",
+      "إِنَّ اللَّهَ سَبِيلُ الرَّسُولِ",
+      "فَاتَّبِعُوهُ"
     ],
     "translations": [
-      "My Lord Make me",
-      "an establisher (of) the prayer",
-      "and from my offsprings",
-      "Our Lord",
-      "and accept",
-      "my prayer"
+      "Those who fulfill",
+      "the covenant (of) Allah",
+      "and not",
+      "they break",
+      "the contract"
     ],
-    "hint": "A heartfelt supplication of Prophet Ibrahim (Abraham) asking Allah to make him and his descendants steadfast in prayer.",
-    "arabic": "رَبِّ ٱجْعَلْنِى مُقِيمَ ٱلصَّلَوٰةِ وَمِن ذُرِّيَّتِى ۚ رَبَّنَا وَتَقَبَّلْ دُعَآءِ",
+    "hint": "A verse about the difference between believers who recognize truth and arrogant disbelievers, emphasizing following the Messenger's way.",
+    "arabic": "ٱلَّذِينَ يُوفُونَ بِعَهْدِ ٱللَّهِ وَلَا يَنقُضُونَ ٱلْمِيثَـٰقَ",
     "words": [
-      "رَبِّ ٱجْعَلْنِى",
-      "مُقِيمَ ٱلصَّلَوٰةِ",
-      "وَمِن ذُرِّيَّتِى ۚ",
-      "رَبَّنَا",
-      "وَتَقَبَّلْ",
-      "دُعَآءِ"
+      "ٱلَّذِينَ يُوفُونَ",
+      "بِعَهْدِ ٱللَّهِ",
+      "وَلَا",
+      "يَنقُضُونَ",
+      "ٱلْمِيثَـٰقَ"
     ],
-    "verseEn": "My Lord, make me an establisher of prayer, and [many] from my descendants. Our Lord, and accept my supplication."
+    "verseEn": "Those who fulfill the covenant of Allāh and do not break the contract,"
   },
   "generated": true,
   "model": "auto (chain)"

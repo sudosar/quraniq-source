@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-21",
+  "date": "2026-07-22",
   "puzzle": {
-    "word": "ريحان",
-    "display": "رِيحَان",
-    "hint": "An aromatic herb mentioned alongside the reward of Paradise - 'ryhan' in transliteration",
-    "verseRef": "56:89",
-    "arabicVerse": "فَرَوْحٌۭ وَرَيْحَانٌۭ وَجَنَّتُ نَعِيمٍۢ",
-    "verse": "56:89 - Then [for him is] rest and bounty and a garden of pleasure."
+    "word": "حساب",
+    "display": "حِسَاب",
+    "hint": "This is what everyone will face for their actions.",
+    "verseRef": "21:1",
+    "arabicVerse": "ٱقْتَرَبَ لِلنَّاسِ حِسَابُهُمْ وَهُمْ فِى غَفْلَةٍۢ مُّعْرِضُونَ",
+    "verse": "21:1 - [The time of] their account has approached for the people, while they are in heedlessness turning away."
   },
   "generated": true,
   "model": "auto (chain)"
