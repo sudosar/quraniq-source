@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-22",
+  "date": "2026-07-23",
   "puzzle": {
-    "word": "حساب",
-    "display": "حِسَاب",
-    "hint": "This is what everyone will face for their actions.",
-    "verseRef": "21:1",
-    "arabicVerse": "ٱقْتَرَبَ لِلنَّاسِ حِسَابُهُمْ وَهُمْ فِى غَفْلَةٍۢ مُّعْرِضُونَ",
-    "verse": "21:1 - [The time of] their account has approached for the people, while they are in heedlessness turning away."
+    "word": "شريعة",
+    "display": "شَرِيعَةٍ",
+    "hint": "A divinely prescribed path or law; often translated as 'law'",
+    "verseRef": "45:18",
+    "arabicVerse": "ثُمَّ جَعَلْنَـٰكَ عَلَىٰ شَرِيعَةٍۢ مِّنَ ٱلْأَمْرِ فَٱتَّبِعْهَا وَلَا تَتَّبِعْ أَهْوَآءَ ٱلَّذِينَ لَا يَعْلَمُونَ",
+    "verse": "45:18 - Then We put you, [O Muḥammad], on an ordained way concerning the matter [of religion]; so follow it and do not follow the inclinations of those who do not know."
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-22",
+  "date": "2026-07-23",
   "puzzle": {
-    "title": "From the Depths of the Well",
-    "intro": "A young soul's journey began with a powerful vision of celestial bodies bowing in reverence. This individual's life was marked by the deepest betrayal from those closest, followed by years of enslavement and wrongful imprisonment. Yet through unwavering faith and divine guidance, this figure rose from the lowest pit to become one of the most powerful people in a great empire. Can you uncover the identity of this remarkable servant of Allah?",
+    "title": "The Army That Was Met by Flying Clay",
+    "intro": "In the era before Prophet Muhammad, a powerful ruler from Yemen launched a military campaign aimed at destroying a sacred sanctuary in Makkah. This enemy led a vast army complete with war elephants, confident in their strength and numbers. However, their journey would end abruptly as they encountered an unexpected divine intervention. Can you identify who faced this remarkable reckoning?",
     "clues": [
-      "I was shown a vision of eleven stars, the sun, and the moon prostrating before me",
-      "I was the deeply beloved child of my parent, which bred jealousy among my brothers",
-      "I was seized by my own brothers, stripped of my garment, and cast into a deep, dark well",
-      "I was sold as a commodity in a marketplace and carried far from my homeland",
-      "A powerful woman attempted to compromise my honor, and I was thrown into prison for refusing her advances",
-      "I was blessed with the gift of dream interpretation, and rose from a forgotten prisoner to the chief minister of Egypt"
+      "We marched with a massive army and powerful war elephants toward the sacred house",
+      "We intended to uproot and destroy a place of worship built by servants of the Most Merciful",
+      "A flock of small birds was sent against us, carrying clay stones in their beaks and claws",
+      "We were met with a sound that threw stones upon us, turning us into trampled remnants",
+      "I was from the land of Yemen and served under a ruler who sought to挑衅 the sacred sanctuary",
+      "We were made an example of for those who would dare to desafío the sanctuary of Allah"
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Yusuf",
-          "Prophet Musa",
-          "Prophet Dawud",
-          "Prophet Ayyub",
-          "Prophet Sulayman"
+          "The Army of Abraha al-Ashram",
+          "The Ethiopian Forces",
+          "The Persian Conquerors",
+          "The Roman legions",
+          "The Bedouin Raiders"
         ],
-        "answer": "Prophet Yusuf"
+        "answer": "The Army of Abraha al-Ashram"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Cast into a deep well by one's own brothers",
-          "Surviving a great worldwide flood",
-          "Being thrown into a blazing furnace",
-          "Battling a giant warrior on a battlefield",
-          "Being swallowed by a great fish"
+          "A siege of a desert fortress",
+          "An invasion of the sacred sanctuary in Makkah",
+          "A naval battle at sea",
+          "A rebellion against a tyrant king",
+          "A search for a lost prophet"
         ],
-        "answer": "Cast into a deep well by one's own brothers"
+        "answer": "An invasion of the sacred sanctuary in Makkah"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A deep, dry well in the wilderness",
-          "A great wooden ark atop a mountain",
-          "A staff that transformed into a serpent",
-          "A magnificent throne of great splendor",
-          "A sling and five smooth stones"
+          "The valley of Mina near Makkah",
+          "The palace of Sana'a in Yemen",
+          "The mountains of Tihamah",
+          "The ancient city of Jerusalem",
+          "The shores of the Red Sea"
         ],
-        "answer": "A deep, dry well in the wilderness"
+        "answer": "The valley of Mina near Makkah"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Rose to chief minister of Egypt and reunited with beloved family",
-          "Built a great ship and called people to faith",
-          "Led an entire nation out of bondage in Egypt",
-          "Was granted a kingdom and dominion over the unseen",
-          "Was given patience through severe illness and healed"
+          "Victory and destruction of the sacred house",
+          "Defeat by birds carrying clay stones",
+          "Peaceful surrender and conversion",
+          "Famine and natural disaster",
+          "Retreat due to heavy rainfall"
         ],
-        "answer": "Rose to chief minister of Egypt and reunited with beloved family"
+        "answer": "Defeat by birds carrying clay stones"
       }
     },
-    "verseRef": "40:34",
-    "arabic": "وَلَقَدْ جَآءَكُمْ يُوسُفُ مِن قَبْلُ بِٱلْبَيِّنَـٰتِ فَمَا زِلْتُمْ فِى شَكٍّۢ مِّمَّا جَآءَكُم بِهِۦ ۖ حَتَّىٰٓ إِذَا هَلَكَ قُلْتُمْ لَن يَبْعَثَ ٱللَّهُ مِنۢ بَعْدِهِۦ رَسُولًۭا ۚ كَذَٰلِكَ يُضِلُّ ٱللَّهُ مَنْ هُوَ مُسْرِفٌۭ مُّرْتَابٌ",
-    "verse": "And Joseph had already come to you before with clear proofs, but you remained in doubt of that which he brought to you, until when he died, you said, 'Never will Allāh send a messenger after him.' Thus does Allāh leave astray he who is a transgressor and skeptic.\" (40:34)"
+    "verseRef": "105:2-4",
+    "verse": "Did He not make their plan into misguidance? (105:2-4)",
+    "arabic": ""
   },
   "generated": true,
   "model": "auto (chain)"

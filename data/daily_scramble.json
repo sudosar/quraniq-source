@@ -1,32 +1,29 @@
 {
-  "date": "2026-07-22",
+  "date": "2026-07-23",
   "puzzle": {
-    "verseRef": "13:20",
-    "reference": "Surah Ar-Ra'd (13:20)",
+    "verseRef": "88:20",
+    "reference": "Surah Al-Ghashiyah (88:20)",
     "segments": [
-      "أُولَٰئِكَ الَّذِينَ يَعْلَمُونَ",
-      "أَنَّ اللَّهَ هُوَ الْحَقُّ",
-      "وَأَنَّ هَٰؤُلَاءِ مُسْتَكْبِرُونَ",
-      "إِنَّ اللَّهَ سَبِيلُ الرَّسُولِ",
-      "فَاتَّبِعُوهُ"
+      "وَإِلَى الْجِبَالِ",
+      "كَيْفَ كُرَّتْ",
+      "فَجُعِلَتْ",
+      "حَثَاثًا"
     ],
     "translations": [
-      "Those who fulfill",
-      "the covenant (of) Allah",
-      "and not",
-      "they break",
-      "the contract"
+      "And towards",
+      "the earth",
+      "how",
+      "it is spread out"
     ],
-    "hint": "A verse about the difference between believers who recognize truth and arrogant disbelievers, emphasizing following the Messenger's way.",
-    "arabic": "ٱلَّذِينَ يُوفُونَ بِعَهْدِ ٱللَّهِ وَلَا يَنقُضُونَ ٱلْمِيثَـٰقَ",
+    "hint": "A verse describing what happens to the mighty mountains on the Day of Resurrection.",
+    "arabic": "وَإِلَى ٱلْأَرْضِ كَيْفَ سُطِحَتْ",
     "words": [
-      "ٱلَّذِينَ يُوفُونَ",
-      "بِعَهْدِ ٱللَّهِ",
-      "وَلَا",
-      "يَنقُضُونَ",
-      "ٱلْمِيثَـٰقَ"
+      "وَإِلَى",
+      "ٱلْأَرْضِ",
+      "كَيْفَ",
+      "سُطِحَتْ"
     ],
-    "verseEn": "Those who fulfill the covenant of Allāh and do not break the contract,"
+    "verseEn": "And at the earth - how it is spread out?"
   },
   "generated": true,
   "model": "auto (chain)"
