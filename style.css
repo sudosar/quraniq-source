@@ -118,6 +118,11 @@
     /* Fonts */
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-arabic: 'Amiri', serif;
+
+    /* Arabic font scale — layered on top of global font-size setting.
+       Prevents Arabic in Connections (tiles + verse text) from staying
+       tiny when the user bumps font-size to max (data-font-size="2"). */
+    --arabic-font-scale: 1;
 }
 
 [data-theme="dark"] {
@@ -175,16 +180,19 @@ body {
 /* ===== Font Size Accessibility ===== */
 html[data-font-size="0"] {
     font-size: 100%;
+    --arabic-font-scale: 1;
 }
 
 /* Default (16px) */
 html[data-font-size="1"] {
     font-size: 112.5%;
+    --arabic-font-scale: 1.15;
 }
 
 /* Large (~18px) */
 html[data-font-size="2"] {
     font-size: 125%;
+    --arabic-font-scale: 1.3;
 }
 
 /* Extra Large: keep wbw-en label and verse slide text from overflowing.
@@ -192,6 +200,7 @@ html[data-font-size="2"] {
 @media (max-width: 480px) {
     html[data-font-size="2"] {
         font-size: 118%;
+        --arabic-font-scale: 1.15;
     }
 }
 
@@ -1254,7 +1263,7 @@ textarea {
 
 .theme-verse-ar {
     font-family: var(--font-arabic);
-    font-size: 1.15rem;
+    font-size: calc(1.2rem * var(--arabic-font-scale));
     direction: rtl;
     line-height: 1.8;
     margin-bottom: 6px;
@@ -1343,7 +1352,7 @@ textarea {
 /* Arabic connection tiles */
 .conn-tile-ar {
     font-family: var(--font-arabic);
-    font-size: 1.3rem;
+    font-size: calc(1.4rem * var(--arabic-font-scale));
     direction: rtl;
     line-height: 1.4;
     position: relative;
@@ -3240,7 +3249,7 @@ textarea {
     }
 
     .conn-tile-ar {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
         line-height: 1.3;
     }
 }
@@ -3263,7 +3272,7 @@ textarea {
     }
     
     .conn-tile-ar {
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 1.25;
     }
 }
