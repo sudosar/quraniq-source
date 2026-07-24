@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-23",
+  "date": "2026-07-24",
   "puzzle": {
-    "word": "شريعة",
-    "display": "شَرِيعَةٍ",
-    "hint": "A divinely prescribed path or law; often translated as 'law'",
-    "verseRef": "45:18",
-    "arabicVerse": "ثُمَّ جَعَلْنَـٰكَ عَلَىٰ شَرِيعَةٍۢ مِّنَ ٱلْأَمْرِ فَٱتَّبِعْهَا وَلَا تَتَّبِعْ أَهْوَآءَ ٱلَّذِينَ لَا يَعْلَمُونَ",
-    "verse": "45:18 - Then We put you, [O Muḥammad], on an ordained way concerning the matter [of religion]; so follow it and do not follow the inclinations of those who do not know."
+    "word": "شجرة",
+    "display": "شَجَرَة",
+    "hint": "A blessed plant mentioned beside Mount Sinai, source of oil and condiment for those who eat",
+    "verseRef": "23:20",
+    "arabicVerse": "وَشَجَرَةًۭ تَخْرُجُ مِن طُورِ سَيْنَآءَ تَنۢبُتُ بِٱلدُّهْنِ وَصِبْغٍۢ لِّلْـَٔاكِلِينَ",
+    "verse": "23:20 - And [We brought forth] a tree issuing from Mount Sinai which produces oil and food [i.e., olives] for those who eat."
   },
   "generated": true,
   "model": "auto (chain)"

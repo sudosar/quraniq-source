@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-23",
+  "date": "2026-07-24",
   "puzzle": {
-    "title": "The Army That Was Met by Flying Clay",
-    "intro": "In the era before Prophet Muhammad, a powerful ruler from Yemen launched a military campaign aimed at destroying a sacred sanctuary in Makkah. This enemy led a vast army complete with war elephants, confident in their strength and numbers. However, their journey would end abruptly as they encountered an unexpected divine intervention. Can you identify who faced this remarkable reckoning?",
+    "title": "The Veiled Conspirator",
+    "intro": "You find yourself in the presence of a powerful figure from the days of revelation. This individual was known for their intellect, wealth, and status among their people. When the clear signs came, they recognized the beauty yet chose defiance over submission. What drove this soul to plot in the dark, and what was their ultimate fate?",
     "clues": [
-      "We marched with a massive army and powerful war elephants toward the sacred house",
-      "We intended to uproot and destroy a place of worship built by servants of the Most Merciful",
-      "A flock of small birds was sent against us, carrying clay stones in their beaks and claws",
-      "We were met with a sound that threw stones upon us, turning us into trampled remnants",
-      "I was from the land of Yemen and served under a ruler who sought to挑衅 the sacred sanctuary",
-      "We were made an example of for those who would dare to desafío the sanctuary of Allah"
+      "I was blessed with abundant resources and influence, making my word heavy in the assemblies.",
+      "When the words of the divine were recited, I could not deny their eloquence, but my pride would not allow me to submit.",
+      "I gathered my advisors, isolating myself to ponder a way to discredit the message.",
+      "After much thought, I declared it nothing but 'magic handed down from the past' to turn people away.",
+      "The revelation then addressed me directly: 'Leave Me with the one I created alone.' I was singled out for my scheming.",
+      "Soon, the very fire I was warned about will seize me by the forelock, and I will have no escape."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Army of Abraha al-Ashram",
-          "The Ethiopian Forces",
-          "The Persian Conquerors",
-          "The Roman legions",
-          "The Bedouin Raiders"
+          "Al-Walid ibn al-Mughira",
+          "Abu Lahab",
+          "Abu Jahl",
+          "Uqbah ibn Abi Mu'ayt",
+          "Al-Nadr ibn al-Harith"
         ],
-        "answer": "The Army of Abraha al-Ashram"
+        "answer": "Al-Walid ibn al-Mughira"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "A siege of a desert fortress",
-          "An invasion of the sacred sanctuary in Makkah",
-          "A naval battle at sea",
-          "A rebellion against a tyrant king",
-          "A search for a lost prophet"
+          "Conspired to assassinate the Prophet",
+          "Led a boycott against the Muslims",
+          "Gathered a council to brand the Quran as magic",
+          "Plotted to expel the Prophet from Makkah",
+          "Refused to share his wealth with orphans"
         ],
-        "answer": "An invasion of the sacred sanctuary in Makkah"
+        "answer": "Gathered a council to brand the Quran as magic"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The valley of Mina near Makkah",
-          "The palace of Sana'a in Yemen",
-          "The mountains of Tihamah",
-          "The ancient city of Jerusalem",
-          "The shores of the Red Sea"
+          "The Revelation",
+          "The Council",
+          "The Forelock",
+          "The Wealth",
+          "The Pen"
         ],
-        "answer": "The valley of Mina near Makkah"
+        "answer": "The Forelock"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Victory and destruction of the sacred house",
-          "Defeat by birds carrying clay stones",
-          "Peaceful surrender and conversion",
-          "Famine and natural disaster",
-          "Retreat due to heavy rainfall"
+          "He repented and embraced Islam",
+          "He migrated to Abyssinia",
+          "He was struck by a deadly disease",
+          "He died in battle against Muslims",
+          "He was condemned to Hellfire"
         ],
-        "answer": "Defeat by birds carrying clay stones"
+        "answer": "He was condemned to Hellfire"
       }
     },
-    "verseRef": "105:2-4",
-    "verse": "Did He not make their plan into misguidance? (105:2-4)",
-    "arabic": ""
+    "verseRef": "74:18",
+    "arabic": "إِنَّهُۥ فَكَّرَ وَقَدَّرَ",
+    "verse": "Indeed, he thought and deliberated. (74:18)"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,29 +1,32 @@
 {
-  "date": "2026-07-23",
+  "date": "2026-07-24",
   "puzzle": {
-    "verseRef": "88:20",
-    "reference": "Surah Al-Ghashiyah (88:20)",
+    "verseRef": "20:8",
+    "reference": "Surah Ta-Ha (20:8)",
     "segments": [
-      "وَإِلَى الْجِبَالِ",
-      "كَيْفَ كُرَّتْ",
-      "فَجُعِلَتْ",
-      "حَثَاثًا"
+      "Allahu",
+      "la ilaha",
+      "illa huwa",
+      "al-rahmani",
+      "al-rahim"
     ],
     "translations": [
-      "And towards",
-      "the earth",
-      "how",
-      "it is spread out"
+      "Allah  (there is) no",
+      "god except",
+      "Him To Him (belong)",
+      "the Names",
+      "the Most Beautiful"
     ],
-    "hint": "A verse describing what happens to the mighty mountains on the Day of Resurrection.",
-    "arabic": "وَإِلَى ٱلْأَرْضِ كَيْفَ سُطِحَتْ",
+    "hint": "A fundamental declaration of Islamic monotheism (tawhid) followed by two of Allah's most important mercy-related attributes",
+    "arabic": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ لَهُ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ",
     "words": [
-      "وَإِلَى",
-      "ٱلْأَرْضِ",
-      "كَيْفَ",
-      "سُطِحَتْ"
+      "ٱللَّهُ لَآ",
+      "إِلَـٰهَ إِلَّا",
+      "هُوَ ۖ لَهُ",
+      "ٱلْأَسْمَآءُ",
+      "ٱلْحُسْنَىٰ"
     ],
-    "verseEn": "And at the earth - how it is spread out?"
+    "verseEn": "Allāh - there is no deity except Him. To Him belong the best names."
   },
   "generated": true,
   "model": "auto (chain)"
