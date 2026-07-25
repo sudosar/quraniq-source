@@ -1,32 +1,32 @@
 {
-  "date": "2026-07-24",
+  "date": "2026-07-25",
   "puzzle": {
-    "verseRef": "20:8",
-    "reference": "Surah Ta-Ha (20:8)",
+    "verseRef": "51:56",
+    "reference": "Surah Adh-Dhariyat (51:56)",
     "segments": [
-      "Allahu",
-      "la ilaha",
-      "illa huwa",
-      "al-rahmani",
-      "al-rahim"
+      "وَمَا خَلَقْتُ",
+      "الْجِنَّ",
+      "وَالْإِنسَ",
+      "إِلَّا",
+      "لِيَعْبُدُونِ"
     ],
     "translations": [
-      "Allah  (there is) no",
-      "god except",
-      "Him To Him (belong)",
-      "the Names",
-      "the Most Beautiful"
+      "And not I have created",
+      "the jinn",
+      "and the mankind",
+      "except",
+      "that they worship Me"
     ],
-    "hint": "A fundamental declaration of Islamic monotheism (tawhid) followed by two of Allah's most important mercy-related attributes",
-    "arabic": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ لَهُ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ",
+    "hint": "The purpose of creation of jinn and humans.",
+    "arabic": "وَمَا خَلَقْتُ ٱلْجِنَّ وَٱلْإِنسَ إِلَّا لِيَعْبُدُونِ",
     "words": [
-      "ٱللَّهُ لَآ",
-      "إِلَـٰهَ إِلَّا",
-      "هُوَ ۖ لَهُ",
-      "ٱلْأَسْمَآءُ",
-      "ٱلْحُسْنَىٰ"
+      "وَمَا خَلَقْتُ",
+      "ٱلْجِنَّ",
+      "وَٱلْإِنسَ",
+      "إِلَّا",
+      "لِيَعْبُدُونِ"
     ],
-    "verseEn": "Allāh - there is no deity except Him. To Him belong the best names."
+    "verseEn": "And I did not create the jinn and mankind except to worship Me."
   },
   "generated": true,
   "model": "auto (chain)"
