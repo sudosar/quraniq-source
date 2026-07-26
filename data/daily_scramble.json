@@ -1,32 +1,29 @@
 {
-  "date": "2026-07-25",
+  "date": "2026-07-26",
   "puzzle": {
-    "verseRef": "51:56",
-    "reference": "Surah Adh-Dhariyat (51:56)",
+    "verseRef": "18:24",
+    "reference": "Surah Al-Kahf (18:24)",
     "segments": [
-      "وَمَا خَلَقْتُ",
-      "الْجِنَّ",
-      "وَالْإِنسَ",
-      "إِلَّا",
-      "لِيَعْبُدُونِ"
+      "رَّبِّ اشْرَحْ لِي صَدْرِي",
+      "وَيَسِّرْ لِي أَمْرِي",
+      "وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي",
+      "يَفْقَهُوا قَوْلِي"
     ],
     "translations": [
-      "And not I have created",
-      "the jinn",
-      "and the mankind",
-      "except",
-      "that they worship Me"
+      "Except If Allah wills Allah wills And remember",
+      "your Lord when you forget and say",
+      "Perhaps [that] will guide me my Lord",
+      "to a nearer (way) than this right way"
     ],
-    "hint": "The purpose of creation of jinn and humans.",
-    "arabic": "وَمَا خَلَقْتُ ٱلْجِنَّ وَٱلْإِنسَ إِلَّا لِيَعْبُدُونِ",
+    "hint": "A famous du'a from Surah Al-Kahf where Prophet Musa (AS) supplicates to Allah for relief and ease",
+    "arabic": "إِلَّآ أَن يَشَآءَ ٱللَّهُ ۚ وَٱذْكُر رَّبَّكَ إِذَا نَسِيتَ وَقُلْ عَسَىٰٓ أَن يَهْدِيَنِ رَبِّى لِأَقْرَبَ مِنْ هَـٰذَا رَشَدًۭا",
     "words": [
-      "وَمَا خَلَقْتُ",
-      "ٱلْجِنَّ",
-      "وَٱلْإِنسَ",
-      "إِلَّا",
-      "لِيَعْبُدُونِ"
+      "إِلَّآ أَن يَشَآءَ ٱللَّهُ ۚ وَٱذْكُر",
+      "رَّبَّكَ إِذَا نَسِيتَ وَقُلْ",
+      "عَسَىٰٓ أَن يَهْدِيَنِ رَبِّى",
+      "لِأَقْرَبَ مِنْ هَـٰذَا رَشَدًۭا"
     ],
-    "verseEn": "And I did not create the jinn and mankind except to worship Me."
+    "verseEn": "Except [when adding], \"If Allāh wills.\" And remember your Lord when you forget [it] and say, \"Perhaps my Lord will guide me to what is nearer than this to right conduct.\""
   },
   "generated": true,
   "model": "auto (chain)"

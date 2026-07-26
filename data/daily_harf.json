@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-25",
+  "date": "2026-07-26",
   "puzzle": {
-    "word": "عذاب",
-    "display": "عَذَابٍ",
-    "hint": "A painful reckoning promised to those who knowingly reject the messengers' message",
-    "verseRef": "3:21",
-    "arabicVerse": "إِنَّ ٱلَّذِينَ يَكْفُرُونَ بِـَٔايَـٰتِ ٱللَّهِ وَيَقْتُلُونَ ٱلنَّبِيِّـۧنَ بِغَيْرِ حَقٍّۢ وَيَقْتُلُونَ ٱلَّذِينَ يَأْمُرُونَ بِٱلْقِسْطِ مِنَ ٱلنَّاسِ فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ",
-    "verse": "3:21 - Those who disbelieve in the signs of Allāh and kill the prophets without right and kill those who order justice from among the people - give them tidings of a painful punishment."
+    "word": "خسر",
+    "display": "خُسْر",
+    "hint": "The state of loss mentioned in Surah Al-Asr, from which only the faithful are exempt",
+    "verseRef": "103:2",
+    "arabicVerse": "إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ",
+    "verse": "103:2 - Indeed, mankind is in loss,"
   },
   "generated": true,
   "model": "auto (chain)"
