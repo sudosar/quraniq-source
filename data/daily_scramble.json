@@ -1,32 +1,32 @@
 {
-  "date": "2026-07-27",
+  "date": "2026-07-28",
   "puzzle": {
-    "verseRef": "42:43",
-    "reference": "Surah Ash-Shura (42:43)",
+    "verseRef": "53:39",
+    "reference": "Surah An-Najm (53:39)",
     "segments": [
-      "وَلَمَن صَبَرَ",
-      "وَغَفَرَ",
-      "إِنَّ ذَٰلِكَ",
-      "لَمِنْ عَزْمِ",
-      "الْأُمُورِ"
+      "وَأَنَّ",
+      "لَيْسَ",
+      "لِلْإِنسَانِ",
+      "إِلَّا",
+      "مَا سَعَىٰ"
     ],
     "translations": [
-      "And whoever (is) patient",
-      "and forgives indeed",
-      "that (is) surely of",
-      "matters of determination",
-      "matters of determination"
+      "And that is not",
+      "for man",
+      "except",
+      "what",
+      "he strives (for)"
     ],
-    "hint": "A celebrated verse praising the noble traits of patience and forgiveness — it describes them as a hallmark of firm resolve and strong character.",
-    "arabic": "وَلَمَن صَبَرَ وَغَفَرَ إِنَّ ذَٰلِكَ لَمِنْ عَزْمِ ٱلْأُمُورِ",
+    "hint": "Personal accountability — a powerful declaration that one's reward comes only from one's own striving and effort, not from lineage, status, or others' deeds.",
+    "arabic": "وَأَن لَّيْسَ لِلْإِنسَـٰنِ إِلَّا مَا سَعَىٰ",
     "words": [
-      "وَلَمَن صَبَرَ",
-      "وَغَفَرَ إِنَّ",
-      "ذَٰلِكَ لَمِنْ",
-      "عَزْمِ",
-      "ٱلْأُمُورِ"
+      "وَأَن لَّيْسَ",
+      "لِلْإِنسَـٰنِ",
+      "إِلَّا",
+      "مَا",
+      "سَعَىٰ"
     ],
-    "verseEn": "And whoever is patient and forgives - indeed, that is of the matters [worthy] of resolve."
+    "verseEn": "And that there is not for man except that [good] for which he strives"
   },
   "generated": true,
   "model": "auto (chain)"

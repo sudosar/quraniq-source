@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-27",
+  "date": "2026-07-28",
   "puzzle": {
-    "title": "The Offering that Altered Destiny",
-    "intro": "In the earliest days of humanity, a soul offered a gift with pure intentions. Yet, envy lurked in the shadow of acceptance. Discover the story of this figure whose piety and tragic end are immortalized in divine revelation.",
+    "title": "The Sacred Creature's Test",
+    "intro": "A sign was sent to a nation that had gone astray. In the midst of their comfortable lives came a warning—accompanied by a remarkable creature that would become the ultimate test of their faith. Their response would seal their fate forever. Can you uncover who delivered this warning and what became of those who rejected it?",
     "clues": [
-      "I was among the very first generations of mankind.",
-      "I presented an offering to my Lord, and it was received with favor.",
-      "My brother's offering was rejected, and envy darkened his heart.",
-      "I told him, 'If you stretch your hand towards me to kill me, I will not stretch my hand to kill you; indeed I fear Allah, Lord of the worlds.'",
-      "I became the victim of the first act of murder on earth.",
-      "My blood cried out, and I was the first martyr of innocence."
+      "We were a people who had been guided by previous messengers before us.",
+      "A magnificent creature emerged from the mountain, a sign from our Lord for this nation.",
+      "I told them: 'This is a she-camel belonging to Allah, so leave her to eat from Allah's earth and do not touch her with harm.'",
+      "But the people hamstrung my she-camel, defying the command of their Lord.",
+      "I am only a messenger from your Lord, sent with the truth—I am a trustworthy prophet and servant.",
+      "As for the wrongdoers, our Lord struck them with a thunderous sound, and they became motionless in their homes."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Habil (Abel)",
-          "Qabil (Cain)",
-          "The Man from Ya-Sin",
-          "The Samiri",
-          "Luqman"
+          "Prophet Hud of the people of A'ad",
+          "Prophet Salih of the people of Thamud",
+          "Prophet Shu'aib of Midian",
+          "Prophet Lut of the people of Sodom",
+          "Prophet Nuh of the Ark"
         ],
-        "answer": "Habil (Abel)"
+        "answer": "Prophet Salih of the people of Thamud"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "His offering was accepted, causing his brother's envy and his murder",
-          "He was thrown into a blazing furnace but emerged unharmed",
-          "He constructed a massive ship under divine guidance",
-          "He was swallowed by a great fish and remained in darkness",
-          "He led his people through a parted sea"
+          "The Flood that drowned a disbelieving nation",
+          "The earthquake that destroyed a sinful city",
+          "The she-camel sent as a divine sign and test",
+          "The storm that punished the people of Midian",
+          "The destruction of the people of Lot with stones"
         ],
-        "answer": "His offering was accepted, causing his brother's envy and his murder"
+        "answer": "The she-camel sent as a divine sign and test"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "An accepted offering",
-          "A staff turning into a snake",
-          "A she-camel as a divine sign",
-          "A hoopoe bringing news",
-          "A golden calf worshipped"
+          "The city of Sodom in the Jordan Valley",
+          "The valley of Al-Hijr between Hijaz and Syria",
+          "The ancient land of A'ad in southern Arabia",
+          "The forests of Midian near the Red Sea",
+          "The plains of Mount Judi in Mesopotamia"
         ],
-        "answer": "An accepted offering"
+        "answer": "The valley of Al-Hijr between Hijaz and Syria"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "First murder in history; his brother was condemned",
-          "Swallowed by the earth along with his wealth",
-          "Transformed into monkeys due to transgression",
-          "Destroyed by a fierce, icy wind",
-          "Drowned in a great flood as punishment"
+          "They were saved after repenting and believing",
+          "A rain of stones destroyed them completely",
+          "A thunderous sound struck them motionless",
+          "They were carried away by a violent wind",
+          "An earthquake swallowed them into the ground"
         ],
-        "answer": "First murder in history; his brother was condemned"
+        "answer": "A thunderous sound struck them motionless"
       }
     },
-    "verseRef": "5:27",
-    "arabic": "۞ وَٱتْلُ عَلَيْهِمْ نَبَأَ ٱبْنَىْ ءَادَمَ بِٱلْحَقِّ إِذْ قَرَّبَا قُرْبَانًۭا فَتُقُبِّلَ مِنْ أَحَدِهِمَا وَلَمْ يُتَقَبَّلْ مِنَ ٱلْـَٔاخَرِ قَالَ لَأَقْتُلَنَّكَ ۖ قَالَ إِنَّمَا يَتَقَبَّلُ ٱللَّهُ مِنَ ٱلْمُتَّقِينَ",
-    "verse": "And recite to them the story of Adam's two sons, in truth, when they both made an offering [to Allāh], and it was accepted from one of them but was not accepted from the other. Said [the latter], \"I will surely kill you.\" Said [the former], \"Indeed, Allāh only accepts from the righteous [who fear Him]. (5:27)"
+    "verseRef": "54:31",
+    "arabic": "إِنَّآ أَرْسَلْنَا عَلَيْهِمْ صَيْحَةًۭ وَٰحِدَةًۭ فَكَانُوا۟ كَهَشِيمِ ٱلْمُحْتَظِرِ",
+    "verse": "Indeed, We sent upon them one shriek [i.e., blast from the sky], and they became like the dry twig fragments of an [animal] pen. (54:31)"
   },
   "generated": true,
   "model": "auto (chain)"

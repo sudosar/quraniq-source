@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-27",
+  "date": "2026-07-28",
   "puzzle": {
-    "word": "صراطك",
-    "display": "صِرَاطَكَ",
-    "hint": "The straight path that believers are commanded to follow",
-    "verseRef": "43:43",
-    "arabicVerse": "فَٱسْتَمْسِكْ بِٱلَّذِىٓ أُوحِىَ إِلَيْكَ ۖ إِنَّكَ عَلَىٰ صِرَٰطٍۢ مُّسْتَقِيمٍۢ",
-    "verse": "43:43 - So adhere to that which is revealed to you. Indeed, you are on a straight path."
+    "word": "عبادي",
+    "display": "عِبَادِي",
+    "hint": "A plural form of a word meaning one who worships and serves Allah alone",
+    "verseRef": "39:16",
+    "arabicVerse": "لَهُم مِّن فَوْقِهِمْ ظُلَلٌۭ مِّنَ ٱلنَّارِ وَمِن تَحْتِهِمْ ظُلَلٌۭ ۚ ذَٰلِكَ يُخَوِّفُ ٱللَّهُ بِهِۦ عِبَادَهُۥ ۚ يَـٰعِبَادِ فَٱتَّقُونِ",
+    "verse": "39:16 - They will have canopies [i.e., layers] of fire above them and below them, canopies. By that Allāh threatens [i.e., warns] His servants. O My servants, then fear Me."
   },
   "generated": true,
   "model": "auto (chain)"
