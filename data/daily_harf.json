@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-28",
+  "date": "2026-07-29",
   "puzzle": {
-    "word": "عبادي",
-    "display": "عِبَادِي",
-    "hint": "A plural form of a word meaning one who worships and serves Allah alone",
-    "verseRef": "39:16",
-    "arabicVerse": "لَهُم مِّن فَوْقِهِمْ ظُلَلٌۭ مِّنَ ٱلنَّارِ وَمِن تَحْتِهِمْ ظُلَلٌۭ ۚ ذَٰلِكَ يُخَوِّفُ ٱللَّهُ بِهِۦ عِبَادَهُۥ ۚ يَـٰعِبَادِ فَٱتَّقُونِ",
-    "verse": "39:16 - They will have canopies [i.e., layers] of fire above them and below them, canopies. By that Allāh threatens [i.e., warns] His servants. O My servants, then fear Me."
+    "word": "عاملة",
+    "display": "عَامِلَةٌ",
+    "hint": "Toiling and weary (feminine), describing some faces on the Day of Resurrection.",
+    "verseRef": "88:3",
+    "arabicVerse": "عَامِلَةٌۭ نَّاصِبَةٌۭ",
+    "verse": "88:3 - Working [hard] and exhausted."
   },
   "generated": true,
   "model": "auto (chain)"
