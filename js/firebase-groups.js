@@ -631,7 +631,7 @@ async function submitFirebaseScoreRaw(gameMode, crescents, dateStr, uid) {
     if (txnResult && txnResult.committed) {
         try {
             const stats = (typeof loadStats === 'function') ? loadStats() : null;
-            const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
+            const allModes = ['connections', 'harf', 'deduction', 'scramble'];
             let bestStreak = 0;
             if (stats) {
                 allModes.forEach(m => { if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak); });
@@ -1190,7 +1190,7 @@ async function backfillTodayScores() {
         // (ServerValue.TIMESTAMP can't be set inside a transaction callback)
         if (txnResult && txnResult.committed) {
             const stats = loadStats();
-            const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
+            const allModes = ['connections', 'harf', 'deduction', 'scramble'];
             let bestStreak = 0;
             allModes.forEach(m => { if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak); });
             await FB_STATE.db.ref(scorePath).update({

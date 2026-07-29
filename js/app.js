@@ -377,6 +377,10 @@ function initResetButton() {
 }
 
 // ==================== PER-MODE STATS ====================
+
+// `calcWinRate` is defined in js/stats-utils.js (loaded before this file) so it
+// can also be unit-tested under Node.js. See tests/test_win_rate.mjs.
+
 function showStatsModal() {
     // Default to current game mode
     app.statsViewMode = app.currentMode;
@@ -413,7 +417,7 @@ function renderStatsContent() {
 
     const s = app.stats[app.statsViewMode] || createDefaultModeStats();
     document.getElementById('stat-played').textContent = s.played;
-    document.getElementById('stat-win-pct').textContent = s.played ? Math.round((s.won / s.played) * 100) : 0;
+    document.getElementById('stat-win-pct').textContent = calcWinRate(s.won, s.played);
     document.getElementById('stat-streak').textContent = s.streak;
     document.getElementById('stat-max-streak').textContent = s.maxStreak;
 
@@ -837,7 +841,8 @@ function getScholarTitle(score, totalPlayed, maxStreak, quranPercent, daysActive
 
 function getGameInsight(mode, stats) {
     if (stats.played === 0) return null;
-    const winRate = stats.won / stats.played;
+    // Use clamped ratio (0–100%) for display, but pass raw ratio to calculateScore so the score remains consistent with the underlying counters.
+    const winRate = Math.min(stats.won, stats.played) / stats.played;
     const score = calculateScore(winRate, stats.maxStreak, stats.played, 0, 0);
 
     const modeNames = {
@@ -866,7 +871,7 @@ function getGameInsight(mode, stats) {
         name: modeNames[mode],
         emoji: modeEmojis[mode],
         score,
-        winRate: Math.round(winRate * 100),
+        winRate: Math.min(100, Math.round(winRate * 100)),
         strength,
         played: stats.played,
         streak: stats.streak,

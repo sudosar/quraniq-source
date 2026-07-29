@@ -707,10 +707,14 @@ function getPlayerId() {
 function calculatePlayerScore() {
     const stats = loadStats();
     const verseStats = getVerseStats();
-    const modes = ['connections', 'wordle', 'deduction', 'scramble'];
+    // NOTE: 'wordle' was renamed to 'harf' in stats v2. Keep 'harf' here so the
+    // leaderboard submission doesn't throw on `undefined.played` (which would
+    // cause quraniq_percentile to never refresh — see issue #191).
+    const modes = ['connections', 'harf', 'deduction', 'scramble'];
     let totalPlayed = 0, totalWon = 0, bestStreak = 0;
     modes.forEach(m => {
         const s = stats[m];
+        if (!s) return; // defensive: skip any mode that's missing
         totalPlayed += s.played;
         totalWon += s.won;
         bestStreak = Math.max(bestStreak, s.maxStreak);
@@ -733,12 +737,15 @@ async function submitScore() {
     try {
         const stats = loadStats();
         const verseStats = getVerseStats();
-        const modes = ['connections', 'wordle', 'deduction', 'scramble'];
+        // See calculatePlayerScore above for why this is 'harf' not 'wordle'.
+        const modes = ['connections', 'harf', 'deduction', 'scramble'];
         let totalPlayed = 0, totalWon = 0, bestStreak = 0;
         modes.forEach(m => {
-            totalPlayed += stats[m].played;
-            totalWon += stats[m].won;
-            bestStreak = Math.max(bestStreak, stats[m].maxStreak);
+            const s = stats[m];
+            if (!s) return; // defensive: skip any mode that's missing
+            totalPlayed += s.played;
+            totalWon += s.won;
+            bestStreak = Math.max(bestStreak, s.maxStreak);
         });
         const score = calculatePlayerScore();
         const payload = {
