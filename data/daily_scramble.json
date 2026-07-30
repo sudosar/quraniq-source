@@ -1,32 +1,32 @@
 {
-  "date": "2026-07-29",
+  "date": "2026-07-30",
   "puzzle": {
-    "verseRef": "32:17",
-    "reference": "As-Sajdah (32:17)",
+    "verseRef": "23:118",
+    "reference": "Surah Al-Mu'minun (23:118)",
     "segments": [
-      "فَلَا تَعْلَمُ نَفْسٌ",
-      "مَّا أُخْفِىَ لَهُم",
-      "مِّن قُرَّةِ أَعْيُنٍۢ",
-      "جَزَآءًۢ",
-      "بِمَا كَانُوا۟ يَعْمَلُونَ"
+      "rabbi",
+      "ighfir",
+      "warham",
+      "innaka",
+      "anta khayru r-rahimina"
     ],
     "translations": [
-      "And not knows a soul",
-      "what is hidden for them",
-      "of (the) comfort (for) the eyes",
-      "(as) a reward for what",
-      "they used (to) do"
+      "And say My Lord",
+      "Forgive and have mercy",
+      "and You",
+      "(are the) Best",
+      "(of) those who show mercy"
     ],
-    "hint": "This verse describes the unseen reward awaiting the righteous in the Hereafter, a joy beyond imagination.",
-    "arabic": "فَلَا تَعْلَمُ نَفْسٌۭ مَّآ أُخْفِىَ لَهُم مِّن قُرَّةِ أَعْيُنٍۢ جَزَآءًۢ بِمَا كَانُوا۟ يَعْمَلُونَ",
+    "hint": "A beautiful supplication taught in the Quran, asking Allah for forgiveness and mercy - one of the most moving du'as in the Muslim scripture.",
+    "arabic": "وَقُل رَّبِّ ٱغْفِرْ وَٱرْحَمْ وَأَنتَ خَيْرُ ٱلرَّٰحِمِينَ",
     "words": [
-      "فَلَا تَعْلَمُ نَفْسٌۭ",
-      "مَّآ أُخْفِىَ لَهُم",
-      "مِّن قُرَّةِ أَعْيُنٍۢ",
-      "جَزَآءًۢ بِمَا",
-      "كَانُوا۟ يَعْمَلُونَ"
+      "وَقُل رَّبِّ",
+      "ٱغْفِرْ وَٱرْحَمْ",
+      "وَأَنتَ",
+      "خَيْرُ",
+      "ٱلرَّٰحِمِينَ"
     ],
-    "verseEn": "And no soul knows what has been hidden for them of comfort for eyes [i.e., satisfaction] as reward for what they used to do."
+    "verseEn": "And, [O Muḥammad], say, \"My Lord, forgive and have mercy, and You are the best of the merciful.\""
   },
   "generated": true,
   "model": "auto (chain)"

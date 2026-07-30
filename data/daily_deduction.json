@@ -1,65 +1,65 @@
 {
-  "date": "2026-07-29",
+  "date": "2026-07-30",
   "puzzle": {
-    "title": "The Courtly Pursuit",
-    "intro": "In the corridors of power, a figure of high status became infatuated with a servant whose beauty was otherworldly. This infatuation led to a series of events that would test loyalties, reveal hidden truths, and ultimately affirm the servant's innocence.",
+    "title": "The Strange Visitors of a Walled City",
+    "intro": "A group arrived at the gates of a city whose people had never known truth. They brought a message, but the inhabitants turned hostile, threatening violence. Yet, from an unexpected place, a single voice rose to defend the strangers, setting the stage for a dramatic turn of events.",
     "clues": [
-      "I lived in the land of the Nile, in a palace of great influence.",
-      "A young man came into my household, and his presence unsettled my world.",
-      "I tried to seduce him, but he sought refuge in his Lord.",
-      "I tore his garment from behind, but the evidence pointed to my deceit.",
-      "To silence the gossip of the noblewomen, I invited them to a gathering and placed sharp objects in their hands.",
-      "In the end, I publicly confessed my fault, acknowledging the truth before the king."
+      "We entered a city whose people were engulfed in disbelief.",
+      "They looked at us with suspicion and said, 'You are only ordinary beings like us.'",
+      "We warned them, but they raised stones against us.",
+      "A man rushed from the farthest end of the city to affirm our truth.",
+      "He declared to his people, 'Why should I not worship the One who created me?'",
+      "The city's denial ended with a single blast, and silence reigned where once they jeered."
     ],
     "categories": {
       "identity": {
-        "label": "Who Am I?",
+        "label": "Who Are We?",
         "options": [
-          "The Wife of Al-Aziz",
-          "Asiya (Wife of Pharaoh)",
-          "Bilqis (Queen of Sheba)",
-          "Maryam (Mother of Isa)",
-          "The Mother of Musa"
+          "The Messengers of Ya-Sin",
+          "The Disciples of Isa",
+          "The People of the Trench",
+          "The Magicians of Pharaoh",
+          "The Believer of Ya-Sin"
         ],
-        "answer": "The Wife of Al-Aziz"
+        "answer": "The Messengers of Ya-Sin"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "She attempted to seduce Prophet Yusuf",
-          "She tried to kill Prophet Musa",
-          "She claimed to be a goddess",
-          "She built a tower to challenge Allah",
-          "She led an army against Makkah"
+          "Rejection and threat of stoning",
+          "Being thrown into a fierce fire",
+          "A test of patience with a lost child",
+          "A garden that suffered destruction",
+          "A journey through the sea"
         ],
-        "answer": "She attempted to seduce Prophet Yusuf"
+        "answer": "Rejection and threat of stoning"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A shirt torn from the back",
-          "A golden calf",
-          "A staff that turned into a serpent",
-          "A she-camel",
-          "A lamp"
+          "The farthest end of the city",
+          "The Red Sea",
+          "The ditch of fire",
+          "The cave of refuge",
+          "The prison of Egypt"
         ],
-        "answer": "A shirt torn from the back"
+        "answer": "The farthest end of the city"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "She confessed and acknowledged the truth",
-          "She was drowned with her army",
-          "She turned into a pillar of salt",
-          "She was swallowed by the earth",
-          "She was destroyed by a screaming wind"
+          "The city was destroyed by a single shout",
+          "The sea parted and drowned the army",
+          "The fire became cool and safe",
+          "The garden was consumed by a heavenly fire",
+          "The whale returned the person to the shore"
         ],
-        "answer": "She confessed and acknowledged the truth"
+        "answer": "The city was destroyed by a single shout"
       }
     },
-    "verseRef": "12:51",
-    "arabic": "قَالَ مَا خَطْبُكُنَّ إِذْ رَٰوَدتُّنَّ يُوسُفَ عَن نَّفْسِهِۦ ۚ قُلْنَ حَـٰشَ لِلَّهِ مَا عَلِمْنَا عَلَيْهِ مِن سُوٓءٍۢ ۚ قَالَتِ ٱمْرَأَتُ ٱلْعَزِيزِ ٱلْـَٔـٰنَ حَصْحَصَ ٱلْحَقُّ أَنَا۠ رَٰوَدتُّهُۥ عَن نَّفْسِهِۦ وَإِنَّهُۥ لَمِنَ ٱلصَّـٰدِقِينَ",
-    "verse": "Said [the king to the women], \"What was your condition when you sought to seduce Joseph?\" They said, \"Perfect is Allāh! We know about him no evil.\" The wife of al-ʿAzeez said, \"Now the truth has become evident. It was I who sought to seduce him, and indeed, he is of the truthful. (12:51)"
+    "verseRef": "36:14",
+    "arabic": "إِذْ أَرْسَلْنَآ إِلَيْهِمُ ٱثْنَيْنِ فَكَذَّبُوهُمَا فَعَزَّزْنَا بِثَالِثٍۢ فَقَالُوٓا۟ إِنَّآ إِلَيْكُم مُّرْسَلُونَ",
+    "verse": "When We sent to them two but they denied them, so We strengthened [them] with a third, and they said, \"Indeed, we are messengers to you.\" (36:14)"
   },
   "generated": true,
   "model": "auto (chain)"

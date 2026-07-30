@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-29",
+  "date": "2026-07-30",
   "puzzle": {
-    "word": "عاملة",
-    "display": "عَامِلَةٌ",
-    "hint": "Toiling and weary (feminine), describing some faces on the Day of Resurrection.",
-    "verseRef": "88:3",
-    "arabicVerse": "عَامِلَةٌۭ نَّاصِبَةٌۭ",
-    "verse": "88:3 - Working [hard] and exhausted."
+    "word": "شفق",
+    "display": "شَفَق",
+    "hint": "The reddish glow that lingers in the sky after sunset — the Quran swears by it.",
+    "verseRef": "84:16",
+    "arabicVerse": "فَلَآ أُقْسِمُ بِٱلشَّفَقِ",
+    "verse": "84:16 - So I swear by the twilight glow"
   },
   "generated": true,
   "model": "auto (chain)"
