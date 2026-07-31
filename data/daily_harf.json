@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-30",
+  "date": "2026-07-31",
   "puzzle": {
-    "word": "شفق",
-    "display": "شَفَق",
-    "hint": "The reddish glow that lingers in the sky after sunset — the Quran swears by it.",
-    "verseRef": "84:16",
-    "arabicVerse": "فَلَآ أُقْسِمُ بِٱلشَّفَقِ",
-    "verse": "84:16 - So I swear by the twilight glow"
+    "word": "ظلمات",
+    "display": "ظُلُمَاتِ",
+    "hint": "Darknesses mentioned in the Quran, often with land and sea",
+    "verseRef": "6:97",
+    "arabicVerse": "وَهُوَ ٱلَّذِى جَعَلَ لَكُمُ ٱلنُّجُومَ لِتَهْتَدُوا۟ بِهَا فِى ظُلُمَـٰتِ ٱلْبَرِّ وَٱلْبَحْرِ ۗ قَدْ فَصَّلْنَا ٱلْـَٔايَـٰتِ لِقَوْمٍۢ يَعْلَمُونَ",
+    "verse": "6:97 - And it is He who placed for you the stars that you may be guided by them through the darknesses of the land and sea. We have detailed the signs for a people who know."
   },
   "generated": true,
   "model": "auto (chain)"

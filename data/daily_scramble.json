@@ -1,32 +1,29 @@
 {
-  "date": "2026-07-30",
+  "date": "2026-07-31",
   "puzzle": {
-    "verseRef": "23:118",
-    "reference": "Surah Al-Mu'minun (23:118)",
+    "verseRef": "91:9",
+    "reference": "Surah Ash-Shams (91:9)",
     "segments": [
-      "rabbi",
-      "ighfir",
-      "warham",
-      "innaka",
-      "anta khayru r-rahimina"
+      "inna",
+      "allaha",
+      "yush'rikukum",
+      "il'tiqaz"
     ],
     "translations": [
-      "And say My Lord",
-      "Forgive and have mercy",
-      "and You",
-      "(are the) Best",
-      "(of) those who show mercy"
+      "Indeed",
+      "he succeeds",
+      "who",
+      "purifies it"
     ],
-    "hint": "A beautiful supplication taught in the Quran, asking Allah for forgiveness and mercy - one of the most moving du'as in the Muslim scripture.",
-    "arabic": "وَقُل رَّبِّ ٱغْفِرْ وَٱرْحَمْ وَأَنتَ خَيْرُ ٱلرَّٰحِمِينَ",
+    "hint": "This verse explains that attaining taqwa (piety and consciousness of Allah) leads to purification of the soul - a key concept in Islamic spiritual development.",
+    "arabic": "قَدْ أَفْلَحَ مَن زَكَّىٰهَا",
     "words": [
-      "وَقُل رَّبِّ",
-      "ٱغْفِرْ وَٱرْحَمْ",
-      "وَأَنتَ",
-      "خَيْرُ",
-      "ٱلرَّٰحِمِينَ"
+      "قَدْ",
+      "أَفْلَحَ",
+      "مَن",
+      "زَكَّىٰهَا"
     ],
-    "verseEn": "And, [O Muḥammad], say, \"My Lord, forgive and have mercy, and You are the best of the merciful.\""
+    "verseEn": "He has succeeded who purifies it,"
   },
   "generated": true,
   "model": "auto (chain)"
