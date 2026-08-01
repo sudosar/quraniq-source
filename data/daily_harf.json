@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-31",
+  "date": "2026-08-01",
   "puzzle": {
-    "word": "ظلمات",
-    "display": "ظُلُمَاتِ",
-    "hint": "Darknesses mentioned in the Quran, often with land and sea",
-    "verseRef": "6:97",
-    "arabicVerse": "وَهُوَ ٱلَّذِى جَعَلَ لَكُمُ ٱلنُّجُومَ لِتَهْتَدُوا۟ بِهَا فِى ظُلُمَـٰتِ ٱلْبَرِّ وَٱلْبَحْرِ ۗ قَدْ فَصَّلْنَا ٱلْـَٔايَـٰتِ لِقَوْمٍۢ يَعْلَمُونَ",
-    "verse": "6:97 - And it is He who placed for you the stars that you may be guided by them through the darknesses of the land and sea. We have detailed the signs for a people who know."
+    "word": "ميزان",
+    "display": "مِيزَان",
+    "hint": "A scale of balance — by which weights are made just and deeds are measured in the Hereafter",
+    "verseRef": "11:85",
+    "arabicVerse": "وَيَـٰقَوْمِ أَوْفُوا۟ ٱلْمِكْيَالَ وَٱلْمِيزَانَ بِٱلْقِسْطِ ۖ وَلَا تَبْخَسُوا۟ ٱلنَّاسَ أَشْيَآءَهُمْ وَلَا تَعْثَوْا۟ فِى ٱلْأَرْضِ مُفْسِدِينَ",
+    "verse": "11:85 - And O my people, give full measure and weight in justice and do not deprive the people of their due and do not commit abuse on the earth, spreading corruption."
   },
   "generated": true,
   "model": "auto (chain)"

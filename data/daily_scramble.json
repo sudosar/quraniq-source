@@ -1,29 +1,32 @@
 {
-  "date": "2026-07-31",
+  "date": "2026-08-01",
   "puzzle": {
-    "verseRef": "91:9",
-    "reference": "Surah Ash-Shams (91:9)",
+    "verseRef": "46:13",
+    "reference": "Surah Al-Ahqaf (46:13)",
     "segments": [
-      "inna",
-      "allaha",
-      "yush'rikukum",
-      "il'tiqaz"
+      "إِنَّ الَّذِينَ قَالُوا",
+      "رَبُّنَا اللَّهُ",
+      "ثُمَّ اسْتَقَامُوا",
+      "فَلَا خَوْفٌ عَلَيْهِمْ",
+      "وَلَا هُمْ يَحْزَنُونَ"
     ],
     "translations": [
-      "Indeed",
-      "he succeeds",
-      "who",
-      "purifies it"
+      "Indeed those who say",
+      "Our Lord (is) Allah then",
+      "remain firm then no fear",
+      "on them and not",
+      "they will grieve"
     ],
-    "hint": "This verse explains that attaining taqwa (piety and consciousness of Allah) leads to purification of the soul - a key concept in Islamic spiritual development.",
-    "arabic": "قَدْ أَفْلَحَ مَن زَكَّىٰهَا",
+    "hint": "A divine promise for those who affirm Tawheed (pure monotheism) and remain firm on the straight path—they have nothing to fear in this life or the next.",
+    "arabic": "إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَـٰمُوا۟ فَلَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ",
     "words": [
-      "قَدْ",
-      "أَفْلَحَ",
-      "مَن",
-      "زَكَّىٰهَا"
+      "إِنَّ ٱلَّذِينَ قَالُوا۟",
+      "رَبُّنَا ٱللَّهُ ثُمَّ",
+      "ٱسْتَقَـٰمُوا۟ فَلَا خَوْفٌ",
+      "عَلَيْهِمْ وَلَا",
+      "هُمْ يَحْزَنُونَ"
     ],
-    "verseEn": "He has succeeded who purifies it,"
+    "verseEn": "Indeed, those who have said, \"Our Lord is Allāh,\" and then remained on a right course - there will be no fear concerning them, nor will they grieve."
   },
   "generated": true,
   "model": "auto (chain)"
