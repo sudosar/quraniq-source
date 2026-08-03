@@ -296,20 +296,21 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
+KIMI_API_KEY = os.environ.get("KIMI_API_KEY", "")
 
 # API endpoints
 OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
-MINIMAX_M27_API_URL = "https://api.minimax.io/v1/text/chatcompletion_v2"  # native, max_completion_tokens
-MINIMAX_M3_API_URL  = "https://api.minimax.io/v1/chat/completions"        # OpenAI-compat, max_tokens
+MINIMAX_M3_API_URL = "https://api.minimax.io/v1/chat/completions"
+KIMI_API_URL = "https://api.moonshot.ai/v1/chat/completions"
 
-# Model fallback chain: MiniMax M2.7 → MiniMax M3 → DeepSeek V4 Pro
+# Model fallback chain: MiniMax M3 → Kimi K3 → DeepSeek V4 Pro
 MODEL_CHAIN = [
-    {"id": "MiniMax-M2.7",    "api": "minimax_m27", "label": "MiniMax M2.7"},
-    {"id": "MiniMax-M3",      "api": "minimax_m3",  "label": "MiniMax M3"},
-    {"id": "deepseek-v4-pro", "api": "deepseek",    "label": "DeepSeek V4 Pro"},
+    {"id": "MiniMax-M3",      "api": "minimax_m3", "label": "MiniMax M3"},
+    {"id": "kimi-k3",         "api": "kimi",       "label": "Kimi K3"},
+    {"id": "deepseek-v4-pro", "api": "deepseek",   "label": "DeepSeek V4 Pro"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -573,14 +574,23 @@ def call_model(prompt, model_config, system_msg=None):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {DEEPSEEK_API_KEY}"
         }
-    elif api_type in ("minimax_m27", "minimax_m3"):
+    elif api_type == "minimax_m3":
         if not MINIMAX_API_KEY:
             print(f"  ⚠ MINIMAX_API_KEY not set, skipping {model_config['label']}")
             return None
-        api_url = MINIMAX_M27_API_URL if api_type == "minimax_m27" else MINIMAX_M3_API_URL
+        api_url = MINIMAX_M3_API_URL
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {MINIMAX_API_KEY}"
+        }
+    elif api_type == "kimi":
+        if not KIMI_API_KEY:
+            print(f"  ⚠ KIMI_API_KEY not set, skipping {model_config['label']}")
+            return None
+        api_url = KIMI_API_URL
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {KIMI_API_KEY}"
         }
     else:  # github
         if not GITHUB_TOKEN:
@@ -605,21 +615,19 @@ def call_model(prompt, model_config, system_msg=None):
         "temperature": 0.6,
         "top_p": 0.95,
     }
-    # M2.7 native endpoint uses max_completion_tokens; M3 + others use max_tokens.
-    # DeepSeek V4 Pro uses chain-of-thought reasoning tokens, needs higher ceiling.
-    if api_type == "minimax_m27":
-        payload["max_completion_tokens"] = 16384
-    elif api_type == "deepseek":
+    # M3 and DeepSeek are reasoning models — give them a larger token budget so
+    # chain-of-thought doesn't crowd out the JSON answer (seen at exactly 16384 out).
+    if api_type in ("minimax_m3", "deepseek"):
         payload["max_tokens"] = 32768
     else:
         payload["max_tokens"] = 16384
 
     # These APIs support the response_format JSON mode parameter
-    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m27", "minimax_m3"):
+    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m3", "kimi"):
         payload["response_format"] = {"type": "json_object"}
 
-    # M3 needs more time — it runs extended reasoning passes
-    request_timeout = 300 if api_type == "minimax_m3" else 180
+    # Reasoning models need more wall-clock time; Kimi K3 is also a reasoning model
+    request_timeout = 300 if api_type in ("minimax_m3", "kimi") else 180
     try:
         resp = requests.post(api_url, headers=headers, json=payload, timeout=request_timeout)
 
@@ -657,9 +665,7 @@ def call_model(prompt, model_config, system_msg=None):
                     "temperature": 0.3,
                     "top_p": 0.95,
                 }
-                if api_type == "minimax_m27":
-                    cont_payload["max_completion_tokens"] = 16384
-                elif api_type == "deepseek":
+                if api_type in ("minimax_m3", "deepseek"):
                     cont_payload["max_tokens"] = 32768
                 else:
                     cont_payload["max_tokens"] = 16384
@@ -2712,16 +2718,20 @@ def main():
             print(f"Partial history found for {today}. Missing: {', '.join(missing_games)}")
             print(f"Will regenerate only missing games.")
 
-    if not MINIMAX_API_KEY and not DEEPSEEK_API_KEY:
+    if not MINIMAX_API_KEY and not KIMI_API_KEY and not DEEPSEEK_API_KEY:
         print("ERROR: No API credentials set.")
-        print("  Set MINIMAX_API_KEY and/or DEEPSEEK_API_KEY.")
+        print("  Set at least one of: MINIMAX_API_KEY, KIMI_API_KEY, DEEPSEEK_API_KEY.")
         return 1
 
     print(f"Available APIs:")
     if MINIMAX_API_KEY:
-        print(f"  ✓ MiniMax API (M2.7, M3)")
+        print(f"  ✓ MiniMax API (M3)")
     else:
         print(f"  ✗ MiniMax API (MINIMAX_API_KEY not set)")
+    if KIMI_API_KEY:
+        print(f"  ✓ Kimi API (kimi-k3)")
+    else:
+        print(f"  ✗ Kimi API (KIMI_API_KEY not set)")
     if DEEPSEEK_API_KEY:
         print(f"  ✓ DeepSeek API (deepseek-v4-pro)")
     else:
