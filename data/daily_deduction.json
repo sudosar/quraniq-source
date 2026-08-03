@@ -1,65 +1,65 @@
 {
-  "date": "2026-06-12",
+  "date": "2026-08-03",
   "puzzle": {
-    "title": "The Willing Sacrifice",
-    "intro": "In a time of divine tests, a soul was called to the ultimate act of submission. Raised in a barren land, this figure grew to embody faith and patience. When a vision commanded a sacrifice, they did not waver. Their story is a cornerstone of devotion.",
+    "title": "The Spring Beneath the Sand",
+    "intro": "In the annals of the Quran, a figure of immense patience faced a trial that would break the stoutest hearts. Everything was stripped away - wealth, family, and health. Yet from the depths of despair, a humble prayer was answered in the most unexpected way. Can you identify this soul whose story of restoration echoes through the ages?",
     "clues": [
-      "I was the answer to a long-awaited prayer of a great prophet.",
-      "My mother and I were left in a desolate valley with only provisions of dates and water.",
-      "I grew up to become a prophet known for my truthfulness and patience.",
-      "I helped my father raise the foundations of a sacred house dedicated to Allah.",
-      "When my father told me of a dream to sacrifice me, I replied, 'Do as you are commanded.'",
-      "Allah honored my submission by sending a ram from the sky to ransom me."
+      "I was tested with a trial so severe that it is remembered throughout the ages.",
+      "I lost everything that mattered - my wealth, my children, and my health.",
+      "My body was covered with painful sores, and I was shunned by all.",
+      "In my desperation, I called to Allah, saying that Satan had touched me with hardship and torment.",
+      "Allah answered me and commanded me to strike the earth with my foot.",
+      "From that very spot, a cool spring burst forth, and Allah restored my family and doubled them as a mercy."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Isma'il",
-          "Prophet Ishaq",
-          "Prophet Ya'qub",
-          "Prophet Ibrahim",
-          "Prophet Yusuf"
+          "Prophet Ayyub",
+          "Prophet Musa",
+          "Prophet Ilyas",
+          "Prophet Sulayman",
+          "Prophet Dawud"
         ],
-        "answer": "Prophet Isma'il"
+        "answer": "Prophet Ayyub"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Willingly submitting to be sacrificed",
-          "Being thrown into a blazing fire",
-          "Being swallowed by a great fish",
-          "Being sold into slavery",
-          "Being tested with a severe illness"
+          "Severe illness and loss of family and wealth",
+          "Being swallowed by a great whale",
+          "Exile from the city of Makkah",
+          "Imprisonment in a deep well",
+          "Confrontation with an arrogant ruler"
         ],
-        "answer": "Willingly submitting to be sacrificed"
+        "answer": "Severe illness and loss of family and wealth"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Well of Zamzam",
-          "The Ark of Nuh",
-          "The Fire of Nimrod",
-          "The Golden Calf",
-          "The Staff of Musa"
+          "A cool spring from the earth",
+          "A boat upon a great flood",
+          "A staff that split the sea",
+          "An elevated throne of glass",
+          "A walled cave for sleep"
         ],
-        "answer": "Well of Zamzam"
+        "answer": "A cool spring from the earth"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Was ransomed with a great ram",
-          "Was saved from the fire",
-          "Was saved from the flood",
-          "Was taken out of the whale",
-          "Was given a kingdom and wisdom"
+          "Family and wealth restored and doubled",
+          "Exit from the belly of a fish",
+          "Safe passage through parted waters",
+          "A kingdom given to rule",
+          "A son's miraculous birth in old age"
         ],
-        "answer": "Was ransomed with a great ram"
+        "answer": "Family and wealth restored and doubled"
       }
     },
-    "verseRef": "37:102",
-    "arabic": "فَلَمَّا بَلَغَ مَعَهُ ٱلسَّعْىَ قَالَ يَـٰبُنَىَّ إِنِّىٓ أَرَىٰ فِى ٱلْمَنَامِ أَنِّىٓ أَذْبَحُكَ فَٱنظُرْ مَاذَا تَرَىٰ ۚ قَالَ يَـٰٓأَبَتِ ٱفْعَلْ مَا تُؤْمَرُ ۖ سَتَجِدُنِىٓ إِن شَآءَ ٱللَّهُ مِنَ ٱلصَّـٰبِرِينَ",
-    "verse": "And when he reached with him [the age of] exertion, he said, \"O my son, indeed I have seen in a dream that I [must] sacrifice you, so see what you think.\" He said, \"O my father, do as you are commanded. You will find me, if Allāh wills, of the steadfast.\" (37:102)"
+    "verseRef": "38:41",
+    "arabic": "وَٱذْكُرْ عَبْدَنَآ أَيُّوبَ إِذْ نَادَىٰ رَبَّهُۥٓ أَنِّى مَسَّنِىَ ٱلشَّيْطَـٰنُ بِنُصْبٍۢ وَعَذَابٍ",
+    "verse": "And remember Our servant Job, when he called to his Lord, \"Indeed, Satan has touched me with hardship and torment.\" (38:41)"
   },
   "generated": true,
   "model": "auto (chain)"

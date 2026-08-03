@@ -296,20 +296,21 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
+KIMI_API_KEY = os.environ.get("KIMI_API_KEY", "")
 
 # API endpoints
 OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 GITHUB_MODELS_URL = "https://models.inference.ai.azure.com/chat/completions"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
-MINIMAX_M27_API_URL = "https://api.minimax.io/v1/text/chatcompletion_v2"  # native, max_completion_tokens
-MINIMAX_M3_API_URL  = "https://api.minimax.io/v1/chat/completions"        # OpenAI-compat, max_tokens
+MINIMAX_M3_API_URL = "https://api.minimax.io/v1/chat/completions"
+KIMI_API_URL = "https://api.moonshot.ai/v1/chat/completions"
 
-# Model fallback chain: MiniMax M2.7 → MiniMax M3 → DeepSeek V4 Pro
+# Model fallback chain: MiniMax M3 → Kimi K3 → DeepSeek V4 Pro
 MODEL_CHAIN = [
-    {"id": "MiniMax-M2.7",    "api": "minimax_m27", "label": "MiniMax M2.7"},
-    {"id": "MiniMax-M3",      "api": "minimax_m3",  "label": "MiniMax M3"},
-    {"id": "deepseek-v4-pro", "api": "deepseek",    "label": "DeepSeek V4 Pro"},
+    {"id": "MiniMax-M3",      "api": "minimax_m3", "label": "MiniMax M3"},
+    {"id": "kimi-k3",         "api": "kimi",       "label": "Kimi K3"},
+    {"id": "deepseek-v4-pro", "api": "deepseek",   "label": "DeepSeek V4 Pro"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -573,14 +574,23 @@ def call_model(prompt, model_config, system_msg=None):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {DEEPSEEK_API_KEY}"
         }
-    elif api_type in ("minimax_m27", "minimax_m3"):
+    elif api_type == "minimax_m3":
         if not MINIMAX_API_KEY:
             print(f"  ⚠ MINIMAX_API_KEY not set, skipping {model_config['label']}")
             return None
-        api_url = MINIMAX_M27_API_URL if api_type == "minimax_m27" else MINIMAX_M3_API_URL
+        api_url = MINIMAX_M3_API_URL
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {MINIMAX_API_KEY}"
+        }
+    elif api_type == "kimi":
+        if not KIMI_API_KEY:
+            print(f"  ⚠ KIMI_API_KEY not set, skipping {model_config['label']}")
+            return None
+        api_url = KIMI_API_URL
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {KIMI_API_KEY}"
         }
     else:  # github
         if not GITHUB_TOKEN:
@@ -605,21 +615,19 @@ def call_model(prompt, model_config, system_msg=None):
         "temperature": 0.6,
         "top_p": 0.95,
     }
-    # M2.7 native endpoint uses max_completion_tokens; M3 + others use max_tokens.
-    # DeepSeek V4 Pro uses chain-of-thought reasoning tokens, needs higher ceiling.
-    if api_type == "minimax_m27":
-        payload["max_completion_tokens"] = 16384
-    elif api_type == "deepseek":
+    # M3 and DeepSeek are reasoning models — give them a larger token budget so
+    # chain-of-thought doesn't crowd out the JSON answer (seen at exactly 16384 out).
+    if api_type in ("minimax_m3", "deepseek"):
         payload["max_tokens"] = 32768
     else:
         payload["max_tokens"] = 16384
 
     # These APIs support the response_format JSON mode parameter
-    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m27", "minimax_m3"):
+    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m3", "kimi"):
         payload["response_format"] = {"type": "json_object"}
 
-    # M3 needs more time — it runs extended reasoning passes
-    request_timeout = 300 if api_type == "minimax_m3" else 180
+    # Reasoning models need more wall-clock time; Kimi K3 is also a reasoning model
+    request_timeout = 300 if api_type in ("minimax_m3", "kimi") else 180
     try:
         resp = requests.post(api_url, headers=headers, json=payload, timeout=request_timeout)
 
@@ -657,9 +665,7 @@ def call_model(prompt, model_config, system_msg=None):
                     "temperature": 0.3,
                     "top_p": 0.95,
                 }
-                if api_type == "minimax_m27":
-                    cont_payload["max_completion_tokens"] = 16384
-                elif api_type == "deepseek":
+                if api_type in ("minimax_m3", "deepseek"):
                     cont_payload["max_tokens"] = 32768
                 else:
                     cont_payload["max_tokens"] = 16384
@@ -1481,6 +1487,7 @@ IMPORTANT:
 - Return ONLY the JSON object, no markdown
 - The word without diacritics must be 3-5 letters
 - The hint should be clever but not too obscure
+- The hint MUST NOT directly reveal or contain the Arabic word (e.g. if the word is "hear", the hint must not be "hear" or "the word is hear")
 - Choose words that are meaningful Islamic concepts
 - The verse MUST be from a surah NOT in the forbidden surahs list
 - Do NOT include full verse text - only the ref. Verse text will be looked up separately."""
@@ -1513,6 +1520,13 @@ def validate_harf(puzzle, history):
         cooldown_violations.append(f"Word '{word}' reused (cooldown)")
     if hint.lower().strip() in history["harf"]["hints"]:
         cooldown_violations.append(f"Hint reused (cooldown)")
+    # Hint must not directly reveal the word or contain it as a substring
+    hint_lower = hint.lower().strip()
+    word_stripped = re.sub(r'[\u064B-\u065F\u0670\u06D6-\u06ED]', '', word).lower()
+    if hint_lower == word_stripped:
+        cooldown_violations.append(f"Hint directly reveals the word '{word_stripped}'")
+    elif hint_lower in word_stripped or word_stripped in hint_lower:
+        cooldown_violations.append(f"Hint '{hint_lower}' contains or is contained by word '{word_stripped}'")
     # Check verse ref against game-specific AND global cooldown
     if verse_ref:
         if verse_ref in history["harf"]["verseRefs"]:
@@ -1636,6 +1650,10 @@ def validate_deduction(puzzle, history):
         opts = cat.get("options", [])
         if len(opts) != 5:
             errors.append(f"Category '{key}' has {len(opts)} options, expected 5")
+        # Reject empty or blank options (LLM sometimes generates null/empty slots)
+        for i, opt in enumerate(opts):
+            if not opt or not str(opt).strip():
+                errors.append(f"Category '{key}' has empty/whitespace option at position {i+1}")
         if not cat.get("answer"):
             errors.append(f"Category '{key}' missing answer")
         elif cat["answer"] not in opts:
@@ -2131,7 +2149,25 @@ def enrich_single_category(cat):
         if verse_data:
             item["verse"] = verse_data["arabic"]
             item["verseEn"] = verse_data["english"]
+            # Overwrite LLM-generated en with authoritative word-by-word translation
+            # from the Quran API. This fixes hallucinated/wrong word meanings.
             ar_word = item.get("ar", "")
+            if ar_word and verse_data.get("wbw"):
+                wbw = verse_data["wbw"]
+                # Find the best matching wbw entry for this word
+                from difflib import SequenceMatcher
+                best_en = None
+                best_score = 0.0
+                norm_ar = normalize_arabic(ar_word)
+                for wbw_entry in wbw:
+                    wbw_ar_norm = normalize_arabic(wbw_entry.get("arabic", ""))
+                    if wbw_ar_norm and len(wbw_ar_norm) >= 3 and len(norm_ar) >= 3:
+                        score = SequenceMatcher(None, wbw_ar_norm, norm_ar).ratio()
+                        if score > best_score and score >= 0.75:
+                            best_score = score
+                            best_en = wbw_entry.get("english", "")
+                if best_en:
+                    item["en"] = best_en
             if ar_word and not word_in_verse(ar_word, verse_data["arabic"]):
                 snippet = verse_data["arabic"][:120]
                 msg = (
@@ -2320,9 +2356,30 @@ def enrich_deduction_with_verses(puzzle):
     if verse_data:
         puzzle["arabic"] = verse_data["arabic"]
         puzzle["verse"] = f"{verse_data['english']} ({ref})"
-        print(f"  ✓ Verse text fetched from Quran API")
+        print(f"  ✓ Verse text fetched from Quran.com API")
     else:
-        print(f"  ⚠ Could not fetch verse text for {ref}")
+        # Fallback: try alquran.cloud (supports range refs like 40:36-37)
+        print(f"  ⚠ Quran.com failed for {ref}, trying alquran.cloud fallback...")
+        try:
+            alt_resp = requests.get(
+                f"https://api.alquran.cloud/v1/ayah/{ref}/en.sahih",
+                timeout=20
+            )
+            if alt_resp.status_code == 200:
+                alt_data = alt_resp.json()
+                ayah_data = alt_data.get("data", {})
+                # alquran.cloud returns English in 'text' for en.sahih edition
+                english = ayah_data.get("text", "") or ayah_data.get("translation", "") or ""
+                if english:
+                    puzzle["verse"] = f"{english} ({ref})"
+                    print(f"  ✓ Verse text fetched from alquran.cloud fallback")
+                else:
+                    raise ValueError("Empty english from alquran.cloud")
+            else:
+                raise ValueError(f"alquran.cloud returned {alt_resp.status_code}")
+        except Exception as e:
+            print(f"  ⚠ All verse APIs failed for {ref}: {e}")
+        # Last resort: at minimum, store the ref so the UI shows something
         if not puzzle.get("arabic"):
             puzzle["arabic"] = ""
         if not puzzle.get("verse"):
@@ -2661,16 +2718,20 @@ def main():
             print(f"Partial history found for {today}. Missing: {', '.join(missing_games)}")
             print(f"Will regenerate only missing games.")
 
-    if not MINIMAX_API_KEY and not DEEPSEEK_API_KEY:
+    if not MINIMAX_API_KEY and not KIMI_API_KEY and not DEEPSEEK_API_KEY:
         print("ERROR: No API credentials set.")
-        print("  Set MINIMAX_API_KEY and/or DEEPSEEK_API_KEY.")
+        print("  Set at least one of: MINIMAX_API_KEY, KIMI_API_KEY, DEEPSEEK_API_KEY.")
         return 1
 
     print(f"Available APIs:")
     if MINIMAX_API_KEY:
-        print(f"  ✓ MiniMax API (M2.7, M3)")
+        print(f"  ✓ MiniMax API (M3)")
     else:
         print(f"  ✗ MiniMax API (MINIMAX_API_KEY not set)")
+    if KIMI_API_KEY:
+        print(f"  ✓ Kimi API (kimi-k3)")
+    else:
+        print(f"  ✗ Kimi API (KIMI_API_KEY not set)")
     if DEEPSEEK_API_KEY:
         print(f"  ✓ DeepSeek API (deepseek-v4-pro)")
     else:
