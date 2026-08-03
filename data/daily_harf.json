@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-02",
+  "date": "2026-08-03",
   "puzzle": {
-    "word": "اسلام",
-    "display": "إِسْلَام",
-    "hint": "The name of the religion that means 'submission to God'",
-    "verseRef": "49:17",
-    "arabicVerse": "يَمُنُّونَ عَلَيْكَ أَنْ أَسْلَمُوا۟ ۖ قُل لَّا تَمُنُّوا۟ عَلَىَّ إِسْلَـٰمَكُم ۖ بَلِ ٱللَّهُ يَمُنُّ عَلَيْكُمْ أَنْ هَدَىٰكُمْ لِلْإِيمَـٰنِ إِن كُنتُمْ صَـٰدِقِينَ",
-    "verse": "49:17 - They consider it a favor to you that they have accepted Islām. Say, \"Do not consider your Islām a favor to me. Rather, Allāh has conferred favor upon you that He has guided you to the faith, if you should be truthful.\""
+    "word": "رحيم",
+    "display": "رَحِيم",
+    "hint": "A comforting divine name that assures forgiveness",
+    "verseRef": "4:106",
+    "arabicVerse": "وَٱسْتَغْفِرِ ٱللَّهَ ۖ إِنَّ ٱللَّهَ كَانَ غَفُورًۭا رَّحِيمًۭا",
+    "verse": "4:106 - And seek forgiveness of Allāh. Indeed, Allāh is ever Forgiving and Merciful."
   },
   "generated": true,
   "model": "auto (chain)"
