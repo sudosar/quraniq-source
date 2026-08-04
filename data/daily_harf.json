@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-03",
+  "date": "2026-08-04",
   "puzzle": {
-    "word": "رحيم",
-    "display": "رَحِيم",
-    "hint": "A comforting divine name that assures forgiveness",
-    "verseRef": "4:106",
-    "arabicVerse": "وَٱسْتَغْفِرِ ٱللَّهَ ۖ إِنَّ ٱللَّهَ كَانَ غَفُورًۭا رَّحِيمًۭا",
-    "verse": "4:106 - And seek forgiveness of Allāh. Indeed, Allāh is ever Forgiving and Merciful."
+    "word": "بيان",
+    "display": "بَيَانَ",
+    "hint": "Clear exposition; a divine promise regarding the Quran's meaning",
+    "verseRef": "75:19",
+    "arabicVerse": "ثُمَّ إِنَّ عَلَيْنَا بَيَانَهُۥ",
+    "verse": "75:19 - Then upon Us is its clarification [to you]."
   },
   "generated": true,
   "model": "auto (chain)"

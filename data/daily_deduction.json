@@ -1,65 +1,65 @@
 {
-  "date": "2026-08-03",
+  "date": "2026-08-04",
   "puzzle": {
-    "title": "The Spring Beneath the Sand",
-    "intro": "In the annals of the Quran, a figure of immense patience faced a trial that would break the stoutest hearts. Everything was stripped away - wealth, family, and health. Yet from the depths of despair, a humble prayer was answered in the most unexpected way. Can you identify this soul whose story of restoration echoes through the ages?",
+    "title": "The Echo Through the Cliffs",
+    "intro": "Imagine a valley where dwellings are hewn from cliffs, and the air carries the memory of a warning unheeded. A people once thrived here, blessed yet defiant, until a sign emerged from the very rock they trusted.",
     "clues": [
-      "I was tested with a trial so severe that it is remembered throughout the ages.",
-      "I lost everything that mattered - my wealth, my children, and my health.",
-      "My body was covered with painful sores, and I was shunned by all.",
-      "In my desperation, I called to Allah, saying that Satan had touched me with hardship and torment.",
-      "Allah answered me and commanded me to strike the earth with my foot.",
-      "From that very spot, a cool spring burst forth, and Allah restored my family and doubled them as a mercy."
+      "We were a people who carved out secure homes from the mountains, feeling safe in our rocky dwellings.",
+      "We lived in a land of plains and stone, blessed with gardens and springs.",
+      "A messenger from among us came, calling us to abandon our false gods and worship the One true Creator.",
+      "We arrogantly set a condition for belief: a unique sign that would emerge from the very rocks we carved.",
+      "When the promised she-camel appeared from the rock, a clear sign, our elite still refused and hamstrung her despite the warning of an impending doom.",
+      "Three days after our deed, a thunderous blast echoed through the valley, and we were reduced to fallen rubble, our homes our graves."
     ],
     "categories": {
       "identity": {
-        "label": "Who Am I?",
+        "label": "Who Are We?",
         "options": [
-          "Prophet Ayyub",
-          "Prophet Musa",
-          "Prophet Ilyas",
-          "Prophet Sulayman",
-          "Prophet Dawud"
+          "The People of ¿Ad",
+          "The People of Thamud",
+          "The People of Madyan",
+          "The People of the Grove",
+          "The People of the Cave"
         ],
-        "answer": "Prophet Ayyub"
+        "answer": "The People of Thamud"
       },
       "trial": {
-        "label": "Trial/Event",
+        "label": "Our Trial/Main Event",
         "options": [
-          "Severe illness and loss of family and wealth",
-          "Being swallowed by a great whale",
-          "Exile from the city of Makkah",
-          "Imprisonment in a deep well",
-          "Confrontation with an arrogant ruler"
+          "The hamstringing of Allah’s she-camel",
+          "The worship of the golden calf",
+          "The breaking of the Sabbath",
+          "The building of a tower to the sky",
+          "The slaying of the prophets"
         ],
-        "answer": "Severe illness and loss of family and wealth"
+        "answer": "The hamstringing of Allah’s she-camel"
       },
       "location": {
-        "label": "Key Element",
+        "label": "Key Element in Our Story",
         "options": [
-          "A cool spring from the earth",
-          "A boat upon a great flood",
-          "A staff that split the sea",
-          "An elevated throne of glass",
-          "A walled cave for sleep"
+          "The she-camel of Allah",
+          "The staff of Musa",
+          "The ark of Nuh",
+          "The white hand of Musa",
+          "The bird of ¿Isa"
         ],
-        "answer": "A cool spring from the earth"
+        "answer": "The she-camel of Allah"
       },
       "outcome": {
-        "label": "Outcome",
+        "label": "Our Outcome",
         "options": [
-          "Family and wealth restored and doubled",
-          "Exit from the belly of a fish",
-          "Safe passage through parted waters",
-          "A kingdom given to rule",
-          "A son's miraculous birth in old age"
+          "Destruction by a deafening blast",
+          "A rain of stones from the sky",
+          "A flood that covered the earth",
+          "A fierce wind that uprooted us",
+          "The earth swallowing us"
         ],
-        "answer": "Family and wealth restored and doubled"
+        "answer": "Destruction by a deafening blast"
       }
     },
-    "verseRef": "38:41",
-    "arabic": "وَٱذْكُرْ عَبْدَنَآ أَيُّوبَ إِذْ نَادَىٰ رَبَّهُۥٓ أَنِّى مَسَّنِىَ ٱلشَّيْطَـٰنُ بِنُصْبٍۢ وَعَذَابٍ",
-    "verse": "And remember Our servant Job, when he called to his Lord, \"Indeed, Satan has touched me with hardship and torment.\" (38:41)"
+    "verseRef": "27:45",
+    "arabic": "وَلَقَدْ أَرْسَلْنَآ إِلَىٰ ثَمُودَ أَخَاهُمْ صَـٰلِحًا أَنِ ٱعْبُدُوا۟ ٱللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ",
+    "verse": "And We had certainly sent to Thamūd their brother Ṣāliḥ, [saying], \"Worship Allāh,\" and at once they were two parties conflicting. (27:45)"
   },
   "generated": true,
   "model": "auto (chain)"
