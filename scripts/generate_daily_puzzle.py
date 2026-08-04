@@ -622,8 +622,8 @@ def call_model(prompt, model_config, system_msg=None):
     else:
         payload["max_tokens"] = 16384
 
-    # These APIs support the response_format JSON mode parameter
-    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m3", "kimi"):
+    # response_format JSON mode — not all models support it; Kimi K3 returns 400 with it
+    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m3"):
         payload["response_format"] = {"type": "json_object"}
 
     # Reasoning models need more wall-clock time; Kimi K3 is also a reasoning model
@@ -637,12 +637,16 @@ def call_model(prompt, model_config, system_msg=None):
         if resp.status_code == 401:
             print(f"  ✗ Authentication failed for {model_config['label']}")
             return None
+        if resp.status_code == 400:
+            print(f"  ✗ Bad request for {model_config['label']}: {resp.text[:400]}")
+            return None
 
         resp.raise_for_status()
         data = resp.json()
-        # All APIs (OpenAI, GitHub, DeepSeek, Gemini via OpenAI-compatible endpoint) return
-        # the same choices[0].message.content structure.
-        text = data["choices"][0]["message"]["content"]
+        msg = data["choices"][0]["message"]
+        # Reasoning models (M3, Kimi K3) may put the answer in reasoning_content
+        # and leave content empty when the thinking budget is exhausted.
+        text = msg.get("content") or msg.get("reasoning_content", "")
         usage = data.get("usage", {})
         print(f"  Tokens: {usage.get('prompt_tokens', '?')} in, "
               f"{usage.get('completion_tokens', '?')} out, "
