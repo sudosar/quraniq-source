@@ -1,35 +1,32 @@
 {
-  "date": "2026-08-03",
+  "date": "2026-08-04",
   "puzzle": {
-    "verseRef": "38:16",
-    "reference": "Surah Sad (38:16)",
+    "verseRef": "50:39",
+    "reference": "Surah Qaf (50:39)",
     "segments": [
-      "Ibrahim said:",
-      "My Lord, forgive",
-      "me and my parents",
-      "and the believers",
-      "the Day when",
-      "the reckoning will be established"
+      "فَاصْبِرْ",
+      "عَلَىٰ مَا يَقُولُونَ",
+      "وَسَبِّحْ بِحَمْدِ رَبِّكَ",
+      "قَبْلَ طُلُوعِ الشَّمْسِ",
+      "وَقَبْلَ غُرُوبِهَا"
     ],
     "translations": [
-      "And they say Our Lord",
-      "Hasten for us",
-      "our share",
-      "before",
-      "(the) Day",
-      "(of) the Account"
+      "So be patient over what",
+      "they say and glorify (the) praise",
+      "(of) your Lord before",
+      "(the) rising (of) the sun",
+      "and before the setting"
     ],
-    "hint": "A prophet's supplication for forgiveness, mentioning family and all believers on the Day of Judgment",
-    "arabic": "وَقَالُوا۟ رَبَّنَا عَجِّل لَّنَا قِطَّنَا قَبْلَ يَوْمِ ٱلْحِسَابِ",
+    "hint": "This verse from Surah Qaf encourages patience in the face of opposition and the practice of glorifying Allah with praise at the start and end of the day.",
+    "arabic": "فَٱصْبِرْ عَلَىٰ مَا يَقُولُونَ وَسَبِّحْ بِحَمْدِ رَبِّكَ قَبْلَ طُلُوعِ ٱلشَّمْسِ وَقَبْلَ ٱلْغُرُوبِ",
     "words": [
-      "وَقَالُوا۟ رَبَّنَا",
-      "عَجِّل لَّنَا",
-      "قِطَّنَا",
-      "قَبْلَ",
-      "يَوْمِ",
-      "ٱلْحِسَابِ"
+      "فَٱصْبِرْ عَلَىٰ مَا",
+      "يَقُولُونَ وَسَبِّحْ بِحَمْدِ",
+      "رَبِّكَ قَبْلَ",
+      "طُلُوعِ ٱلشَّمْسِ",
+      "وَقَبْلَ ٱلْغُرُوبِ"
     ],
-    "verseEn": "And they say, \"Our Lord, hasten for us our share [of the punishment] before the Day of Account.\""
+    "verseEn": "So be patient, [O Muḥammad], over what they say and exalt [Allāh] with praise of your Lord before the rising of the sun and before its setting,"
   },
   "generated": true,
   "model": "auto (chain)"
