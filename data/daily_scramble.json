@@ -1,32 +1,29 @@
 {
-  "date": "2026-08-04",
+  "date": "2026-08-05",
   "puzzle": {
-    "verseRef": "50:39",
-    "reference": "Surah Qaf (50:39)",
+    "verseRef": "6:103",
+    "reference": "Al-An'am (6:103)",
     "segments": [
-      "فَاصْبِرْ",
-      "عَلَىٰ مَا يَقُولُونَ",
-      "وَسَبِّحْ بِحَمْدِ رَبِّكَ",
-      "قَبْلَ طُلُوعِ الشَّمْسِ",
-      "وَقَبْلَ غُرُوبِهَا"
+      "لَّا تُدْرِكُهُ الْأَبْصَارُ",
+      "وَهُوَ يُدْرِكُ الْأَبْصَارَ",
+      "وَهُوَ اللَّطِيفُ",
+      "الْخَبِيرُ"
     ],
     "translations": [
-      "So be patient over what",
-      "they say and glorify (the) praise",
-      "(of) your Lord before",
-      "(the) rising (of) the sun",
-      "and before the setting"
+      "Not (can) grasp Him the visions",
+      "but He (can) grasp",
+      "(all) the vision and He (is)",
+      "the All-Subtle the All-Aware"
     ],
-    "hint": "This verse from Surah Qaf encourages patience in the face of opposition and the practice of glorifying Allah with praise at the start and end of the day.",
-    "arabic": "فَٱصْبِرْ عَلَىٰ مَا يَقُولُونَ وَسَبِّحْ بِحَمْدِ رَبِّكَ قَبْلَ طُلُوعِ ٱلشَّمْسِ وَقَبْلَ ٱلْغُرُوبِ",
+    "hint": "A verse about Allah's perception and attributes.",
+    "arabic": "لَّا تُدْرِكُهُ ٱلْأَبْصَـٰرُ وَهُوَ يُدْرِكُ ٱلْأَبْصَـٰرَ ۖ وَهُوَ ٱللَّطِيفُ ٱلْخَبِيرُ",
     "words": [
-      "فَٱصْبِرْ عَلَىٰ مَا",
-      "يَقُولُونَ وَسَبِّحْ بِحَمْدِ",
-      "رَبِّكَ قَبْلَ",
-      "طُلُوعِ ٱلشَّمْسِ",
-      "وَقَبْلَ ٱلْغُرُوبِ"
+      "لَّا تُدْرِكُهُ ٱلْأَبْصَـٰرُ",
+      "وَهُوَ يُدْرِكُ",
+      "ٱلْأَبْصَـٰرَ ۖ وَهُوَ",
+      "ٱللَّطِيفُ ٱلْخَبِيرُ"
     ],
-    "verseEn": "So be patient, [O Muḥammad], over what they say and exalt [Allāh] with praise of your Lord before the rising of the sun and before its setting,"
+    "verseEn": "Vision perceives Him not, but He perceives [all] vision; and He is the Subtle, the Aware."
   },
   "generated": true,
   "model": "auto (chain)"

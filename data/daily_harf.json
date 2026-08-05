@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-04",
+  "date": "2026-08-05",
   "puzzle": {
-    "word": "بيان",
-    "display": "بَيَانَ",
-    "hint": "Clear exposition; a divine promise regarding the Quran's meaning",
-    "verseRef": "75:19",
-    "arabicVerse": "ثُمَّ إِنَّ عَلَيْنَا بَيَانَهُۥ",
-    "verse": "75:19 - Then upon Us is its clarification [to you]."
+    "word": "نعيم",
+    "display": "نَعِيمٍ",
+    "hint": "The bliss or delight promised to the righteous in Paradise.",
+    "verseRef": "83:22",
+    "arabicVerse": "إِنَّ ٱلْأَبْرَارَ لَفِى نَعِيمٍ",
+    "verse": "83:22 - Indeed, the righteous will be in pleasure"
   },
   "generated": true,
   "model": "auto (chain)"

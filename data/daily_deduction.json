@@ -1,65 +1,65 @@
 {
-  "date": "2026-08-04",
+  "date": "2026-08-05",
   "puzzle": {
-    "title": "The Echo Through the Cliffs",
-    "intro": "Imagine a valley where dwellings are hewn from cliffs, and the air carries the memory of a warning unheeded. A people once thrived here, blessed yet defiant, until a sign emerged from the very rock they trusted.",
+    "title": "The Day of the Final Display",
+    "intro": "Summoned to a grand display of power, a group of skilled performers found themselves facing an unexpected truth that would change their lives forever.",
     "clues": [
-      "We were a people who carved out secure homes from the mountains, feeling safe in our rocky dwellings.",
-      "We lived in a land of plains and stone, blessed with gardens and springs.",
-      "A messenger from among us came, calling us to abandon our false gods and worship the One true Creator.",
-      "We arrogantly set a condition for belief: a unique sign that would emerge from the very rocks we carved.",
-      "When the promised she-camel appeared from the rock, a clear sign, our elite still refused and hamstrung her despite the warning of an impending doom.",
-      "Three days after our deed, a thunderous blast echoed through the valley, and we were reduced to fallen rubble, our homes our graves."
+      "We were renowned for our craft, masters of illusion and trickery.",
+      "We were summoned by the ruler to confront a challenger who wielded a simple staff.",
+      "When we saw the truth, we fell down in prostration, declaring belief in the Lord of the worlds.",
+      "The tyrant threatened us with severe punishment, but we did not waver.",
+      "We were among the first to believe in the message after witnessing the clear sign.",
+      "We were martyred for our faith, but we will be the first to enter Paradise with the righteous."
     ],
     "categories": {
       "identity": {
         "label": "Who Are We?",
         "options": [
-          "The People of ¿Ad",
+          "The Magicians of Pharaoh",
+          "The Israelites",
           "The People of Thamud",
-          "The People of Madyan",
-          "The People of the Grove",
-          "The People of the Cave"
+          "The Disciples of Isa",
+          "The Army of Abraha"
         ],
-        "answer": "The People of Thamud"
+        "answer": "The Magicians of Pharaoh"
       },
       "trial": {
-        "label": "Our Trial/Main Event",
+        "label": "Trial / Event",
         "options": [
-          "The hamstringing of Allah’s she-camel",
-          "The worship of the golden calf",
-          "The breaking of the Sabbath",
-          "The building of a tower to the sky",
-          "The slaying of the prophets"
+          "Contest with Prophet Musa",
+          "Building the Tower",
+          "The Great Flood",
+          "The Plague of Locusts",
+          "The Splitting Sea"
         ],
-        "answer": "The hamstringing of Allah’s she-camel"
+        "answer": "Contest with Prophet Musa"
       },
       "location": {
-        "label": "Key Element in Our Story",
+        "label": "Key Element",
         "options": [
-          "The she-camel of Allah",
-          "The staff of Musa",
-          "The ark of Nuh",
-          "The white hand of Musa",
-          "The bird of ¿Isa"
+          "The Festival Day",
+          "The Valley of Tuwa",
+          "The City of Iram",
+          "The Garden of Eternity",
+          "The Plain of Arafat"
         ],
-        "answer": "The she-camel of Allah"
+        "answer": "The Festival Day"
       },
       "outcome": {
-        "label": "Our Outcome",
+        "label": "Outcome",
         "options": [
-          "Destruction by a deafening blast",
-          "A rain of stones from the sky",
-          "A flood that covered the earth",
-          "A fierce wind that uprooted us",
-          "The earth swallowing us"
+          "They were crucified in public",
+          "They were drowned in the sea",
+          "They were made followers of the prophet",
+          "They were sent into exile",
+          "They were consumed by fire"
         ],
-        "answer": "Destruction by a deafening blast"
+        "answer": "They were crucified in public"
       }
     },
-    "verseRef": "27:45",
-    "arabic": "وَلَقَدْ أَرْسَلْنَآ إِلَىٰ ثَمُودَ أَخَاهُمْ صَـٰلِحًا أَنِ ٱعْبُدُوا۟ ٱللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ",
-    "verse": "And We had certainly sent to Thamūd their brother Ṣāliḥ, [saying], \"Worship Allāh,\" and at once they were two parties conflicting. (27:45)"
+    "verseRef": "20:70",
+    "arabic": "فَأُلْقِىَ ٱلسَّحَرَةُ سُجَّدًۭا قَالُوٓا۟ ءَامَنَّا بِرَبِّ هَـٰرُونَ وَمُوسَىٰ",
+    "verse": "So the magicians fell down in prostration. They said, \"We have believed in the Lord of Aaron and Moses.\" (20:70)"
   },
   "generated": true,
   "model": "auto (chain)"
