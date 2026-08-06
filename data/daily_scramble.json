@@ -1,29 +1,32 @@
 {
-  "date": "2026-08-05",
+  "date": "2026-08-06",
   "puzzle": {
-    "verseRef": "6:103",
-    "reference": "Al-An'am (6:103)",
+    "verseRef": "2:30",
+    "reference": "Al-Baqarah (2:30)",
     "segments": [
-      "لَّا تُدْرِكُهُ الْأَبْصَارُ",
-      "وَهُوَ يُدْرِكُ الْأَبْصَارَ",
-      "وَهُوَ اللَّطِيفُ",
-      "الْخَبِيرُ"
+      "وَإِذْ قَالَ",
+      "رَبُّكَ لِلْمَلَائِكَةِ",
+      "إِنِّي جَاعِلٌ",
+      "فِي الْأَرْضِ",
+      "خَلِيفَةً"
     ],
     "translations": [
-      "Not (can) grasp Him the visions",
-      "but He (can) grasp",
-      "(all) the vision and He (is)",
-      "the All-Subtle the All-Aware"
+      "And when said your Lord to the angels Indeed, I (am) going to place",
+      "in the earth a vicegerent they said Will You place in it",
+      "(one) who will spread corruption in it and will shed [the] blood[s] while we",
+      "[we] glorify (You) with Your praises and we sanctify [to] You He said",
+      "Indeed, I [I] know what not you know"
     ],
-    "hint": "A verse about Allah's perception and attributes.",
-    "arabic": "لَّا تُدْرِكُهُ ٱلْأَبْصَـٰرُ وَهُوَ يُدْرِكُ ٱلْأَبْصَـٰرَ ۖ وَهُوَ ٱللَّطِيفُ ٱلْخَبِيرُ",
+    "hint": "This verse marks Allah's announcement to the angels about creating a khalifa (vicegerent) on Earth, relating to the creation of Prophet Adam and humanity's role as stewards of the earth.",
+    "arabic": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَـٰٓئِكَةِ إِنِّى جَاعِلٌۭ فِى ٱلْأَرْضِ خَلِيفَةًۭ ۖ قَالُوٓا۟ أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ ٱلدِّمَآءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ إِنِّىٓ أَعْلَمُ مَا لَا تَعْلَمُونَ",
     "words": [
-      "لَّا تُدْرِكُهُ ٱلْأَبْصَـٰرُ",
-      "وَهُوَ يُدْرِكُ",
-      "ٱلْأَبْصَـٰرَ ۖ وَهُوَ",
-      "ٱللَّطِيفُ ٱلْخَبِيرُ"
+      "وَإِذْ قَالَ رَبُّكَ لِلْمَلَـٰٓئِكَةِ إِنِّى جَاعِلٌۭ",
+      "فِى ٱلْأَرْضِ خَلِيفَةًۭ ۖ قَالُوٓا۟ أَتَجْعَلُ فِيهَا",
+      "مَن يُفْسِدُ فِيهَا وَيَسْفِكُ ٱلدِّمَآءَ وَنَحْنُ",
+      "نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ",
+      "إِنِّىٓ أَعْلَمُ مَا لَا تَعْلَمُونَ"
     ],
-    "verseEn": "Vision perceives Him not, but He perceives [all] vision; and He is the Subtle, the Aware."
+    "verseEn": "And [mention, O Muḥammad], when your Lord said to the angels, \"Indeed, I will make upon the earth a successive authority.\" They said, \"Will You place upon it one who causes corruption therein and sheds blood, while we exalt You with praise and declare Your perfection?\" He [Allāh] said, \"Indeed, I know that which you do not know.\""
   },
   "generated": true,
   "model": "auto (chain)"

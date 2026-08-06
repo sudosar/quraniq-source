@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-05",
+  "date": "2026-08-06",
   "puzzle": {
-    "word": "نعيم",
-    "display": "نَعِيمٍ",
-    "hint": "The bliss or delight promised to the righteous in Paradise.",
-    "verseRef": "83:22",
-    "arabicVerse": "إِنَّ ٱلْأَبْرَارَ لَفِى نَعِيمٍ",
-    "verse": "83:22 - Indeed, the righteous will be in pleasure"
+    "word": "عقل",
+    "display": "عَقْل",
+    "hint": "A mental faculty whose absence causes regret on the Day of Judgment — the disbelievers wish they had employed it alongside listening",
+    "verseRef": "67:10",
+    "arabicVerse": "وَقَالُوا۟ لَوْ كُنَّا نَسْمَعُ أَوْ نَعْقِلُ مَا كُنَّا فِىٓ أَصْحَـٰبِ ٱلسَّعِيرِ",
+    "verse": "67:10 - And they will say, \"If only we had been listening or reasoning, we would not be among the companions of the Blaze.\""
   },
   "generated": true,
   "model": "auto (chain)"
