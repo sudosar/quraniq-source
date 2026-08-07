@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-06",
+  "date": "2026-08-07",
   "puzzle": {
-    "word": "عقل",
-    "display": "عَقْل",
-    "hint": "A mental faculty whose absence causes regret on the Day of Judgment — the disbelievers wish they had employed it alongside listening",
-    "verseRef": "67:10",
-    "arabicVerse": "وَقَالُوا۟ لَوْ كُنَّا نَسْمَعُ أَوْ نَعْقِلُ مَا كُنَّا فِىٓ أَصْحَـٰبِ ٱلسَّعِيرِ",
-    "verse": "67:10 - And they will say, \"If only we had been listening or reasoning, we would not be among the companions of the Blaze.\""
+    "word": "مطر",
+    "display": "مَطَر",
+    "hint": "It can bring life or destruction, sent from above",
+    "verseRef": "27:58",
+    "arabicVerse": "وَأَمْطَرْنَا عَلَيْهِم مَّطَرًۭا ۖ فَسَآءَ مَطَرُ ٱلْمُنذَرِينَ",
+    "verse": "27:58 - And We rained upon them a rain [of stones], and evil was the rain of those who were warned."
   },
   "generated": true,
   "model": "auto (chain)"

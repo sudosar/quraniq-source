@@ -1,32 +1,29 @@
 {
-  "date": "2026-08-06",
+  "date": "2026-08-07",
   "puzzle": {
-    "verseRef": "2:30",
-    "reference": "Al-Baqarah (2:30)",
+    "verseRef": "8:33",
+    "reference": "Surah Al-Anfal (8:33)",
     "segments": [
-      "وَإِذْ قَالَ",
-      "رَبُّكَ لِلْمَلَائِكَةِ",
-      "إِنِّي جَاعِلٌ",
-      "فِي الْأَرْضِ",
-      "خَلِيفَةً"
+      "مَّا كَانَ اللَّهُ لِيُعَذِّبَهُمْ",
+      "وَأَنتَ فِيهِمْ",
+      "وَمَا كَانَ اللَّهُ مُعَذِّبَهُمْ",
+      "وَهُمْ يَسْتَغْفِرُونَ"
     ],
     "translations": [
-      "And when said your Lord to the angels Indeed, I (am) going to place",
-      "in the earth a vicegerent they said Will You place in it",
-      "(one) who will spread corruption in it and will shed [the] blood[s] while we",
-      "[we] glorify (You) with Your praises and we sanctify [to] You He said",
-      "Indeed, I [I] know what not you know"
+      "But not is (for) Allah",
+      "that He punishes them while you (are) among them",
+      "and not is Allah",
+      "the One Who punishes them while they seek forgiveness"
     ],
-    "hint": "This verse marks Allah's announcement to the angels about creating a khalifa (vicegerent) on Earth, relating to the creation of Prophet Adam and humanity's role as stewards of the earth.",
-    "arabic": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَـٰٓئِكَةِ إِنِّى جَاعِلٌۭ فِى ٱلْأَرْضِ خَلِيفَةًۭ ۖ قَالُوٓا۟ أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ ٱلدِّمَآءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ إِنِّىٓ أَعْلَمُ مَا لَا تَعْلَمُونَ",
+    "hint": "The Prophet's presence is a mercy, and seeking forgiveness averts Allah's punishment",
+    "arabic": "وَمَا كَانَ ٱللَّهُ لِيُعَذِّبَهُمْ وَأَنتَ فِيهِمْ ۚ وَمَا كَانَ ٱللَّهُ مُعَذِّبَهُمْ وَهُمْ يَسْتَغْفِرُونَ",
     "words": [
-      "وَإِذْ قَالَ رَبُّكَ لِلْمَلَـٰٓئِكَةِ إِنِّى جَاعِلٌۭ",
-      "فِى ٱلْأَرْضِ خَلِيفَةًۭ ۖ قَالُوٓا۟ أَتَجْعَلُ فِيهَا",
-      "مَن يُفْسِدُ فِيهَا وَيَسْفِكُ ٱلدِّمَآءَ وَنَحْنُ",
-      "نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ",
-      "إِنِّىٓ أَعْلَمُ مَا لَا تَعْلَمُونَ"
+      "وَمَا كَانَ ٱللَّهُ",
+      "لِيُعَذِّبَهُمْ وَأَنتَ فِيهِمْ ۚ",
+      "وَمَا كَانَ ٱللَّهُ",
+      "مُعَذِّبَهُمْ وَهُمْ يَسْتَغْفِرُونَ"
     ],
-    "verseEn": "And [mention, O Muḥammad], when your Lord said to the angels, \"Indeed, I will make upon the earth a successive authority.\" They said, \"Will You place upon it one who causes corruption therein and sheds blood, while we exalt You with praise and declare Your perfection?\" He [Allāh] said, \"Indeed, I know that which you do not know.\""
+    "verseEn": "But Allāh would not punish them while you, [O Muḥammad], are among them, and Allāh would not punish them while they seek forgiveness."
   },
   "generated": true,
   "model": "auto (chain)"
