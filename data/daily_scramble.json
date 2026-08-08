@@ -1,29 +1,35 @@
 {
-  "date": "2026-08-07",
+  "date": "2026-08-08",
   "puzzle": {
-    "verseRef": "8:33",
-    "reference": "Surah Al-Anfal (8:33)",
+    "verseRef": "28:56",
+    "reference": "Al-Qasas (28:56)",
     "segments": [
-      "مَّا كَانَ اللَّهُ لِيُعَذِّبَهُمْ",
-      "وَأَنتَ فِيهِمْ",
-      "وَمَا كَانَ اللَّهُ مُعَذِّبَهُمْ",
-      "وَهُمْ يَسْتَغْفِرُونَ"
+      "إِنَّكَ",
+      "لَا تَهْدِي",
+      "مَنْ أَحْبَبْتَ",
+      "وَلَٰكِنَّ اللَّهَ",
+      "يَهْدِي",
+      "مَن يَشَاءُ"
     ],
     "translations": [
-      "But not is (for) Allah",
-      "that He punishes them while you (are) among them",
-      "and not is Allah",
-      "the One Who punishes them while they seek forgiveness"
+      "Indeed, you (can) not guide",
+      "whom you love",
+      "but Allah",
+      "guides whom",
+      "He wills And He",
+      "(is) most knowing (of) the guided ones"
     ],
-    "hint": "The Prophet's presence is a mercy, and seeking forgiveness averts Allah's punishment",
-    "arabic": "وَمَا كَانَ ٱللَّهُ لِيُعَذِّبَهُمْ وَأَنتَ فِيهِمْ ۚ وَمَا كَانَ ٱللَّهُ مُعَذِّبَهُمْ وَهُمْ يَسْتَغْفِرُونَ",
+    "hint": "A profound teaching about divine guidance, revealed when the Prophet was grieved over a loved one's refusal of faith.",
+    "arabic": "إِنَّكَ لَا تَهْدِى مَنْ أَحْبَبْتَ وَلَـٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ۚ وَهُوَ أَعْلَمُ بِٱلْمُهْتَدِينَ",
     "words": [
-      "وَمَا كَانَ ٱللَّهُ",
-      "لِيُعَذِّبَهُمْ وَأَنتَ فِيهِمْ ۚ",
-      "وَمَا كَانَ ٱللَّهُ",
-      "مُعَذِّبَهُمْ وَهُمْ يَسْتَغْفِرُونَ"
+      "إِنَّكَ لَا تَهْدِى",
+      "مَنْ أَحْبَبْتَ",
+      "وَلَـٰكِنَّ ٱللَّهَ",
+      "يَهْدِى مَن",
+      "يَشَآءُ ۚ وَهُوَ",
+      "أَعْلَمُ بِٱلْمُهْتَدِينَ"
     ],
-    "verseEn": "But Allāh would not punish them while you, [O Muḥammad], are among them, and Allāh would not punish them while they seek forgiveness."
+    "verseEn": "Indeed, [O Muḥammad], you do not guide whom you like, but Allāh guides whom He wills. And He is most knowing of the [rightly] guided."
   },
   "generated": true,
   "model": "auto (chain)"
