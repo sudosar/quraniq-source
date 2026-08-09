@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-08",
+  "date": "2026-08-09",
   "puzzle": {
-    "word": "وعد",
-    "display": "وَعْدَ",
-    "hint": "A sacred commitment from the Most High that never fails",
-    "verseRef": "31:9",
-    "arabicVerse": "خَـٰلِدِينَ فِيهَا ۖ وَعْدَ ٱللَّهِ حَقًّۭا ۚ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
-    "verse": "31:9 - Wherein they abide eternally; [it is] the promise of Allāh [which is] truth. And He is the Exalted in Might, the Wise."
+    "word": "عسر",
+    "display": "عُسْر",
+    "hint": "Hardship or difficulty, famously paired with its opposite يسر in the Quranic promise that ease follows hardship.",
+    "verseRef": "94:6",
+    "arabicVerse": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًۭا",
+    "verse": "94:6 - Indeed, with hardship [will be] ease."
   },
   "generated": true,
   "model": "auto (chain)"

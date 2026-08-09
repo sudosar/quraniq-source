@@ -1,65 +1,65 @@
 {
-  "date": "2026-08-08",
+  "date": "2026-08-09",
   "puzzle": {
-    "title": "The Voice Before the Storm",
-    "intro": "A figure in the desert rose to call a powerful nation back to the truth. The people were known for their magnificent buildings and unmatched strength. Yet their pride blinded them, and they refused to listen. Eventually, a devastating punishment befell them, sparing only a small group of believers.",
+    "title": "The Truthful Voice of Ancient Times",
+    "intro": "There is a soul in the Quran whose story is told in just a few verses, yet their noble qualities shine through with brilliant clarity. Praised by the Almighty for a special virtue, this ancient servant of the Most Merciful holds a place in the pages of revelation. Your task is to identify this remarkable figure. Can you guess who they are?",
     "clues": [
-      "I was sent to a powerful people who lived in the open lands and were known for their might.",
-      "My people came after another great nation that had been destroyed.",
-      "They had magnificent structures and built high towers.",
-      "I called them to worship One God, but they refused to abandon their idols.",
-      "A violent punishment overtook them, sparing only those who believed with me.",
-      "I am the one sent to a mighty people known as Aad."
+      "I am a prophet of Allah who lived among the early generations of humanity.",
+      "Allah mentioned me in His Book with other prophets, all praised for the same noble virtue.",
+      "I am described as a man of truth in the Quran.",
+      "Allah raised me to a high station that few others have attained.",
+      "My name is mentioned in Surah Al-Anbiya, grouped with two other prophets praised for their patience.",
+      "I am Idris, the truthful and elevated prophet."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Hud",
-          "Prophet Salih",
-          "Prophet Shu'aib",
+          "Prophet Idris",
           "Prophet Nuh",
-          "Prophet Ibrahim"
+          "Prophet Ibrahim",
+          "Prophet Musa",
+          "Prophet Ismail"
         ],
-        "answer": "Prophet Hud"
+        "answer": "Prophet Idris"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "The great flood",
-          "A roaring violent wind",
-          "An earthquake and a terrifying cry",
-          "A rain of burning stones",
-          "Heavenly fire from above"
+          "Maintaining patience and truthfulness, then elevated to a high station",
+          "Building a great ark to save the believers from a devastating flood",
+          "Being cast into a blazing fire and emerging completely unharmed",
+          "Confronting a mighty king and defeating his army of magicians",
+          "Surviving inside the belly of a great fish in the depths of the sea"
         ],
-        "answer": "A roaring violent wind"
+        "answer": "Maintaining patience and truthfulness, then elevated to a high station"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A great ark built on a mountain",
-          "A unique she-camel",
-          "A staff that became a serpent",
-          "Tall buildings and lofty structures",
-          "A flaming pyre"
+          "A high and exalted station by Allah",
+          "A massive ship built from planks and pitched with tar",
+          "A raging fire fueled by the idolaters of a wicked king",
+          "A vast sea that split into dry paths",
+          "The dark belly of a great whale at the bottom of the ocean"
         ],
-        "answer": "Tall buildings and lofty structures"
+        "answer": "A high and exalted station by Allah"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "All drowned in a great flood",
-          "My people destroyed by a violent wind, while I was saved",
-          "My people struck by an earthquake and cry",
-          "My people pelted with stones from the sky",
-          "My people thrown into a blazing fire"
+          "Admitted into Allah's mercy as one of the righteous",
+          "Saved along with all the believers from a worldwide flood",
+          "Walked out of the flames untouched by the fire",
+          "Led the Children of Israel safely to freedom across the sea",
+          "Reunited with their beloved family after long years of hardship"
         ],
-        "answer": "My people destroyed by a violent wind, while I was saved"
+        "answer": "Admitted into Allah's mercy as one of the righteous"
       }
     },
-    "verseRef": "7:69",
-    "arabic": "أَوَعَجِبْتُمْ أَن جَآءَكُمْ ذِكْرٌۭ مِّن رَّبِّكُمْ عَلَىٰ رَجُلٍۢ مِّنكُمْ لِيُنذِرَكُمْ ۚ وَٱذْكُرُوٓا۟ إِذْ جَعَلَكُمْ خُلَفَآءَ مِنۢ بَعْدِ قَوْمِ نُوحٍۢ وَزَادَكُمْ فِى ٱلْخَلْقِ بَصْۜطَةًۭ ۖ فَٱذْكُرُوٓا۟ ءَالَآءَ ٱللَّهِ لَعَلَّكُمْ تُفْلِحُونَ",
-    "verse": "Then do you wonder that there has come to you a reminder from your Lord through a man from among you, that he may warn you? And remember when He made you successors after the people of Noah and increased you in stature extensively. So remember the favors of Allāh that you might succeed.\" (7:69)"
+    "verseRef": "21:85",
+    "arabic": "وَإِسْمَـٰعِيلَ وَإِدْرِيسَ وَذَا ٱلْكِفْلِ ۖ كُلٌّۭ مِّنَ ٱلصَّـٰبِرِينَ",
+    "verse": "And [mention] Ishmael and Idrees and Dhul-Kifl; all were of the patient. (21:85)"
   },
   "generated": true,
   "model": "auto (chain)"
