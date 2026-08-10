@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-09",
+  "date": "2026-08-10",
   "puzzle": {
-    "word": "عسر",
-    "display": "عُسْر",
-    "hint": "Hardship or difficulty, famously paired with its opposite يسر in the Quranic promise that ease follows hardship.",
-    "verseRef": "94:6",
-    "arabicVerse": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًۭا",
-    "verse": "94:6 - Indeed, with hardship [will be] ease."
+    "word": "يتيم",
+    "display": "يَتِيمًا",
+    "hint": "A parentless child; Allah consoled His Prophet ﷺ by reminding him of this status in Surah Ad-Duha",
+    "verseRef": "93:6",
+    "arabicVerse": "أَلَمْ يَجِدْكَ يَتِيمًۭا فَـَٔاوَىٰ",
+    "verse": "93:6 - Did He not find you an orphan and give [you] refuge?"
   },
   "generated": true,
   "model": "auto (chain)"
