@@ -1,35 +1,32 @@
 {
-  "date": "2026-08-10",
+  "date": "2026-08-11",
   "puzzle": {
-    "verseRef": "49:15",
-    "reference": "Al-Hujurat (49:15)",
+    "verseRef": "21:69",
+    "reference": "Surah Al-Anbiya (21:69)",
     "segments": [
-      "إِنَّمَا",
-      "الْمُؤْمِنُونَ إِخْوَةٌ",
-      "فَأَصْلِحُوا بَيْنَ",
-      "أَخَوَيْكُمْ",
-      "وَاتَّقُوا اللَّهَ",
-      "لَعَلَّكُمْ تُرْحَمُونَ"
+      "قُلْنَا",
+      "يَا نَارُ",
+      "كُونِي بَرْدًا",
+      "وَسَلَامًا",
+      "عَلَىٰ إِبْرَاهِيمَ"
     ],
     "translations": [
-      "Only the believers (are) those who",
-      "believe in Allah and His Messenger",
-      "then (do) not doubt",
-      "but strive with their wealth and their lives",
-      "in (the) way (of) Allah",
-      "Those [they] (are) the truthful"
+      "We said O fire",
+      "Be cool[ness]",
+      "and safe[ty]",
+      "for",
+      "Ibrahim"
     ],
-    "hint": "The sacred bond of brotherhood among believers — a command to reconcile disputes and revere Allah.",
-    "arabic": "إِنَّمَا ٱلْمُؤْمِنُونَ ٱلَّذِينَ ءَامَنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ ثُمَّ لَمْ يَرْتَابُوا۟ وَجَـٰهَدُوا۟ بِأَمْوَٰلِهِمْ وَأَنفُسِهِمْ فِى سَبِيلِ ٱللَّهِ ۚ أُو۟لَـٰٓئِكَ هُمُ ٱلصَّـٰدِقُونَ",
+    "hint": "Allah's miraculous protection of Prophet Ibrahim when his people threw him into a blazing fire — a story of absolute trust (tawakkul) and divine rescue.",
+    "arabic": "قُلْنَا يَـٰنَارُ كُونِى بَرْدًۭا وَسَلَـٰمًا عَلَىٰٓ إِبْرَٰهِيمَ",
     "words": [
-      "إِنَّمَا ٱلْمُؤْمِنُونَ ٱلَّذِينَ",
-      "ءَامَنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ",
-      "ثُمَّ لَمْ يَرْتَابُوا۟",
-      "وَجَـٰهَدُوا۟ بِأَمْوَٰلِهِمْ وَأَنفُسِهِمْ",
-      "فِى سَبِيلِ ٱللَّهِ ۚ",
-      "أُو۟لَـٰٓئِكَ هُمُ ٱلصَّـٰدِقُونَ"
+      "قُلْنَا يَـٰنَارُ",
+      "كُونِى بَرْدًۭا",
+      "وَسَلَـٰمًا",
+      "عَلَىٰٓ",
+      "إِبْرَٰهِيمَ"
     ],
-    "verseEn": "The believers are only the ones who have believed in Allāh and His Messenger and then doubt not but strive with their properties and their lives in the cause of Allāh. It is those who are the truthful."
+    "verseEn": "We [i.e., Allāh] said, \"O fire, be coolness and safety upon Abraham.\""
   },
   "generated": true,
   "model": "auto (chain)"
