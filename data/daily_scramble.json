@@ -1,32 +1,35 @@
 {
-  "date": "2026-08-11",
+  "date": "2026-08-12",
   "puzzle": {
-    "verseRef": "21:69",
-    "reference": "Surah Al-Anbiya (21:69)",
+    "verseRef": "11:43",
+    "reference": "Surah Hud (11:43)",
     "segments": [
-      "قُلْنَا",
-      "يَا نَارُ",
-      "كُونِي بَرْدًا",
-      "وَسَلَامًا",
-      "عَلَىٰ إِبْرَاهِيمَ"
+      "لَا تَقُولُوا",
+      "لِمَن يُقْتَلُ",
+      "فِي سَبِيلِ اللَّهِ",
+      "أَمْوَاتٌ",
+      "بَلْ أَحْيَاءٌ",
+      "وَلَٰكِن لَّا تَشْعُرُونَ"
     ],
     "translations": [
-      "We said O fire",
-      "Be cool[ness]",
-      "and safe[ty]",
-      "for",
-      "Ibrahim"
+      "He said I will betake myself to a mountain",
+      "(that) will save me from the water He said",
+      "(There is) no protector today from",
+      "the Command of Allah the Command of Allah except (on) whom",
+      "He has mercy And came (in) between them the waves",
+      "so he was among the drowned"
     ],
-    "hint": "Allah's miraculous protection of Prophet Ibrahim when his people threw him into a blazing fire — a story of absolute trust (tawakkul) and divine rescue.",
-    "arabic": "قُلْنَا يَـٰنَارُ كُونِى بَرْدًۭا وَسَلَـٰمًا عَلَىٰٓ إِبْرَٰهِيمَ",
+    "hint": "About the status of those who sacrifice their lives in Allah's cause — they are alive, not dead.",
+    "arabic": "قَالَ سَـَٔاوِىٓ إِلَىٰ جَبَلٍۢ يَعْصِمُنِى مِنَ ٱلْمَآءِ ۚ قَالَ لَا عَاصِمَ ٱلْيَوْمَ مِنْ أَمْرِ ٱللَّهِ إِلَّا مَن رَّحِمَ ۚ وَحَالَ بَيْنَهُمَا ٱلْمَوْجُ فَكَانَ مِنَ ٱلْمُغْرَقِينَ",
     "words": [
-      "قُلْنَا يَـٰنَارُ",
-      "كُونِى بَرْدًۭا",
-      "وَسَلَـٰمًا",
-      "عَلَىٰٓ",
-      "إِبْرَٰهِيمَ"
+      "قَالَ سَـَٔاوِىٓ إِلَىٰ جَبَلٍۢ",
+      "يَعْصِمُنِى مِنَ ٱلْمَآءِ ۚ قَالَ",
+      "لَا عَاصِمَ ٱلْيَوْمَ مِنْ",
+      "أَمْرِ ٱللَّهِ إِلَّا مَن",
+      "رَّحِمَ ۚ وَحَالَ بَيْنَهُمَا ٱلْمَوْجُ",
+      "فَكَانَ مِنَ ٱلْمُغْرَقِينَ"
     ],
-    "verseEn": "We [i.e., Allāh] said, \"O fire, be coolness and safety upon Abraham.\""
+    "verseEn": "[But] he said, \"I will take refuge on a mountain to protect me from the water.\" [Noah] said, \"There is no protector today from the decree of Allāh, except for whom He gives mercy.\" And the waves came between them, and he was among the drowned."
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-11",
+  "date": "2026-08-12",
   "puzzle": {
-    "word": "كريم",
-    "display": "كَرِيم",
-    "hint": "One of Allah's Beautiful Names, meaning Most Generous and Noble — it follows 'Rabb' in a verse asking mankind what deceived them about their Lord",
-    "verseRef": "82:6",
-    "arabicVerse": "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ مَا غَرَّكَ بِرَبِّكَ ٱلْكَرِيمِ",
-    "verse": "82:6 - O mankind, what has deceived you concerning your Lord, the Generous,"
+    "word": "جهاد",
+    "display": "جِهَاد",
+    "hint": "A praiseworthy struggle in the cause of Allah.",
+    "verseRef": "22:78",
+    "arabicVerse": "وَجَـٰهِدُوا۟ فِى ٱللَّهِ حَقَّ جِهَادِهِۦ ۚ هُوَ ٱجْتَبَىٰكُمْ وَمَا جَعَلَ عَلَيْكُمْ فِى ٱلدِّينِ مِنْ حَرَجٍۢ ۚ مِّلَّةَ أَبِيكُمْ إِبْرَٰهِيمَ ۚ هُوَ سَمَّىٰكُمُ ٱلْمُسْلِمِينَ مِن قَبْلُ وَفِى هَـٰذَا لِيَكُونَ ٱلرَّسُولُ شَهِيدًا عَلَيْكُمْ وَتَكُونُوا۟ شُهَدَآءَ عَلَى ٱلنَّاسِ ۚ فَأَقِيمُوا۟ ٱلصَّلَوٰةَ وَءَاتُوا۟ ٱلزَّكَوٰةَ وَٱعْتَصِمُوا۟ بِٱللَّهِ هُوَ مَوْلَىٰكُمْ ۖ فَنِعْمَ ٱلْمَوْلَىٰ وَنِعْمَ ٱلنَّصِيرُ",
+    "verse": "22:78 - And strive for Allāh with the striving due to Him. He has chosen you and has not placed upon you in the religion any difficulty. [It is] the religion of your father, Abraham. He [i.e., Allāh] named you \"Muslims\" before [in former scriptures] and in this [revelation] that the Messenger may be a witness over you and you may be witnesses over the people. So establish prayer and give zakāh and hold fast to Allāh. He is your protector; and excellent is the protector, and excellent is the helper."
   },
   "generated": true,
   "model": "auto (chain)"
