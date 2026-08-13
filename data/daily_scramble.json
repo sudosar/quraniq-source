@@ -1,35 +1,35 @@
 {
-  "date": "2026-08-12",
+  "date": "2026-08-13",
   "puzzle": {
-    "verseRef": "11:43",
-    "reference": "Surah Hud (11:43)",
+    "verseRef": "39:36",
+    "reference": "Surah Az-Zumar (39:36)",
     "segments": [
-      "لَا تَقُولُوا",
-      "لِمَن يُقْتَلُ",
-      "فِي سَبِيلِ اللَّهِ",
-      "أَمْوَاتٌ",
-      "بَلْ أَحْيَاءٌ",
-      "وَلَٰكِن لَّا تَشْعُرُونَ"
+      "أَلَيْسَ اللَّهُ",
+      "بِكَافٍ عَبْدَهُ",
+      "وَيُخَوِّفُونَكَ",
+      "بِالَّذِينَ مِن دُونِهِ",
+      "وَمَن يُضْلِلِ اللَّهُ",
+      "فَلَا هَادِيَ لَهُ"
     ],
     "translations": [
-      "He said I will betake myself to a mountain",
-      "(that) will save me from the water He said",
-      "(There is) no protector today from",
-      "the Command of Allah the Command of Allah except (on) whom",
-      "He has mercy And came (in) between them the waves",
-      "so he was among the drowned"
+      "Is not Allah sufficient",
+      "(for) His slave And they threaten you with those",
+      "besides Him besides Him And whoever",
+      "Allah lets go astray  Allah lets go astray ",
+      "then not for him",
+      "any guide"
     ],
-    "hint": "About the status of those who sacrifice their lives in Allah's cause — they are alive, not dead.",
-    "arabic": "قَالَ سَـَٔاوِىٓ إِلَىٰ جَبَلٍۢ يَعْصِمُنِى مِنَ ٱلْمَآءِ ۚ قَالَ لَا عَاصِمَ ٱلْيَوْمَ مِنْ أَمْرِ ٱللَّهِ إِلَّا مَن رَّحِمَ ۚ وَحَالَ بَيْنَهُمَا ٱلْمَوْجُ فَكَانَ مِنَ ٱلْمُغْرَقِينَ",
+    "hint": "A powerful declaration that Allah alone is sufficient for the believer, and no worldly threat or false guide can harm one whom Allah protects.",
+    "arabic": "أَلَيْسَ ٱللَّهُ بِكَافٍ عَبْدَهُۥ ۖ وَيُخَوِّفُونَكَ بِٱلَّذِينَ مِن دُونِهِۦ ۚ وَمَن يُضْلِلِ ٱللَّهُ فَمَا لَهُۥ مِنْ هَادٍۢ",
     "words": [
-      "قَالَ سَـَٔاوِىٓ إِلَىٰ جَبَلٍۢ",
-      "يَعْصِمُنِى مِنَ ٱلْمَآءِ ۚ قَالَ",
-      "لَا عَاصِمَ ٱلْيَوْمَ مِنْ",
-      "أَمْرِ ٱللَّهِ إِلَّا مَن",
-      "رَّحِمَ ۚ وَحَالَ بَيْنَهُمَا ٱلْمَوْجُ",
-      "فَكَانَ مِنَ ٱلْمُغْرَقِينَ"
+      "أَلَيْسَ ٱللَّهُ بِكَافٍ",
+      "عَبْدَهُۥ ۖ وَيُخَوِّفُونَكَ بِٱلَّذِينَ",
+      "مِن دُونِهِۦ ۚ وَمَن",
+      "يُضْلِلِ ٱللَّهُ",
+      "فَمَا لَهُۥ",
+      "مِنْ هَادٍۢ"
     ],
-    "verseEn": "[But] he said, \"I will take refuge on a mountain to protect me from the water.\" [Noah] said, \"There is no protector today from the decree of Allāh, except for whom He gives mercy.\" And the waves came between them, and he was among the drowned."
+    "verseEn": "Is not Allāh sufficient for His Servant [i.e., Prophet Muḥammad (ﷺ)]? And [yet], they threaten you with those [they worship] other than Him. And whoever Allāh leaves astray - for him there is no guide."
   },
   "generated": true,
   "model": "auto (chain)"

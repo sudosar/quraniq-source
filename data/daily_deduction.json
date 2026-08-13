@@ -1,65 +1,65 @@
 {
-  "date": "2026-08-12",
+  "date": "2026-08-13",
   "puzzle": {
-    "title": "The Envoys of Mercy and Might",
-    "intro": "Imagine a quiet afternoon interrupted by the arrival of unfamiliar travelers. Their appearance is ordinary, but their purpose is anything but. They carry a divine message that will alter the course of two nations, bringing laughter to a barren home and terror to a sinful city. Who are these mysterious visitors?",
+    "title": "The Patient Soul of the Sacred House",
+    "intro": "In the pages of the Quran, a figure emerges from the lineage of a great prophet, granted as a gift in old age. This soul is celebrated for unwavering truthfulness and a profound role in establishing a sanctuary that would become a beacon of faith. As you read the clues, listen carefully to the voice from the past, for it speaks in the first person.",
     "clues": [
-      "We were sent to a devoted servant of Allah, known for their boundless hospitality.",
-      "We arrived in the guise of strangers, and yet our host sensed something otherworldly about our presence.",
-      "We brought tidings that made an elderly woman laugh in disbelief, striking her own face in astonishment.",
-      "We were tasked with protecting a righteous family while raining destruction upon a city steeped in corruption.",
-      "We refused to partake in the meal offered to us, which only deepened the suspicion of our host.",
-      "We revealed our true nature only before departing, saying, 'Indeed, we are messengers of your Lord.'"
+      "I am mentioned in the Quran alongside another prophet as a gift granted to an elderly messenger.",
+      "I was one of two offspring bestowed upon that prophet in his later years.",
+      "I am praised in the Quran for being true to my word.",
+      "I carried the honor of prophethood and was sent as a messenger.",
+      "I joined my father in raising the foundations of the Sacred House.",
+      "I am remembered as one of the patient ones, and the sacred house we built became a place of return and security for people."
     ],
     "categories": {
       "identity": {
-        "label": "Who Are We?",
+        "label": "Who Am I?",
         "options": [
-          "The Guests of Abraham",
-          "The Disciples of Jesus",
-          "The Companions of the Cave",
-          "The Army of Abraha",
-          "The Messengers of Ya-Sin"
+          "Prophet Ismail",
+          "Prophet Ishaq",
+          "Prophet Yaqub",
+          "Prophet Zakariya",
+          "Prophet Yahya"
         ],
-        "answer": "The Guests of Abraham"
+        "answer": "Prophet Ismail"
       },
       "trial": {
-        "label": "Our Mission",
+        "label": "Trial/Event",
         "options": [
-          "To test Abraham's faith regarding his son",
-          "To deliver the scripture to Abraham",
-          "To announce the birth of Isaac and the destruction of Lot's people",
-          "To guide Abraham to the Kaaba",
-          "To rescue Abraham from the fire"
+          "Raising the foundations of the Kaaba with Ibrahim",
+          "Being thrown into a fire",
+          "Being swallowed by a whale",
+          "Leading the Israelites out of Egypt",
+          "Building an ark"
         ],
-        "answer": "To announce the birth of Isaac and the destruction of Lot's people"
+        "answer": "Raising the foundations of the Kaaba with Ibrahim"
       },
       "location": {
-        "label": "Place of Appearance",
+        "label": "Key Element",
         "options": [
-          "In the land of Egypt",
-          "In the city of Ur",
-          "At Abraham's home",
-          "In the garden of Eden",
-          "At the well of Zamzam"
+          "The Kaaba",
+          "Mount Sinai",
+          "The Red Sea",
+          "The Golden Calf",
+          "The Garden of Eden"
         ],
-        "answer": "At Abraham's home"
+        "answer": "The Kaaba"
       },
       "outcome": {
-        "label": "The Result",
+        "label": "Outcome",
         "options": [
-          "Abraham became a king",
-          "Abraham built the Kaaba",
-          "Sarah gave birth to Isaac and Lot's people were destroyed",
-          "Abraham migrated to Palestine",
-          "Abraham's people were saved from a great flood"
+          "Counted among the patient",
+          "Counted among the wrongdoers",
+          "Counted among the magicians",
+          "Counted among the disbelievers",
+          "Counted among the hypocrites"
         ],
-        "answer": "Sarah gave birth to Isaac and Lot's people were destroyed"
+        "answer": "Counted among the patient"
       }
     },
-    "verseRef": "15:51",
-    "arabic": "وَنَبِّئْهُمْ عَن ضَيْفِ إِبْرَٰهِيمَ",
-    "verse": "And inform them about the guests of Abraham, (15:51)"
+    "verseRef": "14:39",
+    "arabic": "ٱلْحَمْدُ لِلَّهِ ٱلَّذِى وَهَبَ لِى عَلَى ٱلْكِبَرِ إِسْمَـٰعِيلَ وَإِسْحَـٰقَ ۚ إِنَّ رَبِّى لَسَمِيعُ ٱلدُّعَآءِ",
+    "verse": "Praise to Allāh, who has granted to me in old age Ishmael and Isaac. Indeed, my Lord is the Hearer of supplication. (14:39)"
   },
   "generated": true,
   "model": "auto (chain)"
