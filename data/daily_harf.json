@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-13",
+  "date": "2026-08-14",
   "puzzle": {
-    "word": "أجر",
-    "display": "أَجْرٌ",
-    "hint": "What awaits the faithful for their good deeds",
-    "verseRef": "41:8",
-    "arabicVerse": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۢ",
-    "verse": "41:8 - Indeed, those who believe and do righteous deeds - for them is a reward uninterrupted."
+    "word": "الحق",
+    "display": "الْحَقّ",
+    "hint": "The opposite of falsehood; what is true and just.",
+    "verseRef": "10:32",
+    "arabicVerse": "فَذَٰلِكُمُ ٱللَّهُ رَبُّكُمُ ٱلْحَقُّ ۖ فَمَاذَا بَعْدَ ٱلْحَقِّ إِلَّا ٱلضَّلَـٰلُ ۖ فَأَنَّىٰ تُصْرَفُونَ",
+    "verse": "10:32 - For that is Allāh, your Lord, the Truth. And what can be beyond truth except error? So how are you averted?"
   },
   "generated": true,
   "model": "auto (chain)"
