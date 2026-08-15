@@ -1,65 +1,65 @@
 {
-  "date": "2026-08-14",
+  "date": "2026-08-15",
   "puzzle": {
-    "title": "The Cursed Hands",
-    "intro": "You stand in the winding alleys of ancient Makkah, where a soul of influence and wealth once turned away from the call of truth. This figure's story is a stark reminder that ties of blood cannot overcome the chains of pride. Who is this one whose name echoes with the fire that awaits?",
+    "title": "The Voice Against False Weights",
+    "intro": "A faithful soul was raised among traders and merchants in a land where scales were tilted and measures were shortened. This individual stood alone against an entire nation's dishonesty, calling them to fairness and the worship of the One True God. Though the message was clear and the call was just, the people refused to listen and faced a devastating fate. Can you identify this noble messenger from the Quran?",
     "clues": [
-      "I walked the streets of Makkah with a pride that blinded me to the truth, though the messenger was of my own blood.",
-      "My possessions were vast, but they became a curse rather than a shield.",
-      "The book of guidance speaks of my ruin, declaring that my hands and my person will perish.",
-      "My spouse joined my campaign of enmity, gathering thorns to spread on the path of the one who called to Allah.",
-      "On the day of judgment, I will be plunged into a fire of blazing flame, and my spouse will have a rope of palm fiber around the neck.",
-      "I am known by a name that means 'father of flame' — a name that foretells my eternal abode."
+      "I was sent as a messenger to a people whose livelihoods revolved around trade and commerce.",
+      "My people were known throughout the land for giving short measure and cheating in weights.",
+      "They also terrorized travelers on the road and spread corruption throughout the earth.",
+      "I urged them to worship Allah alone and to be completely honest in their dealings with others.",
+      "They rejected my message and threatened to expel me and those who believed with me from the land.",
+      "Allah saved me and my followers by His mercy, while the wrongdoers were seized by a devastating punishment."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Abu Lahab",
-          "Abu Jahl",
-          "Abu Talib",
-          "Abu Sufyan",
-          "Al-Walid ibn al-Mughira"
+          "Prophet Shuaib",
+          "Prophet Lut",
+          "Prophet Hud",
+          "Prophet Salih",
+          "Prophet Nuh"
         ],
-        "answer": "Abu Lahab"
+        "answer": "Prophet Shuaib"
       },
       "trial": {
-        "label": "Key Trial or Event",
+        "label": "The Sin of My People",
         "options": [
-          "Opposed the Prophet and was cursed in the Quran",
-          "Led an army to destroy the Kaaba",
-          "Attempted to kill the Prophet by throwing stones",
-          "Refused to believe in the splitting of the moon",
-          "Built a tower to reach the heavens"
+          "Cheating in weights and measures",
+          "Building a lofty tower against the sky",
+          "Demanding a she-camel from a rock",
+          "Smiting the prophets sent to them",
+          "Burying infant girls alive"
         ],
-        "answer": "Opposed the Prophet and was cursed in the Quran"
+        "answer": "Cheating in weights and measures"
       },
       "location": {
-        "label": "Key Element",
+        "label": "My People",
         "options": [
-          "The blazing Fire of Hell",
-          "The Staff of Musa",
-          "The Ark of Nuh",
-          "The Well of Zamzam",
-          "The Golden Calf"
+          "The People of Madyan",
+          "The People of 'Aad",
+          "The People of Thamud",
+          "The People of Pharaoh",
+          "The People of the Sabbath"
         ],
-        "answer": "The blazing Fire of Hell"
+        "answer": "The People of Madyan"
       },
       "outcome": {
-        "label": "Outcome",
+        "label": "Their End",
         "options": [
-          "He will enter the blazing Fire, and his wealth will not avail him",
-          "He repented and became a believer",
-          "He was forgiven after recanting",
-          "He died as a martyr",
-          "He was taken up to the heavens"
+          "A piercing cry seized them by night",
+          "A mighty flood drowned them all",
+          "A violent cold wind destroyed them",
+          "Stones of baked clay rained upon them",
+          "They were turned into pillars of stone"
         ],
-        "answer": "He will enter the blazing Fire, and his wealth will not avail him"
+        "answer": "A piercing cry seized them by night"
       }
     },
-    "verseRef": "111:2",
-    "arabic": "مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ",
-    "verse": "His wealth will not avail him or that which he gained. (111:2)"
+    "verseRef": "11:94",
+    "arabic": "وَلَمَّا جَآءَ أَمْرُنَا نَجَّيْنَا شُعَيْبًۭا وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ بِرَحْمَةٍۢ مِّنَّا وَأَخَذَتِ ٱلَّذِينَ ظَلَمُوا۟ ٱلصَّيْحَةُ فَأَصْبَحُوا۟ فِى دِيَـٰرِهِمْ جَـٰثِمِينَ",
+    "verse": "And when Our command came, We saved Shuʿayb and those who believed with him, by mercy from Us. And the shriek seized those who had wronged, and they became within their homes [corpses] fallen prone (11:94)"
   },
   "generated": true,
   "model": "auto (chain)"

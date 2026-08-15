@@ -1,32 +1,30 @@
 {
-  "date": "2026-08-14",
+  "date": "2026-08-15",
   "puzzle": {
-    "verseRef": "33:3",
-    "reference": "Surah Al-Ahzab (33:3)",
+    "verseRef": "99:5",
+    "reference": "Az-Zalzalah (99:5)",
     "segments": [
-      "وَتَوَكَّلْ",
-      "عَلَى اللَّهِ",
-      "وَكَفَىٰ",
-      "بِاللَّهِ",
-      "وَكِيلًا"
+      "من",
+      "يعمل",
+      "مثقال ذرة",
+      "خيرا",
+      "يره"
     ],
     "translations": [
-      "And put your trust in",
-      "Allah",
-      "And Allah is sufficient",
-      "And Allah is sufficient",
-      "(as) Disposer of affairs"
+      "Because",
+      "your Lord",
+      "inspired",
+      "[to] it"
     ],
-    "hint": "A powerful command of tawakkul (reliance on Allah) — reminding believers that placing trust in Allah alone is enough, for He suffices as the ultimate Protector and Disposer of all affairs.",
-    "arabic": "وَتَوَكَّلْ عَلَى ٱللَّهِ ۚ وَكَفَىٰ بِٱللَّهِ وَكِيلًۭا",
+    "hint": "A verse from Surah Az-Zalzalah emphasizing that no deed, however small, is overlooked — even an atom's weight of good will be presented before its doer on the Day of Judgment.",
+    "arabic": "بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا",
     "words": [
-      "وَتَوَكَّلْ عَلَى",
-      "ٱللَّهِ ۚ",
-      "وَكَفَىٰ",
-      "بِٱللَّهِ",
-      "وَكِيلًۭا"
+      "بِأَنَّ",
+      "رَبَّكَ",
+      "أَوْحَىٰ",
+      "لَهَا"
     ],
-    "verseEn": "And rely upon Allāh; and sufficient is Allāh as Disposer of affairs."
+    "verseEn": "Because your Lord has inspired [i.e., commanded] it."
   },
   "generated": true,
   "model": "auto (chain)"
