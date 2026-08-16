@@ -1,65 +1,65 @@
 {
-  "date": "2026-08-15",
+  "date": "2026-08-16",
   "puzzle": {
-    "title": "The Voice Against False Weights",
-    "intro": "A faithful soul was raised among traders and merchants in a land where scales were tilted and measures were shortened. This individual stood alone against an entire nation's dishonesty, calling them to fairness and the worship of the One True God. Though the message was clear and the call was just, the people refused to listen and faced a devastating fate. Can you identify this noble messenger from the Quran?",
+    "title": "The Silent Voice in the Chamber",
+    "intro": "A prayer echoed in the stillness of a sacred chamber long ago, rising from an aging soul yearning for what the world had declared impossible. This figure, advanced in years and burdened with worry for the future, turned to their Lord with a personal supplication. What followed was a divine response that defied every natural expectation—a testament to the mercy of the One who answers the desperate call.",
     "clues": [
-      "I was sent as a messenger to a people whose livelihoods revolved around trade and commerce.",
-      "My people were known throughout the land for giving short measure and cheating in weights.",
-      "They also terrorized travelers on the road and spread corruption throughout the earth.",
-      "I urged them to worship Allah alone and to be completely honest in their dealings with others.",
-      "They rejected my message and threatened to expel me and those who believed with me from the land.",
-      "Allah saved me and my followers by His mercy, while the wrongdoers were seized by a devastating punishment."
+      "I called upon my Lord in private, withdrawing to a chamber where I devoted myself to His worship.",
+      "I admitted to my Lord that I feared for those who would come after me, worried for the guidance of my people once I departed.",
+      "Old age had overtaken me—my bones had grown weak and white hair had spread across my head.",
+      "My spouse had been barren her entire life, yet I still asked my Lord to grant me an heir from His own presence.",
+      "I requested a sign, and my Lord answered by preventing me from speaking to anyone for three nights, while I remained physically sound.",
+      "I was promised a son whose name would be Yahya, a name my Lord declared had never been given to any before."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Shuaib",
-          "Prophet Lut",
-          "Prophet Hud",
-          "Prophet Salih",
-          "Prophet Nuh"
+          "Prophet Zakariya",
+          "Prophet Nuh",
+          "Prophet Musa",
+          "Prophet Yusuf",
+          "Prophet Dawud"
         ],
-        "answer": "Prophet Shuaib"
+        "answer": "Prophet Zakariya"
       },
       "trial": {
-        "label": "The Sin of My People",
+        "label": "Trial/Event",
         "options": [
-          "Cheating in weights and measures",
-          "Building a lofty tower against the sky",
-          "Demanding a she-camel from a rock",
-          "Smiting the prophets sent to them",
-          "Burying infant girls alive"
+          "Praying for an heir in old age with a barren spouse",
+          "Being thrown into a blazing fire",
+          "Being swallowed by a great fish in darkness",
+          "Enduring the loss of family, wealth, and health",
+          "Being commanded to build a great ark"
         ],
-        "answer": "Cheating in weights and measures"
+        "answer": "Praying for an heir in old age with a barren spouse"
       },
       "location": {
-        "label": "My People",
+        "label": "Key Element",
         "options": [
-          "The People of Madyan",
-          "The People of 'Aad",
-          "The People of Thamud",
-          "The People of Pharaoh",
-          "The People of the Sabbath"
+          "The prayer chamber (mihrab)",
+          "A staff that transformed into a serpent",
+          "A great wooden ark",
+          "A garden with a unique spring",
+          "A mountain where birds gathered"
         ],
-        "answer": "The People of Madyan"
+        "answer": "The prayer chamber (mihrab)"
       },
       "outcome": {
-        "label": "Their End",
+        "label": "Outcome",
         "options": [
-          "A piercing cry seized them by night",
-          "A mighty flood drowned them all",
-          "A violent cold wind destroyed them",
-          "Stones of baked clay rained upon them",
-          "They were turned into pillars of stone"
+          "Granted a miraculously named son despite extreme old age",
+          "Saved from a blazing fire by divine command",
+          "A great flood destroyed the disbelievers",
+          "Restored to family, wealth, and health after patience",
+          "Pharaoh and his army drowned in the sea"
         ],
-        "answer": "A piercing cry seized them by night"
+        "answer": "Granted a miraculously named son despite extreme old age"
       }
     },
-    "verseRef": "11:94",
-    "arabic": "وَلَمَّا جَآءَ أَمْرُنَا نَجَّيْنَا شُعَيْبًۭا وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ بِرَحْمَةٍۢ مِّنَّا وَأَخَذَتِ ٱلَّذِينَ ظَلَمُوا۟ ٱلصَّيْحَةُ فَأَصْبَحُوا۟ فِى دِيَـٰرِهِمْ جَـٰثِمِينَ",
-    "verse": "And when Our command came, We saved Shuʿayb and those who believed with him, by mercy from Us. And the shriek seized those who had wronged, and they became within their homes [corpses] fallen prone (11:94)"
+    "verseRef": "19:5",
+    "arabic": "وَإِنِّى خِفْتُ ٱلْمَوَٰلِىَ مِن وَرَآءِى وَكَانَتِ ٱمْرَأَتِى عَاقِرًۭا فَهَبْ لِى مِن لَّدُنكَ وَلِيًّۭا",
+    "verse": "And indeed, I fear the successors after me, and my wife has been barren, so give me from Yourself an heir (19:5)"
   },
   "generated": true,
   "model": "auto (chain)"

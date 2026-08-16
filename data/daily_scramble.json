@@ -1,30 +1,29 @@
 {
-  "date": "2026-08-15",
+  "date": "2026-08-16",
   "puzzle": {
-    "verseRef": "99:5",
-    "reference": "Az-Zalzalah (99:5)",
+    "verseRef": "43:67",
+    "reference": "Surah Az-Zukhruf (43:67)",
     "segments": [
-      "من",
-      "يعمل",
-      "مثقال ذرة",
-      "خيرا",
-      "يره"
+      "اَلْأَخِلَّاءُ يَوْمَئِذٍ",
+      "بَعْضُهُمْ لِبَعْضٍ",
+      "عَدُوٌّ",
+      "إِلَّا الْمُتَّقِينَ"
     ],
     "translations": [
-      "Because",
-      "your Lord",
-      "inspired",
-      "[to] it"
+      "Friends that Day",
+      "some of them to others",
+      "(will be) enemies except",
+      "the righteous"
     ],
-    "hint": "A verse from Surah Az-Zalzalah emphasizing that no deed, however small, is overlooked — even an atom's weight of good will be presented before its doer on the Day of Judgment.",
-    "arabic": "بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا",
+    "hint": "On the Day of Judgment, true friendship is revealed — only bonds built on righteousness endure.",
+    "arabic": "ٱلْأَخِلَّآءُ يَوْمَئِذٍۭ بَعْضُهُمْ لِبَعْضٍ عَدُوٌّ إِلَّا ٱلْمُتَّقِينَ",
     "words": [
-      "بِأَنَّ",
-      "رَبَّكَ",
-      "أَوْحَىٰ",
-      "لَهَا"
+      "ٱلْأَخِلَّآءُ يَوْمَئِذٍۭ",
+      "بَعْضُهُمْ لِبَعْضٍ",
+      "عَدُوٌّ إِلَّا",
+      "ٱلْمُتَّقِينَ"
     ],
-    "verseEn": "Because your Lord has inspired [i.e., commanded] it."
+    "verseEn": "Close friends, that Day, will be enemies to each other, except for the righteous"
   },
   "generated": true,
   "model": "auto (chain)"
