@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-16",
+  "date": "2026-08-17",
   "puzzle": {
-    "word": "ربا",
-    "display": "رِبًا",
-    "hint": "Despite growing in people's wealth, this forbidden practice doesn't multiply with Allah",
-    "verseRef": "30:39",
-    "arabicVerse": "وَمَآ ءَاتَيْتُم مِّن رِّبًۭا لِّيَرْبُوَا۟ فِىٓ أَمْوَٰلِ ٱلنَّاسِ فَلَا يَرْبُوا۟ عِندَ ٱللَّهِ ۖ وَمَآ ءَاتَيْتُم مِّن زَكَوٰةٍۢ تُرِيدُونَ وَجْهَ ٱللَّهِ فَأُو۟لَـٰٓئِكَ هُمُ ٱلْمُضْعِفُونَ",
-    "verse": "30:39 - And whatever you give for interest [i.e., advantage] to increase within the wealth of people will not increase with Allāh. But what you give in zakāh, desiring the face [i.e., approval] of Allāh - those are the multipliers."
+    "word": "موت",
+    "display": "مَوْت",
+    "hint": "The inevitable transition every soul will experience, marking the end of worldly life",
+    "verseRef": "50:19",
+    "arabicVerse": "وَجَآءَتْ سَكْرَةُ ٱلْمَوْتِ بِٱلْحَقِّ ۖ ذَٰلِكَ مَا كُنتَ مِنْهُ تَحِيدُ",
+    "verse": "50:19 - And the intoxication of death will bring the truth; that is what you were trying to avoid."
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,29 +1,29 @@
 {
-  "date": "2026-08-16",
+  "date": "2026-08-17",
   "puzzle": {
-    "verseRef": "43:67",
-    "reference": "Surah Az-Zukhruf (43:67)",
+    "verseRef": "54:17",
+    "reference": "Surah Al-Qamar (54:17)",
     "segments": [
-      "اَلْأَخِلَّاءُ يَوْمَئِذٍ",
-      "بَعْضُهُمْ لِبَعْضٍ",
-      "عَدُوٌّ",
-      "إِلَّا الْمُتَّقِينَ"
+      "word 1",
+      "words 2-4",
+      "word 5",
+      "words 6-7"
     ],
     "translations": [
-      "Friends that Day",
-      "some of them to others",
-      "(will be) enemies except",
-      "the righteous"
+      "And certainly We have made easy",
+      "the Quran for remembrance",
+      "so is (there) any",
+      "who will receive admonition"
     ],
-    "hint": "On the Day of Judgment, true friendship is revealed — only bonds built on righteousness endure.",
-    "arabic": "ٱلْأَخِلَّآءُ يَوْمَئِذٍۭ بَعْضُهُمْ لِبَعْضٍ عَدُوٌّ إِلَّا ٱلْمُتَّقِينَ",
+    "hint": "This verse appears four times in Surah Al-Qamar, emphasizing the accessibility of the Qur'an for reflection and reminder.",
+    "arabic": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍۢ",
     "words": [
-      "ٱلْأَخِلَّآءُ يَوْمَئِذٍۭ",
-      "بَعْضُهُمْ لِبَعْضٍ",
-      "عَدُوٌّ إِلَّا",
-      "ٱلْمُتَّقِينَ"
+      "وَلَقَدْ يَسَّرْنَا",
+      "ٱلْقُرْءَانَ لِلذِّكْرِ",
+      "فَهَلْ مِن",
+      "مُّدَّكِرٍۢ"
     ],
-    "verseEn": "Close friends, that Day, will be enemies to each other, except for the righteous"
+    "verseEn": "And We have certainly made the Qur’ān easy for remembrance, so is there any who will remember?"
   },
   "generated": true,
   "model": "auto (chain)"
