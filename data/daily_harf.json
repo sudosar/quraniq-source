@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-17",
+  "date": "2026-08-18",
   "puzzle": {
-    "word": "موت",
-    "display": "مَوْت",
-    "hint": "The inevitable transition every soul will experience, marking the end of worldly life",
-    "verseRef": "50:19",
-    "arabicVerse": "وَجَآءَتْ سَكْرَةُ ٱلْمَوْتِ بِٱلْحَقِّ ۖ ذَٰلِكَ مَا كُنتَ مِنْهُ تَحِيدُ",
-    "verse": "50:19 - And the intoxication of death will bring the truth; that is what you were trying to avoid."
+    "word": "مسجد",
+    "display": "مَسْجِد",
+    "hint": "A place where the devotee bows the forehead to the ground in sujood, where the muaddhin's call echoes five times a day",
+    "verseRef": "18:21",
+    "arabicVerse": "وَكَذَٰلِكَ أَعْثَرْنَا عَلَيْهِمْ لِيَعْلَمُوٓا۟ أَنَّ وَعْدَ ٱللَّهِ حَقٌّۭ وَأَنَّ ٱلسَّاعَةَ لَا رَيْبَ فِيهَآ إِذْ يَتَنَـٰزَعُونَ بَيْنَهُمْ أَمْرَهُمْ ۖ فَقَالُوا۟ ٱبْنُوا۟ عَلَيْهِم بُنْيَـٰنًۭا ۖ رَّبُّهُمْ أَعْلَمُ بِهِمْ ۚ قَالَ ٱلَّذِينَ غَلَبُوا۟ عَلَىٰٓ أَمْرِهِمْ لَنَتَّخِذَنَّ عَلَيْهِم مَّسْجِدًۭا",
+    "verse": "18:21 - And similarly, We caused them to be found that they [who found them] would know that the promise of Allāh is truth and that of the Hour there is no doubt. [That was] when they disputed among themselves about their affair and [then] said, \"Construct over them a structure. Their Lord is most knowing about them.\" Said those who prevailed in the matter, \"We will surely take [for ourselves] over them a masjid.\""
   },
   "generated": true,
   "model": "auto (chain)"

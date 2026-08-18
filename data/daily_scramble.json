@@ -1,29 +1,29 @@
 {
-  "date": "2026-08-17",
+  "date": "2026-08-18",
   "puzzle": {
-    "verseRef": "54:17",
-    "reference": "Surah Al-Qamar (54:17)",
+    "verseRef": "93:5",
+    "reference": "Surah Ad-Duha (93:5)",
     "segments": [
-      "word 1",
-      "words 2-4",
-      "word 5",
-      "words 6-7"
+      "وَلَسَوْفَ",
+      "يُعْطِيكَ",
+      "رَبُّكَ",
+      "فَتَرْضَىٰ"
     ],
     "translations": [
-      "And certainly We have made easy",
-      "the Quran for remembrance",
-      "so is (there) any",
-      "who will receive admonition"
+      "And soon",
+      "will give you",
+      "your Lord",
+      "then you will be satisfied"
     ],
-    "hint": "This verse appears four times in Surah Al-Qamar, emphasizing the accessibility of the Qur'an for reflection and reminder.",
-    "arabic": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍۢ",
+    "hint": "A comforting promise of the Lord's generosity and the Prophet's ultimate satisfaction.",
+    "arabic": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰٓ",
     "words": [
-      "وَلَقَدْ يَسَّرْنَا",
-      "ٱلْقُرْءَانَ لِلذِّكْرِ",
-      "فَهَلْ مِن",
-      "مُّدَّكِرٍۢ"
+      "وَلَسَوْفَ",
+      "يُعْطِيكَ",
+      "رَبُّكَ",
+      "فَتَرْضَىٰٓ"
     ],
-    "verseEn": "And We have certainly made the Qur’ān easy for remembrance, so is there any who will remember?"
+    "verseEn": "And your Lord is going to give you, and you will be satisfied."
   },
   "generated": true,
   "model": "auto (chain)"
