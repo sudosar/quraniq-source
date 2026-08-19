@@ -1,65 +1,65 @@
 {
-  "date": "2026-08-18",
+  "date": "2026-08-19",
   "puzzle": {
-    "title": "The One Who Earned a Surah",
-    "intro": "Imagine a humble soul approaching one of Allah's Messengers with a heart full of sincerity and a deep yearning to learn. Yet at that very moment, a person of wealth and status held the Messenger's attention, and a frown was directed at the seeker. What followed was nothing less than an entire chapter of the Quran, sent to correct the Messenger and honor the soul who came seeking.",
+    "title": "The Nation That Defied the Natural Order",
+    "intro": "In a region whose story echoes through the ages, a community lived in open rebellion against the laws of purity. Their deeds were so unprecedented that they are remembered as a warning for all humanity. Who were these souls, and what fate overtook them?",
     "clues": [
-      "I came to a Messenger of Allah with an open heart and a deep yearning for guidance",
-      "I had no worldly status to offer, only a humble soul seeking truth",
-      "My physical eyes could not see, but my spiritual vision was clear",
-      "I arrived at an inconvenient moment, when the Messenger was occupied with a person of great influence",
-      "A frown was turned toward me, but Allah responded with divine correction",
-      "I am Abdullah ibn Umm Maktum, the devoted companion whose story inspired Surah Abasa"
+      "We dwelt in a land by a route that travelers often passed through, but we made their journey perilous.",
+      "We committed such acts of indecency that no one in the worlds had ever done before.",
+      "A messenger from among us called us to abandon our ways, but we rejected him and demanded the punishment if he was truthful.",
+      "When handsome guests came to our city, we sought to assault them, not knowing they were messengers of destruction.",
+      "We were warned of a terrible punishment if we did not desist, but we mocked the warning and remained in our sin.",
+      "A rain of stones from the sky fell upon us, and our homes were overturned, leaving not a trace except a sign for those who reflect."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Abdullah ibn Umm Maktum",
-          "Bilal ibn Rabah",
-          "Mu'adh ibn Jabal",
-          "Zayd ibn Thabit",
-          "Salman al-Farisi"
+          "People of Lut",
+          "People of Thamud",
+          "People of A'ad",
+          "People of Madyan",
+          "People of Saba"
         ],
-        "answer": "Abdullah ibn Umm Maktum"
+        "answer": "People of Lut"
       },
       "trial": {
-        "label": "Trial / Event",
+        "label": "Trial/Event",
         "options": [
-          "Being turned away by the Prophet for a wealthy person",
-          "Being thrown into a raging fire by enemies",
-          "Being sold and persecuted as a slave",
-          "Being challenged to a duel by a mighty warrior",
-          "Being swallowed by a great fish"
+          "Committed unprecedented immorality and obstructed roads",
+          "Worshipped a golden calf",
+          "Killed the sacred she-camel",
+          "Cheated in trade and shortchanged the people",
+          "Built a lofty tower to challenge the heavens"
         ],
-        "answer": "Being turned away by the Prophet for a wealthy person"
+        "answer": "Committed unprecedented immorality and obstructed roads"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A Quranic chapter beginning with a frown (Surah Abasa)",
-          "A fire made cool and safe",
-          "A staff that split a mighty sea",
-          "An ark built upon a high mountain",
-          "A bird shaped from hardened clay"
+          "Angels disguised as handsome guests",
+          "A she-camel emerging from a rock",
+          "A staff transforming into a serpent",
+          "A boat constructed on a mountain",
+          "A fire that became cool and peaceful"
         ],
-        "answer": "A Quranic chapter beginning with a frown (Surah Abasa)"
+        "answer": "Angels disguised as handsome guests"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Allah revealed a Quranic surah defending me",
-          "Allah made the fire cool and safe for me",
-          "Allah parted the sea to save me from pursuit",
-          "Allah granted me a great kingdom and wisdom",
-          "Allah took me to heaven without death"
+          "Destroyed by a rain of stones from the sky",
+          "Swallowed by the earth",
+          "Drowned in a great flood",
+          "Struck by a screaming blast",
+          "Transformed into apes"
         ],
-        "answer": "Allah revealed a Quranic surah defending me"
+        "answer": "Destroyed by a rain of stones from the sky"
       }
     },
-    "verseRef": "80:2",
-    "arabic": "أَن جَآءَهُ ٱلْأَعْمَىٰ",
-    "verse": "Because there came to him the blind man, [interrupting]. (80:2)"
+    "verseRef": "29:34",
+    "arabic": "إِنَّا مُنزِلُونَ عَلَىٰٓ أَهْلِ هَـٰذِهِ ٱلْقَرْيَةِ رِجْزًۭا مِّنَ ٱلسَّمَآءِ بِمَا كَانُوا۟ يَفْسُقُونَ",
+    "verse": "Indeed, we will bring down on the people of this city punishment from the sky because they have been defiantly disobedient.\" (29:34)"
   },
   "generated": true,
   "model": "auto (chain)"

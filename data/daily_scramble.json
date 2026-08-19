@@ -1,29 +1,29 @@
 {
-  "date": "2026-08-18",
+  "date": "2026-08-19",
   "puzzle": {
-    "verseRef": "93:5",
-    "reference": "Surah Ad-Duha (93:5)",
+    "verseRef": "3:141",
+    "reference": "Surah Ali 'Imran (3:141)",
     "segments": [
-      "وَلَسَوْفَ",
-      "يُعْطِيكَ",
-      "رَبُّكَ",
-      "فَتَرْضَىٰ"
+      "Wa la tahinu",
+      "wa la tahzanu",
+      "wa antumul a'launa",
+      "in kuntum mu'mineen"
     ],
     "translations": [
-      "And soon",
-      "will give you",
-      "your Lord",
-      "then you will be satisfied"
+      "And so that may purify Allah",
+      "those who believe",
+      "and destroy",
+      "the disbelievers"
     ],
-    "hint": "A comforting promise of the Lord's generosity and the Prophet's ultimate satisfaction.",
-    "arabic": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰٓ",
+    "hint": "A powerful message of courage and perseverance for true believers, revealed in the context of the Battle of Uhud.",
+    "arabic": "وَلِيُمَحِّصَ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ وَيَمْحَقَ ٱلْكَـٰفِرِينَ",
     "words": [
-      "وَلَسَوْفَ",
-      "يُعْطِيكَ",
-      "رَبُّكَ",
-      "فَتَرْضَىٰٓ"
+      "وَلِيُمَحِّصَ ٱللَّهُ",
+      "ٱلَّذِينَ ءَامَنُوا۟",
+      "وَيَمْحَقَ",
+      "ٱلْكَـٰفِرِينَ"
     ],
-    "verseEn": "And your Lord is going to give you, and you will be satisfied."
+    "verseEn": "And that Allāh may purify the believers [through trials] and destroy the disbelievers."
   },
   "generated": true,
   "model": "auto (chain)"
