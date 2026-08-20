@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-19",
+  "date": "2026-08-20",
   "puzzle": {
-    "word": "إثم",
-    "display": "إِثْمًا",
-    "hint": "A transgression or burdening sin",
-    "verseRef": "33:58",
-    "arabicVerse": "وَٱلَّذِينَ يُؤْذُونَ ٱلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ بِغَيْرِ مَا ٱكْتَسَبُوا۟ فَقَدِ ٱحْتَمَلُوا۟ بُهْتَـٰنًۭا وَإِثْمًۭا مُّبِينًۭا",
-    "verse": "33:58 - And those who harm believing men and believing women for [something] other than what they have earned [i.e., deserved] have certainly borne upon themselves a slander and manifest sin."
+    "word": "باطل",
+    "display": "بَاطِلٌ",
+    "hint": "Falsehood — the opposite of established truth in Islamic theology; what divine will renders void.",
+    "verseRef": "8:8",
+    "arabicVerse": "لِيُحِقَّ ٱلْحَقَّ وَيُبْطِلَ ٱلْبَـٰطِلَ وَلَوْ كَرِهَ ٱلْمُجْرِمُونَ",
+    "verse": "8:8 - That He should establish the truth and abolish falsehood, even if the criminals disliked it."
   },
   "generated": true,
   "model": "auto (chain)"

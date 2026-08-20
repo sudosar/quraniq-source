@@ -1,29 +1,32 @@
 {
-  "date": "2026-08-19",
+  "date": "2026-08-20",
   "puzzle": {
-    "verseRef": "3:141",
-    "reference": "Surah Ali 'Imran (3:141)",
+    "verseRef": "67:14",
+    "reference": "Surah Al-Mulk (67:14)",
     "segments": [
-      "Wa la tahinu",
-      "wa la tahzanu",
-      "wa antumul a'launa",
-      "in kuntum mu'mineen"
+      "أَلَا يَعْلَمُ",
+      "مَنْ خَلَقَ",
+      "وَهُوَ",
+      "اللَّطِيفُ",
+      "الْخَبِيرُ"
     ],
     "translations": [
-      "And so that may purify Allah",
-      "those who believe",
-      "and destroy",
-      "the disbelievers"
+      "Does not know",
+      "(the One) Who created",
+      "And He",
+      "(is) the Subtle",
+      "the All-Aware"
     ],
-    "hint": "A powerful message of courage and perseverance for true believers, revealed in the context of the Battle of Uhud.",
-    "arabic": "وَلِيُمَحِّصَ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ وَيَمْحَقَ ٱلْكَـٰفِرِينَ",
+    "hint": "A rhetorical question affirming Allah's perfect knowledge — the Creator who knows all things is also the Subtle and All-Aware",
+    "arabic": "أَلَا يَعْلَمُ مَنْ خَلَقَ وَهُوَ ٱللَّطِيفُ ٱلْخَبِيرُ",
     "words": [
-      "وَلِيُمَحِّصَ ٱللَّهُ",
-      "ٱلَّذِينَ ءَامَنُوا۟",
-      "وَيَمْحَقَ",
-      "ٱلْكَـٰفِرِينَ"
+      "أَلَا يَعْلَمُ",
+      "مَنْ خَلَقَ",
+      "وَهُوَ",
+      "ٱللَّطِيفُ",
+      "ٱلْخَبِيرُ"
     ],
-    "verseEn": "And that Allāh may purify the believers [through trials] and destroy the disbelievers."
+    "verseEn": "Does He who created not know, while He is the Subtle, the Aware?"
   },
   "generated": true,
   "model": "auto (chain)"
