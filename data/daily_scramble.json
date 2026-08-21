@@ -1,32 +1,29 @@
 {
-  "date": "2026-08-20",
+  "date": "2026-08-21",
   "puzzle": {
-    "verseRef": "67:14",
-    "reference": "Surah Al-Mulk (67:14)",
+    "verseRef": "47:35",
+    "reference": "Surah Muhammad (47:35)",
     "segments": [
-      "أَلَا يَعْلَمُ",
-      "مَنْ خَلَقَ",
-      "وَهُوَ",
-      "اللَّطِيفُ",
-      "الْخَبِيرُ"
+      "وَلَا تَهِنُوا",
+      "وَلَا تَحْزَنُوا",
+      "وَأَنتُمُ الْأَعْلَوْنَ",
+      "إِن كُنتُم مُّؤْمِنِينَ"
     ],
     "translations": [
-      "Does not know",
-      "(the One) Who created",
-      "And He",
-      "(is) the Subtle",
-      "the All-Aware"
+      "So (do) not weaken and call",
+      "for peace while you",
+      "(are) superior and Allah (is) with you",
+      "and never will deprive you (of) your deeds"
     ],
-    "hint": "A rhetorical question affirming Allah's perfect knowledge — the Creator who knows all things is also the Subtle and All-Aware",
-    "arabic": "أَلَا يَعْلَمُ مَنْ خَلَقَ وَهُوَ ٱللَّطِيفُ ٱلْخَبِيرُ",
+    "hint": "A powerful call to steadfastness for believers — never lose heart or despair, for the ultimate victory belongs to those who have true faith.",
+    "arabic": "فَلَا تَهِنُوا۟ وَتَدْعُوٓا۟ إِلَى ٱلسَّلْمِ وَأَنتُمُ ٱلْأَعْلَوْنَ وَٱللَّهُ مَعَكُمْ وَلَن يَتِرَكُمْ أَعْمَـٰلَكُمْ",
     "words": [
-      "أَلَا يَعْلَمُ",
-      "مَنْ خَلَقَ",
-      "وَهُوَ",
-      "ٱللَّطِيفُ",
-      "ٱلْخَبِيرُ"
+      "فَلَا تَهِنُوا۟ وَتَدْعُوٓا۟",
+      "إِلَى ٱلسَّلْمِ وَأَنتُمُ",
+      "ٱلْأَعْلَوْنَ وَٱللَّهُ مَعَكُمْ",
+      "وَلَن يَتِرَكُمْ أَعْمَـٰلَكُمْ"
     ],
-    "verseEn": "Does He who created not know, while He is the Subtle, the Aware?"
+    "verseEn": "So do not weaken and call for peace while you are superior; and Allāh is with you and will never deprive you of [the reward of] your deeds."
   },
   "generated": true,
   "model": "auto (chain)"

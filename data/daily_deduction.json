@@ -1,65 +1,65 @@
 {
-  "date": "2026-08-20",
+  "date": "2026-08-21",
   "puzzle": {
-    "title": "The Voice of Defiance",
-    "intro": "Long before the first human walked the earth, a being of immense power stood in a realm of perfect peace, surrounded by the most devoted of souls. When a single command was given, every voice bowed in submission—but one voice rose in defiance, and that defiance would echo through every age until the final Day. Who is this fallen being?",
+    "title": "The Shadow Behind the Throne",
+    "intro": "You stand within the courts of a mighty ancient kingdom, where a powerful ruler has proclaimed themselves as a god over all the people. Beside this ruler stands a devoted servant, entrusted with the kingdom's grandest ambitions. Together, they plot and plan, refusing to heed the warnings of a messenger sent to guide them. Can you uncover who this loyal servant was?",
     "clues": [
-      "I was created from something that burned brightly, while others beside me were formed from what they walked upon.",
-      "I dwelt in a sacred place among devoted beings, until a single command turned everything upside down.",
-      "When the command came, every soul bowed save for me; my refusal was born of pride.",
-      "I was cast out from that sacred place, marked with a curse that would endure forever.",
-      "I begged for time until the Day of Resurrection, and it was granted. I vowed to approach every soul and lead them astray.",
-      "When the trumpet sounds, those who followed me will share my fate, joining me in a blazing fire where no helper can save them."
+      "I lived in a mighty kingdom ruled by a powerful figure who claimed divinity over all the people.",
+      "I served as a trusted minister of this ruler, carrying out their every ambition and command.",
+      "When a messenger of Allah came to our land calling us to truth, my ruler and I refused to listen.",
+      "I was commanded to kindle a great fire and prepare bricks of clay for a grand construction.",
+      "My ruler wanted to erect a towering structure so high that it would reach the heavens themselves.",
+      "In the end, my ruler, our armies, and I were swept away and drowned in the depths of the sea."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Iblis",
-          "Pharaoh (Fir'awn)",
-          "Namrud",
-          "Abu Lahab",
-          "Azar (the father of Ibrahim)"
+          "Haman",
+          "Dhul-Kifl",
+          "Jibreel",
+          "Mikail",
+          "Harut"
         ],
-        "answer": "Iblis"
+        "answer": "Haman"
       },
       "trial": {
-        "label": "The Defining Moment",
+        "label": "Trial/Event",
         "options": [
-          "Refusing to prostrate before Adam",
-          "Usurping divinity over a great empire",
-          "Plotting to throw a righteous one into flames",
-          "Leading a people to worship a golden image",
-          "Drowning a great army in the sea"
+          "Building a tower to reach the heavens",
+          "Being cast into a blazing fire",
+          "Awakening a people from worship of stone idols",
+          "Splitting the moon as a divine sign",
+          "Conquering a mighty city by divine command"
         ],
-        "answer": "Refusing to prostrate before Adam"
+        "answer": "Building a tower to reach the heavens"
       },
       "location": {
-        "label": "The Sacred Place",
+        "label": "Key Element",
         "options": [
-          "Jannah (Paradise)",
-          "A magnificent palace on the Nile",
-          "A tower of bricks reaching toward the sky",
-          "A golden calf fashioned from ornaments",
-          "A furnace of blazing fire"
+          "A tower of baked clay bricks",
+          "A whale's belly",
+          "A sacred spring in the desert",
+          "A burning bush on a holy mountain",
+          "An ark carrying a chosen family"
         ],
-        "answer": "Jannah (Paradise)"
+        "answer": "A tower of baked clay bricks"
       },
       "outcome": {
-        "label": "The Final Fate",
+        "label": "Outcome",
         "options": [
-          "Cast out, with respite until a promised Day",
-          "Drowned with armies beneath the waves",
-          "Crushed by stones pelted from the sky",
-          "Torn apart by swarms of birds in flight",
-          "Consumed by a single mighty blast"
+          "Drowned in the depths of the sea",
+          "Lifted to safety in a magnificent palace",
+          "Saved from the belly of a great fish",
+          "Honored with kingship and divine wisdom",
+          "Turned to dust by a piercing cry"
         ],
-        "answer": "Cast out, with respite until a promised Day"
+        "answer": "Drowned in the depths of the sea"
       }
     },
-    "verseRef": "17:62",
-    "arabic": "قَالَ أَرَءَيْتَكَ هَـٰذَا ٱلَّذِى كَرَّمْتَ عَلَىَّ لَئِنْ أَخَّرْتَنِ إِلَىٰ يَوْمِ ٱلْقِيَـٰمَةِ لَأَحْتَنِكَنَّ ذُرِّيَّتَهُۥٓ إِلَّا قَلِيلًۭا",
-    "verse": "[Iblees] said, \"Do You see this one whom You have honored above me? If You delay me [i.e., my death] until the Day of Resurrection, I will surely destroy his descendants, except for a few.\" (17:62)"
+    "verseRef": "40:37",
+    "arabic": "أَسْبَـٰبَ ٱلسَّمَـٰوَٰتِ فَأَطَّلِعَ إِلَىٰٓ إِلَـٰهِ مُوسَىٰ وَإِنِّى لَأَظُنُّهُۥ كَـٰذِبًۭا ۚ وَكَذَٰلِكَ زُيِّنَ لِفِرْعَوْنَ سُوٓءُ عَمَلِهِۦ وَصُدَّ عَنِ ٱلسَّبِيلِ ۚ وَمَا كَيْدُ فِرْعَوْنَ إِلَّا فِى تَبَابٍۢ",
+    "verse": "The ways into the heavens - so that I may look at the deity of Moses; but indeed, I think he is a liar.\" And thus was made attractive to Pharaoh the evil of his deed, and he was averted from the [right] way. And the plan of Pharaoh was not except in ruin. (40:37)"
   },
   "generated": true,
   "model": "auto (chain)"

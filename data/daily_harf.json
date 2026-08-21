@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-20",
+  "date": "2026-08-21",
   "puzzle": {
-    "word": "باطل",
-    "display": "بَاطِلٌ",
-    "hint": "Falsehood — the opposite of established truth in Islamic theology; what divine will renders void.",
-    "verseRef": "8:8",
-    "arabicVerse": "لِيُحِقَّ ٱلْحَقَّ وَيُبْطِلَ ٱلْبَـٰطِلَ وَلَوْ كَرِهَ ٱلْمُجْرِمُونَ",
-    "verse": "8:8 - That He should establish the truth and abolish falsehood, even if the criminals disliked it."
+    "word": "قيمة",
+    "display": "قَيِّمَةٌ",
+    "hint": "Upright, straight, or of established truth; describes the scriptures in Surah Al-Bayyinah.",
+    "verseRef": "98:3",
+    "arabicVerse": "فِيهَا كُتُبٌۭ قَيِّمَةٌۭ",
+    "verse": "98:3 - Within which are correct writings [i.e., rulings and laws]."
   },
   "generated": true,
   "model": "auto (chain)"
