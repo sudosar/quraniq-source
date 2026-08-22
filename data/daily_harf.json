@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-21",
+  "date": "2026-08-22",
   "puzzle": {
-    "word": "قيمة",
-    "display": "قَيِّمَةٌ",
-    "hint": "Upright, straight, or of established truth; describes the scriptures in Surah Al-Bayyinah.",
-    "verseRef": "98:3",
-    "arabicVerse": "فِيهَا كُتُبٌۭ قَيِّمَةٌۭ",
-    "verse": "98:3 - Within which are correct writings [i.e., rulings and laws]."
+    "word": "خبيث",
+    "display": "خَبِيث",
+    "hint": "A Quranic adjective meaning morally foul or impure — paired as the antonym of tayyib (pure/good) in Surah An-Nur.",
+    "verseRef": "24:26",
+    "arabicVerse": "ٱلْخَبِيثَـٰتُ لِلْخَبِيثِينَ وَٱلْخَبِيثُونَ لِلْخَبِيثَـٰتِ ۖ وَٱلطَّيِّبَـٰتُ لِلطَّيِّبِينَ وَٱلطَّيِّبُونَ لِلطَّيِّبَـٰتِ ۚ أُو۟لَـٰٓئِكَ مُبَرَّءُونَ مِمَّا يَقُولُونَ ۖ لَهُم مَّغْفِرَةٌۭ وَرِزْقٌۭ كَرِيمٌۭ",
+    "verse": "24:26 - Evil words are for evil men, and evil men are [subjected] to evil words. And good words are for good men, and good men are [an object] of good words. Those [good people] are declared innocent of what they [i.e., slanderers] say. For them is forgiveness and noble provision."
   },
   "generated": true,
   "model": "auto (chain)"

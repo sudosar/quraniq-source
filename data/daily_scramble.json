@@ -1,29 +1,35 @@
 {
-  "date": "2026-08-21",
+  "date": "2026-08-22",
   "puzzle": {
-    "verseRef": "47:35",
-    "reference": "Surah Muhammad (47:35)",
+    "verseRef": "17:80",
+    "reference": "Surah Al-Isra (17:80)",
     "segments": [
-      "وَلَا تَهِنُوا",
-      "وَلَا تَحْزَنُوا",
-      "وَأَنتُمُ الْأَعْلَوْنَ",
-      "إِن كُنتُم مُّؤْمِنِينَ"
+      "وَقُل رَّبِّ",
+      "أَدْخِلْنِي مُدْخَلَ صِدْقٍ",
+      "وَأَخْرِجْنِي مُخْرَجَ صِدْقٍ",
+      "وَاجْعَل لِّي",
+      "مِن لَّدُنكَ",
+      "سُلْطَانًا نَّصِيرًا"
     ],
     "translations": [
-      "So (do) not weaken and call",
-      "for peace while you",
-      "(are) superior and Allah (is) with you",
-      "and never will deprive you (of) your deeds"
+      "And say My Lord Cause me to enter",
+      "an entrance sound and cause me to exit",
+      "an exit sound",
+      "and make for me",
+      "from near You",
+      "an authority helping"
     ],
-    "hint": "A powerful call to steadfastness for believers — never lose heart or despair, for the ultimate victory belongs to those who have true faith.",
-    "arabic": "فَلَا تَهِنُوا۟ وَتَدْعُوٓا۟ إِلَى ٱلسَّلْمِ وَأَنتُمُ ٱلْأَعْلَوْنَ وَٱللَّهُ مَعَكُمْ وَلَن يَتِرَكُمْ أَعْمَـٰلَكُمْ",
+    "hint": "A prophetic supplication asking Allah for blessed beginnings and endings in life, and for divine authority and support — often recited by Muslims.",
+    "arabic": "وَقُل رَّبِّ أَدْخِلْنِى مُدْخَلَ صِدْقٍۢ وَأَخْرِجْنِى مُخْرَجَ صِدْقٍۢ وَٱجْعَل لِّى مِن لَّدُنكَ سُلْطَـٰنًۭا نَّصِيرًۭا",
     "words": [
-      "فَلَا تَهِنُوا۟ وَتَدْعُوٓا۟",
-      "إِلَى ٱلسَّلْمِ وَأَنتُمُ",
-      "ٱلْأَعْلَوْنَ وَٱللَّهُ مَعَكُمْ",
-      "وَلَن يَتِرَكُمْ أَعْمَـٰلَكُمْ"
+      "وَقُل رَّبِّ أَدْخِلْنِى",
+      "مُدْخَلَ صِدْقٍۢ وَأَخْرِجْنِى",
+      "مُخْرَجَ صِدْقٍۢ",
+      "وَٱجْعَل لِّى",
+      "مِن لَّدُنكَ",
+      "سُلْطَـٰنًۭا نَّصِيرًۭا"
     ],
-    "verseEn": "So do not weaken and call for peace while you are superior; and Allāh is with you and will never deprive you of [the reward of] your deeds."
+    "verseEn": "And say, \"My Lord, cause me to enter a sound entrance and to exit a sound exit and grant me from Yourself a supporting authority.\""
   },
   "generated": true,
   "model": "auto (chain)"
