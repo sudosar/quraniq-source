@@ -1,65 +1,65 @@
 {
-  "date": "2026-08-22",
+  "date": "2026-08-23",
   "puzzle": {
-    "title": "The Town That Believed in Time",
-    "intro": "In the annals of divine mercy, there is a community whose turning point was a moment of collective realization. You are about to uncover their story—a tale of warning, repentance, and a reprieve that set them apart from the fate of other nations.",
+    "title": "The Vanished Multitude",
+    "intro": "You stand before the echoes of a community whose story is written in the waves. These souls heard a call, chose defiance, and faced a consequence that reshaped the earth. Who are they, and what became of their world?",
     "clues": [
-      "We were a people to whom a messenger was sent, and we turned away from his call at first.",
-      "When the signs of impending punishment became clear, we realized the truth of his warning.",
-      "We turned to our Lord with sincere repentance, and our faith was accepted.",
-      "The punishment that had been decreed upon us was lifted because of our belief.",
-      "Our story is cited as an exception among the towns that believed after seeing the punishment.",
-      "We were the people of the prophet who was swallowed by the whale, yet we were saved from destruction."
+      "We lived long ago, and a messenger came to us from among ourselves.",
+      "We worshipped five idols and refused to abandon them.",
+      "We mocked the messenger and accused him of being astray.",
+      "We demanded he bring the punishment if he was truthful.",
+      "We saw the skies pour down rain and the earth gush forth springs.",
+      "We climbed to the high places to escape, but the waves overtook us."
     ],
     "categories": {
       "identity": {
-        "label": "Who Am I?",
+        "label": "Who Are We?",
         "options": [
-          "People of Yunus",
           "People of Nuh",
-          "People of Hud",
-          "People of Salih",
-          "People of Lut"
+          "People of 'Ad",
+          "People of Thamud",
+          "People of Lut",
+          "People of Madyan"
         ],
-        "answer": "People of Yunus"
+        "answer": "People of Nuh"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "A devastating flood",
-          "A severe windstorm",
-          "An impending punishment of disgrace that was averted",
-          "The earth swallowing them",
-          "A rain of stones"
+          "We were drowned in a great flood",
+          "We were destroyed by a hurricane",
+          "We were killed by a loud blast",
+          "We were swallowed by the earth",
+          "We were pelted with stones from the sky"
         ],
-        "answer": "An impending punishment of disgrace that was averted"
+        "answer": "We were drowned in a great flood"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The ark",
-          "The she-camel",
-          "A city of a hundred thousand",
-          "The staff of Musa",
-          "The hoard of Qarun"
+          "A great flood",
+          "A violent wind",
+          "A shower of stones",
+          "A fiery blast",
+          "An earthquake"
         ],
-        "answer": "A city of a hundred thousand"
+        "answer": "A great flood"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "They were destroyed completely",
-          "They were given enjoyment for a time",
-          "They were transformed into apes",
-          "They were drowned",
-          "They were swallowed by the earth"
+          "We all perished except the believers with Nuh",
+          "We were transformed into apes",
+          "We were left as ruins for travelers",
+          "We were turned into salt",
+          "We were given respite"
         ],
-        "answer": "They were given enjoyment for a time"
+        "answer": "We all perished except the believers with Nuh"
       }
     },
-    "verseRef": "37:148",
-    "arabic": "فَـَٔامَنُوا۟ فَمَتَّعْنَـٰهُمْ إِلَىٰ حِينٍۢ",
-    "verse": "And they believed, so We gave them enjoyment [of life] for a time. (37:148)"
+    "verseRef": "71:21",
+    "arabic": "قَالَ نُوحٌۭ رَّبِّ إِنَّهُمْ عَصَوْنِى وَٱتَّبَعُوا۟ مَن لَّمْ يَزِدْهُ مَالُهُۥ وَوَلَدُهُۥٓ إِلَّا خَسَارًۭا",
+    "verse": "Noah said, \"My Lord, indeed they have disobeyed me and followed him whose wealth and children will not increase him except in loss. (71:21)"
   },
   "generated": true,
   "model": "auto (chain)"
