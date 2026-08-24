@@ -1,35 +1,29 @@
 {
-  "date": "2026-08-23",
+  "date": "2026-08-24",
   "puzzle": {
-    "verseRef": "40:65",
-    "reference": "Surah Ghafir (40:65)",
+    "verseRef": "7:204",
+    "reference": "Al-A'raf (7:204)",
     "segments": [
-      "هُوَ الْحَيُّ",
-      "لَا إِلَٰهَ إِلَّا هُوَ",
-      "فَادْعُوهُ",
-      "مُخْلِصِينَ لَهُ الدِّينَ",
-      "الْحَمْدُ لِلَّهِ",
-      "رَبِّ الْعَالَمِينَ"
+      "وَإِذَا قُرِئَ الْقُرْآنُ",
+      "فَاسْتَمِعُوا لَهُ",
+      "وَأَنصِتُوا",
+      "لَعَلَّكُمْ تُرْحَمُونَ"
     ],
     "translations": [
-      "He (is) the Ever-Living (there is) no",
-      "god but He",
-      "so call Him (being) sincere",
-      "to Him (in) the religion",
-      "All praise (be) to Allah",
-      "(the) Lord (of) the worlds"
+      "And when is recited",
+      "the Quran then listen",
+      "to it and pay attention",
+      "so that you may receive mercy"
     ],
-    "hint": "A powerful affirmation of Allah's eternal life and absolute oneness, calling believers to sincere devotion and worship.",
-    "arabic": "هُوَ ٱلْحَىُّ لَآ إِلَـٰهَ إِلَّا هُوَ فَٱدْعُوهُ مُخْلِصِينَ لَهُ ٱلدِّينَ ۗ ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+    "hint": "This verse commands believers to listen attentively and with full focus when the Quran is being recited, promising divine mercy in return.",
+    "arabic": "وَإِذَا قُرِئَ ٱلْقُرْءَانُ فَٱسْتَمِعُوا۟ لَهُۥ وَأَنصِتُوا۟ لَعَلَّكُمْ تُرْحَمُونَ",
     "words": [
-      "هُوَ ٱلْحَىُّ لَآ",
-      "إِلَـٰهَ إِلَّا هُوَ",
-      "فَٱدْعُوهُ مُخْلِصِينَ",
-      "لَهُ ٱلدِّينَ ۗ",
-      "ٱلْحَمْدُ لِلَّهِ",
-      "رَبِّ ٱلْعَـٰلَمِينَ"
+      "وَإِذَا قُرِئَ",
+      "ٱلْقُرْءَانُ فَٱسْتَمِعُوا۟",
+      "لَهُۥ وَأَنصِتُوا۟",
+      "لَعَلَّكُمْ تُرْحَمُونَ"
     ],
-    "verseEn": "He is the Ever-Living; there is no deity except Him, so call upon Him, [being] sincere to Him in religion. [All] praise is [due] to Allāh, Lord of the worlds."
+    "verseEn": "So when the Qur’ān is recited, then listen to it and pay attention that you may receive mercy."
   },
   "generated": true,
   "model": "auto (chain)"
