@@ -1,29 +1,38 @@
 {
-  "date": "2026-08-24",
+  "date": "2026-08-25",
   "puzzle": {
-    "verseRef": "7:204",
-    "reference": "Al-A'raf (7:204)",
+    "verseRef": "16:97",
+    "reference": "Surah An-Nahl (16:97)",
     "segments": [
-      "وَإِذَا قُرِئَ الْقُرْآنُ",
-      "فَاسْتَمِعُوا لَهُ",
-      "وَأَنصِتُوا",
-      "لَعَلَّكُمْ تُرْحَمُونَ"
+      "مَنْ عَمِلَ صَالِحًا",
+      "مِّن ذَكَرٍ أَوْ أُنثَىٰ",
+      "وَهُوَ مُؤْمِنٌ",
+      "فَلَنُحْيِيَنَّهُ",
+      "حَيَاةً طَيِّبَةً",
+      "وَلَنَجْزِيَنَّهُمْ أَجْرَهُم",
+      "بِأَحْسَنِ مَا كَانُوا يَعْمَلُونَ"
     ],
     "translations": [
-      "And when is recited",
-      "the Quran then listen",
-      "to it and pay attention",
-      "so that you may receive mercy"
+      "Whoever does righteous deeds",
+      "whether male or",
+      "female while he (is) a believer",
+      "then surely We will give him life a life good",
+      "and We will pay them their reward",
+      "to (the) best of what",
+      "they used (to) do"
     ],
-    "hint": "This verse commands believers to listen attentively and with full focus when the Quran is being recited, promising divine mercy in return.",
-    "arabic": "وَإِذَا قُرِئَ ٱلْقُرْءَانُ فَٱسْتَمِعُوا۟ لَهُۥ وَأَنصِتُوا۟ لَعَلَّكُمْ تُرْحَمُونَ",
+    "hint": "A beautiful divine promise that whoever does righteous deeds, male or female, while being a believer, will be granted a good life in this world and the best of rewards in the Hereafter.",
+    "arabic": "مَنْ عَمِلَ صَـٰلِحًۭا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌۭ فَلَنُحْيِيَنَّهُۥ حَيَوٰةًۭ طَيِّبَةًۭ ۖ وَلَنَجْزِيَنَّهُمْ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا۟ يَعْمَلُونَ",
     "words": [
-      "وَإِذَا قُرِئَ",
-      "ٱلْقُرْءَانُ فَٱسْتَمِعُوا۟",
-      "لَهُۥ وَأَنصِتُوا۟",
-      "لَعَلَّكُمْ تُرْحَمُونَ"
+      "مَنْ عَمِلَ صَـٰلِحًۭا",
+      "مِّن ذَكَرٍ أَوْ",
+      "أُنثَىٰ وَهُوَ مُؤْمِنٌۭ",
+      "فَلَنُحْيِيَنَّهُۥ حَيَوٰةًۭ طَيِّبَةًۭ ۖ",
+      "وَلَنَجْزِيَنَّهُمْ أَجْرَهُم",
+      "بِأَحْسَنِ مَا",
+      "كَانُوا۟ يَعْمَلُونَ"
     ],
-    "verseEn": "So when the Qur’ān is recited, then listen to it and pay attention that you may receive mercy."
+    "verseEn": "Whoever does righteousness, whether male or female, while he is a believer - We will surely cause him to live a good life, and We will surely give them their reward [in the Hereafter] according to the best of what they used to do."
   },
   "generated": true,
   "model": "auto (chain)"

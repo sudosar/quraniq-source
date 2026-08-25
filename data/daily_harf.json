@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-24",
+  "date": "2026-08-25",
   "puzzle": {
-    "word": "فصل",
-    "display": "فَصْل",
-    "hint": "A Quranic term meaning 'separation' or 'final judgment' — appears in 'the Day of ___' in Surah Al-Mursalat",
-    "verseRef": "77:14",
-    "arabicVerse": "وَمَآ أَدْرَىٰكَ مَا يَوْمُ ٱلْفَصْلِ",
-    "verse": "77:14 - And what can make you know what is the Day of Judgement?"
+    "word": "ريب",
+    "display": "رَيْبَ",
+    "hint": "A 3-letter Arabic word meaning doubt — it appears in the famous Quranic phrase 'lā ___ fīh' (no ___ in it) about the Day of Judgment",
+    "verseRef": "3:25",
+    "arabicVerse": "فَكَيْفَ إِذَا جَمَعْنَـٰهُمْ لِيَوْمٍۢ لَّا رَيْبَ فِيهِ وَوُفِّيَتْ كُلُّ نَفْسٍۢ مَّا كَسَبَتْ وَهُمْ لَا يُظْلَمُونَ",
+    "verse": "3:25 - So how will it be when We assemble them for a Day about which there is no doubt? And each soul will be compensated [in full for] what it earned, and they will not be wronged."
   },
   "generated": true,
   "model": "auto (chain)"
