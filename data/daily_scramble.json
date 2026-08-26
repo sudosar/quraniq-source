@@ -1,38 +1,32 @@
 {
-  "date": "2026-08-25",
+  "date": "2026-08-26",
   "puzzle": {
-    "verseRef": "16:97",
-    "reference": "Surah An-Nahl (16:97)",
+    "verseRef": "5:35",
+    "reference": "Surah Al-Ma'idah (5:35)",
     "segments": [
-      "مَنْ عَمِلَ صَالِحًا",
-      "مِّن ذَكَرٍ أَوْ أُنثَىٰ",
-      "وَهُوَ مُؤْمِنٌ",
-      "فَلَنُحْيِيَنَّهُ",
-      "حَيَاةً طَيِّبَةً",
-      "وَلَنَجْزِيَنَّهُمْ أَجْرَهُم",
-      "بِأَحْسَنِ مَا كَانُوا يَعْمَلُونَ"
+      "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+      "اتَّقُوا اللَّهَ",
+      "وَابْتَغُوا إِلَيْهِ الْوَسِيلَةَ",
+      "وَجَاهِدُوا فِي سَبِيلِهِ",
+      "لَعَلَّكُمْ تُفْلِحُونَ"
     ],
     "translations": [
-      "Whoever does righteous deeds",
-      "whether male or",
-      "female while he (is) a believer",
-      "then surely We will give him life a life good",
-      "and We will pay them their reward",
-      "to (the) best of what",
-      "they used (to) do"
+      "O you who believe",
+      "Fear Allah and seek",
+      "towards Him the means and strive hard",
+      "in His way",
+      "so that you may succeed"
     ],
-    "hint": "A beautiful divine promise that whoever does righteous deeds, male or female, while being a believer, will be granted a good life in this world and the best of rewards in the Hereafter.",
-    "arabic": "مَنْ عَمِلَ صَـٰلِحًۭا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌۭ فَلَنُحْيِيَنَّهُۥ حَيَوٰةًۭ طَيِّبَةًۭ ۖ وَلَنَجْزِيَنَّهُمْ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا۟ يَعْمَلُونَ",
+    "hint": "A powerful address to the believers combining three essential commands: taqwa (consciousness of Allah), drawing closer to Him through righteous deeds, and striving earnestly in His path — with the promise of ultimate success.",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَٱبْتَغُوٓا۟ إِلَيْهِ ٱلْوَسِيلَةَ وَجَـٰهِدُوا۟ فِى سَبِيلِهِۦ لَعَلَّكُمْ تُفْلِحُونَ",
     "words": [
-      "مَنْ عَمِلَ صَـٰلِحًۭا",
-      "مِّن ذَكَرٍ أَوْ",
-      "أُنثَىٰ وَهُوَ مُؤْمِنٌۭ",
-      "فَلَنُحْيِيَنَّهُۥ حَيَوٰةًۭ طَيِّبَةًۭ ۖ",
-      "وَلَنَجْزِيَنَّهُمْ أَجْرَهُم",
-      "بِأَحْسَنِ مَا",
-      "كَانُوا۟ يَعْمَلُونَ"
+      "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟",
+      "ٱتَّقُوا۟ ٱللَّهَ وَٱبْتَغُوٓا۟",
+      "إِلَيْهِ ٱلْوَسِيلَةَ وَجَـٰهِدُوا۟",
+      "فِى سَبِيلِهِۦ",
+      "لَعَلَّكُمْ تُفْلِحُونَ"
     ],
-    "verseEn": "Whoever does righteousness, whether male or female, while he is a believer - We will surely cause him to live a good life, and We will surely give them their reward [in the Hereafter] according to the best of what they used to do."
+    "verseEn": "O you who have believed, fear Allāh and seek the means [of nearness] to Him and strive in His cause that you may succeed."
   },
   "generated": true,
   "model": "auto (chain)"
