@@ -1,65 +1,65 @@
 {
-  "date": "2026-08-27",
+  "date": "2026-08-28",
   "puzzle": {
-    "title": "The Articulate Chosen One",
-    "intro": "In the shadow of a mountain where divine words descended, a people's faith wavered under the glint of gold. One soul, gifted with eloquence, stood as a support to a greater mission, yet faced a moment of profound testing. When the chosen messenger ascended to a sacred appointment, this figure remained behind, pleading with a restless nation. Who is this steadfast soul whose voice rose against idolatry?",
+    "title": "The Hindrance at the Ancient House",
+    "intro": "In the sacred city, a powerful figure seethed with anger as a new message began to spread. This individual, whose name became synonymous with opposition to the truth, watched their influence crumble under the weight of divine revelation. Who was this soul, whose fate was sealed in the sands of a famous battlefield?",
     "clues": [
-      "I was chosen by Allah to be a prophet, though my story is often told alongside another.",
-      "I was sent to a tyrant ruler, but my role was to support, not to lead.",
-      "I was gifted with eloquence, and my words were meant to soften hearts.",
-      "When my companion departed for a sacred appointment, I was left to guide a restless people.",
-      "In their impatience, they forged an image from their ornaments, and I pleaded with them to remain true to Allah.",
-      "My companion returned and seized me, but I explained that the people overpowered me and nearly killed me; I was not among the wrongdoers."
+      "I was a chief among my people, known for my wealth and influence in a city that housed an ancient sanctuary.",
+      "When a man from my tribe began to proclaim a message of one God, I ridiculed him and his revelations, calling them mere tales of the past.",
+      "I confronted that man as he prayed near the sacred structure, threatening to stop his worship by force if necessary.",
+      "I was among the leaders who plotted to silence the new faith, opposing its followers with both words and weapons.",
+      "I marched with an army to a place called Badr, confident that we would crush the small band of believers.",
+      "But on that battlefield, my life came to an end, and my death became a lesson for those who persist in disbelief after clear signs."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Musa",
-          "Prophet Harun",
-          "Prophet Isa",
-          "Prophet Yahya",
-          "Prophet Zakariya"
+          "Abu Jahl",
+          "Abu Sufyan ibn Harb",
+          "Al-Nadr ibn al-Harith",
+          "Umayyah ibn Khalaf",
+          "Utbah ibn Rabi'ah"
         ],
-        "answer": "Prophet Harun"
+        "answer": "Abu Jahl"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Being thrown into a fire",
-          "Being cast into a well",
-          "Facing the golden calf incident",
-          "The test of a severe illness",
-          "The test of losing wealth and children"
+          "Preventing the Prophet from praying at the Kaaba",
+          "Building the Kaaba",
+          "Writing the Quran",
+          "Leading the army of the elephant",
+          "Splitting the moon"
         ],
-        "answer": "Facing the golden calf incident"
+        "answer": "Preventing the Prophet from praying at the Kaaba"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The golden calf",
-          "The staff",
-          "The Ark of the Covenant",
-          "The tablets",
-          "The burning bush"
+          "The Kaaba",
+          "The Ark of Prophet Nuh",
+          "The Staff of Prophet Musa",
+          "The Golden Calf",
+          "The Throne of the Queen of Sheba"
         ],
-        "answer": "The golden calf"
+        "answer": "The Kaaba"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Punished severely",
-          "Forgiven and exonerated",
-          "Made a king",
-          "Taken to heaven",
-          "Given a new scripture"
+          "Killed at the Battle of Badr",
+          "Repented and became a Muslim",
+          "Fled to Abyssinia",
+          "Died in the Year of the Elephant",
+          "Became a companion of the Prophet"
         ],
-        "answer": "Forgiven and exonerated"
+        "answer": "Killed at the Battle of Badr"
       }
     },
-    "verseRef": "10:75",
-    "arabic": "ثُمَّ بَعَثْنَا مِنۢ بَعْدِهِم مُّوسَىٰ وَهَـٰرُونَ إِلَىٰ فِرْعَوْنَ وَمَلَإِي۟هِۦ بِـَٔايَـٰتِنَا فَٱسْتَكْبَرُوا۟ وَكَانُوا۟ قَوْمًۭا مُّجْرِمِينَ",
-    "verse": "Then We sent after them Moses and Aaron to Pharaoh and his establishment with Our signs, but they behaved arrogantly and were a criminal people. (10:75)"
+    "verseRef": "96:9",
+    "arabic": "أَرَءَيْتَ ٱلَّذِى يَنْهَىٰ",
+    "verse": "Have you seen the one who forbids (96:9)"
   },
   "generated": true,
   "model": "auto (chain)"

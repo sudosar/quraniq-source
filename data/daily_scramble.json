@@ -1,32 +1,35 @@
 {
-  "date": "2026-08-27",
+  "date": "2026-08-28",
   "puzzle": {
-    "verseRef": "19:36",
-    "reference": "Surah Maryam (19:36)",
+    "verseRef": "52:48",
+    "reference": "Surah At-Tur (52:48)",
     "segments": [
-      "وَإِنَّ اللَّهَ رَبِّي",
-      "وَرَبُّكُمْ",
-      "فَاعْبُدُوهُ",
-      "هَٰذَا صِرَاطٌ",
-      "مُّسْتَقِيمٌ"
+      "وَاصْبِرْ",
+      "لِحُكْمِ رَبِّكَ",
+      "فَإِنَّكَ بِأَعْيُنِنَا",
+      "وَسَبِّحْ",
+      "بِحَمْدِ رَبِّكَ",
+      "حِينَ تَقُومُ"
     ],
     "translations": [
-      "And indeed Allah",
-      "(is) my Lord and your Lord",
-      "so worship Him This",
-      "(is) a path",
-      "straight"
+      "So be patient for (the) Command",
+      "(of) your Lord for indeed, you",
+      "(are) in Our Eyes And glorify",
+      "(the) praise (of) your Lord",
+      "when",
+      "you arise"
     ],
-    "hint": "The declaration of Prophet Isa (Jesus) affirming that Allah alone is worthy of worship and that this is the straight path.",
-    "arabic": "وَإِنَّ ٱللَّهَ رَبِّى وَرَبُّكُمْ فَٱعْبُدُوهُ ۚ هَـٰذَا صِرَٰطٌۭ مُّسْتَقِيمٌۭ",
+    "hint": "About patience and trust in Allah — a gentle reassurance of being under His watchful care.",
+    "arabic": "وَٱصْبِرْ لِحُكْمِ رَبِّكَ فَإِنَّكَ بِأَعْيُنِنَا ۖ وَسَبِّحْ بِحَمْدِ رَبِّكَ حِينَ تَقُومُ",
     "words": [
-      "وَإِنَّ ٱللَّهَ",
-      "رَبِّى وَرَبُّكُمْ",
-      "فَٱعْبُدُوهُ ۚ هَـٰذَا",
-      "صِرَٰطٌۭ",
-      "مُّسْتَقِيمٌۭ"
+      "وَٱصْبِرْ لِحُكْمِ",
+      "رَبِّكَ فَإِنَّكَ",
+      "بِأَعْيُنِنَا ۖ وَسَبِّحْ",
+      "بِحَمْدِ رَبِّكَ",
+      "حِينَ",
+      "تَقُومُ"
     ],
-    "verseEn": "[Jesus said], \"And indeed, Allāh is my Lord and your Lord, so worship Him. That is a straight path.\""
+    "verseEn": "And be patient, [O Muḥammad], for the decision of your Lord, for indeed, you are in Our eyes [i.e., sight]. And exalt [Allāh] with praise of your Lord when you arise"
   },
   "generated": true,
   "model": "auto (chain)"

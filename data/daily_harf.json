@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-27",
+  "date": "2026-08-28",
   "puzzle": {
-    "word": "ناقة",
-    "display": "نَاقَة",
-    "hint": "The she-camel sent as a sign to the people of Thamud.",
-    "verseRef": "91:13",
-    "arabicVerse": "فَقَالَ لَهُمْ رَسُولُ ٱللَّهِ نَاقَةَ ٱللَّهِ وَسُقْيَـٰهَا",
-    "verse": "91:13 - And the messenger of Allāh [i.e., Ṣāliḥ] said to them, \"[Do not harm] the she-camel of Allāh or [prevent her from] her drink.\""
+    "word": "نصف",
+    "display": "نِصْفَ",
+    "hint": "Two of these together make a whole",
+    "verseRef": "73:3",
+    "arabicVerse": "نِّصْفَهُۥٓ أَوِ ٱنقُصْ مِنْهُ قَلِيلًا",
+    "verse": "73:3 - Half of it - or subtract from it a little"
   },
   "generated": true,
   "model": "auto (chain)"
