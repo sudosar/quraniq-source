@@ -1,35 +1,32 @@
 {
-  "date": "2026-08-28",
+  "date": "2026-08-29",
   "puzzle": {
-    "verseRef": "52:48",
-    "reference": "Surah At-Tur (52:48)",
+    "verseRef": "42:30",
+    "reference": "Surah Ash-Shura (42:30)",
     "segments": [
-      "وَاصْبِرْ",
-      "لِحُكْمِ رَبِّكَ",
-      "فَإِنَّكَ بِأَعْيُنِنَا",
-      "وَسَبِّحْ",
-      "بِحَمْدِ رَبِّكَ",
-      "حِينَ تَقُومُ"
+      "وَمَا أَصَابَكُم",
+      "مِّن مُّصِيبَةٍ",
+      "فَبِمَا كَسَبَتْ",
+      "أَيْدِيكُمْ",
+      "وَيَعْفُو عَن كَثِيرٍ"
     ],
     "translations": [
-      "So be patient for (the) Command",
-      "(of) your Lord for indeed, you",
-      "(are) in Our Eyes And glorify",
-      "(the) praise (of) your Lord",
-      "when",
-      "you arise"
+      "And whatever befalls you",
+      "of (the) misfortune",
+      "(is because) of what have earned",
+      "your hands But He pardons",
+      "[from] much"
     ],
-    "hint": "About patience and trust in Allah — a gentle reassurance of being under His watchful care.",
-    "arabic": "وَٱصْبِرْ لِحُكْمِ رَبِّكَ فَإِنَّكَ بِأَعْيُنِنَا ۖ وَسَبِّحْ بِحَمْدِ رَبِّكَ حِينَ تَقُومُ",
+    "hint": "A profound reminder about divine decree and Allah's mercy: calamities often stem from our own deeds, yet Allah forgives far more than He punishes.",
+    "arabic": "وَمَآ أَصَـٰبَكُم مِّن مُّصِيبَةٍۢ فَبِمَا كَسَبَتْ أَيْدِيكُمْ وَيَعْفُوا۟ عَن كَثِيرٍۢ",
     "words": [
-      "وَٱصْبِرْ لِحُكْمِ",
-      "رَبِّكَ فَإِنَّكَ",
-      "بِأَعْيُنِنَا ۖ وَسَبِّحْ",
-      "بِحَمْدِ رَبِّكَ",
-      "حِينَ",
-      "تَقُومُ"
+      "وَمَآ أَصَـٰبَكُم",
+      "مِّن مُّصِيبَةٍۢ",
+      "فَبِمَا كَسَبَتْ",
+      "أَيْدِيكُمْ وَيَعْفُوا۟",
+      "عَن كَثِيرٍۢ"
     ],
-    "verseEn": "And be patient, [O Muḥammad], for the decision of your Lord, for indeed, you are in Our eyes [i.e., sight]. And exalt [Allāh] with praise of your Lord when you arise"
+    "verseEn": "And whatever strikes you of disaster - it is for what your hands have earned; but He pardons much."
   },
   "generated": true,
   "model": "auto (chain)"

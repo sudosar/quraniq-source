@@ -1,65 +1,65 @@
 {
-  "date": "2026-08-28",
+  "date": "2026-08-29",
   "puzzle": {
-    "title": "The Hindrance at the Ancient House",
-    "intro": "In the sacred city, a powerful figure seethed with anger as a new message began to spread. This individual, whose name became synonymous with opposition to the truth, watched their influence crumble under the weight of divine revelation. Who was this soul, whose fate was sealed in the sands of a famous battlefield?",
+    "title": "The patience that outlasted grief",
+    "intro": "An elder whose patience became legendary, whose vision faded from sorrow, yet whose faith in the divine plan never wavered. This individual watched twelve sons grow into the foundations of tribes, suffered the painful loss of a most beloved child, and became a timeless symbol of beautiful patience in the face of overwhelming grief. A revered soul whose story is told across the pages of revelation. Can you identify this figure from the Quran?",
     "clues": [
-      "I was a chief among my people, known for my wealth and influence in a city that housed an ancient sanctuary.",
-      "When a man from my tribe began to proclaim a message of one God, I ridiculed him and his revelations, calling them mere tales of the past.",
-      "I confronted that man as he prayed near the sacred structure, threatening to stop his worship by force if necessary.",
-      "I was among the leaders who plotted to silence the new faith, opposing its followers with both words and weapons.",
-      "I marched with an army to a place called Badr, confident that we would crush the small band of believers.",
-      "But on that battlefield, my life came to an end, and my death became a lesson for those who persist in disbelief after clear signs."
+      "I was a prophet whose story is told in detail within a major surah of the Quran.",
+      "I had twelve sons who became the fathers of the tribes of Bani Israel.",
+      "I told my sons to enter through different gates, lest they be recognized as a single people.",
+      "My eyes whitened from ceaseless weeping over a beloved child taken from me.",
+      "I refused to despair even when my other sons urged me to, saying I only complain to Allah.",
+      "I am the father of the prophet Yusuf, whose very name means 'the augmenter' in Arabic."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Abu Jahl",
-          "Abu Sufyan ibn Harb",
-          "Al-Nadr ibn al-Harith",
-          "Umayyah ibn Khalaf",
-          "Utbah ibn Rabi'ah"
+          "Prophet Yaqub (Jacob)",
+          "Prophet Yusuf",
+          "Prophet Ibrahim",
+          "Prophet Musa",
+          "Prophet Dawud"
         ],
-        "answer": "Abu Jahl"
+        "answer": "Prophet Yaqub (Jacob)"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Preventing the Prophet from praying at the Kaaba",
-          "Building the Kaaba",
-          "Writing the Quran",
-          "Leading the army of the elephant",
-          "Splitting the moon"
+          "Loss of a beloved son to a well",
+          "The great flood that engulfed an entire people",
+          "The migration from a fire-worshipping kingdom",
+          "The confrontation with a mighty tyrant of Egypt",
+          "The exile to a whale's belly"
         ],
-        "answer": "Preventing the Prophet from praying at the Kaaba"
+        "answer": "Loss of a beloved son to a well"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Kaaba",
-          "The Ark of Prophet Nuh",
-          "The Staff of Prophet Musa",
-          "The Golden Calf",
-          "The Throne of the Queen of Sheba"
+          "A shirt stained with false blood",
+          "A staff that turned into a serpent",
+          "An ark built on a mountain",
+          "A she-camel carved from rock",
+          "A golden calf"
         ],
-        "answer": "The Kaaba"
+        "answer": "A shirt stained with false blood"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Killed at the Battle of Badr",
-          "Repented and became a Muslim",
-          "Fled to Abyssinia",
-          "Died in the Year of the Elephant",
-          "Became a companion of the Prophet"
+          "Sight restored when a beloved son's shirt was placed over the face",
+          "Salvation after being cast into the belly of a great fish",
+          "Receiving the title of Khalilullah from Allah",
+          "Crossing the sea with a people freed from bondage",
+          "A rainbow appearing as a sign of hope after the flood"
         ],
-        "answer": "Killed at the Battle of Badr"
+        "answer": "Sight restored when a beloved son's shirt was placed over the face"
       }
     },
-    "verseRef": "96:9",
-    "arabic": "أَرَءَيْتَ ٱلَّذِى يَنْهَىٰ",
-    "verse": "Have you seen the one who forbids (96:9)"
+    "verseRef": "12:86",
+    "arabic": "قَالَ إِنَّمَآ أَشْكُوا۟ بَثِّى وَحُزْنِىٓ إِلَى ٱللَّهِ وَأَعْلَمُ مِنَ ٱللَّهِ مَا لَا تَعْلَمُونَ",
+    "verse": "He said, \"I only complain of my suffering and my grief to Allāh, and I know from Allāh that which you do not know. (12:86)"
   },
   "generated": true,
   "model": "auto (chain)"

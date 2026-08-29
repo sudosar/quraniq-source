@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-28",
+  "date": "2026-08-29",
   "puzzle": {
-    "word": "نصف",
-    "display": "نِصْفَ",
-    "hint": "Two of these together make a whole",
-    "verseRef": "73:3",
-    "arabicVerse": "نِّصْفَهُۥٓ أَوِ ٱنقُصْ مِنْهُ قَلِيلًا",
-    "verse": "73:3 - Half of it - or subtract from it a little"
+    "word": "ميثاق",
+    "display": "مِيثَاق",
+    "hint": "A solemn covenant or binding agreement.",
+    "verseRef": "2:84",
+    "arabicVerse": "وَإِذْ أَخَذْنَا مِيثَـٰقَكُمْ لَا تَسْفِكُونَ دِمَآءَكُمْ وَلَا تُخْرِجُونَ أَنفُسَكُم مِّن دِيَـٰرِكُمْ ثُمَّ أَقْرَرْتُمْ وَأَنتُمْ تَشْهَدُونَ",
+    "verse": "2:84 - And [recall] when We took your covenant, [saying], \"Do not shed your [i.e., each other's] blood or evict one another from your homes.\" Then you acknowledged [this] while you were witnessing."
   },
   "generated": true,
   "model": "auto (chain)"
