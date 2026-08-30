@@ -1,6 +1,5 @@
 {
-  "date": "2026-08-30",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَشْيَاءُ خُلِقَتْ أَزْوَاجًا",
@@ -144,6 +143,104 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "سلام",
+    "display": "سَلَام",
+    "hint": "Said as a greeting between Muslims; one of Allah's beautiful names",
+    "verseRef": "43:89",
+    "arabicVerse": "فَٱصْفَحْ عَنْهُمْ وَقُلْ سَلَـٰمٌۭ ۚ فَسَوْفَ يَعْلَمُونَ",
+    "verse": "43:89 - So turn aside from them and say, \"Peace.\" But they are going to know."
+  },
+  "deduction": {
+    "title": "The Trusted Spirit of Revelation",
+    "intro": "In the unseen realms, a being of pure light moves with precision, executing every command without hesitation. This figure has spoken to chosen servants, brought words of guidance, and witnessed the unfolding of divine decrees across the ages. Who is this honored soul?",
+    "clues": [
+      "I am a being of pure light, created from light, and I have never disobeyed a single command of my Lord.",
+      "I move between the heavens and the earth, descending with the decrees of the Most Merciful.",
+      "I was sent to a noble virgin in the sanctuary, announcing to her a pure son.",
+      "I am the spirit of holiness, and I supported a prophet who was given clear signs and the Gospel.",
+      "I came to a cave on a mountain to deliver the first words of a recitation that would be preserved forever.",
+      "I am the trustworthy spirit, and it was I who brought the Quran down upon the heart of the final messenger."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Jibril (Gabriel)",
+          "Mikail (Michael)",
+          "The Angel of Death",
+          "Malik (Keeper of Hell)",
+          "Harut (one of the two angels in Babylon)"
+        ],
+        "answer": "Jibril (Gabriel)"
+      },
+      "trial": {
+        "label": "Key Mission/Role",
+        "options": [
+          "Delivering revelation to the prophets",
+          "Blowing the trumpet on the Day of Judgment",
+          "Guarding the gates of Hell",
+          "Recording the deeds of humans",
+          "Causing the rain to fall"
+        ],
+        "answer": "Delivering revelation to the prophets"
+      },
+      "location": {
+        "label": "Key Attribute or Title",
+        "options": [
+          "The Holy Spirit (Ruh al-Qudus)",
+          "The Spirit of Power",
+          "The Spirit of Mercy",
+          "The Spirit of Guidance",
+          "The Spirit of Truth"
+        ],
+        "answer": "The Holy Spirit (Ruh al-Qudus)"
+      },
+      "outcome": {
+        "label": "Outcome of the Mission",
+        "options": [
+          "The Quran was revealed to Prophet Muhammad",
+          "The trumpet was blown on the Day of Judgment",
+          "Hell was guarded and its gates were closed",
+          "The Book of Deeds was presented to Allah",
+          "The rain was sent down to the earth"
+        ],
+        "answer": "The Quran was revealed to Prophet Muhammad"
+      }
+    },
+    "verseRef": "81:19",
+    "arabic": "إِنَّهُۥ لَقَوْلُ رَسُولٍۢ كَرِيمٍۢ",
+    "verse": "[That] indeed, it [i.e., the Qur’ān] is a word [conveyed by] a noble messenger [i.e., Gabriel] (81:19)"
+  },
+  "scramble": {
+    "verseRef": "65:6",
+    "reference": "Surah At-Talaq (65:6)",
+    "segments": [
+      "يَا أَيُّهَا الَّذِينَ",
+      "آمَنُوا",
+      "قُوا أَنفُسَكُمْ",
+      "وَأَهْلِيكُمْ",
+      "نَارًا",
+      "وَقُودُهَا النَّاسُ وَالْحِجَارَةُ"
+    ],
+    "translations": [
+      "Lodge them from where you dwell (out) of your means",
+      "and (do) not harm them to distress [on] them And if they are",
+      "those (who are) pregnant then spend on them until",
+      "they deliver their burden Then if they suckle for you",
+      "then give them their payment and consult among yourselves with kindness",
+      "but if you disagree then may suckle for him another (women)"
+    ],
+    "hint": "A powerful reminder of the believer's responsibility to safeguard themselves and their families from the Hellfire, whose fuel are people and stones.",
+    "arabic": "أَسْكِنُوهُنَّ مِنْ حَيْثُ سَكَنتُم مِّن وُجْدِكُمْ وَلَا تُضَآرُّوهُنَّ لِتُضَيِّقُوا۟ عَلَيْهِنَّ ۚ وَإِن كُنَّ أُو۟لَـٰتِ حَمْلٍۢ فَأَنفِقُوا۟ عَلَيْهِنَّ حَتَّىٰ يَضَعْنَ حَمْلَهُنَّ ۚ فَإِنْ أَرْضَعْنَ لَكُمْ فَـَٔاتُوهُنَّ أُجُورَهُنَّ ۖ وَأْتَمِرُوا۟ بَيْنَكُم بِمَعْرُوفٍۢ ۖ وَإِن تَعَاسَرْتُمْ فَسَتُرْضِعُ لَهُۥٓ أُخْرَىٰ",
+    "words": [
+      "أَسْكِنُوهُنَّ مِنْ حَيْثُ سَكَنتُم مِّن وُجْدِكُمْ",
+      "وَلَا تُضَآرُّوهُنَّ لِتُضَيِّقُوا۟ عَلَيْهِنَّ ۚ وَإِن كُنَّ",
+      "أُو۟لَـٰتِ حَمْلٍۢ فَأَنفِقُوا۟ عَلَيْهِنَّ حَتَّىٰ",
+      "يَضَعْنَ حَمْلَهُنَّ ۚ فَإِنْ أَرْضَعْنَ لَكُمْ",
+      "فَـَٔاتُوهُنَّ أُجُورَهُنَّ ۖ وَأْتَمِرُوا۟ بَيْنَكُم بِمَعْرُوفٍۢ ۖ",
+      "وَإِن تَعَاسَرْتُمْ فَسَتُرْضِعُ لَهُۥٓ أُخْرَىٰ"
+    ],
+    "verseEn": "Lodge them [in a section] of where you dwell out of your means and do not harm them in order to oppress them. And if they should be pregnant, then spend on them until they give birth. And if they breastfeed for you, then give them their payment and confer among yourselves in the acceptable way; but if you are in discord, then there may breastfeed for him [i.e., the father] another woman."
+  }
 }

@@ -1,32 +1,35 @@
 {
-  "date": "2026-08-29",
+  "date": "2026-08-30",
   "puzzle": {
-    "verseRef": "42:30",
-    "reference": "Surah Ash-Shura (42:30)",
+    "verseRef": "65:6",
+    "reference": "Surah At-Talaq (65:6)",
     "segments": [
-      "وَمَا أَصَابَكُم",
-      "مِّن مُّصِيبَةٍ",
-      "فَبِمَا كَسَبَتْ",
-      "أَيْدِيكُمْ",
-      "وَيَعْفُو عَن كَثِيرٍ"
+      "يَا أَيُّهَا الَّذِينَ",
+      "آمَنُوا",
+      "قُوا أَنفُسَكُمْ",
+      "وَأَهْلِيكُمْ",
+      "نَارًا",
+      "وَقُودُهَا النَّاسُ وَالْحِجَارَةُ"
     ],
     "translations": [
-      "And whatever befalls you",
-      "of (the) misfortune",
-      "(is because) of what have earned",
-      "your hands But He pardons",
-      "[from] much"
+      "Lodge them from where you dwell (out) of your means",
+      "and (do) not harm them to distress [on] them And if they are",
+      "those (who are) pregnant then spend on them until",
+      "they deliver their burden Then if they suckle for you",
+      "then give them their payment and consult among yourselves with kindness",
+      "but if you disagree then may suckle for him another (women)"
     ],
-    "hint": "A profound reminder about divine decree and Allah's mercy: calamities often stem from our own deeds, yet Allah forgives far more than He punishes.",
-    "arabic": "وَمَآ أَصَـٰبَكُم مِّن مُّصِيبَةٍۢ فَبِمَا كَسَبَتْ أَيْدِيكُمْ وَيَعْفُوا۟ عَن كَثِيرٍۢ",
+    "hint": "A powerful reminder of the believer's responsibility to safeguard themselves and their families from the Hellfire, whose fuel are people and stones.",
+    "arabic": "أَسْكِنُوهُنَّ مِنْ حَيْثُ سَكَنتُم مِّن وُجْدِكُمْ وَلَا تُضَآرُّوهُنَّ لِتُضَيِّقُوا۟ عَلَيْهِنَّ ۚ وَإِن كُنَّ أُو۟لَـٰتِ حَمْلٍۢ فَأَنفِقُوا۟ عَلَيْهِنَّ حَتَّىٰ يَضَعْنَ حَمْلَهُنَّ ۚ فَإِنْ أَرْضَعْنَ لَكُمْ فَـَٔاتُوهُنَّ أُجُورَهُنَّ ۖ وَأْتَمِرُوا۟ بَيْنَكُم بِمَعْرُوفٍۢ ۖ وَإِن تَعَاسَرْتُمْ فَسَتُرْضِعُ لَهُۥٓ أُخْرَىٰ",
     "words": [
-      "وَمَآ أَصَـٰبَكُم",
-      "مِّن مُّصِيبَةٍۢ",
-      "فَبِمَا كَسَبَتْ",
-      "أَيْدِيكُمْ وَيَعْفُوا۟",
-      "عَن كَثِيرٍۢ"
+      "أَسْكِنُوهُنَّ مِنْ حَيْثُ سَكَنتُم مِّن وُجْدِكُمْ",
+      "وَلَا تُضَآرُّوهُنَّ لِتُضَيِّقُوا۟ عَلَيْهِنَّ ۚ وَإِن كُنَّ",
+      "أُو۟لَـٰتِ حَمْلٍۢ فَأَنفِقُوا۟ عَلَيْهِنَّ حَتَّىٰ",
+      "يَضَعْنَ حَمْلَهُنَّ ۚ فَإِنْ أَرْضَعْنَ لَكُمْ",
+      "فَـَٔاتُوهُنَّ أُجُورَهُنَّ ۖ وَأْتَمِرُوا۟ بَيْنَكُم بِمَعْرُوفٍۢ ۖ",
+      "وَإِن تَعَاسَرْتُمْ فَسَتُرْضِعُ لَهُۥٓ أُخْرَىٰ"
     ],
-    "verseEn": "And whatever strikes you of disaster - it is for what your hands have earned; but He pardons much."
+    "verseEn": "Lodge them [in a section] of where you dwell out of your means and do not harm them in order to oppress them. And if they should be pregnant, then spend on them until they give birth. And if they breastfeed for you, then give them their payment and confer among yourselves in the acceptable way; but if you are in discord, then there may breastfeed for him [i.e., the father] another woman."
   },
   "generated": true,
   "model": "auto (chain)"
