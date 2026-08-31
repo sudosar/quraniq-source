@@ -1,35 +1,32 @@
 {
-  "date": "2026-08-30",
+  "date": "2026-08-31",
   "puzzle": {
-    "verseRef": "65:6",
-    "reference": "Surah At-Talaq (65:6)",
+    "verseRef": "41:33",
+    "reference": "Surah Fussilat (41:33)",
     "segments": [
-      "يَا أَيُّهَا الَّذِينَ",
-      "آمَنُوا",
-      "قُوا أَنفُسَكُمْ",
-      "وَأَهْلِيكُمْ",
-      "نَارًا",
-      "وَقُودُهَا النَّاسُ وَالْحِجَارَةُ"
+      "وَمَنْ أَحْسَنُ قَوْلًا",
+      "مِّمَّن دَعَا إِلَى اللَّهِ",
+      "وَعَمِلَ صَالِحًا",
+      "وَقَالَ",
+      "إِنَّنِي مِنَ الْمُسْلِمِينَ"
     ],
     "translations": [
-      "Lodge them from where you dwell (out) of your means",
-      "and (do) not harm them to distress [on] them And if they are",
-      "those (who are) pregnant then spend on them until",
-      "they deliver their burden Then if they suckle for you",
-      "then give them their payment and consult among yourselves with kindness",
-      "but if you disagree then may suckle for him another (women)"
+      "And who (is) better (in) speech",
+      "than (one) who invites to",
+      "Allah and does righteous (deeds)",
+      "and says Indeed, I am",
+      "of those who submit"
     ],
-    "hint": "A powerful reminder of the believer's responsibility to safeguard themselves and their families from the Hellfire, whose fuel are people and stones.",
-    "arabic": "أَسْكِنُوهُنَّ مِنْ حَيْثُ سَكَنتُم مِّن وُجْدِكُمْ وَلَا تُضَآرُّوهُنَّ لِتُضَيِّقُوا۟ عَلَيْهِنَّ ۚ وَإِن كُنَّ أُو۟لَـٰتِ حَمْلٍۢ فَأَنفِقُوا۟ عَلَيْهِنَّ حَتَّىٰ يَضَعْنَ حَمْلَهُنَّ ۚ فَإِنْ أَرْضَعْنَ لَكُمْ فَـَٔاتُوهُنَّ أُجُورَهُنَّ ۖ وَأْتَمِرُوا۟ بَيْنَكُم بِمَعْرُوفٍۢ ۖ وَإِن تَعَاسَرْتُمْ فَسَتُرْضِعُ لَهُۥٓ أُخْرَىٰ",
+    "hint": "A verse describing the best form of speech and conduct: calling to Allah, doing good deeds, and affirming one's submission to Him.",
+    "arabic": "وَمَنْ أَحْسَنُ قَوْلًۭا مِّمَّن دَعَآ إِلَى ٱللَّهِ وَعَمِلَ صَـٰلِحًۭا وَقَالَ إِنَّنِى مِنَ ٱلْمُسْلِمِينَ",
     "words": [
-      "أَسْكِنُوهُنَّ مِنْ حَيْثُ سَكَنتُم مِّن وُجْدِكُمْ",
-      "وَلَا تُضَآرُّوهُنَّ لِتُضَيِّقُوا۟ عَلَيْهِنَّ ۚ وَإِن كُنَّ",
-      "أُو۟لَـٰتِ حَمْلٍۢ فَأَنفِقُوا۟ عَلَيْهِنَّ حَتَّىٰ",
-      "يَضَعْنَ حَمْلَهُنَّ ۚ فَإِنْ أَرْضَعْنَ لَكُمْ",
-      "فَـَٔاتُوهُنَّ أُجُورَهُنَّ ۖ وَأْتَمِرُوا۟ بَيْنَكُم بِمَعْرُوفٍۢ ۖ",
-      "وَإِن تَعَاسَرْتُمْ فَسَتُرْضِعُ لَهُۥٓ أُخْرَىٰ"
+      "وَمَنْ أَحْسَنُ قَوْلًۭا",
+      "مِّمَّن دَعَآ إِلَى",
+      "ٱللَّهِ وَعَمِلَ صَـٰلِحًۭا",
+      "وَقَالَ إِنَّنِى",
+      "مِنَ ٱلْمُسْلِمِينَ"
     ],
-    "verseEn": "Lodge them [in a section] of where you dwell out of your means and do not harm them in order to oppress them. And if they should be pregnant, then spend on them until they give birth. And if they breastfeed for you, then give them their payment and confer among yourselves in the acceptable way; but if you are in discord, then there may breastfeed for him [i.e., the father] another woman."
+    "verseEn": "And who is better in speech than one who invites to Allāh and does righteousness and says, \"Indeed, I am of the Muslims.\""
   },
   "generated": true,
   "model": "auto (chain)"
