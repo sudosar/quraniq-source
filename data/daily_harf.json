@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-31",
+  "date": "2026-09-01",
   "puzzle": {
-    "word": "فسق",
-    "display": "فِسْق",
-    "hint": "Defiance of divine law",
-    "verseRef": "6:121",
-    "arabicVerse": "وَلَا تَأْكُلُوا۟ مِمَّا لَمْ يُذْكَرِ ٱسْمُ ٱللَّهِ عَلَيْهِ وَإِنَّهُۥ لَفِسْقٌۭ ۗ وَإِنَّ ٱلشَّيَـٰطِينَ لَيُوحُونَ إِلَىٰٓ أَوْلِيَآئِهِمْ لِيُجَـٰدِلُوكُمْ ۖ وَإِنْ أَطَعْتُمُوهُمْ إِنَّكُمْ لَمُشْرِكُونَ",
-    "verse": "6:121 - And do not eat of that upon which the name of Allāh has not been mentioned, for indeed, it is grave disobedience. And indeed do the devils inspire their allies [among men] to dispute with you. And if you were to obey them, indeed, you would be associators [of others with Him]."
+    "word": "البلد",
+    "display": "الْبَلَدِ",
+    "hint": "A place of settlement; often described as 'the secure' in an oath",
+    "verseRef": "95:3",
+    "arabicVerse": "وَهَـٰذَا ٱلْبَلَدِ ٱلْأَمِينِ",
+    "verse": "95:3 - And [by] this secure city [i.e., Makkah],"
   },
   "generated": true,
   "model": "auto (chain)"

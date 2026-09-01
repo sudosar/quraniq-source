@@ -1,32 +1,32 @@
 {
-  "date": "2026-08-31",
+  "date": "2026-09-01",
   "puzzle": {
-    "verseRef": "41:33",
-    "reference": "Surah Fussilat (41:33)",
+    "verseRef": "24:62",
+    "reference": "Surah An-Nur (24:62)",
     "segments": [
-      "وَمَنْ أَحْسَنُ قَوْلًا",
-      "مِّمَّن دَعَا إِلَى اللَّهِ",
-      "وَعَمِلَ صَالِحًا",
-      "وَقَالَ",
-      "إِنَّنِي مِنَ الْمُسْلِمِينَ"
+      "إِنَّمَا الْمُؤْمِنُونَ",
+      "إِخْوَةٌ",
+      "فَأَصْلِحُوا بَيْنَ أَخَوَيِكُمْ",
+      "وَاتَّقُوا اللَّهَ",
+      "لَعَلَّكُمْ تُرْحَمُونَ"
     ],
     "translations": [
-      "And who (is) better (in) speech",
-      "than (one) who invites to",
-      "Allah and does righteous (deeds)",
-      "and says Indeed, I am",
-      "of those who submit"
+      "Only the believers (are) those who believe in Allah and His Messenger and when they are",
+      "with him for a matter (of) collective action not they go until they (have) asked his permission",
+      "Indeed those who ask your permission those [those who] believe in Allah and His Messenger",
+      "So when they ask your permission for some affair of theirs then give permission to whom you will among them",
+      "and ask forgiveness for them (of) Allah Indeed Allah (is) Oft-Forgiving Most Merciful"
     ],
-    "hint": "A verse describing the best form of speech and conduct: calling to Allah, doing good deeds, and affirming one's submission to Him.",
-    "arabic": "وَمَنْ أَحْسَنُ قَوْلًۭا مِّمَّن دَعَآ إِلَى ٱللَّهِ وَعَمِلَ صَـٰلِحًۭا وَقَالَ إِنَّنِى مِنَ ٱلْمُسْلِمِينَ",
+    "hint": "A foundational verse on the brotherhood of believers and the duty to make peace between disputing Muslims, ending with an encouragement to attain Allah's mercy through taqwa (God-consciousness).",
+    "arabic": "إِنَّمَا ٱلْمُؤْمِنُونَ ٱلَّذِينَ ءَامَنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ وَإِذَا كَانُوا۟ مَعَهُۥ عَلَىٰٓ أَمْرٍۢ جَامِعٍۢ لَّمْ يَذْهَبُوا۟ حَتَّىٰ يَسْتَـْٔذِنُوهُ ۚ إِنَّ ٱلَّذِينَ يَسْتَـْٔذِنُونَكَ أُو۟لَـٰٓئِكَ ٱلَّذِينَ يُؤْمِنُونَ بِٱللَّهِ وَرَسُولِهِۦ ۚ فَإِذَا ٱسْتَـْٔذَنُوكَ لِبَعْضِ شَأْنِهِمْ فَأْذَن لِّمَن شِئْتَ مِنْهُمْ وَٱسْتَغْفِرْ لَهُمُ ٱللَّهَ ۚ إِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ",
     "words": [
-      "وَمَنْ أَحْسَنُ قَوْلًۭا",
-      "مِّمَّن دَعَآ إِلَى",
-      "ٱللَّهِ وَعَمِلَ صَـٰلِحًۭا",
-      "وَقَالَ إِنَّنِى",
-      "مِنَ ٱلْمُسْلِمِينَ"
+      "إِنَّمَا ٱلْمُؤْمِنُونَ ٱلَّذِينَ ءَامَنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ وَإِذَا كَانُوا۟",
+      "مَعَهُۥ عَلَىٰٓ أَمْرٍۢ جَامِعٍۢ لَّمْ يَذْهَبُوا۟ حَتَّىٰ يَسْتَـْٔذِنُوهُ ۚ",
+      "إِنَّ ٱلَّذِينَ يَسْتَـْٔذِنُونَكَ أُو۟لَـٰٓئِكَ ٱلَّذِينَ يُؤْمِنُونَ بِٱللَّهِ وَرَسُولِهِۦ ۚ",
+      "فَإِذَا ٱسْتَـْٔذَنُوكَ لِبَعْضِ شَأْنِهِمْ فَأْذَن لِّمَن شِئْتَ مِنْهُمْ",
+      "وَٱسْتَغْفِرْ لَهُمُ ٱللَّهَ ۚ إِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ"
     ],
-    "verseEn": "And who is better in speech than one who invites to Allāh and does righteousness and says, \"Indeed, I am of the Muslims.\""
+    "verseEn": "The believers are only those who believe in Allāh and His Messenger and, when they are [meeting] with him for a matter of common interest, do not depart until they have asked his permission. Indeed, those who ask your permission, [O Muḥammad] - those are the ones who believe in Allāh and His Messenger. So when they ask your permission due to something of their affairs, then give permission to whom you will among them and ask forgiveness for them of Allāh. Indeed, Allāh is Forgiving and Merciful."
   },
   "generated": true,
   "model": "auto (chain)"
