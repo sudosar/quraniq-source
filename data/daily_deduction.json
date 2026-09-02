@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-01",
+  "date": "2026-09-02",
   "puzzle": {
-    "title": "The Voice from the Outskirts",
-    "intro": "You stand in a city where three messengers have come with clear signs, but the people mock them and cling to their old ways. From the farthest part of the city, a figure sprints toward the crowd, breathless and determined, to speak truth in the face of rejection. Who is this soul who risked everything for a message not their own?",
+    "title": "The Slumber Beyond Time",
+    "intro": "Imagine a time when truth was silenced and believers were hunted. A small group chose retreat over surrender, finding refuge in the most unlikely of places — a place that would become their resting ground for centuries beyond counting. When they finally awoke, the world had transformed around them. Who are these slumbering souls?",
     "clues": [
-      "I lived among a people who had received messengers with clear signs, yet they turned away in arrogance.",
-      "I came running from the farthest part of the city when I heard of the messengers' call.",
-      "I said to my people, 'O my people, follow the messengers. Follow those who ask no reward of you, for they are rightly guided.'",
-      "I was not a prophet, but I believed in the messengers and urged my people to do the same.",
-      "My people mocked my advice and accused me of being an extremist.",
-      "When they killed me, Allah told me to enter Paradise, and I wished my people could know the forgiveness and honor I received."
+      "We were young people living in an ancient city.",
+      "Our community demanded that we worship alongside them, but we refused.",
+      "We fled the city in search of refuge from those who opposed our beliefs.",
+      "A loyal four-legged companion stayed at the entrance of our hiding place.",
+      "Allah caused us to sleep for three hundred and nine years.",
+      "When we finally awoke, our once-persecuting city had embraced faith."
     ],
     "categories": {
       "identity": {
-        "label": "Who Am I?",
+        "label": "Who Are We?",
         "options": [
-          "The man from the farthest part of the city (Ya-Sin)",
-          "One of the three messengers sent to the city",
-          "A prominent merchant of the city",
-          "A ruler of the city",
-          "The leader of the disbelievers"
+          "Ashab al-Kahf (The People of the Cave)",
+          "Ashab al-Fil (The Army of the Elephant)",
+          "Ashab al-Ukhdud (The Companions of the Trench)",
+          "The Hawariyyun (Disciples of Isa)",
+          "Yajuj wa Majuj (Gog and Magog)"
         ],
-        "answer": "The man from the farthest part of the city (Ya-Sin)"
+        "answer": "Ashab al-Kahf (The People of the Cave)"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Preaching to his people to follow the messengers",
-          "Building a ship to save believers from a flood",
-          "Being thrown into a fire for faith",
-          "Being swallowed by a whale",
-          "Being given a kingdom and wisdom"
+          "We retreated into a cave and slept for centuries",
+          "We were saved from a blazing fire",
+          "We were swallowed by a great fish",
+          "We were tested with a miraculous she-camel",
+          "We were given nine clear signs"
         ],
-        "answer": "Preaching to his people to follow the messengers"
+        "answer": "We retreated into a cave and slept for centuries"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The farthest part of the city",
-          "The ark",
-          "The well",
-          "The burning bush",
-          "The cave"
+          "A deep cave in the mountains",
+          "A boat on the open sea",
+          "A towering structure reaching the heavens",
+          "A garden divided between two rivals",
+          "A barrier of iron and copper"
         ],
-        "answer": "The farthest part of the city"
+        "answer": "A deep cave in the mountains"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Entered Paradise and wished his people could know his forgiveness",
-          "Drowned with his people for rejecting the message",
-          "Was given a miracle of the she-camel",
-          "Became a ruler after his trial",
-          "Was saved by Allah and remained with his people"
+          "We awoke to find our city had turned to faith",
+          "A blazing fire became cool and peaceful",
+          "An enemy army was drowned in the sea",
+          "Birds carrying stones destroyed the foe",
+          "A great fish released us onto the shore"
         ],
-        "answer": "Entered Paradise and wished his people could know his forgiveness"
+        "answer": "We awoke to find our city had turned to faith"
       }
     },
-    "verseRef": "36:26",
-    "arabic": "قِيلَ ٱدْخُلِ ٱلْجَنَّةَ ۖ قَالَ يَـٰلَيْتَ قَوْمِى يَعْلَمُونَ",
-    "verse": "It was said, \"Enter Paradise.\" He said, \"I wish my people could know (36:26)"
+    "verseRef": "18:25",
+    "arabic": "وَلَبِثُوا۟ فِى كَهْفِهِمْ ثَلَـٰثَ مِا۟ئَةٍۢ سِنِينَ وَٱزْدَادُوا۟ تِسْعًۭا",
+    "verse": "And they remained in their cave for three hundred years and exceeded by nine. (18:25)"
   },
   "generated": true,
   "model": "auto (chain)"

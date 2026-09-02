@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-01",
+  "date": "2026-09-02",
   "puzzle": {
-    "word": "البلد",
-    "display": "الْبَلَدِ",
-    "hint": "A place of settlement; often described as 'the secure' in an oath",
-    "verseRef": "95:3",
-    "arabicVerse": "وَهَـٰذَا ٱلْبَلَدِ ٱلْأَمِينِ",
-    "verse": "95:3 - And [by] this secure city [i.e., Makkah],"
+    "word": "عنب",
+    "display": "عِنَب",
+    "hint": "A fruit that grows on a vine, often mentioned alongside dates in the Quran",
+    "verseRef": "16:67",
+    "arabicVerse": "وَمِن ثَمَرَٰتِ ٱلنَّخِيلِ وَٱلْأَعْنَـٰبِ تَتَّخِذُونَ مِنْهُ سَكَرًۭا وَرِزْقًا حَسَنًا ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةًۭ لِّقَوْمٍۢ يَعْقِلُونَ",
+    "verse": "16:67 - And from the fruits of the palm trees and grapevines you take intoxicant and good provision. Indeed in that is a sign for a people who reason."
   },
   "generated": true,
   "model": "auto (chain)"
