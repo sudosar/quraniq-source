@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-02",
+  "date": "2026-09-03",
   "puzzle": {
-    "word": "عنب",
-    "display": "عِنَب",
-    "hint": "A fruit that grows on a vine, often mentioned alongside dates in the Quran",
-    "verseRef": "16:67",
-    "arabicVerse": "وَمِن ثَمَرَٰتِ ٱلنَّخِيلِ وَٱلْأَعْنَـٰبِ تَتَّخِذُونَ مِنْهُ سَكَرًۭا وَرِزْقًا حَسَنًا ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةًۭ لِّقَوْمٍۢ يَعْقِلُونَ",
-    "verse": "16:67 - And from the fruits of the palm trees and grapevines you take intoxicant and good provision. Indeed in that is a sign for a people who reason."
+    "word": "قبر",
+    "display": "قَبْر",
+    "hint": "An underground chamber where the deceased are laid to rest",
+    "verseRef": "35:22",
+    "arabicVerse": "وَمَا يَسْتَوِى ٱلْأَحْيَآءُ وَلَا ٱلْأَمْوَٰتُ ۚ إِنَّ ٱللَّهَ يُسْمِعُ مَن يَشَآءُ ۖ وَمَآ أَنتَ بِمُسْمِعٍۢ مَّن فِى ٱلْقُبُورِ",
+    "verse": "35:22 - And not equal are the living and the dead. Indeed, Allāh causes to hear whom He wills, but you cannot make hear those in the graves."
   },
   "generated": true,
   "model": "auto (chain)"

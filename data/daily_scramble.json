@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-02",
+  "date": "2026-09-03",
   "puzzle": {
-    "verseRef": "55:78",
-    "reference": "Surah Ar-Rahman (55:78)",
+    "verseRef": "13:24",
+    "reference": "Surah Ar-Ra'd (13:24)",
     "segments": [
-      "تَبَارَكَ اسْمُ رَبِّكَ",
-      "ذِي الْجَلَالِ",
-      "وَ",
-      "الْإِكْرَامِ"
+      "سَلَامٌ عَلَيْكُم",
+      "بِمَا صَبَرْتُمْ",
+      "فَنِعْمَ",
+      "عُقْبَى الدَّارِ"
     ],
     "translations": [
-      "Blessed is (the) name",
-      "(of) your Lord Owner",
-      "(of) Majesty",
-      "and Honor"
+      "(Saying), \"Peace (be) upon you",
+      "for what you patiently endured",
+      "And excellent (is) the final attainment",
+      "(of) the Home"
     ],
-    "hint": "This closing verse of Surah Ar-Rahman extols Allah's majestic and honorable attributes, frequently recited in remembrance and supplication.",
-    "arabic": "تَبَـٰرَكَ ٱسْمُ رَبِّكَ ذِى ٱلْجَلَـٰلِ وَٱلْإِكْرَامِ",
+    "hint": "The divine greeting of peace and the blessed reward awaiting those who remained patient and steadfast in faith.",
+    "arabic": "سَلَـٰمٌ عَلَيْكُم بِمَا صَبَرْتُمْ ۚ فَنِعْمَ عُقْبَى ٱلدَّارِ",
     "words": [
-      "تَبَـٰرَكَ ٱسْمُ",
-      "رَبِّكَ ذِى",
-      "ٱلْجَلَـٰلِ",
-      "وَٱلْإِكْرَامِ"
+      "سَلَـٰمٌ عَلَيْكُم",
+      "بِمَا صَبَرْتُمْ ۚ",
+      "فَنِعْمَ عُقْبَى",
+      "ٱلدَّارِ"
     ],
-    "verseEn": "Blessed is the name of your Lord, Owner of Majesty and Honor."
+    "verseEn": "\"Peace [i.e., security] be upon you for what you patiently endured. And excellent is the final home.\""
   },
   "generated": true,
   "model": "auto (chain)"
