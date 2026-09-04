@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-03",
+  "date": "2026-09-04",
   "puzzle": {
-    "word": "قبر",
-    "display": "قَبْر",
-    "hint": "An underground chamber where the deceased are laid to rest",
-    "verseRef": "35:22",
-    "arabicVerse": "وَمَا يَسْتَوِى ٱلْأَحْيَآءُ وَلَا ٱلْأَمْوَٰتُ ۚ إِنَّ ٱللَّهَ يُسْمِعُ مَن يَشَآءُ ۖ وَمَآ أَنتَ بِمُسْمِعٍۢ مَّن فِى ٱلْقُبُورِ",
-    "verse": "35:22 - And not equal are the living and the dead. Indeed, Allāh causes to hear whom He wills, but you cannot make hear those in the graves."
+    "word": "عظيم",
+    "display": "عَظِيم",
+    "hint": "An attribute of Allah meaning 'Magnificent' or 'Mighty'.",
+    "verseRef": "42:4",
+    "arabicVerse": "لَهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ",
+    "verse": "42:4 - To Him belongs whatever is in the heavens and whatever is in the earth, and He is the Most High, the Most Great."
   },
   "generated": true,
   "model": "auto (chain)"
