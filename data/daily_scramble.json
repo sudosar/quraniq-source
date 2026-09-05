@@ -1,32 +1,32 @@
 {
-  "date": "2026-09-04",
+  "date": "2026-09-05",
   "puzzle": {
-    "verseRef": "20:14",
-    "reference": "Surah Ta-Ha (20:14)",
+    "verseRef": "14:41",
+    "reference": "Surah Ibrahim (14:41)",
     "segments": [
-      "إِنَّنِي أَنَا اللَّهُ",
-      "لَا إِلَٰهَ إِلَّا أَنَا",
-      "فَاعْبُدْنِي",
-      "وَأَقِمِ الصَّلَاةَ",
-      "لِذِكْرِي"
+      "رَبَّنَا",
+      "اغْفِرْ لِي",
+      "وَلِوَالِدَيَّ",
+      "وَلِلْمُؤْمِنِينَ",
+      "يَوْمَ يَقُومُ الْحِسَابُ"
     ],
     "translations": [
-      "Indeed, [I] I Am Allah",
-      "(There is) no god",
-      "but I",
-      "so worship Me and establish",
-      "the prayer for My remembrance"
+      "Our Lord Forgive",
+      "me and my parents",
+      "and the believers (on) the Day",
+      "will (be) established",
+      "the account"
     ],
-    "hint": "Allah declares His oneness and commands worship and prayer for His remembrance.",
-    "arabic": "إِنَّنِىٓ أَنَا ٱللَّهُ لَآ إِلَـٰهَ إِلَّآ أَنَا۠ فَٱعْبُدْنِى وَأَقِمِ ٱلصَّلَوٰةَ لِذِكْرِىٓ",
+    "hint": "A famous prophetic du'a from Ibrahim (Abraham) seeking forgiveness for himself, his parents, and all believers on the Day of Judgment.",
+    "arabic": "رَبَّنَا ٱغْفِرْ لِى وَلِوَٰلِدَىَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ ٱلْحِسَابُ",
     "words": [
-      "إِنَّنِىٓ أَنَا ٱللَّهُ",
-      "لَآ إِلَـٰهَ",
-      "إِلَّآ أَنَا۠",
-      "فَٱعْبُدْنِى وَأَقِمِ",
-      "ٱلصَّلَوٰةَ لِذِكْرِىٓ"
+      "رَبَّنَا ٱغْفِرْ",
+      "لِى وَلِوَٰلِدَىَّ",
+      "وَلِلْمُؤْمِنِينَ يَوْمَ",
+      "يَقُومُ",
+      "ٱلْحِسَابُ"
     ],
-    "verseEn": "Indeed, I am Allāh. There is no deity except Me, so worship Me and establish prayer for My remembrance."
+    "verseEn": "Our Lord, forgive me and my parents and the believers the Day the account is established.\""
   },
   "generated": true,
   "model": "auto (chain)"

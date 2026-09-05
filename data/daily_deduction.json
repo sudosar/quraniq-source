@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-04",
+  "date": "2026-09-05",
   "puzzle": {
-    "title": "The Melody That Moved the Mountains",
-    "intro": "You are about to uncover the story of a remarkable servant of Allah. In a land of messengers and rulers, this figure was blessed with a divine book, a powerful voice, and strength over iron. As you read the clues, can you identify who this might be?",
+    "title": "The Splendor That Sank",
+    "intro": "Picture this: a soul draped in fine garments and surrounded by treasures beyond imagination. This individual believed their wealth was earned through their own brilliance, never acknowledging the source of true provision. Walking among the followers of a mighty prophet, this person refused every call to humility. Today, we uncover the identity of a figure whose magnificent fortune became their final resting place.",
     "clues": [
-      "I was a servant of Allah who was granted a special book.",
-      "I had a beautiful voice, and my praise was so beloved that even the hills and birds joined me.",
-      "I faced a formidable opponent in a famous battle, and despite being smaller, I prevailed.",
-      "Iron was made pliant for me, allowing me to craft armor with my own hands.",
-      "I was made a ruler over a great nation, and my wisdom in judgment was renowned.",
-      "My son, also a prophet, was granted control over the wind and the jinn."
+      "I lived during the time of a prophet who called a stubborn nation to truth.",
+      "I was part of a chosen community, yet my heart turned away from the message.",
+      "Gold and silver captivated me more than any divine command.",
+      "My treasure vaults grew so vast that a strong group of men could barely lift the keys.",
+      "I boasted that my wealth was given to me because of my own knowledge.",
+      "In the end, I and my entire dwelling were swallowed by the earth as a warning."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Dawud (David)",
-          "Prophet Sulaiman (Solomon)",
-          "Prophet Musa (Moses)",
-          "Prophet Harun (Aaron)",
-          "Prophet Ilyas (Elias)"
+          "Qarun",
+          "Haman",
+          "Samiri",
+          "Bilqis",
+          "Talut (Saul)"
         ],
-        "answer": "Prophet Dawud (David)"
+        "answer": "Qarun"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Defeated Goliath (Jalut)",
-          "Parted the sea",
-          "Survived the whale",
-          "Was thrown into a fire",
-          "Built the Ark"
+          "Arrogance over wealth and refusing charity",
+          "Forging a golden idol from melted jewelry",
+          "Declaring divinity over a powerful kingdom",
+          "Persecuting early believers in Makkah",
+          "Leading a campaign to destroy the Sacred House"
         ],
-        "answer": "Defeated Goliath (Jalut)"
+        "answer": "Arrogance over wealth and refusing charity"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Zabur (Psalms)",
-          "The Torah (Tawrat)",
-          "The Gospel (Injil)",
-          "The Scrolls of Ibrahim",
-          "The Qur'an"
+          "Treasures whose keys burdened many strong men",
+          "A golden calf that produced sound",
+          "A glorious throne from a distant land",
+          "A trench filled with blazing fire",
+          "A mighty army of war elephants"
         ],
-        "answer": "The Zabur (Psalms)"
+        "answer": "Treasures whose keys burdened many strong men"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Became a prophet and king of Israel",
-          "Became the ruler of Egypt",
-          "Was raised to the heavens",
-          "Was destroyed by a storm",
-          "Became a companion of the cave"
+          "Swallowed by the earth along with the dwelling",
+          "Drowned in the sea with an army",
+          "Burned alive in a pit of fire",
+          "Destroyed by a howling, raging wind",
+          "Struck down by a single mighty blast"
         ],
-        "answer": "Became a prophet and king of Israel"
+        "answer": "Swallowed by the earth along with the dwelling"
       }
     },
-    "verseRef": "38:18",
-    "arabic": "إِنَّا سَخَّرْنَا ٱلْجِبَالَ مَعَهُۥ يُسَبِّحْنَ بِٱلْعَشِىِّ وَٱلْإِشْرَاقِ",
-    "verse": "Indeed, We subjected the mountains [to praise] with him, exalting [Allāh] in the [late] afternoon and [after] sunrise. (38:18)"
+    "verseRef": "28:79",
+    "arabic": "فَخَرَجَ عَلَىٰ قَوْمِهِۦ فِى زِينَتِهِۦ ۖ قَالَ ٱلَّذِينَ يُرِيدُونَ ٱلْحَيَوٰةَ ٱلدُّنْيَا يَـٰلَيْتَ لَنَا مِثْلَ مَآ أُوتِىَ قَـٰرُونُ إِنَّهُۥ لَذُو حَظٍّ عَظِيمٍۢ",
+    "verse": "So he came out before his people in his adornment. Those who desired the worldly life said, \"Oh, would that we had like what was given to Qārūn. Indeed, he is one of great fortune.\" (28:79)"
   },
   "generated": true,
   "model": "auto (chain)"
