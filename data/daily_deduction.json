@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-05",
+  "date": "2026-09-06",
   "puzzle": {
-    "title": "The Splendor That Sank",
-    "intro": "Picture this: a soul draped in fine garments and surrounded by treasures beyond imagination. This individual believed their wealth was earned through their own brilliance, never acknowledging the source of true provision. Walking among the followers of a mighty prophet, this person refused every call to humility. Today, we uncover the identity of a figure whose magnificent fortune became their final resting place.",
+    "title": "The Outcast of the Golden Calf",
+    "intro": "A figure mentioned in the Quran led a great multitude into deviation during the absence of a noble prophet. Something crafted from gold captured the hearts of an entire nation — but the story of this individual ends in solitude and a strange curse. Who could this outcast be?",
     "clues": [
-      "I lived during the time of a prophet who called a stubborn nation to truth.",
-      "I was part of a chosen community, yet my heart turned away from the message.",
-      "Gold and silver captivated me more than any divine command.",
-      "My treasure vaults grew so vast that a strong group of men could barely lift the keys.",
-      "I boasted that my wealth was given to me because of my own knowledge.",
-      "In the end, I and my entire dwelling were swallowed by the earth as a warning."
+      "I emerged during the absence of a great prophet who had ascended to receive divine guidance.",
+      "I caused a great multitude to go astray with something I crafted with my own hands.",
+      "The golden creation I produced seemed to have life, producing sounds that mesmerized those who followed it.",
+      "I claimed to have seen what others could not perceive — a glimpse into the unseen.",
+      "I drew something from the tracks of the divine messenger and cast it into molten metal.",
+      "I was condemned to wander alone, with a unique curse that none could touch my skin nor I touch theirs."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Qarun",
-          "Haman",
           "Samiri",
-          "Bilqis",
-          "Talut (Saul)"
+          "Haman",
+          "Pharaoh (Fir'awn)",
+          "Abu Lahab",
+          "Prophet Salih"
         ],
-        "answer": "Qarun"
+        "answer": "Samiri"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Arrogance over wealth and refusing charity",
-          "Forging a golden idol from melted jewelry",
-          "Declaring divinity over a powerful kingdom",
-          "Persecuting early believers in Makkah",
-          "Leading a campaign to destroy the Sacred House"
+          "Created a golden calf for worship",
+          "Built a tower reaching the heavens",
+          "Challenged Egypt's sorcerers",
+          "Led an army with flying beasts",
+          "Split the moon as proof of prophethood"
         ],
-        "answer": "Arrogance over wealth and refusing charity"
+        "answer": "Created a golden calf for worship"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Treasures whose keys burdened many strong men",
-          "A golden calf that produced sound",
-          "A glorious throne from a distant land",
-          "A trench filled with blazing fire",
-          "A mighty army of war elephants"
+          "The golden calf",
+          "A staff that turned into a serpent",
+          "A burning bush on a mountain",
+          "An ark resting on a peak",
+          "A trench filled with blazing fire"
         ],
-        "answer": "Treasures whose keys burdened many strong men"
+        "answer": "The golden calf"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Swallowed by the earth along with the dwelling",
-          "Drowned in the sea with an army",
-          "Burned alive in a pit of fire",
-          "Destroyed by a howling, raging wind",
-          "Struck down by a single mighty blast"
+          "Exiled, forbidden from being touched or touching others",
+          "Drowned in the sea along with an army",
+          "Burned alive for rejecting faith",
+          "Struck down by a violent, roaring wind",
+          "Forgiven and raised to a high station"
         ],
-        "answer": "Swallowed by the earth along with the dwelling"
+        "answer": "Exiled, forbidden from being touched or touching others"
       }
     },
-    "verseRef": "28:79",
-    "arabic": "فَخَرَجَ عَلَىٰ قَوْمِهِۦ فِى زِينَتِهِۦ ۖ قَالَ ٱلَّذِينَ يُرِيدُونَ ٱلْحَيَوٰةَ ٱلدُّنْيَا يَـٰلَيْتَ لَنَا مِثْلَ مَآ أُوتِىَ قَـٰرُونُ إِنَّهُۥ لَذُو حَظٍّ عَظِيمٍۢ",
-    "verse": "So he came out before his people in his adornment. Those who desired the worldly life said, \"Oh, would that we had like what was given to Qārūn. Indeed, he is one of great fortune.\" (28:79)"
+    "verseRef": "20:85",
+    "arabic": "قَالَ فَإِنَّا قَدْ فَتَنَّا قَوْمَكَ مِنۢ بَعْدِكَ وَأَضَلَّهُمُ ٱلسَّامِرِىُّ",
+    "verse": "[Allāh] said, \"But indeed, We have tried your people after you [departed], and the Sāmirī has led them astray.\" (20:85)"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,32 +1,29 @@
 {
-  "date": "2026-09-05",
+  "date": "2026-09-06",
   "puzzle": {
-    "verseRef": "14:41",
-    "reference": "Surah Ibrahim (14:41)",
+    "verseRef": "8:61",
+    "reference": "Surah Al-Anfal (8:61)",
     "segments": [
-      "رَبَّنَا",
-      "اغْفِرْ لِي",
-      "وَلِوَالِدَيَّ",
-      "وَلِلْمُؤْمِنِينَ",
-      "يَوْمَ يَقُومُ الْحِسَابُ"
+      "وَإِن جَنَحُوا لِلسَّلْمِ",
+      "فَاجْنَحْ لَهَا",
+      "وَتَوَكَّلْ عَلَى اللَّهِ",
+      "إِنَّهُ هُوَ السَّمِيعُ الْعَلِيمُ"
     ],
     "translations": [
-      "Our Lord Forgive",
-      "me and my parents",
-      "and the believers (on) the Day",
-      "will (be) established",
-      "the account"
+      "And if they incline to peace",
+      "then you (also) incline to it and put (your) trust",
+      "in Allah Indeed",
+      "He (is) All-Hearer All-Knower"
     ],
-    "hint": "A famous prophetic du'a from Ibrahim (Abraham) seeking forgiveness for himself, his parents, and all believers on the Day of Judgment.",
-    "arabic": "رَبَّنَا ٱغْفِرْ لِى وَلِوَٰلِدَىَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ ٱلْحِسَابُ",
+    "hint": "A divine instruction on embracing peace and placing full trust in Allah, even in times of conflict.",
+    "arabic": "۞ وَإِن جَنَحُوا۟ لِلسَّلْمِ فَٱجْنَحْ لَهَا وَتَوَكَّلْ عَلَى ٱللَّهِ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
     "words": [
-      "رَبَّنَا ٱغْفِرْ",
-      "لِى وَلِوَٰلِدَىَّ",
-      "وَلِلْمُؤْمِنِينَ يَوْمَ",
-      "يَقُومُ",
-      "ٱلْحِسَابُ"
+      "۞ وَإِن جَنَحُوا۟ لِلسَّلْمِ",
+      "فَٱجْنَحْ لَهَا وَتَوَكَّلْ",
+      "عَلَى ٱللَّهِ ۚ إِنَّهُۥ",
+      "هُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ"
     ],
-    "verseEn": "Our Lord, forgive me and my parents and the believers the Day the account is established.\""
+    "verseEn": "And if they incline to peace, then incline to it [also] and rely upon Allāh. Indeed, it is He who is the Hearing, the Knowing."
   },
   "generated": true,
   "model": "auto (chain)"
