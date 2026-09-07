@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-06",
+  "date": "2026-09-07",
   "puzzle": {
-    "verseRef": "8:61",
-    "reference": "Surah Al-Anfal (8:61)",
+    "verseRef": "4:31",
+    "reference": "An-Nisa (4:31)",
     "segments": [
-      "وَإِن جَنَحُوا لِلسَّلْمِ",
-      "فَاجْنَحْ لَهَا",
-      "وَتَوَكَّلْ عَلَى اللَّهِ",
-      "إِنَّهُ هُوَ السَّمِيعُ الْعَلِيمُ"
+      "words 1-3",
+      "words 4-6",
+      "words 7-9",
+      "words 10-12"
     ],
     "translations": [
-      "And if they incline to peace",
-      "then you (also) incline to it and put (your) trust",
-      "in Allah Indeed",
-      "He (is) All-Hearer All-Knower"
+      "If you avoid great (sins)",
+      "(of) what you are forbidden from [it]",
+      "We will remove from you your evil deeds",
+      "and We will admit you (to) an entrance noble"
     ],
-    "hint": "A divine instruction on embracing peace and placing full trust in Allah, even in times of conflict.",
-    "arabic": "۞ وَإِن جَنَحُوا۟ لِلسَّلْمِ فَٱجْنَحْ لَهَا وَتَوَكَّلْ عَلَى ٱللَّهِ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
+    "hint": "This verse promises forgiveness and an honorable entry for those who abstain from major sins.",
+    "arabic": "إِن تَجْتَنِبُوا۟ كَبَآئِرَ مَا تُنْهَوْنَ عَنْهُ نُكَفِّرْ عَنكُمْ سَيِّـَٔاتِكُمْ وَنُدْخِلْكُم مُّدْخَلًۭا كَرِيمًۭا",
     "words": [
-      "۞ وَإِن جَنَحُوا۟ لِلسَّلْمِ",
-      "فَٱجْنَحْ لَهَا وَتَوَكَّلْ",
-      "عَلَى ٱللَّهِ ۚ إِنَّهُۥ",
-      "هُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ"
+      "إِن تَجْتَنِبُوا۟ كَبَآئِرَ",
+      "مَا تُنْهَوْنَ عَنْهُ",
+      "نُكَفِّرْ عَنكُمْ سَيِّـَٔاتِكُمْ",
+      "وَنُدْخِلْكُم مُّدْخَلًۭا كَرِيمًۭا"
     ],
-    "verseEn": "And if they incline to peace, then incline to it [also] and rely upon Allāh. Indeed, it is He who is the Hearing, the Knowing."
+    "verseEn": "If you avoid the major sins which you are forbidden, We will remove from you your lesser sins and admit you to a noble entrance [into Paradise]."
   },
   "generated": true,
   "model": "auto (chain)"
