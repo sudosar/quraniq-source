@@ -1,29 +1,32 @@
 {
-  "date": "2026-09-07",
+  "date": "2026-09-08",
   "puzzle": {
-    "verseRef": "4:31",
-    "reference": "An-Nisa (4:31)",
+    "verseRef": "6:79",
+    "reference": "Surah Al-An'am (6:79)",
     "segments": [
-      "words 1-3",
-      "words 4-6",
-      "words 7-9",
-      "words 10-12"
+      "إِنِّي وَجَّهْتُ وَجْهِيَ",
+      "لِلَّذِي فَطَرَ السَّمَاوَاتِ",
+      "وَالْأَرْضَ حَنِيفًا",
+      "وَمَا أَنَا",
+      "مِنَ الْمُشْرِكِينَ"
     ],
     "translations": [
-      "If you avoid great (sins)",
-      "(of) what you are forbidden from [it]",
-      "We will remove from you your evil deeds",
-      "and We will admit you (to) an entrance noble"
+      "Indeed, I [I] have turned my face",
+      "to the One Who created the heavens",
+      "and the earth (as) a true monotheist",
+      "and not I (am)",
+      "of the polytheists"
     ],
-    "hint": "This verse promises forgiveness and an honorable entry for those who abstain from major sins.",
-    "arabic": "إِن تَجْتَنِبُوا۟ كَبَآئِرَ مَا تُنْهَوْنَ عَنْهُ نُكَفِّرْ عَنكُمْ سَيِّـَٔاتِكُمْ وَنُدْخِلْكُم مُّدْخَلًۭا كَرِيمًۭا",
+    "hint": "Prophet Ibrahim's (Abraham's) declaration of pure monotheism — a famous statement recited by Muslims worldwide about turning sincerely to Allah alone.",
+    "arabic": "إِنِّى وَجَّهْتُ وَجْهِىَ لِلَّذِى فَطَرَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ حَنِيفًۭا ۖ وَمَآ أَنَا۠ مِنَ ٱلْمُشْرِكِينَ",
     "words": [
-      "إِن تَجْتَنِبُوا۟ كَبَآئِرَ",
-      "مَا تُنْهَوْنَ عَنْهُ",
-      "نُكَفِّرْ عَنكُمْ سَيِّـَٔاتِكُمْ",
-      "وَنُدْخِلْكُم مُّدْخَلًۭا كَرِيمًۭا"
+      "إِنِّى وَجَّهْتُ وَجْهِىَ",
+      "لِلَّذِى فَطَرَ ٱلسَّمَـٰوَٰتِ",
+      "وَٱلْأَرْضَ حَنِيفًۭا ۖ",
+      "وَمَآ أَنَا۠",
+      "مِنَ ٱلْمُشْرِكِينَ"
     ],
-    "verseEn": "If you avoid the major sins which you are forbidden, We will remove from you your lesser sins and admit you to a noble entrance [into Paradise]."
+    "verseEn": "Indeed, I have turned my face [i.e., self] toward He who created the heavens and the earth, inclining toward truth, and I am not of those who associate others with Allāh.\""
   },
   "generated": true,
   "model": "auto (chain)"
