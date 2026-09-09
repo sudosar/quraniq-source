@@ -1,32 +1,35 @@
 {
-  "date": "2026-09-08",
+  "date": "2026-09-09",
   "puzzle": {
-    "verseRef": "6:79",
-    "reference": "Surah Al-An'am (6:79)",
+    "verseRef": "12:87",
+    "reference": "Surah Yusuf (12:87)",
     "segments": [
-      "إِنِّي وَجَّهْتُ وَجْهِيَ",
-      "لِلَّذِي فَطَرَ السَّمَاوَاتِ",
-      "وَالْأَرْضَ حَنِيفًا",
-      "وَمَا أَنَا",
-      "مِنَ الْمُشْرِكِينَ"
+      "وَلَا تَيْأَسُوا",
+      "مِنْ رَوْحِ اللَّهِ",
+      "إِنَّهُ",
+      "لَا يَيْأَسُ",
+      "مِنْ رَوْحِ اللَّهِ",
+      "إِلَّا الْقَوْمُ الْكَافِرُونَ"
     ],
     "translations": [
-      "Indeed, I [I] have turned my face",
-      "to the One Who created the heavens",
-      "and the earth (as) a true monotheist",
-      "and not I (am)",
-      "of the polytheists"
+      "O my sons Go and inquire about",
+      "Yusuf and his brother and not despair",
+      "of (the) Mercy of Allah (the) Mercy of Allah",
+      "Indeed none despairs",
+      "of (the) Mercy of Allah (the) Mercy of Allah",
+      "except the people the disbelievers"
     ],
-    "hint": "Prophet Ibrahim's (Abraham's) declaration of pure monotheism — a famous statement recited by Muslims worldwide about turning sincerely to Allah alone.",
-    "arabic": "إِنِّى وَجَّهْتُ وَجْهِىَ لِلَّذِى فَطَرَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ حَنِيفًۭا ۖ وَمَآ أَنَا۠ مِنَ ٱلْمُشْرِكِينَ",
+    "hint": "A powerful message of hope from Prophet Yaqub (Jacob) to his sons — never lose hope in Allah's mercy.",
+    "arabic": "يَـٰبَنِىَّ ٱذْهَبُوا۟ فَتَحَسَّسُوا۟ مِن يُوسُفَ وَأَخِيهِ وَلَا تَا۟يْـَٔسُوا۟ مِن رَّوْحِ ٱللَّهِ ۖ إِنَّهُۥ لَا يَا۟يْـَٔسُ مِن رَّوْحِ ٱللَّهِ إِلَّا ٱلْقَوْمُ ٱلْكَـٰفِرُونَ",
     "words": [
-      "إِنِّى وَجَّهْتُ وَجْهِىَ",
-      "لِلَّذِى فَطَرَ ٱلسَّمَـٰوَٰتِ",
-      "وَٱلْأَرْضَ حَنِيفًۭا ۖ",
-      "وَمَآ أَنَا۠",
-      "مِنَ ٱلْمُشْرِكِينَ"
+      "يَـٰبَنِىَّ ٱذْهَبُوا۟ فَتَحَسَّسُوا۟ مِن",
+      "يُوسُفَ وَأَخِيهِ وَلَا تَا۟يْـَٔسُوا۟",
+      "مِن رَّوْحِ ٱللَّهِ ۖ",
+      "إِنَّهُۥ لَا يَا۟يْـَٔسُ",
+      "مِن رَّوْحِ ٱللَّهِ",
+      "إِلَّا ٱلْقَوْمُ ٱلْكَـٰفِرُونَ"
     ],
-    "verseEn": "Indeed, I have turned my face [i.e., self] toward He who created the heavens and the earth, inclining toward truth, and I am not of those who associate others with Allāh.\""
+    "verseEn": "O my sons, go and find out about Joseph and his brother and despair not of relief from Allāh. Indeed, no one despairs of relief from Allāh except the disbelieving people.\""
   },
   "generated": true,
   "model": "auto (chain)"

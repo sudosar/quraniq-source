@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-08",
+  "date": "2026-09-09",
   "puzzle": {
-    "word": "جزاء",
-    "display": "جَزَاء",
-    "hint": "A just return from Allah — what each soul receives in proportion to what they did",
-    "verseRef": "56:24",
-    "arabicVerse": "جَزَآءًۢ بِمَا كَانُوا۟ يَعْمَلُونَ",
-    "verse": "56:24 - As reward for what they used to do."
+    "word": "مقام",
+    "display": "مَقَام",
+    "hint": "A station or standing — especially before the Divine — that the mindful fear",
+    "verseRef": "55:46",
+    "arabicVerse": "وَلِمَنْ خَافَ مَقَامَ رَبِّهِۦ جَنَّتَانِ",
+    "verse": "55:46 - But for he who has feared the position of his Lord are two gardens -"
   },
   "generated": true,
   "model": "auto (chain)"
