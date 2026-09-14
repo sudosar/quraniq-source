@@ -1,35 +1,32 @@
 {
-  "date": "2026-09-09",
+  "date": "2026-09-14",
   "puzzle": {
-    "verseRef": "12:87",
-    "reference": "Surah Yusuf (12:87)",
+    "verseRef": "33:5",
+    "reference": "Surah Al-Ahzab (33:5)",
     "segments": [
-      "وَلَا تَيْأَسُوا",
-      "مِنْ رَوْحِ اللَّهِ",
-      "إِنَّهُ",
-      "لَا يَيْأَسُ",
-      "مِنْ رَوْحِ اللَّهِ",
-      "إِلَّا الْقَوْمُ الْكَافِرُونَ"
+      "إِنَّ اللَّهَ وَمَلَائِكَتَهُ",
+      "يُصَلُّونَ عَلَى النَّبِيِّ",
+      "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+      "صَلُّوا عَلَيْهِ",
+      "وَسَلِّمُوا تَسْلِيمًا"
     ],
     "translations": [
-      "O my sons Go and inquire about",
-      "Yusuf and his brother and not despair",
-      "of (the) Mercy of Allah (the) Mercy of Allah",
-      "Indeed none despairs",
-      "of (the) Mercy of Allah (the) Mercy of Allah",
-      "except the people the disbelievers"
+      "Call them by their fathers it (is) more just near Allah",
+      "But if not you know their fathers  then (they are) your brothers in",
+      "[the] religion and your friends But not is upon you any blame in what",
+      "you made a mistake in it but what intended",
+      "your hearts And Allah And Allah (is) Oft-Forgiving Most Merciful"
     ],
-    "hint": "A powerful message of hope from Prophet Yaqub (Jacob) to his sons — never lose hope in Allah's mercy.",
-    "arabic": "يَـٰبَنِىَّ ٱذْهَبُوا۟ فَتَحَسَّسُوا۟ مِن يُوسُفَ وَأَخِيهِ وَلَا تَا۟يْـَٔسُوا۟ مِن رَّوْحِ ٱللَّهِ ۖ إِنَّهُۥ لَا يَا۟يْـَٔسُ مِن رَّوْحِ ٱللَّهِ إِلَّا ٱلْقَوْمُ ٱلْكَـٰفِرُونَ",
+    "hint": "A beloved verse instructing believers to send peace and blessings upon the Prophet ﷺ — the source of the well-known 'Salat upon Ibrahim' recited in every prayer.",
+    "arabic": "ٱدْعُوهُمْ لِـَٔابَآئِهِمْ هُوَ أَقْسَطُ عِندَ ٱللَّهِ ۚ فَإِن لَّمْ تَعْلَمُوٓا۟ ءَابَآءَهُمْ فَإِخْوَٰنُكُمْ فِى ٱلدِّينِ وَمَوَٰلِيكُمْ ۚ وَلَيْسَ عَلَيْكُمْ جُنَاحٌۭ فِيمَآ أَخْطَأْتُم بِهِۦ وَلَـٰكِن مَّا تَعَمَّدَتْ قُلُوبُكُمْ ۚ وَكَانَ ٱللَّهُ غَفُورًۭا رَّحِيمًا",
     "words": [
-      "يَـٰبَنِىَّ ٱذْهَبُوا۟ فَتَحَسَّسُوا۟ مِن",
-      "يُوسُفَ وَأَخِيهِ وَلَا تَا۟يْـَٔسُوا۟",
-      "مِن رَّوْحِ ٱللَّهِ ۖ",
-      "إِنَّهُۥ لَا يَا۟يْـَٔسُ",
-      "مِن رَّوْحِ ٱللَّهِ",
-      "إِلَّا ٱلْقَوْمُ ٱلْكَـٰفِرُونَ"
+      "ٱدْعُوهُمْ لِـَٔابَآئِهِمْ هُوَ أَقْسَطُ عِندَ ٱللَّهِ ۚ",
+      "فَإِن لَّمْ تَعْلَمُوٓا۟ ءَابَآءَهُمْ فَإِخْوَٰنُكُمْ فِى",
+      "ٱلدِّينِ وَمَوَٰلِيكُمْ ۚ وَلَيْسَ عَلَيْكُمْ جُنَاحٌۭ فِيمَآ",
+      "أَخْطَأْتُم بِهِۦ وَلَـٰكِن مَّا تَعَمَّدَتْ",
+      "قُلُوبُكُمْ ۚ وَكَانَ ٱللَّهُ غَفُورًۭا رَّحِيمًا"
     ],
-    "verseEn": "O my sons, go and find out about Joseph and his brother and despair not of relief from Allāh. Indeed, no one despairs of relief from Allāh except the disbelieving people.\""
+    "verseEn": "Call them by [the names of] their fathers; it is more just in the sight of Allāh. But if you do not know their fathers - then they are [still] your brothers in religion and those entrusted to you. And there is no blame upon you for that in which you have erred but [only for] what your hearts intended. And ever is Allāh Forgiving and Merciful."
   },
   "generated": true,
   "model": "auto (chain)"

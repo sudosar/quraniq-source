@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-09",
+  "date": "2026-09-14",
   "puzzle": {
-    "word": "مقام",
-    "display": "مَقَام",
-    "hint": "A station or standing — especially before the Divine — that the mindful fear",
-    "verseRef": "55:46",
-    "arabicVerse": "وَلِمَنْ خَافَ مَقَامَ رَبِّهِۦ جَنَّتَانِ",
-    "verse": "55:46 - But for he who has feared the position of his Lord are two gardens -"
+    "word": "حطمة",
+    "display": "حُطَمَة",
+    "hint": "A fearsome name for Hellfire, meaning that which crushes and utterly destroys everything cast into it",
+    "verseRef": "104:5",
+    "arabicVerse": "وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ",
+    "verse": "104:5 - And what can make you know what is the Crusher?"
   },
   "generated": true,
   "model": "auto (chain)"
