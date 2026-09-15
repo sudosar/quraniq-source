@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-14",
+  "date": "2026-09-15",
   "puzzle": {
-    "word": "حطمة",
-    "display": "حُطَمَة",
-    "hint": "A fearsome name for Hellfire, meaning that which crushes and utterly destroys everything cast into it",
-    "verseRef": "104:5",
-    "arabicVerse": "وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ",
-    "verse": "104:5 - And what can make you know what is the Crusher?"
+    "word": "بأس",
+    "display": "بَأْس",
+    "hint": "The fierce intensity of Allah's might in battle, of which He is described as أشد (most extreme) against the disbelievers",
+    "verseRef": "4:84",
+    "arabicVerse": "فَقَـٰتِلْ فِى سَبِيلِ ٱللَّهِ لَا تُكَلَّفُ إِلَّا نَفْسَكَ ۚ وَحَرِّضِ ٱلْمُؤْمِنِينَ ۖ عَسَى ٱللَّهُ أَن يَكُفَّ بَأْسَ ٱلَّذِينَ كَفَرُوا۟ ۚ وَٱللَّهُ أَشَدُّ بَأْسًۭا وَأَشَدُّ تَنكِيلًۭا",
+    "verse": "4:84 - So fight, [O Muḥammad], in the cause of Allāh; you are not held responsible except for yourself. And encourage the believers [to join you] that perhaps Allāh will restrain the [military] might of those who disbelieve. And Allāh is greater in might and stronger in [exemplary] punishment."
   },
   "generated": true,
   "model": "auto (chain)"

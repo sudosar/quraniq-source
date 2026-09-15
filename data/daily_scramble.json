@@ -1,32 +1,32 @@
 {
-  "date": "2026-09-14",
+  "date": "2026-09-15",
   "puzzle": {
-    "verseRef": "33:5",
-    "reference": "Surah Al-Ahzab (33:5)",
+    "verseRef": "30:60",
+    "reference": "Ar-Rum (30:60)",
     "segments": [
-      "إِنَّ اللَّهَ وَمَلَائِكَتَهُ",
-      "يُصَلُّونَ عَلَى النَّبِيِّ",
-      "يَا أَيُّهَا الَّذِينَ آمَنُوا",
-      "صَلُّوا عَلَيْهِ",
-      "وَسَلِّمُوا تَسْلِيمًا"
+      "فَاصْبِرْ",
+      "إِنَّ وَعْدَ اللَّهِ",
+      "حَقٌّ",
+      "وَلَا يَسْتَخِفَّنَّكَ",
+      "الَّذِينَ لَا يُوقِنُونَ"
     ],
     "translations": [
-      "Call them by their fathers it (is) more just near Allah",
-      "But if not you know their fathers  then (they are) your brothers in",
-      "[the] religion and your friends But not is upon you any blame in what",
-      "you made a mistake in it but what intended",
-      "your hearts And Allah And Allah (is) Oft-Forgiving Most Merciful"
+      "So be patient Indeed",
+      "(the) Promise (of) Allah",
+      "(is) true And (let) not",
+      "take you in light estimation those who",
+      "(are) not certain in faith"
     ],
-    "hint": "A beloved verse instructing believers to send peace and blessings upon the Prophet ﷺ — the source of the well-known 'Salat upon Ibrahim' recited in every prayer.",
-    "arabic": "ٱدْعُوهُمْ لِـَٔابَآئِهِمْ هُوَ أَقْسَطُ عِندَ ٱللَّهِ ۚ فَإِن لَّمْ تَعْلَمُوٓا۟ ءَابَآءَهُمْ فَإِخْوَٰنُكُمْ فِى ٱلدِّينِ وَمَوَٰلِيكُمْ ۚ وَلَيْسَ عَلَيْكُمْ جُنَاحٌۭ فِيمَآ أَخْطَأْتُم بِهِۦ وَلَـٰكِن مَّا تَعَمَّدَتْ قُلُوبُكُمْ ۚ وَكَانَ ٱللَّهُ غَفُورًۭا رَّحِيمًا",
+    "hint": "A call to patience and steadfastness, affirming that Allah's promise is certainly true and urging the believer not to be shaken by disbelievers.",
+    "arabic": "فَٱصْبِرْ إِنَّ وَعْدَ ٱللَّهِ حَقٌّۭ ۖ وَلَا يَسْتَخِفَّنَّكَ ٱلَّذِينَ لَا يُوقِنُونَ",
     "words": [
-      "ٱدْعُوهُمْ لِـَٔابَآئِهِمْ هُوَ أَقْسَطُ عِندَ ٱللَّهِ ۚ",
-      "فَإِن لَّمْ تَعْلَمُوٓا۟ ءَابَآءَهُمْ فَإِخْوَٰنُكُمْ فِى",
-      "ٱلدِّينِ وَمَوَٰلِيكُمْ ۚ وَلَيْسَ عَلَيْكُمْ جُنَاحٌۭ فِيمَآ",
-      "أَخْطَأْتُم بِهِۦ وَلَـٰكِن مَّا تَعَمَّدَتْ",
-      "قُلُوبُكُمْ ۚ وَكَانَ ٱللَّهُ غَفُورًۭا رَّحِيمًا"
+      "فَٱصْبِرْ إِنَّ",
+      "وَعْدَ ٱللَّهِ",
+      "حَقٌّۭ ۖ وَلَا",
+      "يَسْتَخِفَّنَّكَ ٱلَّذِينَ",
+      "لَا يُوقِنُونَ"
     ],
-    "verseEn": "Call them by [the names of] their fathers; it is more just in the sight of Allāh. But if you do not know their fathers - then they are [still] your brothers in religion and those entrusted to you. And there is no blame upon you for that in which you have erred but [only for] what your hearts intended. And ever is Allāh Forgiving and Merciful."
+    "verseEn": "So be patient. Indeed, the promise of Allāh is truth. And let them not disquiet you who are not certain [in faith]."
   },
   "generated": true,
   "model": "auto (chain)"

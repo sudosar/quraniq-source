@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-14",
+  "date": "2026-09-15",
   "puzzle": {
-    "title": "The Voice of Wisdom in the Shadows",
-    "intro": "A figure from ancient times, known for profound insight, speaks to you across the centuries. This individual never claimed prophethood, yet divine wisdom flowed through their words. A parent who left an eternal legacy of guidance, their advice remains preserved in the hearts of millions, recited and reflected upon to this day.",
+    "title": "The hospitality that brought fear",
+    "intro": "In a city consumed by wickedness, a faithful servant received unexpected visitors one day. Concerned for their safety, this individual offered protection, but the city's people demanded something shameful. Warned of an impending doom, the servant fled with family under cover of darkness, leaving behind a city marked for destruction. Who is this lone believer?",
     "clues": [
-      "I received a divine gift that set me apart - a wisdom so deep it became my defining trait throughout history.",
-      "I was not a messenger nor an angel - just a soul blessed with deep understanding and insight into the world.",
-      "My closest bond was with my child, and through this bond, my most lasting message was delivered.",
-      "I urged gratitude to the One who gave me everything, and warned against pride and arrogance.",
-      "I taught about the weight of even a mustard seed's worth of deeds, and the importance of lowering one's voice in humility.",
-      "A chapter in the Quran bears my name, where my counsel to my beloved son is preserved for all eternity."
+      "I was sent as a messenger to a people who had engaged in shameful acts.",
+      "Unexpected visitors came to my home, and I was more worried for their safety than my own.",
+      "My people demanded to see my guests for wicked intentions, and I tried to reason with them.",
+      "My visitors revealed themselves as angels and commanded me to take my family and leave in the night.",
+      "My wife did not heed the call to escape and faced the same destruction as my people.",
+      "My city was overturned with a rain of stones of layered clay, its highest parts brought lowest."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Luqman the Wise",
-          "Dhul-Kifl the Devoted",
-          "Khidr the Wise Wanderer",
-          "Harut the Angel in Babel",
-          "Marut the Angel in Babel"
+          "Prophet Lut",
+          "Prophet Musa",
+          "Prophet Ibrahim",
+          "Prophet Nuh",
+          "Prophet Hud"
         ],
-        "answer": "Luqman the Wise"
+        "answer": "Prophet Lut"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Being tested with patience through illness",
-          "Granting wisdom and advising one's child",
-          "Being cast into a great fire",
-          "Being lifted to the heavens alive",
-          "Building a great vessel to escape destruction"
+          "The demand of my people to approach my guests wickedly",
+          "The parting of the sea to escape a tyrant",
+          "The building of a great ark amid mockery",
+          "The sacrifice of my son in a test of faith",
+          "The experience of being swallowed by a great fish"
         ],
-        "answer": "Granting wisdom and advising one's child"
+        "answer": "The demand of my people to approach my guests wickedly"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A sacred house of worship",
-          "A staff that became a serpent",
-          "Words of timeless wisdom addressed to one's son",
-          "A magnificent throne of glass",
-          "A garden overtaken by ruin"
+          "The overturned city of my people",
+          "The mountain where I received divine speech",
+          "The ark that sailed through a great flood",
+          "The she-camel that emerged from the rock",
+          "The garden with a hidden righteous visitor"
         ],
-        "answer": "Words of timeless wisdom addressed to one's son"
+        "answer": "The overturned city of my people"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Granted wisdom and commanded gratitude to Allah",
-          "Became ruler of jinn, humans, and wind",
-          "Was taken up alive to the heavens",
-          "Swallowed by a great whale and emerged renewed",
-          "Cast into a well by jealous brothers"
+          "I was saved with my family before my city was overturned",
+          "I led my people to freedom across the sea",
+          "I built a great ark and survived a mighty flood",
+          "I was given dominion over the winds and jinn",
+          "I patiently endured suffering and was rewarded with family"
         ],
-        "answer": "Granted wisdom and commanded gratitude to Allah"
+        "answer": "I was saved with my family before my city was overturned"
       }
     },
-    "verseRef": "31:12",
-    "arabic": "وَلَقَدْ ءَاتَيْنَا لُقْمَـٰنَ ٱلْحِكْمَةَ أَنِ ٱشْكُرْ لِلَّهِ ۚ وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِۦ ۖ وَمَن كَفَرَ فَإِنَّ ٱللَّهَ غَنِىٌّ حَمِيدٌۭ",
-    "verse": "And We had certainly given Luqmān wisdom [and said], \"Be grateful to Allāh.\" And whoever is grateful is grateful for [the benefit of] himself. And whoever denies [His favor] - then indeed, Allāh is Free of need and Praiseworthy. (31:12)"
+    "verseRef": "11:80",
+    "arabic": "قَالَ لَوْ أَنَّ لِى بِكُمْ قُوَّةً أَوْ ءَاوِىٓ إِلَىٰ رُكْنٍۢ شَدِيدٍۢ",
+    "verse": "He said, \"If only I had against you some power or could take refuge in a strong support.\" (11:80)"
   },
   "generated": true,
   "model": "auto (chain)"
