@@ -1,32 +1,32 @@
 {
-  "date": "2026-09-15",
+  "date": "2026-09-16",
   "puzzle": {
-    "verseRef": "30:60",
-    "reference": "Ar-Rum (30:60)",
+    "verseRef": "39:14",
+    "reference": "Surah Az-Zumar (39:14)",
     "segments": [
-      "فَاصْبِرْ",
-      "إِنَّ وَعْدَ اللَّهِ",
-      "حَقٌّ",
-      "وَلَا يَسْتَخِفَّنَّكَ",
-      "الَّذِينَ لَا يُوقِنُونَ"
+      "قُلِ اللَّهَ",
+      "أَعْبُدُ",
+      "مُخْلِصًا",
+      "لَّهُ",
+      "دِينِي"
     ],
     "translations": [
-      "So be patient Indeed",
-      "(the) Promise (of) Allah",
-      "(is) true And (let) not",
-      "take you in light estimation those who",
-      "(are) not certain in faith"
+      "Say I worship Allah",
+      "I worship Allah",
+      "(being) sincere",
+      "to Him",
+      "(in) my religion"
     ],
-    "hint": "A call to patience and steadfastness, affirming that Allah's promise is certainly true and urging the believer not to be shaken by disbelievers.",
-    "arabic": "فَٱصْبِرْ إِنَّ وَعْدَ ٱللَّهِ حَقٌّۭ ۖ وَلَا يَسْتَخِفَّنَّكَ ٱلَّذِينَ لَا يُوقِنُونَ",
+    "hint": "This verse emphasizes ikhlas (pure sincerity) in worship — dedicating one's devotion entirely and exclusively to Allah alone.",
+    "arabic": "قُلِ ٱللَّهَ أَعْبُدُ مُخْلِصًۭا لَّهُۥ دِينِى",
     "words": [
-      "فَٱصْبِرْ إِنَّ",
-      "وَعْدَ ٱللَّهِ",
-      "حَقٌّۭ ۖ وَلَا",
-      "يَسْتَخِفَّنَّكَ ٱلَّذِينَ",
-      "لَا يُوقِنُونَ"
+      "قُلِ ٱللَّهَ",
+      "أَعْبُدُ",
+      "مُخْلِصًۭا",
+      "لَّهُۥ",
+      "دِينِى"
     ],
-    "verseEn": "So be patient. Indeed, the promise of Allāh is truth. And let them not disquiet you who are not certain [in faith]."
+    "verseEn": "Say, \"Allāh [alone] do I worship, sincere to Him in my religion,"
   },
   "generated": true,
   "model": "auto (chain)"
