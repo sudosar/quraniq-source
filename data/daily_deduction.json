@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-16",
+  "date": "2026-09-17",
   "puzzle": {
-    "title": "The Reign Tested by a River",
-    "intro": "A leader rises by divine decree in ancient times. This ruler's reign began not with glory but with a test by flowing waters. A formidable foe would challenge their army, and the outcome would reshape the course of history. Can you guess who this figure is?",
+    "title": "Under the Date Palm's Shade",
+    "intro": "A tale unfolds of a soul set apart before birth, nurtured within sacred walls, and chosen to bear a sign the world had never witnessed. When accusation arose from every direction, a voice came from the most unlikely of places to silence all doubt. Can you discover who walked beneath the date palm's shade?",
     "clues": [
-      "I was chosen to lead a great nation, but the appointment came from above, not from the people.",
-      "A sacred object was returned to my people as a sign confirming my rule.",
-      "I tested my soldiers with a river — most drank from it and failed.",
-      "A formidable warrior named Jalut came against us with a vast army.",
-      "A young man from my own ranks, armed with nothing but faith, struck down Jalut.",
-      "After our victory, the kingdom was eventually entrusted to that young champion."
+      "I was dedicated to the service of the Almighty before I ever drew my first breath, a vow made by the one who carried me.",
+      "I grew up under the watchful care of a righteous guardian within the sacred chambers of a place of worship.",
+      "Whenever my guardian came to my chamber, he found with me provisions from seasons that should not have been.",
+      "I was given glad tidings of a son, though my circumstances left no room for what was promised.",
+      "I withdrew to a distant place, and there a date palm offered me shade while a stream flowed beneath.",
+      "When accusation came and questions surrounded me, I pointed to my newborn child — and he spoke from the cradle to silence every doubt."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Talut (Saul)",
-          "Jalut (Goliath)",
-          "Prophet Dawud",
-          "Prophet Musa",
-          "Prophet Harun"
+          "Maryam",
+          "Sarah",
+          "Hawwa",
+          "Umm Musa",
+          "The Wife of Nuh"
         ],
-        "answer": "Talut (Saul)"
+        "answer": "Maryam"
       },
       "trial": {
-        "label": "Trial/Event",
+        "label": "Trial / Event",
         "options": [
-          "Tested with a river",
-          "Thrown into a blazing fire",
-          "Commanded to sacrifice a son",
-          "Ordered to build a great ark",
-          "Swallowed by a great fish"
+          "Giving birth to a miraculous son in isolation",
+          "Being cast into a blazing fire by idolaters",
+          "Surviving the great flood with a chosen few",
+          "Being separated from an infant cast into the river",
+          "Confronting the mighty ruler of Egypt"
         ],
-        "answer": "Tested with a river"
+        "answer": "Giving birth to a miraculous son in isolation"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Ark of the Covenant",
-          "A staff that split the sea",
-          "A sling and smooth stones",
-          "A golden calf idol",
-          "A magnificent throne"
+          "A date palm and a flowing stream beneath it",
+          "A mighty ark upon towering waves",
+          "A staff that split a great sea in two",
+          "A blazing fire meant to consume a faithful soul",
+          "A golden throne adorned with precious stones"
         ],
-        "answer": "The Ark of the Covenant"
+        "answer": "A date palm and a flowing stream beneath it"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Kingdom transferred to the young champion (Dawud)",
-          "Drowned with the army in the sea",
-          "Pulled safely from a raging fire",
-          "Swallowed by the earth with treasures",
-          "Burned alive in a flaming ditch"
+          "Honored as the most exalted of all women",
+          "Reunited with a beloved child after long separation",
+          "Led an entire nation out of the bondage of a tyrant",
+          "Warned a people lost in immorality",
+          "Granted dominion over jinn, mankind, and the winds"
         ],
-        "answer": "Kingdom transferred to the young champion (Dawud)"
+        "answer": "Honored as the most exalted of all women"
       }
     },
-    "verseRef": "2:249",
-    "arabic": "فَلَمَّا فَصَلَ طَالُوتُ بِٱلْجُنُودِ قَالَ إِنَّ ٱللَّهَ مُبْتَلِيكُم بِنَهَرٍۢ فَمَن شَرِبَ مِنْهُ فَلَيْسَ مِنِّى وَمَن لَّمْ يَطْعَمْهُ فَإِنَّهُۥ مِنِّىٓ إِلَّا مَنِ ٱغْتَرَفَ غُرْفَةًۢ بِيَدِهِۦ ۚ فَشَرِبُوا۟ مِنْهُ إِلَّا قَلِيلًۭا مِّنْهُمْ ۚ فَلَمَّا جَاوَزَهُۥ هُوَ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ قَالُوا۟ لَا طَاقَةَ لَنَا ٱلْيَوْمَ بِجَالُوتَ وَجُنُودِهِۦ ۚ قَالَ ٱلَّذِينَ يَظُنُّونَ أَنَّهُم مُّلَـٰقُوا۟ ٱللَّهِ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ۗ وَٱللَّهُ مَعَ ٱلصَّـٰبِرِينَ",
-    "verse": "And when Saul went forth with the soldiers, he said, \"Indeed, Allāh will be testing you with a river. So whoever drinks from it is not of me, and whoever does not taste it is indeed of me, excepting one who takes [from it] in the hollow of his hand.\" But they drank from it, except a [very] few of them. Then when he had crossed it along with those who believed with him, they said, \"There is no power for us today against Goliath and his soldiers.\" But those who were certain that they would meet Allāh said, \"How many a small company has overcome a large company by permission of Allāh. And Allāh is with the patient.\" (2:249)"
+    "verseRef": "19:24",
+    "arabic": "فَنَادَىٰهَا مِن تَحْتِهَآ أَلَّا تَحْزَنِى قَدْ جَعَلَ رَبُّكِ تَحْتَكِ سَرِيًّۭا",
+    "verse": "But he called her from below her, \"Do not grieve; your Lord has provided beneath you a stream. (19:24)"
   },
   "generated": true,
   "model": "auto (chain)"

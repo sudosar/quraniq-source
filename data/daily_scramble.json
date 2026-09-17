@@ -1,32 +1,35 @@
 {
-  "date": "2026-09-16",
+  "date": "2026-09-17",
   "puzzle": {
-    "verseRef": "39:14",
-    "reference": "Surah Az-Zumar (39:14)",
+    "verseRef": "10:108",
+    "reference": "Surah Yunus (10:108)",
     "segments": [
-      "قُلِ اللَّهَ",
-      "أَعْبُدُ",
-      "مُخْلِصًا",
-      "لَّهُ",
-      "دِينِي"
+      "يَا أَيَّتُهَا النَّفْسُ",
+      "الْمُطْمَئِنَّةُ",
+      "ارْجِعِي إِلَى رَبِّكِ",
+      "رَاضِيَةً مَرْضِيَّةً",
+      "فَادْخُلِي فِي عِبَادِي",
+      "وَادْخُلِي جَنَّتِي"
     ],
     "translations": [
-      "Say I worship Allah",
-      "I worship Allah",
-      "(being) sincere",
-      "to Him",
-      "(in) my religion"
+      "Say O mankind O mankind Verily",
+      "has come to you the truth from your Lord",
+      "So whoever (is) guided then only (he is) guided",
+      "for his soul and whoever goes astray then only",
+      "he strays against it And I am not",
+      "And I am not over you a guardian"
     ],
-    "hint": "This verse emphasizes ikhlas (pure sincerity) in worship — dedicating one's devotion entirely and exclusively to Allah alone.",
-    "arabic": "قُلِ ٱللَّهَ أَعْبُدُ مُخْلِصًۭا لَّهُۥ دِينِى",
+    "hint": "Allah's comforting call to the soul at peace, inviting it to Paradise — a beloved verse recited at moments of farewell and hope.",
+    "arabic": "قُلْ يَـٰٓأَيُّهَا ٱلنَّاسُ قَدْ جَآءَكُمُ ٱلْحَقُّ مِن رَّبِّكُمْ ۖ فَمَنِ ٱهْتَدَىٰ فَإِنَّمَا يَهْتَدِى لِنَفْسِهِۦ ۖ وَمَن ضَلَّ فَإِنَّمَا يَضِلُّ عَلَيْهَا ۖ وَمَآ أَنَا۠ عَلَيْكُم بِوَكِيلٍۢ",
     "words": [
-      "قُلِ ٱللَّهَ",
-      "أَعْبُدُ",
-      "مُخْلِصًۭا",
-      "لَّهُۥ",
-      "دِينِى"
+      "قُلْ يَـٰٓأَيُّهَا ٱلنَّاسُ قَدْ",
+      "جَآءَكُمُ ٱلْحَقُّ مِن رَّبِّكُمْ ۖ",
+      "فَمَنِ ٱهْتَدَىٰ فَإِنَّمَا يَهْتَدِى",
+      "لِنَفْسِهِۦ ۖ وَمَن ضَلَّ فَإِنَّمَا",
+      "يَضِلُّ عَلَيْهَا ۖ وَمَآ",
+      "أَنَا۠ عَلَيْكُم بِوَكِيلٍۢ"
     ],
-    "verseEn": "Say, \"Allāh [alone] do I worship, sincere to Him in my religion,"
+    "verseEn": "Say, \"O mankind, the truth has come to you from your Lord, so whoever is guided is only guided for [the benefit of] his soul, and whoever goes astray only goes astray [in violation] against it. And I am not over you a manager.\""
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,6 +1,5 @@
 {
-  "date": "2026-09-17",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَسْمَاءُ الْكُتُبِ الْمُنَزَّلَةِ",
@@ -144,6 +143,104 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "ظلم",
+    "display": "ظُلْم",
+    "hint": "A grave wrongdoing — Allah declares in the Qur'an that He never commits this against His servants",
+    "verseRef": "5:39",
+    "arabicVerse": "فَمَن تَابَ مِنۢ بَعْدِ ظُلْمِهِۦ وَأَصْلَحَ فَإِنَّ ٱللَّهَ يَتُوبُ عَلَيْهِ ۗ إِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌ",
+    "verse": "5:39 - But whoever repents after his wrongdoing and reforms, indeed, Allāh will turn to him in forgiveness. Indeed, Allāh is Forgiving and Merciful."
+  },
+  "deduction": {
+    "title": "Under the Date Palm's Shade",
+    "intro": "A tale unfolds of a soul set apart before birth, nurtured within sacred walls, and chosen to bear a sign the world had never witnessed. When accusation arose from every direction, a voice came from the most unlikely of places to silence all doubt. Can you discover who walked beneath the date palm's shade?",
+    "clues": [
+      "I was dedicated to the service of the Almighty before I ever drew my first breath, a vow made by the one who carried me.",
+      "I grew up under the watchful care of a righteous guardian within the sacred chambers of a place of worship.",
+      "Whenever my guardian came to my chamber, he found with me provisions from seasons that should not have been.",
+      "I was given glad tidings of a son, though my circumstances left no room for what was promised.",
+      "I withdrew to a distant place, and there a date palm offered me shade while a stream flowed beneath.",
+      "When accusation came and questions surrounded me, I pointed to my newborn child — and he spoke from the cradle to silence every doubt."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Maryam",
+          "Sarah",
+          "Hawwa",
+          "Umm Musa",
+          "The Wife of Nuh"
+        ],
+        "answer": "Maryam"
+      },
+      "trial": {
+        "label": "Trial / Event",
+        "options": [
+          "Giving birth to a miraculous son in isolation",
+          "Being cast into a blazing fire by idolaters",
+          "Surviving the great flood with a chosen few",
+          "Being separated from an infant cast into the river",
+          "Confronting the mighty ruler of Egypt"
+        ],
+        "answer": "Giving birth to a miraculous son in isolation"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "A date palm and a flowing stream beneath it",
+          "A mighty ark upon towering waves",
+          "A staff that split a great sea in two",
+          "A blazing fire meant to consume a faithful soul",
+          "A golden throne adorned with precious stones"
+        ],
+        "answer": "A date palm and a flowing stream beneath it"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "Honored as the most exalted of all women",
+          "Reunited with a beloved child after long separation",
+          "Led an entire nation out of the bondage of a tyrant",
+          "Warned a people lost in immorality",
+          "Granted dominion over jinn, mankind, and the winds"
+        ],
+        "answer": "Honored as the most exalted of all women"
+      }
+    },
+    "verseRef": "19:24",
+    "arabic": "فَنَادَىٰهَا مِن تَحْتِهَآ أَلَّا تَحْزَنِى قَدْ جَعَلَ رَبُّكِ تَحْتَكِ سَرِيًّۭا",
+    "verse": "But he called her from below her, \"Do not grieve; your Lord has provided beneath you a stream. (19:24)"
+  },
+  "scramble": {
+    "verseRef": "10:108",
+    "reference": "Surah Yunus (10:108)",
+    "segments": [
+      "يَا أَيَّتُهَا النَّفْسُ",
+      "الْمُطْمَئِنَّةُ",
+      "ارْجِعِي إِلَى رَبِّكِ",
+      "رَاضِيَةً مَرْضِيَّةً",
+      "فَادْخُلِي فِي عِبَادِي",
+      "وَادْخُلِي جَنَّتِي"
+    ],
+    "translations": [
+      "Say O mankind O mankind Verily",
+      "has come to you the truth from your Lord",
+      "So whoever (is) guided then only (he is) guided",
+      "for his soul and whoever goes astray then only",
+      "he strays against it And I am not",
+      "And I am not over you a guardian"
+    ],
+    "hint": "Allah's comforting call to the soul at peace, inviting it to Paradise — a beloved verse recited at moments of farewell and hope.",
+    "arabic": "قُلْ يَـٰٓأَيُّهَا ٱلنَّاسُ قَدْ جَآءَكُمُ ٱلْحَقُّ مِن رَّبِّكُمْ ۖ فَمَنِ ٱهْتَدَىٰ فَإِنَّمَا يَهْتَدِى لِنَفْسِهِۦ ۖ وَمَن ضَلَّ فَإِنَّمَا يَضِلُّ عَلَيْهَا ۖ وَمَآ أَنَا۠ عَلَيْكُم بِوَكِيلٍۢ",
+    "words": [
+      "قُلْ يَـٰٓأَيُّهَا ٱلنَّاسُ قَدْ",
+      "جَآءَكُمُ ٱلْحَقُّ مِن رَّبِّكُمْ ۖ",
+      "فَمَنِ ٱهْتَدَىٰ فَإِنَّمَا يَهْتَدِى",
+      "لِنَفْسِهِۦ ۖ وَمَن ضَلَّ فَإِنَّمَا",
+      "يَضِلُّ عَلَيْهَا ۖ وَمَآ",
+      "أَنَا۠ عَلَيْكُم بِوَكِيلٍۢ"
+    ],
+    "verseEn": "Say, \"O mankind, the truth has come to you from your Lord, so whoever is guided is only guided for [the benefit of] his soul, and whoever goes astray only goes astray [in violation] against it. And I am not over you a manager.\""
+  }
 }
