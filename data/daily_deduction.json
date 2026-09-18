@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-17",
+  "date": "2026-09-18",
   "puzzle": {
-    "title": "Under the Date Palm's Shade",
-    "intro": "A tale unfolds of a soul set apart before birth, nurtured within sacred walls, and chosen to bear a sign the world had never witnessed. When accusation arose from every direction, a voice came from the most unlikely of places to silence all doubt. Can you discover who walked beneath the date palm's shade?",
+    "title": "The Call from the Sacred Valley",
+    "intro": "Beyond the pages of history lies the story of a soul who stood between a powerful ruler and an entire enslaved people. This individual was called upon to deliver a nation from tyranny, performing wonders that defied every natural law. From a sacred mount to a miracle upon the waters, this servant of Allah witnessed signs that would echo through the ages. Your task today is to identify this remarkable figure whose legacy shaped the course of human history.",
     "clues": [
-      "I was dedicated to the service of the Almighty before I ever drew my first breath, a vow made by the one who carried me.",
-      "I grew up under the watchful care of a righteous guardian within the sacred chambers of a place of worship.",
-      "Whenever my guardian came to my chamber, he found with me provisions from seasons that should not have been.",
-      "I was given glad tidings of a son, though my circumstances left no room for what was promised.",
-      "I withdrew to a distant place, and there a date palm offered me shade while a stream flowed beneath.",
-      "When accusation came and questions surrounded me, I pointed to my newborn child — and he spoke from the cradle to silence every doubt."
+      "I was born during a time when my people faced a deadly decree, and my family placed me in the waters to save my life.",
+      "I was found and raised in the very household of the ruler who had ordered the deaths of my kind.",
+      "I fled to a sacred mount where I saw fire upon a tree that was not consumed, and a voice spoke to me from it.",
+      "I was sent back to that very ruler with miracles, demanding the freedom of my enslaved people.",
+      "I struck the sea with my staff, and it parted into dry paths, swallowing the pursuers who followed my people.",
+      "I communed with my Lord on a mount for forty nights, and was granted tablets of divine guidance."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Maryam",
-          "Sarah",
-          "Hawwa",
-          "Umm Musa",
-          "The Wife of Nuh"
+          "Prophet Musa",
+          "Prophet Harun",
+          "Prophet Ibrahim",
+          "Prophet Yusuf",
+          "Prophet Dawud"
         ],
-        "answer": "Maryam"
+        "answer": "Prophet Musa"
       },
       "trial": {
-        "label": "Trial / Event",
+        "label": "My Defining Trial",
         "options": [
-          "Giving birth to a miraculous son in isolation",
-          "Being cast into a blazing fire by idolaters",
-          "Surviving the great flood with a chosen few",
-          "Being separated from an infant cast into the river",
-          "Confronting the mighty ruler of Egypt"
+          "The Parting of the Sea",
+          "Building the Great Ark",
+          "Trial by a Blazing Fire",
+          "Confinement in a Whale's Belly",
+          "Imprisonment by an Egyptian Official"
         ],
-        "answer": "Giving birth to a miraculous son in isolation"
+        "answer": "The Parting of the Sea"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A date palm and a flowing stream beneath it",
-          "A mighty ark upon towering waves",
-          "A staff that split a great sea in two",
-          "A blazing fire meant to consume a faithful soul",
-          "A golden throne adorned with precious stones"
+          "A Shepherd's Staff",
+          "A Great Wooden Ark",
+          "A Cave Where Time Slept",
+          "A Garden with Two Springs",
+          "A Throne Adorned with Gold"
         ],
-        "answer": "A date palm and a flowing stream beneath it"
+        "answer": "A Shepherd's Staff"
       },
       "outcome": {
-        "label": "Outcome",
+        "label": "The Outcome",
         "options": [
-          "Honored as the most exalted of all women",
-          "Reunited with a beloved child after long separation",
-          "Led an entire nation out of the bondage of a tyrant",
-          "Warned a people lost in immorality",
-          "Granted dominion over jinn, mankind, and the winds"
+          "My People Crossed the Sea to Safety",
+          "A Great Flood Destroyed the Disbelievers",
+          "A Tyrant's Fire Became Cool and Peaceful",
+          "The Sea Cast Its Captive onto the Shore",
+          "The Captive Became the Treasurer of Egypt"
         ],
-        "answer": "Honored as the most exalted of all women"
+        "answer": "My People Crossed the Sea to Safety"
       }
     },
-    "verseRef": "19:24",
-    "arabic": "فَنَادَىٰهَا مِن تَحْتِهَآ أَلَّا تَحْزَنِى قَدْ جَعَلَ رَبُّكِ تَحْتَكِ سَرِيًّۭا",
-    "verse": "But he called her from below her, \"Do not grieve; your Lord has provided beneath you a stream. (19:24)"
+    "verseRef": "26:10",
+    "arabic": "وَإِذْ نَادَىٰ رَبُّكَ مُوسَىٰٓ أَنِ ٱئْتِ ٱلْقَوْمَ ٱلظَّـٰلِمِينَ",
+    "verse": "And [mention] when your Lord called Moses, [saying], \"Go to the wrongdoing people - (26:10)"
   },
   "generated": true,
   "model": "auto (chain)"

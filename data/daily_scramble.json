@@ -1,35 +1,32 @@
 {
-  "date": "2026-09-17",
+  "date": "2026-09-18",
   "puzzle": {
-    "verseRef": "10:108",
-    "reference": "Surah Yunus (10:108)",
+    "verseRef": "51:55",
+    "reference": "Surah Adh-Dhariyat (51:55)",
     "segments": [
-      "يَا أَيَّتُهَا النَّفْسُ",
-      "الْمُطْمَئِنَّةُ",
-      "ارْجِعِي إِلَى رَبِّكِ",
-      "رَاضِيَةً مَرْضِيَّةً",
-      "فَادْخُلِي فِي عِبَادِي",
-      "وَادْخُلِي جَنَّتِي"
+      "وَذَكِّرْ",
+      "فَإِنَّ",
+      "الذِّكْرَىٰ",
+      "تَنفَعُ",
+      "الْمُؤْمِنِينَ"
     ],
     "translations": [
-      "Say O mankind O mankind Verily",
-      "has come to you the truth from your Lord",
-      "So whoever (is) guided then only (he is) guided",
-      "for his soul and whoever goes astray then only",
-      "he strays against it And I am not",
-      "And I am not over you a guardian"
+      "And remind",
+      "for indeed",
+      "the reminder",
+      "benefits",
+      "the believers"
     ],
-    "hint": "Allah's comforting call to the soul at peace, inviting it to Paradise — a beloved verse recited at moments of farewell and hope.",
-    "arabic": "قُلْ يَـٰٓأَيُّهَا ٱلنَّاسُ قَدْ جَآءَكُمُ ٱلْحَقُّ مِن رَّبِّكُمْ ۖ فَمَنِ ٱهْتَدَىٰ فَإِنَّمَا يَهْتَدِى لِنَفْسِهِۦ ۖ وَمَن ضَلَّ فَإِنَّمَا يَضِلُّ عَلَيْهَا ۖ وَمَآ أَنَا۠ عَلَيْكُم بِوَكِيلٍۢ",
+    "hint": "A divine command affirming that admonition and reminders truly benefit the faithful — often cited in the context of dawah and conveying the message.",
+    "arabic": "وَذَكِّرْ فَإِنَّ ٱلذِّكْرَىٰ تَنفَعُ ٱلْمُؤْمِنِينَ",
     "words": [
-      "قُلْ يَـٰٓأَيُّهَا ٱلنَّاسُ قَدْ",
-      "جَآءَكُمُ ٱلْحَقُّ مِن رَّبِّكُمْ ۖ",
-      "فَمَنِ ٱهْتَدَىٰ فَإِنَّمَا يَهْتَدِى",
-      "لِنَفْسِهِۦ ۖ وَمَن ضَلَّ فَإِنَّمَا",
-      "يَضِلُّ عَلَيْهَا ۖ وَمَآ",
-      "أَنَا۠ عَلَيْكُم بِوَكِيلٍۢ"
+      "وَذَكِّرْ",
+      "فَإِنَّ",
+      "ٱلذِّكْرَىٰ",
+      "تَنفَعُ",
+      "ٱلْمُؤْمِنِينَ"
     ],
-    "verseEn": "Say, \"O mankind, the truth has come to you from your Lord, so whoever is guided is only guided for [the benefit of] his soul, and whoever goes astray only goes astray [in violation] against it. And I am not over you a manager.\""
+    "verseEn": "And remind, for indeed, the reminder benefits the believers."
   },
   "generated": true,
   "model": "auto (chain)"
