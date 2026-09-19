@@ -1,32 +1,32 @@
 {
-  "date": "2026-09-18",
+  "date": "2026-09-19",
   "puzzle": {
-    "verseRef": "51:55",
-    "reference": "Surah Adh-Dhariyat (51:55)",
+    "verseRef": "25:30",
+    "reference": "Surah Al-Furqan (25:30)",
     "segments": [
-      "وَذَكِّرْ",
-      "فَإِنَّ",
-      "الذِّكْرَىٰ",
-      "تَنفَعُ",
-      "الْمُؤْمِنِينَ"
+      "وَقَالَ الرَّسُولُ",
+      "يَا رَبِّ",
+      "إِنَّ قَوْمِي",
+      "اتَّخَذُوا هَٰذَا الْقُرْآنَ",
+      "مَهْجُورًا"
     ],
     "translations": [
-      "And remind",
-      "for indeed",
-      "the reminder",
-      "benefits",
-      "the believers"
+      "And said the Messenger",
+      "O my Lord Indeed",
+      "my people took",
+      "this the Quran",
+      "(as) a forsaken thing"
     ],
-    "hint": "A divine command affirming that admonition and reminders truly benefit the faithful — often cited in the context of dawah and conveying the message.",
-    "arabic": "وَذَكِّرْ فَإِنَّ ٱلذِّكْرَىٰ تَنفَعُ ٱلْمُؤْمِنِينَ",
+    "hint": "The Messenger's plea to Allah regarding his people treating the Qur'an as something they turn away from.",
+    "arabic": "وَقَالَ ٱلرَّسُولُ يَـٰرَبِّ إِنَّ قَوْمِى ٱتَّخَذُوا۟ هَـٰذَا ٱلْقُرْءَانَ مَهْجُورًۭا",
     "words": [
-      "وَذَكِّرْ",
-      "فَإِنَّ",
-      "ٱلذِّكْرَىٰ",
-      "تَنفَعُ",
-      "ٱلْمُؤْمِنِينَ"
+      "وَقَالَ ٱلرَّسُولُ",
+      "يَـٰرَبِّ إِنَّ",
+      "قَوْمِى ٱتَّخَذُوا۟",
+      "هَـٰذَا ٱلْقُرْءَانَ",
+      "مَهْجُورًۭا"
     ],
-    "verseEn": "And remind, for indeed, the reminder benefits the believers."
+    "verseEn": "And the Messenger has said, \"O my Lord, indeed my people have taken this Qur’ān as [a thing] abandoned.\""
   },
   "generated": true,
   "model": "auto (chain)"

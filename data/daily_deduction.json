@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-18",
+  "date": "2026-09-19",
   "puzzle": {
-    "title": "The Call from the Sacred Valley",
-    "intro": "Beyond the pages of history lies the story of a soul who stood between a powerful ruler and an entire enslaved people. This individual was called upon to deliver a nation from tyranny, performing wonders that defied every natural law. From a sacred mount to a miracle upon the waters, this servant of Allah witnessed signs that would echo through the ages. Your task today is to identify this remarkable figure whose legacy shaped the course of human history.",
+    "title": "The Devoted Voices Beside a Prophet",
+    "intro": "In a distant land, a noble messenger faced harsh rejection from the ruling powers of that era. Yet a small circle of devoted souls stood beside this servant of Allah, eager to answer a divine call. Their unflinching conviction would divide a powerful nation and ultimately prevail against the forces of disbelief.",
     "clues": [
-      "I was born during a time when my people faced a deadly decree, and my family placed me in the waters to save my life.",
-      "I was found and raised in the very household of the ruler who had ordered the deaths of my kind.",
-      "I fled to a sacred mount where I saw fire upon a tree that was not consumed, and a voice spoke to me from it.",
-      "I was sent back to that very ruler with miracles, demanding the freedom of my enslaved people.",
-      "I struck the sea with my staff, and it parted into dry paths, swallowing the pursuers who followed my people.",
-      "I communed with my Lord on a mount for forty nights, and was granted tablets of divine guidance."
+      "We were a small devoted group, united in faith and purpose.",
+      "We stood beside a noble messenger who was rejected by the powerful authorities of their land.",
+      "When this messenger asked, 'Who are my supporters in the cause of Allah?' we answered without hesitation.",
+      "We asked this messenger to seek a feast from the sky to bring reassurance to our hearts.",
+      "Among the people of that era, some believed through our message and others stubbornly refused, but Allah strengthened the believers.",
+      "We are the Hawwariyyun — the devoted disciples of Isa, made victorious through Allah's support."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Musa",
-          "Prophet Harun",
-          "Prophet Ibrahim",
-          "Prophet Yusuf",
-          "Prophet Dawud"
+          "The Hawwariyyun (Disciples of Isa)",
+          "The Companions of the Cave",
+          "The Believing Wife of Pharaoh",
+          "The Royal Family of Saba",
+          "The Magicians who believed in Pharaoh's court"
         ],
-        "answer": "Prophet Musa"
+        "answer": "The Hawwariyyun (Disciples of Isa)"
       },
       "trial": {
-        "label": "My Defining Trial",
+        "label": "Trial/Event",
         "options": [
-          "The Parting of the Sea",
-          "Building the Great Ark",
-          "Trial by a Blazing Fire",
-          "Confinement in a Whale's Belly",
-          "Imprisonment by an Egyptian Official"
+          "Pledging loyalty as supporters of a prophet's mission",
+          "Being preserved in a slumber within a sealed cave",
+          "Being thrown into a blazing trench for faith",
+          "Surviving an extermination plot as infants",
+          "Witnessing parting seas at the command of a prophet"
         ],
-        "answer": "The Parting of the Sea"
+        "answer": "Pledging loyalty as supporters of a prophet's mission"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A Shepherd's Staff",
-          "A Great Wooden Ark",
-          "A Cave Where Time Slept",
-          "A Garden with Two Springs",
-          "A Throne Adorned with Gold"
+          "A table spread with heavenly food from the sky",
+          "A divinely built ship resting on a mountain peak",
+          "A staff that devoured the magic of tyrants",
+          "A cave sealed by divine protection",
+          "A she-camel that emerged from solid rock"
         ],
-        "answer": "A Shepherd's Staff"
+        "answer": "A table spread with heavenly food from the sky"
       },
       "outcome": {
-        "label": "The Outcome",
+        "label": "Outcome",
         "options": [
-          "My People Crossed the Sea to Safety",
-          "A Great Flood Destroyed the Disbelievers",
-          "A Tyrant's Fire Became Cool and Peaceful",
-          "The Sea Cast Its Captive onto the Shore",
-          "The Captive Became the Treasurer of Egypt"
+          "Were made dominant over those who rejected the message",
+          "Slept peacefully for three hundred years",
+          "Were saved from the waters of a great flood",
+          "Witnessed the drowning of an oppressive ruler and his army",
+          "Accumulated untold gold and treasures but were destroyed by arrogance"
         ],
-        "answer": "My People Crossed the Sea to Safety"
+        "answer": "Were made dominant over those who rejected the message"
       }
     },
-    "verseRef": "26:10",
-    "arabic": "وَإِذْ نَادَىٰ رَبُّكَ مُوسَىٰٓ أَنِ ٱئْتِ ٱلْقَوْمَ ٱلظَّـٰلِمِينَ",
-    "verse": "And [mention] when your Lord called Moses, [saying], \"Go to the wrongdoing people - (26:10)"
+    "verseRef": "61:14",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوٓا۟ أَنصَارَ ٱللَّهِ كَمَا قَالَ عِيسَى ٱبْنُ مَرْيَمَ لِلْحَوَارِيِّـۧنَ مَنْ أَنصَارِىٓ إِلَى ٱللَّهِ ۖ قَالَ ٱلْحَوَارِيُّونَ نَحْنُ أَنصَارُ ٱللَّهِ ۖ فَـَٔامَنَت طَّآئِفَةٌۭ مِّنۢ بَنِىٓ إِسْرَٰٓءِيلَ وَكَفَرَت طَّآئِفَةٌۭ ۖ فَأَيَّدْنَا ٱلَّذِينَ ءَامَنُوا۟ عَلَىٰ عَدُوِّهِمْ فَأَصْبَحُوا۟ ظَـٰهِرِينَ",
+    "verse": "O you who have believed, be supporters of Allāh, as when Jesus, the son of Mary, said to the disciples, \"Who are my supporters for Allāh?\" The disciples said, \"We are supporters of Allāh.\" And a faction of the Children of Israel believed and a faction disbelieved. So We supported those who believed against their enemy, and they became dominant. (61:14)"
   },
   "generated": true,
   "model": "auto (chain)"
