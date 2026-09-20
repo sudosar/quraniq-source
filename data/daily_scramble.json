@@ -1,32 +1,32 @@
 {
-  "date": "2026-09-19",
+  "date": "2026-09-20",
   "puzzle": {
-    "verseRef": "25:30",
-    "reference": "Surah Al-Furqan (25:30)",
+    "verseRef": "23:115",
+    "reference": "Surah Al-Mu'minun (23:115)",
     "segments": [
-      "وَقَالَ الرَّسُولُ",
-      "يَا رَبِّ",
-      "إِنَّ قَوْمِي",
-      "اتَّخَذُوا هَٰذَا الْقُرْآنَ",
-      "مَهْجُورًا"
+      "أَفَحَسِبْتُمْ",
+      "أَنَّمَا خَلَقْنَاكُمْ",
+      "عَبَثًا",
+      "وَأَنَّكُمْ إِلَيْنَا",
+      "لَا تُرْجَعُونَ"
     ],
     "translations": [
-      "And said the Messenger",
-      "O my Lord Indeed",
-      "my people took",
-      "this the Quran",
-      "(as) a forsaken thing"
+      "Then did you think that",
+      "We created you uselessly",
+      "and that you to Us",
+      "not",
+      "will be returned"
     ],
-    "hint": "The Messenger's plea to Allah regarding his people treating the Qur'an as something they turn away from.",
-    "arabic": "وَقَالَ ٱلرَّسُولُ يَـٰرَبِّ إِنَّ قَوْمِى ٱتَّخَذُوا۟ هَـٰذَا ٱلْقُرْءَانَ مَهْجُورًۭا",
+    "hint": "A profound rhetorical question about the purpose of creation and our return to Allah for accountability on the Day of Judgment.",
+    "arabic": "أَفَحَسِبْتُمْ أَنَّمَا خَلَقْنَـٰكُمْ عَبَثًۭا وَأَنَّكُمْ إِلَيْنَا لَا تُرْجَعُونَ",
     "words": [
-      "وَقَالَ ٱلرَّسُولُ",
-      "يَـٰرَبِّ إِنَّ",
-      "قَوْمِى ٱتَّخَذُوا۟",
-      "هَـٰذَا ٱلْقُرْءَانَ",
-      "مَهْجُورًۭا"
+      "أَفَحَسِبْتُمْ أَنَّمَا",
+      "خَلَقْنَـٰكُمْ عَبَثًۭا",
+      "وَأَنَّكُمْ إِلَيْنَا",
+      "لَا",
+      "تُرْجَعُونَ"
     ],
-    "verseEn": "And the Messenger has said, \"O my Lord, indeed my people have taken this Qur’ān as [a thing] abandoned.\""
+    "verseEn": "Then did you think that We created you uselessly and that to Us you would not be returned?\""
   },
   "generated": true,
   "model": "auto (chain)"

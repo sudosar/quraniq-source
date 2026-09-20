@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-19",
+  "date": "2026-09-20",
   "puzzle": {
-    "title": "The Devoted Voices Beside a Prophet",
-    "intro": "In a distant land, a noble messenger faced harsh rejection from the ruling powers of that era. Yet a small circle of devoted souls stood beside this servant of Allah, eager to answer a divine call. Their unflinching conviction would divide a powerful nation and ultimately prevail against the forces of disbelief.",
+    "title": "The Veiled Believer in the Tyrant's Court",
+    "intro": "Within the gilded halls of the most arrogant ruler known to the Quran — where defiance of the Divine defined every edict — one soul walked among the privileged, hiding the most dangerous of secrets in plain sight. This individual carried a faith so forbidden within those walls that its discovery would mean certain death. Yet conviction burned like a flame beneath the ashes, and when the moment arrived, truth rang out with a courage that shook the very foundation of the tyrant's palace.",
     "clues": [
-      "We were a small devoted group, united in faith and purpose.",
-      "We stood beside a noble messenger who was rejected by the powerful authorities of their land.",
-      "When this messenger asked, 'Who are my supporters in the cause of Allah?' we answered without hesitation.",
-      "We asked this messenger to seek a feast from the sky to bring reassurance to our hearts.",
-      "Among the people of that era, some believed through our message and others stubbornly refused, but Allah strengthened the believers.",
-      "We are the Hawwariyyun — the devoted disciples of Isa, made victorious through Allah's support."
+      "I lived among the inner circle of the most powerful and arrogant ruler of my time, surrounded by luxury and influence.",
+      "I concealed my true belief deep within my heart, fearing for my life from those who ruled with cruelty and oppression.",
+      "When my people doubted and wavered in the face of truth, I stepped forward to warn them of the tragic fate that had befallen past nations who rejected their Lord's messengers.",
+      "I reminded my people of the story of a beloved young dreamer who was cast down by his own kin yet rose to great authority in a distant land.",
+      "I urged my people not to obey the ruler who led them astray, instead inviting them to follow me along the path of righteousness and guidance.",
+      "I openly spoke the truth even though the tyrant's followers threatened to stone me or expel me from the land."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Hawwariyyun (Disciples of Isa)",
-          "The Companions of the Cave",
-          "The Believing Wife of Pharaoh",
-          "The Royal Family of Saba",
-          "The Magicians who believed in Pharaoh's court"
+          "The Hidden Believer from Pharaoh's Family",
+          "A Patient Patriarch Who Wept Blind Until His Son Returned",
+          "A Faithful Servant Whose Skin Disease Was Eventually Cured",
+          "A Sinful Son Who Rejected a Prophet's Invitation to Board the Ark",
+          "A Ruthless Tyrant Who Claimed Divinity for Themselves"
         ],
-        "answer": "The Hawwariyyun (Disciples of Isa)"
+        "answer": "The Hidden Believer from Pharaoh's Family"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Pledging loyalty as supporters of a prophet's mission",
-          "Being preserved in a slumber within a sealed cave",
-          "Being thrown into a blazing trench for faith",
-          "Surviving an extermination plot as infants",
-          "Witnessing parting seas at the command of a prophet"
+          "Concealing faith in a tyrant's court",
+          "Suffering blindness from years of weeping",
+          "Being tested by the loss of family and severe affliction",
+          "Building a great ship while being ridiculed",
+          "Enduring the scorching heat of a great fire"
         ],
-        "answer": "Pledging loyalty as supporters of a prophet's mission"
+        "answer": "Concealing faith in a tyrant's court"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A table spread with heavenly food from the sky",
-          "A divinely built ship resting on a mountain peak",
-          "A staff that devoured the magic of tyrants",
-          "A cave sealed by divine protection",
-          "A she-camel that emerged from solid rock"
+          "Pharaoh's palace",
+          "A mountain peak where an ark was constructed",
+          "A sacred valley beneath Mount Sinai",
+          "A magnificent garden with two flowing streams",
+          "A crystal throne above an underground river"
         ],
-        "answer": "A table spread with heavenly food from the sky"
+        "answer": "Pharaoh's palace"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Were made dominant over those who rejected the message",
-          "Slept peacefully for three hundred years",
-          "Were saved from the waters of a great flood",
-          "Witnessed the drowning of an oppressive ruler and his army",
-          "Accumulated untold gold and treasures but were destroyed by arrogance"
+          "Divine protection while the oppressors met their destruction",
+          "Was reunited with family after decades of separation",
+          "Was granted patience, restored health, and a larger family",
+          "Was saved on a boat while the rest of the world drowned",
+          "Was rescued unharmed from flames by the command of Allah"
         ],
-        "answer": "Were made dominant over those who rejected the message"
+        "answer": "Divine protection while the oppressors met their destruction"
       }
     },
-    "verseRef": "61:14",
-    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوٓا۟ أَنصَارَ ٱللَّهِ كَمَا قَالَ عِيسَى ٱبْنُ مَرْيَمَ لِلْحَوَارِيِّـۧنَ مَنْ أَنصَارِىٓ إِلَى ٱللَّهِ ۖ قَالَ ٱلْحَوَارِيُّونَ نَحْنُ أَنصَارُ ٱللَّهِ ۖ فَـَٔامَنَت طَّآئِفَةٌۭ مِّنۢ بَنِىٓ إِسْرَٰٓءِيلَ وَكَفَرَت طَّآئِفَةٌۭ ۖ فَأَيَّدْنَا ٱلَّذِينَ ءَامَنُوا۟ عَلَىٰ عَدُوِّهِمْ فَأَصْبَحُوا۟ ظَـٰهِرِينَ",
-    "verse": "O you who have believed, be supporters of Allāh, as when Jesus, the son of Mary, said to the disciples, \"Who are my supporters for Allāh?\" The disciples said, \"We are supporters of Allāh.\" And a faction of the Children of Israel believed and a faction disbelieved. So We supported those who believed against their enemy, and they became dominant. (61:14)"
+    "verseRef": "40:38",
+    "arabic": "وَقَالَ ٱلَّذِىٓ ءَامَنَ يَـٰقَوْمِ ٱتَّبِعُونِ أَهْدِكُمْ سَبِيلَ ٱلرَّشَادِ",
+    "verse": "And he who believed said, \"O my people, follow me; I will guide you to the way of right conduct. (40:38)"
   },
   "generated": true,
   "model": "auto (chain)"
