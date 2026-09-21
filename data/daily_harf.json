@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "puzzle": {
-    "word": "شعر",
-    "display": "شِعْر",
-    "hint": "The disbelievers falsely claimed the Prophet ﷺ composed this art form — but Surah Ya-Sin declares he was never taught it",
-    "verseRef": "36:69",
-    "arabicVerse": "وَمَا عَلَّمْنَـٰهُ ٱلشِّعْرَ وَمَا يَنۢبَغِى لَهُۥٓ ۚ إِنْ هُوَ إِلَّا ذِكْرٌۭ وَقُرْءَانٌۭ مُّبِينٌۭ",
-    "verse": "36:69 - And We did not give him [i.e., Prophet Muḥammad (ﷺ)] knowledge of poetry, nor is it befitting for him. It is not but a message and a clear Qur’ān"
+    "word": "نذير",
+    "display": "نَذِيرٌ",
+    "hint": "One sent to caution people against punishment",
+    "verseRef": "67:9",
+    "arabicVerse": "قَالُوا۟ بَلَىٰ قَدْ جَآءَنَا نَذِيرٌۭ فَكَذَّبْنَا وَقُلْنَا مَا نَزَّلَ ٱللَّهُ مِن شَىْءٍ إِنْ أَنتُمْ إِلَّا فِى ضَلَـٰلٍۢ كَبِيرٍۢ",
+    "verse": "67:9 - They will say, \"Yes, a warner had come to us, but we denied and said, 'Allāh has not sent down anything. You are not but in great error.'\""
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "puzzle": {
-    "title": "The Veiled Believer in the Tyrant's Court",
-    "intro": "Within the gilded halls of the most arrogant ruler known to the Quran — where defiance of the Divine defined every edict — one soul walked among the privileged, hiding the most dangerous of secrets in plain sight. This individual carried a faith so forbidden within those walls that its discovery would mean certain death. Yet conviction burned like a flame beneath the ashes, and when the moment arrived, truth rang out with a courage that shook the very foundation of the tyrant's palace.",
+    "title": "The Cry From The Deep",
+    "intro": "A servant of the Most Merciful grew weary of a stubborn nation and departed before permission was granted. This individual ended up in a place where no human had ever been, where the call to the Divine echoes strangely through layers of darkness. Emerging weakened but transformed, this soul became a timeless lesson in patience, sincere repentance, and the boundless mercy of the Creator. Can you unravel the mystery?",
     "clues": [
-      "I lived among the inner circle of the most powerful and arrogant ruler of my time, surrounded by luxury and influence.",
-      "I concealed my true belief deep within my heart, fearing for my life from those who ruled with cruelty and oppression.",
-      "When my people doubted and wavered in the face of truth, I stepped forward to warn them of the tragic fate that had befallen past nations who rejected their Lord's messengers.",
-      "I reminded my people of the story of a beloved young dreamer who was cast down by his own kin yet rose to great authority in a distant land.",
-      "I urged my people not to obey the ruler who led them astray, instead inviting them to follow me along the path of righteousness and guidance.",
-      "I openly spoke the truth even though the tyrant's followers threatened to stone me or expel me from the land."
+      "I was sent as a messenger to my people, but they exceeded all bounds in their disbelief and refused to listen.",
+      "I grew angry at their rejection and fled from my people before Allah's command came.",
+      "I boarded a ship loaded beyond capacity, and we drew lots to determine who would be cast overboard.",
+      "I was thrown into the raging sea and swallowed by a great fish.",
+      "Trapped in three layers of darkness — the belly, the deep sea, and the earth below — I called out to my Lord in sincere repentance.",
+      "I emerged from the fish onto the open shore, weak and weary, and a gourd plant grew over me. My people, a hundred thousand or more, finally believed."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Hidden Believer from Pharaoh's Family",
-          "A Patient Patriarch Who Wept Blind Until His Son Returned",
-          "A Faithful Servant Whose Skin Disease Was Eventually Cured",
-          "A Sinful Son Who Rejected a Prophet's Invitation to Board the Ark",
-          "A Ruthless Tyrant Who Claimed Divinity for Themselves"
+          "Prophet Yunus",
+          "Prophet Ayyub",
+          "Prophet Yusuf",
+          "Prophet Musa",
+          "Prophet Sulaiman"
         ],
-        "answer": "The Hidden Believer from Pharaoh's Family"
+        "answer": "Prophet Yunus"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Concealing faith in a tyrant's court",
-          "Suffering blindness from years of weeping",
-          "Being tested by the loss of family and severe affliction",
-          "Building a great ship while being ridiculed",
-          "Enduring the scorching heat of a great fire"
+          "Swallowed by a great fish",
+          "Thrown into a blazing fire",
+          "Trapped at the bottom of a well",
+          "Overwhelmed by a great flood",
+          "Imprisoned unjustly by a king"
         ],
-        "answer": "Concealing faith in a tyrant's court"
+        "answer": "Swallowed by a great fish"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Pharaoh's palace",
-          "A mountain peak where an ark was constructed",
-          "A sacred valley beneath Mount Sinai",
-          "A magnificent garden with two flowing streams",
-          "A crystal throne above an underground river"
+          "The belly of a great fish",
+          "The sacred valley near the Kaaba",
+          "An ark resting on a mountain",
+          "A staff that turned into a serpent",
+          "A throne of unmatched grandeur"
         ],
-        "answer": "Pharaoh's palace"
+        "answer": "The belly of a great fish"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Divine protection while the oppressors met their destruction",
-          "Was reunited with family after decades of separation",
-          "Was granted patience, restored health, and a larger family",
-          "Was saved on a boat while the rest of the world drowned",
-          "Was rescued unharmed from flames by the command of Allah"
+          "His people, a hundred thousand or more, believed",
+          "Raised alive to the heavens",
+          "Became ruler of an unrivaled kingdom",
+          "Destroyed by a piercing cry from the sky",
+          "Overturned by a devastating earthquake"
         ],
-        "answer": "Divine protection while the oppressors met their destruction"
+        "answer": "His people, a hundred thousand or more, believed"
       }
     },
-    "verseRef": "40:38",
-    "arabic": "وَقَالَ ٱلَّذِىٓ ءَامَنَ يَـٰقَوْمِ ٱتَّبِعُونِ أَهْدِكُمْ سَبِيلَ ٱلرَّشَادِ",
-    "verse": "And he who believed said, \"O my people, follow me; I will guide you to the way of right conduct. (40:38)"
+    "verseRef": "37:147",
+    "arabic": "وَأَرْسَلْنَـٰهُ إِلَىٰ مِا۟ئَةِ أَلْفٍ أَوْ يَزِيدُونَ",
+    "verse": "And We sent him to [his people of] a hundred thousand or more. (37:147)"
   },
   "generated": true,
   "model": "auto (chain)"

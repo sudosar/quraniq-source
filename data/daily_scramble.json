@@ -1,32 +1,38 @@
 {
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "puzzle": {
-    "verseRef": "23:115",
-    "reference": "Surah Al-Mu'minun (23:115)",
+    "verseRef": "67:19",
+    "reference": "Surah Al-Mulk (67:19)",
     "segments": [
-      "أَفَحَسِبْتُمْ",
-      "أَنَّمَا خَلَقْنَاكُمْ",
-      "عَبَثًا",
-      "وَأَنَّكُمْ إِلَيْنَا",
-      "لَا تُرْجَعُونَ"
+      "Wa qul rabbi",
+      "a'udhu bika",
+      "min hamazati",
+      "al-shayateeni",
+      "wa a'udhu",
+      "bika rabbi",
+      "an yahduron"
     ],
     "translations": [
-      "Then did you think that",
-      "We created you uselessly",
-      "and that you to Us",
-      "not",
-      "will be returned"
+      "Do not they see [to]",
+      "the birds above them",
+      "spreading (their wings) and folding",
+      "Not holds them",
+      "except the Most Gracious",
+      "Indeed, He (is) of every",
+      "thing All-Seer"
     ],
-    "hint": "A profound rhetorical question about the purpose of creation and our return to Allah for accountability on the Day of Judgment.",
-    "arabic": "أَفَحَسِبْتُمْ أَنَّمَا خَلَقْنَـٰكُمْ عَبَثًۭا وَأَنَّكُمْ إِلَيْنَا لَا تُرْجَعُونَ",
+    "hint": "A powerful dua asking Allah for protection against the whisperings of the devils (Shaytan). Part of the closing verses of Surah Al-Mulk, commonly recited before sleep.",
+    "arabic": "أَوَلَمْ يَرَوْا۟ إِلَى ٱلطَّيْرِ فَوْقَهُمْ صَـٰٓفَّـٰتٍۢ وَيَقْبِضْنَ ۚ مَا يُمْسِكُهُنَّ إِلَّا ٱلرَّحْمَـٰنُ ۚ إِنَّهُۥ بِكُلِّ شَىْءٍۭ بَصِيرٌ",
     "words": [
-      "أَفَحَسِبْتُمْ أَنَّمَا",
-      "خَلَقْنَـٰكُمْ عَبَثًۭا",
-      "وَأَنَّكُمْ إِلَيْنَا",
-      "لَا",
-      "تُرْجَعُونَ"
+      "أَوَلَمْ يَرَوْا۟ إِلَى",
+      "ٱلطَّيْرِ فَوْقَهُمْ",
+      "صَـٰٓفَّـٰتٍۢ وَيَقْبِضْنَ ۚ",
+      "مَا يُمْسِكُهُنَّ",
+      "إِلَّا ٱلرَّحْمَـٰنُ ۚ",
+      "إِنَّهُۥ بِكُلِّ",
+      "شَىْءٍۭ بَصِيرٌ"
     ],
-    "verseEn": "Then did you think that We created you uselessly and that to Us you would not be returned?\""
+    "verseEn": "Do they not see the birds above them with wings outspread and [sometimes] folded in? None holds them [aloft] except the Most Merciful. Indeed He is, of all things, Seeing."
   },
   "generated": true,
   "model": "auto (chain)"
