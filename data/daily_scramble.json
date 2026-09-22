@@ -1,38 +1,35 @@
 {
-  "date": "2026-09-21",
+  "date": "2026-09-22",
   "puzzle": {
-    "verseRef": "67:19",
-    "reference": "Surah Al-Mulk (67:19)",
+    "verseRef": "59:18",
+    "reference": "Surah Al-Hashr (59:18)",
     "segments": [
-      "Wa qul rabbi",
-      "a'udhu bika",
-      "min hamazati",
-      "al-shayateeni",
-      "wa a'udhu",
-      "bika rabbi",
-      "an yahduron"
+      "يَا أَيُّهَا الَّذِينَ آمَنُوا",
+      "اتَّقُوا اللَّهَ",
+      "وَلْتَنْظُرْ نَفْسٌ",
+      "مَّا قَدَّمَتْ لِغَدٍ",
+      "وَاتَّقُوا اللَّهَ",
+      "إِنَّ اللَّهَ خَبِيرٌ بِمَا تَعْمَلُونَ"
     ],
     "translations": [
-      "Do not they see [to]",
-      "the birds above them",
-      "spreading (their wings) and folding",
-      "Not holds them",
-      "except the Most Gracious",
-      "Indeed, He (is) of every",
-      "thing All-Seer"
+      "O you (who) believe",
+      "Fear Allah and let look",
+      "every soul what it has sent forth",
+      "for tomorrow and fear Allah",
+      "Indeed Allah (is) All-Aware",
+      "of what you do"
     ],
-    "hint": "A powerful dua asking Allah for protection against the whisperings of the devils (Shaytan). Part of the closing verses of Surah Al-Mulk, commonly recited before sleep.",
-    "arabic": "أَوَلَمْ يَرَوْا۟ إِلَى ٱلطَّيْرِ فَوْقَهُمْ صَـٰٓفَّـٰتٍۢ وَيَقْبِضْنَ ۚ مَا يُمْسِكُهُنَّ إِلَّا ٱلرَّحْمَـٰنُ ۚ إِنَّهُۥ بِكُلِّ شَىْءٍۭ بَصِيرٌ",
+    "hint": "A powerful call to taqwa (God-consciousness), urging believers to reflect on their deeds before the Day of Judgment and remain mindful of Allah.",
+    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَلْتَنظُرْ نَفْسٌۭ مَّا قَدَّمَتْ لِغَدٍۢ ۖ وَٱتَّقُوا۟ ٱللَّهَ ۚ إِنَّ ٱللَّهَ خَبِيرٌۢ بِمَا تَعْمَلُونَ",
     "words": [
-      "أَوَلَمْ يَرَوْا۟ إِلَى",
-      "ٱلطَّيْرِ فَوْقَهُمْ",
-      "صَـٰٓفَّـٰتٍۢ وَيَقْبِضْنَ ۚ",
-      "مَا يُمْسِكُهُنَّ",
-      "إِلَّا ٱلرَّحْمَـٰنُ ۚ",
-      "إِنَّهُۥ بِكُلِّ",
-      "شَىْءٍۭ بَصِيرٌ"
+      "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟",
+      "ٱتَّقُوا۟ ٱللَّهَ وَلْتَنظُرْ",
+      "نَفْسٌۭ مَّا قَدَّمَتْ",
+      "لِغَدٍۢ ۖ وَٱتَّقُوا۟ ٱللَّهَ ۚ",
+      "إِنَّ ٱللَّهَ خَبِيرٌۢ",
+      "بِمَا تَعْمَلُونَ"
     ],
-    "verseEn": "Do they not see the birds above them with wings outspread and [sometimes] folded in? None holds them [aloft] except the Most Merciful. Indeed He is, of all things, Seeing."
+    "verseEn": "O you who have believed, fear Allāh. And let every soul look to what it has put forth for tomorrow - and fear Allāh. Indeed, Allāh is Aware of what you do."
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-21",
+  "date": "2026-09-22",
   "puzzle": {
-    "word": "نذير",
-    "display": "نَذِيرٌ",
-    "hint": "One sent to caution people against punishment",
-    "verseRef": "67:9",
-    "arabicVerse": "قَالُوا۟ بَلَىٰ قَدْ جَآءَنَا نَذِيرٌۭ فَكَذَّبْنَا وَقُلْنَا مَا نَزَّلَ ٱللَّهُ مِن شَىْءٍ إِنْ أَنتُمْ إِلَّا فِى ضَلَـٰلٍۢ كَبِيرٍۢ",
-    "verse": "67:9 - They will say, \"Yes, a warner had come to us, but we denied and said, 'Allāh has not sent down anything. You are not but in great error.'\""
+    "word": "رجع",
+    "display": "رَجْع",
+    "hint": "The act of returning; Allah is fully capable of bringing humans back after death.",
+    "verseRef": "86:8",
+    "arabicVerse": "إِنَّهُۥ عَلَىٰ رَجْعِهِۦ لَقَادِرٌۭ",
+    "verse": "86:8 - Indeed, He [i.e., Allāh], to return him [to life], is Able."
   },
   "generated": true,
   "model": "auto (chain)"

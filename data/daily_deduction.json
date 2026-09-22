@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-21",
+  "date": "2026-09-22",
   "puzzle": {
-    "title": "The Cry From The Deep",
-    "intro": "A servant of the Most Merciful grew weary of a stubborn nation and departed before permission was granted. This individual ended up in a place where no human had ever been, where the call to the Divine echoes strangely through layers of darkness. Emerging weakened but transformed, this soul became a timeless lesson in patience, sincere repentance, and the boundless mercy of the Creator. Can you unravel the mystery?",
+    "title": "The Builders of the Lofty Pillars",
+    "intro": "You stand before the ruins of a majestic ancient city, its lofty pillars now fallen. The wind howls through the empty streets, carrying the memory of a mighty people who once ruled these lands. Who were they?",
     "clues": [
-      "I was sent as a messenger to my people, but they exceeded all bounds in their disbelief and refused to listen.",
-      "I grew angry at their rejection and fled from my people before Allah's command came.",
-      "I boarded a ship loaded beyond capacity, and we drew lots to determine who would be cast overboard.",
-      "I was thrown into the raging sea and swallowed by a great fish.",
-      "Trapped in three layers of darkness — the belly, the deep sea, and the earth below — I called out to my Lord in sincere repentance.",
-      "I emerged from the fish onto the open shore, weak and weary, and a gourd plant grew over me. My people, a hundred thousand or more, finally believed."
+      "We were a people of immense strength and skill, known for our great buildings and advanced civilization.",
+      "We lived in a land of sand dunes and rocky hills, and we believed no one could overpower us.",
+      "A messenger came to us from among our own kin, calling us to worship Allah alone, but we rejected and ridiculed him.",
+      "We boasted, 'Who is stronger than us?' and we continued in our arrogance and idol worship.",
+      "Allah sent upon us a furious wind that blew for seven nights and eight days, laying waste to everything.",
+      "We were the people of 'Ad, the builders of Iram, and our fate became a warning for all who came after."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Yunus",
-          "Prophet Ayyub",
-          "Prophet Yusuf",
-          "Prophet Musa",
-          "Prophet Sulaiman"
+          "People of 'Ad",
+          "People of Thamud",
+          "People of Madyan",
+          "People of Tubba'",
+          "People of al-Rass"
         ],
-        "answer": "Prophet Yunus"
+        "answer": "People of 'Ad"
       },
       "trial": {
-        "label": "Trial/Event",
+        "label": "What was the punishment sent upon them?",
         "options": [
-          "Swallowed by a great fish",
-          "Thrown into a blazing fire",
-          "Trapped at the bottom of a well",
-          "Overwhelmed by a great flood",
-          "Imprisoned unjustly by a king"
+          "A devastating wind",
+          "A shower of stones",
+          "A loud blast",
+          "Drowning by flood",
+          "Swallowed by the earth"
         ],
-        "answer": "Swallowed by a great fish"
+        "answer": "A devastating wind"
       },
       "location": {
-        "label": "Key Element",
+        "label": "What is the name of their legendary city?",
         "options": [
-          "The belly of a great fish",
-          "The sacred valley near the Kaaba",
-          "An ark resting on a mountain",
-          "A staff that turned into a serpent",
-          "A throne of unmatched grandeur"
+          "Iram",
+          "Sodom",
+          "Midian",
+          "Babel",
+          "Petra"
         ],
-        "answer": "The belly of a great fish"
+        "answer": "Iram"
       },
       "outcome": {
-        "label": "Outcome",
+        "label": "What was their ultimate fate?",
         "options": [
-          "His people, a hundred thousand or more, believed",
-          "Raised alive to the heavens",
-          "Became ruler of an unrivaled kingdom",
-          "Destroyed by a piercing cry from the sky",
-          "Overturned by a devastating earthquake"
+          "They were destroyed and their remains became a lesson",
+          "They repented and were saved",
+          "They were transformed into apes",
+          "They were drowned in the sea",
+          "They were buried under a landslide"
         ],
-        "answer": "His people, a hundred thousand or more, believed"
+        "answer": "They were destroyed and their remains became a lesson"
       }
     },
-    "verseRef": "37:147",
-    "arabic": "وَأَرْسَلْنَـٰهُ إِلَىٰ مِا۟ئَةِ أَلْفٍ أَوْ يَزِيدُونَ",
-    "verse": "And We sent him to [his people of] a hundred thousand or more. (37:147)"
+    "verseRef": "46:25",
+    "arabic": "تُدَمِّرُ كُلَّ شَىْءٍۭ بِأَمْرِ رَبِّهَا فَأَصْبَحُوا۟ لَا يُرَىٰٓ إِلَّا مَسَـٰكِنُهُمْ ۚ كَذَٰلِكَ نَجْزِى ٱلْقَوْمَ ٱلْمُجْرِمِينَ",
+    "verse": "Destroying everything by command of its Lord. And they became so that nothing was seen [of them] except their dwellings. Thus do We recompense the criminal people. (46:25)"
   },
   "generated": true,
   "model": "auto (chain)"
