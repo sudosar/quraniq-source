@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-22",
+  "date": "2026-09-23",
   "puzzle": {
-    "word": "رجع",
-    "display": "رَجْع",
-    "hint": "The act of returning; Allah is fully capable of bringing humans back after death.",
-    "verseRef": "86:8",
-    "arabicVerse": "إِنَّهُۥ عَلَىٰ رَجْعِهِۦ لَقَادِرٌۭ",
-    "verse": "86:8 - Indeed, He [i.e., Allāh], to return him [to life], is Able."
+    "word": "سنة",
+    "display": "سُنَّة",
+    "hint": "Allah's established, unalterable pattern regarding past communities — never to be changed",
+    "verseRef": "33:38",
+    "arabicVerse": "مَّا كَانَ عَلَى ٱلنَّبِىِّ مِنْ حَرَجٍۢ فِيمَا فَرَضَ ٱللَّهُ لَهُۥ ۖ سُنَّةَ ٱللَّهِ فِى ٱلَّذِينَ خَلَوْا۟ مِن قَبْلُ ۚ وَكَانَ أَمْرُ ٱللَّهِ قَدَرًۭا مَّقْدُورًا",
+    "verse": "33:38 - There is not to be upon the Prophet any discomfort concerning that which Allāh has imposed upon him. [This is] the established way of Allāh with those [prophets] who have passed on before. And ever is the command of Allāh a destiny decreed."
   },
   "generated": true,
   "model": "auto (chain)"

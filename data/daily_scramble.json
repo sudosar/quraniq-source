@@ -1,35 +1,32 @@
 {
-  "date": "2026-09-22",
+  "date": "2026-09-23",
   "puzzle": {
-    "verseRef": "59:18",
-    "reference": "Surah Al-Hashr (59:18)",
+    "verseRef": "57:1",
+    "reference": "Surah Al-Hadid (57:1)",
     "segments": [
-      "يَا أَيُّهَا الَّذِينَ آمَنُوا",
-      "اتَّقُوا اللَّهَ",
-      "وَلْتَنْظُرْ نَفْسٌ",
-      "مَّا قَدَّمَتْ لِغَدٍ",
-      "وَاتَّقُوا اللَّهَ",
-      "إِنَّ اللَّهَ خَبِيرٌ بِمَا تَعْمَلُونَ"
+      "سَبَّحَ لِلَّهِ",
+      "مَا فِي السَّمَاوَاتِ",
+      "وَالْأَرْضِ",
+      "وَهُوَ الْعَزِيزُ",
+      "الْحَكِيمُ"
     ],
     "translations": [
-      "O you (who) believe",
-      "Fear Allah and let look",
-      "every soul what it has sent forth",
-      "for tomorrow and fear Allah",
-      "Indeed Allah (is) All-Aware",
-      "of what you do"
+      "Glorifies [to] Allah",
+      "whatever (is) in",
+      "the heavens and the earth",
+      "and He (is) the All-Mighty",
+      "the All-Wise"
     ],
-    "hint": "A powerful call to taqwa (God-consciousness), urging believers to reflect on their deeds before the Day of Judgment and remain mindful of Allah.",
-    "arabic": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَلْتَنظُرْ نَفْسٌۭ مَّا قَدَّمَتْ لِغَدٍۢ ۖ وَٱتَّقُوا۟ ٱللَّهَ ۚ إِنَّ ٱللَّهَ خَبِيرٌۢ بِمَا تَعْمَلُونَ",
+    "hint": "This powerful opening verse of Surah Al-Hadid (The Iron) proclaims that all of creation declares Allah's perfection, highlighting His two majestic attributes of Supreme Might and Infinite Wisdom.",
+    "arabic": "سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
     "words": [
-      "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟",
-      "ٱتَّقُوا۟ ٱللَّهَ وَلْتَنظُرْ",
-      "نَفْسٌۭ مَّا قَدَّمَتْ",
-      "لِغَدٍۢ ۖ وَٱتَّقُوا۟ ٱللَّهَ ۚ",
-      "إِنَّ ٱللَّهَ خَبِيرٌۢ",
-      "بِمَا تَعْمَلُونَ"
+      "سَبَّحَ لِلَّهِ",
+      "مَا فِى",
+      "ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ",
+      "وَهُوَ ٱلْعَزِيزُ",
+      "ٱلْحَكِيمُ"
     ],
-    "verseEn": "O you who have believed, fear Allāh. And let every soul look to what it has put forth for tomorrow - and fear Allāh. Indeed, Allāh is Aware of what you do."
+    "verseEn": "Whatever is in the heavens and earth exalts Allāh, and He is the Exalted in Might, the Wise."
   },
   "generated": true,
   "model": "auto (chain)"
