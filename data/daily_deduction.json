@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-23",
+  "date": "2026-09-24",
   "puzzle": {
-    "title": "The call that weathered ages",
-    "intro": "Imagine a soul who stood alone against an entire civilization, determined to guide them back from misguidance with unwavering resolve. For centuries, the message was rejected, mocked, and dismissed—yet the effort never ceased. Eventually, a great reckoning came, and only a few boarded salvation alongside this steadfast soul. Can you identify this figure from the Quran?",
+    "title": "The Sovereign Who Demanded Divinity",
+    "intro": "A powerful and arrogant ruler believed none stood above their throne. They chased a fleeing group across a vast body of water, only to meet a dramatic end. This sovereign's story echoes across many passages of the Quran, serving as a warning to all.",
     "clues": [
-      "I was sent as a warner to a people lost in their own ways.",
-      "I invited them to seek forgiveness and turn back from their wrongs, but they turned away.",
-      "Under divine command, I constructed a massive vessel while my people watched and ridiculed me.",
-      "I called upon my Lord ceaselessly—eventually He responded, and water poured from the sky in torrents.",
-      "I boarded the vessel with those who believed when the floodwaters rose above the land.",
-      "I cried out to one who had stayed behind, asking them to take refuge on a mountain, but the decree had already passed."
+      "I was a powerful ruler who believed no authority surpassed my own in the lands I governed.",
+      "I had a trusted vizier named Haman who helped me carry out grand architectural projects.",
+      "I summoned the finest magicians of my land to challenge the signs of a messenger who opposed me.",
+      "I refused to let a people enslaved within my realm depart, despite plagues and clear warnings.",
+      "I pursued them across a vast sea with my entire army and chariots.",
+      "That very sea closed over me and my forces, drowning us all, while they crossed safely."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Nuh",
-          "Prophet Ibrahim",
-          "Prophet Musa",
-          "Prophet Hud",
-          "Prophet Salih"
+          "Fir'awn (Pharaoh)",
+          "Namrud",
+          "Abu Lahab",
+          "Haman",
+          "Abu Jahl"
         ],
-        "answer": "Prophet Nuh"
+        "answer": "Fir'awn (Pharaoh)"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Building a great ark and surviving a worldwide flood",
-          "Being cast into a blazing fire",
-          "Confronting a tyrant and his powerful magicians",
-          "Being swallowed by a great fish",
-          "Witnessing the killing of a sacred she-camel"
+          "Plagues and confrontation with Musa (Moses)",
+          "Building an ark before a great flood",
+          "Battle against Jalut in the valley",
+          "Being swallowed by a whale",
+          "Defending honest trade weights"
         ],
-        "answer": "Building a great ark and surviving a worldwide flood"
+        "answer": "Plagues and confrontation with Musa (Moses)"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A massive wooden ark on raging floodwaters",
-          "A sacred valley with ancient stone ruins",
-          "A deep cave where companions slept for centuries",
-          "The belly of a giant whale in ocean depths",
-          "A towering mountain of stone in the wilderness"
+          "Tall towers and stakes",
+          "A great wooden ark",
+          "A golden calf",
+          "A staff that turned into a serpent",
+          "A massive whale"
         ],
-        "answer": "A massive wooden ark on raging floodwaters"
+        "answer": "Tall towers and stakes"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Saved with the believers aboard the vessel",
-          "Rescued unharmed from the fire through divine command",
-          "Led a great exodus out of a powerful kingdom",
-          "Cast out from the fish onto a barren shore",
-          "Led people away from wrongdoing through a miraculous sign"
+          "Drowned in the sea with army",
+          "Saved by Allah's mercy and patience rewarded",
+          "Reunited with family after years of hardship",
+          "Swallowed by the earth",
+          "Burned in a fire"
         ],
-        "answer": "Saved with the believers aboard the vessel"
+        "answer": "Drowned in the sea with army"
       }
     },
-    "verseRef": "71:2",
-    "arabic": "قَالَ يَـٰقَوْمِ إِنِّى لَكُمْ نَذِيرٌۭ مُّبِينٌ",
-    "verse": "He said, \"O my people, indeed I am to you a clear warner - (71:2)"
+    "verseRef": "51:40",
+    "arabic": "فَأَخَذْنَـٰهُ وَجُنُودَهُۥ فَنَبَذْنَـٰهُمْ فِى ٱلْيَمِّ وَهُوَ مُلِيمٌۭ",
+    "verse": "So We took him and his soldiers and cast them into the sea, and he was blameworthy. (51:40)"
   },
   "generated": true,
   "model": "auto (chain)"

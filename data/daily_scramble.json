@@ -1,32 +1,29 @@
 {
-  "date": "2026-09-23",
+  "date": "2026-09-24",
   "puzzle": {
-    "verseRef": "57:1",
-    "reference": "Surah Al-Hadid (57:1)",
+    "verseRef": "61:3",
+    "reference": "Surah As-Saff (61:3)",
     "segments": [
-      "سَبَّحَ لِلَّهِ",
-      "مَا فِي السَّمَاوَاتِ",
-      "وَالْأَرْضِ",
-      "وَهُوَ الْعَزِيزُ",
-      "الْحَكِيمُ"
+      "words 1-2",
+      "words 3-4",
+      "words 5-6",
+      "words 7-9"
     ],
     "translations": [
-      "Glorifies [to] Allah",
-      "whatever (is) in",
-      "the heavens and the earth",
-      "and He (is) the All-Mighty",
-      "the All-Wise"
+      "Great is hatred with",
+      "Allah that",
+      "you say what",
+      "not you do"
     ],
-    "hint": "This powerful opening verse of Surah Al-Hadid (The Iron) proclaims that all of creation declares Allah's perfection, highlighting His two majestic attributes of Supreme Might and Infinite Wisdom.",
-    "arabic": "سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+    "hint": "This verse warns against the discrepancy between words and actions, emphasizing sincerity in faith.",
+    "arabic": "كَبُرَ مَقْتًا عِندَ ٱللَّهِ أَن تَقُولُوا۟ مَا لَا تَفْعَلُونَ",
     "words": [
-      "سَبَّحَ لِلَّهِ",
-      "مَا فِى",
-      "ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ",
-      "وَهُوَ ٱلْعَزِيزُ",
-      "ٱلْحَكِيمُ"
+      "كَبُرَ مَقْتًا عِندَ",
+      "ٱللَّهِ أَن",
+      "تَقُولُوا۟ مَا",
+      "لَا تَفْعَلُونَ"
     ],
-    "verseEn": "Whatever is in the heavens and earth exalts Allāh, and He is the Exalted in Might, the Wise."
+    "verseEn": "Greatly hateful in the sight of Allāh is that you say what you do not do."
   },
   "generated": true,
   "model": "auto (chain)"
