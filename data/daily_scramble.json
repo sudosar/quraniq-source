@@ -1,29 +1,32 @@
 {
-  "date": "2026-09-24",
+  "date": "2026-09-25",
   "puzzle": {
-    "verseRef": "61:3",
-    "reference": "Surah As-Saff (61:3)",
+    "verseRef": "82:19",
+    "reference": "Al-Infitar (82:19)",
     "segments": [
       "words 1-2",
       "words 3-4",
       "words 5-6",
-      "words 7-9"
+      "word 7",
+      "words 8-9"
     ],
     "translations": [
-      "Great is hatred with",
-      "Allah that",
-      "you say what",
-      "not you do"
+      "(The) Day not",
+      "will have power a soul",
+      "for a soul anything",
+      "and the Command that Day",
+      "(will be) with Allah"
     ],
-    "hint": "This verse warns against the discrepancy between words and actions, emphasizing sincerity in faith.",
-    "arabic": "كَبُرَ مَقْتًا عِندَ ٱللَّهِ أَن تَقُولُوا۟ مَا لَا تَفْعَلُونَ",
+    "hint": "Describes the Day of Judgment when no soul can help another and all authority belongs to Allah",
+    "arabic": "يَوْمَ لَا تَمْلِكُ نَفْسٌۭ لِّنَفْسٍۢ شَيْـًۭٔا ۖ وَٱلْأَمْرُ يَوْمَئِذٍۢ لِّلَّهِ",
     "words": [
-      "كَبُرَ مَقْتًا عِندَ",
-      "ٱللَّهِ أَن",
-      "تَقُولُوا۟ مَا",
-      "لَا تَفْعَلُونَ"
+      "يَوْمَ لَا",
+      "تَمْلِكُ نَفْسٌۭ",
+      "لِّنَفْسٍۢ شَيْـًۭٔا ۖ",
+      "وَٱلْأَمْرُ يَوْمَئِذٍۢ",
+      "لِّلَّهِ"
     ],
-    "verseEn": "Greatly hateful in the sight of Allāh is that you say what you do not do."
+    "verseEn": "It is the Day when a soul will not possess for another soul [power to do] a thing; and the command, that Day, is [entirely] with Allāh."
   },
   "generated": true,
   "model": "auto (chain)"

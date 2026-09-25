@@ -1,6 +1,5 @@
 {
-  "date": "2026-09-25",
-  "puzzle": {
+  "connections": {
     "categories": [
       {
         "name": "أَلْفَاظُ الْجَمَاعَاتِ الْبَشَرِيَّةِ فِي الْقُرْآنِ",
@@ -144,6 +143,101 @@
       }
     ]
   },
-  "generated": true,
-  "model": "auto (chain)"
+  "harf": {
+    "word": "أعطى",
+    "display": "أَعْطَىٰ",
+    "hint": "A past tense verb meaning 'he gave', often used in contexts of charity or giving for God's sake.",
+    "verseRef": "92:5",
+    "arabicVerse": "فَأَمَّا مَنْ أَعْطَىٰ وَٱتَّقَىٰ",
+    "verse": "92:5 - As for he who gives and fears Allāh"
+  },
+  "deduction": {
+    "title": "The Dam That Broke a Kingdom",
+    "intro": "A land of flowing rivers, two verdant gardens, and unmatched prosperity — but its inhabitants grew heedless of the One who blessed them. When reminders came calling them back, they turned away. What followed was a punishment that still echoes as a warning. Who was this ancient community?",
+    "clues": [
+      "We lived in a land so blessed that our home lay between two verdant gardens.",
+      "We enjoyed rivers flowing through our lands and abundant harvests filling our homes.",
+      "Yet when we were called toward gratitude and obedience to our Lord, we turned away in pride.",
+      "Our wealth and ease made us forget the One who had granted it all.",
+      "Then came a sudden torrent that broke through the great barrier we had relied upon.",
+      "We are the people of Saba', whose land was known for the great Ma'rib Dam."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Are We?",
+        "options": [
+          "People of Saba",
+          "People of the Trench",
+          "Companions of the Well",
+          "People of Tubba'",
+          "People of Midian"
+        ],
+        "answer": "People of Saba"
+      },
+      "trial": {
+        "label": "Our Downfall",
+        "options": [
+          "Flood from a bursting dam",
+          "A violent wind from the sky",
+          "Burning in a trench of fire",
+          "A massive earthquake",
+          "Drowning in a great flood"
+        ],
+        "answer": "Flood from a bursting dam"
+      },
+      "location": {
+        "label": "Key Location",
+        "options": [
+          "The Ma'rib Dam",
+          "Mount Sinai",
+          "The Cave of the Seven Sleepers",
+          "The Burning Bush",
+          "The Splitting of the Sea"
+        ],
+        "answer": "The Ma'rib Dam"
+      },
+      "outcome": {
+        "label": "Our Fate",
+        "options": [
+          "Two bitter gardens replaced our lush ones",
+          "Our gardens grew even more lush",
+          "The land sank beneath the sea",
+          "We were buried in volcanic ash",
+          "Our nation split into twelve tribes"
+        ],
+        "answer": "Two bitter gardens replaced our lush ones"
+      }
+    },
+    "verseRef": "34:16",
+    "arabic": "فَأَعْرَضُوا۟ فَأَرْسَلْنَا عَلَيْهِمْ سَيْلَ ٱلْعَرِمِ وَبَدَّلْنَـٰهُم بِجَنَّتَيْهِمْ جَنَّتَيْنِ ذَوَاتَىْ أُكُلٍ خَمْطٍۢ وَأَثْلٍۢ وَشَىْءٍۢ مِّن سِدْرٍۢ قَلِيلٍۢ",
+    "verse": "But they turned away [refusing], so We sent upon them the flood of the dam, and We replaced their two [fields of] gardens with gardens of bitter fruit, tamarisks and something of sparse lote trees. (34:16)"
+  },
+  "scramble": {
+    "verseRef": "82:19",
+    "reference": "Al-Infitar (82:19)",
+    "segments": [
+      "words 1-2",
+      "words 3-4",
+      "words 5-6",
+      "word 7",
+      "words 8-9"
+    ],
+    "translations": [
+      "(The) Day not",
+      "will have power a soul",
+      "for a soul anything",
+      "and the Command that Day",
+      "(will be) with Allah"
+    ],
+    "hint": "Describes the Day of Judgment when no soul can help another and all authority belongs to Allah",
+    "arabic": "يَوْمَ لَا تَمْلِكُ نَفْسٌۭ لِّنَفْسٍۢ شَيْـًۭٔا ۖ وَٱلْأَمْرُ يَوْمَئِذٍۢ لِّلَّهِ",
+    "words": [
+      "يَوْمَ لَا",
+      "تَمْلِكُ نَفْسٌۭ",
+      "لِّنَفْسٍۢ شَيْـًۭٔا ۖ",
+      "وَٱلْأَمْرُ يَوْمَئِذٍۢ",
+      "لِّلَّهِ"
+    ],
+    "verseEn": "It is the Day when a soul will not possess for another soul [power to do] a thing; and the command, that Day, is [entirely] with Allāh."
+  }
 }
