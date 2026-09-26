@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-25",
+  "date": "2026-09-26",
   "puzzle": {
-    "word": "أعطى",
-    "display": "أَعْطَىٰ",
-    "hint": "A past tense verb meaning 'he gave', often used in contexts of charity or giving for God's sake.",
-    "verseRef": "92:5",
-    "arabicVerse": "فَأَمَّا مَنْ أَعْطَىٰ وَٱتَّقَىٰ",
-    "verse": "92:5 - As for he who gives and fears Allāh"
+    "word": "بينة",
+    "display": "بَيِّنَةٌ",
+    "hint": "A clear proof or evidence that leaves no doubt.",
+    "verseRef": "98:4",
+    "arabicVerse": "وَمَا تَفَرَّقَ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ إِلَّا مِنۢ بَعْدِ مَا جَآءَتْهُمُ ٱلْبَيِّنَةُ",
+    "verse": "98:4 - Nor did those who were given the Scripture become divided until after there had come to them clear evidence."
   },
   "generated": true,
   "model": "auto (chain)"

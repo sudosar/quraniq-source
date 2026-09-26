@@ -1,32 +1,35 @@
 {
-  "date": "2026-09-25",
+  "date": "2026-09-26",
   "puzzle": {
-    "verseRef": "82:19",
-    "reference": "Al-Infitar (82:19)",
+    "verseRef": "22:54",
+    "reference": "Surah Al-Hajj (22:54)",
     "segments": [
-      "words 1-2",
-      "words 3-4",
-      "words 5-6",
-      "word 7",
-      "words 8-9"
+      "وَالَّذِينَ",
+      "جَاهَدُوا فِينَا",
+      "لَنَهْدِيَنَّهُمْ",
+      "سُبُلَنَا",
+      "وَإِنَّ اللَّهَ",
+      "لَمَعَ الْمُحْسِنِينَ"
     ],
     "translations": [
-      "(The) Day not",
-      "will have power a soul",
-      "for a soul anything",
-      "and the Command that Day",
-      "(will be) with Allah"
+      "And that may know those who have been given the knowledge",
+      "that it (is) the truth from your Lord",
+      "and they believe in it and may humbly submit to it",
+      "their hearts And indeed Allah",
+      "(is) surely (the) Guide (of) those who believe",
+      "to a Path Straight"
     ],
-    "hint": "Describes the Day of Judgment when no soul can help another and all authority belongs to Allah",
-    "arabic": "يَوْمَ لَا تَمْلِكُ نَفْسٌۭ لِّنَفْسٍۢ شَيْـًۭٔا ۖ وَٱلْأَمْرُ يَوْمَئِذٍۢ لِّلَّهِ",
+    "hint": "This verse delivers one of the most uplifting promises in the Quran: those who exert effort for Allah's sake will be guided by Him — and Allah stands with the doers of good.",
+    "arabic": "وَلِيَعْلَمَ ٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ أَنَّهُ ٱلْحَقُّ مِن رَّبِّكَ فَيُؤْمِنُوا۟ بِهِۦ فَتُخْبِتَ لَهُۥ قُلُوبُهُمْ ۗ وَإِنَّ ٱللَّهَ لَهَادِ ٱلَّذِينَ ءَامَنُوٓا۟ إِلَىٰ صِرَٰطٍۢ مُّسْتَقِيمٍۢ",
     "words": [
-      "يَوْمَ لَا",
-      "تَمْلِكُ نَفْسٌۭ",
-      "لِّنَفْسٍۢ شَيْـًۭٔا ۖ",
-      "وَٱلْأَمْرُ يَوْمَئِذٍۢ",
-      "لِّلَّهِ"
+      "وَلِيَعْلَمَ ٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ",
+      "أَنَّهُ ٱلْحَقُّ مِن رَّبِّكَ",
+      "فَيُؤْمِنُوا۟ بِهِۦ فَتُخْبِتَ لَهُۥ",
+      "قُلُوبُهُمْ ۗ وَإِنَّ ٱللَّهَ",
+      "لَهَادِ ٱلَّذِينَ ءَامَنُوٓا۟",
+      "إِلَىٰ صِرَٰطٍۢ مُّسْتَقِيمٍۢ"
     ],
-    "verseEn": "It is the Day when a soul will not possess for another soul [power to do] a thing; and the command, that Day, is [entirely] with Allāh."
+    "verseEn": "And so those who were given knowledge may know that it is the truth from your Lord and [therefore] believe in it, and their hearts humbly submit to it. And indeed is Allāh the Guide of those who have believed to a straight path."
   },
   "generated": true,
   "model": "auto (chain)"
