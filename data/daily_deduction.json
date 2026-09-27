@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-26",
+  "date": "2026-09-27",
   "puzzle": {
-    "title": "The Denial Amidst Abundance",
-    "intro": "You find yourself among a people whose marketplaces buzz with trade, yet their scales tip dishonestly. A messenger has come to them with clear warnings, but they laugh and turn away, confident in their prosperity. The sky begins to darken, but they see it as a blessing of rain. Who are these people?",
+    "title": "The Garden That Vanished Overnight",
+    "intro": "Picture a lush garden, heavy with ripening fruit and surrounded by towering trees. Those who tended it thought themselves clever, planning their harvest in the quiet hours before dawn, away from the eyes of those in need. But the One who never sleeps had other plans for their hidden bounty. Can you guess who stands behind this cautionary tale from the Quran?",
     "clues": [
-      "We thrived in lands of commerce and plenty, yet our hearts grew callous.",
-      "A messenger came to us with signs from our Lord, but we mocked his warnings.",
-      "We were known for our trade, but we gave short measure and cheated the people.",
-      "We lived among dense trees and lush vegetation, but we took our blessings for granted.",
-      "When a dark cloud approached, we rejoiced, thinking it would bring rain to our parched lands.",
-      "Instead, that cloud unleashed a scorching punishment, and we were seized by the torment of the day of shadow."
+      "We once possessed a garden so lush and abundant that it became the envy of all who passed by.",
+      "In our planning, we whispered to one another early in the morning, declaring that no needy soul would be allowed to enter that day.",
+      "We were people of wealth, and our hearts had grown blind to the rights of the poor around us.",
+      "When the dawn of our intended harvest arrived, we approached our garden only to find it transformed into a blackened ruin overnight.",
+      "A devastating decree swept through, leaving nothing but ashes where clusters of ripe fruit had once hung.",
+      "Our tale is a stern warning recorded in the Quran, where we are known as the owners of the garden who withheld charity from the needy."
     ],
     "categories": {
       "identity": {
-        "label": "Who Are We?",
+        "label": "Who Am I?",
         "options": [
-          "Ashab al-Aykah (The Companions of the Wood)",
-          "People of Thamud",
-          "People of 'Ad",
-          "People of Lut",
-          "People of Nuh"
+          "The Owners of the Garden",
+          "The People of the Cave",
+          "The Disciples of Isa",
+          "The Companions of the Wood",
+          "The Guests of Ibrahim"
         ],
-        "answer": "Ashab al-Aykah (The Companions of the Wood)"
+        "answer": "The Owners of the Garden"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "They rejected their messenger and defrauded in trade",
-          "They worshiped a golden calf and were led astray",
-          "They practiced sodomy and attacked travelers",
-          "They built tall towers and challenged God",
-          "They refused to share water and harmed a she-camel"
+          "Secretly harvesting fruit and barring the poor",
+          "Sleeping for centuries inside a cave",
+          "Refusing to produce a she-camel from stone",
+          "Worshipping a golden calf at Mount Sinai",
+          "Building a great ark to escape a flood"
         ],
-        "answer": "They rejected their messenger and defrauded in trade"
+        "answer": "Secretly harvesting fruit and barring the poor"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A dense forest or thicket",
-          "A mountain carved into dwellings",
-          "A city by the sea",
-          "A desert valley with wells",
-          "A fertile garden with many fruits"
+          "A walled garden filled with palms and vines",
+          "A dark cavern deep in the mountains",
+          "A city overtaken by a divine hurricane",
+          "A sacred valley near the House of Allah",
+          "The banks of a flowing river"
         ],
-        "answer": "A dense forest or thicket"
+        "answer": "A walled garden filled with palms and vines"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Destroyed by a shadow cloud of fire",
-          "Drowned by a great flood",
-          "Swallowed by an earthquake",
-          "Struck by a violent wind",
-          "Turned into stone"
+          "The garden was consumed by a scorching decree from heaven",
+          "They slept peacefully for 309 lunar years",
+          "They were crushed by a rain of stones",
+          "They drowned beneath the waves of a great flood",
+          "They were scattered by a blast of cold, raging wind"
         ],
-        "answer": "Destroyed by a shadow cloud of fire"
+        "answer": "The garden was consumed by a scorching decree from heaven"
       }
     },
-    "verseRef": "15:79",
-    "arabic": "فَٱنتَقَمْنَا مِنْهُمْ وَإِنَّهُمَا لَبِإِمَامٍۢ مُّبِينٍۢ",
-    "verse": "So We took retribution from them, and indeed, both [cities] are on a clear highway. (15:79)"
+    "verseRef": "68:33",
+    "arabic": "كَذَٰلِكَ ٱلْعَذَابُ ۖ وَلَعَذَابُ ٱلْـَٔاخِرَةِ أَكْبَرُ ۚ لَوْ كَانُوا۟ يَعْلَمُونَ",
+    "verse": "Such is the punishment [of this world]. And the punishment of the Hereafter is greater, if they only knew. (68:33)"
   },
   "generated": true,
   "model": "auto (chain)"

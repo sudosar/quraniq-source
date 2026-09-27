@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-26",
+  "date": "2026-09-27",
   "puzzle": {
-    "word": "بينة",
-    "display": "بَيِّنَةٌ",
-    "hint": "A clear proof or evidence that leaves no doubt.",
-    "verseRef": "98:4",
-    "arabicVerse": "وَمَا تَفَرَّقَ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ إِلَّا مِنۢ بَعْدِ مَا جَآءَتْهُمُ ٱلْبَيِّنَةُ",
-    "verse": "98:4 - Nor did those who were given the Scripture become divided until after there had come to them clear evidence."
+    "word": "تنزيل",
+    "display": "تَنزِيلًا",
+    "hint": "How Allah's guidance was sent down to the Prophet ﷺ gradually, piece by piece",
+    "verseRef": "76:23",
+    "arabicVerse": "إِنَّا نَحْنُ نَزَّلْنَا عَلَيْكَ ٱلْقُرْءَانَ تَنزِيلًۭا",
+    "verse": "76:23 - Indeed, it is We who have sent down to you, [O Muḥammad], the Qur’ān progressively."
   },
   "generated": true,
   "model": "auto (chain)"

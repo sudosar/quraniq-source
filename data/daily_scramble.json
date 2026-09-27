@@ -1,35 +1,32 @@
 {
-  "date": "2026-09-26",
+  "date": "2026-09-27",
   "puzzle": {
-    "verseRef": "22:54",
-    "reference": "Surah Al-Hajj (22:54)",
+    "verseRef": "2:46",
+    "reference": "Surah Al-Baqarah (2:46)",
     "segments": [
-      "وَالَّذِينَ",
-      "جَاهَدُوا فِينَا",
-      "لَنَهْدِيَنَّهُمْ",
-      "سُبُلَنَا",
-      "وَإِنَّ اللَّهَ",
-      "لَمَعَ الْمُحْسِنِينَ"
+      "الَّذِينَ آمَنُوا",
+      "وَتَطْمَئِنُّ قُلُوبُهُم",
+      "بِذِكْرِ اللَّهِ",
+      "أَلَا بِذِكْرِ اللَّهِ",
+      "تَطْمَئِنُّ الْقُلُوبُ"
     ],
     "translations": [
-      "And that may know those who have been given the knowledge",
-      "that it (is) the truth from your Lord",
-      "and they believe in it and may humbly submit to it",
-      "their hearts And indeed Allah",
-      "(is) surely (the) Guide (of) those who believe",
-      "to a Path Straight"
+      "Those who believe",
+      "that they will meet",
+      "their Lord and that they",
+      "to Him",
+      "will return"
     ],
-    "hint": "This verse delivers one of the most uplifting promises in the Quran: those who exert effort for Allah's sake will be guided by Him — and Allah stands with the doers of good.",
-    "arabic": "وَلِيَعْلَمَ ٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ أَنَّهُ ٱلْحَقُّ مِن رَّبِّكَ فَيُؤْمِنُوا۟ بِهِۦ فَتُخْبِتَ لَهُۥ قُلُوبُهُمْ ۗ وَإِنَّ ٱللَّهَ لَهَادِ ٱلَّذِينَ ءَامَنُوٓا۟ إِلَىٰ صِرَٰطٍۢ مُّسْتَقِيمٍۢ",
+    "hint": "This verse reassures believers that hearts find true peace and tranquility through the remembrance (dhikr) of Allah.",
+    "arabic": "ٱلَّذِينَ يَظُنُّونَ أَنَّهُم مُّلَـٰقُوا۟ رَبِّهِمْ وَأَنَّهُمْ إِلَيْهِ رَٰجِعُونَ",
     "words": [
-      "وَلِيَعْلَمَ ٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ",
-      "أَنَّهُ ٱلْحَقُّ مِن رَّبِّكَ",
-      "فَيُؤْمِنُوا۟ بِهِۦ فَتُخْبِتَ لَهُۥ",
-      "قُلُوبُهُمْ ۗ وَإِنَّ ٱللَّهَ",
-      "لَهَادِ ٱلَّذِينَ ءَامَنُوٓا۟",
-      "إِلَىٰ صِرَٰطٍۢ مُّسْتَقِيمٍۢ"
+      "ٱلَّذِينَ يَظُنُّونَ",
+      "أَنَّهُم مُّلَـٰقُوا۟",
+      "رَبِّهِمْ وَأَنَّهُمْ",
+      "إِلَيْهِ",
+      "رَٰجِعُونَ"
     ],
-    "verseEn": "And so those who were given knowledge may know that it is the truth from your Lord and [therefore] believe in it, and their hearts humbly submit to it. And indeed is Allāh the Guide of those who have believed to a straight path."
+    "verseEn": "Who are certain that they will meet their Lord and that they will return to Him."
   },
   "generated": true,
   "model": "auto (chain)"
