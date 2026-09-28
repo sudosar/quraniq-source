@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-27",
+  "date": "2026-09-28",
   "puzzle": {
-    "word": "تنزيل",
-    "display": "تَنزِيلًا",
-    "hint": "How Allah's guidance was sent down to the Prophet ﷺ gradually, piece by piece",
-    "verseRef": "76:23",
-    "arabicVerse": "إِنَّا نَحْنُ نَزَّلْنَا عَلَيْكَ ٱلْقُرْءَانَ تَنزِيلًۭا",
-    "verse": "76:23 - Indeed, it is We who have sent down to you, [O Muḥammad], the Qur’ān progressively."
+    "word": "جهنم",
+    "display": "جَهَنَّمَ",
+    "hint": "A blazing destination for Pharaoh and those who deny truth",
+    "verseRef": "21:29",
+    "arabicVerse": "۞ وَمَن يَقُلْ مِنْهُمْ إِنِّىٓ إِلَـٰهٌۭ مِّن دُونِهِۦ فَذَٰلِكَ نَجْزِيهِ جَهَنَّمَ ۚ كَذَٰلِكَ نَجْزِى ٱلظَّـٰلِمِينَ",
+    "verse": "21:29 - And whoever of them should say, \"Indeed, I am a god besides Him\" - that one We would recompense with Hell. Thus do We recompense the wrongdoers."
   },
   "generated": true,
   "model": "auto (chain)"

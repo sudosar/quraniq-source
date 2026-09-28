@@ -1,32 +1,32 @@
 {
-  "date": "2026-09-27",
+  "date": "2026-09-28",
   "puzzle": {
-    "verseRef": "2:46",
-    "reference": "Surah Al-Baqarah (2:46)",
+    "verseRef": "19:96",
+    "reference": "Surah Maryam (19:96)",
     "segments": [
-      "الَّذِينَ آمَنُوا",
-      "وَتَطْمَئِنُّ قُلُوبُهُم",
-      "بِذِكْرِ اللَّهِ",
-      "أَلَا بِذِكْرِ اللَّهِ",
-      "تَطْمَئِنُّ الْقُلُوبُ"
+      "إِنَّ الَّذِينَ آمَنُوا",
+      "وَعَمِلُوا الصَّالِحَاتِ",
+      "سَيَجْعَلُ لَهُمُ",
+      "الرَّحْمَٰنُ",
+      "وُدًّا"
     ],
     "translations": [
-      "Those who believe",
-      "that they will meet",
-      "their Lord and that they",
-      "to Him",
-      "will return"
+      "Indeed those who",
+      "believed and did",
+      "good deeds will bestow",
+      "for them the Most Gracious",
+      "affection"
     ],
-    "hint": "This verse reassures believers that hearts find true peace and tranquility through the remembrance (dhikr) of Allah.",
-    "arabic": "ٱلَّذِينَ يَظُنُّونَ أَنَّهُم مُّلَـٰقُوا۟ رَبِّهِمْ وَأَنَّهُمْ إِلَيْهِ رَٰجِعُونَ",
+    "hint": "A beautiful verse promising that those who have faith and do good works — the Most Merciful will place love (in the hearts of others) for them.",
+    "arabic": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ سَيَجْعَلُ لَهُمُ ٱلرَّحْمَـٰنُ وُدًّۭا",
     "words": [
-      "ٱلَّذِينَ يَظُنُّونَ",
-      "أَنَّهُم مُّلَـٰقُوا۟",
-      "رَبِّهِمْ وَأَنَّهُمْ",
-      "إِلَيْهِ",
-      "رَٰجِعُونَ"
+      "إِنَّ ٱلَّذِينَ",
+      "ءَامَنُوا۟ وَعَمِلُوا۟",
+      "ٱلصَّـٰلِحَـٰتِ سَيَجْعَلُ",
+      "لَهُمُ ٱلرَّحْمَـٰنُ",
+      "وُدًّۭا"
     ],
-    "verseEn": "Who are certain that they will meet their Lord and that they will return to Him."
+    "verseEn": "Indeed, those who have believed and done righteous deeds - the Most Merciful will appoint for them affection."
   },
   "generated": true,
   "model": "auto (chain)"
