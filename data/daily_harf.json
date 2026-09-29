@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "puzzle": {
-    "word": "جهنم",
-    "display": "جَهَنَّمَ",
-    "hint": "A blazing destination for Pharaoh and those who deny truth",
-    "verseRef": "21:29",
-    "arabicVerse": "۞ وَمَن يَقُلْ مِنْهُمْ إِنِّىٓ إِلَـٰهٌۭ مِّن دُونِهِۦ فَذَٰلِكَ نَجْزِيهِ جَهَنَّمَ ۚ كَذَٰلِكَ نَجْزِى ٱلظَّـٰلِمِينَ",
-    "verse": "21:29 - And whoever of them should say, \"Indeed, I am a god besides Him\" - that one We would recompense with Hell. Thus do We recompense the wrongdoers."
+    "word": "كلام",
+    "display": "كَلَام",
+    "hint": "The Arabic term for speech, often referring to the divine word",
+    "verseRef": "9:6",
+    "arabicVerse": "وَإِنْ أَحَدٌۭ مِّنَ ٱلْمُشْرِكِينَ ٱسْتَجَارَكَ فَأَجِرْهُ حَتَّىٰ يَسْمَعَ كَلَـٰمَ ٱللَّهِ ثُمَّ أَبْلِغْهُ مَأْمَنَهُۥ ۚ ذَٰلِكَ بِأَنَّهُمْ قَوْمٌۭ لَّا يَعْلَمُونَ",
+    "verse": "9:6 - And if any one of the polytheists seeks your protection, then grant him protection so that he may hear the words of Allāh [i.e., the Qur’ān]. Then deliver him to his place of safety. That is because they are a people who do not know."
   },
   "generated": true,
   "model": "auto (chain)"

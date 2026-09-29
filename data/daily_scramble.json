@@ -1,32 +1,29 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "puzzle": {
-    "verseRef": "19:96",
-    "reference": "Surah Maryam (19:96)",
+    "verseRef": "73:11",
+    "reference": "Surah Al-Muzzammil (73:11)",
     "segments": [
-      "إِنَّ الَّذِينَ آمَنُوا",
-      "وَعَمِلُوا الصَّالِحَاتِ",
-      "سَيَجْعَلُ لَهُمُ",
-      "الرَّحْمَٰنُ",
-      "وُدًّا"
+      "وَمِنَ اللَّيْلِ فَتَهَجَّدْ بِهِ",
+      "نَافِلَةً لَّكَ",
+      "عَلَىٰ أَن يَبْعَثَكَ رَبُّكَ",
+      "مَقَامًا مَّحْمُودًا"
     ],
     "translations": [
-      "Indeed those who",
-      "believed and did",
-      "good deeds will bestow",
-      "for them the Most Gracious",
-      "affection"
+      "And leave Me and the deniers",
+      "possessors (of) the ease",
+      "and allow them respite ",
+      "a little"
     ],
-    "hint": "A beautiful verse promising that those who have faith and do good works — the Most Merciful will place love (in the hearts of others) for them.",
-    "arabic": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ سَيَجْعَلُ لَهُمُ ٱلرَّحْمَـٰنُ وُدًّۭا",
+    "hint": "A verse about the special night vigil prayer (Tahajjud) and the noble 'Maqam Mahmud' (praised station) promised by Allah.",
+    "arabic": "وَذَرْنِى وَٱلْمُكَذِّبِينَ أُو۟لِى ٱلنَّعْمَةِ وَمَهِّلْهُمْ قَلِيلًا",
     "words": [
-      "إِنَّ ٱلَّذِينَ",
-      "ءَامَنُوا۟ وَعَمِلُوا۟",
-      "ٱلصَّـٰلِحَـٰتِ سَيَجْعَلُ",
-      "لَهُمُ ٱلرَّحْمَـٰنُ",
-      "وُدًّۭا"
+      "وَذَرْنِى وَٱلْمُكَذِّبِينَ",
+      "أُو۟لِى ٱلنَّعْمَةِ",
+      "وَمَهِّلْهُمْ",
+      "قَلِيلًا"
     ],
-    "verseEn": "Indeed, those who have believed and done righteous deeds - the Most Merciful will appoint for them affection."
+    "verseEn": "And leave Me with [the matter of] the deniers, those of ease [in life], and allow them respite a little."
   },
   "generated": true,
   "model": "auto (chain)"

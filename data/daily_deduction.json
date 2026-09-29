@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "puzzle": {
-    "title": "The Eleven Stars That Bowed",
-    "intro": "A figure from the Quran was granted a profound vision in childhood — a dream of celestial bodies bowing in reverence. Years would pass through betrayal, separation, false accusation, and imprisonment before this vision came true. Who is this resilient soul whose story occupies the longest chapter of the Quran?",
+    "title": "The Prophet of the Carved Mountains",
+    "intro": "In the harsh deserts of ancient Arabia, a figure emerged among people renowned for their extraordinary craftsmanship. Their homes rose from solid rock, yet their hearts were harder than the mountains they carved. A divine messenger arrived with a single, miraculous sign — but pride and defiance led to swift and terrifying consequences. Can you identify the noble servant whose people chose destruction over guidance?",
     "clues": [
-      "I was once young, blessed with a remarkable dream that even my own father warned me to keep private.",
-      "My own brothers, blinded by jealousy, plotted against me and cast me into a deep, dark well.",
-      "I was carried to a distant land and sold into the household of a noble official, where I found favor and rose in responsibility.",
-      "False accusation led to my unjust imprisonment, yet in that dark place I found solace in prayer and prostration to Allah.",
-      "Allah blessed me with the rare ability to interpret dreams, which eventually brought me before the ruler of the land and elevated me to a high position of trust.",
-      "After long years of separation, I was reunited with my beloved family, and my childhood dream of eleven stars, the sun, and the moon bowing to me was finally fulfilled."
+      "I was sent as a warner to my people, calling them to the worship of the One God.",
+      "My people lived among dramatic rock formations, carving magnificent dwellings into the mountainsides.",
+      "A miraculous she-camel emerged from solid rock at my prayer, a clear sign from the Almighty.",
+      "I told my people to share the water with this she-camel and not to harm it.",
+      "My people plotted against the she-camel and hamstrung her, sealing their own destruction.",
+      "A terrifying earthquake struck my people, and they were left fallen motionless in their dwellings."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Yusuf",
           "Prophet Salih",
-          "Prophet Ilyas",
-          "Tubba', the ruler of ancient Himyar",
-          "A humble shepherd from the hills of Palestine"
+          "Prophet Hud",
+          "Prophet Shu'ayb",
+          "Prophet Nuh",
+          "Prophet Musa"
         ],
-        "answer": "Prophet Yusuf"
+        "answer": "Prophet Salih"
       },
       "trial": {
-        "label": "Trial/Event",
+        "label": "What was the defining trial?",
         "options": [
-          "Being cast into a deep, dark well by jealous brothers",
-          "Being swallowed by a great creature of the deep seas",
-          "Being thrown into a blazing fire by idolaters",
-          "Being swept away by a divine wind of destruction",
-          "Surviving a great flood that covered the entire land"
+          "The hamstringing of a miraculous she-camel",
+          "Building a great ark amid mockery",
+          "Confronting a tyrannical pharaoh",
+          "Being cast into a blazing fire",
+          "The breaking of the Sabbath covenant"
         ],
-        "answer": "Being cast into a deep, dark well by jealous brothers"
+        "answer": "The hamstringing of a miraculous she-camel"
       },
       "location": {
-        "label": "Key Element",
+        "label": "What was the central element?",
         "options": [
-          "A dry well in the desert where I was abandoned",
-          "A great fish of the deep seas",
-          "A massive ark built upon divine command",
-          "A tower built to reach the heavens",
-          "A sacred fire that refused to burn"
+          "A she-camel that emerged from rock",
+          "A great wooden ark",
+          "A staff that parted the sea",
+          "An enormous whale",
+          "A mountain suspended overhead"
         ],
-        "answer": "A dry well in the desert where I was abandoned"
+        "answer": "A she-camel that emerged from rock"
       },
       "outcome": {
-        "label": "Outcome",
+        "label": "What was their ultimate fate?",
         "options": [
-          "Reunited with family after years of separation and became a trusted minister",
-          "Led a great exodus of my people across a parted sea",
-          "Warned my nation of impending doom that consumed them",
-          "Built a sacred house that became a sanctuary for all",
-          "Emerged safely from the belly of a great creature after three days"
+          "A sudden earthquake from the heavens",
+          "Drowned in a mighty flood",
+          "Their cities overturned by divine command",
+          "Burned by a scorching wind",
+          "Swallowed by the earth"
         ],
-        "answer": "Reunited with family after years of separation and became a trusted minister"
+        "answer": "A sudden earthquake from the heavens"
       }
     },
-    "verseRef": "12:21",
-    "arabic": "وَقَالَ ٱلَّذِى ٱشْتَرَىٰهُ مِن مِّصْرَ لِٱمْرَأَتِهِۦٓ أَكْرِمِى مَثْوَىٰهُ عَسَىٰٓ أَن يَنفَعَنَآ أَوْ نَتَّخِذَهُۥ وَلَدًۭا ۚ وَكَذَٰلِكَ مَكَّنَّا لِيُوسُفَ فِى ٱلْأَرْضِ وَلِنُعَلِّمَهُۥ مِن تَأْوِيلِ ٱلْأَحَادِيثِ ۚ وَٱللَّهُ غَالِبٌ عَلَىٰٓ أَمْرِهِۦ وَلَـٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يَعْلَمُونَ",
-    "verse": "And the one from Egypt who bought him said to his wife, \"Make his residence comfortable. Perhaps he will benefit us, or we will adopt him as a son.\" And thus, We established Joseph in the land that We might teach him the interpretation of events [i.e., dreams]. And Allāh is predominant over His affair, but most of the people do not know. (12:21)"
+    "verseRef": "22:42",
+    "arabic": "وَإِن يُكَذِّبُوكَ فَقَدْ كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍۢ وَعَادٌۭ وَثَمُودُ",
+    "verse": "And if they deny you, [O Muḥammad] - so, before them, did the people of Noah and ʿAad and Thamūd deny [their prophets], (22:42)"
   },
   "generated": true,
   "model": "auto (chain)"
