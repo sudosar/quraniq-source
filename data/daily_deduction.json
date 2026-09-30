@@ -1,65 +1,65 @@
 {
-  "date": "2026-09-29",
+  "date": "2026-09-30",
   "puzzle": {
-    "title": "The Prophet of the Carved Mountains",
-    "intro": "In the harsh deserts of ancient Arabia, a figure emerged among people renowned for their extraordinary craftsmanship. Their homes rose from solid rock, yet their hearts were harder than the mountains they carved. A divine messenger arrived with a single, miraculous sign — but pride and defiance led to swift and terrifying consequences. Can you identify the noble servant whose people chose destruction over guidance?",
+    "title": "The Patient One",
+    "intro": "Long ago, in the earliest days of human history, two souls stood before their Creator with offerings. One was accepted, one was not. What followed would become the first great tragedy between siblings - one act of patient restraint and one act of bitter vengeance. Can you uncover who I am?",
     "clues": [
-      "I was sent as a warner to my people, calling them to the worship of the One God.",
-      "My people lived among dramatic rock formations, carving magnificent dwellings into the mountainsides.",
-      "A miraculous she-camel emerged from solid rock at my prayer, a clear sign from the Almighty.",
-      "I told my people to share the water with this she-camel and not to harm it.",
-      "My people plotted against the she-camel and hamstrung her, sealing their own destruction.",
-      "A terrifying earthquake struck my people, and they were left fallen motionless in their dwellings."
+      "I was born in the very first days of human existence on earth",
+      "I was a child of the very first pair of humans to ever walk this earth",
+      "I once offered a sacrifice from the best of my flock to please my Creator",
+      "My offering was accepted from above, while my sibling's offering was rejected",
+      "When threatened with death, I chose not to lift my hand against my sibling",
+      "I became the first person in all of human history to be wrongfully killed by another"
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Salih",
-          "Prophet Hud",
-          "Prophet Shu'ayb",
-          "Prophet Nuh",
-          "Prophet Musa"
+          "Habil (Abel), son of Adam",
+          "Qabil (Cain), son of Adam",
+          "Adam, the first human",
+          "Nuh (Noah)",
+          "Ibrahim (Abraham)"
         ],
-        "answer": "Prophet Salih"
+        "answer": "Habil (Abel), son of Adam"
       },
       "trial": {
-        "label": "What was the defining trial?",
+        "label": "Trial/Event",
         "options": [
-          "The hamstringing of a miraculous she-camel",
-          "Building a great ark amid mockery",
-          "Confronting a tyrannical pharaoh",
-          "Being cast into a blazing fire",
-          "The breaking of the Sabbath covenant"
+          "The first murder in human history",
+          "The great flood of Nuh",
+          "The destruction of Fir'awn's army",
+          "The sacrifice of Ismail by Ibrahim",
+          "The battle against Jalut (Goliath)"
         ],
-        "answer": "The hamstringing of a miraculous she-camel"
+        "answer": "The first murder in human history"
       },
       "location": {
-        "label": "What was the central element?",
+        "label": "Key Element",
         "options": [
-          "A she-camel that emerged from rock",
+          "A sheep offered as a pleasing sacrifice",
           "A great wooden ark",
-          "A staff that parted the sea",
-          "An enormous whale",
-          "A mountain suspended overhead"
+          "A staff that turned into a serpent",
+          "A hoopoe bird carrying a royal message",
+          "A blazing trench of fire"
         ],
-        "answer": "A she-camel that emerged from rock"
+        "answer": "A sheep offered as a pleasing sacrifice"
       },
       "outcome": {
-        "label": "What was their ultimate fate?",
+        "label": "Outcome",
         "options": [
-          "A sudden earthquake from the heavens",
-          "Drowned in a mighty flood",
-          "Their cities overturned by divine command",
-          "Burned by a scorching wind",
-          "Swallowed by the earth"
+          "Became the first victim of murder in human history",
+          "Survived a great flood inside a wooden vessel",
+          "Lived inside the belly of a great fish",
+          "Ruled over jinn, humans, and the wind",
+          "Wandered for forty years in a vast wilderness"
         ],
-        "answer": "A sudden earthquake from the heavens"
+        "answer": "Became the first victim of murder in human history"
       }
     },
-    "verseRef": "22:42",
-    "arabic": "وَإِن يُكَذِّبُوكَ فَقَدْ كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍۢ وَعَادٌۭ وَثَمُودُ",
-    "verse": "And if they deny you, [O Muḥammad] - so, before them, did the people of Noah and ʿAad and Thamūd deny [their prophets], (22:42)"
+    "verseRef": "5:27",
+    "arabic": "۞ وَٱتْلُ عَلَيْهِمْ نَبَأَ ٱبْنَىْ ءَادَمَ بِٱلْحَقِّ إِذْ قَرَّبَا قُرْبَانًۭا فَتُقُبِّلَ مِنْ أَحَدِهِمَا وَلَمْ يُتَقَبَّلْ مِنَ ٱلْـَٔاخَرِ قَالَ لَأَقْتُلَنَّكَ ۖ قَالَ إِنَّمَا يَتَقَبَّلُ ٱللَّهُ مِنَ ٱلْمُتَّقِينَ",
+    "verse": "And recite to them the story of Adam's two sons, in truth, when they both made an offering [to Allāh], and it was accepted from one of them but was not accepted from the other. Said [the latter], \"I will surely kill you.\" Said [the former], \"Indeed, Allāh only accepts from the righteous [who fear Him]. (5:27)"
   },
   "generated": true,
   "model": "auto (chain)"

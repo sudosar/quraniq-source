@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-29",
+  "date": "2026-09-30",
   "puzzle": {
-    "word": "كلام",
-    "display": "كَلَام",
-    "hint": "The Arabic term for speech, often referring to the divine word",
-    "verseRef": "9:6",
-    "arabicVerse": "وَإِنْ أَحَدٌۭ مِّنَ ٱلْمُشْرِكِينَ ٱسْتَجَارَكَ فَأَجِرْهُ حَتَّىٰ يَسْمَعَ كَلَـٰمَ ٱللَّهِ ثُمَّ أَبْلِغْهُ مَأْمَنَهُۥ ۚ ذَٰلِكَ بِأَنَّهُمْ قَوْمٌۭ لَّا يَعْلَمُونَ",
-    "verse": "9:6 - And if any one of the polytheists seeks your protection, then grant him protection so that he may hear the words of Allāh [i.e., the Qur’ān]. Then deliver him to his place of safety. That is because they are a people who do not know."
+    "word": "عابد",
+    "display": "عَابِدٌ",
+    "hint": "One devoted to acts of worship",
+    "verseRef": "109:5",
+    "arabicVerse": "وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ",
+    "verse": "109:5 - Nor will you be worshippers of what I worship."
   },
   "generated": true,
   "model": "auto (chain)"
