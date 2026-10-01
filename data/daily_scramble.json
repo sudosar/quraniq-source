@@ -1,32 +1,32 @@
 {
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "puzzle": {
-    "verseRef": "5:36",
-    "reference": "Surah Al-Ma'idah (5:36)",
+    "verseRef": "29:62",
+    "reference": "Surah Al-Ankabut (29:62)",
     "segments": [
-      "مَن قَتَلَ نَفْسًا",
-      "بِغَيْرِ نَفْسٍ",
-      "أَوْ فَسَادٍ فِي الْأَرْضِ",
-      "فَكَأَنَّمَا قَتَلَ النَّاسَ",
-      "جَمِيعًا"
+      "لَا يُكَلِّفُ اللَّهُ",
+      "نَفْسًا إِلَّا وُسْعَهَا",
+      "لَهَا مَا كَسَبَتْ",
+      "وَعَلَيْهَا",
+      "مَا اكْتَسَبَتْ"
     ],
     "translations": [
-      "Indeed those who disbelieve if that",
-      "for them (is) what (is) in the earth all",
-      "and the like of it with it to ransom themselves with it from",
-      "(the) punishment (of the) Day (of) the Resurrection not will be accepted",
-      "from them and for them (is) a punishment painful"
+      "Allah extends the provision",
+      "for whom He wills of",
+      "His slaves and restricts for him",
+      "Indeed Allah of every",
+      "thing (is) All-Knower"
     ],
-    "hint": "A foundational teaching about the sanctity of every human life.",
-    "arabic": "إِنَّ ٱلَّذِينَ كَفَرُوا۟ لَوْ أَنَّ لَهُم مَّا فِى ٱلْأَرْضِ جَمِيعًۭا وَمِثْلَهُۥ مَعَهُۥ لِيَفْتَدُوا۟ بِهِۦ مِنْ عَذَابِ يَوْمِ ٱلْقِيَـٰمَةِ مَا تُقُبِّلَ مِنْهُمْ ۖ وَلَهُمْ عَذَابٌ أَلِيمٌۭ",
+    "hint": "A comforting reminder that Allah never burdens a soul beyond what it can bear — each person is accountable for their own deeds.",
+    "arabic": "ٱللَّهُ يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ مِنْ عِبَادِهِۦ وَيَقْدِرُ لَهُۥٓ ۚ إِنَّ ٱللَّهَ بِكُلِّ شَىْءٍ عَلِيمٌۭ",
     "words": [
-      "إِنَّ ٱلَّذِينَ كَفَرُوا۟ لَوْ أَنَّ",
-      "لَهُم مَّا فِى ٱلْأَرْضِ جَمِيعًۭا",
-      "وَمِثْلَهُۥ مَعَهُۥ لِيَفْتَدُوا۟ بِهِۦ مِنْ",
-      "عَذَابِ يَوْمِ ٱلْقِيَـٰمَةِ مَا تُقُبِّلَ",
-      "مِنْهُمْ ۖ وَلَهُمْ عَذَابٌ أَلِيمٌۭ"
+      "ٱللَّهُ يَبْسُطُ ٱلرِّزْقَ",
+      "لِمَن يَشَآءُ مِنْ",
+      "عِبَادِهِۦ وَيَقْدِرُ لَهُۥٓ ۚ",
+      "إِنَّ ٱللَّهَ بِكُلِّ",
+      "شَىْءٍ عَلِيمٌۭ"
     ],
-    "verseEn": "Indeed, those who disbelieve - if they should have all that is in the earth and the like of it with it by which to ransom themselves from the punishment of the Day of Resurrection, it will not be accepted from them, and for them is a painful punishment."
+    "verseEn": "Allāh extends provision for whom He wills of His servants and restricts for him. Indeed Allāh is, of all things, Knowing."
   },
   "generated": true,
   "model": "auto (chain)"

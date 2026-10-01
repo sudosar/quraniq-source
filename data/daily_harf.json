@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "puzzle": {
-    "word": "عابد",
-    "display": "عَابِدٌ",
-    "hint": "One devoted to acts of worship",
-    "verseRef": "109:5",
-    "arabicVerse": "وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ",
-    "verse": "109:5 - Nor will you be worshippers of what I worship."
+    "word": "توكل",
+    "display": "تَوَكَّلْ",
+    "hint": "Rely upon Allah; put your trust in Him (imperative form)",
+    "verseRef": "11:123",
+    "arabicVerse": "وَلِلَّهِ غَيْبُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَإِلَيْهِ يُرْجَعُ ٱلْأَمْرُ كُلُّهُۥ فَٱعْبُدْهُ وَتَوَكَّلْ عَلَيْهِ ۚ وَمَا رَبُّكَ بِغَـٰفِلٍ عَمَّا تَعْمَلُونَ",
+    "verse": "11:123 - And to Allāh belong the unseen [aspects] of the heavens and the earth and to Him will be returned the matter, all of it, so worship Him and rely upon Him. And your Lord is not unaware of that which you do."
   },
   "generated": true,
   "model": "auto (chain)"
