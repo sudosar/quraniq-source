@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "puzzle": {
-    "word": "توكل",
-    "display": "تَوَكَّلْ",
-    "hint": "Rely upon Allah; put your trust in Him (imperative form)",
-    "verseRef": "11:123",
-    "arabicVerse": "وَلِلَّهِ غَيْبُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَإِلَيْهِ يُرْجَعُ ٱلْأَمْرُ كُلُّهُۥ فَٱعْبُدْهُ وَتَوَكَّلْ عَلَيْهِ ۚ وَمَا رَبُّكَ بِغَـٰفِلٍ عَمَّا تَعْمَلُونَ",
-    "verse": "11:123 - And to Allāh belong the unseen [aspects] of the heavens and the earth and to Him will be returned the matter, all of it, so worship Him and rely upon Him. And your Lord is not unaware of that which you do."
+    "word": "أمة",
+    "display": "أُمَّة",
+    "hint": "The worldwide community of all Muslims",
+    "verseRef": "3:104",
+    "arabicVerse": "وَلْتَكُن مِّنكُمْ أُمَّةٌۭ يَدْعُونَ إِلَى ٱلْخَيْرِ وَيَأْمُرُونَ بِٱلْمَعْرُوفِ وَيَنْهَوْنَ عَنِ ٱلْمُنكَرِ ۚ وَأُو۟لَـٰٓئِكَ هُمُ ٱلْمُفْلِحُونَ",
+    "verse": "3:104 - And let there be [arising] from you a nation inviting to [all that is] good, enjoining what is right and forbidding what is wrong, and those will be the successful."
   },
   "generated": true,
   "model": "auto (chain)"

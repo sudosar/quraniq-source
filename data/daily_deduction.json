@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "puzzle": {
-    "title": "Spoken Into Being",
-    "intro": "A figure emerges from sacred history, carrying miracles that defied the natural order. This soul arrived through a single divine command, defended a parent from grave accusations, and departed this world before earthly chains could bind them. The story spans from a humble cradle to the heavens above. Who could this be?",
+    "title": "The Sovereign Who Traversed the Earth's Ends",
+    "intro": "Imagine a powerful ruler, granted strength and authority over the land. This figure embarked on extraordinary journeys, reaching the place where the sun sets and the place where it rises, encountering strange peoples and facing a great challenge from two corrupting nations. Who is this enigmatic leader?",
     "clues": [
-      "I was sent as a sign and mercy from Allah to the Children of Israel.",
-      "My arrival was unlike any before — I came into being by the divine word 'Be!' without an earthly father.",
-      "My parent faced cruel slander, but sacred revelation descended to declare their innocence and elevate their station.",
-      "As a newborn infant, I astonished those around me by speaking clearly from my cradle to clear my parent's name.",
-      "By Allah's permission, I shaped life from lifeless clay, gave sight to the blind, and cured the leper with my touch.",
-      "I was raised up to the heavens before harm could touch me, and I shall return to this world before the final Hour arrives."
+      "I was a ruler granted authority and means to reach the farthest corners of the earth.",
+      "I journeyed to the west and witnessed the sun setting in a murky spring.",
+      "I encountered a people near the rising sun who had no shelter from its heat.",
+      "Another community asked my help against two corrupting nations known as Gog and Magog.",
+      "I built a barrier using iron and molten copper to contain them.",
+      "I declared that this barrier was a mercy from my Lord, and it will remain until the appointed time."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Isa",
-          "Prophet Musa",
-          "Prophet Ibrahim",
-          "Prophet Yusuf",
-          "Prophet Dawud"
+          "Dhul-Qarnayn",
+          "Prophet Sulaiman",
+          "Qarun",
+          "Talut",
+          "Namrud"
         ],
-        "answer": "Prophet Isa"
+        "answer": "Dhul-Qarnayn"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Speaking from the cradle as an infant",
-          "Surviving in the belly of a great fish",
-          "Being cast into a blazing fire",
-          "Building a great ark before a flood",
-          "Facing the sorcery of Pharaoh's court"
+          "Building a barrier against Gog and Magog",
+          "Surviving a great flood",
+          "Being thrown into a fire",
+          "Crossing the sea",
+          "Fighting a giant"
         ],
-        "answer": "Speaking from the cradle as an infant"
+        "answer": "Building a barrier against Gog and Magog"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The Injeel (Gospel)",
-          "The Tawrah (Torah)",
-          "The Zabur (Psalms)",
-          "The Suhuf (Scrolls of Ibrahim)",
-          "A staff that split the sea"
+          "A barrier of iron and copper",
+          "A staff that became a snake",
+          "A ship of wood",
+          "A palace of glass",
+          "A garden of date palms"
         ],
-        "answer": "The Injeel (Gospel)"
+        "answer": "A barrier of iron and copper"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Raised to the heavens, will return before the Day of Judgment",
-          "Led the Children of Israel out of Egypt",
-          "Became a king with dominion over jinn, humans, and birds",
-          "Survived a massive flood with the faithful",
-          "Built the sacred house in Mecca"
+          "Gog and Magog were contained until the appointed time",
+          "He became a prophet",
+          "He was punished for arrogance",
+          "He conquered the whole world",
+          "He lived forever"
         ],
-        "answer": "Raised to the heavens, will return before the Day of Judgment"
+        "answer": "Gog and Magog were contained until the appointed time"
       }
     },
-    "verseRef": "23:50",
-    "arabic": "وَجَعَلْنَا ٱبْنَ مَرْيَمَ وَأُمَّهُۥٓ ءَايَةًۭ وَءَاوَيْنَـٰهُمَآ إِلَىٰ رَبْوَةٍۢ ذَاتِ قَرَارٍۢ وَمَعِينٍۢ",
-    "verse": "And We made the son of Mary and his mother a sign and sheltered them within a high ground having level [areas] and flowing water. (23:50)"
+    "verseRef": "18:94",
+    "arabic": "قَالُوا۟ يَـٰذَا ٱلْقَرْنَيْنِ إِنَّ يَأْجُوجَ وَمَأْجُوجَ مُفْسِدُونَ فِى ٱلْأَرْضِ فَهَلْ نَجْعَلُ لَكَ خَرْجًا عَلَىٰٓ أَن تَجْعَلَ بَيْنَنَا وَبَيْنَهُمْ سَدًّۭا",
+    "verse": "They said, \"O Dhul-Qarnayn, indeed Gog and Magog are [great] corrupters in the land. So may we assign for you an expenditure that you might make between us and them a barrier?\" (18:94)"
   },
   "generated": true,
   "model": "auto (chain)"

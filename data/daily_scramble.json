@@ -1,32 +1,29 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "puzzle": {
-    "verseRef": "29:62",
-    "reference": "Surah Al-Ankabut (29:62)",
+    "verseRef": "64:13",
+    "reference": "Surah At-Taghabun (64:13)",
     "segments": [
-      "لَا يُكَلِّفُ اللَّهُ",
-      "نَفْسًا إِلَّا وُسْعَهَا",
-      "لَهَا مَا كَسَبَتْ",
-      "وَعَلَيْهَا",
-      "مَا اكْتَسَبَتْ"
+      "اللَّهُ",
+      "لَا إِلَٰهَ إِلَّا هُوَ",
+      "وَعَلَى اللَّهِ",
+      "فَلْيَتَوَكَّلِ الْمُؤْمِنُونَ"
     ],
     "translations": [
-      "Allah extends the provision",
-      "for whom He wills of",
-      "His slaves and restricts for him",
-      "Indeed Allah of every",
-      "thing (is) All-Knower"
+      "Allah (there is) no god",
+      "except Him",
+      "And upon Allah",
+      "let put (their) trust the believers"
     ],
-    "hint": "A comforting reminder that Allah never burdens a soul beyond what it can bear — each person is accountable for their own deeds.",
-    "arabic": "ٱللَّهُ يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ مِنْ عِبَادِهِۦ وَيَقْدِرُ لَهُۥٓ ۚ إِنَّ ٱللَّهَ بِكُلِّ شَىْءٍ عَلِيمٌۭ",
+    "hint": "A powerful verse that combines tawhid (the oneness of Allah) with the command of tawakkul (placing full reliance upon Him).",
+    "arabic": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ۚ وَعَلَى ٱللَّهِ فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ",
     "words": [
-      "ٱللَّهُ يَبْسُطُ ٱلرِّزْقَ",
-      "لِمَن يَشَآءُ مِنْ",
-      "عِبَادِهِۦ وَيَقْدِرُ لَهُۥٓ ۚ",
-      "إِنَّ ٱللَّهَ بِكُلِّ",
-      "شَىْءٍ عَلِيمٌۭ"
+      "ٱللَّهُ لَآ إِلَـٰهَ",
+      "إِلَّا هُوَ ۚ",
+      "وَعَلَى ٱللَّهِ",
+      "فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ"
     ],
-    "verseEn": "Allāh extends provision for whom He wills of His servants and restricts for him. Indeed Allāh is, of all things, Knowing."
+    "verseEn": "Allāh - there is no deity except Him. And upon Allāh let the believers rely."
   },
   "generated": true,
   "model": "auto (chain)"
