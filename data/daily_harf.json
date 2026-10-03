@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-02",
+  "date": "2026-10-03",
   "puzzle": {
-    "word": "أمة",
-    "display": "أُمَّة",
-    "hint": "The worldwide community of all Muslims",
-    "verseRef": "3:104",
-    "arabicVerse": "وَلْتَكُن مِّنكُمْ أُمَّةٌۭ يَدْعُونَ إِلَى ٱلْخَيْرِ وَيَأْمُرُونَ بِٱلْمَعْرُوفِ وَيَنْهَوْنَ عَنِ ٱلْمُنكَرِ ۚ وَأُو۟لَـٰٓئِكَ هُمُ ٱلْمُفْلِحُونَ",
-    "verse": "3:104 - And let there be [arising] from you a nation inviting to [all that is] good, enjoining what is right and forbidding what is wrong, and those will be the successful."
+    "word": "آخرة",
+    "display": "آخِرَة",
+    "hint": "The life after this world; the final abode.",
+    "verseRef": "93:4",
+    "arabicVerse": "وَلَلْـَٔاخِرَةُ خَيْرٌۭ لَّكَ مِنَ ٱلْأُولَىٰ",
+    "verse": "93:4 - And the Hereafter is better for you than the first [life]."
   },
   "generated": true,
   "model": "auto (chain)"
