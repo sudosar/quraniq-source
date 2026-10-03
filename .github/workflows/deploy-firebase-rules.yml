@@ -1,0 +1,35 @@
+name: Deploy Firebase Rules
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - firebase-rules.json
+      - scripts/deploy_firebase_rules.mjs
+      - .github/workflows/deploy-firebase-rules.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firebase-rules
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Firebase Admin SDK
+        run: npm install --no-save --no-package-lock firebase-admin@13
+
+      - name: Deploy database rules
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node scripts/deploy_firebase_rules.mjs
