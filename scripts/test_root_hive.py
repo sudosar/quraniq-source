@@ -67,6 +67,20 @@ check(ok["score"], "maxScore equals the sum of word points")
 check(ok["senses"], "every word has at least one glossed sense")
 check(ok["roots_in_hive"], "featured root letters are all in the hive")
 
+print("\nDistinct clues")
+fsd = rh.build_puzzle("فسد", rh.design_hive("فسد", lex, forms), lex, forms) if rh.design_hive("فسد", lex, forms) else None
+if fsd:
+    g = {w["w"]: w["senses"][0]["gloss"] for w in fsd["words"]}
+    check(g.get("فساد") and g.get("مفسد"), "فساد and مفسد are both in the فسد hive")
+check(rh.gloss_key("spreading corruption") == rh.gloss_key("spread corruption"), "gloss_key treats inflections as equal")
+check(rh.glosses_overlap("corruption", "spreading corruption"), "a contained meaning counts as overlapping")
+check(not rh.glosses_overlap("book", "scribe"), "different meanings do not overlap")
+dups = 0
+for root, p in puzzles:
+    gl = [w["senses"][0]["gloss"] for w in p["words"]]
+    dups += sum(rh.glosses_overlap(gl[i], gl[j]) for i in range(len(gl)) for j in range(i + 1, len(gl)))
+print(f"  {dups} overlapping gloss pairs left across {len(puzzles)} sample puzzles (the client labels these)")
+
 print("\nCooldown")
 root_a, _ = rh.pick_root(lex, forms, set(), seed="2026-10-03")
 root_b, _ = rh.pick_root(lex, forms, {root_a}, seed="2026-10-03")

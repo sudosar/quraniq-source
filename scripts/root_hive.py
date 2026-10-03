@@ -182,6 +182,41 @@ def _sense(lem):
     return out
 
 
+def gloss_key(gloss):
+    """Loose identity for an English gloss: "spreading corruption" == "spread corruption"."""
+    words = re.findall(r"[a-z]+", (gloss or "").lower())
+    stems = {re.sub(r"(ing|ed|es|s)$", "", w) or w for w in words if w not in ("the", "a", "an", "to", "of")}
+    return " ".join(sorted(stems))
+
+
+def glosses_overlap(a, b):
+    """True when one gloss's meaning words contain the other's ("corruption" vs "spreading corruption")."""
+    ka, kb = set(gloss_key(a).split()), set(gloss_key(b).split())
+    return bool(ka) and bool(kb) and (ka <= kb or kb <= ka)
+
+
+def _distinguish_glosses(words):
+    """Give each word in a puzzle its own English gloss where the data allows.
+
+    The corpus often glosses related forms identically (فَساد and مُفْسِد are both
+    "spreading corruption"), which makes clues look like a word already found.
+    Words take turns, most frequent first, switching to an alternative gloss
+    that clashes with no other word's current gloss.
+    """
+    ordered = sorted(words, key=lambda w: -w["senses"][0]["count"])
+    for _ in range(2):  # a second pass lets earlier words yield once later ones are settled
+        for w in ordered:
+            sense = w["senses"][0]
+            others = [o["senses"][0]["gloss"] for o in ordered if o is not w]
+            if not any(glosses_overlap(sense["gloss"], g) for g in others):
+                continue
+            options = [sense["gloss"]] + sense.get("alt", [])
+            choice = next((g for g in options if g and not any(glosses_overlap(g, o) for o in others)), None)
+            if choice and choice != sense["gloss"]:
+                sense["alt"] = [g for g in options if g != choice]
+                sense["gloss"] = choice
+
+
 def default_meaning(root, lexicon):
     """Data-driven fallback description built from the root's commonest glosses."""
     lemmas = sorted((lexicon["lemmas"][i] for i in lexicon["roots"][root]["lemmas"]), key=lambda l: -l["count"])
@@ -207,6 +242,8 @@ def build_puzzle(root, design, lexicon, forms, meaning=None):
             "points": _word_points(norm, is_family),
             "senses": [_sense(l) for l in lemmas],
         })
+
+    _distinguish_glosses(words)
 
     root_info = lexicon["roots"][root]
     family_all = sorted((lexicon["lemmas"][i] for i in root_info["lemmas"]), key=lambda l: -l["count"])
