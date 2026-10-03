@@ -5570,3 +5570,10 @@ textarea {
 @media (max-width: 480px) and (max-height: 700px) {
     .rh-app.has-clue .rh-hive { width: min(236px, 64vw); }
 }
+
+.rh-clue-not {
+    font-weight: 700;
+    color: var(--rh-gold-deep);
+}
+
+.rh-clue-not [lang="ar"] { font-family: var(--font-arabic); font-size: 1.05rem; }

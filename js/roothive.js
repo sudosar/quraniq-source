@@ -382,12 +382,46 @@ function hintHiveWord(w) {
     if (typeof trackEvent === 'function') trackEvent('roothive_hint', { level, family: entry.family });
 }
 
+/** Mirrors gloss_key / glosses_overlap in scripts/root_hive.py. */
+function hiveGlossKey(gloss) {
+    const stems = (String(gloss || '').toLowerCase().match(/[a-z]+/g) || [])
+        .filter(w => !['the', 'a', 'an', 'to', 'of'].includes(w))
+        .map(w => w.replace(/(ing|ed|es|s)$/, '') || w);
+    return [...new Set(stems)].sort().join(' ');
+}
+
+/** Found words whose meaning matches this word's — a clue must not be mistaken for them. */
+function hiveGlossesOverlap(a, b) {
+    const ka = new Set(hiveGlossKey(a).split(' ').filter(Boolean));
+    const kb = new Set(hiveGlossKey(b).split(' ').filter(Boolean));
+    if (!ka.size || !kb.size) return false;
+    const within = (x, y) => [...x].every(t => y.has(t));
+    return within(ka, kb) || within(kb, ka);
+}
+
+function hiveFoundTwins(entry) {
+    const gloss = entry.senses[0]?.gloss;
+    if (!gloss) return [];
+    return hive.found
+        .filter(w => w !== entry.w)
+        .map(w => hive.words.get(w))
+        .filter(e => e && hiveGlossesOverlap(e.senses[0]?.gloss, gloss));
+}
+
+function hiveTwinNote(entry) {
+    const twins = hiveFoundTwins(entry);
+    if (!twins.length) return '';
+    return `<span class="rh-clue-not">a different word from <span lang="ar" dir="rtl">${twins.map(t => hiveEsc(hiveDisplayLemma(t))).join('، ')}</span></span>`;
+}
+
 /** Easiest useful word to hint: one already being hinted, then root-family words, then common short words. */
 function pickHiveHintTarget() {
     if (hive.clue && hive.words.has(hive.clue) && !hive.found.includes(hive.clue)) return hive.clue;
     const unfound = hive.puzzle.words.filter(w => !hive.found.includes(w.w));
     unfound.sort((a, b) =>
         (hiveHintLevel(b.w) - hiveHintLevel(a.w)) ||
+        // Prefer words that can't be confused with one already found
+        (hiveFoundTwins(a).length - hiveFoundTwins(b).length) ||
         (Number(b.family) - Number(a.family)) ||
         ((b.senses[0]?.count || 0) - (a.senses[0]?.count || 0)) ||
         (a.w.length - b.w.length));
@@ -424,7 +458,11 @@ function hiveClueParts(entry) {
     const level = hiveHintLevel(entry.w);
     const sense = entry.senses[0];
     const parts = [`${entry.w.length} letters`];
-    if (level >= HIVE_HINT_MEANING) parts.push(`“${hiveEsc(hiveGloss(sense))}” <span class="rh-clue-type">(${hiveEsc(hiveTypeInfo(sense).label)})</span>`);
+    if (level >= HIVE_HINT_MEANING) {
+        parts.push(`“${hiveEsc(hiveGloss(sense))}” <span class="rh-clue-type">(${hiveEsc(hiveTypeInfo(sense).label)})</span>`);
+        const note = hiveTwinNote(entry);
+        if (note) parts.push(note);
+    }
     if (level >= HIVE_HINT_LETTER) parts.push(`starts <b lang="ar">${hiveEsc(entry.w[0])}</b>`);
     return parts;
 }
@@ -817,7 +855,7 @@ function hiveSlot(entry) {
     const sense = entry.senses[0];
     return `<div class="rh-slot ${entry.family ? 'family' : ''}">
         <span class="rh-slot-blanks" dir="rtl" lang="ar" aria-label="${entry.w.length} letters">${blanks}</span>
-        ${level >= HIVE_HINT_MEANING ? `<span class="rh-slot-hint">“${hiveEsc(hiveGloss(sense))}” · ${hiveEsc(hiveTypeInfo(sense).label)}</span>` : ''}
+        ${level >= HIVE_HINT_MEANING ? `<span class="rh-slot-hint">“${hiveEsc(hiveGloss(sense))}” · ${hiveEsc(hiveTypeInfo(sense).label)}${hiveTwinNote(entry) ? `<br>${hiveTwinNote(entry)}` : ''}</span>` : ''}
         ${hiveHintButton(entry)}
     </div>`;
 }
