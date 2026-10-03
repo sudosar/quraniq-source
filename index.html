@@ -41,7 +41,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260218-a11y">
+    <link rel="stylesheet" href="style.css?v=20261003-roothive">
     <link rel="stylesheet" href="css/juz-puzzle.css?v=20260212">
     <link rel="stylesheet" href="css/leaderboard.css?v=20260212">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -144,6 +144,11 @@
             <span class="mode-icon" aria-hidden="true">🧩</span>
             <span class="mode-name">Scramble</span>
         </button>
+        <button class="mode-tab" data-mode="roothive" role="tab" aria-selected="false" aria-controls="roothive-game"
+            id="tab-roothive">
+            <span class="mode-icon" aria-hidden="true">🐝</span>
+            <span class="mode-name">Root Hive</span>
+        </button>
         <button class="mode-tab juz-tab" data-mode="juz" role="tab" aria-selected="false" aria-controls="juz-game"
             id="tab-juz">
             <span class="mode-icon" aria-hidden="true">🌙</span>
@@ -220,6 +225,48 @@
                     <button id="scramble-reset" class="btn btn-secondary">Reset</button>
                     <button id="scramble-check" class="btn btn-primary">Submit</button>
                 </div>
+            </div>
+        </section>
+
+        <!-- ==================== ROOT HIVE MODE ==================== -->
+        <section id="roothive-game" class="game-mode" role="tabpanel" aria-labelledby="tab-roothive">
+            <div class="game-header">
+                <h2>Root Hive</h2>
+                <p class="game-desc">Build Quranic words from the hive. Every word must use the centre letter.</p>
+            </div>
+            <p id="rh-loading" class="rh-empty">Today’s hive is being prepared…</p>
+            <div id="rh-app" class="rh-app hidden">
+                <div id="rh-root" class="rh-root"></div>
+                <div id="rh-progress" class="rh-progress"></div>
+                <div id="rh-input" class="rh-input" aria-live="polite" aria-label="Current word"></div>
+                <div id="rh-clue" class="rh-clue" aria-live="polite" hidden></div>
+                <div id="rh-hive" class="rh-hive" role="group" aria-label="Letter hive"></div>
+                <div class="rh-controls">
+                    <button id="rh-delete" class="btn btn-secondary rh-btn">Delete</button>
+                    <button id="rh-shuffle" class="btn btn-secondary rh-btn rh-btn-round" aria-label="Shuffle letters" title="Shuffle (space)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+                    </button>
+                    <button id="rh-hint" class="btn btn-secondary rh-btn rh-btn-round" aria-label="Get a hint" title="Hint (?)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg>
+                    </button>
+                    <button id="rh-enter" class="btn btn-primary rh-btn">Enter</button>
+                </div>
+                <div class="rh-list">
+                    <button id="rh-list-toggle" class="rh-list-toggle" aria-expanded="false" aria-controls="rh-list-panel"></button>
+                    <div id="rh-list-panel" class="rh-list-panel" hidden>
+                        <div class="rh-tabs" role="tablist" aria-label="Word lists">
+                            <button class="rh-tab active" data-tab="found" role="tab" aria-selected="true">Words found</button>
+                            <button class="rh-tab" data-tab="family" role="tab" aria-selected="false">Root family</button>
+                            <button class="rh-tab" data-tab="hints" role="tab" aria-selected="false">💡 Hints</button>
+                        </div>
+                        <div id="rh-list-body" class="rh-list-body"></div>
+                    </div>
+                </div>
+                <div class="rh-footer">
+                    <button id="rh-share" class="btn btn-secondary" hidden>Share result</button>
+                    <button id="rh-reveal" class="rh-reveal">Reveal all words</button>
+                </div>
+                <p class="rh-credit">Word data: Quranic Arabic Corpus morphology &amp; quran.com word-by-word.</p>
             </div>
         </section>
 
@@ -328,6 +375,7 @@
                         I?</button>
                     <button class="stats-tab" data-stats-mode="scramble" role="tab"
                         aria-selected="false">Scramble</button>
+                    <button class="stats-tab" data-stats-mode="roothive" role="tab" aria-selected="false">Hive</button>
                 </div>
                 <div class="stats-grid">
                     <div class="stat-item">
@@ -364,6 +412,13 @@
             </div>
         </div>
 
+        <div id="roothive-word-modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Word details">
+            <div class="modal-content rh-word-modal">
+                <button class="modal-close" id="rh-word-close" aria-label="Close">&times;</button>
+                <div id="rh-word-body"></div>
+            </div>
+        </div>
+
         <!-- ==================== MENU SIDEBAR ==================== -->
         <div id="sidebar" class="sidebar hidden" role="navigation" aria-label="App navigation">
             <div class="sidebar-header">
@@ -383,6 +438,9 @@
                 </a>
                 <a href="#" data-mode="scramble" class="sidebar-link">
                     <span aria-hidden="true">🧩</span> Ayah Scramble
+                </a>
+                <a href="#" data-mode="roothive" class="sidebar-link">
+                    <span aria-hidden="true">🐝</span> Root Hive
                 </a>
                 <a href="#" data-mode="juz" class="sidebar-link juz-sidebar-link">
                     <span aria-hidden="true">🌙</span> Juz Journey
@@ -588,10 +646,11 @@
     <script src="js/bugreport.js?v=46"></script>
     <script src="js/analytics.js?v=20260210m"></script>
     <script src="js/juz-puzzle.js?v=20260212"></script>
+    <script src="js/roothive.js?v=20261003"></script>
     <!-- Firebase Setup & Configuration -->
     <script src="js/firebase-groups.js?v=50"></script>
     <script src="js/leaderboard-ui.js?v=20260605-scorequeue"></script>
-    <script src="js/app.js?v=45"></script>
+    <script src="js/app.js?v=46"></script>
     <script>
         // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {

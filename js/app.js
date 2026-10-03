@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDeduction();
     initScramble();
     initJuzJourney();
+    initRootHive();
     restoreViewResultsButtons();
     startCountdown();
     initNotifications();
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hash-based deep linking (e.g., #connections, #harf, #deduction, #scramble, #juz, #shukr, #help, #stats, #join=CODE)
     const hash = window.location.hash.replace('#', '');
-    const GAME_MODES = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
+    const GAME_MODES = ['connections', 'harf', 'deduction', 'scramble', 'roothive', 'juz'];
     if (GAME_MODES.includes(hash)) {
         switchMode(hash);
     } else if (hash === 'wordle') switchMode('harf'); // Redirect old #wordle links
@@ -419,7 +420,10 @@ function renderStatsContent() {
 
     const maxDist = Math.max(1, ...Object.values(s.distribution));
     distEl.innerHTML = '';
-    for (let i = 1; i <= 6; i++) {
+    // Root Hive records crescents earned (1-5) rather than a guess number
+    const isHive = app.statsViewMode === 'roothive';
+    distHeading.textContent = isHive ? 'Crescents Earned' : 'Score Distribution';
+    for (let i = 1; i <= (isHive ? 5 : 6); i++) {
         const count = s.distribution[i] || 0;
         const pct = Math.max(8, (count / maxDist) * 100);
         distEl.innerHTML += `<div class="dist-row"><div class="dist-label">${i}</div><div class="dist-bar" style="width:${pct}%" role="progressbar" aria-valuenow="${count}" aria-valuemin="0" aria-valuemax="${maxDist}">${count}</div></div>`;
@@ -494,6 +498,26 @@ function showHelpModal() {
                 <li>Hints 2–3: Locks a segment in its correct position</li>
             </ul>
             <p>You have <strong>5 attempts</strong> to arrange the verse correctly. Tap a placed segment to remove it, or drag to swap positions.</p>
+        `,
+        roothive: `
+            <h3>Root Hive</h3>
+            <p>Make as many Quranic words as you can from the seven letters in the hive. Every word must use the <strong>centre letter</strong>, and letters can be reused.</p>
+            <p>Most Arabic words grow from a three-letter <strong>root</strong>. Today’s root is shown above the hive, and its letters are marked in gold. Words built from it are the <strong>root family</strong>.</p>
+            <ul style="text-align:left;margin:8px auto;max-width:320px">
+                <li>Words are Quranic dictionary forms of 3+ letters: كتاب, not الكتاب or كتابهم</li>
+                <li>Tashkeel and hamzas don’t matter: أ = ا, ة = ه, ى = ي</li>
+                <li>Points: 1 for a 3-letter word, +1 for each extra letter, +2 for root-family words</li>
+            </ul>
+            <p><strong>Crescents:</strong> climb the ranks to earn up to <strong>5🌙</strong> — Seeker, Learner, Reader, Scholar and Root Master each add one. Your crescents count towards the leaderboard, and you can keep playing for the full hive.</p>
+            <p><strong>Play at your level.</strong> Experts can chase every word unaided. If you’re learning, tap 💡 (or press ?) for a clue on an easy word, or open the <strong>Hints</strong> tab:</p>
+            <ul style="text-align:left;margin:8px auto;max-width:320px">
+                <li><strong>Free:</strong> a map of how many words are left, by first letter and length</li>
+                <li><strong>Meaning</strong> (−1 point on that word): its English meaning and word type. Too many hints can cost you a 🌙</li>
+                <li><strong>First letter</strong> (−1 more)</li>
+                <li><strong>Show word</strong>: adds it to your list for 0 points, so you can still learn it</li>
+            </ul>
+            <p>Tap any word you find to learn its meaning, pattern, and a verse where it appears.</p>
+            <p><strong>Keyboard:</strong> type Arabic letters or 1–7, Enter to submit, Backspace to delete, Space to shuffle, ? for a hint.</p>
         `,
         juz: `
             <h3>Juz Journey</h3>
@@ -844,14 +868,16 @@ function getGameInsight(mode, stats) {
         connections: 'Ayah Connections',
         harf: 'Harf by Harf',
         deduction: 'Who Am I?',
-        scramble: 'Ayah Scramble'
+        scramble: 'Ayah Scramble',
+        roothive: 'Root Hive'
     };
 
     const modeEmojis = {
         connections: '🔗',
         harf: '🔤',
         deduction: '🔎',
-        scramble: '🧩'
+        scramble: '🧩',
+        roothive: '🐝'
     };
 
     // Determine strength descriptor
@@ -876,7 +902,7 @@ function getGameInsight(mode, stats) {
 
 function renderPerformanceInsights() {
     const el = document.getElementById('performance-insights');
-    const modes = ['connections', 'harf', 'deduction', 'scramble'];
+    const modes = ['connections', 'harf', 'deduction', 'scramble', 'roothive'];
 
     // Calculate overall stats
     let totalPlayed = 0, totalWon = 0, bestStreak = 0;

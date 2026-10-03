@@ -115,21 +115,18 @@ function loadStats() {
             saveStats(raw); // persist migration
         }
 
-        if (raw.connections && raw.harf) return raw;
-
-        // Return fresh per-mode stats
-        return {
-            connections: raw.connections || createDefaultModeStats(),
-            harf: raw.harf || createDefaultModeStats(),
-            deduction: raw.deduction || createDefaultModeStats(),
-            scramble: raw.scramble || createDefaultModeStats()
-        };
+        // Fill in any mode that has no stats yet (e.g. a newly added game)
+        ['connections', 'harf', 'deduction', 'scramble', 'roothive'].forEach(m => {
+            if (!raw[m]) raw[m] = createDefaultModeStats();
+        });
+        return raw;
     } catch {
         return {
             connections: createDefaultModeStats(),
             harf: createDefaultModeStats(),
             deduction: createDefaultModeStats(),
-            scramble: createDefaultModeStats()
+            scramble: createDefaultModeStats(),
+            roothive: createDefaultModeStats()
         };
     }
 }

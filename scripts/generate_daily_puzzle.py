@@ -323,6 +323,8 @@ DEDUCTION_COOLING_DAYS = 60 # Shorter cooldown for Who Am I (limited character p
 THEME_COOLING_DAYS = 30     # Shorter cooldown for English themes to allow more flexibility
 SURAH_COOLING_DAYS = 30    # Surah-level cooldown for single-verse games (Scramble, Wordle, Deduction)
 CONNECTIONS_COOLING_DAYS = 60  # Shorter cooldown: Connections burns 16 verses/day
+ROOT_HIVE_COOLING_DAYS = 180   # ~230 usable featured roots, so a year-long cooldown would exhaust them
+ROOT_LEXICON_PATH = os.path.join(DATA_DIR, "root_lexicon.json")
 MAX_RETRIES = 5
 COLORS = ["yellow", "green", "blue", "purple"]
 
@@ -333,6 +335,7 @@ OUTPUT_FILES = {
     "deduction": os.path.join(DATA_DIR, "daily_deduction.json"),
     "scramble": os.path.join(DATA_DIR, "daily_scramble.json"),
     "juz": os.path.join(DATA_DIR, "daily_juz.json"),
+    "roothive": os.path.join(DATA_DIR, "daily_roothive.json"),
 }
 
 # Ramadan 2026 - Juz Journey launched Feb 17 evening (1 Ramadan 1447 AH)
@@ -371,6 +374,7 @@ def load_history(exclude_date=None):
         "deduction": {"titles": set(), "characters": set(), "verseRefs": set(), "surahs": set()},
         "scramble": {"verses": set(), "references": set(), "surahs": set()},
         "juz": {"juz_numbers": set(), "verses": set()},
+        "roothive": {"roots": set()},
         "all_verses": set(),  # Global cross-game verse deduplication
     }
 
@@ -483,6 +487,11 @@ def load_history(exclude_date=None):
                 history["juz"]["verses"].add(ref)
                 # Juz Journey is Ramadan-only and exempt from global cross-game cooldown
                 # history["all_verses"].add(ref)
+
+        # Root Hive history (featured-root cooldown; uses no verse refs)
+        hive = data.get("roothive")
+        if hive and hive.get("featuredRoot") and fdate >= datetime.utcnow() - timedelta(days=ROOT_HIVE_COOLING_DAYS):
+            history["roothive"]["roots"].add(hive["featuredRoot"])
 
     return history
 
@@ -2420,7 +2429,73 @@ GAME_CONFIGS = {
         "validate": validate_juz,
         "label": "Juz Journey",
     },
+    "roothive": {
+        "label": "Root Hive",
+    },
 }
+
+
+def describe_root(root, family_words):
+    """Ask the model chain for a short, learner-friendly explanation of a root.
+
+    Optional enrichment: returns None on any failure so the caller can fall back
+    to the data-driven description. One attempt per model keeps this cheap.
+    """
+    words = ", ".join(f"{w['lemma']} ({w['gloss']})" for w in family_words[:8])
+    prompt = (
+        f"The Arabic root {' '.join(root)} appears in the Quran in words such as: {words}.\n"
+        "In 2 short sentences for a learner (max 240 characters total), explain the core idea this "
+        "root carries and how its derived words grow out of it. Plain English, no Arabic script, "
+        "no transliteration of the root letters, no lists.\n"
+        'Return JSON only: {"meaning": "..."}'
+    )
+    for model_config in MODEL_CHAIN:
+        raw = call_model(prompt, model_config)
+        if not raw or raw == "RATE_LIMITED":
+            continue
+        try:
+            meaning = str(parse_json_response(raw).get("meaning", "")).strip()
+        except (json.JSONDecodeError, AttributeError):
+            continue
+        if 40 <= len(meaning) <= 320 and not re.search(r"[\u0600-\u06FF]", meaning):
+            return meaning
+        print(f"  ⚠ Root description rejected ({len(meaning)} chars)")
+    return None
+
+
+def generate_roothive(history, today):
+    """Root Hive is built deterministically from the corpus lexicon; the model is only
+    asked for an optional plain-English description of the featured root."""
+    from root_hive import index_lexicon, pick_root, build_puzzle
+
+    print(f"\n{'═'*60}")
+    print("  Generating: Root Hive")
+    print(f"{'═'*60}")
+    try:
+        with open(ROOT_LEXICON_PATH, encoding="utf-8") as f:
+            lexicon = json.load(f)
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"  ✗ Could not load root lexicon: {e}")
+        return None
+
+    forms = index_lexicon(lexicon)
+    root, design = pick_root(lexicon, forms, history["roothive"]["roots"], seed=today)
+    if not root:
+        print("  ⚠ Every candidate root is in cooldown; allowing repeats")
+        root, design = pick_root(lexicon, forms, set(), seed=today)
+    if not root:
+        print("  ✗ No root could be designed into a hive")
+        return None
+
+    family = sorted((lexicon["lemmas"][i] for i in lexicon["roots"][root]["lemmas"]), key=lambda l: -l["count"])
+    meaning = describe_root(root, family)
+    puzzle = build_puzzle(root, design, lexicon, forms, meaning)
+    puzzle["featuredRoot"] = root
+    fam = [w["w"] for w in puzzle["words"] if w["family"]]
+    print(f"  ✓ Root {puzzle['root']['display']} ({puzzle['root']['translit']}): "
+          f"{len(puzzle['words'])} words, {len(fam)} in the root family, max score {puzzle['maxScore']}")
+    print(f"    Meaning ({'model' if meaning else 'fallback'}): {puzzle['root']['meaning']}")
+    return puzzle
 
 
 def generate_game(game_type, history, today):
@@ -2675,7 +2750,7 @@ def main():
             existing_puzzles = {}
 
         # Check which core games already exist
-        core_games = ["connections", "harf", "deduction", "scramble", "juz"]
+        core_games = ["connections", "harf", "deduction", "scramble", "juz", "roothive"]
         missing_games = [g for g in core_games if g not in existing_puzzles]
 
         if not missing_games and not force_regen:
@@ -2769,6 +2844,7 @@ def main():
         print(f"\n  \U0001f319 Ramadan mode: Generating Juz Journey (Juz {juz_num})")
     else:
         print(f"\n  Juz Journey: Skipped (not during Ramadan)")
+    game_types.append("roothive")  # no rate-limited generation, so it runs last
 
     # Generate all games (skip games already in partial history)
     all_puzzles = dict(existing_puzzles)  # Start with any existing puzzles
@@ -2782,12 +2858,14 @@ def main():
             continue
 
         # Wait 60s between API calls to respect rate limits
-        if generated_count > 0:
+        if generated_count > 0 and game_type != "roothive":
             print(f"\n  ⏳ Waiting 60 seconds before next game (rate limit)...")
             time.sleep(60)
 
         if game_type == "connections":
             puzzle = generate_connections(history, today)
+        elif game_type == "roothive":
+            puzzle = generate_roothive(history, today)
         else:
             puzzle = generate_game(game_type, history, today)
         generated_count += 1
