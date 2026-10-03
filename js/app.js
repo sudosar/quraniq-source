@@ -509,7 +509,7 @@ function showHelpModal() {
                 <li>Points: 1 for a 3-letter word, +1 for each extra letter, +2 for root-family words</li>
             </ul>
             <p><strong>Crescents:</strong> climb the ranks to earn up to <strong>5🌙</strong> — Seeker, Learner, Reader, Scholar and Root Master each add one. Your crescents count towards the leaderboard, and you can keep playing for the full hive.</p>
-            <p><strong>Play at your level.</strong> Experts can chase every word unaided. If you’re learning, tap 💡 (or press ?) for a clue on an easy word, or open the <strong>Hints</strong> tab:</p>
+            <p><strong>Play at your level.</strong> Experts can chase every word unaided. If you’re learning, tap 💡 (or press ?) for a clue — each press clues a new word — or open the <strong>Hints</strong> tab to pick one:</p>
             <ul style="text-align:left;margin:8px auto;max-width:320px">
                 <li><strong>Free:</strong> a map of how many words are left, by first letter and length</li>
                 <li><strong>Meaning</strong> (−1 point on that word): its English meaning and word type. Too many hints can cost you a 🌙</li>

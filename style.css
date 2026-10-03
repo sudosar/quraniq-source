@@ -5577,3 +5577,11 @@ textarea {
 }
 
 .rh-clue-not [lang="ar"] { font-family: var(--font-arabic); font-size: 1.05rem; }
+
+.rh-slot-type {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+    text-align: center;
+}
