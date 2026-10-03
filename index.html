@@ -239,11 +239,15 @@
                 <div id="rh-root" class="rh-root"></div>
                 <div id="rh-progress" class="rh-progress"></div>
                 <div id="rh-input" class="rh-input" aria-live="polite" aria-label="Current word"></div>
+                <div id="rh-clue" class="rh-clue" aria-live="polite" hidden></div>
                 <div id="rh-hive" class="rh-hive" role="group" aria-label="Letter hive"></div>
                 <div class="rh-controls">
                     <button id="rh-delete" class="btn btn-secondary rh-btn">Delete</button>
                     <button id="rh-shuffle" class="btn btn-secondary rh-btn rh-btn-round" aria-label="Shuffle letters" title="Shuffle (space)">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+                    </button>
+                    <button id="rh-hint" class="btn btn-secondary rh-btn rh-btn-round" aria-label="Get a hint" title="Hint (?)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg>
                     </button>
                     <button id="rh-enter" class="btn btn-primary rh-btn">Enter</button>
                 </div>
@@ -253,6 +257,7 @@
                         <div class="rh-tabs" role="tablist" aria-label="Word lists">
                             <button class="rh-tab active" data-tab="found" role="tab" aria-selected="true">Words found</button>
                             <button class="rh-tab" data-tab="family" role="tab" aria-selected="false">Root family</button>
+                            <button class="rh-tab" data-tab="hints" role="tab" aria-selected="false">💡 Hints</button>
                         </div>
                         <div id="rh-list-body" class="rh-list-body"></div>
                     </div>

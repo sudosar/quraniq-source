@@ -504,10 +504,16 @@ function showHelpModal() {
                 <li>Words are Quranic dictionary forms of 3+ letters: كتاب, not الكتاب or كتابهم</li>
                 <li>Tashkeel and hamzas don’t matter: أ = ا, ة = ه, ى = ي</li>
                 <li>Points: 1 for a 3-letter word, +1 for each extra letter, +2 for root-family words</li>
-                <li>Stuck? The Root family tab can show a missing word’s meaning (you lose its bonus)</li>
+            </ul>
+            <p><strong>Play at your level.</strong> Experts can chase every word unaided. If you’re learning, tap 💡 (or press ?) for a clue on an easy word, or open the <strong>Hints</strong> tab:</p>
+            <ul style="text-align:left;margin:8px auto;max-width:320px">
+                <li><strong>Free:</strong> a map of how many words are left, by first letter and length</li>
+                <li><strong>Meaning</strong> (−1 point on that word): its English meaning and word type</li>
+                <li><strong>First letter</strong> (−1 more)</li>
+                <li><strong>Show word</strong>: adds it to your list for 0 points, so you can still learn it</li>
             </ul>
             <p>Tap any word you find to learn its meaning, pattern, and a verse where it appears.</p>
-            <p><strong>Keyboard:</strong> type Arabic letters or 1–7, Enter to submit, Backspace to delete, Space to shuffle.</p>
+            <p><strong>Keyboard:</strong> type Arabic letters or 1–7, Enter to submit, Backspace to delete, Space to shuffle, ? for a hint.</p>
         `,
         juz: `
             <h3>Juz Journey</h3>

@@ -14,6 +14,9 @@ const HIVE_RANKS = [
 
 const HIVE_MIN_LEN = 3;
 const HIVE_FAMILY_BONUS = 2;
+const HIVE_HINT_MEANING = 1;   // hint levels per word; each step costs 1 point on that word
+const HIVE_HINT_LETTER = 2;
+const HIVE_HINT_SHOWN = 3;     // word revealed: added to the list, scores 0
 
 const VERB_FORMS = {
     1: ['I', 'فَعَلَ', 'the basic verb — the root’s core action'],
@@ -41,7 +44,8 @@ const hive = {
     puzzle: null,
     words: new Map(),     // normalised word -> word entry
     found: [],            // normalised words, in the order found
-    hinted: new Set(),    // root-family words whose meaning was revealed as a hint
+    hints: {},            // normalised word -> hint level (HIVE_HINT_*)
+    clue: null,           // word whose clue is shown under the input
     revealed: false,      // player chose to reveal all answers
     input: [],
     outer: [],
@@ -54,7 +58,7 @@ const hive = {
 
 function normalizeHive(str) {
     return (str || '')
-        .replace(/[ؐ-ًؚ-ٰٟۖ-ۭـ]/g, '')
+        .replace(/[ؐ-ًؚ-ٰٟۖ-ۭـ]]/g, '')
         .replace(/[أإآٱ]/g, 'ا')
         .replace(/ؤ/g, 'و')
         .replace(/[ئى]/g, 'ي')
@@ -90,7 +94,8 @@ function setupRootHive() {
     const saved = app.state[hiveStateKey()];
     if (saved && saved.sig === hiveSignature(p)) {
         hive.found = (saved.found || []).filter(w => hive.words.has(w));
-        hive.hinted = new Set(saved.hinted || []);
+        hive.hints = saved.hints || {};
+        hive.clue = saved.clue || null;
         hive.revealed = !!saved.revealed;
     }
     if (hive.listOpen === null) hive.listOpen = window.matchMedia('(min-width: 700px)').matches;
@@ -110,7 +115,8 @@ function saveHiveState() {
     app.state[hiveStateKey()] = {
         sig: hiveSignature(hive.puzzle),
         found: hive.found,
-        hinted: [...hive.hinted],
+        hints: hive.hints,
+        clue: hive.clue,
         revealed: hive.revealed,
     };
     saveState(app.state);
@@ -118,10 +124,18 @@ function saveHiveState() {
 
 /* ---------- Scoring ---------- */
 
+function hiveHintLevel(w) {
+    return hive.hints[w] || 0;
+}
+
 function hiveWordPoints(entry) {
-    let pts = entry.points;
-    if (entry.family && hive.hinted.has(entry.w)) pts -= HIVE_FAMILY_BONUS;
-    return pts;
+    const level = hiveHintLevel(entry.w);
+    if (level >= HIVE_HINT_SHOWN) return 0;
+    return Math.max(0, entry.points - level);
+}
+
+function hiveHintsUsed() {
+    return Object.values(hive.hints).reduce((sum, l) => sum + l, 0);
 }
 
 function hiveScore() {
@@ -205,6 +219,7 @@ function acceptHiveWord(entry) {
     hive.found.push(entry.w);
     hive.lastFound = entry.w;
     hive.input = [];
+    if (hive.clue === entry.w) hive.clue = null;
     saveHiveState();
 
     const pts = hiveWordPoints(entry);
@@ -262,6 +277,9 @@ function handleHiveKey(e) {
     } else if (e.key === ' ' && !onControl) {
         e.preventDefault();
         shuffleHive();
+    } else if (e.key === '?') {
+        e.preventDefault();
+        quickHiveHint();
     } else if (/^[1-7]$/.test(e.key)) {
         addHiveLetter(hiveLetters()[Number(e.key) - 1]);
         flashHiveCell(Number(e.key) - 1);
@@ -289,12 +307,71 @@ function flashHiveCell(idx) {
 
 /* ---------- Hints & reveal ---------- */
 
-function revealFamilyMeaning(w) {
-    if (hive.revealed || hive.hinted.has(w) || hive.found.includes(w)) return;
-    hive.hinted.add(w);
+function hintHiveWord(w) {
+    if (hive.revealed || hive.found.includes(w) || !hive.words.has(w)) return;
+    const level = hiveHintLevel(w) + 1;
+    if (level > HIVE_HINT_SHOWN) return;
+    hive.hints[w] = level;
+    hive.clue = w;
+    const entry = hive.words.get(w);
+    if (level === HIVE_HINT_SHOWN) {
+        hive.found.push(w);
+        hive.lastFound = w;
+        hive.clue = null;
+        const msg = `${hiveDisplayLemma(entry)} — ${hiveGloss(entry.senses[0])}`;
+        showToast(msg, 2400);
+        announce(`The word was ${msg}`);
+    }
     saveHiveState();
-    renderHiveList();
-    if (typeof trackEvent === 'function') trackEvent('roothive_hint', {});
+    renderRootHive();
+    if (typeof trackEvent === 'function') trackEvent('roothive_hint', { level, family: entry.family });
+}
+
+/** Easiest useful word to hint: one already being hinted, then root-family words, then common short words. */
+function pickHiveHintTarget() {
+    if (hive.clue && hive.words.has(hive.clue) && !hive.found.includes(hive.clue)) return hive.clue;
+    const unfound = hive.puzzle.words.filter(w => !hive.found.includes(w.w));
+    unfound.sort((a, b) =>
+        (hiveHintLevel(b.w) - hiveHintLevel(a.w)) ||
+        (Number(b.family) - Number(a.family)) ||
+        ((b.senses[0]?.count || 0) - (a.senses[0]?.count || 0)) ||
+        (a.w.length - b.w.length));
+    return unfound[0]?.w || null;
+}
+
+function quickHiveHint() {
+    if (hive.revealed) return;
+    const w = pickHiveHintTarget();
+    if (!w) return;
+    const level = hiveHintLevel(w);
+    if (hive.clue === w && level >= HIVE_HINT_LETTER) {
+        showToast('Still stuck? Tap “Show word” in the hint, or try another word');
+        return;
+    }
+    if (hive.clue === w || level === 0) {
+        hintHiveWord(w);
+    } else {
+        hive.clue = w;  // resume a word hinted earlier without charging again
+        saveHiveState();
+        renderRootHive();
+    }
+}
+
+function hiveHintButton(entry) {
+    const level = hiveHintLevel(entry.w);
+    const w = hiveEsc(entry.w);
+    if (level === 0) return `<button type="button" class="rh-hint-btn" data-hint="${w}">Meaning <small>−1</small></button>`;
+    if (level === HIVE_HINT_MEANING) return `<button type="button" class="rh-hint-btn" data-hint="${w}">First letter <small>−1</small></button>`;
+    return `<button type="button" class="rh-hint-btn strong" data-hint="${w}">Show word <small>0 pts</small></button>`;
+}
+
+function hiveClueParts(entry) {
+    const level = hiveHintLevel(entry.w);
+    const sense = entry.senses[0];
+    const parts = [`${entry.w.length} letters`];
+    if (level >= HIVE_HINT_MEANING) parts.push(`“${hiveEsc(hiveGloss(sense))}” <span class="rh-clue-type">(${hiveEsc(hiveTypeInfo(sense).label)})</span>`);
+    if (level >= HIVE_HINT_LETTER) parts.push(`starts <b lang="ar">${hiveEsc(entry.w[0])}</b>`);
+    return parts;
 }
 
 function revealAllHiveWords() {
@@ -334,6 +411,7 @@ async function shareHive() {
         `Root ${p.root.display} (${p.root.translit})`,
         `${rank} · ${score}/${p.maxScore} points`,
         `${hive.found.length}/${p.words.length} words · root family ${famFound}/${family.length}${famFound === family.length ? ' 🍯' : ''}`,
+        hiveHintsUsed() ? `💡 ${hiveHintsUsed()} hint${hiveHintsUsed() === 1 ? '' : 's'}` : 'No hints used',
         `${location.origin}${location.pathname}#roothive`,
     ].join('\n');
     try {
@@ -367,6 +445,7 @@ function bindHiveControls() {
     bind('rh-delete', deleteHiveLetter);
     bind('rh-shuffle', shuffleHive);
     bind('rh-enter', submitHiveWord);
+    bind('rh-hint', quickHiveHint);
     bind('rh-reveal', revealAllHiveWords);
     bind('rh-share', shareHive);
     bind('rh-root', () => {
@@ -387,15 +466,24 @@ function bindHiveControls() {
             renderHiveList();
         });
     });
+    const game = document.getElementById('roothive-game');
+    if (game && !game.dataset.hintsBound) {
+        game.dataset.hintsBound = '1';
+        game.addEventListener('click', (e) => {
+            const hint = e.target.closest('[data-hint]');
+            if (hint) hintHiveWord(hint.dataset.hint);
+            if (e.target.closest('[data-clue-close]')) {
+                hive.clue = null;
+                saveHiveState();
+                renderHiveClue();
+            }
+        });
+    }
     const list = document.getElementById('rh-list-body');
     if (list && !list.dataset.bound) {
         list.dataset.bound = '1';
         list.addEventListener('click', (e) => {
-            const hint = e.target.closest('[data-hint]');
-            if (hint) {
-                revealFamilyMeaning(hint.dataset.hint);
-                return;
-            }
+            if (e.target.closest('[data-hint]')) return;
             const chip = e.target.closest('[data-word]');
             if (chip) openHiveWord(chip.dataset.word);
             const other = e.target.closest('[data-other]');
@@ -419,6 +507,7 @@ function renderRootHive() {
     renderHiveRoot();
     renderHiveProgress();
     renderHiveInput();
+    renderHiveClue();
     renderHiveCells();
     renderHiveList();
     const app_ = document.getElementById('rh-app');
@@ -431,9 +520,10 @@ function renderRootHive() {
     }
     const share = document.getElementById('rh-share');
     if (share) share.hidden = hive.found.length === 0;
-    ['rh-delete', 'rh-shuffle', 'rh-enter'].forEach(id => {
+    const complete = hive.found.length === hive.puzzle.words.length;
+    ['rh-delete', 'rh-shuffle', 'rh-enter', 'rh-hint'].forEach(id => {
         const b = document.getElementById(id);
-        if (b) b.disabled = hive.revealed;
+        if (b) b.disabled = hive.revealed || (id === 'rh-hint' && complete);
     });
 }
 
@@ -500,6 +590,23 @@ function renderHiveInput() {
         c === center ? `<span class="rh-c">${hiveEsc(c)}</span>` : hiveEsc(c)).join('')}</span><span class="rh-caret"></span>`;
 }
 
+function renderHiveClue() {
+    const el = document.getElementById('rh-clue');
+    if (!el) return;
+    const entry = hive.clue && hive.words.get(hive.clue);
+    const show = !!entry && !hive.revealed && !hive.found.includes(entry.w);
+    document.getElementById('rh-app')?.classList.toggle('has-clue', show);
+    if (!show) {
+        el.hidden = true;
+        el.innerHTML = '';
+        return;
+    }
+    el.hidden = false;
+    el.innerHTML = `<span class="rh-clue-text"><span aria-hidden="true">💡</span> ${entry.family ? '<span class="rh-clue-root">Root word</span> ' : ''}${hiveClueParts(entry).join(' · ')}</span>
+        ${hiveHintButton(entry)}
+        <button type="button" class="rh-clue-close" data-clue-close aria-label="Hide hint">×</button>`;
+}
+
 function renderHiveCells() {
     const wrap = document.getElementById('rh-hive');
     if (!wrap) return;
@@ -548,11 +655,15 @@ function renderHiveList() {
         t.setAttribute('aria-selected', active ? 'true' : 'false');
         if (t.dataset.tab === 'family') t.textContent = `Root family ${famFound}/${family.length}`;
         if (t.dataset.tab === 'found') t.textContent = hive.revealed ? 'All words' : 'Words found';
+        if (t.dataset.tab === 'hints') t.hidden = hive.revealed;
     });
 
     const body = document.getElementById('rh-list-body');
     if (!hive.listOpen) return;
-    body.innerHTML = hive.listTab === 'family' ? renderHiveFamilyTab(family) : renderHiveFoundTab();
+    if (hive.revealed && hive.listTab === 'hints') hive.listTab = 'found';
+    body.innerHTML = hive.listTab === 'family' ? renderHiveFamilyTab(family)
+        : hive.listTab === 'hints' ? renderHiveHintsTab()
+        : renderHiveFoundTab();
     if (hive.lastFound) {
         body.querySelector(`[data-word="${CSS.escape(hive.lastFound)}"]`)?.classList.add('rh-new');
         hive.lastFound = null;
@@ -561,10 +672,58 @@ function renderHiveList() {
 
 function hiveChip(entry, missed) {
     const sense = entry.senses[0];
-    return `<button type="button" class="rh-chip ${entry.family ? 'family' : ''} ${missed ? 'missed' : ''}" data-word="${hiveEsc(entry.w)}">
+    const level = hiveHintLevel(entry.w);
+    const badge = missed ? '' : level >= HIVE_HINT_SHOWN ? 'shown' : `+${hiveWordPoints(entry)}${level ? ' 💡' : ''}`;
+    return `<button type="button" class="rh-chip ${entry.family ? 'family' : ''} ${missed ? 'missed' : ''} ${level >= HIVE_HINT_SHOWN ? 'given' : ''}" data-word="${hiveEsc(entry.w)}">
+        ${badge ? `<span class="rh-chip-pts">${badge}</span>` : ''}
         <span class="rh-chip-ar" dir="rtl" lang="ar">${hiveEsc(hiveDisplayLemma(entry))}</span>
         <span class="rh-chip-en">${hiveEsc(hiveGloss(sense))}</span>
     </button>`;
+}
+
+function hiveSlot(entry) {
+    const level = hiveHintLevel(entry.w);
+    const blanks = [...entry.w].map((c, i) =>
+        i === 0 && level >= HIVE_HINT_LETTER ? `<b>${hiveEsc(c)}</b>` : '<i></i>').join('');
+    const sense = entry.senses[0];
+    return `<div class="rh-slot ${entry.family ? 'family' : ''}">
+        <span class="rh-slot-blanks" dir="rtl" lang="ar" aria-label="${entry.w.length} letters">${blanks}</span>
+        ${level >= HIVE_HINT_MEANING ? `<span class="rh-slot-hint">“${hiveEsc(hiveGloss(sense))}” · ${hiveEsc(hiveTypeInfo(sense).label)}</span>` : ''}
+        ${hiveHintButton(entry)}
+    </div>`;
+}
+
+function renderHiveHintsTab() {
+    const words = hive.puzzle.words;
+    const unfound = words.filter(w => !hive.found.includes(w.w));
+    if (!unfound.length) return '<p class="rh-empty">You found every word — no hints needed!</p>';
+
+    const lengths = [...new Set(words.map(w => w.w.length))].sort((a, b) => a - b);
+    const starts = [...new Set(words.map(w => w.w[0]))].sort((a, b) => a.localeCompare(b, 'ar'));
+    const left = (pred) => unfound.filter(pred).length;
+    const cell = (n, total) => total === 0 ? '<td class="none">·</td>' : n === 0 ? '<td class="done">✓</td>' : `<td>${n}</td>`;
+    const rows = starts.map(c => {
+        const inRow = (w) => w.w[0] === c;
+        return `<tr><th scope="row" lang="ar">${hiveEsc(c)}</th>${lengths.map(L =>
+            cell(left(w => inRow(w) && w.w.length === L), words.filter(w => inRow(w) && w.w.length === L).length)).join('')}
+            <td class="sum">${left(inRow)}</td></tr>`;
+    }).join('');
+    const map = `<table class="rh-map">
+        <caption>Words left, by first letter and length</caption>
+        <thead><tr><th scope="col"></th>${lengths.map(L => `<th scope="col">${L}</th>`).join('')}<th scope="col">Σ</th></tr></thead>
+        <tbody>${rows}</tbody>
+        <tfoot><tr><th scope="row">Σ</th>${lengths.map(L => `<td>${left(w => w.w.length === L)}</td>`).join('')}<td class="sum">${unfound.length}</td></tr></tfoot>
+    </table>`;
+
+    const groups = lengths.map(L => {
+        const group = unfound.filter(w => w.w.length === L);
+        if (!group.length) return '';
+        group.sort((a, b) => (Number(b.family) - Number(a.family)) || ((b.senses[0]?.count || 0) - (a.senses[0]?.count || 0)));
+        return `<h4 class="rh-subhead">${L} letters</h4><div class="rh-slots">${group.map(hiveSlot).join('')}</div>`;
+    }).join('');
+
+    return `<p class="rh-subnote"><strong class="rh-free">Free:</strong> the map counts the words you still need. Want a clue? Each step — meaning, then first letter — costs 1 point on that word. “Show word” adds it for 0 points.</p>
+        ${map}${groups}`;
 }
 
 function renderHiveFoundTab() {
@@ -584,14 +743,7 @@ function renderHiveFamilyTab(family) {
     const slots = family.map(entry => {
         const found = hive.found.includes(entry.w);
         if (found || hive.revealed) return hiveChip(entry, !found);
-        const sense = entry.senses[0];
-        const hinted = hive.hinted.has(entry.w);
-        return `<div class="rh-slot">
-            <span class="rh-slot-blanks" dir="rtl" aria-label="${entry.w.length} letters">${'<i></i>'.repeat(entry.w.length)}</span>
-            ${hinted
-                ? `<span class="rh-slot-hint">“${hiveEsc(hiveGloss(sense))}” · ${hiveEsc(WORD_TYPES[sense.type]?.[0] || 'Verb')}</span>`
-                : `<button type="button" class="rh-slot-btn" data-hint="${hiveEsc(entry.w)}">Show meaning <small>(−${HIVE_FAMILY_BONUS} bonus)</small></button>`}
-        </div>`;
+        return hiveSlot(entry);
     }).join('');
 
     const others = hive.puzzle.otherFamily || [];

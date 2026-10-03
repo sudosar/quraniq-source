@@ -5109,7 +5109,7 @@ textarea {
     line-height: 1.45;
 }
 
-.rh-subnote strong { font-family: var(--font-arabic); color: var(--rh-gold-deep); }
+.rh-subnote strong[lang="ar"] { font-family: var(--font-arabic); color: var(--rh-gold-deep); }
 
 .rh-subhead {
     margin: 18px 2px 4px;
@@ -5422,4 +5422,140 @@ textarea {
 
 @media (prefers-reduced-motion: reduce) {
     .rh-app *, .rh-app *::before, .rh-app *::after { animation: none !important; transition: none !important; }
+}
+
+/* Root Hive hints */
+.rh-clue {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: -6px auto 0;
+    padding: 5px 6px 5px 12px;
+    width: min(100%, 460px);
+    border-radius: 14px;
+    background: var(--rh-gold-soft);
+    color: var(--text);
+    font-size: 0.8rem;
+    line-height: 1.3;
+    animation: fadeIn 0.2s ease;
+}
+
+.rh-clue b[lang="ar"],
+.rh-slot-blanks b {
+    font-family: var(--font-arabic);
+    font-size: 1.15rem;
+    color: var(--rh-gold-deep);
+}
+
+.rh-clue-text { flex: 1; min-width: 0; }
+
+.rh-clue-close {
+    flex: none;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.rh-hint-btn {
+    border: 1px solid var(--rh-gold);
+    border-radius: 100px;
+    background: var(--bg-card);
+    padding: 4px 10px;
+    min-height: 30px;
+    font-family: var(--font-main);
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--rh-gold-deep);
+    cursor: pointer;
+    white-space: nowrap;
+    touch-action: manipulation;
+}
+
+.rh-hint-btn small { font-weight: 500; opacity: 0.75; }
+.rh-hint-btn.strong { background: var(--rh-gold); color: #2b2003; }
+.rh-hint-btn:active { transform: scale(0.96); }
+
+.rh-slot.family { background: var(--rh-gold-soft); }
+.rh-slot:not(.family) { border-color: var(--border); }
+
+.rh-chip { position: relative; }
+
+.rh-chip-pts {
+    position: absolute;
+    top: 3px;
+    right: 6px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.rh-chip.given { border-style: dotted; }
+.rh-chip.given .rh-chip-pts { color: var(--rh-gold-deep); }
+
+.rh-free { color: var(--accent); }
+
+.rh-map {
+    width: 100%;
+    margin: 4px 0 6px;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.rh-map caption {
+    caption-side: top;
+    margin-bottom: 6px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+.rh-map th,
+.rh-map td {
+    padding: 5px 4px;
+    border-bottom: 1px solid var(--border);
+}
+
+.rh-map thead th { color: var(--text-secondary); font-weight: 700; }
+.rh-map tbody th { font-family: var(--font-arabic); font-size: 1.15rem; color: var(--rh-gold-deep); }
+.rh-map td.done { color: var(--accent); }
+.rh-map td.none { color: var(--border); }
+.rh-map .sum, .rh-map tfoot { font-weight: 800; }
+.rh-map tfoot th, .rh-map tfoot td { border-bottom: none; }
+
+.rh-tab[hidden] { display: none; }
+
+.rh-clue-type { color: var(--text-secondary); }
+
+.rh-clue-root {
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: 100px;
+    background: var(--rh-gold);
+    color: #2b2003;
+    font-size: 0.66rem;
+    font-weight: 800;
+    vertical-align: 1px;
+}
+
+@media (max-width: 480px) {
+    .rh-clue { margin-top: -4px; font-size: 0.76rem; }
+    .rh-hint-btn { padding: 4px 8px; }
+}
+
+.rh-hive { transition: width 0.25s ease; }
+
+@media (max-width: 480px) {
+    .rh-app.has-clue .rh-hive { width: min(262px, 70vw); }
+}
+
+@media (max-width: 480px) and (max-height: 700px) {
+    .rh-app.has-clue .rh-hive { width: min(236px, 64vw); }
 }
