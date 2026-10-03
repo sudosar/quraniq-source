@@ -4711,7 +4711,7 @@ textarea {
 .rh-rank {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     margin-bottom: 10px;
     gap: 8px;
 }
@@ -4723,8 +4723,17 @@ textarea {
 }
 
 .rh-rank-next {
-    font-size: 0.78rem;
+    margin-top: 2px;
+    font-size: 0.76rem;
     color: var(--text-secondary);
+    text-align: right;
+}
+
+.rh-moons {
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 .rh-bar {
@@ -5405,6 +5414,8 @@ textarea {
     }
     .rh-root.open .rh-root-chev { transform: rotate(180deg); }
     .rh-rank { margin-bottom: 6px; }
+    .rh-bar { margin-bottom: 2px; }
+    .rh-rank-next { margin-top: 0; font-size: 0.72rem; }
     .rh-hive { width: min(300px, 78vw); }
     .rh-input { font-size: 1.9rem; min-height: 44px; }
     .rh-chips, .rh-slots { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }

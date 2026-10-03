@@ -588,7 +588,7 @@ async function drainPendingScores() {
 
 /**
  * Low-level Firebase score write. Bypasses the pending-queue logic.
- * @param {string} gameMode - one of: connections, harf, deduction, scramble, juz
+ * @param {string} gameMode - one of: connections, harf, deduction, scramble, juz, roothive
  * @param {number} crescents - score in crescents
  * @param {string} [dateStr] - YYYY-MM-DD; defaults to today
  * @param {string} [uid] - target uid; defaults to current user
@@ -609,7 +609,8 @@ async function submitFirebaseScoreRaw(gameMode, crescents, dateStr, uid) {
             harf: 'harf',
             deduction: 'deduction',
             scramble: 'scramble',
-            juz: 'juz'
+            juz: 'juz',
+            roothive: 'roothive'
         };
         const field = modeMap[gameMode];
         if (!field) return; // abort transaction
@@ -620,7 +621,7 @@ async function submitFirebaseScoreRaw(gameMode, crescents, dateStr, uid) {
         }
 
         // Recalculate total
-        const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
+        const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz', 'roothive'];
         current.total = fields.reduce((sum, f) => sum + (current[f] || 0), 0);
 
         return current;
@@ -631,7 +632,7 @@ async function submitFirebaseScoreRaw(gameMode, crescents, dateStr, uid) {
     if (txnResult && txnResult.committed) {
         try {
             const stats = (typeof loadStats === 'function') ? loadStats() : null;
-            const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
+            const allModes = ['connections', 'harf', 'deduction', 'scramble', 'roothive'];
             let bestStreak = 0;
             if (stats) {
                 allModes.forEach(m => { if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak); });
@@ -758,7 +759,7 @@ async function fetchGroupLeaderboard(groupCode) {
                 let maxStreak = 0;
 
                 // Per-game all-time totals (for badge tiebreaking)
-                const allTimeScores = { connections: 0, harf: 0, deduction: 0, scramble: 0, juz: 0 };
+                const allTimeScores = { connections: 0, harf: 0, deduction: 0, scramble: 0, juz: 0, roothive: 0 };
 
                 // Sort dates and calculate (ignore dates before cutoff)
                 const SCORE_CUTOFF = '2026-02-13';
@@ -775,6 +776,7 @@ async function fetchGroupLeaderboard(groupCode) {
                         allTimeScores.deduction += s.deduction || 0;
                         allTimeScores.scramble += s.scramble || 0;
                         allTimeScores.juz += s.juz || 0;
+                        allTimeScores.roothive += s.roothive || 0;
                     }
                 });
 
@@ -804,7 +806,8 @@ async function fetchGroupLeaderboard(groupCode) {
                         harf: todayScores.harf || 0,
                         deduction: todayScores.deduction || 0,
                         scramble: todayScores.scramble || 0,
-                        juz: todayScores.juz || 0
+                        juz: todayScores.juz || 0,
+                        roothive: todayScores.roothive || 0
                     },
                     allTimeScores,
                     ramadanTotal,
@@ -1103,7 +1106,7 @@ async function backfillTodayScores() {
         const dayNum = (typeof app !== 'undefined' && app.dayNumber) ? app.dayNumber : getDayNumber();
 
         // Compute what we'd write — transaction needs this up front
-        const computed = { connections: 0, harf: 0, deduction: 0, scramble: 0, juz: 0 };
+        const computed = { connections: 0, harf: 0, deduction: 0, scramble: 0, juz: 0, roothive: 0 };
 
         // --- Connections ---
         const connState = state[`conn_${dayNum}`];
@@ -1156,6 +1159,12 @@ async function backfillTodayScores() {
             computed.scramble = Math.max(1, 5 - (scrState.hintsUsed || 0) - (scrState.moves || 0));
         }
 
+        // --- Root Hive (crescents are earned progressively, so no game-over gate) ---
+        const hiveState = state[`roothive_${dayNum}`];
+        if (hiveState && hiveState.moons) {
+            computed.roothive = Math.min(5, hiveState.moons);
+        }
+
         // --- Juz ---
         try {
             const rawJuz = localStorage.getItem('quraniq_juz');
@@ -1172,7 +1181,7 @@ async function backfillTodayScores() {
         const txnResult = await FB_STATE.db.ref(scorePath).transaction((current) => {
             current = current || {};
             // Only update individual game scores if local computed is higher
-            const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
+            const fields = ['connections', 'harf', 'deduction', 'scramble', 'juz', 'roothive'];
             let didChange = false;
             for (const f of fields) {
                 if ((current[f] || 0) < computed[f]) {
@@ -1190,14 +1199,14 @@ async function backfillTodayScores() {
         // (ServerValue.TIMESTAMP can't be set inside a transaction callback)
         if (txnResult && txnResult.committed) {
             const stats = loadStats();
-            const allModes = ['connections', 'wordle', 'deduction', 'scramble'];
+            const allModes = ['connections', 'harf', 'deduction', 'scramble', 'roothive'];
             let bestStreak = 0;
             allModes.forEach(m => { if (stats[m]) bestStreak = Math.max(bestStreak, stats[m].streak); });
             await FB_STATE.db.ref(scorePath).update({
                 streak: bestStreak,
                 timestamp: firebase.database.ServerValue.TIMESTAMP
             });
-            console.log('[FB] Backfill complete — total:', computed.connections + computed.harf + computed.deduction + computed.scramble + computed.juz);
+            console.log('[FB] Backfill complete — total:', computed.connections + computed.harf + computed.deduction + computed.scramble + computed.juz + computed.roothive);
         }
     } catch (err) {
         console.error('[FB] Backfill failed:', err);

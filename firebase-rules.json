@@ -40,8 +40,11 @@
             "juz": {
               ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5"
             },
+            "roothive": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5"
+            },
             "total": {
-              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 30"
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 35"
             },
             "streak": {
               ".validate": "newData.isNumber() && newData.val() >= 0"

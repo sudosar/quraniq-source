@@ -420,7 +420,10 @@ function renderStatsContent() {
 
     const maxDist = Math.max(1, ...Object.values(s.distribution));
     distEl.innerHTML = '';
-    for (let i = 1; i <= 6; i++) {
+    // Root Hive records crescents earned (1-5) rather than a guess number
+    const isHive = app.statsViewMode === 'roothive';
+    distHeading.textContent = isHive ? 'Crescents Earned' : 'Score Distribution';
+    for (let i = 1; i <= (isHive ? 5 : 6); i++) {
         const count = s.distribution[i] || 0;
         const pct = Math.max(8, (count / maxDist) * 100);
         distEl.innerHTML += `<div class="dist-row"><div class="dist-label">${i}</div><div class="dist-bar" style="width:${pct}%" role="progressbar" aria-valuenow="${count}" aria-valuemin="0" aria-valuemax="${maxDist}">${count}</div></div>`;
@@ -505,10 +508,11 @@ function showHelpModal() {
                 <li>Tashkeel and hamzas don’t matter: أ = ا, ة = ه, ى = ي</li>
                 <li>Points: 1 for a 3-letter word, +1 for each extra letter, +2 for root-family words</li>
             </ul>
+            <p><strong>Crescents:</strong> climb the ranks to earn up to <strong>5🌙</strong> — Seeker, Learner, Reader, Scholar and Root Master each add one. Your crescents count towards the leaderboard, and you can keep playing for the full hive.</p>
             <p><strong>Play at your level.</strong> Experts can chase every word unaided. If you’re learning, tap 💡 (or press ?) for a clue on an easy word, or open the <strong>Hints</strong> tab:</p>
             <ul style="text-align:left;margin:8px auto;max-width:320px">
                 <li><strong>Free:</strong> a map of how many words are left, by first letter and length</li>
-                <li><strong>Meaning</strong> (−1 point on that word): its English meaning and word type</li>
+                <li><strong>Meaning</strong> (−1 point on that word): its English meaning and word type. Too many hints can cost you a 🌙</li>
                 <li><strong>First letter</strong> (−1 more)</li>
                 <li><strong>Show word</strong>: adds it to your list for 0 points, so you can still learn it</li>
             </ul>
@@ -864,14 +868,16 @@ function getGameInsight(mode, stats) {
         connections: 'Ayah Connections',
         harf: 'Harf by Harf',
         deduction: 'Who Am I?',
-        scramble: 'Ayah Scramble'
+        scramble: 'Ayah Scramble',
+        roothive: 'Root Hive'
     };
 
     const modeEmojis = {
         connections: '🔗',
         harf: '🔤',
         deduction: '🔎',
-        scramble: '🧩'
+        scramble: '🧩',
+        roothive: '🐝'
     };
 
     // Determine strength descriptor
@@ -896,7 +902,7 @@ function getGameInsight(mode, stats) {
 
 function renderPerformanceInsights() {
     const el = document.getElementById('performance-insights');
-    const modes = ['connections', 'harf', 'deduction', 'scramble'];
+    const modes = ['connections', 'harf', 'deduction', 'scramble', 'roothive'];
 
     // Calculate overall stats
     let totalPlayed = 0, totalWon = 0, bestStreak = 0;

@@ -3,6 +3,7 @@
    Build Quranic words from seven letters around a featured Arabic root.
    ============================================ */
 
+// Each rank above Beginner earns one crescent, so 🌙 = rank index (0-5).
 const HIVE_RANKS = [
     { name: 'Beginner', pct: 0 },
     { name: 'Seeker', pct: 0.05 },
@@ -46,6 +47,9 @@ const hive = {
     found: [],            // normalised words, in the order found
     hints: {},            // normalised word -> hint level (HIVE_HINT_*)
     clue: null,           // word whose clue is shown under the input
+    moons: 0,             // best crescents earned today (0-5)
+    shown: {},            // result modals already shown: { master, complete, revealed }
+    rootVerse: null,      // { ref, arabic, translation } for the result card
     revealed: false,      // player chose to reveal all answers
     input: [],
     outer: [],
@@ -96,6 +100,8 @@ function setupRootHive() {
         hive.found = (saved.found || []).filter(w => hive.words.has(w));
         hive.hints = saved.hints || {};
         hive.clue = saved.clue || null;
+        hive.moons = saved.moons || 0;
+        hive.shown = saved.shown || {};
         hive.revealed = !!saved.revealed;
     }
     if (hive.listOpen === null) hive.listOpen = window.matchMedia('(min-width: 700px)').matches;
@@ -105,6 +111,9 @@ function setupRootHive() {
 
     bindHiveControls();
     renderRootHive();
+    updateHiveCrescents();  // sync saves made before crescents were tracked
+    loadHiveRootVerse();
+    restoreHiveResult();
 
     if (hive.keyHandler) document.removeEventListener('keydown', hive.keyHandler);
     hive.keyHandler = handleHiveKey;
@@ -117,6 +126,8 @@ function saveHiveState() {
         found: hive.found,
         hints: hive.hints,
         clue: hive.clue,
+        moons: hive.moons,
+        shown: hive.shown,
         revealed: hive.revealed,
     };
     saveState(app.state);
@@ -151,6 +162,38 @@ function hiveRankIndex(score) {
 
 function hiveFamily() {
     return hive.puzzle.words.filter(w => w.family);
+}
+
+function hiveMoonString(moons) {
+    return '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
+}
+
+/** Record a newly earned crescent: Firebase leaderboard, local stats. Returns true on a gain. */
+function updateHiveCrescents() {
+    const moons = hiveRankIndex(hiveScore());
+    if (moons <= hive.moons) return false;
+    hive.moons = moons;
+    saveHiveState();
+    if (typeof submitFirebaseScore === 'function') submitFirebaseScore('roothive', moons).catch(() => { });
+    recordHiveStats(moons);
+    return true;
+}
+
+/** Stats: a day counts as played (and won) from the first crescent; the
+ *  distribution tracks the best crescent count reached that day. */
+function recordHiveStats(moons) {
+    if (typeof isServingStale === 'function' && isServingStale()) return;
+    const s = app.stats.roothive;
+    if (!s) return;
+    if (s.lastDay !== app.dayNumber) {
+        updateModeStats('roothive', true, moons);
+        s.todayMoons = moons;
+    } else if ((s.todayMoons || 0) < moons) {
+        if (s.todayMoons) s.distribution[s.todayMoons] = Math.max(0, (s.distribution[s.todayMoons] || 0) - 1);
+        s.distribution[moons] = (s.distribution[moons] || 0) + 1;
+        s.todayMoons = moons;
+    }
+    saveStats(app.stats);
 }
 
 /* ---------- Input ---------- */
@@ -237,12 +280,24 @@ function acceptHiveWord(entry) {
     const familyDone = entry.family && family.every(f => hive.found.includes(f.w));
     const allDone = hive.found.length === hive.puzzle.words.length;
 
+    updateHiveCrescents();
     if (allDone) {
-        setTimeout(() => celebrateHive('Hive complete! “From their bellies comes a drink of varying colours, in which there is healing for people.” (16:69)', 5000), 700);
+        setTimeout(() => celebrateHive('Hive complete! “From their bellies comes a drink of varying colours, in which there is healing for people.” (16:69)', 3000), 700);
+        if (!hive.shown.complete) setTimeout(() => showHiveResult('complete'), 1800);
     } else if (familyDone) {
         setTimeout(() => celebrateHive(`Root family complete 🍯 You found every ${hive.puzzle.root.display} word in the hive.`, 3200), 700);
     } else if (after > before) {
-        setTimeout(() => showToast(`New rank: ${HIVE_RANKS[after].name}`, 2200), 700);
+        if (after === HIVE_RANKS.length - 1 && !hive.shown.master) {
+            // Play continues past Root Master, so don't interrupt with the modal — offer it instead.
+            hive.shown.master = true;
+            saveHiveState();
+            setTimeout(() => {
+                celebrateHive('Root Master! All 5 🌙 earned — keep going, or view & share your results below', 3200);
+                restoreHiveResult();
+            }, 700);
+        } else {
+            setTimeout(() => showToast(`${HIVE_RANKS[after].name} · +1 🌙`, 2200), 700);
+        }
     }
 
     if (typeof trackEvent === 'function') {
@@ -395,25 +450,30 @@ function revealAllHiveWords() {
     hive.listTab = 'found';
     saveHiveState();
     renderRootHive();
+    showHiveResult('revealed');
     if (typeof trackEvent === 'function') trackEvent('roothive_reveal', { found: hive.found.length });
 }
 
 /* ---------- Share ---------- */
 
-async function shareHive() {
+function hiveShareText() {
     const p = hive.puzzle;
-    const score = hiveScore();
-    const rank = HIVE_RANKS[hiveRankIndex(score)].name;
     const family = hiveFamily();
     const famFound = family.filter(f => hive.found.includes(f.w)).length;
-    const text = [
-        `Root Hive 🐝 ${typeof getActivePuzzleDate === 'function' && getActivePuzzleDate() ? getActivePuzzleDate() : ''}`.trim(),
+    const hints = hiveHintsUsed();
+    const num = typeof getPuzzleNumber === 'function' ? ` #${getPuzzleNumber()}` : '';
+    return [
+        `QuranIQ - Root Hive${num}`,
         `Root ${p.root.display} (${p.root.translit})`,
-        `${rank} · ${score}/${p.maxScore} points`,
-        `${hive.found.length}/${p.words.length} words · root family ${famFound}/${family.length}${famFound === family.length ? ' 🍯' : ''}`,
-        hiveHintsUsed() ? `💡 ${hiveHintsUsed()} hint${hiveHintsUsed() === 1 ? '' : 's'}` : 'No hints used',
-        `${location.origin}${location.pathname}#roothive`,
+        `${hiveMoonString(hive.moons)} ${HIVE_RANKS[hive.moons].name}`,
+        `Words: ${hive.found.length}/${p.words.length} | Root family: ${famFound}/${family.length}${famFound === family.length ? ' 🍯' : ''} | Hints: ${hints}`,
+        '',
+        'https://sudosar.github.io/quraniq/#roothive',
     ].join('\n');
+}
+
+async function shareHive() {
+    const text = hiveShareText();
     try {
         if (navigator.share && window.matchMedia('(pointer: coarse)').matches) {
             await navigator.share({ text });
@@ -430,6 +490,71 @@ async function shareHive() {
             showToast('Could not share');
         }
     }
+}
+
+/* ---------- Result card (shared result modal) ---------- */
+
+/** The featured root's most frequent word supplies the verse on the result card. */
+async function loadHiveRootVerse() {
+    const top = hiveFamily().slice().sort((a, b) => (b.senses[0]?.count || 0) - (a.senses[0]?.count || 0))[0];
+    const sense = top?.senses[0];
+    if (!sense) return;
+    try {
+        const resp = await fetch(`https://api.quran.com/api/v4/verses/by_key/${encodeURIComponent(sense.ref)}?fields=text_uthmani&translations=20`);
+        const data = await resp.json();
+        const raw = data.verse?.translations?.[0]?.text || '';
+        hive.rootVerse = {
+            ref: sense.ref,
+            lemma: sense.lemma,
+            gloss: hiveGloss(sense),
+            arabic: data.verse?.text_uthmani || '',
+            translation: raw.replace(/<sup[^>]*>.*?<\/sup>/g, '').replace(/<[^>]+>/g, '').trim(),
+        };
+        if (app.lastResults.roothive) restoreHiveResult();
+    } catch (e) { /* the result card simply shows no verse */ }
+}
+
+function hiveResultData(kind) {
+    const p = hive.puzzle;
+    const family = hiveFamily();
+    const famFound = family.filter(f => hive.found.includes(f.w)).length;
+    const titles = {
+        master: ['🐝', 'Root Master!'],
+        complete: ['🍯', 'Hive Complete!'],
+        revealed: ['📖', 'Words Revealed'],
+    };
+    const [icon, title] = titles[kind] || titles.master;
+    const v = hive.rootVerse;
+    return {
+        icon,
+        title,
+        arabic: v?.arabic || '',
+        translation: v?.translation || '',
+        verseRef: v?.ref,
+        emojiGrid: family.map(f => hive.found.includes(f.w) ? '🟨' : '⬜').join(''),
+        moons: hive.moons,
+        statsText: `Root ${p.root.display} | Words: ${hive.found.length}/${p.words.length} | Root family: ${famFound}/${family.length} | Hints: ${hiveHintsUsed()}`,
+        shareText: hiveShareText(),
+        dynamicShareFn: hiveShareText,
+    };
+}
+
+function showHiveResult(kind) {
+    hive.shown[kind] = true;
+    saveHiveState();
+    if (app.currentMode !== 'roothive') {
+        restoreHiveResult();
+        return;
+    }
+    showResultModal(hiveResultData(kind));
+}
+
+/** After a reload (or a background result), offer the "View Results & Share" button again. */
+function restoreHiveResult() {
+    const kind = hive.shown.revealed ? 'revealed' : hive.shown.complete ? 'complete' : hive.shown.master ? 'master' : null;
+    if (!kind) return;
+    app.lastResults.roothive = hiveResultData(kind);
+    showViewResultsButton('roothive');
 }
 
 /* ---------- Rendering ---------- */
@@ -560,18 +685,22 @@ function renderHiveProgress() {
     const fill = Math.min(100, (score / top) * 100);
     const next = HIVE_RANKS[idx + 1];
     const toNext = next ? Math.ceil(next.pct * max) - score : 0;
+    const complete = hive.found.length === hive.puzzle.words.length;
+    const moons = Array.from({ length: 5 }, (_, i) =>
+        `<span class="ded-moon ${i < idx ? 'active' : 'spent'}">${i < idx ? '🌙' : '🌑'}</span>`).join('');
     document.getElementById('rh-progress').innerHTML = `
         <div class="rh-rank">
             <span class="rh-rank-name">${HIVE_RANKS[idx].name}</span>
-            <span class="rh-rank-next">${hive.found.length === hive.puzzle.words.length ? 'Hive complete 🍯' : next ? `${toNext} to ${next.name}` : 'Top rank reached'}</span>
+            <span class="rh-moons" role="img" aria-label="${idx} of 5 crescents">${moons}</span>
         </div>
         <div class="rh-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${max}" aria-valuenow="${score}" aria-label="Score ${score} of ${max}">
             <div class="rh-bar-fill" style="width:${fill}%"></div>
             ${HIVE_RANKS.map((rk, i) => {
                 const pos = Math.min(100, (Math.ceil(rk.pct * max) / top) * 100);
-                return `<span class="rh-bar-dot ${i <= idx ? 'on' : ''} ${i === idx ? 'current' : ''}" style="left:${pos}%" title="${rk.name}">${i === idx ? score : ''}</span>`;
+                return `<span class="rh-bar-dot ${i <= idx ? 'on' : ''} ${i === idx ? 'current' : ''}" style="left:${pos}%" title="${rk.name}${i ? ` · ${i} 🌙` : ''}">${i === idx ? score : ''}</span>`;
             }).join('')}
-        </div>`;
+        </div>
+        <div class="rh-rank-next">${complete ? 'Hive complete 🍯' : next ? `${toNext} point${toNext === 1 ? '' : 's'} to ${next.name} · next 🌙` : 'All 5 🌙 earned — keep going for the full hive'}</div>`;
 }
 
 function renderHiveInput() {
@@ -722,7 +851,7 @@ function renderHiveHintsTab() {
         return `<h4 class="rh-subhead">${L} letters</h4><div class="rh-slots">${group.map(hiveSlot).join('')}</div>`;
     }).join('');
 
-    return `<p class="rh-subnote"><strong class="rh-free">Free:</strong> the map counts the words you still need. Want a clue? Each step — meaning, then first letter — costs 1 point on that word. “Show word” adds it for 0 points.</p>
+    return `<p class="rh-subnote"><strong class="rh-free">Free:</strong> the map counts the words you still need. Want a clue? Each step — meaning, then first letter — costs 1 point on that word, so lean on them too much and you may miss a 🌙. “Show word” adds it for 0 points.</p>
         ${map}${groups}`;
 }
 
