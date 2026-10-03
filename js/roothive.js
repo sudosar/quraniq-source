@@ -965,7 +965,7 @@ function renderHiveSheet(senses) {
         const info = hiveTypeInfo(s);
         const sameRoot = normalizeHive(s.root) === root.letters;
         const rootDisplay = [...normalizeHive(s.root)].join(' ');
-        const [surah, ayah] = s.ref.split(':');
+        const surah = s.ref.split(':')[0];
         const surahName = typeof getSurahName === 'function' ? getSurahName(Number(surah)) : `Surah ${surah}`;
         return `<article class="rh-sense">
             ${senses.length > 1 ? `<div class="rh-sense-num">Meaning ${i + 1} of ${senses.length}</div>` : ''}
@@ -984,7 +984,7 @@ function renderHiveSheet(senses) {
                 </div>
                 <div class="rh-example-ar" dir="rtl" lang="ar"><span class="rh-loading-dots">Loading verse…</span></div>
                 <div class="rh-example-en"></div>
-                <a class="rh-example-link" href="https://quran.com/${Number(surah)}/${Number(ayah)}" target="_blank" rel="noopener">Read on Quran.com ↗</a>
+                <a class="rh-example-link" href="${hiveEsc(refToQuranLink(s.ref))}" target="_blank" rel="noopener">Read on Sabaq.net ↗</a>
             </div>
         </article>`;
     }).join('');
