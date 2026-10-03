@@ -442,5 +442,6 @@
     "maxScore": 42,
     "featuredRoot": "فسد"
   },
-  "generated": true
+  "generated": true,
+  "model": "auto (chain)"
 }
