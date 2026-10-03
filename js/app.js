@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDeduction();
     initScramble();
     initJuzJourney();
+    initRootHive();
     restoreViewResultsButtons();
     startCountdown();
     initNotifications();
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hash-based deep linking (e.g., #connections, #harf, #deduction, #scramble, #juz, #shukr, #help, #stats, #join=CODE)
     const hash = window.location.hash.replace('#', '');
-    const GAME_MODES = ['connections', 'harf', 'deduction', 'scramble', 'juz'];
+    const GAME_MODES = ['connections', 'harf', 'deduction', 'scramble', 'roothive', 'juz'];
     if (GAME_MODES.includes(hash)) {
         switchMode(hash);
     } else if (hash === 'wordle') switchMode('harf'); // Redirect old #wordle links
@@ -494,6 +495,19 @@ function showHelpModal() {
                 <li>Hints 2–3: Locks a segment in its correct position</li>
             </ul>
             <p>You have <strong>5 attempts</strong> to arrange the verse correctly. Tap a placed segment to remove it, or drag to swap positions.</p>
+        `,
+        roothive: `
+            <h3>Root Hive</h3>
+            <p>Make as many Quranic words as you can from the seven letters in the hive. Every word must use the <strong>centre letter</strong>, and letters can be reused.</p>
+            <p>Most Arabic words grow from a three-letter <strong>root</strong>. Today’s root is shown above the hive, and its letters are marked in gold. Words built from it are the <strong>root family</strong>.</p>
+            <ul style="text-align:left;margin:8px auto;max-width:320px">
+                <li>Words are Quranic dictionary forms of 3+ letters: كتاب, not الكتاب or كتابهم</li>
+                <li>Tashkeel and hamzas don’t matter: أ = ا, ة = ه, ى = ي</li>
+                <li>Points: 1 for a 3-letter word, +1 for each extra letter, +2 for root-family words</li>
+                <li>Stuck? The Root family tab can show a missing word’s meaning (you lose its bonus)</li>
+            </ul>
+            <p>Tap any word you find to learn its meaning, pattern, and a verse where it appears.</p>
+            <p><strong>Keyboard:</strong> type Arabic letters or 1–7, Enter to submit, Backspace to delete, Space to shuffle.</p>
         `,
         juz: `
             <h3>Juz Journey</h3>

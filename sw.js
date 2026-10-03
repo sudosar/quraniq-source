@@ -1,5 +1,5 @@
-// QuranIQ Service Worker — v44 (Score-queue reliability fix)
-const CACHE_NAME = 'quraniq-v44';
+// QuranIQ Service Worker — v45 (Root Hive)
+const CACHE_NAME = 'quraniq-v45';
 const PUZZLE_CHECK_TAG = 'quraniq-puzzle-check';
 
 // Assets to pre-cache on install
@@ -17,6 +17,7 @@ const PRECACHE_ASSETS = [
   './js/scramble.js',
   './js/utils.js',
   './js/harf.js',
+  './js/roothive.js',
   './js/onboarding.js',
   './js/bugreport.js',
   './js/analytics.js',
