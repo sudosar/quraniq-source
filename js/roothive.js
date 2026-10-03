@@ -414,14 +414,24 @@ function hiveTwinNote(entry) {
     return `<span class="rh-clue-not">a different word from <span lang="ar" dir="rtl">${twins.map(t => hiveEsc(hiveDisplayLemma(t))).join('، ')}</span></span>`;
 }
 
-/** Easiest useful word to hint: one already being hinted, then root-family words, then common short words. */
-function pickHiveHintTarget() {
-    if (hive.clue && hive.words.has(hive.clue) && !hive.found.includes(hive.clue)) return hive.clue;
-    const unfound = hive.puzzle.words.filter(w => !hive.found.includes(w.w));
+/** Unfound words whose clue is already showing (meaning revealed), other than `except`. */
+function hiveCluedWords(except) {
+    return hive.puzzle.words.filter(w =>
+        w.w !== except && !hive.found.includes(w.w) && hiveHintLevel(w.w) >= HIVE_HINT_MEANING);
+}
+
+/**
+ * Next word for 💡, never the one currently shown: unclued words first (each press
+ * should teach something new), avoiding meanings that overlap words already found
+ * or already clued, then root-family words, then common short words.
+ */
+function pickHiveHintTarget(exclude) {
+    const clued = hiveCluedWords(exclude).map(w => w.senses[0]?.gloss);
+    const overlaps = (e) => hiveFoundTwins(e).length + clued.filter(g => hiveGlossesOverlap(g, e.senses[0]?.gloss)).length;
+    const unfound = hive.puzzle.words.filter(w => !hive.found.includes(w.w) && w.w !== exclude);
     unfound.sort((a, b) =>
-        (hiveHintLevel(b.w) - hiveHintLevel(a.w)) ||
-        // Prefer words that can't be confused with one already found
-        (hiveFoundTwins(a).length - hiveFoundTwins(b).length) ||
+        (Number(hiveHintLevel(a.w) > 0) - Number(hiveHintLevel(b.w) > 0)) ||
+        (overlaps(a) - overlaps(b)) ||
         (Number(b.family) - Number(a.family)) ||
         ((b.senses[0]?.count || 0) - (a.senses[0]?.count || 0)) ||
         (a.w.length - b.w.length));
@@ -430,17 +440,16 @@ function pickHiveHintTarget() {
 
 function quickHiveHint() {
     if (hive.revealed) return;
-    const w = pickHiveHintTarget();
-    if (!w) return;
-    const level = hiveHintLevel(w);
-    if (hive.clue === w && level >= HIVE_HINT_LETTER) {
-        showToast('Still stuck? Tap “Show word” in the hint, or try another word');
+    const current = hive.clue && hive.words.has(hive.clue) && !hive.found.includes(hive.clue) ? hive.clue : null;
+    const w = pickHiveHintTarget(current);
+    if (!w) {
+        if (current) showToast('That’s the last word left — try its first letter');
         return;
     }
-    if (hive.clue === w || level === 0) {
+    if (hiveHintLevel(w) === 0) {
         hintHiveWord(w);
     } else {
-        hive.clue = w;  // resume a word hinted earlier without charging again
+        hive.clue = w;  // already paid for: show its clue again for free
         saveHiveState();
         renderRootHive();
     }
@@ -854,8 +863,9 @@ function hiveSlot(entry) {
         i === 0 && level >= HIVE_HINT_LETTER ? `<b>${hiveEsc(c)}</b>` : '<i></i>').join('');
     const sense = entry.senses[0];
     return `<div class="rh-slot ${entry.family ? 'family' : ''}">
+        <span class="rh-slot-type">${hiveEsc(hiveTypeInfo(sense).label)}${entry.family ? ' · root word' : ''}</span>
         <span class="rh-slot-blanks" dir="rtl" lang="ar" aria-label="${entry.w.length} letters">${blanks}</span>
-        ${level >= HIVE_HINT_MEANING ? `<span class="rh-slot-hint">“${hiveEsc(hiveGloss(sense))}” · ${hiveEsc(hiveTypeInfo(sense).label)}${hiveTwinNote(entry) ? `<br>${hiveTwinNote(entry)}` : ''}</span>` : ''}
+        ${level >= HIVE_HINT_MEANING ? `<span class="rh-slot-hint">“${hiveEsc(hiveGloss(sense))}”${hiveTwinNote(entry) ? `<br>${hiveTwinNote(entry)}` : ''}</span>` : ''}
         ${hiveHintButton(entry)}
     </div>`;
 }
@@ -889,7 +899,7 @@ function renderHiveHintsTab() {
         return `<h4 class="rh-subhead">${L} letters</h4><div class="rh-slots">${group.map(hiveSlot).join('')}</div>`;
     }).join('');
 
-    return `<p class="rh-subnote"><strong class="rh-free">Free:</strong> the map counts the words you still need. Want a clue? Each step — meaning, then first letter — costs 1 point on that word, so lean on them too much and you may miss a 🌙. “Show word” adds it for 0 points.</p>
+    return `<p class="rh-subnote"><strong class="rh-free">Free:</strong> the map counts the words you still need. Want a clue? Each step — meaning, then first letter — costs 1 point on that word, so lean on them too much and you may miss a 🌙. “Show word” adds it for 0 points. Each 💡 press clues a new word.</p>
         ${map}${groups}`;
 }
 
