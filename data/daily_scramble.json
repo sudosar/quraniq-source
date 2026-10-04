@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-03",
+  "date": "2026-10-04",
   "puzzle": {
-    "verseRef": "3:194",
-    "reference": "Surah Al-Imran (3:194)",
+    "verseRef": "11:56",
+    "reference": "Surah Hud (11:56)",
     "segments": [
-      "رَبَّنَا وَآتِنَا",
-      "مَا وَعَدتَّنَا",
-      "عَلَىٰ رُسُلِكَ",
-      "وَلَا تُخْزِنَا",
-      "يَوْمَ الْقِيَامَةِ",
-      "إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ"
+      "إِنَّكَ لَا تَهْدِي",
+      "مَنْ أَحْبَبْتَ",
+      "وَلَٰكِنَّ اللَّهَ يَهْدِي",
+      "مَن يَشَاءُ",
+      "وَهُوَ أَعْلَمُ",
+      "بِالْمُهْتَدِينَ"
     ],
     "translations": [
-      "Our Lord grant us what",
-      "You promised us through Your Messengers",
-      "and (do) not disgrace us",
-      "(on the) Day (of) [the] Resurrection",
-      "Indeed, You (do) not",
-      "break the promise"
+      "Indeed, I [I] put my trust upon",
+      "Allah my Lord and your Lord",
+      "(There is) not of a moving creature of a moving creature",
+      "but He has grasp",
+      "of its forelock Indeed my Lord",
+      "(is) on a path straight"
     ],
-    "hint": "A powerful supplication asking Allah to fulfill His promises and grant dignity on the Day of Judgment.",
-    "arabic": "رَبَّنَا وَءَاتِنَا مَا وَعَدتَّنَا عَلَىٰ رُسُلِكَ وَلَا تُخْزِنَا يَوْمَ ٱلْقِيَـٰمَةِ ۗ إِنَّكَ لَا تُخْلِفُ ٱلْمِيعَادَ",
+    "hint": "A powerful verse about divine guidance — the Prophet cannot guide whom he loves; only Allah guides whom He wills.",
+    "arabic": "إِنِّى تَوَكَّلْتُ عَلَى ٱللَّهِ رَبِّى وَرَبِّكُم ۚ مَّا مِن دَآبَّةٍ إِلَّا هُوَ ءَاخِذٌۢ بِنَاصِيَتِهَآ ۚ إِنَّ رَبِّى عَلَىٰ صِرَٰطٍۢ مُّسْتَقِيمٍۢ",
     "words": [
-      "رَبَّنَا وَءَاتِنَا مَا",
-      "وَعَدتَّنَا عَلَىٰ رُسُلِكَ",
-      "وَلَا تُخْزِنَا",
-      "يَوْمَ ٱلْقِيَـٰمَةِ ۗ",
-      "إِنَّكَ لَا",
-      "تُخْلِفُ ٱلْمِيعَادَ"
+      "إِنِّى تَوَكَّلْتُ عَلَى",
+      "ٱللَّهِ رَبِّى وَرَبِّكُم ۚ",
+      "مَّا مِن دَآبَّةٍ",
+      "إِلَّا هُوَ ءَاخِذٌۢ",
+      "بِنَاصِيَتِهَآ ۚ إِنَّ رَبِّى",
+      "عَلَىٰ صِرَٰطٍۢ مُّسْتَقِيمٍۢ"
     ],
-    "verseEn": "Our Lord, and grant us what You promised us through Your messengers and do not disgrace us on the Day of Resurrection. Indeed, You do not fail in [Your] promise.\""
+    "verseEn": "Indeed, I have relied upon Allāh, my Lord and your Lord. There is no creature but that He holds it by its forelock [i.e., controls it]. Indeed, my Lord is on a path [that is] straight."
   },
   "generated": true,
   "model": "auto (chain)"

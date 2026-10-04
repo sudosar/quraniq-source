@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-03",
+  "date": "2026-10-04",
   "puzzle": {
-    "word": "آخرة",
-    "display": "آخِرَة",
-    "hint": "The life after this world; the final abode.",
-    "verseRef": "93:4",
-    "arabicVerse": "وَلَلْـَٔاخِرَةُ خَيْرٌۭ لَّكَ مِنَ ٱلْأُولَىٰ",
-    "verse": "93:4 - And the Hereafter is better for you than the first [life]."
+    "word": "يقين",
+    "display": "يَقِين",
+    "hint": "Absolute conviction or certainty beyond doubt, often associated with faith",
+    "verseRef": "74:47",
+    "arabicVerse": "حَتَّىٰٓ أَتَىٰنَا ٱلْيَقِينُ",
+    "verse": "74:47 - Until there came to us the certainty [i.e., death].\""
   },
   "generated": true,
   "model": "auto (chain)"
