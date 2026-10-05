@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "puzzle": {
-    "title": "The Burden That Brought Healing",
-    "intro": "A soul tested beyond measure was stripped of comfort, of companions, and of bodily strength. Isolated in deep affliction, this servant of Allah turned only toward the Divine. Through unwavering patience and heartfelt prayer, a tide of mercy arrived that surpassed all expectation. Who is this figure whose devotion opened a door of restoration?",
+    "title": "The Trust Entrusted to the River",
+    "intro": "A soul faced an impossible decree, where the life of a newborn hung in the balance. Guided by divine inspiration, a desperate command was obeyed, and a precious secret was set adrift on the current, only to be returned in a way unforeseen.",
     "clues": [
-      "I was a favored servant of Allah, enjoying abundance, a flourishing household, and good health in my days.",
-      "Then a trial descended: wealth departed, loved ones departed, and my own flesh was struck with grave affliction.",
-      "Those near to me could not endure my condition, and I was left isolated, my body wracked with suffering.",
-      "I called upon my Lord, declaring that Satan had touched me with exhaustion and punishment.",
-      "The response came — a command to strike the ground with my foot, and from it gushed forth cool water for healing.",
-      "My Lord removed the hardship entirely and restored to me my family, multiplied, as a sign of mercy for those who reflect."
+      "I lived under the shadow of a tyrant who commanded the killing of newborn males.",
+      "A divine inspiration came to me, instructing me to take a desperate and heart-wrenching action.",
+      "I placed my precious infant in a chest and set it upon the flowing river.",
+      "My heart became empty, and I almost revealed the secret, but Allah strengthened my resolve.",
+      "I sent someone to follow the child's journey downstream as the current carried the chest away.",
+      "The child was found by the household of the tyrant, and eventually, I was reunited with my child and became the nursemaid."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Ayyub",
-          "Prophet Musa",
-          "Prophet Yusuf",
-          "Prophet Yunus",
-          "Prophet Ibrahim"
+          "Mother of Prophet Musa",
+          "Asiya (Wife of Pharaoh)",
+          "Maryam (Mother of Prophet Isa)",
+          "The wife of Prophet Lut",
+          "The mother of Prophet Yahya (wife of Zakariya)"
         ],
-        "answer": "Prophet Ayyub"
+        "answer": "Mother of Prophet Musa"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Severe illness and loss of all",
-          "Cast into a fire by a tyrant's command",
-          "Imprisoned in a deep pit by kin",
-          "Swallowed by a great fish at sea",
-          "Wandering in exile from the homeland"
+          "She placed her child in a chest and set it on the river",
+          "She hid her child in a cave",
+          "She abandoned her child in the desert",
+          "She threw her child into a fire",
+          "She left her child at the door of a mosque"
         ],
-        "answer": "Severe illness and loss of all"
+        "answer": "She placed her child in a chest and set it on the river"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The cool spring that gushed from the ground",
-          "The cool and peaceful fire",
-          "The ark resting upon a mountain",
-          "The staff that parted the sea",
-          "The basket floating upon the river"
+          "A chest set afloat on the river",
+          "A burning bush",
+          "A staff that turned into a snake",
+          "A table spread with food from heaven",
+          "A she-camel sent as a sign"
         ],
-        "answer": "The cool spring that gushed from the ground"
+        "answer": "A chest set afloat on the river"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Family and blessings restored, doubled",
-          "Escaped the burning fire unharmed",
-          "Rose to the highest office of a kingdom",
-          "Came out of a great fish's belly to safety",
-          "Led a people through a divided sea"
+          "She was reunited with her child and nursed him",
+          "She never saw her child again",
+          "She was executed by the tyrant",
+          "She became a queen in Egypt",
+          "She migrated to another land and lived in exile"
         ],
-        "answer": "Family and blessings restored, doubled"
+        "answer": "She was reunited with her child and nursed him"
       }
     },
-    "verseRef": "38:43",
-    "arabic": "وَوَهَبْنَا لَهُۥٓ أَهْلَهُۥ وَمِثْلَهُم مَّعَهُمْ رَحْمَةًۭ مِّنَّا وَذِكْرَىٰ لِأُو۟لِى ٱلْأَلْبَـٰبِ",
-    "verse": "And We granted him his family and a like [number] with them as mercy from Us and a reminder for those of understanding. (38:43)"
+    "verseRef": "28:7",
+    "arabic": "وَأَوْحَيْنَآ إِلَىٰٓ أُمِّ مُوسَىٰٓ أَنْ أَرْضِعِيهِ ۖ فَإِذَا خِفْتِ عَلَيْهِ فَأَلْقِيهِ فِى ٱلْيَمِّ وَلَا تَخَافِى وَلَا تَحْزَنِىٓ ۖ إِنَّا رَآدُّوهُ إِلَيْكِ وَجَاعِلُوهُ مِنَ ٱلْمُرْسَلِينَ",
+    "verse": "And We inspired to the mother of Moses, \"Suckle him; but when you fear for him, cast him into the river and do not fear and do not grieve. Indeed, We will return him to you and will make him [one] of the messengers.\" (28:7)"
   },
   "generated": true,
   "model": "auto (chain)"

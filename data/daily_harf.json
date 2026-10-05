@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "puzzle": {
-    "word": "يقين",
-    "display": "يَقِين",
-    "hint": "Absolute conviction or certainty beyond doubt, often associated with faith",
-    "verseRef": "74:47",
-    "arabicVerse": "حَتَّىٰٓ أَتَىٰنَا ٱلْيَقِينُ",
-    "verse": "74:47 - Until there came to us the certainty [i.e., death].\""
+    "word": "تولى",
+    "display": "تَوَلَّىٰ",
+    "hint": "Turned away (from the truth)",
+    "verseRef": "96:13",
+    "arabicVerse": "أَرَءَيْتَ إِن كَذَّبَ وَتَوَلَّىٰٓ",
+    "verse": "96:13 - Have you seen if he denies and turns away -"
   },
   "generated": true,
   "model": "auto (chain)"

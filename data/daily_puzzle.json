@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "puzzle": {
     "categories": [
       {
-        "name": "مَرَاحِلُ خَلْقِ الْإِنْسَانِ",
-        "nameEn": "Stages of Human Creation in the Quran",
+        "name": "أَفْعَالُ الْخَلْقِ فِي الْقُرْآنِ",
+        "nameEn": "Verbs of Creation in the Quran",
         "color": "yellow",
         "items": [
           {
-            "ar": "نُطْفَةٍ",
-            "en": "a semen-drop",
-            "ref": "76:2",
-            "verse": "إِنَّا خَلَقْنَا ٱلْإِنسَـٰنَ مِن نُّطْفَةٍ أَمْشَاجٍۢ نَّبْتَلِيهِ فَجَعَلْنَـٰهُ سَمِيعًۢا بَصِيرًا",
-            "verseEn": "Indeed, We created man from a sperm-drop mixture that We may try him; and We made him hearing and seeing."
+            "ar": "خَلَقَكُمْ",
+            "en": "created you",
+            "ref": "7:189",
+            "verse": "۞ هُوَ ٱلَّذِى خَلَقَكُم مِّن نَّفْسٍۢ وَٰحِدَةٍۢ وَجَعَلَ مِنْهَا زَوْجَهَا لِيَسْكُنَ إِلَيْهَا ۖ فَلَمَّا تَغَشَّىٰهَا حَمَلَتْ حَمْلًا خَفِيفًۭا فَمَرَّتْ بِهِۦ ۖ فَلَمَّآ أَثْقَلَت دَّعَوَا ٱللَّهَ رَبَّهُمَا لَئِنْ ءَاتَيْتَنَا صَـٰلِحًۭا لَّنَكُونَنَّ مِنَ ٱلشَّـٰكِرِينَ",
+            "verseEn": "It is He who created you from one soul and created from it its mate that he might dwell in security with her. And when he [i.e., man] covers her, she carries a light burden [i.e., a pregnancy] and continues therein. And when it becomes heavy, they both invoke Allāh, their Lord, \"If You should give us a good [child], we will surely be among the grateful.\""
           },
           {
-            "ar": "عَلَقَةً",
-            "en": "a clinging substance",
-            "ref": "75:38",
-            "verse": "ثُمَّ كَانَ عَلَقَةًۭ فَخَلَقَ فَسَوَّىٰ",
-            "verseEn": "Then he was a clinging clot, and [Allāh] created [his form] and proportioned [him]"
+            "ar": "جَعَلَ",
+            "en": "made",
+            "ref": "43:10",
+            "verse": "ٱلَّذِى جَعَلَ لَكُمُ ٱلْأَرْضَ مَهْدًۭا وَجَعَلَ لَكُمْ فِيهَا سُبُلًۭا لَّعَلَّكُمْ تَهْتَدُونَ",
+            "verseEn": "[The one] who has made for you the earth a bed and made for you upon it roads that you might be guided"
           },
           {
-            "ar": "أَجِنَّةٌ",
-            "en": "fetuses",
-            "ref": "53:32",
-            "verse": "ٱلَّذِينَ يَجْتَنِبُونَ كَبَـٰٓئِرَ ٱلْإِثْمِ وَٱلْفَوَٰحِشَ إِلَّا ٱللَّمَمَ ۚ إِنَّ رَبَّكَ وَٰسِعُ ٱلْمَغْفِرَةِ ۚ هُوَ أَعْلَمُ بِكُمْ إِذْ أَنشَأَكُم مِّنَ ٱلْأَرْضِ وَإِذْ أَنتُمْ أَجِنَّةٌۭ فِى بُطُونِ أُمَّهَـٰتِكُمْ ۖ فَلَا تُزَكُّوٓا۟ أَنفُسَكُمْ ۖ هُوَ أَعْلَمُ بِمَنِ ٱتَّقَىٰٓ",
-            "verseEn": "Those who avoid the major sins and immoralities, only [committing] slight ones. Indeed, your Lord is vast in forgiveness. He was most knowing of you when He produced you from the earth and when you were fetuses in the wombs of your mothers. So do not claim yourselves to be pure; He is most knowing of who fears Him."
+            "ar": "فَطَرَهُنَّ",
+            "en": "created them",
+            "ref": "21:56",
+            "verse": "قَالَ بَل رَّبُّكُمْ رَبُّ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ٱلَّذِى فَطَرَهُنَّ وَأَنَا۠ عَلَىٰ ذَٰلِكُم مِّنَ ٱلشَّـٰهِدِينَ",
+            "verseEn": "He said, \"[No], rather, your Lord is the Lord of the heavens and the earth who created them, and I, to that, am of those who testify."
           },
           {
-            "ar": "الْعِظَامَ",
-            "en": "(to) the bones",
-            "ref": "36:78",
-            "verse": "وَضَرَبَ لَنَا مَثَلًۭا وَنَسِىَ خَلْقَهُۥ ۖ قَالَ مَن يُحْىِ ٱلْعِظَـٰمَ وَهِىَ رَمِيمٌۭ",
-            "verseEn": "And he presents for Us an example and forgets his [own] creation. He says, \"Who will give life to bones while they are disintegrated?\""
+            "ar": "نَبْرَأَهَا",
+            "en": "We bring it into existence",
+            "ref": "57:22",
+            "verse": "مَآ أَصَابَ مِن مُّصِيبَةٍۢ فِى ٱلْأَرْضِ وَلَا فِىٓ أَنفُسِكُمْ إِلَّا فِى كِتَـٰبٍۢ مِّن قَبْلِ أَن نَّبْرَأَهَآ ۚ إِنَّ ذَٰلِكَ عَلَى ٱللَّهِ يَسِيرٌۭ",
+            "verseEn": "No disaster strikes upon the earth or among yourselves except that it is in a register before We bring it into being - indeed that, for Allāh, is easy -"
           }
         ]
       },
       {
-        "name": "مُفْرَدَاتٌ مِنْ قِصَّةِ آدَمَ وَإِبْلِيسَ",
-        "nameEn": "Key terms from the story of Adam and Iblis",
+        "name": "كَلِمَاتُ الْخُصُومَةِ وَالنَّجْوَى",
+        "nameEn": "Words of dispute and secret counsel in the Quran",
         "color": "green",
         "items": [
           {
-            "ar": "آدَمُ",
-            "en": "O Adam",
-            "ref": "2:33",
-            "verse": "قَالَ يَـٰٓـَٔادَمُ أَنۢبِئْهُم بِأَسْمَآئِهِمْ ۖ فَلَمَّآ أَنۢبَأَهُم بِأَسْمَآئِهِمْ قَالَ أَلَمْ أَقُل لَّكُمْ إِنِّىٓ أَعْلَمُ غَيْبَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَأَعْلَمُ مَا تُبْدُونَ وَمَا كُنتُمْ تَكْتُمُونَ",
-            "verseEn": "He said, \"O Adam, inform them of their names.\" And when he had informed them of their names, He said, \"Did I not tell you that I know the unseen [aspects] of the heavens and the earth? And I know what you reveal and what you have concealed.\""
+            "ar": "يُجَادِلُونَ",
+            "en": "dispute",
+            "ref": "42:35",
+            "verse": "وَيَعْلَمَ ٱلَّذِينَ يُجَـٰدِلُونَ فِىٓ ءَايَـٰتِنَا مَا لَهُم مِّن مَّحِيصٍۢ",
+            "verseEn": "And [that is so] those who dispute concerning Our signs may know that for them there is no place of escape."
           },
           {
-            "ar": "إِبْلِيسُ",
-            "en": "O Iblis",
-            "ref": "15:32",
-            "verse": "قَالَ يَـٰٓإِبْلِيسُ مَا لَكَ أَلَّا تَكُونَ مَعَ ٱلسَّـٰجِدِينَ",
-            "verseEn": "[Allāh] said, \"O Iblees, what is [the matter] with you that you are not with those who prostrate?\""
+            "ar": "يُحَادُّونَ",
+            "en": "oppose",
+            "ref": "58:5",
+            "verse": "إِنَّ ٱلَّذِينَ يُحَآدُّونَ ٱللَّهَ وَرَسُولَهُۥ كُبِتُوا۟ كَمَا كُبِتَ ٱلَّذِينَ مِن قَبْلِهِمْ ۚ وَقَدْ أَنزَلْنَآ ءَايَـٰتٍۭ بَيِّنَـٰتٍۢ ۚ وَلِلْكَـٰفِرِينَ عَذَابٌۭ مُّهِينٌۭ",
+            "verseEn": "Indeed, those who oppose Allāh and His Messenger are abased as those before them were abased. And We have certainly sent down verses of clear evidence. And for the disbelievers is a humiliating punishment"
           },
           {
-            "ar": "نَفَخْتُ",
-            "en": "and breathed",
-            "ref": "38:72",
-            "verse": "فَإِذَا سَوَّيْتُهُۥ وَنَفَخْتُ فِيهِ مِن رُّوحِى فَقَعُوا۟ لَهُۥ سَـٰجِدِينَ",
-            "verseEn": "So when I have proportioned him and breathed into him of My [created] soul, then fall down to him in prostration.\""
+            "ar": "تَخَاصُمُ",
+            "en": "(the) quarreling",
+            "ref": "38:64",
+            "verse": "إِنَّ ذَٰلِكَ لَحَقٌّۭ تَخَاصُمُ أَهْلِ ٱلنَّارِ",
+            "verseEn": "Indeed, that is truth [i.e., reality] - the quarreling of the people of the Fire."
           },
           {
-            "ar": "فَسَجَدَ",
-            "en": "So prostrated",
-            "ref": "15:30",
-            "verse": "فَسَجَدَ ٱلْمَلَـٰٓئِكَةُ كُلُّهُمْ أَجْمَعُونَ",
-            "verseEn": "So the angels prostrated - all of them entirely,"
+            "ar": "نَجْوَى",
+            "en": "secret counsel",
+            "ref": "58:7",
+            "verse": "أَلَمْ تَرَ أَنَّ ٱللَّهَ يَعْلَمُ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ مَا يَكُونُ مِن نَّجْوَىٰ ثَلَـٰثَةٍ إِلَّا هُوَ رَابِعُهُمْ وَلَا خَمْسَةٍ إِلَّا هُوَ سَادِسُهُمْ وَلَآ أَدْنَىٰ مِن ذَٰلِكَ وَلَآ أَكْثَرَ إِلَّا هُوَ مَعَهُمْ أَيْنَ مَا كَانُوا۟ ۖ ثُمَّ يُنَبِّئُهُم بِمَا عَمِلُوا۟ يَوْمَ ٱلْقِيَـٰمَةِ ۚ إِنَّ ٱللَّهَ بِكُلِّ شَىْءٍ عَلِيمٌ",
+            "verseEn": "Have you not considered that Allāh knows what is in the heavens and what is on the earth? There are not three in a private conversation but that He is the fourth of them, nor are there five but that He is the sixth of them - and no less than that and no more except that He is with them [in knowledge] wherever they are. Then He will inform them of what they did, on the Day of Resurrection. Indeed Allāh is, of all things, Knowing."
           }
         ]
       },
       {
-        "name": "أَسْمَاءُ نَارِ الْعَذَابِ فِي الْقُرْآنِ",
-        "nameEn": "Names of the fire of punishment in the Quran",
+        "name": "مُفْرَدَاتُ مُلْكِ سُلَيْمَانَ",
+        "nameEn": "Elements of Sulayman's Dominion in the Quran",
         "color": "blue",
         "items": [
           {
-            "ar": "الْجَحِيمِ",
-            "en": "(of) the Hellfire",
-            "ref": "37:55",
-            "verse": "فَٱطَّلَعَ فَرَءَاهُ فِى سَوَآءِ ٱلْجَحِيمِ",
-            "verseEn": "And he will look and see him in the midst of the Hellfire."
+            "ar": "مُلْكًا",
+            "en": "a kingdom",
+            "ref": "38:35",
+            "verse": "قَالَ رَبِّ ٱغْفِرْ لِى وَهَبْ لِى مُلْكًۭا لَّا يَنۢبَغِى لِأَحَدٍۢ مِّنۢ بَعْدِىٓ ۖ إِنَّكَ أَنتَ ٱلْوَهَّابُ",
+            "verseEn": "He said, \"My Lord, forgive me and grant me a kingdom such as will not belong to anyone after me. Indeed, You are the Bestower.\""
           },
           {
-            "ar": "السَّعِيرِ",
-            "en": "(of) the Blaze",
-            "ref": "31:21",
-            "verse": "وَإِذَا قِيلَ لَهُمُ ٱتَّبِعُوا۟ مَآ أَنزَلَ ٱللَّهُ قَالُوا۟ بَلْ نَتَّبِعُ مَا وَجَدْنَا عَلَيْهِ ءَابَآءَنَآ ۚ أَوَلَوْ كَانَ ٱلشَّيْطَـٰنُ يَدْعُوهُمْ إِلَىٰ عَذَابِ ٱلسَّعِيرِ",
-            "verseEn": "And when it is said to them, \"Follow what Allāh has revealed,\" they say, \"Rather, we will follow that upon which we found our fathers.\" Even if Satan was inviting them to the punishment of the Blaze?"
+            "ar": "بَنَّاءٍ",
+            "en": "builder",
+            "ref": "38:37",
+            "verse": "وَٱلشَّيَـٰطِينَ كُلَّ بَنَّآءٍۢ وَغَوَّاصٍۢ",
+            "verseEn": "And [also] the devils [of jinn] - every builder and diver."
           },
           {
-            "ar": "جَهَنَّمُ",
-            "en": "(is) Hell",
-            "ref": "4:93",
-            "verse": "وَمَن يَقْتُلْ مُؤْمِنًۭا مُّتَعَمِّدًۭا فَجَزَآؤُهُۥ جَهَنَّمُ خَـٰلِدًۭا فِيهَا وَغَضِبَ ٱللَّهُ عَلَيْهِ وَلَعَنَهُۥ وَأَعَدَّ لَهُۥ عَذَابًا عَظِيمًۭا",
-            "verseEn": "But whoever kills a believer intentionally - his recompense is Hell, wherein he will abide eternally, and Allāh has become angry with him and has cursed him and has prepared for him a great punishment."
+            "ar": "سُلْطَانٍ",
+            "en": "a reason",
+            "ref": "27:21",
+            "verse": "لَأُعَذِّبَنَّهُۥ عَذَابًۭا شَدِيدًا أَوْ لَأَا۟ذْبَحَنَّهُۥٓ أَوْ لَيَأْتِيَنِّى بِسُلْطَـٰنٍۢ مُّبِينٍۢ",
+            "verseEn": "I will surely punish him with a severe punishment or slaughter him unless he brings me clear authorization.\""
           },
           {
-            "ar": "حَمِيمٍ",
-            "en": "boiling fluids",
-            "ref": "10:4",
-            "verse": "إِلَيْهِ مَرْجِعُكُمْ جَمِيعًۭا ۖ وَعْدَ ٱللَّهِ حَقًّا ۚ إِنَّهُۥ يَبْدَؤُا۟ ٱلْخَلْقَ ثُمَّ يُعِيدُهُۥ لِيَجْزِىَ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ بِٱلْقِسْطِ ۚ وَٱلَّذِينَ كَفَرُوا۟ لَهُمْ شَرَابٌۭ مِّنْ حَمِيمٍۢ وَعَذَابٌ أَلِيمٌۢ بِمَا كَانُوا۟ يَكْفُرُونَ",
-            "verseEn": "To Him is your return all together. [It is] the promise of Allāh [which is] truth. Indeed, He begins the [process of] creation and then repeats it that He may reward those who have believed and done righteous deeds, in justice. But those who disbelieved will have a drink of scalding water and a painful punishment for what they used to deny."
+            "ar": "الطَّيْرِ",
+            "en": "(of) the birds",
+            "ref": "27:16",
+            "verse": "وَوَرِثَ سُلَيْمَـٰنُ دَاوُۥدَ ۖ وَقَالَ يَـٰٓأَيُّهَا ٱلنَّاسُ عُلِّمْنَا مَنطِقَ ٱلطَّيْرِ وَأُوتِينَا مِن كُلِّ شَىْءٍ ۖ إِنَّ هَـٰذَا لَهُوَ ٱلْفَضْلُ ٱلْمُبِينُ",
+            "verseEn": "And Solomon inherited David. He said, \"O people, we have been taught the language of birds, and we have been given from all things. Indeed, this is evident bounty.\""
           }
         ]
       },
       {
-        "name": "أَلْفَاظُ الْعِصْيَانِ وَالطُّغْيَانِ",
-        "nameEn": "Quranic Terms for Transgression and Disobedience",
+        "name": "كَلِمَاتُ الْجَزَاءِ فِي سُورَةِ التِّينِ",
+        "nameEn": "Words of Degradation and Judgment in Surah at-Tin",
         "color": "purple",
         "items": [
           {
-            "ar": "عَصَوُا",
-            "en": "and disobeyed",
-            "ref": "4:42",
-            "verse": "يَوْمَئِذٍۢ يَوَدُّ ٱلَّذِينَ كَفَرُوا۟ وَعَصَوُا۟ ٱلرَّسُولَ لَوْ تُسَوَّىٰ بِهِمُ ٱلْأَرْضُ وَلَا يَكْتُمُونَ ٱللَّهَ حَدِيثًۭا",
-            "verseEn": "That Day, those who disbelieved and disobeyed the Messenger will wish they could be covered by the earth. And they will not conceal from Allāh a [single] statement."
+            "ar": "أَسْفَلَ",
+            "en": "(to the) lowest",
+            "ref": "95:5",
+            "verse": "ثُمَّ رَدَدْنَـٰهُ أَسْفَلَ سَـٰفِلِينَ",
+            "verseEn": "Then We return him to the lowest of the low,"
           },
           {
-            "ar": "يَبْغُونَ",
-            "en": "rebel",
-            "ref": "10:23",
-            "verse": "فَلَمَّآ أَنجَىٰهُمْ إِذَا هُمْ يَبْغُونَ فِى ٱلْأَرْضِ بِغَيْرِ ٱلْحَقِّ ۗ يَـٰٓأَيُّهَا ٱلنَّاسُ إِنَّمَا بَغْيُكُمْ عَلَىٰٓ أَنفُسِكُم ۖ مَّتَـٰعَ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۖ ثُمَّ إِلَيْنَا مَرْجِعُكُمْ فَنُنَبِّئُكُم بِمَا كُنتُمْ تَعْمَلُونَ",
-            "verseEn": "But when He saves them, at once they commit injustice upon the earth without right. O mankind, your injustice is only against yourselves, [being merely] the enjoyment of worldly life. Then to Us is your return, and We will inform you of what you used to do."
+            "ar": "مَمْنُونٍ",
+            "en": "ending",
+            "ref": "95:6",
+            "verse": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۢ",
+            "verseEn": "Except for those who believe and do righteous deeds, for they will have a reward uninterrupted."
           },
           {
-            "ar": "طَغْوَاهَا",
-            "en": "by their transgression",
-            "ref": "91:11",
-            "verse": "كَذَّبَتْ ثَمُودُ بِطَغْوَىٰهَآ",
-            "verseEn": "Thamūd denied [their prophet] by reason of their transgression,"
+            "ar": "يُكَذِّبُكَ",
+            "en": "causes you to deny",
+            "ref": "95:7",
+            "verse": "فَمَا يُكَذِّبُكَ بَعْدُ بِٱلدِّينِ",
+            "verseEn": "So what yet causes you to deny the Recompense?"
           },
           {
-            "ar": "عُتُوًّا",
-            "en": "(with) insolence",
-            "ref": "25:21",
-            "verse": "۞ وَقَالَ ٱلَّذِينَ لَا يَرْجُونَ لِقَآءَنَا لَوْلَآ أُنزِلَ عَلَيْنَا ٱلْمَلَـٰٓئِكَةُ أَوْ نَرَىٰ رَبَّنَا ۗ لَقَدِ ٱسْتَكْبَرُوا۟ فِىٓ أَنفُسِهِمْ وَعَتَوْ عُتُوًّۭا كَبِيرًۭا",
-            "verseEn": "And those who do not expect the meeting with Us say, \"Why were not angels sent down to us, or [why] do we [not] see our Lord?\" They have certainly become arrogant within themselves and [become] insolent with great insolence."
+            "ar": "أَحْكَمِ",
+            "en": "(the) Most Just",
+            "ref": "95:8",
+            "verse": "أَلَيْسَ ٱللَّهُ بِأَحْكَمِ ٱلْحَـٰكِمِينَ",
+            "verseEn": "Is not Allāh the most just of judges?"
           }
         ]
       }

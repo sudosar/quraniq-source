@@ -1,35 +1,32 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "puzzle": {
-    "verseRef": "11:56",
-    "reference": "Surah Hud (11:56)",
+    "verseRef": "41:35",
+    "reference": "Surah Fussilat (41:35)",
     "segments": [
-      "إِنَّكَ لَا تَهْدِي",
-      "مَنْ أَحْبَبْتَ",
-      "وَلَٰكِنَّ اللَّهَ يَهْدِي",
-      "مَن يَشَاءُ",
-      "وَهُوَ أَعْلَمُ",
-      "بِالْمُهْتَدِينَ"
+      "وَمَا يُلَقَّاهَا",
+      "إِلَّا الَّذِينَ صَبَرُوا",
+      "وَمَا يُلَقَّاهَا",
+      "إِلَّا",
+      "ذُو حَظٍّ عَظِيمٍ"
     ],
     "translations": [
-      "Indeed, I [I] put my trust upon",
-      "Allah my Lord and your Lord",
-      "(There is) not of a moving creature of a moving creature",
-      "but He has grasp",
-      "of its forelock Indeed my Lord",
-      "(is) on a path straight"
+      "And not it is granted except",
+      "(to) those who (are) patient",
+      "and not it is granted",
+      "except (to the) owner",
+      "(of) fortune great"
     ],
-    "hint": "A powerful verse about divine guidance — the Prophet cannot guide whom he loves; only Allah guides whom He wills.",
-    "arabic": "إِنِّى تَوَكَّلْتُ عَلَى ٱللَّهِ رَبِّى وَرَبِّكُم ۚ مَّا مِن دَآبَّةٍ إِلَّا هُوَ ءَاخِذٌۢ بِنَاصِيَتِهَآ ۚ إِنَّ رَبِّى عَلَىٰ صِرَٰطٍۢ مُّسْتَقِيمٍۢ",
+    "hint": "The rare spiritual reward of patience and noble character — turning enmity into devoted friendship.",
+    "arabic": "وَمَا يُلَقَّىٰهَآ إِلَّا ٱلَّذِينَ صَبَرُوا۟ وَمَا يُلَقَّىٰهَآ إِلَّا ذُو حَظٍّ عَظِيمٍۢ",
     "words": [
-      "إِنِّى تَوَكَّلْتُ عَلَى",
-      "ٱللَّهِ رَبِّى وَرَبِّكُم ۚ",
-      "مَّا مِن دَآبَّةٍ",
-      "إِلَّا هُوَ ءَاخِذٌۢ",
-      "بِنَاصِيَتِهَآ ۚ إِنَّ رَبِّى",
-      "عَلَىٰ صِرَٰطٍۢ مُّسْتَقِيمٍۢ"
+      "وَمَا يُلَقَّىٰهَآ إِلَّا",
+      "ٱلَّذِينَ صَبَرُوا۟",
+      "وَمَا يُلَقَّىٰهَآ",
+      "إِلَّا ذُو",
+      "حَظٍّ عَظِيمٍۢ"
     ],
-    "verseEn": "Indeed, I have relied upon Allāh, my Lord and your Lord. There is no creature but that He holds it by its forelock [i.e., controls it]. Indeed, my Lord is on a path [that is] straight."
+    "verseEn": "But none is granted it except those who are patient, and none is granted it except one having a great portion [of good]."
   },
   "generated": true,
   "model": "auto (chain)"

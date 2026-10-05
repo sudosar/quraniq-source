@@ -1,24 +1,44 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "puzzle": {
     "center": "ب",
     "outer": [
       "ي",
-      "ا",
       "م",
-      "و",
-      "ث",
+      "ا",
+      "ت",
+      "ن",
       "ه"
     ],
     "root": {
-      "letters": "ثوب",
-      "display": "ث و ب",
-      "translit": "th-w-b",
-      "meaning": "This root carries the idea of giving back, especially as a reward. Its derived words describe reward, recompense, and the act of returning something to someone.",
-      "occurrences": 28,
-      "lemmaCount": 6
+      "letters": "بين",
+      "display": "ب ي ن",
+      "translit": "b-y-n",
+      "meaning": "This root centers on something becoming clear or distinct—the moment when confusion gives way to evident truth. Built words stretch that idea: some describe making things clear, others name the clear proof itself, and some point to what has become evident.",
+      "occurrences": 523,
+      "lemmaCount": 12
     },
     "words": [
+      {
+        "w": "ابن",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "ابْن",
+            "gloss": "son",
+            "type": "noun",
+            "root": "بني",
+            "count": 63,
+            "ref": "2:87",
+            "pos": 11,
+            "alt": [
+              "sons",
+              "children"
+            ]
+          }
+        ]
+      },
       {
         "w": "ابي",
         "family": false,
@@ -60,36 +80,144 @@
         ]
       },
       {
-        "w": "بوا",
+        "w": "بنت",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "بَوَّأَ",
-            "gloss": "to post",
+            "lemma": "بِنْت",
+            "gloss": "daughters",
+            "type": "noun",
+            "root": "بني",
+            "count": 17,
+            "ref": "43:16",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "بني",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "بُنَىّ",
+            "gloss": "children",
+            "type": "noun",
+            "root": "بني",
+            "count": 80,
+            "ref": "2:83",
+            "pos": 4,
+            "alt": [
+              "children of israel",
+              "sons"
+            ]
+          },
+          {
+            "lemma": "بَنَى",
+            "gloss": "construct",
             "type": "verb",
-            "root": "بوأ",
-            "count": 6,
-            "ref": "3:121",
-            "pos": 5,
+            "root": "بني",
+            "count": 11,
+            "ref": "40:36",
+            "pos": 4,
+            "alt": [
+              "build"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "بهت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "بُهِتَ",
+            "gloss": "became dumbfounded",
+            "type": "verb",
+            "root": "بهت",
+            "count": 2,
+            "ref": "2:258",
+            "pos": 36,
+            "alt": [
+              "bewilder"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "بيت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "بَيْت",
+            "gloss": "houses",
+            "type": "noun",
+            "root": "بيت",
+            "count": 65,
+            "ref": "3:96",
+            "pos": 3,
+            "alt": [
+              "house",
+              "homes"
+            ]
+          },
+          {
+            "lemma": "بَيَّتَ",
+            "gloss": "plan by night",
+            "type": "verb",
+            "root": "بيت",
+            "count": 4,
+            "ref": "4:81",
+            "pos": 7,
             "form": 2
           }
         ]
       },
       {
-        "w": "ثوب",
+        "w": "بين",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "ثُوِّبَ",
-            "gloss": "been rewarded",
+            "lemma": "بَيْن",
+            "gloss": "between",
+            "type": "noun",
+            "root": "بين",
+            "count": 266,
+            "ref": "2:66",
+            "pos": 4,
+            "alt": [
+              "before",
+              "among"
+            ]
+          },
+          {
+            "lemma": "بَيَّنُ",
+            "gloss": "makes clear",
             "type": "verb",
-            "root": "ثوب",
-            "count": 1,
-            "ref": "83:36",
-            "pos": 2,
+            "root": "بين",
+            "count": 35,
+            "ref": "2:68",
+            "pos": 5,
+            "alt": [
+              "to make clear",
+              "allah makes clear"
+            ],
             "form": 2
+          },
+          {
+            "lemma": "بَيِّن",
+            "gloss": "clear",
+            "type": "adjective",
+            "root": "بين",
+            "count": 1,
+            "ref": "18:15",
+            "pos": 11
           }
         ]
       },
@@ -113,111 +241,319 @@
         ]
       },
       {
-        "w": "وهب",
+        "w": "نبا",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "وَهَبَ",
-            "gloss": "grant",
-            "type": "verb",
-            "root": "وهب",
-            "count": 22,
-            "ref": "3:38",
-            "pos": 7,
+            "lemma": "نَبَأ",
+            "gloss": "news",
+            "type": "noun",
+            "root": "نبأ",
+            "count": 29,
+            "ref": "3:44",
+            "pos": 3,
             "alt": [
-              "has granted",
-              "gives"
-            ],
-            "form": 1
+              "story"
+            ]
           }
         ]
       },
       {
-        "w": "اثاب",
-        "family": true,
-        "points": 4,
+        "w": "نبي",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَثابَ",
-            "gloss": "repaid",
-            "type": "verb",
-            "root": "ثوب",
-            "count": 3,
-            "ref": "3:153",
-            "pos": 11,
+            "lemma": "نَبِيّ",
+            "gloss": "prophet",
+            "type": "noun",
+            "root": "نبأ",
+            "count": 75,
+            "ref": "2:91",
+            "pos": 24,
             "alt": [
-              "rewarded"
+              "prophets",
+              "any prophet"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ابنت",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "ابْنَت",
+            "gloss": "daughter",
+            "type": "noun",
+            "root": "بني",
+            "count": 2,
+            "ref": "66:12",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "اناب",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَنابَ",
+            "gloss": "turns",
+            "type": "verb",
+            "root": "نوب",
+            "count": 11,
+            "ref": "11:88",
+            "pos": 35,
+            "alt": [
+              "turn",
+              "turns back"
             ],
             "form": 4
           }
         ]
       },
       {
-        "w": "اواب",
+        "w": "انبا",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَوّاب",
-            "gloss": "repeatedly turning",
-            "type": "noun",
-            "root": "أوب",
-            "count": 6,
-            "ref": "38:17",
-            "pos": 11,
+            "lemma": "أَنۢبَأَ",
+            "gloss": "inform",
+            "type": "verb",
+            "root": "نبأ",
+            "count": 4,
+            "ref": "2:31",
+            "pos": 10,
             "alt": [
-              "one who repeatedly turned",
-              "repeatedly turned"
+              "had informed",
+              "informed"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "انبت",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَنۢبَتَ",
+            "gloss": "grows",
+            "type": "verb",
+            "root": "نبت",
+            "count": 16,
+            "ref": "2:61",
+            "pos": 15,
+            "alt": [
+              "causes to grow"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "بنان",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "بَنان",
+            "gloss": "fingertip",
+            "type": "noun",
+            "root": "بنن",
+            "count": 2,
+            "ref": "8:12",
+            "pos": 23
+          }
+        ]
+      },
+      {
+        "w": "بيات",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "بَيات",
+            "gloss": "night",
+            "type": "noun",
+            "root": "بيت",
+            "count": 3,
+            "ref": "7:4",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "بيان",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "بَيان",
+            "gloss": "declaration",
+            "type": "noun",
+            "root": "بين",
+            "count": 3,
+            "ref": "3:138",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "بينه",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "بَيِّنَة",
+            "gloss": "clear",
+            "type": "noun",
+            "root": "بين",
+            "count": 71,
+            "ref": "2:99",
+            "pos": 5,
+            "alt": [
+              "clear proof",
+              "clear proofs"
             ]
           }
         ]
       },
       {
-        "w": "ثواب",
+        "w": "تبين",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "ثَواب",
-            "gloss": "reward",
-            "type": "noun",
-            "root": "ثوب",
-            "count": 13,
-            "ref": "3:145",
-            "pos": 13
+            "lemma": "تَبَيَّنَ",
+            "gloss": "becomes distinct",
+            "type": "verb",
+            "root": "بين",
+            "count": 18,
+            "ref": "2:109",
+            "pos": 19,
+            "alt": [
+              "became clear",
+              "become clear"
+            ],
+            "form": 5
           }
         ]
       },
       {
-        "w": "ثياب",
+        "w": "مبين",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "ثِياب",
-            "gloss": "garments",
-            "type": "noun",
-            "root": "ثوب",
-            "count": 8,
-            "ref": "18:31",
-            "pos": 16
+            "lemma": "مُبِين",
+            "gloss": "manifest",
+            "type": "active participle",
+            "root": "بين",
+            "count": 119,
+            "ref": "2:168",
+            "pos": 16,
+            "alt": [
+              "clear",
+              "open"
+            ]
           }
         ]
       },
       {
-        "w": "وهاب",
+        "w": "متاب",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "وَهّاب",
-            "gloss": "bestower",
+            "lemma": "مَتاب",
+            "gloss": "repentance",
             "type": "noun",
-            "root": "وهب",
-            "count": 3,
-            "ref": "3:8",
-            "pos": 15
+            "root": "توب",
+            "count": 2,
+            "ref": "25:71",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "منيب",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُنِيب",
+            "gloss": "oft-returning",
+            "type": "active participle",
+            "root": "نوب",
+            "count": 7,
+            "ref": "11:75",
+            "pos": 5,
+            "alt": [
+              "turning",
+              "turns"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "نبات",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "نَبات",
+            "gloss": "vegetation",
+            "type": "noun",
+            "root": "نبت",
+            "count": 9,
+            "ref": "3:37",
+            "pos": 6,
+            "alt": [
+              "plants",
+              "rearing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "بنيان",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "بُنْيان",
+            "gloss": "structure",
+            "type": "noun",
+            "root": "بني",
+            "count": 7,
+            "ref": "18:21",
+            "pos": 21
+          }
+        ]
+      },
+      {
+        "w": "بهتان",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "بُهْتان",
+            "gloss": "slander",
+            "type": "noun",
+            "root": "بهت",
+            "count": 6,
+            "ref": "4:20",
+            "pos": 15,
+            "alt": [
+              "false accusation"
+            ]
           }
         ]
       },
@@ -241,41 +577,74 @@
         ]
       },
       {
-        "w": "مثابه",
+        "w": "تبيان",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "مَثابَة",
-            "gloss": "place of return",
+            "lemma": "تِبْيان",
+            "gloss": "clarification",
             "type": "noun",
-            "root": "ثوب",
+            "root": "بين",
             "count": 1,
-            "ref": "2:125",
-            "pos": 4
+            "ref": "16:89",
+            "pos": 18
           }
         ]
       },
       {
-        "w": "مثوبه",
+        "w": "مبينه",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "مَثُوبَة",
-            "gloss": "recompense",
-            "type": "verbal noun",
-            "root": "ثوب",
-            "count": 2,
-            "ref": "5:60",
-            "pos": 7
+            "lemma": "مُبَيِّنَة",
+            "gloss": "open",
+            "type": "active participle",
+            "root": "بين",
+            "count": 6,
+            "ref": "4:19",
+            "pos": 21,
+            "alt": [
+              "clear"
+            ]
           }
         ]
       }
     ],
-    "otherFamily": [],
-    "maxScore": 37,
-    "featuredRoot": "ثوب"
+    "otherFamily": [
+      {
+        "lemma": "تَسْتَبِينَ",
+        "gloss": "becomes manifest",
+        "type": "verb",
+        "root": "بين",
+        "count": 1,
+        "ref": "6:55",
+        "pos": 4,
+        "form": 10
+      },
+      {
+        "lemma": "مُسْتَبِين",
+        "gloss": "clear",
+        "type": "active participle",
+        "root": "بين",
+        "count": 1,
+        "ref": "37:117",
+        "pos": 3
+      },
+      {
+        "lemma": "يُبِينُ",
+        "gloss": "clear",
+        "type": "verb",
+        "root": "بين",
+        "count": 1,
+        "ref": "43:52",
+        "pos": 11,
+        "form": 4
+      }
+    ],
+    "maxScore": 66,
+    "featuredRoot": "بين"
   },
   "generated": true,
   "model": "auto (chain)"
