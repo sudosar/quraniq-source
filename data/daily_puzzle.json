@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-05",
+  "date": "2026-10-06",
   "puzzle": {
     "categories": [
       {
-        "name": "أَفْعَالُ الْخَلْقِ فِي الْقُرْآنِ",
-        "nameEn": "Verbs of Creation in the Quran",
+        "name": "مُفْرَدَاتٌ مِنْ سُورَةِ الْأَعْلَى",
+        "nameEn": "Key terms from Surah Al-A'la",
         "color": "yellow",
         "items": [
           {
-            "ar": "خَلَقَكُمْ",
-            "en": "created you",
-            "ref": "7:189",
-            "verse": "۞ هُوَ ٱلَّذِى خَلَقَكُم مِّن نَّفْسٍۢ وَٰحِدَةٍۢ وَجَعَلَ مِنْهَا زَوْجَهَا لِيَسْكُنَ إِلَيْهَا ۖ فَلَمَّا تَغَشَّىٰهَا حَمَلَتْ حَمْلًا خَفِيفًۭا فَمَرَّتْ بِهِۦ ۖ فَلَمَّآ أَثْقَلَت دَّعَوَا ٱللَّهَ رَبَّهُمَا لَئِنْ ءَاتَيْتَنَا صَـٰلِحًۭا لَّنَكُونَنَّ مِنَ ٱلشَّـٰكِرِينَ",
-            "verseEn": "It is He who created you from one soul and created from it its mate that he might dwell in security with her. And when he [i.e., man] covers her, she carries a light burden [i.e., a pregnancy] and continues therein. And when it becomes heavy, they both invoke Allāh, their Lord, \"If You should give us a good [child], we will surely be among the grateful.\""
+            "ar": "قَدَّرَ",
+            "en": "measured",
+            "ref": "87:3",
+            "verse": "وَٱلَّذِى قَدَّرَ فَهَدَىٰ",
+            "verseEn": "And who destined and [then] guided"
           },
           {
-            "ar": "جَعَلَ",
-            "en": "made",
-            "ref": "43:10",
-            "verse": "ٱلَّذِى جَعَلَ لَكُمُ ٱلْأَرْضَ مَهْدًۭا وَجَعَلَ لَكُمْ فِيهَا سُبُلًۭا لَّعَلَّكُمْ تَهْتَدُونَ",
-            "verseEn": "[The one] who has made for you the earth a bed and made for you upon it roads that you might be guided"
+            "ar": "أَخْرَجَ",
+            "en": "brings forth",
+            "ref": "87:4",
+            "verse": "وَٱلَّذِىٓ أَخْرَجَ ٱلْمَرْعَىٰ",
+            "verseEn": "And who brings out the pasture"
           },
           {
-            "ar": "فَطَرَهُنَّ",
-            "en": "created them",
-            "ref": "21:56",
-            "verse": "قَالَ بَل رَّبُّكُمْ رَبُّ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ٱلَّذِى فَطَرَهُنَّ وَأَنَا۠ عَلَىٰ ذَٰلِكُم مِّنَ ٱلشَّـٰهِدِينَ",
-            "verseEn": "He said, \"[No], rather, your Lord is the Lord of the heavens and the earth who created them, and I, to that, am of those who testify."
+            "ar": "يَعْلَمُ",
+            "en": "knows",
+            "ref": "87:7",
+            "verse": "إِلَّا مَا شَآءَ ٱللَّهُ ۚ إِنَّهُۥ يَعْلَمُ ٱلْجَهْرَ وَمَا يَخْفَىٰ",
+            "verseEn": "Except what Allāh should will. Indeed, He knows what is declared and what is hidden."
           },
           {
-            "ar": "نَبْرَأَهَا",
-            "en": "We bring it into existence",
-            "ref": "57:22",
-            "verse": "مَآ أَصَابَ مِن مُّصِيبَةٍۢ فِى ٱلْأَرْضِ وَلَا فِىٓ أَنفُسِكُمْ إِلَّا فِى كِتَـٰبٍۢ مِّن قَبْلِ أَن نَّبْرَأَهَآ ۚ إِنَّ ذَٰلِكَ عَلَى ٱللَّهِ يَسِيرٌۭ",
-            "verseEn": "No disaster strikes upon the earth or among yourselves except that it is in a register before We bring it into being - indeed that, for Allāh, is easy -"
+            "ar": "النَّارَ",
+            "en": "(in) the Fire",
+            "ref": "87:12",
+            "verse": "ٱلَّذِى يَصْلَى ٱلنَّارَ ٱلْكُبْرَىٰ",
+            "verseEn": "[He] who will [enter and] burn in the greatest Fire,"
           }
         ]
       },
       {
-        "name": "كَلِمَاتُ الْخُصُومَةِ وَالنَّجْوَى",
-        "nameEn": "Words of dispute and secret counsel in the Quran",
+        "name": "أَسْمَاءُ يَوْمِ الْقِيَامَةِ فِي الْقُرْآنِ",
+        "nameEn": "Names of the Day of Resurrection in the Quran",
         "color": "green",
         "items": [
           {
-            "ar": "يُجَادِلُونَ",
-            "en": "dispute",
-            "ref": "42:35",
-            "verse": "وَيَعْلَمَ ٱلَّذِينَ يُجَـٰدِلُونَ فِىٓ ءَايَـٰتِنَا مَا لَهُم مِّن مَّحِيصٍۢ",
-            "verseEn": "And [that is so] those who dispute concerning Our signs may know that for them there is no place of escape."
+            "ar": "السَّاعَةُ",
+            "en": "the Hour",
+            "ref": "30:12",
+            "verse": "وَيَوْمَ تَقُومُ ٱلسَّاعَةُ يُبْلِسُ ٱلْمُجْرِمُونَ",
+            "verseEn": "And the Day the Hour appears the criminals will be in despair."
           },
           {
-            "ar": "يُحَادُّونَ",
-            "en": "oppose",
-            "ref": "58:5",
-            "verse": "إِنَّ ٱلَّذِينَ يُحَآدُّونَ ٱللَّهَ وَرَسُولَهُۥ كُبِتُوا۟ كَمَا كُبِتَ ٱلَّذِينَ مِن قَبْلِهِمْ ۚ وَقَدْ أَنزَلْنَآ ءَايَـٰتٍۭ بَيِّنَـٰتٍۢ ۚ وَلِلْكَـٰفِرِينَ عَذَابٌۭ مُّهِينٌۭ",
-            "verseEn": "Indeed, those who oppose Allāh and His Messenger are abased as those before them were abased. And We have certainly sent down verses of clear evidence. And for the disbelievers is a humiliating punishment"
+            "ar": "الْآخِرَةِ",
+            "en": "the Hereafter",
+            "ref": "30:7",
+            "verse": "يَعْلَمُونَ ظَـٰهِرًۭا مِّنَ ٱلْحَيَوٰةِ ٱلدُّنْيَا وَهُمْ عَنِ ٱلْـَٔاخِرَةِ هُمْ غَـٰفِلُونَ",
+            "verseEn": "They know what is apparent of the worldly life, but they, of the Hereafter, are unaware."
           },
           {
-            "ar": "تَخَاصُمُ",
-            "en": "(the) quarreling",
-            "ref": "38:64",
-            "verse": "إِنَّ ذَٰلِكَ لَحَقٌّۭ تَخَاصُمُ أَهْلِ ٱلنَّارِ",
-            "verseEn": "Indeed, that is truth [i.e., reality] - the quarreling of the people of the Fire."
+            "ar": "الْحِسَابِ",
+            "en": "(of) the Account",
+            "ref": "40:27",
+            "verse": "وَقَالَ مُوسَىٰٓ إِنِّى عُذْتُ بِرَبِّى وَرَبِّكُم مِّن كُلِّ مُتَكَبِّرٍۢ لَّا يُؤْمِنُ بِيَوْمِ ٱلْحِسَابِ",
+            "verseEn": "But Moses said, \"Indeed, I have sought refuge in my Lord and your Lord from every arrogant one who does not believe in the Day of Account.\""
           },
           {
-            "ar": "نَجْوَى",
-            "en": "secret counsel",
-            "ref": "58:7",
-            "verse": "أَلَمْ تَرَ أَنَّ ٱللَّهَ يَعْلَمُ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ مَا يَكُونُ مِن نَّجْوَىٰ ثَلَـٰثَةٍ إِلَّا هُوَ رَابِعُهُمْ وَلَا خَمْسَةٍ إِلَّا هُوَ سَادِسُهُمْ وَلَآ أَدْنَىٰ مِن ذَٰلِكَ وَلَآ أَكْثَرَ إِلَّا هُوَ مَعَهُمْ أَيْنَ مَا كَانُوا۟ ۖ ثُمَّ يُنَبِّئُهُم بِمَا عَمِلُوا۟ يَوْمَ ٱلْقِيَـٰمَةِ ۚ إِنَّ ٱللَّهَ بِكُلِّ شَىْءٍ عَلِيمٌ",
-            "verseEn": "Have you not considered that Allāh knows what is in the heavens and what is on the earth? There are not three in a private conversation but that He is the fourth of them, nor are there five but that He is the sixth of them - and no less than that and no more except that He is with them [in knowledge] wherever they are. Then He will inform them of what they did, on the Day of Resurrection. Indeed Allāh is, of all things, Knowing."
+            "ar": "التَّنَادِ",
+            "en": "(of) Calling",
+            "ref": "40:32",
+            "verse": "وَيَـٰقَوْمِ إِنِّىٓ أَخَافُ عَلَيْكُمْ يَوْمَ ٱلتَّنَادِ",
+            "verseEn": "And O my people, indeed I fear for you the Day of Calling -"
           }
         ]
       },
       {
-        "name": "مُفْرَدَاتُ مُلْكِ سُلَيْمَانَ",
-        "nameEn": "Elements of Sulayman's Dominion in the Quran",
+        "name": "مُفْرَدَاتٌ مِنْ سُورَةِ الْجِنِّ",
+        "nameEn": "Key terms from Surah Al-Jinn",
         "color": "blue",
         "items": [
           {
-            "ar": "مُلْكًا",
-            "en": "a kingdom",
-            "ref": "38:35",
-            "verse": "قَالَ رَبِّ ٱغْفِرْ لِى وَهَبْ لِى مُلْكًۭا لَّا يَنۢبَغِى لِأَحَدٍۢ مِّنۢ بَعْدِىٓ ۖ إِنَّكَ أَنتَ ٱلْوَهَّابُ",
-            "verseEn": "He said, \"My Lord, forgive me and grant me a kingdom such as will not belong to anyone after me. Indeed, You are the Bestower.\""
+            "ar": "آمَنَّا",
+            "en": "so we believe",
+            "ref": "72:2",
+            "verse": "يَهْدِىٓ إِلَى ٱلرُّشْدِ فَـَٔامَنَّا بِهِۦ ۖ وَلَن نُّشْرِكَ بِرَبِّنَآ أَحَدًۭا",
+            "verseEn": "It guides to the right course, and we have believed in it. And we will never associate with our Lord anyone."
           },
           {
-            "ar": "بَنَّاءٍ",
-            "en": "builder",
-            "ref": "38:37",
-            "verse": "وَٱلشَّيَـٰطِينَ كُلَّ بَنَّآءٍۢ وَغَوَّاصٍۢ",
-            "verseEn": "And [also] the devils [of jinn] - every builder and diver."
+            "ar": "شُهُبًا",
+            "en": "and flaming fires",
+            "ref": "72:8",
+            "verse": "وَأَنَّا لَمَسْنَا ٱلسَّمَآءَ فَوَجَدْنَـٰهَا مُلِئَتْ حَرَسًۭا شَدِيدًۭا وَشُهُبًۭا",
+            "verseEn": "And we have sought [to reach] the heaven but found it filled with powerful guards and burning flames."
           },
           {
-            "ar": "سُلْطَانٍ",
-            "en": "a reason",
-            "ref": "27:21",
-            "verse": "لَأُعَذِّبَنَّهُۥ عَذَابًۭا شَدِيدًا أَوْ لَأَا۟ذْبَحَنَّهُۥٓ أَوْ لَيَأْتِيَنِّى بِسُلْطَـٰنٍۢ مُّبِينٍۢ",
-            "verseEn": "I will surely punish him with a severe punishment or slaughter him unless he brings me clear authorization.\""
+            "ar": "رَشَدًا",
+            "en": "(the) right path",
+            "ref": "72:14",
+            "verse": "وَأَنَّا مِنَّا ٱلْمُسْلِمُونَ وَمِنَّا ٱلْقَـٰسِطُونَ ۖ فَمَنْ أَسْلَمَ فَأُو۟لَـٰٓئِكَ تَحَرَّوْا۟ رَشَدًۭا",
+            "verseEn": "And among us are Muslims [in submission to Allāh], and among us are the unjust. And whoever has become Muslim - those have sought out the right course."
           },
           {
-            "ar": "الطَّيْرِ",
-            "en": "(of) the birds",
-            "ref": "27:16",
-            "verse": "وَوَرِثَ سُلَيْمَـٰنُ دَاوُۥدَ ۖ وَقَالَ يَـٰٓأَيُّهَا ٱلنَّاسُ عُلِّمْنَا مَنطِقَ ٱلطَّيْرِ وَأُوتِينَا مِن كُلِّ شَىْءٍ ۖ إِنَّ هَـٰذَا لَهُوَ ٱلْفَضْلُ ٱلْمُبِينُ",
-            "verseEn": "And Solomon inherited David. He said, \"O people, we have been taught the language of birds, and we have been given from all things. Indeed, this is evident bounty.\""
+            "ar": "لِبَدًا",
+            "en": "a compacted mass",
+            "ref": "72:19",
+            "verse": "وَأَنَّهُۥ لَمَّا قَامَ عَبْدُ ٱللَّهِ يَدْعُوهُ كَادُوا۟ يَكُونُونَ عَلَيْهِ لِبَدًۭا",
+            "verseEn": "And that when the Servant [i.e., Prophet] of Allāh stood up supplicating Him, they almost became about him a compacted mass.\""
           }
         ]
       },
       {
-        "name": "كَلِمَاتُ الْجَزَاءِ فِي سُورَةِ التِّينِ",
-        "nameEn": "Words of Degradation and Judgment in Surah at-Tin",
+        "name": "خِدَاعُ إِخْوَةِ يُوسُفَ",
+        "nameEn": "Deceptive elements in the plot of Yusuf's brothers",
         "color": "purple",
         "items": [
           {
-            "ar": "أَسْفَلَ",
-            "en": "(to the) lowest",
-            "ref": "95:5",
-            "verse": "ثُمَّ رَدَدْنَـٰهُ أَسْفَلَ سَـٰفِلِينَ",
-            "verseEn": "Then We return him to the lowest of the low,"
+            "ar": "اُقْتُلُوا",
+            "en": "Kill",
+            "ref": "12:9",
+            "verse": "ٱقْتُلُوا۟ يُوسُفَ أَوِ ٱطْرَحُوهُ أَرْضًۭا يَخْلُ لَكُمْ وَجْهُ أَبِيكُمْ وَتَكُونُوا۟ مِنۢ بَعْدِهِۦ قَوْمًۭا صَـٰلِحِينَ",
+            "verseEn": "Kill Joseph or cast him out to [another] land; the countenance [i.e., attention] of your father will [then] be only for you, and you will be after that a righteous people.\""
           },
           {
-            "ar": "مَمْنُونٍ",
-            "en": "ending",
-            "ref": "95:6",
-            "verse": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۢ",
-            "verseEn": "Except for those who believe and do righteous deeds, for they will have a reward uninterrupted."
+            "ar": "لَنَاصِحُونَ",
+            "en": "surely well-wishers",
+            "ref": "12:11",
+            "verse": "قَالُوا۟ يَـٰٓأَبَانَا مَا لَكَ لَا تَأْمَ۫نَّا عَلَىٰ يُوسُفَ وَإِنَّا لَهُۥ لَنَـٰصِحُونَ",
+            "verseEn": "They said, \"O our father, why do you not entrust us with Joseph while indeed, we are to him sincere counselors?"
           },
           {
-            "ar": "يُكَذِّبُكَ",
-            "en": "causes you to deny",
-            "ref": "95:7",
-            "verse": "فَمَا يُكَذِّبُكَ بَعْدُ بِٱلدِّينِ",
-            "verseEn": "So what yet causes you to deny the Recompense?"
+            "ar": "يَبْكُونَ",
+            "en": "weeping",
+            "ref": "12:16",
+            "verse": "وَجَآءُوٓ أَبَاهُمْ عِشَآءًۭ يَبْكُونَ",
+            "verseEn": "And they came to their father at night, weeping."
           },
           {
-            "ar": "أَحْكَمِ",
-            "en": "(the) Most Just",
-            "ref": "95:8",
-            "verse": "أَلَيْسَ ٱللَّهُ بِأَحْكَمِ ٱلْحَـٰكِمِينَ",
-            "verseEn": "Is not Allāh the most just of judges?"
+            "ar": "الذِّئْبُ",
+            "en": "the wolf",
+            "ref": "12:17",
+            "verse": "قَالُوا۟ يَـٰٓأَبَانَآ إِنَّا ذَهَبْنَا نَسْتَبِقُ وَتَرَكْنَا يُوسُفَ عِندَ مَتَـٰعِنَا فَأَكَلَهُ ٱلذِّئْبُ ۖ وَمَآ أَنتَ بِمُؤْمِنٍۢ لَّنَا وَلَوْ كُنَّا صَـٰدِقِينَ",
+            "verseEn": "They said, \"O our father, indeed we went racing each other and left Joseph with our possessions, and a wolf ate him. But you would not believe us, even if we were truthful.\""
           }
         ]
       }

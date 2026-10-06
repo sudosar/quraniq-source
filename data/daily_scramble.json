@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-05",
+  "date": "2026-10-06",
   "puzzle": {
-    "verseRef": "41:35",
-    "reference": "Surah Fussilat (41:35)",
+    "verseRef": "16:53",
+    "reference": "Surah An-Nahl (16:53)",
     "segments": [
-      "وَمَا يُلَقَّاهَا",
-      "إِلَّا الَّذِينَ صَبَرُوا",
-      "وَمَا يُلَقَّاهَا",
-      "إِلَّا",
-      "ذُو حَظٍّ عَظِيمٍ"
+      "وَمَا بِكُم مِّن نِّعْمَةٍ",
+      "فَمِنَ اللَّهِ",
+      "ثُمَّ إِذَا مَسَّكُمُ الضُّرُّ",
+      "فَإِلَيْهِ",
+      "تَجْأَرُونَ"
     ],
     "translations": [
-      "And not it is granted except",
-      "(to) those who (are) patient",
-      "and not it is granted",
-      "except (to the) owner",
-      "(of) fortune great"
+      "And whatever you have of",
+      "favor (is) from Allah",
+      "Then when",
+      "touches you the adversity",
+      "then to Him you cry for help"
     ],
-    "hint": "The rare spiritual reward of patience and noble character — turning enmity into devoted friendship.",
-    "arabic": "وَمَا يُلَقَّىٰهَآ إِلَّا ٱلَّذِينَ صَبَرُوا۟ وَمَا يُلَقَّىٰهَآ إِلَّا ذُو حَظٍّ عَظِيمٍۢ",
+    "hint": "A powerful reminder that every blessing comes from Allah, and He alone is our refuge in times of hardship",
+    "arabic": "وَمَا بِكُم مِّن نِّعْمَةٍۢ فَمِنَ ٱللَّهِ ۖ ثُمَّ إِذَا مَسَّكُمُ ٱلضُّرُّ فَإِلَيْهِ تَجْـَٔرُونَ",
     "words": [
-      "وَمَا يُلَقَّىٰهَآ إِلَّا",
-      "ٱلَّذِينَ صَبَرُوا۟",
-      "وَمَا يُلَقَّىٰهَآ",
-      "إِلَّا ذُو",
-      "حَظٍّ عَظِيمٍۢ"
+      "وَمَا بِكُم مِّن",
+      "نِّعْمَةٍۢ فَمِنَ ٱللَّهِ ۖ",
+      "ثُمَّ إِذَا",
+      "مَسَّكُمُ ٱلضُّرُّ",
+      "فَإِلَيْهِ تَجْـَٔرُونَ"
     ],
-    "verseEn": "But none is granted it except those who are patient, and none is granted it except one having a great portion [of good]."
+    "verseEn": "And whatever you have of favor - it is from Allāh. Then when adversity touches you, to Him you cry for help."
   },
   "generated": true,
   "model": "auto (chain)"

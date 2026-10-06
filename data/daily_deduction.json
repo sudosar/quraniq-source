@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-05",
+  "date": "2026-10-06",
   "puzzle": {
-    "title": "The Trust Entrusted to the River",
-    "intro": "A soul faced an impossible decree, where the life of a newborn hung in the balance. Guided by divine inspiration, a desperate command was obeyed, and a precious secret was set adrift on the current, only to be returned in a way unforeseen.",
+    "title": "The Truth That Silenced the Court",
+    "intro": "In a palace where denial reigned and power was absolute, a gathering of skilled practitioners stood before an unexpected challenge. The air crackled with anticipation as the two paths of falsehood and truth were about to collide. Little did the assembled ones know that this encounter would transform their lives forever and etch their story into the sacred text.",
     "clues": [
-      "I lived under the shadow of a tyrant who commanded the killing of newborn males.",
-      "A divine inspiration came to me, instructing me to take a desperate and heart-wrenching action.",
-      "I placed my precious infant in a chest and set it upon the flowing river.",
-      "My heart became empty, and I almost revealed the secret, but Allah strengthened my resolve.",
-      "I sent someone to follow the child's journey downstream as the current carried the chest away.",
-      "The child was found by the household of the tyrant, and eventually, I was reunited with my child and became the nursemaid."
+      "We were renowned for our skill in illusions and were gathered by a powerful ruler to confront a challenger.",
+      "When the moment came, we cast our instruments and awaited the outcome, confident in our craft.",
+      "But what we witnessed made our own devices seem like mere toys, and our hearts recognized the undeniable truth.",
+      "We fell to the ground in prostration, declaring our belief in the Lord of Moses and Aaron, despite the rage of the ruler.",
+      "That ruler threatened us with the most brutal punishment, vowing to crucify us and cut our limbs opposite ways.",
+      "We remained steadfast, saying we preferred the judgment of our Lord over any worldly consequence, and we were martyred for our faith."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Mother of Prophet Musa",
-          "Asiya (Wife of Pharaoh)",
-          "Maryam (Mother of Prophet Isa)",
-          "The wife of Prophet Lut",
-          "The mother of Prophet Yahya (wife of Zakariya)"
+          "The Sorcerers of Pharaoh",
+          "The People of the Cave",
+          "The Companions of the Wood",
+          "The Disciples of Isa",
+          "The People of the Elephant"
         ],
-        "answer": "Mother of Prophet Musa"
+        "answer": "The Sorcerers of Pharaoh"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "She placed her child in a chest and set it on the river",
-          "She hid her child in a cave",
-          "She abandoned her child in the desert",
-          "She threw her child into a fire",
-          "She left her child at the door of a mosque"
+          "A magic contest against Musa",
+          "A fire thrown upon them",
+          "A flood that drowned them",
+          "A drought and famine",
+          "An earthquake"
         ],
-        "answer": "She placed her child in a chest and set it on the river"
+        "answer": "A magic contest against Musa"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A chest set afloat on the river",
+          "Staffs and ropes that turned into snakes",
           "A burning bush",
-          "A staff that turned into a snake",
-          "A table spread with food from heaven",
-          "A she-camel sent as a sign"
+          "A she-camel",
+          "An ark of wood",
+          "A whale"
         ],
-        "answer": "A chest set afloat on the river"
+        "answer": "Staffs and ropes that turned into snakes"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "She was reunited with her child and nursed him",
-          "She never saw her child again",
-          "She was executed by the tyrant",
-          "She became a queen in Egypt",
-          "She migrated to another land and lived in exile"
+          "Executed for faith, promised Paradise",
+          "Drowned in the sea",
+          "Became rulers of Egypt",
+          "Remained followers of Pharaoh",
+          "Inherited the land"
         ],
-        "answer": "She was reunited with her child and nursed him"
+        "answer": "Executed for faith, promised Paradise"
       }
     },
-    "verseRef": "28:7",
-    "arabic": "وَأَوْحَيْنَآ إِلَىٰٓ أُمِّ مُوسَىٰٓ أَنْ أَرْضِعِيهِ ۖ فَإِذَا خِفْتِ عَلَيْهِ فَأَلْقِيهِ فِى ٱلْيَمِّ وَلَا تَخَافِى وَلَا تَحْزَنِىٓ ۖ إِنَّا رَآدُّوهُ إِلَيْكِ وَجَاعِلُوهُ مِنَ ٱلْمُرْسَلِينَ",
-    "verse": "And We inspired to the mother of Moses, \"Suckle him; but when you fear for him, cast him into the river and do not fear and do not grieve. Indeed, We will return him to you and will make him [one] of the messengers.\" (28:7)"
+    "verseRef": "20:70",
+    "arabic": "فَأُلْقِىَ ٱلسَّحَرَةُ سُجَّدًۭا قَالُوٓا۟ ءَامَنَّا بِرَبِّ هَـٰرُونَ وَمُوسَىٰ",
+    "verse": "So the magicians fell down in prostration. They said, \"We have believed in the Lord of Aaron and Moses.\" (20:70)"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-05",
+  "date": "2026-10-06",
   "puzzle": {
-    "word": "تولى",
-    "display": "تَوَلَّىٰ",
-    "hint": "Turned away (from the truth)",
-    "verseRef": "96:13",
-    "arabicVerse": "أَرَءَيْتَ إِن كَذَّبَ وَتَوَلَّىٰٓ",
-    "verse": "96:13 - Have you seen if he denies and turns away -"
+    "word": "أشتات",
+    "display": "أَشْتَاتًا",
+    "hint": "Scattered, separate groups — the way people will emerge apart from one another, as in the short surah named after a violent quake",
+    "verseRef": "99:6",
+    "arabicVerse": "يَوْمَئِذٍۢ يَصْدُرُ ٱلنَّاسُ أَشْتَاتًۭا لِّيُرَوْا۟ أَعْمَـٰلَهُمْ",
+    "verse": "99:6 - That Day, the people will depart separated [into categories] to be shown [the result of] their deeds."
   },
   "generated": true,
   "model": "auto (chain)"
