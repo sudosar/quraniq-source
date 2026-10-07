@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "puzzle": {
-    "verseRef": "16:53",
-    "reference": "Surah An-Nahl (16:53)",
+    "verseRef": "15:97",
+    "reference": "Surah Al-Hijr (15:97)",
     "segments": [
-      "وَمَا بِكُم مِّن نِّعْمَةٍ",
-      "فَمِنَ اللَّهِ",
-      "ثُمَّ إِذَا مَسَّكُمُ الضُّرُّ",
-      "فَإِلَيْهِ",
-      "تَجْأَرُونَ"
+      "وَلَقَدْ يَسَّرْنَا",
+      "الْقُرْآنَ",
+      "لِلذِّكْرِ",
+      "فَهَلْ مِنْ",
+      "مُدَّكِرٍ"
     ],
     "translations": [
-      "And whatever you have of",
-      "favor (is) from Allah",
-      "Then when",
-      "touches you the adversity",
-      "then to Him you cry for help"
+      "And verily We know",
+      "that [you] (is) straitened",
+      "your breast",
+      "by what",
+      "they say"
     ],
-    "hint": "A powerful reminder that every blessing comes from Allah, and He alone is our refuge in times of hardship",
-    "arabic": "وَمَا بِكُم مِّن نِّعْمَةٍۢ فَمِنَ ٱللَّهِ ۖ ثُمَّ إِذَا مَسَّكُمُ ٱلضُّرُّ فَإِلَيْهِ تَجْـَٔرُونَ",
+    "hint": "A beloved verse reminding believers that Allah has made the Quran easy to learn, reflect upon, and remember — a source of encouragement for anyone engaging with the Book of Allah.",
+    "arabic": "وَلَقَدْ نَعْلَمُ أَنَّكَ يَضِيقُ صَدْرُكَ بِمَا يَقُولُونَ",
     "words": [
-      "وَمَا بِكُم مِّن",
-      "نِّعْمَةٍۢ فَمِنَ ٱللَّهِ ۖ",
-      "ثُمَّ إِذَا",
-      "مَسَّكُمُ ٱلضُّرُّ",
-      "فَإِلَيْهِ تَجْـَٔرُونَ"
+      "وَلَقَدْ نَعْلَمُ",
+      "أَنَّكَ يَضِيقُ",
+      "صَدْرُكَ",
+      "بِمَا",
+      "يَقُولُونَ"
     ],
-    "verseEn": "And whatever you have of favor - it is from Allāh. Then when adversity touches you, to Him you cry for help."
+    "verseEn": "And We already know that your breast is constrained by what they say."
   },
   "generated": true,
   "model": "auto (chain)"

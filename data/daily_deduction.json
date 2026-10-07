@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "puzzle": {
-    "title": "The Truth That Silenced the Court",
-    "intro": "In a palace where denial reigned and power was absolute, a gathering of skilled practitioners stood before an unexpected challenge. The air crackled with anticipation as the two paths of falsehood and truth were about to collide. Little did the assembled ones know that this encounter would transform their lives forever and etch their story into the sacred text.",
+    "title": "The flame within the palace of arrogance",
+    "intro": "Behind the grand walls of the most powerful palace of the ancient world lived a figure whose heart carried a secret that no royal decree could silence. While all around bowed to false gods, this soul kept a quiet faith burning within. The ruler of that land believed themselves divine, yet this individual chose truth over comfort, and devotion over safety. Today, your task is to discover who this courageous soul was, whose story remains one of the most powerful examples of unwavering faith.",
     "clues": [
-      "We were renowned for our skill in illusions and were gathered by a powerful ruler to confront a challenger.",
-      "When the moment came, we cast our instruments and awaited the outcome, confident in our craft.",
-      "But what we witnessed made our own devices seem like mere toys, and our hearts recognized the undeniable truth.",
-      "We fell to the ground in prostration, declaring our belief in the Lord of Moses and Aaron, despite the rage of the ruler.",
-      "That ruler threatened us with the most brutal punishment, vowing to crucify us and cut our limbs opposite ways.",
-      "We remained steadfast, saying we preferred the judgment of our Lord over any worldly consequence, and we were martyred for our faith."
+      "I lived in a place of immense wealth and unmatched grandeur, where the ruler of the land held absolute power over all.",
+      "While those around me bowed to false gods, I kept a quiet light of faith within my heart.",
+      "I discovered and adopted a child who was brought to me in an unusual way - not by birth, but through the waters of a great river.",
+      "I prayed to my Lord, asking for a home near Him in Paradise and salvation from the tyranny that surrounded me.",
+      "The child I raised grew up to challenge the very ruler who controlled my fate, and I stood firm in my faith even when threatened.",
+      "I am the one whose name is honored in the Quran as a model of faith, and I lived in the palace of Pharaoh himself."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Sorcerers of Pharaoh",
-          "The People of the Cave",
-          "The Companions of the Wood",
-          "The Disciples of Isa",
-          "The People of the Elephant"
+          "Asiya, the wife of Pharaoh",
+          "Maryam, the mother of Isa",
+          "Bilqis, the Queen of Sheba",
+          "The wife of Prophet Lut",
+          "The wife of Imran"
         ],
-        "answer": "The Sorcerers of Pharaoh"
+        "answer": "Asiya, the wife of Pharaoh"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "A magic contest against Musa",
-          "A fire thrown upon them",
-          "A flood that drowned them",
-          "A drought and famine",
-          "An earthquake"
+          "Discovering and raising an abandoned infant who became a great prophet",
+          "Being cast into a great fire by a tyrant",
+          "Witnessing a great flood that destroyed a people",
+          "Witnessing a date palm shake and provide nourishment",
+          "Conceiving a son despite advanced age"
         ],
-        "answer": "A magic contest against Musa"
+        "answer": "Discovering and raising an abandoned infant who became a great prophet"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Staffs and ropes that turned into snakes",
-          "A burning bush",
-          "A she-camel",
-          "An ark of wood",
-          "A whale"
+          "A royal palace of unmatched splendor",
+          "A great ship built to withstand a flood",
+          "A deep cave hidden in the mountains",
+          "A blazing fire built on a mountaintop",
+          "A garden enclosed by walls"
         ],
-        "answer": "Staffs and ropes that turned into snakes"
+        "answer": "A royal palace of unmatched splendor"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Executed for faith, promised Paradise",
-          "Drowned in the sea",
-          "Became rulers of Egypt",
-          "Remained followers of Pharaoh",
-          "Inherited the land"
+          "A home was granted in Paradise by the will of Allah",
+          "A great flood destroyed the disbelievers of an ancient nation",
+          "A kingdom of immense power and authority was granted in this world",
+          "A mighty army was scattered by birds in flight",
+          "A tyrant who claimed divinity was drowned in the sea"
         ],
-        "answer": "Executed for faith, promised Paradise"
+        "answer": "A home was granted in Paradise by the will of Allah"
       }
     },
-    "verseRef": "20:70",
-    "arabic": "فَأُلْقِىَ ٱلسَّحَرَةُ سُجَّدًۭا قَالُوٓا۟ ءَامَنَّا بِرَبِّ هَـٰرُونَ وَمُوسَىٰ",
-    "verse": "So the magicians fell down in prostration. They said, \"We have believed in the Lord of Aaron and Moses.\" (20:70)"
+    "verseRef": "66:11",
+    "arabic": "وَضَرَبَ ٱللَّهُ مَثَلًۭا لِّلَّذِينَ ءَامَنُوا۟ ٱمْرَأَتَ فِرْعَوْنَ إِذْ قَالَتْ رَبِّ ٱبْنِ لِى عِندَكَ بَيْتًۭا فِى ٱلْجَنَّةِ وَنَجِّنِى مِن فِرْعَوْنَ وَعَمَلِهِۦ وَنَجِّنِى مِنَ ٱلْقَوْمِ ٱلظَّـٰلِمِينَ",
+    "verse": "And Allāh presents an example of those who believed: the wife of Pharaoh, when she said, \"My Lord, build for me near You a house in Paradise and save me from Pharaoh and his deeds and save me from the wrongdoing people.\" (66:11)"
   },
   "generated": true,
   "model": "auto (chain)"

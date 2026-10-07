@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "puzzle": {
     "categories": [
       {
-        "name": "مُفْرَدَاتٌ مِنْ سُورَةِ الْأَعْلَى",
-        "nameEn": "Key terms from Surah Al-A'la",
+        "name": "نَعِيمُ أَهْلِ الْجَنَّةِ فِي سُورَةِ الْحَاقَّةِ",
+        "nameEn": "Blessings of the People of Paradise in Surah Al-Haqqah",
         "color": "yellow",
         "items": [
           {
-            "ar": "قَدَّرَ",
-            "en": "measured",
-            "ref": "87:3",
-            "verse": "وَٱلَّذِى قَدَّرَ فَهَدَىٰ",
-            "verseEn": "And who destined and [then] guided"
+            "ar": "حِسَابِيَهْ",
+            "en": "my account",
+            "ref": "69:20",
+            "verse": "إِنِّى ظَنَنتُ أَنِّى مُلَـٰقٍ حِسَابِيَهْ",
+            "verseEn": "Indeed, I was certain that I would be meeting my account.\""
           },
           {
-            "ar": "أَخْرَجَ",
-            "en": "brings forth",
-            "ref": "87:4",
-            "verse": "وَٱلَّذِىٓ أَخْرَجَ ٱلْمَرْعَىٰ",
-            "verseEn": "And who brings out the pasture"
+            "ar": "عِيشَةٍ",
+            "en": "a life",
+            "ref": "69:21",
+            "verse": "فَهُوَ فِى عِيشَةٍۢ رَّاضِيَةٍۢ",
+            "verseEn": "So he will be in a pleasant life -"
           },
           {
-            "ar": "يَعْلَمُ",
-            "en": "knows",
-            "ref": "87:7",
-            "verse": "إِلَّا مَا شَآءَ ٱللَّهُ ۚ إِنَّهُۥ يَعْلَمُ ٱلْجَهْرَ وَمَا يَخْفَىٰ",
-            "verseEn": "Except what Allāh should will. Indeed, He knows what is declared and what is hidden."
+            "ar": "جَنَّةٍ",
+            "en": "a Garden",
+            "ref": "69:22",
+            "verse": "فِى جَنَّةٍ عَالِيَةٍۢ",
+            "verseEn": "In an elevated garden,"
           },
           {
-            "ar": "النَّارَ",
-            "en": "(in) the Fire",
-            "ref": "87:12",
-            "verse": "ٱلَّذِى يَصْلَى ٱلنَّارَ ٱلْكُبْرَىٰ",
-            "verseEn": "[He] who will [enter and] burn in the greatest Fire,"
+            "ar": "قُطُوفُهَا",
+            "en": "Its clusters of fruits",
+            "ref": "69:23",
+            "verse": "قُطُوفُهَا دَانِيَةٌۭ",
+            "verseEn": "Its [fruit] to be picked hanging near."
           }
         ]
       },
       {
-        "name": "أَسْمَاءُ يَوْمِ الْقِيَامَةِ فِي الْقُرْآنِ",
-        "nameEn": "Names of the Day of Resurrection in the Quran",
+        "name": "أسماء قرآنية على وزن فِعْل",
+        "nameEn": "Quranic Nouns on the Pattern فِعْل",
         "color": "green",
         "items": [
           {
-            "ar": "السَّاعَةُ",
-            "en": "the Hour",
-            "ref": "30:12",
-            "verse": "وَيَوْمَ تَقُومُ ٱلسَّاعَةُ يُبْلِسُ ٱلْمُجْرِمُونَ",
-            "verseEn": "And the Day the Hour appears the criminals will be in despair."
+            "ar": "الْعِلْمِ",
+            "en": "the knowledge",
+            "ref": "2:145",
+            "verse": "وَلَئِنْ أَتَيْتَ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ بِكُلِّ ءَايَةٍۢ مَّا تَبِعُوا۟ قِبْلَتَكَ ۚ وَمَآ أَنتَ بِتَابِعٍۢ قِبْلَتَهُمْ ۚ وَمَا بَعْضُهُم بِتَابِعٍۢ قِبْلَةَ بَعْضٍۢ ۚ وَلَئِنِ ٱتَّبَعْتَ أَهْوَآءَهُم مِّنۢ بَعْدِ مَا جَآءَكَ مِنَ ٱلْعِلْمِ ۙ إِنَّكَ إِذًۭا لَّمِنَ ٱلظَّـٰلِمِينَ",
+            "verseEn": "And if you brought to those who were given the Scripture every sign, they would not follow your qiblah. Nor will you be a follower of their qiblah. Nor would they be followers of one another's qiblah. So if you were to follow their desires after what has come to you of knowledge, indeed, you would then be among the wrongdoers."
           },
           {
-            "ar": "الْآخِرَةِ",
-            "en": "the Hereafter",
-            "ref": "30:7",
-            "verse": "يَعْلَمُونَ ظَـٰهِرًۭا مِّنَ ٱلْحَيَوٰةِ ٱلدُّنْيَا وَهُمْ عَنِ ٱلْـَٔاخِرَةِ هُمْ غَـٰفِلُونَ",
-            "verseEn": "They know what is apparent of the worldly life, but they, of the Hereafter, are unaware."
+            "ar": "عِزًّا",
+            "en": "an honor",
+            "ref": "19:81",
+            "verse": "وَٱتَّخَذُوا۟ مِن دُونِ ٱللَّهِ ءَالِهَةًۭ لِّيَكُونُوا۟ لَهُمْ عِزًّۭا",
+            "verseEn": "And they have taken besides Allāh [false] deities that they would be for them [a source of] honor."
           },
           {
-            "ar": "الْحِسَابِ",
-            "en": "(of) the Account",
-            "ref": "40:27",
-            "verse": "وَقَالَ مُوسَىٰٓ إِنِّى عُذْتُ بِرَبِّى وَرَبِّكُم مِّن كُلِّ مُتَكَبِّرٍۢ لَّا يُؤْمِنُ بِيَوْمِ ٱلْحِسَابِ",
-            "verseEn": "But Moses said, \"Indeed, I have sought refuge in my Lord and your Lord from every arrogant one who does not believe in the Day of Account.\""
+            "ar": "ذِكْرٌ",
+            "en": "(is) a Reminder",
+            "ref": "38:49",
+            "verse": "هَـٰذَا ذِكْرٌۭ ۚ وَإِنَّ لِلْمُتَّقِينَ لَحُسْنَ مَـَٔابٍۢ",
+            "verseEn": "This is a reminder. And indeed, for the righteous is a good place of return -"
           },
           {
-            "ar": "التَّنَادِ",
-            "en": "(of) Calling",
-            "ref": "40:32",
-            "verse": "وَيَـٰقَوْمِ إِنِّىٓ أَخَافُ عَلَيْكُمْ يَوْمَ ٱلتَّنَادِ",
-            "verseEn": "And O my people, indeed I fear for you the Day of Calling -"
+            "ar": "الرِّزْقِ",
+            "en": "[the] provision",
+            "ref": "16:71",
+            "verse": "وَٱللَّهُ فَضَّلَ بَعْضَكُمْ عَلَىٰ بَعْضٍۢ فِى ٱلرِّزْقِ ۚ فَمَا ٱلَّذِينَ فُضِّلُوا۟ بِرَآدِّى رِزْقِهِمْ عَلَىٰ مَا مَلَكَتْ أَيْمَـٰنُهُمْ فَهُمْ فِيهِ سَوَآءٌ ۚ أَفَبِنِعْمَةِ ٱللَّهِ يَجْحَدُونَ",
+            "verseEn": "And Allāh has favored some of you over others in provision. But those who were favored [i.e., given more] would not hand over their provision to those whom their right hands possess [i.e., slaves] so they would be equal to them therein. Then is it the favor of Allāh they reject?"
           }
         ]
       },
       {
-        "name": "مُفْرَدَاتٌ مِنْ سُورَةِ الْجِنِّ",
-        "nameEn": "Key terms from Surah Al-Jinn",
+        "name": "صِفَاتُ الْمَقْسُومِ بِهَا فِي الْقُرْآنِ",
+        "nameEn": "Attributes of the Sworn Beings in Quranic Oaths",
         "color": "blue",
         "items": [
           {
-            "ar": "آمَنَّا",
-            "en": "so we believe",
-            "ref": "72:2",
-            "verse": "يَهْدِىٓ إِلَى ٱلرُّشْدِ فَـَٔامَنَّا بِهِۦ ۖ وَلَن نُّشْرِكَ بِرَبِّنَآ أَحَدًۭا",
-            "verseEn": "It guides to the right course, and we have believed in it. And we will never associate with our Lord anyone."
+            "ar": "الْحَامِلَاتِ",
+            "en": "And those carrying",
+            "ref": "51:2",
+            "verse": "فَٱلْحَـٰمِلَـٰتِ وِقْرًۭا",
+            "verseEn": "And the [clouds] carrying a load [of water]"
           },
           {
-            "ar": "شُهُبًا",
-            "en": "and flaming fires",
-            "ref": "72:8",
-            "verse": "وَأَنَّا لَمَسْنَا ٱلسَّمَآءَ فَوَجَدْنَـٰهَا مُلِئَتْ حَرَسًۭا شَدِيدًۭا وَشُهُبًۭا",
-            "verseEn": "And we have sought [to reach] the heaven but found it filled with powerful guards and burning flames."
+            "ar": "الْجَارِيَاتِ",
+            "en": "And those sailing",
+            "ref": "51:3",
+            "verse": "فَٱلْجَـٰرِيَـٰتِ يُسْرًۭا",
+            "verseEn": "And the ships sailing with ease"
           },
           {
-            "ar": "رَشَدًا",
-            "en": "(the) right path",
-            "ref": "72:14",
-            "verse": "وَأَنَّا مِنَّا ٱلْمُسْلِمُونَ وَمِنَّا ٱلْقَـٰسِطُونَ ۖ فَمَنْ أَسْلَمَ فَأُو۟لَـٰٓئِكَ تَحَرَّوْا۟ رَشَدًۭا",
-            "verseEn": "And among us are Muslims [in submission to Allāh], and among us are the unjust. And whoever has become Muslim - those have sought out the right course."
+            "ar": "الْمُقَسِّمَاتِ",
+            "en": "And those distributing",
+            "ref": "51:4",
+            "verse": "فَٱلْمُقَسِّمَـٰتِ أَمْرًا",
+            "verseEn": "And the [angels] apportioning [each] matter,"
           },
           {
-            "ar": "لِبَدًا",
-            "en": "a compacted mass",
-            "ref": "72:19",
-            "verse": "وَأَنَّهُۥ لَمَّا قَامَ عَبْدُ ٱللَّهِ يَدْعُوهُ كَادُوا۟ يَكُونُونَ عَلَيْهِ لِبَدًۭا",
-            "verseEn": "And that when the Servant [i.e., Prophet] of Allāh stood up supplicating Him, they almost became about him a compacted mass.\""
+            "ar": "الْمُدَبِّرَاتِ",
+            "en": "And those who arrange",
+            "ref": "79:5",
+            "verse": "فَٱلْمُدَبِّرَٰتِ أَمْرًۭا",
+            "verseEn": "And those who arrange [each] matter,"
           }
         ]
       },
       {
-        "name": "خِدَاعُ إِخْوَةِ يُوسُفَ",
-        "nameEn": "Deceptive elements in the plot of Yusuf's brothers",
+        "name": "أَشْيَاءُ وُصِفَتْ بِالْعَظِيمِ فِي الْقُرْآنِ",
+        "nameEn": "Things Described as 'Great' in the Quran",
         "color": "purple",
         "items": [
           {
-            "ar": "اُقْتُلُوا",
-            "en": "Kill",
-            "ref": "12:9",
-            "verse": "ٱقْتُلُوا۟ يُوسُفَ أَوِ ٱطْرَحُوهُ أَرْضًۭا يَخْلُ لَكُمْ وَجْهُ أَبِيكُمْ وَتَكُونُوا۟ مِنۢ بَعْدِهِۦ قَوْمًۭا صَـٰلِحِينَ",
-            "verseEn": "Kill Joseph or cast him out to [another] land; the countenance [i.e., attention] of your father will [then] be only for you, and you will be after that a righteous people.\""
+            "ar": "الْعَرْشِ",
+            "en": "(of) the Throne",
+            "ref": "23:86",
+            "verse": "قُلْ مَن رَّبُّ ٱلسَّمَـٰوَٰتِ ٱلسَّبْعِ وَرَبُّ ٱلْعَرْشِ ٱلْعَظِيمِ",
+            "verseEn": "Say, \"Who is Lord of the seven heavens and Lord of the Great Throne?\""
           },
           {
-            "ar": "لَنَاصِحُونَ",
-            "en": "surely well-wishers",
-            "ref": "12:11",
-            "verse": "قَالُوا۟ يَـٰٓأَبَانَا مَا لَكَ لَا تَأْمَ۫نَّا عَلَىٰ يُوسُفَ وَإِنَّا لَهُۥ لَنَـٰصِحُونَ",
-            "verseEn": "They said, \"O our father, why do you not entrust us with Joseph while indeed, we are to him sincere counselors?"
+            "ar": "الْفَضْلِ",
+            "en": "(of) [the] Bounty",
+            "ref": "2:105",
+            "verse": "مَّا يَوَدُّ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَـٰبِ وَلَا ٱلْمُشْرِكِينَ أَن يُنَزَّلَ عَلَيْكُم مِّنْ خَيْرٍۢ مِّن رَّبِّكُمْ ۗ وَٱللَّهُ يَخْتَصُّ بِرَحْمَتِهِۦ مَن يَشَآءُ ۚ وَٱللَّهُ ذُو ٱلْفَضْلِ ٱلْعَظِيمِ",
+            "verseEn": "Neither those who disbelieve from the People of the Scripture [i.e., the Jews and Christians] nor the polytheists wish that any good should be sent down to you from your Lord. But Allāh selects for His mercy whom He wills, and Allāh is the possessor of great bounty."
           },
           {
-            "ar": "يَبْكُونَ",
-            "en": "weeping",
-            "ref": "12:16",
-            "verse": "وَجَآءُوٓ أَبَاهُمْ عِشَآءًۭ يَبْكُونَ",
-            "verseEn": "And they came to their father at night, weeping."
+            "ar": "عَذَابٌ",
+            "en": "(is) a punishment",
+            "ref": "3:105",
+            "verse": "وَلَا تَكُونُوا۟ كَٱلَّذِينَ تَفَرَّقُوا۟ وَٱخْتَلَفُوا۟ مِنۢ بَعْدِ مَا جَآءَهُمُ ٱلْبَيِّنَـٰتُ ۚ وَأُو۟لَـٰٓئِكَ لَهُمْ عَذَابٌ عَظِيمٌۭ",
+            "verseEn": "And do not be like the ones who became divided and differed after the clear proofs had come to them. And those will have a great punishment"
           },
           {
-            "ar": "الذِّئْبُ",
-            "en": "the wolf",
-            "ref": "12:17",
-            "verse": "قَالُوا۟ يَـٰٓأَبَانَآ إِنَّا ذَهَبْنَا نَسْتَبِقُ وَتَرَكْنَا يُوسُفَ عِندَ مَتَـٰعِنَا فَأَكَلَهُ ٱلذِّئْبُ ۖ وَمَآ أَنتَ بِمُؤْمِنٍۢ لَّنَا وَلَوْ كُنَّا صَـٰدِقِينَ",
-            "verseEn": "They said, \"O our father, indeed we went racing each other and left Joseph with our possessions, and a wolf ate him. But you would not believe us, even if we were truthful.\""
+            "ar": "يَوْمٍ",
+            "en": "For a Day",
+            "ref": "83:5",
+            "verse": "لِيَوْمٍ عَظِيمٍۢ",
+            "verseEn": "For a tremendous Day -"
           }
         ]
       }
