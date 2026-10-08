@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "puzzle": {
     "categories": [
       {
-        "name": "نَعِيمُ أَهْلِ الْجَنَّةِ فِي سُورَةِ الْحَاقَّةِ",
-        "nameEn": "Blessings of the People of Paradise in Surah Al-Haqqah",
+        "name": "أَفْرَادُ الْأُسْرَةِ فِي الْقُرْآنِ",
+        "nameEn": "Family members in the Quran",
         "color": "yellow",
         "items": [
           {
-            "ar": "حِسَابِيَهْ",
-            "en": "my account",
-            "ref": "69:20",
-            "verse": "إِنِّى ظَنَنتُ أَنِّى مُلَـٰقٍ حِسَابِيَهْ",
-            "verseEn": "Indeed, I was certain that I would be meeting my account.\""
+            "ar": "أَبَتِ",
+            "en": "O my father",
+            "ref": "19:44",
+            "verse": "يَـٰٓأَبَتِ لَا تَعْبُدِ ٱلشَّيْطَـٰنَ ۖ إِنَّ ٱلشَّيْطَـٰنَ كَانَ لِلرَّحْمَـٰنِ عَصِيًّۭا",
+            "verseEn": "O my father, do not worship [i.e., obey] Satan. Indeed Satan has ever been, to the Most Merciful, disobedient."
           },
           {
-            "ar": "عِيشَةٍ",
-            "en": "a life",
-            "ref": "69:21",
-            "verse": "فَهُوَ فِى عِيشَةٍۢ رَّاضِيَةٍۢ",
-            "verseEn": "So he will be in a pleasant life -"
+            "ar": "أُمِّهِ",
+            "en": "And his mother",
+            "ref": "80:35",
+            "verse": "وَأُمِّهِۦ وَأَبِيهِ",
+            "verseEn": "And his mother and his father"
           },
           {
-            "ar": "جَنَّةٍ",
-            "en": "a Garden",
-            "ref": "69:22",
-            "verse": "فِى جَنَّةٍ عَالِيَةٍۢ",
-            "verseEn": "In an elevated garden,"
+            "ar": "أَخِيهِ",
+            "en": "and his brother",
+            "ref": "12:89",
+            "verse": "قَالَ هَلْ عَلِمْتُم مَّا فَعَلْتُم بِيُوسُفَ وَأَخِيهِ إِذْ أَنتُمْ جَـٰهِلُونَ",
+            "verseEn": "He said, \"Do you know what you did with Joseph and his brother when you were ignorant?\""
           },
           {
-            "ar": "قُطُوفُهَا",
-            "en": "Its clusters of fruits",
-            "ref": "69:23",
-            "verse": "قُطُوفُهَا دَانِيَةٌۭ",
-            "verseEn": "Its [fruit] to be picked hanging near."
+            "ar": "الْبَنَاتِ",
+            "en": "daughters",
+            "ref": "16:57",
+            "verse": "وَيَجْعَلُونَ لِلَّهِ ٱلْبَنَـٰتِ سُبْحَـٰنَهُۥ ۙ وَلَهُم مَّا يَشْتَهُونَ",
+            "verseEn": "And they attribute to Allāh daughters - exalted is He - and for them is what they desire [i.e., sons]."
           }
         ]
       },
       {
-        "name": "أسماء قرآنية على وزن فِعْل",
-        "nameEn": "Quranic Nouns on the Pattern فِعْل",
+        "name": "أَحْدَاثُ يَوْمِ الْقِيَامَةِ فِي سُورَةِ النَّازِعَاتِ",
+        "nameEn": "Events of the Day of Judgment in Surah An-Nazi'at",
         "color": "green",
         "items": [
           {
-            "ar": "الْعِلْمِ",
-            "en": "the knowledge",
-            "ref": "2:145",
-            "verse": "وَلَئِنْ أَتَيْتَ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ بِكُلِّ ءَايَةٍۢ مَّا تَبِعُوا۟ قِبْلَتَكَ ۚ وَمَآ أَنتَ بِتَابِعٍۢ قِبْلَتَهُمْ ۚ وَمَا بَعْضُهُم بِتَابِعٍۢ قِبْلَةَ بَعْضٍۢ ۚ وَلَئِنِ ٱتَّبَعْتَ أَهْوَآءَهُم مِّنۢ بَعْدِ مَا جَآءَكَ مِنَ ٱلْعِلْمِ ۙ إِنَّكَ إِذًۭا لَّمِنَ ٱلظَّـٰلِمِينَ",
-            "verseEn": "And if you brought to those who were given the Scripture every sign, they would not follow your qiblah. Nor will you be a follower of their qiblah. Nor would they be followers of one another's qiblah. So if you were to follow their desires after what has come to you of knowledge, indeed, you would then be among the wrongdoers."
+            "ar": "الرَّادِفَةُ",
+            "en": "the subsequent",
+            "ref": "79:7",
+            "verse": "تَتْبَعُهَا ٱلرَّادِفَةُ",
+            "verseEn": "There will follow it the subsequent [one]."
           },
           {
-            "ar": "عِزًّا",
-            "en": "an honor",
-            "ref": "19:81",
-            "verse": "وَٱتَّخَذُوا۟ مِن دُونِ ٱللَّهِ ءَالِهَةًۭ لِّيَكُونُوا۟ لَهُمْ عِزًّۭا",
-            "verseEn": "And they have taken besides Allāh [false] deities that they would be for them [a source of] honor."
+            "ar": "السَّاهِرَةِ",
+            "en": "(will be) awakened",
+            "ref": "79:14",
+            "verse": "فَإِذَا هُم بِٱلسَّاهِرَةِ",
+            "verseEn": "And suddenly they will be [alert] upon the earth's surface."
           },
           {
-            "ar": "ذِكْرٌ",
-            "en": "(is) a Reminder",
-            "ref": "38:49",
-            "verse": "هَـٰذَا ذِكْرٌۭ ۚ وَإِنَّ لِلْمُتَّقِينَ لَحُسْنَ مَـَٔابٍۢ",
-            "verseEn": "This is a reminder. And indeed, for the righteous is a good place of return -"
+            "ar": "الْمَأْوَىٰ",
+            "en": "(is) the refuge",
+            "ref": "79:39",
+            "verse": "فَإِنَّ ٱلْجَحِيمَ هِىَ ٱلْمَأْوَىٰ",
+            "verseEn": "Then indeed, Hellfire will be [his] refuge."
           },
           {
-            "ar": "الرِّزْقِ",
-            "en": "[the] provision",
-            "ref": "16:71",
-            "verse": "وَٱللَّهُ فَضَّلَ بَعْضَكُمْ عَلَىٰ بَعْضٍۢ فِى ٱلرِّزْقِ ۚ فَمَا ٱلَّذِينَ فُضِّلُوا۟ بِرَآدِّى رِزْقِهِمْ عَلَىٰ مَا مَلَكَتْ أَيْمَـٰنُهُمْ فَهُمْ فِيهِ سَوَآءٌ ۚ أَفَبِنِعْمَةِ ٱللَّهِ يَجْحَدُونَ",
-            "verseEn": "And Allāh has favored some of you over others in provision. But those who were favored [i.e., given more] would not hand over their provision to those whom their right hands possess [i.e., slaves] so they would be equal to them therein. Then is it the favor of Allāh they reject?"
+            "ar": "عَشِيَّةً",
+            "en": "an evening",
+            "ref": "79:46",
+            "verse": "كَأَنَّهُمْ يَوْمَ يَرَوْنَهَا لَمْ يَلْبَثُوٓا۟ إِلَّا عَشِيَّةً أَوْ ضُحَىٰهَا",
+            "verseEn": "It will be, on the Day they see it, as though they had not remained [in the world] except for an afternoon or a morning thereof."
           }
         ]
       },
       {
-        "name": "صِفَاتُ الْمَقْسُومِ بِهَا فِي الْقُرْآنِ",
-        "nameEn": "Attributes of the Sworn Beings in Quranic Oaths",
+        "name": "أَلْفَاظٌ خَاصَّةٌ بِالْكَافِرِينَ فِي سُورَةِ الْمُلْكِ",
+        "nameEn": "Distinctive terms for the disbelievers in Surah Al-Mulk",
         "color": "blue",
         "items": [
           {
-            "ar": "الْحَامِلَاتِ",
-            "en": "And those carrying",
-            "ref": "51:2",
-            "verse": "فَٱلْحَـٰمِلَـٰتِ وِقْرًۭا",
-            "verseEn": "And the [clouds] carrying a load [of water]"
+            "ar": "يَخْسِفَ",
+            "en": "He will cause to swallow",
+            "ref": "67:16",
+            "verse": "ءَأَمِنتُم مَّن فِى ٱلسَّمَآءِ أَن يَخْسِفَ بِكُمُ ٱلْأَرْضَ فَإِذَا هِىَ تَمُورُ",
+            "verseEn": "Do you feel secure that He who is above would not cause the earth to swallow you and suddenly it would sway?"
           },
           {
-            "ar": "الْجَارِيَاتِ",
-            "en": "And those sailing",
-            "ref": "51:3",
-            "verse": "فَٱلْجَـٰرِيَـٰتِ يُسْرًۭا",
-            "verseEn": "And the ships sailing with ease"
+            "ar": "لَجُّوا",
+            "en": "they persist",
+            "ref": "67:21",
+            "verse": "أَمَّنْ هَـٰذَا ٱلَّذِى يَرْزُقُكُمْ إِنْ أَمْسَكَ رِزْقَهُۥ ۚ بَل لَّجُّوا۟ فِى عُتُوٍّۢ وَنُفُورٍ",
+            "verseEn": "Or who is it that could provide for you if He withheld His provision? But they have persisted in insolence and aversion."
           },
           {
-            "ar": "الْمُقَسِّمَاتِ",
-            "en": "And those distributing",
-            "ref": "51:4",
-            "verse": "فَٱلْمُقَسِّمَـٰتِ أَمْرًا",
-            "verseEn": "And the [angels] apportioning [each] matter,"
+            "ar": "مُكِبًّا",
+            "en": "fallen",
+            "ref": "67:22",
+            "verse": "أَفَمَن يَمْشِى مُكِبًّا عَلَىٰ وَجْهِهِۦٓ أَهْدَىٰٓ أَمَّن يَمْشِى سَوِيًّا عَلَىٰ صِرَٰطٍۢ مُّسْتَقِيمٍۢ",
+            "verseEn": "Then is one who walks fallen on his face better guided or one who walks erect on a straight path?"
           },
           {
-            "ar": "الْمُدَبِّرَاتِ",
-            "en": "And those who arrange",
-            "ref": "79:5",
-            "verse": "فَٱلْمُدَبِّرَٰتِ أَمْرًۭا",
-            "verseEn": "And those who arrange [each] matter,"
+            "ar": "يُجِيرُ",
+            "en": "(can) protect",
+            "ref": "67:28",
+            "verse": "قُلْ أَرَءَيْتُمْ إِنْ أَهْلَكَنِىَ ٱللَّهُ وَمَن مَّعِىَ أَوْ رَحِمَنَا فَمَن يُجِيرُ ٱلْكَـٰفِرِينَ مِنْ عَذَابٍ أَلِيمٍۢ",
+            "verseEn": "Say, [O Muḥammad], \"Have you considered: whether Allāh should cause my death and those with me or have mercy upon us, who can protect the disbelievers from a painful punishment?\""
           }
         ]
       },
       {
-        "name": "أَشْيَاءُ وُصِفَتْ بِالْعَظِيمِ فِي الْقُرْآنِ",
-        "nameEn": "Things Described as 'Great' in the Quran",
+        "name": "مُفْرَدَاتٌ مِنْ سُورَةِ الْعَلَقِ",
+        "nameEn": "Key Terms from Surah Al-Alaq",
         "color": "purple",
         "items": [
           {
-            "ar": "الْعَرْشِ",
-            "en": "(of) the Throne",
-            "ref": "23:86",
-            "verse": "قُلْ مَن رَّبُّ ٱلسَّمَـٰوَٰتِ ٱلسَّبْعِ وَرَبُّ ٱلْعَرْشِ ٱلْعَظِيمِ",
-            "verseEn": "Say, \"Who is Lord of the seven heavens and Lord of the Great Throne?\""
+            "ar": "الْأَكْرَمُ",
+            "en": "(is) the Most Generous",
+            "ref": "96:3",
+            "verse": "ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ",
+            "verseEn": "Recite, and your Lord is the most Generous -"
           },
           {
-            "ar": "الْفَضْلِ",
-            "en": "(of) [the] Bounty",
-            "ref": "2:105",
-            "verse": "مَّا يَوَدُّ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَـٰبِ وَلَا ٱلْمُشْرِكِينَ أَن يُنَزَّلَ عَلَيْكُم مِّنْ خَيْرٍۢ مِّن رَّبِّكُمْ ۗ وَٱللَّهُ يَخْتَصُّ بِرَحْمَتِهِۦ مَن يَشَآءُ ۚ وَٱللَّهُ ذُو ٱلْفَضْلِ ٱلْعَظِيمِ",
-            "verseEn": "Neither those who disbelieve from the People of the Scripture [i.e., the Jews and Christians] nor the polytheists wish that any good should be sent down to you from your Lord. But Allāh selects for His mercy whom He wills, and Allāh is the possessor of great bounty."
+            "ar": "الْإِنسَانَ",
+            "en": "man",
+            "ref": "96:5",
+            "verse": "عَلَّمَ ٱلْإِنسَـٰنَ مَا لَمْ يَعْلَمْ",
+            "verseEn": "Taught man that which he knew not."
           },
           {
-            "ar": "عَذَابٌ",
-            "en": "(is) a punishment",
-            "ref": "3:105",
-            "verse": "وَلَا تَكُونُوا۟ كَٱلَّذِينَ تَفَرَّقُوا۟ وَٱخْتَلَفُوا۟ مِنۢ بَعْدِ مَا جَآءَهُمُ ٱلْبَيِّنَـٰتُ ۚ وَأُو۟لَـٰٓئِكَ لَهُمْ عَذَابٌ عَظِيمٌۭ",
-            "verseEn": "And do not be like the ones who became divided and differed after the clear proofs had come to them. And those will have a great punishment"
+            "ar": "اسْتَغْنَىٰ",
+            "en": "self-sufficient",
+            "ref": "96:7",
+            "verse": "أَن رَّءَاهُ ٱسْتَغْنَىٰٓ",
+            "verseEn": "Because he sees himself self-sufficient."
           },
           {
-            "ar": "يَوْمٍ",
-            "en": "For a Day",
-            "ref": "83:5",
-            "verse": "لِيَوْمٍ عَظِيمٍۢ",
-            "verseEn": "For a tremendous Day -"
+            "ar": "التَّقْوَىٰ",
+            "en": "[of the] righteousness",
+            "ref": "96:12",
+            "verse": "أَوْ أَمَرَ بِٱلتَّقْوَىٰٓ",
+            "verseEn": "Or enjoins righteousness?"
           }
         ]
       }

@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "puzzle": {
-    "verseRef": "15:97",
-    "reference": "Surah Al-Hijr (15:97)",
+    "verseRef": "93:3",
+    "reference": "Surah Ad-Duha (93:3)",
     "segments": [
-      "وَلَقَدْ يَسَّرْنَا",
-      "الْقُرْآنَ",
-      "لِلذِّكْرِ",
-      "فَهَلْ مِنْ",
-      "مُدَّكِرٍ"
+      "word 1",
+      "word 2",
+      "word 3",
+      "word 4",
+      "word 5"
     ],
     "translations": [
-      "And verily We know",
-      "that [you] (is) straitened",
-      "your breast",
-      "by what",
-      "they say"
+      "Not",
+      "has forsaken you",
+      "your Lord",
+      "and not",
+      "He is displeased"
     ],
-    "hint": "A beloved verse reminding believers that Allah has made the Quran easy to learn, reflect upon, and remember — a source of encouragement for anyone engaging with the Book of Allah.",
-    "arabic": "وَلَقَدْ نَعْلَمُ أَنَّكَ يَضِيقُ صَدْرُكَ بِمَا يَقُولُونَ",
+    "hint": "Allah reassures the Prophet Muhammad (peace be upon him) that He has not abandoned him.",
+    "arabic": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
     "words": [
-      "وَلَقَدْ نَعْلَمُ",
-      "أَنَّكَ يَضِيقُ",
-      "صَدْرُكَ",
-      "بِمَا",
-      "يَقُولُونَ"
+      "مَا",
+      "وَدَّعَكَ",
+      "رَبُّكَ",
+      "وَمَا",
+      "قَلَىٰ"
     ],
-    "verseEn": "And We already know that your breast is constrained by what they say."
+    "verseEn": "Your Lord has not taken leave of you, [O Muḥammad], nor has He detested [you]."
   },
   "generated": true,
   "model": "auto (chain)"
