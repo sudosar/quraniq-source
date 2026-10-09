@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "puzzle": {
-    "verseRef": "93:3",
-    "reference": "Surah Ad-Duha (93:3)",
+    "verseRef": "20:46",
+    "reference": "Surah Taha (20:46)",
     "segments": [
-      "word 1",
-      "word 2",
-      "word 3",
-      "word 4",
-      "word 5"
+      "قال",
+      "لا تخافا",
+      "إني معكما",
+      "أسمع",
+      "وأرى"
     ],
     "translations": [
-      "Not",
-      "has forsaken you",
-      "your Lord",
-      "and not",
-      "He is displeased"
+      "He said (Do) not",
+      "fear Indeed, I Am",
+      "with you both",
+      "I hear",
+      "and I see"
     ],
-    "hint": "Allah reassures the Prophet Muhammad (peace be upon him) that He has not abandoned him.",
-    "arabic": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+    "hint": "Allah's reassuring words to two prophets facing a powerful tyrant — a reminder of His constant presence, hearing, and sight over all.",
+    "arabic": "قَالَ لَا تَخَافَآ ۖ إِنَّنِى مَعَكُمَآ أَسْمَعُ وَأَرَىٰ",
     "words": [
-      "مَا",
-      "وَدَّعَكَ",
-      "رَبُّكَ",
-      "وَمَا",
-      "قَلَىٰ"
+      "قَالَ لَا",
+      "تَخَافَآ ۖ إِنَّنِى",
+      "مَعَكُمَآ",
+      "أَسْمَعُ",
+      "وَأَرَىٰ"
     ],
-    "verseEn": "Your Lord has not taken leave of you, [O Muḥammad], nor has He detested [you]."
+    "verseEn": "[Allāh] said, \"Fear not. Indeed, I am with you both; I hear and I see."
   },
   "generated": true,
   "model": "auto (chain)"

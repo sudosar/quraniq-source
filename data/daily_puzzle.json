@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "puzzle": {
     "categories": [
       {
-        "name": "أَفْرَادُ الْأُسْرَةِ فِي الْقُرْآنِ",
-        "nameEn": "Family members in the Quran",
+        "name": "مَصَائِرُ الْآخِرَةِ",
+        "nameEn": "Outcomes of the Hereafter",
         "color": "yellow",
         "items": [
           {
-            "ar": "أَبَتِ",
-            "en": "O my father",
-            "ref": "19:44",
-            "verse": "يَـٰٓأَبَتِ لَا تَعْبُدِ ٱلشَّيْطَـٰنَ ۖ إِنَّ ٱلشَّيْطَـٰنَ كَانَ لِلرَّحْمَـٰنِ عَصِيًّۭا",
-            "verseEn": "O my father, do not worship [i.e., obey] Satan. Indeed Satan has ever been, to the Most Merciful, disobedient."
+            "ar": "الْعَذَابَ",
+            "en": "(with) the punishment",
+            "ref": "88:24",
+            "verse": "فَيُعَذِّبُهُ ٱللَّهُ ٱلْعَذَابَ ٱلْأَكْبَرَ",
+            "verseEn": "Then Allāh will punish him with the greatest punishment."
           },
           {
-            "ar": "أُمِّهِ",
-            "en": "And his mother",
-            "ref": "80:35",
-            "verse": "وَأُمِّهِۦ وَأَبِيهِ",
-            "verseEn": "And his mother and his father"
+            "ar": "إِيَابَهُمْ",
+            "en": "(will be) their return",
+            "ref": "88:25",
+            "verse": "إِنَّ إِلَيْنَآ إِيَابَهُمْ",
+            "verseEn": "Indeed, to Us is their return."
           },
           {
-            "ar": "أَخِيهِ",
-            "en": "and his brother",
-            "ref": "12:89",
-            "verse": "قَالَ هَلْ عَلِمْتُم مَّا فَعَلْتُم بِيُوسُفَ وَأَخِيهِ إِذْ أَنتُمْ جَـٰهِلُونَ",
-            "verseEn": "He said, \"Do you know what you did with Joseph and his brother when you were ignorant?\""
+            "ar": "حِسَابَهُم",
+            "en": "(is) their account",
+            "ref": "88:26",
+            "verse": "ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم",
+            "verseEn": "Then indeed, upon Us is their account."
           },
           {
-            "ar": "الْبَنَاتِ",
-            "en": "daughters",
-            "ref": "16:57",
-            "verse": "وَيَجْعَلُونَ لِلَّهِ ٱلْبَنَـٰتِ سُبْحَـٰنَهُۥ ۙ وَلَهُم مَّا يَشْتَهُونَ",
-            "verseEn": "And they attribute to Allāh daughters - exalted is He - and for them is what they desire [i.e., sons]."
+            "ar": "جَنَّاتُ",
+            "en": "Gardens",
+            "ref": "98:8",
+            "verse": "جَزَآؤُهُمْ عِندَ رَبِّهِمْ جَنَّـٰتُ عَدْنٍۢ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَآ أَبَدًۭا ۖ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِىَ رَبَّهُۥ",
+            "verseEn": "Their reward with their Lord will be gardens of perpetual residence beneath which rivers flow, wherein they will abide forever, Allāh being pleased with them and they with Him. That is for whoever has feared his Lord."
           }
         ]
       },
       {
-        "name": "أَحْدَاثُ يَوْمِ الْقِيَامَةِ فِي سُورَةِ النَّازِعَاتِ",
-        "nameEn": "Events of the Day of Judgment in Surah An-Nazi'at",
+        "name": "مُصْطَلَحَاتُ الْكَافِرِينَ فِي سُورَةِ الزُّخْرُفِ",
+        "nameEn": "Terms for the disbelievers in Surah Az-Zukhruf",
         "color": "green",
         "items": [
           {
-            "ar": "الرَّادِفَةُ",
-            "en": "the subsequent",
-            "ref": "79:7",
-            "verse": "تَتْبَعُهَا ٱلرَّادِفَةُ",
-            "verseEn": "There will follow it the subsequent [one]."
+            "ar": "مُسْرِفِينَ",
+            "en": "transgressing",
+            "ref": "43:5",
+            "verse": "أَفَنَضْرِبُ عَنكُمُ ٱلذِّكْرَ صَفْحًا أَن كُنتُمْ قَوْمًۭا مُّسْرِفِينَ",
+            "verseEn": "Then should We turn the message away, disregarding you, because you are a transgressing people?"
           },
           {
-            "ar": "السَّاهِرَةِ",
-            "en": "(will be) awakened",
-            "ref": "79:14",
-            "verse": "فَإِذَا هُم بِٱلسَّاهِرَةِ",
-            "verseEn": "And suddenly they will be [alert] upon the earth's surface."
+            "ar": "كَفُورٌ",
+            "en": "surely (is) clearly ungrateful",
+            "ref": "43:15",
+            "verse": "وَجَعَلُوا۟ لَهُۥ مِنْ عِبَادِهِۦ جُزْءًا ۚ إِنَّ ٱلْإِنسَـٰنَ لَكَفُورٌۭ مُّبِينٌ",
+            "verseEn": "But they have attributed to Him from His servants a portion. Indeed, man is clearly ungrateful."
           },
           {
-            "ar": "الْمَأْوَىٰ",
-            "en": "(is) the refuge",
-            "ref": "79:39",
-            "verse": "فَإِنَّ ٱلْجَحِيمَ هِىَ ٱلْمَأْوَىٰ",
-            "verseEn": "Then indeed, Hellfire will be [his] refuge."
+            "ar": "مُتْرَفُوهَا",
+            "en": "(the) wealthy ones of it",
+            "ref": "43:23",
+            "verse": "وَكَذَٰلِكَ مَآ أَرْسَلْنَا مِن قَبْلِكَ فِى قَرْيَةٍۢ مِّن نَّذِيرٍ إِلَّا قَالَ مُتْرَفُوهَآ إِنَّا وَجَدْنَآ ءَابَآءَنَا عَلَىٰٓ أُمَّةٍۢ وَإِنَّا عَلَىٰٓ ءَاثَـٰرِهِم مُّقْتَدُونَ",
+            "verseEn": "And similarly, We did not send before you any warner into a city except that its affluent said, \"Indeed, we found our fathers upon a religion, and we are, in their footsteps, following.\""
           },
           {
-            "ar": "عَشِيَّةً",
-            "en": "an evening",
-            "ref": "79:46",
-            "verse": "كَأَنَّهُمْ يَوْمَ يَرَوْنَهَا لَمْ يَلْبَثُوٓا۟ إِلَّا عَشِيَّةً أَوْ ضُحَىٰهَا",
-            "verseEn": "It will be, on the Day they see it, as though they had not remained [in the world] except for an afternoon or a morning thereof."
+            "ar": "الْمُجْرِمِينَ",
+            "en": "the criminals",
+            "ref": "43:74",
+            "verse": "إِنَّ ٱلْمُجْرِمِينَ فِى عَذَابِ جَهَنَّمَ خَـٰلِدُونَ",
+            "verseEn": "Indeed, the criminals will be in the punishment of Hell, abiding eternally."
           }
         ]
       },
       {
-        "name": "أَلْفَاظٌ خَاصَّةٌ بِالْكَافِرِينَ فِي سُورَةِ الْمُلْكِ",
-        "nameEn": "Distinctive terms for the disbelievers in Surah Al-Mulk",
+        "name": "كَلِمَاتٌ مِنْ سُورَةِ الْمُطَفِّفِينَ",
+        "nameEn": "Key Terms in Surah Al-Mutaffifin on Fraud and Resurrection",
         "color": "blue",
         "items": [
           {
-            "ar": "يَخْسِفَ",
-            "en": "He will cause to swallow",
-            "ref": "67:16",
-            "verse": "ءَأَمِنتُم مَّن فِى ٱلسَّمَآءِ أَن يَخْسِفَ بِكُمُ ٱلْأَرْضَ فَإِذَا هِىَ تَمُورُ",
-            "verseEn": "Do you feel secure that He who is above would not cause the earth to swallow you and suddenly it would sway?"
+            "ar": "يَسْتَوْفُونَ",
+            "en": "they take in full",
+            "ref": "83:2",
+            "verse": "ٱلَّذِينَ إِذَا ٱكْتَالُوا۟ عَلَى ٱلنَّاسِ يَسْتَوْفُونَ",
+            "verseEn": "Who, when they take a measure from people, take in full."
           },
           {
-            "ar": "لَجُّوا",
-            "en": "they persist",
-            "ref": "67:21",
-            "verse": "أَمَّنْ هَـٰذَا ٱلَّذِى يَرْزُقُكُمْ إِنْ أَمْسَكَ رِزْقَهُۥ ۚ بَل لَّجُّوا۟ فِى عُتُوٍّۢ وَنُفُورٍ",
-            "verseEn": "Or who is it that could provide for you if He withheld His provision? But they have persisted in insolence and aversion."
+            "ar": "مَبْعُوثُونَ",
+            "en": "(will be) resurrected",
+            "ref": "83:4",
+            "verse": "أَلَا يَظُنُّ أُو۟لَـٰٓئِكَ أَنَّهُم مَّبْعُوثُونَ",
+            "verseEn": "Do they not think that they will be resurrected"
           },
           {
-            "ar": "مُكِبًّا",
-            "en": "fallen",
-            "ref": "67:22",
-            "verse": "أَفَمَن يَمْشِى مُكِبًّا عَلَىٰ وَجْهِهِۦٓ أَهْدَىٰٓ أَمَّن يَمْشِى سَوِيًّا عَلَىٰ صِرَٰطٍۢ مُّسْتَقِيمٍۢ",
-            "verseEn": "Then is one who walks fallen on his face better guided or one who walks erect on a straight path?"
+            "ar": "الْعَالَمِينَ",
+            "en": "(of) the worlds",
+            "ref": "83:6",
+            "verse": "يَوْمَ يَقُومُ ٱلنَّاسُ لِرَبِّ ٱلْعَـٰلَمِينَ",
+            "verseEn": "The Day when mankind will stand before the Lord of the worlds?"
           },
           {
-            "ar": "يُجِيرُ",
-            "en": "(can) protect",
-            "ref": "67:28",
-            "verse": "قُلْ أَرَءَيْتُمْ إِنْ أَهْلَكَنِىَ ٱللَّهُ وَمَن مَّعِىَ أَوْ رَحِمَنَا فَمَن يُجِيرُ ٱلْكَـٰفِرِينَ مِنْ عَذَابٍ أَلِيمٍۢ",
-            "verseEn": "Say, [O Muḥammad], \"Have you considered: whether Allāh should cause my death and those with me or have mercy upon us, who can protect the disbelievers from a painful punishment?\""
+            "ar": "سِجِّينٌ",
+            "en": "(is) Sijjin",
+            "ref": "83:8",
+            "verse": "وَمَآ أَدْرَىٰكَ مَا سِجِّينٌۭ",
+            "verseEn": "And what can make you know what is sijjeen?"
           }
         ]
       },
       {
-        "name": "مُفْرَدَاتٌ مِنْ سُورَةِ الْعَلَقِ",
-        "nameEn": "Key Terms from Surah Al-Alaq",
+        "name": "أَحْوَالٌ مَنْصُوبَةٌ فِي الْقُرْآنِ",
+        "nameEn": "Quranic Circumstantial Adverbs (Hāl) in the Accusative",
         "color": "purple",
         "items": [
           {
-            "ar": "الْأَكْرَمُ",
-            "en": "(is) the Most Generous",
-            "ref": "96:3",
-            "verse": "ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ",
-            "verseEn": "Recite, and your Lord is the most Generous -"
+            "ar": "خَائِفًا",
+            "en": "fearing",
+            "ref": "28:21",
+            "verse": "فَخَرَجَ مِنْهَا خَآئِفًۭا يَتَرَقَّبُ ۖ قَالَ رَبِّ نَجِّنِى مِنَ ٱلْقَوْمِ ٱلظَّـٰلِمِينَ",
+            "verseEn": "So he left it, fearful and anticipating [apprehension]. He said, \"My Lord, save me from the wrongdoing people.\""
           },
           {
-            "ar": "الْإِنسَانَ",
-            "en": "man",
-            "ref": "96:5",
-            "verse": "عَلَّمَ ٱلْإِنسَـٰنَ مَا لَمْ يَعْلَمْ",
-            "verseEn": "Taught man that which he knew not."
+            "ar": "جَمِيعًا",
+            "en": "together",
+            "ref": "2:148",
+            "verse": "وَلِكُلٍّۢ وِجْهَةٌ هُوَ مُوَلِّيهَا ۖ فَٱسْتَبِقُوا۟ ٱلْخَيْرَٰتِ ۚ أَيْنَ مَا تَكُونُوا۟ يَأْتِ بِكُمُ ٱللَّهُ جَمِيعًا ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ",
+            "verseEn": "For each [religious following] is a [prayer] direction toward which it faces. So race to [all that is] good. Wherever you may be, Allāh will bring you forth [for judgement] all together. Indeed, Allāh is over all things competent."
           },
           {
-            "ar": "اسْتَغْنَىٰ",
-            "en": "self-sufficient",
-            "ref": "96:7",
-            "verse": "أَن رَّءَاهُ ٱسْتَغْنَىٰٓ",
-            "verseEn": "Because he sees himself self-sufficient."
+            "ar": "رِجَالًا",
+            "en": "then (pray) on foot",
+            "ref": "2:239",
+            "verse": "فَإِنْ خِفْتُمْ فَرِجَالًا أَوْ رُكْبَانًۭا ۖ فَإِذَآ أَمِنتُمْ فَٱذْكُرُوا۟ ٱللَّهَ كَمَا عَلَّمَكُم مَّا لَمْ تَكُونُوا۟ تَعْلَمُونَ",
+            "verseEn": "And if you fear [an enemy, then pray] on foot or riding. But when you are secure, then remember Allāh [in prayer], as He has taught you that which you did not [previously] know."
           },
           {
-            "ar": "التَّقْوَىٰ",
-            "en": "[of the] righteousness",
-            "ref": "96:12",
-            "verse": "أَوْ أَمَرَ بِٱلتَّقْوَىٰٓ",
-            "verseEn": "Or enjoins righteousness?"
+            "ar": "طَوْعًا",
+            "en": "willingly",
+            "ref": "3:83",
+            "verse": "أَفَغَيْرَ دِينِ ٱللَّهِ يَبْغُونَ وَلَهُۥٓ أَسْلَمَ مَن فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ طَوْعًۭا وَكَرْهًۭا وَإِلَيْهِ يُرْجَعُونَ",
+            "verseEn": "So is it other than the religion of Allāh they desire, while to Him have submitted [all] those within the heavens and earth, willingly or by compulsion, and to Him they will be returned?"
           }
         ]
       }

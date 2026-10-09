@@ -1,670 +1,391 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "puzzle": {
-    "center": "ع",
+    "center": "ر",
     "outer": [
-      "ي",
-      "ا",
       "و",
+      "ف",
+      "م",
       "ه",
-      "د",
-      "م"
+      "ع",
+      "ا"
     ],
     "root": {
-      "letters": "وعد",
-      "display": "و ع د",
-      "translit": "w-ʿ-d",
-      "meaning": "The core meaning is making a commitment about something that will happen, whether hopeful or a warning. Related words shape this idea into specific uses, like a set time for meeting, a promise to keep, or a threat given to someone.",
-      "occurrences": 151,
-      "lemmaCount": 10
+      "letters": "رفع",
+      "display": "ر ف ع",
+      "translit": "r-f-ʿ",
+      "meaning": "This root centers on the idea of lifting something upward, whether in a physical sense or in rank and honor. Its various forms spread out to express the action of raising, describe something lifted high, and name the one who elevates others.",
+      "occurrences": 29,
+      "lemmaCount": 6
     },
     "words": [
       {
-        "w": "اعد",
+        "w": "امر",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَعَدَّ",
-            "gloss": "has prepared",
-            "type": "verb",
-            "root": "عدد",
-            "count": 20,
-            "ref": "2:24",
-            "pos": 12,
+            "lemma": "أَمْر",
+            "gloss": "command",
+            "type": "noun",
+            "root": "أمر",
+            "count": 166,
+            "ref": "2:117",
+            "pos": 6,
             "alt": [
-              "prepared",
-              "allah has prepared"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "داع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "داع",
-            "gloss": "supplicant",
-            "type": "active participle",
-            "root": "دعو",
-            "count": 3,
-            "ref": "2:186",
-            "pos": 9,
-            "alt": [
-              "caller"
+              "matter",
+              "affair"
             ]
-          }
-        ]
-      },
-      {
-        "w": "دعا",
-        "family": false,
-        "points": 1,
-        "senses": [
+          },
           {
-            "lemma": "دَعا",
-            "gloss": "invoke",
+            "lemma": "أَمَرَ",
+            "gloss": "commands",
             "type": "verb",
-            "root": "دعو",
-            "count": 170,
-            "ref": "2:68",
-            "pos": 2,
+            "root": "أمر",
+            "count": 77,
+            "ref": "2:27",
+            "pos": 10,
             "alt": [
-              "calls",
-              "call"
+              "commanded",
+              "has ordered"
             ],
             "form": 1
           }
         ]
       },
       {
-        "w": "دمع",
+        "w": "راع",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "دَمْع",
-            "gloss": "tears",
-            "type": "noun",
-            "root": "دمع",
+            "lemma": "راعِ",
+            "gloss": "raina",
+            "type": "verb",
+            "root": "رعي",
             "count": 2,
-            "ref": "5:83",
-            "pos": 11
+            "ref": "2:104",
+            "pos": 6,
+            "alt": [
+              "\"raina"
+            ],
+            "form": 3
           }
         ]
       },
       {
-        "w": "عاد",
+        "w": "رفع",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "رَفَعَ",
+            "gloss": "raise",
+            "type": "verb",
+            "root": "رفع",
+            "count": 22,
+            "ref": "2:127",
+            "pos": 2,
+            "alt": [
+              "raised",
+              "raising"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "عرف",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "عاد",
-            "gloss": "aad",
-            "type": "proper noun",
-            "root": "عود",
-            "count": 24,
-            "ref": "7:65",
+            "lemma": "عَرَفَ",
+            "gloss": "recognize",
+            "type": "verb",
+            "root": "عرف",
+            "count": 20,
+            "ref": "22:72",
+            "pos": 6,
+            "alt": [
+              "be known"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "عُرْف",
+            "gloss": "one after another",
+            "type": "noun",
+            "root": "عرف",
+            "count": 2,
+            "ref": "77:1",
             "pos": 2
           },
           {
-            "lemma": "عادَ",
-            "gloss": "return",
+            "lemma": "عَرَّفَ",
+            "gloss": "made known",
             "type": "verb",
-            "root": "عود",
-            "count": 18,
-            "ref": "2:275",
-            "pos": 39,
-            "alt": [
-              "repeated",
-              "returned"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "عاد",
-            "gloss": "transgressor",
-            "type": "active participle",
-            "root": "عدو",
-            "count": 6,
-            "ref": "2:173",
-            "pos": 18,
-            "alt": [
-              "transgressing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عام",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عام",
-            "gloss": "year",
-            "type": "noun",
-            "root": "عوم",
-            "count": 9,
-            "ref": "2:259",
-            "pos": 20,
-            "alt": [
-              "one year",
-              "two years"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عدد",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَدَد",
-            "gloss": "number",
-            "type": "noun",
-            "root": "عدد",
-            "count": 6,
-            "ref": "10:5",
-            "pos": 11
-          }
-        ]
-      },
-      {
-        "w": "عده",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عِدَّة",
-            "gloss": "waiting period",
-            "type": "noun",
-            "root": "عدد",
-            "count": 11,
-            "ref": "9:36",
-            "pos": 2,
-            "alt": [
-              "number"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عدو",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَدُوّ",
-            "gloss": "enemy",
-            "type": "noun",
-            "root": "عدو",
-            "count": 50,
-            "ref": "2:36",
-            "pos": 12,
-            "alt": [
-              "enemies",
-              "hostile"
-            ]
-          },
-          {
-            "lemma": "عَدْو",
-            "gloss": "enmity",
-            "type": "noun",
-            "root": "عدو",
+            "root": "عرف",
             "count": 2,
-            "ref": "6:108",
-            "pos": 10
+            "ref": "66:3",
+            "pos": 14,
+            "form": 2
           }
         ]
       },
       {
-        "w": "عمد",
+        "w": "عمر",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "عَمَد",
-            "gloss": "pillars",
+            "lemma": "عُمُر",
+            "gloss": "lifetime",
             "type": "noun",
-            "root": "عمد",
-            "count": 3,
-            "ref": "13:2",
-            "pos": 6,
-            "alt": [
-              "columns"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عمه",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَمَّة",
-            "gloss": "paternal aunts",
-            "type": "noun",
-            "root": "عمم",
-            "count": 3,
-            "ref": "4:23",
-            "pos": 6,
-            "alt": [
-              "father's sisters"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عمي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَمِيَ",
-            "gloss": "blinded",
-            "type": "verb",
-            "root": "عمي",
+            "root": "عمر",
             "count": 7,
-            "ref": "6:104",
-            "pos": 10,
-            "alt": [
-              "blind"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "عَمي",
-            "gloss": "blind",
-            "type": "adjective",
-            "root": "عمي",
-            "count": 2,
-            "ref": "7:64",
+            "ref": "10:16",
             "pos": 14
           },
           {
-            "lemma": "عَمًى",
-            "gloss": "blindness",
-            "type": "noun",
-            "root": "عمي",
-            "count": 2,
-            "ref": "41:44",
-            "pos": 25
+            "lemma": "عَمَرُ",
+            "gloss": "maintain",
+            "type": "verb",
+            "root": "عمر",
+            "count": 4,
+            "ref": "9:18",
+            "pos": 2,
+            "form": 1
           }
         ]
       },
       {
-        "w": "عهد",
+        "w": "فار",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "عَهْد",
-            "gloss": "covenant",
-            "type": "noun",
-            "root": "عهد",
-            "count": 29,
-            "ref": "2:27",
-            "pos": 3,
-            "alt": [
-              "promise"
-            ]
-          },
-          {
-            "lemma": "عَهِدَ",
-            "gloss": "taken promise",
+            "lemma": "فارَ",
+            "gloss": "boils up",
             "type": "verb",
-            "root": "عهد",
-            "count": 6,
-            "ref": "3:183",
-            "pos": 5,
-            "alt": [
-              "has promised",
-              "enjoin"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "عيي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَيِي",
-            "gloss": "tired",
-            "type": "verb",
-            "root": "عيي",
-            "count": 2,
-            "ref": "46:33",
-            "pos": 10,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "وعد",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "وَعَدَ",
-            "gloss": "promised",
-            "type": "verb",
-            "root": "وعد",
-            "count": 70,
-            "ref": "4:95",
-            "pos": 24,
-            "alt": [
-              "allah has promised",
-              "is promised"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "وَعْد",
-            "gloss": "promise",
-            "type": "noun",
-            "root": "وعد",
-            "count": 49,
-            "ref": "4:122",
-            "pos": 14,
-            "alt": [
-              "promise of allah"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اعمي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَعْمَى",
-            "gloss": "blind",
-            "type": "noun",
-            "root": "عمي",
-            "count": 21,
-            "ref": "2:18",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "اعيد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أُعِيدُ",
-            "gloss": "repeat",
-            "type": "verb",
-            "root": "عود",
-            "count": 18,
-            "ref": "34:49",
+            "root": "فور",
+            "count": 3,
+            "ref": "67:7",
             "pos": 8,
-            "form": 4
+            "form": 1
           }
         ]
       },
       {
-        "w": "اوعي",
+        "w": "مره",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَوْعَى",
-            "gloss": "hoarded",
-            "type": "verb",
-            "root": "وعي",
-            "count": 2,
-            "ref": "70:18",
+            "lemma": "مَرَّة",
+            "gloss": "time",
+            "type": "noun",
+            "root": "مرر",
+            "count": 20,
+            "ref": "2:229",
             "pos": 2,
             "alt": [
-              "keep within themselves"
-            ],
-            "form": 4
+              "twice",
+              "times"
+            ]
           }
         ]
       },
       {
-        "w": "داعي",
-        "family": false,
-        "points": 2,
+        "w": "رافع",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "داعِي",
-            "gloss": "caller",
+            "lemma": "رافِع",
+            "gloss": "raise",
             "type": "active participle",
-            "root": "دعو",
-            "count": 4,
-            "ref": "46:31",
+            "root": "رفع",
+            "count": 1,
+            "ref": "3:55",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "رافه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "رَأْفَة",
+            "gloss": "pity for",
+            "type": "noun",
+            "root": "رأف",
+            "count": 2,
+            "ref": "24:2",
+            "pos": 12,
+            "alt": [
+              "compassion"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عروه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "عُرْوَة",
+            "gloss": "handhold",
+            "type": "noun",
+            "root": "عرو",
+            "count": 2,
+            "ref": "2:256",
+            "pos": 17
+          }
+        ]
+      },
+      {
+        "w": "عمره",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "عُمْرَة",
+            "gloss": "umrah",
+            "type": "noun",
+            "root": "عمر",
+            "count": 2,
+            "ref": "2:196",
             "pos": 3
           }
         ]
       },
       {
-        "w": "دعوه",
+        "w": "عوره",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "دَعْوَة",
-            "gloss": "invocation",
+            "lemma": "عَوْرَة",
+            "gloss": "private aspects",
             "type": "noun",
-            "root": "دعو",
-            "count": 6,
-            "ref": "2:186",
-            "pos": 8,
-            "alt": [
-              "supplication",
-              "call"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "دعوي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "دَعْوَى",
-            "gloss": "plea",
-            "type": "noun",
-            "root": "دعو",
+            "root": "عور",
             "count": 4,
-            "ref": "7:5",
-            "pos": 3,
+            "ref": "24:31",
+            "pos": 61,
             "alt": [
-              "prayer",
-              "call"
+              "times of privacy",
+              "exposed"
             ]
           }
         ]
       },
       {
-        "w": "عاهد",
+        "w": "فرار",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "عاهَدَ",
-            "gloss": "made a covenant",
-            "type": "verb",
-            "root": "عهد",
-            "count": 11,
-            "ref": "9:75",
-            "pos": 3,
-            "alt": [
-              "has covenanted"
-            ],
-            "form": 3
-          }
-        ]
-      },
-      {
-        "w": "عدوه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "عُدْوَة",
-            "gloss": "on side of the valley",
+            "lemma": "فِرار",
+            "gloss": "flight",
             "type": "noun",
-            "root": "عدو",
-            "count": 2,
-            "ref": "8:42",
-            "pos": 3,
-            "alt": [
-              "on the side"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "موعد",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مَوْعِد",
-            "gloss": "appointment",
-            "type": "noun",
-            "root": "وعد",
-            "count": 12,
-            "ref": "18:48",
-            "pos": 16,
-            "alt": [
-              "appointed time"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "واعد",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "واعَدْ",
-            "gloss": "appointed",
-            "type": "verb",
-            "root": "وعد",
+            "root": "فرر",
             "count": 4,
-            "ref": "2:51",
-            "pos": 2,
+            "ref": "18:18",
+            "pos": 19,
             "alt": [
-              "promise",
-              "made a covenant with"
-            ],
-            "form": 3
+              "to flee"
+            ]
           }
         ]
       },
       {
-        "w": "وعيد",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "وَعِيد",
-            "gloss": "threat",
-            "type": "noun",
-            "root": "وعد",
-            "count": 6,
-            "ref": "50:14",
-            "pos": 9
-          }
-        ]
-      },
-      {
-        "w": "عداوه",
+        "w": "اعراف",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "عَداوَة",
-            "gloss": "enmity",
+            "lemma": "أَعْراف",
+            "gloss": "heights",
             "type": "noun",
-            "root": "عدو",
-            "count": 6,
-            "ref": "5:82",
+            "root": "عرف",
+            "count": 2,
+            "ref": "7:46",
             "pos": 4
           }
         ]
       },
       {
-        "w": "موعده",
+        "w": "رافعه",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "مَوْعِدَة",
-            "gloss": "promise",
-            "type": "noun",
-            "root": "وعد",
+            "lemma": "رافِعَة",
+            "gloss": "raising up",
+            "type": "active participle",
+            "root": "رفع",
             "count": 1,
-            "ref": "9:114",
-            "pos": 8
-          }
-        ]
-      },
-      {
-        "w": "موعود",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مَوْعُود",
-            "gloss": "promised",
-            "type": "passive participle",
-            "root": "وعد",
-            "count": 1,
-            "ref": "85:2",
+            "ref": "56:3",
             "pos": 2
           }
         ]
       },
       {
-        "w": "ميعاد",
+        "w": "مرفوع",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "مِيعاد",
-            "gloss": "appointment",
-            "type": "noun",
-            "root": "وعد",
-            "count": 6,
-            "ref": "34:30",
-            "pos": 3
+            "lemma": "مَرْفُوع",
+            "gloss": "raised high",
+            "type": "passive participle",
+            "root": "رفع",
+            "count": 1,
+            "ref": "52:5",
+            "pos": 2
           }
         ]
       },
       {
-        "w": "معدوده",
+        "w": "معروف",
         "family": false,
-        "points": 4,
+        "points": 3,
         "senses": [
           {
-            "lemma": "مَعْدُودَة",
-            "gloss": "determined",
+            "lemma": "مَعْرُوف",
+            "gloss": "kindness",
             "type": "passive participle",
-            "root": "عدد",
-            "count": 6,
-            "ref": "2:80",
-            "pos": 7,
+            "root": "عرف",
+            "count": 38,
+            "ref": "2:235",
+            "pos": 26,
             "alt": [
-              "numbered",
-              "few"
+              "kind",
+              "honorable"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مرفوعه",
+        "family": true,
+        "points": 6,
+        "senses": [
+          {
+            "lemma": "مَرْفُوعَة",
+            "gloss": "exalted",
+            "type": "passive participle",
+            "root": "رفع",
+            "count": 3,
+            "ref": "56:34",
+            "pos": 2,
+            "alt": [
+              "raised",
+              "raised high"
             ]
           }
         ]
@@ -672,28 +393,17 @@
     ],
     "otherFamily": [
       {
-        "lemma": "تُوعِدُ",
-        "gloss": "threatening",
-        "type": "verb",
-        "root": "وعد",
+        "lemma": "رَفِيع",
+        "gloss": "possessor of the highest ranks",
+        "type": "adjective",
+        "root": "رفع",
         "count": 1,
-        "ref": "7:86",
-        "pos": 5,
-        "form": 4
-      },
-      {
-        "lemma": "تَواعَد",
-        "gloss": "made an appointment",
-        "type": "verb",
-        "root": "وعد",
-        "count": 1,
-        "ref": "8:42",
-        "pos": 12,
-        "form": 6
+        "ref": "40:15",
+        "pos": 1
       }
     ],
-    "maxScore": 67,
-    "featuredRoot": "وعد"
+    "maxScore": 45,
+    "featuredRoot": "رفع"
   },
   "generated": true,
   "model": "auto (chain)"
