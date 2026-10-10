@@ -704,7 +704,9 @@ function getPlayerId() {
 function calculatePlayerScore() {
     const stats = loadStats();
     const verseStats = getVerseStats();
-    const modes = ['connections', 'wordle', 'deduction', 'scramble'];
+    // Include roothive so daily root-hive plays count toward the overall score.
+    // Mirrors the fix in submitScore() for issue #191.
+    const modes = ['connections', 'wordle', 'deduction', 'scramble', 'roothive'];
     let totalPlayed = 0, totalWon = 0, bestStreak = 0;
     modes.forEach(m => {
         const s = stats[m];
@@ -730,7 +732,10 @@ async function submitScore() {
     try {
         const stats = loadStats();
         const verseStats = getVerseStats();
-        const modes = ['connections', 'wordle', 'deduction', 'scramble'];
+        // Include roothive so daily root-hive plays count toward leaderboard "games".
+        // Fix for issue #191 ("player count feels stagnant"): root-hive was played
+        // and stored locally but never summed into the leaderboard submission.
+        const modes = ['connections', 'wordle', 'deduction', 'scramble', 'roothive'];
         let totalPlayed = 0, totalWon = 0, bestStreak = 0;
         modes.forEach(m => {
             totalPlayed += stats[m].played;
