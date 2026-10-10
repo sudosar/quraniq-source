@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "puzzle": {
-    "title": "The Unheeded Call in the Land of Arrogance",
-    "intro": "You stand in the ruins of a once-great civilization, where power and pride knew no bounds. A messenger walked among them, calling to the truth, but their hearts were hardened. The warning went unheeded, and the sky itself became an instrument of wrath. Who was this messenger, and what became of those who rejected the call?",
+    "title": "The Feathered Scout",
+    "intro": "Within a kingdom ruled by one granted dominion over the winds, the unseen beings, and the creatures of the sky, one small and swift member vanished from the ranks — only to return with revelations that would reshape the fate of a distant nation. This keen-eyed informant brought truth to light where ignorance had taken root. Who Am I?",
     "clues": [
-      "I was sent to a people who were unmatched in strength and who built on every high place a monument.",
-      "My people considered themselves invincible and said, 'Who is mightier than us in strength?'",
-      "I called them to worship Allah alone, but they accused me of foolishness and lying.",
-      "They challenged me to bring the punishment I promised if I was truthful.",
-      "Allah sent upon them a barren wind that spared nothing it came upon.",
-      "I and those who believed with me were saved by Allah's mercy, while the disbelievers were utterly destroyed."
+      "I served in a court where humans, unseen beings, and creatures of the sky answered to a single wise ruler who commanded the very winds.",
+      "I was absent from my post for a time, and the ruler's wrath was promised should I fail to provide a satisfactory reason.",
+      "I am a small creature of flight, known for sharp sight, and my kind was honored with direct naming in the pages of revelation.",
+      "When I returned, I brought news of a distant land where the people prostrated to the sun, blind to the One who created the heavens and the earth.",
+      "I found a woman ruling over a great kingdom, sitting upon a magnificent throne, never having known the truth before.",
+      "I am the one who discovered the realm of Saba' and carried a letter of invitation from a prophet-king who was given dominion over the wind."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Hud",
-          "Prophet Salih",
-          "Prophet Shuaib",
-          "Prophet Lut",
-          "Prophet Nuh"
+          "The Hoopoe (Hudhud)",
+          "The Ant from Sulaiman's Valley",
+          "Asif ibn Barkhiya",
+          "Ifrit the Jinn",
+          "An Angel of the Throne"
         ],
-        "answer": "Prophet Hud"
+        "answer": "The Hoopoe (Hudhud)"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "A devastating wind destroyed the disbelievers",
-          "A great flood engulfed the disbelievers",
-          "A shower of stones rained down",
-          "A loud shriek seized the disbelievers",
-          "An earthquake struck the disbelievers"
+          "The expedition to the Kingdom of Saba' (Sheba)",
+          "The confrontation with Pharaoh's sorcerers",
+          "The flood of Prophet Nuh",
+          "The destruction of the People of 'Ad",
+          "The splitting of the Red Sea"
         ],
-        "answer": "A devastating wind destroyed the disbelievers"
+        "answer": "The expedition to the Kingdom of Saba' (Sheba)"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A relentless wind",
-          "A wooden ark",
-          "A she-camel",
-          "A rain of clay stones",
-          "A blazing fire"
+          "The Land of Saba' (Sheba)",
+          "Mount Sinai",
+          "The Ark of Prophet Nuh",
+          "The Cave of Ashab al-Kahf",
+          "The Palace of Pharaoh"
         ],
-        "answer": "A relentless wind"
+        "answer": "The Land of Saba' (Sheba)"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Hud and the believers were saved, and the disbelievers were destroyed",
-          "Hud was raised to a high station",
-          "Hud was killed by his people",
-          "Hud's people repented and were spared",
-          "Hud left his people before any punishment"
+          "Bilqis came in submission to Sulaiman's court",
+          "Pharaoh and his army drowned in the sea",
+          "The People of 'Ad were destroyed by a violent wind",
+          "Pharaoh's sorcerers believed in Prophet Musa",
+          "A great flood consumed the disbelievers"
         ],
-        "answer": "Hud and the believers were saved, and the disbelievers were destroyed"
+        "answer": "Bilqis came in submission to Sulaiman's court"
       }
     },
-    "verseRef": "7:72",
-    "arabic": "فَأَنجَيْنَـٰهُ وَٱلَّذِينَ مَعَهُۥ بِرَحْمَةٍۢ مِّنَّا وَقَطَعْنَا دَابِرَ ٱلَّذِينَ كَذَّبُوا۟ بِـَٔايَـٰتِنَا ۖ وَمَا كَانُوا۟ مُؤْمِنِينَ",
-    "verse": "So We saved him and those with him by mercy from Us. And We eliminated those who denied Our signs, and they were not [at all] believers. (7:72)"
+    "verseRef": "27:27",
+    "arabic": "۞ قَالَ سَنَنظُرُ أَصَدَقْتَ أَمْ كُنتَ مِنَ ٱلْكَـٰذِبِينَ",
+    "verse": "[Solomon] said, \"We will see whether you were truthful or were of the liars. (27:27)"
   },
   "generated": true,
   "model": "auto (chain)"

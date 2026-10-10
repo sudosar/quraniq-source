@@ -1,409 +1,520 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "puzzle": {
-    "center": "ر",
+    "center": "ع",
     "outer": [
-      "و",
-      "ف",
+      "ت",
+      "ن",
       "م",
-      "ه",
-      "ع",
+      "ص",
+      "ي",
       "ا"
     ],
     "root": {
-      "letters": "رفع",
-      "display": "ر ف ع",
-      "translit": "r-f-ʿ",
-      "meaning": "This root centers on the idea of lifting something upward, whether in a physical sense or in rank and honor. Its various forms spread out to express the action of raising, describe something lifted high, and name the one who elevates others.",
-      "occurrences": 29,
-      "lemmaCount": 6
+      "letters": "عصي",
+      "display": "ع ص ي",
+      "translit": "ʿ-ṣ-y",
+      "meaning": "This root carries the core meaning of refusing to obey or rebelling against authority. From it grow related forms naming the act of disobedience, describing someone who resists commands, and referring to the resulting state of rebellion.",
+      "occurrences": 32,
+      "lemmaCount": 4
     },
     "words": [
       {
-        "w": "امر",
+        "w": "صنع",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَمْر",
-            "gloss": "command",
-            "type": "noun",
-            "root": "أمر",
-            "count": 166,
-            "ref": "2:117",
-            "pos": 6,
-            "alt": [
-              "matter",
-              "affair"
-            ]
-          },
-          {
-            "lemma": "أَمَرَ",
-            "gloss": "commands",
+            "lemma": "صَنَعُ",
+            "gloss": "make",
             "type": "verb",
-            "root": "أمر",
-            "count": 77,
-            "ref": "2:27",
-            "pos": 10,
+            "root": "صنع",
+            "count": 15,
+            "ref": "7:137",
+            "pos": 24,
             "alt": [
-              "commanded",
-              "has ordered"
+              "construct"
             ],
             "form": 1
+          },
+          {
+            "lemma": "صُنْع",
+            "gloss": "work",
+            "type": "noun",
+            "root": "صنع",
+            "count": 2,
+            "ref": "18:104",
+            "pos": 11
           }
         ]
       },
       {
-        "w": "راع",
+        "w": "عام",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "راعِ",
-            "gloss": "raina",
-            "type": "verb",
-            "root": "رعي",
-            "count": 2,
-            "ref": "2:104",
-            "pos": 6,
+            "lemma": "عام",
+            "gloss": "year",
+            "type": "noun",
+            "root": "عوم",
+            "count": 9,
+            "ref": "2:259",
+            "pos": 20,
             "alt": [
-              "\"raina"
-            ],
-            "form": 3
+              "one year",
+              "two years"
+            ]
           }
         ]
       },
       {
-        "w": "رفع",
+        "w": "عتي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عِتِيّ",
+            "gloss": "extreme",
+            "type": "noun",
+            "root": "عتو",
+            "count": 2,
+            "ref": "19:8",
+            "pos": 14,
+            "alt": [
+              "rebellion"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عصا",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "رَفَعَ",
-            "gloss": "raise",
+            "lemma": "عَصا",
+            "gloss": "disobeys",
             "type": "verb",
-            "root": "رفع",
-            "count": 22,
-            "ref": "2:127",
+            "root": "عصي",
+            "count": 27,
+            "ref": "4:14",
             "pos": 2,
             "alt": [
-              "raised",
-              "raising"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "عرف",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَرَفَ",
-            "gloss": "recognize",
-            "type": "verb",
-            "root": "عرف",
-            "count": 20,
-            "ref": "22:72",
-            "pos": 6,
-            "alt": [
-              "be known"
+              "disobey"
             ],
             "form": 1
           },
           {
-            "lemma": "عُرْف",
-            "gloss": "one after another",
+            "lemma": "عَصا",
+            "gloss": "staff",
             "type": "noun",
-            "root": "عرف",
-            "count": 2,
-            "ref": "77:1",
-            "pos": 2
-          },
-          {
-            "lemma": "عَرَّفَ",
-            "gloss": "made known",
-            "type": "verb",
-            "root": "عرف",
-            "count": 2,
-            "ref": "66:3",
-            "pos": 14,
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "عمر",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عُمُر",
-            "gloss": "lifetime",
-            "type": "noun",
-            "root": "عمر",
-            "count": 7,
-            "ref": "10:16",
-            "pos": 14
-          },
-          {
-            "lemma": "عَمَرُ",
-            "gloss": "maintain",
-            "type": "verb",
-            "root": "عمر",
-            "count": 4,
-            "ref": "9:18",
-            "pos": 2,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "فار",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "فارَ",
-            "gloss": "boils up",
-            "type": "verb",
-            "root": "فور",
-            "count": 3,
-            "ref": "67:7",
-            "pos": 8,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "مره",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَرَّة",
-            "gloss": "time",
-            "type": "noun",
-            "root": "مرر",
-            "count": 20,
-            "ref": "2:229",
-            "pos": 2,
-            "alt": [
-              "twice",
-              "times"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "رافع",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "رافِع",
-            "gloss": "raise",
-            "type": "active participle",
-            "root": "رفع",
-            "count": 1,
-            "ref": "3:55",
+            "root": "عصو",
+            "count": 10,
+            "ref": "2:60",
             "pos": 7
           }
         ]
       },
       {
-        "w": "رافه",
-        "family": false,
-        "points": 2,
+        "w": "عصي",
+        "family": true,
+        "points": 3,
         "senses": [
           {
-            "lemma": "رَأْفَة",
-            "gloss": "pity for",
-            "type": "noun",
-            "root": "رأف",
+            "lemma": "عَصِيّ",
+            "gloss": "disobedient",
+            "type": "adjective",
+            "root": "عصي",
             "count": 2,
-            "ref": "24:2",
-            "pos": 12,
+            "ref": "19:14",
+            "pos": 6
+          },
+          {
+            "lemma": "عِصِيّ",
+            "gloss": "staffs",
+            "type": "noun",
+            "root": "عصو",
+            "count": 2,
+            "ref": "20:66",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "عمي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عَمِيَ",
+            "gloss": "blinded",
+            "type": "verb",
+            "root": "عمي",
+            "count": 7,
+            "ref": "6:104",
+            "pos": 10,
             "alt": [
-              "compassion"
+              "blind"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "عَمي",
+            "gloss": "blind",
+            "type": "adjective",
+            "root": "عمي",
+            "count": 2,
+            "ref": "7:64",
+            "pos": 14
+          },
+          {
+            "lemma": "عَمًى",
+            "gloss": "blindness",
+            "type": "noun",
+            "root": "عمي",
+            "count": 2,
+            "ref": "41:44",
+            "pos": 25
+          }
+        ]
+      },
+      {
+        "w": "عين",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عَيْن",
+            "gloss": "eyes",
+            "type": "noun",
+            "root": "عين",
+            "count": 57,
+            "ref": "2:60",
+            "pos": 13,
+            "alt": [
+              "spring",
+              "springs"
+            ]
+          },
+          {
+            "lemma": "عِين",
+            "gloss": "large eyes",
+            "type": "noun",
+            "root": "عين",
+            "count": 4,
+            "ref": "37:48",
+            "pos": 4,
+            "alt": [
+              "beautiful eyes",
+              "companions with beautiful eyes"
             ]
           }
         ]
       },
       {
-        "w": "عروه",
+        "w": "عيي",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "عُرْوَة",
-            "gloss": "handhold",
-            "type": "noun",
-            "root": "عرو",
+            "lemma": "عَيِي",
+            "gloss": "tired",
+            "type": "verb",
+            "root": "عيي",
             "count": 2,
-            "ref": "2:256",
-            "pos": 17
+            "ref": "46:33",
+            "pos": 10,
+            "form": 1
           }
         ]
       },
       {
-        "w": "عمره",
+        "w": "متع",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "عُمْرَة",
-            "gloss": "umrah",
+            "lemma": "مَتَّعْ",
+            "gloss": "provide for",
+            "type": "verb",
+            "root": "متع",
+            "count": 18,
+            "ref": "2:126",
+            "pos": 22,
+            "alt": [
+              "grant him enjoyment",
+              "make provision for"
+            ],
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "منع",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَنَعَ",
+            "gloss": "prevents",
+            "type": "verb",
+            "root": "منع",
+            "count": 12,
+            "ref": "2:114",
+            "pos": 4,
+            "alt": [
+              "has been denied",
+              "prevented"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "نعم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "نَعَم",
+            "gloss": "cattle",
             "type": "noun",
-            "root": "عمر",
-            "count": 2,
-            "ref": "2:196",
+            "root": "نعم",
+            "count": 33,
+            "ref": "6:138",
             "pos": 3
           }
         ]
       },
       {
-        "w": "عوره",
+        "w": "اعان",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "عَوْرَة",
-            "gloss": "private aspects",
-            "type": "noun",
-            "root": "عور",
-            "count": 4,
-            "ref": "24:31",
-            "pos": 61,
-            "alt": [
-              "times of privacy",
-              "exposed"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "فرار",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "فِرار",
-            "gloss": "flight",
-            "type": "noun",
-            "root": "فرر",
-            "count": 4,
-            "ref": "18:18",
-            "pos": 19,
-            "alt": [
-              "to flee"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اعراف",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "أَعْراف",
-            "gloss": "heights",
-            "type": "noun",
-            "root": "عرف",
+            "lemma": "أَعانَ",
+            "gloss": "assist",
+            "type": "verb",
+            "root": "عون",
             "count": 2,
-            "ref": "7:46",
-            "pos": 4
+            "ref": "18:95",
+            "pos": 7,
+            "alt": [
+              "helped"
+            ],
+            "form": 4
           }
         ]
       },
       {
-        "w": "رافعه",
-        "family": true,
-        "points": 5,
+        "w": "اعمي",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "رافِعَة",
-            "gloss": "raising up",
+            "lemma": "أَعْمَى",
+            "gloss": "blind",
+            "type": "noun",
+            "root": "عمي",
+            "count": 21,
+            "ref": "2:18",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "انعم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَنْعَمَ",
+            "gloss": "favored",
+            "type": "verb",
+            "root": "نعم",
+            "count": 17,
+            "ref": "4:69",
+            "pos": 8,
+            "alt": [
+              "allah bestowed favor",
+              "has bestowed favor"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "تمتع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "تَمَتَّعَ",
+            "gloss": "took advantage",
+            "type": "verb",
+            "root": "متع",
+            "count": 11,
+            "ref": "2:196",
+            "pos": 37,
+            "alt": [
+              "enjoy"
+            ],
+            "form": 5
+          }
+        ]
+      },
+      {
+        "w": "عاصم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "عاصِم",
+            "gloss": "protector",
             "type": "active participle",
-            "root": "رفع",
-            "count": 1,
-            "ref": "56:3",
-            "pos": 2
+            "root": "عصم",
+            "count": 3,
+            "ref": "10:27",
+            "pos": 14,
+            "alt": [
+              "defender"
+            ]
           }
         ]
       },
       {
-        "w": "مرفوع",
-        "family": true,
-        "points": 5,
+        "w": "متاع",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "مَرْفُوع",
-            "gloss": "raised high",
-            "type": "passive participle",
-            "root": "رفع",
-            "count": 1,
-            "ref": "52:5",
-            "pos": 2
+            "lemma": "مَتاع",
+            "gloss": "enjoyment",
+            "type": "noun",
+            "root": "متع",
+            "count": 35,
+            "ref": "2:236",
+            "pos": 21,
+            "alt": [
+              "provision",
+              "enjoy"
+            ]
           }
         ]
       },
       {
-        "w": "معروف",
+        "w": "معين",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَعِين",
+            "gloss": "flowing spring",
+            "type": "noun",
+            "root": "عين",
+            "count": 4,
+            "ref": "37:45",
+            "pos": 5,
+            "alt": [
+              "flowing stream",
+              "flowing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مناع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَنّاع",
+            "gloss": "forbidder",
+            "type": "adjective",
+            "root": "منع",
+            "count": 2,
+            "ref": "50:25",
+            "pos": 1,
+            "alt": [
+              "preventer"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "نعيم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "نَعِيم",
+            "gloss": "bliss",
+            "type": "noun",
+            "root": "نعم",
+            "count": 17,
+            "ref": "9:21",
+            "pos": 9,
+            "alt": [
+              "pleasure",
+              "delight"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اعتصم",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "مَعْرُوف",
-            "gloss": "kindness",
-            "type": "passive participle",
-            "root": "عرف",
-            "count": 38,
-            "ref": "2:235",
-            "pos": 26,
-            "alt": [
-              "kind",
-              "honorable"
-            ]
+            "lemma": "اعْتَصَمُ",
+            "gloss": "holds firmly",
+            "type": "verb",
+            "root": "عصم",
+            "count": 5,
+            "ref": "3:101",
+            "pos": 11,
+            "form": 8
           }
         ]
       },
       {
-        "w": "مرفوعه",
+        "w": "عصيان",
         "family": true,
-        "points": 6,
+        "points": 5,
         "senses": [
           {
-            "lemma": "مَرْفُوعَة",
-            "gloss": "exalted",
-            "type": "passive participle",
-            "root": "رفع",
-            "count": 3,
-            "ref": "56:34",
-            "pos": 2,
-            "alt": [
-              "raised",
-              "raised high"
-            ]
+            "lemma": "عِصْيان",
+            "gloss": "disobedience",
+            "type": "noun",
+            "root": "عصي",
+            "count": 1,
+            "ref": "49:7",
+            "pos": 25
+          }
+        ]
+      },
+      {
+        "w": "معصيت",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَعْصِيَت",
+            "gloss": "disobedience",
+            "type": "noun",
+            "root": "عصي",
+            "count": 2,
+            "ref": "58:8",
+            "pos": 16
           }
         ]
       }
     ],
-    "otherFamily": [
-      {
-        "lemma": "رَفِيع",
-        "gloss": "possessor of the highest ranks",
-        "type": "adjective",
-        "root": "رفع",
-        "count": 1,
-        "ref": "40:15",
-        "pos": 1
-      }
-    ],
-    "maxScore": 45,
-    "featuredRoot": "رفع"
+    "otherFamily": [],
+    "maxScore": 46,
+    "featuredRoot": "عصي"
   },
   "generated": true,
   "model": "auto (chain)"

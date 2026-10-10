@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "puzzle": {
-    "word": "بطشة",
-    "display": "الْبَطْشَةَ",
-    "hint": "An overwhelming, violent act of seizing — used in Surah Ad-Dukhan to describe a great day of divine vengeance",
-    "verseRef": "44:16",
-    "arabicVerse": "يَوْمَ نَبْطِشُ ٱلْبَطْشَةَ ٱلْكُبْرَىٰٓ إِنَّا مُنتَقِمُونَ",
-    "verse": "44:16 - The Day We will strike with the greatest assault, indeed, We will take retribution."
+    "word": "كتب",
+    "display": "كَتَبَ",
+    "hint": "He wrote or decreed (verb)",
+    "verseRef": "59:3",
+    "arabicVerse": "وَلَوْلَآ أَن كَتَبَ ٱللَّهُ عَلَيْهِمُ ٱلْجَلَآءَ لَعَذَّبَهُمْ فِى ٱلدُّنْيَا ۖ وَلَهُمْ فِى ٱلْـَٔاخِرَةِ عَذَابُ ٱلنَّارِ",
+    "verse": "59:3 - And if not that Allāh had decreed for them evacuation, He would have punished them in [this] world, and for them in the Hereafter is the punishment of the Fire."
   },
   "generated": true,
   "model": "auto (chain)"

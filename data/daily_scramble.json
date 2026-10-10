@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "puzzle": {
-    "verseRef": "20:46",
-    "reference": "Surah Taha (20:46)",
+    "verseRef": "21:89",
+    "reference": "Surah Al-Anbiya (21:89)",
     "segments": [
-      "قال",
-      "لا تخافا",
-      "إني معكما",
-      "أسمع",
-      "وأرى"
+      "وَزَكَرِيَّا إِذْ نَادَىٰ",
+      "رَبَّهُ",
+      "رَبِّ لَا تَذَرْنِي",
+      "فَرْدًا",
+      "وَأَنتَ خَيْرُ الْوَارِثِينَ"
     ],
     "translations": [
-      "He said (Do) not",
-      "fear Indeed, I Am",
-      "with you both",
-      "I hear",
-      "and I see"
+      "And Zakariya when he called",
+      "(to) his Lord My Lord",
+      "(Do) not leave me",
+      "alone while You",
+      "(are) [the] Best (of) the inheritors"
     ],
-    "hint": "Allah's reassuring words to two prophets facing a powerful tyrant — a reminder of His constant presence, hearing, and sight over all.",
-    "arabic": "قَالَ لَا تَخَافَآ ۖ إِنَّنِى مَعَكُمَآ أَسْمَعُ وَأَرَىٰ",
+    "hint": "A heartfelt supplication of Prophet Zakariya (AS) praying to Allah for a child in his old age.",
+    "arabic": "وَزَكَرِيَّآ إِذْ نَادَىٰ رَبَّهُۥ رَبِّ لَا تَذَرْنِى فَرْدًۭا وَأَنتَ خَيْرُ ٱلْوَٰرِثِينَ",
     "words": [
-      "قَالَ لَا",
-      "تَخَافَآ ۖ إِنَّنِى",
-      "مَعَكُمَآ",
-      "أَسْمَعُ",
-      "وَأَرَىٰ"
+      "وَزَكَرِيَّآ إِذْ نَادَىٰ",
+      "رَبَّهُۥ رَبِّ",
+      "لَا تَذَرْنِى",
+      "فَرْدًۭا وَأَنتَ",
+      "خَيْرُ ٱلْوَٰرِثِينَ"
     ],
-    "verseEn": "[Allāh] said, \"Fear not. Indeed, I am with you both; I hear and I see."
+    "verseEn": "And [mention] Zechariah, when he called to his Lord, \"My Lord, do not leave me alone [with no heir], while You are the best of inheritors.\""
   },
   "generated": true,
   "model": "auto (chain)"
