@@ -1,520 +1,251 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "puzzle": {
-    "center": "ع",
+    "center": "خ",
     "outer": [
-      "ت",
-      "ن",
-      "م",
-      "ص",
+      "ء",
       "ي",
+      "ط",
+      "ل",
+      "ه",
       "ا"
     ],
     "root": {
-      "letters": "عصي",
-      "display": "ع ص ي",
-      "translit": "ʿ-ṣ-y",
-      "meaning": "This root carries the core meaning of refusing to obey or rebelling against authority. From it grow related forms naming the act of disobedience, describing someone who resists commands, and referring to the resulting state of rebellion.",
-      "occurrences": 32,
-      "lemmaCount": 4
+      "letters": "خطا",
+      "display": "خ ط ا",
+      "translit": "kh-ṭ-ʾ",
+      "meaning": "This root centers on the idea of error or going astray, from a small slip to a deliberate sin. Related words simply shade this same meaning, adding ideas like the doer, the act, or fault itself.",
+      "occurrences": 22,
+      "lemmaCount": 6
     },
     "words": [
       {
-        "w": "صنع",
+        "w": "خال",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "صَنَعُ",
-            "gloss": "make",
+            "lemma": "خال",
+            "gloss": "maternal uncles",
+            "type": "noun",
+            "root": "خول",
+            "count": 2,
+            "ref": "24:61",
+            "pos": 40
+          }
+        ]
+      },
+      {
+        "w": "خطء",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "خِطْء",
+            "gloss": "sin",
+            "type": "noun",
+            "root": "خطأ",
+            "count": 1,
+            "ref": "17:31",
+            "pos": 12
+          }
+        ]
+      },
+      {
+        "w": "خطا",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "خَطَأ",
+            "gloss": "mistake",
+            "type": "noun",
+            "root": "خطأ",
+            "count": 2,
+            "ref": "4:92",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "خلا",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "خَلا",
+            "gloss": "passed away",
             "type": "verb",
-            "root": "صنع",
-            "count": 15,
-            "ref": "7:137",
-            "pos": 24,
+            "root": "خلو",
+            "count": 25,
+            "ref": "2:76",
+            "pos": 8,
             "alt": [
-              "construct"
+              "has passed away",
+              "had passed"
             ],
             "form": 1
-          },
+          }
+        ]
+      },
+      {
+        "w": "خيط",
+        "family": false,
+        "points": 1,
+        "senses": [
           {
-            "lemma": "صُنْع",
-            "gloss": "work",
+            "lemma": "خَيْط",
+            "gloss": "thread",
             "type": "noun",
-            "root": "صنع",
+            "root": "خيط",
             "count": 2,
-            "ref": "18:104",
+            "ref": "2:187",
+            "pos": 36
+          }
+        ]
+      },
+      {
+        "w": "خيل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "خَيْل",
+            "gloss": "horses",
+            "type": "noun",
+            "root": "خيل",
+            "count": 5,
+            "ref": "59:6",
             "pos": 11
           }
         ]
       },
       {
-        "w": "عام",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عام",
-            "gloss": "year",
-            "type": "noun",
-            "root": "عوم",
-            "count": 9,
-            "ref": "2:259",
-            "pos": 20,
-            "alt": [
-              "one year",
-              "two years"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عتي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عِتِيّ",
-            "gloss": "extreme",
-            "type": "noun",
-            "root": "عتو",
-            "count": 2,
-            "ref": "19:8",
-            "pos": 14,
-            "alt": [
-              "rebellion"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عصا",
+        "w": "اخطا",
         "family": true,
-        "points": 3,
+        "points": 4,
         "senses": [
           {
-            "lemma": "عَصا",
-            "gloss": "disobeys",
+            "lemma": "أَخْطَأْ",
+            "gloss": "err",
             "type": "verb",
-            "root": "عصي",
-            "count": 27,
-            "ref": "4:14",
-            "pos": 2,
+            "root": "خطأ",
+            "count": 2,
+            "ref": "2:286",
+            "pos": 19,
             "alt": [
-              "disobey"
+              "made a mistake"
             ],
-            "form": 1
-          },
-          {
-            "lemma": "عَصا",
-            "gloss": "staff",
-            "type": "noun",
-            "root": "عصو",
-            "count": 10,
-            "ref": "2:60",
-            "pos": 7
+            "form": 4
           }
         ]
       },
       {
-        "w": "عصي",
+        "w": "خاطي",
         "family": true,
-        "points": 3,
+        "points": 4,
         "senses": [
           {
-            "lemma": "عَصِيّ",
-            "gloss": "disobedient",
-            "type": "adjective",
-            "root": "عصي",
-            "count": 2,
-            "ref": "19:14",
-            "pos": 6
-          },
-          {
-            "lemma": "عِصِيّ",
-            "gloss": "staffs",
-            "type": "noun",
-            "root": "عصو",
-            "count": 2,
-            "ref": "20:66",
-            "pos": 6
+            "lemma": "خاطِئ",
+            "gloss": "sinners",
+            "type": "active participle",
+            "root": "خطأ",
+            "count": 5,
+            "ref": "12:97",
+            "pos": 8
           }
         ]
       },
       {
-        "w": "عمي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَمِيَ",
-            "gloss": "blinded",
-            "type": "verb",
-            "root": "عمي",
-            "count": 7,
-            "ref": "6:104",
-            "pos": 10,
-            "alt": [
-              "blind"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "عَمي",
-            "gloss": "blind",
-            "type": "adjective",
-            "root": "عمي",
-            "count": 2,
-            "ref": "7:64",
-            "pos": 14
-          },
-          {
-            "lemma": "عَمًى",
-            "gloss": "blindness",
-            "type": "noun",
-            "root": "عمي",
-            "count": 2,
-            "ref": "41:44",
-            "pos": 25
-          }
-        ]
-      },
-      {
-        "w": "عين",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَيْن",
-            "gloss": "eyes",
-            "type": "noun",
-            "root": "عين",
-            "count": 57,
-            "ref": "2:60",
-            "pos": 13,
-            "alt": [
-              "spring",
-              "springs"
-            ]
-          },
-          {
-            "lemma": "عِين",
-            "gloss": "large eyes",
-            "type": "noun",
-            "root": "عين",
-            "count": 4,
-            "ref": "37:48",
-            "pos": 4,
-            "alt": [
-              "beautiful eyes",
-              "companions with beautiful eyes"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عيي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَيِي",
-            "gloss": "tired",
-            "type": "verb",
-            "root": "عيي",
-            "count": 2,
-            "ref": "46:33",
-            "pos": 10,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "متع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَتَّعْ",
-            "gloss": "provide for",
-            "type": "verb",
-            "root": "متع",
-            "count": 18,
-            "ref": "2:126",
-            "pos": 22,
-            "alt": [
-              "grant him enjoyment",
-              "make provision for"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "منع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَنَعَ",
-            "gloss": "prevents",
-            "type": "verb",
-            "root": "منع",
-            "count": 12,
-            "ref": "2:114",
-            "pos": 4,
-            "alt": [
-              "has been denied",
-              "prevented"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "نعم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "نَعَم",
-            "gloss": "cattle",
-            "type": "noun",
-            "root": "نعم",
-            "count": 33,
-            "ref": "6:138",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "اعان",
+        "w": "خاله",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَعانَ",
-            "gloss": "assist",
-            "type": "verb",
-            "root": "عون",
-            "count": 2,
-            "ref": "18:95",
+            "lemma": "خالَة",
+            "gloss": "maternal aunts",
+            "type": "noun",
+            "root": "خول",
+            "count": 3,
+            "ref": "4:23",
             "pos": 7,
             "alt": [
-              "helped"
-            ],
-            "form": 4
+              "mother's sisters"
+            ]
           }
         ]
       },
       {
-        "w": "اعمي",
+        "w": "خلال",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَعْمَى",
-            "gloss": "blind",
+            "lemma": "خِلال",
+            "gloss": "any friendship",
             "type": "noun",
-            "root": "عمي",
-            "count": 21,
-            "ref": "2:18",
+            "root": "خلل",
+            "count": 8,
+            "ref": "14:31",
+            "pos": 21,
+            "alt": [
+              "inner most part"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "خليل",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "خَلِيل",
+            "gloss": "friend",
+            "type": "noun",
+            "root": "خلل",
+            "count": 4,
+            "ref": "4:125",
+            "pos": 17
+          }
+        ]
+      },
+      {
+        "w": "خاطيه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "خاطِئَة",
+            "gloss": "sinful",
+            "type": "active participle",
+            "root": "خطأ",
+            "count": 2,
+            "ref": "96:16",
             "pos": 3
           }
         ]
       },
       {
-        "w": "انعم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَنْعَمَ",
-            "gloss": "favored",
-            "type": "verb",
-            "root": "نعم",
-            "count": 17,
-            "ref": "4:69",
-            "pos": 8,
-            "alt": [
-              "allah bestowed favor",
-              "has bestowed favor"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "تمتع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "تَمَتَّعَ",
-            "gloss": "took advantage",
-            "type": "verb",
-            "root": "متع",
-            "count": 11,
-            "ref": "2:196",
-            "pos": 37,
-            "alt": [
-              "enjoy"
-            ],
-            "form": 5
-          }
-        ]
-      },
-      {
-        "w": "عاصم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "عاصِم",
-            "gloss": "protector",
-            "type": "active participle",
-            "root": "عصم",
-            "count": 3,
-            "ref": "10:27",
-            "pos": 14,
-            "alt": [
-              "defender"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "متاع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَتاع",
-            "gloss": "enjoyment",
-            "type": "noun",
-            "root": "متع",
-            "count": 35,
-            "ref": "2:236",
-            "pos": 21,
-            "alt": [
-              "provision",
-              "enjoy"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "معين",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَعِين",
-            "gloss": "flowing spring",
-            "type": "noun",
-            "root": "عين",
-            "count": 4,
-            "ref": "37:45",
-            "pos": 5,
-            "alt": [
-              "flowing stream",
-              "flowing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مناع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَنّاع",
-            "gloss": "forbidder",
-            "type": "adjective",
-            "root": "منع",
-            "count": 2,
-            "ref": "50:25",
-            "pos": 1,
-            "alt": [
-              "preventer"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "نعيم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "نَعِيم",
-            "gloss": "bliss",
-            "type": "noun",
-            "root": "نعم",
-            "count": 17,
-            "ref": "9:21",
-            "pos": 9,
-            "alt": [
-              "pleasure",
-              "delight"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اعتصم",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "اعْتَصَمُ",
-            "gloss": "holds firmly",
-            "type": "verb",
-            "root": "عصم",
-            "count": 5,
-            "ref": "3:101",
-            "pos": 11,
-            "form": 8
-          }
-        ]
-      },
-      {
-        "w": "عصيان",
+        "w": "خطييه",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "عِصْيان",
-            "gloss": "disobedience",
+            "lemma": "خَطِيئَة",
+            "gloss": "fault",
             "type": "noun",
-            "root": "عصي",
-            "count": 1,
-            "ref": "49:7",
-            "pos": 25
-          }
-        ]
-      },
-      {
-        "w": "معصيت",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مَعْصِيَت",
-            "gloss": "disobedience",
-            "type": "noun",
-            "root": "عصي",
-            "count": 2,
-            "ref": "58:8",
-            "pos": 16
+            "root": "خطأ",
+            "count": 10,
+            "ref": "4:112",
+            "pos": 3
           }
         ]
       }
     ],
     "otherFamily": [],
-    "maxScore": 46,
-    "featuredRoot": "عصي"
+    "maxScore": 34,
+    "featuredRoot": "خطأ"
   },
   "generated": true,
   "model": "auto (chain)"

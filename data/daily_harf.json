@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "puzzle": {
-    "word": "كتب",
-    "display": "كَتَبَ",
-    "hint": "He wrote or decreed (verb)",
-    "verseRef": "59:3",
-    "arabicVerse": "وَلَوْلَآ أَن كَتَبَ ٱللَّهُ عَلَيْهِمُ ٱلْجَلَآءَ لَعَذَّبَهُمْ فِى ٱلدُّنْيَا ۖ وَلَهُمْ فِى ٱلْـَٔاخِرَةِ عَذَابُ ٱلنَّارِ",
-    "verse": "59:3 - And if not that Allāh had decreed for them evacuation, He would have punished them in [this] world, and for them in the Hereafter is the punishment of the Fire."
+    "word": "حرام",
+    "display": "حَرَام",
+    "hint": "Unlawful - what the disbelievers falsely declared of Allah's provisions, the opposite of permitted",
+    "verseRef": "10:59",
+    "arabicVerse": "قُلْ أَرَءَيْتُم مَّآ أَنزَلَ ٱللَّهُ لَكُم مِّن رِّزْقٍۢ فَجَعَلْتُم مِّنْهُ حَرَامًۭا وَحَلَـٰلًۭا قُلْ ءَآللَّهُ أَذِنَ لَكُمْ ۖ أَمْ عَلَى ٱللَّهِ تَفْتَرُونَ",
+    "verse": "10:59 - Say, \"Have you seen what Allāh has sent down to you of provision of which you have made [some] lawful and [some] unlawful?\" Say, \"Has Allāh permitted you [to do so], or do you invent [something] about Allāh?\""
   },
   "generated": true,
   "model": "auto (chain)"

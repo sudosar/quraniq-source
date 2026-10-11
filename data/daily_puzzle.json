@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "puzzle": {
     "categories": [
       {
-        "name": "مُكَوِّنَاتُ الْكَوْنِ فِي الْقُرْآنِ",
-        "nameEn": "Astronomical entities in the Quran",
+        "name": "مُفْرَدَاتٌ مِنْ سُورَةِ الْفَجْرِ",
+        "nameEn": "Key terms from Surah Al-Fajr",
         "color": "yellow",
         "items": [
           {
-            "ar": "السَّمَاوَاتِ",
-            "en": "(of) the heavens",
-            "ref": "2:107",
-            "verse": "أَلَمْ تَعْلَمْ أَنَّ ٱللَّهَ لَهُۥ مُلْكُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۗ وَمَا لَكُم مِّن دُونِ ٱللَّهِ مِن وَلِىٍّۢ وَلَا نَصِيرٍ",
-            "verseEn": "Do you not know that to Allāh belongs the dominion of the heavens and the earth and [that] you have not besides Allāh any protector or any helper?"
+            "ar": "إِرَمَ",
+            "en": "Iram",
+            "ref": "89:7",
+            "verse": "إِرَمَ ذَاتِ ٱلْعِمَادِ",
+            "verseEn": "[With] Iram - who had lofty pillars,"
           },
           {
-            "ar": "الْأَرْضِ",
-            "en": "the earth",
-            "ref": "2:284",
-            "verse": "لِّلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ وَإِن تُبْدُوا۟ مَا فِىٓ أَنفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُم بِهِ ٱللَّهُ ۖ فَيَغْفِرُ لِمَن يَشَآءُ وَيُعَذِّبُ مَن يَشَآءُ ۗ وَٱللَّهُ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ",
-            "verseEn": "To Allāh belongs whatever is in the heavens and whatever is in the earth. Whether you show what is within yourselves or conceal it, Allāh will bring you to account for it. Then He will forgive whom He wills and punish whom He wills, and Allāh is over all things competent."
+            "ar": "الْبِلَادِ",
+            "en": "the cities",
+            "ref": "89:8",
+            "verse": "ٱلَّتِى لَمْ يُخْلَقْ مِثْلُهَا فِى ٱلْبِلَـٰدِ",
+            "verseEn": "The likes of whom had never been created in the land?"
           },
           {
-            "ar": "الشَّمْسَ",
-            "en": "the sun",
-            "ref": "6:78",
-            "verse": "فَلَمَّا رَءَا ٱلشَّمْسَ بَازِغَةًۭ قَالَ هَـٰذَا رَبِّى هَـٰذَآ أَكْبَرُ ۖ فَلَمَّآ أَفَلَتْ قَالَ يَـٰقَوْمِ إِنِّى بَرِىٓءٌۭ مِّمَّا تُشْرِكُونَ",
-            "verseEn": "And when he saw the sun rising, he said, \"This is my lord; this is greater.\" But when it set, he said, \"O my people, indeed I am free from what you associate with Allāh."
+            "ar": "وَثَاقَهُ",
+            "en": "(as) His binding",
+            "ref": "89:26",
+            "verse": "وَلَا يُوثِقُ وَثَاقَهُۥٓ أَحَدٌۭ",
+            "verseEn": "And none will bind [as severely] as His binding [of the evildoers]."
           },
           {
-            "ar": "النَّجْمِ",
-            "en": "And by the stars",
-            "ref": "16:16",
-            "verse": "وَعَلَـٰمَـٰتٍۢ ۚ وَبِٱلنَّجْمِ هُمْ يَهْتَدُونَ",
-            "verseEn": "And landmarks. And by the stars they are [also] guided."
+            "ar": "عِبَادِي",
+            "en": "My slaves",
+            "ref": "89:29",
+            "verse": "فَٱدْخُلِى فِى عِبَـٰدِى",
+            "verseEn": "And enter among My [righteous] servants"
           }
         ]
       },
       {
-        "name": "مشاعر سلبية في القرآن",
-        "nameEn": "Negative Emotions in the Quran",
+        "name": "أَلْفَاظُ الطَّرِيقِ فِي الْقُرْآنِ",
+        "nameEn": "Quranic Terms for Path/Way",
         "color": "green",
         "items": [
           {
-            "ar": "تَحْزَنُوا",
-            "en": "you grieve",
-            "ref": "3:153",
-            "verse": "۞ إِذْ تُصْعِدُونَ وَلَا تَلْوُۥنَ عَلَىٰٓ أَحَدٍۢ وَٱلرَّسُولُ يَدْعُوكُمْ فِىٓ أُخْرَىٰكُمْ فَأَثَـٰبَكُمْ غَمًّۢا بِغَمٍّۢ لِّكَيْلَا تَحْزَنُوا۟ عَلَىٰ مَا فَاتَكُمْ وَلَا مَآ أَصَـٰبَكُمْ ۗ وَٱللَّهُ خَبِيرٌۢ بِمَا تَعْمَلُونَ",
-            "verseEn": "[Remember] when you [fled and] climbed [the mountain] without looking aside at anyone while the Messenger was calling you from behind. So Allāh repaid you with distress upon distress so you would not grieve for that which had escaped you [of victory and spoils of war] or [for] that which had befallen you [of injury and death]. And Allāh is [fully] Aware of what you do."
+            "ar": "الصِّرَاطَ",
+            "en": "(to) the Path",
+            "ref": "37:118",
+            "verse": "وَهَدَيْنَـٰهُمَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+            "verseEn": "And We guided them on the straight path."
           },
           {
-            "ar": "خَافُونِ",
-            "en": "but fear Me",
-            "ref": "3:175",
-            "verse": "إِنَّمَا ذَٰلِكُمُ ٱلشَّيْطَـٰنُ يُخَوِّفُ أَوْلِيَآءَهُۥ فَلَا تَخَافُوهُمْ وَخَافُونِ إِن كُنتُم مُّؤْمِنِينَ",
-            "verseEn": "That is only Satan who frightens [you] of his supporters. So fear them not, but fear Me, if you are [indeed] believers."
+            "ar": "سَبِيلِ",
+            "en": "(the) way",
+            "ref": "22:9",
+            "verse": "ثَانِىَ عِطْفِهِۦ لِيُضِلَّ عَن سَبِيلِ ٱللَّهِ ۖ لَهُۥ فِى ٱلدُّنْيَا خِزْىٌۭ ۖ وَنُذِيقُهُۥ يَوْمَ ٱلْقِيَـٰمَةِ عَذَابَ ٱلْحَرِيقِ",
+            "verseEn": "Twisting his neck [in arrogance] to mislead [people] from the way of Allāh. For him in the world is disgrace, and We will make him taste on the Day of Resurrection the punishment of the Burning Fire [while it is said],"
           },
           {
-            "ar": "يَغِيظُ",
-            "en": "that angers",
-            "ref": "9:120",
-            "verse": "مَا كَانَ لِأَهْلِ ٱلْمَدِينَةِ وَمَنْ حَوْلَهُم مِّنَ ٱلْأَعْرَابِ أَن يَتَخَلَّفُوا۟ عَن رَّسُولِ ٱللَّهِ وَلَا يَرْغَبُوا۟ بِأَنفُسِهِمْ عَن نَّفْسِهِۦ ۚ ذَٰلِكَ بِأَنَّهُمْ لَا يُصِيبُهُمْ ظَمَأٌۭ وَلَا نَصَبٌۭ وَلَا مَخْمَصَةٌۭ فِى سَبِيلِ ٱللَّهِ وَلَا يَطَـُٔونَ مَوْطِئًۭا يَغِيظُ ٱلْكُفَّارَ وَلَا يَنَالُونَ مِنْ عَدُوٍّۢ نَّيْلًا إِلَّا كُتِبَ لَهُم بِهِۦ عَمَلٌۭ صَـٰلِحٌ ۚ إِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ",
-            "verseEn": "It was not [proper] for the people of Madīnah and those surrounding them of the bedouins that they remain behind after [the departure of] the Messenger of Allāh or that they prefer themselves over his self. That is because they are not afflicted by thirst or fatigue or hunger in the cause of Allāh, nor do they tread on any ground that enrages the disbelievers, nor do they inflict upon an enemy any infliction but that it is registered for them as a righteous deed. Indeed, Allāh does not allow to be lost the reward of the doers of good."
+            "ar": "طَرِيقٍ",
+            "en": "a Path",
+            "ref": "46:30",
+            "verse": "قَالُوا۟ يَـٰقَوْمَنَآ إِنَّا سَمِعْنَا كِتَـٰبًا أُنزِلَ مِنۢ بَعْدِ مُوسَىٰ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ يَهْدِىٓ إِلَى ٱلْحَقِّ وَإِلَىٰ طَرِيقٍۢ مُّسْتَقِيمٍۢ",
+            "verseEn": "They said, \"O our people, indeed we have heard a [recited] Book revealed after Moses confirming what was before it which guides to the truth and to a straight path."
           },
           {
-            "ar": "حَسَرَاتٍ",
-            "en": "(as) regrets",
-            "ref": "2:167",
-            "verse": "وَقَالَ ٱلَّذِينَ ٱتَّبَعُوا۟ لَوْ أَنَّ لَنَا كَرَّةًۭ فَنَتَبَرَّأَ مِنْهُمْ كَمَا تَبَرَّءُوا۟ مِنَّا ۗ كَذَٰلِكَ يُرِيهِمُ ٱللَّهُ أَعْمَـٰلَهُمْ حَسَرَٰتٍ عَلَيْهِمْ ۖ وَمَا هُم بِخَـٰرِجِينَ مِنَ ٱلنَّارِ",
-            "verseEn": "Those who followed will say, \"If only we had another turn [at worldly life] so we could disassociate ourselves from them as they have disassociated themselves from us.\" Thus will Allāh show them their deeds as regrets upon them. And they are never to emerge from the Fire."
+            "ar": "سُنَّةَ",
+            "en": "(The established) way",
+            "ref": "48:23",
+            "verse": "سُنَّةَ ٱللَّهِ ٱلَّتِى قَدْ خَلَتْ مِن قَبْلُ ۖ وَلَن تَجِدَ لِسُنَّةِ ٱللَّهِ تَبْدِيلًۭا",
+            "verseEn": "[This is] the established way of Allāh which has occurred before. And never will you find in the way of Allāh any change."
           }
         ]
       },
       {
-        "name": "أَدَوَاتُ عَذَابِ الْمُكَذِّبِينَ",
-        "nameEn": "Specific Instruments of Punishment for the Deniers in the Hereafter",
+        "name": "مُصْطَلَحَاتٌ مِنْ قِصَّةِ مُوسَىٰ وَالْخَضِرِ فِي سُورَةِ الْكَهْفِ",
+        "nameEn": "Key Terms from the Story of Musa and Al-Khidr in Surah Al-Kahf",
         "color": "blue",
         "items": [
           {
-            "ar": "أَنكَالًا",
-            "en": "(are) shackles",
-            "ref": "73:12",
-            "verse": "إِنَّ لَدَيْنَآ أَنكَالًۭا وَجَحِيمًۭا",
-            "verseEn": "Indeed, with Us [for them] are shackles and burning fire."
+            "ar": "نَبْغِ",
+            "en": "seeking",
+            "ref": "18:64",
+            "verse": "قَالَ ذَٰلِكَ مَا كُنَّا نَبْغِ ۚ فَٱرْتَدَّا عَلَىٰٓ ءَاثَارِهِمَا قَصَصًۭا",
+            "verseEn": "[Moses] said, \"That is what we were seeking.\" So they returned, following their footprints."
           },
           {
-            "ar": "السَّلَاسِلُ",
-            "en": "and the chains",
-            "ref": "40:71",
-            "verse": "إِذِ ٱلْأَغْلَـٰلُ فِىٓ أَعْنَـٰقِهِمْ وَٱلسَّلَـٰسِلُ يُسْحَبُونَ",
-            "verseEn": "When the shackles are around their necks and the chains; they will be dragged"
+            "ar": "رَحْمَةً",
+            "en": "mercy",
+            "ref": "18:65",
+            "verse": "فَوَجَدَا عَبْدًۭا مِّنْ عِبَادِنَآ ءَاتَيْنَـٰهُ رَحْمَةًۭ مِّنْ عِندِنَا وَعَلَّمْنَـٰهُ مِن لَّدُنَّا عِلْمًۭا",
+            "verseEn": "And they found a servant from among Our servants [i.e., al-Khiḍr] to whom We had given mercy from Us and had taught him from Us a [certain] knowledge."
           },
           {
-            "ar": "غُصَّةٍ",
-            "en": "chokes",
-            "ref": "73:13",
-            "verse": "وَطَعَامًۭا ذَا غُصَّةٍۢ وَعَذَابًا أَلِيمًۭا",
-            "verseEn": "And food that chokes and a painful punishment -"
+            "ar": "ذِكْرًا",
+            "en": "a mention",
+            "ref": "18:70",
+            "verse": "قَالَ فَإِنِ ٱتَّبَعْتَنِى فَلَا تَسْـَٔلْنِى عَن شَىْءٍ حَتَّىٰٓ أُحْدِثَ لَكَ مِنْهُ ذِكْرًۭا",
+            "verseEn": "He said, \"Then if you follow me, do not ask me about anything until I make to you about it mention [i.e., explanation].\""
           },
           {
-            "ar": "الْجَحِيمَ",
-            "en": "(into) the Hellfire",
-            "ref": "69:31",
-            "verse": "ثُمَّ ٱلْجَحِيمَ صَلُّوهُ",
-            "verseEn": "Then into Hellfire drive him."
+            "ar": "صَبْرًا",
+            "en": "(to have) patience",
+            "ref": "18:72",
+            "verse": "قَالَ أَلَمْ أَقُلْ إِنَّكَ لَن تَسْتَطِيعَ مَعِىَ صَبْرًۭا",
+            "verseEn": "[Al-Khiḍr] said, \"Did I not say that with me you would never be able to have patience?\""
           }
         ]
       },
       {
-        "name": "أَلْفَاظُ الْجَزَاءِ فِي الْقُرْآنِ",
-        "nameEn": "Terms for Reward in the Quran",
+        "name": "مَا لَا يُغْنِي يَوْمَ الْقِيَامَةِ",
+        "nameEn": "Things that will not avail on the Day of Judgment",
         "color": "purple",
         "items": [
           {
-            "ar": "أَجْرٌ",
-            "en": "(is) a reward",
-            "ref": "84:25",
-            "verse": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۭ",
-            "verseEn": "Except for those who believe and do righteous deeds. For them is a reward uninterrupted."
+            "ar": "شَفَاعَةٌ",
+            "en": "any intercession",
+            "ref": "2:48",
+            "verse": "وَٱتَّقُوا۟ يَوْمًۭا لَّا تَجْزِى نَفْسٌ عَن نَّفْسٍۢ شَيْـًۭٔا وَلَا يُقْبَلُ مِنْهَا شَفَـٰعَةٌۭ وَلَا يُؤْخَذُ مِنْهَا عَدْلٌۭ وَلَا هُمْ يُنصَرُونَ",
+            "verseEn": "And fear a Day when no soul will suffice for another soul at all, nor will intercession be accepted from it, nor will compensation be taken from it, nor will they be aided."
           },
           {
-            "ar": "جَزَاءُ",
-            "en": "(is the) reward",
-            "ref": "5:85",
-            "verse": "فَأَثَـٰبَهُمُ ٱللَّهُ بِمَا قَالُوا۟ جَنَّـٰتٍۢ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَا ۚ وَذَٰلِكَ جَزَآءُ ٱلْمُحْسِنِينَ",
-            "verseEn": "So Allāh rewarded them for what they said with gardens [in Paradise] beneath which rivers flow, wherein they abide eternally. And that is the reward of doers of good."
+            "ar": "مَوْلًى",
+            "en": "a relation",
+            "ref": "44:41",
+            "verse": "يَوْمَ لَا يُغْنِى مَوْلًى عَن مَّوْلًۭى شَيْـًۭٔا وَلَا هُمْ يُنصَرُونَ",
+            "verseEn": "The Day when no relation will avail a relation at all, nor will they be helped -"
           },
           {
-            "ar": "الْحَسَنَةِ",
-            "en": "with a good (deed)",
-            "ref": "28:84",
-            "verse": "مَن جَآءَ بِٱلْحَسَنَةِ فَلَهُۥ خَيْرٌۭ مِّنْهَا ۖ وَمَن جَآءَ بِٱلسَّيِّئَةِ فَلَا يُجْزَى ٱلَّذِينَ عَمِلُوا۟ ٱلسَّيِّـَٔاتِ إِلَّا مَا كَانُوا۟ يَعْمَلُونَ",
-            "verseEn": "Whoever comes [on the Day of Judgement] with a good deed will have better than it; and whoever comes with an evil deed - then those who did evil deeds will not be recompensed except [as much as] what they used to do."
+            "ar": "أَنْسَابَ",
+            "en": "(there) will be relationship",
+            "ref": "23:101",
+            "verse": "فَإِذَا نُفِخَ فِى ٱلصُّورِ فَلَآ أَنسَابَ بَيْنَهُمْ يَوْمَئِذٍۢ وَلَا يَتَسَآءَلُونَ",
+            "verseEn": "So when the Horn is blown, no relationship will there be among them that Day, nor will they ask about one another."
           },
           {
-            "ar": "ثَوَابًا",
-            "en": "a reward",
-            "ref": "3:195",
-            "verse": "فَٱسْتَجَابَ لَهُمْ رَبُّهُمْ أَنِّى لَآ أُضِيعُ عَمَلَ عَـٰمِلٍۢ مِّنكُم مِّن ذَكَرٍ أَوْ أُنثَىٰ ۖ بَعْضُكُم مِّنۢ بَعْضٍۢ ۖ فَٱلَّذِينَ هَاجَرُوا۟ وَأُخْرِجُوا۟ مِن دِيَـٰرِهِمْ وَأُوذُوا۟ فِى سَبِيلِى وَقَـٰتَلُوا۟ وَقُتِلُوا۟ لَأُكَفِّرَنَّ عَنْهُمْ سَيِّـَٔاتِهِمْ وَلَأُدْخِلَنَّهُمْ جَنَّـٰتٍۢ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ثَوَابًۭا مِّنْ عِندِ ٱللَّهِ ۗ وَٱللَّهُ عِندَهُۥ حُسْنُ ٱلثَّوَابِ",
-            "verseEn": "And their Lord responded to them, \"Never will I allow to be lost the work of [any] worker among you, whether male or female; you are of one another. So those who emigrated or were evicted from their homes or were harmed in My cause or fought or were killed - I will surely remove from them their misdeeds, and I will surely admit them to gardens beneath which rivers flow as reward from Allāh, and Allāh has with Him the best reward.\""
+            "ar": "نَاصِرِينَ",
+            "en": "helpers",
+            "ref": "3:22",
+            "verse": "أُو۟لَـٰٓئِكَ ٱلَّذِينَ حَبِطَتْ أَعْمَـٰلُهُمْ فِى ٱلدُّنْيَا وَٱلْـَٔاخِرَةِ وَمَا لَهُم مِّن نَّـٰصِرِينَ",
+            "verseEn": "They are the ones whose deeds have become worthless in this world and the Hereafter, and for them there will be no helpers."
           }
         ]
       }

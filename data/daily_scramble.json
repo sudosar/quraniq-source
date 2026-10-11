@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "puzzle": {
-    "verseRef": "21:89",
-    "reference": "Surah Al-Anbiya (21:89)",
+    "verseRef": "84:6",
+    "reference": "Surah Al-Inshiqaq (84:6)",
     "segments": [
-      "وَزَكَرِيَّا إِذْ نَادَىٰ",
-      "رَبَّهُ",
-      "رَبِّ لَا تَذَرْنِي",
-      "فَرْدًا",
-      "وَأَنتَ خَيْرُ الْوَارِثِينَ"
+      "يا أيها الإنسان",
+      "إنك كادح",
+      "إلى ربك",
+      "كدحا",
+      "فملاقيه"
     ],
     "translations": [
-      "And Zakariya when he called",
-      "(to) his Lord My Lord",
-      "(Do) not leave me",
-      "alone while You",
-      "(are) [the] Best (of) the inheritors"
+      "O mankind",
+      "Indeed, you (are) laboring",
+      "to your Lord",
+      "(with) exertion",
+      "and you (will) meet Him"
     ],
-    "hint": "A heartfelt supplication of Prophet Zakariya (AS) praying to Allah for a child in his old age.",
-    "arabic": "وَزَكَرِيَّآ إِذْ نَادَىٰ رَبَّهُۥ رَبِّ لَا تَذَرْنِى فَرْدًۭا وَأَنتَ خَيْرُ ٱلْوَٰرِثِينَ",
+    "hint": "A powerful reminder from Surah Al-Inshiqaq about the human journey and the inevitable meeting with our Lord — a call to self-accountability and purposeful striving.",
+    "arabic": "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًۭا فَمُلَـٰقِيهِ",
     "words": [
-      "وَزَكَرِيَّآ إِذْ نَادَىٰ",
-      "رَبَّهُۥ رَبِّ",
-      "لَا تَذَرْنِى",
-      "فَرْدًۭا وَأَنتَ",
-      "خَيْرُ ٱلْوَٰرِثِينَ"
+      "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ",
+      "إِنَّكَ كَادِحٌ",
+      "إِلَىٰ رَبِّكَ",
+      "كَدْحًۭا",
+      "فَمُلَـٰقِيهِ"
     ],
-    "verseEn": "And [mention] Zechariah, when he called to his Lord, \"My Lord, do not leave me alone [with no heir], while You are the best of inheritors.\""
+    "verseEn": "O mankind, indeed you are laboring toward your Lord with [great] exertion and will meet it."
   },
   "generated": true,
   "model": "auto (chain)"
