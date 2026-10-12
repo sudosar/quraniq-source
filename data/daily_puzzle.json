@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-11",
+  "date": "2026-10-12",
   "puzzle": {
     "categories": [
       {
-        "name": "مُفْرَدَاتٌ مِنْ سُورَةِ الْفَجْرِ",
-        "nameEn": "Key terms from Surah Al-Fajr",
+        "name": "أَلْفَاظُ الْعِبَادَةِ وَالثَّنَاءِ",
+        "nameEn": "Acts of worship and praise in the Quran",
         "color": "yellow",
         "items": [
           {
-            "ar": "إِرَمَ",
-            "en": "Iram",
-            "ref": "89:7",
-            "verse": "إِرَمَ ذَاتِ ٱلْعِمَادِ",
-            "verseEn": "[With] Iram - who had lofty pillars,"
+            "ar": "الصَّلَاةَ",
+            "en": "the prayer",
+            "ref": "6:72",
+            "verse": "وَأَنْ أَقِيمُوا۟ ٱلصَّلَوٰةَ وَٱتَّقُوهُ ۚ وَهُوَ ٱلَّذِىٓ إِلَيْهِ تُحْشَرُونَ",
+            "verseEn": "And to establish prayer and fear Him.\" And it is He to whom you will be gathered."
           },
           {
-            "ar": "الْبِلَادِ",
-            "en": "the cities",
-            "ref": "89:8",
-            "verse": "ٱلَّتِى لَمْ يُخْلَقْ مِثْلُهَا فِى ٱلْبِلَـٰدِ",
-            "verseEn": "The likes of whom had never been created in the land?"
+            "ar": "الزَّكَاةَ",
+            "en": "zakah",
+            "ref": "22:41",
+            "verse": "ٱلَّذِينَ إِن مَّكَّنَّـٰهُمْ فِى ٱلْأَرْضِ أَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ وَأَمَرُوا۟ بِٱلْمَعْرُوفِ وَنَهَوْا۟ عَنِ ٱلْمُنكَرِ ۗ وَلِلَّهِ عَـٰقِبَةُ ٱلْأُمُورِ",
+            "verseEn": "[And they are] those who, if We give them authority in the land, establish prayer and give zakāh and enjoin what is right and forbid what is wrong. And to Allāh belongs the outcome of [all] matters."
           },
           {
-            "ar": "وَثَاقَهُ",
-            "en": "(as) His binding",
-            "ref": "89:26",
-            "verse": "وَلَا يُوثِقُ وَثَاقَهُۥٓ أَحَدٌۭ",
-            "verseEn": "And none will bind [as severely] as His binding [of the evildoers]."
+            "ar": "سَبِّحْ",
+            "en": "So glorify",
+            "ref": "15:98",
+            "verse": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَكُن مِّنَ ٱلسَّـٰجِدِينَ",
+            "verseEn": "So exalt [Allāh] with praise of your Lord and be of those who prostrate [to Him]."
           },
           {
-            "ar": "عِبَادِي",
-            "en": "My slaves",
-            "ref": "89:29",
-            "verse": "فَٱدْخُلِى فِى عِبَـٰدِى",
-            "verseEn": "And enter among My [righteous] servants"
+            "ar": "الْحَمْدُ",
+            "en": "And all praise",
+            "ref": "37:182",
+            "verse": "وَٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+            "verseEn": "And praise to Allāh, Lord of the worlds."
           }
         ]
       },
       {
-        "name": "أَلْفَاظُ الطَّرِيقِ فِي الْقُرْآنِ",
-        "nameEn": "Quranic Terms for Path/Way",
+        "name": "مُفْرَدَاتٌ مِنْ سُورَةِ الْحُجُرَاتِ",
+        "nameEn": "Key terms from Sūrat al-Ḥujurāt",
         "color": "green",
         "items": [
           {
-            "ar": "الصِّرَاطَ",
-            "en": "(to) the Path",
-            "ref": "37:118",
-            "verse": "وَهَدَيْنَـٰهُمَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
-            "verseEn": "And We guided them on the straight path."
+            "ar": "فَضْلًا",
+            "en": "A Bounty",
+            "ref": "49:8",
+            "verse": "فَضْلًۭا مِّنَ ٱللَّهِ وَنِعْمَةًۭ ۚ وَٱللَّهُ عَلِيمٌ حَكِيمٌۭ",
+            "verseEn": "[It is] as bounty from Allāh and favor. And Allāh is Knowing and Wise."
           },
           {
-            "ar": "سَبِيلِ",
-            "en": "(the) way",
-            "ref": "22:9",
-            "verse": "ثَانِىَ عِطْفِهِۦ لِيُضِلَّ عَن سَبِيلِ ٱللَّهِ ۖ لَهُۥ فِى ٱلدُّنْيَا خِزْىٌۭ ۖ وَنُذِيقُهُۥ يَوْمَ ٱلْقِيَـٰمَةِ عَذَابَ ٱلْحَرِيقِ",
-            "verseEn": "Twisting his neck [in arrogance] to mislead [people] from the way of Allāh. For him in the world is disgrace, and We will make him taste on the Day of Resurrection the punishment of the Burning Fire [while it is said],"
+            "ar": "الْعَدْلِ",
+            "en": "with justice",
+            "ref": "49:9",
+            "verse": "وَإِن طَآئِفَتَانِ مِنَ ٱلْمُؤْمِنِينَ ٱقْتَتَلُوا۟ فَأَصْلِحُوا۟ بَيْنَهُمَا ۖ فَإِنۢ بَغَتْ إِحْدَىٰهُمَا عَلَى ٱلْأُخْرَىٰ فَقَـٰتِلُوا۟ ٱلَّتِى تَبْغِى حَتَّىٰ تَفِىٓءَ إِلَىٰٓ أَمْرِ ٱللَّهِ ۚ فَإِن فَآءَتْ فَأَصْلِحُوا۟ بَيْنَهُمَا بِٱلْعَدْلِ وَأَقْسِطُوٓا۟ ۖ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُقْسِطِينَ",
+            "verseEn": "And if two factions among the believers should fight, then make settlement between the two. But if one of them oppresses the other, then fight against the one that oppresses until it returns to the ordinance of Allāh. And if it returns, then make settlement between them in justice and act justly. Indeed, Allāh loves those who act justly."
           },
           {
-            "ar": "طَرِيقٍ",
-            "en": "a Path",
-            "ref": "46:30",
-            "verse": "قَالُوا۟ يَـٰقَوْمَنَآ إِنَّا سَمِعْنَا كِتَـٰبًا أُنزِلَ مِنۢ بَعْدِ مُوسَىٰ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ يَهْدِىٓ إِلَى ٱلْحَقِّ وَإِلَىٰ طَرِيقٍۢ مُّسْتَقِيمٍۢ",
-            "verseEn": "They said, \"O our people, indeed we have heard a [recited] Book revealed after Moses confirming what was before it which guides to the truth and to a straight path."
+            "ar": "السَّمَاوَاتِ",
+            "en": "the heavens",
+            "ref": "49:16",
+            "verse": "قُلْ أَتُعَلِّمُونَ ٱللَّهَ بِدِينِكُمْ وَٱللَّهُ يَعْلَمُ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۚ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌۭ",
+            "verseEn": "Say, \"Would you acquaint Allāh with your religion while Allāh knows whatever is in the heavens and whatever is on the earth, and Allāh is Knowing of all things?\""
           },
           {
-            "ar": "سُنَّةَ",
-            "en": "(The established) way",
-            "ref": "48:23",
-            "verse": "سُنَّةَ ٱللَّهِ ٱلَّتِى قَدْ خَلَتْ مِن قَبْلُ ۖ وَلَن تَجِدَ لِسُنَّةِ ٱللَّهِ تَبْدِيلًۭا",
-            "verseEn": "[This is] the established way of Allāh which has occurred before. And never will you find in the way of Allāh any change."
+            "ar": "غَيْبَ",
+            "en": "(the) unseen",
+            "ref": "49:18",
+            "verse": "إِنَّ ٱللَّهَ يَعْلَمُ غَيْبَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَٱللَّهُ بَصِيرٌۢ بِمَا تَعْمَلُونَ",
+            "verseEn": "Indeed, Allāh knows the unseen [aspects] of the heavens and the earth. And Allāh is Seeing of what you do."
           }
         ]
       },
       {
-        "name": "مُصْطَلَحَاتٌ مِنْ قِصَّةِ مُوسَىٰ وَالْخَضِرِ فِي سُورَةِ الْكَهْفِ",
-        "nameEn": "Key Terms from the Story of Musa and Al-Khidr in Surah Al-Kahf",
+        "name": "صِفَاتُ الْمُؤْمِنِينَ فِي سُورَتَيِ الْمُؤْمِنُونَ وَالْمَعَارِجِ",
+        "nameEn": "Characteristics of the successful believers in Surah Al-Mu'minun and Al-Ma'arij",
         "color": "blue",
         "items": [
           {
-            "ar": "نَبْغِ",
-            "en": "seeking",
-            "ref": "18:64",
-            "verse": "قَالَ ذَٰلِكَ مَا كُنَّا نَبْغِ ۚ فَٱرْتَدَّا عَلَىٰٓ ءَاثَارِهِمَا قَصَصًۭا",
-            "verseEn": "[Moses] said, \"That is what we were seeking.\" So they returned, following their footprints."
+            "ar": "أَيْمَانُهُمْ",
+            "en": "their right hands",
+            "ref": "23:6",
+            "verse": "إِلَّا عَلَىٰٓ أَزْوَٰجِهِمْ أَوْ مَا مَلَكَتْ أَيْمَـٰنُهُمْ فَإِنَّهُمْ غَيْرُ مَلُومِينَ",
+            "verseEn": "Except from their wives or those their right hands possess, for indeed, they will not be blamed -"
           },
           {
-            "ar": "رَحْمَةً",
-            "en": "mercy",
-            "ref": "18:65",
-            "verse": "فَوَجَدَا عَبْدًۭا مِّنْ عِبَادِنَآ ءَاتَيْنَـٰهُ رَحْمَةًۭ مِّنْ عِندِنَا وَعَلَّمْنَـٰهُ مِن لَّدُنَّا عِلْمًۭا",
-            "verseEn": "And they found a servant from among Our servants [i.e., al-Khiḍr] to whom We had given mercy from Us and had taught him from Us a [certain] knowledge."
+            "ar": "الْعَادُونَ",
+            "en": "(are) the transgressors",
+            "ref": "23:7",
+            "verse": "فَمَنِ ٱبْتَغَىٰ وَرَآءَ ذَٰلِكَ فَأُو۟لَـٰٓئِكَ هُمُ ٱلْعَادُونَ",
+            "verseEn": "But whoever seeks beyond that, then those are the transgressors -"
           },
           {
-            "ar": "ذِكْرًا",
-            "en": "a mention",
-            "ref": "18:70",
-            "verse": "قَالَ فَإِنِ ٱتَّبَعْتَنِى فَلَا تَسْـَٔلْنِى عَن شَىْءٍ حَتَّىٰٓ أُحْدِثَ لَكَ مِنْهُ ذِكْرًۭا",
-            "verseEn": "He said, \"Then if you follow me, do not ask me about anything until I make to you about it mention [i.e., explanation].\""
+            "ar": "الْوَارِثُونَ",
+            "en": "(are) the inheritors",
+            "ref": "23:10",
+            "verse": "أُو۟لَـٰٓئِكَ هُمُ ٱلْوَٰرِثُونَ",
+            "verseEn": "Those are the inheritors"
           },
           {
-            "ar": "صَبْرًا",
-            "en": "(to have) patience",
-            "ref": "18:72",
-            "verse": "قَالَ أَلَمْ أَقُلْ إِنَّكَ لَن تَسْتَطِيعَ مَعِىَ صَبْرًۭا",
-            "verseEn": "[Al-Khiḍr] said, \"Did I not say that with me you would never be able to have patience?\""
+            "ar": "عَهْدِهِمْ",
+            "en": "and their promise",
+            "ref": "70:32",
+            "verse": "وَٱلَّذِينَ هُمْ لِأَمَـٰنَـٰتِهِمْ وَعَهْدِهِمْ رَٰعُونَ",
+            "verseEn": "And those who are to their trusts and promises attentive."
           }
         ]
       },
       {
-        "name": "مَا لَا يُغْنِي يَوْمَ الْقِيَامَةِ",
-        "nameEn": "Things that will not avail on the Day of Judgment",
+        "name": "مَصَادِرُ عَلَى وَزْنِ تَفْعِيلٍ فِي الْقُرْآنِ",
+        "nameEn": "Quranic verbal nouns on the pattern taf'īl",
         "color": "purple",
         "items": [
           {
-            "ar": "شَفَاعَةٌ",
-            "en": "any intercession",
-            "ref": "2:48",
-            "verse": "وَٱتَّقُوا۟ يَوْمًۭا لَّا تَجْزِى نَفْسٌ عَن نَّفْسٍۢ شَيْـًۭٔا وَلَا يُقْبَلُ مِنْهَا شَفَـٰعَةٌۭ وَلَا يُؤْخَذُ مِنْهَا عَدْلٌۭ وَلَا هُمْ يُنصَرُونَ",
-            "verseEn": "And fear a Day when no soul will suffice for another soul at all, nor will intercession be accepted from it, nor will compensation be taken from it, nor will they be aided."
+            "ar": "تَقْدِيرًا",
+            "en": "(with) determination",
+            "ref": "25:2",
+            "verse": "ٱلَّذِى لَهُۥ مُلْكُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَلَمْ يَتَّخِذْ وَلَدًۭا وَلَمْ يَكُن لَّهُۥ شَرِيكٌۭ فِى ٱلْمُلْكِ وَخَلَقَ كُلَّ شَىْءٍۢ فَقَدَّرَهُۥ تَقْدِيرًۭا",
+            "verseEn": "He to whom belongs the dominion of the heavens and the earth and who has not taken a son and has not had a partner in dominion and has created each thing and determined it with [precise] determination."
           },
           {
-            "ar": "مَوْلًى",
-            "en": "a relation",
-            "ref": "44:41",
-            "verse": "يَوْمَ لَا يُغْنِى مَوْلًى عَن مَّوْلًۭى شَيْـًۭٔا وَلَا هُمْ يُنصَرُونَ",
-            "verseEn": "The Day when no relation will avail a relation at all, nor will they be helped -"
+            "ar": "تَنْزِيلًا",
+            "en": "descending",
+            "ref": "25:25",
+            "verse": "وَيَوْمَ تَشَقَّقُ ٱلسَّمَآءُ بِٱلْغَمَـٰمِ وَنُزِّلَ ٱلْمَلَـٰٓئِكَةُ تَنزِيلًا",
+            "verseEn": "And [mention] the Day when the heaven will split open with [emerging] clouds, and the angels will be sent down in successive descent."
           },
           {
-            "ar": "أَنْسَابَ",
-            "en": "(there) will be relationship",
-            "ref": "23:101",
-            "verse": "فَإِذَا نُفِخَ فِى ٱلصُّورِ فَلَآ أَنسَابَ بَيْنَهُمْ يَوْمَئِذٍۢ وَلَا يَتَسَآءَلُونَ",
-            "verseEn": "So when the Horn is blown, no relationship will there be among them that Day, nor will they ask about one another."
+            "ar": "تَفْسِيرًا",
+            "en": "explanation",
+            "ref": "25:33",
+            "verse": "وَلَا يَأْتُونَكَ بِمَثَلٍ إِلَّا جِئْنَـٰكَ بِٱلْحَقِّ وَأَحْسَنَ تَفْسِيرًا",
+            "verseEn": "And they do not come to you with an example [i.e., argument] except that We bring you the truth and the best explanation."
           },
           {
-            "ar": "نَاصِرِينَ",
-            "en": "helpers",
-            "ref": "3:22",
-            "verse": "أُو۟لَـٰٓئِكَ ٱلَّذِينَ حَبِطَتْ أَعْمَـٰلُهُمْ فِى ٱلدُّنْيَا وَٱلْـَٔاخِرَةِ وَمَا لَهُم مِّن نَّـٰصِرِينَ",
-            "verseEn": "They are the ones whose deeds have become worthless in this world and the Hereafter, and for them there will be no helpers."
+            "ar": "تَوْفِيقًا",
+            "en": "and reconciliation",
+            "ref": "4:62",
+            "verse": "فَكَيْفَ إِذَآ أَصَـٰبَتْهُم مُّصِيبَةٌۢ بِمَا قَدَّمَتْ أَيْدِيهِمْ ثُمَّ جَآءُوكَ يَحْلِفُونَ بِٱللَّهِ إِنْ أَرَدْنَآ إِلَّآ إِحْسَـٰنًۭا وَتَوْفِيقًا",
+            "verseEn": "So how [will it be] when disaster strikes them because of what their hands have put forth and then they come to you swearing by Allāh, \"We intended nothing but good conduct and accommodation.\""
           }
         ]
       }

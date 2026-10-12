@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-11",
+  "date": "2026-10-12",
   "puzzle": {
-    "word": "حرام",
-    "display": "حَرَام",
-    "hint": "Unlawful - what the disbelievers falsely declared of Allah's provisions, the opposite of permitted",
-    "verseRef": "10:59",
-    "arabicVerse": "قُلْ أَرَءَيْتُم مَّآ أَنزَلَ ٱللَّهُ لَكُم مِّن رِّزْقٍۢ فَجَعَلْتُم مِّنْهُ حَرَامًۭا وَحَلَـٰلًۭا قُلْ ءَآللَّهُ أَذِنَ لَكُمْ ۖ أَمْ عَلَى ٱللَّهِ تَفْتَرُونَ",
-    "verse": "10:59 - Say, \"Have you seen what Allāh has sent down to you of provision of which you have made [some] lawful and [some] unlawful?\" Say, \"Has Allāh permitted you [to do so], or do you invent [something] about Allāh?\""
+    "word": "وزر",
+    "display": "وِزْرَ",
+    "hint": "A heavy accountability — no soul carries another's on the Day of Judgment",
+    "verseRef": "53:38",
+    "arabicVerse": "أَلَّا تَزِرُ وَازِرَةٌۭ وِزْرَ أُخْرَىٰ",
+    "verse": "53:38 - That no bearer of burdens will bear the burden of another"
   },
   "generated": true,
   "model": "auto (chain)"

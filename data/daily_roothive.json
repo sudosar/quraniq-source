@@ -1,24 +1,45 @@
 {
-  "date": "2026-10-11",
+  "date": "2026-10-12",
   "puzzle": {
     "center": "خ",
     "outer": [
-      "ء",
-      "ي",
-      "ط",
-      "ل",
       "ه",
-      "ا"
+      "ل",
+      "ا",
+      "ي",
+      "ن",
+      "ف"
     ],
     "root": {
-      "letters": "خطا",
-      "display": "خ ط ا",
-      "translit": "kh-ṭ-ʾ",
-      "meaning": "This root centers on the idea of error or going astray, from a small slip to a deliberate sin. Related words simply shade this same meaning, adding ideas like the doer, the act, or fault itself.",
-      "occurrences": 22,
-      "lemmaCount": 6
+      "letters": "خفي",
+      "display": "خ ف ي",
+      "translit": "kh-f-y",
+      "meaning": "The root carries the core idea of concealment, something kept out of sight. Its derived words show different ways hiding happens, from a thing being hidden to actively concealing or doing something in secret.",
+      "occurrences": 34,
+      "lemmaCount": 8
     },
     "words": [
+      {
+        "w": "خاف",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "خافَ",
+            "gloss": "fear",
+            "type": "verb",
+            "root": "خوف",
+            "count": 83,
+            "ref": "2:182",
+            "pos": 2,
+            "alt": [
+              "fears",
+              "could i fear"
+            ],
+            "form": 1
+          }
+        ]
+      },
       {
         "w": "خال",
         "family": false,
@@ -36,34 +57,63 @@
         ]
       },
       {
-        "w": "خطء",
-        "family": true,
-        "points": 3,
+        "w": "خان",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "خِطْء",
-            "gloss": "sin",
-            "type": "noun",
-            "root": "خطأ",
-            "count": 1,
-            "ref": "17:31",
-            "pos": 12
+            "lemma": "خانُ",
+            "gloss": "betray",
+            "type": "verb",
+            "root": "خون",
+            "count": 5,
+            "ref": "8:27",
+            "pos": 5,
+            "alt": [
+              "have betrayed",
+              "both betrayed"
+            ],
+            "form": 1
           }
         ]
       },
       {
-        "w": "خطا",
+        "w": "خفف",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "خَفَّفَ",
+            "gloss": "be lightened",
+            "type": "verb",
+            "root": "خفف",
+            "count": 8,
+            "ref": "2:86",
+            "pos": 8,
+            "alt": [
+              "lighten",
+              "has lightened"
+            ],
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "خفي",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "خَطَأ",
-            "gloss": "mistake",
-            "type": "noun",
-            "root": "خطأ",
+            "lemma": "خَفِيّ",
+            "gloss": "stealthy",
+            "type": "adjective",
+            "root": "خفي",
             "count": 2,
-            "ref": "4:92",
-            "pos": 8
+            "ref": "19:3",
+            "pos": 5,
+            "alt": [
+              "secret"
+            ]
           }
         ]
       },
@@ -89,18 +139,32 @@
         ]
       },
       {
-        "w": "خيط",
+        "w": "خلف",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "خَيْط",
-            "gloss": "thread",
+            "lemma": "خَلْف",
+            "gloss": "successors",
             "type": "noun",
-            "root": "خيط",
-            "count": 2,
-            "ref": "2:187",
-            "pos": 36
+            "root": "خلف",
+            "count": 22,
+            "ref": "7:169",
+            "pos": 4
+          },
+          {
+            "lemma": "خَلَفَ",
+            "gloss": "succeeded",
+            "type": "verb",
+            "root": "خلف",
+            "count": 5,
+            "ref": "7:142",
+            "pos": 16,
+            "alt": [
+              "take my place",
+              "have done in my place"
+            ],
+            "form": 1
           }
         ]
       },
@@ -121,38 +185,69 @@
         ]
       },
       {
-        "w": "اخطا",
-        "family": true,
-        "points": 4,
+        "w": "نخل",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَخْطَأْ",
-            "gloss": "err",
-            "type": "verb",
-            "root": "خطأ",
-            "count": 2,
-            "ref": "2:286",
-            "pos": 19,
-            "alt": [
-              "made a mistake"
-            ],
-            "form": 4
+            "lemma": "نَخْل",
+            "gloss": "date-palms",
+            "type": "noun",
+            "root": "نخل",
+            "count": 11,
+            "ref": "54:20",
+            "pos": 5
           }
         ]
       },
       {
-        "w": "خاطي",
+        "w": "اخفي",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "خاطِئ",
-            "gloss": "sinners",
-            "type": "active participle",
-            "root": "خطأ",
-            "count": 5,
-            "ref": "12:97",
-            "pos": 8
+            "lemma": "أُخْفِيَ",
+            "gloss": "conceal",
+            "type": "verb",
+            "root": "خفي",
+            "count": 18,
+            "ref": "3:118",
+            "pos": 21,
+            "alt": [
+              "conceals",
+              "is hidden"
+            ],
+            "form": 4
+          },
+          {
+            "lemma": "أَخْفَى",
+            "gloss": "more hidden",
+            "type": "noun",
+            "root": "خفي",
+            "count": 1,
+            "ref": "20:7",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "اخلف",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَخْلَفُ",
+            "gloss": "break",
+            "type": "verb",
+            "root": "خلف",
+            "count": 14,
+            "ref": "2:80",
+            "pos": 14,
+            "alt": [
+              "fail",
+              "fail/violate"
+            ],
+            "form": 4
           }
         ]
       },
@@ -171,6 +266,101 @@
             "pos": 7,
             "alt": [
               "mother's sisters"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "خايف",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "خائِف",
+            "gloss": "fearful",
+            "type": "active participle",
+            "root": "خوف",
+            "count": 3,
+            "ref": "2:114",
+            "pos": 21,
+            "alt": [
+              "fear",
+              "fearing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "خاين",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "خائِن",
+            "gloss": "deceitful",
+            "type": "active participle",
+            "root": "خون",
+            "count": 3,
+            "ref": "4:105",
+            "pos": 14,
+            "alt": [
+              "traitors",
+              "betrayers"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "خفيف",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "خَفِيف",
+            "gloss": "light",
+            "type": "adjective",
+            "root": "خفف",
+            "count": 2,
+            "ref": "7:189",
+            "pos": 16
+          }
+        ]
+      },
+      {
+        "w": "خفيه",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "خُفْيَة",
+            "gloss": "secretly",
+            "type": "noun",
+            "root": "خفي",
+            "count": 2,
+            "ref": "6:63",
+            "pos": 10,
+            "alt": [
+              "privately"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "خلاف",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "خِلاف",
+            "gloss": "opposite sides",
+            "type": "noun",
+            "root": "خلف",
+            "count": 6,
+            "ref": "5:33",
+            "pos": 20,
+            "alt": [
+              "opposite",
+              "behind"
             ]
           }
         ]
@@ -211,41 +401,166 @@
         ]
       },
       {
-        "w": "خاطيه",
-        "family": true,
-        "points": 5,
+        "w": "خيفه",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "خاطِئَة",
-            "gloss": "sinful",
-            "type": "active participle",
-            "root": "خطأ",
-            "count": 2,
-            "ref": "96:16",
-            "pos": 3
+            "lemma": "خِيفَة",
+            "gloss": "fear",
+            "type": "noun",
+            "root": "خوف",
+            "count": 6,
+            "ref": "11:70",
+            "pos": 10
           }
         ]
       },
       {
-        "w": "خطييه",
+        "w": "نخله",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "نَخْلَة",
+            "gloss": "date-palm",
+            "type": "noun",
+            "root": "نخل",
+            "count": 2,
+            "ref": "19:23",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "نخيل",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "نَخِيل",
+            "gloss": "date-palms",
+            "type": "noun",
+            "root": "نخل",
+            "count": 7,
+            "ref": "2:266",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "خافيه",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "خَطِيئَة",
-            "gloss": "fault",
+            "lemma": "خافِيَة",
+            "gloss": "any secret",
+            "type": "active participle",
+            "root": "خفي",
+            "count": 1,
+            "ref": "69:18",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "خاينه",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "خائِنَة",
+            "gloss": "treachery",
+            "type": "active participle",
+            "root": "خون",
+            "count": 2,
+            "ref": "5:13",
+            "pos": 21,
+            "alt": [
+              "stealthy glance"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "خليفه",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "خَلِيفَة",
+            "gloss": "vicegerent",
             "type": "noun",
-            "root": "خطأ",
-            "count": 10,
-            "ref": "4:112",
-            "pos": 3
+            "root": "خلف",
+            "count": 9,
+            "ref": "2:30",
+            "pos": 9,
+            "alt": [
+              "successors",
+              "inheritors"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "خيانه",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "خِيانَة",
+            "gloss": "betrayal",
+            "type": "noun",
+            "root": "خون",
+            "count": 2,
+            "ref": "8:58",
+            "pos": 5
           }
         ]
       }
     ],
-    "otherFamily": [],
-    "maxScore": 34,
-    "featuredRoot": "خطأ"
+    "otherFamily": [
+      {
+        "lemma": "يَخْفَى",
+        "gloss": "is hidden",
+        "type": "verb",
+        "root": "خفي",
+        "count": 6,
+        "ref": "3:5",
+        "pos": 4,
+        "alt": [
+          "hidden",
+          "be hidden"
+        ],
+        "form": 1
+      },
+      {
+        "lemma": "يَسْتَخْفُ",
+        "gloss": "seek to hide",
+        "type": "verb",
+        "root": "خفي",
+        "count": 3,
+        "ref": "4:108",
+        "pos": 1,
+        "alt": [
+          "hide",
+          "may hide"
+        ],
+        "form": 10
+      },
+      {
+        "lemma": "مُسْتَخْف",
+        "gloss": "hidden",
+        "type": "active participle",
+        "root": "خفي",
+        "count": 1,
+        "ref": "13:10",
+        "pos": 11
+      }
+    ],
+    "maxScore": 55,
+    "featuredRoot": "خفي"
   },
   "generated": true,
   "model": "auto (chain)"

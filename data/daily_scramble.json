@@ -1,32 +1,35 @@
 {
-  "date": "2026-10-11",
+  "date": "2026-10-12",
   "puzzle": {
-    "verseRef": "84:6",
-    "reference": "Surah Al-Inshiqaq (84:6)",
+    "verseRef": "12:92",
+    "reference": "Surah Yusuf (12:92)",
     "segments": [
-      "يا أيها الإنسان",
-      "إنك كادح",
-      "إلى ربك",
-      "كدحا",
-      "فملاقيه"
+      "قال",
+      "لا تثريب",
+      "عليكم اليوم",
+      "يغفر الله لكم",
+      "وهو أرحم",
+      "الراحمين"
     ],
     "translations": [
-      "O mankind",
-      "Indeed, you (are) laboring",
-      "to your Lord",
-      "(with) exertion",
-      "and you (will) meet Him"
+      "He said No",
+      "blame upon you",
+      "today Allah will forgive",
+      "Allah will forgive you",
+      "and He (is) the Most Merciful",
+      "(of) those who show mercy"
     ],
-    "hint": "A powerful reminder from Surah Al-Inshiqaq about the human journey and the inevitable meeting with our Lord — a call to self-accountability and purposeful striving.",
-    "arabic": "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًۭا فَمُلَـٰقِيهِ",
+    "hint": "A moment of forgiveness and mercy in the story of Prophet Yusuf (Joseph).",
+    "arabic": "قَالَ لَا تَثْرِيبَ عَلَيْكُمُ ٱلْيَوْمَ ۖ يَغْفِرُ ٱللَّهُ لَكُمْ ۖ وَهُوَ أَرْحَمُ ٱلرَّٰحِمِينَ",
     "words": [
-      "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ",
-      "إِنَّكَ كَادِحٌ",
-      "إِلَىٰ رَبِّكَ",
-      "كَدْحًۭا",
-      "فَمُلَـٰقِيهِ"
+      "قَالَ لَا",
+      "تَثْرِيبَ عَلَيْكُمُ",
+      "ٱلْيَوْمَ ۖ يَغْفِرُ",
+      "ٱللَّهُ لَكُمْ ۖ",
+      "وَهُوَ أَرْحَمُ",
+      "ٱلرَّٰحِمِينَ"
     ],
-    "verseEn": "O mankind, indeed you are laboring toward your Lord with [great] exertion and will meet it."
+    "verseEn": "He said, \"No blame will there be upon you today. May Allāh forgive you; and He is the most merciful of the merciful."
   },
   "generated": true,
   "model": "auto (chain)"
