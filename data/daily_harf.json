@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "puzzle": {
-    "word": "وزر",
-    "display": "وِزْرَ",
-    "hint": "A heavy accountability — no soul carries another's on the Day of Judgment",
-    "verseRef": "53:38",
-    "arabicVerse": "أَلَّا تَزِرُ وَازِرَةٌۭ وِزْرَ أُخْرَىٰ",
-    "verse": "53:38 - That no bearer of burdens will bear the burden of another"
+    "word": "شورى",
+    "display": "شُورَىٰ",
+    "hint": "A Quranic principle of mutual decision-making, praised as a defining trait of the early believing community.",
+    "verseRef": "42:38",
+    "arabicVerse": "وَٱلَّذِينَ ٱسْتَجَابُوا۟ لِرَبِّهِمْ وَأَقَامُوا۟ ٱلصَّلَوٰةَ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ",
+    "verse": "42:38 - And those who have responded to their Lord and established prayer and whose affair is [determined by] consultation among themselves, and from what We have provided them, they spend,"
   },
   "generated": true,
   "model": "auto (chain)"

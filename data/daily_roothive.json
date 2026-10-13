@@ -1,566 +1,512 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "puzzle": {
-    "center": "خ",
+    "center": "ت",
     "outer": [
+      "ف",
+      "م",
       "ه",
-      "ل",
-      "ا",
       "ي",
       "ن",
-      "ف"
+      "ا"
     ],
     "root": {
-      "letters": "خفي",
-      "display": "خ ف ي",
-      "translit": "kh-f-y",
-      "meaning": "The root carries the core idea of concealment, something kept out of sight. Its derived words show different ways hiding happens, from a thing being hidden to actively concealing or doing something in secret.",
-      "occurrences": 34,
-      "lemmaCount": 8
+      "letters": "فتي",
+      "display": "ف ت ي",
+      "translit": "f-t-y",
+      "meaning": "This root centers on the idea of youth, a young person in their prime. From it grow words describing young men and women in different forms and numbers, plus verbs about seeking or giving rulings.",
+      "occurrences": 21,
+      "lemmaCount": 7
     },
     "words": [
       {
-        "w": "خاف",
+        "w": "اتم",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "خافَ",
-            "gloss": "fear",
+            "lemma": "أَتَمَّ",
+            "gloss": "perfect",
             "type": "verb",
-            "root": "خوف",
-            "count": 83,
-            "ref": "2:182",
-            "pos": 2,
+            "root": "تمم",
+            "count": 16,
+            "ref": "2:233",
+            "pos": 9,
             "alt": [
-              "fears",
-              "could i fear"
+              "complete",
+              "completes"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "اتي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "آتَى",
+            "gloss": "was given",
+            "type": "verb",
+            "root": "أتي",
+            "count": 271,
+            "ref": "2:136",
+            "pos": 16,
+            "alt": [
+              "is given",
+              "has been given"
+            ],
+            "form": 4
+          },
+          {
+            "lemma": "أَتَى",
+            "gloss": "comes",
+            "type": "verb",
+            "root": "أتي",
+            "count": 264,
+            "ref": "2:106",
+            "pos": 7,
+            "alt": [
+              "come",
+              "bring"
             ],
             "form": 1
-          }
-        ]
-      },
-      {
-        "w": "خال",
-        "family": false,
-        "points": 1,
-        "senses": [
+          },
           {
-            "lemma": "خال",
-            "gloss": "maternal uncles",
-            "type": "noun",
-            "root": "خول",
-            "count": 2,
-            "ref": "24:61",
-            "pos": 40
-          }
-        ]
-      },
-      {
-        "w": "خان",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "خانُ",
-            "gloss": "betray",
-            "type": "verb",
-            "root": "خون",
-            "count": 5,
-            "ref": "8:27",
-            "pos": 5,
-            "alt": [
-              "have betrayed",
-              "both betrayed"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "خفف",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "خَفَّفَ",
-            "gloss": "be lightened",
-            "type": "verb",
-            "root": "خفف",
-            "count": 8,
-            "ref": "2:86",
+            "lemma": "آتِي",
+            "gloss": "come",
+            "type": "active participle",
+            "root": "أتي",
+            "count": 9,
+            "ref": "19:93",
             "pos": 8,
             "alt": [
-              "lighten",
-              "has lightened"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "خفي",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "خَفِيّ",
-            "gloss": "stealthy",
-            "type": "adjective",
-            "root": "خفي",
-            "count": 2,
-            "ref": "19:3",
-            "pos": 5,
-            "alt": [
-              "secret"
+              "coming"
             ]
           }
         ]
       },
       {
-        "w": "خلا",
+        "w": "فات",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "خَلا",
-            "gloss": "passed away",
+            "lemma": "فاتَ",
+            "gloss": "escaped",
             "type": "verb",
-            "root": "خلو",
-            "count": 25,
-            "ref": "2:76",
+            "root": "فوت",
+            "count": 3,
+            "ref": "3:153",
+            "pos": 18,
+            "alt": [
+              "has escaped",
+              "have gone from"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "فتن",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "فَتَنُ",
+            "gloss": "tried",
+            "type": "verb",
+            "root": "فتن",
+            "count": 23,
+            "ref": "4:101",
+            "pos": 15,
+            "alt": [
+              "tempt you away",
+              "harm"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "فتي",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "فَتَى",
+            "gloss": "to his boy",
+            "type": "noun",
+            "root": "فتي",
+            "count": 3,
+            "ref": "12:30",
             "pos": 8,
             "alt": [
-              "has passed away",
-              "had passed"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "خلف",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "خَلْف",
-            "gloss": "successors",
-            "type": "noun",
-            "root": "خلف",
-            "count": 22,
-            "ref": "7:169",
-            "pos": 4
+              "slave boy"
+            ]
           },
           {
-            "lemma": "خَلَفَ",
-            "gloss": "succeeded",
+            "lemma": "فَتًى",
+            "gloss": "youth",
+            "type": "noun",
+            "root": "فتي",
+            "count": 1,
+            "ref": "21:60",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "مات",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "ماتَ",
+            "gloss": "die",
             "type": "verb",
-            "root": "خلف",
-            "count": 5,
-            "ref": "7:142",
-            "pos": 16,
+            "root": "موت",
+            "count": 39,
+            "ref": "3:144",
+            "pos": 11,
             "alt": [
-              "take my place",
-              "have done in my place"
+              "dies",
+              "died"
             ],
             "form": 1
           }
         ]
       },
       {
-        "w": "خيل",
+        "w": "ميت",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "خَيْل",
-            "gloss": "horses",
+            "lemma": "مَيِّت",
+            "gloss": "dead",
             "type": "noun",
-            "root": "خيل",
+            "root": "موت",
+            "count": 38,
+            "ref": "2:28",
+            "pos": 5,
+            "alt": [
+              "die"
+            ]
+          },
+          {
+            "lemma": "مَيْت",
+            "gloss": "dead",
+            "type": "noun",
+            "root": "موت",
             "count": 5,
-            "ref": "59:6",
-            "pos": 11
+            "ref": "6:122",
+            "pos": 3
           }
         ]
       },
       {
-        "w": "نخل",
+        "w": "هات",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "نَخْل",
-            "gloss": "date-palms",
-            "type": "noun",
-            "root": "نخل",
-            "count": 11,
-            "ref": "54:20",
-            "pos": 5
+            "lemma": "هاتُ",
+            "gloss": "bring",
+            "type": "verb",
+            "root": "هات",
+            "count": 4,
+            "ref": "2:111",
+            "pos": 14,
+            "alt": [
+              "bring forth"
+            ],
+            "form": 1
           }
         ]
       },
       {
-        "w": "اخفي",
+        "w": "امات",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَماتَ",
+            "gloss": "causes death",
+            "type": "verb",
+            "root": "موت",
+            "count": 21,
+            "ref": "53:44",
+            "pos": 3,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "تيمم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "تَيَمَّمُ",
+            "gloss": "aim",
+            "type": "verb",
+            "root": "يمم",
+            "count": 3,
+            "ref": "2:267",
+            "pos": 15,
+            "alt": [
+              "tayammum",
+              "tayyammum"
+            ],
+            "form": 5
+          }
+        ]
+      },
+      {
+        "w": "فتاه",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "أُخْفِيَ",
-            "gloss": "conceal",
-            "type": "verb",
-            "root": "خفي",
-            "count": 18,
-            "ref": "3:118",
-            "pos": 21,
-            "alt": [
-              "conceals",
-              "is hidden"
-            ],
-            "form": 4
-          },
-          {
-            "lemma": "أَخْفَى",
-            "gloss": "more hidden",
+            "lemma": "فَتاة",
+            "gloss": "slave girls",
             "type": "noun",
-            "root": "خفي",
-            "count": 1,
-            "ref": "20:7",
+            "root": "فتي",
+            "count": 2,
+            "ref": "4:25",
+            "pos": 15
+          }
+        ]
+      },
+      {
+        "w": "فتنه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "فِتْنَة",
+            "gloss": "trial",
+            "type": "noun",
+            "root": "فتن",
+            "count": 34,
+            "ref": "2:102",
+            "pos": 32,
+            "alt": [
+              "oppression"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "فتيه",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "فِتْيَة",
+            "gloss": "youths",
+            "type": "noun",
+            "root": "فتي",
+            "count": 3,
+            "ref": "18:13",
             "pos": 7
           }
         ]
       },
       {
-        "w": "اخلف",
+        "w": "متين",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَخْلَفُ",
-            "gloss": "break",
-            "type": "verb",
-            "root": "خلف",
-            "count": 14,
-            "ref": "2:80",
-            "pos": 14,
-            "alt": [
-              "fail",
-              "fail/violate"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "خاله",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "خالَة",
-            "gloss": "maternal aunts",
+            "lemma": "مَتِين",
+            "gloss": "firm",
             "type": "noun",
-            "root": "خول",
+            "root": "متن",
             "count": 3,
-            "ref": "4:23",
-            "pos": 7,
-            "alt": [
-              "mother's sisters"
-            ]
+            "ref": "7:183",
+            "pos": 5
           }
         ]
       },
       {
-        "w": "خايف",
+        "w": "ممات",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "خائِف",
-            "gloss": "fearful",
-            "type": "active participle",
-            "root": "خوف",
-            "count": 3,
-            "ref": "2:114",
-            "pos": 21,
-            "alt": [
-              "fear",
-              "fearing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "خاين",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "خائِن",
-            "gloss": "deceitful",
-            "type": "active participle",
-            "root": "خون",
-            "count": 3,
-            "ref": "4:105",
-            "pos": 14,
-            "alt": [
-              "traitors",
-              "betrayers"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "خفيف",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "خَفِيف",
-            "gloss": "light",
-            "type": "adjective",
-            "root": "خفف",
-            "count": 2,
-            "ref": "7:189",
-            "pos": 16
-          }
-        ]
-      },
-      {
-        "w": "خفيه",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "خُفْيَة",
-            "gloss": "secretly",
+            "lemma": "مَمات",
+            "gloss": "dying",
             "type": "noun",
-            "root": "خفي",
-            "count": 2,
-            "ref": "6:63",
-            "pos": 10,
+            "root": "موت",
+            "count": 3,
+            "ref": "6:162",
+            "pos": 6,
             "alt": [
-              "privately"
+              "death"
             ]
           }
         ]
       },
       {
-        "w": "خلاف",
+        "w": "ميته",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "خِلاف",
-            "gloss": "opposite sides",
+            "lemma": "مَيْتَة",
+            "gloss": "dead",
             "type": "noun",
-            "root": "خلف",
+            "root": "موت",
             "count": 6,
-            "ref": "5:33",
-            "pos": 20,
+            "ref": "6:139",
+            "pos": 14
+          }
+        ]
+      },
+      {
+        "w": "يتيم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "يَتِيم",
+            "gloss": "orphan",
+            "type": "noun",
+            "root": "يتم",
+            "count": 23,
+            "ref": "4:127",
+            "pos": 14,
             "alt": [
-              "opposite",
-              "behind"
+              "orphans",
+              "two orphan boys"
             ]
           }
         ]
       },
       {
-        "w": "خلال",
+        "w": "امانت",
         "family": false,
-        "points": 2,
+        "points": 3,
         "senses": [
           {
-            "lemma": "خِلال",
-            "gloss": "any friendship",
+            "lemma": "أَمانَت",
+            "gloss": "trust",
             "type": "noun",
-            "root": "خلل",
-            "count": 8,
-            "ref": "14:31",
-            "pos": 21,
-            "alt": [
-              "inner most part"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "خليل",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "خَلِيل",
-            "gloss": "friend",
-            "type": "noun",
-            "root": "خلل",
-            "count": 4,
-            "ref": "4:125",
+            "root": "أمن",
+            "count": 2,
+            "ref": "2:283",
             "pos": 17
           }
         ]
       },
       {
-        "w": "خيفه",
+        "w": "امنيت",
         "family": false,
-        "points": 2,
+        "points": 3,
         "senses": [
           {
-            "lemma": "خِيفَة",
-            "gloss": "fear",
+            "lemma": "أُمْنِيَّت",
+            "gloss": "wishful thinking",
             "type": "noun",
-            "root": "خوف",
+            "root": "مني",
             "count": 6,
-            "ref": "11:70",
-            "pos": 10
+            "ref": "2:78",
+            "pos": 7,
+            "alt": [
+              "desire"
+            ]
           }
         ]
       },
       {
-        "w": "نخله",
+        "w": "انتهي",
         "family": false,
-        "points": 2,
+        "points": 3,
         "senses": [
           {
-            "lemma": "نَخْلَة",
-            "gloss": "date-palm",
-            "type": "noun",
-            "root": "نخل",
-            "count": 2,
-            "ref": "19:23",
-            "pos": 5
+            "lemma": "انتَهَى",
+            "gloss": "desist",
+            "type": "verb",
+            "root": "نهي",
+            "count": 16,
+            "ref": "19:46",
+            "pos": 9,
+            "alt": [
+              "cease",
+              "desists"
+            ],
+            "form": 8
           }
         ]
       },
       {
-        "w": "نخيل",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "نَخِيل",
-            "gloss": "date-palms",
-            "type": "noun",
-            "root": "نخل",
-            "count": 7,
-            "ref": "2:266",
-            "pos": 8
-          }
-        ]
-      },
-      {
-        "w": "خافيه",
+        "w": "فتيان",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "خافِيَة",
-            "gloss": "any secret",
-            "type": "active participle",
-            "root": "خفي",
+            "lemma": "فَتَيان",
+            "gloss": "two young men",
+            "type": "noun",
+            "root": "فتي",
             "count": 1,
-            "ref": "69:18",
-            "pos": 6
+            "ref": "12:36",
+            "pos": 4
           }
         ]
       },
       {
-        "w": "خاينه",
+        "w": "منتهي",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "خائِنَة",
-            "gloss": "treachery",
-            "type": "active participle",
-            "root": "خون",
-            "count": 2,
-            "ref": "5:13",
-            "pos": 21,
+            "lemma": "مُنتَهَى",
+            "gloss": "utmost boundary",
+            "type": "passive participle",
+            "root": "نهي",
+            "count": 3,
+            "ref": "53:14",
+            "pos": 3,
             "alt": [
-              "stealthy glance"
+              "final goal",
+              "finality"
             ]
-          }
-        ]
-      },
-      {
-        "w": "خليفه",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "خَلِيفَة",
-            "gloss": "vicegerent",
-            "type": "noun",
-            "root": "خلف",
-            "count": 9,
-            "ref": "2:30",
-            "pos": 9,
-            "alt": [
-              "successors",
-              "inheritors"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "خيانه",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "خِيانَة",
-            "gloss": "betrayal",
-            "type": "noun",
-            "root": "خون",
-            "count": 2,
-            "ref": "8:58",
-            "pos": 5
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "يَخْفَى",
-        "gloss": "is hidden",
+        "lemma": "يَسْتَفْتُ",
+        "gloss": "inquire",
         "type": "verb",
-        "root": "خفي",
+        "root": "فتي",
         "count": 6,
-        "ref": "3:5",
-        "pos": 4,
-        "alt": [
-          "hidden",
-          "be hidden"
-        ],
-        "form": 1
-      },
-      {
-        "lemma": "يَسْتَخْفُ",
-        "gloss": "seek to hide",
-        "type": "verb",
-        "root": "خفي",
-        "count": 3,
-        "ref": "4:108",
-        "pos": 1,
-        "alt": [
-          "hide",
-          "may hide"
-        ],
+        "ref": "18:22",
+        "pos": 30,
         "form": 10
       },
       {
-        "lemma": "مُسْتَخْف",
-        "gloss": "hidden",
-        "type": "active participle",
-        "root": "خفي",
-        "count": 1,
-        "ref": "13:10",
-        "pos": 11
+        "lemma": "يُفْتِي",
+        "gloss": "explain to",
+        "type": "verb",
+        "root": "فتي",
+        "count": 5,
+        "ref": "4:127",
+        "pos": 6,
+        "alt": [
+          "gives you the ruling",
+          "gives you a ruling"
+        ],
+        "form": 4
       }
     ],
-    "maxScore": 55,
-    "featuredRoot": "خفي"
+    "maxScore": 49,
+    "featuredRoot": "فتي"
   },
   "generated": true,
   "model": "auto (chain)"

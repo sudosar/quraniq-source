@@ -1,35 +1,29 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "puzzle": {
-    "verseRef": "12:92",
-    "reference": "Surah Yusuf (12:92)",
+    "verseRef": "8:64",
+    "reference": "Surah Al-Anfal (8:64)",
     "segments": [
-      "قال",
-      "لا تثريب",
-      "عليكم اليوم",
-      "يغفر الله لكم",
-      "وهو أرحم",
-      "الراحمين"
+      "يَا أَيُّهَا النَّبِيُّ",
+      "حَسْبُكَ اللَّهُ",
+      "وَمَنِ اتَّبَعَكَ",
+      "مِنَ الْمُؤْمِنِينَ"
     ],
     "translations": [
-      "He said No",
-      "blame upon you",
-      "today Allah will forgive",
-      "Allah will forgive you",
-      "and He (is) the Most Merciful",
-      "(of) those who show mercy"
+      "O Prophet",
+      "Sufficient for you (is) Allah",
+      "and whoever follows you",
+      "of the believers"
     ],
-    "hint": "A moment of forgiveness and mercy in the story of Prophet Yusuf (Joseph).",
-    "arabic": "قَالَ لَا تَثْرِيبَ عَلَيْكُمُ ٱلْيَوْمَ ۖ يَغْفِرُ ٱللَّهُ لَكُمْ ۖ وَهُوَ أَرْحَمُ ٱلرَّٰحِمِينَ",
+    "hint": "A reassuring verse of divine support revealed after the Battle of Hunayn — a powerful statement of tawakkul (reliance on Allah).",
+    "arabic": "يَـٰٓأَيُّهَا ٱلنَّبِىُّ حَسْبُكَ ٱللَّهُ وَمَنِ ٱتَّبَعَكَ مِنَ ٱلْمُؤْمِنِينَ",
     "words": [
-      "قَالَ لَا",
-      "تَثْرِيبَ عَلَيْكُمُ",
-      "ٱلْيَوْمَ ۖ يَغْفِرُ",
-      "ٱللَّهُ لَكُمْ ۖ",
-      "وَهُوَ أَرْحَمُ",
-      "ٱلرَّٰحِمِينَ"
+      "يَـٰٓأَيُّهَا ٱلنَّبِىُّ",
+      "حَسْبُكَ ٱللَّهُ",
+      "وَمَنِ ٱتَّبَعَكَ",
+      "مِنَ ٱلْمُؤْمِنِينَ"
     ],
-    "verseEn": "He said, \"No blame will there be upon you today. May Allāh forgive you; and He is the most merciful of the merciful."
+    "verseEn": "O Prophet, sufficient for you is Allāh and for whoever follows you of the believers."
   },
   "generated": true,
   "model": "auto (chain)"

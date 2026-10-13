@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "puzzle": {
-    "title": "The Vow of the Unborn",
-    "intro": "A sincere soul made a sacred promise before the arrival of a child. This figure's story unfolds within the walls of a sanctuary, where devotion meets divine acceptance. Who is this servant of Allah?",
+    "title": "The Fiery Adversary",
+    "intro": "In the early days of revelation, a figure emerged as a stubborn opponent of the truth. Blessed with wealth and status, this soul chose pride over guidance, and their story became a stark warning in the final verses of a surah.",
     "clues": [
-      "I belonged to a family honored in the Quran.",
-      "I made a solemn vow to dedicate my unborn child to the service of Allah.",
-      "When I gave birth, I was surprised to find it was a daughter, though I had expected a son.",
-      "I named my child Maryam, a name reflecting devotion and service.",
-      "I sought Allah's protection for my child and her descendants from the accursed Satan.",
-      "My child was accepted by the Lord and placed under the care of Prophet Zakariya in the sanctuary."
+      "I lived in the same city as the Prophet, and I was among the closest of kin to him, yet my pride kept me distant from the truth.",
+      "I possessed great wealth and numerous properties, and I thought my resources would always protect me.",
+      "When the message was revealed, I mocked it openly and turned away, considering myself superior to the believers.",
+      "My enmity was so notorious that a surah of the Quran addressed me directly, calling me by the name others knew me.",
+      "I was warned that my wealth and my earnings would not avail me, and I would be thrown into a blazing fire.",
+      "I am known as the father of the flame, and my wife will carry the firewood with a rope of palm fiber around her neck."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The wife of Imran (Mother of Maryam)",
-          "Asiya, wife of Pharaoh",
-          "Maryam, mother of Isa",
-          "The mother of Prophet Musa",
-          "The Queen of Sheba"
+          "Abu Lahab",
+          "Abu Jahl",
+          "Abu Sufyan",
+          "Al-Walid ibn al-Mughira",
+          "Al-As ibn Wail"
         ],
-        "answer": "The wife of Imran (Mother of Maryam)"
+        "answer": "Abu Lahab"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Vowing to dedicate her child to the temple",
-          "Being thrown into a fire",
-          "Crossing the sea on dry land",
-          "Building a great ark",
-          "Being swallowed by a large fish"
+          "Rejected Islam and openly opposed the Prophet",
+          "Plotted to assassinate the Prophet",
+          "Led a social boycott against Muslims",
+          "Fought in the Battle of Badr",
+          "Tortured Bilal ibn Rabah"
         ],
-        "answer": "Vowing to dedicate her child to the temple"
+        "answer": "Rejected Islam and openly opposed the Prophet"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The sanctuary (mihrab) where her child was placed",
-          "The ark of the covenant",
-          "The golden calf",
-          "The staff that turned into a snake",
-          "The date palm under which she rested"
+          "A rope of palm fiber",
+          "A sharp sword",
+          "A heavy chain",
+          "A wooden staff",
+          "A leather whip"
         ],
-        "answer": "The sanctuary (mihrab) where her child was placed"
+        "answer": "A rope of palm fiber"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Her child was accepted and placed under Prophet Zakariya's care",
-          "She was saved from a tyrant's punishment",
-          "She was given a son named Yahya",
-          "Her people were destroyed by a storm",
-          "She became a queen over a great kingdom"
+          "Will burn in a blazing fire",
+          "Repented and became a companion",
+          "Lost his wealth but died honored",
+          "Fled to Abyssinia",
+          "Drowned in the sea"
         ],
-        "answer": "Her child was accepted and placed under Prophet Zakariya's care"
+        "answer": "Will burn in a blazing fire"
       }
     },
-    "verseRef": "3:35",
-    "arabic": "إِذْ قَالَتِ ٱمْرَأَتُ عِمْرَٰنَ رَبِّ إِنِّى نَذَرْتُ لَكَ مَا فِى بَطْنِى مُحَرَّرًۭا فَتَقَبَّلْ مِنِّىٓ ۖ إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
-    "verse": "[Mention, O Muḥammad], when the wife of ʿImrān said, \"My Lord, indeed I have pledged to You what is in my womb, consecrated [for Your service], so accept this from me. Indeed, You are the Hearing, the Knowing.\" (3:35)"
+    "verseRef": "111:2",
+    "arabic": "مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ",
+    "verse": "His wealth will not avail him or that which he gained. (111:2)"
   },
   "generated": true,
   "model": "auto (chain)"
