@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "puzzle": {
-    "word": "شورى",
-    "display": "شُورَىٰ",
-    "hint": "A Quranic principle of mutual decision-making, praised as a defining trait of the early believing community.",
-    "verseRef": "42:38",
-    "arabicVerse": "وَٱلَّذِينَ ٱسْتَجَابُوا۟ لِرَبِّهِمْ وَأَقَامُوا۟ ٱلصَّلَوٰةَ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ",
-    "verse": "42:38 - And those who have responded to their Lord and established prayer and whose affair is [determined by] consultation among themselves, and from what We have provided them, they spend,"
+    "word": "عسرة",
+    "display": "عُسْرَة",
+    "hint": "A state of difficulty or hardship, often financial",
+    "verseRef": "2:280",
+    "arabicVerse": "وَإِن كَانَ ذُو عُسْرَةٍۢ فَنَظِرَةٌ إِلَىٰ مَيْسَرَةٍۢ ۚ وَأَن تَصَدَّقُوا۟ خَيْرٌۭ لَّكُمْ ۖ إِن كُنتُمْ تَعْلَمُونَ",
+    "verse": "2:280 - And if someone is in hardship, then [let there be] postponement until [a time of] ease. But if you give [from your right as] charity, then it is better for you, if you only knew."
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,29 +1,29 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "puzzle": {
-    "verseRef": "8:64",
-    "reference": "Surah Al-Anfal (8:64)",
+    "verseRef": "40:62",
+    "reference": "Surah Ghafir (40:62)",
     "segments": [
-      "يَا أَيُّهَا النَّبِيُّ",
-      "حَسْبُكَ اللَّهُ",
-      "وَمَنِ اتَّبَعَكَ",
-      "مِنَ الْمُؤْمِنِينَ"
+      "ذَٰلِكُمُ اللَّهُ",
+      "رَبُّكُمْ خَالِقُ كُلِّ شَيْءٍ",
+      "لَّا إِلَٰهَ إِلَّا هُوَ",
+      "فَأَنَّىٰ تُؤْفَكُونَ"
     ],
     "translations": [
-      "O Prophet",
-      "Sufficient for you (is) Allah",
-      "and whoever follows you",
-      "of the believers"
+      "That (is) Allah your Lord",
+      "(the) Creator (of) all things",
+      "(there is) no god except",
+      "Him So how are you deluded"
     ],
-    "hint": "A reassuring verse of divine support revealed after the Battle of Hunayn — a powerful statement of tawakkul (reliance on Allah).",
-    "arabic": "يَـٰٓأَيُّهَا ٱلنَّبِىُّ حَسْبُكَ ٱللَّهُ وَمَنِ ٱتَّبَعَكَ مِنَ ٱلْمُؤْمِنِينَ",
+    "hint": "A powerful affirmation of pure monotheism (Tawhid) — affirming that Allah alone is the Creator and the only deity worthy of worship.",
+    "arabic": "ذَٰلِكُمُ ٱللَّهُ رَبُّكُمْ خَـٰلِقُ كُلِّ شَىْءٍۢ لَّآ إِلَـٰهَ إِلَّا هُوَ ۖ فَأَنَّىٰ تُؤْفَكُونَ",
     "words": [
-      "يَـٰٓأَيُّهَا ٱلنَّبِىُّ",
-      "حَسْبُكَ ٱللَّهُ",
-      "وَمَنِ ٱتَّبَعَكَ",
-      "مِنَ ٱلْمُؤْمِنِينَ"
+      "ذَٰلِكُمُ ٱللَّهُ رَبُّكُمْ",
+      "خَـٰلِقُ كُلِّ شَىْءٍۢ",
+      "لَّآ إِلَـٰهَ إِلَّا",
+      "هُوَ ۖ فَأَنَّىٰ تُؤْفَكُونَ"
     ],
-    "verseEn": "O Prophet, sufficient for you is Allāh and for whoever follows you of the believers."
+    "verseEn": "That is Allāh, your Lord, Creator of all things; there is no deity except Him, so how are you deluded?"
   },
   "generated": true,
   "model": "auto (chain)"

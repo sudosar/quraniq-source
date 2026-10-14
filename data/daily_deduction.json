@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "puzzle": {
-    "title": "The Fiery Adversary",
-    "intro": "In the early days of revelation, a figure emerged as a stubborn opponent of the truth. Blessed with wealth and status, this soul chose pride over guidance, and their story became a stark warning in the final verses of a surah.",
+    "title": "The Exiled Covenant Breakers",
+    "intro": "In the early days of a fledgling community, a tribe once lived in fortified dwellings, bound by a pact. When that pact was betrayed, the consequences echoed through the pages of the Quran. Who were these people, and what became of their homes and orchards?",
     "clues": [
-      "I lived in the same city as the Prophet, and I was among the closest of kin to him, yet my pride kept me distant from the truth.",
-      "I possessed great wealth and numerous properties, and I thought my resources would always protect me.",
-      "When the message was revealed, I mocked it openly and turned away, considering myself superior to the believers.",
-      "My enmity was so notorious that a surah of the Quran addressed me directly, calling me by the name others knew me.",
-      "I was warned that my wealth and my earnings would not avail me, and I would be thrown into a blazing fire.",
-      "I am known as the father of the flame, and my wife will carry the firewood with a rope of palm fiber around her neck."
+      "We dwelt in strongholds that gave us a false sense of security.",
+      "We were people of the Scripture, yet we broke our covenant.",
+      "We plotted against the messenger after he came to us, but our scheme failed.",
+      "Our palm trees were cut down by the command of Allah, a sign of His power.",
+      "We were expelled from our homes, never to return, as a punishment for our defiance.",
+      "The Quran mentions us in the chapter of the gathering, and our story serves as a warning for those who break pacts."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Abu Lahab",
-          "Abu Jahl",
-          "Abu Sufyan",
-          "Al-Walid ibn al-Mughira",
-          "Al-As ibn Wail"
+          "Banu Nadir",
+          "Banu Qurayza",
+          "Banu Qaynuqa",
+          "People of Madyan",
+          "People of Thamud"
         ],
-        "answer": "Abu Lahab"
+        "answer": "Banu Nadir"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Rejected Islam and openly opposed the Prophet",
-          "Plotted to assassinate the Prophet",
-          "Led a social boycott against Muslims",
-          "Fought in the Battle of Badr",
-          "Tortured Bilal ibn Rabah"
+          "Siege and expulsion from their homes",
+          "Drowning in the sea",
+          "Being swallowed by the earth",
+          "Destruction by a storm",
+          "Being turned into apes"
         ],
-        "answer": "Rejected Islam and openly opposed the Prophet"
+        "answer": "Siege and expulsion from their homes"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A rope of palm fiber",
-          "A sharp sword",
-          "A heavy chain",
-          "A wooden staff",
-          "A leather whip"
+          "Palm trees cut down",
+          "The staff",
+          "The ark",
+          "The well of water",
+          "The cave"
         ],
-        "answer": "A rope of palm fiber"
+        "answer": "Palm trees cut down"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Will burn in a blazing fire",
-          "Repented and became a companion",
-          "Lost his wealth but died honored",
-          "Fled to Abyssinia",
-          "Drowned in the sea"
+          "Exiled and their property taken",
+          "Returned victorious",
+          "Were forgiven and remained",
+          "Entered paradise immediately",
+          "Were struck by a plague"
         ],
-        "answer": "Will burn in a blazing fire"
+        "answer": "Exiled and their property taken"
       }
     },
-    "verseRef": "111:2",
-    "arabic": "مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ",
-    "verse": "His wealth will not avail him or that which he gained. (111:2)"
+    "verseRef": "59:5",
+    "arabic": "مَا قَطَعْتُم مِّن لِّينَةٍ أَوْ تَرَكْتُمُوهَا قَآئِمَةً عَلَىٰٓ أُصُولِهَا فَبِإِذْنِ ٱللَّهِ وَلِيُخْزِىَ ٱلْفَـٰسِقِينَ",
+    "verse": "Whatever you have cut down of [their] palm trees or left standing on their trunks - it was by permission of Allāh and so He would disgrace the defiantly disobedient. (59:5)"
   },
   "generated": true,
   "model": "auto (chain)"
