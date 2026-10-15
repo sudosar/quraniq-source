@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "puzzle": {
-    "word": "عسرة",
-    "display": "عُسْرَة",
-    "hint": "A state of difficulty or hardship, often financial",
-    "verseRef": "2:280",
-    "arabicVerse": "وَإِن كَانَ ذُو عُسْرَةٍۢ فَنَظِرَةٌ إِلَىٰ مَيْسَرَةٍۢ ۚ وَأَن تَصَدَّقُوا۟ خَيْرٌۭ لَّكُمْ ۖ إِن كُنتُمْ تَعْلَمُونَ",
-    "verse": "2:280 - And if someone is in hardship, then [let there be] postponement until [a time of] ease. But if you give [from your right as] charity, then it is better for you, if you only knew."
+    "word": "سبحان",
+    "display": "سُبْحَانَ",
+    "hint": "A phrase of glorification often said by Muslims, meaning 'glory be to Allah'.",
+    "verseRef": "30:17",
+    "arabicVerse": "فَسُبْحَـٰنَ ٱللَّهِ حِينَ تُمْسُونَ وَحِينَ تُصْبِحُونَ",
+    "verse": "30:17 - So exalted is Allāh when you reach the evening and when you reach the morning."
   },
   "generated": true,
   "model": "auto (chain)"

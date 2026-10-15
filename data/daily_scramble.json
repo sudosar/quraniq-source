@@ -1,29 +1,29 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "puzzle": {
-    "verseRef": "40:62",
-    "reference": "Surah Ghafir (40:62)",
+    "verseRef": "98:7",
+    "reference": "Surah Al-Bayyinah (98:7)",
     "segments": [
-      "ذَٰلِكُمُ اللَّهُ",
-      "رَبُّكُمْ خَالِقُ كُلِّ شَيْءٍ",
-      "لَّا إِلَٰهَ إِلَّا هُوَ",
-      "فَأَنَّىٰ تُؤْفَكُونَ"
+      "إِنَّ الَّذِينَ آمَنُوا",
+      "وَعَمِلُوا الصَّالِحَاتِ",
+      "أُولَٰئِكَ هُمْ",
+      "خَيْرُ الْبَرِيَّةِ"
     ],
     "translations": [
-      "That (is) Allah your Lord",
-      "(the) Creator (of) all things",
-      "(there is) no god except",
-      "Him So how are you deluded"
+      "Indeed those who believe",
+      "and do righteous deeds",
+      "those  they",
+      "(are the) best (of) the creatures"
     ],
-    "hint": "A powerful affirmation of pure monotheism (Tawhid) — affirming that Allah alone is the Creator and the only deity worthy of worship.",
-    "arabic": "ذَٰلِكُمُ ٱللَّهُ رَبُّكُمْ خَـٰلِقُ كُلِّ شَىْءٍۢ لَّآ إِلَـٰهَ إِلَّا هُوَ ۖ فَأَنَّىٰ تُؤْفَكُونَ",
+    "hint": "This verse describes the best of creation as those who believe and do righteous deeds.",
+    "arabic": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ أُو۟لَـٰٓئِكَ هُمْ خَيْرُ ٱلْبَرِيَّةِ",
     "words": [
-      "ذَٰلِكُمُ ٱللَّهُ رَبُّكُمْ",
-      "خَـٰلِقُ كُلِّ شَىْءٍۢ",
-      "لَّآ إِلَـٰهَ إِلَّا",
-      "هُوَ ۖ فَأَنَّىٰ تُؤْفَكُونَ"
+      "إِنَّ ٱلَّذِينَ ءَامَنُوا۟",
+      "وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ",
+      "أُو۟لَـٰٓئِكَ هُمْ",
+      "خَيْرُ ٱلْبَرِيَّةِ"
     ],
-    "verseEn": "That is Allāh, your Lord, Creator of all things; there is no deity except Him, so how are you deluded?"
+    "verseEn": "Indeed, they who have believed and done righteous deeds - those are the best of creatures."
   },
   "generated": true,
   "model": "auto (chain)"

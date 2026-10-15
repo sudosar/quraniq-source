@@ -1,649 +1,513 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "puzzle": {
-    "center": "ق",
+    "center": "ك",
     "outer": [
-      "ا",
-      "ي",
-      "م",
       "ت",
-      "س",
-      "د"
+      "م",
+      "ل",
+      "ا",
+      "و",
+      "ي"
     ],
     "root": {
-      "letters": "قدم",
-      "display": "ق د م",
-      "translit": "q-d-m",
-      "meaning": "This root carries the meaning of being in front or coming before in time and position. Derived words express sending ahead like deeds sent forth, advancing forward, something ancient, or forefathers who came first.",
-      "occurrences": 48,
-      "lemmaCount": 8
+      "letters": "ملك",
+      "display": "م ل ك",
+      "translit": "m-l-k",
+      "meaning": "The core idea is ownership and sovereign control. From this root, different word patterns grow to express a king, a kingdom, dominion, an angel as a messenger under God's authority, or something that is owned.",
+      "occurrences": 206,
+      "lemmaCount": 9
     },
     "words": [
       {
-        "w": "تقي",
+        "w": "اكل",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "تَقِيّ",
-            "gloss": "righteous",
-            "type": "noun",
-            "root": "وقي",
-            "count": 4,
-            "ref": "19:13",
-            "pos": 6,
-            "alt": [
-              "god fearing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "ساق",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "ساق",
-            "gloss": "shin",
-            "type": "noun",
-            "root": "سوق",
-            "count": 4,
-            "ref": "68:42",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "سقي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "سَقَى",
-            "gloss": "cannot water",
+            "lemma": "أَكَلَ",
+            "gloss": "eat",
             "type": "verb",
-            "root": "سقي",
-            "count": 12,
-            "ref": "2:71",
-            "pos": 11,
+            "root": "أكل",
+            "count": 93,
+            "ref": "5:3",
+            "pos": 17,
             "alt": [
-              "water",
-              "watered"
+              "eating",
+              "ate"
             ],
             "form": 1
-          }
-        ]
-      },
-      {
-        "w": "سيق",
-        "family": false,
-        "points": 1,
-        "senses": [
+          },
           {
-            "lemma": "سِيقَ",
-            "gloss": "drive",
-            "type": "verb",
-            "root": "سوق",
+            "lemma": "أُكُل",
+            "gloss": "producing fruit",
+            "type": "noun",
+            "root": "أكل",
             "count": 7,
-            "ref": "32:27",
-            "pos": 4,
-            "form": 1
+            "ref": "34:16",
+            "pos": 10
+          },
+          {
+            "lemma": "أَكْل",
+            "gloss": "devouring",
+            "type": "verbal noun",
+            "root": "أكل",
+            "count": 4,
+            "ref": "89:19",
+            "pos": 3
+          },
+          {
+            "lemma": "آكِل",
+            "gloss": "eat",
+            "type": "active participle",
+            "root": "أكل",
+            "count": 3,
+            "ref": "23:20",
+            "pos": 9
           }
         ]
       },
       {
-        "w": "قام",
+        "w": "كال",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "قامَ",
-            "gloss": "stand",
+            "lemma": "كالُ",
+            "gloss": "measure",
             "type": "verb",
-            "root": "قوم",
-            "count": 33,
-            "ref": "2:275",
-            "pos": 8,
+            "root": "كيل",
+            "count": 2,
+            "ref": "17:35",
+            "pos": 4,
             "alt": [
-              "established",
-              "stands"
+              "give by measure"
             ],
             "form": 1
           }
         ]
       },
       {
-        "w": "قدس",
+        "w": "كتم",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "قُدُس",
-            "gloss": "holy spirit",
-            "type": "noun",
-            "root": "قدس",
-            "count": 4,
-            "ref": "2:87",
-            "pos": 16,
+            "lemma": "كَتَمَ",
+            "gloss": "conceal",
+            "type": "verb",
+            "root": "كتم",
+            "count": 21,
+            "ref": "2:140",
+            "pos": 21,
             "alt": [
-              "holy"
-            ]
+              "concealed"
+            ],
+            "form": 1
           }
         ]
       },
       {
-        "w": "قدم",
-        "family": true,
-        "points": 3,
+        "w": "كلم",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "قَدَّمَ",
-            "gloss": "sent forth",
+            "lemma": "كَلَّمَ",
+            "gloss": "speak",
             "type": "verb",
-            "root": "قدم",
-            "count": 27,
-            "ref": "2:95",
-            "pos": 5,
+            "root": "كلم",
+            "count": 20,
+            "ref": "2:253",
+            "pos": 9,
             "alt": [
-              "have sent forth",
-              "has sent forth"
+              "spoke",
+              "could be made to speak"
             ],
             "form": 2
           },
           {
-            "lemma": "قَدَم",
-            "gloss": "respectable position",
+            "lemma": "كَلِم",
+            "gloss": "words",
             "type": "noun",
-            "root": "قدم",
-            "count": 8,
-            "ref": "10:2",
-            "pos": 17,
-            "alt": [
-              "foot"
-            ]
-          },
-          {
-            "lemma": "قَدِمْ",
-            "gloss": "precede",
-            "type": "verb",
-            "root": "قدم",
-            "count": 2,
-            "ref": "11:98",
-            "pos": 1,
-            "form": 1
+            "root": "كلم",
+            "count": 4,
+            "ref": "4:46",
+            "pos": 5
           }
         ]
       },
       {
-        "w": "قست",
+        "w": "كيل",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "قَسَتْ",
-            "gloss": "hardened",
-            "type": "verb",
-            "root": "قسو",
-            "count": 3,
-            "ref": "2:74",
-            "pos": 2,
-            "alt": [
-              "became hardened"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "قسم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قَسَمْ",
-            "gloss": "distribute",
-            "type": "verb",
-            "root": "قسم",
-            "count": 2,
-            "ref": "43:32",
-            "pos": 2,
-            "form": 1
-          },
-          {
-            "lemma": "قَسَم",
-            "gloss": "oath",
+            "lemma": "كَيْل",
+            "gloss": "measurement",
             "type": "noun",
-            "root": "قسم",
-            "count": 2,
-            "ref": "89:5",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "قيم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قَيِّم",
-            "gloss": "straight",
-            "type": "adjective",
-            "root": "قوم",
-            "count": 5,
-            "ref": "18:2",
-            "pos": 1
-          }
-        ]
-      },
-      {
-        "w": "مقت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَقْت",
-            "gloss": "hatred",
-            "type": "noun",
-            "root": "مقت",
-            "count": 6,
-            "ref": "35:39",
-            "pos": 18,
+            "root": "كيل",
+            "count": 10,
+            "ref": "12:60",
+            "pos": 6,
             "alt": [
-              "hateful"
+              "measure"
             ]
           }
         ]
       },
       {
-        "w": "اتقي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "اتَّقَى",
-            "gloss": "fears",
-            "type": "verb",
-            "root": "وقي",
-            "count": 166,
-            "ref": "2:189",
-            "pos": 19,
-            "alt": [
-              "fear",
-              "fears allah"
-            ],
-            "form": 8
-          },
-          {
-            "lemma": "أَتْقَى",
-            "gloss": "most righteous of",
-            "type": "noun",
-            "root": "وقي",
-            "count": 2,
-            "ref": "49:13",
-            "pos": 16,
-            "alt": [
-              "righteous"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اسقي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَسْقَيْ",
-            "gloss": "be given to drink",
-            "type": "verb",
-            "root": "سقي",
-            "count": 8,
-            "ref": "15:22",
-            "pos": 8,
-            "alt": [
-              "gave it to you to drink",
-              "give you to drink"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اقام",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَقامَ",
-            "gloss": "establish",
-            "type": "verb",
-            "root": "قوم",
-            "count": 54,
-            "ref": "10:105",
-            "pos": 2,
-            "alt": [
-              "direct",
-              "assign"
-            ],
-            "form": 4
-          },
-          {
-            "lemma": "إِقام",
-            "gloss": "establishment",
-            "type": "verbal noun",
-            "root": "قوم",
-            "count": 2,
-            "ref": "21:73",
-            "pos": 9,
-            "alt": [
-              "establishing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اقدم",
+        "w": "ملك",
         "family": true,
-        "points": 4,
+        "points": 3,
         "senses": [
           {
-            "lemma": "أَقْدَم",
-            "gloss": "forefathers",
+            "lemma": "مَلَك",
+            "gloss": "angel",
             "type": "noun",
-            "root": "قدم",
-            "count": 1,
-            "ref": "26:76",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "اقسم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَقْسَمُ",
-            "gloss": "swear",
-            "type": "verb",
-            "root": "قسم",
-            "count": 20,
-            "ref": "30:55",
-            "pos": 4,
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "تقدم",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "تَقَدَّمَ",
-            "gloss": "proceed",
-            "type": "verb",
-            "root": "قدم",
-            "count": 2,
-            "ref": "48:2",
+            "root": "ملك",
+            "count": 88,
+            "ref": "6:8",
             "pos": 5,
             "alt": [
-              "preceded"
+              "angels"
+            ]
+          },
+          {
+            "lemma": "مُلْك",
+            "gloss": "dominion",
+            "type": "noun",
+            "root": "ملك",
+            "count": 48,
+            "ref": "2:102",
+            "pos": 6,
+            "alt": [
+              "kingdom"
+            ]
+          },
+          {
+            "lemma": "مَلِك",
+            "gloss": "king",
+            "type": "noun",
+            "root": "ملك",
+            "count": 15,
+            "ref": "2:246",
+            "pos": 17,
+            "alt": [
+              "kings"
+            ]
+          },
+          {
+            "lemma": "مَلْك",
+            "gloss": "will",
+            "type": "noun",
+            "root": "ملك",
+            "count": 1,
+            "ref": "20:87",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "وكل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وُكِّلَ",
+            "gloss": "has been put in charge",
+            "type": "verb",
+            "root": "وكل",
+            "count": 2,
+            "ref": "32:11",
+            "pos": 6,
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "اكمل",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَكْمَلْ",
+            "gloss": "complete",
+            "type": "verb",
+            "root": "كمل",
+            "count": 2,
+            "ref": "2:185",
+            "pos": 36,
+            "alt": [
+              "have perfected"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "توكل",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "تَوَكَّلْ",
+            "gloss": "put our trust",
+            "type": "verb",
+            "root": "وكل",
+            "count": 40,
+            "ref": "8:49",
+            "pos": 12,
+            "alt": [
+              "puts trust",
+              "put trust"
             ],
             "form": 5
           }
         ]
       },
       {
-        "w": "سقيم",
+        "w": "كلام",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "سَقِيم",
-            "gloss": "sick",
+            "lemma": "كَلام",
+            "gloss": "words",
             "type": "noun",
-            "root": "سقم",
-            "count": 2,
-            "ref": "37:89",
-            "pos": 3,
+            "root": "كلم",
+            "count": 4,
+            "ref": "2:75",
+            "pos": 10,
             "alt": [
-              "ill"
+              "words of allah"
             ]
           }
         ]
       },
       {
-        "w": "قايم",
+        "w": "كلما",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "قائِم",
-            "gloss": "means of support",
-            "type": "active participle",
-            "root": "قوم",
-            "count": 17,
-            "ref": "3:18",
-            "pos": 11,
+            "lemma": "كُلَّما",
+            "gloss": "every time",
+            "type": "noun",
+            "root": "كلل",
+            "count": 15,
+            "ref": "2:20",
+            "pos": 5,
             "alt": [
-              "standing",
-              "establishment"
+              "whenever"
             ]
           }
         ]
       },
       {
-        "w": "قديم",
+        "w": "مالك",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "قَدِيم",
-            "gloss": "ancient",
-            "type": "adjective",
-            "root": "قدم",
-            "count": 3,
-            "ref": "46:11",
-            "pos": 19
-          }
-        ]
-      },
-      {
-        "w": "متقي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُتَّقي",
-            "gloss": "righteous",
+            "lemma": "مالِك",
+            "gloss": "master",
             "type": "active participle",
-            "root": "وقي",
-            "count": 49,
-            "ref": "2:2",
-            "pos": 7,
+            "root": "ملك",
+            "count": 4,
+            "ref": "1:4",
+            "pos": 1,
             "alt": [
-              "fear",
-              "god-fearing"
+              "owner",
+              "owners"
             ]
           }
         ]
       },
       {
-        "w": "مقام",
+        "w": "متكي",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "مَقام",
-            "gloss": "position",
+            "lemma": "مُتَّكِئ",
+            "gloss": "reclining",
+            "type": "active participle",
+            "root": "وكأ",
+            "count": 8,
+            "ref": "18:31",
+            "pos": 21
+          }
+        ]
+      },
+      {
+        "w": "ملكت",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مَلَكَتْ",
+            "gloss": "possess",
+            "type": "verb",
+            "root": "ملك",
+            "count": 44,
+            "ref": "4:3",
+            "pos": 23,
+            "alt": [
+              "have power",
+              "rightfully possess"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "مليك",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مَلِيك",
+            "gloss": "king",
             "type": "noun",
-            "root": "قوم",
-            "count": 14,
-            "ref": "2:125",
-            "pos": 9,
-            "alt": [
-              "standing place",
-              "standing"
-            ]
-          },
-          {
-            "lemma": "مُقام",
-            "gloss": "stand",
-            "type": "passive participle",
-            "root": "قوم",
-            "count": 3,
-            "ref": "33:13",
-            "pos": 8
+            "root": "ملك",
+            "count": 1,
+            "ref": "54:55",
+            "pos": 5
           }
         ]
       },
       {
-        "w": "مقدس",
+        "w": "وكيل",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "مُقَدَّس",
-            "gloss": "sacred",
-            "type": "passive participle",
-            "root": "قدس",
-            "count": 2,
-            "ref": "20:12",
-            "pos": 8
-          }
-        ]
-      },
-      {
-        "w": "مقيم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُقِيم",
-            "gloss": "lasting",
-            "type": "active participle",
-            "root": "قوم",
-            "count": 10,
-            "ref": "5:37",
-            "pos": 12,
+            "lemma": "وَكِيل",
+            "gloss": "guardian",
+            "type": "noun",
+            "root": "وكل",
+            "count": 24,
+            "ref": "4:81",
+            "pos": 24,
             "alt": [
-              "enduring",
-              "establisher"
+              "disposer of affairs",
+              "trustee"
             ]
           }
         ]
       },
       {
-        "w": "ميقات",
+        "w": "اكتال",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "مِيقات",
-            "gloss": "indicators of periods",
-            "type": "noun",
-            "root": "وقت",
-            "count": 8,
-            "ref": "2:189",
-            "pos": 6,
-            "alt": [
-              "set term",
-              "appointment"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "استسقي",
-        "family": false,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "اسْتَسْقَى",
-            "gloss": "asked water",
+            "lemma": "اكْتالُ",
+            "gloss": "get measure",
             "type": "verb",
-            "root": "سقي",
+            "root": "كيل",
             "count": 2,
-            "ref": "2:60",
-            "pos": 2,
-            "form": 10
+            "ref": "12:63",
+            "pos": 13,
+            "form": 8
           }
         ]
       },
       {
-        "w": "استقام",
+        "w": "اكمام",
         "family": false,
-        "points": 4,
+        "points": 3,
         "senses": [
           {
-            "lemma": "اسْتَقامُ",
-            "gloss": "take a straight way",
-            "type": "verb",
-            "root": "قوم",
-            "count": 10,
-            "ref": "81:28",
-            "pos": 5,
-            "form": 10
-          }
-        ]
-      },
-      {
-        "w": "مستقدم",
-        "family": true,
-        "points": 6,
-        "senses": [
-          {
-            "lemma": "مُسْتَقْدِم",
-            "gloss": "preceding ones",
-            "type": "active participle",
-            "root": "قدم",
-            "count": 1,
-            "ref": "15:24",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "مستقيم",
-        "family": false,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُسْتَقِيم",
-            "gloss": "straight",
-            "type": "active participle",
-            "root": "قوم",
-            "count": 37,
-            "ref": "2:142",
-            "pos": 21,
+            "lemma": "أَكْمام",
+            "gloss": "coverings",
+            "type": "noun",
+            "root": "كمم",
+            "count": 2,
+            "ref": "41:47",
+            "pos": 10,
             "alt": [
-              "straight path"
+              "sheaths"
             ]
           }
         ]
-      }
-    ],
-    "otherFamily": [
+      },
       {
-        "lemma": "يَسْتَقْدِمُ",
-        "gloss": "seek to advance",
-        "type": "verb",
-        "root": "قدم",
-        "count": 4,
-        "ref": "7:34",
-        "pos": 11,
-        "alt": [
-          "can precede",
-          "can advance"
-        ],
-        "form": 10
+        "w": "متوكل",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُتَوَكِّل",
+            "gloss": "ones who put trust",
+            "type": "active participle",
+            "root": "وكل",
+            "count": 4,
+            "ref": "3:159",
+            "pos": 30,
+            "alt": [
+              "trust"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مكيال",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مِكْيال",
+            "gloss": "measure",
+            "type": "noun",
+            "root": "كيل",
+            "count": 2,
+            "ref": "11:84",
+            "pos": 16
+          }
+        ]
+      },
+      {
+        "w": "ملكوت",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَلَكُوت",
+            "gloss": "dominion",
+            "type": "noun",
+            "root": "ملك",
+            "count": 4,
+            "ref": "6:75",
+            "pos": 4,
+            "alt": [
+              "kingdom",
+              "is dominion"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مملوك",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَمْلُوك",
+            "gloss": "owned",
+            "type": "passive participle",
+            "root": "ملك",
+            "count": 1,
+            "ref": "16:75",
+            "pos": 5
+          }
+        ]
       }
     ],
-    "maxScore": 66,
-    "featuredRoot": "قدم"
+    "otherFamily": [],
+    "maxScore": 55,
+    "featuredRoot": "ملك"
   },
   "generated": true,
   "model": "auto (chain)"

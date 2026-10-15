@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "puzzle": {
-    "title": "The Exiled Covenant Breakers",
-    "intro": "In the early days of a fledgling community, a tribe once lived in fortified dwellings, bound by a pact. When that pact was betrayed, the consequences echoed through the pages of the Quran. Who were these people, and what became of their homes and orchards?",
+    "title": "Justice Among the Merchants",
+    "intro": "A figure stood before a people consumed by the lure of profit, calling them to honesty and fairness in their dealings. This servant of Allah warned against giving short measure and tampering with the scales. The people refused to listen, threatening to banish this individual from their land. The earth itself would rise up in judgment against them. Who is this figure that stood for justice among the merchants?",
     "clues": [
-      "We dwelt in strongholds that gave us a false sense of security.",
-      "We were people of the Scripture, yet we broke our covenant.",
-      "We plotted against the messenger after he came to us, but our scheme failed.",
-      "Our palm trees were cut down by the command of Allah, a sign of His power.",
-      "We were expelled from our homes, never to return, as a punishment for our defiance.",
-      "The Quran mentions us in the chapter of the gathering, and our story serves as a warning for those who break pacts."
+      "I was sent as a messenger to a people who were deeply immersed in trade and commerce.",
+      "My people gave short measure when weighing goods for others.",
+      "They threatened to expel me from the land if I persisted in calling them to faith.",
+      "I am remembered as the most eloquent speaker among the prophets.",
+      "My people were seized by a violent earthquake that left them lifeless in their homes.",
+      "I was sent to the people of Madyan in the northern Hijaz."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Banu Nadir",
-          "Banu Qurayza",
-          "Banu Qaynuqa",
-          "People of Madyan",
-          "People of Thamud"
+          "Prophet Shu'ayb",
+          "Prophet Ishaq",
+          "Prophet Isma'il",
+          "Prophet Zakariya",
+          "Prophet Yahya"
         ],
-        "answer": "Banu Nadir"
+        "answer": "Prophet Shu'ayb"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Siege and expulsion from their homes",
-          "Drowning in the sea",
-          "Being swallowed by the earth",
-          "Destruction by a storm",
-          "Being turned into apes"
+          "Threatened with expulsion from the land",
+          "Cast into a blazing fire by my people",
+          "Confronted the magicians of a mighty pharaoh",
+          "Faced the demand to produce a she-camel from rock",
+          "Witnessed the destruction of my city by an angelic host"
         ],
-        "answer": "Siege and expulsion from their homes"
+        "answer": "Threatened with expulsion from the land"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Palm trees cut down",
-          "The staff",
-          "The ark",
-          "The well of water",
-          "The cave"
+          "The land of Madyan",
+          "The land of Egypt",
+          "Mount Sinai",
+          "The city of Sodom",
+          "The land of Canaan"
         ],
-        "answer": "Palm trees cut down"
+        "answer": "The land of Madyan"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Exiled and their property taken",
-          "Returned victorious",
-          "Were forgiven and remained",
-          "Entered paradise immediately",
-          "Were struck by a plague"
+          "My people were seized by a violent earthquake",
+          "My people were drowned in a great flood",
+          "My people were transformed into apes",
+          "My people were scattered by a screaming wind",
+          "I was saved while inside the belly of a great fish"
         ],
-        "answer": "Exiled and their property taken"
+        "answer": "My people were seized by a violent earthquake"
       }
     },
-    "verseRef": "59:5",
-    "arabic": "مَا قَطَعْتُم مِّن لِّينَةٍ أَوْ تَرَكْتُمُوهَا قَآئِمَةً عَلَىٰٓ أُصُولِهَا فَبِإِذْنِ ٱللَّهِ وَلِيُخْزِىَ ٱلْفَـٰسِقِينَ",
-    "verse": "Whatever you have cut down of [their] palm trees or left standing on their trunks - it was by permission of Allāh and so He would disgrace the defiantly disobedient. (59:5)"
+    "verseRef": "11:87",
+    "arabic": "قَالُوا۟ يَـٰشُعَيْبُ أَصَلَوٰتُكَ تَأْمُرُكَ أَن نَّتْرُكَ مَا يَعْبُدُ ءَابَآؤُنَآ أَوْ أَن نَّفْعَلَ فِىٓ أَمْوَٰلِنَا مَا نَشَـٰٓؤُا۟ ۖ إِنَّكَ لَأَنتَ ٱلْحَلِيمُ ٱلرَّشِيدُ",
+    "verse": "They said, \"O Shuʿayb, does your prayer [i.e., religion] command you that we should leave what our fathers worship or not do with our wealth what we please? Indeed, you are the forbearing, the discerning!\" (11:87)"
   },
   "generated": true,
   "model": "auto (chain)"
