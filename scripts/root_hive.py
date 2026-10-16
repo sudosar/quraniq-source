@@ -195,23 +195,47 @@ def glosses_overlap(a, b):
     return bool(ka) and bool(kb) and (ka <= kb or kb <= ka)
 
 
-def _distinguish_glosses(words):
+def _distinguish_glosses(words, avoid_tokens=None):
     """Give each word in a puzzle its own English gloss where the data allows.
 
     The corpus often glosses related forms identically (فَساد and مُفْسِد are both
     "spreading corruption"), which makes clues look like a word already found.
     Words take turns, most frequent first, switching to an alternative gloss
     that clashes with no other word's current gloss.
+
+    `avoid_tokens` is an optional set of stemmed English tokens that must
+    not appear in any word's gloss (because the root description uses them).
+    Fixes #221: the ب-ي-ن root description says "...things become clear or
+    evident..." and the word gloss was "clear", which the user read as
+    "I already found this" (because بَيَان, مِبين, بَين are all "clear").
     """
+    if avoid_tokens is None:
+        avoid_tokens = set()
+
+    def _uses_avoid_token(gloss):
+        if not avoid_tokens:
+            return False
+        # Subset match (the gloss is fully inside the description), e.g.
+        # "clear" in "...become clear...". Catches one-token overlaps.
+        return bool(set(gloss_key(gloss).split()) & avoid_tokens)
+
     ordered = sorted(words, key=lambda w: -w["senses"][0]["count"])
     for _ in range(2):  # a second pass lets earlier words yield once later ones are settled
         for w in ordered:
             sense = w["senses"][0]
             others = [o["senses"][0]["gloss"] for o in ordered if o is not w]
-            if not any(glosses_overlap(sense["gloss"], g) for g in others):
+            needs_swap = _uses_avoid_token(sense["gloss"]) or any(
+                glosses_overlap(sense["gloss"], g) for g in others
+            )
+            if not needs_swap:
                 continue
             options = [sense["gloss"]] + sense.get("alt", [])
-            choice = next((g for g in options if g and not any(glosses_overlap(g, o) for o in others)), None)
+            choice = next((
+                g for g in options
+                if g
+                and not _uses_avoid_token(g)
+                and not any(glosses_overlap(g, o) for o in others)
+            ), None)
             if choice and choice != sense["gloss"]:
                 sense["alt"] = [g for g in options if g != choice]
                 sense["gloss"] = choice
@@ -229,6 +253,18 @@ def default_meaning(root, lexicon):
     return "Words from this root carry the sense of: " + ", ".join(glosses[:4]) + "."
 
 
+def _meaning_tokens(meaning_text):
+    """Extract stemmed English tokens from a root-meaning string.
+
+    Mirrors gloss_key(): lowercase, strip stopwords, strip common suffixes.
+    Used by _distinguish_glosses() to keep word glosses disjoint from the
+    words used in the root's plain-English description.
+    """
+    if not meaning_text:
+        return set()
+    return set((gloss_key(meaning_text) or "").split())
+
+
 def build_puzzle(root, design, lexicon, forms, meaning=None):
     family = set(design["family"])
     words = []
@@ -243,7 +279,10 @@ def build_puzzle(root, design, lexicon, forms, meaning=None):
             "senses": [_sense(l) for l in lemmas],
         })
 
-    _distinguish_glosses(words)
+    # Compute the meaning first so _distinguish_glosses can use its tokens
+    # to keep word glosses disjoint from the root description. Fixes #221.
+    final_meaning = meaning or default_meaning(root, lexicon)
+    _distinguish_glosses(words, avoid_tokens=_meaning_tokens(final_meaning))
 
     root_info = lexicon["roots"][root]
     family_all = sorted((lexicon["lemmas"][i] for i in root_info["lemmas"]), key=lambda l: -l["count"])
@@ -258,7 +297,7 @@ def build_puzzle(root, design, lexicon, forms, meaning=None):
             "letters": hive_normalize(root),
             "display": " ".join(hive_normalize(root)),
             "translit": translit_root(root),
-            "meaning": meaning or default_meaning(root, lexicon),
+            "meaning": final_meaning,
             "occurrences": root_info["count"],
             "lemmaCount": len(root_info["lemmas"]),
         },
