@@ -651,8 +651,23 @@ def call_model(prompt, model_config, system_msg=None):
             return None
 
         resp.raise_for_status()
-        data = resp.json()
-        msg = data["choices"][0]["message"]
+        try:
+            data = resp.json()
+        except ValueError as je:
+            # Non-JSON body (e.g. proxy HTML error page) — retrying won't help
+            print(f"  ✗ Non-JSON response from {model_config['label']}: {je}")
+            print(f"    Body: {resp.text[:200]!r}")
+            return "SKIP"
+        try:
+            msg = data["choices"][0]["message"]
+        except (KeyError, IndexError, TypeError) as ke:
+            # Malformed payload (no 'choices' key, empty list, or wrong shape).
+            # Retrying with the same model is pointless — surface the raw body
+            # so we can diagnose, then skip to the next model in the chain.
+            print(f"  ✗ Malformed response from {model_config['label']}: {ke}")
+            print(f"    Keys present: {list(data.keys()) if isinstance(data, dict) else type(data).__name__}")
+            print(f"    Body: {json.dumps(data)[:300] if isinstance(data, (dict, list)) else str(data)[:300]}")
+            return "SKIP"
         # Reasoning models (M3, Kimi K3) may put the answer in reasoning_content
         # and leave content empty when the thinking budget is exhausted.
         text = msg.get("content") or msg.get("reasoning_content", "")
@@ -2451,7 +2466,7 @@ def describe_root(root, family_words):
     )
     for model_config in MODEL_CHAIN:
         raw = call_model(prompt, model_config)
-        if not raw or raw == "RATE_LIMITED":
+        if not raw or raw in ("RATE_LIMITED", "SKIP"):
             continue
         try:
             meaning = str(parse_json_response(raw).get("meaning", "")).strip()
@@ -2533,6 +2548,12 @@ def generate_game(game_type, history, today):
                 else:
                     print(f"  → Rate limited on {model_label} (no retries left), falling back to next model...")
                     break
+
+            # Malformed/unparseable response → skip this model entirely
+            # (retrying with the same model returns the same broken shape)
+            if raw == "SKIP":
+                print(f"  → Skipping {model_label} (malformed response, won't improve with retry)")
+                break
 
             # Other failure (timeout, auth, etc.) → try next model
             if not raw:
@@ -2632,6 +2653,10 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
                 else:
                     print(f"    Rate limited on {model_label} (no retries left), falling back...")
                     break
+
+            if raw == "SKIP":
+                print(f"    Skipping {model_label} (malformed response, won't improve with retry)")
+                break
 
             if not raw:
                 print(f"    Failed ({model_label}), trying next attempt/model...")
