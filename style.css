@@ -801,7 +801,9 @@ textarea {
 /* Slides area */
 .verse-slides {
     flex: 1;
-    min-height: 120px;
+    /* No min-height: let the active slide dictate its own height so
+       longer translations are not clipped at the bottom. The fade-in
+       animation runs on the active slide only. Fix for #193. */
     position: relative;
     overflow: visible;
     touch-action: pan-y;
@@ -816,7 +818,11 @@ textarea {
     padding: 4px 8px;
     max-width: 100%;
     min-width: 0;
-    overflow: hidden;
+    /* overflow: visible so the verse translation and any larger-font
+       Arabic text can extend without being clipped by the slide box.
+       The slide is the active one, so neighbouring .verse-slide
+       elements (display: none) never overflow into it. Fix for #193. */
+    overflow: visible;
     box-sizing: border-box;
 }
 
