@@ -1,513 +1,325 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "puzzle": {
-    "center": "ك",
+    "center": "و",
     "outer": [
-      "ت",
-      "م",
-      "ل",
+      "ق",
       "ا",
-      "و",
-      "ي"
+      "ه",
+      "ع",
+      "ت",
+      "م"
     ],
     "root": {
-      "letters": "ملك",
-      "display": "م ل ك",
-      "translit": "m-l-k",
-      "meaning": "The core idea is ownership and sovereign control. From this root, different word patterns grow to express a king, a kingdom, dominion, an angel as a messenger under God's authority, or something that is owned.",
-      "occurrences": 206,
-      "lemmaCount": 9
+      "letters": "وقع",
+      "display": "و ق ع",
+      "translit": "w-q-ʿ",
+      "meaning": "This root carries the idea of something falling into place or an event becoming real and unavoidable. Other words built from it describe things that happen, land, or are destined to take place.",
+      "occurrences": 24,
+      "lemmaCount": 7
     },
     "words": [
       {
-        "w": "اكل",
+        "w": "عتو",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَكَلَ",
-            "gloss": "eat",
-            "type": "verb",
-            "root": "أكل",
-            "count": 93,
-            "ref": "5:3",
-            "pos": 17,
-            "alt": [
-              "eating",
-              "ate"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "أُكُل",
-            "gloss": "producing fruit",
+            "lemma": "عُتُوّ",
+            "gloss": "insolence",
             "type": "noun",
-            "root": "أكل",
-            "count": 7,
-            "ref": "34:16",
-            "pos": 10
-          },
-          {
-            "lemma": "أَكْل",
-            "gloss": "devouring",
-            "type": "verbal noun",
-            "root": "أكل",
-            "count": 4,
-            "ref": "89:19",
-            "pos": 3
-          },
-          {
-            "lemma": "آكِل",
-            "gloss": "eat",
-            "type": "active participle",
-            "root": "أكل",
-            "count": 3,
-            "ref": "23:20",
-            "pos": 9
-          }
-        ]
-      },
-      {
-        "w": "كال",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "كالُ",
-            "gloss": "measure",
-            "type": "verb",
-            "root": "كيل",
+            "root": "عتو",
             "count": 2,
-            "ref": "17:35",
-            "pos": 4,
+            "ref": "25:21",
+            "pos": 18,
             "alt": [
-              "give by measure"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "كتم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "كَتَمَ",
-            "gloss": "conceal",
-            "type": "verb",
-            "root": "كتم",
-            "count": 21,
-            "ref": "2:140",
-            "pos": 21,
-            "alt": [
-              "concealed"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "كلم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "كَلَّمَ",
-            "gloss": "speak",
-            "type": "verb",
-            "root": "كلم",
-            "count": 20,
-            "ref": "2:253",
-            "pos": 9,
-            "alt": [
-              "spoke",
-              "could be made to speak"
-            ],
-            "form": 2
-          },
-          {
-            "lemma": "كَلِم",
-            "gloss": "words",
-            "type": "noun",
-            "root": "كلم",
-            "count": 4,
-            "ref": "4:46",
-            "pos": 5
-          }
-        ]
-      },
-      {
-        "w": "كيل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "كَيْل",
-            "gloss": "measurement",
-            "type": "noun",
-            "root": "كيل",
-            "count": 10,
-            "ref": "12:60",
-            "pos": 6,
-            "alt": [
-              "measure"
+              "pride"
             ]
           }
         ]
       },
       {
-        "w": "ملك",
+        "w": "قوم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "قَوْم",
+            "gloss": "people",
+            "type": "noun",
+            "root": "قوم",
+            "count": 383,
+            "ref": "3:86",
+            "pos": 4,
+            "alt": [
+              "community",
+              "group"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "قوه",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "قُوَّة",
+            "gloss": "strength",
+            "type": "noun",
+            "root": "قوي",
+            "count": 30,
+            "ref": "8:60",
+            "pos": 6,
+            "alt": [
+              "power",
+              "force"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "موت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَوْت",
+            "gloss": "death",
+            "type": "noun",
+            "root": "موت",
+            "count": 50,
+            "ref": "25:3",
+            "pos": 18
+          }
+        ]
+      },
+      {
+        "w": "واق",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "واق",
+            "gloss": "defender",
+            "type": "active participle",
+            "root": "وقي",
+            "count": 3,
+            "ref": "13:34",
+            "pos": 14,
+            "alt": [
+              "protector"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "وقت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وَقْت",
+            "gloss": "time",
+            "type": "noun",
+            "root": "وقت",
+            "count": 3,
+            "ref": "7:187",
+            "pos": 13
+          }
+        ]
+      },
+      {
+        "w": "وقع",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "مَلَك",
-            "gloss": "angel",
-            "type": "noun",
-            "root": "ملك",
-            "count": 88,
-            "ref": "6:8",
-            "pos": 5,
-            "alt": [
-              "angels"
-            ]
-          },
-          {
-            "lemma": "مُلْك",
-            "gloss": "dominion",
-            "type": "noun",
-            "root": "ملك",
-            "count": 48,
-            "ref": "2:102",
-            "pos": 6,
-            "alt": [
-              "kingdom"
-            ]
-          },
-          {
-            "lemma": "مَلِك",
-            "gloss": "king",
-            "type": "noun",
-            "root": "ملك",
-            "count": 15,
-            "ref": "2:246",
-            "pos": 17,
-            "alt": [
-              "kings"
-            ]
-          },
-          {
-            "lemma": "مَلْك",
-            "gloss": "will",
-            "type": "noun",
-            "root": "ملك",
-            "count": 1,
-            "ref": "20:87",
-            "pos": 5
-          }
-        ]
-      },
-      {
-        "w": "وكل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وُكِّلَ",
-            "gloss": "has been put in charge",
+            "lemma": "وَقَعَ",
+            "gloss": "incumbent",
             "type": "verb",
-            "root": "وكل",
-            "count": 2,
-            "ref": "32:11",
-            "pos": 6,
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "اكمل",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَكْمَلْ",
-            "gloss": "complete",
-            "type": "verb",
-            "root": "كمل",
-            "count": 2,
-            "ref": "2:185",
-            "pos": 36,
-            "alt": [
-              "have perfected"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "توكل",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "تَوَكَّلْ",
-            "gloss": "put our trust",
-            "type": "verb",
-            "root": "وكل",
-            "count": 40,
-            "ref": "8:49",
-            "pos": 12,
-            "alt": [
-              "puts trust",
-              "put trust"
-            ],
-            "form": 5
-          }
-        ]
-      },
-      {
-        "w": "كلام",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "كَلام",
-            "gloss": "words",
-            "type": "noun",
-            "root": "كلم",
-            "count": 4,
-            "ref": "2:75",
-            "pos": 10,
-            "alt": [
-              "words of allah"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "كلما",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "كُلَّما",
-            "gloss": "every time",
-            "type": "noun",
-            "root": "كلل",
-            "count": 15,
-            "ref": "2:20",
-            "pos": 5,
-            "alt": [
-              "whenever"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مالك",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مالِك",
-            "gloss": "master",
-            "type": "active participle",
-            "root": "ملك",
-            "count": 4,
-            "ref": "1:4",
-            "pos": 1,
-            "alt": [
-              "owner",
-              "owners"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "متكي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُتَّكِئ",
-            "gloss": "reclining",
-            "type": "active participle",
-            "root": "وكأ",
-            "count": 8,
-            "ref": "18:31",
-            "pos": 21
-          }
-        ]
-      },
-      {
-        "w": "ملكت",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مَلَكَتْ",
-            "gloss": "possess",
-            "type": "verb",
-            "root": "ملك",
-            "count": 44,
-            "ref": "4:3",
-            "pos": 23,
-            "alt": [
-              "have power",
-              "rightfully possess"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "مليك",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مَلِيك",
-            "gloss": "king",
-            "type": "noun",
-            "root": "ملك",
-            "count": 1,
-            "ref": "54:55",
-            "pos": 5
-          }
-        ]
-      },
-      {
-        "w": "وكيل",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "وَكِيل",
-            "gloss": "guardian",
-            "type": "noun",
-            "root": "وكل",
-            "count": 24,
-            "ref": "4:81",
+            "root": "وقع",
+            "count": 12,
+            "ref": "4:100",
             "pos": 24,
             "alt": [
-              "disposer of affairs",
-              "trustee"
-            ]
+              "has fallen",
+              "fell"
+            ],
+            "form": 1
           }
         ]
       },
       {
-        "w": "اكتال",
+        "w": "اقوم",
         "family": false,
-        "points": 3,
+        "points": 2,
         "senses": [
           {
-            "lemma": "اكْتالُ",
-            "gloss": "get measure",
-            "type": "verb",
-            "root": "كيل",
-            "count": 2,
-            "ref": "12:63",
-            "pos": 13,
-            "form": 8
-          }
-        ]
-      },
-      {
-        "w": "اكمام",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "أَكْمام",
-            "gloss": "coverings",
+            "lemma": "أَقْوَم",
+            "gloss": "most straight",
             "type": "noun",
-            "root": "كمم",
+            "root": "قوم",
+            "count": 4,
+            "ref": "17:9",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "اواه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَوّاه",
+            "gloss": "imploring",
+            "type": "noun",
+            "root": "أوه",
             "count": 2,
-            "ref": "41:47",
-            "pos": 10,
+            "ref": "11:75",
+            "pos": 4
+          }
+        ]
+      },
+      {
+        "w": "قوام",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "قَوّام",
+            "gloss": "protectors",
+            "type": "noun",
+            "root": "قوم",
+            "count": 3,
+            "ref": "4:34",
+            "pos": 2,
             "alt": [
-              "sheaths"
+              "custodians",
+              "steadfast"
             ]
           }
         ]
       },
       {
-        "w": "متوكل",
+        "w": "موتت",
         "family": false,
-        "points": 3,
+        "points": 2,
         "senses": [
           {
-            "lemma": "مُتَوَكِّل",
-            "gloss": "ones who put trust",
+            "lemma": "مَوْتَت",
+            "gloss": "death",
+            "type": "noun",
+            "root": "موت",
+            "count": 3,
+            "ref": "37:59",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "واقع",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "واقِع",
+            "gloss": "befall",
             "type": "active participle",
-            "root": "وكل",
-            "count": 4,
-            "ref": "3:159",
-            "pos": 30,
+            "root": "وقع",
+            "count": 6,
+            "ref": "7:171",
+            "pos": 9,
             "alt": [
-              "trust"
+              "fall",
+              "bound to happen"
             ]
           }
         ]
       },
       {
-        "w": "مكيال",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "مِكْيال",
-            "gloss": "measure",
-            "type": "noun",
-            "root": "كيل",
-            "count": 2,
-            "ref": "11:84",
-            "pos": 16
-          }
-        ]
-      },
-      {
-        "w": "ملكوت",
+        "w": "وقعت",
         "family": true,
-        "points": 5,
+        "points": 4,
         "senses": [
           {
-            "lemma": "مَلَكُوت",
-            "gloss": "dominion",
+            "lemma": "وَقْعَت",
+            "gloss": "at its occurrence",
             "type": "noun",
-            "root": "ملك",
-            "count": 4,
-            "ref": "6:75",
-            "pos": 4,
-            "alt": [
-              "kingdom",
-              "is dominion"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مملوك",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مَمْلُوك",
-            "gloss": "owned",
-            "type": "passive participle",
-            "root": "ملك",
+            "root": "وقع",
             "count": 1,
-            "ref": "16:75",
-            "pos": 5
+            "ref": "56:2",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "مواقع",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَواقِع",
+            "gloss": "setting",
+            "type": "noun",
+            "root": "وقع",
+            "count": 1,
+            "ref": "56:75",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "واقعه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "واقِعَة",
+            "gloss": "event",
+            "type": "active participle",
+            "root": "وقع",
+            "count": 2,
+            "ref": "56:1",
+            "pos": 3,
+            "alt": [
+              "occurrence"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مواقعو",
+        "family": true,
+        "points": 6,
+        "senses": [
+          {
+            "lemma": "مُواقِعُو",
+            "gloss": "are to fall in",
+            "type": "active participle",
+            "root": "وقع",
+            "count": 1,
+            "ref": "18:53",
+            "pos": 6
           }
         ]
       }
     ],
-    "otherFamily": [],
-    "maxScore": 55,
-    "featuredRoot": "ملك"
+    "otherFamily": [
+      {
+        "lemma": "يُوقِعَ",
+        "gloss": "cause",
+        "type": "verb",
+        "root": "وقع",
+        "count": 1,
+        "ref": "5:91",
+        "pos": 5,
+        "form": 4
+      }
+    ],
+    "maxScore": 41,
+    "featuredRoot": "وقع"
   },
   "generated": true,
   "model": "auto (chain)"

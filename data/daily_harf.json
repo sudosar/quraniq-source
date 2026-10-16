@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "puzzle": {
-    "word": "سبحان",
-    "display": "سُبْحَانَ",
-    "hint": "A phrase of glorification often said by Muslims, meaning 'glory be to Allah'.",
-    "verseRef": "30:17",
-    "arabicVerse": "فَسُبْحَـٰنَ ٱللَّهِ حِينَ تُمْسُونَ وَحِينَ تُصْبِحُونَ",
-    "verse": "30:17 - So exalted is Allāh when you reach the evening and when you reach the morning."
+    "word": "هلوع",
+    "display": "هَلُوعًا",
+    "hint": "A four-letter Arabic term meaning intensely eager, impatient, or greedy—the Quran states that humans were 'created' with this quality",
+    "verseRef": "70:19",
+    "arabicVerse": "۞ إِنَّ ٱلْإِنسَـٰنَ خُلِقَ هَلُوعًا",
+    "verse": "70:19 - Indeed, mankind was created anxious:"
   },
   "generated": true,
   "model": "auto (chain)"

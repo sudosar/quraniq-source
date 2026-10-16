@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "puzzle": {
-    "title": "Justice Among the Merchants",
-    "intro": "A figure stood before a people consumed by the lure of profit, calling them to honesty and fairness in their dealings. This servant of Allah warned against giving short measure and tampering with the scales. The people refused to listen, threatening to banish this individual from their land. The earth itself would rise up in judgment against them. Who is this figure that stood for justice among the merchants?",
+    "title": "The Community That Defied the Day of Rest",
+    "intro": "Step into a coastal settlement where a divine command set aside one day for worship and restraint. A group within this community chose to test the limits of that command with a cunning plan, leading to a transformation that would echo through the ages. Who were these souls, and what became of them?",
     "clues": [
-      "I was sent as a messenger to a people who were deeply immersed in trade and commerce.",
-      "My people gave short measure when weighing goods for others.",
-      "They threatened to expel me from the land if I persisted in calling them to faith.",
-      "I am remembered as the most eloquent speaker among the prophets.",
-      "My people were seized by a violent earthquake that left them lifeless in their homes.",
-      "I was sent to the people of Madyan in the northern Hijaz."
+      "We lived near the coast, where the sea provided our livelihood.",
+      "We were commanded to honor one day of the week, setting it aside from worldly pursuits.",
+      "On that day, the fish came to us in great numbers, as if tempting us to break the command.",
+      "We devised a plan to trap the fish on the eve of the sacred day, then collect them after it passed.",
+      "When some among us warned against this deceit, we ignored their counsel and persisted.",
+      "For our transgression, we were transformed into apes, despised and rejected."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Shu'ayb",
-          "Prophet Ishaq",
-          "Prophet Isma'il",
-          "Prophet Zakariya",
-          "Prophet Yahya"
+          "The People of the Sabbath",
+          "The People of the Ditch",
+          "The People of the Wood",
+          "The People of the Garden",
+          "The People of the Elephant"
         ],
-        "answer": "Prophet Shu'ayb"
+        "answer": "The People of the Sabbath"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Threatened with expulsion from the land",
-          "Cast into a blazing fire by my people",
-          "Confronted the magicians of a mighty pharaoh",
-          "Faced the demand to produce a she-camel from rock",
-          "Witnessed the destruction of my city by an angelic host"
+          "Fishing on the Sabbath",
+          "Building a lofty tower",
+          "Killing a sacred she-camel",
+          "Denying a prophet sent to them",
+          "Transgressing in trade weights"
         ],
-        "answer": "Threatened with expulsion from the land"
+        "answer": "Fishing on the Sabbath"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The land of Madyan",
-          "The land of Egypt",
-          "Mount Sinai",
-          "The city of Sodom",
-          "The land of Canaan"
+          "The sea and its fish",
+          "The fire that was made cool",
+          "The staff that became a serpent",
+          "The ark of salvation",
+          "The tablets of stone"
         ],
-        "answer": "The land of Madyan"
+        "answer": "The sea and its fish"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "My people were seized by a violent earthquake",
-          "My people were drowned in a great flood",
-          "My people were transformed into apes",
-          "My people were scattered by a screaming wind",
-          "I was saved while inside the belly of a great fish"
+          "Transformed into apes",
+          "Swallowed by the earth",
+          "Destroyed by a fierce wind",
+          "Drowned in the sea",
+          "Struck by a shower of stones"
         ],
-        "answer": "My people were seized by a violent earthquake"
+        "answer": "Transformed into apes"
       }
     },
-    "verseRef": "11:87",
-    "arabic": "قَالُوا۟ يَـٰشُعَيْبُ أَصَلَوٰتُكَ تَأْمُرُكَ أَن نَّتْرُكَ مَا يَعْبُدُ ءَابَآؤُنَآ أَوْ أَن نَّفْعَلَ فِىٓ أَمْوَٰلِنَا مَا نَشَـٰٓؤُا۟ ۖ إِنَّكَ لَأَنتَ ٱلْحَلِيمُ ٱلرَّشِيدُ",
-    "verse": "They said, \"O Shuʿayb, does your prayer [i.e., religion] command you that we should leave what our fathers worship or not do with our wealth what we please? Indeed, you are the forbearing, the discerning!\" (11:87)"
+    "verseRef": "2:65",
+    "arabic": "وَلَقَدْ عَلِمْتُمُ ٱلَّذِينَ ٱعْتَدَوْا۟ مِنكُمْ فِى ٱلسَّبْتِ فَقُلْنَا لَهُمْ كُونُوا۟ قِرَدَةً خَـٰسِـِٔينَ",
+    "verse": "And you had already known about those who transgressed among you concerning the sabbath, and We said to them, \"Be apes, despised.\" (2:65)"
   },
   "generated": true,
   "model": "auto (chain)"

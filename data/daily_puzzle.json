@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "puzzle": {
     "categories": [
       {
-        "name": "أَلْفَاظُ الْوَقْتِ فِي الْقُرْآنِ",
-        "nameEn": "Terms of Time in the Quran",
+        "name": "مُصْطَلَحَاتٌ قَضَائِيَّةٌ فِي سُورَةِ الْبَقَرَةِ",
+        "nameEn": "Judicial and Legal Terms in Surah Al-Baqarah",
         "color": "yellow",
         "items": [
           {
-            "ar": "اللَّيْلَ",
-            "en": "the night",
-            "ref": "10:67",
-            "verse": "هُوَ ٱلَّذِى جَعَلَ لَكُمُ ٱلَّيْلَ لِتَسْكُنُوا۟ فِيهِ وَٱلنَّهَارَ مُبْصِرًا ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍۢ لِّقَوْمٍۢ يَسْمَعُونَ",
-            "verseEn": "It is He who made for you the night to rest therein and the day, giving sight. Indeed in that are signs for a people who listen."
+            "ar": "الْقِصَاصِ",
+            "en": "the legal retribution",
+            "ref": "2:179",
+            "verse": "وَلَكُمْ فِى ٱلْقِصَاصِ حَيَوٰةٌۭ يَـٰٓأُو۟لِى ٱلْأَلْبَـٰبِ لَعَلَّكُمْ تَتَّقُونَ",
+            "verseEn": "And there is for you in legal retribution [saving of] life, O you [people] of understanding, that you may become righteous."
           },
           {
-            "ar": "النَّهَارِ",
-            "en": "and the day",
-            "ref": "23:80",
-            "verse": "وَهُوَ ٱلَّذِى يُحْىِۦ وَيُمِيتُ وَلَهُ ٱخْتِلَـٰفُ ٱلَّيْلِ وَٱلنَّهَارِ ۚ أَفَلَا تَعْقِلُونَ",
-            "verseEn": "And it is He who gives life and causes death, and His is the alternation of the night and the day. Then will you not reason?"
+            "ar": "الْحُكَّامِ",
+            "en": "the authorities",
+            "ref": "2:188",
+            "verse": "وَلَا تَأْكُلُوٓا۟ أَمْوَٰلَكُم بَيْنَكُم بِٱلْبَـٰطِلِ وَتُدْلُوا۟ بِهَآ إِلَى ٱلْحُكَّامِ لِتَأْكُلُوا۟ فَرِيقًۭا مِّنْ أَمْوَٰلِ ٱلنَّاسِ بِٱلْإِثْمِ وَأَنتُمْ تَعْلَمُونَ",
+            "verseEn": "And do not consume one another's wealth unjustly or send it [in bribery] to the rulers in order that [they might aid] you [to] consume a portion of the wealth of the people in sin, while you know [it is unlawful]."
           },
           {
-            "ar": "أَجَلٌ",
-            "en": "(the) term",
-            "ref": "6:60",
-            "verse": "وَهُوَ ٱلَّذِى يَتَوَفَّىٰكُم بِٱلَّيْلِ وَيَعْلَمُ مَا جَرَحْتُم بِٱلنَّهَارِ ثُمَّ يَبْعَثُكُمْ فِيهِ لِيُقْضَىٰٓ أَجَلٌۭ مُّسَمًّۭى ۖ ثُمَّ إِلَيْهِ مَرْجِعُكُمْ ثُمَّ يُنَبِّئُكُم بِمَا كُنتُمْ تَعْمَلُونَ",
-            "verseEn": "And it is He who takes your souls by night and knows what you have committed by day. Then He revives you therein [i.e., by day] that a specified term may be fulfilled. Then to Him will be your return; then He will inform you about what you used to do."
+            "ar": "أَيْمَانِكُمْ",
+            "en": "in your oaths",
+            "ref": "2:224",
+            "verse": "وَلَا تَجْعَلُوا۟ ٱللَّهَ عُرْضَةًۭ لِّأَيْمَـٰنِكُمْ أَن تَبَرُّوا۟ وَتَتَّقُوا۟ وَتُصْلِحُوا۟ بَيْنَ ٱلنَّاسِ ۗ وَٱللَّهُ سَمِيعٌ عَلِيمٌۭ",
+            "verseEn": "And do not make [your oath by] Allāh an excuse against being righteous and fearing Allāh and making peace among people. And Allāh is Hearing and Knowing."
           },
           {
-            "ar": "الْوَقْتِ",
-            "en": "(of) the time",
-            "ref": "38:81",
-            "verse": "إِلَىٰ يَوْمِ ٱلْوَقْتِ ٱلْمَعْلُومِ",
-            "verseEn": "Until the Day of the time well-known.\""
+            "ar": "وَصِيَّةً",
+            "en": "(should make) a will",
+            "ref": "2:240",
+            "verse": "وَٱلَّذِينَ يُتَوَفَّوْنَ مِنكُمْ وَيَذَرُونَ أَزْوَٰجًۭا وَصِيَّةًۭ لِّأَزْوَٰجِهِم مَّتَـٰعًا إِلَى ٱلْحَوْلِ غَيْرَ إِخْرَاجٍۢ ۚ فَإِنْ خَرَجْنَ فَلَا جُنَاحَ عَلَيْكُمْ فِى مَا فَعَلْنَ فِىٓ أَنفُسِهِنَّ مِن مَّعْرُوفٍۢ ۗ وَٱللَّهُ عَزِيزٌ حَكِيمٌۭ",
+            "verseEn": "And those who are taken in death among you and leave wives behind - for their wives is a bequest: maintenance for one year without turning [them] out. But if they leave [of their own accord], then there is no blame upon you for what they do with themselves in an acceptable way. And Allāh is Exalted in Might and Wise."
           }
         ]
       },
       {
-        "name": "مُفْرَدَاتُ الْمَاءِ وَالْبَحْرِ",
-        "nameEn": "Water and Sea Travel Terms in the Quran",
+        "name": "عَنَاصِرُ عَذَابِ الْمُجْرِمِينَ فِي سُورَةِ الدُّخَانِ",
+        "nameEn": "Elements of the Sinners' Punishment in Surah Ad-Dukhan",
         "color": "green",
         "items": [
           {
-            "ar": "مَاءً",
-            "en": "water",
-            "ref": "16:65",
-            "verse": "وَٱللَّهُ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءًۭ فَأَحْيَا بِهِ ٱلْأَرْضَ بَعْدَ مَوْتِهَآ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَةًۭ لِّقَوْمٍۢ يَسْمَعُونَ",
-            "verseEn": "And Allāh has sent down rain from the sky and given life thereby to the earth after its lifelessness. Indeed in that is a sign for a people who listen."
+            "ar": "عَذَابِ",
+            "en": "(the) punishment",
+            "ref": "44:48",
+            "verse": "ثُمَّ صُبُّوا۟ فَوْقَ رَأْسِهِۦ مِنْ عَذَابِ ٱلْحَمِيمِ",
+            "verseEn": "Then pour over his head from the torment of scalding water.\""
           },
           {
-            "ar": "الْبَحْرِ",
-            "en": "and the sea",
-            "ref": "30:41",
-            "verse": "ظَهَرَ ٱلْفَسَادُ فِى ٱلْبَرِّ وَٱلْبَحْرِ بِمَا كَسَبَتْ أَيْدِى ٱلنَّاسِ لِيُذِيقَهُم بَعْضَ ٱلَّذِى عَمِلُوا۟ لَعَلَّهُمْ يَرْجِعُونَ",
-            "verseEn": "Corruption has appeared throughout the land and sea by [reason of] what the hands of people have earned so He [i.e., Allāh] may let them taste part of [the consequence of] what they have done that perhaps they will return [to righteousness]."
+            "ar": "الْمُهْلِ",
+            "en": "Like the murky oil",
+            "ref": "44:45",
+            "verse": "كَٱلْمُهْلِ يَغْلِى فِى ٱلْبُطُونِ",
+            "verseEn": "Like murky oil, it boils within bellies"
           },
           {
-            "ar": "عُيُونٍ",
-            "en": "and springs",
-            "ref": "44:25",
-            "verse": "كَمْ تَرَكُوا۟ مِن جَنَّـٰتٍۢ وَعُيُونٍۢ",
-            "verseEn": "How much they left behind of gardens and springs"
+            "ar": "الْحَمِيمِ",
+            "en": "(of) scalding water",
+            "ref": "44:46",
+            "verse": "كَغَلْىِ ٱلْحَمِيمِ",
+            "verseEn": "Like the boiling of scalding water."
           },
           {
-            "ar": "الْفُلْكَ",
-            "en": "the ships",
-            "ref": "31:31",
-            "verse": "أَلَمْ تَرَ أَنَّ ٱلْفُلْكَ تَجْرِى فِى ٱلْبَحْرِ بِنِعْمَتِ ٱللَّهِ لِيُرِيَكُم مِّنْ ءَايَـٰتِهِۦٓ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍۢ لِّكُلِّ صَبَّارٍۢ شَكُورٍۢ",
-            "verseEn": "Do you not see that ships sail through the sea by the favor of Allāh that He may show you of His signs? Indeed in that are signs for everyone patient and grateful."
+            "ar": "الْجَحِيمِ",
+            "en": "(of) the Hellfire",
+            "ref": "44:47",
+            "verse": "خُذُوهُ فَٱعْتِلُوهُ إِلَىٰ سَوَآءِ ٱلْجَحِيمِ",
+            "verseEn": "[It will be commanded], \"Seize him and drag him into the midst of the Hellfire,"
           }
         ]
       },
       {
-        "name": "مُفْرَدَاتُ الرُّؤْيَا وَتَأْوِيلِهَا فِي سُورَةِ يُوسُفَ",
-        "nameEn": "Dream Interpretation Terms in Surah Yusuf",
+        "name": "أَلْفَاظٌ مِنْ خِطَابِ إِبْلِيسَ فِي سُورَةِ الْحِجْرِ",
+        "nameEn": "Words from Iblis's Address in Surah Al-Hijr",
         "color": "blue",
         "items": [
           {
-            "ar": "رُؤْيَاكَ",
-            "en": "your vision",
-            "ref": "12:5",
-            "verse": "قَالَ يَـٰبُنَىَّ لَا تَقْصُصْ رُءْيَاكَ عَلَىٰٓ إِخْوَتِكَ فَيَكِيدُوا۟ لَكَ كَيْدًا ۖ إِنَّ ٱلشَّيْطَـٰنَ لِلْإِنسَـٰنِ عَدُوٌّۭ مُّبِينٌۭ",
-            "verseEn": "He said, \"O my son, do not relate your vision to your brothers or they will contrive against you a plan. Indeed Satan, to man, is a manifest enemy."
+            "ar": "أَنْظِرْنِي",
+            "en": "Then give me respite",
+            "ref": "15:36",
+            "verse": "قَالَ رَبِّ فَأَنظِرْنِىٓ إِلَىٰ يَوْمِ يُبْعَثُونَ",
+            "verseEn": "He said, \"My Lord, then reprieve me until the Day they are resurrected.\""
           },
           {
-            "ar": "نَبَّأْتُكُمَا",
-            "en": "I will inform both of you",
-            "ref": "12:37",
-            "verse": "قَالَ لَا يَأْتِيكُمَا طَعَامٌۭ تُرْزَقَانِهِۦٓ إِلَّا نَبَّأْتُكُمَا بِتَأْوِيلِهِۦ قَبْلَ أَن يَأْتِيَكُمَا ۚ ذَٰلِكُمَا مِمَّا عَلَّمَنِى رَبِّىٓ ۚ إِنِّى تَرَكْتُ مِلَّةَ قَوْمٍۢ لَّا يُؤْمِنُونَ بِٱللَّهِ وَهُم بِٱلْـَٔاخِرَةِ هُمْ كَـٰفِرُونَ",
-            "verseEn": "He said, \"You will not receive food that is provided to you except that I will inform you of its interpretation before it comes to you. That is from what my Lord has taught me. Indeed, I have left the religion of a people who do not believe in Allāh, and they, in the Hereafter, are disbelievers."
+            "ar": "أُزَيِّنَنَّ",
+            "en": "surely, I will make (evil) fair-seeming",
+            "ref": "15:39",
+            "verse": "قَالَ رَبِّ بِمَآ أَغْوَيْتَنِى لَأُزَيِّنَنَّ لَهُمْ فِى ٱلْأَرْضِ وَلَأُغْوِيَنَّهُمْ أَجْمَعِينَ",
+            "verseEn": "[Iblees] said, \"My Lord, because You have put me in error, I will surely make [disobedience] attractive to them [i.e., mankind] on earth, and I will mislead them all"
           },
           {
-            "ar": "نَجَا",
-            "en": "was saved",
-            "ref": "12:45",
-            "verse": "وَقَالَ ٱلَّذِى نَجَا مِنْهُمَا وَٱدَّكَرَ بَعْدَ أُمَّةٍ أَنَا۠ أُنَبِّئُكُم بِتَأْوِيلِهِۦ فَأَرْسِلُونِ",
-            "verseEn": "But the one who was freed and remembered after a time said, \"I will inform you of its interpretation, so send me forth.\""
+            "ar": "الْمُخْلَصِينَ",
+            "en": "the ones who are sincere",
+            "ref": "15:40",
+            "verse": "إِلَّا عِبَادَكَ مِنْهُمُ ٱلْمُخْلَصِينَ",
+            "verseEn": "Except, among them, Your chosen servants.\""
           },
           {
-            "ar": "يُغَاثُ",
-            "en": "will be given abundant rain",
-            "ref": "12:49",
-            "verse": "ثُمَّ يَأْتِى مِنۢ بَعْدِ ذَٰلِكَ عَامٌۭ فِيهِ يُغَاثُ ٱلنَّاسُ وَفِيهِ يَعْصِرُونَ",
-            "verseEn": "Then will come after that a year in which the people will be given rain and in which they will press [olives and grapes].\""
+            "ar": "سُلْطَانٌ",
+            "en": "any authority",
+            "ref": "15:42",
+            "verse": "إِنَّ عِبَادِى لَيْسَ لَكَ عَلَيْهِمْ سُلْطَـٰنٌ إِلَّا مَنِ ٱتَّبَعَكَ مِنَ ٱلْغَاوِينَ",
+            "verseEn": "Indeed, My servants - no authority will you have over them, except those who follow you of the deviators."
           }
         ]
       },
       {
-        "name": "أَفْعَالٌ مُضَارِعَةٌ بِصِيغَةِ الْجَمْعِ فِي سُورَةِ الْبَقَرَةِ",
-        "nameEn": "Present Tense Verbs in Surah Al-Baqarah (Third Person Plural)",
+        "name": "مَتَاعُ الْحَيَاةِ الدُّنْيَا فِي سُورَةِ الزُّخْرُفِ",
+        "nameEn": "Worldly Luxuries and Provisions in Surah Az-Zukhruf",
         "color": "purple",
         "items": [
           {
-            "ar": "يُوقِنُونَ",
-            "en": "firmly believe",
-            "ref": "2:4",
-            "verse": "وَٱلَّذِينَ يُؤْمِنُونَ بِمَآ أُنزِلَ إِلَيْكَ وَمَآ أُنزِلَ مِن قَبْلِكَ وَبِٱلْـَٔاخِرَةِ هُمْ يُوقِنُونَ",
-            "verseEn": "And who believe in what has been revealed to you, [O Muḥammad], and what was revealed before you, and of the Hereafter they are certain [in faith]."
+            "ar": "الْقَرْيَتَيْنِ",
+            "en": "the two towns",
+            "ref": "43:31",
+            "verse": "وَقَالُوا۟ لَوْلَا نُزِّلَ هَـٰذَا ٱلْقُرْءَانُ عَلَىٰ رَجُلٍۢ مِّنَ ٱلْقَرْيَتَيْنِ عَظِيمٍ",
+            "verseEn": "And they said, \"Why was this Qur’ān not sent down upon a great man from [one of] the two cities?\""
           },
           {
-            "ar": "يُبْصِرُونَ",
-            "en": "(do) they see",
-            "ref": "2:17",
-            "verse": "مَثَلُهُمْ كَمَثَلِ ٱلَّذِى ٱسْتَوْقَدَ نَارًۭا فَلَمَّآ أَضَآءَتْ مَا حَوْلَهُۥ ذَهَبَ ٱللَّهُ بِنُورِهِمْ وَتَرَكَهُمْ فِى ظُلُمَـٰتٍۢ لَّا يُبْصِرُونَ",
-            "verseEn": "Their example is that of one who kindled a fire, but when it illuminated what was around him, Allāh took away their light and left them in darkness [so] they could not see."
+            "ar": "مَعِيشَتَهُمْ",
+            "en": "their livelihood",
+            "ref": "43:32",
+            "verse": "أَهُمْ يَقْسِمُونَ رَحْمَتَ رَبِّكَ ۚ نَحْنُ قَسَمْنَا بَيْنَهُم مَّعِيشَتَهُمْ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا ۚ وَرَفَعْنَا بَعْضَهُمْ فَوْقَ بَعْضٍۢ دَرَجَـٰتٍۢ لِّيَتَّخِذَ بَعْضُهُم بَعْضًۭا سُخْرِيًّۭا ۗ وَرَحْمَتُ رَبِّكَ خَيْرٌۭ مِّمَّا يَجْمَعُونَ",
+            "verseEn": "Do they distribute the mercy of your Lord? It is We who have apportioned among them their livelihood in the life of this world and have raised some of them above others in degrees [of rank] that they may make use of one another for service. But the mercy of your Lord is better than whatever they accumulate."
           },
           {
-            "ar": "يَعْلَمُونَ",
-            "en": "know",
-            "ref": "2:78",
-            "verse": "وَمِنْهُمْ أُمِّيُّونَ لَا يَعْلَمُونَ ٱلْكِتَـٰبَ إِلَّآ أَمَانِىَّ وَإِنْ هُمْ إِلَّا يَظُنُّونَ",
-            "verseEn": "And among them are unlettered ones who do not know the Scripture except [indulgement in] wishful thinking, but they are only assuming."
+            "ar": "أَبْوَابًا",
+            "en": "doors",
+            "ref": "43:34",
+            "verse": "وَلِبُيُوتِهِمْ أَبْوَٰبًۭا وَسُرُرًا عَلَيْهَا يَتَّكِـُٔونَ",
+            "verseEn": "And for their houses - doors and couches [of silver] upon which to recline"
           },
           {
-            "ar": "يَكْتُبُونَ",
-            "en": "write",
-            "ref": "2:79",
-            "verse": "فَوَيْلٌۭ لِّلَّذِينَ يَكْتُبُونَ ٱلْكِتَـٰبَ بِأَيْدِيهِمْ ثُمَّ يَقُولُونَ هَـٰذَا مِنْ عِندِ ٱللَّهِ لِيَشْتَرُوا۟ بِهِۦ ثَمَنًۭا قَلِيلًۭا ۖ فَوَيْلٌۭ لَّهُم مِّمَّا كَتَبَتْ أَيْدِيهِمْ وَوَيْلٌۭ لَّهُم مِّمَّا يَكْسِبُونَ",
-            "verseEn": "So woe to those who write the \"scripture\" with their own hands, then say, \"This is from Allāh,\" in order to exchange it for a small price. Woe to them for what their hands have written and woe to them for what they earn."
+            "ar": "زُخْرُفًا",
+            "en": "And ornaments of gold",
+            "ref": "43:35",
+            "verse": "وَزُخْرُفًۭا ۚ وَإِن كُلُّ ذَٰلِكَ لَمَّا مَتَـٰعُ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۚ وَٱلْـَٔاخِرَةُ عِندَ رَبِّكَ لِلْمُتَّقِينَ",
+            "verseEn": "And gold ornament. But all that is not but the enjoyment of worldly life. And the Hereafter with your Lord is for the righteous."
           }
         ]
       }

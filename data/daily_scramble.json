@@ -1,29 +1,38 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "puzzle": {
-    "verseRef": "98:7",
-    "reference": "Surah Al-Bayyinah (98:7)",
+    "verseRef": "17:57",
+    "reference": "Surah Al-Isra (17:57)",
     "segments": [
-      "إِنَّ الَّذِينَ آمَنُوا",
-      "وَعَمِلُوا الصَّالِحَاتِ",
-      "أُولَٰئِكَ هُمْ",
-      "خَيْرُ الْبَرِيَّةِ"
+      "أُولَٰئِكَ الَّذِينَ يَدْعُونَ",
+      "يَبْتَغُونَ إِلَىٰ رَبِّهِمُ الْوَسِيلَةَ",
+      "أَيُّهُمْ أَقْرَبُ",
+      "وَيَرْجُونَ رَحْمَتَهُ",
+      "وَيَخَافُونَ عَذَابَهُ",
+      "إِنَّ عَذَابَ رَبِّكَ",
+      "كَانَ مَحْذُورًا"
     ],
     "translations": [
-      "Indeed those who believe",
-      "and do righteous deeds",
-      "those  they",
-      "(are the) best (of) the creatures"
+      "Those whom they call",
+      "seek to their Lord",
+      "the means of access which of them (is) nearest",
+      "and they hope (for) His mercy and fear",
+      "His punishment Indeed",
+      "(the) punishment (of) your Lord",
+      "is (ever) feared"
     ],
-    "hint": "This verse describes the best of creation as those who believe and do righteous deeds.",
-    "arabic": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ أُو۟لَـٰٓئِكَ هُمْ خَيْرُ ٱلْبَرِيَّةِ",
+    "hint": "A profound verse that reveals even those whom the disbelievers invoke are themselves devotedly seeking nearness to Allah, hoping for His mercy and fearing His punishment.",
+    "arabic": "أُو۟لَـٰٓئِكَ ٱلَّذِينَ يَدْعُونَ يَبْتَغُونَ إِلَىٰ رَبِّهِمُ ٱلْوَسِيلَةَ أَيُّهُمْ أَقْرَبُ وَيَرْجُونَ رَحْمَتَهُۥ وَيَخَافُونَ عَذَابَهُۥٓ ۚ إِنَّ عَذَابَ رَبِّكَ كَانَ مَحْذُورًۭا",
     "words": [
-      "إِنَّ ٱلَّذِينَ ءَامَنُوا۟",
-      "وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ",
-      "أُو۟لَـٰٓئِكَ هُمْ",
-      "خَيْرُ ٱلْبَرِيَّةِ"
+      "أُو۟لَـٰٓئِكَ ٱلَّذِينَ يَدْعُونَ",
+      "يَبْتَغُونَ إِلَىٰ رَبِّهِمُ",
+      "ٱلْوَسِيلَةَ أَيُّهُمْ أَقْرَبُ",
+      "وَيَرْجُونَ رَحْمَتَهُۥ وَيَخَافُونَ",
+      "عَذَابَهُۥٓ ۚ إِنَّ",
+      "عَذَابَ رَبِّكَ",
+      "كَانَ مَحْذُورًۭا"
     ],
-    "verseEn": "Indeed, they who have believed and done righteous deeds - those are the best of creatures."
+    "verseEn": "Those whom they invoke seek means of access to their Lord, [striving as to] which of them would be nearest, and they hope for His mercy and fear His punishment. Indeed, the punishment of your Lord is ever feared."
   },
   "generated": true,
   "model": "auto (chain)"
