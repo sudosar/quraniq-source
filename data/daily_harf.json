@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-17",
   "puzzle": {
-    "word": "هلوع",
-    "display": "هَلُوعًا",
-    "hint": "A four-letter Arabic term meaning intensely eager, impatient, or greedy—the Quran states that humans were 'created' with this quality",
-    "verseRef": "70:19",
-    "arabicVerse": "۞ إِنَّ ٱلْإِنسَـٰنَ خُلِقَ هَلُوعًا",
-    "verse": "70:19 - Indeed, mankind was created anxious:"
+    "word": "قدير",
+    "display": "قَدِير",
+    "hint": "A divine attribute of Allah - means 'All-Powerful' or 'Omnipotent', describing His perfect ability over all things",
+    "verseRef": "46:33",
+    "arabicVerse": "أَوَلَمْ يَرَوْا۟ أَنَّ ٱللَّهَ ٱلَّذِى خَلَقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ وَلَمْ يَعْىَ بِخَلْقِهِنَّ بِقَـٰدِرٍ عَلَىٰٓ أَن يُحْـِۧىَ ٱلْمَوْتَىٰ ۚ بَلَىٰٓ إِنَّهُۥ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ",
+    "verse": "46:33 - Do they not see that Allāh, who created the heavens and earth and did not fail in their creation, is able to give life to the dead? Yes. Indeed, He is over all things competent."
   },
   "generated": true,
   "model": "auto (chain)"

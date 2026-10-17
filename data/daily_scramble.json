@@ -1,38 +1,32 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-17",
   "puzzle": {
-    "verseRef": "17:57",
-    "reference": "Surah Al-Isra (17:57)",
+    "verseRef": "33:21",
+    "reference": "Surah Al-Ahzab (33:21)",
     "segments": [
-      "أُولَٰئِكَ الَّذِينَ يَدْعُونَ",
-      "يَبْتَغُونَ إِلَىٰ رَبِّهِمُ الْوَسِيلَةَ",
-      "أَيُّهُمْ أَقْرَبُ",
-      "وَيَرْجُونَ رَحْمَتَهُ",
-      "وَيَخَافُونَ عَذَابَهُ",
-      "إِنَّ عَذَابَ رَبِّكَ",
-      "كَانَ مَحْذُورًا"
+      "لَقَدْ كَانَ لَكُمْ",
+      "فِي رَسُولِ اللَّهِ",
+      "أُسْوَةٌ حَسَنَةٌ",
+      "لِّمَن كَانَ يَرْجُو",
+      "اللَّهَ وَالْيَوْمَ الْآخِرَ"
     ],
     "translations": [
-      "Those whom they call",
-      "seek to their Lord",
-      "the means of access which of them (is) nearest",
-      "and they hope (for) His mercy and fear",
-      "His punishment Indeed",
-      "(the) punishment (of) your Lord",
-      "is (ever) feared"
+      "Certainly is for you in",
+      "(the) Messenger (of) Allah an excellent example an excellent example",
+      "for (one) who has hope",
+      "(in) Allah and the Day the Last",
+      "and remembers Allah much"
     ],
-    "hint": "A profound verse that reveals even those whom the disbelievers invoke are themselves devotedly seeking nearness to Allah, hoping for His mercy and fearing His punishment.",
-    "arabic": "أُو۟لَـٰٓئِكَ ٱلَّذِينَ يَدْعُونَ يَبْتَغُونَ إِلَىٰ رَبِّهِمُ ٱلْوَسِيلَةَ أَيُّهُمْ أَقْرَبُ وَيَرْجُونَ رَحْمَتَهُۥ وَيَخَافُونَ عَذَابَهُۥٓ ۚ إِنَّ عَذَابَ رَبِّكَ كَانَ مَحْذُورًۭا",
+    "hint": "This verse highlights Prophet Muhammad ﷺ as the supreme role model for believers who hope in Allah and the Last Day.",
+    "arabic": "لَّقَدْ كَانَ لَكُمْ فِى رَسُولِ ٱللَّهِ أُسْوَةٌ حَسَنَةٌۭ لِّمَن كَانَ يَرْجُوا۟ ٱللَّهَ وَٱلْيَوْمَ ٱلْـَٔاخِرَ وَذَكَرَ ٱللَّهَ كَثِيرًۭا",
     "words": [
-      "أُو۟لَـٰٓئِكَ ٱلَّذِينَ يَدْعُونَ",
-      "يَبْتَغُونَ إِلَىٰ رَبِّهِمُ",
-      "ٱلْوَسِيلَةَ أَيُّهُمْ أَقْرَبُ",
-      "وَيَرْجُونَ رَحْمَتَهُۥ وَيَخَافُونَ",
-      "عَذَابَهُۥٓ ۚ إِنَّ",
-      "عَذَابَ رَبِّكَ",
-      "كَانَ مَحْذُورًۭا"
+      "لَّقَدْ كَانَ لَكُمْ فِى",
+      "رَسُولِ ٱللَّهِ أُسْوَةٌ حَسَنَةٌۭ",
+      "لِّمَن كَانَ يَرْجُوا۟",
+      "ٱللَّهَ وَٱلْيَوْمَ ٱلْـَٔاخِرَ",
+      "وَذَكَرَ ٱللَّهَ كَثِيرًۭا"
     ],
-    "verseEn": "Those whom they invoke seek means of access to their Lord, [striving as to] which of them would be nearest, and they hope for His mercy and fear His punishment. Indeed, the punishment of your Lord is ever feared."
+    "verseEn": "There has certainly been for you in the Messenger of Allāh an excellent pattern for anyone whose hope is in Allāh and the Last Day and [who] remembers Allāh often."
   },
   "generated": true,
   "model": "auto (chain)"

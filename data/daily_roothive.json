@@ -1,325 +1,321 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-17",
   "puzzle": {
-    "center": "و",
+    "center": "ز",
     "outer": [
-      "ق",
-      "ا",
       "ه",
-      "ع",
-      "ت",
+      "و",
+      "ل",
+      "ا",
+      "ف",
       "م"
     ],
     "root": {
-      "letters": "وقع",
-      "display": "و ق ع",
-      "translit": "w-q-ʿ",
-      "meaning": "This root carries the idea of something falling into place or an event becoming real and unavoidable. Other words built from it describe things that happen, land, or are destined to take place.",
-      "occurrences": 24,
-      "lemmaCount": 7
+      "letters": "فوز",
+      "display": "ف و ز",
+      "translit": "f-w-z",
+      "meaning": "This root carries the idea of winning or reaching a happy outcome, like triumph or salvation. Verbs describe the act of succeeding, nouns name the resulting state or the people who achieve it, and an intensified form points to an ultimate place of escape.",
+      "occurrences": 29,
+      "lemmaCount": 5
     },
     "words": [
       {
-        "w": "عتو",
+        "w": "زال",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "عُتُوّ",
-            "gloss": "insolence",
-            "type": "noun",
-            "root": "عتو",
-            "count": 2,
-            "ref": "25:21",
-            "pos": 18,
-            "alt": [
-              "pride"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قوم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قَوْم",
-            "gloss": "people",
-            "type": "noun",
-            "root": "قوم",
-            "count": 383,
-            "ref": "3:86",
-            "pos": 4,
-            "alt": [
-              "community",
-              "group"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قوه",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قُوَّة",
-            "gloss": "strength",
-            "type": "noun",
-            "root": "قوي",
-            "count": 30,
-            "ref": "8:60",
-            "pos": 6,
-            "alt": [
-              "power",
-              "force"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "موت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَوْت",
-            "gloss": "death",
-            "type": "noun",
-            "root": "موت",
-            "count": 50,
-            "ref": "25:3",
-            "pos": 18
-          }
-        ]
-      },
-      {
-        "w": "واق",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "واق",
-            "gloss": "defender",
-            "type": "active participle",
-            "root": "وقي",
-            "count": 3,
-            "ref": "13:34",
-            "pos": 14,
-            "alt": [
-              "protector"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "وقت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وَقْت",
-            "gloss": "time",
-            "type": "noun",
-            "root": "وقت",
-            "count": 3,
-            "ref": "7:187",
-            "pos": 13
-          }
-        ]
-      },
-      {
-        "w": "وقع",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "وَقَعَ",
-            "gloss": "incumbent",
+            "lemma": "زالَ",
+            "gloss": "should be moved",
             "type": "verb",
-            "root": "وقع",
-            "count": 12,
-            "ref": "4:100",
-            "pos": 24,
+            "root": "زول",
+            "count": 3,
+            "ref": "14:46",
+            "pos": 10,
             "alt": [
-              "has fallen",
-              "fell"
+              "cease",
+              "should cease"
             ],
             "form": 1
           }
         ]
       },
       {
-        "w": "اقوم",
+        "w": "زلل",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَقْوَم",
-            "gloss": "most straight",
-            "type": "noun",
-            "root": "قوم",
-            "count": 4,
-            "ref": "17:9",
-            "pos": 7
-          }
-        ]
-      },
-      {
-        "w": "اواه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَوّاه",
-            "gloss": "imploring",
-            "type": "noun",
-            "root": "أوه",
+            "lemma": "زَلَلْ",
+            "gloss": "slip",
+            "type": "verb",
+            "root": "زلل",
             "count": 2,
-            "ref": "11:75",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "قوام",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "قَوّام",
-            "gloss": "protectors",
-            "type": "noun",
-            "root": "قوم",
-            "count": 3,
-            "ref": "4:34",
+            "ref": "2:209",
             "pos": 2,
             "alt": [
-              "custodians",
-              "steadfast"
+              "lest, should slip"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "فاز",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "فازَ",
+            "gloss": "is successful",
+            "type": "verb",
+            "root": "فوز",
+            "count": 3,
+            "ref": "3:185",
+            "pos": 17,
+            "alt": [
+              "has attained"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "فوز",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "فَوْز",
+            "gloss": "attainment",
+            "type": "noun",
+            "root": "فوز",
+            "count": 19,
+            "ref": "4:73",
+            "pos": 17,
+            "alt": [
+              "success"
             ]
           }
         ]
       },
       {
-        "w": "موتت",
+        "w": "هزم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هَزَمُ",
+            "gloss": "defeated",
+            "type": "verb",
+            "root": "هزم",
+            "count": 2,
+            "ref": "2:251",
+            "pos": 1,
+            "alt": [
+              "soon will be defeated"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "هزو",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هُزُو",
+            "gloss": "ridicule",
+            "type": "noun",
+            "root": "هزأ",
+            "count": 11,
+            "ref": "2:67",
+            "pos": 13,
+            "alt": [
+              "jest",
+              "mockery"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ازفه",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "مَوْتَت",
-            "gloss": "death",
-            "type": "noun",
-            "root": "موت",
-            "count": 3,
-            "ref": "37:59",
-            "pos": 2
-          }
-        ]
-      },
-      {
-        "w": "واقع",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "واقِع",
-            "gloss": "befall",
+            "lemma": "آزِفَة",
+            "gloss": "approaching",
             "type": "active participle",
-            "root": "وقع",
-            "count": 6,
-            "ref": "7:171",
-            "pos": 9,
+            "root": "أزف",
+            "count": 2,
+            "ref": "40:18",
+            "pos": 3,
             "alt": [
-              "fall",
-              "bound to happen"
+              "approaching day"
             ]
           }
         ]
       },
       {
-        "w": "وقعت",
-        "family": true,
-        "points": 4,
+        "w": "الزم",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "وَقْعَت",
-            "gloss": "at its occurrence",
-            "type": "noun",
-            "root": "وقع",
-            "count": 1,
-            "ref": "56:2",
-            "pos": 2
+            "lemma": "أَلْزَمَ",
+            "gloss": "should we compel you",
+            "type": "verb",
+            "root": "لزم",
+            "count": 3,
+            "ref": "11:28",
+            "pos": 16,
+            "alt": [
+              "have fastened to",
+              "made them adhere"
+            ],
+            "form": 4
           }
         ]
       },
       {
-        "w": "مواقع",
-        "family": true,
-        "points": 5,
+        "w": "زلزل",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "مَواقِع",
-            "gloss": "setting",
+            "lemma": "زُلْزِلُ",
+            "gloss": "is shaken",
+            "type": "verb",
+            "root": "زلزل",
+            "count": 3,
+            "ref": "99:1",
+            "pos": 2,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "زلفه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "زُلْفَة",
+            "gloss": "approaching",
             "type": "noun",
-            "root": "وقع",
-            "count": 1,
-            "ref": "56:75",
+            "root": "زلف",
+            "count": 2,
+            "ref": "67:27",
             "pos": 3
           }
         ]
       },
       {
-        "w": "واقعه",
-        "family": true,
-        "points": 5,
+        "w": "لزام",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "واقِعَة",
-            "gloss": "event",
-            "type": "active participle",
-            "root": "وقع",
+            "lemma": "لِزام",
+            "gloss": "obligation",
+            "type": "noun",
+            "root": "لزم",
             "count": 2,
-            "ref": "56:1",
-            "pos": 3,
+            "ref": "20:129",
+            "pos": 7,
             "alt": [
-              "occurrence"
+              "inevitable"
             ]
           }
         ]
       },
       {
-        "w": "مواقعو",
+        "w": "مفاز",
         "family": true,
-        "points": 6,
+        "points": 4,
         "senses": [
           {
-            "lemma": "مُواقِعُو",
-            "gloss": "are to fall in",
-            "type": "active participle",
-            "root": "وقع",
+            "lemma": "مَفاز",
+            "gloss": "success",
+            "type": "noun",
+            "root": "فوز",
             "count": 1,
-            "ref": "18:53",
-            "pos": 6
+            "ref": "78:31",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "ازلام",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "أَزْلام",
+            "gloss": "divining arrows",
+            "type": "noun",
+            "root": "زلم",
+            "count": 2,
+            "ref": "5:3",
+            "pos": 28
+          }
+        ]
+      },
+      {
+        "w": "زلزال",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "زِلْزال",
+            "gloss": "shake",
+            "type": "noun",
+            "root": "زلزل",
+            "count": 2,
+            "ref": "33:11",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "مفازه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَفازَة",
+            "gloss": "escape",
+            "type": "noun",
+            "root": "فوز",
+            "count": 2,
+            "ref": "3:188",
+            "pos": 15,
+            "alt": [
+              "to their place of salvation"
+            ]
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "يُوقِعَ",
-        "gloss": "cause",
-        "type": "verb",
-        "root": "وقع",
-        "count": 1,
-        "ref": "5:91",
-        "pos": 5,
-        "form": 4
+        "lemma": "فائِز",
+        "gloss": "successful ones",
+        "type": "active participle",
+        "root": "فوز",
+        "count": 4,
+        "ref": "9:20",
+        "pos": 16,
+        "alt": [
+          "successful",
+          "achievers"
+        ]
       }
     ],
-    "maxScore": 41,
-    "featuredRoot": "وقع"
+    "maxScore": 35,
+    "featuredRoot": "فوز"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-17",
   "puzzle": {
     "categories": [
       {
-        "name": "مُصْطَلَحَاتٌ قَضَائِيَّةٌ فِي سُورَةِ الْبَقَرَةِ",
-        "nameEn": "Judicial and Legal Terms in Surah Al-Baqarah",
+        "name": "صِفَاتُ الْوُجُوهِ فِي الْآخِرَةِ",
+        "nameEn": "Descriptions of Faces in the Hereafter",
         "color": "yellow",
         "items": [
           {
-            "ar": "الْقِصَاصِ",
-            "en": "the legal retribution",
-            "ref": "2:179",
-            "verse": "وَلَكُمْ فِى ٱلْقِصَاصِ حَيَوٰةٌۭ يَـٰٓأُو۟لِى ٱلْأَلْبَـٰبِ لَعَلَّكُمْ تَتَّقُونَ",
-            "verseEn": "And there is for you in legal retribution [saving of] life, O you [people] of understanding, that you may become righteous."
+            "ar": "مُسْوَدَّةٌ",
+            "en": "(will be) blackened",
+            "ref": "39:60",
+            "verse": "وَيَوْمَ ٱلْقِيَـٰمَةِ تَرَى ٱلَّذِينَ كَذَبُوا۟ عَلَى ٱللَّهِ وُجُوهُهُم مُّسْوَدَّةٌ ۚ أَلَيْسَ فِى جَهَنَّمَ مَثْوًۭى لِّلْمُتَكَبِّرِينَ",
+            "verseEn": "And on the Day of Resurrection you will see those who lied about Allāh [with] their faces blackened. Is there not in Hell a residence for the arrogant?"
           },
           {
-            "ar": "الْحُكَّامِ",
-            "en": "the authorities",
-            "ref": "2:188",
-            "verse": "وَلَا تَأْكُلُوٓا۟ أَمْوَٰلَكُم بَيْنَكُم بِٱلْبَـٰطِلِ وَتُدْلُوا۟ بِهَآ إِلَى ٱلْحُكَّامِ لِتَأْكُلُوا۟ فَرِيقًۭا مِّنْ أَمْوَٰلِ ٱلنَّاسِ بِٱلْإِثْمِ وَأَنتُمْ تَعْلَمُونَ",
-            "verseEn": "And do not consume one another's wealth unjustly or send it [in bribery] to the rulers in order that [they might aid] you [to] consume a portion of the wealth of the people in sin, while you know [it is unlawful]."
+            "ar": "بَاسِرَةٌ",
+            "en": "(will be) distorted",
+            "ref": "75:24",
+            "verse": "وَوُجُوهٌۭ يَوْمَئِذٍۭ بَاسِرَةٌۭ",
+            "verseEn": "And [some] faces, that Day, will be contorted,"
           },
           {
-            "ar": "أَيْمَانِكُمْ",
-            "en": "in your oaths",
-            "ref": "2:224",
-            "verse": "وَلَا تَجْعَلُوا۟ ٱللَّهَ عُرْضَةًۭ لِّأَيْمَـٰنِكُمْ أَن تَبَرُّوا۟ وَتَتَّقُوا۟ وَتُصْلِحُوا۟ بَيْنَ ٱلنَّاسِ ۗ وَٱللَّهُ سَمِيعٌ عَلِيمٌۭ",
-            "verseEn": "And do not make [your oath by] Allāh an excuse against being righteous and fearing Allāh and making peace among people. And Allāh is Hearing and Knowing."
+            "ar": "نَضْرَةَ",
+            "en": "(the) radiance",
+            "ref": "83:24",
+            "verse": "تَعْرِفُ فِى وُجُوهِهِمْ نَضْرَةَ ٱلنَّعِيمِ",
+            "verseEn": "You will recognize in their faces the radiance of pleasure."
           },
           {
-            "ar": "وَصِيَّةً",
-            "en": "(should make) a will",
-            "ref": "2:240",
-            "verse": "وَٱلَّذِينَ يُتَوَفَّوْنَ مِنكُمْ وَيَذَرُونَ أَزْوَٰجًۭا وَصِيَّةًۭ لِّأَزْوَٰجِهِم مَّتَـٰعًا إِلَى ٱلْحَوْلِ غَيْرَ إِخْرَاجٍۢ ۚ فَإِنْ خَرَجْنَ فَلَا جُنَاحَ عَلَيْكُمْ فِى مَا فَعَلْنَ فِىٓ أَنفُسِهِنَّ مِن مَّعْرُوفٍۢ ۗ وَٱللَّهُ عَزِيزٌ حَكِيمٌۭ",
-            "verseEn": "And those who are taken in death among you and leave wives behind - for their wives is a bequest: maintenance for one year without turning [them] out. But if they leave [of their own accord], then there is no blame upon you for what they do with themselves in an acceptable way. And Allāh is Exalted in Might and Wise."
+            "ar": "ضَاحِكَةٌ",
+            "en": "Laughing",
+            "ref": "80:39",
+            "verse": "ضَاحِكَةٌۭ مُّسْتَبْشِرَةٌۭ",
+            "verseEn": "Laughing, rejoicing at good news."
           }
         ]
       },
       {
-        "name": "عَنَاصِرُ عَذَابِ الْمُجْرِمِينَ فِي سُورَةِ الدُّخَانِ",
-        "nameEn": "Elements of the Sinners' Punishment in Surah Ad-Dukhan",
+        "name": "صِفَاتُ الْمُكَذِّبِ الْمُتَكَبِّرِ فِي سُورَةِ الْقَلَمِ",
+        "nameEn": "Attributes of the Arrogant Denier in Surah Al-Qalam",
         "color": "green",
         "items": [
           {
-            "ar": "عَذَابِ",
-            "en": "(the) punishment",
-            "ref": "44:48",
-            "verse": "ثُمَّ صُبُّوا۟ فَوْقَ رَأْسِهِۦ مِنْ عَذَابِ ٱلْحَمِيمِ",
-            "verseEn": "Then pour over his head from the torment of scalding water.\""
+            "ar": "حَلَّافٍ",
+            "en": "habitual swearer",
+            "ref": "68:10",
+            "verse": "وَلَا تُطِعْ كُلَّ حَلَّافٍۢ مَّهِينٍ",
+            "verseEn": "And do not obey every worthless habitual swearer"
           },
           {
-            "ar": "الْمُهْلِ",
-            "en": "Like the murky oil",
-            "ref": "44:45",
-            "verse": "كَٱلْمُهْلِ يَغْلِى فِى ٱلْبُطُونِ",
-            "verseEn": "Like murky oil, it boils within bellies"
+            "ar": "هَمَّازٍ",
+            "en": "Defamer",
+            "ref": "68:11",
+            "verse": "هَمَّازٍۢ مَّشَّآءٍۭ بِنَمِيمٍۢ",
+            "verseEn": "[And] scorner, going about with malicious gossip -"
           },
           {
-            "ar": "الْحَمِيمِ",
-            "en": "(of) scalding water",
-            "ref": "44:46",
-            "verse": "كَغَلْىِ ٱلْحَمِيمِ",
-            "verseEn": "Like the boiling of scalding water."
+            "ar": "مَنَّاعٍ",
+            "en": "A preventer",
+            "ref": "68:12",
+            "verse": "مَّنَّاعٍۢ لِّلْخَيْرِ مُعْتَدٍ أَثِيمٍ",
+            "verseEn": "A preventer of good, transgressing and sinful,"
           },
           {
-            "ar": "الْجَحِيمِ",
-            "en": "(of) the Hellfire",
-            "ref": "44:47",
-            "verse": "خُذُوهُ فَٱعْتِلُوهُ إِلَىٰ سَوَآءِ ٱلْجَحِيمِ",
-            "verseEn": "[It will be commanded], \"Seize him and drag him into the midst of the Hellfire,"
+            "ar": "زَنِيمٍ",
+            "en": "utterly useless",
+            "ref": "68:13",
+            "verse": "عُتُلٍّۭ بَعْدَ ذَٰلِكَ زَنِيمٍ",
+            "verseEn": "Cruel, moreover, and an illegitimate pretender."
           }
         ]
       },
       {
-        "name": "أَلْفَاظٌ مِنْ خِطَابِ إِبْلِيسَ فِي سُورَةِ الْحِجْرِ",
-        "nameEn": "Words from Iblis's Address in Surah Al-Hijr",
+        "name": "أَدْوَارُ النَّبِيِّ فِي الْقُرْآنِ",
+        "nameEn": "Roles of the Prophet Muhammad in the Quran",
         "color": "blue",
         "items": [
           {
-            "ar": "أَنْظِرْنِي",
-            "en": "Then give me respite",
-            "ref": "15:36",
-            "verse": "قَالَ رَبِّ فَأَنظِرْنِىٓ إِلَىٰ يَوْمِ يُبْعَثُونَ",
-            "verseEn": "He said, \"My Lord, then reprieve me until the Day they are resurrected.\""
+            "ar": "مُذَكِّرٌ",
+            "en": "(are) a reminder",
+            "ref": "88:21",
+            "verse": "فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌۭ",
+            "verseEn": "So remind, [O Muḥammad]; you are only a reminder."
           },
           {
-            "ar": "أُزَيِّنَنَّ",
-            "en": "surely, I will make (evil) fair-seeming",
-            "ref": "15:39",
-            "verse": "قَالَ رَبِّ بِمَآ أَغْوَيْتَنِى لَأُزَيِّنَنَّ لَهُمْ فِى ٱلْأَرْضِ وَلَأُغْوِيَنَّهُمْ أَجْمَعِينَ",
-            "verseEn": "[Iblees] said, \"My Lord, because You have put me in error, I will surely make [disobedience] attractive to them [i.e., mankind] on earth, and I will mislead them all"
+            "ar": "نَذِيرٌ",
+            "en": "a warner",
+            "ref": "35:23",
+            "verse": "إِنْ أَنتَ إِلَّا نَذِيرٌ",
+            "verseEn": "You, [O Muḥammad], are not but a warner."
           },
           {
-            "ar": "الْمُخْلَصِينَ",
-            "en": "the ones who are sincere",
-            "ref": "15:40",
-            "verse": "إِلَّا عِبَادَكَ مِنْهُمُ ٱلْمُخْلَصِينَ",
-            "verseEn": "Except, among them, Your chosen servants.\""
+            "ar": "مُبَشِّرِينَ",
+            "en": "(as) bearer of glad tidings",
+            "ref": "6:48",
+            "verse": "وَمَا نُرْسِلُ ٱلْمُرْسَلِينَ إِلَّا مُبَشِّرِينَ وَمُنذِرِينَ ۖ فَمَنْ ءَامَنَ وَأَصْلَحَ فَلَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ",
+            "verseEn": "And We send not the messengers except as bringers of good tidings and warners. So whoever believes and reforms - there will be no fear concerning them, nor will they grieve."
           },
           {
-            "ar": "سُلْطَانٌ",
-            "en": "any authority",
-            "ref": "15:42",
-            "verse": "إِنَّ عِبَادِى لَيْسَ لَكَ عَلَيْهِمْ سُلْطَـٰنٌ إِلَّا مَنِ ٱتَّبَعَكَ مِنَ ٱلْغَاوِينَ",
-            "verseEn": "Indeed, My servants - no authority will you have over them, except those who follow you of the deviators."
+            "ar": "شَاهِدًا",
+            "en": "(as) a witness",
+            "ref": "73:15",
+            "verse": "إِنَّآ أَرْسَلْنَآ إِلَيْكُمْ رَسُولًۭا شَـٰهِدًا عَلَيْكُمْ كَمَآ أَرْسَلْنَآ إِلَىٰ فِرْعَوْنَ رَسُولًۭا",
+            "verseEn": "Indeed, We have sent to you a Messenger as a witness upon you just as We sent to Pharaoh a messenger."
           }
         ]
       },
       {
-        "name": "مَتَاعُ الْحَيَاةِ الدُّنْيَا فِي سُورَةِ الزُّخْرُفِ",
-        "nameEn": "Worldly Luxuries and Provisions in Surah Az-Zukhruf",
+        "name": "أَلْفَاظُ الْعَذَابِ وَالْوَعِيدِ فِي الْقُرْآنِ",
+        "nameEn": "Terms of Divine Punishment and Warning in the Quran",
         "color": "purple",
         "items": [
           {
-            "ar": "الْقَرْيَتَيْنِ",
-            "en": "the two towns",
-            "ref": "43:31",
-            "verse": "وَقَالُوا۟ لَوْلَا نُزِّلَ هَـٰذَا ٱلْقُرْءَانُ عَلَىٰ رَجُلٍۢ مِّنَ ٱلْقَرْيَتَيْنِ عَظِيمٍ",
-            "verseEn": "And they said, \"Why was this Qur’ān not sent down upon a great man from [one of] the two cities?\""
+            "ar": "ضُرٌّ",
+            "en": "harm",
+            "ref": "30:33",
+            "verse": "وَإِذَا مَسَّ ٱلنَّاسَ ضُرٌّۭ دَعَوْا۟ رَبَّهُم مُّنِيبِينَ إِلَيْهِ ثُمَّ إِذَآ أَذَاقَهُم مِّنْهُ رَحْمَةً إِذَا فَرِيقٌۭ مِّنْهُم بِرَبِّهِمْ يُشْرِكُونَ",
+            "verseEn": "And when adversity touches the people, they call upon their Lord, turning in repentance to Him. Then when He lets them taste mercy from Him, at once a party of them associate others with their Lord,"
           },
           {
-            "ar": "مَعِيشَتَهُمْ",
-            "en": "their livelihood",
-            "ref": "43:32",
-            "verse": "أَهُمْ يَقْسِمُونَ رَحْمَتَ رَبِّكَ ۚ نَحْنُ قَسَمْنَا بَيْنَهُم مَّعِيشَتَهُمْ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا ۚ وَرَفَعْنَا بَعْضَهُمْ فَوْقَ بَعْضٍۢ دَرَجَـٰتٍۢ لِّيَتَّخِذَ بَعْضُهُم بَعْضًۭا سُخْرِيًّۭا ۗ وَرَحْمَتُ رَبِّكَ خَيْرٌۭ مِّمَّا يَجْمَعُونَ",
-            "verseEn": "Do they distribute the mercy of your Lord? It is We who have apportioned among them their livelihood in the life of this world and have raised some of them above others in degrees [of rank] that they may make use of one another for service. But the mercy of your Lord is better than whatever they accumulate."
+            "ar": "الْعَذَابِ",
+            "en": "the punishment",
+            "ref": "32:21",
+            "verse": "وَلَنُذِيقَنَّهُم مِّنَ ٱلْعَذَابِ ٱلْأَدْنَىٰ دُونَ ٱلْعَذَابِ ٱلْأَكْبَرِ لَعَلَّهُمْ يَرْجِعُونَ",
+            "verseEn": "And We will surely let them taste the nearer punishment short of the greater punishment that perhaps they will return [i.e., repent]."
           },
           {
-            "ar": "أَبْوَابًا",
-            "en": "doors",
-            "ref": "43:34",
-            "verse": "وَلِبُيُوتِهِمْ أَبْوَٰبًۭا وَسُرُرًا عَلَيْهَا يَتَّكِـُٔونَ",
-            "verseEn": "And for their houses - doors and couches [of silver] upon which to recline"
+            "ar": "صَيْحَةً",
+            "en": "a shout",
+            "ref": "36:49",
+            "verse": "مَا يَنظُرُونَ إِلَّا صَيْحَةًۭ وَٰحِدَةًۭ تَأْخُذُهُمْ وَهُمْ يَخِصِّمُونَ",
+            "verseEn": "They do not await except one blast which will seize them while they are disputing."
           },
           {
-            "ar": "زُخْرُفًا",
-            "en": "And ornaments of gold",
-            "ref": "43:35",
-            "verse": "وَزُخْرُفًۭا ۚ وَإِن كُلُّ ذَٰلِكَ لَمَّا مَتَـٰعُ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۚ وَٱلْـَٔاخِرَةُ عِندَ رَبِّكَ لِلْمُتَّقِينَ",
-            "verseEn": "And gold ornament. But all that is not but the enjoyment of worldly life. And the Hereafter with your Lord is for the righteous."
+            "ar": "وَيْلَنَا",
+            "en": "O woe to us",
+            "ref": "36:52",
+            "verse": "قَالُوا۟ يَـٰوَيْلَنَا مَنۢ بَعَثَنَا مِن مَّرْقَدِنَا ۜ ۗ هَـٰذَا مَا وَعَدَ ٱلرَّحْمَـٰنُ وَصَدَقَ ٱلْمُرْسَلُونَ",
+            "verseEn": "They will say, \"O woe to us! Who has raised us up from our sleeping place?\" [The reply will be], \"This is what the Most Merciful had promised, and the messengers told the truth.\""
           }
         ]
       }
