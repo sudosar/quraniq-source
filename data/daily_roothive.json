@@ -1,321 +1,551 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "puzzle": {
-    "center": "ز",
+    "center": "ق",
     "outer": [
-      "ه",
       "و",
       "ل",
       "ا",
-      "ف",
-      "م"
+      "ت",
+      "ي",
+      "ه"
     ],
     "root": {
-      "letters": "فوز",
-      "display": "ف و ز",
-      "translit": "f-w-z",
-      "meaning": "This root carries the idea of winning or reaching a happy outcome, like triumph or salvation. Verbs describe the act of succeeding, nouns name the resulting state or the people who achieve it, and an intensified form points to an ultimate place of escape.",
-      "occurrences": 29,
-      "lemmaCount": 5
+      "letters": "قلل",
+      "display": "ق ل ل",
+      "translit": "q-l-l",
+      "meaning": "The core idea is smallness in amount or degree, pointing to something few or little. From this root, derived words grow by adding patterns to describe things smaller in number, actions that reduce or make less, and even the idea of carrying lightly.",
+      "occurrences": 76,
+      "lemmaCount": 6
     },
     "words": [
       {
-        "w": "زال",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "زالَ",
-            "gloss": "should be moved",
-            "type": "verb",
-            "root": "زول",
-            "count": 3,
-            "ref": "14:46",
-            "pos": 10,
-            "alt": [
-              "cease",
-              "should cease"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "زلل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "زَلَلْ",
-            "gloss": "slip",
-            "type": "verb",
-            "root": "زلل",
-            "count": 2,
-            "ref": "2:209",
-            "pos": 2,
-            "alt": [
-              "lest, should slip"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "فاز",
+        "w": "اقل",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "فازَ",
-            "gloss": "is successful",
-            "type": "verb",
-            "root": "فوز",
-            "count": 3,
-            "ref": "3:185",
-            "pos": 17,
-            "alt": [
-              "has attained"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "فوز",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "فَوْز",
-            "gloss": "attainment",
+            "lemma": "أَقَلّ",
+            "gloss": "lesser",
             "type": "noun",
-            "root": "فوز",
-            "count": 19,
-            "ref": "4:73",
-            "pos": 17,
+            "root": "قلل",
+            "count": 2,
+            "ref": "18:39",
+            "pos": 16
+          }
+        ]
+      },
+      {
+        "w": "تقي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "تَقِيّ",
+            "gloss": "righteous",
+            "type": "noun",
+            "root": "وقي",
+            "count": 4,
+            "ref": "19:13",
+            "pos": 6,
             "alt": [
-              "success"
+              "god fearing"
             ]
           }
         ]
       },
       {
-        "w": "هزم",
+        "w": "قال",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "هَزَمُ",
-            "gloss": "defeated",
+            "lemma": "قالَ",
+            "gloss": "said",
             "type": "verb",
-            "root": "هزم",
-            "count": 2,
-            "ref": "2:251",
-            "pos": 1,
+            "root": "قول",
+            "count": 1618,
+            "ref": "2:8",
+            "pos": 4,
             "alt": [
-              "soon will be defeated"
+              "say",
+              "says"
             ],
             "form": 1
           }
         ]
       },
       {
-        "w": "هزو",
+        "w": "قتل",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "هُزُو",
-            "gloss": "ridicule",
+            "lemma": "قَتَلَ",
+            "gloss": "kills",
+            "type": "verb",
+            "root": "قتل",
+            "count": 83,
+            "ref": "2:154",
+            "pos": 4,
+            "alt": [
+              "killed",
+              "are slain"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "قَتْل",
+            "gloss": "kill",
+            "type": "verbal noun",
+            "root": "قتل",
+            "count": 10,
+            "ref": "5:30",
+            "pos": 4,
+            "alt": [
+              "killing"
+            ]
+          },
+          {
+            "lemma": "قُتِّلُ",
+            "gloss": "be killed",
+            "type": "verb",
+            "root": "قتل",
+            "count": 4,
+            "ref": "5:33",
+            "pos": 12,
+            "alt": [
+              "kill",
+              "were killing"
+            ],
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "قول",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "قَوْل",
+            "gloss": "saying",
+            "type": "verbal noun",
+            "root": "قول",
+            "count": 92,
+            "ref": "2:59",
+            "pos": 4,
+            "alt": [
+              "word",
+              "speech"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "قوه",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "قُوَّة",
+            "gloss": "strength",
             "type": "noun",
-            "root": "هزأ",
+            "root": "قوي",
+            "count": 30,
+            "ref": "8:60",
+            "pos": 6,
+            "alt": [
+              "power",
+              "force"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "قوي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "قَوِيّ",
+            "gloss": "all-strong",
+            "type": "noun",
+            "root": "قوي",
             "count": 11,
-            "ref": "2:67",
-            "pos": 13,
+            "ref": "8:52",
+            "pos": 15
+          }
+        ]
+      },
+      {
+        "w": "قيل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "قِيل",
+            "gloss": "statement",
+            "type": "noun",
+            "root": "قول",
+            "count": 4,
+            "ref": "4:122",
+            "pos": 21,
             "alt": [
-              "jest",
-              "mockery"
+              "saying",
+              "word"
             ]
           }
         ]
       },
       {
-        "w": "ازفه",
+        "w": "لقي",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "آزِفَة",
-            "gloss": "approaching",
-            "type": "active participle",
-            "root": "أزف",
-            "count": 2,
-            "ref": "40:18",
-            "pos": 3,
-            "alt": [
-              "approaching day"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "الزم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَلْزَمَ",
-            "gloss": "should we compel you",
+            "lemma": "لَقَّى",
+            "gloss": "is granted",
             "type": "verb",
-            "root": "لزم",
+            "root": "لقي",
+            "count": 6,
+            "ref": "25:75",
+            "pos": 6,
+            "alt": [
+              "be met",
+              "surely, receive"
+            ],
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "واق",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "واق",
+            "gloss": "defender",
+            "type": "active participle",
+            "root": "وقي",
             "count": 3,
-            "ref": "11:28",
+            "ref": "13:34",
+            "pos": 14,
+            "alt": [
+              "protector"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "وقت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وَقْت",
+            "gloss": "time",
+            "type": "noun",
+            "root": "وقت",
+            "count": 3,
+            "ref": "7:187",
+            "pos": 13
+          }
+        ]
+      },
+      {
+        "w": "وقي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وَقَى",
+            "gloss": "protect",
+            "type": "verb",
+            "root": "وقي",
+            "count": 16,
+            "ref": "40:9",
+            "pos": 4,
+            "alt": [
+              "is saved"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "اتقي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "اتَّقَى",
+            "gloss": "fears",
+            "type": "verb",
+            "root": "وقي",
+            "count": 166,
+            "ref": "2:189",
+            "pos": 19,
+            "alt": [
+              "fear",
+              "fears allah"
+            ],
+            "form": 8
+          },
+          {
+            "lemma": "أَتْقَى",
+            "gloss": "most righteous of",
+            "type": "noun",
+            "root": "وقي",
+            "count": 2,
+            "ref": "49:13",
             "pos": 16,
             "alt": [
-              "have fastened to",
-              "made them adhere"
+              "righteous"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اقلت",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "أَقَلَّتْ",
+            "gloss": "have carried",
+            "type": "verb",
+            "root": "قلل",
+            "count": 1,
+            "ref": "7:57",
+            "pos": 11,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "القي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَلْقَى",
+            "gloss": "throw",
+            "type": "verb",
+            "root": "لقي",
+            "count": 71,
+            "ref": "4:94",
+            "pos": 13,
+            "alt": [
+              "throws",
+              "threw"
             ],
             "form": 4
           }
         ]
       },
       {
-        "w": "زلزل",
+        "w": "تقول",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "زُلْزِلُ",
-            "gloss": "is shaken",
+            "lemma": "تَقَوَّلَ",
+            "gloss": "fabricated",
             "type": "verb",
-            "root": "زلزل",
-            "count": 3,
-            "ref": "99:1",
+            "root": "قول",
+            "count": 2,
+            "ref": "69:44",
             "pos": 2,
-            "form": 1
+            "form": 5
           }
         ]
       },
       {
-        "w": "زلفه",
+        "w": "تقوي",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "زُلْفَة",
-            "gloss": "approaching",
+            "lemma": "تَقْوَى",
+            "gloss": "righteousness",
             "type": "noun",
-            "root": "زلف",
-            "count": 2,
-            "ref": "67:27",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "لزام",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "لِزام",
-            "gloss": "obligation",
-            "type": "noun",
-            "root": "لزم",
-            "count": 2,
-            "ref": "20:129",
-            "pos": 7,
+            "root": "وقي",
+            "count": 17,
+            "ref": "9:109",
+            "pos": 5,
             "alt": [
-              "inevitable"
+              "piety"
             ]
           }
         ]
       },
       {
-        "w": "مفاز",
-        "family": true,
-        "points": 4,
+        "w": "تلقي",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "مَفاز",
-            "gloss": "success",
-            "type": "noun",
-            "root": "فوز",
-            "count": 1,
-            "ref": "78:31",
-            "pos": 3
+            "lemma": "تَلَقَّى",
+            "gloss": "receive",
+            "type": "verb",
+            "root": "لقي",
+            "count": 4,
+            "ref": "50:17",
+            "pos": 2,
+            "form": 5
           }
         ]
       },
       {
-        "w": "ازلام",
+        "w": "قاتل",
         "family": false,
-        "points": 3,
+        "points": 2,
         "senses": [
           {
-            "lemma": "أَزْلام",
-            "gloss": "divining arrows",
-            "type": "noun",
-            "root": "زلم",
-            "count": 2,
-            "ref": "5:3",
-            "pos": 28
+            "lemma": "قاتَلَ",
+            "gloss": "may fight",
+            "type": "verb",
+            "root": "قتل",
+            "count": 54,
+            "ref": "2:246",
+            "pos": 18,
+            "alt": [
+              "fight",
+              "fighting"
+            ],
+            "form": 3
           }
         ]
       },
       {
-        "w": "زلزال",
+        "w": "قايل",
         "family": false,
-        "points": 3,
+        "points": 2,
         "senses": [
           {
-            "lemma": "زِلْزال",
-            "gloss": "shake",
+            "lemma": "قائِل",
+            "gloss": "speaker",
+            "type": "active participle",
+            "root": "قول",
+            "count": 5,
+            "ref": "12:10",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "قتال",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "قِتال",
+            "gloss": "fighting",
             "type": "noun",
-            "root": "زلزل",
-            "count": 2,
-            "ref": "33:11",
+            "root": "قتل",
+            "count": 13,
+            "ref": "2:217",
             "pos": 5
           }
         ]
       },
       {
-        "w": "مفازه",
+        "w": "قليل",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "قَلِيل",
+            "gloss": "little",
+            "type": "adjective",
+            "root": "قلل",
+            "count": 70,
+            "ref": "2:41",
+            "pos": 16,
+            "alt": [
+              "few",
+              "small"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اقتتل",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "اقْتَتَلَ",
+            "gloss": "fought each other",
+            "type": "verb",
+            "root": "قتل",
+            "count": 4,
+            "ref": "2:253",
+            "pos": 26,
+            "form": 8
+          }
+        ]
+      },
+      {
+        "w": "التقي",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "الْتَقَى",
+            "gloss": "met",
+            "type": "verb",
+            "root": "لقي",
+            "count": 7,
+            "ref": "3:155",
+            "pos": 6,
+            "form": 8
+          }
+        ]
+      },
+      {
+        "w": "قليله",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "مَفازَة",
-            "gloss": "escape",
-            "type": "noun",
-            "root": "فوز",
-            "count": 2,
-            "ref": "3:188",
-            "pos": 15,
-            "alt": [
-              "to their place of salvation"
-            ]
+            "lemma": "قَلِيلَة",
+            "gloss": "small",
+            "type": "adjective",
+            "root": "قلل",
+            "count": 1,
+            "ref": "2:249",
+            "pos": 52
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "فائِز",
-        "gloss": "successful ones",
-        "type": "active participle",
-        "root": "فوز",
-        "count": 4,
-        "ref": "9:20",
-        "pos": 16,
-        "alt": [
-          "successful",
-          "achievers"
-        ]
+        "lemma": "قَلَّ",
+        "gloss": "little",
+        "type": "verb",
+        "root": "قلل",
+        "count": 1,
+        "ref": "4:7",
+        "pos": 14,
+        "form": 1
+      },
+      {
+        "lemma": "يُقَلِّلُ",
+        "gloss": "made you as few",
+        "type": "verb",
+        "root": "قلل",
+        "count": 1,
+        "ref": "8:44",
+        "pos": 8,
+        "form": 2
       }
     ],
-    "maxScore": 35,
-    "featuredRoot": "فوز"
+    "maxScore": 49,
+    "featuredRoot": "قلل"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,32 +1,35 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "puzzle": {
-    "verseRef": "33:21",
-    "reference": "Surah Al-Ahzab (33:21)",
+    "verseRef": "34:39",
+    "reference": "Surah Saba (34:39)",
     "segments": [
-      "لَقَدْ كَانَ لَكُمْ",
-      "فِي رَسُولِ اللَّهِ",
-      "أُسْوَةٌ حَسَنَةٌ",
-      "لِّمَن كَانَ يَرْجُو",
-      "اللَّهَ وَالْيَوْمَ الْآخِرَ"
+      "قُلْ إِنَّ رَبِّي",
+      "يَبْسُطُ الرِّزْقَ",
+      "لِمَن يَشَاءُ",
+      "وَيَقْدِرُ",
+      "وَلَٰكِنَّ أَكْثَرَ النَّاسِ",
+      "لَا يَعْلَمُونَ"
     ],
     "translations": [
-      "Certainly is for you in",
-      "(the) Messenger (of) Allah an excellent example an excellent example",
-      "for (one) who has hope",
-      "(in) Allah and the Day the Last",
-      "and remembers Allah much"
+      "Say Indeed my Lord extends",
+      "the provision for whom He wills of",
+      "His slaves and restricts for him",
+      "But what you spend of",
+      "anything then He will compensate it",
+      "and He (is the) Best (of) the Providers"
     ],
-    "hint": "This verse highlights Prophet Muhammad ﷺ as the supreme role model for believers who hope in Allah and the Last Day.",
-    "arabic": "لَّقَدْ كَانَ لَكُمْ فِى رَسُولِ ٱللَّهِ أُسْوَةٌ حَسَنَةٌۭ لِّمَن كَانَ يَرْجُوا۟ ٱللَّهَ وَٱلْيَوْمَ ٱلْـَٔاخِرَ وَذَكَرَ ٱللَّهَ كَثِيرًۭا",
+    "hint": "About Allah's absolute control over sustenance and provision — a reminder that He gives abundantly to whom He wills and measures it to whom He wills.",
+    "arabic": "قُلْ إِنَّ رَبِّى يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ مِنْ عِبَادِهِۦ وَيَقْدِرُ لَهُۥ ۚ وَمَآ أَنفَقْتُم مِّن شَىْءٍۢ فَهُوَ يُخْلِفُهُۥ ۖ وَهُوَ خَيْرُ ٱلرَّٰزِقِينَ",
     "words": [
-      "لَّقَدْ كَانَ لَكُمْ فِى",
-      "رَسُولِ ٱللَّهِ أُسْوَةٌ حَسَنَةٌۭ",
-      "لِّمَن كَانَ يَرْجُوا۟",
-      "ٱللَّهَ وَٱلْيَوْمَ ٱلْـَٔاخِرَ",
-      "وَذَكَرَ ٱللَّهَ كَثِيرًۭا"
+      "قُلْ إِنَّ رَبِّى يَبْسُطُ",
+      "ٱلرِّزْقَ لِمَن يَشَآءُ مِنْ",
+      "عِبَادِهِۦ وَيَقْدِرُ لَهُۥ ۚ",
+      "وَمَآ أَنفَقْتُم مِّن",
+      "شَىْءٍۢ فَهُوَ يُخْلِفُهُۥ ۖ",
+      "وَهُوَ خَيْرُ ٱلرَّٰزِقِينَ"
     ],
-    "verseEn": "There has certainly been for you in the Messenger of Allāh an excellent pattern for anyone whose hope is in Allāh and the Last Day and [who] remembers Allāh often."
+    "verseEn": "Say, \"Indeed, my Lord extends provision for whom He wills of His servants and restricts [it] for him. But whatever thing you spend [in His cause] - He will compensate it; and He is the best of providers.\""
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "puzzle": {
-    "title": "The Longing in the Sacred Chamber",
-    "intro": "You step into the quiet sanctuary and see a devoted servant of Allah standing in prayer. Their hands are raised, their eyes lifted, and their heart carries a longing that has spanned a lifetime. Who is this patient soul whose trust in Allah never wavered?",
+    "title": "The Glad Tiding in Old Age",
+    "intro": "You are witnessing a moment where hope is rekindled. A couple, long past the age of parenthood, receives a promise that defies the laws of nature. In their midst stands a figure whose very existence is a sign of divine mercy—a soul destined for prophethood, carrying a legacy that will span generations. Who is this remarkable individual?",
     "clues": [
-      "I spent long years in worship and prayer, witnessing miracles that strengthened my faith.",
-      "I was given the responsibility of caring for a blessed young soul in the sanctuary.",
-      "As I grew old, my greatest sorrow was that I had no child, for my wife was barren and we were both advanced in age.",
-      "I prayed to my Lord for a successor from my own family, someone who would carry on the legacy of prophethood.",
-      "While I stood in the prayer niche, the angels called me, saying, 'Allah gives you glad tidings', and I was struck with fear and awe.",
-      "I was told I would have a son named Yahya, a name that had never been given to anyone before, and as a sign I would not speak to people for three days."
+      "I was born to parents who had reached old age and had no children.",
+      "My birth was announced by angels who came as guests to my family.",
+      "I was given wisdom and prophethood, and I am mentioned among the patient.",
+      "My father was called the friend of Allah, and I was a gift to him in his later years.",
+      "I had a brother who was also a prophet, and we were both blessed by our Lord.",
+      "My son was also a prophet, and my descendants were given the scripture and prophethood."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Zakariyya",
-          "Prophet Yahya",
-          "Prophet Isa",
-          "Prophet Dawud",
-          "Luqman the Wise"
+          "Prophet Ishaq (Isaac)",
+          "Prophet Ismail (Ishmael)",
+          "Prophet Yaqub (Jacob)",
+          "Prophet Yahya (John)",
+          "Prophet Uzair (Ezra)"
         ],
-        "answer": "Prophet Zakariyya"
+        "answer": "Prophet Ishaq (Isaac)"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Barrenness and old age while desiring a righteous heir",
-          "Being thrown into a blazing fire",
-          "Being swallowed by a great fish",
-          "Losing a kingdom to a tyrant",
-          "Being exiled from one's homeland"
+          "Born to elderly parents",
+          "Thrown into a fire",
+          "Given a kingdom and wealth",
+          "Led his people out of Egypt",
+          "Built an ark to save believers"
         ],
-        "answer": "Barrenness and old age while desiring a righteous heir"
+        "answer": "Born to elderly parents"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The prayer niche (mihrab)",
-          "The great ship (Ark)",
+          "The glad tidings of a son",
           "The burning bush",
-          "The staff that turned into a serpent",
-          "The she-camel of Allah"
+          "The golden calf",
+          "The ark of the covenant",
+          "The staff of prophethood"
         ],
-        "answer": "The prayer niche (mihrab)"
+        "answer": "The glad tidings of a son"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Granted a righteous son and spoke again after three days of silence",
-          "Destroyed by a flood for disbelief",
-          "Given a vast kingdom and control over the wind",
-          "Delivered from the belly of a fish",
-          "Swallowed by the earth"
+          "Became a prophet with a lineage of prophets",
+          "Became a wealthy king",
+          "His people were destroyed for disbelief",
+          "He was saved from the fire",
+          "He was given the ability to speak as an infant"
         ],
-        "answer": "Granted a righteous son and spoke again after three days of silence"
+        "answer": "Became a prophet with a lineage of prophets"
       }
     },
-    "verseRef": "19:5",
-    "arabic": "وَإِنِّى خِفْتُ ٱلْمَوَٰلِىَ مِن وَرَآءِى وَكَانَتِ ٱمْرَأَتِى عَاقِرًۭا فَهَبْ لِى مِن لَّدُنكَ وَلِيًّۭا",
-    "verse": "And indeed, I fear the successors after me, and my wife has been barren, so give me from Yourself an heir (19:5)"
+    "verseRef": "14:39",
+    "arabic": "ٱلْحَمْدُ لِلَّهِ ٱلَّذِى وَهَبَ لِى عَلَى ٱلْكِبَرِ إِسْمَـٰعِيلَ وَإِسْحَـٰقَ ۚ إِنَّ رَبِّى لَسَمِيعُ ٱلدُّعَآءِ",
+    "verse": "Praise to Allāh, who has granted to me in old age Ishmael and Isaac. Indeed, my Lord is the Hearer of supplication. (14:39)"
   },
   "generated": true,
   "model": "auto (chain)"
