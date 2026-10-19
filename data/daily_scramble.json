@@ -1,35 +1,32 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "puzzle": {
-    "verseRef": "34:39",
-    "reference": "Surah Saba (34:39)",
+    "verseRef": "55:29",
+    "reference": "Ar-Rahman (55:29)",
     "segments": [
-      "قُلْ إِنَّ رَبِّي",
-      "يَبْسُطُ الرِّزْقَ",
-      "لِمَن يَشَاءُ",
-      "وَيَقْدِرُ",
-      "وَلَٰكِنَّ أَكْثَرَ النَّاسِ",
-      "لَا يَعْلَمُونَ"
+      "يسأله من",
+      "في السماوات",
+      "والأرض كل",
+      "يوم هو",
+      "في شأن"
     ],
     "translations": [
-      "Say Indeed my Lord extends",
-      "the provision for whom He wills of",
-      "His slaves and restricts for him",
-      "But what you spend of",
-      "anything then He will compensate it",
-      "and He (is the) Best (of) the Providers"
+      "Asks Him whoever",
+      "(is) in the heavens",
+      "and the earth Every",
+      "day He",
+      "(is) in a matter"
     ],
-    "hint": "About Allah's absolute control over sustenance and provision — a reminder that He gives abundantly to whom He wills and measures it to whom He wills.",
-    "arabic": "قُلْ إِنَّ رَبِّى يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ مِنْ عِبَادِهِۦ وَيَقْدِرُ لَهُۥ ۚ وَمَآ أَنفَقْتُم مِّن شَىْءٍۢ فَهُوَ يُخْلِفُهُۥ ۖ وَهُوَ خَيْرُ ٱلرَّٰزِقِينَ",
+    "hint": "A verse about Allah's constant activity and that all creatures depend on Him.",
+    "arabic": "يَسْـَٔلُهُۥ مَن فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ كُلَّ يَوْمٍ هُوَ فِى شَأْنٍۢ",
     "words": [
-      "قُلْ إِنَّ رَبِّى يَبْسُطُ",
-      "ٱلرِّزْقَ لِمَن يَشَآءُ مِنْ",
-      "عِبَادِهِۦ وَيَقْدِرُ لَهُۥ ۚ",
-      "وَمَآ أَنفَقْتُم مِّن",
-      "شَىْءٍۢ فَهُوَ يُخْلِفُهُۥ ۖ",
-      "وَهُوَ خَيْرُ ٱلرَّٰزِقِينَ"
+      "يَسْـَٔلُهُۥ مَن",
+      "فِى ٱلسَّمَـٰوَٰتِ",
+      "وَٱلْأَرْضِ ۚ كُلَّ",
+      "يَوْمٍ هُوَ",
+      "فِى شَأْنٍۢ"
     ],
-    "verseEn": "Say, \"Indeed, my Lord extends provision for whom He wills of His servants and restricts [it] for him. But whatever thing you spend [in His cause] - He will compensate it; and He is the best of providers.\""
+    "verseEn": "Whoever is within the heavens and earth asks Him; every day He is in [i.e., bringing about] a matter."
   },
   "generated": true,
   "model": "auto (chain)"

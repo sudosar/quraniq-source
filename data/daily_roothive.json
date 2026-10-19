@@ -1,551 +1,370 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "puzzle": {
-    "center": "ق",
+    "center": "ر",
     "outer": [
-      "و",
-      "ل",
-      "ا",
       "ت",
+      "م",
       "ي",
-      "ه"
+      "ء",
+      "ا",
+      "و"
     ],
     "root": {
-      "letters": "قلل",
-      "display": "ق ل ل",
-      "translit": "q-l-l",
-      "meaning": "The core idea is smallness in amount or degree, pointing to something few or little. From this root, derived words grow by adding patterns to describe things smaller in number, actions that reduce or make less, and even the idea of carrying lightly.",
-      "occurrences": 76,
-      "lemmaCount": 6
+      "letters": "راي",
+      "display": "ر ا ي",
+      "translit": "r-ʾ-y",
+      "meaning": "This root centers on sight and seeing, capturing what becomes visible to the eye. From this idea grow forms meaning to show, vision, appearance, and even showing off, since that too means letting yourself be seen.",
+      "occurrences": 328,
+      "lemmaCount": 8
     },
     "words": [
       {
-        "w": "اقل",
+        "w": "اري",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "أَقَلّ",
-            "gloss": "lesser",
-            "type": "noun",
-            "root": "قلل",
-            "count": 2,
-            "ref": "18:39",
-            "pos": 16
-          }
-        ]
-      },
-      {
-        "w": "تقي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "تَقِيّ",
-            "gloss": "righteous",
-            "type": "noun",
-            "root": "وقي",
-            "count": 4,
-            "ref": "19:13",
-            "pos": 6,
-            "alt": [
-              "god fearing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قال",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قالَ",
-            "gloss": "said",
+            "lemma": "أَرَيْ",
+            "gloss": "show",
             "type": "verb",
-            "root": "قول",
-            "count": 1618,
-            "ref": "2:8",
-            "pos": 4,
-            "alt": [
-              "say",
-              "says"
-            ],
-            "form": 1
+            "root": "رأي",
+            "count": 40,
+            "ref": "6:75",
+            "pos": 2,
+            "form": 4
           }
         ]
       },
       {
-        "w": "قتل",
+        "w": "امر",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "قَتَلَ",
-            "gloss": "kills",
-            "type": "verb",
-            "root": "قتل",
-            "count": 83,
-            "ref": "2:154",
-            "pos": 4,
-            "alt": [
-              "killed",
-              "are slain"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "قَتْل",
-            "gloss": "kill",
-            "type": "verbal noun",
-            "root": "قتل",
-            "count": 10,
-            "ref": "5:30",
-            "pos": 4,
-            "alt": [
-              "killing"
-            ]
-          },
-          {
-            "lemma": "قُتِّلُ",
-            "gloss": "be killed",
-            "type": "verb",
-            "root": "قتل",
-            "count": 4,
-            "ref": "5:33",
-            "pos": 12,
-            "alt": [
-              "kill",
-              "were killing"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "قول",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قَوْل",
-            "gloss": "saying",
-            "type": "verbal noun",
-            "root": "قول",
-            "count": 92,
-            "ref": "2:59",
-            "pos": 4,
-            "alt": [
-              "word",
-              "speech"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قوه",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قُوَّة",
-            "gloss": "strength",
+            "lemma": "أَمْر",
+            "gloss": "command",
             "type": "noun",
-            "root": "قوي",
-            "count": 30,
-            "ref": "8:60",
-            "pos": 6,
-            "alt": [
-              "power",
-              "force"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قوي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قَوِيّ",
-            "gloss": "all-strong",
-            "type": "noun",
-            "root": "قوي",
-            "count": 11,
-            "ref": "8:52",
-            "pos": 15
-          }
-        ]
-      },
-      {
-        "w": "قيل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قِيل",
-            "gloss": "statement",
-            "type": "noun",
-            "root": "قول",
-            "count": 4,
-            "ref": "4:122",
-            "pos": 21,
-            "alt": [
-              "saying",
-              "word"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "لقي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "لَقَّى",
-            "gloss": "is granted",
-            "type": "verb",
-            "root": "لقي",
-            "count": 6,
-            "ref": "25:75",
-            "pos": 6,
-            "alt": [
-              "be met",
-              "surely, receive"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "واق",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "واق",
-            "gloss": "defender",
-            "type": "active participle",
-            "root": "وقي",
-            "count": 3,
-            "ref": "13:34",
-            "pos": 14,
-            "alt": [
-              "protector"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "وقت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وَقْت",
-            "gloss": "time",
-            "type": "noun",
-            "root": "وقت",
-            "count": 3,
-            "ref": "7:187",
-            "pos": 13
-          }
-        ]
-      },
-      {
-        "w": "وقي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وَقَى",
-            "gloss": "protect",
-            "type": "verb",
-            "root": "وقي",
-            "count": 16,
-            "ref": "40:9",
-            "pos": 4,
-            "alt": [
-              "is saved"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "اتقي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "اتَّقَى",
-            "gloss": "fears",
-            "type": "verb",
-            "root": "وقي",
+            "root": "أمر",
             "count": 166,
-            "ref": "2:189",
-            "pos": 19,
+            "ref": "2:117",
+            "pos": 6,
             "alt": [
-              "fear",
-              "fears allah"
-            ],
-            "form": 8
+              "matter",
+              "affair"
+            ]
           },
           {
-            "lemma": "أَتْقَى",
-            "gloss": "most righteous of",
-            "type": "noun",
-            "root": "وقي",
-            "count": 2,
-            "ref": "49:13",
-            "pos": 16,
-            "alt": [
-              "righteous"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اقلت",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "أَقَلَّتْ",
-            "gloss": "have carried",
+            "lemma": "أَمَرَ",
+            "gloss": "commands",
             "type": "verb",
-            "root": "قلل",
-            "count": 1,
-            "ref": "7:57",
-            "pos": 11,
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "القي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَلْقَى",
-            "gloss": "throw",
-            "type": "verb",
-            "root": "لقي",
-            "count": 71,
-            "ref": "4:94",
-            "pos": 13,
+            "root": "أمر",
+            "count": 77,
+            "ref": "2:27",
+            "pos": 10,
             "alt": [
-              "throws",
-              "threw"
+              "commanded",
+              "has ordered"
             ],
-            "form": 4
+            "form": 1
           }
         ]
       },
       {
-        "w": "تقول",
-        "family": false,
-        "points": 2,
+        "w": "رءي",
+        "family": true,
+        "points": 3,
         "senses": [
           {
-            "lemma": "تَقَوَّلَ",
-            "gloss": "fabricated",
-            "type": "verb",
-            "root": "قول",
-            "count": 2,
-            "ref": "69:44",
-            "pos": 2,
-            "form": 5
-          }
-        ]
-      },
-      {
-        "w": "تقوي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "تَقْوَى",
-            "gloss": "righteousness",
+            "lemma": "رِءْي",
+            "gloss": "appearance",
             "type": "noun",
-            "root": "وقي",
-            "count": 17,
-            "ref": "9:109",
-            "pos": 5,
-            "alt": [
-              "piety"
-            ]
+            "root": "رأي",
+            "count": 1,
+            "ref": "19:74",
+            "pos": 9
           }
         ]
       },
       {
-        "w": "تلقي",
-        "family": false,
-        "points": 2,
+        "w": "راي",
+        "family": true,
+        "points": 3,
         "senses": [
           {
-            "lemma": "تَلَقَّى",
-            "gloss": "receive",
+            "lemma": "رَأَى",
+            "gloss": "saw",
             "type": "verb",
-            "root": "لقي",
+            "root": "رأي",
+            "count": 271,
+            "ref": "2:55",
+            "pos": 8,
+            "alt": [
+              "see",
+              "seen"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "رَأْى",
+            "gloss": "sight",
+            "type": "noun",
+            "root": "رأي",
+            "count": 2,
+            "ref": "3:13",
+            "pos": 17
+          }
+        ]
+      },
+      {
+        "w": "رمي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "رَمَى",
+            "gloss": "throws",
+            "type": "verb",
+            "root": "رمي",
+            "count": 9,
+            "ref": "4:112",
+            "pos": 7,
+            "alt": [
+              "threw",
+              "throws up"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "مرء",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَرْء",
+            "gloss": "man",
+            "type": "noun",
+            "root": "مرأ",
             "count": 4,
-            "ref": "50:17",
-            "pos": 2,
-            "form": 5
+            "ref": "2:102",
+            "pos": 41
           }
         ]
       },
       {
-        "w": "قاتل",
+        "w": "وري",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "قاتَلَ",
-            "gloss": "may fight",
+            "lemma": "وُۥرِيَ",
+            "gloss": "to hide",
             "type": "verb",
-            "root": "قتل",
-            "count": 54,
-            "ref": "2:246",
-            "pos": 18,
+            "root": "وري",
+            "count": 4,
+            "ref": "5:31",
+            "pos": 9,
             "alt": [
-              "fight",
-              "fighting"
+              "was concealed",
+              "covers"
             ],
             "form": 3
           }
         ]
       },
       {
-        "w": "قايل",
+        "w": "امري",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "قائِل",
-            "gloss": "speaker",
-            "type": "active participle",
-            "root": "قول",
-            "count": 5,
-            "ref": "12:10",
-            "pos": 2
-          }
-        ]
-      },
-      {
-        "w": "قتال",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "قِتال",
-            "gloss": "fighting",
+            "lemma": "امْرِئ",
+            "gloss": "person",
             "type": "noun",
-            "root": "قتل",
-            "count": 13,
-            "ref": "2:217",
-            "pos": 5
-          }
-        ]
-      },
-      {
-        "w": "قليل",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "قَلِيل",
-            "gloss": "little",
-            "type": "adjective",
-            "root": "قلل",
-            "count": 70,
-            "ref": "2:41",
+            "root": "مرأ",
+            "count": 5,
+            "ref": "24:11",
             "pos": 16,
             "alt": [
-              "few",
-              "small"
+              "man"
             ]
           }
         ]
       },
       {
-        "w": "اقتتل",
-        "family": false,
-        "points": 3,
+        "w": "رءيا",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "اقْتَتَلَ",
-            "gloss": "fought each other",
-            "type": "verb",
-            "root": "قتل",
-            "count": 4,
-            "ref": "2:253",
-            "pos": 26,
-            "form": 8
-          }
-        ]
-      },
-      {
-        "w": "التقي",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "الْتَقَى",
-            "gloss": "met",
-            "type": "verb",
-            "root": "لقي",
+            "lemma": "رُءْيا",
+            "gloss": "dream",
+            "type": "noun",
+            "root": "رأي",
             "count": 7,
-            "ref": "3:155",
-            "pos": 6,
-            "form": 8
+            "ref": "12:5",
+            "pos": 5,
+            "alt": [
+              "vision",
+              "visions"
+            ]
           }
         ]
       },
       {
-        "w": "قليله",
+        "w": "رميم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "رَمِيم",
+            "gloss": "decomposed",
+            "type": "noun",
+            "root": "رمم",
+            "count": 2,
+            "ref": "36:78",
+            "pos": 11
+          }
+        ]
+      },
+      {
+        "w": "رياء",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "رِئاء",
+            "gloss": "be seen",
+            "type": "verbal noun",
+            "root": "رأي",
+            "count": 3,
+            "ref": "2:264",
+            "pos": 12,
+            "alt": [
+              "to be seen"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "وراء",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "وَراء",
+            "gloss": "behind",
+            "type": "noun",
+            "root": "وري",
+            "count": 24,
+            "ref": "2:101",
+            "pos": 18,
+            "alt": [
+              "beyond",
+              "after"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "امرات",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "امْرَأَت",
+            "gloss": "wife",
+            "type": "noun",
+            "root": "مرأ",
+            "count": 26,
+            "ref": "3:35",
+            "pos": 3,
+            "alt": [
+              "woman",
+              "women"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "تراءت",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "قَلِيلَة",
-            "gloss": "small",
-            "type": "adjective",
-            "root": "قلل",
-            "count": 1,
-            "ref": "2:249",
-            "pos": 52
+            "lemma": "تَراءَتِ",
+            "gloss": "came in sight",
+            "type": "verb",
+            "root": "رأي",
+            "count": 2,
+            "ref": "8:48",
+            "pos": 17,
+            "alt": [
+              "saw each other"
+            ],
+            "form": 6
+          }
+        ]
+      },
+      {
+        "w": "توارت",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "تَوارَتْ",
+            "gloss": "hides himself",
+            "type": "verb",
+            "root": "وري",
+            "count": 2,
+            "ref": "16:59",
+            "pos": 1,
+            "alt": [
+              "were hidden"
+            ],
+            "form": 6
+          }
+        ]
+      },
+      {
+        "w": "ممتري",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُمْتَري",
+            "gloss": "doubters",
+            "type": "active participle",
+            "root": "مري",
+            "count": 4,
+            "ref": "2:147",
+            "pos": 7,
+            "alt": [
+              "ones who doubt"
+            ]
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "قَلَّ",
-        "gloss": "little",
+        "lemma": "يُراءُ",
+        "gloss": "showing off",
         "type": "verb",
-        "root": "قلل",
-        "count": 1,
-        "ref": "4:7",
-        "pos": 14,
-        "form": 1
-      },
-      {
-        "lemma": "يُقَلِّلُ",
-        "gloss": "made you as few",
-        "type": "verb",
-        "root": "قلل",
-        "count": 1,
-        "ref": "8:44",
-        "pos": 8,
-        "form": 2
+        "root": "رأي",
+        "count": 2,
+        "ref": "4:142",
+        "pos": 13,
+        "alt": [
+          "make show"
+        ],
+        "form": 3
       }
     ],
-    "maxScore": 49,
-    "featuredRoot": "قلل"
+    "maxScore": 41,
+    "featuredRoot": "رأي"
   },
   "generated": true,
   "model": "auto (chain)"

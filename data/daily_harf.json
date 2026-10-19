@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "puzzle": {
-    "word": "لهو",
-    "display": "لَهْوَ",
-    "hint": "A form of idle amusement or distraction, often condemned in the Quran",
-    "verseRef": "31:6",
-    "arabicVerse": "وَمِنَ ٱلنَّاسِ مَن يَشْتَرِى لَهْوَ ٱلْحَدِيثِ لِيُضِلَّ عَن سَبِيلِ ٱللَّهِ بِغَيْرِ عِلْمٍۢ وَيَتَّخِذَهَا هُزُوًا ۚ أُو۟لَـٰٓئِكَ لَهُمْ عَذَابٌۭ مُّهِينٌۭ",
-    "verse": "31:6 - And of the people is he who buys the amusement of speech to mislead [others] from the way of Allāh without knowledge and who takes it [i.e., His way] in ridicule. Those will have a humiliating punishment."
+    "word": "نصيرا",
+    "display": "نَصِيرًا",
+    "hint": "A supporter or ally; one who provides assistance",
+    "verseRef": "4:123",
+    "arabicVerse": "لَّيْسَ بِأَمَانِيِّكُمْ وَلَآ أَمَانِىِّ أَهْلِ ٱلْكِتَـٰبِ ۗ مَن يَعْمَلْ سُوٓءًۭا يُجْزَ بِهِۦ وَلَا يَجِدْ لَهُۥ مِن دُونِ ٱللَّهِ وَلِيًّۭا وَلَا نَصِيرًۭا",
+    "verse": "4:123 - It [i.e., Paradise] is not [obtained] by your wishful thinking nor by that of the People of the Scripture. Whoever does a wrong will be recompensed for it, and he will not find besides Allāh a protector or a helper."
   },
   "generated": true,
   "model": "auto (chain)"

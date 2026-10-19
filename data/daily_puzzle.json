@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "puzzle": {
     "categories": [
       {
-        "name": "أَفْعَالُ الْأَمْرِ فِي سُورَةِ آلِ عِمْرَان",
-        "nameEn": "Imperative Commands in Surah Al Imran",
+        "name": "أَفْعَالُ الْبَخِيلِ وَمُعْتَقَدَاتُهُ",
+        "nameEn": "Actions and Beliefs of the Miser in the Quran",
         "color": "yellow",
         "items": [
           {
-            "ar": "أَطِيعُوا",
-            "en": "Obey",
-            "ref": "3:32",
-            "verse": "قُلْ أَطِيعُوا۟ ٱللَّهَ وَٱلرَّسُولَ ۖ فَإِن تَوَلَّوْا۟ فَإِنَّ ٱللَّهَ لَا يُحِبُّ ٱلْكَـٰفِرِينَ",
-            "verseEn": "Say, \"Obey Allāh and the Messenger. But if you turn away - then indeed, Allāh does not like the disbelievers.\""
+            "ar": "بَخِلَ",
+            "en": "withholds",
+            "ref": "92:8",
+            "verse": "وَأَمَّا مَنۢ بَخِلَ وَٱسْتَغْنَىٰ",
+            "verseEn": "But as for he who withholds and considers himself free of need"
           },
           {
-            "ar": "اُعْبُدُوهُ",
-            "en": "so worship Him",
-            "ref": "3:51",
-            "verse": "إِنَّ ٱللَّهَ رَبِّى وَرَبُّكُمْ فَٱعْبُدُوهُ ۗ هَـٰذَا صِرَٰطٌۭ مُّسْتَقِيمٌۭ",
-            "verseEn": "Indeed, Allāh is my Lord and your Lord, so worship Him. That is the straight path.'\""
+            "ar": "تَرَدَّىٰ",
+            "en": "he falls",
+            "ref": "92:11",
+            "verse": "وَمَا يُغْنِى عَنْهُ مَالُهُۥٓ إِذَا تَرَدَّىٰٓ",
+            "verseEn": "And what will his wealth avail him when he falls?"
           },
           {
-            "ar": "تَعَالَوْا",
-            "en": "Come",
-            "ref": "3:61",
-            "verse": "فَمَنْ حَآجَّكَ فِيهِ مِنۢ بَعْدِ مَا جَآءَكَ مِنَ ٱلْعِلْمِ فَقُلْ تَعَالَوْا۟ نَدْعُ أَبْنَآءَنَا وَأَبْنَآءَكُمْ وَنِسَآءَنَا وَنِسَآءَكُمْ وَأَنفُسَنَا وَأَنفُسَكُمْ ثُمَّ نَبْتَهِلْ فَنَجْعَل لَّعْنَتَ ٱللَّهِ عَلَى ٱلْكَـٰذِبِينَ",
-            "verseEn": "Then whoever argues with you about it after [this] knowledge has come to you - say, \"Come, let us call our sons and your sons, our women and your women, ourselves and yourselves, then supplicate earnestly [together] and invoke the curse of Allāh upon the liars [among us].\""
+            "ar": "عَدَّدَهُ",
+            "en": "and counts it",
+            "ref": "104:2",
+            "verse": "ٱلَّذِى جَمَعَ مَالًۭا وَعَدَّدَهُۥ",
+            "verseEn": "Who collects wealth and [continuously] counts it."
           },
           {
-            "ar": "آمِنُوا",
-            "en": "Believe",
-            "ref": "3:72",
-            "verse": "وَقَالَت طَّآئِفَةٌۭ مِّنْ أَهْلِ ٱلْكِتَـٰبِ ءَامِنُوا۟ بِٱلَّذِىٓ أُنزِلَ عَلَى ٱلَّذِينَ ءَامَنُوا۟ وَجْهَ ٱلنَّهَارِ وَٱكْفُرُوٓا۟ ءَاخِرَهُۥ لَعَلَّهُمْ يَرْجِعُونَ",
-            "verseEn": "And a faction of the People of the Scripture say [to each other], \"Believe in that which was revealed to the believers at the beginning of the day and reject it at its end that perhaps they will return [i.e., abandon their religion],"
+            "ar": "أَخْلَدَهُ",
+            "en": "will make him immortal",
+            "ref": "104:3",
+            "verse": "يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ",
+            "verseEn": "He thinks that his wealth will make him immortal."
           }
         ]
       },
       {
-        "name": "حَسَرَاتُ الْكَافِرِ فِي سُورَةِ الْحَاقَّةِ",
-        "nameEn": "Regrets of the disbeliever in Surah Al-Haqqah",
+        "name": "مُصْطَلَحَاتُ الْأَدِلَّةِ وَالْبَرَاهِينِ فِي الْقُرْآنِ",
+        "nameEn": "Quranic Terms for Evidence and Proof",
         "color": "green",
         "items": [
           {
-            "ar": "حِسَابِيَهْ",
-            "en": "(is) my account",
-            "ref": "69:26",
-            "verse": "وَلَمْ أَدْرِ مَا حِسَابِيَهْ",
-            "verseEn": "And had not known what is my account."
+            "ar": "آيَةٍ",
+            "en": "a sign",
+            "ref": "2:106",
+            "verse": "۞ مَا نَنسَخْ مِنْ ءَايَةٍ أَوْ نُنسِهَا نَأْتِ بِخَيْرٍۢ مِّنْهَآ أَوْ مِثْلِهَآ ۗ أَلَمْ تَعْلَمْ أَنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ",
+            "verseEn": "We do not abrogate a verse or cause it to be forgotten except that We bring forth [one] better than it or similar to it. Do you not know that Allāh is over all things competent?"
           },
           {
-            "ar": "الْقَاضِيَةَ",
-            "en": "the end",
-            "ref": "69:27",
-            "verse": "يَـٰلَيْتَهَا كَانَتِ ٱلْقَاضِيَةَ",
-            "verseEn": "I wish it [i.e., my death] had been the decisive one."
+            "ar": "بَيِّنَةٍ",
+            "en": "clear proof",
+            "ref": "6:57",
+            "verse": "قُلْ إِنِّى عَلَىٰ بَيِّنَةٍۢ مِّن رَّبِّى وَكَذَّبْتُم بِهِۦ ۚ مَا عِندِى مَا تَسْتَعْجِلُونَ بِهِۦٓ ۚ إِنِ ٱلْحُكْمُ إِلَّا لِلَّهِ ۖ يَقُصُّ ٱلْحَقَّ ۖ وَهُوَ خَيْرُ ٱلْفَـٰصِلِينَ",
+            "verseEn": "Say, \"Indeed, I am on clear evidence from my Lord, and you have denied it. I do not have that for which you are impatient. The decision is only for Allāh. He relates the truth, and He is the best of deciders.\""
           },
           {
-            "ar": "مَالِيَهْ",
-            "en": "my wealth",
-            "ref": "69:28",
-            "verse": "مَآ أَغْنَىٰ عَنِّى مَالِيَهْ ۜ",
-            "verseEn": "My wealth has not availed me."
+            "ar": "بُرْهَانَكُمْ",
+            "en": "your proof",
+            "ref": "27:64",
+            "verse": "أَمَّن يَبْدَؤُا۟ ٱلْخَلْقَ ثُمَّ يُعِيدُهُۥ وَمَن يَرْزُقُكُم مِّنَ ٱلسَّمَآءِ وَٱلْأَرْضِ ۗ أَءِلَـٰهٌۭ مَّعَ ٱللَّهِ ۚ قُلْ هَاتُوا۟ بُرْهَـٰنَكُمْ إِن كُنتُمْ صَـٰدِقِينَ",
+            "verseEn": "Is He [not best] who begins creation and then repeats it and who provides for you from the heaven and earth? Is there a deity with Allāh? Say, \"Produce your proof, if you should be truthful.\""
           },
           {
-            "ar": "سُلْطَانِيَهْ",
-            "en": "my authority",
-            "ref": "69:29",
-            "verse": "هَلَكَ عَنِّى سُلْطَـٰنِيَهْ",
-            "verseEn": "Gone from me is my authority.\""
+            "ar": "سُلْطَانٍ",
+            "en": "authority",
+            "ref": "37:30",
+            "verse": "وَمَا كَانَ لَنَا عَلَيْكُم مِّن سُلْطَـٰنٍۭ ۖ بَلْ كُنتُمْ قَوْمًۭا طَـٰغِينَ",
+            "verseEn": "And we had over you no authority, but you were a transgressing people."
           }
         ]
       },
       {
-        "name": "مُصْطَلَحَاتٌ مِنْ خِطَابِ مَلِكَةِ سَبَأٍ فِي سُورَةِ النَّمْل",
-        "nameEn": "Key Terms from the Queen of Sheba's Address to Her Council in Surah An-Naml",
+        "name": "مُصْطَلَحَاتٌ مِنْ قِصَّةِ لُوطٍ فِي سُورَةِ الْقَمَرِ",
+        "nameEn": "Terms from the Story of Lot in Surah Al-Qamar",
         "color": "blue",
         "items": [
           {
-            "ar": "مُسْلِمِينَ",
-            "en": "(in) submission",
-            "ref": "27:31",
-            "verse": "أَلَّا تَعْلُوا۟ عَلَىَّ وَأْتُونِى مُسْلِمِينَ",
-            "verseEn": "Be not haughty with me but come to me in submission [as Muslims].'\""
+            "ar": "لُوطٍ",
+            "en": "(of) Lut",
+            "ref": "54:33",
+            "verse": "كَذَّبَتْ قَوْمُ لُوطٍۭ بِٱلنُّذُرِ",
+            "verseEn": "The people of Lot denied the warning."
           },
           {
-            "ar": "الْمَلَأُ",
-            "en": "chiefs",
-            "ref": "27:32",
-            "verse": "قَالَتْ يَـٰٓأَيُّهَا ٱلْمَلَؤُا۟ أَفْتُونِى فِىٓ أَمْرِى مَا كُنتُ قَاطِعَةً أَمْرًا حَتَّىٰ تَشْهَدُونِ",
-            "verseEn": "She said, \"O eminent ones, advise me in my affair. I would not decide a matter until you witness [for] me.\""
+            "ar": "رَاوَدُوهُ",
+            "en": "they demanded from him",
+            "ref": "54:37",
+            "verse": "وَلَقَدْ رَٰوَدُوهُ عَن ضَيْفِهِۦ فَطَمَسْنَآ أَعْيُنَهُمْ فَذُوقُوا۟ عَذَابِى وَنُذُرِ",
+            "verseEn": "And they had demanded from him his guests, but We obliterated their eyes, [saying], \"Taste My punishment and warning.\""
           },
           {
-            "ar": "بَأْسٍ",
-            "en": "(of) might",
-            "ref": "27:33",
-            "verse": "قَالُوا۟ نَحْنُ أُو۟لُوا۟ قُوَّةٍۢ وَأُو۟لُوا۟ بَأْسٍۢ شَدِيدٍۢ وَٱلْأَمْرُ إِلَيْكِ فَٱنظُرِى مَاذَا تَأْمُرِينَ",
-            "verseEn": "They said, \"We are men of strength and of great military might, but the command is yours, so see what you will command.\""
+            "ar": "عَذَابٌ",
+            "en": "a punishment",
+            "ref": "54:38",
+            "verse": "وَلَقَدْ صَبَّحَهُم بُكْرَةً عَذَابٌۭ مُّسْتَقِرٌّۭ",
+            "verseEn": "And there came upon them by morning an abiding punishment."
           },
           {
-            "ar": "أَذِلَّةً",
-            "en": "(the) lowest",
-            "ref": "27:34",
-            "verse": "قَالَتْ إِنَّ ٱلْمُلُوكَ إِذَا دَخَلُوا۟ قَرْيَةً أَفْسَدُوهَا وَجَعَلُوٓا۟ أَعِزَّةَ أَهْلِهَآ أَذِلَّةًۭ ۖ وَكَذَٰلِكَ يَفْعَلُونَ",
-            "verseEn": "She said, \"Indeed kings - when they enter a city, they ruin it and render the honored of its people humbled. And thus do they do."
+            "ar": "نُذُرِ",
+            "en": "and My warnings",
+            "ref": "54:39",
+            "verse": "فَذُوقُوا۟ عَذَابِى وَنُذُرِ",
+            "verseEn": "So taste My punishment and warning."
           }
         ]
       },
       {
-        "name": "أَفْعَالُ الرُّؤْيَةِ وَالشَّهَادَةِ فِي الْقُرْآنِ",
-        "nameEn": "Verbs of Seeing and Witnessing in the Quran",
+        "name": "مَشَاعِرُ الخَشْيَةِ وَالخُشُوعِ لَدَى المُؤْمِنِينَ",
+        "nameEn": "Feelings of Awe and Humility of the Believers",
         "color": "purple",
         "items": [
           {
-            "ar": "تَرَى",
-            "en": "you see",
-            "ref": "5:83",
-            "verse": "وَإِذَا سَمِعُوا۟ مَآ أُنزِلَ إِلَى ٱلرَّسُولِ تَرَىٰٓ أَعْيُنَهُمْ تَفِيضُ مِنَ ٱلدَّمْعِ مِمَّا عَرَفُوا۟ مِنَ ٱلْحَقِّ ۖ يَقُولُونَ رَبَّنَآ ءَامَنَّا فَٱكْتُبْنَا مَعَ ٱلشَّـٰهِدِينَ",
-            "verseEn": "And when they hear what has been revealed to the Messenger, you see their eyes overflowing with tears because of what they have recognized of the truth. They say, \"Our Lord, we have believed, so register us among the witnesses."
+            "ar": "يَخْشَوْنَ",
+            "en": "fear",
+            "ref": "67:12",
+            "verse": "إِنَّ ٱلَّذِينَ يَخْشَوْنَ رَبَّهُم بِٱلْغَيْبِ لَهُم مَّغْفِرَةٌۭ وَأَجْرٌۭ كَبِيرٌۭ",
+            "verseEn": "Indeed, those who fear their Lord unseen will have forgiveness and great reward."
           },
           {
-            "ar": "اُنْظُرْنَا",
-            "en": "Unzurna",
-            "ref": "2:104",
-            "verse": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تَقُولُوا۟ رَٰعِنَا وَقُولُوا۟ ٱنظُرْنَا وَٱسْمَعُوا۟ ۗ وَلِلْكَـٰفِرِينَ عَذَابٌ أَلِيمٌۭ",
-            "verseEn": "O you who have believed, say not [to Allāh's Messenger], \"Rāʿinā\" but say, \"Unẓurnā\" and listen. And for the disbelievers is a painful punishment."
+            "ar": "خُشُوعًا",
+            "en": "(in) humility",
+            "ref": "17:109",
+            "verse": "وَيَخِرُّونَ لِلْأَذْقَانِ يَبْكُونَ وَيَزِيدُهُمْ خُشُوعًۭا ۩",
+            "verseEn": "And they fall upon their faces weeping, and it [i.e., the Qur’ān] increases them in humble submission."
           },
           {
-            "ar": "أَبْصِرْ",
-            "en": "and how (they will) see",
-            "ref": "19:38",
-            "verse": "أَسْمِعْ بِهِمْ وَأَبْصِرْ يَوْمَ يَأْتُونَنَا ۖ لَـٰكِنِ ٱلظَّـٰلِمُونَ ٱلْيَوْمَ فِى ضَلَـٰلٍۢ مُّبِينٍۢ",
-            "verseEn": "How [clearly] they will hear and see the Day they come to Us, but the wrongdoers today are in clear error."
+            "ar": "يَتَضَرَّعُونَ",
+            "en": "humble themselves",
+            "ref": "6:42",
+            "verse": "وَلَقَدْ أَرْسَلْنَآ إِلَىٰٓ أُمَمٍۢ مِّن قَبْلِكَ فَأَخَذْنَـٰهُم بِٱلْبَأْسَآءِ وَٱلضَّرَّآءِ لَعَلَّهُمْ يَتَضَرَّعُونَ",
+            "verseEn": "And We have already sent [messengers] to nations before you, [O Muḥammad]; then We seized them with poverty and hardship that perhaps they might humble themselves [to Us]."
           },
           {
-            "ar": "شَهِدْنَا",
-            "en": "we have testified",
-            "ref": "7:172",
-            "verse": "وَإِذْ أَخَذَ رَبُّكَ مِنۢ بَنِىٓ ءَادَمَ مِن ظُهُورِهِمْ ذُرِّيَّتَهُمْ وَأَشْهَدَهُمْ عَلَىٰٓ أَنفُسِهِمْ أَلَسْتُ بِرَبِّكُمْ ۖ قَالُوا۟ بَلَىٰ ۛ شَهِدْنَآ ۛ أَن تَقُولُوا۟ يَوْمَ ٱلْقِيَـٰمَةِ إِنَّا كُنَّا عَنْ هَـٰذَا غَـٰفِلِينَ",
-            "verseEn": "And [mention] when your Lord took from the children of Adam - from their loins - their descendants and made them testify of themselves, [saying to them], \"Am I not your Lord?\" They said, \"Yes, we have testified.\" [This] - lest you should say on the Day of Resurrection, \"Indeed, we were of this unaware.\""
+            "ar": "مُشْفِقُونَ",
+            "en": "(are) afraid",
+            "ref": "21:49",
+            "verse": "ٱلَّذِينَ يَخْشَوْنَ رَبَّهُم بِٱلْغَيْبِ وَهُم مِّنَ ٱلسَّاعَةِ مُشْفِقُونَ",
+            "verseEn": "Who fear their Lord unseen, while they are of the Hour apprehensive."
           }
         ]
       }
