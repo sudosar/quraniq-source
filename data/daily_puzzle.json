@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "puzzle": {
     "categories": [
       {
-        "name": "أَفْعَالُ الْبَخِيلِ وَمُعْتَقَدَاتُهُ",
-        "nameEn": "Actions and Beliefs of the Miser in the Quran",
+        "name": "أَوَامِرُ الْمُؤْمِنِينَ فِي سُورَةِ التَّغَابُنِ",
+        "nameEn": "Commands to the believers in Surah At-Taghabun",
         "color": "yellow",
         "items": [
           {
-            "ar": "بَخِلَ",
-            "en": "withholds",
-            "ref": "92:8",
-            "verse": "وَأَمَّا مَنۢ بَخِلَ وَٱسْتَغْنَىٰ",
-            "verseEn": "But as for he who withholds and considers himself free of need"
+            "ar": "قُلْ",
+            "en": "Say",
+            "ref": "64:7",
+            "verse": "زَعَمَ ٱلَّذِينَ كَفَرُوٓا۟ أَن لَّن يُبْعَثُوا۟ ۚ قُلْ بَلَىٰ وَرَبِّى لَتُبْعَثُنَّ ثُمَّ لَتُنَبَّؤُنَّ بِمَا عَمِلْتُمْ ۚ وَذَٰلِكَ عَلَى ٱللَّهِ يَسِيرٌۭ",
+            "verseEn": "Those who disbelieve have claimed that they will never be resurrected. Say, \"Yes, by my Lord, you will surely be resurrected; then you will surely be informed of what you did. And that, for Allāh, is easy.\""
           },
           {
-            "ar": "تَرَدَّىٰ",
-            "en": "he falls",
-            "ref": "92:11",
-            "verse": "وَمَا يُغْنِى عَنْهُ مَالُهُۥٓ إِذَا تَرَدَّىٰٓ",
-            "verseEn": "And what will his wealth avail him when he falls?"
+            "ar": "أَطِيعُوا",
+            "en": "So obey",
+            "ref": "64:12",
+            "verse": "وَأَطِيعُوا۟ ٱللَّهَ وَأَطِيعُوا۟ ٱلرَّسُولَ ۚ فَإِن تَوَلَّيْتُمْ فَإِنَّمَا عَلَىٰ رَسُولِنَا ٱلْبَلَـٰغُ ٱلْمُبِينُ",
+            "verseEn": "And obey Allāh and obey the Messenger; but if you turn away - then upon Our Messenger is only [the duty of] clear notification."
           },
           {
-            "ar": "عَدَّدَهُ",
-            "en": "and counts it",
-            "ref": "104:2",
-            "verse": "ٱلَّذِى جَمَعَ مَالًۭا وَعَدَّدَهُۥ",
-            "verseEn": "Who collects wealth and [continuously] counts it."
+            "ar": "فَاحْذَرُوهُمْ",
+            "en": "so beware of them",
+            "ref": "64:14",
+            "verse": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِنَّ مِنْ أَزْوَٰجِكُمْ وَأَوْلَـٰدِكُمْ عَدُوًّۭا لَّكُمْ فَٱحْذَرُوهُمْ ۚ وَإِن تَعْفُوا۟ وَتَصْفَحُوا۟ وَتَغْفِرُوا۟ فَإِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌ",
+            "verseEn": "O you who have believed, indeed, among your spouses and your children are enemies to you, so beware of them. But if you pardon and overlook and forgive - then indeed, Allāh is Forgiving and Merciful."
           },
           {
-            "ar": "أَخْلَدَهُ",
-            "en": "will make him immortal",
-            "ref": "104:3",
-            "verse": "يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ",
-            "verseEn": "He thinks that his wealth will make him immortal."
+            "ar": "فَاتَّقُوا",
+            "en": "So fear",
+            "ref": "64:16",
+            "verse": "فَٱتَّقُوا۟ ٱللَّهَ مَا ٱسْتَطَعْتُمْ وَٱسْمَعُوا۟ وَأَطِيعُوا۟ وَأَنفِقُوا۟ خَيْرًۭا لِّأَنفُسِكُمْ ۗ وَمَن يُوقَ شُحَّ نَفْسِهِۦ فَأُو۟لَـٰٓئِكَ هُمُ ٱلْمُفْلِحُونَ",
+            "verseEn": "So fear Allāh as much as you are able and listen and obey and spend [in the way of Allāh]; it is better for your selves. And whoever is protected from the stinginess of his soul - it is those who will be the successful."
           }
         ]
       },
       {
-        "name": "مُصْطَلَحَاتُ الْأَدِلَّةِ وَالْبَرَاهِينِ فِي الْقُرْآنِ",
-        "nameEn": "Quranic Terms for Evidence and Proof",
+        "name": "أَفْعَلُ التَّفْضِيلِ فِي الْقُرْآنِ",
+        "nameEn": "Superlative Adjectives in the Quran",
         "color": "green",
         "items": [
           {
-            "ar": "آيَةٍ",
-            "en": "a sign",
-            "ref": "2:106",
-            "verse": "۞ مَا نَنسَخْ مِنْ ءَايَةٍ أَوْ نُنسِهَا نَأْتِ بِخَيْرٍۢ مِّنْهَآ أَوْ مِثْلِهَآ ۗ أَلَمْ تَعْلَمْ أَنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ",
-            "verseEn": "We do not abrogate a verse or cause it to be forgotten except that We bring forth [one] better than it or similar to it. Do you not know that Allāh is over all things competent?"
+            "ar": "أَحْسَنُ",
+            "en": "(is) best",
+            "ref": "29:46",
+            "verse": "۞ وَلَا تُجَـٰدِلُوٓا۟ أَهْلَ ٱلْكِتَـٰبِ إِلَّا بِٱلَّتِى هِىَ أَحْسَنُ إِلَّا ٱلَّذِينَ ظَلَمُوا۟ مِنْهُمْ ۖ وَقُولُوٓا۟ ءَامَنَّا بِٱلَّذِىٓ أُنزِلَ إِلَيْنَا وَأُنزِلَ إِلَيْكُمْ وَإِلَـٰهُنَا وَإِلَـٰهُكُمْ وَٰحِدٌۭ وَنَحْنُ لَهُۥ مُسْلِمُونَ",
+            "verseEn": "And do not argue with the People of the Scripture except in a way that is best, except for those who commit injustice among them, and say, \"We believe in that which has been revealed to us and revealed to you. And our God and your God is one; and we are Muslims [in submission] to Him.\""
           },
           {
-            "ar": "بَيِّنَةٍ",
-            "en": "clear proof",
-            "ref": "6:57",
-            "verse": "قُلْ إِنِّى عَلَىٰ بَيِّنَةٍۢ مِّن رَّبِّى وَكَذَّبْتُم بِهِۦ ۚ مَا عِندِى مَا تَسْتَعْجِلُونَ بِهِۦٓ ۚ إِنِ ٱلْحُكْمُ إِلَّا لِلَّهِ ۖ يَقُصُّ ٱلْحَقَّ ۖ وَهُوَ خَيْرُ ٱلْفَـٰصِلِينَ",
-            "verseEn": "Say, \"Indeed, I am on clear evidence from my Lord, and you have denied it. I do not have that for which you are impatient. The decision is only for Allāh. He relates the truth, and He is the best of deciders.\""
+            "ar": "أَظْلَمُ",
+            "en": "(is) more unjust",
+            "ref": "6:93",
+            "verse": "وَمَنْ أَظْلَمُ مِمَّنِ ٱفْتَرَىٰ عَلَى ٱللَّهِ كَذِبًا أَوْ قَالَ أُوحِىَ إِلَىَّ وَلَمْ يُوحَ إِلَيْهِ شَىْءٌۭ وَمَن قَالَ سَأُنزِلُ مِثْلَ مَآ أَنزَلَ ٱللَّهُ ۗ وَلَوْ تَرَىٰٓ إِذِ ٱلظَّـٰلِمُونَ فِى غَمَرَٰتِ ٱلْمَوْتِ وَٱلْمَلَـٰٓئِكَةُ بَاسِطُوٓا۟ أَيْدِيهِمْ أَخْرِجُوٓا۟ أَنفُسَكُمُ ۖ ٱلْيَوْمَ تُجْزَوْنَ عَذَابَ ٱلْهُونِ بِمَا كُنتُمْ تَقُولُونَ عَلَى ٱللَّهِ غَيْرَ ٱلْحَقِّ وَكُنتُمْ عَنْ ءَايَـٰتِهِۦ تَسْتَكْبِرُونَ",
+            "verseEn": "And who is more unjust than one who invents a lie about Allāh or says, \"It has been inspired to me,\" while nothing has been inspired to him, and one who says, \"I will reveal [something] like what Allāh revealed.\" And if you could but see when the wrongdoers are in the overwhelming pangs of death while the angels extend their hands, [saying], \"Discharge your souls! Today you will be awarded the punishment of [extreme] humiliation for what you used to say against Allāh other than the truth and [that] you were, toward His verses, being arrogant.\""
           },
           {
-            "ar": "بُرْهَانَكُمْ",
-            "en": "your proof",
-            "ref": "27:64",
-            "verse": "أَمَّن يَبْدَؤُا۟ ٱلْخَلْقَ ثُمَّ يُعِيدُهُۥ وَمَن يَرْزُقُكُم مِّنَ ٱلسَّمَآءِ وَٱلْأَرْضِ ۗ أَءِلَـٰهٌۭ مَّعَ ٱللَّهِ ۚ قُلْ هَاتُوا۟ بُرْهَـٰنَكُمْ إِن كُنتُمْ صَـٰدِقِينَ",
-            "verseEn": "Is He [not best] who begins creation and then repeats it and who provides for you from the heaven and earth? Is there a deity with Allāh? Say, \"Produce your proof, if you should be truthful.\""
+            "ar": "أَعْلَمُ",
+            "en": "(is) most knowing",
+            "ref": "16:101",
+            "verse": "وَإِذَا بَدَّلْنَآ ءَايَةًۭ مَّكَانَ ءَايَةٍۢ ۙ وَٱللَّهُ أَعْلَمُ بِمَا يُنَزِّلُ قَالُوٓا۟ إِنَّمَآ أَنتَ مُفْتَرٍۭ ۚ بَلْ أَكْثَرُهُمْ لَا يَعْلَمُونَ",
+            "verseEn": "And when We substitute a verse in place of a verse - and Allāh is most knowing of what He sends down - they say, \"You, [O Muḥammad], are but an inventor [of lies].\" But most of them do not know."
           },
           {
-            "ar": "سُلْطَانٍ",
-            "en": "authority",
-            "ref": "37:30",
-            "verse": "وَمَا كَانَ لَنَا عَلَيْكُم مِّن سُلْطَـٰنٍۭ ۖ بَلْ كُنتُمْ قَوْمًۭا طَـٰغِينَ",
-            "verseEn": "And we had over you no authority, but you were a transgressing people."
+            "ar": "أَقْرَبُ",
+            "en": "(is) nearer",
+            "ref": "16:77",
+            "verse": "وَلِلَّهِ غَيْبُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَمَآ أَمْرُ ٱلسَّاعَةِ إِلَّا كَلَمْحِ ٱلْبَصَرِ أَوْ هُوَ أَقْرَبُ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ",
+            "verseEn": "And to Allāh belongs the unseen [aspects] of the heavens and the earth. And the command for the Hour is not but as a glance of the eye or even nearer. Indeed, Allāh is over all things competent."
           }
         ]
       },
       {
-        "name": "مُصْطَلَحَاتٌ مِنْ قِصَّةِ لُوطٍ فِي سُورَةِ الْقَمَرِ",
-        "nameEn": "Terms from the Story of Lot in Surah Al-Qamar",
+        "name": "قِصَّةُ ذَبْحِ إِبْرَاهِيمَ فِي سُورَةِ الصَّافَّاتِ",
+        "nameEn": "The Story of Ibrahim's Sacrifice in Surah As-Saffat",
         "color": "blue",
         "items": [
           {
-            "ar": "لُوطٍ",
-            "en": "(of) Lut",
-            "ref": "54:33",
-            "verse": "كَذَّبَتْ قَوْمُ لُوطٍۭ بِٱلنُّذُرِ",
-            "verseEn": "The people of Lot denied the warning."
+            "ar": "حَلِيمٍ",
+            "en": "forbearing",
+            "ref": "37:101",
+            "verse": "فَبَشَّرْنَـٰهُ بِغُلَـٰمٍ حَلِيمٍۢ",
+            "verseEn": "So We gave him good tidings of a forbearing boy."
           },
           {
-            "ar": "رَاوَدُوهُ",
-            "en": "they demanded from him",
-            "ref": "54:37",
-            "verse": "وَلَقَدْ رَٰوَدُوهُ عَن ضَيْفِهِۦ فَطَمَسْنَآ أَعْيُنَهُمْ فَذُوقُوا۟ عَذَابِى وَنُذُرِ",
-            "verseEn": "And they had demanded from him his guests, but We obliterated their eyes, [saying], \"Taste My punishment and warning.\""
+            "ar": "أَذْبَحُكَ",
+            "en": "sacrificing you",
+            "ref": "37:102",
+            "verse": "فَلَمَّا بَلَغَ مَعَهُ ٱلسَّعْىَ قَالَ يَـٰبُنَىَّ إِنِّىٓ أَرَىٰ فِى ٱلْمَنَامِ أَنِّىٓ أَذْبَحُكَ فَٱنظُرْ مَاذَا تَرَىٰ ۚ قَالَ يَـٰٓأَبَتِ ٱفْعَلْ مَا تُؤْمَرُ ۖ سَتَجِدُنِىٓ إِن شَآءَ ٱللَّهُ مِنَ ٱلصَّـٰبِرِينَ",
+            "verseEn": "And when he reached with him [the age of] exertion, he said, \"O my son, indeed I have seen in a dream that I [must] sacrifice you, so see what you think.\" He said, \"O my father, do as you are commanded. You will find me, if Allāh wills, of the steadfast.\""
           },
           {
-            "ar": "عَذَابٌ",
-            "en": "a punishment",
-            "ref": "54:38",
-            "verse": "وَلَقَدْ صَبَّحَهُم بُكْرَةً عَذَابٌۭ مُّسْتَقِرٌّۭ",
-            "verseEn": "And there came upon them by morning an abiding punishment."
+            "ar": "أَسْلَمَا",
+            "en": "both of them had submitted",
+            "ref": "37:103",
+            "verse": "فَلَمَّآ أَسْلَمَا وَتَلَّهُۥ لِلْجَبِينِ",
+            "verseEn": "And when they had both submitted and he put him down upon his forehead,"
           },
           {
-            "ar": "نُذُرِ",
-            "en": "and My warnings",
-            "ref": "54:39",
-            "verse": "فَذُوقُوا۟ عَذَابِى وَنُذُرِ",
-            "verseEn": "So taste My punishment and warning."
+            "ar": "صَدَّقْتَ",
+            "en": "you have fulfilled",
+            "ref": "37:105",
+            "verse": "قَدْ صَدَّقْتَ ٱلرُّءْيَآ ۚ إِنَّا كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ",
+            "verseEn": "You have fulfilled the vision.\" Indeed, We thus reward the doers of good."
           }
         ]
       },
       {
-        "name": "مَشَاعِرُ الخَشْيَةِ وَالخُشُوعِ لَدَى المُؤْمِنِينَ",
-        "nameEn": "Feelings of Awe and Humility of the Believers",
+        "name": "أَفْعَالُ الْفَرِيقَيْنِ فِي سُورَةِ عَبَسَ",
+        "nameEn": "Contrasting actions of the seeker and the heedless in Surah Abasa",
         "color": "purple",
         "items": [
           {
-            "ar": "يَخْشَوْنَ",
-            "en": "fear",
-            "ref": "67:12",
-            "verse": "إِنَّ ٱلَّذِينَ يَخْشَوْنَ رَبَّهُم بِٱلْغَيْبِ لَهُم مَّغْفِرَةٌۭ وَأَجْرٌۭ كَبِيرٌۭ",
-            "verseEn": "Indeed, those who fear their Lord unseen will have forgiveness and great reward."
+            "ar": "يَزَّكَّىٰ",
+            "en": "purify himself",
+            "ref": "80:3",
+            "verse": "وَمَا يُدْرِيكَ لَعَلَّهُۥ يَزَّكَّىٰٓ",
+            "verseEn": "But what would make you perceive, [O Muḥammad], that perhaps he might be purified"
           },
           {
-            "ar": "خُشُوعًا",
-            "en": "(in) humility",
-            "ref": "17:109",
-            "verse": "وَيَخِرُّونَ لِلْأَذْقَانِ يَبْكُونَ وَيَزِيدُهُمْ خُشُوعًۭا ۩",
-            "verseEn": "And they fall upon their faces weeping, and it [i.e., the Qur’ān] increases them in humble submission."
+            "ar": "يَذَّكَّرُ",
+            "en": "be reminded",
+            "ref": "80:4",
+            "verse": "أَوْ يَذَّكَّرُ فَتَنفَعَهُ ٱلذِّكْرَىٰٓ",
+            "verseEn": "Or be reminded and the remembrance would benefit him?"
           },
           {
-            "ar": "يَتَضَرَّعُونَ",
-            "en": "humble themselves",
-            "ref": "6:42",
-            "verse": "وَلَقَدْ أَرْسَلْنَآ إِلَىٰٓ أُمَمٍۢ مِّن قَبْلِكَ فَأَخَذْنَـٰهُم بِٱلْبَأْسَآءِ وَٱلضَّرَّآءِ لَعَلَّهُمْ يَتَضَرَّعُونَ",
-            "verseEn": "And We have already sent [messengers] to nations before you, [O Muḥammad]; then We seized them with poverty and hardship that perhaps they might humble themselves [to Us]."
+            "ar": "اِسْتَغْنَىٰ",
+            "en": "considers himself free from need",
+            "ref": "80:5",
+            "verse": "أَمَّا مَنِ ٱسْتَغْنَىٰ",
+            "verseEn": "As for he who thinks himself without need,"
           },
           {
-            "ar": "مُشْفِقُونَ",
-            "en": "(are) afraid",
-            "ref": "21:49",
-            "verse": "ٱلَّذِينَ يَخْشَوْنَ رَبَّهُم بِٱلْغَيْبِ وَهُم مِّنَ ٱلسَّاعَةِ مُشْفِقُونَ",
-            "verseEn": "Who fear their Lord unseen, while they are of the Hour apprehensive."
+            "ar": "يَسْعَىٰ",
+            "en": "striving",
+            "ref": "80:8",
+            "verse": "وَأَمَّا مَن جَآءَكَ يَسْعَىٰ",
+            "verseEn": "But as for he who came to you striving [for knowledge]"
           }
         ]
       }

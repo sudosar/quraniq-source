@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "puzzle": {
-    "word": "نصيرا",
-    "display": "نَصِيرًا",
-    "hint": "A supporter or ally; one who provides assistance",
-    "verseRef": "4:123",
-    "arabicVerse": "لَّيْسَ بِأَمَانِيِّكُمْ وَلَآ أَمَانِىِّ أَهْلِ ٱلْكِتَـٰبِ ۗ مَن يَعْمَلْ سُوٓءًۭا يُجْزَ بِهِۦ وَلَا يَجِدْ لَهُۥ مِن دُونِ ٱللَّهِ وَلِيًّۭا وَلَا نَصِيرًۭا",
-    "verse": "4:123 - It [i.e., Paradise] is not [obtained] by your wishful thinking nor by that of the People of the Scripture. Whoever does a wrong will be recompensed for it, and he will not find besides Allāh a protector or a helper."
+    "word": "خالق",
+    "display": "خَالِقٌ",
+    "verseRef": "35:3",
+    "hint": "This four-letter word means 'Creator' — one of the divine attributes of Allah mentioned throughout the Quran",
+    "arabicVerse": "يَـٰٓأَيُّهَا ٱلنَّاسُ ٱذْكُرُوا۟ نِعْمَتَ ٱللَّهِ عَلَيْكُمْ ۚ هَلْ مِنْ خَـٰلِقٍ غَيْرُ ٱللَّهِ يَرْزُقُكُم مِّنَ ٱلسَّمَآءِ وَٱلْأَرْضِ ۚ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ فَأَنَّىٰ تُؤْفَكُونَ",
+    "verse": "35:3 - O mankind, remember the favor of Allāh upon you. Is there any creator other than Allāh who provides for you from the heaven and earth? There is no deity except Him, so how are you deluded?"
   },
   "generated": true,
   "model": "auto (chain)"

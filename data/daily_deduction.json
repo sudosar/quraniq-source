@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "puzzle": {
-    "title": "The Outcast of the Heavens",
-    "intro": "A mysterious being stands at the crossroads of creation and rejection. Their story is one of unparalleled arrogance and the ultimate defiance of a divine command. Their choice echoes through every generation, becoming a test for every soul born into this world. Can you identify this eternal adversary?",
+    "title": "The Architect of False Ambition",
+    "intro": "A figure of great authority once served one of history's most notorious tyrants in ancient Egypt. This individual was entrusted with an audacious command — to construct a structure meant to defy the heavens. Their story stands in the Quran as a striking lesson about how blind obedience to arrogance leads only to ruin.",
     "clues": [
-      "I was present at an event of cosmic significance, when a new being was formed from clay and given life by the Breath of the Merciful.",
-      "I myself was brought into existence from a single blazing element, unlike that being of dust.",
-      "A command was issued to me that I deemed beneath my station.",
-      "Pride swelled within me, and I adamantly refused to comply with that command.",
-      "A delay until an appointed Day was granted to me, so that I might pursue my declared purpose of misleading others.",
-      "I am the declared enemy of all who walk the earth, whispering deceptions and luring them away from the straight path."
+      "I served in the courts of a powerful ruler who claimed divinity over the lands.",
+      "I held a high ministerial position, advising the most arrogant tyrant of my time.",
+      "My ruler was consumed with challenging the God of Moses, whom they refused to acknowledge.",
+      "I was commanded to construct a tower of fire-baked bricks so my ruler could ascend to the heavens.",
+      "The tower never reached the sky, and my servitude to arrogance earned me eternal disgrace.",
+      "I perished with the one I followed, and my name became a lasting warning against those who enable tyrants."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Iblis (Satan)",
-          "Pharaoh (Fir'awn)",
           "Haman",
-          "Abu Jahl",
-          "Samiri"
+          "Azar (father of Ibrahim)",
+          "Illyas (a prophet)",
+          "Dhu al-Kifl",
+          "Harut (one of the two angels in Babylon)"
         ],
-        "answer": "Iblis (Satan)"
+        "answer": "Haman"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Refused to bow before Adam",
-          "Claimed divinity falsely",
-          "Forged a golden calf for worship",
-          "Killed his brother out of envy",
-          "Led the polytheist opposition in Makkah"
+          "Ordered to build a towering structure to reach the heavens",
+          "Asked to interpret a dream sent from the divine",
+          "Thrown into a blazing fire as a test of faith",
+          "Compelled to choose between throne and truth",
+          "Challenged in a contest of sorcery"
         ],
-        "answer": "Refused to bow before Adam"
+        "answer": "Ordered to build a towering structure to reach the heavens"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Paradise (Jannah)",
-          "Pharaoh's palace in Egypt",
-          "The sacred valley of Tuwa",
-          "The depths of the sea",
-          "The garden of Sheba"
+          "A tower of fire-baked bricks",
+          "A staff that transformed into a serpent",
+          "A ship sailing through a great flood",
+          "A garden enclosed by high walls",
+          "A throne adorned with rubies and gold"
         ],
-        "answer": "Paradise (Jannah)"
+        "answer": "A tower of fire-baked bricks"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Granted respite until the Day of Judgment",
-          "Drowned along with the army in the sea",
-          "Swallowed by the earth along with treasures",
-          "Transformed into apes for violating the Sabbath",
-          "Burned by stones hurled from the sky"
+          "Drowned alongside the oppressor in the sea",
+          "Became a powerful monarch of vast lands",
+          "Escaped a blazing fire unharmed",
+          "Built a prosperous kingdom of wisdom",
+          "Was reunited with family after years of exile"
         ],
-        "answer": "Granted respite until the Day of Judgment"
+        "answer": "Drowned alongside the oppressor in the sea"
       }
     },
-    "verseRef": "16:99",
-    "arabic": "إِنَّهُۥ لَيْسَ لَهُۥ سُلْطَـٰنٌ عَلَى ٱلَّذِينَ ءَامَنُوا۟ وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
-    "verse": "Indeed, there is for him no authority over those who have believed and rely upon their Lord. (16:99)"
+    "verseRef": "40:23",
+    "arabic": "وَلَقَدْ أَرْسَلْنَا مُوسَىٰ بِـَٔايَـٰتِنَا وَسُلْطَـٰنٍۢ مُّبِينٍ",
+    "verse": "And We did certainly send Moses with Our signs and a clear authority (40:23)"
   },
   "generated": true,
   "model": "auto (chain)"

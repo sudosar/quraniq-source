@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "puzzle": {
-    "verseRef": "55:29",
-    "reference": "Ar-Rahman (55:29)",
+    "verseRef": "65:5",
+    "reference": "Surah At-Talaq (65:5)",
     "segments": [
-      "يسأله من",
-      "في السماوات",
-      "والأرض كل",
-      "يوم هو",
-      "في شأن"
+      "ذٰلِكَ أَمْرُ اللَّهِ",
+      "أَنزَلَهُ إِلَيْكُمْ",
+      "وَمَن يَتَّقِ اللَّهَ",
+      "يَجْعَل لَّهُ",
+      "مَخْرَجًا"
     ],
     "translations": [
-      "Asks Him whoever",
-      "(is) in the heavens",
-      "and the earth Every",
-      "day He",
-      "(is) in a matter"
+      "That (is the) Command (of) Allah",
+      "which He has sent down to you and whoever",
+      "fears Allah He will remove",
+      "from him his evil deeds and make great",
+      "for him (his) reward"
     ],
-    "hint": "A verse about Allah's constant activity and that all creatures depend on Him.",
-    "arabic": "يَسْـَٔلُهُۥ مَن فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ كُلَّ يَوْمٍ هُوَ فِى شَأْنٍۢ",
+    "hint": "A divine promise for those with taqwa (God-consciousness): Allah will always provide a way out of their difficulties.",
+    "arabic": "ذَٰلِكَ أَمْرُ ٱللَّهِ أَنزَلَهُۥٓ إِلَيْكُمْ ۚ وَمَن يَتَّقِ ٱللَّهَ يُكَفِّرْ عَنْهُ سَيِّـَٔاتِهِۦ وَيُعْظِمْ لَهُۥٓ أَجْرًا",
     "words": [
-      "يَسْـَٔلُهُۥ مَن",
-      "فِى ٱلسَّمَـٰوَٰتِ",
-      "وَٱلْأَرْضِ ۚ كُلَّ",
-      "يَوْمٍ هُوَ",
-      "فِى شَأْنٍۢ"
+      "ذَٰلِكَ أَمْرُ ٱللَّهِ",
+      "أَنزَلَهُۥٓ إِلَيْكُمْ ۚ وَمَن",
+      "يَتَّقِ ٱللَّهَ يُكَفِّرْ",
+      "عَنْهُ سَيِّـَٔاتِهِۦ وَيُعْظِمْ",
+      "لَهُۥٓ أَجْرًا"
     ],
-    "verseEn": "Whoever is within the heavens and earth asks Him; every day He is in [i.e., bringing about] a matter."
+    "verseEn": "That is the command of Allāh, which He has sent down to you; and whoever fears Allāh - He will remove for him his misdeeds and make great for him his reward."
   },
   "generated": true,
   "model": "auto (chain)"
