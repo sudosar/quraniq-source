@@ -1,32 +1,32 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "puzzle": {
-    "verseRef": "65:5",
-    "reference": "Surah At-Talaq (65:5)",
+    "verseRef": "18:23",
+    "reference": "Surah Al-Kahf (18:23)",
     "segments": [
-      "ذٰلِكَ أَمْرُ اللَّهِ",
-      "أَنزَلَهُ إِلَيْكُمْ",
-      "وَمَن يَتَّقِ اللَّهَ",
-      "يَجْعَل لَّهُ",
-      "مَخْرَجًا"
+      "وَلَا تَقُولَنَّ",
+      "لِشَيْءٍ",
+      "إِنِّي فَاعِلٌ",
+      "ذَٰلِكَ",
+      "غَدًا"
     ],
     "translations": [
-      "That (is the) Command (of) Allah",
-      "which He has sent down to you and whoever",
-      "fears Allah He will remove",
-      "from him his evil deeds and make great",
-      "for him (his) reward"
+      "And (do) not say",
+      "of anything Indeed, I",
+      "will do",
+      "that",
+      "tomorrow"
     ],
-    "hint": "A divine promise for those with taqwa (God-consciousness): Allah will always provide a way out of their difficulties.",
-    "arabic": "ذَٰلِكَ أَمْرُ ٱللَّهِ أَنزَلَهُۥٓ إِلَيْكُمْ ۚ وَمَن يَتَّقِ ٱللَّهَ يُكَفِّرْ عَنْهُ سَيِّـَٔاتِهِۦ وَيُعْظِمْ لَهُۥٓ أَجْرًا",
+    "hint": "The famous verse that teaches Muslims to always say 'In sha Allah' (God willing) when making plans for the future.",
+    "arabic": "وَلَا تَقُولَنَّ لِشَا۟ىْءٍ إِنِّى فَاعِلٌۭ ذَٰلِكَ غَدًا",
     "words": [
-      "ذَٰلِكَ أَمْرُ ٱللَّهِ",
-      "أَنزَلَهُۥٓ إِلَيْكُمْ ۚ وَمَن",
-      "يَتَّقِ ٱللَّهَ يُكَفِّرْ",
-      "عَنْهُ سَيِّـَٔاتِهِۦ وَيُعْظِمْ",
-      "لَهُۥٓ أَجْرًا"
+      "وَلَا تَقُولَنَّ",
+      "لِشَا۟ىْءٍ إِنِّى",
+      "فَاعِلٌۭ",
+      "ذَٰلِكَ",
+      "غَدًا"
     ],
-    "verseEn": "That is the command of Allāh, which He has sent down to you; and whoever fears Allāh - He will remove for him his misdeeds and make great for him his reward."
+    "verseEn": "And never say of anything, \"Indeed, I will do that tomorrow,\""
   },
   "generated": true,
   "model": "auto (chain)"

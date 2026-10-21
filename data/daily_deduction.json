@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "puzzle": {
-    "title": "The Architect of False Ambition",
-    "intro": "A figure of great authority once served one of history's most notorious tyrants in ancient Egypt. This individual was entrusted with an audacious command — to construct a structure meant to defy the heavens. Their story stands in the Quran as a striking lesson about how blind obedience to arrogance leads only to ruin.",
+    "title": "The Messenger Who Confronted the Idolaters",
+    "intro": "In a time when devotion had strayed, a messenger rose with a call to return to the worship of the Lord of the worlds. This figure stood firm against a people entrenched in the worship of a false deity, reminding them of their true Creator and the Lord of their forefathers. Yet the people were heedless and rejected the warning, sealing their own fate. Who was this unwavering caller?",
     "clues": [
-      "I served in the courts of a powerful ruler who claimed divinity over the lands.",
-      "I held a high ministerial position, advising the most arrogant tyrant of my time.",
-      "My ruler was consumed with challenging the God of Moses, whom they refused to acknowledge.",
-      "I was commanded to construct a tower of fire-baked bricks so my ruler could ascend to the heavens.",
-      "The tower never reached the sky, and my servitude to arrogance earned me eternal disgrace.",
-      "I perished with the one I followed, and my name became a lasting warning against those who enable tyrants."
+      "I was sent to a people who had turned away from the path of the One True God.",
+      "I asked my people, \"Will you not fear Allah?\"",
+      "I called them to abandon their worship of a false deity named Baal.",
+      "My people rejected my call and persisted in their idolatry.",
+      "Because of their denial, they will surely be brought forth for punishment.",
+      "My Lord granted me peace and a blessed remembrance among the later generations."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Haman",
-          "Azar (father of Ibrahim)",
-          "Illyas (a prophet)",
-          "Dhu al-Kifl",
-          "Harut (one of the two angels in Babylon)"
+          "Prophet Ilyas",
+          "Prophet Yahya",
+          "Prophet Dhul-Kifl",
+          "Prophet Yusuf",
+          "Prophet Shu'ayb"
         ],
-        "answer": "Haman"
+        "answer": "Prophet Ilyas"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Ordered to build a towering structure to reach the heavens",
-          "Asked to interpret a dream sent from the divine",
-          "Thrown into a blazing fire as a test of faith",
-          "Compelled to choose between throne and truth",
-          "Challenged in a contest of sorcery"
+          "Called his people to abandon Baal",
+          "Built an ark to save the believers",
+          "Was thrown into a fire",
+          "Fled from the tyrant Pharaoh",
+          "Struck a rock to bring forth water"
         ],
-        "answer": "Ordered to build a towering structure to reach the heavens"
+        "answer": "Called his people to abandon Baal"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A tower of fire-baked bricks",
-          "A staff that transformed into a serpent",
-          "A ship sailing through a great flood",
-          "A garden enclosed by high walls",
-          "A throne adorned with rubies and gold"
+          "Baal",
+          "Al-Lat",
+          "Al-Uzza",
+          "Manat",
+          "Hubal"
         ],
-        "answer": "A tower of fire-baked bricks"
+        "answer": "Baal"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Drowned alongside the oppressor in the sea",
-          "Became a powerful monarch of vast lands",
-          "Escaped a blazing fire unharmed",
-          "Built a prosperous kingdom of wisdom",
-          "Was reunited with family after years of exile"
+          "Granted peace and a blessed remembrance",
+          "Swallowed by the earth",
+          "Destroyed by a violent storm",
+          "Turned into a stone",
+          "Drowned in the sea"
         ],
-        "answer": "Drowned alongside the oppressor in the sea"
+        "answer": "Granted peace and a blessed remembrance"
       }
     },
-    "verseRef": "40:23",
-    "arabic": "وَلَقَدْ أَرْسَلْنَا مُوسَىٰ بِـَٔايَـٰتِنَا وَسُلْطَـٰنٍۢ مُّبِينٍ",
-    "verse": "And We did certainly send Moses with Our signs and a clear authority (40:23)"
+    "verseRef": "37:123",
+    "arabic": "وَإِنَّ إِلْيَاسَ لَمِنَ ٱلْمُرْسَلِينَ",
+    "verse": "And indeed, Elias was from among the messengers, (37:123)"
   },
   "generated": true,
   "model": "auto (chain)"

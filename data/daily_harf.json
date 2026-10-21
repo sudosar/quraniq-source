@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "puzzle": {
-    "word": "خالق",
-    "display": "خَالِقٌ",
-    "verseRef": "35:3",
-    "hint": "This four-letter word means 'Creator' — one of the divine attributes of Allah mentioned throughout the Quran",
-    "arabicVerse": "يَـٰٓأَيُّهَا ٱلنَّاسُ ٱذْكُرُوا۟ نِعْمَتَ ٱللَّهِ عَلَيْكُمْ ۚ هَلْ مِنْ خَـٰلِقٍ غَيْرُ ٱللَّهِ يَرْزُقُكُم مِّنَ ٱلسَّمَآءِ وَٱلْأَرْضِ ۚ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ فَأَنَّىٰ تُؤْفَكُونَ",
-    "verse": "35:3 - O mankind, remember the favor of Allāh upon you. Is there any creator other than Allāh who provides for you from the heaven and earth? There is no deity except Him, so how are you deluded?"
+    "word": "رسولا",
+    "display": "رَسُولًا",
+    "hint": "A divine envoy is sent to a people, with a parallel mission associated with Pharaoh.",
+    "verseRef": "73:16",
+    "arabicVerse": "فَعَصَىٰ فِرْعَوْنُ ٱلرَّسُولَ فَأَخَذْنَـٰهُ أَخْذًۭا وَبِيلًۭا",
+    "verse": "73:16 - But Pharaoh disobeyed the messenger, so We seized him with a ruinous seizure."
   },
   "generated": true,
   "model": "auto (chain)"
