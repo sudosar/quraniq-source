@@ -34,13 +34,15 @@ def test(name, cond, detail=""):
 
 
 # --- 1. hard reject: named field is empty, competitor has 3+ matches ---
+# Theme must actually name a field for the trigger to fire. No surah in the
+# name, so the #228 surah check doesn't run first.
 cat = {
-    "nameEn": "Astronomical entities",  # No surah name → no surah check
+    "nameEn": "Worldly Luxuries and Provisions",  # no surah → no surah check
     "items": [
-        {"ref": "1:1", "ar": "", "en": "the cosmos", "verse": "", "verseEn": ""},
-        {"ref": "1:2", "ar": "", "en": "the stars", "verse": "", "verseEn": ""},
-        {"ref": "1:3", "ar": "", "en": "the heavens", "verse": "", "verseEn": ""},
-        {"ref": "1:4", "ar": "", "en": "the planets", "verse": "", "verseEn": ""},
+        {"ref": "1:1", "ar": "", "en": "the stars", "verse": "", "verseEn": ""},
+        {"ref": "1:2", "ar": "", "en": "the heavens", "verse": "", "verseEn": ""},
+        {"ref": "1:3", "ar": "", "en": "the sun", "verse": "", "verseEn": ""},
+        {"ref": "1:4", "ar": "", "en": "the moon", "verse": "", "verseEn": ""},
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat)
