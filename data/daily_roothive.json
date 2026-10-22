@@ -1,445 +1,569 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "puzzle": {
-    "center": "و",
+    "center": "ب",
     "outer": [
-      "م",
-      "ت",
-      "ل",
+      "ن",
       "ي",
       "ا",
-      "ف"
+      "ج",
+      "م",
+      "ع"
     ],
     "root": {
-      "letters": "وفي",
-      "display": "و ف ي",
-      "translit": "w-f-y",
-      "meaning": "The root conveys reaching completion or paying in full. Its derivatives develop this idea into fulfilling promises, repaying fully, or coming to one’s end, as in dying.",
-      "occurrences": 66,
-      "lemmaCount": 7
+      "letters": "عجب",
+      "display": "ع ج ب",
+      "translit": "ʿ-j-b",
+      "meaning": "It conveys wonder or amazement at something unusual, striking, or delightful. Its derivatives express astonishment, curiosity, admiration, or the quality of being amazing.",
+      "occurrences": 27,
+      "lemmaCount": 5
     },
     "words": [
       {
-        "w": "اول",
+        "w": "ابن",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَوَّل",
-            "gloss": "first",
+            "lemma": "ابْن",
+            "gloss": "son",
             "type": "noun",
-            "root": "أول",
-            "count": 82,
-            "ref": "2:41",
-            "pos": 9
+            "root": "بني",
+            "count": 63,
+            "ref": "2:87",
+            "pos": 11,
+            "alt": [
+              "sons",
+              "children"
+            ]
           }
         ]
       },
       {
-        "w": "اوي",
+        "w": "ابي",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "آوَى",
-            "gloss": "took",
+            "lemma": "أَبَى",
+            "gloss": "refused",
             "type": "verb",
-            "root": "أوي",
-            "count": 9,
-            "ref": "12:69",
-            "pos": 5,
-            "form": 4
-          },
-          {
-            "lemma": "أَوَى",
-            "gloss": "could take refuge",
-            "type": "verb",
-            "root": "أوي",
-            "count": 5,
-            "ref": "11:80",
-            "pos": 8,
+            "root": "أبي",
+            "count": 13,
+            "ref": "2:34",
+            "pos": 9,
             "alt": [
-              "retreated"
+              "refuse"
             ],
             "form": 1
           }
         ]
       },
       {
-        "w": "موت",
+        "w": "باب",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "مَوْت",
-            "gloss": "death",
+            "lemma": "باب",
+            "gloss": "gates",
             "type": "noun",
-            "root": "موت",
-            "count": 50,
-            "ref": "25:3",
-            "pos": 18
+            "root": "بوب",
+            "count": 27,
+            "ref": "6:44",
+            "pos": 8,
+            "alt": [
+              "gate",
+              "doors"
+            ]
           }
         ]
       },
       {
-        "w": "وفي",
+        "w": "بني",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "بُنَىّ",
+            "gloss": "children",
+            "type": "noun",
+            "root": "بني",
+            "count": 80,
+            "ref": "2:83",
+            "pos": 4,
+            "alt": [
+              "children of israel",
+              "sons"
+            ]
+          },
+          {
+            "lemma": "بَنَى",
+            "gloss": "construct",
+            "type": "verb",
+            "root": "بني",
+            "count": 11,
+            "ref": "40:36",
+            "pos": 4,
+            "alt": [
+              "build"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "بيع",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "بَيْع",
+            "gloss": "bargaining",
+            "type": "noun",
+            "root": "بيع",
+            "count": 7,
+            "ref": "2:254",
+            "pos": 13,
+            "alt": [
+              "any trade",
+              "sale"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "بين",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "بَيْن",
+            "gloss": "between",
+            "type": "noun",
+            "root": "بين",
+            "count": 266,
+            "ref": "2:66",
+            "pos": 4,
+            "alt": [
+              "before",
+              "among"
+            ]
+          },
+          {
+            "lemma": "بَيَّنُ",
+            "gloss": "makes clear",
+            "type": "verb",
+            "root": "بين",
+            "count": 35,
+            "ref": "2:68",
+            "pos": 5,
+            "alt": [
+              "to make clear",
+              "allah makes clear"
+            ],
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "جنب",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "جَنب",
+            "gloss": "regard",
+            "type": "noun",
+            "root": "جنب",
+            "count": 8,
+            "ref": "39:56",
+            "pos": 9
+          },
+          {
+            "lemma": "جُنُب",
+            "gloss": "impure",
+            "type": "adjective",
+            "root": "جنب",
+            "count": 4,
+            "ref": "4:43",
+            "pos": 14,
+            "alt": [
+              "state of ceremonial impurity",
+              "distance"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "جيب",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "جَيْب",
+            "gloss": "bosom",
+            "type": "noun",
+            "root": "جيب",
+            "count": 3,
+            "ref": "24:31",
+            "pos": 18,
+            "alt": [
+              "bosoms"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عجب",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "وَفَّى",
-            "gloss": "be repaid in full",
+            "lemma": "عَجِبُ",
+            "gloss": "astonished",
             "type": "verb",
-            "root": "وفي",
-            "count": 18,
-            "ref": "2:272",
-            "pos": 24,
-            "alt": [
-              "repaid in full",
-              "is repaid in full"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "ولي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وَلِيّ",
-            "gloss": "protector",
-            "type": "noun",
-            "root": "ولي",
-            "count": 86,
-            "ref": "2:107",
-            "pos": 15,
-            "alt": [
-              "allies",
-              "protectors"
-            ]
+            "root": "عجب",
+            "count": 8,
+            "ref": "13:5",
+            "pos": 2,
+            "form": 1
           },
           {
-            "lemma": "وَلَّى",
-            "gloss": "make friends",
-            "type": "verb",
-            "root": "ولي",
-            "count": 30,
-            "ref": "6:129",
-            "pos": 2,
-            "alt": [
-              "turned back",
-              "turned"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "يوم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "يَوْم",
-            "gloss": "day",
+            "lemma": "عَجَب",
+            "gloss": "wonder",
             "type": "noun",
-            "root": "يوم",
-            "count": 475,
-            "ref": "1:4",
-            "pos": 2,
+            "root": "عجب",
+            "count": 5,
+            "ref": "10:2",
+            "pos": 3,
             "alt": [
-              "days",
-              "periods"
+              "amazingly",
+              "amazing"
             ]
           }
         ]
       },
       {
-        "w": "اوفي",
+        "w": "عنب",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عِنَب",
+            "gloss": "grapes",
+            "type": "noun",
+            "root": "عنب",
+            "count": 11,
+            "ref": "6:99",
+            "pos": 27,
+            "alt": [
+              "grapevines"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ماب",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَآب",
+            "gloss": "place of return",
+            "type": "noun",
+            "root": "أوب",
+            "count": 9,
+            "ref": "13:29",
+            "pos": 8,
+            "alt": [
+              "return"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "نبا",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "نَبَأ",
+            "gloss": "news",
+            "type": "noun",
+            "root": "نبأ",
+            "count": 29,
+            "ref": "3:44",
+            "pos": 3,
+            "alt": [
+              "story"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "نبي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "نَبِيّ",
+            "gloss": "prophet",
+            "type": "noun",
+            "root": "نبأ",
+            "count": 75,
+            "ref": "2:91",
+            "pos": 24,
+            "alt": [
+              "prophets",
+              "any prophet"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اعجب",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "أَوْفَى",
-            "gloss": "more faithful",
+            "lemma": "أَعْجَبَ",
+            "gloss": "delighting",
             "type": "verb",
-            "root": "وفي",
-            "count": 20,
-            "ref": "2:40",
-            "pos": 10,
+            "root": "عجب",
+            "count": 11,
+            "ref": "48:29",
+            "pos": 40,
             "alt": [
-              "fulfill",
-              "fulfills"
+              "pleases"
             ],
             "form": 4
           }
         ]
       },
       {
-        "w": "اولي",
+        "w": "اناب",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَوْلَى",
-            "gloss": "nearer",
-            "type": "noun",
-            "root": "ولي",
+            "lemma": "أَنابَ",
+            "gloss": "turns",
+            "type": "verb",
+            "root": "نوب",
             "count": 11,
-            "ref": "3:68",
-            "pos": 2,
+            "ref": "11:88",
+            "pos": 35,
             "alt": [
-              "closer",
-              "woe"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "توفي",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "تَوَفَّى",
-            "gloss": "dies",
-            "type": "verb",
-            "root": "وفي",
-            "count": 24,
-            "ref": "8:50",
-            "pos": 4,
-            "alt": [
-              "take away souls",
-              "takes"
+              "turn",
+              "turns back"
             ],
-            "form": 5
+            "form": 4
           }
         ]
       },
       {
-        "w": "تولي",
+        "w": "انبا",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "تَوَلَّى",
-            "gloss": "turns away",
+            "lemma": "أَنۢبَأَ",
+            "gloss": "inform",
             "type": "verb",
-            "root": "ولي",
-            "count": 78,
-            "ref": "2:205",
-            "pos": 2,
+            "root": "نبأ",
+            "count": 4,
+            "ref": "2:31",
+            "pos": 10,
             "alt": [
-              "turned",
-              "takes as an ally"
+              "had informed",
+              "informed"
             ],
-            "form": 5
+            "form": 4
           }
         ]
       },
       {
-        "w": "لولو",
+        "w": "بايع",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "لُؤْلُؤ",
-            "gloss": "pearls",
-            "type": "noun",
-            "root": "لؤلؤ",
+            "lemma": "بايَعْ",
+            "gloss": "have contracted",
+            "type": "verb",
+            "root": "بيع",
             "count": 6,
-            "ref": "52:24",
-            "pos": 6
-          }
-        ]
-      },
-      {
-        "w": "ماوي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَأْوَى",
-            "gloss": "abode",
-            "type": "noun",
-            "root": "أوي",
-            "count": 22,
-            "ref": "3:151",
-            "pos": 15,
+            "ref": "9:111",
+            "pos": 32,
             "alt": [
-              "refuge"
-            ]
+              "pledge allegiance to",
+              "pledge allegiance"
+            ],
+            "form": 3
           }
         ]
       },
       {
-        "w": "ملوم",
+        "w": "بنان",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "مَلُوم",
-            "gloss": "blameworthy",
-            "type": "passive participle",
-            "root": "لوم",
-            "count": 5,
-            "ref": "17:29",
-            "pos": 12
-          }
-        ]
-      },
-      {
-        "w": "موتت",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَوْتَت",
-            "gloss": "death",
+            "lemma": "بَنان",
+            "gloss": "fingertip",
             "type": "noun",
-            "root": "موت",
+            "root": "بنن",
+            "count": 2,
+            "ref": "8:12",
+            "pos": 23
+          }
+        ]
+      },
+      {
+        "w": "بيان",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "بَيان",
+            "gloss": "declaration",
+            "type": "noun",
+            "root": "بين",
             "count": 3,
-            "ref": "37:59",
+            "ref": "3:138",
             "pos": 2
           }
         ]
       },
       {
-        "w": "موفو",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُوَفُّو",
-            "gloss": "pay them in full",
-            "type": "active participle",
-            "root": "وفي",
-            "count": 1,
-            "ref": "11:109",
-            "pos": 17
-          }
-        ]
-      },
-      {
-        "w": "موفي",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُوفي",
-            "gloss": "fulfill",
-            "type": "active participle",
-            "root": "وفي",
-            "count": 1,
-            "ref": "2:177",
-            "pos": 36
-          }
-        ]
-      },
-      {
-        "w": "مولي",
+        "w": "جانب",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "مَوْلَى",
-            "gloss": "relation",
-            "type": "noun",
-            "root": "ولي",
-            "count": 18,
-            "ref": "44:41",
-            "pos": 4,
-            "alt": [
-              "protector"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "تاويل",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "تَأْوِيل",
-            "gloss": "interpretation",
-            "type": "verbal noun",
-            "root": "أول",
-            "count": 17,
-            "ref": "4:59",
-            "pos": 28,
-            "alt": [
-              "determination",
-              "interpretation of"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "متوفي",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مُتَوَفِّي",
-            "gloss": "take",
+            "lemma": "جانِب",
+            "gloss": "side",
             "type": "active participle",
-            "root": "وفي",
+            "root": "جنب",
+            "count": 9,
+            "ref": "17:68",
+            "pos": 5,
+            "alt": [
+              "on side",
+              "direction"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عجاب",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "عُجاب",
+            "gloss": "curious",
+            "type": "adjective",
+            "root": "عجب",
             "count": 1,
-            "ref": "3:55",
-            "pos": 6
+            "ref": "38:5",
+            "pos": 8
           }
         ]
       },
       {
-        "w": "موالي",
-        "family": false,
-        "points": 3,
+        "w": "عجيب",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "مَوالِي",
-            "gloss": "heirs",
-            "type": "noun",
-            "root": "ولي",
-            "count": 3,
-            "ref": "4:33",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "ولايت",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "وَلايَت",
-            "gloss": "protection",
-            "type": "noun",
-            "root": "ولي",
+            "lemma": "عَجِيب",
+            "gloss": "amazing",
+            "type": "adjective",
+            "root": "عجب",
             "count": 2,
-            "ref": "8:72",
-            "pos": 25
+            "ref": "11:72",
+            "pos": 12
+          }
+        ]
+      },
+      {
+        "w": "مبين",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُبِين",
+            "gloss": "clear",
+            "type": "active participle",
+            "root": "بين",
+            "count": 119,
+            "ref": "2:168",
+            "pos": 16,
+            "alt": [
+              "manifest",
+              "open"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مجيب",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُجِيب",
+            "gloss": "all-responsive",
+            "type": "active participle",
+            "root": "جوب",
+            "count": 2,
+            "ref": "11:61",
+            "pos": 27
+          }
+        ]
+      },
+      {
+        "w": "منيب",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُنِيب",
+            "gloss": "oft-returning",
+            "type": "active participle",
+            "root": "نوب",
+            "count": 7,
+            "ref": "11:75",
+            "pos": 5,
+            "alt": [
+              "turning",
+              "turns"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "بنيان",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "بُنْيان",
+            "gloss": "structure",
+            "type": "noun",
+            "root": "بني",
+            "count": 7,
+            "ref": "18:21",
+            "pos": 21
           }
         ]
       }
     ],
-    "otherFamily": [
-      {
-        "lemma": "يَسْتَوْفُ",
-        "gloss": "take in full",
-        "type": "verb",
-        "root": "وفي",
-        "count": 1,
-        "ref": "83:2",
-        "pos": 6,
-        "form": 10
-      }
-    ],
-    "maxScore": 52,
-    "featuredRoot": "وفي"
+    "otherFamily": [],
+    "maxScore": 48,
+    "featuredRoot": "عجب"
   },
   "generated": true,
   "model": "auto (chain)"

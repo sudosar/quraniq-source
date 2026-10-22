@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "puzzle": {
-    "title": "The Messenger Who Confronted the Idolaters",
-    "intro": "In a time when devotion had strayed, a messenger rose with a call to return to the worship of the Lord of the worlds. This figure stood firm against a people entrenched in the worship of a false deity, reminding them of their true Creator and the Lord of their forefathers. Yet the people were heedless and rejected the warning, sealing their own fate. Who was this unwavering caller?",
+    "title": "The Community of the First Transgression",
+    "intro": "In the land of ancient cities, a people once thrived. They were visited by a messenger with a clear call, yet they turned away and pursued a path no one had ever walked. Their tale is one of defiance, depravity, and a punishment that left their homeland as a sign for all who reflect. Who are these souls?",
     "clues": [
-      "I was sent to a people who had turned away from the path of the One True God.",
-      "I asked my people, \"Will you not fear Allah?\"",
-      "I called them to abandon their worship of a false deity named Baal.",
-      "My people rejected my call and persisted in their idolatry.",
-      "Because of their denial, they will surely be brought forth for punishment.",
-      "My Lord granted me peace and a blessed remembrance among the later generations."
+      "We lived in cities of the plain, where our prophet called us to righteousness.",
+      "We were the first to commit an indecency that no one in all the worlds had ever done before.",
+      "We waylaid travelers and committed evil openly in our gatherings.",
+      "We rejected the messenger sent to us and threatened to drive him out of our land.",
+      "We rushed to his house demanding he surrender his guests to us.",
+      "Our punishment was a rain of stones, and our city was turned upside down."
     ],
     "categories": {
       "identity": {
-        "label": "Who Am I?",
+        "label": "Who Are We?",
         "options": [
-          "Prophet Ilyas",
-          "Prophet Yahya",
-          "Prophet Dhul-Kifl",
-          "Prophet Yusuf",
-          "Prophet Shu'ayb"
+          "People of Lut",
+          "People of Nuh",
+          "People of 'Ad",
+          "People of Thamud",
+          "People of Madyan"
         ],
-        "answer": "Prophet Ilyas"
+        "answer": "People of Lut"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Called his people to abandon Baal",
-          "Built an ark to save the believers",
-          "Was thrown into a fire",
-          "Fled from the tyrant Pharaoh",
-          "Struck a rock to bring forth water"
+          "Committed the first act of sodomy",
+          "Worshipped idols",
+          "Cheated in trade",
+          "Killed their prophet",
+          "Disobeyed their parents"
         ],
-        "answer": "Called his people to abandon Baal"
+        "answer": "Committed the first act of sodomy"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Baal",
-          "Al-Lat",
-          "Al-Uzza",
-          "Manat",
-          "Hubal"
+          "The city of the plain",
+          "The city of the well",
+          "The city of the ditch",
+          "The city of the elephant",
+          "The city of the garden"
         ],
-        "answer": "Baal"
+        "answer": "The city of the plain"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Granted peace and a blessed remembrance",
+          "Rained with stones and overturned",
+          "Drowned by a flood",
+          "Destroyed by a violent wind",
           "Swallowed by the earth",
-          "Destroyed by a violent storm",
-          "Turned into a stone",
-          "Drowned in the sea"
+          "Struck by a loud blast"
         ],
-        "answer": "Granted peace and a blessed remembrance"
+        "answer": "Rained with stones and overturned"
       }
     },
-    "verseRef": "37:123",
-    "arabic": "وَإِنَّ إِلْيَاسَ لَمِنَ ٱلْمُرْسَلِينَ",
-    "verse": "And indeed, Elias was from among the messengers, (37:123)"
+    "verseRef": "26:162",
+    "arabic": "إِنِّى لَكُمْ رَسُولٌ أَمِينٌۭ",
+    "verse": "Indeed, I am to you a trustworthy messenger. (26:162)"
   },
   "generated": true,
   "model": "auto (chain)"

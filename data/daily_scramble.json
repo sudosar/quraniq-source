@@ -1,32 +1,29 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "puzzle": {
-    "verseRef": "18:23",
-    "reference": "Surah Al-Kahf (18:23)",
+    "verseRef": "37:180",
+    "reference": "Surah As-Saffat (37:180)",
     "segments": [
-      "وَلَا تَقُولَنَّ",
-      "لِشَيْءٍ",
-      "إِنِّي فَاعِلٌ",
-      "ذَٰلِكَ",
-      "غَدًا"
+      "وَإِنَّ الْمَسَاجِدَ",
+      "لِلَّهِ فَلَا",
+      "تَدْعُوا مَعَ اللَّهِ",
+      "أَحَدًا"
     ],
     "translations": [
-      "And (do) not say",
-      "of anything Indeed, I",
-      "will do",
-      "that",
-      "tomorrow"
+      "Glory (be to) your Lord",
+      "(the) Lord (of) Honor",
+      "above what",
+      "they attribute"
     ],
-    "hint": "The famous verse that teaches Muslims to always say 'In sha Allah' (God willing) when making plans for the future.",
-    "arabic": "وَلَا تَقُولَنَّ لِشَا۟ىْءٍ إِنِّى فَاعِلٌۭ ذَٰلِكَ غَدًا",
+    "hint": "A reminder of Allah's absolute uniqueness: worship and supplication are directed to Him alone.",
+    "arabic": "سُبْحَـٰنَ رَبِّكَ رَبِّ ٱلْعِزَّةِ عَمَّا يَصِفُونَ",
     "words": [
-      "وَلَا تَقُولَنَّ",
-      "لِشَا۟ىْءٍ إِنِّى",
-      "فَاعِلٌۭ",
-      "ذَٰلِكَ",
-      "غَدًا"
+      "سُبْحَـٰنَ رَبِّكَ",
+      "رَبِّ ٱلْعِزَّةِ",
+      "عَمَّا",
+      "يَصِفُونَ"
     ],
-    "verseEn": "And never say of anything, \"Indeed, I will do that tomorrow,\""
+    "verseEn": "Exalted is your Lord, the Lord of might, above what they describe."
   },
   "generated": true,
   "model": "auto (chain)"

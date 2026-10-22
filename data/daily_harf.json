@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "puzzle": {
-    "word": "رسولا",
-    "display": "رَسُولًا",
-    "hint": "A divine envoy is sent to a people, with a parallel mission associated with Pharaoh.",
-    "verseRef": "73:16",
-    "arabicVerse": "فَعَصَىٰ فِرْعَوْنُ ٱلرَّسُولَ فَأَخَذْنَـٰهُ أَخْذًۭا وَبِيلًۭا",
-    "verse": "73:16 - But Pharaoh disobeyed the messenger, so We seized him with a ruinous seizure."
+    "word": "كفوا",
+    "display": "كُفُوًا",
+    "hint": "The One described as having no partner, likeness, or rival.",
+    "verseRef": "112:5",
+    "arabicVerse": "",
+    "verse": "112:5"
   },
   "generated": true,
   "model": "auto (chain)"
