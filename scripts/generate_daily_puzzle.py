@@ -827,13 +827,38 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
             if item.get("ar"):
                 all_prev_words.append(item["ar"])
 
-    avoided_themes = ", ".join(sorted(avoided_themes_set)) or "(none)"
-    # Show ALL forbidden verses sorted numerically so the model sees every ref it must avoid.
-    def _ref_key(r):
-        try: s, a = r.split(":"); return (int(s), int(a))
-        except: return (999, 999)
-    _sorted_verses = sorted(all_avoided_verses, key=_ref_key)
-    avoided_verses = ", ".join(_sorted_verses)
+    # Only actively-cooled themes are worth forbidding. load_history() already
+    # limits history["connections"]["themes"] to the theme-cooldown window;
+    # that set can still reach ~120 names (~5.7k chars), which is more list
+    # than a model will attend to. Cap it and always keep this run's picks,
+    # which are the ones a repeat would actually be visible to a player.
+    this_run_themes = {
+        pc.get("nameEn", "").lower().strip() for pc in accumulated_cats
+    } - {""}
+    cooled = set(history["connections"]["themes"])
+    kept = sorted(this_run_themes) + sorted(cooled - this_run_themes)
+    avoided_themes = ", ".join(kept[:30]) or "(none)"
+
+    # ── Cooldown constraint: POSITIVE allowlist, not a negative blocklist ──
+    # Listing every forbidden ref cost ~5,600 tokens and the model ignored
+    # it, then kept re-picking the famous verses it had memorised
+    # (2:255, 7:176, 72:1), burning 11-13 retries per category.
+    # Offering the surahs/ayah-ranges that are still free is ~90 tokens
+    # and gives the model something it can actually act on.
+    from surah_ranges import free_ayah_ranges, format_allowed_ranges
+    blocked_refs = history["connections"]["verses"] | history["all_verses"]
+    for prev_cat in accumulated_cats:
+        cr = prev_cat.get("verse", {}).get("ref")
+        if cr:
+            blocked_refs.add(cr)
+        for item in prev_cat.get("items", []):
+            if item.get("ref"):
+                blocked_refs.add(item["ref"])
+    allowed_ranges = format_allowed_ranges(free_ayah_ranges(blocked_refs))
+    # NOTE: the previous implementation built a comma-joined list of every
+    # blocked ref (~22k chars / ~5.6k tokens) and interpolated it into
+    # RULES below. That single line was 98% of the prompt and the model
+    # did not comply with it. We now pass `allowed_ranges` instead.
 
     # Summary of categories already chosen in this puzzle run
     chosen_block = ""
@@ -909,7 +934,10 @@ RULES:
 2. Theme (nameEn) MUST be specific (e.g., "Attributes of Paradise", not "Attributes").
    FORBIDDEN themes (used recently - do NOT reuse): {avoided_themes}
 3. CRITICAL: Every word must actually appear in its cited verse. No guessing.
-4. Surah:Ayah refs must be unique and not in this forbidden list: {avoided_verses}.
+4. CHOOSE YOUR 4 REFS FROM THESE AVAILABLE PASSAGES (already filtered to exclude
+   everything on cooldown — verses outside this list will be rejected):
+   {allowed_ranges}
+   Pick all 4 refs from ONE of those passages so they sit near each other.
 5. Words must not share roots with each other or previous categories.
 
 {chosen_block}{violation_block}
@@ -1904,6 +1932,39 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
     for ref in seen:
         if ref in all_avoided_verses:
             violations.append(f"Verse ref {ref} reused (cooldown or already used in puzzle)")
+
+    # Enforce the allowlist the prompt offered. Without this the model can
+    # pick any verse it likes and only discover the mistake here, wasting a
+    # full retry. Naming the nearby free alternatives makes the violation
+    # actionable in the same round.
+    if items:
+        from surah_ranges import free_ayah_ranges, format_allowed_ranges
+        _blocked = set(history["connections"]["verses"]) | set(history["all_verses"])
+        for _pc in accumulated_cats:
+            _cr = _pc.get("verse", {}).get("ref")
+            if _cr:
+                _blocked.add(_cr)
+            for _it in _pc.get("items", []):
+                if _it.get("ref"):
+                    _blocked.add(_it["ref"])
+        _ranges = free_ayah_ranges(_blocked)
+
+        def _in_allowlist(ref):
+            if ":" not in str(ref):
+                return False
+            try:
+                s, a = str(ref).split(":")
+                s, a = int(s), int(a)
+            except ValueError:
+                return False
+            return any(lo <= a <= hi for lo, hi in _ranges.get(s, ()))
+
+        stray = sorted(r for r in seen if not _in_allowlist(r))
+        if stray and _ranges:
+            violations.append(
+                f"Refs {', '.join(stray)} are outside the available passages offered. "
+                f"Pick from: {format_allowed_ranges(_ranges)}"
+            )
 
         # Items
     new_word_data = []  # List of (ar, en)

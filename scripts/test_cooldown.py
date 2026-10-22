@@ -216,7 +216,13 @@ history["connections"]["themes"] = {"prophets of firm resolve", "pillars of isla
 history["connections"]["verses"] = {"2:255", "4:163"}
 prompt = gen.build_connections_prompt(history)
 test("Prompt contains avoided themes", "prophets of firm resolve" in prompt.lower())
-test("Prompt contains avoided verses", "2:255" in prompt)
+# Blocked verses must NOT appear as options. They used to appear in a
+# ~5.6k-token negative list the model ignored; now they're excluded from
+# the allowlist entirely, so their absence IS the constraint.
+test("Prompt does not offer blocked verses as options",
+     "2:255" not in prompt and "4:163" not in prompt,
+     "a blocked verse reappeared in the allowlist")
+test("Prompt offers free passages instead", "AVAILABLE PASSAGES" in prompt)
 
 print("\n7. Build connections prompt with violations")
 violations = ["Verse ref 2:255 reused (30-day cooldown)"]
