@@ -153,6 +153,47 @@ test("2:255-258 accepted on a fresh history (not blocked yet)",
      not any("outside the available" in str(v) for v in viol),
      "a fresh history should permit any verse")
 
+# ── prompt/validator must agree (regression) ──────────────────────
+# The prompt renders offered_ranges (runs >= MIN_SPAN). If the validator
+# tested raw free_ayah_ranges instead, it would reject refs inside runs the
+# prompt had filtered out — advertising surah 26 [19-27] and then refusing
+# 26:20, which is worse than not checking at all.
+h5 = make_history({f"{s}:{a}" for s in range(2, 19) for a in range(1, VERSES_PER_SURAH[s-1] + 1)})
+from surah_ranges import offered_ranges, MIN_SPAN
+off = offered_ranges(h5["connections"]["verses"] | h5["all_verses"])
+top_s = max(off.items(), key=lambda kv: sum(b - a + 1 for a, b in kv[1]))[0]
+top_run = off[top_s][0]
+# A ref inside the advertised run must be accepted.
+mid = f"{top_s}:{(top_run[0] + top_run[1]) // 2}"
+cat_ok = cat_with_refs([f"{top_s}:{top_run[0]+i}" for i in range(4)])
+e, v, _ = gen.validate_single_category(cat_ok, 0, h5, [])
+test("prompt-advertised refs are accepted by the validator (no mismatch)",
+     not any("outside the available" in str(x) for x in v), f"violations={v}")
+
+# Every ref the prompt literally prints must validate.
+prompt5 = gen.build_single_category_prompt(h5, "2026-10-23", 0, [])
+import re as _re2
+printed = set()
+for m in _re2.finditer(r"(\d+) \([^)]*\) \[([\d,\-]+)\]", prompt5):
+    s_n = int(m.group(1))
+    for span in m.group(2).split(","):
+        if "-" in span:
+            a_, b_ = span.split("-")
+            printed.add((s_n, int(a_), int(b_)))
+        else:
+            printed.add((s_n, int(span), int(span)))
+sample_refs = [f"{s}:{a}" for s, a, b in sorted(printed)[:4]]
+cat_printed = cat_with_refs(sample_refs)
+e2, v2, _ = gen.validate_single_category(cat_printed, 0, h5, [])
+test("refs taken from the prompt's own printed ranges validate",
+     not any("outside the available" in str(x) for x in v2),
+     f"refs={sample_refs} violations={[str(x)[:80] for x in v2]}")
+
+# A short run the prompt filtered out must NOT be silently accepted either
+test("offered_ranges applies MIN_SPAN filtering",
+     all((b - a + 1) >= MIN_SPAN for runs in off.values() for a, b in runs),
+     "a sub-MIN_SPAN run leaked into the offered set")
+
 print()
 if FAIL:
     print(f"  {FAIL} test(s) FAILED")

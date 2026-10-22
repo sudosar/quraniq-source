@@ -845,7 +845,7 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
     # (2:255, 7:176, 72:1), burning 11-13 retries per category.
     # Offering the surahs/ayah-ranges that are still free is ~90 tokens
     # and gives the model something it can actually act on.
-    from surah_ranges import free_ayah_ranges, format_allowed_ranges
+    from surah_ranges import offered_ranges, format_allowed_ranges
     blocked_refs = history["connections"]["verses"] | history["all_verses"]
     for prev_cat in accumulated_cats:
         cr = prev_cat.get("verse", {}).get("ref")
@@ -854,7 +854,10 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
         for item in prev_cat.get("items", []):
             if item.get("ref"):
                 blocked_refs.add(item["ref"])
-    allowed_ranges = format_allowed_ranges(free_ayah_ranges(blocked_refs))
+    # offered_ranges is the SINGLE source of truth: the prompt renders these
+    # ranges and the validator accepts refs from exactly these ranges, so the
+    # model is never offered a neighbourhood it is then punished for using.
+    allowed_ranges = format_allowed_ranges(offered_ranges(blocked_refs))
     # NOTE: the previous implementation built a comma-joined list of every
     # blocked ref (~22k chars / ~5.6k tokens) and interpolated it into
     # RULES below. That single line was 98% of the prompt and the model
@@ -1937,8 +1940,13 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
     # pick any verse it likes and only discover the mistake here, wasting a
     # full retry. Naming the nearby free alternatives makes the violation
     # actionable in the same round.
+    #
+    # Uses the SAME offered_ranges() the prompt rendered. Testing against
+    # raw free_ayah_ranges() would reject refs inside runs the prompt had
+    # filtered out for being too short — advertising surah 26 [19-27] and
+    # then refusing 26:20 would be worse than not checking at all.
     if items:
-        from surah_ranges import free_ayah_ranges, format_allowed_ranges
+        from surah_ranges import offered_ranges, format_allowed_ranges
         _blocked = set(history["connections"]["verses"]) | set(history["all_verses"])
         for _pc in accumulated_cats:
             _cr = _pc.get("verse", {}).get("ref")
@@ -1947,7 +1955,7 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
             for _it in _pc.get("items", []):
                 if _it.get("ref"):
                     _blocked.add(_it["ref"])
-        _ranges = free_ayah_ranges(_blocked)
+        _ranges = offered_ranges(_blocked)
 
         def _in_allowlist(ref):
             if ":" not in str(ref):

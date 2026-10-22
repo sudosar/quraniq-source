@@ -100,14 +100,36 @@ def free_ayah_ranges(blocked_refs, min_free=3):
     return ranges
 
 
+# Runs shorter than this are not shown to the model, so the validator must
+# not reject refs from them either — otherwise the prompt offers a surah and
+# then refuses the whole neighbourhood it just pointed at.
+MIN_SPAN = 8
+
+
+def offered_ranges(blocked_refs, min_span=MIN_SPAN, max_surahs=20):
+    """The ranges the prompt actually advertises, as {surah: [(lo, hi)]}.
+
+    Must be the single source of truth for BOTH the prompt text and the
+    validator's accept/reject decision. `format_allowed_ranges` renders
+    these; `_in_allowlist` tests against them.
+    """
+    ranges = free_ayah_ranges(blocked_refs)
+    offered = {}
+    for s, runs in ranges.items():
+        kept = [(lo, hi) for lo, hi in runs if (hi - lo + 1) >= min_span][:3]
+        if kept:
+            offered[s] = kept
+    # Rank by free space, then cap — same ordering the prompt uses.
+    ranked = sorted(offered.items(), key=lambda kv: -sum(b - a + 1 for a, b in kv[1]))
+    return dict(ranked[:max_surahs])
+
+
 def format_allowed_ranges(ranges, max_surahs=20, min_span=8):
     """Compact human-readable allowlist for the prompt.
 
-    Surahs with the most free ayahs come first (best odds of a clean
-    pick). Within a surah we report only the LONGEST contiguous free run
-    rather than every 2-ayah sliver — the model needs a plausible
-    neighbourhood to pick from, not an exact whitelist, and listing every
-    run is what made the original negative list unreadable.
+    Prefer passing the output of `offered_ranges` directly — this function
+    additionally filters and caps, so calling it on raw `free_ayah_ranges`
+    output can advertise a surah whose runs were later dropped.
     """
     if not ranges:
         return "(none)"
@@ -116,7 +138,6 @@ def format_allowed_ranges(ranges, max_surahs=20, min_span=8):
     ))[:max_surahs]
     parts = []
     for s, runs in ranked:
-        # Keep the largest runs; drop runs too short to give a real choice.
         kept = [r for r in runs if (r[1] - r[0] + 1) >= min_span][:3]
         if not kept:
             continue
