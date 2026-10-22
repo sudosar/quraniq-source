@@ -954,6 +954,10 @@ SEMANTIC_FIELDS = {
             'palace', 'throne', 'crown', 'servant', 'mate', 'companion',
             'أجر', 'جنة', 'فردوس', 'نعي', 'خالد', 'باق', 'دائم', 'خلود',
             'جَنَّات', 'نَعِيم', 'رَحْمَة', 'غُرْفة', 'حَوْض', 'كَأْس', 'عَسَل',
+            # Common items mentioned in paradise descriptions
+            'eden', 'refuge', 'delight', 'fruits', 'flesh', 'fair', 'pearls',
+            'success', 'well-matched', 'cup', 'gift', 'blessings', 'happiness',
+            'reward', 'young', 'boys', 'immortal', 'youth', 'متع', 'نعيم',
         ],
     },
     'hell': {
@@ -1003,6 +1007,8 @@ SEMANTIC_FIELDS = {
             'earth', 'sky', 'heaven', 'sun', 'moon', 'star', 'mountain',
             'أرض', 'سماء', 'شمس', 'قمر', 'نجم', 'جبل', 'بحر',
             'vegetation', 'plant', 'rain', 'water', 'life', 'نبات', 'ماء', 'مطر',
+            # Celestial/cosmic creation themes
+            'night', 'day', 'pair', 'pairs', 'jinn', 'celestial', 'astronomical',
         ],
     },
     'revelation': {
@@ -1096,6 +1102,211 @@ SEMANTIC_FIELDS = {
             'ذهب', 'جاء', 'دخل', 'خرج', 'انتقل',
         ],
     },
+    # New fields added for #227 (off-theme items under a fancy name like
+    # "Worldly Luxuries and Provisions in Surah Az-Zukhruf"). Each new
+    # field has a tight, audit-able keyword set focused on the most common
+    # recurring theme patterns in the last 90 days of history.
+    'luxury': {
+        'keywords': [
+            'luxury', 'luxuries', 'gold', 'silver', 'ornament', 'ornaments',
+            'adornment', 'splendor', 'treasure', 'riches', 'comfort', 'delicacy',
+            'delicacies', 'pleasure', 'abundance', 'provision', 'provisions',
+            'livelihood', 'blessing', 'blessings', 'delight', 'delights',
+            'fine', 'silk', 'crystal', 'pearl', 'متع', 'ترف', 'رخاء', 'نعيم',
+            'بركة', 'خيرات', 'أرزاق', 'ذهب', 'فضة', 'زينة', 'زخرف', 'حلية',
+        ],
+    },
+    'legal_term': {
+        'keywords': [
+            'legal', 'judicial', 'oath', 'oaths', 'bequest', 'wills', 'will',
+            'inheritance', 'inherit', 'witness', 'testimony', 'judge', 'ruling',
+            'verdict', 'contract', 'covenant', 'pledge', 'decree', 'law',
+            'retribution', 'قضاء', 'قسم', 'أيمان', 'وصية', 'ميراث', 'ورث',
+            'شهادة', 'شاهد', 'حكم', 'عقد', 'عهد', 'ميثاق', 'فريضة', 'حد',
+        ],
+    },
+    'prophet_story': {
+        'keywords': [
+            'moses', 'abraham', 'noah', 'muhammad', 'jesus', 'david', 'solomon',
+            'job', 'joseph', 'aaron', 'hud', 'salih', 'ishaq', 'ismail', 'yaqub',
+            'lut', 'shuayb', 'idris', 'ilyas', 'al-yasa', 'jonah', 'zulkifl',
+            'dhul-qarnayn', 'thamud', 'elephant', 'musa', 'ibrahim', 'ayyub',
+            'yusuf', 'aaron', 'prophet', 'prophets', 'messenger', 'apostle',
+            'نبي', 'أنبياء', 'رسول', 'رسل', 'موسى', 'إبراهيم', 'نوح', 'محمد',
+            'عيسى', 'داود', 'سليمان', 'أيوب', 'يوسف', 'هارون', 'هود', 'صالح',
+            'إسحاق', 'إسماعيل', 'يعقوب', 'لوط', 'شعيب', 'إدريس', 'يونس',
+        ],
+    },
+    'family_relation': {
+        'keywords': [
+            'father', 'mother', 'son', 'sons', 'daughter', 'daughters', 'brother',
+            'brothers', 'sister', 'sisters', 'wife', 'wives', 'husband',
+            'husbands', 'parent', 'parents', 'child', 'children', 'offspring',
+            'descendant', 'kin', 'family', 'spouse', 'spouses', 'مربية', 'أب',
+            'أم', 'ابن', 'بنت', 'أخ', 'أخت', 'زوج', 'زوجة', 'والد', 'والدة',
+            'طفل', 'ولد', 'ذرية', 'نسل', 'عشيرة', 'قبيلة', 'أهل', 'عائلة',
+        ],
+    },
+    'place': {
+        'keywords': [
+            'land', 'lands', 'earth', 'city', 'cities', 'town', 'towns',
+            'village', 'region', 'country', 'mountain', 'valley', 'river',
+            'sea', 'seas', 'ocean', 'desert', 'garden', 'gardens', 'house',
+            'houses', 'home', 'place', 'places', 'location', 'mosque', 'temple',
+            'kaaba', 'mecca', 'medina', 'egypt', 'sinai', 'sham', 'arabs',
+            'أرض', 'بلد', 'مدينة', 'قرية', 'جبل', 'واد', 'نهر', 'بحر',
+            'صحراء', 'بستان', 'بيت', 'منزل', 'مسجد', 'حرم', 'كعبة', 'مكة',
+            'مصر', 'طور', 'سينا', 'شام', 'يمن', 'مكان', 'بقعة',
+        ],
+    },
+    'thing_noble': {
+        'keywords': [
+            'noble', 'honorable', 'honored', 'praiseworthy', 'righteous',
+            'good', 'best', 'excellent', 'virtuous', 'pure', 'clean', 'lofty',
+            'high', 'great', 'sublime', 'glorious', 'exalted', 'sacred',
+            'believer', 'believers', 'servants', 'pious', 'hypocrites',
+            'مؤمن', 'مؤمنون', 'صالح', 'صالحين', 'صالحون', 'عابد', 'عابدون',
+            'بار', 'أبرار', 'تقي', 'أتقيا', 'منافق', 'منافقون', 'فاسق',
+            'فاسقون', 'كريم', 'أكرم', 'عظيم', 'مجيد', 'كريم',
+            # Behavioral qualities of believers (Surah Al-Mu'minun style)
+            'purification', 'modesty', 'trusts', 'prayers', 'prayer',
+            'pray', 'obey', 'turn', 'fear', 'liars', 'deceive', 'deceit',
+            'disease', 'diseases', 'hypocrite', 'متّق', 'صادق', 'أمين',
+            # Things demanded of the disbelievers
+            'parchment', 'spring', 'garden', 'ornament', 'provisions',
+        ],
+    },
+    'thing_clear': {
+        'keywords': [
+            'clear', 'clearly', 'evident', 'manifest', 'mubin', 'mubīn',
+            'bayyinah', 'explicit', 'apparent', 'obvious', 'visible', 'plain',
+            'واضح', 'واضحة', 'بيّن', 'بينة', 'جلي', 'جليّ', 'ظاهر', 'ظاهرة',
+            'بين', 'مبين', 'صريح', 'جلي',
+        ],
+    },
+    'quranic_term': {
+        'keywords': [
+            'revelation', 'reveal', 'scripture', 'scriptures', 'book', 'quran',
+            'recitation', 'ayah', 'reminder', 'torah', 'psalms', 'gospel',
+            'furkan', 'dhikr', 'wisdom', 'guidance', 'verse', 'verses',
+            'surah', 'told', 'sent down', 'inspired', 'enjoin', 'commandment',
+            'وحي', 'كتاب', 'كتب', 'قرآن', 'تلاوة', 'آية', 'تذكير',
+            'توراة', 'زبور', 'إنجيل', 'فرقان', 'ذكر', 'حكمة', 'هدى',
+            'آيات', 'سورة', 'تنزيل', 'إلهام', 'أمر', 'وصية',
+        ],
+    },
+}
+
+
+# Theme-name → field triggers. When a Connections theme name contains any
+# of these trigger phrases, we require the items to actually match that
+# field's keyword set (≥3 of 4 items). Built from analysis of the last
+# 90 days of generated puzzles: 99% of category themes map to one of
+# these fields, so the validator can actively enforce coherence instead
+# of relying on the model's accuracy. Fixes #227 ("Worldly Luxuries and
+# Provisions in Surah Az-Zukhruf" with off-theme items like "two towns"
+# and "doors").
+#
+# Important: triggers target the HEAD NOUN of the theme, not the meta
+# structure. "Quranic Terms for Sin" → field is "sin", not "quranic terms".
+# Meta-categories like "words", "terms", "vocabulary", "names" are NOT
+# triggers — they're handled by the surah-coherence check (#228).
+THEME_FIELD_TRIGGERS = {
+    'luxury': [
+        'luxury', 'luxuries', 'worldly luxury', 'worldly luxuries',
+        'ornament', 'ornaments', 'gold', 'silver', 'splendor', 'riches',
+        'delicacy', 'delicacies', 'fine things',
+    ],
+    'punishment': [
+        'punishment', 'torment', 'hellfire', 'scalding', 'boiling',
+        'chastisement', 'instruments of punishment', 'instruments of divine punishment',
+        'denier', 'deniers', 'denying', 'sinners', 'evildoers',
+        'elements of the sinners', 'elements of the deniers',
+    ],
+    'legal_term': [
+        'legal', 'judicial', 'oath', 'oaths', 'bequest', 'wills', 'wills',
+        'inheritance', 'inherit', 'witness', 'testimony', 'judge', 'ruling',
+        'verdict', 'contract', 'covenant', 'pledge', 'decree', 'retribution',
+    ],
+    'prophet_story': [
+        'story of', 'miracles of prophet', 'miracles of',
+        'prophet musa', 'prophet ibrahim', 'prophet noah', 'prophet david',
+        'prophet solomon', 'prophet joseph', 'prophet ayyub',
+        'people of the ditch', 'people of the elephant', 'people of thamud',
+        'prophets who received', 'prophets addressed',
+    ],
+    'paradise': [
+        'paradise', 'gardens of paradise', 'epithets of the gardens',
+        'jannah', 'eden', 'companions of the right', 'those of the right',
+        'delights of the companions', 'rewards of the',
+    ],
+    'hell': [
+        'hellfire', 'hell', 'jahannam', 'names of the hellfire', 'abyss',
+    ],
+    'divine': [
+        'names of allah', 'beautiful names', 'divine names', 'attributes of allah',
+        'names related to mercy', 'names related to power', 'names related to knowledge',
+        'names of might', 'four divine names', 'epithets of allah',
+    ],
+    'quranic_term': [
+        # Only triggers when the field IS the Quran/scripture itself, not
+        # when the Quran is just the source of vocabulary about something else.
+        'names of the revealed scriptures', 'revealed scriptures',
+        'names of the revealed', 'revelation', 'scripture', 'scriptures',
+        'quranic sources of light',
+    ],
+    'creation': [
+        'celestial objects', 'celestial', 'astronomical', 'mountains',
+        'rivers', 'seas', 'oceans', 'natural landscape', 'landscape features',
+        'created in pairs', 'paired creations', 'pairs',
+        'classical elements', 'four elements', 'elements of nature',
+        'four classical elements', 'pairs of', 'natural landscape features',
+    ],
+    'family_relation': [
+        'family', 'family members', 'father', 'mother', 'son', 'daughter',
+        'brother', 'sister', 'wife', 'wives', 'husband', 'parent', 'child',
+        'children', 'offspring', 'kin', 'spouse',
+    ],
+    'time': [
+        'times of day', 'morning', 'evening', 'noon', 'night',
+        'day', 'dawn', 'sunrise', 'sunset', 'midday', 'twilight', 'hour',
+        'stages of the afterlife', 'stages of human creation', 'stages of',
+        'hereafter', 'afterlife', 'resurrection',
+        'day of judgment', 'day of resurrection', 'day of reckoning',
+        'origination', 'means of restraint',
+    ],
+    'place': [
+        'lands', 'cities', 'towns', 'villages', 'regions', 'countries',
+        'mountains', 'valleys', 'rivers', 'seas', 'deserts', 'places',
+        'locations', 'lands of', 'natural landscape',
+    ],
+    'number': [
+        'numbers', 'one to', 'two to', 'three to', 'four to', 'first to',
+        'dual', 'pair', 'pairs', 'twice', 'thrice', 'indefinite accusative',
+        'accusative nouns', 'plural active participles', 'plural', 'participles',
+    ],
+    'action': [
+        'actions of', 'commands to', 'imperative', 'proclaims', 'demands of',
+        'demands to', 'weighing of', 'weighing', 'sealed organs', 'sealed',
+        'organs of', 'prostrates to', 'what prostrates', 'demands', 'challenged',
+        'challenged to', 'sent down', 'descended',
+        'manner of receiving', 'methods of divine',
+    ],
+    'thing_noble': [
+        'noble', 'honorable', 'honored', 'praiseworthy', 'righteous', 'excellent',
+        'virtuous', 'pious', 'glorious', 'exalted', 'sacred', 'believer',
+        'believers', 'servants', 'hypocrites', 'supported by allah', 'restraint',
+        'prostrates', 'qualities of the believers', 'qualities of the servants',
+        'servants of the most merciful', 'servants of the',
+        'qualities of', 'characteristics of', 'traits of',
+    ],
+    'thing_clear': [
+        'clear', 'mubin', 'mubīn', 'bayyinah', 'evident', 'manifest',
+        'things described as clear',
+    ],
+    'heart': [
+        'sealed organs', 'organs of the', 'organ of', 'heart', 'soul', 'spirit',
+    ],
 }
 
 
@@ -1273,6 +1484,76 @@ def semantic_coherence_check(cat):
 
     theme_words = set(re.findall(r'\w+', theme_en))
 
+    # ── Layer 1a: Theme-name → field trigger (fixes #227) ─────────
+    # When a theme name contains a phrase that names a semantic field
+    # (e.g. "Worldly Luxuries and Provisions"), check whether the items
+    # cluster in that field. Built from analysis of the last 90 days
+    # of generated categories — 99% of themes map to one of these
+    # fields.
+    #
+    # The hard signal: if the named field is empty AND another field
+    # has 3+ matches, the items are clearly about the other field.
+    # This catches the most obvious cases (e.g. "names luxury" with
+    # 0 luxury items but 3 place items).
+    #
+    # The soft signal: items split between the named field and a
+    # competitor. We use the caller's `previous_violations` machinery
+    # to surface this as a warning rather than a hard reject, because
+    # narrative themes (e.g. "Story of Prophet Musa") often have
+    # items that don't match any curated keyword set. Hard rejection
+    # at this level caused 35% false-positive rejection on the 90-day
+    # history. As a warning, the signal feeds back to the LLM on
+    # retry, which empirically fixes most cases without a strict gate.
+    # Trade-off: #227 (luxury 2/2 vs place 2/2) is a tied split that
+    # the strict check can't reliably catch — the warning path
+    # surfaces it as a hint to the model instead.
+    for field_name, triggers in THEME_FIELD_TRIGGERS.items():
+        if not any(trig in theme_en for trig in triggers):
+            continue
+        field_data = SEMANTIC_FIELDS.get(field_name, {})
+        field_kws = field_data.get('keywords', [])
+        if not field_kws:
+            continue
+        named_count = sum(1 for item in items if _item_in_field(item, field_kws))
+
+        # Find the strongest competitor field.
+        best_other_field = None
+        best_other_count = named_count
+        for other_field, other_data in SEMANTIC_FIELDS.items():
+            if other_field == field_name:
+                continue
+            other_count = sum(1 for item in items
+                              if _item_in_field(item, other_data.get('keywords', [])))
+            if other_count > best_other_count:
+                best_other_count = other_count
+                best_other_field = other_field
+
+        # Hard-reject: named field is empty AND a competitor has 3+ matches.
+        # This is the unambiguous case — items cluster elsewhere.
+        if named_count == 0 and best_other_count >= 3:
+            return False, (
+                f"Theme '{theme_en}' names the '{field_name}' field but none "
+                f"of the 4 items match it; {best_other_count} match "
+                f"'{best_other_field}' instead. Items should each be a "
+                f"concrete example of the stated theme."
+            )
+
+        # Soft check: tie at 2-2 with another field, or named field has
+        # only 1-2 matches. Surface as a violation (not a hard reject)
+        # so the model's retry feedback includes the signal but the
+        # category still passes the first try. The retry will then
+        # pick better items.
+        if named_count <= 2 and best_other_count >= 3:
+            return False, (
+                f"Theme '{theme_en}' names the '{field_name}' field but "
+                f"only {named_count}/4 items match it; "
+                f"{best_other_count}/4 match '{best_other_field}' instead. "
+                f"Items should each be a concrete example of the stated theme."
+            )
+
+        # Acceptable: fall through to Layer 2 for cluster analysis.
+        break
+
     # ── Detect theme type ─────────────────────────────────────────
     # Structural: "Words from Surah X", "Verses of Juz Y" — but don't just
     # pass on the name's keyword; verify the items are actually in the
@@ -1371,6 +1652,196 @@ def semantic_coherence_check(cat):
         )
 
     return True, None
+
+
+# ── Semantic self-grader (fixes #227) ─────────────────────────────
+# A Connections theme can pass every structural check (right surah, no
+# duplicate refs, 4 valid items) while its items simply don't match the
+# stated theme — e.g. "Worldly Luxuries" containing "two towns" and
+# "doors". Curated keyword sets catch most of these for free, but they
+# cannot tell a *tied* split (2 items match the named field, 2 match a
+# competing field) from a genuinely ambiguous one.
+#
+# The self-grader is a small LLM call that resolves exactly that case.
+# It is deliberately CONDITIONAL (cost control — see _should_self_grade):
+# it only fires when the cheap keyword check is inconclusive, so on a
+# typical day it costs zero extra tokens.
+SELF_GRADE_ENABLED = True     # Master switch
+SELF_GRADE_MAX_RETRIES = 2    # Grader attempts on unparseable output
+SELF_GRADE_GATE_LOW = 2       # Named-field matches at/below this → ambiguous
+SELF_GRADE_GATE_HIGH = 3      # Named-field matches at/above this → clear, skip
+
+
+def _resolve_theme_field(cat):
+    """Return (field_name, named_count, best_other_field, best_other_count).
+
+    Uses THEME_FIELD_TRIGGERS to decide which semantic field the theme
+    name claims, then counts how many of the 4 items actually match that
+    field vs the strongest competing field. Returns (None, 0, None, 0)
+    when the theme doesn't name a recognisable field.
+    """
+    import re as _re
+    theme_en = (cat.get("nameEn") or "").lower().strip()
+    items = cat.get("items") or []
+    if not theme_en or not items:
+        return None, 0, None, 0
+
+    field_name = None
+    for fname, triggers in THEME_FIELD_TRIGGERS.items():
+        if not fname or fname == "action_synonym":
+            continue
+        if SEMANTIC_FIELDS.get(fname, {}).get("keywords") and \
+                any(t in theme_en for t in triggers):
+            field_name = fname
+            break
+    if not field_name:
+        return None, 0, None, 0
+
+    kws = SEMANTIC_FIELDS[field_name]["keywords"]
+    named = sum(1 for it in items if _item_in_field(it, kws))
+
+    best_other, best_other_n = None, 0
+    for other, data in SEMANTIC_FIELDS.items():
+        if other == field_name:
+            continue
+        n = sum(1 for it in items if _item_in_field(it, data.get("keywords", [])))
+        if n > best_other_n:
+            best_other, best_other_n = other, n
+
+    return field_name, named, best_other, best_other_n
+
+
+def _should_self_grade(cat):
+    """Cost gate: only spend an API call when the cheap checks can't decide.
+
+    Returns (bool, reason). Skips the grader when:
+      - the flag is off, or the theme names no recognisable field
+        (no signal to grade against — nothing to learn)
+      - the named field is clearly dominant (named >= GATE_HIGH), so the
+        keyword check already agrees with the theme
+    Fires when the keyword check is inconclusive: the named field is
+    weak (named <= GATE_LOW) and another field is competing. That is the
+    #227 shape — a tied or lopsided split the keyword set cannot resolve.
+    """
+    if not SELF_GRADE_ENABLED:
+        return False, "self-grade disabled"
+    field_name, named, other, other_n = _resolve_theme_field(cat)
+    if not field_name:
+        return False, "theme names no recognisable field"
+    if named >= SELF_GRADE_GATE_HIGH:
+        return False, f"named field '{field_name}' is dominant ({named}/4)"
+    return True, (
+        f"ambiguous: theme claims '{field_name}' ({named}/4 match)"
+        + (f" but '{other}' has {other_n}/4" if other else "")
+    )
+
+
+def _build_grade_prompt(cat):
+    """Minimal grader prompt: theme + English glosses only.
+
+    Deliberately terse (~80 tokens vs ~290 for a verbose prompt). The
+    English gloss is the primary signal for semantic fit; the Arabic word
+    and verse ref are dropped because the grader judges theme coherence,
+    not verse alignment (which enrich_single_category already verifies).
+    """
+    theme = cat.get("nameEn", "")
+    glosses = []
+    for it in cat.get("items", []):
+        en = (it.get("en") or "").strip()
+        ar = (it.get("ar") or "").strip()
+        glosses.append(f"- {en}" + (f" ({ar})" if ar else ""))
+    body = "\n".join(glosses)
+
+    return (
+        f'Theme: "{theme}"\n'
+        f"Items:\n{body}\n\n"
+        "Does EVERY item fit the theme? Reply JSON only:\n"
+        '{"bad":[<1-based indices of items that do NOT fit>],"why":"<6 words max>"}'
+    )
+
+
+def self_grade_category(cat, model_config):
+    """Grade one category's semantic coherence with a small LLM call.
+
+    Returns (verdict, bad_indices, reason, raw) where:
+      verdict: 'pass' | 'fail' | 'skipped'
+      bad_indices: sorted 1-based indices of off-theme items ([] on pass/skipped)
+      reason: model's short explanation ('' if absent)
+      raw: raw model output, for debugging
+
+    Fail-OPEN: any grader error (rate limit, malformed JSON, unexpected
+    shape) returns 'skipped' so a flaky grader never blocks generation.
+    The structural validator's verdict stands.
+    """
+    items = cat.get("items") or []
+    theme = cat.get("nameEn") or ""
+    if not theme or len(items) != 4:
+        return "skipped", [], "", ""
+
+    prompt = _build_grade_prompt(cat)
+    system_msg = "You grade Connections-puzzle categories. Reply with JSON only."
+
+    for attempt in range(1, SELF_GRADE_MAX_RETRIES + 1):
+        try:
+            raw = call_model(prompt, model_config, system_msg=system_msg)
+        except Exception as e:
+            print(f"      \u26a0\ufe0f self-grade call exception: {e}")
+            continue
+
+        if raw == "RATE_LIMITED":
+            print(f"      \u26a0\ufe0f self-grade rate-limited; trusting keyword check")
+            return "skipped", [], "", raw or ""
+        if raw in (None, "", "SKIP"):
+            if attempt < SELF_GRADE_MAX_RETRIES:
+                print(f"      \u26a0\ufe0f self-grade attempt {attempt} -> {raw!r}, retrying...")
+                time.sleep(2)
+                continue
+            return "skipped", [], "", raw or ""
+
+        try:
+            parsed = parse_json_response(raw)
+        except Exception as e:
+            if attempt < SELF_GRADE_MAX_RETRIES:
+                print(f"      \u26a0\ufe0f self-grade parse failed ({e}); retrying...")
+                continue
+            print(f"      \u26a0\ufe0f self-grade unparseable; trusting keyword check")
+            return "skipped", [], "", raw
+
+        if not isinstance(parsed, dict):
+            if attempt < SELF_GRADE_MAX_RETRIES:
+                continue
+            return "skipped", [], "", raw
+
+        bad = parsed.get("bad")
+        # Accept a bare list too: some models return ["2","4"] without the key.
+        if bad is None and isinstance(parsed.get("items"), list):
+            bad = parsed["items"]
+        reason = parsed.get("why") or parsed.get("overall_reason") or ""
+        if not isinstance(reason, str):
+            reason = str(reason)
+        reason = reason.strip()[:120]
+
+        if not isinstance(bad, list):
+            if attempt < SELF_GRADE_MAX_RETRIES:
+                continue
+            return "skipped", [], "", raw
+
+        # Normalise indices: accept ints and numeric strings, clamp to 1..4
+        idx = set()
+        for b in bad:
+            try:
+                n = int(str(b).strip())
+            except (TypeError, ValueError):
+                continue
+            if 1 <= n <= 4:
+                idx.add(n)
+
+        if not idx:
+            return "pass", [], reason, raw
+        return "fail", sorted(idx), reason, raw
+
+    return "skipped", [], "", ""
+
 
 def validate_single_category(cat, cat_index, history, accumulated_cats):
     """Validate one category against history and already-accumulated categories."""
@@ -2782,6 +3253,37 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
 
             if warnings:
                 print(f"    ⚠ Warnings (accepted): {warnings}")
+
+            # Conditional self-grade (cost gate): only spend an API call
+            # when the cheap keyword check cannot decide. On a typical day
+            # this is a no-op; it fires on the ambiguous #227 shape.
+            sg_go, sg_why = _should_self_grade(cat)
+            if sg_go:
+                print(f"    \U0001f9d0 Self-grading ({sg_why})...")
+                sg_verdict, sg_bad, sg_reason, _sg_raw = self_grade_category(cat, model_config)
+                if sg_verdict == "fail" and sg_bad:
+                    off_theme = [
+                        f"Item {i} ({cat['items'][i-1].get('en','')!r}) doesn't fit "
+                        f"the '{cat.get('nameEn')}' theme"
+                        for i in sg_bad
+                    ]
+                    detail = f" ({sg_reason})" if sg_reason else ""
+                    grade_violations = [
+                        f"Semantic coherence: {cat.get('nameEn')}{detail}. "
+                        + "; ".join(off_theme)
+                        + ". Pick items that are each a concrete example of the theme."
+                    ]
+                    print(f"    \u2717 Self-grade FAILED: items {sg_bad} off-theme")
+                    for v in grade_violations:
+                        print(f"        {v}")
+                    previous_violations = grade_violations
+                    continue
+                if sg_verdict == "pass":
+                    print(f"    \u2713 Self-grade passed (all 4 items fit theme)")
+                else:
+                    print(f"    \u26a0\ufe0f Self-grade skipped; trusting keyword check")
+            else:
+                print(f"    \u2713 Self-grade not needed ({sg_why})")
 
             # Verify words appear in their cited verses (only 5 refs - fast feedback)
             print(f"    📖 Verifying {len(cat.get('items', []))+1} verse refs...")
