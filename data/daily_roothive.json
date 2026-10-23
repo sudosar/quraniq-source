@@ -1,569 +1,475 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "puzzle": {
-    "center": "ب",
+    "center": "س",
     "outer": [
-      "ن",
       "ي",
-      "ا",
-      "ج",
+      "و",
+      "ء",
       "م",
-      "ع"
+      "ا",
+      "ه"
     ],
     "root": {
-      "letters": "عجب",
-      "display": "ع ج ب",
-      "translit": "ʿ-j-b",
-      "meaning": "It conveys wonder or amazement at something unusual, striking, or delightful. Its derivatives express astonishment, curiosity, admiration, or the quality of being amazing.",
-      "occurrences": 27,
-      "lemmaCount": 5
+      "letters": "سوا",
+      "display": "س و ا",
+      "translit": "s-w-ʾ",
+      "meaning": "It centers on badness, harm, or fault. Its derived words express evil or wrong acts, a bad condition, and the worst kind or degree of something.",
+      "occurrences": 167,
+      "lemmaCount": 10
     },
     "words": [
       {
-        "w": "ابن",
+        "w": "اسس",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "ابْن",
-            "gloss": "son",
-            "type": "noun",
-            "root": "بني",
-            "count": 63,
-            "ref": "2:87",
-            "pos": 11,
-            "alt": [
-              "sons",
-              "children"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "ابي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أَبَى",
-            "gloss": "refused",
+            "lemma": "أَسَّسَ",
+            "gloss": "founded",
             "type": "verb",
-            "root": "أبي",
-            "count": 13,
-            "ref": "2:34",
-            "pos": 9,
-            "alt": [
-              "refuse"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "باب",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "باب",
-            "gloss": "gates",
-            "type": "noun",
-            "root": "بوب",
-            "count": 27,
-            "ref": "6:44",
-            "pos": 8,
-            "alt": [
-              "gate",
-              "doors"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "بني",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "بُنَىّ",
-            "gloss": "children",
-            "type": "noun",
-            "root": "بني",
-            "count": 80,
-            "ref": "2:83",
-            "pos": 4,
-            "alt": [
-              "children of israel",
-              "sons"
-            ]
-          },
-          {
-            "lemma": "بَنَى",
-            "gloss": "construct",
-            "type": "verb",
-            "root": "بني",
-            "count": 11,
-            "ref": "40:36",
-            "pos": 4,
-            "alt": [
-              "build"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "بيع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "بَيْع",
-            "gloss": "bargaining",
-            "type": "noun",
-            "root": "بيع",
-            "count": 7,
-            "ref": "2:254",
-            "pos": 13,
-            "alt": [
-              "any trade",
-              "sale"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "بين",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "بَيْن",
-            "gloss": "between",
-            "type": "noun",
-            "root": "بين",
-            "count": 266,
-            "ref": "2:66",
-            "pos": 4,
-            "alt": [
-              "before",
-              "among"
-            ]
-          },
-          {
-            "lemma": "بَيَّنُ",
-            "gloss": "makes clear",
-            "type": "verb",
-            "root": "بين",
-            "count": 35,
-            "ref": "2:68",
-            "pos": 5,
-            "alt": [
-              "to make clear",
-              "allah makes clear"
-            ],
+            "root": "أسس",
+            "count": 3,
+            "ref": "9:108",
+            "pos": 6,
             "form": 2
           }
         ]
       },
       {
-        "w": "جنب",
+        "w": "اسم",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "جَنب",
-            "gloss": "regard",
+            "lemma": "اسْم",
+            "gloss": "name",
             "type": "noun",
-            "root": "جنب",
-            "count": 8,
-            "ref": "39:56",
-            "pos": 9
-          },
-          {
-            "lemma": "جُنُب",
-            "gloss": "impure",
-            "type": "adjective",
-            "root": "جنب",
-            "count": 4,
-            "ref": "4:43",
-            "pos": 14,
+            "root": "سمو",
+            "count": 39,
+            "ref": "5:4",
+            "pos": 23,
             "alt": [
-              "state of ceremonial impurity",
-              "distance"
+              "names",
+              "name of allah"
             ]
           }
         ]
       },
       {
-        "w": "جيب",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "جَيْب",
-            "gloss": "bosom",
-            "type": "noun",
-            "root": "جيب",
-            "count": 3,
-            "ref": "24:31",
-            "pos": 18,
-            "alt": [
-              "bosoms"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عجب",
+        "w": "ساء",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "عَجِبُ",
-            "gloss": "astonished",
+            "lemma": "ساءَ",
+            "gloss": "was distressed",
             "type": "verb",
-            "root": "عجب",
-            "count": 8,
-            "ref": "13:5",
-            "pos": 2,
+            "root": "سوأ",
+            "count": 30,
+            "ref": "5:66",
+            "pos": 22,
+            "alt": [
+              "evil",
+              "evil is"
+            ],
             "form": 1
+          }
+        ]
+      },
+      {
+        "w": "سمي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "سَمَّى",
+            "gloss": "named",
+            "type": "verb",
+            "root": "سمو",
+            "count": 8,
+            "ref": "76:18",
+            "pos": 3,
+            "form": 2
           },
           {
-            "lemma": "عَجَب",
-            "gloss": "wonder",
+            "lemma": "سَمِيّ",
+            "gloss": "name",
             "type": "noun",
-            "root": "عجب",
-            "count": 5,
-            "ref": "10:2",
-            "pos": 3,
-            "alt": [
-              "amazingly",
-              "amazing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عنب",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عِنَب",
-            "gloss": "grapes",
-            "type": "noun",
-            "root": "عنب",
-            "count": 11,
-            "ref": "6:99",
-            "pos": 27,
-            "alt": [
-              "grapevines"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "ماب",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَآب",
-            "gloss": "place of return",
-            "type": "noun",
-            "root": "أوب",
-            "count": 9,
-            "ref": "13:29",
-            "pos": 8,
-            "alt": [
-              "return"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "نبا",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "نَبَأ",
-            "gloss": "news",
-            "type": "noun",
-            "root": "نبأ",
-            "count": 29,
-            "ref": "3:44",
-            "pos": 3,
-            "alt": [
-              "story"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "نبي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "نَبِيّ",
-            "gloss": "prophet",
-            "type": "noun",
-            "root": "نبأ",
-            "count": 75,
-            "ref": "2:91",
-            "pos": 24,
-            "alt": [
-              "prophets",
-              "any prophet"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اعجب",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "أَعْجَبَ",
-            "gloss": "delighting",
-            "type": "verb",
-            "root": "عجب",
-            "count": 11,
-            "ref": "48:29",
-            "pos": 40,
-            "alt": [
-              "pleases"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اناب",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَنابَ",
-            "gloss": "turns",
-            "type": "verb",
-            "root": "نوب",
-            "count": 11,
-            "ref": "11:88",
-            "pos": 35,
-            "alt": [
-              "turn",
-              "turns back"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "انبا",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَنۢبَأَ",
-            "gloss": "inform",
-            "type": "verb",
-            "root": "نبأ",
-            "count": 4,
-            "ref": "2:31",
-            "pos": 10,
-            "alt": [
-              "had informed",
-              "informed"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "بايع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "بايَعْ",
-            "gloss": "have contracted",
-            "type": "verb",
-            "root": "بيع",
-            "count": 6,
-            "ref": "9:111",
-            "pos": 32,
-            "alt": [
-              "pledge allegiance to",
-              "pledge allegiance"
-            ],
-            "form": 3
-          }
-        ]
-      },
-      {
-        "w": "بنان",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "بَنان",
-            "gloss": "fingertip",
-            "type": "noun",
-            "root": "بنن",
+            "root": "سمو",
             "count": 2,
-            "ref": "8:12",
-            "pos": 23
-          }
-        ]
-      },
-      {
-        "w": "بيان",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "بَيان",
-            "gloss": "declaration",
-            "type": "noun",
-            "root": "بين",
-            "count": 3,
-            "ref": "3:138",
-            "pos": 2
-          }
-        ]
-      },
-      {
-        "w": "جانب",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "جانِب",
-            "gloss": "side",
-            "type": "active participle",
-            "root": "جنب",
-            "count": 9,
-            "ref": "17:68",
-            "pos": 5,
+            "ref": "19:7",
+            "pos": 12,
             "alt": [
-              "on side",
-              "direction"
+              "any similarity"
             ]
           }
         ]
       },
       {
-        "w": "عجاب",
+        "w": "سوء",
         "family": true,
-        "points": 4,
+        "points": 3,
         "senses": [
           {
-            "lemma": "عُجاب",
-            "gloss": "curious",
+            "lemma": "سُوء",
+            "gloss": "evil",
+            "type": "noun",
+            "root": "سوأ",
+            "count": 50,
+            "ref": "2:49",
+            "pos": 7,
+            "alt": [
+              "worst",
+              "any harm"
+            ]
+          },
+          {
+            "lemma": "سَوْء",
+            "gloss": "evil",
+            "type": "noun",
+            "root": "سوأ",
+            "count": 9,
+            "ref": "19:28",
+            "pos": 7,
+            "alt": [
+              "evil man"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "سوي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "سَوَّى",
+            "gloss": "can restore",
+            "type": "verb",
+            "root": "سوي",
+            "count": 13,
+            "ref": "75:4",
+            "pos": 5,
+            "form": 2
+          },
+          {
+            "lemma": "سَوِيّ",
+            "gloss": "sound",
+            "type": "noun",
+            "root": "سوي",
+            "count": 5,
+            "ref": "19:10",
+            "pos": 13,
+            "alt": [
+              "well-proportioned",
+              "even"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "سيي",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "سَيِّئ",
+            "gloss": "evil",
             "type": "adjective",
-            "root": "عجب",
-            "count": 1,
-            "ref": "38:5",
+            "root": "سوأ",
+            "count": 4,
+            "ref": "9:102",
             "pos": 8
           }
         ]
       },
       {
-        "w": "عجيب",
+        "w": "اساء",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "عَجِيب",
-            "gloss": "amazing",
-            "type": "adjective",
-            "root": "عجب",
+            "lemma": "أَساءَ",
+            "gloss": "evil",
+            "type": "verb",
+            "root": "سوأ",
+            "count": 5,
+            "ref": "41:46",
+            "pos": 6,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "اسوا",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "أَسْوَأ",
+            "gloss": "worst",
+            "type": "noun",
+            "root": "سوأ",
             "count": 2,
-            "ref": "11:72",
+            "ref": "39:35",
+            "pos": 4
+          }
+        ]
+      },
+      {
+        "w": "اسوه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أُسْوَة",
+            "gloss": "example",
+            "type": "noun",
+            "root": "أسو",
+            "count": 3,
+            "ref": "33:21",
+            "pos": 7,
+            "alt": [
+              "excellent example"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ساهي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "ساهي",
+            "gloss": "heedlessness",
+            "type": "active participle",
+            "root": "سهو",
+            "count": 2,
+            "ref": "51:11",
+            "pos": 5,
+            "alt": [
+              "neglectful"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "سماء",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "سَماء",
+            "gloss": "heavens",
+            "type": "noun",
+            "root": "سمو",
+            "count": 310,
+            "ref": "2:29",
+            "pos": 15,
+            "alt": [
+              "heaven"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "سموم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "سَمُوم",
+            "gloss": "scorching fire",
+            "type": "noun",
+            "root": "سمم",
+            "count": 3,
+            "ref": "56:42",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "سوءه",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "سَوْءَة",
+            "gloss": "dead body",
+            "type": "noun",
+            "root": "سوأ",
+            "count": 7,
+            "ref": "5:31",
+            "pos": 10
+          }
+        ]
+      },
+      {
+        "w": "سواء",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "سَواء",
+            "gloss": "same",
+            "type": "noun",
+            "root": "سوي",
+            "count": 27,
+            "ref": "2:6",
+            "pos": 4,
+            "alt": [
+              "equal",
+              "is same"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "سواي",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "سُوٓأَى",
+            "gloss": "evil",
+            "type": "noun",
+            "root": "سوأ",
+            "count": 1,
+            "ref": "30:10",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "سيما",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "سِيما",
+            "gloss": "marks",
+            "type": "noun",
+            "root": "سوم",
+            "count": 6,
+            "ref": "2:273",
+            "pos": 18,
+            "alt": [
+              "mark"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "سييه",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "سَيِّئَة",
+            "gloss": "misfortune",
+            "type": "noun",
+            "root": "سوأ",
+            "count": 58,
+            "ref": "2:81",
+            "pos": 4,
+            "alt": [
+              "evil",
+              "evils"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مسمي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُسَمًّى",
+            "gloss": "appointed",
+            "type": "passive participle",
+            "root": "سمو",
+            "count": 21,
+            "ref": "2:282",
+            "pos": 9,
+            "alt": [
+              "specified",
+              "fixed"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مسيء",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مُسِيء",
+            "gloss": "evildoer",
+            "type": "active participle",
+            "root": "سوأ",
+            "count": 1,
+            "ref": "40:58",
+            "pos": 10
+          }
+        ]
+      },
+      {
+        "w": "وسوس",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "وَسْوَسَ",
+            "gloss": "whispers",
+            "type": "verb",
+            "root": "وسوس",
+            "count": 4,
+            "ref": "50:16",
+            "pos": 6,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "ييوس",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "يَئُوس",
+            "gloss": "despair",
+            "type": "noun",
+            "root": "يأس",
+            "count": 3,
+            "ref": "17:83",
             "pos": 12
           }
         ]
       },
       {
-        "w": "مبين",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُبِين",
-            "gloss": "clear",
-            "type": "active participle",
-            "root": "بين",
-            "count": 119,
-            "ref": "2:168",
-            "pos": 16,
-            "alt": [
-              "manifest",
-              "open"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مجيب",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُجِيب",
-            "gloss": "all-responsive",
-            "type": "active participle",
-            "root": "جوب",
-            "count": 2,
-            "ref": "11:61",
-            "pos": 27
-          }
-        ]
-      },
-      {
-        "w": "منيب",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُنِيب",
-            "gloss": "oft-returning",
-            "type": "active participle",
-            "root": "نوب",
-            "count": 7,
-            "ref": "11:75",
-            "pos": 5,
-            "alt": [
-              "turning",
-              "turns"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "بنيان",
+        "w": "مسومه",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "بُنْيان",
-            "gloss": "structure",
-            "type": "noun",
-            "root": "بني",
-            "count": 7,
-            "ref": "18:21",
-            "pos": 21
+            "lemma": "مُسَوَّمَة",
+            "gloss": "marked",
+            "type": "passive participle",
+            "root": "سوم",
+            "count": 3,
+            "ref": "11:83",
+            "pos": 1
           }
         ]
       }
     ],
     "otherFamily": [],
-    "maxScore": 48,
-    "featuredRoot": "عجب"
+    "maxScore": 58,
+    "featuredRoot": "سوأ"
   },
   "generated": true,
   "model": "auto (chain)"

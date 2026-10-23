@@ -1,29 +1,32 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "puzzle": {
-    "verseRef": "37:180",
-    "reference": "Surah As-Saffat (37:180)",
+    "verseRef": "4:129",
+    "reference": "An-Nisa (4:129)",
     "segments": [
-      "وَإِنَّ الْمَسَاجِدَ",
-      "لِلَّهِ فَلَا",
-      "تَدْعُوا مَعَ اللَّهِ",
-      "أَحَدًا"
+      "words 1-2",
+      "words 3-4",
+      "words 5-7",
+      "words 8-9",
+      "words 10-12"
     ],
     "translations": [
-      "Glory (be to) your Lord",
-      "(the) Lord (of) Honor",
-      "above what",
-      "they attribute"
+      "And never will you be able to deal justly between",
+      "[the] women even if you desired but (do) not incline",
+      "(with) all the inclination and leave her (the other) like the suspended one",
+      "And if you reconcile and fear (Allah) then indeed",
+      "Allah is Oft-Forgiving Most Merciful"
     ],
-    "hint": "A reminder of Allah's absolute uniqueness: worship and supplication are directed to Him alone.",
-    "arabic": "سُبْحَـٰنَ رَبِّكَ رَبِّ ٱلْعِزَّةِ عَمَّا يَصِفُونَ",
+    "hint": "A humble confession of wrongdoing and a heartfelt appeal for Allah's forgiveness and mercy.",
+    "arabic": "وَلَن تَسْتَطِيعُوٓا۟ أَن تَعْدِلُوا۟ بَيْنَ ٱلنِّسَآءِ وَلَوْ حَرَصْتُمْ ۖ فَلَا تَمِيلُوا۟ كُلَّ ٱلْمَيْلِ فَتَذَرُوهَا كَٱلْمُعَلَّقَةِ ۚ وَإِن تُصْلِحُوا۟ وَتَتَّقُوا۟ فَإِنَّ ٱللَّهَ كَانَ غَفُورًۭا رَّحِيمًۭا",
     "words": [
-      "سُبْحَـٰنَ رَبِّكَ",
-      "رَبِّ ٱلْعِزَّةِ",
-      "عَمَّا",
-      "يَصِفُونَ"
+      "وَلَن تَسْتَطِيعُوٓا۟ أَن تَعْدِلُوا۟ بَيْنَ",
+      "ٱلنِّسَآءِ وَلَوْ حَرَصْتُمْ ۖ فَلَا تَمِيلُوا۟",
+      "كُلَّ ٱلْمَيْلِ فَتَذَرُوهَا كَٱلْمُعَلَّقَةِ ۚ",
+      "وَإِن تُصْلِحُوا۟ وَتَتَّقُوا۟ فَإِنَّ",
+      "ٱللَّهَ كَانَ غَفُورًۭا رَّحِيمًۭا"
     ],
-    "verseEn": "Exalted is your Lord, the Lord of might, above what they describe."
+    "verseEn": "And you will never be able to be equal [in feeling] between wives, even if you should strive [to do so]. So do not incline completely [toward one] and leave another hanging. And if you amend [your affairs] and fear Allāh - then indeed, Allāh is ever Forgiving and Merciful."
   },
   "generated": true,
   "model": "auto (chain)"

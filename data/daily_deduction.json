@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "puzzle": {
-    "title": "The Community of the First Transgression",
-    "intro": "In the land of ancient cities, a people once thrived. They were visited by a messenger with a clear call, yet they turned away and pursued a path no one had ever walked. Their tale is one of defiance, depravity, and a punishment that left their homeland as a sign for all who reflect. Who are these souls?",
+    "title": "The Mission in the Ancient City",
+    "intro": "A dusty ancient town, its people entrenched in denial, and a final warning that went unheeded. Today, step into the role of those sent by Allah to deliver a message to a stubborn people. A story of rejection, a singular voice of faith, and an ending sealed by a devastating decree. Who speaks through these clues?",
     "clues": [
-      "We lived in cities of the plain, where our prophet called us to righteousness.",
-      "We were the first to commit an indecency that no one in all the worlds had ever done before.",
-      "We waylaid travelers and committed evil openly in our gatherings.",
-      "We rejected the messenger sent to us and threatened to drive him out of our land.",
-      "We rushed to his house demanding he surrender his guests to us.",
-      "Our punishment was a rain of stones, and our city was turned upside down."
+      "We were sent by Allah to a town whose people had turned away from truth",
+      "Two of us came first, then a third joined to strengthen our mission",
+      "The townsfolk rejected us, saying we were nothing but humans like them",
+      "A single soul from the farthest end of the city ran to tell the people to follow us",
+      "We pled with them, but they hardened their hearts and turned against us",
+      "In one devastating cry from the heavens, our entire city was silenced"
     ],
     "categories": {
       "identity": {
-        "label": "Who Are We?",
+        "label": "Who Am I?",
         "options": [
-          "People of Lut",
-          "People of Nuh",
-          "People of 'Ad",
-          "People of Thamud",
-          "People of Madyan"
+          "The Messengers of the Town in Surah Ya-Sin",
+          "The Hawwariyyun (Disciples of Isa)",
+          "The Sorcerers of Pharaoh's Court",
+          "The Companions of the Sabbath",
+          "The People of the Elephant"
         ],
-        "answer": "People of Lut"
+        "answer": "The Messengers of the Town in Surah Ya-Sin"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Committed the first act of sodomy",
-          "Worshipped idols",
-          "Cheated in trade",
-          "Killed their prophet",
-          "Disobeyed their parents"
+          "Rejected and called liars by the townspeople",
+          "Burned alive in a great blazing fire",
+          "Swallowed by a great fish in the deep sea",
+          "Forced to labor building a towering pillar",
+          "Tortured in a trench of raging fire"
         ],
-        "answer": "Committed the first act of sodomy"
+        "answer": "Rejected and called liars by the townspeople"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The city of the plain",
-          "The city of the well",
-          "The city of the ditch",
-          "The city of the elephant",
-          "The city of the garden"
+          "The ancient town (al-Qaryah)",
+          "A great blazing furnace",
+          "The belly of a great fish",
+          "The lofty sky-touching pillar",
+          "The sacred House (Kaaba)"
         ],
-        "answer": "The city of the plain"
+        "answer": "The ancient town (al-Qaryah)"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Rained with stones and overturned",
-          "Drowned by a flood",
-          "Destroyed by a violent wind",
-          "Swallowed by the earth",
-          "Struck by a loud blast"
+          "The town was destroyed by a single devastating cry (Sayha)",
+          "The tyrant and his army were drowned in the parted sea",
+          "The people were transformed into apes and monkeys",
+          "A rain of stones from the sky destroyed the city",
+          "A violent flood swept away the entire community"
         ],
-        "answer": "Rained with stones and overturned"
+        "answer": "The town was destroyed by a single devastating cry (Sayha)"
       }
     },
-    "verseRef": "26:162",
-    "arabic": "إِنِّى لَكُمْ رَسُولٌ أَمِينٌۭ",
-    "verse": "Indeed, I am to you a trustworthy messenger. (26:162)"
+    "verseRef": "36:14",
+    "arabic": "إِذْ أَرْسَلْنَآ إِلَيْهِمُ ٱثْنَيْنِ فَكَذَّبُوهُمَا فَعَزَّزْنَا بِثَالِثٍۢ فَقَالُوٓا۟ إِنَّآ إِلَيْكُم مُّرْسَلُونَ",
+    "verse": "When We sent to them two but they denied them, so We strengthened [them] with a third, and they said, \"Indeed, we are messengers to you.\" (36:14)"
   },
   "generated": true,
   "model": "auto (chain)"

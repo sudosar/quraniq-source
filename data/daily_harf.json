@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "puzzle": {
-    "word": "كفوا",
-    "display": "كُفُوًا",
-    "hint": "The One described as having no partner, likeness, or rival.",
-    "verseRef": "112:5",
-    "arabicVerse": "",
-    "verse": "112:5"
+    "word": "كيد",
+    "display": "كَيْد",
+    "hint": "A secret ploy or scheme — a covert plan, often with ill intent, woven against an adversary.",
+    "verseRef": "86:15",
+    "arabicVerse": "إِنَّهُمْ يَكِيدُونَ كَيْدًۭا",
+    "verse": "86:15 - Indeed, they are planning a plan,"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "puzzle": {
     "categories": [
       {
-        "name": "أَسْمَاءُ الْقُرْآنِ وَأَوْصَافُهُ",
-        "nameEn": "Names and Descriptions of the Quran",
+        "name": "مَشَاهِدُ الْآخِرَةِ فِي سُورَةِ الطُّورِ",
+        "nameEn": "Scenes of the Hereafter in Surah At-Tur",
         "color": "yellow",
         "items": [
           {
-            "ar": "الْقُرْآنَ",
-            "en": "the Quran",
-            "ref": "55:2",
-            "verse": "عَلَّمَ ٱلْقُرْءَانَ",
-            "verseEn": "Taught the Qur’ān,"
+            "ar": "الْمُكَذِّبِينَ",
+            "en": "to the deniers",
+            "ref": "52:11",
+            "verse": "فَوَيْلٌۭ يَوْمَئِذٍۢ لِّلْمُكَذِّبِينَ",
+            "verseEn": "Then woe, that Day, to the deniers,"
           },
           {
-            "ar": "الْكِتَابِ",
-            "en": "(of) the Book",
-            "ref": "45:2",
-            "verse": "تَنزِيلُ ٱلْكِتَـٰبِ مِنَ ٱللَّهِ ٱلْعَزِيزِ ٱلْحَكِيمِ",
-            "verseEn": "The revelation of the Book is from Allāh, the Exalted in Might, the Wise."
+            "ar": "نَارِ",
+            "en": "(the) Fire",
+            "ref": "52:13",
+            "verse": "يَوْمَ يُدَعُّونَ إِلَىٰ نَارِ جَهَنَّمَ دَعًّا",
+            "verseEn": "The Day they are thrust toward the fire of Hell with a [violent] thrust, [its angels will say],"
           },
           {
-            "ar": "تَنْزِيلٌ",
-            "en": "A Revelation",
-            "ref": "56:80",
-            "verse": "تَنزِيلٌۭ مِّن رَّبِّ ٱلْعَـٰلَمِينَ",
-            "verseEn": "[It is] a revelation from the Lord of the worlds."
+            "ar": "جَنَّاتٍ",
+            "en": "Gardens",
+            "ref": "52:17",
+            "verse": "إِنَّ ٱلْمُتَّقِينَ فِى جَنَّـٰتٍۢ وَنَعِيمٍۢ",
+            "verseEn": "Indeed, the righteous will be in gardens and pleasure,"
           },
           {
-            "ar": "ذِكْرًا",
-            "en": "a Reminder",
-            "ref": "20:99",
-            "verse": "كَذَٰلِكَ نَقُصُّ عَلَيْكَ مِنْ أَنۢبَآءِ مَا قَدْ سَبَقَ ۚ وَقَدْ ءَاتَيْنَـٰكَ مِن لَّدُنَّا ذِكْرًۭا",
-            "verseEn": "Thus, [O Muḥammad], We relate to you from the news of what has preceded. And We have certainly given you from Us a message [i.e., the Qur’ān]."
+            "ar": "كُلُوا۟",
+            "en": "Eat",
+            "ref": "52:19",
+            "verse": "كُلُوا۟ وَٱشْرَبُوا۟ هَنِيٓـًٔۢا بِمَا كُنتُمْ تَعْمَلُونَ",
+            "verseEn": "[They will be told], \"Eat and drink in satisfaction for what you used to do.\""
           }
         ]
       },
       {
-        "name": "أَلْفَاظُ الْعَطَاءِ وَالصَّدَقَةِ فِي الْقُرْآنِ",
-        "nameEn": "Terms for Charity and Giving in the Quran",
+        "name": "ألفاظ هلاك الأمم السابقة في سورة الأنبياء",
+        "nameEn": "Terms describing the destruction of past nations in Surah Al-Anbiya",
         "color": "green",
         "items": [
           {
-            "ar": "الزَّكَاةَ",
-            "en": "zakah",
-            "ref": "27:3",
-            "verse": "ٱلَّذِينَ يُقِيمُونَ ٱلصَّلَوٰةَ وَيُؤْتُونَ ٱلزَّكَوٰةَ وَهُم بِٱلْـَٔاخِرَةِ هُمْ يُوقِنُونَ",
-            "verseEn": "Who establish prayer and give zakāh, and of the Hereafter they are certain [in faith]."
+            "ar": "قَصَمۡنَا",
+            "en": "We (have) shattered",
+            "ref": "21:11",
+            "verse": "وَكَمْ قَصَمْنَا مِن قَرْيَةٍۢ كَانَتْ ظَالِمَةًۭ وَأَنشَأْنَا بَعْدَهَا قَوْمًا ءَاخَرِينَ",
+            "verseEn": "And how many a city which was unjust have We shattered and produced after it another people."
           },
           {
-            "ar": "صَدَقَةٍ",
-            "en": "a charity",
-            "ref": "2:263",
-            "verse": "۞ قَوْلٌۭ مَّعْرُوفٌۭ وَمَغْفِرَةٌ خَيْرٌۭ مِّن صَدَقَةٍۢ يَتْبَعُهَآ أَذًۭى ۗ وَٱللَّهُ غَنِىٌّ حَلِيمٌۭ",
-            "verseEn": "Kind speech and forgiveness are better than charity followed by injury. And Allāh is Free of need and Forbearing."
+            "ar": "يَرۡكُضُونَ",
+            "en": "were fleeing",
+            "ref": "21:12",
+            "verse": "فَلَمَّآ أَحَسُّوا۟ بَأْسَنَآ إِذَا هُم مِّنْهَا يَرْكُضُونَ",
+            "verseEn": "And when they [i.e., its inhabitants] perceived Our punishment, at once they fled from it."
           },
           {
-            "ar": "نَفَقَةً",
-            "en": "any spending",
-            "ref": "9:121",
-            "verse": "وَلَا يُنفِقُونَ نَفَقَةًۭ صَغِيرَةًۭ وَلَا كَبِيرَةًۭ وَلَا يَقْطَعُونَ وَادِيًا إِلَّا كُتِبَ لَهُمْ لِيَجْزِيَهُمُ ٱللَّهُ أَحْسَنَ مَا كَانُوا۟ يَعْمَلُونَ",
-            "verseEn": "Nor do they spend an expenditure, small or large, or cross a valley but that it is registered for them that Allāh may reward them for the best of what they were doing."
+            "ar": "أُتۡرِفۡتُمۡ",
+            "en": "you were given luxury",
+            "ref": "21:13",
+            "verse": "لَا تَرْكُضُوا۟ وَٱرْجِعُوٓا۟ إِلَىٰ مَآ أُتْرِفْتُمْ فِيهِ وَمَسَـٰكِنِكُمْ لَعَلَّكُمْ تُسْـَٔلُونَ",
+            "verseEn": "[Some angels said], \"Do not flee but return to where you were given luxury and to your homes - perhaps you will be questioned.\""
           },
           {
-            "ar": "قَرْضًا",
-            "en": "a loan",
-            "ref": "57:18",
-            "verse": "إِنَّ ٱلْمُصَّدِّقِينَ وَٱلْمُصَّدِّقَـٰتِ وَأَقْرَضُوا۟ ٱللَّهَ قَرْضًا حَسَنًۭا يُضَـٰعَفُ لَهُمْ وَلَهُمْ أَجْرٌۭ كَرِيمٌۭ",
-            "verseEn": "Indeed, the men who practice charity and the women who practice charity and [they who] have loaned Allāh a goodly loan - it will be multiplied for them, and they will have a noble reward."
+            "ar": "حَصِيدًۭا",
+            "en": "reaped",
+            "ref": "21:15",
+            "verse": "فَمَا زَالَت تِّلْكَ دَعْوَىٰهُمْ حَتَّىٰ جَعَلْنَـٰهُمْ حَصِيدًا خَـٰمِدِينَ",
+            "verseEn": "And that declaration of theirs did not cease until We made them [as] a harvest [mowed down], extinguished [like a fire]."
           }
         ]
       },
       {
-        "name": "أوامر وتحذيرات في سورة المزمل",
-        "nameEn": "Admonitions in Surah Al-Muzzammil: Patience, Warning, and the Hereafter",
+        "name": "المصطلحات القرآنية في الردّ على عقيدة الدهر في سورة الجاثية",
+        "nameEn": "Quranic rebuttal of the 'dahr' (time) materialist doctrine in Surah Al-Jathiyah",
         "color": "blue",
         "items": [
           {
-            "ar": "وَاصْبِرْ",
-            "en": "And be patient",
-            "ref": "73:10",
-            "verse": "وَٱصْبِرْ عَلَىٰ مَا يَقُولُونَ وَٱهْجُرْهُمْ هَجْرًۭا جَمِيلًۭا",
-            "verseEn": "And be patient over what they say and avoid them with gracious avoidance."
+            "ar": "ٱلدَّهۡرُ",
+            "en": "the time",
+            "ref": "45:24",
+            "verse": "وَقَالُوا۟ مَا هِىَ إِلَّا حَيَاتُنَا ٱلدُّنْيَا نَمُوتُ وَنَحْيَا وَمَا يُهْلِكُنَآ إِلَّا ٱلدَّهْرُ ۚ وَمَا لَهُم بِذَٰلِكَ مِنْ عِلْمٍ ۖ إِنْ هُمْ إِلَّا يَظُنُّونَ",
+            "verseEn": "And they say, \"There is not but our worldly life; we die and live, and nothing destroys us except time.\" And they have of that no knowledge; they are only assuming."
           },
           {
-            "ar": "تَتَّقُونَ",
-            "en": "will you guard yourselves",
-            "ref": "73:17",
-            "verse": "فَكَيْفَ تَتَّقُونَ إِن كَفَرْتُمْ يَوْمًۭا يَجْعَلُ ٱلْوِلْدَٰنَ شِيبًا",
-            "verseEn": "Then how can you fear, if you disbelieve, a Day that will make the children white-haired?"
+            "ar": "حُجَّتَهُمۡ",
+            "en": "their argument",
+            "ref": "45:25",
+            "verse": "وَإِذَا تُتْلَىٰ عَلَيْهِمْ ءَايَـٰتُنَا بَيِّنَـٰتٍۢ مَّا كَانَ حُجَّتَهُمْ إِلَّآ أَن قَالُوا۟ ٱئْتُوا۟ بِـَٔابَآئِنَآ إِن كُنتُمْ صَـٰدِقِينَ",
+            "verseEn": "And when Our verses are recited to them as clear evidences, their argument is only that they say, \"Bring [back] our forefathers, if you should be truthful.\""
           },
           {
-            "ar": "مُنْفَطِرٌ",
-            "en": "(will) break apart",
-            "ref": "73:18",
-            "verse": "ٱلسَّمَآءُ مُنفَطِرٌۢ بِهِۦ ۚ كَانَ وَعْدُهُۥ مَفْعُولًا",
-            "verseEn": "The heaven will break apart therefrom; ever is His promise fulfilled."
+            "ar": "جَاثِيَةًۢ",
+            "en": "kneeling",
+            "ref": "45:28",
+            "verse": "وَتَرَىٰ كُلَّ أُمَّةٍۢ جَاثِيَةًۭ ۚ كُلُّ أُمَّةٍۢ تُدْعَىٰٓ إِلَىٰ كِتَـٰبِهَا ٱلْيَوْمَ تُجْزَوْنَ مَا كُنتُمْ تَعْمَلُونَ",
+            "verseEn": "And you will see every nation kneeling [from fear]. Every nation will be called to its record [and told], \"Today you will be recompensed for what you used to do."
           },
           {
-            "ar": "سَبِيلًا",
-            "en": "a way",
-            "ref": "73:19",
-            "verse": "إِنَّ هَـٰذِهِۦ تَذْكِرَةٌۭ ۖ فَمَن شَآءَ ٱتَّخَذَ إِلَىٰ رَبِّهِۦ سَبِيلًا",
-            "verseEn": "Indeed, this is a reminder, so whoever wills may take to his Lord a way."
+            "ar": "يَنطِقُ",
+            "en": "speaks",
+            "ref": "45:29",
+            "verse": "هَـٰذَا كِتَـٰبُنَا يَنطِقُ عَلَيْكُم بِٱلْحَقِّ ۚ إِنَّا كُنَّا نَسْتَنسِخُ مَا كُنتُمْ تَعْمَلُونَ",
+            "verseEn": "This, Our record, speaks about you in truth. Indeed, We were having transcribed whatever you used to do.\""
           }
         ]
       },
       {
-        "name": "مُصْطَلَحَاتُ الْفُرْقَةِ وَالشِّقَاقِ فِي الْقُرْآنِ",
-        "nameEn": "Terms for Separation and Discord in the Quran",
+        "name": "أَسْئِلَةُ التَّوْبِيخِ فِي سُورَةِ الْقَلَمِ",
+        "nameEn": "Rhetorical Questions to Disbelievers in Surah Al-Qalam",
         "color": "purple",
         "items": [
           {
-            "ar": "فِرَاقُ",
-            "en": "(is) parting",
-            "ref": "18:78",
-            "verse": "قَالَ هَـٰذَا فِرَاقُ بَيْنِى وَبَيْنِكَ ۚ سَأُنَبِّئُكَ بِتَأْوِيلِ مَا لَمْ تَسْتَطِع عَّلَيْهِ صَبْرًا",
-            "verseEn": "[Al-Khiḍr] said, \"This is parting between me and you. I will inform you of the interpretation of that about which you could not have patience."
+            "ar": "كِتَابٌ",
+            "en": "a book",
+            "ref": "68:37",
+            "verse": "أَمْ لَكُمْ كِتَـٰبٌۭ فِيهِ تَدْرُسُونَ",
+            "verseEn": "Or do you have a scripture in which you learn"
           },
           {
-            "ar": "اِخْتَلَفُوا",
-            "en": "who differed",
-            "ref": "2:176",
-            "verse": "ذَٰلِكَ بِأَنَّ ٱللَّهَ نَزَّلَ ٱلْكِتَـٰبَ بِٱلْحَقِّ ۗ وَإِنَّ ٱلَّذِينَ ٱخْتَلَفُوا۟ فِى ٱلْكِتَـٰبِ لَفِى شِقَاقٍۭ بَعِيدٍۢ",
-            "verseEn": "That is [deserved by them] because Allāh has sent down the Book in truth. And indeed, those who differ over the Book are in extreme dissension."
+            "ar": "أَيْمَانٌ",
+            "en": "oaths",
+            "ref": "68:39",
+            "verse": "أَمْ لَكُمْ أَيْمَـٰنٌ عَلَيْنَا بَـٰلِغَةٌ إِلَىٰ يَوْمِ ٱلْقِيَـٰمَةِ ۙ إِنَّ لَكُمْ لَمَا تَحْكُمُونَ",
+            "verseEn": "Or do you have oaths [binding] upon Us, extending until the Day of Resurrection, that indeed for you is whatever you judge?"
           },
           {
-            "ar": "الْفَصْلِ",
-            "en": "(of) Judgment",
-            "ref": "37:21",
-            "verse": "هَـٰذَا يَوْمُ ٱلْفَصْلِ ٱلَّذِى كُنتُم بِهِۦ تُكَذِّبُونَ",
-            "verseEn": "[They will be told], \"This is the Day of Judgement which you used to deny.\""
+            "ar": "زَعِيمٌ",
+            "en": "(is) responsible",
+            "ref": "68:40",
+            "verse": "سَلْهُمْ أَيُّهُم بِذَٰلِكَ زَعِيمٌ",
+            "verseEn": "Ask them which of them, for that [claim], is responsible."
           },
           {
-            "ar": "شِقَاقٍ",
-            "en": "opposition",
-            "ref": "41:52",
-            "verse": "قُلْ أَرَءَيْتُمْ إِن كَانَ مِنْ عِندِ ٱللَّهِ ثُمَّ كَفَرْتُم بِهِۦ مَنْ أَضَلُّ مِمَّنْ هُوَ فِى شِقَاقٍۭ بَعِيدٍۢ",
-            "verseEn": "Say, \"Have you considered: if it [i.e., the Qur’ān] is from Allāh and you disbelieved in it, who would be more astray than one who is in extreme dissension?\""
+            "ar": "شُرَكَاءُ",
+            "en": "partners",
+            "ref": "68:41",
+            "verse": "أَمْ لَهُمْ شُرَكَآءُ فَلْيَأْتُوا۟ بِشُرَكَآئِهِمْ إِن كَانُوا۟ صَـٰدِقِينَ",
+            "verseEn": "Or do they have partners? Then let them bring their partners, if they should be truthful."
           }
         ]
       }
