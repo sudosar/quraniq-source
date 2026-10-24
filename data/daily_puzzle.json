@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "puzzle": {
     "categories": [
       {
-        "name": "مَشَاهِدُ الْآخِرَةِ فِي سُورَةِ الطُّورِ",
-        "nameEn": "Scenes of the Hereafter in Surah At-Tur",
+        "name": "أَفْعَالُ اللَّهِ الَّتِي اعْتَرَفَ بِهَا إِبْرَاهِيمُ فِي سُورَةِ الشُّعَرَاء",
+        "nameEn": "Acts of Allah Acknowledged by Abraham in Ash-Shu'ara",
         "color": "yellow",
         "items": [
           {
-            "ar": "الْمُكَذِّبِينَ",
-            "en": "to the deniers",
-            "ref": "52:11",
-            "verse": "فَوَيْلٌۭ يَوْمَئِذٍۢ لِّلْمُكَذِّبِينَ",
-            "verseEn": "Then woe, that Day, to the deniers,"
+            "ar": "يَهْدِينِ",
+            "en": "guides me",
+            "ref": "26:78",
+            "verse": "ٱلَّذِى خَلَقَنِى فَهُوَ يَهْدِينِ",
+            "verseEn": "Who created me, and He [it is who] guides me."
           },
           {
-            "ar": "نَارِ",
-            "en": "(the) Fire",
-            "ref": "52:13",
-            "verse": "يَوْمَ يُدَعُّونَ إِلَىٰ نَارِ جَهَنَّمَ دَعًّا",
-            "verseEn": "The Day they are thrust toward the fire of Hell with a [violent] thrust, [its angels will say],"
+            "ar": "يُطْعِمُنِي",
+            "en": "gives me food",
+            "ref": "26:79",
+            "verse": "وَٱلَّذِى هُوَ يُطْعِمُنِى وَيَسْقِينِ",
+            "verseEn": "And it is He who feeds me and gives me drink."
           },
           {
-            "ar": "جَنَّاتٍ",
-            "en": "Gardens",
-            "ref": "52:17",
-            "verse": "إِنَّ ٱلْمُتَّقِينَ فِى جَنَّـٰتٍۢ وَنَعِيمٍۢ",
-            "verseEn": "Indeed, the righteous will be in gardens and pleasure,"
+            "ar": "يَشْفِينِ",
+            "en": "cures me",
+            "ref": "26:80",
+            "verse": "وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ",
+            "verseEn": "And when I am ill, it is He who cures me"
           },
           {
-            "ar": "كُلُوا۟",
-            "en": "Eat",
-            "ref": "52:19",
-            "verse": "كُلُوا۟ وَٱشْرَبُوا۟ هَنِيٓـًٔۢا بِمَا كُنتُمْ تَعْمَلُونَ",
-            "verseEn": "[They will be told], \"Eat and drink in satisfaction for what you used to do.\""
+            "ar": "يُحْيِينِ",
+            "en": "he will give me life",
+            "ref": "26:81",
+            "verse": "وَٱلَّذِى يُمِيتُنِى ثُمَّ يُحْيِينِ",
+            "verseEn": "And who will cause me to die and then bring me to life"
           }
         ]
       },
       {
-        "name": "ألفاظ هلاك الأمم السابقة في سورة الأنبياء",
-        "nameEn": "Terms describing the destruction of past nations in Surah Al-Anbiya",
+        "name": "نِعَمُ أَهْلِ الْجَنَّةِ فِي سُورَةِ الصَّافَّاتِ",
+        "nameEn": "Blessings of the People of Paradise in Surah As-Saffat",
         "color": "green",
         "items": [
           {
-            "ar": "قَصَمۡنَا",
-            "en": "We (have) shattered",
-            "ref": "21:11",
-            "verse": "وَكَمْ قَصَمْنَا مِن قَرْيَةٍۢ كَانَتْ ظَالِمَةًۭ وَأَنشَأْنَا بَعْدَهَا قَوْمًا ءَاخَرِينَ",
-            "verseEn": "And how many a city which was unjust have We shattered and produced after it another people."
+            "ar": "رِزْقٌ",
+            "en": "(will be) a provision",
+            "ref": "37:41",
+            "verse": "أُو۟لَـٰٓئِكَ لَهُمْ رِزْقٌۭ مَّعْلُومٌۭ",
+            "verseEn": "Those will have a provision determined -"
           },
           {
-            "ar": "يَرۡكُضُونَ",
-            "en": "were fleeing",
-            "ref": "21:12",
-            "verse": "فَلَمَّآ أَحَسُّوا۟ بَأْسَنَآ إِذَا هُم مِّنْهَا يَرْكُضُونَ",
-            "verseEn": "And when they [i.e., its inhabitants] perceived Our punishment, at once they fled from it."
+            "ar": "فَوَٰكِهُ",
+            "en": "Fruits",
+            "ref": "37:42",
+            "verse": "فَوَٰكِهُ ۖ وَهُم مُّكْرَمُونَ",
+            "verseEn": "Fruits; and they will be honored"
           },
           {
-            "ar": "أُتۡرِفۡتُمۡ",
-            "en": "you were given luxury",
-            "ref": "21:13",
-            "verse": "لَا تَرْكُضُوا۟ وَٱرْجِعُوٓا۟ إِلَىٰ مَآ أُتْرِفْتُمْ فِيهِ وَمَسَـٰكِنِكُمْ لَعَلَّكُمْ تُسْـَٔلُونَ",
-            "verseEn": "[Some angels said], \"Do not flee but return to where you were given luxury and to your homes - perhaps you will be questioned.\""
+            "ar": "جَنَّـٰتِ",
+            "en": "Gardens",
+            "ref": "37:43",
+            "verse": "فِى جَنَّـٰتِ ٱلنَّعِيمِ",
+            "verseEn": "In gardens of pleasure"
           },
           {
-            "ar": "حَصِيدًۭا",
-            "en": "reaped",
-            "ref": "21:15",
-            "verse": "فَمَا زَالَت تِّلْكَ دَعْوَىٰهُمْ حَتَّىٰ جَعَلْنَـٰهُمْ حَصِيدًا خَـٰمِدِينَ",
-            "verseEn": "And that declaration of theirs did not cease until We made them [as] a harvest [mowed down], extinguished [like a fire]."
+            "ar": "سُرُرٍ",
+            "en": "thrones",
+            "ref": "37:44",
+            "verse": "عَلَىٰ سُرُرٍۢ مُّتَقَـٰبِلِينَ",
+            "verseEn": "On thrones facing one another."
           }
         ]
       },
       {
-        "name": "المصطلحات القرآنية في الردّ على عقيدة الدهر في سورة الجاثية",
-        "nameEn": "Quranic rebuttal of the 'dahr' (time) materialist doctrine in Surah Al-Jathiyah",
+        "name": "عَنَاصِرُ دُعَاءِ مُوسَى وَاسْتِجَابَةِ اللهِ فِي سُورَةِ طه",
+        "nameEn": "Elements of Musa's Supplication and Divine Response in Surah Ta-Ha",
         "color": "blue",
         "items": [
           {
-            "ar": "ٱلدَّهۡرُ",
-            "en": "the time",
-            "ref": "45:24",
-            "verse": "وَقَالُوا۟ مَا هِىَ إِلَّا حَيَاتُنَا ٱلدُّنْيَا نَمُوتُ وَنَحْيَا وَمَا يُهْلِكُنَآ إِلَّا ٱلدَّهْرُ ۚ وَمَا لَهُم بِذَٰلِكَ مِنْ عِلْمٍ ۖ إِنْ هُمْ إِلَّا يَظُنُّونَ",
-            "verseEn": "And they say, \"There is not but our worldly life; we die and live, and nothing destroys us except time.\" And they have of that no knowledge; they are only assuming."
+            "ar": "أَزْرِي",
+            "en": "my strength",
+            "ref": "20:31",
+            "verse": "ٱشْدُدْ بِهِۦٓ أَزْرِى",
+            "verseEn": "Increase through him my strength"
           },
           {
-            "ar": "حُجَّتَهُمۡ",
-            "en": "their argument",
-            "ref": "45:25",
-            "verse": "وَإِذَا تُتْلَىٰ عَلَيْهِمْ ءَايَـٰتُنَا بَيِّنَـٰتٍۢ مَّا كَانَ حُجَّتَهُمْ إِلَّآ أَن قَالُوا۟ ٱئْتُوا۟ بِـَٔابَآئِنَآ إِن كُنتُمْ صَـٰدِقِينَ",
-            "verseEn": "And when Our verses are recited to them as clear evidences, their argument is only that they say, \"Bring [back] our forefathers, if you should be truthful.\""
+            "ar": "أَمْرِي",
+            "en": "my task",
+            "ref": "20:32",
+            "verse": "وَأَشْرِكْهُ فِىٓ أَمْرِى",
+            "verseEn": "And let him share my task"
           },
           {
-            "ar": "جَاثِيَةًۢ",
-            "en": "kneeling",
-            "ref": "45:28",
-            "verse": "وَتَرَىٰ كُلَّ أُمَّةٍۢ جَاثِيَةًۭ ۚ كُلُّ أُمَّةٍۢ تُدْعَىٰٓ إِلَىٰ كِتَـٰبِهَا ٱلْيَوْمَ تُجْزَوْنَ مَا كُنتُمْ تَعْمَلُونَ",
-            "verseEn": "And you will see every nation kneeling [from fear]. Every nation will be called to its record [and told], \"Today you will be recompensed for what you used to do."
+            "ar": "بَصِيرًا",
+            "en": "All-Seer",
+            "ref": "20:35",
+            "verse": "إِنَّكَ كُنتَ بِنَا بَصِيرًۭا",
+            "verseEn": "Indeed, You are of us ever Seeing.\""
           },
           {
-            "ar": "يَنطِقُ",
-            "en": "speaks",
-            "ref": "45:29",
-            "verse": "هَـٰذَا كِتَـٰبُنَا يَنطِقُ عَلَيْكُم بِٱلْحَقِّ ۚ إِنَّا كُنَّا نَسْتَنسِخُ مَا كُنتُمْ تَعْمَلُونَ",
-            "verseEn": "This, Our record, speaks about you in truth. Indeed, We were having transcribed whatever you used to do.\""
+            "ar": "سُؤْلَكَ",
+            "en": "your request",
+            "ref": "20:36",
+            "verse": "قَالَ قَدْ أُوتِيتَ سُؤْلَكَ يَـٰمُوسَىٰ",
+            "verseEn": "[Allāh] said, \"You have been granted your request, O Moses."
           }
         ]
       },
       {
-        "name": "أَسْئِلَةُ التَّوْبِيخِ فِي سُورَةِ الْقَلَمِ",
-        "nameEn": "Rhetorical Questions to Disbelievers in Surah Al-Qalam",
+        "name": "أَحْوَالُ فِرْعَوْنَ وَدَعْوَتُهُ فِي النَّازِعَاتِ",
+        "nameEn": "Pharaoh's Transgression and the Call to Purification in An-Nazi'at",
         "color": "purple",
         "items": [
           {
-            "ar": "كِتَابٌ",
-            "en": "a book",
-            "ref": "68:37",
-            "verse": "أَمْ لَكُمْ كِتَـٰبٌۭ فِيهِ تَدْرُسُونَ",
-            "verseEn": "Or do you have a scripture in which you learn"
+            "ar": "طَغَىٰ",
+            "en": "(has) transgressed",
+            "ref": "79:17",
+            "verse": "ٱذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُۥ طَغَىٰ",
+            "verseEn": "\"Go to Pharaoh. Indeed, he has transgressed."
           },
           {
-            "ar": "أَيْمَانٌ",
-            "en": "oaths",
-            "ref": "68:39",
-            "verse": "أَمْ لَكُمْ أَيْمَـٰنٌ عَلَيْنَا بَـٰلِغَةٌ إِلَىٰ يَوْمِ ٱلْقِيَـٰمَةِ ۙ إِنَّ لَكُمْ لَمَا تَحْكُمُونَ",
-            "verseEn": "Or do you have oaths [binding] upon Us, extending until the Day of Resurrection, that indeed for you is whatever you judge?"
+            "ar": "تَزَكَّىٰ",
+            "en": "purify yourself",
+            "ref": "79:18",
+            "verse": "فَقُلْ هَل لَّكَ إِلَىٰٓ أَن تَزَكَّىٰ",
+            "verseEn": "And say to him, 'Would you [be willing to] purify yourself"
           },
           {
-            "ar": "زَعِيمٌ",
-            "en": "(is) responsible",
-            "ref": "68:40",
-            "verse": "سَلْهُمْ أَيُّهُم بِذَٰلِكَ زَعِيمٌ",
-            "verseEn": "Ask them which of them, for that [claim], is responsible."
+            "ar": "تَخْشَىٰ",
+            "en": "so you would fear",
+            "ref": "79:19",
+            "verse": "وَأَهْدِيَكَ إِلَىٰ رَبِّكَ فَتَخْشَىٰ",
+            "verseEn": "And let me guide you to your Lord so you would fear [Him]?'\""
           },
           {
-            "ar": "شُرَكَاءُ",
-            "en": "partners",
-            "ref": "68:41",
-            "verse": "أَمْ لَهُمْ شُرَكَآءُ فَلْيَأْتُوا۟ بِشُرَكَآئِهِمْ إِن كَانُوا۟ صَـٰدِقِينَ",
-            "verseEn": "Or do they have partners? Then let them bring their partners, if they should be truthful."
+            "ar": "عَصَىٰ",
+            "en": "and disobeyed",
+            "ref": "79:21",
+            "verse": "فَكَذَّبَ وَعَصَىٰ",
+            "verseEn": "But he [i.e., Pharaoh] denied and disobeyed."
           }
         ]
       }

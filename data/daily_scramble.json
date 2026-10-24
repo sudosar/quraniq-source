@@ -1,32 +1,29 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "puzzle": {
-    "verseRef": "4:129",
-    "reference": "An-Nisa (4:129)",
+    "verseRef": "99:3",
+    "reference": "Surah Az-Zalzalah (99:3)",
     "segments": [
       "words 1-2",
       "words 3-4",
-      "words 5-7",
-      "words 8-9",
-      "words 10-12"
+      "word 5",
+      "word 6"
     ],
     "translations": [
-      "And never will you be able to deal justly between",
-      "[the] women even if you desired but (do) not incline",
-      "(with) all the inclination and leave her (the other) like the suspended one",
-      "And if you reconcile and fear (Allah) then indeed",
-      "Allah is Oft-Forgiving Most Merciful"
+      "And says",
+      "man",
+      "What",
+      "(is) with it"
     ],
-    "hint": "A humble confession of wrongdoing and a heartfelt appeal for Allah's forgiveness and mercy.",
-    "arabic": "وَلَن تَسْتَطِيعُوٓا۟ أَن تَعْدِلُوا۟ بَيْنَ ٱلنِّسَآءِ وَلَوْ حَرَصْتُمْ ۖ فَلَا تَمِيلُوا۟ كُلَّ ٱلْمَيْلِ فَتَذَرُوهَا كَٱلْمُعَلَّقَةِ ۚ وَإِن تُصْلِحُوا۟ وَتَتَّقُوا۟ فَإِنَّ ٱللَّهَ كَانَ غَفُورًۭا رَّحِيمًۭا",
+    "hint": "Every smallest good deed is preserved and will be shown to its doer on the Day of Judgment.",
+    "arabic": "وَقَالَ ٱلْإِنسَـٰنُ مَا لَهَا",
     "words": [
-      "وَلَن تَسْتَطِيعُوٓا۟ أَن تَعْدِلُوا۟ بَيْنَ",
-      "ٱلنِّسَآءِ وَلَوْ حَرَصْتُمْ ۖ فَلَا تَمِيلُوا۟",
-      "كُلَّ ٱلْمَيْلِ فَتَذَرُوهَا كَٱلْمُعَلَّقَةِ ۚ",
-      "وَإِن تُصْلِحُوا۟ وَتَتَّقُوا۟ فَإِنَّ",
-      "ٱللَّهَ كَانَ غَفُورًۭا رَّحِيمًۭا"
+      "وَقَالَ",
+      "ٱلْإِنسَـٰنُ",
+      "مَا",
+      "لَهَا"
     ],
-    "verseEn": "And you will never be able to be equal [in feeling] between wives, even if you should strive [to do so]. So do not incline completely [toward one] and leave another hanging. And if you amend [your affairs] and fear Allāh - then indeed, Allāh is ever Forgiving and Merciful."
+    "verseEn": "And man says, \"What is [wrong] with it?\" -"
   },
   "generated": true,
   "model": "auto (chain)"

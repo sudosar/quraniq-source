@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "puzzle": {
-    "word": "كيد",
-    "display": "كَيْد",
-    "hint": "A secret ploy or scheme — a covert plan, often with ill intent, woven against an adversary.",
-    "verseRef": "86:15",
-    "arabicVerse": "إِنَّهُمْ يَكِيدُونَ كَيْدًۭا",
-    "verse": "86:15 - Indeed, they are planning a plan,"
+    "word": "وليا",
+    "display": "وَلِيًّا",
+    "hint": "One entrusted with another’s affairs, serving as a guardian, helper, or close ally.",
+    "verseRef": "45:19",
+    "arabicVerse": "إِنَّهُمْ لَن يُغْنُوا۟ عَنكَ مِنَ ٱللَّهِ شَيْـًۭٔا ۚ وَإِنَّ ٱلظَّـٰلِمِينَ بَعْضُهُمْ أَوْلِيَآءُ بَعْضٍۢ ۖ وَٱللَّهُ وَلِىُّ ٱلْمُتَّقِينَ",
+    "verse": "45:19 - Indeed, they will never avail you against Allāh at all. And indeed, the wrongdoers are allies of one another; but Allāh is the protector of the righteous."
   },
   "generated": true,
   "model": "auto (chain)"
