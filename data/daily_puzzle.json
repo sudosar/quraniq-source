@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "puzzle": {
     "categories": [
       {
-        "name": "أَفْعَالُ اللَّهِ الَّتِي اعْتَرَفَ بِهَا إِبْرَاهِيمُ فِي سُورَةِ الشُّعَرَاء",
-        "nameEn": "Acts of Allah Acknowledged by Abraham in Ash-Shu'ara",
+        "name": "أُمُورٌ تَخُصُّ مُلْكَ اللهِ فِي الزُّخْرُفِ",
+        "nameEn": "Aspects of Allah's Sovereignty in Surah Az-Zukhruf",
         "color": "yellow",
         "items": [
           {
-            "ar": "يَهْدِينِ",
-            "en": "guides me",
-            "ref": "26:78",
-            "verse": "ٱلَّذِى خَلَقَنِى فَهُوَ يَهْدِينِ",
-            "verseEn": "Who created me, and He [it is who] guides me."
+            "ar": "السَّمَاوَاتِ",
+            "en": "(of) the heavens",
+            "ref": "43:82",
+            "verse": "سُبْحَـٰنَ رَبِّ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ رَبِّ ٱلْعَرْشِ عَمَّا يَصِفُونَ",
+            "verseEn": "Exalted is the Lord of the heavens and the earth, Lord of the Throne, above what they describe."
           },
           {
-            "ar": "يُطْعِمُنِي",
-            "en": "gives me food",
-            "ref": "26:79",
-            "verse": "وَٱلَّذِى هُوَ يُطْعِمُنِى وَيَسْقِينِ",
-            "verseEn": "And it is He who feeds me and gives me drink."
+            "ar": "الْأَرْضِ",
+            "en": "the earth ",
+            "ref": "43:84",
+            "verse": "وَهُوَ ٱلَّذِى فِى ٱلسَّمَآءِ إِلَـٰهٌۭ وَفِى ٱلْأَرْضِ إِلَـٰهٌۭ ۚ وَهُوَ ٱلْحَكِيمُ ٱلْعَلِيمُ",
+            "verseEn": "And it is He [i.e., Allāh] who is [the only] deity in the heaven, and on the earth [the only] deity. And He is the Wise, the Knowing."
           },
           {
-            "ar": "يَشْفِينِ",
-            "en": "cures me",
-            "ref": "26:80",
-            "verse": "وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ",
-            "verseEn": "And when I am ill, it is He who cures me"
+            "ar": "السَّاعَةِ",
+            "en": "(of) the Hour",
+            "ref": "43:85",
+            "verse": "وَتَبَارَكَ ٱلَّذِى لَهُۥ مُلْكُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَمَا بَيْنَهُمَا وَعِندَهُۥ عِلْمُ ٱلسَّاعَةِ وَإِلَيْهِ تُرْجَعُونَ",
+            "verseEn": "And blessed is He to whom belongs the dominion of the heavens and the earth and whatever is between them and with whom is knowledge of the Hour and to whom you will be returned."
           },
           {
-            "ar": "يُحْيِينِ",
-            "en": "he will give me life",
-            "ref": "26:81",
-            "verse": "وَٱلَّذِى يُمِيتُنِى ثُمَّ يُحْيِينِ",
-            "verseEn": "And who will cause me to die and then bring me to life"
+            "ar": "الشَّفَاعَةَ",
+            "en": "(for) the intercession",
+            "ref": "43:86",
+            "verse": "وَلَا يَمْلِكُ ٱلَّذِينَ يَدْعُونَ مِن دُونِهِ ٱلشَّفَـٰعَةَ إِلَّا مَن شَهِدَ بِٱلْحَقِّ وَهُمْ يَعْلَمُونَ",
+            "verseEn": "And those they invoke besides Him do not possess [power of] intercession; but only those who testify to the truth [can benefit], and they know."
           }
         ]
       },
       {
-        "name": "نِعَمُ أَهْلِ الْجَنَّةِ فِي سُورَةِ الصَّافَّاتِ",
-        "nameEn": "Blessings of the People of Paradise in Surah As-Saffat",
+        "name": "مَظَاهِرُ عَجْزِ الشُّرَكَاءِ فِي سُورَةِ الْأَعْرَافِ",
+        "nameEn": "Aspects of the False Gods' Inability in Surah Al-A'raf",
         "color": "green",
         "items": [
           {
-            "ar": "رِزْقٌ",
-            "en": "(will be) a provision",
-            "ref": "37:41",
-            "verse": "أُو۟لَـٰٓئِكَ لَهُمْ رِزْقٌۭ مَّعْلُومٌۭ",
-            "verseEn": "Those will have a provision determined -"
+            "ar": "شُرَكَاءَ",
+            "en": "partners",
+            "ref": "7:190",
+            "verse": "فَلَمَّآ ءَاتَىٰهُمَا صَـٰلِحًۭا جَعَلَا لَهُۥ شُرَكَآءَ فِيمَآ ءَاتَىٰهُمَا ۚ فَتَعَـٰلَى ٱللَّهُ عَمَّا يُشْرِكُونَ",
+            "verseEn": "But when He gives them a good [child], they ascribe partners to Him concerning that which He has given them. Exalted is Allāh above what they associate with Him."
           },
           {
-            "ar": "فَوَٰكِهُ",
-            "en": "Fruits",
-            "ref": "37:42",
-            "verse": "فَوَٰكِهُ ۖ وَهُم مُّكْرَمُونَ",
-            "verseEn": "Fruits; and they will be honored"
+            "ar": "يُخْلَقُونَ",
+            "en": "are created",
+            "ref": "7:191",
+            "verse": "أَيُشْرِكُونَ مَا لَا يَخْلُقُ شَيْـًۭٔا وَهُمْ يُخْلَقُونَ",
+            "verseEn": "Do they associate with Him those who create nothing and they are [themselves] created?"
           },
           {
-            "ar": "جَنَّـٰتِ",
-            "en": "Gardens",
-            "ref": "37:43",
-            "verse": "فِى جَنَّـٰتِ ٱلنَّعِيمِ",
-            "verseEn": "In gardens of pleasure"
+            "ar": "نَصْرًا",
+            "en": "any help",
+            "ref": "7:192",
+            "verse": "وَلَا يَسْتَطِيعُونَ لَهُمْ نَصْرًۭا وَلَآ أَنفُسَهُمْ يَنصُرُونَ",
+            "verseEn": "And they [i.e., the false deities] are unable to [give] them help, nor can they help themselves."
           },
           {
-            "ar": "سُرُرٍ",
-            "en": "thrones",
-            "ref": "37:44",
-            "verse": "عَلَىٰ سُرُرٍۢ مُّتَقَـٰبِلِينَ",
-            "verseEn": "On thrones facing one another."
+            "ar": "الْهُدَىٰ",
+            "en": "the guidance",
+            "ref": "7:193",
+            "verse": "وَإِن تَدْعُوهُمْ إِلَى ٱلْهُدَىٰ لَا يَتَّبِعُوكُمْ ۚ سَوَآءٌ عَلَيْكُمْ أَدَعَوْتُمُوهُمْ أَمْ أَنتُمْ صَـٰمِتُونَ",
+            "verseEn": "And if you [believers] invite them to guidance, they will not follow you. It is all the same for you whether you invite them or you are silent."
           }
         ]
       },
       {
-        "name": "عَنَاصِرُ دُعَاءِ مُوسَى وَاسْتِجَابَةِ اللهِ فِي سُورَةِ طه",
-        "nameEn": "Elements of Musa's Supplication and Divine Response in Surah Ta-Ha",
+        "name": "حِوَارُ أَهْلِ النَّارِ مَعَ رَبِّهِمْ فِي سُورَةِ الْمُؤْمِنُون",
+        "nameEn": "Dialogue of the People of the Fire with their Lord in Surah Al-Mu'minun",
         "color": "blue",
         "items": [
           {
-            "ar": "أَزْرِي",
-            "en": "my strength",
-            "ref": "20:31",
-            "verse": "ٱشْدُدْ بِهِۦٓ أَزْرِى",
-            "verseEn": "Increase through him my strength"
+            "ar": "أَرْجِعُونِ",
+            "en": "Send me back",
+            "ref": "23:99",
+            "verse": "حَتَّىٰٓ إِذَا جَآءَ أَحَدَهُمُ ٱلْمَوْتُ قَالَ رَبِّ ٱرْجِعُونِ",
+            "verseEn": "[For such is the state of the disbelievers] until, when death comes to one of them, he says, \"My Lord, send me back"
           },
           {
-            "ar": "أَمْرِي",
-            "en": "my task",
-            "ref": "20:32",
-            "verse": "وَأَشْرِكْهُ فِىٓ أَمْرِى",
-            "verseEn": "And let him share my task"
+            "ar": "غَلَبَتْ",
+            "en": "Overcame",
+            "ref": "23:106",
+            "verse": "قَالُوا۟ رَبَّنَا غَلَبَتْ عَلَيْنَا شِقْوَتُنَا وَكُنَّا قَوْمًۭا ضَآلِّينَ",
+            "verseEn": "They will say, \"Our Lord, our wretchedness overcame us, and we were a people astray."
           },
           {
-            "ar": "بَصِيرًا",
-            "en": "All-Seer",
-            "ref": "20:35",
-            "verse": "إِنَّكَ كُنتَ بِنَا بَصِيرًۭا",
-            "verseEn": "Indeed, You are of us ever Seeing.\""
+            "ar": "أَخْرِجْنَا",
+            "en": "Bring us out",
+            "ref": "23:107",
+            "verse": "رَبَّنَآ أَخْرِجْنَا مِنْهَا فَإِنْ عُدْنَا فَإِنَّا ظَـٰلِمُونَ",
+            "verseEn": "Our Lord, remove us from it, and if we were to return [to evil], we would indeed be wrongdoers.\""
           },
           {
-            "ar": "سُؤْلَكَ",
-            "en": "your request",
-            "ref": "20:36",
-            "verse": "قَالَ قَدْ أُوتِيتَ سُؤْلَكَ يَـٰمُوسَىٰ",
-            "verseEn": "[Allāh] said, \"You have been granted your request, O Moses."
+            "ar": "اِخْسَئُوا",
+            "en": "Remain despised",
+            "ref": "23:108",
+            "verse": "قَالَ ٱخْسَـُٔوا۟ فِيهَا وَلَا تُكَلِّمُونِ",
+            "verseEn": "He will say, \"Remain despised therein and do not speak to Me."
           }
         ]
       },
       {
-        "name": "أَحْوَالُ فِرْعَوْنَ وَدَعْوَتُهُ فِي النَّازِعَاتِ",
-        "nameEn": "Pharaoh's Transgression and the Call to Purification in An-Nazi'at",
+        "name": "عَنَاصِرُ مُوَاجَهَةِ السَّحَرَةِ لِمُوسَى فِي سُورَةِ الشُّعَرَاءِ",
+        "nameEn": "Elements of the Magicians' Confrontation with Musa in Surah Ash-Shu'ara",
         "color": "purple",
         "items": [
           {
-            "ar": "طَغَىٰ",
-            "en": "(has) transgressed",
-            "ref": "79:17",
-            "verse": "ٱذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُۥ طَغَىٰ",
-            "verseEn": "\"Go to Pharaoh. Indeed, he has transgressed."
+            "ar": "أَجْرًا",
+            "en": "a reward",
+            "ref": "26:41",
+            "verse": "فَلَمَّا جَآءَ ٱلسَّحَرَةُ قَالُوا۟ لِفِرْعَوْنَ أَئِنَّ لَنَا لَأَجْرًا إِن كُنَّا نَحْنُ ٱلْغَـٰلِبِينَ",
+            "verseEn": "And when the magicians arrived, they said to Pharaoh, \"Is there indeed for us a reward if we are the predominant?\""
           },
           {
-            "ar": "تَزَكَّىٰ",
-            "en": "purify yourself",
-            "ref": "79:18",
-            "verse": "فَقُلْ هَل لَّكَ إِلَىٰٓ أَن تَزَكَّىٰ",
-            "verseEn": "And say to him, 'Would you [be willing to] purify yourself"
+            "ar": "الْمُقَرَّبِينَ",
+            "en": "the ones who are brought near",
+            "ref": "26:42",
+            "verse": "قَالَ نَعَمْ وَإِنَّكُمْ إِذًۭا لَّمِنَ ٱلْمُقَرَّبِينَ",
+            "verseEn": "He said, \"Yes, and indeed, you will then be of those near [to me].\""
           },
           {
-            "ar": "تَخْشَىٰ",
-            "en": "so you would fear",
-            "ref": "79:19",
-            "verse": "وَأَهْدِيَكَ إِلَىٰ رَبِّكَ فَتَخْشَىٰ",
-            "verseEn": "And let me guide you to your Lord so you would fear [Him]?'\""
+            "ar": "أَلْقُوا",
+            "en": "Throw",
+            "ref": "26:43",
+            "verse": "قَالَ لَهُم مُّوسَىٰٓ أَلْقُوا۟ مَآ أَنتُم مُّلْقُونَ",
+            "verseEn": "Moses said to them, \"Throw whatever you will throw.\""
           },
           {
-            "ar": "عَصَىٰ",
-            "en": "and disobeyed",
-            "ref": "79:21",
-            "verse": "فَكَذَّبَ وَعَصَىٰ",
-            "verseEn": "But he [i.e., Pharaoh] denied and disobeyed."
+            "ar": "حِبَالَهُمْ",
+            "en": "their ropes",
+            "ref": "26:44",
+            "verse": "فَأَلْقَوْا۟ حِبَالَهُمْ وَعِصِيَّهُمْ وَقَالُوا۟ بِعِزَّةِ فِرْعَوْنَ إِنَّا لَنَحْنُ ٱلْغَـٰلِبُونَ",
+            "verseEn": "So they threw their ropes and their staffs and said, \"By the might of Pharaoh, indeed it is we who are predominant.\""
           }
         ]
       }

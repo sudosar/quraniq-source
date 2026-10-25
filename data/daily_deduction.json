@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "puzzle": {
-    "title": "The Warning Beneath the Ground",
-    "intro": "Imagine standing beside a deep excavation as voices rise from below and the world above falls silent. The Qur’an preserves this scene as a warning: a community rejects what the messengers bring, punishment closes in, and even its roar becomes part of the testimony. Which collective speaks through those verses?",
+    "title": "The Complaint Heard Above the Noise",
+    "intro": "You hear a voice rising from a society where oppression has become routine. No display of power answers the grievance; instead, a direct appeal reaches Allah, and the response strikes at the heart of worship itself. Who made that complaint, what question followed, and what truth was affirmed?",
     "clues": [
-      "We are remembered in the Qur’an as a collective defined by one shared fate rather than by an individual name.",
-      "We rejected the message brought by messengers, even though what they said was true.",
-      "Our remembered identity is tied to a deep cut in the earth, and that feature became part of our name.",
-      "On the appointed day, we were brought out and dragged toward the fire.",
-      "We could not defend ourselves against the punishment, and we could not hear its roar.",
-      "Our faces would be turned in the fire, and we would be driven into it; when questioned, we would say that we were among those who could not respond."
+      "I became troubled by the oppression of the people around me.",
+      "I voiced that grievance directly to Allah in a personal complaint.",
+      "Allah heard the complaint and answered with a challenge about my own belief.",
+      "The answer asked how I could fail to believe in Allah, who is One and Supreme.",
+      "I then asked why Allah should favor a people who were disbelieving.",
+      "I am Uzair, named in Surah Az-Zukhruf as the one whose complaint Allah heard."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Companions of the Trench",
-          "The Nation Delivered from the Great Flood",
-          "The Worshippers of the Golden Calf",
-          "The Group Sheltered Inside the Mountain Cave",
-          "The Community Delivered from the Fiery Furnace"
+          "Uzair",
+          "The companion who sailed on the great flood",
+          "The servant who walked upon water",
+          "The sleeper protected within a cave",
+          "The servant who brought stones to a river"
         ],
-        "answer": "The Companions of the Trench"
+        "answer": "Uzair"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Dragged and cast into the Fire",
-          "Delivered from a fiery furnace",
-          "Carried safely through a great flood",
-          "Sheltered for centuries inside a cave",
-          "Rescued after being cast into a well"
+          "Complaining to Allah about the oppression of the people",
+          "Walking upon water during a storm",
+          "Carrying stones to a river that lacked water",
+          "Sailing through a great flood aboard the Ark",
+          "Receiving the key to an immense treasure"
         ],
-        "answer": "Dragged and cast into the Fire"
+        "answer": "Complaining to Allah about the oppression of the people"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A trench or pit",
-          "A great sea",
-          "A mountain cave",
-          "A high palace",
-          "A desert well"
+          "A direct complaint addressed to Allah",
+          "A staff that became a serpent",
+          "A furnace made cool and peaceful",
+          "An ark floating over floodwaters",
+          "A fish swallowing a servant"
         ],
-        "answer": "A trench or pit"
+        "answer": "A direct complaint addressed to Allah"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Unable to defend themselves and unable to hear the Fire’s roar",
-          "Rescued and granted entry into eternal gardens",
-          "Delivered safely through a destructive flood",
-          "Protected by a long sleep inside a cave",
-          "Honored with an everlasting kingdom"
+          "Allah heard the complaint and affirmed divine Oneness and Supreme Lordship",
+          "Walking safely on water during a storm",
+          "Crossing a great flood safely aboard the Ark",
+          "Regaining sight within a palace of arrogance",
+          "Receiving dominion stretching from the East to the West"
         ],
-        "answer": "Unable to defend themselves and unable to hear the Fire’s roar"
+        "answer": "Allah heard the complaint and affirmed divine Oneness and Supreme Lordship"
       }
     },
-    "verseRef": "85:16",
-    "arabic": "فَعَّالٌۭ لِّمَا يُرِيدُ",
-    "verse": "Effecter of what He intends. (85:16)"
+    "verseRef": "43:7",
+    "arabic": "وَمَا يَأْتِيهِم مِّن نَّبِىٍّ إِلَّا كَانُوا۟ بِهِۦ يَسْتَهْزِءُونَ",
+    "verse": "But there would not come to them a prophet except that they used to ridicule him. (43:7)"
   },
   "generated": true,
   "model": "auto (chain)"

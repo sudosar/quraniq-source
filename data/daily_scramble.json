@@ -1,29 +1,32 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "puzzle": {
-    "verseRef": "99:3",
-    "reference": "Surah Az-Zalzalah (99:3)",
+    "verseRef": "54:55",
+    "reference": "Surah Ar-Rahman (54:55)",
     "segments": [
-      "words 1-2",
-      "words 3-4",
-      "word 5",
-      "word 6"
+      "words 1-3",
+      "word 4",
+      "words 5-6",
+      "word 7",
+      "words 8-9"
     ],
     "translations": [
-      "And says",
-      "man",
-      "What",
-      "(is) with it"
+      "In a seat",
+      "(of) honor",
+      "near",
+      "a King",
+      "Most Powerful"
     ],
-    "hint": "Every smallest good deed is preserved and will be shown to its doer on the Day of Judgment.",
-    "arabic": "وَقَالَ ٱلْإِنسَـٰنُ مَا لَهَا",
+    "hint": "The concluding du'a of Surah Ar-Rahman, emphasizing Allah's immense mercy, forgiveness for those who repent, and acceptance of charitable deeds.",
+    "arabic": "فِى مَقْعَدِ صِدْقٍ عِندَ مَلِيكٍۢ مُّقْتَدِرٍۭ",
     "words": [
-      "وَقَالَ",
-      "ٱلْإِنسَـٰنُ",
-      "مَا",
-      "لَهَا"
+      "فِى مَقْعَدِ",
+      "صِدْقٍ",
+      "عِندَ",
+      "مَلِيكٍۢ",
+      "مُّقْتَدِرٍۭ"
     ],
-    "verseEn": "And man says, \"What is [wrong] with it?\" -"
+    "verseEn": "In a seat of honor near a Sovereign, Perfect in Ability."
   },
   "generated": true,
   "model": "auto (chain)"
