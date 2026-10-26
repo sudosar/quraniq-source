@@ -19,6 +19,15 @@ Triggered by:
     semantic (items don't match "luxuries" theme). The new check is
     necessary but not sufficient for this case. Document the limitation
     rather than over-claim.
+
+UPDATE (#235): the cases below that asserted "coherence passes" for
+surah-named, single-passage themes have been superseded. #235 showed
+that passage-anchored categories are themselves the bug class: the
+player never sees the surah or passage, so "these words are all in
+Surah X" is not a findable pattern. semantic_coherence_check now
+rejects surah/juz-named themes and single-passage clusters outright
+(passage_anchor_violation). The _surah_proximity_violation helper is
+unchanged and its direct tests below still stand.
 """
 import sys
 import os
@@ -86,11 +95,11 @@ v = gen._surah_proximity_violation(items_tight, 15, max_span=20)
 test("items span 7 verses passes proximity check", v is None, f"got {v!r}")
 
 
-# --- case 5: real bug #226 (theme names surah, but should be rejected for off-theme) ---
-# Note: the off-surah is a 15:42 vs 15:36-40, all in surah 15. So the new check
-# actually PASSES this category on its own — the real complaint is semantic.
-# The new check will still catch FUTURE off-surah inclusions, which is the
-# realistic regression class. The semantic check is a separate problem.
+# --- case 5: real bug #226 ---
+# Originally this asserted the coherence check PASSES (all items in surah
+# 15, tightly clustered). Superseded by #235: a theme whose connection is
+# "words from Surah Al-Hijr" is passage-anchored, so it is now REJECTED
+# by Layer 0 before the field checks run.
 cat_226 = {
     "nameEn": "Words from Iblis's Address in Surah Al-Hijr",
     "items": [
@@ -101,9 +110,9 @@ cat_226 = {
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat_226)
-test("bug #226: all 4 items in surah 15 within 7 verses → coherence passes",
-     ok and reason is None,
-     f"got ok={ok} reason={reason!r} (this documents the limitation: the new check is necessary but not sufficient for this bug)")
+test("bug #226: surah-named theme REJECTED as passage-anchored (#235)",
+     not ok and reason and "surah" in reason.lower(),
+     f"got ok={ok} reason={reason!r}")
 
 
 # --- case 6: real bug #227 (purple items in same surah, span 5) ---
@@ -117,9 +126,9 @@ cat_227 = {
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat_227)
-test("bug #227: items in surah 43 within 5 verses → coherence passes",
-     ok and reason is None,
-     f"got ok={ok} reason={reason!r} (limitation: items are in the right surah but the theme is semantic)")
+test("bug #227: surah-named theme REJECTED as passage-anchored (#235)",
+     not ok and reason and "surah" in reason.lower(),
+     f"got ok={ok} reason={reason!r}")
 
 
 # --- case 7: hypothetical bad category that the new check SHOULD catch ---
@@ -134,7 +143,7 @@ cat_bad = {
 }
 ok, reason = gen.semantic_coherence_check(cat_bad)
 test("hypothetical: 2:255 sneaking into a Surah-15 theme is REJECTED",
-     not ok and reason and "from other surahs" in reason,
+     not ok and reason and "surah" in reason.lower(),
      f"got ok={ok} reason={reason!r}")
 
 
@@ -150,7 +159,7 @@ cat_scattered = {
 }
 ok, reason = gen.semantic_coherence_check(cat_scattered)
 test("scattered items across surah 2 (281 verses) REJECTED",
-     not ok and reason and "span" in reason,
+     not ok and reason and "surah" in reason.lower(),
      f"got ok={ok} reason={reason!r}")
 
 
