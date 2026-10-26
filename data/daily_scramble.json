@@ -1,32 +1,29 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "puzzle": {
-    "verseRef": "54:55",
-    "reference": "Surah Ar-Rahman (54:55)",
+    "verseRef": "36:83",
+    "reference": "Surah Ya-Sin (36:83)",
     "segments": [
-      "words 1-3",
-      "word 4",
-      "words 5-6",
-      "word 7",
-      "words 8-9"
+      "فَسُبْحَانَ الَّذِي",
+      "بِيَدِهِ مَلَكُوتُ",
+      "كُلِّ شَيْءٍ",
+      "وَإِلَيْهِ تُرْجَعُونَ"
     ],
     "translations": [
-      "In a seat",
-      "(of) honor",
-      "near",
-      "a King",
-      "Most Powerful"
+      "So glory be (to) the One who",
+      "in Whose hand is (the) dominion",
+      "(of) all things",
+      "and to Him you will be returned"
     ],
-    "hint": "The concluding du'a of Surah Ar-Rahman, emphasizing Allah's immense mercy, forgiveness for those who repent, and acceptance of charitable deeds.",
-    "arabic": "فِى مَقْعَدِ صِدْقٍ عِندَ مَلِيكٍۢ مُّقْتَدِرٍۭ",
+    "hint": "This verse glorifies Allah's absolute sovereignty over all creation and reminds that everything will return to Him.",
+    "arabic": "فَسُبْحَـٰنَ ٱلَّذِى بِيَدِهِۦ مَلَكُوتُ كُلِّ شَىْءٍۢ وَإِلَيْهِ تُرْجَعُونَ",
     "words": [
-      "فِى مَقْعَدِ",
-      "صِدْقٍ",
-      "عِندَ",
-      "مَلِيكٍۢ",
-      "مُّقْتَدِرٍۭ"
+      "فَسُبْحَـٰنَ ٱلَّذِى",
+      "بِيَدِهِۦ مَلَكُوتُ",
+      "كُلِّ شَىْءٍۢ",
+      "وَإِلَيْهِ تُرْجَعُونَ"
     ],
-    "verseEn": "In a seat of honor near a Sovereign, Perfect in Ability."
+    "verseEn": "So exalted is He in whose hand is the realm of all things, and to Him you will be returned."
   },
   "generated": true,
   "model": "auto (chain)"

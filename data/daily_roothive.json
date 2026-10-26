@@ -1,679 +1,348 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "puzzle": {
-    "center": "ع",
+    "center": "ك",
     "outer": [
-      "ه",
-      "ا",
-      "م",
       "و",
-      "ت",
-      "د"
+      "ز",
+      "ا",
+      "ي",
+      "ه",
+      "ل"
     ],
     "root": {
-      "letters": "عدد",
-      "display": "ع د د",
-      "translit": "ʿ-d-d",
-      "meaning": "This root conveys counting, numbering, or determining how many something is. Its derived words extend this idea to preparation or readiness, as when something is made ready or arranged for a purpose.",
-      "occurrences": 57,
-      "lemmaCount": 11
+      "letters": "زكو",
+      "display": "ز ك و",
+      "translit": "z-k-w",
+      "meaning": "This root carries the idea of purity that brings increase and blessing. Words formed from it describe cleansing, making oneself pure, or giving charity, because such acts both purify and cause spiritual or worldly growth.",
+      "occurrences": 59,
+      "lemmaCount": 7
     },
     "words": [
       {
-        "w": "اعد",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "أَعَدَّ",
-            "gloss": "has prepared",
-            "type": "verb",
-            "root": "عدد",
-            "count": 20,
-            "ref": "2:24",
-            "pos": 12,
-            "alt": [
-              "prepared",
-              "allah has prepared"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "داع",
+        "w": "اكل",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "داع",
-            "gloss": "caller",
-            "type": "active participle",
-            "root": "دعو",
-            "count": 3,
-            "ref": "2:186",
-            "pos": 9,
-            "alt": [
-              "supplicant"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "دعا",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "دَعا",
-            "gloss": "invoke",
+            "lemma": "أَكَلَ",
+            "gloss": "eat",
             "type": "verb",
-            "root": "دعو",
-            "count": 170,
-            "ref": "2:68",
-            "pos": 2,
+            "root": "أكل",
+            "count": 93,
+            "ref": "5:3",
+            "pos": 17,
             "alt": [
-              "calls",
-              "call"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "دمع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "دَمْع",
-            "gloss": "tears",
-            "type": "noun",
-            "root": "دمع",
-            "count": 2,
-            "ref": "5:83",
-            "pos": 11
-          }
-        ]
-      },
-      {
-        "w": "عاد",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "عادّ",
-            "gloss": "keep count",
-            "type": "active participle",
-            "root": "عدد",
-            "count": 1,
-            "ref": "23:113",
-            "pos": 8
-          },
-          {
-            "lemma": "عاد",
-            "gloss": "aad",
-            "type": "proper noun",
-            "root": "عود",
-            "count": 24,
-            "ref": "7:65",
-            "pos": 2
-          },
-          {
-            "lemma": "عادَ",
-            "gloss": "return",
-            "type": "verb",
-            "root": "عود",
-            "count": 18,
-            "ref": "2:275",
-            "pos": 39,
-            "alt": [
-              "repeated",
-              "returned"
+              "eating",
+              "ate"
             ],
             "form": 1
           },
           {
-            "lemma": "عاد",
-            "gloss": "transgressor",
-            "type": "active participle",
-            "root": "عدو",
-            "count": 6,
-            "ref": "2:173",
-            "pos": 18,
-            "alt": [
-              "transgressing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عام",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عام",
-            "gloss": "year",
+            "lemma": "أُكُل",
+            "gloss": "producing fruit",
             "type": "noun",
-            "root": "عوم",
-            "count": 9,
-            "ref": "2:259",
-            "pos": 20,
-            "alt": [
-              "one year",
-              "two years"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عتو",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عُتُوّ",
-            "gloss": "insolence",
-            "type": "noun",
-            "root": "عتو",
-            "count": 2,
-            "ref": "25:21",
-            "pos": 18,
-            "alt": [
-              "pride"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عدد",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "عَدَد",
-            "gloss": "number",
-            "type": "noun",
-            "root": "عدد",
-            "count": 6,
-            "ref": "10:5",
-            "pos": 11
-          },
-          {
-            "lemma": "عَدَّدَ",
-            "gloss": "counts",
-            "type": "verb",
-            "root": "عدد",
-            "count": 1,
-            "ref": "104:2",
-            "pos": 4,
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "عده",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "عِدَّة",
-            "gloss": "waiting period",
-            "type": "noun",
-            "root": "عدد",
-            "count": 11,
-            "ref": "9:36",
-            "pos": 2,
-            "alt": [
-              "number"
-            ]
-          },
-          {
-            "lemma": "عُدَّة",
-            "gloss": "preparation",
-            "type": "noun",
-            "root": "عدد",
-            "count": 1,
-            "ref": "9:46",
-            "pos": 6
-          }
-        ]
-      },
-      {
-        "w": "عدو",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَدُوّ",
-            "gloss": "enemy",
-            "type": "noun",
-            "root": "عدو",
-            "count": 50,
-            "ref": "2:36",
-            "pos": 12,
-            "alt": [
-              "enemies",
-              "hostile"
-            ]
-          },
-          {
-            "lemma": "عَدْو",
-            "gloss": "enmity",
-            "type": "noun",
-            "root": "عدو",
-            "count": 2,
-            "ref": "6:108",
+            "root": "أكل",
+            "count": 7,
+            "ref": "34:16",
             "pos": 10
-          }
-        ]
-      },
-      {
-        "w": "عمد",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَمَد",
-            "gloss": "pillars",
-            "type": "noun",
-            "root": "عمد",
-            "count": 3,
-            "ref": "13:2",
-            "pos": 6,
-            "alt": [
-              "columns"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عمه",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَمَّة",
-            "gloss": "paternal aunts",
-            "type": "noun",
-            "root": "عمم",
-            "count": 3,
-            "ref": "4:23",
-            "pos": 6,
-            "alt": [
-              "father's sisters"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عهد",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَهْد",
-            "gloss": "promise",
-            "type": "noun",
-            "root": "عهد",
-            "count": 29,
-            "ref": "2:27",
-            "pos": 3,
-            "alt": [
-              "covenant"
-            ]
           },
           {
-            "lemma": "عَهِدَ",
-            "gloss": "taken promise",
-            "type": "verb",
-            "root": "عهد",
-            "count": 6,
-            "ref": "3:183",
-            "pos": 5,
-            "alt": [
-              "has promised",
-              "enjoin"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "متع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَتَّعْ",
-            "gloss": "provide for",
-            "type": "verb",
-            "root": "متع",
-            "count": 18,
-            "ref": "2:126",
-            "pos": 22,
-            "alt": [
-              "grant him enjoyment",
-              "make provision for"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "وعد",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وَعَدَ",
-            "gloss": "promised",
-            "type": "verb",
-            "root": "وعد",
-            "count": 70,
-            "ref": "4:95",
-            "pos": 24,
-            "alt": [
-              "allah has promised",
-              "is promised"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "وَعْد",
-            "gloss": "promise",
-            "type": "noun",
-            "root": "وعد",
-            "count": 49,
-            "ref": "4:122",
-            "pos": 14,
-            "alt": [
-              "promise of allah"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "تمتع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "تَمَتَّعَ",
-            "gloss": "took advantage",
-            "type": "verb",
-            "root": "متع",
-            "count": 11,
-            "ref": "2:196",
-            "pos": 37,
-            "alt": [
-              "enjoy"
-            ],
-            "form": 5
-          }
-        ]
-      },
-      {
-        "w": "دعوه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "دَعْوَة",
-            "gloss": "invocation",
-            "type": "noun",
-            "root": "دعو",
-            "count": 6,
-            "ref": "2:186",
-            "pos": 8,
-            "alt": [
-              "supplication",
-              "call"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عاهد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "عاهَدَ",
-            "gloss": "has covenanted",
-            "type": "verb",
-            "root": "عهد",
-            "count": 11,
-            "ref": "9:75",
-            "pos": 3,
-            "alt": [
-              "made a covenant"
-            ],
-            "form": 3
-          }
-        ]
-      },
-      {
-        "w": "عدوه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "عُدْوَة",
-            "gloss": "on side of the valley",
-            "type": "noun",
-            "root": "عدو",
-            "count": 2,
-            "ref": "8:42",
-            "pos": 3,
-            "alt": [
-              "on the side"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "متاع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَتاع",
-            "gloss": "enjoyment",
-            "type": "noun",
-            "root": "متع",
-            "count": 35,
-            "ref": "2:236",
-            "pos": 21,
-            "alt": [
-              "provision",
-              "enjoy"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "معتد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُعْتَد",
-            "gloss": "transgressor",
-            "type": "active participle",
-            "root": "عدو",
-            "count": 3,
-            "ref": "50:25",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "موعد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَوْعِد",
-            "gloss": "appointment",
-            "type": "noun",
-            "root": "وعد",
-            "count": 12,
-            "ref": "18:48",
-            "pos": 16,
-            "alt": [
-              "appointed time"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "واعد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "واعَدْ",
-            "gloss": "appointed",
-            "type": "verb",
-            "root": "وعد",
+            "lemma": "أَكْل",
+            "gloss": "devouring",
+            "type": "verbal noun",
+            "root": "أكل",
             "count": 4,
-            "ref": "2:51",
-            "pos": 2,
-            "alt": [
-              "promise",
-              "made a covenant with"
-            ],
-            "form": 3
-          }
-        ]
-      },
-      {
-        "w": "اعتدت",
-        "family": false,
-        "points": 3,
-        "senses": [
+            "ref": "89:19",
+            "pos": 3
+          },
           {
-            "lemma": "أَعْتَدَتْ",
-            "gloss": "have prepared",
-            "type": "verb",
-            "root": "عتد",
-            "count": 14,
-            "ref": "4:18",
-            "pos": 21,
-            "alt": [
-              "prepared"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "عداوه",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "عَداوَة",
-            "gloss": "enmity",
-            "type": "noun",
-            "root": "عدو",
-            "count": 6,
-            "ref": "5:82",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "متعمد",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "مُتَعَمِّد",
-            "gloss": "intentionally",
+            "lemma": "آكِل",
+            "gloss": "eat",
             "type": "active participle",
-            "root": "عمد",
-            "count": 2,
-            "ref": "4:93",
-            "pos": 4
+            "root": "أكل",
+            "count": 3,
+            "ref": "23:20",
+            "pos": 9
           }
         ]
       },
       {
-        "w": "معدود",
+        "w": "زكي",
         "family": true,
-        "points": 5,
+        "points": 3,
         "senses": [
           {
-            "lemma": "مَعْدُود",
-            "gloss": "limited",
-            "type": "passive participle",
-            "root": "عدد",
+            "lemma": "زَكَّى",
+            "gloss": "purifies",
+            "type": "verb",
+            "root": "زكو",
+            "count": 12,
+            "ref": "4:49",
+            "pos": 9,
+            "form": 2
+          },
+          {
+            "lemma": "زَكِيّ",
+            "gloss": "pure",
+            "type": "adjective",
+            "root": "زكو",
             "count": 1,
-            "ref": "11:104",
+            "ref": "19:19",
+            "pos": 9
+          },
+          {
+            "lemma": "زَكَى",
+            "gloss": "have been pure",
+            "type": "verb",
+            "root": "زكو",
+            "count": 1,
+            "ref": "24:21",
+            "pos": 22,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "كال",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "كالُ",
+            "gloss": "measure",
+            "type": "verb",
+            "root": "كيل",
+            "count": 2,
+            "ref": "17:35",
+            "pos": 4,
+            "alt": [
+              "give by measure"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "كهل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "كَهْل",
+            "gloss": "maturity",
+            "type": "noun",
+            "root": "كهل",
+            "count": 2,
+            "ref": "3:46",
             "pos": 5
           }
         ]
       },
       {
-        "w": "معدوده",
-        "family": true,
-        "points": 6,
+        "w": "كيل",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "مَعْدُودَة",
-            "gloss": "few",
-            "type": "passive participle",
-            "root": "عدد",
-            "count": 6,
-            "ref": "2:80",
+            "lemma": "كَيْل",
+            "gloss": "measurement",
+            "type": "noun",
+            "root": "كيل",
+            "count": 10,
+            "ref": "12:60",
+            "pos": 6,
+            "alt": [
+              "measure"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "هلك",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هَلَكَ",
+            "gloss": "died",
+            "type": "verb",
+            "root": "هلك",
+            "count": 5,
+            "ref": "4:176",
+            "pos": 9,
+            "alt": [
+              "destroyed",
+              "is gone"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "وكل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وُكِّلَ",
+            "gloss": "has been put in charge",
+            "type": "verb",
+            "root": "وكل",
+            "count": 2,
+            "ref": "32:11",
+            "pos": 6,
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "ازكي",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "أَزْكَى",
+            "gloss": "purer",
+            "type": "noun",
+            "root": "زكو",
+            "count": 4,
+            "ref": "2:232",
+            "pos": 26,
+            "alt": [
+              "more virtuous",
+              "purest"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اهلك",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَهْلَكَ",
+            "gloss": "destroy",
+            "type": "verb",
+            "root": "هلك",
+            "count": 51,
+            "ref": "5:17",
+            "pos": 20,
+            "alt": [
+              "be destroyed",
+              "destroyed"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "زكاه",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "زَكاة",
+            "gloss": "zakah",
+            "type": "noun",
+            "root": "زكو",
+            "count": 32,
+            "ref": "18:81",
             "pos": 7,
             "alt": [
-              "numbered",
-              "determined"
+              "purity"
             ]
+          }
+        ]
+      },
+      {
+        "w": "زكيه",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "زَكِيَّة",
+            "gloss": "pure",
+            "type": "noun",
+            "root": "زكو",
+            "count": 1,
+            "ref": "18:74",
+            "pos": 10
+          }
+        ]
+      },
+      {
+        "w": "هالك",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "هالِك",
+            "gloss": "destroyed",
+            "type": "active participle",
+            "root": "هلك",
+            "count": 2,
+            "ref": "28:88",
+            "pos": 13
+          }
+        ]
+      },
+      {
+        "w": "وكيل",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "وَكِيل",
+            "gloss": "guardian",
+            "type": "noun",
+            "root": "وكل",
+            "count": 24,
+            "ref": "4:81",
+            "pos": 24,
+            "alt": [
+              "disposer of affairs",
+              "trustee"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "كلاله",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "كَلالَة",
+            "gloss": "no parent or child",
+            "type": "noun",
+            "root": "كلل",
+            "count": 2,
+            "ref": "4:12",
+            "pos": 54
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "عَدَّ",
-        "gloss": "count",
+        "lemma": "تَزَكَّى",
+        "gloss": "purifies himself",
         "type": "verb",
-        "root": "عدد",
-        "count": 7,
-        "ref": "19:84",
-        "pos": 5,
-        "form": 1
-      },
-      {
-        "lemma": "عَدّ",
-        "gloss": "number",
-        "type": "noun",
-        "root": "عدد",
-        "count": 2,
-        "ref": "19:84",
-        "pos": 7,
+        "root": "زكو",
+        "count": 8,
+        "ref": "20:76",
+        "pos": 12,
         "alt": [
-          "counting"
-        ]
-      },
-      {
-        "lemma": "تَعْتَدُّ",
-        "gloss": "count concerning",
-        "type": "verb",
-        "root": "عدد",
-        "count": 1,
-        "ref": "33:49",
-        "pos": 18,
-        "form": 8
+          "purifies",
+          "purify himself"
+        ],
+        "form": 5
       }
     ],
-    "maxScore": 59,
-    "featuredRoot": "عدد"
+    "maxScore": 30,
+    "featuredRoot": "زكو"
   },
   "generated": true,
   "model": "auto (chain)"

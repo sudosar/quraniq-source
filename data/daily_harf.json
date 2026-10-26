@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "puzzle": {
-    "word": "العصر",
-    "display": "الْعَصْرِ",
-    "hint": "The fleeting span named in the final chapter, by which human beings are shown to be in loss.",
-    "verseRef": "115:1",
-    "arabicVerse": "",
-    "verse": "115:1"
+    "word": "رعب",
+    "display": "رُعْب",
+    "hint": "This is cast into the hearts of those who disbelieve when divine help arrives.",
+    "verseRef": "8:12",
+    "arabicVerse": "إِذْ يُوحِى رَبُّكَ إِلَى ٱلْمَلَـٰٓئِكَةِ أَنِّى مَعَكُمْ فَثَبِّتُوا۟ ٱلَّذِينَ ءَامَنُوا۟ ۚ سَأُلْقِى فِى قُلُوبِ ٱلَّذِينَ كَفَرُوا۟ ٱلرُّعْبَ فَٱضْرِبُوا۟ فَوْقَ ٱلْأَعْنَاقِ وَٱضْرِبُوا۟ مِنْهُمْ كُلَّ بَنَانٍۢ",
+    "verse": "8:12 - [Remember] when your Lord inspired to the angels, \"I am with you, so strengthen those who have believed. I will cast terror into the hearts of those who disbelieved, so strike [them] upon the necks and strike from them every fingertip.\""
   },
   "generated": true,
   "model": "auto (chain)"

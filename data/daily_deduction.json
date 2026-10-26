@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "puzzle": {
-    "title": "The Complaint Heard Above the Noise",
-    "intro": "You hear a voice rising from a society where oppression has become routine. No display of power answers the grievance; instead, a direct appeal reaches Allah, and the response strikes at the heart of worship itself. Who made that complaint, what question followed, and what truth was affirmed?",
+    "title": "The Whisper in the Wind",
+    "intro": "Imagine a realm where the unseen and the seen intertwined, and you stand before a figure at the heart of a kingdom unlike any other. This soul possesses knowledge beyond ordinary reach, commanding forces that others could only imagine. Yet, even the mightiest can be humbled by a tiny creature, and the truth may remain hidden until the appointed time. Who is this figure whose legacy echoes through the ages?",
     "clues": [
-      "I became troubled by the oppression of the people around me.",
-      "I voiced that grievance directly to Allah in a personal complaint.",
-      "Allah heard the complaint and answered with a challenge about my own belief.",
-      "The answer asked how I could fail to believe in Allah, who is One and Supreme.",
-      "I then asked why Allah should favor a people who were disbelieving.",
-      "I am Uzair, named in Surah Az-Zukhruf as the one whose complaint Allah heard."
+      "I was given a kingdom that no one after me would have.",
+      "I inherited knowledge and wisdom from a beloved parent.",
+      "The wind was under my command, traveling by my order wherever I wished.",
+      "I could understand the speech of the birds, and they served in my army.",
+      "I received news from a small bird about a queen who worshipped the sun.",
+      "My death remained hidden until a creature of the earth devoured my staff, and only then did the jinn realize they did not know the unseen."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Uzair",
-          "The companion who sailed on the great flood",
-          "The servant who walked upon water",
-          "The sleeper protected within a cave",
-          "The servant who brought stones to a river"
+          "Prophet Sulayman (Solomon)",
+          "Prophet Dawud (David)",
+          "Prophet Musa (Moses)",
+          "Prophet Isa (Jesus)",
+          "Prophet Nuh (Noah)"
         ],
-        "answer": "Uzair"
+        "answer": "Prophet Sulayman (Solomon)"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Complaining to Allah about the oppression of the people",
-          "Walking upon water during a storm",
-          "Carrying stones to a river that lacked water",
-          "Sailing through a great flood aboard the Ark",
-          "Receiving the key to an immense treasure"
+          "The visit of the Queen of Sheba",
+          "Being thrown into a fire",
+          "Parting the sea",
+          "Building an ark",
+          "Being swallowed by a whale"
         ],
-        "answer": "Complaining to Allah about the oppression of the people"
+        "answer": "The visit of the Queen of Sheba"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A direct complaint addressed to Allah",
-          "A staff that became a serpent",
-          "A furnace made cool and peaceful",
-          "An ark floating over floodwaters",
-          "A fish swallowing a servant"
+          "The staff consumed by a creature of the earth",
+          "The staff that turned into a serpent",
+          "The she-camel",
+          "The ark",
+          "The whale"
         ],
-        "answer": "A direct complaint addressed to Allah"
+        "answer": "The staff consumed by a creature of the earth"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Allah heard the complaint and affirmed divine Oneness and Supreme Lordship",
-          "Walking safely on water during a storm",
-          "Crossing a great flood safely aboard the Ark",
-          "Regaining sight within a palace of arrogance",
-          "Receiving dominion stretching from the East to the West"
+          "His death was concealed from the jinn until his staff was eaten",
+          "He was raised to the heavens alive",
+          "He was saved from the fire by Allah's command",
+          "He was given the Torah",
+          "He was saved from the whale"
         ],
-        "answer": "Allah heard the complaint and affirmed divine Oneness and Supreme Lordship"
+        "answer": "His death was concealed from the jinn until his staff was eaten"
       }
     },
-    "verseRef": "43:7",
-    "arabic": "وَمَا يَأْتِيهِم مِّن نَّبِىٍّ إِلَّا كَانُوا۟ بِهِۦ يَسْتَهْزِءُونَ",
-    "verse": "But there would not come to them a prophet except that they used to ridicule him. (43:7)"
+    "verseRef": "34:14",
+    "arabic": "فَلَمَّا قَضَيْنَا عَلَيْهِ ٱلْمَوْتَ مَا دَلَّهُمْ عَلَىٰ مَوْتِهِۦٓ إِلَّا دَآبَّةُ ٱلْأَرْضِ تَأْكُلُ مِنسَأَتَهُۥ ۖ فَلَمَّا خَرَّ تَبَيَّنَتِ ٱلْجِنُّ أَن لَّوْ كَانُوا۟ يَعْلَمُونَ ٱلْغَيْبَ مَا لَبِثُوا۟ فِى ٱلْعَذَابِ ٱلْمُهِينِ",
+    "verse": "And when We decreed for him [i.e., Solomon] death, nothing indicated to them [i.e., the jinn] his death except a creature of the earth eating his staff. But when he fell, it became clear to the jinn that if they had known the unseen, they would not have remained in humiliating punishment. (34:14)"
   },
   "generated": true,
   "model": "auto (chain)"
