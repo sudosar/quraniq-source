@@ -6,6 +6,13 @@ Added with the broader semantic field-coherence PR. The check has two parts:
   1. HARD REJECT: named field has 0 matches AND another field has 3+ matches.
   2. SOFT REJECT: named field has ≤2 matches AND another field has 3+ matches.
 
+UPDATE (#235): this suite originally used placeholder refs (1:1-1:4)
+and two cases asserted that surah-anchored themes PASS. Both are
+superseded: semantic_coherence_check now runs the pattern-anchor check
+(Layer 0) first, which rejects surah-named themes and single-passage
+clusters. Fixtures below therefore use realistic spread refs, and the
+#227/#228 cases assert the new rejection.
+
 Catches obvious off-theme categories. Limitations (documented in the test):
   - #227 (luxury 2/2 vs place 2/2) is a tied split that this check cannot
     reliably catch without an LLM. The test verifies the LIKELY false
@@ -39,10 +46,10 @@ def test(name, cond, detail=""):
 cat = {
     "nameEn": "Worldly Luxuries and Provisions",  # no surah → no surah check
     "items": [
-        {"ref": "1:1", "ar": "", "en": "the stars", "verse": "", "verseEn": ""},
-        {"ref": "1:2", "ar": "", "en": "the heavens", "verse": "", "verseEn": ""},
-        {"ref": "1:3", "ar": "", "en": "the sun", "verse": "", "verseEn": ""},
-        {"ref": "1:4", "ar": "", "en": "the moon", "verse": "", "verseEn": ""},
+        {"ref": "37:6", "ar": "", "en": "the stars", "verse": "", "verseEn": ""},
+        {"ref": "91:1", "ar": "", "en": "the heavens", "verse": "", "verseEn": ""},
+        {"ref": "14:32", "ar": "", "en": "the sun", "verse": "", "verseEn": ""},
+        {"ref": "54:1", "ar": "", "en": "the moon", "verse": "", "verseEn": ""},
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat)
@@ -73,10 +80,10 @@ test("soft reject: 'punishment' theme with 2/4 punishment + 3/4 creation",
 cat = {
     "nameEn": "Worldly luxuries and provisions",  # No surah name
     "items": [
-        {"ref": "1:1", "ar": "", "en": "ornament of gold", "verse": "", "verseEn": ""},
-        {"ref": "1:2", "ar": "", "en": "silver", "verse": "", "verseEn": ""},
-        {"ref": "1:3", "ar": "", "en": "comfort and luxury", "verse": "", "verseEn": ""},
-        {"ref": "1:4", "ar": "", "en": "delicacies", "verse": "", "verseEn": ""},
+        {"ref": "43:35", "ar": "", "en": "ornament of gold", "verse": "", "verseEn": ""},
+        {"ref": "18:31", "ar": "", "en": "silver", "verse": "", "verseEn": ""},
+        {"ref": "22:23", "ar": "", "en": "comfort and luxury", "verse": "", "verseEn": ""},
+        {"ref": "35:33", "ar": "", "en": "delicacies", "verse": "", "verseEn": ""},
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat)
@@ -88,10 +95,10 @@ test("pass: 'luxury' theme with 4/4 luxury items",
 cat = {
     "nameEn": "Astronomical entities in the Quran",
     "items": [
-        {"ref": "1:1", "ar": "", "en": "the sun", "verse": "", "verseEn": ""},
-        {"ref": "1:2", "ar": "", "en": "the moon", "verse": "", "verseEn": ""},
-        {"ref": "1:3", "ar": "", "en": "the stars", "verse": "", "verseEn": ""},
-        {"ref": "1:4", "ar": "", "en": "the heavens", "verse": "", "verseEn": ""},
+        {"ref": "91:1", "ar": "", "en": "the sun", "verse": "", "verseEn": ""},
+        {"ref": "55:5", "ar": "", "en": "the moon", "verse": "", "verseEn": ""},
+        {"ref": "37:6", "ar": "", "en": "the stars", "verse": "", "verseEn": ""},
+        {"ref": "21:33", "ar": "", "en": "the heavens", "verse": "", "verseEn": ""},
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat)
@@ -99,7 +106,7 @@ test("pass: 'astronomical entities' doesn't trigger any field (1% cases pass thr
      ok, f"got ok={ok} reason={reason!r}")
 
 
-# --- 5. documented limitation: #227 (luxury 2/2 vs place 2/2) ---
+# --- 5. #227 (luxury 2/2 vs place 2/2) — was a documented limitation ---
 cat_227 = {
     "nameEn": "Worldly Luxuries and Provisions in Surah Az-Zukhruf",
     "items": [
@@ -110,23 +117,25 @@ cat_227 = {
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat_227)
-test("documented limitation: #227 (2 luxury / 2 place tie) currently passes through",
-     ok,
-     f"got ok={ok} reason={reason!r} (this is a known limitation — needs an LLM to disambiguate tied splits)")
+test("#227 category now REJECTED as passage-anchored (#235 supersedes the limitation)",
+     not ok and reason and "surah" in reason.lower(),
+     f"got ok={ok} reason={reason!r}")
 
 
-# --- 6. surah-anchored theme with all items in the surah still passes ---
+# --- 6. pattern theme (no surah named) with 3/4 luxury items passes ---
+# (The original case asserted a surah-anchored version of this theme
+# passes; that behaviour is superseded by #235 — see case 5.)
 cat = {
-    "nameEn": "Worldly Luxuries and Provisions in Surah Az-Zukhruf",
+    "nameEn": "Worldly Luxuries and Provisions",
     "items": [
         {"ref": "43:31", "ar": "", "en": "the two towns", "verse": "", "verseEn": ""},
         {"ref": "43:32", "ar": "", "en": "their livelihood", "verse": "", "verseEn": ""},
-        {"ref": "43:33", "ar": "", "en": "ornaments of gold", "verse": "", "verseEn": ""},
-        {"ref": "43:35", "ar": "", "en": "delicacies", "verse": "", "verseEn": ""},
+        {"ref": "18:31", "ar": "", "en": "ornaments of gold", "verse": "", "verseEn": ""},
+        {"ref": "52:22", "ar": "", "en": "delicacies", "verse": "", "verseEn": ""},
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat)
-test("pass: 'luxury' theme with 3/4 luxury items, all in same surah",
+test("pass: 'luxury' theme with 3/4 luxury items, refs spread",
      ok, f"got ok={ok} reason={reason!r}")
 
 
@@ -134,10 +143,10 @@ test("pass: 'luxury' theme with 3/4 luxury items, all in same surah",
 cat = {
     "nameEn": "Family Members in the Quran",
     "items": [
-        {"ref": "1:1", "ar": "", "en": "father", "verse": "", "verseEn": ""},
-        {"ref": "1:2", "ar": "", "en": "mother", "verse": "", "verseEn": ""},
-        {"ref": "1:3", "ar": "", "en": "son", "verse": "", "verseEn": ""},
-        {"ref": "1:4", "ar": "", "en": "daughter", "verse": "", "verseEn": ""},
+        {"ref": "12:4", "ar": "", "en": "father", "verse": "", "verseEn": ""},
+        {"ref": "28:7", "ar": "", "en": "mother", "verse": "", "verseEn": ""},
+        {"ref": "37:101", "ar": "", "en": "son", "verse": "", "verseEn": ""},
+        {"ref": "66:12", "ar": "", "en": "daughter", "verse": "", "verseEn": ""},
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat)
@@ -145,7 +154,7 @@ test("pass: 'family members' theme with 4/4 family items",
      ok, f"got ok={ok} reason={reason!r}")
 
 
-# --- 8. regression: surah-coherence still works (from #228) ---
+# --- 8. #228 case: surah-anchored themes are now rejected (#235) ---
 cat = {
     "nameEn": "Words from Iblis's Address in Surah Al-Hijr",
     "items": [
@@ -156,11 +165,11 @@ cat = {
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat)
-test("pass: surah-anchored theme with all items in surah (#228 still works)",
-     ok, f"got ok={ok} reason={reason!r}")
+test("reject: surah-anchored theme even with all items in surah (#228 superseded by #235)",
+     not ok and reason and "surah" in reason.lower(), f"got ok={ok} reason={reason!r}")
 
 
-# --- 9. regression: surah-coherence still catches off-surah items ---
+# --- 9. regression: surah-anchored theme with an off-surah item still rejected ---
 cat = {
     "nameEn": "Words from Iblis's Address in Surah Al-Hijr",
     "items": [
@@ -171,7 +180,7 @@ cat = {
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat)
-test("reject: surah-anchored theme with item from wrong surah (#228 still works)",
+test("reject: surah-anchored theme with item from wrong surah",
      not ok, f"got ok={ok} reason={reason!r}")
 
 
@@ -179,10 +188,10 @@ test("reject: surah-anchored theme with item from wrong surah (#228 still works)
 cat = {
     "nameEn": "Names of the Four Classical Elements",
     "items": [
-        {"ref": "1:1", "ar": "", "en": "water", "verse": "", "verseEn": ""},
-        {"ref": "1:2", "ar": "", "en": "fire", "verse": "", "verseEn": ""},
-        {"ref": "1:3", "ar": "", "en": "earth", "verse": "", "verseEn": ""},
-        {"ref": "1:4", "ar": "", "en": "wind", "verse": "", "verseEn": ""},
+        {"ref": "21:30", "ar": "", "en": "water", "verse": "", "verseEn": ""},
+        {"ref": "2:24", "ar": "", "en": "fire", "verse": "", "verseEn": ""},
+        {"ref": "7:57", "ar": "", "en": "earth", "verse": "", "verseEn": ""},
+        {"ref": "30:48", "ar": "", "en": "wind", "verse": "", "verseEn": ""},
     ],
 }
 ok, reason = gen.semantic_coherence_check(cat)

@@ -922,25 +922,45 @@ Difficulty guidance: {DIFFICULTY_DESCRIPTIONS[difficulty]}
 
 WHAT IS AYAH CONNECTIONS:
 16 Arabic words (4 categories of 4) from real Quranic verses.
+The player sees ONLY the 16 Arabic words and their English meanings,
+shuffled. They never see the verses, refs, or surah names while playing.
+A category is therefore valid ONLY if the connection between its 4 words
+is visible from the words and meanings themselves. A shared verse,
+passage, surah, or story setting is NOT a connection — the player cannot
+see it. (Fixes #235.)
 Rule: Each word MUST physically exist in the Uthmani script of the cited verse.
 
 VERIFICATION STEP (INTERNAL ONLY):
-1. Select a specific theme.
+1. Select a PATTERN first: one property the 4 words themselves share
+   (what they are, mean, or do) that a knowledgeable player could state
+   in one sentence without seeing any verse.
 2. Verify each of the 4 words exists in its cited verse.
-3. Avoid root overlap with already-used Arabic words: {', '.join(all_prev_words) if all_prev_words else 'None'}.
+3. SOLVABILITY TEST: hide the refs and verse text. Read only the 4 words,
+   their English meanings, and the theme name. If you could not group
+   these 4 words and name the pattern from that alone, DISCARD the
+   category and start again with a different pattern.
+4. Avoid root overlap with already-used Arabic words: {', '.join(all_prev_words) if all_prev_words else 'None'}.
    Exception: same-root words ARE allowed if their English meanings are clearly distinct
    (e.g. كِتَاب "book" vs كَتَبَ "to write" — different meanings, same root, allowed).
-4. If using <think> tags, show your internal verse verification.
+5. If using <think> tags, show your internal verse verification.
 
 RULES:
 1. Provide EXACTLY 4 items. {pivot_block}
-2. Theme (nameEn) MUST be specific (e.g., "Attributes of Paradise", not "Attributes").
+2. Theme (nameEn) MUST state the pattern itself, specifically
+   (e.g., "Birds mentioned in the Qur'an", "Things Allah swears by",
+   "Angels named in the Qur'an"). It must NOT name a surah, juz, or
+   passage, and must NOT be an empty container: no "Aspects of…",
+   "Elements of…", "Dialogue of…", "Words from/in…", or "… in Surah X".
+   Those describe WHERE words appear, not a pattern between them,
+   and categories named that way will be rejected.
    FORBIDDEN themes (used recently - do NOT reuse): {avoided_themes}
 3. CRITICAL: Every word must actually appear in its cited verse. No guessing.
 4. CHOOSE YOUR 4 REFS FROM THESE AVAILABLE PASSAGES (already filtered to exclude
    everything on cooldown — verses outside this list will be rejected):
    {allowed_ranges}
-   Pick all 4 refs from ONE of those passages so they sit near each other.
+   Spread the 4 refs across DIFFERENT passages that exhibit your pattern.
+   A category whose 4 words all come from one short passage (same surah,
+   within 20 ayahs) will be rejected: its only link is the passage.
 5. Words must not share roots with each other or previous categories.
 
 {chosen_block}{violation_block}
@@ -1495,13 +1515,77 @@ def _surah_proximity_violation(items, surah_num, max_span=20):
     return None
 
 
+# ── Pattern-anchor check (fixes #235) ─────────────────────────────
+# The #226/#227-era checks treated "the items really are in the named
+# surah, close together" as coherence. #235 showed that this IS the bug:
+# a category mined from one short passage has no pattern between the
+# words themselves — heavens / earth / Hour / intercession (43:82-86)
+# share nothing a player can see from the shuffled grid, where verses,
+# refs and surah names are hidden. The checks below reject that shape
+# deterministically, before any LLM grader is consulted:
+#   1. the theme names a surah/juz/hizb (the "connection" is a place);
+#   2. the theme is an empty container ("Aspects of…", "Elements of…",
+#      "Dialogue of…", "Words from…") that any 4 words taken from a
+#      single passage would fit;
+#   3. all 4 refs sit in one short passage (same surah, span ≤ 20
+#      ayahs), whatever the theme claims.
+_PASSAGE_ANCHOR_MAX_SPAN = 20
+
+_VACUOUS_THEME_OPENERS = (
+    "aspects of", "elements of", "dialogue of", "words from", "words in",
+    "verses from", "items from", "things from", "things in", "parts of",
+)
+
+
+def passage_anchor_violation(cat):
+    """Return a violation string if a Connections category is anchored
+    to a passage instead of to a pattern in the words, else None."""
+    theme_en = (cat.get("nameEn") or "").lower().strip()
+    items = cat.get("items") or []
+    if theme_en:
+        if re.search(r"\b(surah|juz|hizb|para)\b", theme_en):
+            return (
+                f"Theme '{cat.get('nameEn')}' names a surah/juz — appearing "
+                f"in the same passage is not a pattern a player can see "
+                f"from the words. Name the pattern the 4 words themselves "
+                f"share instead."
+            )
+        if theme_en.startswith(_VACUOUS_THEME_OPENERS):
+            return (
+                f"Theme '{cat.get('nameEn')}' is an empty container — any "
+                f"4 words from one passage would fit it. Name the specific "
+                f"pattern the 4 words themselves share instead."
+            )
+    refs = []
+    for item in items:
+        m = re.match(r"^(\d{1,3}):(\d{1,3})$", str(item.get("ref", "")))
+        if m:
+            refs.append((int(m.group(1)), int(m.group(2))))
+    if len(refs) == 4 and len({s for s, _ in refs}) == 1:
+        ayahs = [a for _, a in refs]
+        span = max(ayahs) - min(ayahs) + 1
+        if span <= _PASSAGE_ANCHOR_MAX_SPAN:
+            return (
+                f"All 4 items come from one passage (Surah {refs[0][0]}, "
+                f"ayahs {min(ayahs)}-{max(ayahs)}) — their only link is "
+                f"the passage, which the player cannot see. Pick words "
+                f"that share a pattern and come from at least two "
+                f"different passages."
+            )
+    return None
+
+
 def semantic_coherence_check(cat):
     """Check if the 4 items coherently fit the category theme.
 
+    Layer 0 — Pattern anchor (fixes #235): the category must be built on
+    a pattern in the words themselves, not on a shared passage. See
+    passage_anchor_violation.
+
     Layer 1 — Explicit theme claim: If the theme name says "Verbs of X/Y/Z",
-    "Attributes of X", "Words from [Surah/Juz]", or uses descriptive semantic
-    keywords, verify items actually match those claims. Prevents "random
-    grouping under a fancy name" bug.
+    "Attributes of X", or uses descriptive semantic keywords, verify items
+    actually match those claims. Prevents "random grouping under a fancy
+    name" bug.
 
     Layer 2 — Coherent group: If no explicit claim, verify items share a
     semantic field (3+ match a field) or don't scatter across 3+ unrelated fields.
@@ -1512,6 +1596,14 @@ def semantic_coherence_check(cat):
 
     if not items:
         return True, None
+
+    # Layer 0 runs first: a passage-anchored category is rejected even
+    # if its items happen to sit in the surah its name claims (the old
+    # structural branch below is now unreachable for such themes and is
+    # kept only as defence-in-depth for direct callers).
+    anchor_violation = passage_anchor_violation(cat)
+    if anchor_violation:
+        return False, anchor_violation
 
     theme_words = set(re.findall(r'\w+', theme_en))
 
