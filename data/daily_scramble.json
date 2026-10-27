@@ -1,29 +1,32 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "puzzle": {
-    "verseRef": "36:83",
-    "reference": "Surah Ya-Sin (36:83)",
+    "verseRef": "13:9",
+    "reference": "Surah Ar-Ra'd (13:9)",
     "segments": [
-      "فَسُبْحَانَ الَّذِي",
-      "بِيَدِهِ مَلَكُوتُ",
-      "كُلِّ شَيْءٍ",
-      "وَإِلَيْهِ تُرْجَعُونَ"
+      "words 1-3",
+      "word 4",
+      "words 5-7",
+      "word 8",
+      "words 9-11"
     ],
     "translations": [
-      "So glory be (to) the One who",
-      "in Whose hand is (the) dominion",
-      "(of) all things",
-      "and to Him you will be returned"
+      "Knower",
+      "(of) the unseen",
+      "and the witnessed",
+      "the Most Great",
+      "the Most High"
     ],
-    "hint": "This verse glorifies Allah's absolute sovereignty over all creation and reminds that everything will return to Him.",
-    "arabic": "فَسُبْحَـٰنَ ٱلَّذِى بِيَدِهِۦ مَلَكُوتُ كُلِّ شَىْءٍۢ وَإِلَيْهِ تُرْجَعُونَ",
+    "hint": "Allah’s constant presence and awareness of all our deeds.",
+    "arabic": "عَـٰلِمُ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ ٱلْكَبِيرُ ٱلْمُتَعَالِ",
     "words": [
-      "فَسُبْحَـٰنَ ٱلَّذِى",
-      "بِيَدِهِۦ مَلَكُوتُ",
-      "كُلِّ شَىْءٍۢ",
-      "وَإِلَيْهِ تُرْجَعُونَ"
+      "عَـٰلِمُ",
+      "ٱلْغَيْبِ",
+      "وَٱلشَّهَـٰدَةِ",
+      "ٱلْكَبِيرُ",
+      "ٱلْمُتَعَالِ"
     ],
-    "verseEn": "So exalted is He in whose hand is the realm of all things, and to Him you will be returned."
+    "verseEn": "[He is] Knower of the unseen and the witnessed, the Grand, the Exalted."
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,348 +1,529 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "puzzle": {
-    "center": "ك",
+    "center": "ق",
     "outer": [
-      "و",
-      "ز",
-      "ا",
+      "ت",
+      "د",
       "ي",
-      "ه",
-      "ل"
+      "م",
+      "ص",
+      "ه"
     ],
     "root": {
-      "letters": "زكو",
-      "display": "ز ك و",
-      "translit": "z-k-w",
-      "meaning": "This root carries the idea of purity that brings increase and blessing. Words formed from it describe cleansing, making oneself pure, or giving charity, because such acts both purify and cause spiritual or worldly growth.",
-      "occurrences": 59,
-      "lemmaCount": 7
+      "letters": "صدق",
+      "display": "ص د ق",
+      "translit": "ṣ-d-q",
+      "meaning": "It means truth, truthfulness, or being true. Its related words express speaking or being truthful, confirming or proving true, and charity, which is an upright gift that earns truthfulness.",
+      "occurrences": 155,
+      "lemmaCount": 18
     },
     "words": [
       {
-        "w": "اكل",
+        "w": "تقي",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَكَلَ",
-            "gloss": "eat",
-            "type": "verb",
-            "root": "أكل",
-            "count": 93,
-            "ref": "5:3",
-            "pos": 17,
-            "alt": [
-              "eating",
-              "ate"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "أُكُل",
-            "gloss": "producing fruit",
+            "lemma": "تَقِيّ",
+            "gloss": "righteous",
             "type": "noun",
-            "root": "أكل",
-            "count": 7,
-            "ref": "34:16",
-            "pos": 10
-          },
-          {
-            "lemma": "أَكْل",
-            "gloss": "devouring",
-            "type": "verbal noun",
-            "root": "أكل",
+            "root": "وقي",
             "count": 4,
-            "ref": "89:19",
-            "pos": 3
-          },
-          {
-            "lemma": "آكِل",
-            "gloss": "eat",
-            "type": "active participle",
-            "root": "أكل",
-            "count": 3,
-            "ref": "23:20",
-            "pos": 9
+            "ref": "19:13",
+            "pos": 6,
+            "alt": [
+              "god fearing"
+            ]
           }
         ]
       },
       {
-        "w": "زكي",
+        "w": "صدق",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "زَكَّى",
-            "gloss": "purifies",
+            "lemma": "صَدَقَ",
+            "gloss": "allah has fulfilled",
             "type": "verb",
-            "root": "زكو",
-            "count": 12,
-            "ref": "4:49",
-            "pos": 9,
-            "form": 2
-          },
-          {
-            "lemma": "زَكِيّ",
-            "gloss": "pure",
-            "type": "adjective",
-            "root": "زكو",
-            "count": 1,
-            "ref": "19:19",
-            "pos": 9
-          },
-          {
-            "lemma": "زَكَى",
-            "gloss": "have been pure",
-            "type": "verb",
-            "root": "زكو",
-            "count": 1,
-            "ref": "24:21",
-            "pos": 22,
+            "root": "صدق",
+            "count": 15,
+            "ref": "3:95",
+            "pos": 2,
+            "alt": [
+              "spoken the truth"
+            ],
             "form": 1
-          }
-        ]
-      },
-      {
-        "w": "كال",
-        "family": false,
-        "points": 1,
-        "senses": [
+          },
           {
-            "lemma": "كالُ",
-            "gloss": "measure",
-            "type": "verb",
-            "root": "كيل",
-            "count": 2,
-            "ref": "17:35",
+            "lemma": "صِدْق",
+            "gloss": "sound",
+            "type": "noun",
+            "root": "صدق",
+            "count": 14,
+            "ref": "6:115",
             "pos": 4,
             "alt": [
-              "give by measure"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "كهل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "كَهْل",
-            "gloss": "maturity",
-            "type": "noun",
-            "root": "كهل",
-            "count": 2,
-            "ref": "3:46",
-            "pos": 5
-          }
-        ]
-      },
-      {
-        "w": "كيل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "كَيْل",
-            "gloss": "measurement",
-            "type": "noun",
-            "root": "كيل",
-            "count": 10,
-            "ref": "12:60",
-            "pos": 6,
-            "alt": [
-              "measure"
+              "honor",
+              "truth"
             ]
-          }
-        ]
-      },
-      {
-        "w": "هلك",
-        "family": false,
-        "points": 1,
-        "senses": [
+          },
           {
-            "lemma": "هَلَكَ",
-            "gloss": "died",
+            "lemma": "صَدَّقَ",
+            "gloss": "found true",
             "type": "verb",
-            "root": "هلك",
-            "count": 5,
-            "ref": "4:176",
-            "pos": 9,
+            "root": "صدق",
+            "count": 10,
+            "ref": "34:20",
+            "pos": 2,
             "alt": [
-              "destroyed",
-              "is gone"
+              "accepted truth"
             ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "وكل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وُكِّلَ",
-            "gloss": "has been put in charge",
-            "type": "verb",
-            "root": "وكل",
-            "count": 2,
-            "ref": "32:11",
-            "pos": 6,
             "form": 2
           }
         ]
       },
       {
-        "w": "ازكي",
-        "family": true,
-        "points": 4,
+        "w": "قدم",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَزْكَى",
-            "gloss": "purer",
-            "type": "noun",
-            "root": "زكو",
-            "count": 4,
-            "ref": "2:232",
-            "pos": 26,
+            "lemma": "قَدَّمَ",
+            "gloss": "sent forth",
+            "type": "verb",
+            "root": "قدم",
+            "count": 27,
+            "ref": "2:95",
+            "pos": 5,
             "alt": [
-              "more virtuous",
-              "purest"
+              "have sent forth",
+              "has sent forth"
+            ],
+            "form": 2
+          },
+          {
+            "lemma": "قَدَم",
+            "gloss": "respectable position",
+            "type": "noun",
+            "root": "قدم",
+            "count": 8,
+            "ref": "10:2",
+            "pos": 17,
+            "alt": [
+              "foot"
+            ]
+          },
+          {
+            "lemma": "قَدِمْ",
+            "gloss": "precede",
+            "type": "verb",
+            "root": "قدم",
+            "count": 2,
+            "ref": "11:98",
+            "pos": 1,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "قصص",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "قَصَص",
+            "gloss": "retracing",
+            "type": "noun",
+            "root": "قصص",
+            "count": 6,
+            "ref": "18:64",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "قيم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "قَيِّم",
+            "gloss": "straight",
+            "type": "adjective",
+            "root": "قوم",
+            "count": 5,
+            "ref": "18:2",
+            "pos": 1
+          }
+        ]
+      },
+      {
+        "w": "مقت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَقْت",
+            "gloss": "hatred",
+            "type": "noun",
+            "root": "مقت",
+            "count": 6,
+            "ref": "35:39",
+            "pos": 18,
+            "alt": [
+              "hateful"
             ]
           }
         ]
       },
       {
-        "w": "اهلك",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَهْلَكَ",
-            "gloss": "destroy",
-            "type": "verb",
-            "root": "هلك",
-            "count": 51,
-            "ref": "5:17",
-            "pos": 20,
-            "alt": [
-              "be destroyed",
-              "destroyed"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "زكاه",
+        "w": "تصدق",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "زَكاة",
-            "gloss": "zakah",
+            "lemma": "تَصَدَّقَ",
+            "gloss": "gives charity",
+            "type": "verb",
+            "root": "صدق",
+            "count": 6,
+            "ref": "5:45",
+            "pos": 18,
+            "form": 5
+          }
+        ]
+      },
+      {
+        "w": "تقدم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "تَقَدَّمَ",
+            "gloss": "preceded",
+            "type": "verb",
+            "root": "قدم",
+            "count": 2,
+            "ref": "48:2",
+            "pos": 5,
+            "alt": [
+              "proceed"
+            ],
+            "form": 5
+          }
+        ]
+      },
+      {
+        "w": "صدقه",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "صَدَقَة",
+            "gloss": "charities",
             "type": "noun",
-            "root": "زكو",
-            "count": 32,
-            "ref": "18:81",
+            "root": "صدق",
+            "count": 13,
+            "ref": "2:196",
+            "pos": 31,
+            "alt": [
+              "charity"
+            ]
+          },
+          {
+            "lemma": "صَدُقَة",
+            "gloss": "dower",
+            "type": "noun",
+            "root": "صدق",
+            "count": 1,
+            "ref": "4:4",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "صديق",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "صِدِّيق",
+            "gloss": "man of truth",
+            "type": "noun",
+            "root": "صدق",
+            "count": 5,
+            "ref": "19:41",
             "pos": 7,
             "alt": [
-              "purity"
+              "truthful"
+            ]
+          },
+          {
+            "lemma": "صَدِيق",
+            "gloss": "friend",
+            "type": "noun",
+            "root": "صدق",
+            "count": 2,
+            "ref": "26:101",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "قديم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "قَدِيم",
+            "gloss": "ancient",
+            "type": "adjective",
+            "root": "قدم",
+            "count": 3,
+            "ref": "46:11",
+            "pos": 19
+          }
+        ]
+      },
+      {
+        "w": "قميص",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "قَمِيص",
+            "gloss": "shirt",
+            "type": "noun",
+            "root": "قمص",
+            "count": 6,
+            "ref": "12:18",
+            "pos": 3,
+            "alt": [
+              "this shirt of mine"
             ]
           }
         ]
       },
       {
-        "w": "زكيه",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "زَكِيَّة",
-            "gloss": "pure",
-            "type": "noun",
-            "root": "زكو",
-            "count": 1,
-            "ref": "18:74",
-            "pos": 10
-          }
-        ]
-      },
-      {
-        "w": "هالك",
+        "w": "قيمه",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "هالِك",
-            "gloss": "destroyed",
-            "type": "active participle",
-            "root": "هلك",
+            "lemma": "قَيِّمَة",
+            "gloss": "correct",
+            "type": "adjective",
+            "root": "قوم",
             "count": 2,
-            "ref": "28:88",
+            "ref": "98:3",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "متقي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُتَّقي",
+            "gloss": "fear",
+            "type": "active participle",
+            "root": "وقي",
+            "count": 49,
+            "ref": "2:2",
+            "pos": 7,
+            "alt": [
+              "righteous",
+              "god-fearing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مصدق",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مُصَدِّق",
+            "gloss": "confirming",
+            "type": "active participle",
+            "root": "صدق",
+            "count": 19,
+            "ref": "2:41",
+            "pos": 4
+          },
+          {
+            "lemma": "مُصَّدِّق",
+            "gloss": "men who give charity",
+            "type": "active participle",
+            "root": "صدق",
+            "count": 1,
+            "ref": "57:18",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "مقيم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُقِيم",
+            "gloss": "lasting",
+            "type": "active participle",
+            "root": "قوم",
+            "count": 10,
+            "ref": "5:37",
+            "pos": 12,
+            "alt": [
+              "enduring",
+              "establisher"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "تصديق",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "تَصْدِيق",
+            "gloss": "confirmation",
+            "type": "verbal noun",
+            "root": "صدق",
+            "count": 2,
+            "ref": "10:37",
+            "pos": 11
+          }
+        ]
+      },
+      {
+        "w": "صديقه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "صِدِّيقَة",
+            "gloss": "truthful",
+            "type": "noun",
+            "root": "صدق",
+            "count": 1,
+            "ref": "5:75",
             "pos": 13
           }
         ]
       },
       {
-        "w": "وكيل",
-        "family": false,
-        "points": 2,
+        "w": "متصدق",
+        "family": true,
+        "points": 5,
         "senses": [
           {
-            "lemma": "وَكِيل",
-            "gloss": "guardian",
-            "type": "noun",
-            "root": "وكل",
-            "count": 24,
-            "ref": "4:81",
-            "pos": 24,
+            "lemma": "مُتَصَدِّق",
+            "gloss": "charitable",
+            "type": "active participle",
+            "root": "صدق",
+            "count": 2,
+            "ref": "12:88",
+            "pos": 21,
             "alt": [
-              "disposer of affairs",
-              "trustee"
+              "men who give charity"
             ]
           }
         ]
       },
       {
-        "w": "كلاله",
+        "w": "مصدقه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مُصَّدِّقَة",
+            "gloss": "women who give charity",
+            "type": "active participle",
+            "root": "صدق",
+            "count": 1,
+            "ref": "57:18",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "مقتصد",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "كَلالَة",
-            "gloss": "no parent or child",
-            "type": "noun",
-            "root": "كلل",
+            "lemma": "مُقْتَصِد",
+            "gloss": "moderate",
+            "type": "active participle",
+            "root": "قصد",
             "count": 2,
-            "ref": "4:12",
-            "pos": 54
+            "ref": "31:32",
+            "pos": 15
+          }
+        ]
+      },
+      {
+        "w": "متصدقه",
+        "family": true,
+        "points": 6,
+        "senses": [
+          {
+            "lemma": "مُتَصَدِّقَة",
+            "gloss": "women who give charity",
+            "type": "active participle",
+            "root": "صدق",
+            "count": 1,
+            "ref": "33:35",
+            "pos": 15
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "تَزَكَّى",
-        "gloss": "purifies himself",
-        "type": "verb",
-        "root": "زكو",
-        "count": 8,
-        "ref": "20:76",
-        "pos": 12,
+        "lemma": "صادِق",
+        "gloss": "truthful",
+        "type": "active participle",
+        "root": "صدق",
+        "count": 59,
+        "ref": "2:23",
+        "pos": 20,
         "alt": [
-          "purifies",
-          "purify himself"
-        ],
-        "form": 5
+          "true"
+        ]
+      },
+      {
+        "lemma": "أَصْدَق",
+        "gloss": "more truthful",
+        "type": "noun",
+        "root": "صدق",
+        "count": 2,
+        "ref": "4:87",
+        "pos": 14,
+        "alt": [
+          "truer"
+        ]
+      },
+      {
+        "lemma": "صادِقَة",
+        "gloss": "truthful women",
+        "type": "active participle",
+        "root": "صدق",
+        "count": 1,
+        "ref": "33:35",
+        "pos": 9
       }
     ],
-    "maxScore": 30,
-    "featuredRoot": "زكو"
+    "maxScore": 65,
+    "featuredRoot": "صدق"
   },
   "generated": true,
   "model": "auto (chain)"
