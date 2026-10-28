@@ -887,6 +887,19 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
             + "\nCRITICAL: Your 4 Arabic words must NOT share roots with ANY of the roots listed above."
         )
 
+        # Grammar cap (issue #238): if this puzzle's one grammatical slot is
+        # already taken, say so where the model reads the chosen list.
+        _gram_prev = [pc for pc in accumulated_cats if is_grammatical_category(pc)]
+        if _gram_prev:
+            chosen_block += (
+                "\n\n⚠ GRAMMAR LIMIT ALREADY USED: "
+                f"\"{_gram_prev[0].get('nameEn')}\" is this puzzle's ONE allowed "
+                "grammatical category. Your category MUST be thematic (what the "
+                "words are, mean, or do) — NOT a grammar or morphology pattern "
+                "(no verb forms, participles, plurals, tense/person forms, or "
+                "wazn patterns). A grammatical category will be rejected."
+            )
+
     violation_block = ""
     if previous_violations:
         verse_mismatches = [v for v in previous_violations if "NOT found in verse" in v]
@@ -962,6 +975,13 @@ RULES:
    A category whose 4 words all come from one short passage (same surah,
    within 20 ayahs) will be rejected: its only link is the passage.
 5. Words must not share roots with each other or previous categories.
+6. GRAMMAR LIMIT: At most ONE of this puzzle's 4 categories may be
+   grammatical — a pattern of Arabic grammar or morphology (verb tense
+   or person forms, participles, plural/dual forms, derived verb forms,
+   wazn patterns such as فاعل or مفعول, pronoun suffixes). Grammatical
+   categories are the hardest in the game: most players have no formal
+   Arabic grammar training and cannot see the pattern from the words
+   alone. Prefer THEMATIC patterns — what the words are, mean, or do.
 
 {chosen_block}{violation_block}
 
@@ -1966,6 +1986,46 @@ def self_grade_category(cat, model_config):
     return "skipped", [], "", ""
 
 
+
+# ── Grammatical-category detection (issue #238) ─────────────────────
+# A category is "grammatical" when its stated pattern is a fact of Arabic
+# grammar/morphology — verb tense or person forms, participles, plural/dual
+# morphology, derived verb forms, wazn patterns, pronoun suffixes — rather
+# than a theme in what the words are, mean, or do. Such categories are the
+# hardest in the game: a player without formal Arabic grammar training
+# cannot see the pattern from the words and meanings alone. The 28 Oct 2026
+# puzzle had THREE of them (fa'il participles, past-tense "we" verbs,
+# passive participles in sound masculine plural), which is what issue #238
+# reports. Cap: at most ONE grammatical category per Connections puzzle.
+
+_GRAMMAR_TERMS_EN = (
+    "participle", "past tense", "present tense", "future tense",
+    "conjugation", "conjugated", "verb form", "derived form",
+    "verbal noun", "masdar", "maṣdar", "morpholog", "wazn",
+    "broken plural", "sound plural", "masculine plural", "feminine plural",
+    "plural form", "dual form", "first person", "second person",
+    "third person", "passive voice", "active voice", "imperative",
+    "subjunctive", "jussive", "declension", "accusative", "nominative",
+    "genitive", "attached pronoun", "pronoun suffix", "object pronoun",
+    "possessive suffix", "on the pattern", "sarf", "ṣarf",
+)
+
+# Arabic grammatical markers, matched against the tashkeel-stripped name.
+_GRAMMAR_TERMS_AR = (
+    "وزن", "صيغة", "اسم فاعل", "اسم مفعول", "جمع مذكر", "جمع مؤنث",
+    "افعال ماضية", "فعل ماض", "فعل مضارع", "المتكلمين",
+)
+
+
+def is_grammatical_category(cat):
+    """True if the category's pattern is Arabic grammar/morphology (#238)."""
+    name_en = (cat.get("nameEn") or "").lower()
+    if any(term in name_en for term in _GRAMMAR_TERMS_EN):
+        return True
+    name_ar = _strip_tashkeel(cat.get("name") or "")
+    return any(term in name_ar for term in _GRAMMAR_TERMS_AR)
+
+
 def validate_single_category(cat, cat_index, history, accumulated_cats):
     """Validate one category against history and already-accumulated categories."""
     errors, violations, warnings = [], [], []
@@ -2004,6 +2064,20 @@ def validate_single_category(cat, cat_index, history, accumulated_cats):
     theme = cat.get("nameEn", "").lower().strip()
     if theme in all_avoided_themes:
         violations.append(f"Theme '{theme}' reused (cooldown or duplicate in puzzle)")
+
+    # Grammar cap (issue #238): at most ONE grammatical category per puzzle.
+    if is_grammatical_category(cat):
+        for prev_cat in accumulated_cats:
+            if is_grammatical_category(prev_cat):
+                violations.append(
+                    "Grammatical-category limit (max one per puzzle): this puzzle already has a "
+                    f"grammatical category (\"{prev_cat.get('nameEn')}\"). This category "
+                    f"(\"{cat.get('nameEn')}\") is also grammatical. Choose a THEMATIC pattern "
+                    "instead — what the words are, mean, or do (things, beings, places, actions, "
+                    "events in the Qur'an's message), not a grammar pattern. "
+                    "Pick a completely different, non-grammatical theme."
+                )
+                break
 
     # Semantic coherence check - items must actually fit the theme
     is_coherent, coherence_violation = semantic_coherence_check(cat)
@@ -2192,6 +2266,15 @@ def validate_connections(puzzle, history):
                     f"Categories {i+1} and {j+1} both focus on '{field_i}' "
                     f"({count_i}/4 and {count_j}/4 items) — choose different themes."
                 )
+
+    # Grammar cap visibility (issue #238): per-category validation enforces
+    # the one-grammatical-category limit during generation; if a puzzle
+    # still arrives here over the cap, surface it in the run log.
+    _gram_count = sum(1 for c in cats if is_grammatical_category(c))
+    if _gram_count > 1:
+        warnings.append(
+            f"{_gram_count} grammatical categories in one puzzle (limit is 1) — issue #238"
+        )
 
     return errors, cooldown_violations, warnings
 
