@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "puzzle": {
-    "title": "A Siege Under a Sudden Sky",
-    "intro": "You are standing before a formidable army approaching a revered sanctuary, with every weapon ready and victory seemingly certain. Before the assault can begin, an unexpected power appears overhead, and the contest takes a turn no one foresaw.",
+    "title": "A Promise Spoken Over Embers",
+    "intro": "You stand beside a desert fire as its embers are carefully spread. Visitors arrive for an encounter in the stillness, and a single message opens a story of promise, surprise, and a future not yet fulfilled.",
     "clues": [
-      "We marched with a confidence that no earthly power could shake.",
-      "We brought mighty elephants, and our force seemed built around them.",
-      "We had come to tear down a revered sanctuary, believing our victory was already certain.",
-      "When we reached it, a flock swept across the sky above us.",
-      "The birds hurled stones of hardened clay at our warriors.",
-      "We were defeated so completely that our mighty force crumbled and scattered like ash."
+      "We crossed the distance to reach a faithful servant in the desert.",
+      "We asked that embers be spread to prepare a fire.",
+      "We spoke to one who had called out to a flame for coolness and safety.",
+      "We brought tidings of a newborn to someone who had passed the age of having children.",
+      "We named the promised child Isaac.",
+      "We brought glad tidings of a son to Ibrahim, and the astonishing news left Ibrahim laughing."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The People of the Elephant",
-          "The Two Princes",
-          "Joseph's Brothers",
-          "The Servant of Allah in Dhul-Kifl",
-          "The Companions of the Righteous Man"
+          "The Angels Who Brought Glad Tidings of Isaac to Ibrahim",
+          "The Angels Who Warned Lut",
+          "The Throne-Bearing Angels",
+          "The Angels of Hell",
+          "The Angels Sent to Noah"
         ],
-        "answer": "The People of the Elephant"
+        "answer": "The Angels Who Brought Glad Tidings of Isaac to Ibrahim"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "The elephant-led assault on the Kaaba",
-          "The sea parting before a delivered group",
-          "The seizure of the Ark by a tyrannical people",
-          "The night journey between two mosques",
-          "The healing of a leper by divine power"
+          "Bringing glad tidings of Isaac's birth to Ibrahim",
+          "Warning Lut before the punishment of his people",
+          "Announcing the birth of Yahya to Zakariyya",
+          "Bearing the Throne on the Day of Judgment",
+          "Announcing the birth of Isa to Maryam"
         ],
-        "answer": "The elephant-led assault on the Kaaba"
+        "answer": "Bringing glad tidings of Isaac's birth to Ibrahim"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Birds carrying pellets of clay",
-          "An ark of gopherwood",
-          "A staff turned into a serpent",
-          "A stone sealed with a sign",
-          "A burning bush"
+          "A fire prepared from spread embers",
+          "An ark floating on floodwater",
+          "A cave sealed by a rolling stone",
+          "A mountain of clay hardened by brine",
+          "A ladder extending into the sky"
         ],
-        "answer": "Birds carrying pellets of clay"
+        "answer": "A fire prepared from spread embers"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Their mighty force crumbled like ash",
-          "They crossed the sea safely",
-          "They walked unharmed through a blazing furnace",
-          "They entered Paradise in pairs",
-          "They slept in a cave for 309 years"
+          "Glad tidings of a son named Isaac",
+          "Glad tidings of a son named Yahya",
+          "The selection of Talut as ruler over the Children of Israel",
+          "A warning before the punishment of Lut's people",
+          "A command to build an ark before the Flood"
         ],
-        "answer": "Their mighty force crumbled like ash"
+        "answer": "Glad tidings of a son named Isaac"
       }
     },
-    "verseRef": "105:8",
-    "arabic": "",
-    "verse": "105:8"
+    "verseRef": "15:51",
+    "arabic": "وَنَبِّئْهُمْ عَن ضَيْفِ إِبْرَٰهِيمَ",
+    "verse": "And inform them about the guests of Abraham, (15:51)"
   },
   "generated": true,
   "model": "auto (chain)"

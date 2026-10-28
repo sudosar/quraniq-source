@@ -1,529 +1,588 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "puzzle": {
-    "center": "ق",
+    "center": "ع",
     "outer": [
+      "ا",
+      "س",
       "ت",
-      "د",
-      "ي",
+      "و",
       "م",
-      "ص",
-      "ه"
+      "ل"
     ],
     "root": {
-      "letters": "صدق",
-      "display": "ص د ق",
-      "translit": "ṣ-d-q",
-      "meaning": "It means truth, truthfulness, or being true. Its related words express speaking or being truthful, confirming or proving true, and charity, which is an upright gift that earns truthfulness.",
-      "occurrences": 155,
-      "lemmaCount": 18
+      "letters": "متع",
+      "display": "م ت ع",
+      "translit": "m-t-ʿ",
+      "meaning": "It conveys giving or receiving benefit, provision, or enjoyment that sustains life. Its derived words extend this idea to being provided for, profiting, and taking advantage.",
+      "occurrences": 70,
+      "lemmaCount": 4
     },
     "words": [
       {
-        "w": "تقي",
+        "w": "تسع",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "تَقِيّ",
-            "gloss": "righteous",
+            "lemma": "تِسْع",
+            "gloss": "nine",
             "type": "noun",
-            "root": "وقي",
-            "count": 4,
-            "ref": "19:13",
-            "pos": 6,
-            "alt": [
-              "god fearing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "صدق",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "صَدَقَ",
-            "gloss": "allah has fulfilled",
-            "type": "verb",
-            "root": "صدق",
-            "count": 15,
-            "ref": "3:95",
-            "pos": 2,
-            "alt": [
-              "spoken the truth"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "صِدْق",
-            "gloss": "sound",
-            "type": "noun",
-            "root": "صدق",
-            "count": 14,
-            "ref": "6:115",
+            "root": "تسع",
+            "count": 5,
+            "ref": "17:101",
             "pos": 4,
             "alt": [
-              "honor",
-              "truth"
+              "ninety-nine"
             ]
-          },
-          {
-            "lemma": "صَدَّقَ",
-            "gloss": "found true",
-            "type": "verb",
-            "root": "صدق",
-            "count": 10,
-            "ref": "34:20",
-            "pos": 2,
-            "alt": [
-              "accepted truth"
-            ],
-            "form": 2
           }
         ]
       },
       {
-        "w": "قدم",
+        "w": "سمع",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "قَدَّمَ",
-            "gloss": "sent forth",
+            "lemma": "سَمِعَ",
+            "gloss": "heard",
             "type": "verb",
-            "root": "قدم",
-            "count": 27,
-            "ref": "2:95",
-            "pos": 5,
+            "root": "سمع",
+            "count": 78,
+            "ref": "2:171",
+            "pos": 9,
             "alt": [
-              "have sent forth",
-              "has sent forth"
+              "hear",
+              "hears"
             ],
-            "form": 2
+            "form": 1
           },
           {
-            "lemma": "قَدَم",
-            "gloss": "respectable position",
+            "lemma": "سَمْع",
+            "gloss": "hear",
             "type": "noun",
-            "root": "قدم",
-            "count": 8,
-            "ref": "10:2",
-            "pos": 17,
+            "root": "سمع",
+            "count": 22,
+            "ref": "18:101",
+            "pos": 11,
             "alt": [
-              "foot"
+              "hearing"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "w": "عام",
+        "family": false,
+        "points": 1,
+        "senses": [
           {
-            "lemma": "قَدِمْ",
-            "gloss": "precede",
-            "type": "verb",
-            "root": "قدم",
+            "lemma": "عام",
+            "gloss": "year",
+            "type": "noun",
+            "root": "عوم",
+            "count": 9,
+            "ref": "2:259",
+            "pos": 20,
+            "alt": [
+              "one year",
+              "two years"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عتو",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عُتُوّ",
+            "gloss": "insolence",
+            "type": "noun",
+            "root": "عتو",
             "count": 2,
-            "ref": "11:98",
-            "pos": 1,
+            "ref": "25:21",
+            "pos": 18,
+            "alt": [
+              "pride"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "علا",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عَلا",
+            "gloss": "exalted himself",
+            "type": "verb",
+            "root": "علو",
+            "count": 6,
+            "ref": "28:4",
+            "pos": 3,
             "form": 1
           }
         ]
       },
       {
-        "w": "قصص",
+        "w": "علم",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "قَصَص",
-            "gloss": "retracing",
-            "type": "noun",
-            "root": "قصص",
-            "count": 6,
-            "ref": "18:64",
-            "pos": 9
-          }
-        ]
-      },
-      {
-        "w": "قيم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قَيِّم",
-            "gloss": "straight",
-            "type": "adjective",
-            "root": "قوم",
-            "count": 5,
-            "ref": "18:2",
-            "pos": 1
-          }
-        ]
-      },
-      {
-        "w": "مقت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَقْت",
-            "gloss": "hatred",
-            "type": "noun",
-            "root": "مقت",
-            "count": 6,
-            "ref": "35:39",
-            "pos": 18,
+            "lemma": "عَلِمَ",
+            "gloss": "knew",
+            "type": "verb",
+            "root": "علم",
+            "count": 382,
+            "ref": "2:30",
+            "pos": 25,
             "alt": [
-              "hateful"
+              "knows",
+              "know"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "عِلْم",
+            "gloss": "knowledge",
+            "type": "noun",
+            "root": "علم",
+            "count": 105,
+            "ref": "2:32",
+            "pos": 4,
+            "alt": [
+              "any knowledge",
+              "having known"
+            ]
+          },
+          {
+            "lemma": "عَلَّمَ",
+            "gloss": "taught",
+            "type": "verb",
+            "root": "علم",
+            "count": 41,
+            "ref": "55:2",
+            "pos": 1,
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "علو",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عُلُوّ",
+            "gloss": "haughtiness",
+            "type": "noun",
+            "root": "علو",
+            "count": 4,
+            "ref": "17:4",
+            "pos": 12,
+            "alt": [
+              "height",
+              "exaltedness"
             ]
           }
         ]
       },
       {
-        "w": "تصدق",
-        "family": true,
-        "points": 4,
+        "w": "عمل",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "تَصَدَّقَ",
-            "gloss": "gives charity",
+            "lemma": "عَمِلَ",
+            "gloss": "does",
             "type": "verb",
-            "root": "صدق",
-            "count": 6,
-            "ref": "5:45",
-            "pos": 18,
-            "form": 5
+            "root": "عمل",
+            "count": 276,
+            "ref": "3:30",
+            "pos": 6,
+            "alt": [
+              "do",
+              "did"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "عَمَل",
+            "gloss": "deed",
+            "type": "noun",
+            "root": "عمل",
+            "count": 71,
+            "ref": "3:195",
+            "pos": 7,
+            "alt": [
+              "deeds",
+              "work"
+            ]
           }
         ]
       },
       {
-        "w": "تقدم",
+        "w": "متع",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مَتَّعْ",
+            "gloss": "provide for",
+            "type": "verb",
+            "root": "متع",
+            "count": 18,
+            "ref": "2:126",
+            "pos": 22,
+            "alt": [
+              "grant him enjoyment",
+              "make provision for"
+            ],
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "وسع",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وَسِعَ",
+            "gloss": "encompasses",
+            "type": "verb",
+            "root": "وسع",
+            "count": 6,
+            "ref": "2:255",
+            "pos": 41,
+            "alt": [
+              "extends",
+              "has encompassed"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "وُسْع",
+            "gloss": "capacity",
+            "type": "noun",
+            "root": "وسع",
+            "count": 5,
+            "ref": "2:233",
+            "pos": 21
+          }
+        ]
+      },
+      {
+        "w": "اسمع",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "تَقَدَّمَ",
-            "gloss": "preceded",
+            "lemma": "أَسْمَعَ",
+            "gloss": "cause to hear",
             "type": "verb",
-            "root": "قدم",
-            "count": 2,
-            "ref": "48:2",
-            "pos": 5,
+            "root": "سمع",
+            "count": 13,
+            "ref": "10:42",
+            "pos": 6,
             "alt": [
-              "proceed"
+              "cause the deaf to hear",
+              "how they will hear"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "اعلم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَعْلَم",
+            "gloss": "most knowing",
+            "type": "noun",
+            "root": "علم",
+            "count": 49,
+            "ref": "2:140",
+            "pos": 15,
+            "alt": [
+              "knows best",
+              "know best"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "تمتع",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "تَمَتَّعَ",
+            "gloss": "took advantage",
+            "type": "verb",
+            "root": "متع",
+            "count": 11,
+            "ref": "2:196",
+            "pos": 37,
+            "alt": [
+              "enjoy"
             ],
             "form": 5
           }
         ]
       },
       {
-        "w": "صدقه",
+        "w": "سماع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "سَمّاع",
+            "gloss": "listeners",
+            "type": "noun",
+            "root": "سمع",
+            "count": 4,
+            "ref": "5:41",
+            "pos": 20,
+            "alt": [
+              "would have listened"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عالم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "عالَم",
+            "gloss": "worlds",
+            "type": "noun",
+            "root": "علم",
+            "count": 73,
+            "ref": "1:2",
+            "pos": 4,
+            "alt": [
+              "to the worlds",
+              "universe"
+            ]
+          },
+          {
+            "lemma": "عالِم",
+            "gloss": "knower",
+            "type": "active participle",
+            "root": "علم",
+            "count": 18,
+            "ref": "6:73",
+            "pos": 19,
+            "alt": [
+              "all-knower",
+              "well-knowing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عامل",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "عامِل",
+            "gloss": "working",
+            "type": "active participle",
+            "root": "عمل",
+            "count": 12,
+            "ref": "3:195",
+            "pos": 8,
+            "alt": [
+              "doer",
+              "worker"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "علام",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "عَلّام",
+            "gloss": "all-knower",
+            "type": "noun",
+            "root": "علم",
+            "count": 4,
+            "ref": "5:109",
+            "pos": 14,
+            "alt": [
+              "knower"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "متاع",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "صَدَقَة",
-            "gloss": "charities",
+            "lemma": "مَتاع",
+            "gloss": "enjoy",
             "type": "noun",
-            "root": "صدق",
-            "count": 13,
-            "ref": "2:196",
-            "pos": 31,
-            "alt": [
-              "charity"
-            ]
-          },
-          {
-            "lemma": "صَدُقَة",
-            "gloss": "dower",
-            "type": "noun",
-            "root": "صدق",
-            "count": 1,
-            "ref": "4:4",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "صديق",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "صِدِّيق",
-            "gloss": "man of truth",
-            "type": "noun",
-            "root": "صدق",
-            "count": 5,
-            "ref": "19:41",
-            "pos": 7,
-            "alt": [
-              "truthful"
-            ]
-          },
-          {
-            "lemma": "صَدِيق",
-            "gloss": "friend",
-            "type": "noun",
-            "root": "صدق",
-            "count": 2,
-            "ref": "26:101",
-            "pos": 2
-          }
-        ]
-      },
-      {
-        "w": "قديم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "قَدِيم",
-            "gloss": "ancient",
-            "type": "adjective",
-            "root": "قدم",
-            "count": 3,
-            "ref": "46:11",
-            "pos": 19
-          }
-        ]
-      },
-      {
-        "w": "قميص",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "قَمِيص",
-            "gloss": "shirt",
-            "type": "noun",
-            "root": "قمص",
-            "count": 6,
-            "ref": "12:18",
-            "pos": 3,
-            "alt": [
-              "this shirt of mine"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قيمه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "قَيِّمَة",
-            "gloss": "correct",
-            "type": "adjective",
-            "root": "قوم",
-            "count": 2,
-            "ref": "98:3",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "متقي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُتَّقي",
-            "gloss": "fear",
-            "type": "active participle",
-            "root": "وقي",
-            "count": 49,
-            "ref": "2:2",
-            "pos": 7,
-            "alt": [
-              "righteous",
-              "god-fearing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مصدق",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُصَدِّق",
-            "gloss": "confirming",
-            "type": "active participle",
-            "root": "صدق",
-            "count": 19,
-            "ref": "2:41",
-            "pos": 4
-          },
-          {
-            "lemma": "مُصَّدِّق",
-            "gloss": "men who give charity",
-            "type": "active participle",
-            "root": "صدق",
-            "count": 1,
-            "ref": "57:18",
-            "pos": 2
-          }
-        ]
-      },
-      {
-        "w": "مقيم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُقِيم",
-            "gloss": "lasting",
-            "type": "active participle",
-            "root": "قوم",
-            "count": 10,
-            "ref": "5:37",
-            "pos": 12,
-            "alt": [
-              "enduring",
-              "establisher"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "تصديق",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "تَصْدِيق",
-            "gloss": "confirmation",
-            "type": "verbal noun",
-            "root": "صدق",
-            "count": 2,
-            "ref": "10:37",
-            "pos": 11
-          }
-        ]
-      },
-      {
-        "w": "صديقه",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "صِدِّيقَة",
-            "gloss": "truthful",
-            "type": "noun",
-            "root": "صدق",
-            "count": 1,
-            "ref": "5:75",
-            "pos": 13
-          }
-        ]
-      },
-      {
-        "w": "متصدق",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مُتَصَدِّق",
-            "gloss": "charitable",
-            "type": "active participle",
-            "root": "صدق",
-            "count": 2,
-            "ref": "12:88",
+            "root": "متع",
+            "count": 35,
+            "ref": "2:236",
             "pos": 21,
             "alt": [
-              "men who give charity"
+              "enjoyment",
+              "provision"
             ]
           }
         ]
       },
       {
-        "w": "مصدقه",
-        "family": true,
-        "points": 5,
+        "w": "موسع",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "مُصَّدِّقَة",
-            "gloss": "women who give charity",
+            "lemma": "مُوسِع",
+            "gloss": "wealthy",
             "type": "active participle",
-            "root": "صدق",
-            "count": 1,
-            "ref": "57:18",
-            "pos": 3
+            "root": "وسع",
+            "count": 2,
+            "ref": "2:236",
+            "pos": 16,
+            "alt": [
+              "expanders"
+            ]
           }
         ]
       },
       {
-        "w": "مقتصد",
+        "w": "واسع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "واسِع",
+            "gloss": "vast",
+            "type": "active participle",
+            "root": "وسع",
+            "count": 9,
+            "ref": "2:115",
+            "pos": 11,
+            "alt": [
+              "all-encompassing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "استمع",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "مُقْتَصِد",
-            "gloss": "moderate",
-            "type": "active participle",
-            "root": "قصد",
-            "count": 2,
-            "ref": "31:32",
-            "pos": 15
+            "lemma": "اسْتَمَعَ",
+            "gloss": "listen",
+            "type": "verb",
+            "root": "سمع",
+            "count": 16,
+            "ref": "6:25",
+            "pos": 3,
+            "alt": [
+              "listened",
+              "listens"
+            ],
+            "form": 8
           }
         ]
       },
       {
-        "w": "متصدقه",
+        "w": "اعلام",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "أَعْلام",
+            "gloss": "like mountains",
+            "type": "noun",
+            "root": "علم",
+            "count": 2,
+            "ref": "42:32",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "مستمع",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُسْتَمِع",
+            "gloss": "listening",
+            "type": "active participle",
+            "root": "سمع",
+            "count": 2,
+            "ref": "26:15",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "معلوم",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مَعْلُوم",
+            "gloss": "known",
+            "type": "passive participle",
+            "root": "علم",
+            "count": 11,
+            "ref": "15:4",
+            "pos": 8,
+            "alt": [
+              "well-known",
+              "determined"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "استمتع",
         "family": true,
         "points": 6,
         "senses": [
           {
-            "lemma": "مُتَصَدِّقَة",
-            "gloss": "women who give charity",
-            "type": "active participle",
-            "root": "صدق",
-            "count": 1,
-            "ref": "33:35",
-            "pos": 15
+            "lemma": "اسْتَمْتَعَ",
+            "gloss": "profited",
+            "type": "verb",
+            "root": "متع",
+            "count": 6,
+            "ref": "6:128",
+            "pos": 15,
+            "alt": [
+              "enjoyed"
+            ],
+            "form": 10
           }
         ]
       }
     ],
-    "otherFamily": [
-      {
-        "lemma": "صادِق",
-        "gloss": "truthful",
-        "type": "active participle",
-        "root": "صدق",
-        "count": 59,
-        "ref": "2:23",
-        "pos": 20,
-        "alt": [
-          "true"
-        ]
-      },
-      {
-        "lemma": "أَصْدَق",
-        "gloss": "more truthful",
-        "type": "noun",
-        "root": "صدق",
-        "count": 2,
-        "ref": "4:87",
-        "pos": 14,
-        "alt": [
-          "truer"
-        ]
-      },
-      {
-        "lemma": "صادِقَة",
-        "gloss": "truthful women",
-        "type": "active participle",
-        "root": "صدق",
-        "count": 1,
-        "ref": "33:35",
-        "pos": 9
-      }
-    ],
-    "maxScore": 65,
-    "featuredRoot": "صدق"
+    "otherFamily": [],
+    "maxScore": 54,
+    "featuredRoot": "متع"
   },
   "generated": true,
   "model": "auto (chain)"
