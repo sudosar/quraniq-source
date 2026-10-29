@@ -45,9 +45,11 @@ jobs:
 
       - name: Check if puzzle was generated
         id: check
+        if: always()
         run: |
+          TODAY=$(date -u +%Y-%m-%d)
           if [ -f "data/daily_puzzle.json" ]; then
-            GENERATED=$(python3 -c "import json; d=json.load(open('data/daily_puzzle.json')); print('true' if d.get('generated') else 'false')")
+            GENERATED=$(TODAY="$TODAY" python3 -c "import json,os; d=json.load(open('data/daily_puzzle.json')); print('true' if d.get('generated') and d.get('date')==os.environ['TODAY'] else 'false')")
             echo "generated=$GENERATED" >> $GITHUB_OUTPUT
           else
             echo "generated=false" >> $GITHUB_OUTPUT
@@ -69,14 +71,22 @@ jobs:
             --title "Puzzle generation failed for ${DATE}" \
             --body "Puzzle generation failed for ${DATE}. Check the workflow run logs for details."
 
-      - name: Commit and push
-        if: steps.check.outputs.generated == 'true'
+      # Commit even on failure: the script saves successful games to
+      # data/history/ before failing, and a later run regenerates only the
+      # missing games. Output files are only written on full success, so a
+      # partial commit can never clobber the live puzzle.
+      - name: Commit and push (including partial progress)
+        if: always()
         run: |
           git config user.name "QuranPuzzle Bot"
           git config user.email "bot@quranpuzzle.app"
           git add data/
           git diff --staged --quiet || {
-            git commit -m "Generate daily puzzles for $(date -u +%Y-%m-%d)" || echo "No changes"
+            if [ "${{ steps.check.outputs.generated }}" = "true" ]; then
+              git commit -m "Generate daily puzzles for $(date -u +%Y-%m-%d)"
+            else
+              git commit -m "Save partial puzzles for $(date -u +%Y-%m-%d) (some games failed, retry will resume)"
+            fi
             git pull --rebase origin main
             git push
           }
