@@ -544,6 +544,77 @@ def is_json_truncated(text):
     return depth_brace > 0 or depth_bracket > 0
 
 
+
+# ── Provider resilience (Oct 2026) ──────────────────────────────────
+# Transport failures (connection drops, timeouts, 5xx) and rate limits are
+# the flaky part of generation; content failures (bad verses, incoherent
+# themes) are not. Two rules keep flakiness from eating the content budget:
+#  1. Transport/rate-limit retries happen INSIDE the HTTP layer with
+#     exponential backoff, and only a *persistent* failure is reported up.
+#  2. A provider that fails twice in a row is marked unhealthy and skipped
+#     for the rest of the run, instead of being re-tried every category.
+
+_TRANSPORT_BACKOFF_S = (5, 15, 45)      # per transport attempt, in seconds
+_RATE_LIMIT_BACKOFF_S = (30, 60, 120)    # per rate-limit wait, in seconds
+_PROVIDER_UNHEALTHY_AFTER = 2            # consecutive failures before skip
+_PROVIDER_FAILURES = {}                  # label -> consecutive failure count
+
+
+def _provider_is_unhealthy(label):
+    return _PROVIDER_FAILURES.get(label, 0) >= _PROVIDER_UNHEALTHY_AFTER
+
+
+def _note_provider_success(label):
+    _PROVIDER_FAILURES[label] = 0
+
+
+def _note_provider_failure(label):
+    _PROVIDER_FAILURES[label] = _PROVIDER_FAILURES.get(label, 0) + 1
+    if _provider_is_unhealthy(label):
+        print(f"  ⚠ {label} marked unhealthy after "
+              f"{_PROVIDER_FAILURES[label]} consecutive failures — skipping for the rest of this run")
+
+
+def _post_with_retries(api_url, headers, payload, timeout, label):
+    """POST with transport-level retries.
+
+    Returns the response object, the string "RATE_LIMITED" if the provider
+    stayed rate-limited after backoff, or None if transport kept failing.
+    Never raises for transport problems.
+    """
+    for attempt, wait in enumerate([0] + list(_TRANSPORT_BACKOFF_S)):
+        if attempt:
+            print(f"  ↻ Transport retry {attempt}/3 for {label} after {wait}s backoff...")
+            time.sleep(wait)
+        try:
+            resp = requests.post(api_url, headers=headers, json=payload, timeout=timeout)
+        except requests.exceptions.RequestException as e:
+            print(f"  ✗ Transport error calling {label}: {e}")
+            continue
+        if resp.status_code == 429:
+            for rl_wait in _RATE_LIMIT_BACKOFF_S:
+                print(f"  ⚠ Rate limited on {label}; waiting {rl_wait}s before retry...")
+                time.sleep(rl_wait)
+                try:
+                    resp = requests.post(api_url, headers=headers, json=payload, timeout=timeout)
+                except requests.exceptions.RequestException as e:
+                    print(f"  ✗ Transport error during rate-limit retry for {label}: {e}")
+                    resp = None
+                    break
+                if resp.status_code != 429:
+                    break
+            if resp is None:
+                continue  # transport trouble during the rate-limit wait: retry at transport level
+            if resp.status_code == 429:
+                return "RATE_LIMITED"
+            return resp
+        if 500 <= resp.status_code < 600:
+            print(f"  ✗ Server error (HTTP {resp.status_code}) from {label}")
+            continue
+        return resp
+    return None
+
+
 def call_model(prompt, model_config, system_msg=None):
     """Call an LLM API and return the response text.
 
@@ -554,6 +625,11 @@ def call_model(prompt, model_config, system_msg=None):
     """
     model_id = model_config["id"]
     api_type = model_config["api"]
+
+    # Fix 3: skip a provider already proven flaky this run.
+    if _provider_is_unhealthy(model_config["label"]):
+        print(f"  ⚠ Skipping {model_config['label']} (marked unhealthy earlier this run)")
+        return "SKIP"
 
     # Select endpoint and auth based on API type
     if api_type == "openai":
@@ -638,10 +714,15 @@ def call_model(prompt, model_config, system_msg=None):
     # Reasoning models need more wall-clock time; Kimi K3 is also a reasoning model
     request_timeout = 300 if api_type in ("minimax_m3", "kimi") else 180
     try:
-        resp = requests.post(api_url, headers=headers, json=payload, timeout=request_timeout)
-
-        if resp.status_code == 429:
-            print(f"  ⚠ Rate limited on {model_config['label']}")
+        # Fix 2: transport/rate-limit retries live inside the HTTP layer, so
+        # a dropped connection or a 429 no longer burns a content retry.
+        resp = _post_with_retries(api_url, headers, payload, request_timeout, model_config["label"])
+        if resp is None:
+            _note_provider_failure(model_config["label"])
+            print(f"  ✗ Transport failed for {model_config['label']} after retries")
+            return None
+        if resp == "RATE_LIMITED":
+            _note_provider_failure(model_config["label"])
             return "RATE_LIMITED"
         if resp.status_code == 401:
             print(f"  ✗ Authentication failed for {model_config['label']}")
@@ -715,14 +796,17 @@ def call_model(prompt, model_config, system_msg=None):
                     accumulated += cleaned_cont
                     if not is_json_truncated(accumulated):
                         print(f"  ✓ JSON completed after {cont} continuation(s)")
+                        _note_provider_success(model_config["label"])
                         return accumulated
                 except Exception as ce:
                     print(f"  ✗ Continuation error: {ce}")
                     break
             # Return whatever we accumulated even if still truncated
             print(f"  ⚠ Returning accumulated response ({len(accumulated)} chars)")
+            _note_provider_success(model_config["label"])
             return accumulated
 
+        _note_provider_success(model_config["label"])
         return text
 
     except requests.exceptions.Timeout:
