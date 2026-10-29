@@ -702,7 +702,12 @@ def call_model(prompt, model_config, system_msg=None):
     }
     # M3 and DeepSeek are reasoning models — give them a larger token budget so
     # chain-of-thought doesn't crowd out the JSON answer (seen at exactly 16384 out).
-    if api_type in ("minimax_m3", "deepseek"):
+    # M3 gets MiniMax's recommended 131072: on the tricky Connections category it
+    # burned the whole 32768 budget in reasoning and returned empty content
+    # (29 Oct 2026, 4 attempts). Thinking tokens count toward max_tokens.
+    if api_type == "minimax_m3":
+        payload["max_tokens"] = 131072
+    elif api_type == "deepseek":
         payload["max_tokens"] = 32768
     else:
         payload["max_tokens"] = 16384
@@ -711,8 +716,16 @@ def call_model(prompt, model_config, system_msg=None):
     if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m3"):
         payload["response_format"] = {"type": "json_object"}
 
-    # Reasoning models need more wall-clock time; Kimi K3 is also a reasoning model
-    request_timeout = 300 if api_type in ("minimax_m3", "kimi") else 180
+    # Reasoning models need more wall-clock time; Kimi K3 is also a reasoning model.
+    # M3 gets 900s: a 131072-token budget cannot complete inside 300s at typical
+    # throughput, and a timeout would burn the attempt the same way an empty
+    # answer does.
+    if api_type == "minimax_m3":
+        request_timeout = 900
+    elif api_type == "kimi":
+        request_timeout = 300
+    else:
+        request_timeout = 180
     try:
         # Fix 2: transport/rate-limit retries live inside the HTTP layer, so
         # a dropped connection or a 429 no longer burns a content retry.
@@ -774,7 +787,9 @@ def call_model(prompt, model_config, system_msg=None):
                     "temperature": 0.3,
                     "top_p": 0.95,
                 }
-                if api_type in ("minimax_m3", "deepseek"):
+                if api_type == "minimax_m3":
+                    cont_payload["max_tokens"] = 131072
+                elif api_type == "deepseek":
                     cont_payload["max_tokens"] = 32768
                 else:
                     cont_payload["max_tokens"] = 16384
