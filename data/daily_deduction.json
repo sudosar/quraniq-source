@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-30",
   "puzzle": {
-    "title": "A Promise Spoken Over Embers",
-    "intro": "You stand beside a desert fire as its embers are carefully spread. Visitors arrive for an encounter in the stillness, and a single message opens a story of promise, surprise, and a future not yet fulfilled.",
+    "title": "The Vigil of the Bereaved",
+    "intro": "You are about to encounter a soul tested by the deepest separation, whose eyes knew the language of tears yet whose heart never lost hope. In a story of deception, longing, and eventual reunion, this noble servant of Allah became a symbol of patience for all time. Who endured the years of hidden pain, only to have sight and joy restored in a single moment?",
     "clues": [
-      "We crossed the distance to reach a faithful servant in the desert.",
-      "We asked that embers be spread to prepare a fire.",
-      "We spoke to one who had called out to a flame for coolness and safety.",
-      "We brought tidings of a newborn to someone who had passed the age of having children.",
-      "We named the promised child Isaac.",
-      "We brought glad tidings of a son to Ibrahim, and the astonishing news left Ibrahim laughing."
+      "I am a prophet whose name became a symbol of patience in the face of great loss.",
+      "I was blessed with many sons, but one was taken from me by the jealousy of others.",
+      "My love for that lost one was so profound that my eyes turned white from grief, yet I never complained except to Allah.",
+      "I sent my sons back to search for the one I had lost and his brother, urging them not to give up hope.",
+      "When the bearer of good tidings arrived, a shirt was cast over my face, and suddenly the world became clear again.",
+      "I am known as Israel, and from my twelve sons came the twelve tribes of a great nation."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Angels Who Brought Glad Tidings of Isaac to Ibrahim",
-          "The Angels Who Warned Lut",
-          "The Throne-Bearing Angels",
-          "The Angels of Hell",
-          "The Angels Sent to Noah"
+          "Prophet Ya'qub (Jacob)",
+          "Prophet Yusuf (Joseph)",
+          "Prophet Ishaq (Isaac)",
+          "Prophet Ibrahim (Abraham)",
+          "Prophet Ayyub (Job)"
         ],
-        "answer": "The Angels Who Brought Glad Tidings of Isaac to Ibrahim"
+        "answer": "Prophet Ya'qub (Jacob)"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Bringing glad tidings of Isaac's birth to Ibrahim",
-          "Warning Lut before the punishment of his people",
-          "Announcing the birth of Yahya to Zakariyya",
-          "Bearing the Throne on the Day of Judgment",
-          "Announcing the birth of Isa to Maryam"
+          "Separation from a beloved son for many years",
+          "Being thrown into a blazing fire",
+          "Swallowed by a great fish",
+          "Afflicted with a severe skin disease",
+          "Being childless until old age"
         ],
-        "answer": "Bringing glad tidings of Isaac's birth to Ibrahim"
+        "answer": "Separation from a beloved son for many years"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "A fire prepared from spread embers",
-          "An ark floating on floodwater",
-          "A cave sealed by a rolling stone",
-          "A mountain of clay hardened by brine",
-          "A ladder extending into the sky"
+          "The shirt of Yusuf",
+          "The staff of Musa",
+          "The ark of Nuh",
+          "The she-camel of Salih",
+          "The ring of Sulayman"
         ],
-        "answer": "A fire prepared from spread embers"
+        "answer": "The shirt of Yusuf"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Glad tidings of a son named Isaac",
-          "Glad tidings of a son named Yahya",
-          "The selection of Talut as ruler over the Children of Israel",
-          "A warning before the punishment of Lut's people",
-          "A command to build an ark before the Flood"
+          "Sight restored and reunited with his son",
+          "Granted victory over a tyrant king",
+          "Raised to the heavens alive",
+          "Appointed as a ruler over Egypt",
+          "Given a son in old age as a miracle"
         ],
-        "answer": "Glad tidings of a son named Isaac"
+        "answer": "Sight restored and reunited with his son"
       }
     },
-    "verseRef": "15:51",
-    "arabic": "وَنَبِّئْهُمْ عَن ضَيْفِ إِبْرَٰهِيمَ",
-    "verse": "And inform them about the guests of Abraham, (15:51)"
+    "verseRef": "12:96",
+    "arabic": "فَلَمَّآ أَن جَآءَ ٱلْبَشِيرُ أَلْقَىٰهُ عَلَىٰ وَجْهِهِۦ فَٱرْتَدَّ بَصِيرًۭا ۖ قَالَ أَلَمْ أَقُل لَّكُمْ إِنِّىٓ أَعْلَمُ مِنَ ٱللَّهِ مَا لَا تَعْلَمُونَ",
+    "verse": "And when the bearer of good tidings arrived, he cast it over his face, and he returned [once again] seeing. He said, \"Did I not tell you that I know from Allāh that which you do not know?\" (12:96)"
   },
   "generated": true,
   "model": "auto (chain)"

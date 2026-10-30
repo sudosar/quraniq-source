@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-30",
   "puzzle": {
     "categories": [
       {
-        "name": "وَزْنُ فَاعِلٍ",
-        "nameEn": "Active participles on the pattern fāʿil (فاعل) in the Qur'an",
+        "name": "أَوْصَافٌ ذَمِيمَةٌ لِجَمَاعَاتٍ فِي الْقُرْآنِ",
+        "nameEn": "Negative descriptions of groups in the Qur'an",
         "color": "yellow",
         "items": [
           {
-            "ar": "دَاخِرُونَ",
-            "en": "(will be) humiliated",
-            "ref": "37:18",
-            "verse": "قُلْ نَعَمْ وَأَنتُمْ دَٰخِرُونَ",
-            "verseEn": "Say, \"Yes, and you will be [rendered] contemptible.\""
+            "ar": "الْأَسْفَلِينَ",
+            "en": "the lowest",
+            "ref": "37:98",
+            "verse": "فَأَرَادُوا۟ بِهِۦ كَيْدًۭا فَجَعَلْنَـٰهُمُ ٱلْأَسْفَلِينَ",
+            "verseEn": "And they intended for him a plan [i.e., harm], but We made them the most debased."
           },
           {
-            "ar": "سَاحِرٍ",
-            "en": "magician",
-            "ref": "10:79",
-            "verse": "وَقَالَ فِرْعَوْنُ ٱئْتُونِى بِكُلِّ سَـٰحِرٍ عَلِيمٍۢ",
-            "verseEn": "And Pharaoh said, \"Bring to me every learned magician.\""
+            "ar": "الْأَرْذَلُونَ",
+            "en": "the lowest",
+            "ref": "26:111",
+            "verse": "۞ قَالُوٓا۟ أَنُؤْمِنُ لَكَ وَٱتَّبَعَكَ ٱلْأَرْذَلُونَ",
+            "verseEn": "They said, \"Should we believe you while you are followed by the lowest [class of people]?\""
           },
           {
-            "ar": "الظَّالِمِينَ",
-            "en": "the wrongdoers",
-            "ref": "23:94",
-            "verse": "رَبِّ فَلَا تَجْعَلْنِى فِى ٱلْقَوْمِ ٱلظَّـٰلِمِينَ",
-            "verseEn": "My Lord, then do not place me among the wrongdoing people.\""
+            "ar": "جَبَّارِينَ",
+            "en": "(as) tyrants",
+            "ref": "26:130",
+            "verse": "وَإِذَا بَطَشْتُم بَطَشْتُمْ جَبَّارِينَ",
+            "verseEn": "And when you strike, you strike as tyrants."
           },
           {
-            "ar": "قَانِطِينَ",
-            "en": "the despairing",
-            "ref": "15:55",
-            "verse": "قَالُوا۟ بَشَّرْنَـٰكَ بِٱلْحَقِّ فَلَا تَكُن مِّنَ ٱلْقَـٰنِطِينَ",
-            "verseEn": "They said, \"We have given you good tidings in truth, so do not be of the despairing.\""
+            "ar": "كَاذِبُونَ",
+            "en": "(are) liars",
+            "ref": "26:223",
+            "verse": "يُلْقُونَ ٱلسَّمْعَ وَأَكْثَرُهُمْ كَـٰذِبُونَ",
+            "verseEn": "They pass on what is heard, and most of them are liars."
           }
         ]
       },
       {
-        "name": "أَفْعَالٌ مَاضِيَةٌ بِصِيغَةِ الْمُتَكَلِّمِينَ (نَا الْفَاعِلِينَ)",
-        "nameEn": "Past tense verbs in the first person plural (we) form",
+        "name": "أَفْعَالُ الْأَمْرِ فِي الْقُرْآنِ",
+        "nameEn": "Imperative Verbs in the Qur'an",
         "color": "green",
         "items": [
           {
-            "ar": "فَأَغْرَقْنَاهُمْ",
-            "en": "and We drowned them",
-            "ref": "43:55",
-            "verse": "فَلَمَّآ ءَاسَفُونَا ٱنتَقَمْنَا مِنْهُمْ فَأَغْرَقْنَـٰهُمْ أَجْمَعِينَ",
-            "verseEn": "And when they angered Us, We took retribution from them and drowned them all."
+            "ar": "اخْفِضْ",
+            "en": "And lower",
+            "ref": "26:215",
+            "verse": "وَٱخْفِضْ جَنَاحَكَ لِمَنِ ٱتَّبَعَكَ مِنَ ٱلْمُؤْمِنِينَ",
+            "verseEn": "And lower your wing [i.e., show kindness] to those who follow you of the believers."
           },
           {
-            "ar": "فَنَجَّيْنَاهُ",
-            "en": "So We saved him",
-            "ref": "26:170",
-            "verse": "فَنَجَّيْنَـٰهُ وَأَهْلَهُۥٓ أَجْمَعِينَ",
-            "verseEn": "So We saved him and his family, all,"
+            "ar": "تَوَكَّلْ",
+            "en": "And put (your) trust",
+            "ref": "26:217",
+            "verse": "وَتَوَكَّلْ عَلَى ٱلْعَزِيزِ ٱلرَّحِيمِ",
+            "verseEn": "And rely upon the Exalted in Might, the Merciful,"
           },
           {
-            "ar": "قَدَّرْنَا",
-            "en": "We have decreed",
-            "ref": "15:60",
-            "verse": "إِلَّا ٱمْرَأَتَهُۥ قَدَّرْنَآ ۙ إِنَّهَا لَمِنَ ٱلْغَـٰبِرِينَ",
-            "verseEn": "Except his wife.\" We [i.e., Allāh] decreed that she is of those who remain behind."
+            "ar": "تَوَلَّ",
+            "en": "So turn away",
+            "ref": "37:174",
+            "verse": "فَتَوَلَّ عَنْهُمْ حَتَّىٰ حِينٍۢ",
+            "verseEn": "So, [O Muḥammad], leave them for a time."
           },
           {
-            "ar": "بَعَثْنَا",
-            "en": "We sent",
-            "ref": "10:74",
-            "verse": "ثُمَّ بَعَثْنَا مِنۢ بَعْدِهِۦ رُسُلًا إِلَىٰ قَوْمِهِمْ فَجَآءُوهُم بِٱلْبَيِّنَـٰتِ فَمَا كَانُوا۟ لِيُؤْمِنُوا۟ بِمَا كَذَّبُوا۟ بِهِۦ مِن قَبْلُ ۚ كَذَٰلِكَ نَطْبَعُ عَلَىٰ قُلُوبِ ٱلْمُعْتَدِينَ",
-            "verseEn": "Then We sent after him messengers to their peoples, and they came to them with clear proofs. But they were not to believe in that which they had denied before. Thus We seal over the hearts of the transgressors."
+            "ar": "أَبْصِرْهُمْ",
+            "en": "And see them",
+            "ref": "37:175",
+            "verse": "وَأَبْصِرْهُمْ فَسَوْفَ يُبْصِرُونَ",
+            "verseEn": "And see [what will befall] them, for they are going to see."
           }
         ]
       },
       {
-        "name": "اِسْمُ مَفْعُولٍ بِصِيغَةِ جَمْعِ الْمُذَكَّرِ السَّالِمِ",
-        "nameEn": "Passive participles in the sound masculine plural form in the Qur'an",
+        "name": "أَلْقَابُ الصَّالِحِينَ فِي الْقُرْآنِ",
+        "nameEn": "Titles of the Righteous in the Qur'an",
         "color": "blue",
         "items": [
           {
-            "ar": "لَمُحْضَرُونَ",
-            "en": "(will) surely be brought",
-            "ref": "37:127",
-            "verse": "فَكَذَّبُوهُ فَإِنَّهُمْ لَمُحْضَرُونَ",
-            "verseEn": "And they denied him, so indeed, they will be brought [for punishment],"
+            "ar": "الْمُؤْمِنِينَ",
+            "en": "believing",
+            "ref": "37:132",
+            "verse": "إِنَّهُۥ مِنْ عِبَادِنَا ٱلْمُؤْمِنِينَ",
+            "verseEn": "Indeed, he was of Our believing servants."
           },
           {
-            "ar": "الْمُخْلَصِينَ",
-            "en": "the chosen ones",
-            "ref": "37:128",
-            "verse": "إِلَّا عِبَادَ ٱللَّهِ ٱلْمُخْلَصِينَ",
-            "verseEn": "Except the chosen servants of Allāh."
+            "ar": "الْمُحْسِنِينَ",
+            "en": "the good-doers",
+            "ref": "37:131",
+            "verse": "إِنَّا كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ",
+            "verseEn": "Indeed, We thus reward the doers of good."
           },
           {
-            "ar": "الْمَرْجُومِينَ",
-            "en": "those who are stoned",
-            "ref": "26:116",
-            "verse": "قَالُوا۟ لَئِن لَّمْ تَنتَهِ يَـٰنُوحُ لَتَكُونَنَّ مِنَ ٱلْمَرْجُومِينَ",
-            "verseEn": "They said, \"If you do not desist, O Noah, you will surely be of those who are stoned.\""
+            "ar": "الصَّافُّونَ",
+            "en": "stand in rows",
+            "ref": "37:165",
+            "verse": "وَإِنَّا لَنَحْنُ ٱلصَّآفُّونَ",
+            "verseEn": "And indeed, we are those who line up [for prayer]."
           },
           {
-            "ar": "الْمُعَذَّبِينَ",
-            "en": "those punished",
-            "ref": "26:213",
-            "verse": "فَلَا تَدْعُ مَعَ ٱللَّهِ إِلَـٰهًا ءَاخَرَ فَتَكُونَ مِنَ ٱلْمُعَذَّبِينَ",
-            "verseEn": "So do not invoke with Allāh another deity and [thus] be among the punished."
+            "ar": "الْمُسَبِّحُونَ",
+            "en": "glorify (Allah)",
+            "ref": "37:166",
+            "verse": "وَإِنَّا لَنَحْنُ ٱلْمُسَبِّحُونَ",
+            "verseEn": "And indeed, we are those who exalt Allāh.\""
           }
         ]
       },
       {
-        "name": "ألفاظ الزمان في القرآن",
-        "nameEn": "Time-related words in the Qur'an",
+        "name": "أَفْعَالٌ تُؤَدَّى بِالْيَدِ",
+        "nameEn": "Actions performed with the hands",
         "color": "purple",
         "items": [
           {
-            "ar": "اللَّيْلِ",
-            "en": "the night",
-            "ref": "15:65",
-            "verse": "فَأَسْرِ بِأَهْلِكَ بِقِطْعٍۢ مِّنَ ٱلَّيْلِ وَٱتَّبِعْ أَدْبَـٰرَهُمْ وَلَا يَلْتَفِتْ مِنكُمْ أَحَدٌۭ وَٱمْضُوا۟ حَيْثُ تُؤْمَرُونَ",
-            "verseEn": "So set out with your family during a portion of the night and follow behind them and let not anyone among you look back and continue on to where you are commanded.\""
+            "ar": "ضَرْبًا",
+            "en": "striking",
+            "ref": "37:93",
+            "verse": "فَرَاغَ عَلَيْهِمْ ضَرْبًۢا بِٱلْيَمِينِ",
+            "verseEn": "And he turned upon them a blow with [his] right hand."
           },
           {
-            "ar": "سِنِينَ",
-            "en": "(for) years",
-            "ref": "26:205",
-            "verse": "أَفَرَءَيْتَ إِن مَّتَّعْنَـٰهُمْ سِنِينَ",
-            "verseEn": "Then have you considered if We gave them enjoyment for years"
+            "ar": "تَنْحِتُونَ",
+            "en": "you carve",
+            "ref": "37:95",
+            "verse": "قَالَ أَتَعْبُدُونَ مَا تَنْحِتُونَ",
+            "verseEn": "He said, \"Do you worship that which you [yourselves] carve,"
           },
           {
-            "ar": "مُصْبِحِينَ",
-            "en": "(in the) morning",
-            "ref": "37:137",
-            "verse": "وَإِنَّكُمْ لَتَمُرُّونَ عَلَيْهِم مُّصْبِحِينَ",
-            "verseEn": "And indeed, you pass by them in the morning"
+            "ar": "ابْنُوا",
+            "en": "Build",
+            "ref": "37:97",
+            "verse": "قَالُوا۟ ٱبْنُوا۟ لَهُۥ بُنْيَـٰنًۭا فَأَلْقُوهُ فِى ٱلْجَحِيمِ",
+            "verseEn": "They said, \"Construct for him a structure [i.e., furnace] and throw him into the burning fire.\""
           },
           {
-            "ar": "حِينٍ",
-            "en": "a while",
-            "ref": "37:148",
-            "verse": "فَـَٔامَنُوا۟ فَمَتَّعْنَـٰهُمْ إِلَىٰ حِينٍۢ",
-            "verseEn": "And they believed, so We gave them enjoyment [of life] for a time."
+            "ar": "فَأْتُوا",
+            "en": "Then bring",
+            "ref": "37:157",
+            "verse": "فَأْتُوا۟ بِكِتَـٰبِكُمْ إِن كُنتُمْ صَـٰدِقِينَ",
+            "verseEn": "Then produce your scripture, if you should be truthful."
           }
         ]
       }

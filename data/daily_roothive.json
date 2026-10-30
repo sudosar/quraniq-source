@@ -1,588 +1,538 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-30",
   "puzzle": {
-    "center": "ع",
+    "center": "ل",
     "outer": [
-      "ا",
-      "س",
-      "ت",
-      "و",
       "م",
-      "ل"
+      "ا",
+      "و",
+      "غ",
+      "ه",
+      "ف"
     ],
     "root": {
-      "letters": "متع",
-      "display": "م ت ع",
-      "translit": "m-t-ʿ",
-      "meaning": "It conveys giving or receiving benefit, provision, or enjoyment that sustains life. Its derived words extend this idea to being provided for, profiting, and taking advantage.",
-      "occurrences": 70,
-      "lemmaCount": 4
+      "letters": "غفل",
+      "display": "غ ف ل",
+      "translit": "gh-f-l",
+      "meaning": "This root centers on being heedless or unaware, failing to notice what matters. Its derived words express that state, the act of neglecting, or causing someone to become unmindful.",
+      "occurrences": 35,
+      "lemmaCount": 5
     },
     "words": [
       {
-        "w": "تسع",
+        "w": "افل",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "تِسْع",
-            "gloss": "nine",
-            "type": "noun",
-            "root": "تسع",
-            "count": 5,
-            "ref": "17:101",
-            "pos": 4,
-            "alt": [
-              "ninety-nine"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "سمع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "سَمِعَ",
-            "gloss": "heard",
+            "lemma": "أَفَلَ",
+            "gloss": "set",
             "type": "verb",
-            "root": "سمع",
-            "count": 78,
-            "ref": "2:171",
-            "pos": 9,
-            "alt": [
-              "hear",
-              "hears"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "سَمْع",
-            "gloss": "hear",
-            "type": "noun",
-            "root": "سمع",
-            "count": 22,
-            "ref": "18:101",
+            "root": "أفل",
+            "count": 3,
+            "ref": "6:76",
             "pos": 11,
-            "alt": [
-              "hearing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عام",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عام",
-            "gloss": "year",
-            "type": "noun",
-            "root": "عوم",
-            "count": 9,
-            "ref": "2:259",
-            "pos": 20,
-            "alt": [
-              "one year",
-              "two years"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عتو",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عُتُوّ",
-            "gloss": "insolence",
-            "type": "noun",
-            "root": "عتو",
-            "count": 2,
-            "ref": "25:21",
-            "pos": 18,
-            "alt": [
-              "pride"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "علا",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَلا",
-            "gloss": "exalted himself",
-            "type": "verb",
-            "root": "علو",
-            "count": 6,
-            "ref": "28:4",
-            "pos": 3,
             "form": 1
           }
         ]
       },
       {
-        "w": "علم",
+        "w": "الف",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "عَلِمَ",
-            "gloss": "knew",
-            "type": "verb",
-            "root": "علم",
-            "count": 382,
-            "ref": "2:30",
-            "pos": 25,
+            "lemma": "أَلْف",
+            "gloss": "thousand",
+            "type": "noun",
+            "root": "ألف",
+            "count": 14,
+            "ref": "2:96",
+            "pos": 13,
             "alt": [
-              "knows",
-              "know"
+              "thousands",
+              "two thousand"
+            ]
+          },
+          {
+            "lemma": "أَلَّفَ",
+            "gloss": "put affection",
+            "type": "verb",
+            "root": "ألف",
+            "count": 5,
+            "ref": "8:63",
+            "pos": 16,
+            "alt": [
+              "joins"
             ],
-            "form": 1
-          },
-          {
-            "lemma": "عِلْم",
-            "gloss": "knowledge",
-            "type": "noun",
-            "root": "علم",
-            "count": 105,
-            "ref": "2:32",
-            "pos": 4,
-            "alt": [
-              "any knowledge",
-              "having known"
-            ]
-          },
-          {
-            "lemma": "عَلَّمَ",
-            "gloss": "taught",
-            "type": "verb",
-            "root": "علم",
-            "count": 41,
-            "ref": "55:2",
-            "pos": 1,
             "form": 2
-          }
-        ]
-      },
-      {
-        "w": "علو",
-        "family": false,
-        "points": 1,
-        "senses": [
+          },
           {
-            "lemma": "عُلُوّ",
-            "gloss": "haughtiness",
-            "type": "noun",
-            "root": "علو",
-            "count": 4,
-            "ref": "17:4",
+            "lemma": "أَلْفَ",
+            "gloss": "found",
+            "type": "verb",
+            "root": "لفو",
+            "count": 3,
+            "ref": "2:170",
             "pos": 12,
             "alt": [
-              "height",
-              "exaltedness"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عمل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَمِلَ",
-            "gloss": "does",
-            "type": "verb",
-            "root": "عمل",
-            "count": 276,
-            "ref": "3:30",
-            "pos": 6,
-            "alt": [
-              "do",
-              "did"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "عَمَل",
-            "gloss": "deed",
-            "type": "noun",
-            "root": "عمل",
-            "count": 71,
-            "ref": "3:195",
-            "pos": 7,
-            "alt": [
-              "deeds",
-              "work"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "متع",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "مَتَّعْ",
-            "gloss": "provide for",
-            "type": "verb",
-            "root": "متع",
-            "count": 18,
-            "ref": "2:126",
-            "pos": 22,
-            "alt": [
-              "grant him enjoyment",
-              "make provision for"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "وسع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وَسِعَ",
-            "gloss": "encompasses",
-            "type": "verb",
-            "root": "وسع",
-            "count": 6,
-            "ref": "2:255",
-            "pos": 41,
-            "alt": [
-              "extends",
-              "has encompassed"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "وُسْع",
-            "gloss": "capacity",
-            "type": "noun",
-            "root": "وسع",
-            "count": 5,
-            "ref": "2:233",
-            "pos": 21
-          }
-        ]
-      },
-      {
-        "w": "اسمع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَسْمَعَ",
-            "gloss": "cause to hear",
-            "type": "verb",
-            "root": "سمع",
-            "count": 13,
-            "ref": "10:42",
-            "pos": 6,
-            "alt": [
-              "cause the deaf to hear",
-              "how they will hear"
+              "both found"
             ],
             "form": 4
           }
         ]
       },
       {
-        "w": "اعلم",
+        "w": "اله",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَعْلَم",
-            "gloss": "most knowing",
+            "lemma": "إِلٰه",
+            "gloss": "god",
             "type": "noun",
-            "root": "علم",
-            "count": 49,
-            "ref": "2:140",
-            "pos": 15,
+            "root": "أله",
+            "count": 147,
+            "ref": "2:133",
+            "pos": 23,
             "alt": [
-              "knows best",
-              "know best"
+              "gods",
+              "one god"
             ]
           }
         ]
       },
       {
-        "w": "تمتع",
-        "family": true,
-        "points": 4,
+        "w": "امل",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "تَمَتَّعَ",
-            "gloss": "took advantage",
-            "type": "verb",
-            "root": "متع",
-            "count": 11,
-            "ref": "2:196",
-            "pos": 37,
-            "alt": [
-              "enjoy"
-            ],
-            "form": 5
+            "lemma": "أَمَل",
+            "gloss": "hope",
+            "type": "noun",
+            "root": "أمل",
+            "count": 2,
+            "ref": "18:46",
+            "pos": 13
           }
         ]
       },
       {
-        "w": "سماع",
+        "w": "اهل",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "سَمّاع",
-            "gloss": "listeners",
+            "lemma": "أَهْل",
+            "gloss": "people",
             "type": "noun",
-            "root": "سمع",
-            "count": 4,
-            "ref": "5:41",
-            "pos": 20,
+            "root": "أهل",
+            "count": 127,
+            "ref": "2:105",
+            "pos": 6,
             "alt": [
-              "would have listened"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عالم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "عالَم",
-            "gloss": "worlds",
-            "type": "noun",
-            "root": "علم",
-            "count": 73,
-            "ref": "1:2",
-            "pos": 4,
-            "alt": [
-              "to the worlds",
-              "universe"
+              "people of the book",
+              "worthy"
             ]
           },
           {
-            "lemma": "عالِم",
-            "gloss": "knower",
-            "type": "active participle",
-            "root": "علم",
-            "count": 18,
-            "ref": "6:73",
-            "pos": 19,
-            "alt": [
-              "all-knower",
-              "well-knowing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عامل",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "عامِل",
-            "gloss": "working",
-            "type": "active participle",
-            "root": "عمل",
-            "count": 12,
-            "ref": "3:195",
-            "pos": 8,
-            "alt": [
-              "doer",
-              "worker"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "علام",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "عَلّام",
-            "gloss": "all-knower",
-            "type": "noun",
-            "root": "علم",
-            "count": 4,
-            "ref": "5:109",
-            "pos": 14,
-            "alt": [
-              "knower"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "متاع",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مَتاع",
-            "gloss": "enjoy",
-            "type": "noun",
-            "root": "متع",
-            "count": 35,
-            "ref": "2:236",
-            "pos": 21,
-            "alt": [
-              "enjoyment",
-              "provision"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "موسع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُوسِع",
-            "gloss": "wealthy",
-            "type": "active participle",
-            "root": "وسع",
-            "count": 2,
-            "ref": "2:236",
-            "pos": 16,
-            "alt": [
-              "expanders"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "واسع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "واسِع",
-            "gloss": "vast",
-            "type": "active participle",
-            "root": "وسع",
-            "count": 9,
-            "ref": "2:115",
-            "pos": 11,
-            "alt": [
-              "all-encompassing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "استمع",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "اسْتَمَعَ",
-            "gloss": "listen",
+            "lemma": "أُهِلَّ",
+            "gloss": "has been dedicated",
             "type": "verb",
-            "root": "سمع",
-            "count": 16,
-            "ref": "6:25",
-            "pos": 3,
+            "root": "هلل",
+            "count": 4,
+            "ref": "2:173",
+            "pos": 9,
             "alt": [
-              "listened",
-              "listens"
+              "dedicated"
             ],
-            "form": 8
+            "form": 4
           }
         ]
       },
       {
-        "w": "اعلام",
+        "w": "اول",
         "family": false,
-        "points": 3,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَعْلام",
-            "gloss": "like mountains",
+            "lemma": "أَوَّل",
+            "gloss": "first",
             "type": "noun",
-            "root": "علم",
+            "root": "أول",
+            "count": 82,
+            "ref": "2:41",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "غلف",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "غُلْف",
+            "gloss": "wrapped",
+            "type": "noun",
+            "root": "غلف",
             "count": 2,
-            "ref": "42:32",
+            "ref": "2:88",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "لغو",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "لَغْو",
+            "gloss": "vain talk",
+            "type": "noun",
+            "root": "لغو",
+            "count": 9,
+            "ref": "19:62",
+            "pos": 4,
+            "alt": [
+              "ill speech",
+              "any vain talk"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "لهو",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "لَهْو",
+            "gloss": "amusement",
+            "type": "noun",
+            "root": "لهو",
+            "count": 10,
+            "ref": "7:51",
+            "pos": 4,
+            "alt": [
+              "pastime",
+              "idle tales"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مال",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مال",
+            "gloss": "wealth",
+            "type": "noun",
+            "root": "مول",
+            "count": 86,
+            "ref": "2:188",
+            "pos": 13,
+            "alt": [
+              "any wealth",
+              "wealth of allah"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ملا",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَلَأ",
+            "gloss": "chiefs",
+            "type": "noun",
+            "root": "ملأ",
+            "count": 30,
+            "ref": "11:38",
             "pos": 6
           }
         ]
       },
       {
-        "w": "مستمع",
+        "w": "مله",
         "family": false,
-        "points": 3,
+        "points": 1,
         "senses": [
           {
-            "lemma": "مُسْتَمِع",
-            "gloss": "listening",
-            "type": "active participle",
-            "root": "سمع",
-            "count": 2,
-            "ref": "26:15",
-            "pos": 7
+            "lemma": "مِلَّة",
+            "gloss": "religion",
+            "type": "noun",
+            "root": "ملل",
+            "count": 15,
+            "ref": "2:130",
+            "pos": 4
           }
         ]
       },
       {
-        "w": "معلوم",
+        "w": "مهل",
         "family": false,
-        "points": 3,
+        "points": 1,
         "senses": [
           {
-            "lemma": "مَعْلُوم",
-            "gloss": "known",
-            "type": "passive participle",
-            "root": "علم",
-            "count": 11,
-            "ref": "15:4",
-            "pos": 8,
+            "lemma": "مُهْل",
+            "gloss": "like molten brass",
+            "type": "noun",
+            "root": "مهل",
+            "count": 3,
+            "ref": "18:29",
+            "pos": 22,
             "alt": [
-              "well-known",
-              "determined"
+              "like the murky oil",
+              "like molten copper"
+            ]
+          },
+          {
+            "lemma": "مَهِّلِ",
+            "gloss": "allow them respite",
+            "type": "verb",
+            "root": "مهل",
+            "count": 2,
+            "ref": "73:11",
+            "pos": 5,
+            "alt": [
+              "give respite"
+            ],
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "هلم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هَلُمّ",
+            "gloss": "bring forward",
+            "type": "noun",
+            "root": "هلم",
+            "count": 2,
+            "ref": "6:150",
+            "pos": 2,
+            "alt": [
+              "come"
             ]
           }
         ]
       },
       {
-        "w": "استمتع",
+        "w": "اغفل",
         "family": true,
-        "points": 6,
+        "points": 4,
         "senses": [
           {
-            "lemma": "اسْتَمْتَعَ",
-            "gloss": "profited",
+            "lemma": "أَغْفَلْ",
+            "gloss": "have made heedless",
             "type": "verb",
-            "root": "متع",
-            "count": 6,
-            "ref": "6:128",
-            "pos": 15,
+            "root": "غفل",
+            "count": 1,
+            "ref": "18:28",
+            "pos": 22,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "الاف",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "إِلاف",
+            "gloss": "familiarity",
+            "type": "verbal noun",
+            "root": "ألف",
+            "count": 2,
+            "ref": "106:1",
+            "pos": 1
+          }
+        ]
+      },
+      {
+        "w": "الله",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "اللَّه",
+            "gloss": "besides allah",
+            "type": "proper noun",
+            "root": "أله",
+            "count": 2699,
+            "ref": "1:1",
+            "pos": 2,
             "alt": [
-              "enjoyed"
-            ],
-            "form": 10
+              "allah",
+              "allah lets go astray"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "غافل",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "غافِل",
+            "gloss": "unaware",
+            "type": "active participle",
+            "root": "غفل",
+            "count": 27,
+            "ref": "6:131",
+            "pos": 10,
+            "alt": [
+              "heedless"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "غفله",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "غَفْلَة",
+            "gloss": "heedlessness",
+            "type": "noun",
+            "root": "غفل",
+            "count": 5,
+            "ref": "19:39",
+            "pos": 9,
+            "alt": [
+              "inattention"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "غلام",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "غُلام",
+            "gloss": "son",
+            "type": "noun",
+            "root": "غلم",
+            "count": 13,
+            "ref": "3:40",
+            "pos": 6,
+            "alt": [
+              "boy",
+              "boys"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "لولو",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "لُؤْلُؤ",
+            "gloss": "pearls",
+            "type": "noun",
+            "root": "لؤلؤ",
+            "count": 6,
+            "ref": "52:24",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "ملوم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَلُوم",
+            "gloss": "blameworthy",
+            "type": "passive participle",
+            "root": "لوم",
+            "count": 5,
+            "ref": "17:29",
+            "pos": 12
+          }
+        ]
+      },
+      {
+        "w": "اللهم",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "اللَّهُمَّ",
+            "gloss": "o allah",
+            "type": "proper noun",
+            "root": "أله",
+            "count": 5,
+            "ref": "3:26",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "غافله",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "غافِلَة",
+            "gloss": "unaware women",
+            "type": "active participle",
+            "root": "غفل",
+            "count": 1,
+            "ref": "24:23",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "مغلوله",
+        "family": false,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مَغْلُولَة",
+            "gloss": "chained",
+            "type": "passive participle",
+            "root": "غلل",
+            "count": 2,
+            "ref": "5:64",
+            "pos": 5
           }
         ]
       }
     ],
-    "otherFamily": [],
-    "maxScore": 54,
-    "featuredRoot": "متع"
+    "otherFamily": [
+      {
+        "lemma": "تَغْفُلُ",
+        "gloss": "neglect",
+        "type": "verb",
+        "root": "غفل",
+        "count": 1,
+        "ref": "4:102",
+        "pos": 32,
+        "form": 1
+      }
+    ],
+    "maxScore": 48,
+    "featuredRoot": "غفل"
   },
   "generated": true,
   "model": "auto (chain)"
