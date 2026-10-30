@@ -3652,7 +3652,120 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
     return None
 
 
-def generate_connections(history, today):
+
+# ── Connections per-category checkpointing (Oct 2026) ────────────────
+# A Connections run can take hours and be killed (e.g. GitHub's 6h job
+# timeout) after categories 1–3 were accepted. Previously those accepted
+# categories lived only in memory, so every retry regenerated the whole
+# game. Now each accepted category is checkpointed the moment it is
+# accepted, and a later run resumes from it instead of starting over.
+# The checkpoint lives in data/checkpoints/ (NOT data/history/, so
+# load_history() never sees it) and under data/ so the workflow's
+# `git add data/` step (if: always()) commits it even when the job is
+# cancelled — verified on the 29 Oct timeout kill, where the always()
+# commit step still ran after the cancellation.
+CHECKPOINT_DIR = os.path.join(DATA_DIR, "checkpoints")
+
+
+def _connections_checkpoint_path(today):
+    return os.path.join(CHECKPOINT_DIR, f"{today}-connections.json")
+
+
+def _category_refs(cat):
+    refs = set()
+    if isinstance(cat, dict):
+        for item in cat.get("items", []):
+            if isinstance(item, dict) and item.get("ref"):
+                refs.add(item["ref"])
+    return refs
+
+
+def _collect_today_refs(today_puzzles):
+    """All verse refs already used by today's other games. Scans
+    recursively for 'surah:ayah' strings, excluding any connections entry
+    itself. Those games were built without knowledge of the checkpointed
+    categories, so their refs win on collision."""
+    refs = set()
+    verse_re = re.compile(r"^\d+:\d+$")
+
+    def walk(node):
+        if isinstance(node, dict):
+            for key, value in node.items():
+                if key == "connections":
+                    continue
+                walk(value)
+        elif isinstance(node, list):
+            for value in node:
+                walk(value)
+        elif isinstance(node, str) and verse_re.match(node):
+            refs.add(node)
+
+    walk(today_puzzles or {})
+    return refs
+
+
+def _valid_checkpoint_category(cat):
+    if not isinstance(cat, dict):
+        return False
+    items = cat.get("items")
+    if not isinstance(items, list) or not items:
+        return False
+    return all(isinstance(i, dict) and i.get("verse") and i.get("ref") for i in items)
+
+
+def _load_connections_checkpoint(today, today_puzzles=None):
+    """Return resumed categories (possibly empty). Drops structurally
+    invalid categories and any category whose refs collide with today's
+    already-generated games."""
+    path = _connections_checkpoint_path(today)
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"  ⚠ Ignoring unreadable Connections checkpoint: {e}")
+        return []
+    if data.get("date") != today:
+        return []
+    cats = data.get("categories", [])
+    if not isinstance(cats, list):
+        return []
+    taken = _collect_today_refs(today_puzzles)
+    resumed = []
+    for cat in cats:
+        # Truncate (don't skip) at the first bad category: colors and
+        # difficulties are tied to category position, so resuming must
+        # always be a prefix of the list, never a gappy subset.
+        if not _valid_checkpoint_category(cat):
+            name = cat.get("nameEn", "?") if isinstance(cat, dict) else "?"
+            print(f"  ⚠ Truncating checkpoint at invalid category: {name}")
+            break
+        if _category_refs(cat) & taken:
+            print(f"  ⚠ Truncating checkpoint at category {cat.get('nameEn', '?')!r}: verse refs already used by today's other games")
+            break
+        resumed.append(cat)
+    if resumed:
+        print(f"  ↻ Resuming Connections from checkpoint: {len(resumed)}/4 categories already accepted")
+    return resumed
+
+
+def _save_connections_checkpoint(today, cats):
+    os.makedirs(CHECKPOINT_DIR, exist_ok=True)
+    tmp = _connections_checkpoint_path(today) + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump({"date": today, "categories": cats}, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, _connections_checkpoint_path(today))
+
+
+def _clear_connections_checkpoint(today):
+    try:
+        os.remove(_connections_checkpoint_path(today))
+    except OSError:
+        pass
+
+
+def generate_connections(history, today, today_puzzles=None, resume=True):
     """Generate the full Connections puzzle one category at a time.
 
     Each category is a focused LLM call (not one-shot for all 16 items).
@@ -3665,9 +3778,14 @@ def generate_connections(history, today):
     print(f"  Generating: Ayah Connections (category-by-category)")
     print(f"{'═'*60}")
 
-    accumulated_cats = []
+    # Seed the global verse-avoidance set with today's already-generated
+    # games, so fresh categories steer clear of their refs too (on a retry
+    # day those games were built without knowledge of this game).
+    history["all_verses"] |= _collect_today_refs(today_puzzles)
 
-    for cat_index in range(4):
+    accumulated_cats = _load_connections_checkpoint(today, today_puzzles) if resume else []
+
+    for cat_index in range(len(accumulated_cats), 4):
         color = COLORS[cat_index]
         difficulty = DIFFICULTY_LABELS[cat_index]
         print(f"\n  ── Category {cat_index+1}/4 ({color}, {difficulty}) ──")
@@ -3678,6 +3796,7 @@ def generate_connections(history, today):
             return None
 
         accumulated_cats.append(cat)
+        _save_connections_checkpoint(today, accumulated_cats)
 
     puzzle = {"categories": accumulated_cats}
 
@@ -3685,12 +3804,17 @@ def generate_connections(history, today):
     errors, cooldown_violations, warnings = validate_connections(puzzle, history)
     if errors:
         print(f"  ✗ Final cross-category validation errors: {errors}")
+        # A validation failure means the set as a whole is bad; drop the
+        # checkpoint so the next run regenerates from scratch instead of
+        # re-validating the same failing set forever.
+        _clear_connections_checkpoint(today)
         return None
     if cooldown_violations:
         # Shouldn't happen if per-category validation worked, but log it
         print(f"  ⚠ Final validation warnings (puzzle accepted): {cooldown_violations}")
 
     print(f"\n  ✓ Ayah Connections generated successfully (4 categories, 20 verses verified)")
+    _clear_connections_checkpoint(today)
     return puzzle
 
 
@@ -3832,7 +3956,7 @@ def main():
             time.sleep(60)
 
         if game_type == "connections":
-            puzzle = generate_connections(history, today)
+            puzzle = generate_connections(history, today, today_puzzles=existing_puzzles, resume=not force_regen)
         elif game_type == "roothive":
             puzzle = generate_roothive(history, today)
         else:
