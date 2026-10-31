@@ -557,6 +557,9 @@ def is_json_truncated(text):
 _TRANSPORT_BACKOFF_S = (5, 15, 45)      # per transport attempt, in seconds
 _RATE_LIMIT_BACKOFF_S = (30, 60, 120)    # per rate-limit wait, in seconds
 _PROVIDER_UNHEALTHY_AFTER = 2            # consecutive failures before skip
+_SECOND_PASS_COOLDOWN_S = 300            # wait before a category's 2nd full-chain pass
+_MAX_CATEGORY_PASSES = 2                 # full MODEL_CHAIN passes per category, max
+_NARROW_PASS_SURAHS = 6                  # surahs advertised on a 2nd pass (vs 20 normally)
 _PROVIDER_FAILURES = {}                  # label -> consecutive failure count
 
 
@@ -592,7 +595,25 @@ def _post_with_retries(api_url, headers, payload, timeout, label):
             print(f"  ✗ Transport error calling {label}: {e}")
             continue
         if resp.status_code == 429:
-            for rl_wait in _RATE_LIMIT_BACKOFF_S:
+            # Log the 429 body once: the provider's error.type names the cause
+            # (quota exhaustion vs overload vs tier limit). Previously the body
+            # was never printed, so chronic Kimi 429s stayed undiagnosed.
+            try:
+                _body = resp.json()
+                _etype = _body.get("error", {}).get("type") if isinstance(_body, dict) else None
+            except Exception:
+                _etype = None
+            print(f"  ⚠ Rate limited on {label} (error.type={_etype}; body: {resp.text[:300]!r})")
+            _retry_after = resp.headers.get("Retry-After") if resp.headers else None
+            try:
+                _retry_after_s = int(_retry_after) if _retry_after is not None else None
+            except (TypeError, ValueError):
+                _retry_after_s = None
+            if _retry_after_s is not None:
+                _waits = [min(_retry_after_s, 300)] + list(_RATE_LIMIT_BACKOFF_S[1:])
+            else:
+                _waits = list(_RATE_LIMIT_BACKOFF_S)
+            for rl_wait in _waits:
                 print(f"  ⚠ Rate limited on {label}; waiting {rl_wait}s before retry...")
                 time.sleep(rl_wait)
                 try:
@@ -901,7 +922,23 @@ DIFFICULTY_DESCRIPTIONS = {
 }
 
 
-def build_single_category_prompt(history, today, cat_index, accumulated_cats, previous_violations=None, force_pivot=False):
+def _narrow_offered_ranges(offered, count):
+    """Evenly-spaced deterministic subset of the ranked offered ranges.
+
+    A 2nd pass advertises only a handful of passages instead of the full
+    ~20-surah allowlist: fewer, concrete options are harder for a model to
+    skim past on its way back to famous verses from memory. The validator
+    accepts any ref in the FULL offered set, so narrowing is guidance only
+    — a model that picks another free range still passes validation.
+    """
+    items = list(offered.items())
+    if len(items) <= count:
+        return dict(items)
+    stride = len(items) / count
+    return dict(items[int(i * stride)] for i in range(count))
+
+
+def build_single_category_prompt(history, today, cat_index, accumulated_cats, previous_violations=None, force_pivot=False, narrow_pass=False):
     """Build prompt for ONE Connections category (cat_index 0-3)."""
     color = COLORS[cat_index]
     difficulty = DIFFICULTY_LABELS[cat_index]
@@ -956,7 +993,13 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
     # offered_ranges is the SINGLE source of truth: the prompt renders these
     # ranges and the validator accepts refs from exactly these ranges, so the
     # model is never offered a neighbourhood it is then punished for using.
-    allowed_ranges = format_allowed_ranges(offered_ranges(blocked_refs))
+    offered = offered_ranges(blocked_refs)
+    if narrow_pass:
+        allowed_ranges = format_allowed_ranges(
+            _narrow_offered_ranges(offered, _NARROW_PASS_SURAHS)
+        )
+    else:
+        allowed_ranges = format_allowed_ranges(offered)
     # NOTE: the previous implementation built a comma-joined list of every
     # blocked ref (~22k chars / ~5.6k tokens) and interpolated it into
     # RULES below. That single line was 98% of the prompt and the model
@@ -1026,6 +1069,16 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
             "ABANDON YOUR CURRENT THEME AND VERSES. Choose a COMPLETELY DIFFERENT theme and different words."
         )
 
+    narrow_block = ""
+    if narrow_pass:
+        narrow_block = (
+            "\n\nNARROWED SCOPE FOR THIS ATTEMPT: previous attempts kept reusing "
+            "verses from memory instead of the passages above. For THIS attempt, "
+            "use ONLY the passages listed in rule 4 — pick your 4 words from "
+            "those passages and nowhere else. Do not fall back to famous verses "
+            "you remember."
+        )
+
     return f"""You are a precise data engine for Quranic category generation.
 
 DATE: {today}
@@ -1082,7 +1135,7 @@ RULES:
    Arabic grammar training and cannot see the pattern from the words
    alone. Prefer THEMATIC patterns — what the words are, mean, or do.
 
-{chosen_block}{violation_block}
+{narrow_block}{chosen_block}{violation_block}
 
 OUTPUT FORMAT: Return ONLY a valid JSON object for this single category (if not using <think> tags):
 {{
@@ -3540,113 +3593,122 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
     previous_violations = None
     total_attempt = 0
 
-    for model_config in MODEL_CHAIN:
-        model_label = model_config["label"]
-        print(f"    Trying: {model_label}")
+    for pass_no in range(1, _MAX_CATEGORY_PASSES + 1):
+        narrow_pass = pass_no > 1
+        if narrow_pass:
+            print(f"  ↻ Second pass for category {cat_index+1} after {_SECOND_PASS_COOLDOWN_S}s cooldown (narrowed passages)...")
+            time.sleep(_SECOND_PASS_COOLDOWN_S)
+            _PROVIDER_FAILURES.clear()
+        for model_config in MODEL_CHAIN:
+            model_label = model_config["label"]
+            print(f"    Trying: {model_label}")
 
-        for retry in range(1, MAX_RETRIES + 1):
-            total_attempt += 1
-            print(f"    Attempt {total_attempt} (retry {retry}/{MAX_RETRIES})...")
+            for retry in range(1, MAX_RETRIES + 1):
+                total_attempt += 1
+                print(f"    Attempt {total_attempt} (retry {retry}/{MAX_RETRIES})...")
 
-            # Inject theme pivot logic if we've failed multiple times or the last failure was a theme violation
-            force_pivot = (retry > 2) or bool(
-                previous_violations and
-                any("theme" in str(v).lower() for v in previous_violations)
-            )
-            prompt = build_single_category_prompt(
-                history, today, cat_index, accumulated_cats, previous_violations, force_pivot=force_pivot
-            )
-            raw = call_model(prompt, model_config)
+                # Inject theme pivot logic if we've failed multiple times or the last failure was a theme violation
+                force_pivot = (retry > 2) or bool(
+                    previous_violations and
+                    any("theme" in str(v).lower() for v in previous_violations)
+                )
+                prompt = build_single_category_prompt(
+                    history, today, cat_index, accumulated_cats, previous_violations, force_pivot=force_pivot, narrow_pass=narrow_pass
+                )
+                raw = call_model(prompt, model_config)
 
-            if raw == "RATE_LIMITED":
-                if retry < MAX_RETRIES:
-                    print(f"    Rate limited on {model_label}, waiting 30s...")
-                    time.sleep(30)
-                    continue
-                else:
-                    print(f"    Rate limited on {model_label} (no retries left), falling back...")
+                if raw == "RATE_LIMITED":
+                    if retry < MAX_RETRIES:
+                        print(f"    Rate limited on {model_label}, waiting 30s...")
+                        time.sleep(30)
+                        continue
+                    else:
+                        print(f"    Rate limited on {model_label} (no retries left), falling back...")
+                        break
+
+                if raw == "SKIP":
+                    if _provider_is_unhealthy(model_label):
+                        print(f"    Skipping {model_label} (marked unhealthy earlier this run)")
+                    else:
+                        print(f"    Skipping {model_label} (malformed response, won't improve with retry)")
                     break
 
-            if raw == "SKIP":
-                print(f"    Skipping {model_label} (malformed response, won't improve with retry)")
-                break
-
-            if not raw:
-                print(f"    Failed ({model_label}), trying next attempt/model...")
-                continue
-
-            try:
-                cat = parse_json_response(raw)
-            except json.JSONDecodeError as e:
-                print(f"    ✗ JSON parse error: {e}")
-                continue
-
-            errors, violations, warnings = validate_single_category(
-                cat, cat_index, history, accumulated_cats
-            )
-
-            if errors:
-                print(f"    ✗ Structural errors: {errors}")
-                continue
-
-            if violations:
-                print(f"    ✗ Violations: {violations}")
-                previous_violations = violations
-                continue
-
-            if warnings:
-                print(f"    ⚠ Warnings (accepted): {warnings}")
-
-            # Conditional self-grade (cost gate): only spend an API call
-            # when the cheap keyword check cannot decide. On a typical day
-            # this is a no-op; it fires on the ambiguous #227 shape.
-            sg_go, sg_why = _should_self_grade(cat)
-            if sg_go:
-                print(f"    \U0001f9d0 Self-grading ({sg_why})...")
-                sg_verdict, sg_bad, sg_reason, _sg_raw = self_grade_category(cat, model_config)
-                if sg_verdict == "fail" and sg_bad:
-                    off_theme = [
-                        f"Item {i} ({cat['items'][i-1].get('en','')!r}) doesn't fit "
-                        f"the '{cat.get('nameEn')}' theme"
-                        for i in sg_bad
-                    ]
-                    detail = f" ({sg_reason})" if sg_reason else ""
-                    grade_violations = [
-                        f"Semantic coherence: {cat.get('nameEn')}{detail}. "
-                        + "; ".join(off_theme)
-                        + ". Pick items that are each a concrete example of the theme."
-                    ]
-                    print(f"    \u2717 Self-grade FAILED: items {sg_bad} off-theme")
-                    for v in grade_violations:
-                        print(f"        {v}")
-                    previous_violations = grade_violations
+                if not raw:
+                    print(f"    Failed ({model_label}), trying next attempt/model...")
                     continue
-                if sg_verdict == "pass":
-                    print(f"    \u2713 Self-grade passed (all 4 items fit theme)")
+
+                try:
+                    cat = parse_json_response(raw)
+                except json.JSONDecodeError as e:
+                    print(f"    ✗ JSON parse error: {e}")
+                    continue
+
+                errors, violations, warnings = validate_single_category(
+                    cat, cat_index, history, accumulated_cats
+                )
+
+                if errors:
+                    print(f"    ✗ Structural errors: {errors}")
+                    continue
+
+                if violations:
+                    print(f"    ✗ Violations: {violations}")
+                    previous_violations = violations
+                    continue
+
+                if warnings:
+                    print(f"    ⚠ Warnings (accepted): {warnings}")
+
+                # Conditional self-grade (cost gate): only spend an API call
+                # when the cheap keyword check cannot decide. On a typical day
+                # this is a no-op; it fires on the ambiguous #227 shape.
+                sg_go, sg_why = _should_self_grade(cat)
+                if sg_go:
+                    print(f"    \U0001f9d0 Self-grading ({sg_why})...")
+                    sg_verdict, sg_bad, sg_reason, _sg_raw = self_grade_category(cat, model_config)
+                    if sg_verdict == "fail" and sg_bad:
+                        off_theme = [
+                            f"Item {i} ({cat['items'][i-1].get('en','')!r}) doesn't fit "
+                            f"the '{cat.get('nameEn')}' theme"
+                            for i in sg_bad
+                        ]
+                        detail = f" ({sg_reason})" if sg_reason else ""
+                        grade_violations = [
+                            f"Semantic coherence: {cat.get('nameEn')}{detail}. "
+                            + "; ".join(off_theme)
+                            + ". Pick items that are each a concrete example of the theme."
+                        ]
+                        print(f"    \u2717 Self-grade FAILED: items {sg_bad} off-theme")
+                        for v in grade_violations:
+                            print(f"        {v}")
+                        previous_violations = grade_violations
+                        continue
+                    if sg_verdict == "pass":
+                        print(f"    \u2713 Self-grade passed (all 4 items fit theme)")
+                    else:
+                        print(f"    \u26a0\ufe0f Self-grade skipped; trusting keyword check")
                 else:
-                    print(f"    \u26a0\ufe0f Self-grade skipped; trusting keyword check")
-            else:
-                print(f"    \u2713 Self-grade not needed ({sg_why})")
+                    print(f"    \u2713 Self-grade not needed ({sg_why})")
 
-            # Verify words appear in their cited verses (only 5 refs - fast feedback)
-            print(f"    📖 Verifying {len(cat.get('items', []))+1} verse refs...")
-            cat, mismatches = enrich_single_category(cat)
+                # Verify words appear in their cited verses (only 5 refs - fast feedback)
+                print(f"    📖 Verifying {len(cat.get('items', []))+1} verse refs...")
+                cat, mismatches = enrich_single_category(cat)
 
-            if mismatches:
-                print(f"    ✗ Word-in-verse failed ({len(mismatches)} issue(s)):")
-                for m in mismatches:
-                    print(f"        {m}")
-                _seen = set(previous_violations or [])
-                previous_violations = (previous_violations or []) + [v for v in mismatches if v not in _seen]
-                continue
+                if mismatches:
+                    print(f"    ✗ Word-in-verse failed ({len(mismatches)} issue(s)):")
+                    for m in mismatches:
+                        print(f"        {m}")
+                    _seen = set(previous_violations or [])
+                    previous_violations = (previous_violations or []) + [v for v in mismatches if v not in _seen]
+                    continue
 
-            print(
-                f"    ✓ Category {cat_index+1} ({color}, {difficulty}) accepted: "
-                f"\"{cat.get('nameEn')}\""
-            )
-            return cat
+                print(
+                    f"    ✓ Category {cat_index+1} ({color}, {difficulty}) accepted: "
+                    f"\"{cat.get('nameEn')}\""
+                )
+                return cat
 
-        print(f"    Exhausted retries for {model_label}")
+            print(f"    Exhausted retries for {model_label}")
 
     print(f"  ✗ All models failed for category {cat_index+1} after {total_attempt} attempts.")
     return None
