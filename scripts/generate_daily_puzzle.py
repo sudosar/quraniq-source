@@ -3735,6 +3735,68 @@ def repair_category_refs(cat, history, accumulated_cats):
     return repaired, unplaceable
 
 
+# ── Post-enrich theme check (Nov 2026, issue #260) ──────────────────
+# The 1 Nov 2026 yellow category shipped AYDINA glossed "(is) before
+# us" (19:64): the Arabic word is "our hands" and belongs in a
+# body-parts category, but the Quran API word-by-word rendering is the
+# contextual phrase translation, which does not read as a body part.
+# Nothing caught it: the pre-enrich gates judged the model's gloss,
+# enrich then overwrote it, and no gate re-checked the FINAL glosses
+# against the theme. (For yellow the pre-enrich self-grade gate had
+# skipped entirely: the theme names no recognisable keyword field.)
+#
+# This check is the last gate before acceptance, judging the FINAL
+# glosses only:
+#   - keyword 4/4 on a recognised field -> pass, no model call;
+#   - otherwise the grader arbitrates on the final glosses;
+#   - grader fail with indices -> reject, with violations in the same
+#     feedback shape as the pre-enrich grade (so the retry prompt can
+#     steer the next attempt away from the off-theme wording);
+#   - grader skipped, or fail without indices -> reject (fail CLOSED).
+#     Unlike the pre-enrich gate, nothing stands behind this check, so
+#     an unverifiable category must fail rather than publish.
+# A failure here is an ordinary attempt failure: the caller sets
+# previous_violations and retries, exactly like other violations.
+
+
+def post_enrich_theme_check(cat, model_config):
+    """Return (ok, violations) for the FINAL glosses of one category.
+
+    ok=True means the category may be accepted. ok=False carries
+    violations worded for the next attempt's prompt.
+    """
+    theme = cat.get("nameEn") or ""
+    items = cat.get("items") or []
+    field_name, named, _other, _other_n = _resolve_theme_field(cat)
+    if field_name and named == 4:
+        return True, []
+    verdict, bad, reason, _raw = self_grade_category(cat, model_config)
+    if verdict == "pass":
+        return True, []
+    if verdict == "fail" and bad:
+        off_theme = [
+            f"Item {i} ({items[i - 1].get('en', '')!r}) doesn't fit "
+            f"the '{theme}' theme"
+            for i in bad
+            if isinstance(i, int) and 1 <= i <= len(items)
+        ]
+        if off_theme:
+            detail = f" ({reason})" if reason else ""
+            return False, [
+                f"Semantic coherence: {theme}{detail}. "
+                + "; ".join(off_theme)
+                + ". Pick items that are each a concrete example of the theme."
+            ]
+    # Grader skipped (rate limit, malformed output, unreachable model)
+    # or fail with no usable indices: no verdict stands behind this
+    # category, so fail closed rather than publish unverified glosses.
+    return False, [
+        f"Post-enrich theme check could not verify the '{theme}' theme "
+        f"(grader {verdict}); rejecting rather than publishing unverified "
+        f"glosses."
+    ]
+
+
 def _generate_single_category(cat_index, accumulated_cats, history, today):
     """Generate one Connections category with full model-chain + retry logic.
 
@@ -3863,6 +3925,19 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
                     _seen = set(previous_violations or [])
                     previous_violations = (previous_violations or []) + [v for v in mismatches if v not in _seen]
                     continue
+
+                # Post-enrich theme check (Nov 2026, issue #260): the
+                # gates above judged the model's gloss, and enrich just
+                # overwrote it with the API's contextual rendering.
+                # Judge the FINAL glosses before acceptance.
+                post_ok, post_violations = post_enrich_theme_check(cat, model_config)
+                if not post_ok:
+                    print("    ✗ Post-enrich theme check failed:")
+                    for v in post_violations:
+                        print(f"        {v}")
+                    previous_violations = post_violations
+                    continue
+
 
                 print(
                     f"    ✓ Category {cat_index+1} ({color}, {difficulty}) accepted: "
