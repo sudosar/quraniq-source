@@ -17,7 +17,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import generate_daily_puzzle as gen
-from surah_ranges import offered_ranges, free_ayah_ranges, VERSES_PER_SURAH
+from surah_ranges import offered_ranges, free_ayah_ranges, format_allowed_ranges, VERSES_PER_SURAH
 
 PASS = 0
 FAIL = 0
@@ -103,6 +103,21 @@ def main():
         gen._post_with_retries = orig_post
         gen.KIMI_API_KEY = orig_key
         gen.DEEPSEEK_API_KEY = orig_deepseek
+
+    # Renderer floor (Nov 2026): format_allowed_ranges used to re-filter
+    # at min_span=8, so a span-5 fallback pool rendered as "(none)" in
+    # the prompt and in stray violations even though the pool was
+    # non-empty. The renderer must never filter stricter than the pool.
+    frag_pool = offered_ranges(blocked)
+    rendered = format_allowed_ranges(frag_pool)
+    test("render: span-5 fallback pool renders surahs, not (none)",
+         rendered != "(none)" and len(rendered) > 10, rendered[:120])
+    test("render: span-5 pool renders all its surahs",
+         all(f"{s} (" in rendered for s in frag_pool))
+    test("render: empty pool still renders (none)",
+         format_allowed_ranges({}) == "(none)")
+    test("render: span-8 control pool renders",
+         format_allowed_ranges(control) != "(none)")
 
     print(f"\n{PASS} passed, {FAIL} failed")
     return 1 if FAIL else 0
