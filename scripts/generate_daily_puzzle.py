@@ -733,6 +733,13 @@ def call_model(prompt, model_config, system_msg=None):
     else:
         payload["max_tokens"] = 16384
 
+    # Kimi K3 rejects any temperature other than 1 (verified 1 Nov 2026:
+    # every attempt 400'd with "invalid temperature: only 1 is allowed
+    # for this model" while the shared payload sent 0.6). Same class of
+    # pickiness as response_format below, which Kimi also rejects.
+    if api_type == "kimi":
+        payload["temperature"] = 1
+
     # response_format JSON mode — not all models support it; Kimi K3 returns 400 with it
     if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m3"):
         payload["response_format"] = {"type": "json_object"}
