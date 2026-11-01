@@ -3581,6 +3581,142 @@ def generate_game(game_type, history, today):
 # CONNECTIONS - CATEGORY-BY-CATEGORY GENERATION
 # ═══════════════════════════════════════════════════════════════════
 
+# ── Connections verse repair (Nov 2026) ──────────────────────────────
+# Problem: the models keep citing famous verses from memory (6:99, 95:1,
+# 16:11, 55:68, ...) that are in the 60-day cooldown, even though the
+# prompt offers only free passages, feeds back violations, force-pivots,
+# and narrows on a second pass. The old full negative cooldown list
+# (~5.6k tokens, 98% of the prompt) was tried and ignored too. Prompting
+# harder does not fix a compliance failure, so the code now fixes the
+# citations itself: the model supplies theme + words, and this repair
+# pass supplies (or corrects) the verse for each word from a local
+# Uthmani corpus before validation runs. Good model refs are untouched;
+# only unusable ones are replaced. The downstream Quran-API
+# word-in-verse check in enrich_single_category stays as the final
+# authority.
+QURAN_TEXT_PATH = os.path.join(DATA_DIR, "quran-uthmani.txt")
+_verse_index = None
+_verse_texts = None
+
+
+def _load_verse_corpus():
+    """Load the vendored Uthmani text: ref -> normalized verse text.
+
+    Built once and cached. Normalization is the same normalize_arabic
+    the validator uses, so index matches agree with word_in_verse.
+    """
+    global _verse_index, _verse_texts
+    if _verse_texts is not None:
+        return _verse_index, _verse_texts
+    index = {}
+    texts = {}
+    with open(QURAN_TEXT_PATH, encoding="utf-8") as f:
+        for line in f:
+            line = line.rstrip("\n")
+            if not line:
+                continue
+            s, a, text = line.split("|", 2)
+            ref = f"{int(s)}:{int(a)}"
+            norm = normalize_arabic(text)
+            texts[ref] = norm
+            for token in set(norm.split(" ")):
+                if token:
+                    index.setdefault(token, []).append(ref)
+    for refs in index.values():
+        refs.sort(key=_ref_sort_key)
+    _verse_index, _verse_texts = index, texts
+    return _verse_index, _verse_texts
+
+
+def _ref_sort_key(ref):
+    s, a = ref.split(":")
+    return (int(s), int(a))
+
+
+def _verses_for_word(word):
+    """All corpus verses containing word, in deterministic ref order.
+
+    Mirrors word_in_verse: exact normalized token, then the token with
+    the 'al' prefix stripped (a variant the validator allows), then a
+    substring scan over normalized verse texts (the validator matches
+    substrings, so a word inside a longer token still counts).
+    """
+    norm = normalize_arabic(word)
+    if not norm:
+        return []
+    index, texts = _load_verse_corpus()
+    found = {}
+    for key in (norm, norm[2:] if norm.startswith("ال") else None):
+        if key:
+            for ref in index.get(key, []):
+                found[ref] = True
+    if not found:
+        for ref, text in texts.items():
+            if norm in text:
+                found[ref] = True
+    return sorted(found, key=_ref_sort_key)
+
+
+def repair_category_refs(cat, history, accumulated_cats):
+    """Replace unusable model-cited refs with code-chosen free verses.
+
+    A ref is kept when it is inside offered_ranges() (the same allowlist
+    the prompt renders and the validator enforces), not in cooldown or
+    history, and not already used in this category. Otherwise the item's
+    word is looked up in the local corpus and the first free verse is
+    assigned, preferring a surah not yet used in this category. Returns
+    (n_repaired, unplaceable_words): a word with no free verse anywhere
+    is left unrepaired so validation fails honestly and the model can
+    swap the word on retry.
+    """
+    items = cat.get("items", [])
+    if len(items) != 4:
+        return 0, []
+    conn = history.get("connections", {}) if isinstance(history, dict) else {}
+    blocked = set(conn.get("verses", set())) | set(history.get("all_verses", set()))
+    for prev_cat in accumulated_cats or []:
+        for item in prev_cat.get("items", []):
+            if item.get("ref"):
+                blocked.add(item["ref"])
+    from surah_ranges import offered_ranges
+    ranges = offered_ranges(blocked)
+
+    def in_allowlist(ref):
+        try:
+            s, a = str(ref).split(":")
+            s, a = int(s), int(a)
+        except ValueError:
+            return False
+        return any(lo <= a <= hi for lo, hi in ranges.get(s, ()))
+
+    used = set()
+    used_surahs = set()
+    repaired = 0
+    unplaceable = []
+    for item in items:
+        word = item.get("ar", "")
+        ref = item.get("ref", "")
+        if ref and ref not in blocked and ref not in used and in_allowlist(ref):
+            used.add(ref)
+            used_surahs.add(int(ref.split(":")[0]))
+            continue
+        cands = [
+            r for r in _verses_for_word(word)
+            if r not in blocked and r not in used and in_allowlist(r)
+        ]
+        if not cands:
+            unplaceable.append(word)
+            continue
+        cands.sort(key=lambda r: (int(r.split(":")[0]) in used_surahs, *_ref_sort_key(r)))
+        chosen = cands[0]
+        print(f"    ↻ Repaired ref for '{word}': {ref or '(none)'} → {chosen}")
+        item["ref"] = chosen
+        used.add(chosen)
+        used_surahs.add(int(chosen.split(":")[0]))
+        repaired += 1
+    return repaired, unplaceable
+
+
 def _generate_single_category(cat_index, accumulated_cats, history, today):
     """Generate one Connections category with full model-chain + retry logic.
 
@@ -3642,6 +3778,14 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
                 except json.JSONDecodeError as e:
                     print(f"    ✗ JSON parse error: {e}")
                     continue
+
+                # Verse repair (Nov 2026): replace unusable model-cited
+                # refs with code-chosen free verses before validation, so
+                # cooldown citations stop burning retries. Good refs are
+                # untouched; see repair_category_refs.
+                _, unplaceable = repair_category_refs(cat, history, accumulated_cats)
+                if unplaceable:
+                    print(f"    ⚠ No available verse for words: {unplaceable} (validation will flag these)")
 
                 errors, violations, warnings = validate_single_category(
                     cat, cat_index, history, accumulated_cats
