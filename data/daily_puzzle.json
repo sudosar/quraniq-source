@@ -1,144 +1,144 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-11-01",
   "puzzle": {
     "categories": [
       {
-        "name": "أَوْصَافٌ ذَمِيمَةٌ لِجَمَاعَاتٍ فِي الْقُرْآنِ",
-        "nameEn": "Negative descriptions of groups in the Qur'an",
+        "name": "أَعْضَاءُ الْجَسَدِ فِي الْقُرْآنِ",
+        "nameEn": "Body parts mentioned in the Qur'an",
         "color": "yellow",
         "items": [
           {
-            "ar": "الْأَسْفَلِينَ",
-            "en": "the lowest",
-            "ref": "37:98",
-            "verse": "فَأَرَادُوا۟ بِهِۦ كَيْدًۭا فَجَعَلْنَـٰهُمُ ٱلْأَسْفَلِينَ",
-            "verseEn": "And they intended for him a plan [i.e., harm], but We made them the most debased."
+            "ar": "قُلُوبُهُم",
+            "en": "their hearts",
+            "ref": "16:22",
+            "verse": "إِلَـٰهُكُمْ إِلَـٰهٌۭ وَٰحِدٌۭ ۚ فَٱلَّذِينَ لَا يُؤْمِنُونَ بِٱلْـَٔاخِرَةِ قُلُوبُهُم مُّنكِرَةٌۭ وَهُم مُّسْتَكْبِرُونَ",
+            "verseEn": "Your god is one God. But those who do not believe in the Hereafter - their hearts are disapproving, and they are arrogant."
           },
           {
-            "ar": "الْأَرْذَلُونَ",
-            "en": "the lowest",
-            "ref": "26:111",
-            "verse": "۞ قَالُوٓا۟ أَنُؤْمِنُ لَكَ وَٱتَّبَعَكَ ٱلْأَرْذَلُونَ",
-            "verseEn": "They said, \"Should we believe you while you are followed by the lowest [class of people]?\""
+            "ar": "أَعْيُنِ",
+            "en": "(the) eyes",
+            "ref": "21:61",
+            "verse": "قَالُوا۟ فَأْتُوا۟ بِهِۦ عَلَىٰٓ أَعْيُنِ ٱلنَّاسِ لَعَلَّهُمْ يَشْهَدُونَ",
+            "verseEn": "They said, \"Then bring him before the eyes of the people that they may testify.\""
           },
           {
-            "ar": "جَبَّارِينَ",
-            "en": "(as) tyrants",
-            "ref": "26:130",
-            "verse": "وَإِذَا بَطَشْتُم بَطَشْتُمْ جَبَّارِينَ",
-            "verseEn": "And when you strike, you strike as tyrants."
+            "ar": "عِظَامًا",
+            "en": "and bones",
+            "ref": "37:16",
+            "verse": "أَءِذَا مِتْنَا وَكُنَّا تُرَابًۭا وَعِظَـٰمًا أَءِنَّا لَمَبْعُوثُونَ",
+            "verseEn": "When we have died and become dust and bones, are we indeed to be resurrected?"
           },
           {
-            "ar": "كَاذِبُونَ",
-            "en": "(are) liars",
-            "ref": "26:223",
-            "verse": "يُلْقُونَ ٱلسَّمْعَ وَأَكْثَرُهُمْ كَـٰذِبُونَ",
-            "verseEn": "They pass on what is heard, and most of them are liars."
+            "ar": "أَيْدِينَا",
+            "en": "(is) before us",
+            "ref": "19:64",
+            "verse": "وَمَا نَتَنَزَّلُ إِلَّا بِأَمْرِ رَبِّكَ ۖ لَهُۥ مَا بَيْنَ أَيْدِينَا وَمَا خَلْفَنَا وَمَا بَيْنَ ذَٰلِكَ ۚ وَمَا كَانَ رَبُّكَ نَسِيًّۭا",
+            "verseEn": "[Gabriel said], \"And we [angels] descend not except by the order of your Lord. To Him belongs that before us and that behind us and what is in between. And never is your Lord forgetful -"
           }
         ]
       },
       {
-        "name": "أَفْعَالُ الْأَمْرِ فِي الْقُرْآنِ",
-        "nameEn": "Imperative Verbs in the Qur'an",
+        "name": "أَلْفَاظٌ قُرْآنِيَّةٌ لِلْجَمَاعَاتِ",
+        "nameEn": "Quranic words for groups of people (folk, nation, chiefs, clan)",
         "color": "green",
         "items": [
           {
-            "ar": "اخْفِضْ",
-            "en": "And lower",
-            "ref": "26:215",
-            "verse": "وَٱخْفِضْ جَنَاحَكَ لِمَنِ ٱتَّبَعَكَ مِنَ ٱلْمُؤْمِنِينَ",
-            "verseEn": "And lower your wing [i.e., show kindness] to those who follow you of the believers."
+            "ar": "قَوْمٌ",
+            "en": "(are) a people",
+            "ref": "44:22",
+            "verse": "فَدَعَا رَبَّهُۥٓ أَنَّ هَـٰٓؤُلَآءِ قَوْمٌۭ مُّجْرِمُونَ",
+            "verseEn": "And [finally] he called to his Lord that these were a criminal people."
           },
           {
-            "ar": "تَوَكَّلْ",
-            "en": "And put (your) trust",
-            "ref": "26:217",
-            "verse": "وَتَوَكَّلْ عَلَى ٱلْعَزِيزِ ٱلرَّحِيمِ",
-            "verseEn": "And rely upon the Exalted in Might, the Merciful,"
+            "ar": "أُمَّةٍ",
+            "en": "nation",
+            "ref": "16:84",
+            "verse": "وَيَوْمَ نَبْعَثُ مِن كُلِّ أُمَّةٍۢ شَهِيدًۭا ثُمَّ لَا يُؤْذَنُ لِلَّذِينَ كَفَرُوا۟ وَلَا هُمْ يُسْتَعْتَبُونَ",
+            "verseEn": "And [mention] the Day when We will resurrect from every nation a witness [i.e., their prophet]. Then it will not be permitted to the disbelievers [to apologize or make excuses], nor will they be asked to appease [Allāh]."
           },
           {
-            "ar": "تَوَلَّ",
-            "en": "So turn away",
-            "ref": "37:174",
-            "verse": "فَتَوَلَّ عَنْهُمْ حَتَّىٰ حِينٍۢ",
-            "verseEn": "So, [O Muḥammad], leave them for a time."
+            "ar": "الْمَلَأُ",
+            "en": "the chiefs",
+            "ref": "7:66",
+            "verse": "قَالَ ٱلْمَلَأُ ٱلَّذِينَ كَفَرُوا۟ مِن قَوْمِهِۦٓ إِنَّا لَنَرَىٰكَ فِى سَفَاهَةٍۢ وَإِنَّا لَنَظُنُّكَ مِنَ ٱلْكَـٰذِبِينَ",
+            "verseEn": "Said the eminent ones who disbelieved among his people, \"Indeed, we see you in foolishness, and indeed, we think you are of the liars.\""
           },
           {
-            "ar": "أَبْصِرْهُمْ",
-            "en": "And see them",
-            "ref": "37:175",
-            "verse": "وَأَبْصِرْهُمْ فَسَوْفَ يُبْصِرُونَ",
-            "verseEn": "And see [what will befall] them, for they are going to see."
+            "ar": "آلَ",
+            "en": "the family / clan (of)",
+            "ref": "27:56",
+            "verse": "۞ فَمَا كَانَ جَوَابَ قَوْمِهِۦٓ إِلَّآ أَن قَالُوٓا۟ أَخْرِجُوٓا۟ ءَالَ لُوطٍۢ مِّن قَرْيَتِكُمْ ۖ إِنَّهُمْ أُنَاسٌۭ يَتَطَهَّرُونَ",
+            "verseEn": "But the answer of his people was not except that they said, \"Expel the family of Lot from your city. Indeed, they are people who keep themselves pure.\""
           }
         ]
       },
       {
-        "name": "أَلْقَابُ الصَّالِحِينَ فِي الْقُرْآنِ",
-        "nameEn": "Titles of the Righteous in the Qur'an",
+        "name": "أَلْقَابٌ أَطْلَقَهَا الْمُكَذِّبُونَ عَلَى الْأَنْبِيَاءِ",
+        "nameEn": "Dismissive labels the disbelievers hurled at the prophets (sorcerer, madman, poet, one 'taught by others')",
         "color": "blue",
         "items": [
           {
-            "ar": "الْمُؤْمِنِينَ",
-            "en": "believing",
-            "ref": "37:132",
-            "verse": "إِنَّهُۥ مِنْ عِبَادِنَا ٱلْمُؤْمِنِينَ",
-            "verseEn": "Indeed, he was of Our believing servants."
+            "ar": "سَاحِرٌ",
+            "en": "A magician",
+            "ref": "51:52",
+            "verse": "كَذَٰلِكَ مَآ أَتَى ٱلَّذِينَ مِن قَبْلِهِم مِّن رَّسُولٍ إِلَّا قَالُوا۟ سَاحِرٌ أَوْ مَجْنُونٌ",
+            "verseEn": "Similarly, there came not to those before them any messenger except that they said, \"A magician or a madman.\""
           },
           {
-            "ar": "الْمُحْسِنِينَ",
-            "en": "the good-doers",
-            "ref": "37:131",
-            "verse": "إِنَّا كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ",
-            "verseEn": "Indeed, We thus reward the doers of good."
+            "ar": "لَمَجْنُونٌ",
+            "en": "(is) surely mad",
+            "ref": "26:27",
+            "verse": "قَالَ إِنَّ رَسُولَكُمُ ٱلَّذِىٓ أُرْسِلَ إِلَيْكُمْ لَمَجْنُونٌۭ",
+            "verseEn": "[Pharaoh] said, \"Indeed, your 'messenger' who has been sent to you is mad.\""
           },
           {
-            "ar": "الصَّافُّونَ",
-            "en": "stand in rows",
-            "ref": "37:165",
-            "verse": "وَإِنَّا لَنَحْنُ ٱلصَّآفُّونَ",
-            "verseEn": "And indeed, we are those who line up [for prayer]."
+            "ar": "لِشَاعِرٍ",
+            "en": "for a poet",
+            "ref": "37:36",
+            "verse": "وَيَقُولُونَ أَئِنَّا لَتَارِكُوٓا۟ ءَالِهَتِنَا لِشَاعِرٍۢ مَّجْنُونٍۭ",
+            "verseEn": "And were saying, \"Are we to leave our gods for a mad poet?\""
           },
           {
-            "ar": "الْمُسَبِّحُونَ",
-            "en": "glorify (Allah)",
-            "ref": "37:166",
-            "verse": "وَإِنَّا لَنَحْنُ ٱلْمُسَبِّحُونَ",
-            "verseEn": "And indeed, we are those who exalt Allāh.\""
+            "ar": "مُعَلَّمٌ",
+            "en": "One taught",
+            "ref": "44:14",
+            "verse": "ثُمَّ تَوَلَّوْا۟ عَنْهُ وَقَالُوا۟ مُعَلَّمٌۭ مَّجْنُونٌ",
+            "verseEn": "Then they turned away from him and said, \"[He was] taught [and is] a madman.\""
           }
         ]
       },
       {
-        "name": "أَفْعَالٌ تُؤَدَّى بِالْيَدِ",
-        "nameEn": "Actions performed with the hands",
+        "name": "كَلِمَاتُ التَّعَجُّبِ وَالزَّجْرِ فِي الْقُرْآنِ",
+        "nameEn": "Standalone exclamations of rebuke in the Qur'an (fie!, far-fetched!, no indeed!, woe!)",
         "color": "purple",
         "items": [
           {
-            "ar": "ضَرْبًا",
-            "en": "striking",
-            "ref": "37:93",
-            "verse": "فَرَاغَ عَلَيْهِمْ ضَرْبًۢا بِٱلْيَمِينِ",
-            "verseEn": "And he turned upon them a blow with [his] right hand."
+            "ar": "أُفٍّ",
+            "en": "Fie! (exclamation of disgust)",
+            "ref": "21:67",
+            "verse": "أُفٍّۢ لَّكُمْ وَلِمَا تَعْبُدُونَ مِن دُونِ ٱللَّهِ ۖ أَفَلَا تَعْقِلُونَ",
+            "verseEn": "Uff to you and to what you worship instead of Allāh. Then will you not use reason?\""
           },
           {
-            "ar": "تَنْحِتُونَ",
-            "en": "you carve",
-            "ref": "37:95",
-            "verse": "قَالَ أَتَعْبُدُونَ مَا تَنْحِتُونَ",
-            "verseEn": "He said, \"Do you worship that which you [yourselves] carve,"
+            "ar": "هَيْهَاتَ",
+            "en": "Far-(fetched)",
+            "ref": "23:36",
+            "verse": "۞ هَيْهَاتَ هَيْهَاتَ لِمَا تُوعَدُونَ",
+            "verseEn": "How far, how far, is that which you are promised."
           },
           {
-            "ar": "ابْنُوا",
-            "en": "Build",
-            "ref": "37:97",
-            "verse": "قَالُوا۟ ٱبْنُوا۟ لَهُۥ بُنْيَـٰنًۭا فَأَلْقُوهُ فِى ٱلْجَحِيمِ",
-            "verseEn": "They said, \"Construct for him a structure [i.e., furnace] and throw him into the burning fire.\""
+            "ar": "كَلَّا",
+            "en": "Nay",
+            "ref": "19:79",
+            "verse": "كَلَّا ۚ سَنَكْتُبُ مَا يَقُولُ وَنَمُدُّ لَهُۥ مِنَ ٱلْعَذَابِ مَدًّۭا",
+            "verseEn": "No! We will record what he says and extend [i.e., increase] for him from the punishment extensively."
           },
           {
-            "ar": "فَأْتُوا",
-            "en": "Then bring",
-            "ref": "37:157",
-            "verse": "فَأْتُوا۟ بِكِتَـٰبِكُمْ إِن كُنتُمْ صَـٰدِقِينَ",
-            "verseEn": "Then produce your scripture, if you should be truthful."
+            "ar": "وَيْلٌ",
+            "en": "Woe",
+            "ref": "77:15",
+            "verse": "وَيْلٌۭ يَوْمَئِذٍۢ لِّلْمُكَذِّبِينَ",
+            "verseEn": "Woe, that Day, to the deniers."
           }
         ]
       }

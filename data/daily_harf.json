@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-11-01",
   "puzzle": {
-    "word": "يعيد",
-    "display": "يُعِيدُ",
-    "hint": "Allah's action of bringing back creation after it has ended",
-    "verseRef": "85:13",
-    "arabicVerse": "إِنَّهُۥ هُوَ يُبْدِئُ وَيُعِيدُ",
-    "verse": "85:13 - Indeed, it is He who originates [creation] and repeats."
+    "word": "بركات",
+    "display": "بَرَكَاتٍ",
+    "hint": "Plural of blessing; divine favors or increase in good",
+    "verseRef": "11:48",
+    "arabicVerse": "قِيلَ يَـٰنُوحُ ٱهْبِطْ بِسَلَـٰمٍۢ مِّنَّا وَبَرَكَـٰتٍ عَلَيْكَ وَعَلَىٰٓ أُمَمٍۢ مِّمَّن مَّعَكَ ۚ وَأُمَمٌۭ سَنُمَتِّعُهُمْ ثُمَّ يَمَسُّهُم مِّنَّا عَذَابٌ أَلِيمٌۭ",
+    "verse": "11:48 - It was said, \"O Noah, disembark in security from Us and blessings upon you and upon nations [descending] from those with you. But other nations [of them] We will grant enjoyment; then there will touch them from Us a painful punishment.\""
   },
   "generated": true,
   "model": "auto (chain)"

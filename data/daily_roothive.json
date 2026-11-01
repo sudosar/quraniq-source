@@ -1,538 +1,344 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-11-01",
   "puzzle": {
-    "center": "ل",
+    "center": "ت",
     "outer": [
-      "م",
-      "ا",
-      "و",
-      "غ",
       "ه",
-      "ف"
+      "ا",
+      "ف",
+      "م",
+      "س",
+      "ح"
     ],
     "root": {
-      "letters": "غفل",
-      "display": "غ ف ل",
-      "translit": "gh-f-l",
-      "meaning": "This root centers on being heedless or unaware, failing to notice what matters. Its derived words express that state, the act of neglecting, or causing someone to become unmindful.",
-      "occurrences": 35,
-      "lemmaCount": 5
+      "letters": "فتح",
+      "display": "ف ت ح",
+      "translit": "f-t-ḥ",
+      "meaning": "The root links opening and beginning with deciding an issue and achieving victory. Its derived words grow from these ideas by naming an opener or judge, a means of access, or seeking victory.",
+      "occurrences": 38,
+      "lemmaCount": 8
     },
     "words": [
       {
-        "w": "افل",
+        "w": "اتم",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَفَلَ",
-            "gloss": "set",
+            "lemma": "أَتَمَّ",
+            "gloss": "perfect",
             "type": "verb",
-            "root": "أفل",
-            "count": 3,
-            "ref": "6:76",
-            "pos": 11,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "الف",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أَلْف",
-            "gloss": "thousand",
-            "type": "noun",
-            "root": "ألف",
-            "count": 14,
-            "ref": "2:96",
-            "pos": 13,
-            "alt": [
-              "thousands",
-              "two thousand"
-            ]
-          },
-          {
-            "lemma": "أَلَّفَ",
-            "gloss": "put affection",
-            "type": "verb",
-            "root": "ألف",
-            "count": 5,
-            "ref": "8:63",
-            "pos": 16,
-            "alt": [
-              "joins"
-            ],
-            "form": 2
-          },
-          {
-            "lemma": "أَلْفَ",
-            "gloss": "found",
-            "type": "verb",
-            "root": "لفو",
-            "count": 3,
-            "ref": "2:170",
-            "pos": 12,
-            "alt": [
-              "both found"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اله",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "إِلٰه",
-            "gloss": "god",
-            "type": "noun",
-            "root": "أله",
-            "count": 147,
-            "ref": "2:133",
-            "pos": 23,
-            "alt": [
-              "gods",
-              "one god"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "امل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أَمَل",
-            "gloss": "hope",
-            "type": "noun",
-            "root": "أمل",
-            "count": 2,
-            "ref": "18:46",
-            "pos": 13
-          }
-        ]
-      },
-      {
-        "w": "اهل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أَهْل",
-            "gloss": "people",
-            "type": "noun",
-            "root": "أهل",
-            "count": 127,
-            "ref": "2:105",
-            "pos": 6,
-            "alt": [
-              "people of the book",
-              "worthy"
-            ]
-          },
-          {
-            "lemma": "أُهِلَّ",
-            "gloss": "has been dedicated",
-            "type": "verb",
-            "root": "هلل",
-            "count": 4,
-            "ref": "2:173",
+            "root": "تمم",
+            "count": 16,
+            "ref": "2:233",
             "pos": 9,
             "alt": [
-              "dedicated"
+              "complete",
+              "completes"
             ],
             "form": 4
           }
         ]
       },
       {
-        "w": "اول",
+        "w": "تحت",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَوَّل",
-            "gloss": "first",
+            "lemma": "تَحْت",
+            "gloss": "under",
             "type": "noun",
-            "root": "أول",
-            "count": 82,
-            "ref": "2:41",
+            "root": "تحت",
+            "count": 51,
+            "ref": "5:66",
+            "pos": 15,
+            "alt": [
+              "beneath",
+              "below"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "سته",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "سِتَّة",
+            "gloss": "six",
+            "type": "noun",
+            "root": "ستت",
+            "count": 7,
+            "ref": "7:54",
             "pos": 9
           }
         ]
       },
       {
-        "w": "غلف",
+        "w": "سحت",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "غُلْف",
-            "gloss": "wrapped",
+            "lemma": "سُحْت",
+            "gloss": "forbidden",
             "type": "noun",
-            "root": "غلف",
-            "count": 2,
-            "ref": "2:88",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "لغو",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "لَغْو",
-            "gloss": "vain talk",
-            "type": "noun",
-            "root": "لغو",
-            "count": 9,
-            "ref": "19:62",
-            "pos": 4,
-            "alt": [
-              "ill speech",
-              "any vain talk"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "لهو",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "لَهْو",
-            "gloss": "amusement",
-            "type": "noun",
-            "root": "لهو",
-            "count": 10,
-            "ref": "7:51",
-            "pos": 4,
-            "alt": [
-              "pastime",
-              "idle tales"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مال",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مال",
-            "gloss": "wealth",
-            "type": "noun",
-            "root": "مول",
-            "count": 86,
-            "ref": "2:188",
-            "pos": 13,
-            "alt": [
-              "any wealth",
-              "wealth of allah"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "ملا",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَلَأ",
-            "gloss": "chiefs",
-            "type": "noun",
-            "root": "ملأ",
-            "count": 30,
-            "ref": "11:38",
-            "pos": 6
-          }
-        ]
-      },
-      {
-        "w": "مله",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مِلَّة",
-            "gloss": "religion",
-            "type": "noun",
-            "root": "ملل",
-            "count": 15,
-            "ref": "2:130",
+            "root": "سحت",
+            "count": 3,
+            "ref": "5:42",
             "pos": 4
           }
         ]
       },
       {
-        "w": "مهل",
+        "w": "فات",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "مُهْل",
-            "gloss": "like molten brass",
-            "type": "noun",
-            "root": "مهل",
+            "lemma": "فاتَ",
+            "gloss": "escaped",
+            "type": "verb",
+            "root": "فوت",
             "count": 3,
-            "ref": "18:29",
-            "pos": 22,
+            "ref": "3:153",
+            "pos": 18,
             "alt": [
-              "like the murky oil",
-              "like molten copper"
-            ]
+              "has escaped",
+              "have gone from"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "فتح",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "فَتَحَ",
+            "gloss": "has",
+            "type": "verb",
+            "root": "فتح",
+            "count": 16,
+            "ref": "2:76",
+            "pos": 15,
+            "alt": [
+              "decide",
+              "has been opened"
+            ],
+            "form": 1
           },
           {
-            "lemma": "مَهِّلِ",
-            "gloss": "allow them respite",
-            "type": "verb",
-            "root": "مهل",
-            "count": 2,
-            "ref": "73:11",
-            "pos": 5,
-            "alt": [
-              "give respite"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "هلم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "هَلُمّ",
-            "gloss": "bring forward",
+            "lemma": "فَتْح",
+            "gloss": "victory",
             "type": "noun",
-            "root": "هلم",
-            "count": 2,
-            "ref": "6:150",
-            "pos": 2,
+            "root": "فتح",
+            "count": 12,
+            "ref": "4:141",
+            "pos": 7,
             "alt": [
-              "come"
+              "judgment"
             ]
           }
         ]
       },
       {
-        "w": "اغفل",
-        "family": true,
-        "points": 4,
+        "w": "مات",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَغْفَلْ",
-            "gloss": "have made heedless",
+            "lemma": "ماتَ",
+            "gloss": "die",
             "type": "verb",
-            "root": "غفل",
-            "count": 1,
-            "ref": "18:28",
-            "pos": 22,
+            "root": "موت",
+            "count": 39,
+            "ref": "3:144",
+            "pos": 11,
+            "alt": [
+              "dies",
+              "died"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "هات",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هاتُ",
+            "gloss": "bring",
+            "type": "verb",
+            "root": "هات",
+            "count": 4,
+            "ref": "2:111",
+            "pos": 14,
+            "alt": [
+              "bring forth"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "امات",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَماتَ",
+            "gloss": "causes death",
+            "type": "verb",
+            "root": "موت",
+            "count": 21,
+            "ref": "53:44",
+            "pos": 3,
             "form": 4
           }
         ]
       },
       {
-        "w": "الاف",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "إِلاف",
-            "gloss": "familiarity",
-            "type": "verbal noun",
-            "root": "ألف",
-            "count": 2,
-            "ref": "106:1",
-            "pos": 1
-          }
-        ]
-      },
-      {
-        "w": "الله",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "اللَّه",
-            "gloss": "besides allah",
-            "type": "proper noun",
-            "root": "أله",
-            "count": 2699,
-            "ref": "1:1",
-            "pos": 2,
-            "alt": [
-              "allah",
-              "allah lets go astray"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "غافل",
+        "w": "فاتح",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "غافِل",
-            "gloss": "unaware",
+            "lemma": "فاتِح",
+            "gloss": "decide",
             "type": "active participle",
-            "root": "غفل",
-            "count": 27,
-            "ref": "6:131",
-            "pos": 10,
-            "alt": [
-              "heedless"
-            ]
+            "root": "فتح",
+            "count": 1,
+            "ref": "7:89",
+            "pos": 42
           }
         ]
       },
       {
-        "w": "غفله",
+        "w": "فتاح",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "غَفْلَة",
-            "gloss": "heedlessness",
+            "lemma": "فَتّاح",
+            "gloss": "judge",
             "type": "noun",
-            "root": "غفل",
-            "count": 5,
-            "ref": "19:39",
-            "pos": 9,
-            "alt": [
-              "inattention"
-            ]
+            "root": "فتح",
+            "count": 1,
+            "ref": "34:26",
+            "pos": 10
           }
         ]
       },
       {
-        "w": "غلام",
+        "w": "فتاه",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "غُلام",
-            "gloss": "son",
+            "lemma": "فَتاة",
+            "gloss": "slave girls",
             "type": "noun",
-            "root": "غلم",
-            "count": 13,
-            "ref": "3:40",
+            "root": "فتي",
+            "count": 2,
+            "ref": "4:25",
+            "pos": 15
+          }
+        ]
+      },
+      {
+        "w": "ممات",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَمات",
+            "gloss": "dying",
+            "type": "noun",
+            "root": "موت",
+            "count": 3,
+            "ref": "6:162",
             "pos": 6,
             "alt": [
-              "boy",
-              "boys"
+              "death"
             ]
           }
         ]
       },
       {
-        "w": "لولو",
-        "family": false,
-        "points": 2,
+        "w": "مفاتح",
+        "family": true,
+        "points": 5,
         "senses": [
           {
-            "lemma": "لُؤْلُؤ",
-            "gloss": "pearls",
+            "lemma": "مَفاتِح",
+            "gloss": "keys",
             "type": "noun",
-            "root": "لؤلؤ",
-            "count": 6,
-            "ref": "52:24",
-            "pos": 6
-          }
-        ]
-      },
-      {
-        "w": "ملوم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَلُوم",
-            "gloss": "blameworthy",
-            "type": "passive participle",
-            "root": "لوم",
-            "count": 5,
-            "ref": "17:29",
-            "pos": 12
-          }
-        ]
-      },
-      {
-        "w": "اللهم",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "اللَّهُمَّ",
-            "gloss": "o allah",
-            "type": "proper noun",
-            "root": "أله",
-            "count": 5,
-            "ref": "3:26",
+            "root": "فتح",
+            "count": 3,
+            "ref": "6:59",
             "pos": 2
           }
         ]
       },
       {
-        "w": "غافله",
+        "w": "مفتحه",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "غافِلَة",
-            "gloss": "unaware women",
-            "type": "active participle",
-            "root": "غفل",
+            "lemma": "مُفَتَّحَة",
+            "gloss": "opened",
+            "type": "passive participle",
+            "root": "فتح",
             "count": 1,
-            "ref": "24:23",
-            "pos": 5
+            "ref": "38:50",
+            "pos": 3
           }
         ]
       },
       {
-        "w": "مغلوله",
-        "family": false,
-        "points": 4,
+        "w": "استفتح",
+        "family": true,
+        "points": 6,
         "senses": [
           {
-            "lemma": "مَغْلُولَة",
-            "gloss": "chained",
-            "type": "passive participle",
-            "root": "غلل",
-            "count": 2,
-            "ref": "5:64",
-            "pos": 5
+            "lemma": "اسْتَفْتَحُ",
+            "gloss": "pray for victory",
+            "type": "verb",
+            "root": "فتح",
+            "count": 3,
+            "ref": "2:89",
+            "pos": 13,
+            "alt": [
+              "ask for victory",
+              "sought victory"
+            ],
+            "form": 10
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "تَغْفُلُ",
-        "gloss": "neglect",
+        "lemma": "تُفَتَّحُ",
+        "gloss": "be opened",
         "type": "verb",
-        "root": "غفل",
+        "root": "فتح",
         "count": 1,
-        "ref": "4:102",
-        "pos": 32,
-        "form": 1
+        "ref": "7:40",
+        "pos": 8,
+        "form": 2
       }
     ],
-    "maxScore": 48,
-    "featuredRoot": "غفل"
+    "maxScore": 40,
+    "featuredRoot": "فتح"
   },
   "generated": true,
   "model": "auto (chain)"

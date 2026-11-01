@@ -1,32 +1,35 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-11-01",
   "puzzle": {
-    "verseRef": "57:2",
-    "reference": "Al-Hadid (57:2)",
+    "verseRef": "31:11",
+    "reference": "Surah Luqman (31:11)",
     "segments": [
-      "لَهُ مُلْكُ",
-      "السَّمَاوَاتِ وَالْأَرْضِ",
-      "يُحْيِي وَيُمِيتُ",
-      "وَهُوَ عَلَىٰ",
-      "كُلِّ شَيْءٍ قَدِيرٌ"
+      "words 1-2",
+      "words 3-4",
+      "words 5-6",
+      "words 7-9",
+      "word 10",
+      "words 11-13"
     ],
     "translations": [
-      "For Him (is the) dominion (of) the heavens",
-      "and the earth He gives life",
-      "and causes death and He",
-      "(is) over all",
-      "things All-Powerful"
+      "This (is the) creation (of) Allah",
+      "So show Me what have created",
+      "those besides Him",
+      "besides Him Nay",
+      "the wrongdoers (are) in",
+      "error clear"
     ],
-    "hint": "This verse highlights Allah's absolute sovereignty, His control over life and death, and His power over all things.",
-    "arabic": "لَهُۥ مُلْكُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ يُحْىِۦ وَيُمِيتُ ۖ وَهُوَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ",
+    "hint": "Luqman's timeless counsel to his son: devoted worship, commanding good and rejecting evil, patience, and reliance upon Allah alone.",
+    "arabic": "هَـٰذَا خَلْقُ ٱللَّهِ فَأَرُونِى مَاذَا خَلَقَ ٱلَّذِينَ مِن دُونِهِۦ ۚ بَلِ ٱلظَّـٰلِمُونَ فِى ضَلَـٰلٍۢ مُّبِينٍۢ",
     "words": [
-      "لَهُۥ مُلْكُ ٱلسَّمَـٰوَٰتِ",
-      "وَٱلْأَرْضِ ۖ يُحْىِۦ",
-      "وَيُمِيتُ ۖ وَهُوَ",
-      "عَلَىٰ كُلِّ",
-      "شَىْءٍۢ قَدِيرٌ"
+      "هَـٰذَا خَلْقُ ٱللَّهِ",
+      "فَأَرُونِى مَاذَا خَلَقَ",
+      "ٱلَّذِينَ مِن",
+      "دُونِهِۦ ۚ بَلِ",
+      "ٱلظَّـٰلِمُونَ فِى",
+      "ضَلَـٰلٍۢ مُّبِينٍۢ"
     ],
-    "verseEn": "His is the dominion of the heavens and earth. He gives life and causes death, and He is over all things competent."
+    "verseEn": "This is the creation of Allāh. So show Me what those other than Him have created. Rather, the wrongdoers are in clear error."
   },
   "generated": true,
   "model": "auto (chain)"

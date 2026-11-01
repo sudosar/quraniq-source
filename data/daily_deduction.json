@@ -1,65 +1,65 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-11-01",
   "puzzle": {
-    "title": "The Vigil of the Bereaved",
-    "intro": "You are about to encounter a soul tested by the deepest separation, whose eyes knew the language of tears yet whose heart never lost hope. In a story of deception, longing, and eventual reunion, this noble servant of Allah became a symbol of patience for all time. Who endured the years of hidden pain, only to have sight and joy restored in a single moment?",
+    "title": "The Voice That Refused Despair",
+    "intro": "Step into a household where loss follows loss, yet one calm voice refuses despair. A single call in the Qur'an turns patience into a turning point; can you trace the clues to the person behind that voice?",
     "clues": [
-      "I am a prophet whose name became a symbol of patience in the face of great loss.",
-      "I was blessed with many sons, but one was taken from me by the jealousy of others.",
-      "My love for that lost one was so profound that my eyes turned white from grief, yet I never complained except to Allah.",
-      "I sent my sons back to search for the one I had lost and his brother, urging them not to give up hope.",
-      "When the bearer of good tidings arrived, a shirt was cast over my face, and suddenly the world became clear again.",
-      "I am known as Israel, and from my twelve sons came the twelve tribes of a great nation."
+      "I was the voice of patience within a household where blessings were tested by calamity.",
+      "I remained in a household emptied by the loss of wealth and children.",
+      "I knew that illness had also struck that companion, whose body was afflicted.",
+      "When the distress became severe, I called out with a reminder of Allah.",
+      "I offered one declaration: Allah is the Truth, so remain patient.",
+      "I called to Ayyub by name; afterward, Allah removed the affliction and restored the family."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Ya'qub (Jacob)",
-          "Prophet Yusuf (Joseph)",
-          "Prophet Ishaq (Isaac)",
-          "Prophet Ibrahim (Abraham)",
-          "Prophet Ayyub (Job)"
+          "The Wife of Prophet Ayyub",
+          "The Wife of Prophet Nuh",
+          "The Wife of Prophet Ibrahim",
+          "The Wife of Prophet Ya'qub",
+          "The Daughter of Pharaoh"
         ],
-        "answer": "Prophet Ya'qub (Jacob)"
+        "answer": "The Wife of Prophet Ayyub"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Separation from a beloved son for many years",
-          "Being thrown into a blazing fire",
-          "Swallowed by a great fish",
-          "Afflicted with a severe skin disease",
-          "Being childless until old age"
+          "Remaining with Ayyub through loss and illness, then calling for patience",
+          "Warning a righteous messenger to abandon a corrupt community",
+          "Praying for the birth of a future lineage",
+          "Interpreting dreams within a royal prison",
+          "Finding an entrusted child beside a river"
         ],
-        "answer": "Separation from a beloved son for many years"
+        "answer": "Remaining with Ayyub through loss and illness, then calling for patience"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The shirt of Yusuf",
-          "The staff of Musa",
-          "The ark of Nuh",
-          "The she-camel of Salih",
-          "The ring of Sulayman"
+          "The declaration that Allah is the Truth and patience is required",
+          "A palm tree beside a spring",
+          "A call to build a vessel far from the waves",
+          "A dream of eleven stars and a rising sun",
+          "A basket carried along the Nile"
         ],
-        "answer": "The shirt of Yusuf"
+        "answer": "The declaration that Allah is the Truth and patience is required"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Sight restored and reunited with his son",
-          "Granted victory over a tyrant king",
-          "Raised to the heavens alive",
-          "Appointed as a ruler over Egypt",
-          "Given a son in old age as a miracle"
+          "Ayyub's affliction was removed and his family restored",
+          "A long-awaited child was granted after a barren prayer",
+          "A young ruler interpreted seven years of abundance and scarcity",
+          "An entrusted child was rescued from flowing water",
+          "A warning preceded a destructive flood"
         ],
-        "answer": "Sight restored and reunited with his son"
+        "answer": "Ayyub's affliction was removed and his family restored"
       }
     },
-    "verseRef": "12:96",
-    "arabic": "فَلَمَّآ أَن جَآءَ ٱلْبَشِيرُ أَلْقَىٰهُ عَلَىٰ وَجْهِهِۦ فَٱرْتَدَّ بَصِيرًۭا ۖ قَالَ أَلَمْ أَقُل لَّكُمْ إِنِّىٓ أَعْلَمُ مِنَ ٱللَّهِ مَا لَا تَعْلَمُونَ",
-    "verse": "And when the bearer of good tidings arrived, he cast it over his face, and he returned [once again] seeing. He said, \"Did I not tell you that I know from Allāh that which you do not know?\" (12:96)"
+    "verseRef": "83:16",
+    "arabic": "ثُمَّ إِنَّهُمْ لَصَالُوا۟ ٱلْجَحِيمِ",
+    "verse": "Then indeed, they will [enter and] burn in Hellfire. (83:16)"
   },
   "generated": true,
   "model": "auto (chain)"
