@@ -1,0 +1,442 @@
+{
+  "harf": {
+    "word": "بركات",
+    "display": "بَرَكَاتٍ",
+    "hint": "Plural of blessing; divine favors or increase in good",
+    "verseRef": "11:48",
+    "arabicVerse": "قِيلَ يَـٰنُوحُ ٱهْبِطْ بِسَلَـٰمٍۢ مِّنَّا وَبَرَكَـٰتٍ عَلَيْكَ وَعَلَىٰٓ أُمَمٍۢ مِّمَّن مَّعَكَ ۚ وَأُمَمٌۭ سَنُمَتِّعُهُمْ ثُمَّ يَمَسُّهُم مِّنَّا عَذَابٌ أَلِيمٌۭ",
+    "verse": "11:48 - It was said, \"O Noah, disembark in security from Us and blessings upon you and upon nations [descending] from those with you. But other nations [of them] We will grant enjoyment; then there will touch them from Us a painful punishment.\""
+  },
+  "deduction": {
+    "title": "The Voice That Refused Despair",
+    "intro": "Step into a household where loss follows loss, yet one calm voice refuses despair. A single call in the Qur'an turns patience into a turning point; can you trace the clues to the person behind that voice?",
+    "clues": [
+      "I was the voice of patience within a household where blessings were tested by calamity.",
+      "I remained in a household emptied by the loss of wealth and children.",
+      "I knew that illness had also struck that companion, whose body was afflicted.",
+      "When the distress became severe, I called out with a reminder of Allah.",
+      "I offered one declaration: Allah is the Truth, so remain patient.",
+      "I called to Ayyub by name; afterward, Allah removed the affliction and restored the family."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "The Wife of Prophet Ayyub",
+          "The Wife of Prophet Nuh",
+          "The Wife of Prophet Ibrahim",
+          "The Wife of Prophet Ya'qub",
+          "The Daughter of Pharaoh"
+        ],
+        "answer": "The Wife of Prophet Ayyub"
+      },
+      "trial": {
+        "label": "Trial/Event",
+        "options": [
+          "Remaining with Ayyub through loss and illness, then calling for patience",
+          "Warning a righteous messenger to abandon a corrupt community",
+          "Praying for the birth of a future lineage",
+          "Interpreting dreams within a royal prison",
+          "Finding an entrusted child beside a river"
+        ],
+        "answer": "Remaining with Ayyub through loss and illness, then calling for patience"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The declaration that Allah is the Truth and patience is required",
+          "A palm tree beside a spring",
+          "A call to build a vessel far from the waves",
+          "A dream of eleven stars and a rising sun",
+          "A basket carried along the Nile"
+        ],
+        "answer": "The declaration that Allah is the Truth and patience is required"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "Ayyub's affliction was removed and his family restored",
+          "A long-awaited child was granted after a barren prayer",
+          "A young ruler interpreted seven years of abundance and scarcity",
+          "An entrusted child was rescued from flowing water",
+          "A warning preceded a destructive flood"
+        ],
+        "answer": "Ayyub's affliction was removed and his family restored"
+      }
+    },
+    "verseRef": "83:16",
+    "arabic": "ثُمَّ إِنَّهُمْ لَصَالُوا۟ ٱلْجَحِيمِ",
+    "verse": "Then indeed, they will [enter and] burn in Hellfire. (83:16)"
+  },
+  "scramble": {
+    "verseRef": "31:11",
+    "reference": "Surah Luqman (31:11)",
+    "segments": [
+      "words 1-2",
+      "words 3-4",
+      "words 5-6",
+      "words 7-9",
+      "word 10",
+      "words 11-13"
+    ],
+    "translations": [
+      "This (is the) creation (of) Allah",
+      "So show Me what have created",
+      "those besides Him",
+      "besides Him Nay",
+      "the wrongdoers (are) in",
+      "error clear"
+    ],
+    "hint": "Luqman's timeless counsel to his son: devoted worship, commanding good and rejecting evil, patience, and reliance upon Allah alone.",
+    "arabic": "هَـٰذَا خَلْقُ ٱللَّهِ فَأَرُونِى مَاذَا خَلَقَ ٱلَّذِينَ مِن دُونِهِۦ ۚ بَلِ ٱلظَّـٰلِمُونَ فِى ضَلَـٰلٍۢ مُّبِينٍۢ",
+    "words": [
+      "هَـٰذَا خَلْقُ ٱللَّهِ",
+      "فَأَرُونِى مَاذَا خَلَقَ",
+      "ٱلَّذِينَ مِن",
+      "دُونِهِۦ ۚ بَلِ",
+      "ٱلظَّـٰلِمُونَ فِى",
+      "ضَلَـٰلٍۢ مُّبِينٍۢ"
+    ],
+    "verseEn": "This is the creation of Allāh. So show Me what those other than Him have created. Rather, the wrongdoers are in clear error."
+  },
+  "roothive": {
+    "center": "ت",
+    "outer": [
+      "ه",
+      "ا",
+      "ف",
+      "م",
+      "س",
+      "ح"
+    ],
+    "root": {
+      "letters": "فتح",
+      "display": "ف ت ح",
+      "translit": "f-t-ḥ",
+      "meaning": "The root links opening and beginning with deciding an issue and achieving victory. Its derived words grow from these ideas by naming an opener or judge, a means of access, or seeking victory.",
+      "occurrences": 38,
+      "lemmaCount": 8
+    },
+    "words": [
+      {
+        "w": "اتم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "أَتَمَّ",
+            "gloss": "perfect",
+            "type": "verb",
+            "root": "تمم",
+            "count": 16,
+            "ref": "2:233",
+            "pos": 9,
+            "alt": [
+              "complete",
+              "completes"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "تحت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "تَحْت",
+            "gloss": "under",
+            "type": "noun",
+            "root": "تحت",
+            "count": 51,
+            "ref": "5:66",
+            "pos": 15,
+            "alt": [
+              "beneath",
+              "below"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "سته",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "سِتَّة",
+            "gloss": "six",
+            "type": "noun",
+            "root": "ستت",
+            "count": 7,
+            "ref": "7:54",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "سحت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "سُحْت",
+            "gloss": "forbidden",
+            "type": "noun",
+            "root": "سحت",
+            "count": 3,
+            "ref": "5:42",
+            "pos": 4
+          }
+        ]
+      },
+      {
+        "w": "فات",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "فاتَ",
+            "gloss": "escaped",
+            "type": "verb",
+            "root": "فوت",
+            "count": 3,
+            "ref": "3:153",
+            "pos": 18,
+            "alt": [
+              "has escaped",
+              "have gone from"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "فتح",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "فَتَحَ",
+            "gloss": "has",
+            "type": "verb",
+            "root": "فتح",
+            "count": 16,
+            "ref": "2:76",
+            "pos": 15,
+            "alt": [
+              "decide",
+              "has been opened"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "فَتْح",
+            "gloss": "victory",
+            "type": "noun",
+            "root": "فتح",
+            "count": 12,
+            "ref": "4:141",
+            "pos": 7,
+            "alt": [
+              "judgment"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مات",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "ماتَ",
+            "gloss": "die",
+            "type": "verb",
+            "root": "موت",
+            "count": 39,
+            "ref": "3:144",
+            "pos": 11,
+            "alt": [
+              "dies",
+              "died"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "هات",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هاتُ",
+            "gloss": "bring",
+            "type": "verb",
+            "root": "هات",
+            "count": 4,
+            "ref": "2:111",
+            "pos": 14,
+            "alt": [
+              "bring forth"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "امات",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَماتَ",
+            "gloss": "causes death",
+            "type": "verb",
+            "root": "موت",
+            "count": 21,
+            "ref": "53:44",
+            "pos": 3,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "فاتح",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "فاتِح",
+            "gloss": "decide",
+            "type": "active participle",
+            "root": "فتح",
+            "count": 1,
+            "ref": "7:89",
+            "pos": 42
+          }
+        ]
+      },
+      {
+        "w": "فتاح",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "فَتّاح",
+            "gloss": "judge",
+            "type": "noun",
+            "root": "فتح",
+            "count": 1,
+            "ref": "34:26",
+            "pos": 10
+          }
+        ]
+      },
+      {
+        "w": "فتاه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "فَتاة",
+            "gloss": "slave girls",
+            "type": "noun",
+            "root": "فتي",
+            "count": 2,
+            "ref": "4:25",
+            "pos": 15
+          }
+        ]
+      },
+      {
+        "w": "ممات",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَمات",
+            "gloss": "dying",
+            "type": "noun",
+            "root": "موت",
+            "count": 3,
+            "ref": "6:162",
+            "pos": 6,
+            "alt": [
+              "death"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مفاتح",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَفاتِح",
+            "gloss": "keys",
+            "type": "noun",
+            "root": "فتح",
+            "count": 3,
+            "ref": "6:59",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "مفتحه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مُفَتَّحَة",
+            "gloss": "opened",
+            "type": "passive participle",
+            "root": "فتح",
+            "count": 1,
+            "ref": "38:50",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "استفتح",
+        "family": true,
+        "points": 6,
+        "senses": [
+          {
+            "lemma": "اسْتَفْتَحُ",
+            "gloss": "pray for victory",
+            "type": "verb",
+            "root": "فتح",
+            "count": 3,
+            "ref": "2:89",
+            "pos": 13,
+            "alt": [
+              "ask for victory",
+              "sought victory"
+            ],
+            "form": 10
+          }
+        ]
+      }
+    ],
+    "otherFamily": [
+      {
+        "lemma": "تُفَتَّحُ",
+        "gloss": "be opened",
+        "type": "verb",
+        "root": "فتح",
+        "count": 1,
+        "ref": "7:40",
+        "pos": 8,
+        "form": 2
+      }
+    ],
+    "maxScore": 40,
+    "featuredRoot": "فتح"
+  }
+}
