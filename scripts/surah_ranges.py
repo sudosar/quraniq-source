@@ -149,12 +149,17 @@ def offered_ranges(blocked_refs, min_span=None, max_surahs=20):
     return {}
 
 
-def format_allowed_ranges(ranges, max_surahs=20, min_span=8):
+def format_allowed_ranges(ranges, max_surahs=20, min_span=3):
     """Compact human-readable allowlist for the prompt.
 
-    Prefer passing the output of `offered_ranges` directly — this function
-    additionally filters and caps, so calling it on raw `free_ayah_ranges`
-    output can advertise a surah whose runs were later dropped.
+    Prefer passing the output of `offered_ranges` directly. The renderer
+    must never filter stricter than the pool it is given: offered_ranges
+    is the single source of truth for the pool, and re-filtering at 8
+    hid the span-5 fallback pool entirely — the 1 Nov 2026 live test
+    showed the prompt rendering "(none)" for rule 4 even though the
+    pool held 20 surahs / 325 refs, so the model had no free passages
+    to pick from. min_span=3 is the cascade floor, so every pool span
+    (8, 5, 3) renders in full.
     """
     if not ranges:
         return "(none)"
