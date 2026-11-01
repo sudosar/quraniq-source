@@ -106,22 +106,47 @@ def free_ayah_ranges(blocked_refs, min_free=3):
 MIN_SPAN = 8
 
 
-def offered_ranges(blocked_refs, min_span=MIN_SPAN, max_surahs=20):
+# Fallback spans for the offered allowlist. History growth fragments
+# free space: on 1 Nov 2026 the longest free run anywhere was 7 ayahs,
+# so the MIN_SPAN=8 pool collapsed to empty (no prompt guidance, no
+# repair candidates) even though thousands of verses were still
+# unblocked. Cascading keeps the 8-verse preference while it works and
+# degrades gracefully instead of collapsing to nothing.
+OFFERED_SPAN_FALLBACKS = (8, 5, 3)
+_offered_fallback_logged = False
+
+
+def offered_ranges(blocked_refs, min_span=None, max_surahs=20):
     """The ranges the prompt actually advertises, as {surah: [(lo, hi)]}.
 
     Must be the single source of truth for BOTH the prompt text and the
     validator's accept/reject decision. `format_allowed_ranges` renders
     these; `_in_allowlist` tests against them.
+
+    When min_span is None (the default), spans cascade (8, then 5,
+    then 3) and the first span with a non-empty pool wins; an explicit
+    min_span is used exactly as given. A fallback is logged once per
+    process.
     """
+    global _offered_fallback_logged
     ranges = free_ayah_ranges(blocked_refs)
-    offered = {}
-    for s, runs in ranges.items():
-        kept = [(lo, hi) for lo, hi in runs if (hi - lo + 1) >= min_span][:3]
-        if kept:
-            offered[s] = kept
-    # Rank by free space, then cap — same ordering the prompt uses.
-    ranked = sorted(offered.items(), key=lambda kv: -sum(b - a + 1 for a, b in kv[1]))
-    return dict(ranked[:max_surahs])
+    preferred = MIN_SPAN if min_span is None else min_span
+    spans = OFFERED_SPAN_FALLBACKS if min_span is None else (min_span,)
+    for span in spans:
+        offered = {}
+        for s, runs in ranges.items():
+            kept = [(lo, hi) for lo, hi in runs if (hi - lo + 1) >= span][:3]
+            if kept:
+                offered[s] = kept
+        # Rank by free space, then cap — same ordering the prompt uses.
+        ranked = sorted(offered.items(), key=lambda kv: -sum(b - a + 1 for a, b in kv[1]))
+        result = dict(ranked[:max_surahs])
+        if result:
+            if span != preferred and not _offered_fallback_logged:
+                print(f"  \u26a0 Allowlist: no runs \u2265 {preferred}; fell back to span {span} ({len(result)} surahs)")
+                _offered_fallback_logged = True
+            return result
+    return {}
 
 
 def format_allowed_ranges(ranges, max_surahs=20, min_span=8):
