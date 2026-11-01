@@ -307,10 +307,21 @@ MINIMAX_M3_API_URL = "https://api.minimax.io/v1/chat/completions"
 KIMI_API_URL = "https://api.moonshot.ai/v1/chat/completions"
 
 # Model fallback chain: MiniMax M3 → Kimi K3 → DeepSeek V4 Pro
+# Chain order is a speed decision, NOT an accuracy ranking: every model
+# still gets its retries and the validator/enrich acceptance criteria are
+# unchanged, so reordering cannot accept a worse category — it only
+# changes which model's success is found first.
+# Kimi first (Nov 2026): it accepted Connections cat 1 first try
+# (10k tokens) in the 1 Nov live test, while M3 burned 30k-58k tokens
+# per attempt and failed 5/5 on the same category. M3 last: its 131072
+# budget is DELIBERATE (29 Oct 2026 it burned the whole 32768 budget in
+# reasoning and returned empty content, 4 attempts) — capping it back
+# would reintroduce that failure, so its slowness is only paid on
+# categories where Kimi and DeepSeek both fail.
 MODEL_CHAIN = [
-    {"id": "MiniMax-M3",      "api": "minimax_m3", "label": "MiniMax M3"},
     {"id": "kimi-k3",         "api": "kimi",       "label": "Kimi K3"},
     {"id": "deepseek-v4-pro", "api": "deepseek",   "label": "DeepSeek V4 Pro"},
+    {"id": "MiniMax-M3",      "api": "minimax_m3", "label": "MiniMax M3"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
