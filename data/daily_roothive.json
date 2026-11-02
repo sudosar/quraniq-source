@@ -1,344 +1,628 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "puzzle": {
-    "center": "ت",
+    "center": "ك",
     "outer": [
-      "ه",
+      "ي",
       "ا",
-      "ف",
-      "م",
       "س",
-      "ح"
+      "ب",
+      "ر",
+      "ت"
     ],
     "root": {
-      "letters": "فتح",
-      "display": "ف ت ح",
-      "translit": "f-t-ḥ",
-      "meaning": "The root links opening and beginning with deciding an issue and achieving victory. Its derived words grow from these ideas by naming an opener or judge, a means of access, or seeking victory.",
-      "occurrences": 38,
-      "lemmaCount": 8
+      "letters": "كبر",
+      "display": "ك ب ر",
+      "translit": "k-b-r",
+      "meaning": "This root centers on greatness or bigness in size, rank, or importance. From it grow words for greater or greatest, old age, something difficult or heavy, and arrogance—seeing oneself as greater than others.",
+      "occurrences": 161,
+      "lemmaCount": 18
     },
     "words": [
       {
-        "w": "اتم",
+        "w": "بكت",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَتَمَّ",
-            "gloss": "perfect",
+            "lemma": "بَكَتْ",
+            "gloss": "wept",
             "type": "verb",
-            "root": "تمم",
-            "count": 16,
-            "ref": "2:233",
-            "pos": 9,
-            "alt": [
-              "complete",
-              "completes"
-            ],
-            "form": 4
+            "root": "بكي",
+            "count": 5,
+            "ref": "44:29",
+            "pos": 2,
+            "form": 1
           }
         ]
       },
       {
-        "w": "تحت",
+        "w": "بكر",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "تَحْت",
-            "gloss": "under",
-            "type": "noun",
-            "root": "تحت",
-            "count": 51,
-            "ref": "5:66",
-            "pos": 15,
+            "lemma": "بِكْر",
+            "gloss": "young",
+            "type": "adjective",
+            "root": "بكر",
+            "count": 3,
+            "ref": "2:68",
+            "pos": 17,
             "alt": [
-              "beneath",
-              "below"
+              "virgins"
             ]
           }
         ]
       },
       {
-        "w": "سته",
+        "w": "ركب",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "سِتَّة",
-            "gloss": "six",
-            "type": "noun",
-            "root": "ستت",
-            "count": 7,
-            "ref": "7:54",
-            "pos": 9
-          }
-        ]
-      },
-      {
-        "w": "سحت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "سُحْت",
-            "gloss": "forbidden",
-            "type": "noun",
-            "root": "سحت",
-            "count": 3,
-            "ref": "5:42",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "فات",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "فاتَ",
-            "gloss": "escaped",
+            "lemma": "رَكِبَ",
+            "gloss": "embark",
             "type": "verb",
-            "root": "فوت",
-            "count": 3,
-            "ref": "3:153",
-            "pos": 18,
-            "alt": [
-              "has escaped",
-              "have gone from"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "فتح",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "فَتَحَ",
-            "gloss": "has",
-            "type": "verb",
-            "root": "فتح",
-            "count": 16,
-            "ref": "2:76",
-            "pos": 15,
-            "alt": [
-              "decide",
-              "has been opened"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "فَتْح",
-            "gloss": "victory",
-            "type": "noun",
-            "root": "فتح",
-            "count": 12,
-            "ref": "4:141",
-            "pos": 7,
-            "alt": [
-              "judgment"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مات",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "ماتَ",
-            "gloss": "die",
-            "type": "verb",
-            "root": "موت",
-            "count": 39,
-            "ref": "3:144",
-            "pos": 11,
-            "alt": [
-              "dies",
-              "died"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "هات",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "هاتُ",
-            "gloss": "bring",
-            "type": "verb",
-            "root": "هات",
-            "count": 4,
-            "ref": "2:111",
+            "root": "ركب",
+            "count": 9,
+            "ref": "11:42",
             "pos": 14,
-            "alt": [
-              "bring forth"
-            ],
             "form": 1
           }
         ]
       },
       {
-        "w": "امات",
+        "w": "كاس",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَماتَ",
-            "gloss": "causes death",
-            "type": "verb",
-            "root": "موت",
-            "count": 21,
-            "ref": "53:44",
-            "pos": 3,
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "فاتح",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "فاتِح",
-            "gloss": "decide",
-            "type": "active participle",
-            "root": "فتح",
-            "count": 1,
-            "ref": "7:89",
-            "pos": 42
-          }
-        ]
-      },
-      {
-        "w": "فتاح",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "فَتّاح",
-            "gloss": "judge",
+            "lemma": "كَأْس",
+            "gloss": "cup",
             "type": "noun",
-            "root": "فتح",
-            "count": 1,
-            "ref": "34:26",
-            "pos": 10
-          }
-        ]
-      },
-      {
-        "w": "فتاه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "فَتاة",
-            "gloss": "slave girls",
-            "type": "noun",
-            "root": "فتي",
-            "count": 2,
-            "ref": "4:25",
-            "pos": 15
-          }
-        ]
-      },
-      {
-        "w": "ممات",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَمات",
-            "gloss": "dying",
-            "type": "noun",
-            "root": "موت",
-            "count": 3,
-            "ref": "6:162",
-            "pos": 6,
-            "alt": [
-              "death"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مفاتح",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مَفاتِح",
-            "gloss": "keys",
-            "type": "noun",
-            "root": "فتح",
-            "count": 3,
-            "ref": "6:59",
-            "pos": 2
-          }
-        ]
-      },
-      {
-        "w": "مفتحه",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مُفَتَّحَة",
-            "gloss": "opened",
-            "type": "passive participle",
-            "root": "فتح",
-            "count": 1,
-            "ref": "38:50",
+            "root": "كأس",
+            "count": 6,
+            "ref": "52:23",
             "pos": 3
           }
         ]
       },
       {
-        "w": "استفتح",
+        "w": "كبت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "كُبِتَ",
+            "gloss": "were disgraced",
+            "type": "verb",
+            "root": "كبت",
+            "count": 3,
+            "ref": "58:5",
+            "pos": 8,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "كبر",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "كَبُرَ",
+            "gloss": "hard",
+            "type": "verb",
+            "root": "كبر",
+            "count": 8,
+            "ref": "6:35",
+            "pos": 3,
+            "alt": [
+              "difficult",
+              "great"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "كِبَر",
+            "gloss": "old age",
+            "type": "noun",
+            "root": "كبر",
+            "count": 6,
+            "ref": "2:266",
+            "pos": 20
+          },
+          {
+            "lemma": "كَبِّرْ",
+            "gloss": "magnify",
+            "type": "verb",
+            "root": "كبر",
+            "count": 4,
+            "ref": "2:185",
+            "pos": 38,
+            "alt": [
+              "may magnify"
+            ],
+            "form": 2
+          },
+          {
+            "lemma": "كِبْر",
+            "gloss": "greatness",
+            "type": "noun",
+            "root": "كبر",
+            "count": 2,
+            "ref": "40:56",
+            "pos": 14
+          }
+        ]
+      },
+      {
+        "w": "كتب",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "كَتَبَ",
+            "gloss": "prescribed",
+            "type": "verb",
+            "root": "كتب",
+            "count": 49,
+            "ref": "2:79",
+            "pos": 19,
+            "alt": [
+              "is prescribed",
+              "was prescribed"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "كرب",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "كَرْب",
+            "gloss": "distress",
+            "type": "noun",
+            "root": "كرب",
+            "count": 4,
+            "ref": "6:64",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "كسب",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "كَسَبَ",
+            "gloss": "earned",
+            "type": "verb",
+            "root": "كسب",
+            "count": 62,
+            "ref": "2:81",
+            "pos": 3,
+            "alt": [
+              "earns",
+              "has earned"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "اركس",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَرْكَسَ",
+            "gloss": "cast them back",
+            "type": "verb",
+            "root": "ركس",
+            "count": 2,
+            "ref": "4:88",
+            "pos": 7,
+            "alt": [
+              "are plunged"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "اكبر",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "أَكْبَر",
+            "gloss": "greater",
+            "type": "noun",
+            "root": "كبر",
+            "count": 24,
+            "ref": "2:217",
+            "pos": 22,
+            "alt": [
+              "greatest"
+            ]
+          },
+          {
+            "lemma": "أَكْبَرْ",
+            "gloss": "greatly admired",
+            "type": "verb",
+            "root": "كبر",
+            "count": 1,
+            "ref": "12:31",
+            "pos": 19,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "بارك",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "بارَكَ",
+            "gloss": "blessed is",
+            "type": "verb",
+            "root": "برك",
+            "count": 8,
+            "ref": "27:8",
+            "pos": 5,
+            "form": 3
+          }
+        ]
+      },
+      {
+        "w": "تارك",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "تارِك",
+            "gloss": "give up",
+            "type": "active participle",
+            "root": "ترك",
+            "count": 3,
+            "ref": "11:12",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "كاتب",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "كاتِب",
+            "gloss": "scribe",
+            "type": "active participle",
+            "root": "كتب",
+            "count": 6,
+            "ref": "2:282",
+            "pos": 13,
+            "alt": [
+              "recorders",
+              "recording"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "كبار",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "كُبّار",
+            "gloss": "great",
+            "type": "adjective",
+            "root": "كبر",
+            "count": 1,
+            "ref": "71:22",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "كبري",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "كُبْرَى",
+            "gloss": "greatest",
+            "type": "adjective",
+            "root": "كبر",
+            "count": 7,
+            "ref": "20:23",
+            "pos": 4,
+            "alt": [
+              "great"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "كبير",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "كَبِير",
+            "gloss": "large",
+            "type": "adjective",
+            "root": "كبر",
+            "count": 40,
+            "ref": "2:217",
+            "pos": 10,
+            "alt": [
+              "great",
+              "most great"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "كتاب",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "كِتاب",
+            "gloss": "book",
+            "type": "noun",
+            "root": "كتب",
+            "count": 260,
+            "ref": "2:89",
+            "pos": 3,
+            "alt": [
+              "record",
+              "decree"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "كرسي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "كُرْسِيّ",
+            "gloss": "seat",
+            "type": "noun",
+            "root": "كرس",
+            "count": 2,
+            "ref": "2:255",
+            "pos": 42,
+            "alt": [
+              "throne"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ابكار",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "إِبْكار",
+            "gloss": "morning",
+            "type": "noun",
+            "root": "بكر",
+            "count": 2,
+            "ref": "3:41",
+            "pos": 20
+          }
+        ]
+      },
+      {
+        "w": "ارايك",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "أَرائِك",
+            "gloss": "couches",
+            "type": "noun",
+            "root": "أرك",
+            "count": 5,
+            "ref": "18:31",
+            "pos": 24,
+            "alt": [
+              "thrones",
+              "adorned couches"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اكتسب",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "اكْتَسَبَ",
+            "gloss": "earned",
+            "type": "verb",
+            "root": "كسب",
+            "count": 5,
+            "ref": "2:286",
+            "pos": 12,
+            "form": 8
+          }
+        ]
+      },
+      {
+        "w": "تبارك",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "تَبارَكَ",
+            "gloss": "blessed is he",
+            "type": "verb",
+            "root": "برك",
+            "count": 9,
+            "ref": "7:54",
+            "pos": 29,
+            "alt": [
+              "blessed is",
+              "blessed"
+            ],
+            "form": 6
+          }
+        ]
+      },
+      {
+        "w": "تكبير",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "تَكْبِير",
+            "gloss": "magnificence",
+            "type": "verbal noun",
+            "root": "كبر",
+            "count": 1,
+            "ref": "17:111",
+            "pos": 21
+          }
+        ]
+      },
+      {
+        "w": "سكاري",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "سُكارَى",
+            "gloss": "intoxicated",
+            "type": "noun",
+            "root": "سكر",
+            "count": 3,
+            "ref": "4:43",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "استكبر",
         "family": true,
         "points": 6,
         "senses": [
           {
-            "lemma": "اسْتَفْتَحُ",
-            "gloss": "pray for victory",
+            "lemma": "اسْتَكْبَرَ",
+            "gloss": "was arrogant",
             "type": "verb",
-            "root": "فتح",
-            "count": 3,
-            "ref": "2:89",
-            "pos": 13,
-            "alt": [
-              "ask for victory",
-              "sought victory"
-            ],
+            "root": "كبر",
+            "count": 40,
+            "ref": "38:74",
+            "pos": 3,
             "form": 10
+          }
+        ]
+      },
+      {
+        "w": "استكبار",
+        "family": true,
+        "points": 7,
+        "senses": [
+          {
+            "lemma": "اسْتِكْبار",
+            "gloss": "pride",
+            "type": "verbal noun",
+            "root": "كبر",
+            "count": 2,
+            "ref": "35:43",
+            "pos": 1,
+            "alt": [
+              "arrogance"
+            ]
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "تُفَتَّحُ",
-        "gloss": "be opened",
+        "lemma": "كَبِيرَة",
+        "gloss": "great",
+        "type": "noun",
+        "root": "كبر",
+        "count": 7,
+        "ref": "4:31",
+        "pos": 3,
+        "alt": [
+          "big",
+          "greater"
+        ]
+      },
+      {
+        "lemma": "مُتَكَبِّر",
+        "gloss": "arrogant one",
+        "type": "active participle",
+        "root": "كبر",
+        "count": 7,
+        "ref": "40:27",
+        "pos": 9,
+        "alt": [
+          "arrogant"
+        ]
+      },
+      {
+        "lemma": "مُسْتَكْبِر",
+        "gloss": "arrogant",
+        "type": "active participle",
+        "root": "كبر",
+        "count": 6,
+        "ref": "16:22",
+        "pos": 11,
+        "alt": [
+          "arrogantly"
+        ]
+      },
+      {
+        "lemma": "يَتَكَبَّرُ",
+        "gloss": "be arrogant",
         "type": "verb",
-        "root": "فتح",
-        "count": 1,
-        "ref": "7:40",
+        "root": "كبر",
+        "count": 2,
+        "ref": "7:13",
         "pos": 8,
-        "form": 2
+        "form": 5
+      },
+      {
+        "lemma": "كِبْرِياء",
+        "gloss": "greatness",
+        "type": "noun",
+        "root": "كبر",
+        "count": 2,
+        "ref": "10:78",
+        "pos": 10
+      },
+      {
+        "lemma": "كُبَراء",
+        "gloss": "great men",
+        "type": "noun",
+        "root": "كبر",
+        "count": 1,
+        "ref": "33:67",
+        "pos": 6
       }
     ],
-    "maxScore": 40,
-    "featuredRoot": "فتح"
+    "maxScore": 72,
+    "featuredRoot": "كبر"
   },
   "generated": true,
   "model": "auto (chain)"

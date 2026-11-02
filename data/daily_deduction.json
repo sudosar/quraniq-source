@@ -1,65 +1,65 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "puzzle": {
-    "title": "The Voice That Refused Despair",
-    "intro": "Step into a household where loss follows loss, yet one calm voice refuses despair. A single call in the Qur'an turns patience into a turning point; can you trace the clues to the person behind that voice?",
+    "title": "The Unwavering Ally in a Trial of Gold",
+    "intro": "In the shadow of a great prophet, a soul of eloquence and faith was chosen to assist in a monumental mission. This figure stood firm when the masses wavered, preaching against a glaring transgression that threatened the very core of monotheism. When the prophet returned to witness the people's lapse, this figure's defense was not one of guilt but of duty and fear of division. Who is this devoted servant of Allah?",
     "clues": [
-      "I was the voice of patience within a household where blessings were tested by calamity.",
-      "I remained in a household emptied by the loss of wealth and children.",
-      "I knew that illness had also struck that companion, whose body was afflicted.",
-      "When the distress became severe, I called out with a reminder of Allah.",
-      "I offered one declaration: Allah is the Truth, so remain patient.",
-      "I called to Ayyub by name; afterward, Allah removed the affliction and restored the family."
+      "I was chosen by Allah for a sacred duty alongside another, and my role was one of support and proclamation.",
+      "I was granted clarity of speech, and I accompanied a messenger to confront a powerful oppressor.",
+      "During a critical journey, the messenger ascended a mountain alone, leaving me to watch over the people.",
+      "In their absence, the people crafted a golden image, and I pleaded with them to remain faithful, but they refused my counsel.",
+      "When the messenger returned, filled with anger and grief, I was seized, but I explained that I had been overpowered and feared causing discord among them.",
+      "I am the prophet who stood beside Musa, my brother, sharing his burden and remaining steadfast against idolatry."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Wife of Prophet Ayyub",
-          "The Wife of Prophet Nuh",
-          "The Wife of Prophet Ibrahim",
-          "The Wife of Prophet Ya'qub",
-          "The Daughter of Pharaoh"
+          "Prophet Harun",
+          "Prophet Musa",
+          "Prophet Isa",
+          "Prophet Dawud",
+          "Prophet Zakariyya"
         ],
-        "answer": "The Wife of Prophet Ayyub"
+        "answer": "Prophet Harun"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Remaining with Ayyub through loss and illness, then calling for patience",
-          "Warning a righteous messenger to abandon a corrupt community",
-          "Praying for the birth of a future lineage",
-          "Interpreting dreams within a royal prison",
-          "Finding an entrusted child beside a river"
+          "People worshipped a golden calf despite warnings",
+          "People threw me into a blazing fire",
+          "I was swallowed by a great fish",
+          "I was imprisoned on false charges",
+          "I was exiled from my city for preaching"
         ],
-        "answer": "Remaining with Ayyub through loss and illness, then calling for patience"
+        "answer": "People worshipped a golden calf despite warnings"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The declaration that Allah is the Truth and patience is required",
-          "A palm tree beside a spring",
-          "A call to build a vessel far from the waves",
-          "A dream of eleven stars and a rising sun",
-          "A basket carried along the Nile"
+          "The Golden Calf",
+          "The Burning Bush",
+          "The Staff that turned into a serpent",
+          "The Tablets of the Covenant",
+          "The Ark of the Covenant"
         ],
-        "answer": "The declaration that Allah is the Truth and patience is required"
+        "answer": "The Golden Calf"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Ayyub's affliction was removed and his family restored",
-          "A long-awaited child was granted after a barren prayer",
-          "A young ruler interpreted seven years of abundance and scarcity",
-          "An entrusted child was rescued from flowing water",
-          "A warning preceded a destructive flood"
+          "I was exonerated and continued my prophetic mission",
+          "I was punished for the people's sin",
+          "I was given a new nation to guide",
+          "I was taken up to heaven alive",
+          "I was made a ruler over a kingdom"
         ],
-        "answer": "Ayyub's affliction was removed and his family restored"
+        "answer": "I was exonerated and continued my prophetic mission"
       }
     },
-    "verseRef": "83:16",
-    "arabic": "ثُمَّ إِنَّهُمْ لَصَالُوا۟ ٱلْجَحِيمِ",
-    "verse": "Then indeed, they will [enter and] burn in Hellfire. (83:16)"
+    "verseRef": "25:35",
+    "arabic": "وَلَقَدْ ءَاتَيْنَا مُوسَى ٱلْكِتَـٰبَ وَجَعَلْنَا مَعَهُۥٓ أَخَاهُ هَـٰرُونَ وَزِيرًۭا",
+    "verse": "And We had certainly given Moses the Scripture and appointed with him his brother Aaron as an assistant. (25:35)"
   },
   "generated": true,
   "model": "auto (chain)"

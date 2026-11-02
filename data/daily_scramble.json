@@ -1,35 +1,32 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "puzzle": {
-    "verseRef": "31:11",
-    "reference": "Surah Luqman (31:11)",
+    "verseRef": "75:40",
+    "reference": "Surah Al-Qiyamah (75:40)",
     "segments": [
-      "words 1-2",
-      "words 3-4",
-      "words 5-6",
-      "words 7-9",
-      "word 10",
-      "words 11-13"
+      "أليس",
+      "ذلك",
+      "بقادر",
+      "على أن يحيي",
+      "الموتى"
     ],
     "translations": [
-      "This (is the) creation (of) Allah",
-      "So show Me what have created",
-      "those besides Him",
-      "besides Him Nay",
-      "the wrongdoers (are) in",
-      "error clear"
+      "Is not [that]",
+      "(He) Able [over]",
+      "to",
+      "give life",
+      "(to) the dead"
     ],
-    "hint": "Luqman's timeless counsel to his son: devoted worship, commanding good and rejecting evil, patience, and reliance upon Allah alone.",
-    "arabic": "هَـٰذَا خَلْقُ ٱللَّهِ فَأَرُونِى مَاذَا خَلَقَ ٱلَّذِينَ مِن دُونِهِۦ ۚ بَلِ ٱلظَّـٰلِمُونَ فِى ضَلَـٰلٍۢ مُّبِينٍۢ",
+    "hint": "A rhetorical question affirming Allah's power to bring the dead back to life.",
+    "arabic": "أَلَيْسَ ذَٰلِكَ بِقَـٰدِرٍ عَلَىٰٓ أَن يُحْـِۧىَ ٱلْمَوْتَىٰ",
     "words": [
-      "هَـٰذَا خَلْقُ ٱللَّهِ",
-      "فَأَرُونِى مَاذَا خَلَقَ",
-      "ٱلَّذِينَ مِن",
-      "دُونِهِۦ ۚ بَلِ",
-      "ٱلظَّـٰلِمُونَ فِى",
-      "ضَلَـٰلٍۢ مُّبِينٍۢ"
+      "أَلَيْسَ ذَٰلِكَ",
+      "بِقَـٰدِرٍ عَلَىٰٓ",
+      "أَن",
+      "يُحْـِۧىَ",
+      "ٱلْمَوْتَىٰ"
     ],
-    "verseEn": "This is the creation of Allāh. So show Me what those other than Him have created. Rather, the wrongdoers are in clear error."
+    "verseEn": "Is not that [Creator] Able to give life to the dead?"
   },
   "generated": true,
   "model": "auto (chain)"
