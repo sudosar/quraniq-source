@@ -1,32 +1,32 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "puzzle": {
-    "verseRef": "75:40",
-    "reference": "Surah Al-Qiyamah (75:40)",
+    "verseRef": "29:59",
+    "reference": "Surah Al-Ankabut (29:59)",
     "segments": [
-      "أليس",
-      "ذلك",
-      "بقادر",
-      "على أن يحيي",
-      "الموتى"
+      "word 1",
+      "word 2",
+      "word 3",
+      "word 4",
+      "word 5"
     ],
     "translations": [
-      "Is not [that]",
-      "(He) Able [over]",
-      "to",
-      "give life",
-      "(to) the dead"
+      "Those who",
+      "(are) patient",
+      "and upon",
+      "their Lord",
+      "put their trust"
     ],
-    "hint": "A rhetorical question affirming Allah's power to bring the dead back to life.",
-    "arabic": "أَلَيْسَ ذَٰلِكَ بِقَـٰدِرٍ عَلَىٰٓ أَن يُحْـِۧىَ ٱلْمَوْتَىٰ",
+    "hint": "A verse about patience and trusting in Allah.",
+    "arabic": "ٱلَّذِينَ صَبَرُوا۟ وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
     "words": [
-      "أَلَيْسَ ذَٰلِكَ",
-      "بِقَـٰدِرٍ عَلَىٰٓ",
-      "أَن",
-      "يُحْـِۧىَ",
-      "ٱلْمَوْتَىٰ"
+      "ٱلَّذِينَ",
+      "صَبَرُوا۟",
+      "وَعَلَىٰ",
+      "رَبِّهِمْ",
+      "يَتَوَكَّلُونَ"
     ],
-    "verseEn": "Is not that [Creator] Able to give life to the dead?"
+    "verseEn": "Who have been patient and upon their Lord rely."
   },
   "generated": true,
   "model": "auto (chain)"

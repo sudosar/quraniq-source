@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "puzzle": {
-    "word": "سميع",
-    "display": "سَمِيعٌ",
-    "hint": "One of the Divine Names, meaning the All-Hearing.",
-    "verseRef": "58:1",
-    "arabicVerse": "قَدْ سَمِعَ ٱللَّهُ قَوْلَ ٱلَّتِى تُجَـٰدِلُكَ فِى زَوْجِهَا وَتَشْتَكِىٓ إِلَى ٱللَّهِ وَٱللَّهُ يَسْمَعُ تَحَاوُرَكُمَآ ۚ إِنَّ ٱللَّهَ سَمِيعٌۢ بَصِيرٌ",
-    "verse": "58:1 - Certainly has Allāh heard the speech of the one who argues [i.e., pleads] with you, [O Muḥammad], concerning her husband and directs her complaint to Allāh. And Allāh hears your dialogue; indeed, Allāh is Hearing and Seeing."
+    "word": "غفلة",
+    "display": "غَفْلَة",
+    "hint": "A state of heedlessness or unawareness",
+    "verseRef": "21:97",
+    "arabicVerse": "وَٱقْتَرَبَ ٱلْوَعْدُ ٱلْحَقُّ فَإِذَا هِىَ شَـٰخِصَةٌ أَبْصَـٰرُ ٱلَّذِينَ كَفَرُوا۟ يَـٰوَيْلَنَا قَدْ كُنَّا فِى غَفْلَةٍۢ مِّنْ هَـٰذَا بَلْ كُنَّا ظَـٰلِمِينَ",
+    "verse": "21:97 - And [when] the true promise [i.e., the resurrection] has approached; then suddenly the eyes of those who disbelieved will be staring [in horror, while they say], \"O woe to us; we had been unmindful of this; rather, we were wrongdoers.\""
   },
   "generated": true,
   "model": "auto (chain)"
