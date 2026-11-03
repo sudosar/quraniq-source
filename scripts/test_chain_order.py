@@ -2,17 +2,17 @@
 """
 Chain-order tests (Nov 2026).
 
-Kimi first, DeepSeek second, M3 third, Meta last. This is a speed
-decision, not an accuracy ranking: acceptance criteria are unchanged,
-so reordering only changes which model's success is found first.
-Evidence: in the 1 Nov 2026 live test Kimi accepted Connections cat 1
-first try (10k tokens) while M3 burned 30k-58k tokens per attempt and
-failed 5/5. M3 keeps its 131072 budget (29 Oct 2026: it burned the
-whole 32768 budget in reasoning and returned empty content) -- capping
-it would reintroduce that failure, so its cost is only paid when Kimi
-and DeepSeek fail. Meta is last (3 Nov 2026): muse-spark-1.3 runs only
-when Kimi, DeepSeek and M3 have all failed, so its $4.25/M output
-price is paid rarely.
+MiniMax M3 first (user direction, 3 Nov 2026), DeepSeek second, Meta
+contributor third, Kimi last. Order is a cost/speed trade, not an
+accuracy ranking: acceptance criteria are unchanged, so order only
+changes which model's success is found first. M3 is cheapest
+pay-as-you-go output ($1.20/M) but slow and verbose (30k-58k tokens
+per grinding attempt); the round-robin cycles mean a slow M3 never
+blocks the other models forever. Meta uses the contributor tier
+(user consented to Meta training on prompts, 3 Nov 2026):
+muse-spark-1.3-contributor at $0.10/M in, $0.20/M out -- cheapest per
+token in the chain, kept third because M3 was asked first. Kimi last:
+$15.00/M output, the most expensive by far.
 """
 import sys
 import os
@@ -39,20 +39,19 @@ def test(name, cond, detail=""):
 def main():
     apis = [m["api"] for m in gen.MODEL_CHAIN]
     ids = [m["id"] for m in gen.MODEL_CHAIN]
-    test("chain order is kimi, deepseek, minimax_m3, meta",
-         apis == ["kimi", "deepseek", "minimax_m3", "meta"], str(apis))
+    test("chain order is minimax_m3, deepseek, meta, kimi",
+         apis == ["minimax_m3", "deepseek", "meta", "kimi"], str(apis))
     test("chain model ids in order",
-         ids == ["kimi-k3", "deepseek-v4-pro", "MiniMax-M3", "muse-spark-1.3"], str(ids))
+         ids == ["MiniMax-M3", "deepseek-v4-pro",
+                 "muse-spark-1.3-contributor", "kimi-k3"], str(ids))
     test("chain still has all four providers",
          set(apis) == {"kimi", "deepseek", "minimax_m3", "meta"})
-    test("kimi is first (fast accurate model tried before slow M3)",
-         apis[0] == "kimi")
-    test("M3 is third, not last (its cost paid only when kimi/deepseek fail)",
-         apis[2] == "minimax_m3")
-    test("Meta is last (only paid when all others fail)",
-         apis[-1] == "meta")
-    test("Meta entry uses muse-spark-1.3 Standard id",
-         gen.MODEL_CHAIN[-1]["id"] == "muse-spark-1.3")
+    test("M3 is first (user direction, cheapest pay-as-you-go output)",
+         apis[0] == "minimax_m3")
+    test("Meta is third with the contributor id",
+         apis[2] == "meta" and ids[2] == "muse-spark-1.3-contributor")
+    test("Kimi is last (most expensive output by far)",
+         apis[-1] == "kimi")
     print(f"\n{PASS} passed, {FAIL} failed")
     return 1 if FAIL else 0
 
