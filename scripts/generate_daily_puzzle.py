@@ -297,6 +297,7 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
 KIMI_API_KEY = os.environ.get("KIMI_API_KEY", "")
+META_API_KEY = os.environ.get("META_API_KEY", "")
 
 # API endpoints
 OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
@@ -305,23 +306,33 @@ GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/c
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 MINIMAX_M3_API_URL = "https://api.minimax.io/v1/chat/completions"
 KIMI_API_URL = "https://api.moonshot.ai/v1/chat/completions"
+META_API_URL = "https://api.meta.ai/v1/chat/completions"
 
-# Model fallback chain: MiniMax M3 → Kimi K3 → DeepSeek V4 Pro
+# Model fallback chain: Kimi K3 -> DeepSeek V4 Pro -> MiniMax M3 -> Meta Spark 1.3
 # Chain order is a speed decision, NOT an accuracy ranking: every model
 # still gets its retries and the validator/enrich acceptance criteria are
-# unchanged, so reordering cannot accept a worse category — it only
+# unchanged, so reordering cannot accept a worse category -- it only
 # changes which model's success is found first.
 # Kimi first (Nov 2026): it accepted Connections cat 1 first try
 # (10k tokens) in the 1 Nov live test, while M3 burned 30k-58k tokens
-# per attempt and failed 5/5 on the same category. M3 last: its 131072
-# budget is DELIBERATE (29 Oct 2026 it burned the whole 32768 budget in
-# reasoning and returned empty content, 4 attempts) — capping it back
+# per attempt and failed 5/5 on the same category. M3's 131072 budget
+# is DELIBERATE (29 Oct 2026 it burned the whole 32768 budget in
+# reasoning and returned empty content, 4 attempts) -- capping it back
 # would reintroduce that failure, so its slowness is only paid on
 # categories where Kimi and DeepSeek both fail.
+# Meta last (Nov 2026): muse-spark-1.3 on api.meta.ai, Standard tier
+# (never the contributor tier -- its discount trades prompts for
+# training). Verified 3 Nov 2026: temperature 0.6, top_p 0.95,
+# max_tokens 16384 and response_format json_object all accepted, and
+# reasoning_effort low is honored, which matters because the default
+# effort burned ~600 reasoning tokens on a hello. Meta runs only when
+# Kimi, DeepSeek and M3 have all failed, so its $4.25/M output price
+# is paid rarely.
 MODEL_CHAIN = [
     {"id": "kimi-k3",         "api": "kimi",       "label": "Kimi K3"},
     {"id": "deepseek-v4-pro", "api": "deepseek",   "label": "DeepSeek V4 Pro"},
     {"id": "MiniMax-M3",      "api": "minimax_m3", "label": "MiniMax M3"},
+    {"id": "muse-spark-1.3", "api": "meta", "label": "Meta Spark 1.3"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -653,7 +664,7 @@ def call_model(prompt, model_config, system_msg=None):
     If the response contains truncated JSON, automatically sends continuation
     requests (up to MAX_CONTINUATIONS) to get the complete output.
 
-    model_config: dict with 'id', 'api' ('openai', 'github', 'gemini', or 'deepseek'), 'label'
+    model_config: dict with 'id', 'api' ('openai', 'github', 'gemini', 'deepseek', 'minimax_m3', 'kimi', or 'meta'), 'label'
     """
     model_id = model_config["id"]
     api_type = model_config["api"]
@@ -709,6 +720,16 @@ def call_model(prompt, model_config, system_msg=None):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {KIMI_API_KEY}"
         }
+    elif api_type == "meta":
+        if not META_API_KEY:
+            print(f"  ⚠ META_API_KEY not set, skipping {model_config['label']}")
+            return None
+        api_url = META_API_URL
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {META_API_KEY}"
+        }
+
     else:  # github
         if not GITHUB_TOKEN:
             print(f"  ⚠ GITHUB_TOKEN not set, skipping {model_config['label']}")
@@ -752,8 +773,15 @@ def call_model(prompt, model_config, system_msg=None):
         payload["temperature"] = 1
 
     # response_format JSON mode — not all models support it; Kimi K3 returns 400 with it
-    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m3"):
+    if model_id.lower().startswith("gpt-") or api_type in ("deepseek", "gemini", "minimax_m3", "meta"):
         payload["response_format"] = {"type": "json_object"}
+    # Meta Spark is a reasoning model with a high default effort
+    # (verified 3 Nov 2026: ~600 reasoning tokens on a hello). Low
+    # effort keeps fallback calls cheap; the validator and retries
+    # still catch a weak category, and Meta runs only after the
+    # other three providers have failed.
+    if api_type == "meta":
+        payload["reasoning_effort"] = "low"
 
     # Reasoning models need more wall-clock time; Kimi K3 is also a reasoning model.
     # M3 gets 900s: a 131072-token budget cannot complete inside 300s at typical
@@ -762,6 +790,11 @@ def call_model(prompt, model_config, system_msg=None):
     if api_type == "minimax_m3":
         request_timeout = 900
     elif api_type == "kimi":
+        request_timeout = 300
+    elif api_type == "meta":
+        # Reasoning model like Kimi: a 10k-token category can
+        # legitimately take minutes, and 180s would burn the
+        # attempt on a slow tail.
         request_timeout = 300
     else:
         request_timeout = 180
@@ -832,6 +865,9 @@ def call_model(prompt, model_config, system_msg=None):
                     cont_payload["max_tokens"] = 32768
                 else:
                     cont_payload["max_tokens"] = 16384
+                # Match the initial call's cost control for Meta.
+                if api_type == "meta":
+                    cont_payload["reasoning_effort"] = "low"
                 try:
                     cont_resp = requests.post(api_url, headers=headers, json=cont_payload, timeout=request_timeout)
                     if cont_resp.status_code != 200:
@@ -4282,9 +4318,9 @@ def main():
             print(f"Partial history found for {today}. Missing: {', '.join(missing_games)}")
             print(f"Will regenerate only missing games.")
 
-    if not MINIMAX_API_KEY and not KIMI_API_KEY and not DEEPSEEK_API_KEY:
+    if not MINIMAX_API_KEY and not KIMI_API_KEY and not DEEPSEEK_API_KEY and not META_API_KEY:
         print("ERROR: No API credentials set.")
-        print("  Set at least one of: MINIMAX_API_KEY, KIMI_API_KEY, DEEPSEEK_API_KEY.")
+        print("  Set at least one of: MINIMAX_API_KEY, KIMI_API_KEY, DEEPSEEK_API_KEY, META_API_KEY.")
         return 1
 
     print(f"Available APIs:")
@@ -4300,6 +4336,10 @@ def main():
         print(f"  ✓ DeepSeek API (deepseek-v4-pro)")
     else:
         print(f"  ✗ DeepSeek API (DEEPSEEK_API_KEY not set)")
+    if META_API_KEY:
+        print(f"  ✓ Meta API (muse-spark-1.3)")
+    else:
+        print(f"  ✗ Meta API (META_API_KEY not set)")
 
     # Load history for cooldown enforcement (exclude today to allow replacing buggy attempts)
     history = load_history(exclude_date=today)
