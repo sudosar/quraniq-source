@@ -2,17 +2,14 @@
 """
 Chain-order tests (Nov 2026).
 
-MiniMax M3 first (user direction, 3 Nov 2026), DeepSeek second, Meta
-contributor third, Kimi last. Order is a cost/speed trade, not an
-accuracy ranking: acceptance criteria are unchanged, so order only
-changes which model's success is found first. M3 is cheapest
-pay-as-you-go output ($1.20/M) but slow and verbose (30k-58k tokens
-per grinding attempt); the round-robin cycles mean a slow M3 never
-blocks the other models forever. Meta uses the contributor tier
-(user consented to Meta training on prompts, 3 Nov 2026):
-muse-spark-1.3-contributor at $0.10/M in, $0.20/M out -- cheapest per
-token in the chain, kept third because M3 was asked first. Kimi last:
-$15.00/M output, the most expensive by far.
+Cheapest-first by list price (user direction, 3 Nov 2026): Meta
+contributor first ($0.20/M out, $0.10/M in), MiniMax M3 second
+($1.20/M out, $0.30/M in), DeepSeek third ($1.98/M out off-peak,
+$3.96/M peak), Kimi last ($15.00/M out). The order is the same on
+input prices. M3 sits second despite the user's MiniMax token plan:
+the plan quota is prepaid but finite (it bound on 1 Nov 2026), and
+list-price order is what was asked for. Order only changes which
+model's success is found first, never whether a category is accepted.
 """
 import sys
 import os
@@ -39,17 +36,17 @@ def test(name, cond, detail=""):
 def main():
     apis = [m["api"] for m in gen.MODEL_CHAIN]
     ids = [m["id"] for m in gen.MODEL_CHAIN]
-    test("chain order is minimax_m3, deepseek, meta, kimi",
-         apis == ["minimax_m3", "deepseek", "meta", "kimi"], str(apis))
+    test("chain order is meta, minimax_m3, deepseek, kimi",
+         apis == ["meta", "minimax_m3", "deepseek", "kimi"], str(apis))
     test("chain model ids in order",
-         ids == ["MiniMax-M3", "deepseek-v4-pro",
-                 "muse-spark-1.3-contributor", "kimi-k3"], str(ids))
+         ids == ["muse-spark-1.3-contributor", "MiniMax-M3",
+                 "deepseek-v4-pro", "kimi-k3"], str(ids))
     test("chain still has all four providers",
          set(apis) == {"kimi", "deepseek", "minimax_m3", "meta"})
-    test("M3 is first (user direction, cheapest pay-as-you-go output)",
-         apis[0] == "minimax_m3")
-    test("Meta is third with the contributor id",
-         apis[2] == "meta" and ids[2] == "muse-spark-1.3-contributor")
+    test("Meta contributor is first (cheapest per token)",
+         apis[0] == "meta" and ids[0] == "muse-spark-1.3-contributor")
+    test("M3 is second (token plan quota is prepaid but finite)",
+         apis[1] == "minimax_m3")
     test("Kimi is last (most expensive output by far)",
          apis[-1] == "kimi")
     print(f"\n{PASS} passed, {FAIL} failed")

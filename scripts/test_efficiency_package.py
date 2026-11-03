@@ -184,7 +184,7 @@ def main():
 
     # --- transport sideline ------------------------------------------
     def transport_fn(label, n):
-        if label == "MiniMax M3":
+        if label == "Meta Spark 1.3 Contributor":
             return None
         return json.dumps(good_cat())
 
@@ -195,13 +195,13 @@ def main():
              cat is not None and cat.get("nameEn") == good_cat()["nameEn"],
              str(cat)[:120])
         test("transport: dead model tried once, not 5 retries",
-             st.calls.get("MiniMax M3") == 1, str(st.calls))
+             st.calls.get("Meta Spark 1.3 Contributor") == 1, str(st.calls))
         test("transport: next model tried once and accepted",
-             st.calls.get("DeepSeek V4 Pro") == 1, str(st.calls))
+             st.calls.get("MiniMax M3") == 1, str(st.calls))
 
     # --- parse early-switch ------------------------------------------
     def parse_fn(label, n):
-        if label == "MiniMax M3":
+        if label == "Meta Spark 1.3 Contributor":
             return "this is not json at all"
         return json.dumps(good_cat())
 
@@ -211,7 +211,7 @@ def main():
         test("parse: category still accepted via next model",
              cat is not None, str(cat)[:120] if cat else "None")
         test("parse: early switch after 3 identical failures, not 5",
-             st.calls.get("MiniMax M3") == 3, str(st.calls))
+             st.calls.get("Meta Spark 1.3 Contributor") == 3, str(st.calls))
 
     # --- rejected-theme carryover -------------------------------------
     reused = "prophets named in the qur'an"

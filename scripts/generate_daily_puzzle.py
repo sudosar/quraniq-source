@@ -308,16 +308,15 @@ MINIMAX_M3_API_URL = "https://api.minimax.io/v1/chat/completions"
 KIMI_API_URL = "https://api.moonshot.ai/v1/chat/completions"
 META_API_URL = "https://api.meta.ai/v1/chat/completions"
 
-# Model fallback chain: MiniMax M3 -> DeepSeek V4 Pro -> Meta Spark 1.3 Contributor -> Kimi K3
-# M3 first is the user's direction (3 Nov 2026). Per-token output prices
-# are M3 $1.20/M, DeepSeek $1.98/M off-peak ($3.96/M peak), Meta
-# contributor $0.20/M (cheapest of all, kept third because M3 was asked
-# first), Kimi $15.00/M last. Order only changes which model's success
-# is found first, never whether a category is accepted.
-# M3 is slow and verbose (15-45 min per grinding attempt, 30k-58k tokens
-# out), so the round-robin cycles below matter: a slow M3 never blocks
-# the other models forever, transport failures break immediately and
-# same-kind failures early-switch after 3.
+# Model fallback chain: Meta Spark 1.3 Contributor -> MiniMax M3 -> DeepSeek V4 Pro -> Kimi K3
+# Cheapest-first by list price (user direction, 3 Nov 2026): Meta
+# contributor $0.20/M out ($0.10/M in), M3 $1.20/M out ($0.30/M in),
+# DeepSeek $1.98/M out off-peak ($3.96/M peak), Kimi $15.00/M out.
+# The order is the same on input prices. M3 sits second despite the
+# user's MiniMax token plan: the plan quota is prepaid but finite
+# (it bound on 1 Nov 2026), and list-price order is what was asked
+# for. Order only changes which model's success is found first,
+# never whether a category is accepted.
 # Meta uses the contributor tier (user consented to Meta training on
 # prompts, 3 Nov 2026): muse-spark-1.3-contributor, verified 3 Nov 2026
 # with the generator payload (temperature 0.6, response_format
@@ -327,9 +326,9 @@ META_API_URL = "https://api.meta.ai/v1/chat/completions"
 # and the run fails, which the workflow's Notify step turns into a
 # GitHub issue. Later cycles keep the narrowed 6-surah passages.
 MODEL_CHAIN = [
+    {"id": "muse-spark-1.3-contributor", "api": "meta", "label": "Meta Spark 1.3 Contributor"},
     {"id": "MiniMax-M3", "api": "minimax_m3", "label": "MiniMax M3"},
     {"id": "deepseek-v4-pro", "api": "deepseek", "label": "DeepSeek V4 Pro"},
-    {"id": "muse-spark-1.3-contributor", "api": "meta", "label": "Meta Spark 1.3 Contributor"},
     {"id": "kimi-k3", "api": "kimi", "label": "Kimi K3"},
 ]
 
@@ -3539,7 +3538,7 @@ def generate_roothive(history, today):
 def generate_game(game_type, history, today):
     """Generate a single game puzzle with retries and model fallback chain.
 
-    Fallback chain: MODEL_CHAIN (MiniMax M3 first). Each model gets up to MAX_RETRIES attempts before falling back.
+    Fallback chain: MODEL_CHAIN (cheapest first). Each model gets up to MAX_RETRIES attempts before falling back.
     Each model gets up to MAX_RETRIES attempts before falling back.
     Rate limiting immediately triggers fallback to the next model.
     """
