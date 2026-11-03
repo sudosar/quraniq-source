@@ -41,6 +41,7 @@ jobs:
           MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
           KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          META_API_KEY: ${{ secrets.META_API_KEY }}
         # -u: unbuffered stdout, so the live Actions log streams line by
         # line instead of flushing in ~8KB blocks. Without it, a running
         # job looks silent for long stretches (1 Nov 2026: only the
