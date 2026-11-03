@@ -981,6 +981,10 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
             if item.get("ar"):
                 all_prev_words.append(item["ar"])
 
+    # Rejected-but-never-published themes from earlier categories this
+    # run join the avoidance set too (they would otherwise be re-proposed:
+    # the validator still refuses them, but only after a wasted generation).
+    avoided_themes_set |= _RUN_REJECTED_THEMES
     # Only actively-cooled themes are worth forbidding. load_history() already
     # limits history["connections"]["themes"] to the theme-cooldown window;
     # that set can still reach ~120 names (~5.7k chars), which is more list
@@ -988,7 +992,8 @@ def build_single_category_prompt(history, today, cat_index, accumulated_cats, pr
     # which are the ones a repeat would actually be visible to a player.
     this_run_themes = {
         pc.get("nameEn", "").lower().strip() for pc in accumulated_cats
-    } - {""}
+    } | _RUN_REJECTED_THEMES
+    this_run_themes.discard("")
     cooled = set(history["connections"]["themes"])
     kept = sorted(this_run_themes) + sorted(cooled - this_run_themes)
     avoided_themes = ", ".join(kept[:30]) or "(none)"
@@ -3797,6 +3802,63 @@ def post_enrich_theme_check(cat, model_config):
     ]
 
 
+# ── Efficiency package (Nov 2026, following the 2 Nov run) ─────────
+# That run took 2h1m (vs 68 min on 1 Nov) on four distinct time sinks:
+#   1. Two fully transport-failed Kimi attempts on one category (~39 min)
+#      before the run-level health rule (2 consecutive failures) sidelined
+#      Kimi. The HTTP layer already retried each call 3x with backoff, so
+#      a fully failed attempt is persistent, not transient.
+#   2. Three consecutive empty outputs (JSON parse errors) from Kimi on
+#      another category before DeepSeek accepted on its first try.
+#   3. Kimi re-proposing a theme the previous category had just had
+#      rejected for reuse (~12 min), because rejected-but-never-published
+#      themes do not propagate across categories (and the prompt's
+#      forbidden list is capped at 30, this-run themes first).
+#   4. A 60s sleep between games (~3 min total).
+# The fixes below are deliberately narrow: they move to the next model
+# sooner and steer the next category better. They do NOT cut model
+# timeouts (a good 10k-token Kimi output can legitimately take 300s)
+# and do NOT parallelise categories (they share theme/ref/verse pools).
+
+_RUN_REJECTED_THEMES = set()   # theme names rejected for reuse, this run
+_EARLY_SWITCH_AFTER = 3        # consecutive same-kind failures -> next model
+_INTER_GAME_SLEEP_S = 10       # gap between games (was 60)
+
+
+def _reset_run_rejected_themes():
+    """Clear the run's rejected-theme carryover (called once per run)."""
+    _RUN_REJECTED_THEMES.clear()
+
+
+def _extract_reused_theme(violation):
+    """Return the theme name from a theme-reuse violation, else None.
+
+    The greedy match survives apostrophes inside theme names
+    ("prophets named in the qur'an"): it runs to the last "' reused".
+    """
+    import re as _re
+    m = _re.search(r"Theme '(.*)' reused", violation or "")
+    if not m:
+        return None
+    theme = m.group(1).strip().lower()
+    return theme or None
+
+
+def _three_same_in_a_row(kinds):
+    """True when the last 3 recorded failure kinds are identical."""
+    return (len(kinds) >= _EARLY_SWITCH_AFTER
+            and len(set(kinds[-_EARLY_SWITCH_AFTER:])) == 1)
+
+
+def _note_failure_kind(recent_kinds, kind, model_label):
+    """Record one failed attempt's kind; True on 3-in-a-row (early switch)."""
+    recent_kinds.append(kind)
+    if _three_same_in_a_row(recent_kinds):
+        print(f"    Early switch: 3 consecutive {kind} failures on {model_label}, moving to next model...")
+        return True
+    return False
+
+
 def _generate_single_category(cat_index, accumulated_cats, history, today):
     """Generate one Connections category with full model-chain + retry logic.
 
@@ -3818,6 +3880,7 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
         for model_config in MODEL_CHAIN:
             model_label = model_config["label"]
             print(f"    Trying: {model_label}")
+            recent_kinds = []
 
             for retry in range(1, MAX_RETRIES + 1):
                 total_attempt += 1
@@ -3849,7 +3912,19 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
                         print(f"    Skipping {model_label} (malformed response, won't improve with retry)")
                     break
 
+                if raw is None:
+                    # Transport/auth/key failure: the HTTP layer already
+                    # retried (3 transport retries + backoff), so further
+                    # retries on this model this pass are dead time.
+                    # Move to the next model now; this model gets a fresh
+                    # chance on the next pass/category.
+                    print(f"    Transport/auth failure on {model_label}, moving to next model...")
+                    break
                 if not raw:
+                    # Empty content: a generation-quality failure, not a
+                    # dead provider. Count it for the early switch.
+                    if _note_failure_kind(recent_kinds, "empty", model_label):
+                        break
                     print(f"    Failed ({model_label}), trying next attempt/model...")
                     continue
 
@@ -3857,6 +3932,8 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
                     cat = parse_json_response(raw)
                 except json.JSONDecodeError as e:
                     print(f"    ✗ JSON parse error: {e}")
+                    if _note_failure_kind(recent_kinds, "parse", model_label):
+                        break
                     continue
 
                 # Verse repair (Nov 2026): replace unusable model-cited
@@ -3873,11 +3950,19 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
 
                 if errors:
                     print(f"    ✗ Structural errors: {errors}")
+                    if _note_failure_kind(recent_kinds, "validation", model_label):
+                        break
                     continue
 
                 if violations:
                     print(f"    ✗ Violations: {violations}")
                     previous_violations = violations
+                    for v in violations:
+                        theme = _extract_reused_theme(v)
+                        if theme:
+                            _RUN_REJECTED_THEMES.add(theme)
+                    if _note_failure_kind(recent_kinds, "validation", model_label):
+                        break
                     continue
 
                 if warnings:
@@ -3906,6 +3991,8 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
                         for v in grade_violations:
                             print(f"        {v}")
                         previous_violations = grade_violations
+                        if _note_failure_kind(recent_kinds, "self_grade", model_label):
+                            break
                         continue
                     if sg_verdict == "pass":
                         print(f"    \u2713 Self-grade passed (all 4 items fit theme)")
@@ -3924,6 +4011,8 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
                         print(f"        {m}")
                     _seen = set(previous_violations or [])
                     previous_violations = (previous_violations or []) + [v for v in mismatches if v not in _seen]
+                    if _note_failure_kind(recent_kinds, "enrich", model_label):
+                        break
                     continue
 
                 # Post-enrich theme check (Nov 2026, issue #260): the
@@ -3936,6 +4025,8 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
                     for v in post_violations:
                         print(f"        {v}")
                     previous_violations = post_violations
+                    if _note_failure_kind(recent_kinds, "post_enrich", model_label):
+                        break
                     continue
 
 
@@ -4083,6 +4174,8 @@ def generate_connections(history, today, today_puzzles=None, resume=True):
     history["all_verses"] |= _collect_today_refs(today_puzzles)
 
     accumulated_cats = _load_connections_checkpoint(today, today_puzzles) if resume else []
+    # Efficiency (Nov 2026): fresh run, fresh rejected-theme carryover.
+    _reset_run_rejected_themes()
 
     for cat_index in range(len(accumulated_cats), 4):
         color = COLORS[cat_index]
@@ -4249,10 +4342,12 @@ def main():
             print(f"\n  ✓ {GAME_CONFIGS[game_type]['label']}: already generated, skipping")
             continue
 
-        # Wait 60s between API calls to respect rate limits
+        # Brief gap between games; provider rate limits are handled by
+        # the HTTP layer (Retry-After + backoff), so a full 60s is dead
+        # time (Nov 2026 efficiency package).
         if generated_count > 0 and game_type != "roothive":
-            print(f"\n  ⏳ Waiting 60 seconds before next game (rate limit)...")
-            time.sleep(60)
+            print(f"\n  ⏳ Waiting {_INTER_GAME_SLEEP_S} seconds before next game (rate limit)...")
+            time.sleep(_INTER_GAME_SLEEP_S)
 
         if game_type == "connections":
             puzzle = generate_connections(history, today, today_puzzles=existing_puzzles, resume=not force_regen)
