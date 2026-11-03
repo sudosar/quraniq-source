@@ -88,8 +88,8 @@ def run_meta(first_text, cont_text=None):
 
 def main():
     apis = [m["api"] for m in gen.MODEL_CHAIN]
-    test("meta is third in chain with contributor id",
-         apis[2] == "meta" and gen.MODEL_CHAIN[2]["id"] == "muse-spark-1.3-contributor",
+    test("meta is first in chain with contributor id",
+         apis[0] == "meta" and gen.MODEL_CHAIN[0]["id"] == "muse-spark-1.3-contributor",
          str(apis))
 
     orig_key = gen.META_API_KEY
