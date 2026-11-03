@@ -3,7 +3,7 @@
 Meta provider tests (Nov 2026).
 
 Verifies the Meta fallback wiring added after the 3 Nov 2026 retest
-proved api.meta.ai serves muse-spark-1.3: chain position, missing-key
+proved api.meta.ai serves muse-spark-1.3-contributor: chain position, missing-key
 skip, the exact payload the generator sends (temperature 0.6,
 top_p 0.95, max_tokens 16384, response_format json_object,
 reasoning_effort low -- all verified live 3 Nov 2026 via the
@@ -47,7 +47,7 @@ class FakeResp:
         return None
 
 
-META_CFG = {"id": "muse-spark-1.3", "api": "meta", "label": "Meta Spark 1.3"}
+META_CFG = {"id": "muse-spark-1.3-contributor", "api": "meta", "label": "Meta Spark 1.3 Contributor"}
 PROMPT = "Return a JSON object."
 FULL_JSON = '{"words": ["apple", "banana", "cherry"]}'
 
@@ -88,8 +88,8 @@ def run_meta(first_text, cont_text=None):
 
 def main():
     apis = [m["api"] for m in gen.MODEL_CHAIN]
-    test("meta is last in chain with muse-spark-1.3 id",
-         apis[-1] == "meta" and gen.MODEL_CHAIN[-1]["id"] == "muse-spark-1.3",
+    test("meta is third in chain with contributor id",
+         apis[2] == "meta" and gen.MODEL_CHAIN[2]["id"] == "muse-spark-1.3-contributor",
          str(apis))
 
     orig_key = gen.META_API_KEY
@@ -110,8 +110,8 @@ def main():
          str(cap.get("url")))
     test("meta sends Bearer auth from META_API_KEY",
          cap.get("headers", {}).get("Authorization") == "Bearer test-meta-key")
-    test("meta payload model is muse-spark-1.3",
-         payload.get("model") == "muse-spark-1.3", str(payload.get("model")))
+    test("meta payload model is muse-spark-1.3-contributor",
+         payload.get("model") == "muse-spark-1.3-contributor", str(payload.get("model")))
     test("meta payload temperature 0.6 and top_p 0.95 (shared payload)",
          payload.get("temperature") == 0.6 and payload.get("top_p") == 0.95,
          str({k: payload.get(k) for k in ("temperature", "top_p")}))

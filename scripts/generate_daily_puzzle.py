@@ -308,31 +308,29 @@ MINIMAX_M3_API_URL = "https://api.minimax.io/v1/chat/completions"
 KIMI_API_URL = "https://api.moonshot.ai/v1/chat/completions"
 META_API_URL = "https://api.meta.ai/v1/chat/completions"
 
-# Model fallback chain: Kimi K3 -> DeepSeek V4 Pro -> MiniMax M3 -> Meta Spark 1.3
-# Chain order is a speed decision, NOT an accuracy ranking: every model
-# still gets its retries and the validator/enrich acceptance criteria are
-# unchanged, so reordering cannot accept a worse category -- it only
-# changes which model's success is found first.
-# Kimi first (Nov 2026): it accepted Connections cat 1 first try
-# (10k tokens) in the 1 Nov live test, while M3 burned 30k-58k tokens
-# per attempt and failed 5/5 on the same category. M3's 131072 budget
-# is DELIBERATE (29 Oct 2026 it burned the whole 32768 budget in
-# reasoning and returned empty content, 4 attempts) -- capping it back
-# would reintroduce that failure, so its slowness is only paid on
-# categories where Kimi and DeepSeek both fail.
-# Meta last (Nov 2026): muse-spark-1.3 on api.meta.ai, Standard tier
-# (never the contributor tier -- its discount trades prompts for
-# training). Verified 3 Nov 2026: temperature 0.6, top_p 0.95,
-# max_tokens 16384 and response_format json_object all accepted, and
-# reasoning_effort low is honored, which matters because the default
-# effort burned ~600 reasoning tokens on a hello. Meta runs only when
-# Kimi, DeepSeek and M3 have all failed, so its $4.25/M output price
-# is paid rarely.
+# Model fallback chain: MiniMax M3 -> DeepSeek V4 Pro -> Meta Spark 1.3 Contributor -> Kimi K3
+# M3 first is the user's direction (3 Nov 2026). Per-token output prices
+# are M3 $1.20/M, DeepSeek $1.98/M off-peak ($3.96/M peak), Meta
+# contributor $0.20/M (cheapest of all, kept third because M3 was asked
+# first), Kimi $15.00/M last. Order only changes which model's success
+# is found first, never whether a category is accepted.
+# M3 is slow and verbose (15-45 min per grinding attempt, 30k-58k tokens
+# out), so the round-robin cycles below matter: a slow M3 never blocks
+# the other models forever, transport failures break immediately and
+# same-kind failures early-switch after 3.
+# Meta uses the contributor tier (user consented to Meta training on
+# prompts, 3 Nov 2026): muse-spark-1.3-contributor, verified 3 Nov 2026
+# with the generator payload (temperature 0.6, response_format
+# json_object, reasoning_effort low all accepted).
+# Cycles: a category gets up to _MAX_CATEGORY_PASSES full chain cycles;
+# giving up after the last writes a bug report (see _write_bug_report)
+# and the run fails, which the workflow's Notify step turns into a
+# GitHub issue. Later cycles keep the narrowed 6-surah passages.
 MODEL_CHAIN = [
-    {"id": "kimi-k3",         "api": "kimi",       "label": "Kimi K3"},
-    {"id": "deepseek-v4-pro", "api": "deepseek",   "label": "DeepSeek V4 Pro"},
-    {"id": "MiniMax-M3",      "api": "minimax_m3", "label": "MiniMax M3"},
-    {"id": "muse-spark-1.3", "api": "meta", "label": "Meta Spark 1.3"},
+    {"id": "MiniMax-M3", "api": "minimax_m3", "label": "MiniMax M3"},
+    {"id": "deepseek-v4-pro", "api": "deepseek", "label": "DeepSeek V4 Pro"},
+    {"id": "muse-spark-1.3-contributor", "api": "meta", "label": "Meta Spark 1.3 Contributor"},
+    {"id": "kimi-k3", "api": "kimi", "label": "Kimi K3"},
 ]
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -579,9 +577,9 @@ def is_json_truncated(text):
 _TRANSPORT_BACKOFF_S = (5, 15, 45)      # per transport attempt, in seconds
 _RATE_LIMIT_BACKOFF_S = (30, 60, 120)    # per rate-limit wait, in seconds
 _PROVIDER_UNHEALTHY_AFTER = 2            # consecutive failures before skip
-_SECOND_PASS_COOLDOWN_S = 300            # wait before a category's 2nd full-chain pass
-_MAX_CATEGORY_PASSES = 2                 # full MODEL_CHAIN passes per category, max
-_NARROW_PASS_SURAHS = 6                  # surahs advertised on a 2nd pass (vs 20 normally)
+_SECOND_PASS_COOLDOWN_S = 300  # wait before each later cycle of a category
+_MAX_CATEGORY_PASSES = 3  # full MODEL_CHAIN cycles per category, max; give up + bug report after 3
+_NARROW_PASS_SURAHS = 6  # surahs advertised on later cycles (vs 20 normally)
 _PROVIDER_FAILURES = {}                  # label -> consecutive failure count
 
 
@@ -3541,7 +3539,7 @@ def generate_roothive(history, today):
 def generate_game(game_type, history, today):
     """Generate a single game puzzle with retries and model fallback chain.
 
-    Fallback chain: GPT-4.1 → DeepSeek-R1 → Gemini Flash → Phi-4
+    Fallback chain: MODEL_CHAIN (MiniMax M3 first). Each model gets up to MAX_RETRIES attempts before falling back.
     Each model gets up to MAX_RETRIES attempts before falling back.
     Rate limiting immediately triggers fallback to the next model.
     """
@@ -3895,6 +3893,56 @@ def _note_failure_kind(recent_kinds, kind, model_label):
     return False
 
 
+_BUG_REPORT_DIR = None  # tests point this at a temp dir; default is data/bug-reports
+
+
+def _bug_report_dir():
+    if _BUG_REPORT_DIR:
+        return _BUG_REPORT_DIR
+    return os.path.join(DATA_DIR, "bug-reports")
+
+
+def _write_bug_report(today, cat_index, color, difficulty, total_attempt, attempts_by_model, previous_violations):
+    """Record a category give-up (3 exhausted cycles) as a bug report.
+
+    The file lands under data/ so the workflow's always() commit picks
+    it up, and the workflow's Notify-on-failure step files the GitHub
+    issue with a link to this run's log, where the BUG REPORT block
+    below also appears. A failed write must never mask the give-up.
+    """
+    labels = [m["label"] for m in MODEL_CHAIN]
+    report = {
+        "date": today,
+        "game": "connections",
+        "category": cat_index + 1,
+        "color": color,
+        "difficulty": difficulty,
+        "cycles": _MAX_CATEGORY_PASSES,
+        "attempts": total_attempt,
+        "attempts_by_model": attempts_by_model,
+        "chain": labels,
+        "last_violations": previous_violations,
+        "run_id": os.environ.get("GITHUB_RUN_ID"),
+        "written_at_utc": datetime.utcnow().isoformat() + "Z",
+    }
+    print("  BUG REPORT: category gave up after 3 cycles")
+    print(f"  Date: {today}, category: {cat_index + 1} ({color}, {difficulty})")
+    print(f"  Attempts: {total_attempt} total, by model: {attempts_by_model}")
+    print(f"  Chain: {', '.join(labels)}")
+    print(f"  Last violations: {previous_violations}")
+    try:
+        out_dir = _bug_report_dir()
+        os.makedirs(out_dir, exist_ok=True)
+        out_path = os.path.join(out_dir, f"{today}-connections-cat{cat_index + 1}.json")
+        with open(out_path, "w", encoding="utf-8") as fh:
+            json.dump(report, fh, ensure_ascii=False, indent=2)
+        print(f"  Report file: {out_path}")
+    except Exception as e:
+        print(f"  ⚠ Could not write bug report file: {e}")
+    return report
+
+
+
 def _generate_single_category(cat_index, accumulated_cats, history, today):
     """Generate one Connections category with full model-chain + retry logic.
 
@@ -3906,11 +3954,12 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
     difficulty = DIFFICULTY_LABELS[cat_index]
     previous_violations = None
     total_attempt = 0
+    attempts_by_model = {}
 
     for pass_no in range(1, _MAX_CATEGORY_PASSES + 1):
         narrow_pass = pass_no > 1
         if narrow_pass:
-            print(f"  ↻ Second pass for category {cat_index+1} after {_SECOND_PASS_COOLDOWN_S}s cooldown (narrowed passages)...")
+            print(f"  ↻ Cycle {pass_no} of {_MAX_CATEGORY_PASSES} for category {cat_index+1} after {_SECOND_PASS_COOLDOWN_S}s cooldown (narrowed passages)...")
             time.sleep(_SECOND_PASS_COOLDOWN_S)
             _PROVIDER_FAILURES.clear()
         for model_config in MODEL_CHAIN:
@@ -3920,6 +3969,7 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
 
             for retry in range(1, MAX_RETRIES + 1):
                 total_attempt += 1
+                attempts_by_model[model_label] = attempts_by_model.get(model_label, 0) + 1
                 print(f"    Attempt {total_attempt} (retry {retry}/{MAX_RETRIES})...")
 
                 # Inject theme pivot logic if we've failed multiple times or the last failure was a theme violation
@@ -4075,6 +4125,7 @@ def _generate_single_category(cat_index, accumulated_cats, history, today):
             print(f"    Exhausted retries for {model_label}")
 
     print(f"  ✗ All models failed for category {cat_index+1} after {total_attempt} attempts.")
+    _write_bug_report(today, cat_index, color, difficulty, total_attempt, attempts_by_model, previous_violations)
     return None
 
 

@@ -33,6 +33,7 @@ post-enrich check run for real.
 import sys
 import os
 import json
+import tempfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import generate_daily_puzzle as gen
@@ -82,6 +83,7 @@ class Stubs:
         self.model_fn = model_fn
         self.prompts = []
         self.calls = {}
+        self.bug_dir = None
         self._orig = {}
 
     def __enter__(self):
@@ -89,6 +91,9 @@ class Stubs:
         self._orig["fetch"] = gen.fetch_verse_text
         self._orig["grade"] = gen.self_grade_category
         self._orig["cooldown"] = gen._SECOND_PASS_COOLDOWN_S
+        self._orig["bug_dir"] = getattr(gen, "_BUG_REPORT_DIR", None)
+        self.bug_dir = tempfile.mkdtemp()
+        gen._BUG_REPORT_DIR = self.bug_dir
 
         def fake_call(prompt, model_config, system_msg=None):
             label = model_config["label"]
@@ -118,6 +123,7 @@ class Stubs:
         gen.fetch_verse_text = self._orig["fetch"]
         gen.self_grade_category = self._orig["grade"]
         gen._SECOND_PASS_COOLDOWN_S = self._orig["cooldown"]
+        gen._BUG_REPORT_DIR = self._orig["bug_dir"]
         gen._RUN_REJECTED_THEMES.clear()
         return False
 
@@ -178,7 +184,7 @@ def main():
 
     # --- transport sideline ------------------------------------------
     def transport_fn(label, n):
-        if label == "Kimi K3":
+        if label == "MiniMax M3":
             return None
         return json.dumps(good_cat())
 
@@ -189,13 +195,13 @@ def main():
              cat is not None and cat.get("nameEn") == good_cat()["nameEn"],
              str(cat)[:120])
         test("transport: dead model tried once, not 5 retries",
-             st.calls.get("Kimi K3") == 1, str(st.calls))
+             st.calls.get("MiniMax M3") == 1, str(st.calls))
         test("transport: next model tried once and accepted",
              st.calls.get("DeepSeek V4 Pro") == 1, str(st.calls))
 
     # --- parse early-switch ------------------------------------------
     def parse_fn(label, n):
-        if label == "Kimi K3":
+        if label == "MiniMax M3":
             return "this is not json at all"
         return json.dumps(good_cat())
 
@@ -205,7 +211,7 @@ def main():
         test("parse: category still accepted via next model",
              cat is not None, str(cat)[:120] if cat else "None")
         test("parse: early switch after 3 identical failures, not 5",
-             st.calls.get("Kimi K3") == 3, str(st.calls))
+             st.calls.get("MiniMax M3") == 3, str(st.calls))
 
     # --- rejected-theme carryover -------------------------------------
     reused = "prophets named in the qur'an"
