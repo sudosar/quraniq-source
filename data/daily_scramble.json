@@ -1,32 +1,32 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "puzzle": {
-    "verseRef": "29:59",
-    "reference": "Surah Al-Ankabut (29:59)",
+    "verseRef": "7:200",
+    "reference": "Al-A'raf (7:200)",
     "segments": [
-      "word 1",
-      "word 2",
-      "word 3",
-      "word 4",
-      "word 5"
+      "وَإِمَّا يَنزَغَنَّكَ",
+      "مِنَ الشَّيْطَانِ نَزْغٌ",
+      "فَاسْتَعِذْ بِاللَّهِ",
+      "إِنَّهُ سَمِيعٌ",
+      "عَلِيمٌ"
     ],
     "translations": [
-      "Those who",
-      "(are) patient",
-      "and upon",
-      "their Lord",
-      "put their trust"
+      "And if an evil suggestion comes to you",
+      "from [the] Shaitaan",
+      "[an evil suggestion] then seek refuge",
+      "in Allah Indeed, He",
+      "(is) All-Hearing All-Knowing"
     ],
-    "hint": "A verse about patience and trusting in Allah.",
-    "arabic": "ٱلَّذِينَ صَبَرُوا۟ وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
+    "hint": "Seeking refuge in Allah when tempted by Satan",
+    "arabic": "وَإِمَّا يَنزَغَنَّكَ مِنَ ٱلشَّيْطَـٰنِ نَزْغٌۭ فَٱسْتَعِذْ بِٱللَّهِ ۚ إِنَّهُۥ سَمِيعٌ عَلِيمٌ",
     "words": [
-      "ٱلَّذِينَ",
-      "صَبَرُوا۟",
-      "وَعَلَىٰ",
-      "رَبِّهِمْ",
-      "يَتَوَكَّلُونَ"
+      "وَإِمَّا يَنزَغَنَّكَ",
+      "مِنَ ٱلشَّيْطَـٰنِ",
+      "نَزْغٌۭ فَٱسْتَعِذْ",
+      "بِٱللَّهِ ۚ إِنَّهُۥ",
+      "سَمِيعٌ عَلِيمٌ"
     ],
-    "verseEn": "Who have been patient and upon their Lord rely."
+    "verseEn": "And if an evil suggestion comes to you from Satan, then seek refuge in Allāh. Indeed, He is Hearing and Knowing."
   },
   "generated": true,
   "model": "auto (chain)"

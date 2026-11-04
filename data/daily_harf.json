@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "puzzle": {
-    "word": "غفلة",
-    "display": "غَفْلَة",
-    "hint": "A state of heedlessness or unawareness",
-    "verseRef": "21:97",
-    "arabicVerse": "وَٱقْتَرَبَ ٱلْوَعْدُ ٱلْحَقُّ فَإِذَا هِىَ شَـٰخِصَةٌ أَبْصَـٰرُ ٱلَّذِينَ كَفَرُوا۟ يَـٰوَيْلَنَا قَدْ كُنَّا فِى غَفْلَةٍۢ مِّنْ هَـٰذَا بَلْ كُنَّا ظَـٰلِمِينَ",
-    "verse": "21:97 - And [when] the true promise [i.e., the resurrection] has approached; then suddenly the eyes of those who disbelieved will be staring [in horror, while they say], \"O woe to us; we had been unmindful of this; rather, we were wrongdoers.\""
+    "word": "سكن",
+    "display": "سَكَنَ",
+    "hint": "That which settles and comes to rest, dwelling quietly in night and day",
+    "verseRef": "6:13",
+    "arabicVerse": "۞ وَلَهُۥ مَا سَكَنَ فِى ٱلَّيْلِ وَٱلنَّهَارِ ۚ وَهُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
+    "verse": "6:13 - And to Him belongs that which reposes by night and by day, and He is the Hearing, the Knowing."
   },
   "generated": true,
   "model": "auto (chain)"

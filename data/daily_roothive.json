@@ -1,573 +1,497 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "puzzle": {
-    "center": "م",
+    "center": "ر",
     "outer": [
-      "س",
+      "ض",
       "ي",
-      "ه",
+      "ا",
       "ت",
-      "ك",
-      "ا"
+      "م",
+      "و"
     ],
     "root": {
-      "letters": "مسك",
-      "display": "م س ك",
-      "translit": "m-s-k",
-      "meaning": "The core idea is to grasp, hold, or retain something securely. Its Quranic forms branch into keeping, withholding, holding fast, and even musk as something that retains fragrance.",
-      "occurrences": 27,
-      "lemmaCount": 8
+      "letters": "رضو",
+      "display": "ر ض و",
+      "translit": "r-ḍ-w",
+      "meaning": "The core idea is pleasure and willing acceptance. Its words grow into being pleased, seeking approval, living in contentment, and reaching mutual agreement.",
+      "occurrences": 73,
+      "lemmaCount": 11
     },
     "words": [
       {
-        "w": "اتم",
+        "w": "ارض",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَتَمَّ",
-            "gloss": "perfect",
-            "type": "verb",
-            "root": "تمم",
-            "count": 16,
-            "ref": "2:233",
-            "pos": 9,
-            "alt": [
-              "complete",
-              "completes"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اسم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "اسْم",
-            "gloss": "name",
+            "lemma": "أَرْض",
+            "gloss": "earth",
             "type": "noun",
-            "root": "سمو",
-            "count": 39,
-            "ref": "5:4",
-            "pos": 23,
-            "alt": [
-              "names",
-              "name of allah"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "امه",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أُمَّة",
-            "gloss": "nation",
-            "type": "noun",
-            "root": "أمم",
-            "count": 64,
-            "ref": "2:128",
-            "pos": 7,
-            "alt": [
-              "community",
-              "nations"
-            ]
-          },
-          {
-            "lemma": "أَمَة",
-            "gloss": "bondwoman",
-            "type": "noun",
-            "root": "أمو",
-            "count": 2,
-            "ref": "2:221",
-            "pos": 6,
-            "alt": [
-              "female slaves"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "امي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أُمِّيّ",
-            "gloss": "unlettered ones",
-            "type": "noun",
-            "root": "أمم",
-            "count": 6,
-            "ref": "2:78",
-            "pos": 2
-          }
-        ]
-      },
-      {
-        "w": "سمي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "سَمَّى",
-            "gloss": "named",
-            "type": "verb",
-            "root": "سمو",
-            "count": 8,
-            "ref": "76:18",
-            "pos": 3,
-            "form": 2
-          },
-          {
-            "lemma": "سَمِيّ",
-            "gloss": "name",
-            "type": "noun",
-            "root": "سمو",
-            "count": 2,
-            "ref": "19:7",
-            "pos": 12,
-            "alt": [
-              "any similarity"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "كتم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "كَتَمَ",
-            "gloss": "conceal",
-            "type": "verb",
-            "root": "كتم",
-            "count": 21,
-            "ref": "2:140",
-            "pos": 21,
-            "alt": [
-              "concealed"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "مات",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "ماتَ",
-            "gloss": "die",
-            "type": "verb",
-            "root": "موت",
-            "count": 39,
-            "ref": "3:144",
-            "pos": 11,
-            "alt": [
-              "dies",
-              "died"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "مسك",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "مِسْك",
-            "gloss": "musk",
-            "type": "noun",
-            "root": "مسك",
-            "count": 1,
-            "ref": "83:26",
-            "pos": 2
-          }
-        ]
-      },
-      {
-        "w": "ميت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَيِّت",
-            "gloss": "dead",
-            "type": "noun",
-            "root": "موت",
-            "count": 38,
-            "ref": "2:28",
-            "pos": 5,
-            "alt": [
-              "die"
-            ]
-          },
-          {
-            "lemma": "مَيْت",
-            "gloss": "dead",
-            "type": "noun",
-            "root": "موت",
-            "count": 5,
-            "ref": "6:122",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "اكمه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَكْمَه",
-            "gloss": "blind",
-            "type": "noun",
-            "root": "كمه",
-            "count": 2,
-            "ref": "3:49",
-            "pos": 25,
-            "alt": [
-              "born blind"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "امات",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَماتَ",
-            "gloss": "causes death",
-            "type": "verb",
-            "root": "موت",
-            "count": 21,
-            "ref": "53:44",
-            "pos": 3,
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "امام",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "إِمام",
-            "gloss": "leaders",
-            "type": "noun",
-            "root": "أمم",
-            "count": 12,
-            "ref": "2:124",
-            "pos": 11,
-            "alt": [
-              "leader",
-              "guide"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "امسك",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "أَمْسَكَ",
-            "gloss": "upholds",
-            "type": "verb",
-            "root": "مسك",
-            "count": 18,
-            "ref": "33:37",
-            "pos": 9,
-            "alt": [
-              "keep",
-              "withholds"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "تيمم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "تَيَمَّمُ",
-            "gloss": "aim",
-            "type": "verb",
-            "root": "يمم",
-            "count": 3,
-            "ref": "2:267",
-            "pos": 15,
-            "alt": [
-              "tayammum",
-              "tayyammum"
-            ],
-            "form": 5
-          }
-        ]
-      },
-      {
-        "w": "سيما",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "سِيما",
-            "gloss": "marks",
-            "type": "noun",
-            "root": "سوم",
-            "count": 6,
-            "ref": "2:273",
+            "root": "أرض",
+            "count": 461,
+            "ref": "4:97",
             "pos": 18,
             "alt": [
-              "mark"
+              "land"
             ]
           }
         ]
       },
       {
-        "w": "مايه",
+        "w": "اري",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "مِائَة",
-            "gloss": "hundred",
+            "lemma": "أَرَيْ",
+            "gloss": "show",
+            "type": "verb",
+            "root": "رأي",
+            "count": 40,
+            "ref": "6:75",
+            "pos": 2,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "امر",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "أَمْر",
+            "gloss": "command",
             "type": "noun",
-            "root": "مأي",
-            "count": 10,
-            "ref": "2:259",
-            "pos": 19,
-            "alt": [
-              "two hundred",
-              "one hundred"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "متكي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُتَّكِئ",
-            "gloss": "reclining",
-            "type": "active participle",
-            "root": "وكأ",
-            "count": 8,
-            "ref": "18:31",
-            "pos": 21
-          }
-        ]
-      },
-      {
-        "w": "مسمي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُسَمًّى",
-            "gloss": "appointed",
-            "type": "passive participle",
-            "root": "سمو",
-            "count": 21,
-            "ref": "2:282",
-            "pos": 9,
-            "alt": [
-              "specified",
-              "fixed"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "ممات",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَمات",
-            "gloss": "dying",
-            "type": "noun",
-            "root": "موت",
-            "count": 3,
-            "ref": "6:162",
+            "root": "أمر",
+            "count": 166,
+            "ref": "2:117",
             "pos": 6,
             "alt": [
-              "death"
+              "matter",
+              "affair"
             ]
+          },
+          {
+            "lemma": "أَمَرَ",
+            "gloss": "commands",
+            "type": "verb",
+            "root": "أمر",
+            "count": 77,
+            "ref": "2:27",
+            "pos": 10,
+            "alt": [
+              "commanded",
+              "has ordered"
+            ],
+            "form": 1
           }
         ]
       },
       {
-        "w": "ممسك",
-        "family": true,
-        "points": 4,
+        "w": "راي",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "مُمْسِك",
-            "gloss": "withhold",
-            "type": "active participle",
-            "root": "مسك",
+            "lemma": "رَأَى",
+            "gloss": "see",
+            "type": "verb",
+            "root": "رأي",
+            "count": 271,
+            "ref": "2:55",
+            "pos": 8,
+            "alt": [
+              "saw",
+              "seen"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "رَأْى",
+            "gloss": "sight",
+            "type": "noun",
+            "root": "رأي",
+            "count": 2,
+            "ref": "3:13",
+            "pos": 17
+          }
+        ]
+      },
+      {
+        "w": "رضي",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "رَضِيَ",
+            "gloss": "be pleased",
+            "type": "verb",
+            "root": "رضو",
+            "count": 38,
+            "ref": "2:120",
+            "pos": 2,
+            "alt": [
+              "pleased",
+              "allah is pleased"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "رَضِيّ",
+            "gloss": "pleasing",
+            "type": "noun",
+            "root": "رضو",
             "count": 1,
-            "ref": "35:2",
+            "ref": "19:6",
             "pos": 8
           }
         ]
       },
       {
-        "w": "ميته",
+        "w": "رمي",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "مَيْتَة",
-            "gloss": "dead",
-            "type": "noun",
-            "root": "موت",
-            "count": 6,
-            "ref": "6:139",
-            "pos": 14
-          }
-        ]
-      },
-      {
-        "w": "يتيم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "يَتِيم",
-            "gloss": "orphan",
-            "type": "noun",
-            "root": "يتم",
-            "count": 23,
-            "ref": "4:127",
-            "pos": 14,
+            "lemma": "رَمَى",
+            "gloss": "throws",
+            "type": "verb",
+            "root": "رمي",
+            "count": 9,
+            "ref": "4:112",
+            "pos": 7,
             "alt": [
-              "orphans",
-              "two orphan boys"
-            ]
+              "threw",
+              "throws up"
+            ],
+            "form": 1
           }
         ]
       },
       {
-        "w": "اكمام",
+        "w": "ضار",
         "family": false,
-        "points": 3,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَكْمام",
-            "gloss": "coverings",
-            "type": "noun",
-            "root": "كمم",
+            "lemma": "ضارّ",
+            "gloss": "at all harm",
+            "type": "active participle",
+            "root": "ضرر",
             "count": 2,
-            "ref": "41:47",
-            "pos": 10,
+            "ref": "2:102",
+            "pos": 45,
             "alt": [
-              "sheaths"
+              "harm"
             ]
           }
         ]
       },
       {
-        "w": "امساك",
-        "family": true,
-        "points": 5,
+        "w": "مرض",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "إِمْساك",
-            "gloss": "to retain",
-            "type": "verbal noun",
-            "root": "مسك",
-            "count": 1,
-            "ref": "2:229",
+            "lemma": "مَرَض",
+            "gloss": "disease",
+            "type": "noun",
+            "root": "مرض",
+            "count": 13,
+            "ref": "2:10",
             "pos": 3
           }
         ]
       },
       {
-        "w": "ممسكه",
+        "w": "وري",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وُۥرِيَ",
+            "gloss": "to hide",
+            "type": "verb",
+            "root": "وري",
+            "count": 4,
+            "ref": "5:31",
+            "pos": 9,
+            "alt": [
+              "was concealed",
+              "covers"
+            ],
+            "form": 3
+          }
+        ]
+      },
+      {
+        "w": "امري",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "امْرِئ",
+            "gloss": "person",
+            "type": "noun",
+            "root": "مرأ",
+            "count": 5,
+            "ref": "24:11",
+            "pos": 16,
+            "alt": [
+              "man"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "تراض",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "تَراضَ",
+            "gloss": "agree",
+            "type": "verb",
+            "root": "رضو",
+            "count": 2,
+            "ref": "2:232",
+            "pos": 12,
+            "alt": [
+              "mutually agree"
+            ],
+            "form": 6
+          },
+          {
+            "lemma": "تَراض",
+            "gloss": "mutual consent",
+            "type": "verbal noun",
+            "root": "رضو",
+            "count": 2,
+            "ref": "2:233",
+            "pos": 38
+          }
+        ]
+      },
+      {
+        "w": "رميم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "رَمِيم",
+            "gloss": "decomposed",
+            "type": "noun",
+            "root": "رمم",
+            "count": 2,
+            "ref": "36:78",
+            "pos": 11
+          }
+        ]
+      },
+      {
+        "w": "ضرار",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "ضِرار",
+            "gloss": "hurt",
+            "type": "verbal noun",
+            "root": "ضرر",
+            "count": 2,
+            "ref": "2:231",
+            "pos": 13,
+            "alt": [
+              "harm"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مرضي",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مَرْضِيّ",
+            "gloss": "pleasing",
+            "type": "passive participle",
+            "root": "رضو",
+            "count": 1,
+            "ref": "19:55",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "مريض",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَرِيض",
+            "gloss": "sick",
+            "type": "noun",
+            "root": "مرض",
+            "count": 10,
+            "ref": "2:184",
+            "pos": 6,
+            "alt": [
+              "ill"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ارتضي",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "مُمْسِكَة",
-            "gloss": "withholders",
-            "type": "active participle",
-            "root": "مسك",
-            "count": 1,
-            "ref": "39:38",
-            "pos": 29
-          }
-        ]
-      },
-      {
-        "w": "استمسك",
-        "family": true,
-        "points": 6,
-        "senses": [
-          {
-            "lemma": "اسْتَمْسَكَ",
-            "gloss": "grasped",
+            "lemma": "ارْتَضَى",
+            "gloss": "has approved",
             "type": "verb",
-            "root": "مسك",
+            "root": "رضو",
             "count": 3,
-            "ref": "2:256",
-            "pos": 16,
+            "ref": "21:28",
+            "pos": 11,
             "alt": [
-              "has grasped"
+              "approves"
             ],
-            "form": 10
+            "form": 8
           }
         ]
       },
       {
-        "w": "مستمسك",
-        "family": true,
-        "points": 6,
+        "w": "امرات",
+        "family": false,
+        "points": 3,
         "senses": [
           {
-            "lemma": "مُسْتَمْسِك",
-            "gloss": "holding fast",
+            "lemma": "امْرَأَت",
+            "gloss": "wife",
+            "type": "noun",
+            "root": "مرأ",
+            "count": 26,
+            "ref": "3:35",
+            "pos": 3,
+            "alt": [
+              "woman",
+              "women"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "توارت",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "تَوارَتْ",
+            "gloss": "hides himself",
+            "type": "verb",
+            "root": "وري",
+            "count": 2,
+            "ref": "16:59",
+            "pos": 1,
+            "alt": [
+              "were hidden"
+            ],
+            "form": 6
+          }
+        ]
+      },
+      {
+        "w": "مرضات",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَرْضات",
+            "gloss": "please",
+            "type": "verbal noun",
+            "root": "رضو",
+            "count": 5,
+            "ref": "2:207",
+            "pos": 7,
+            "alt": [
+              "pleasure"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ممتري",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُمْتَري",
+            "gloss": "doubters",
             "type": "active participle",
-            "root": "مسك",
-            "count": 1,
-            "ref": "43:21",
-            "pos": 8
+            "root": "مري",
+            "count": 4,
+            "ref": "2:147",
+            "pos": 7,
+            "alt": [
+              "ones who doubt"
+            ]
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "يُمَسِّكُ",
-        "gloss": "hold fast",
+        "lemma": "رِضْوان",
+        "gloss": "pleasure",
+        "type": "noun",
+        "root": "رضو",
+        "count": 13,
+        "ref": "3:162",
+        "pos": 3
+      },
+      {
+        "lemma": "راضِيَة",
+        "gloss": "pleasant",
+        "type": "active participle",
+        "root": "رضو",
+        "count": 4,
+        "ref": "69:21",
+        "pos": 4,
+        "alt": [
+          "satisfied",
+          "well pleased"
+        ]
+      },
+      {
+        "lemma": "يُرْضُ",
+        "gloss": "satisfy",
         "type": "verb",
-        "root": "مسك",
+        "root": "رضو",
+        "count": 3,
+        "ref": "9:8",
+        "pos": 11,
+        "alt": [
+          "to please",
+          "should please"
+        ],
+        "form": 4
+      },
+      {
+        "lemma": "مَرْضِيَّة",
+        "gloss": "pleasing",
+        "type": "passive participle",
+        "root": "رضو",
         "count": 1,
-        "ref": "7:170",
-        "pos": 2,
-        "form": 2
+        "ref": "89:28",
+        "pos": 5
       }
     ],
-    "maxScore": 66,
-    "featuredRoot": "مسك"
+    "maxScore": 46,
+    "featuredRoot": "رضو"
   },
   "generated": true,
   "model": "auto (chain)"
