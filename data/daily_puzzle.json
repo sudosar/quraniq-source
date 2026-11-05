@@ -1,144 +1,144 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "puzzle": {
     "categories": [
       {
-        "name": "أَفْرَادُ الْعَائِلَةِ",
-        "nameEn": "Family relatives mentioned in the Qur'an",
+        "name": "أفراد العائلة والنسل",
+        "nameEn": "Family members and offspring",
         "color": "yellow",
         "items": [
           {
-            "ar": "وَأَخِي",
-            "en": "And my brother",
-            "ref": "28:34",
-            "verse": "وَأَخِى هَـٰرُونُ هُوَ أَفْصَحُ مِنِّى لِسَانًۭا فَأَرْسِلْهُ مَعِىَ رِدْءًۭا يُصَدِّقُنِىٓ ۖ إِنِّىٓ أَخَافُ أَن يُكَذِّبُونِ",
-            "verseEn": "And my brother Aaron is more fluent than me in tongue, so send him with me as support, verifying me. Indeed, I fear that they will deny me.\""
+            "ar": "وَبَنِينَ",
+            "en": "And children",
+            "ref": "74:13",
+            "verse": "وَبَنِينَ شُهُودًۭا",
+            "verseEn": "And children present [with him]"
           },
           {
-            "ar": "آبَائِكُمُ",
-            "en": "(of) your forefathers",
-            "ref": "26:26",
-            "verse": "قَالَ رَبُّكُمْ وَرَبُّ ءَابَآئِكُمُ ٱلْأَوَّلِينَ",
-            "verseEn": "[Moses] said, \"Your Lord and the Lord of your first forefathers.\""
+            "ar": "آبَاءَنَا",
+            "en": "our forefathers",
+            "ref": "26:74",
+            "verse": "قَالُوا۟ بَلْ وَجَدْنَآ ءَابَآءَنَا كَذَٰلِكَ يَفْعَلُونَ",
+            "verseEn": "They said, \"But we found our fathers doing thus.\""
           },
           {
-            "ar": "لِأَزْوَاجِكَ",
-            "en": "to your wives",
-            "ref": "33:28",
-            "verse": "يَـٰٓأَيُّهَا ٱلنَّبِىُّ قُل لِّأَزْوَٰجِكَ إِن كُنتُنَّ تُرِدْنَ ٱلْحَيَوٰةَ ٱلدُّنْيَا وَزِينَتَهَا فَتَعَالَيْنَ أُمَتِّعْكُنَّ وَأُسَرِّحْكُنَّ سَرَاحًۭا جَمِيلًۭا",
-            "verseEn": "O Prophet, say to your wives, \"If you should desire the worldly life and its adornment, then come, I will provide for you and give you a gracious release."
+            "ar": "ذُرِّيَّتِهِ",
+            "en": "his offsprings",
+            "ref": "29:27",
+            "verse": "وَوَهَبْنَا لَهُۥٓ إِسْحَـٰقَ وَيَعْقُوبَ وَجَعَلْنَا فِى ذُرِّيَّتِهِ ٱلنُّبُوَّةَ وَٱلْكِتَـٰبَ وَءَاتَيْنَـٰهُ أَجْرَهُۥ فِى ٱلدُّنْيَا ۖ وَإِنَّهُۥ فِى ٱلْـَٔاخِرَةِ لَمِنَ ٱلصَّـٰلِحِينَ",
+            "verseEn": "And We gave to him Isaac and Jacob and placed in his descendants prophethood and scripture. And We gave him his reward in this world, and indeed, he is in the Hereafter among the righteous."
           },
           {
-            "ar": "أَهْلِهِ",
-            "en": "his household",
-            "ref": "51:26",
-            "verse": "فَرَاغَ إِلَىٰٓ أَهْلِهِۦ فَجَآءَ بِعِجْلٍۢ سَمِينٍۢ",
-            "verseEn": "Then he went to his family and came with a fat [roasted] calf."
+            "ar": "وَلَدٍ",
+            "en": "a son",
+            "ref": "19:92",
+            "verse": "وَمَا يَنۢبَغِى لِلرَّحْمَـٰنِ أَن يَتَّخِذَ وَلَدًا",
+            "verseEn": "And it is not appropriate for the Most Merciful that He should take a son."
+          }
+        ]
+      },
+      {
+        "name": "أَلْفَاظُ الزَّمَنِ فِي الْقُرْآنِ",
+        "nameEn": "Time expressions in the Qur'an",
+        "color": "green",
+        "items": [
+          {
+            "ar": "مُصْبِحِينَ",
+            "en": "(by) early morning",
+            "ref": "15:66",
+            "verse": "وَقَضَيْنَآ إِلَيْهِ ذَٰلِكَ ٱلْأَمْرَ أَنَّ دَابِرَ هَـٰٓؤُلَآءِ مَقْطُوعٌۭ مُّصْبِحِينَ",
+            "verseEn": "And We conveyed to him [the decree] of that matter: that those [sinners] would be eliminated by early morning."
+          },
+          {
+            "ar": "يَوْمَئِذٍ",
+            "en": "that Day",
+            "ref": "77:34",
+            "verse": "وَيْلٌۭ يَوْمَئِذٍۢ لِّلْمُكَذِّبِينَ",
+            "verseEn": "Woe, that Day, to the deniers."
+          },
+          {
+            "ar": "ٱلسَّاعَةُ",
+            "en": "the Hour",
+            "ref": "22:55",
+            "verse": "وَلَا يَزَالُ ٱلَّذِينَ كَفَرُوا۟ فِى مِرْيَةٍۢ مِّنْهُ حَتَّىٰ تَأْتِيَهُمُ ٱلسَّاعَةُ بَغْتَةً أَوْ يَأْتِيَهُمْ عَذَابُ يَوْمٍ عَقِيمٍ",
+            "verseEn": "But those who disbelieve will not cease to be in doubt of it until the Hour comes upon them unexpectedly or there comes to them the punishment of a barren Day."
+          },
+          {
+            "ar": "أَبَدًا",
+            "en": "ever",
+            "ref": "9:83",
+            "verse": "فَإِن رَّجَعَكَ ٱللَّهُ إِلَىٰ طَآئِفَةٍۢ مِّنْهُمْ فَٱسْتَـْٔذَنُوكَ لِلْخُرُوجِ فَقُل لَّن تَخْرُجُوا۟ مَعِىَ أَبَدًۭا وَلَن تُقَـٰتِلُوا۟ مَعِىَ عَدُوًّا ۖ إِنَّكُمْ رَضِيتُم بِٱلْقُعُودِ أَوَّلَ مَرَّةٍۢ فَٱقْعُدُوا۟ مَعَ ٱلْخَـٰلِفِينَ",
+            "verseEn": "If Allāh should return you to a faction of them [after the expedition] and then they ask your permission to go out [to battle], say, \"You will not go out with me, ever, and you will never fight with me an enemy. Indeed, you were satisfied with sitting [at home] the first time, so sit [now] with those who stay behind.\""
+          }
+        ]
+      },
+      {
+        "name": "الموت والبعث",
+        "nameEn": "Words describing death and resurrection",
+        "color": "blue",
+        "items": [
+          {
+            "ar": "مَوْتَتُنَا",
+            "en": "our death",
+            "ref": "44:35",
+            "verse": "إِنْ هِىَ إِلَّا مَوْتَتُنَا ٱلْأُولَىٰ وَمَا نَحْنُ بِمُنشَرِينَ",
+            "verseEn": "\"There is not but our first death, and we will not be resurrected."
+          },
+          {
+            "ar": "نُبَدِّلَ",
+            "en": "We (will) change",
+            "ref": "56:61",
+            "verse": "عَلَىٰٓ أَن نُّبَدِّلَ أَمْثَـٰلَكُمْ وَنُنشِئَكُمْ فِى مَا لَا تَعْلَمُونَ",
+            "verseEn": "In that We will change your likenesses and produce you in that [form] which you do not know."
+          },
+          {
+            "ar": "خَلْقٍ",
+            "en": "a creation",
+            "ref": "34:7",
+            "verse": "وَقَالَ ٱلَّذِينَ كَفَرُوا۟ هَلْ نَدُلُّكُمْ عَلَىٰ رَجُلٍۢ يُنَبِّئُكُمْ إِذَا مُزِّقْتُمْ كُلَّ مُمَزَّقٍ إِنَّكُمْ لَفِى خَلْقٍۢ جَدِيدٍ",
+            "verseEn": "But those who disbelieve say, \"Shall we direct you to a man who will inform you [that] when you have disintegrated in complete disintegration, you will [then] be [recreated] in a new creation?"
+          },
+          {
+            "ar": "رَاجِعُونَ",
+            "en": "(will) return",
+            "ref": "23:60",
+            "verse": "وَٱلَّذِينَ يُؤْتُونَ مَآ ءَاتَوا۟ وَّقُلُوبُهُمْ وَجِلَةٌ أَنَّهُمْ إِلَىٰ رَبِّهِمْ رَٰجِعُونَ",
+            "verseEn": "And they who give what they give while their hearts are fearful because they will be returning to their Lord -"
           }
         ]
       },
       {
         "name": "أَسْمَاءُ الْقُرْآنِ",
-        "nameEn": "Names of the Qur'an",
-        "color": "green",
+        "nameEn": "Names of the Qur'an in the Qur'an",
+        "color": "purple",
         "items": [
           {
             "ar": "الْقُرْآنِ",
             "en": "Quran",
-            "ref": "39:27",
-            "verse": "وَلَقَدْ ضَرَبْنَا لِلنَّاسِ فِى هَـٰذَا ٱلْقُرْءَانِ مِن كُلِّ مَثَلٍۢ لَّعَلَّهُمْ يَتَذَكَّرُونَ",
-            "verseEn": "And We have certainly presented for the people in this Qur’ān from every [kind of] example - that they might remember."
+            "ref": "41:26",
+            "verse": "وَقَالَ ٱلَّذِينَ كَفَرُوا۟ لَا تَسْمَعُوا۟ لِهَـٰذَا ٱلْقُرْءَانِ وَٱلْغَوْا۟ فِيهِ لَعَلَّكُمْ تَغْلِبُونَ",
+            "verseEn": "And those who disbelieve say, \"Do not listen to this Qur’ān and speak noisily during [the recitation of] it that perhaps you will overcome.\""
           },
           {
-            "ar": "تَنزِيلَ",
-            "en": "A revelation",
-            "ref": "36:5",
-            "verse": "تَنزِيلَ ٱلْعَزِيزِ ٱلرَّحِيمِ",
-            "verseEn": "[This is] a revelation of the Exalted in Might, the Merciful,"
+            "ar": "الْكِتَابَ",
+            "en": "the Book",
+            "ref": "16:64",
+            "verse": "وَمَآ أَنزَلْنَا عَلَيْكَ ٱلْكِتَـٰبَ إِلَّا لِتُبَيِّنَ لَهُمُ ٱلَّذِى ٱخْتَلَفُوا۟ فِيهِ ۙ وَهُدًۭى وَرَحْمَةًۭ لِّقَوْمٍۢ يُؤْمِنُونَ",
+            "verseEn": "And We have not revealed to you the Book, [O Muḥammad], except for you to make clear to them that wherein they have differed and as guidance and mercy for a people who believe."
           },
           {
-            "ar": "كِتَابًا",
-            "en": "a book",
-            "ref": "43:21",
-            "verse": "أَمْ ءَاتَيْنَـٰهُمْ كِتَـٰبًۭا مِّن قَبْلِهِۦ فَهُم بِهِۦ مُسْتَمْسِكُونَ",
-            "verseEn": "Or have We given them a book before it [i.e., the Qur’ān] to which they are adhering?"
+            "ar": "الْهُدَىٰ",
+            "en": "the guidance",
+            "ref": "40:53",
+            "verse": "وَلَقَدْ ءَاتَيْنَا مُوسَى ٱلْهُدَىٰ وَأَوْرَثْنَا بَنِىٓ إِسْرَٰٓءِيلَ ٱلْكِتَـٰبَ",
+            "verseEn": "And We had certainly given Moses guidance, and We caused the Children of Israel to inherit the Scripture"
           },
           {
-            "ar": "ذِكْرٌ",
-            "en": "a reminder",
-            "ref": "81:27",
-            "verse": "إِنْ هُوَ إِلَّا ذِكْرٌۭ لِّلْعَـٰلَمِينَ",
-            "verseEn": "It is not except a reminder to the worlds"
-          }
-        ]
-      },
-      {
-        "name": "أَسْمَاءُ الْعَذَابِ وَالنَّارِ",
-        "nameEn": "Words for Hellfire and its torment",
-        "color": "blue",
-        "items": [
-          {
-            "ar": "الْعَذَابِ",
-            "en": "the punishment",
-            "ref": "44:30",
-            "verse": "وَلَقَدْ نَجَّيْنَا بَنِىٓ إِسْرَٰٓءِيلَ مِنَ ٱلْعَذَابِ ٱلْمُهِينِ",
-            "verseEn": "And We certainly saved the Children of Israel from the humiliating torment -"
-          },
-          {
-            "ar": "سَعِيرًا",
-            "en": "(in) a Blaze",
-            "ref": "84:12",
-            "verse": "وَيَصْلَىٰ سَعِيرًا",
-            "verseEn": "And [enter to] burn in a Blaze."
-          },
-          {
-            "ar": "جَهَنَّمَ",
-            "en": "Hell",
-            "ref": "50:24",
-            "verse": "أَلْقِيَا فِى جَهَنَّمَ كُلَّ كَفَّارٍ عَنِيدٍۢ",
-            "verseEn": "[Allāh will say], \"Throw into Hell every obstinate disbeliever,"
-          },
-          {
-            "ar": "النَّارِ",
-            "en": "the Fire",
-            "ref": "38:61",
-            "verse": "قَالُوا۟ رَبَّنَا مَن قَدَّمَ لَنَا هَـٰذَا فَزِدْهُ عَذَابًۭا ضِعْفًۭا فِى ٱلنَّارِ",
-            "verseEn": "They will say, \"Our Lord, whoever brought this upon us - increase for him double punishment in the Fire.\""
-          }
-        ]
-      },
-      {
-        "name": "أَمَاكِنُ مَسْكُونَةٌ مَذْكُورَةٌ فِي الْقُرْآنِ",
-        "nameEn": "Inhabited places mentioned in the Qur'an",
-        "color": "purple",
-        "items": [
-          {
-            "ar": "الْمَدَائِنِ",
-            "en": "the cities",
-            "ref": "26:36",
-            "verse": "قَالُوٓا۟ أَرْجِهْ وَأَخَاهُ وَٱبْعَثْ فِى ٱلْمَدَآئِنِ حَـٰشِرِينَ",
-            "verseEn": "They said, \"Postpone [the matter of] him and his brother and send among the cities gatherers"
-          },
-          {
-            "ar": "الْقُرَى",
-            "en": "the towns",
-            "ref": "28:59",
-            "verse": "وَمَا كَانَ رَبُّكَ مُهْلِكَ ٱلْقُرَىٰ حَتَّىٰ يَبْعَثَ فِىٓ أُمِّهَا رَسُولًۭا يَتْلُوا۟ عَلَيْهِمْ ءَايَـٰتِنَا ۚ وَمَا كُنَّا مُهْلِكِى ٱلْقُرَىٰٓ إِلَّا وَأَهْلُهَا ظَـٰلِمُونَ",
-            "verseEn": "And never would your Lord have destroyed the cities until He had sent to their mother [i.e., principal city] a messenger reciting to them Our verses. And We would not destroy the cities except while their people were wrongdoers."
-          },
-          {
-            "ar": "الدَّارُ",
-            "en": "the Home",
-            "ref": "28:83",
-            "verse": "تِلْكَ ٱلدَّارُ ٱلْـَٔاخِرَةُ نَجْعَلُهَا لِلَّذِينَ لَا يُرِيدُونَ عُلُوًّۭا فِى ٱلْأَرْضِ وَلَا فَسَادًۭا ۚ وَٱلْعَـٰقِبَةُ لِلْمُتَّقِينَ",
-            "verseEn": "That home of the Hereafter We assign to those who do not desire exaltedness upon the earth or corruption. And the [best] outcome is for the righteous."
-          },
-          {
-            "ar": "الْمَسْجِدَ",
-            "en": "the Masjid",
-            "ref": "17:7",
-            "verse": "إِنْ أَحْسَنتُمْ أَحْسَنتُمْ لِأَنفُسِكُمْ ۖ وَإِنْ أَسَأْتُمْ فَلَهَا ۚ فَإِذَا جَآءَ وَعْدُ ٱلْـَٔاخِرَةِ لِيَسُـۥٓـُٔوا۟ وُجُوهَكُمْ وَلِيَدْخُلُوا۟ ٱلْمَسْجِدَ كَمَا دَخَلُوهُ أَوَّلَ مَرَّةٍۢ وَلِيُتَبِّرُوا۟ مَا عَلَوْا۟ تَتْبِيرًا",
-            "verseEn": "[And said], \"If you do good, you do good for yourselves; and if you do evil, [you do it] to them [i.e., yourselves].\" Then when the final [i.e., second] promise came, [We sent your enemies] to sadden your faces and to enter the masjid [i.e., the temple in Jerusalem], as they entered it the first time, and to destroy what they had taken over with [total] destruction."
+            "ar": "الْحَدِيثِ",
+            "en": "statement",
+            "ref": "53:59",
+            "verse": "أَفَمِنْ هَـٰذَا ٱلْحَدِيثِ تَعْجَبُونَ",
+            "verseEn": "Then at this statement do you wonder?"
           }
         ]
       }

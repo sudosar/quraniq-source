@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "puzzle": {
-    "word": "سكن",
-    "display": "سَكَنَ",
-    "hint": "That which settles and comes to rest, dwelling quietly in night and day",
-    "verseRef": "6:13",
-    "arabicVerse": "۞ وَلَهُۥ مَا سَكَنَ فِى ٱلَّيْلِ وَٱلنَّهَارِ ۚ وَهُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
-    "verse": "6:13 - And to Him belongs that which reposes by night and by day, and He is the Hearing, the Knowing."
+    "word": "مخلص",
+    "display": "مُخْلِص",
+    "hint": "Sincere and devoted with pure intention toward God alone",
+    "verseRef": "39:2",
+    "arabicVerse": "إِنَّآ أَنزَلْنَآ إِلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ فَٱعْبُدِ ٱللَّهَ مُخْلِصًۭا لَّهُ ٱلدِّينَ",
+    "verse": "39:2 - Indeed, We have sent down to you the Book, [O Muḥammad], in truth. So worship Allāh, [being] sincere to Him in religion."
   },
   "generated": true,
   "model": "auto (chain)"

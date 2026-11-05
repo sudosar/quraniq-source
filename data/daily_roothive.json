@@ -1,497 +1,414 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "puzzle": {
-    "center": "ر",
+    "center": "ع",
     "outer": [
-      "ض",
-      "ي",
+      "ط",
+      "و",
+      "ه",
       "ا",
-      "ت",
-      "م",
-      "و"
+      "ق",
+      "م"
     ],
     "root": {
-      "letters": "رضو",
-      "display": "ر ض و",
-      "translit": "r-ḍ-w",
-      "meaning": "The core idea is pleasure and willing acceptance. Its words grow into being pleased, seeking approval, living in contentment, and reaching mutual agreement.",
-      "occurrences": 73,
-      "lemmaCount": 11
+      "letters": "قطع",
+      "display": "ق ط ع",
+      "translit": "q-ṭ-ʿ",
+      "meaning": "The core idea is cutting or separating something so it is no longer whole or connected. Its forms describe the act of cutting, being cut apart, broken pieces, and even a final decision that cuts off debate.",
+      "occurrences": 36,
+      "lemmaCount": 8
     },
     "words": [
       {
-        "w": "ارض",
+        "w": "طعم",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَرْض",
-            "gloss": "earth",
-            "type": "noun",
-            "root": "أرض",
-            "count": 461,
-            "ref": "4:97",
-            "pos": 18,
-            "alt": [
-              "land"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اري",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أَرَيْ",
-            "gloss": "show",
+            "lemma": "طَعِمُ",
+            "gloss": "taste",
             "type": "verb",
-            "root": "رأي",
-            "count": 40,
-            "ref": "6:75",
-            "pos": 2,
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "امر",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أَمْر",
-            "gloss": "command",
-            "type": "noun",
-            "root": "أمر",
-            "count": 166,
-            "ref": "2:117",
-            "pos": 6,
-            "alt": [
-              "matter",
-              "affair"
-            ]
-          },
-          {
-            "lemma": "أَمَرَ",
-            "gloss": "commands",
-            "type": "verb",
-            "root": "أمر",
-            "count": 77,
-            "ref": "2:27",
-            "pos": 10,
-            "alt": [
-              "commanded",
-              "has ordered"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "راي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "رَأَى",
-            "gloss": "see",
-            "type": "verb",
-            "root": "رأي",
-            "count": 271,
-            "ref": "2:55",
-            "pos": 8,
-            "alt": [
-              "saw",
-              "seen"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "رَأْى",
-            "gloss": "sight",
-            "type": "noun",
-            "root": "رأي",
-            "count": 2,
-            "ref": "3:13",
-            "pos": 17
-          }
-        ]
-      },
-      {
-        "w": "رضي",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "رَضِيَ",
-            "gloss": "be pleased",
-            "type": "verb",
-            "root": "رضو",
-            "count": 38,
-            "ref": "2:120",
-            "pos": 2,
-            "alt": [
-              "pleased",
-              "allah is pleased"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "رَضِيّ",
-            "gloss": "pleasing",
-            "type": "noun",
-            "root": "رضو",
-            "count": 1,
-            "ref": "19:6",
-            "pos": 8
-          }
-        ]
-      },
-      {
-        "w": "رمي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "رَمَى",
-            "gloss": "throws",
-            "type": "verb",
-            "root": "رمي",
-            "count": 9,
-            "ref": "4:112",
-            "pos": 7,
-            "alt": [
-              "threw",
-              "throws up"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "ضار",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "ضارّ",
-            "gloss": "at all harm",
-            "type": "active participle",
-            "root": "ضرر",
-            "count": 2,
-            "ref": "2:102",
-            "pos": 45,
-            "alt": [
-              "harm"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مرض",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَرَض",
-            "gloss": "disease",
-            "type": "noun",
-            "root": "مرض",
-            "count": 13,
-            "ref": "2:10",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "وري",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وُۥرِيَ",
-            "gloss": "to hide",
-            "type": "verb",
-            "root": "وري",
-            "count": 4,
-            "ref": "5:31",
-            "pos": 9,
-            "alt": [
-              "was concealed",
-              "covers"
-            ],
-            "form": 3
-          }
-        ]
-      },
-      {
-        "w": "امري",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "امْرِئ",
-            "gloss": "person",
-            "type": "noun",
-            "root": "مرأ",
+            "root": "طعم",
             "count": 5,
-            "ref": "24:11",
-            "pos": 16,
+            "ref": "2:249",
+            "pos": 17,
             "alt": [
-              "man"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "تراض",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "تَراضَ",
-            "gloss": "agree",
-            "type": "verb",
-            "root": "رضو",
-            "count": 2,
-            "ref": "2:232",
-            "pos": 12,
-            "alt": [
-              "mutually agree"
+              "ate",
+              "can eat"
             ],
-            "form": 6
-          },
-          {
-            "lemma": "تَراض",
-            "gloss": "mutual consent",
-            "type": "verbal noun",
-            "root": "رضو",
-            "count": 2,
-            "ref": "2:233",
-            "pos": 38
+            "form": 1
           }
         ]
       },
       {
-        "w": "رميم",
+        "w": "طمع",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "رَمِيم",
-            "gloss": "decomposed",
+            "lemma": "طَمَع",
+            "gloss": "hope",
             "type": "noun",
-            "root": "رمم",
-            "count": 2,
-            "ref": "36:78",
-            "pos": 11
-          }
-        ]
-      },
-      {
-        "w": "ضرار",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "ضِرار",
-            "gloss": "hurt",
-            "type": "verbal noun",
-            "root": "ضرر",
-            "count": 2,
-            "ref": "2:231",
-            "pos": 13,
-            "alt": [
-              "harm"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مرضي",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مَرْضِيّ",
-            "gloss": "pleasing",
-            "type": "passive participle",
-            "root": "رضو",
-            "count": 1,
-            "ref": "19:55",
+            "root": "طمع",
+            "count": 4,
+            "ref": "7:56",
             "pos": 9
           }
         ]
       },
       {
-        "w": "مريض",
+        "w": "طوع",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "طَوْع",
+            "gloss": "willingly",
+            "type": "noun",
+            "root": "طوع",
+            "count": 4,
+            "ref": "3:83",
+            "pos": 11
+          }
+        ]
+      },
+      {
+        "w": "عام",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عام",
+            "gloss": "year",
+            "type": "noun",
+            "root": "عوم",
+            "count": 9,
+            "ref": "2:259",
+            "pos": 20,
+            "alt": [
+              "one year",
+              "two years"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عمه",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عَمَّة",
+            "gloss": "paternal aunts",
+            "type": "noun",
+            "root": "عمم",
+            "count": 3,
+            "ref": "4:23",
+            "pos": 6,
+            "alt": [
+              "father's sisters"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "قطع",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "قُطِعَ",
+            "gloss": "cut off",
+            "type": "verb",
+            "root": "قطع",
+            "count": 12,
+            "ref": "2:27",
+            "pos": 8,
+            "alt": [
+              "cut",
+              "may cut off"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "قَطَّعَ",
+            "gloss": "be cut off",
+            "type": "verb",
+            "root": "قطع",
+            "count": 12,
+            "ref": "5:33",
+            "pos": 16,
+            "alt": [
+              "could be cloven asunder",
+              "be cut out"
+            ],
+            "form": 2
+          },
+          {
+            "lemma": "قِطَع",
+            "gloss": "pieces",
+            "type": "noun",
+            "root": "قطع",
+            "count": 2,
+            "ref": "10:27",
+            "pos": 18,
+            "alt": [
+              "are tracks"
+            ]
+          },
+          {
+            "lemma": "قِطْع",
+            "gloss": "part",
+            "type": "noun",
+            "root": "قطع",
+            "count": 2,
+            "ref": "11:81",
+            "pos": 11,
+            "alt": [
+              "portion"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "وقع",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وَقَعَ",
+            "gloss": "incumbent",
+            "type": "verb",
+            "root": "وقع",
+            "count": 12,
+            "ref": "4:100",
+            "pos": 24,
+            "alt": [
+              "has fallen",
+              "fell"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "اطاع",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "مَرِيض",
-            "gloss": "sick",
-            "type": "noun",
-            "root": "مرض",
-            "count": 10,
-            "ref": "2:184",
-            "pos": 6,
-            "alt": [
-              "ill"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "ارتضي",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "ارْتَضَى",
-            "gloss": "has approved",
+            "lemma": "أَطاعَ",
+            "gloss": "obey",
             "type": "verb",
-            "root": "رضو",
-            "count": 3,
-            "ref": "21:28",
-            "pos": 11,
+            "root": "طوع",
+            "count": 72,
+            "ref": "4:13",
+            "pos": 5,
             "alt": [
-              "approves"
+              "obeys",
+              "obeyed"
             ],
-            "form": 8
+            "form": 4
           }
         ]
       },
       {
-        "w": "امرات",
+        "w": "اطعم",
         "family": false,
-        "points": 3,
+        "points": 2,
         "senses": [
           {
-            "lemma": "امْرَأَت",
-            "gloss": "wife",
-            "type": "noun",
-            "root": "مرأ",
-            "count": 26,
-            "ref": "3:35",
-            "pos": 3,
+            "lemma": "أَطْعَمَ",
+            "gloss": "feed",
+            "type": "verb",
+            "root": "طعم",
+            "count": 13,
+            "ref": "6:14",
+            "pos": 10,
             "alt": [
-              "woman",
-              "women"
+              "feeds",
+              "is fed"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "طاعه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "طاعَة",
+            "gloss": "obedience",
+            "type": "noun",
+            "root": "طوع",
+            "count": 3,
+            "ref": "4:81",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "طعام",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "طَعام",
+            "gloss": "food",
+            "type": "noun",
+            "root": "طعم",
+            "count": 24,
+            "ref": "2:61",
+            "pos": 7,
+            "alt": [
+              "feeding",
+              "feed"
             ]
           }
         ]
       },
       {
-        "w": "توارت",
+        "w": "مهطع",
         "family": false,
-        "points": 3,
+        "points": 2,
         "senses": [
           {
-            "lemma": "تَوارَتْ",
-            "gloss": "hides himself",
-            "type": "verb",
-            "root": "وري",
-            "count": 2,
-            "ref": "16:59",
+            "lemma": "مُهْطِع",
+            "gloss": "racing ahead",
+            "type": "active participle",
+            "root": "هطع",
+            "count": 3,
+            "ref": "14:43",
             "pos": 1,
             "alt": [
-              "were hidden"
-            ],
-            "form": 6
-          }
-        ]
-      },
-      {
-        "w": "مرضات",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مَرْضات",
-            "gloss": "please",
-            "type": "verbal noun",
-            "root": "رضو",
-            "count": 5,
-            "ref": "2:207",
-            "pos": 7,
-            "alt": [
-              "pleasure"
+              "hasten"
             ]
           }
         ]
       },
       {
-        "w": "ممتري",
+        "w": "واقع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "واقِع",
+            "gloss": "fall",
+            "type": "active participle",
+            "root": "وقع",
+            "count": 6,
+            "ref": "7:171",
+            "pos": 9,
+            "alt": [
+              "befall",
+              "bound to happen"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اطعام",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "مُمْتَري",
-            "gloss": "doubters",
+            "lemma": "إِطْعام",
+            "gloss": "feeding",
+            "type": "verbal noun",
+            "root": "طعم",
+            "count": 3,
+            "ref": "5:89",
+            "pos": 13
+          }
+        ]
+      },
+      {
+        "w": "قاطعه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "قاطِعَة",
+            "gloss": "one to decide",
             "type": "active participle",
-            "root": "مري",
-            "count": 4,
-            "ref": "2:147",
-            "pos": 7,
+            "root": "قطع",
+            "count": 1,
+            "ref": "27:32",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "مقطوع",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَقْطُوع",
+            "gloss": "would be cut off",
+            "type": "passive participle",
+            "root": "قطع",
+            "count": 1,
+            "ref": "15:66",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "واقعه",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "واقِعَة",
+            "gloss": "event",
+            "type": "active participle",
+            "root": "وقع",
+            "count": 2,
+            "ref": "56:1",
+            "pos": 3,
             "alt": [
-              "ones who doubt"
+              "occurrence"
             ]
+          }
+        ]
+      },
+      {
+        "w": "مقطوعه",
+        "family": true,
+        "points": 6,
+        "senses": [
+          {
+            "lemma": "مَقْطُوعَة",
+            "gloss": "limited",
+            "type": "passive participle",
+            "root": "قطع",
+            "count": 1,
+            "ref": "56:33",
+            "pos": 2
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "رِضْوان",
-        "gloss": "pleasure",
-        "type": "noun",
-        "root": "رضو",
-        "count": 13,
-        "ref": "3:162",
-        "pos": 3
-      },
-      {
-        "lemma": "راضِيَة",
-        "gloss": "pleasant",
-        "type": "active participle",
-        "root": "رضو",
-        "count": 4,
-        "ref": "69:21",
-        "pos": 4,
-        "alt": [
-          "satisfied",
-          "well pleased"
-        ]
-      },
-      {
-        "lemma": "يُرْضُ",
-        "gloss": "satisfy",
+        "lemma": "تَقَطَّعَ",
+        "gloss": "have been severed",
         "type": "verb",
-        "root": "رضو",
-        "count": 3,
-        "ref": "9:8",
-        "pos": 11,
+        "root": "قطع",
+        "count": 5,
+        "ref": "6:94",
+        "pos": 23,
         "alt": [
-          "to please",
-          "should please"
+          "cut into pieces"
         ],
-        "form": 4
-      },
-      {
-        "lemma": "مَرْضِيَّة",
-        "gloss": "pleasing",
-        "type": "passive participle",
-        "root": "رضو",
-        "count": 1,
-        "ref": "89:28",
-        "pos": 5
+        "form": 5
       }
     ],
-    "maxScore": 46,
-    "featuredRoot": "رضو"
+    "maxScore": 43,
+    "featuredRoot": "قطع"
   },
   "generated": true,
   "model": "auto (chain)"

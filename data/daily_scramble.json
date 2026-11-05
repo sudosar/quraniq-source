@@ -1,32 +1,29 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "puzzle": {
-    "verseRef": "7:200",
-    "reference": "Al-A'raf (7:200)",
+    "verseRef": "39:62",
+    "reference": "Az-Zumar (39:62)",
     "segments": [
-      "وَإِمَّا يَنزَغَنَّكَ",
-      "مِنَ الشَّيْطَانِ نَزْغٌ",
-      "فَاسْتَعِذْ بِاللَّهِ",
-      "إِنَّهُ سَمِيعٌ",
-      "عَلِيمٌ"
+      "اللَّهُ خَالِقُ",
+      "كُلِّ شَيْءٍ",
+      "وَهُوَ عَلَى",
+      "كُلِّ شَيْءٍ وَكِيلٌ"
     ],
     "translations": [
-      "And if an evil suggestion comes to you",
-      "from [the] Shaitaan",
-      "[an evil suggestion] then seek refuge",
-      "in Allah Indeed, He",
-      "(is) All-Hearing All-Knowing"
+      "Allah (is the) Creator (of) all",
+      "things and He",
+      "(is) over all",
+      "things a Guardian"
     ],
-    "hint": "Seeking refuge in Allah when tempted by Satan",
-    "arabic": "وَإِمَّا يَنزَغَنَّكَ مِنَ ٱلشَّيْطَـٰنِ نَزْغٌۭ فَٱسْتَعِذْ بِٱللَّهِ ۚ إِنَّهُۥ سَمِيعٌ عَلِيمٌ",
+    "hint": "Allah as the Creator and Guardian over all things",
+    "arabic": "ٱللَّهُ خَـٰلِقُ كُلِّ شَىْءٍۢ ۖ وَهُوَ عَلَىٰ كُلِّ شَىْءٍۢ وَكِيلٌۭ",
     "words": [
-      "وَإِمَّا يَنزَغَنَّكَ",
-      "مِنَ ٱلشَّيْطَـٰنِ",
-      "نَزْغٌۭ فَٱسْتَعِذْ",
-      "بِٱللَّهِ ۚ إِنَّهُۥ",
-      "سَمِيعٌ عَلِيمٌ"
+      "ٱللَّهُ خَـٰلِقُ كُلِّ",
+      "شَىْءٍۢ ۖ وَهُوَ",
+      "عَلَىٰ كُلِّ",
+      "شَىْءٍۢ وَكِيلٌۭ"
     ],
-    "verseEn": "And if an evil suggestion comes to you from Satan, then seek refuge in Allāh. Indeed, He is Hearing and Knowing."
+    "verseEn": "Allāh is the Creator of all things, and He is, over all things, Disposer of affairs."
   },
   "generated": true,
   "model": "auto (chain)"
