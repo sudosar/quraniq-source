@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "puzzle": {
-    "word": "مخلص",
-    "display": "مُخْلِص",
-    "hint": "Sincere and devoted with pure intention toward God alone",
-    "verseRef": "39:2",
-    "arabicVerse": "إِنَّآ أَنزَلْنَآ إِلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ فَٱعْبُدِ ٱللَّهَ مُخْلِصًۭا لَّهُ ٱلدِّينَ",
-    "verse": "39:2 - Indeed, We have sent down to you the Book, [O Muḥammad], in truth. So worship Allāh, [being] sincere to Him in religion."
+    "word": "ذنب",
+    "display": "ذَنْب",
+    "hint": "A moral burden one seeks forgiveness for",
+    "verseRef": "12:29",
+    "arabicVerse": "يُوسُفُ أَعْرِضْ عَنْ هَـٰذَا ۚ وَٱسْتَغْفِرِى لِذَنۢبِكِ ۖ إِنَّكِ كُنتِ مِنَ ٱلْخَاطِـِٔينَ",
+    "verse": "12:29 - Joseph, ignore this. And, [my wife], ask forgiveness for your sin. Indeed, you were of the sinful.\""
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,65 +1,65 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "puzzle": {
-    "title": "the melody of the mountains at dusk",
-    "intro": "Listen as valleys echo with praise alongside a chosen servant of Allah. A voice gifted with melody, a judgment sought by disputants at the chamber, and metal softened by divine command await discovery. Which figure of worship and just rule speaks through these signs?",
+    "title": "The First Blood Spilled in Envy",
+    "intro": "Picture the earliest days of humanity, when the whole world was one family. You watch as two offerings are placed before Allah — one accepted, the other rejected. Envy takes root in a heart, and a threat is whispered in anger. What follows will leave a mark on history forever, and even a small bird will become a teacher.",
     "clues": [
-      "I was blessed by Allah with bounty and a melodious voice of praise.",
-      "I was taught by Allah to understand the language of just judgment between disputants.",
-      "I faced a mighty giant warrior in battle and by Allah's will I prevailed over them.",
-      "I was given wisdom, authority and a revealed scripture of psalms from Allah.",
-      "I was joined by the mountains and the birds in glorifying Allah with me in the evening and at sunrise.",
-      "I was taught by Allah to fashion coats of mail from iron that was made soft for me."
+      "I belong to the very first family on earth.",
+      "I presented an offering to Allah, but mine was not accepted while the other offering was.",
+      "I spoke out in envy and threatened to take a life.",
+      "I committed the first unjust killing on earth.",
+      "I saw a crow scratching the ground to show me how to hide a body.",
+      "I was left full of regret and became among the losers for what my hands had done."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Dawud (David)",
-          "Prophet Ismail (Ishmael)",
-          "Prophet Yahya (John)",
-          "Dhul-Kifl",
-          "Prophet Al-Yasa (Elisha)"
+          "Qabil (Cain), son of Adam",
+          "Samiri, the maker of the calf",
+          "Namrud, the tyrant who argued with Ibrahim",
+          "Azar, the maker of idols",
+          "Kan'an, the drowned son of Nuh"
         ],
-        "answer": "Prophet Dawud (David)"
+        "answer": "Qabil (Cain), son of Adam"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Defeated Jalut (Goliath) in battle by Allah's will",
-          "Built the Ark to survive the great flood",
-          "Was thrown into a fire that Allah made cool",
-          "Was swallowed by a great fish in the sea",
-          "Was raised to the heavens without tasting death"
+          "Murder of a sibling out of envy after rejected offering",
+          "Building a lofty tower to look at the heavens",
+          "Fashioning a golden calf for worship",
+          "Demanding a table spread from heaven",
+          "Leading an army of elephants to destroy the Kaaba"
         ],
-        "answer": "Defeated Jalut (Goliath) in battle by Allah's will"
+        "answer": "Murder of a sibling out of envy after rejected offering"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "Mountains and birds joining in praise of Allah",
-          "A staff that turned into a serpent",
-          "A fire that became cool and peaceful",
-          "A she-camel sent as a sign to the people",
-          "A wooden Ark resting on Mount Judi"
+          "A crow scratching the earth to show burial",
+          "A golden calf that lowed",
+          "A great ark upon the flood waters",
+          "A staff that became a serpent",
+          "A table spread with food from heaven"
         ],
-        "answer": "Mountains and birds joining in praise of Allah"
+        "answer": "A crow scratching the earth to show burial"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Granted kingship, wisdom, and the Zabur (Psalms)",
-          "Granted a son in old age after earnest prayer",
-          "Granted safety in the cave for many years",
-          "Granted a spring of Zamzam in the desert",
-          "Granted drowning of the army in the sea"
+          "Became remorseful and among the losers",
+          "Was drowned in the great flood",
+          "Was swallowed by the earth with treasure",
+          "Was struck with leprosy for seven years",
+          "Was granted a kingdom with control of the winds"
         ],
-        "answer": "Granted kingship, wisdom, and the Zabur (Psalms)"
+        "answer": "Became remorseful and among the losers"
       }
     },
-    "verseRef": "38:18",
-    "arabic": "إِنَّا سَخَّرْنَا ٱلْجِبَالَ مَعَهُۥ يُسَبِّحْنَ بِٱلْعَشِىِّ وَٱلْإِشْرَاقِ",
-    "verse": "Indeed, We subjected the mountains [to praise] with him, exalting [Allāh] in the [late] afternoon and [after] sunrise. (38:18)"
+    "verseRef": "5:30",
+    "arabic": "فَطَوَّعَتْ لَهُۥ نَفْسُهُۥ قَتْلَ أَخِيهِ فَقَتَلَهُۥ فَأَصْبَحَ مِنَ ٱلْخَـٰسِرِينَ",
+    "verse": "And his soul permitted to him the murder of his brother, so he killed him and became among the losers. (5:30)"
   },
   "generated": true,
   "model": "auto (chain)"

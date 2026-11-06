@@ -1,29 +1,29 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "puzzle": {
-    "verseRef": "39:62",
-    "reference": "Az-Zumar (39:62)",
+    "verseRef": "28:69",
+    "reference": "Al-Qasas (28:69)",
     "segments": [
-      "اللَّهُ خَالِقُ",
-      "كُلِّ شَيْءٍ",
-      "وَهُوَ عَلَى",
-      "كُلِّ شَيْءٍ وَكِيلٌ"
+      "وَرَبُّكَ يَعْلَمُ",
+      "مَا تُكِنُّ",
+      "صُدُورُهُمْ",
+      "وَمَا يُعْلِنُونَ"
     ],
     "translations": [
-      "Allah (is the) Creator (of) all",
-      "things and He",
-      "(is) over all",
-      "things a Guardian"
+      "And your Lord knows",
+      "what conceals",
+      "their breasts and what",
+      "they declare"
     ],
-    "hint": "Allah as the Creator and Guardian over all things",
-    "arabic": "ٱللَّهُ خَـٰلِقُ كُلِّ شَىْءٍۢ ۖ وَهُوَ عَلَىٰ كُلِّ شَىْءٍۢ وَكِيلٌۭ",
+    "hint": "Allah's complete knowledge of what hearts hide and what is made open",
+    "arabic": "وَرَبُّكَ يَعْلَمُ مَا تُكِنُّ صُدُورُهُمْ وَمَا يُعْلِنُونَ",
     "words": [
-      "ٱللَّهُ خَـٰلِقُ كُلِّ",
-      "شَىْءٍۢ ۖ وَهُوَ",
-      "عَلَىٰ كُلِّ",
-      "شَىْءٍۢ وَكِيلٌۭ"
+      "وَرَبُّكَ يَعْلَمُ",
+      "مَا تُكِنُّ",
+      "صُدُورُهُمْ وَمَا",
+      "يُعْلِنُونَ"
     ],
-    "verseEn": "Allāh is the Creator of all things, and He is, over all things, Disposer of affairs."
+    "verseEn": "And your Lord knows what their breasts conceal and what they declare."
   },
   "generated": true,
   "model": "auto (chain)"

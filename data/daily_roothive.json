@@ -1,414 +1,355 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "puzzle": {
-    "center": "ع",
+    "center": "ح",
     "outer": [
-      "ط",
-      "و",
+      "ف",
       "ه",
+      "ظ",
+      "ل",
       "ا",
-      "ق",
-      "م"
+      "ي"
     ],
     "root": {
-      "letters": "قطع",
-      "display": "ق ط ع",
-      "translit": "q-ṭ-ʿ",
-      "meaning": "The core idea is cutting or separating something so it is no longer whole or connected. Its forms describe the act of cutting, being cut apart, broken pieces, and even a final decision that cuts off debate.",
-      "occurrences": 36,
+      "letters": "حفظ",
+      "display": "ح ف ظ",
+      "translit": "ḥ-f-ẓ",
+      "meaning": "The core idea is keeping something safe from harm or loss. Its words grow by showing a guarding person or a thing kept secure through care.",
+      "occurrences": 44,
       "lemmaCount": 8
     },
     "words": [
       {
-        "w": "طعم",
+        "w": "احل",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "طَعِمُ",
-            "gloss": "taste",
+            "lemma": "أَحَلَّ",
+            "gloss": "permitted",
             "type": "verb",
-            "root": "طعم",
-            "count": 5,
-            "ref": "2:249",
-            "pos": 17,
-            "alt": [
-              "ate",
-              "can eat"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "طمع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "طَمَع",
-            "gloss": "hope",
-            "type": "noun",
-            "root": "طمع",
-            "count": 4,
-            "ref": "7:56",
-            "pos": 9
-          }
-        ]
-      },
-      {
-        "w": "طوع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "طَوْع",
-            "gloss": "willingly",
-            "type": "noun",
-            "root": "طوع",
-            "count": 4,
-            "ref": "3:83",
-            "pos": 11
-          }
-        ]
-      },
-      {
-        "w": "عام",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عام",
-            "gloss": "year",
-            "type": "noun",
-            "root": "عوم",
-            "count": 9,
-            "ref": "2:259",
-            "pos": 20,
-            "alt": [
-              "one year",
-              "two years"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عمه",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَمَّة",
-            "gloss": "paternal aunts",
-            "type": "noun",
-            "root": "عمم",
-            "count": 3,
-            "ref": "4:23",
-            "pos": 6,
-            "alt": [
-              "father's sisters"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قطع",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "قُطِعَ",
-            "gloss": "cut off",
-            "type": "verb",
-            "root": "قطع",
-            "count": 12,
-            "ref": "2:27",
-            "pos": 8,
-            "alt": [
-              "cut",
-              "may cut off"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "قَطَّعَ",
-            "gloss": "be cut off",
-            "type": "verb",
-            "root": "قطع",
-            "count": 12,
-            "ref": "5:33",
-            "pos": 16,
-            "alt": [
-              "could be cloven asunder",
-              "be cut out"
-            ],
-            "form": 2
-          },
-          {
-            "lemma": "قِطَع",
-            "gloss": "pieces",
-            "type": "noun",
-            "root": "قطع",
-            "count": 2,
-            "ref": "10:27",
-            "pos": 18,
-            "alt": [
-              "are tracks"
-            ]
-          },
-          {
-            "lemma": "قِطْع",
-            "gloss": "part",
-            "type": "noun",
-            "root": "قطع",
-            "count": 2,
-            "ref": "11:81",
-            "pos": 11,
-            "alt": [
-              "portion"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "وقع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وَقَعَ",
-            "gloss": "incumbent",
-            "type": "verb",
-            "root": "وقع",
-            "count": 12,
-            "ref": "4:100",
-            "pos": 24,
-            "alt": [
-              "has fallen",
-              "fell"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "اطاع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَطاعَ",
-            "gloss": "obey",
-            "type": "verb",
-            "root": "طوع",
-            "count": 72,
-            "ref": "4:13",
-            "pos": 5,
-            "alt": [
-              "obeys",
-              "obeyed"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اطعم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَطْعَمَ",
-            "gloss": "feed",
-            "type": "verb",
-            "root": "طعم",
-            "count": 13,
-            "ref": "6:14",
-            "pos": 10,
-            "alt": [
-              "feeds",
-              "is fed"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "طاعه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "طاعَة",
-            "gloss": "obedience",
-            "type": "noun",
-            "root": "طوع",
-            "count": 3,
-            "ref": "4:81",
-            "pos": 2
-          }
-        ]
-      },
-      {
-        "w": "طعام",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "طَعام",
-            "gloss": "food",
-            "type": "noun",
-            "root": "طعم",
-            "count": 24,
-            "ref": "2:61",
-            "pos": 7,
-            "alt": [
-              "feeding",
-              "feed"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مهطع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُهْطِع",
-            "gloss": "racing ahead",
-            "type": "active participle",
-            "root": "هطع",
-            "count": 3,
-            "ref": "14:43",
+            "root": "حلل",
+            "count": 20,
+            "ref": "2:187",
             "pos": 1,
             "alt": [
-              "hasten"
+              "are made lawful",
+              "has made lawful"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "حال",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حالَ",
+            "gloss": "comes",
+            "type": "verb",
+            "root": "حول",
+            "count": 3,
+            "ref": "8:24",
+            "pos": 14,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "حفظ",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "حَفِظَ",
+            "gloss": "them to guard",
+            "type": "verb",
+            "root": "حفظ",
+            "count": 7,
+            "ref": "4:34",
+            "pos": 20,
+            "form": 1
+          },
+          {
+            "lemma": "حِفْظ",
+            "gloss": "guard",
+            "type": "noun",
+            "root": "حفظ",
+            "count": 3,
+            "ref": "2:255",
+            "pos": 47,
+            "alt": [
+              "guarding of both of"
             ]
           }
         ]
       },
       {
-        "w": "واقع",
+        "w": "حفي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حَفِيّ",
+            "gloss": "well informed",
+            "type": "noun",
+            "root": "حفو",
+            "count": 2,
+            "ref": "7:187",
+            "pos": 26,
+            "alt": [
+              "ever gracious"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حلف",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حَلَفْ",
+            "gloss": "swear",
+            "type": "verb",
+            "root": "حلف",
+            "count": 12,
+            "ref": "4:62",
+            "pos": 10,
+            "alt": [
+              "swearing",
+              "have sworn"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "حلل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حَلَلْ",
+            "gloss": "settles",
+            "type": "verb",
+            "root": "حلل",
+            "count": 14,
+            "ref": "2:228",
+            "pos": 7,
+            "alt": [
+              "lawful",
+              "on whom descends"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "احيا",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "واقِع",
-            "gloss": "fall",
+            "lemma": "أَحْيا",
+            "gloss": "revives",
+            "type": "verb",
+            "root": "حيي",
+            "count": 51,
+            "ref": "2:73",
+            "pos": 5,
+            "alt": [
+              "gives life",
+              "give life"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "افلح",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَفْلَحَ",
+            "gloss": "succeed",
+            "type": "verb",
+            "root": "فلح",
+            "count": 27,
+            "ref": "6:21",
+            "pos": 13,
+            "alt": [
+              "be successful",
+              "successful"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "حافظ",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "حافِظ",
+            "gloss": "protector",
             "type": "active participle",
-            "root": "وقع",
+            "root": "حفظ",
+            "count": 13,
+            "ref": "12:64",
+            "pos": 14,
+            "alt": [
+              "guardians",
+              "guardian"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حفيظ",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "حَفِيظ",
+            "gloss": "guardian",
+            "type": "active participle",
+            "root": "حفظ",
+            "count": 12,
+            "ref": "4:80",
+            "pos": 12,
+            "alt": [
+              "guardians",
+              "guarded"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حلال",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَلال",
+            "gloss": "lawful",
+            "type": "noun",
+            "root": "حلل",
             "count": 6,
-            "ref": "7:171",
-            "pos": 9,
-            "alt": [
-              "befall",
-              "bound to happen"
-            ]
+            "ref": "2:168",
+            "pos": 7
           }
         ]
       },
       {
-        "w": "اطعام",
+        "w": "حليه",
         "family": false,
-        "points": 3,
+        "points": 2,
         "senses": [
           {
-            "lemma": "إِطْعام",
-            "gloss": "feeding",
-            "type": "verbal noun",
-            "root": "طعم",
-            "count": 3,
-            "ref": "5:89",
-            "pos": 13
+            "lemma": "حِلْيَة",
+            "gloss": "ornaments",
+            "type": "noun",
+            "root": "حلي",
+            "count": 4,
+            "ref": "13:17",
+            "pos": 18
           }
         ]
       },
       {
-        "w": "قاطعه",
+        "w": "حياه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَياة",
+            "gloss": "life",
+            "type": "noun",
+            "root": "حيي",
+            "count": 76,
+            "ref": "2:96",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "يحيي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "يَحْيَى",
+            "gloss": "yahya",
+            "type": "proper noun",
+            "root": "حيي",
+            "count": 5,
+            "ref": "19:7",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "حافظه",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "قاطِعَة",
-            "gloss": "one to decide",
+            "lemma": "حافِظَة",
+            "gloss": "guarding",
             "type": "active participle",
-            "root": "قطع",
-            "count": 1,
-            "ref": "27:32",
-            "pos": 9
-          }
-        ]
-      },
-      {
-        "w": "مقطوع",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مَقْطُوع",
-            "gloss": "would be cut off",
-            "type": "passive participle",
-            "root": "قطع",
-            "count": 1,
-            "ref": "15:66",
-            "pos": 8
-          }
-        ]
-      },
-      {
-        "w": "واقعه",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "واقِعَة",
-            "gloss": "event",
-            "type": "active participle",
-            "root": "وقع",
+            "root": "حفظ",
             "count": 2,
-            "ref": "56:1",
-            "pos": 3,
-            "alt": [
-              "occurrence"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مقطوعه",
-        "family": true,
-        "points": 6,
-        "senses": [
-          {
-            "lemma": "مَقْطُوعَة",
-            "gloss": "limited",
-            "type": "passive participle",
-            "root": "قطع",
-            "count": 1,
-            "ref": "56:33",
-            "pos": 2
+            "ref": "4:34",
+            "pos": 17
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "تَقَطَّعَ",
-        "gloss": "have been severed",
+        "lemma": "يُحافِظُ",
+        "gloss": "guard strictly",
         "type": "verb",
-        "root": "قطع",
-        "count": 5,
-        "ref": "6:94",
-        "pos": 23,
+        "root": "حفظ",
+        "count": 4,
+        "ref": "2:238",
+        "pos": 1,
         "alt": [
-          "cut into pieces"
+          "guarding",
+          "guard"
         ],
-        "form": 5
+        "form": 3
+      },
+      {
+        "lemma": "مَحْفُوظ",
+        "gloss": "protected",
+        "type": "passive participle",
+        "root": "حفظ",
+        "count": 2,
+        "ref": "21:32",
+        "pos": 4,
+        "alt": [
+          "guarded"
+        ]
+      },
+      {
+        "lemma": "اسْتُحْفِظُ",
+        "gloss": "were entrusted",
+        "type": "verb",
+        "root": "حفظ",
+        "count": 1,
+        "ref": "5:44",
+        "pos": 17,
+        "form": 10
       }
     ],
-    "maxScore": 43,
-    "featuredRoot": "قطع"
+    "maxScore": 33,
+    "featuredRoot": "حفظ"
   },
   "generated": true,
   "model": "auto (chain)"
