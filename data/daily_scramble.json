@@ -1,29 +1,32 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "puzzle": {
-    "verseRef": "28:69",
-    "reference": "Al-Qasas (28:69)",
+    "verseRef": "2:157",
+    "reference": "Surah Al-Baqarah (2:157)",
     "segments": [
-      "وَرَبُّكَ يَعْلَمُ",
-      "مَا تُكِنُّ",
-      "صُدُورُهُمْ",
-      "وَمَا يُعْلِنُونَ"
+      "أُولَٰئِكَ عَلَيْهِمْ",
+      "صَلَوَاتٌ مِّن رَّبِّهِمْ",
+      "وَرَحْمَةٌ",
+      "وَأُولَٰئِكَ هُمُ",
+      "الْمُهْتَدُونَ"
     ],
     "translations": [
-      "And your Lord knows",
-      "what conceals",
-      "their breasts and what",
-      "they declare"
+      "Those on them",
+      "(are) blessings from",
+      "their Lord and Mercy",
+      "And those [they]",
+      "(are) the guided ones"
     ],
-    "hint": "Allah's complete knowledge of what hearts hide and what is made open",
-    "arabic": "وَرَبُّكَ يَعْلَمُ مَا تُكِنُّ صُدُورُهُمْ وَمَا يُعْلِنُونَ",
+    "hint": "Allah's reward and guidance for the patient who say 'Indeed we belong to Allah' in calamity",
+    "arabic": "أُو۟لَـٰٓئِكَ عَلَيْهِمْ صَلَوَٰتٌۭ مِّن رَّبِّهِمْ وَرَحْمَةٌۭ ۖ وَأُو۟لَـٰٓئِكَ هُمُ ٱلْمُهْتَدُونَ",
     "words": [
-      "وَرَبُّكَ يَعْلَمُ",
-      "مَا تُكِنُّ",
-      "صُدُورُهُمْ وَمَا",
-      "يُعْلِنُونَ"
+      "أُو۟لَـٰٓئِكَ عَلَيْهِمْ",
+      "صَلَوَٰتٌۭ مِّن",
+      "رَّبِّهِمْ وَرَحْمَةٌۭ ۖ",
+      "وَأُو۟لَـٰٓئِكَ هُمُ",
+      "ٱلْمُهْتَدُونَ"
     ],
-    "verseEn": "And your Lord knows what their breasts conceal and what they declare."
+    "verseEn": "Those are the ones upon whom are blessings from their Lord and mercy. And it is those who are the [rightly] guided."
   },
   "generated": true,
   "model": "auto (chain)"

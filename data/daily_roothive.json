@@ -1,355 +1,499 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "puzzle": {
-    "center": "ح",
+    "center": "د",
     "outer": [
-      "ف",
-      "ه",
-      "ظ",
-      "ل",
       "ا",
-      "ي"
+      "س",
+      "ه",
+      "م",
+      "و",
+      "ج"
     ],
     "root": {
-      "letters": "حفظ",
-      "display": "ح ف ظ",
-      "translit": "ḥ-f-ẓ",
-      "meaning": "The core idea is keeping something safe from harm or loss. Its words grow by showing a guarding person or a thing kept secure through care.",
-      "occurrences": 44,
-      "lemmaCount": 8
+      "letters": "سجد",
+      "display": "س ج د",
+      "translit": "s-j-d",
+      "meaning": "The core idea is humble bowing down in worship. From it come words for the action itself, the person doing it, and the place where it happens.",
+      "occurrences": 92,
+      "lemmaCount": 4
     },
     "words": [
       {
-        "w": "احل",
+        "w": "ادم",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَحَلَّ",
-            "gloss": "permitted",
-            "type": "verb",
-            "root": "حلل",
-            "count": 20,
-            "ref": "2:187",
-            "pos": 1,
+            "lemma": "آدَم",
+            "gloss": "adam",
+            "type": "proper noun",
+            "root": "أدم",
+            "count": 25,
+            "ref": "2:31",
+            "pos": 2,
             "alt": [
-              "are made lawful",
-              "has made lawful"
-            ],
-            "form": 4
+              "children of adam",
+              "adam disobeyed"
+            ]
           }
         ]
       },
       {
-        "w": "حال",
+        "w": "امد",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "حالَ",
-            "gloss": "comes",
+            "lemma": "أَمَدَّ",
+            "gloss": "extend",
             "type": "verb",
-            "root": "حول",
-            "count": 3,
-            "ref": "8:24",
-            "pos": 14,
+            "root": "مدد",
+            "count": 10,
+            "ref": "17:20",
+            "pos": 2,
+            "form": 4
+          },
+          {
+            "lemma": "أَمَد",
+            "gloss": "distance",
+            "type": "noun",
+            "root": "أمد",
+            "count": 4,
+            "ref": "3:30",
+            "pos": 19,
+            "alt": [
+              "time",
+              "term"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "جسد",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "جَسَد",
+            "gloss": "body",
+            "type": "noun",
+            "root": "جسد",
+            "count": 4,
+            "ref": "7:148",
+            "pos": 9,
+            "alt": [
+              "image",
+              "bodies"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "جهد",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "جَهْد",
+            "gloss": "strongest",
+            "type": "verbal noun",
+            "root": "جهد",
+            "count": 5,
+            "ref": "5:53",
+            "pos": 8,
+            "alt": [
+              "strong"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "دام",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "دامُ",
+            "gloss": "as long as remain",
+            "type": "verb",
+            "root": "دوم",
+            "count": 7,
+            "ref": "11:107",
+            "pos": 4,
+            "alt": [
+              "as long as remains"
+            ],
             "form": 1
           }
         ]
       },
       {
-        "w": "حفظ",
+        "w": "سجد",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "حَفِظَ",
-            "gloss": "them to guard",
+            "lemma": "سَجَدَ",
+            "gloss": "prostrate",
             "type": "verb",
-            "root": "حفظ",
-            "count": 7,
-            "ref": "4:34",
-            "pos": 20,
-            "form": 1
-          },
-          {
-            "lemma": "حِفْظ",
-            "gloss": "guard",
-            "type": "noun",
-            "root": "حفظ",
-            "count": 3,
-            "ref": "2:255",
-            "pos": 47,
-            "alt": [
-              "guarding of both of"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "حفي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "حَفِيّ",
-            "gloss": "well informed",
-            "type": "noun",
-            "root": "حفو",
-            "count": 2,
-            "ref": "7:187",
-            "pos": 26,
-            "alt": [
-              "ever gracious"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "حلف",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "حَلَفْ",
-            "gloss": "swear",
-            "type": "verb",
-            "root": "حلف",
-            "count": 12,
-            "ref": "4:62",
-            "pos": 10,
-            "alt": [
-              "swearing",
-              "have sworn"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "حلل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "حَلَلْ",
-            "gloss": "settles",
-            "type": "verb",
-            "root": "حلل",
-            "count": 14,
-            "ref": "2:228",
-            "pos": 7,
-            "alt": [
-              "lawful",
-              "on whom descends"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "احيا",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَحْيا",
-            "gloss": "revives",
-            "type": "verb",
-            "root": "حيي",
-            "count": 51,
-            "ref": "2:73",
+            "root": "سجد",
+            "count": 35,
+            "ref": "7:12",
             "pos": 5,
             "alt": [
-              "gives life",
-              "give life"
+              "prostrates"
             ],
-            "form": 4
+            "form": 1
           }
         ]
       },
       {
-        "w": "افلح",
+        "w": "سدس",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَفْلَحَ",
-            "gloss": "succeed",
-            "type": "verb",
-            "root": "فلح",
-            "count": 27,
-            "ref": "6:21",
-            "pos": 13,
-            "alt": [
-              "be successful",
-              "successful"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "حافظ",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "حافِظ",
-            "gloss": "protector",
-            "type": "active participle",
-            "root": "حفظ",
-            "count": 13,
-            "ref": "12:64",
-            "pos": 14,
-            "alt": [
-              "guardians",
-              "guardian"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "حفيظ",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "حَفِيظ",
-            "gloss": "guardian",
-            "type": "active participle",
-            "root": "حفظ",
-            "count": 12,
-            "ref": "4:80",
-            "pos": 12,
-            "alt": [
-              "guardians",
-              "guarded"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "حلال",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "حَلال",
-            "gloss": "lawful",
+            "lemma": "سُدُس",
+            "gloss": "sixth",
             "type": "noun",
-            "root": "حلل",
-            "count": 6,
-            "ref": "2:168",
-            "pos": 7
+            "root": "سدس",
+            "count": 3,
+            "ref": "4:11",
+            "pos": 27
           }
         ]
       },
       {
-        "w": "حليه",
+        "w": "مهد",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "حِلْيَة",
-            "gloss": "ornaments",
+            "lemma": "مَهْد",
+            "gloss": "bed",
             "type": "noun",
-            "root": "حلي",
-            "count": 4,
-            "ref": "13:17",
-            "pos": 18
-          }
-        ]
-      },
-      {
-        "w": "حياه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "حَياة",
-            "gloss": "life",
-            "type": "noun",
-            "root": "حيي",
-            "count": 76,
-            "ref": "2:96",
+            "root": "مهد",
+            "count": 5,
+            "ref": "20:53",
             "pos": 5
           }
         ]
       },
       {
-        "w": "يحيي",
+        "w": "هاد",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "يَحْيَى",
-            "gloss": "yahya",
+            "lemma": "هادُ",
+            "gloss": "are jews",
+            "type": "verb",
+            "root": "هود",
+            "count": 11,
+            "ref": "2:62",
+            "pos": 5,
+            "alt": [
+              "were jews",
+              "became jews"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "هاد",
+            "gloss": "guide",
+            "type": "active participle",
+            "root": "هدي",
+            "count": 7,
+            "ref": "13:7",
+            "pos": 15
+          }
+        ]
+      },
+      {
+        "w": "هود",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هُود",
+            "gloss": "hud",
             "type": "proper noun",
-            "root": "حيي",
-            "count": 5,
-            "ref": "19:7",
+            "root": "هود",
+            "count": 10,
+            "ref": "2:111",
+            "pos": 8,
+            "alt": [
+              "jews",
+              "jew"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "واد",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "واد",
+            "gloss": "valley",
+            "type": "noun",
+            "root": "ودي",
+            "count": 7,
+            "ref": "26:225",
             "pos": 6
           }
         ]
       },
       {
-        "w": "حافظه",
-        "family": true,
-        "points": 5,
+        "w": "وجد",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "حافِظَة",
-            "gloss": "guarding",
+            "lemma": "وَجَدَ",
+            "gloss": "find",
+            "type": "verb",
+            "root": "وجد",
+            "count": 106,
+            "ref": "2:196",
+            "pos": 47,
+            "alt": [
+              "found",
+              "is found"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "جاهد",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "جاهَدَ",
+            "gloss": "strive",
+            "type": "verb",
+            "root": "جهد",
+            "count": 27,
+            "ref": "9:73",
+            "pos": 3,
+            "alt": [
+              "strives"
+            ],
+            "form": 3
+          }
+        ]
+      },
+      {
+        "w": "جهاد",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "جِهاد",
+            "gloss": "striving",
+            "type": "noun",
+            "root": "جهد",
+            "count": 4,
+            "ref": "25:52",
+            "pos": 6,
+            "alt": [
+              "strive"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ساجد",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "ساجِد",
+            "gloss": "prostrating",
             "type": "active participle",
-            "root": "حفظ",
+            "root": "سجد",
+            "count": 23,
+            "ref": "2:58",
+            "pos": 13,
+            "alt": [
+              "prostrate",
+              "prostration"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "سادس",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "سادِس",
+            "gloss": "sixth of",
+            "type": "noun",
+            "root": "سدس",
             "count": 2,
-            "ref": "4:34",
-            "pos": 17
+            "ref": "18:22",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "سجود",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "سُجُود",
+            "gloss": "prostration",
+            "type": "adjective",
+            "root": "سجد",
+            "count": 6,
+            "ref": "2:125",
+            "pos": 22,
+            "alt": [
+              "prostrate"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مسجد",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مَسْجِد",
+            "gloss": "masjid",
+            "type": "noun",
+            "root": "سجد",
+            "count": 28,
+            "ref": "2:114",
+            "pos": 5,
+            "alt": [
+              "masajid of allah",
+              "masajid"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مسود",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُسْوَدّ",
+            "gloss": "dark",
+            "type": "active participle",
+            "root": "سود",
+            "count": 2,
+            "ref": "16:58",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "مهاد",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مِهاد",
+            "gloss": "bed",
+            "type": "noun",
+            "root": "مهد",
+            "count": 7,
+            "ref": "7:41",
+            "pos": 4,
+            "alt": [
+              "resting place"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "موده",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَوَدَّة",
+            "gloss": "love",
+            "type": "noun",
+            "root": "ودد",
+            "count": 8,
+            "ref": "4:73",
+            "pos": 12,
+            "alt": [
+              "any affection",
+              "affection"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ودود",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "وَدُود",
+            "gloss": "most loving",
+            "type": "adjective",
+            "root": "ودد",
+            "count": 2,
+            "ref": "11:90",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "مجاهد",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُجاهِد",
+            "gloss": "ones who strive",
+            "type": "active participle",
+            "root": "جهد",
+            "count": 4,
+            "ref": "4:95",
+            "pos": 9,
+            "alt": [
+              "strive"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ممدود",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مَمْدُود",
+            "gloss": "extensive",
+            "type": "passive participle",
+            "root": "مدد",
+            "count": 2,
+            "ref": "56:30",
+            "pos": 2,
+            "alt": [
+              "extended"
+            ]
           }
         ]
       }
     ],
-    "otherFamily": [
-      {
-        "lemma": "يُحافِظُ",
-        "gloss": "guard strictly",
-        "type": "verb",
-        "root": "حفظ",
-        "count": 4,
-        "ref": "2:238",
-        "pos": 1,
-        "alt": [
-          "guarding",
-          "guard"
-        ],
-        "form": 3
-      },
-      {
-        "lemma": "مَحْفُوظ",
-        "gloss": "protected",
-        "type": "passive participle",
-        "root": "حفظ",
-        "count": 2,
-        "ref": "21:32",
-        "pos": 4,
-        "alt": [
-          "guarded"
-        ]
-      },
-      {
-        "lemma": "اسْتُحْفِظُ",
-        "gloss": "were entrusted",
-        "type": "verb",
-        "root": "حفظ",
-        "count": 1,
-        "ref": "5:44",
-        "pos": 17,
-        "form": 10
-      }
-    ],
-    "maxScore": 33,
-    "featuredRoot": "حفظ"
+    "otherFamily": [],
+    "maxScore": 46,
+    "featuredRoot": "سجد"
   },
   "generated": true,
   "model": "auto (chain)"

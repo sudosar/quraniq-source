@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "puzzle": {
-    "word": "ذنب",
-    "display": "ذَنْب",
-    "hint": "A moral burden one seeks forgiveness for",
-    "verseRef": "12:29",
-    "arabicVerse": "يُوسُفُ أَعْرِضْ عَنْ هَـٰذَا ۚ وَٱسْتَغْفِرِى لِذَنۢبِكِ ۖ إِنَّكِ كُنتِ مِنَ ٱلْخَاطِـِٔينَ",
-    "verse": "12:29 - Joseph, ignore this. And, [my wife], ask forgiveness for your sin. Indeed, you were of the sinful.\""
+    "word": "ساعة",
+    "display": "سَاعَة",
+    "hint": "The promised moment of reckoning that doubters think will never stand",
+    "verseRef": "18:36",
+    "arabicVerse": "وَمَآ أَظُنُّ ٱلسَّاعَةَ قَآئِمَةًۭ وَلَئِن رُّدِدتُّ إِلَىٰ رَبِّى لَأَجِدَنَّ خَيْرًۭا مِّنْهَا مُنقَلَبًۭا",
+    "verse": "18:36 - And I do not think the Hour will occur. And even if I should be brought back to my Lord, I will surely find better than this as a return.\""
   },
   "generated": true,
   "model": "auto (chain)"
