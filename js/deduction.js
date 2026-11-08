@@ -7,7 +7,8 @@ const ded = {
     cluesRevealed: 0,
     selections: {},
     gameOver: false,
-    won: false
+    won: false,
+    order: {} // issue #266: shuffled option order, persisted per puzzle
 };
 
 function initDeduction() {
@@ -34,6 +35,20 @@ async function loadDailyDeduction() {
     return data.puzzle;
 }
 
+// Issue #266: shuffle each category's options once per puzzle and persist
+// the order, so the correct pill is not always first and pills never move
+// under the player's finger on re-render. Selections are stored by value,
+// so reordering never breaks an in-progress game.
+function ensureDedOrder() {
+    Object.entries(ded.puzzle.categories).forEach(([key, cat]) => {
+        const stored = ded.order[key];
+        const stale = !Array.isArray(stored)
+            || stored.length !== cat.options.length
+            || stored.some(opt => !cat.options.includes(opt));
+        if (stale) ded.order[key] = shuffle([...cat.options]);
+    });
+}
+
 function setupDeductionGame() {
     // Check saved state
     const saved = app.state[`ded_${app.dayNumber}`];
@@ -42,7 +57,11 @@ function setupDeductionGame() {
         ded.selections = saved.selections || {};
         ded.gameOver = saved.gameOver || false;
         ded.won = saved.won || false;
+        ded.order = saved.order || {};
     }
+
+    ensureDedOrder();
+    saveDedState();
 
     renderDeduction();
 
@@ -134,7 +153,7 @@ function renderDeduction() {
         catEl.innerHTML = `<h4>${cat.label}</h4><div class="deduction-options" data-cat="${key}" role="radiogroup" aria-label="${cat.label}"></div>`;
         const optsEl = catEl.querySelector('.deduction-options');
 
-        cat.options.forEach(opt => {
+        (ded.order[key] || cat.options).forEach(opt => {
             const btn = document.createElement('button');
             btn.className = 'deduction-opt';
             btn.setAttribute('role', 'radio');
@@ -211,7 +230,8 @@ function saveDedState() {
         cluesRevealed: ded.cluesRevealed,
         selections: ded.selections,
         gameOver: ded.gameOver,
-        won: ded.won
+        won: ded.won,
+        order: ded.order
     };
     saveState(app.state);
 }
