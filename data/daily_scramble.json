@@ -1,32 +1,35 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "puzzle": {
-    "verseRef": "2:157",
-    "reference": "Surah Al-Baqarah (2:157)",
+    "verseRef": "10:64",
+    "reference": "Surah Yunus (10:64)",
     "segments": [
-      "أُولَٰئِكَ عَلَيْهِمْ",
-      "صَلَوَاتٌ مِّن رَّبِّهِمْ",
-      "وَرَحْمَةٌ",
-      "وَأُولَٰئِكَ هُمُ",
-      "الْمُهْتَدُونَ"
+      "لَهُمُ الْبُشْرَىٰ",
+      "فِي الْحَيَاةِ الدُّنْيَا",
+      "وَفِي الْآخِرَةِ",
+      "لَا تَبْدِيلَ لِكَلِمَاتِ",
+      "اللَّهِ ذَٰلِكَ هُوَ",
+      "الْفَوْزُ الْعَظِيمُ"
     ],
     "translations": [
-      "Those on them",
-      "(are) blessings from",
-      "their Lord and Mercy",
-      "And those [they]",
-      "(are) the guided ones"
+      "For them (are) the glad tidings in",
+      "the life (of) the world and in",
+      "the Hereafter No change",
+      "(is there) in the Words (of) Allah",
+      "That is",
+      "the success the great"
     ],
-    "hint": "Allah's reward and guidance for the patient who say 'Indeed we belong to Allah' in calamity",
-    "arabic": "أُو۟لَـٰٓئِكَ عَلَيْهِمْ صَلَوَٰتٌۭ مِّن رَّبِّهِمْ وَرَحْمَةٌۭ ۖ وَأُو۟لَـٰٓئِكَ هُمُ ٱلْمُهْتَدُونَ",
+    "hint": "Glad tidings for Allah's close allies with an unchangeable promise and supreme success",
+    "arabic": "لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ ذَٰلِكَ هُوَ ٱلْفَوْزُ ٱلْعَظِيمُ",
     "words": [
-      "أُو۟لَـٰٓئِكَ عَلَيْهِمْ",
-      "صَلَوَٰتٌۭ مِّن",
-      "رَّبِّهِمْ وَرَحْمَةٌۭ ۖ",
-      "وَأُو۟لَـٰٓئِكَ هُمُ",
-      "ٱلْمُهْتَدُونَ"
+      "لَهُمُ ٱلْبُشْرَىٰ فِى",
+      "ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى",
+      "ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ",
+      "لِكَلِمَـٰتِ ٱللَّهِ ۚ",
+      "ذَٰلِكَ هُوَ",
+      "ٱلْفَوْزُ ٱلْعَظِيمُ"
     ],
-    "verseEn": "Those are the ones upon whom are blessings from their Lord and mercy. And it is those who are the [rightly] guided."
+    "verseEn": "For them are good tidings in the worldly life and in the Hereafter. No change is there in the words [i.e., decrees] of Allāh. That is what is the great attainment."
   },
   "generated": true,
   "model": "auto (chain)"

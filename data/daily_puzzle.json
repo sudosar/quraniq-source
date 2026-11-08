@@ -1,144 +1,144 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "puzzle": {
     "categories": [
       {
-        "name": "أَشْخَاصٌ سُمُّوا فِي الْقُرْآنِ",
-        "nameEn": "Individuals named in the Qur'an",
+        "name": "أَنْوَاعُ الْبَشَرِ",
+        "nameEn": "Human beings mentioned in the Qur'an",
         "color": "yellow",
         "items": [
           {
-            "ar": "مُوسَىٰ",
-            "en": "Musa",
-            "ref": "17:2",
-            "verse": "وَءَاتَيْنَا مُوسَى ٱلْكِتَـٰبَ وَجَعَلْنَـٰهُ هُدًۭى لِّبَنِىٓ إِسْرَٰٓءِيلَ أَلَّا تَتَّخِذُوا۟ مِن دُونِى وَكِيلًۭا",
-            "verseEn": "And We gave Moses the Scripture and made it a guidance for the Children of Israel that you not take other than Me as Disposer of affairs,"
+            "ar": "الْإِنسَانُ",
+            "en": "[the] man",
+            "ref": "36:77",
+            "verse": "أَوَلَمْ يَرَ ٱلْإِنسَـٰنُ أَنَّا خَلَقْنَـٰهُ مِن نُّطْفَةٍۢ فَإِذَا هُوَ خَصِيمٌۭ مُّبِينٌۭ",
+            "verseEn": "Does man not consider that We created him from a [mere] sperm-drop - then at once he is a clear adversary?"
           },
           {
-            "ar": "هَارُونُ",
-            "en": "Harun",
-            "ref": "20:90",
-            "verse": "وَلَقَدْ قَالَ لَهُمْ هَـٰرُونُ مِن قَبْلُ يَـٰقَوْمِ إِنَّمَا فُتِنتُم بِهِۦ ۖ وَإِنَّ رَبَّكُمُ ٱلرَّحْمَـٰنُ فَٱتَّبِعُونِى وَأَطِيعُوٓا۟ أَمْرِى",
-            "verseEn": "And Aaron had already told them before [the return of Moses], \"O my people, you are only being tested by it, and indeed, your Lord is the Most Merciful, so follow me and obey my order.\""
+            "ar": "لِلْعِبَادِ",
+            "en": "for the slaves",
+            "ref": "50:11",
+            "verse": "رِّزْقًۭا لِّلْعِبَادِ ۖ وَأَحْيَيْنَا بِهِۦ بَلْدَةًۭ مَّيْتًۭا ۚ كَذَٰلِكَ ٱلْخُرُوجُ",
+            "verseEn": "As provision for the servants, and We have given life thereby to a dead land. Thus is the emergence [i.e., resurrection]."
           },
           {
-            "ar": "هُودُ",
-            "en": "O Hud",
-            "ref": "11:53",
-            "verse": "قَالُوا۟ يَـٰهُودُ مَا جِئْتَنَا بِبَيِّنَةٍۢ وَمَا نَحْنُ بِتَارِكِىٓ ءَالِهَتِنَا عَن قَوْلِكَ وَمَا نَحْنُ لَكَ بِمُؤْمِنِينَ",
-            "verseEn": "They said, \"O Hūd, you have not brought us clear evidence, and we are not ones to leave our gods on your say-so. Nor are we believers in you."
+            "ar": "قَوْمٍ",
+            "en": "a people",
+            "ref": "5:102",
+            "verse": "قَدْ سَأَلَهَا قَوْمٌۭ مِّن قَبْلِكُمْ ثُمَّ أَصْبَحُوا۟ بِهَا كَـٰفِرِينَ",
+            "verseEn": "A people asked such [questions] before you; then they became thereby disbelievers."
           },
           {
-            "ar": "فِرْعَوْنُ",
-            "en": "Firaun said",
-            "ref": "26:23",
-            "verse": "قَالَ فِرْعَوْنُ وَمَا رَبُّ ٱلْعَـٰلَمِينَ",
-            "verseEn": "Said Pharaoh, \"And what is the Lord of the worlds?\""
+            "ar": "الرِّجَالَ",
+            "en": "the men",
+            "ref": "29:29",
+            "verse": "أَئِنَّكُمْ لَتَأْتُونَ ٱلرِّجَالَ وَتَقْطَعُونَ ٱلسَّبِيلَ وَتَأْتُونَ فِى نَادِيكُمُ ٱلْمُنكَرَ ۖ فَمَا كَانَ جَوَابَ قَوْمِهِۦٓ إِلَّآ أَن قَالُوا۟ ٱئْتِنَا بِعَذَابِ ٱللَّهِ إِن كُنتَ مِنَ ٱلصَّـٰدِقِينَ",
+            "verseEn": "Indeed, you approach men and obstruct the road and commit in your meetings [every] evil.\" And the answer of his people was not but that they said, \"Bring us the punishment of Allāh, if you should be of the truthful.\""
           }
         ]
       },
       {
-        "name": "أَفْعَالٌ مَذْمُومَةٌ فِي الْقُرْآنِ",
-        "nameEn": "Sinful acts condemned in the Qur'an",
+        "name": "أَنْوَاعُ الْكَلَامِ الْمَنْطُوقِ",
+        "nameEn": "Types of spoken utterances mentioned in the Qur'an",
         "color": "green",
         "items": [
           {
-            "ar": "يَسْرِقْنَ",
-            "en": "they will steal",
-            "ref": "60:12",
-            "verse": "يَـٰٓأَيُّهَا ٱلنَّبِىُّ إِذَا جَآءَكَ ٱلْمُؤْمِنَـٰتُ يُبَايِعْنَكَ عَلَىٰٓ أَن لَّا يُشْرِكْنَ بِٱللَّهِ شَيْـًۭٔا وَلَا يَسْرِقْنَ وَلَا يَزْنِينَ وَلَا يَقْتُلْنَ أَوْلَـٰدَهُنَّ وَلَا يَأْتِينَ بِبُهْتَـٰنٍۢ يَفْتَرِينَهُۥ بَيْنَ أَيْدِيهِنَّ وَأَرْجُلِهِنَّ وَلَا يَعْصِينَكَ فِى مَعْرُوفٍۢ ۙ فَبَايِعْهُنَّ وَٱسْتَغْفِرْ لَهُنَّ ٱللَّهَ ۖ إِنَّ ٱللَّهَ غَفُورٌۭ رَّحِيمٌۭ",
-            "verseEn": "O Prophet, when the believing women come to you pledging to you that they will not associate anything with Allāh, nor will they steal, nor will they commit unlawful sexual intercourse, nor will they kill their children, nor will they bring forth a slander they have invented between their arms and legs, nor will they disobey you in what is right - then accept their pledge and ask forgiveness for them of Allāh. Indeed, Allāh is Forgiving and Merciful."
+            "ar": "الْقَوْلِ",
+            "en": "[the] speech",
+            "ref": "21:110",
+            "verse": "إِنَّهُۥ يَعْلَمُ ٱلْجَهْرَ مِنَ ٱلْقَوْلِ وَيَعْلَمُ مَا تَكْتُمُونَ",
+            "verseEn": "Indeed, He knows what is declared of speech, and He knows what you conceal."
           },
           {
-            "ar": "يَلْمِزُونَ",
-            "en": "criticize",
-            "ref": "9:79",
-            "verse": "ٱلَّذِينَ يَلْمِزُونَ ٱلْمُطَّوِّعِينَ مِنَ ٱلْمُؤْمِنِينَ فِى ٱلصَّدَقَـٰتِ وَٱلَّذِينَ لَا يَجِدُونَ إِلَّا جُهْدَهُمْ فَيَسْخَرُونَ مِنْهُمْ ۙ سَخِرَ ٱللَّهُ مِنْهُمْ وَلَهُمْ عَذَابٌ أَلِيمٌ",
-            "verseEn": "Those who criticize the contributors among the believers concerning [their] charities and [criticize] the ones who find nothing [to spend] except their effort, so they ridicule them - Allāh will ridicule them, and they will have a painful punishment."
+            "ar": "الْحَدِيثِ",
+            "en": "Statement",
+            "ref": "68:44",
+            "verse": "فَذَرْنِى وَمَن يُكَذِّبُ بِهَـٰذَا ٱلْحَدِيثِ ۖ سَنَسْتَدْرِجُهُم مِّنْ حَيْثُ لَا يَعْلَمُونَ",
+            "verseEn": "So leave Me, [O Muḥammad], with [the matter of] whoever denies this statement [i.e., the Qur’ān]. We will progressively lead them [to punishment] from where they do not know."
           },
           {
-            "ar": "الْكَذِبَ",
-            "en": "the lie",
-            "ref": "16:62",
-            "verse": "وَيَجْعَلُونَ لِلَّهِ مَا يَكْرَهُونَ وَتَصِفُ أَلْسِنَتُهُمُ ٱلْكَذِبَ أَنَّ لَهُمُ ٱلْحُسْنَىٰ ۖ لَا جَرَمَ أَنَّ لَهُمُ ٱلنَّارَ وَأَنَّهُم مُّفْرَطُونَ",
-            "verseEn": "And they attribute to Allāh that which they dislike [i.e., daughters], and their tongues assert the lie that they will have the best [from Him]. Assuredly, they will have the Fire, and they will be [therein] neglected."
+            "ar": "الْوَعْدُ",
+            "en": "promise (be fulfilled)",
+            "ref": "27:71",
+            "verse": "وَيَقُولُونَ مَتَىٰ هَـٰذَا ٱلْوَعْدُ إِن كُنتُمْ صَـٰدِقِينَ",
+            "verseEn": "And they say, \"When is [the fulfillment of] this promise, if you should be truthful?\""
           },
           {
-            "ar": "يَفْتَرُونَ",
-            "en": "invent",
-            "ref": "6:138",
-            "verse": "وَقَالُوا۟ هَـٰذِهِۦٓ أَنْعَـٰمٌۭ وَحَرْثٌ حِجْرٌۭ لَّا يَطْعَمُهَآ إِلَّا مَن نَّشَآءُ بِزَعْمِهِمْ وَأَنْعَـٰمٌ حُرِّمَتْ ظُهُورُهَا وَأَنْعَـٰمٌۭ لَّا يَذْكُرُونَ ٱسْمَ ٱللَّهِ عَلَيْهَا ٱفْتِرَآءً عَلَيْهِ ۚ سَيَجْزِيهِم بِمَا كَانُوا۟ يَفْتَرُونَ",
-            "verseEn": "And they say, \"These animals and crops are forbidden; no one may eat from them except whom we will,\" by their claim. And there are those [camels] whose backs are forbidden [by them] and those upon which the name of Allāh is not mentioned - [all of this] an invention of untruth about Him. He will punish them for what they were inventing."
+            "ar": "أَيْمَانَهُمْ",
+            "en": "their oaths",
+            "ref": "58:16",
+            "verse": "ٱتَّخَذُوٓا۟ أَيْمَـٰنَهُمْ جُنَّةًۭ فَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ فَلَهُمْ عَذَابٌۭ مُّهِينٌۭ",
+            "verseEn": "They took their [false] oaths as a cover, so they averted [people] from the way of Allāh, and for them is a humiliating punishment."
           }
         ]
       },
       {
-        "name": "أَفْعَالُ الْكَلَامِ وَالسَّمْعِ",
-        "nameEn": "Verbs of speaking and listening in the Qur'an",
+        "name": "عَطَايَا اللَّهِ وَجَزَاؤُهُ",
+        "nameEn": "Gifts and rewards bestowed by Allah",
         "color": "blue",
         "items": [
           {
-            "ar": "يَسْتَمِعُونَ",
-            "en": "they listen",
-            "ref": "52:38",
-            "verse": "أَمْ لَهُمْ سُلَّمٌۭ يَسْتَمِعُونَ فِيهِ ۖ فَلْيَأْتِ مُسْتَمِعُهُم بِسُلْطَـٰنٍۢ مُّبِينٍ",
-            "verseEn": "Or have they a stairway [into the heaven] upon which they listen? Then let their listener produce a clear authority [i.e., proof]."
+            "ar": "رَحْمَةً",
+            "en": "As Mercy",
+            "ref": "44:6",
+            "verse": "رَحْمَةًۭ مِّن رَّبِّكَ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
+            "verseEn": "As mercy from your Lord. Indeed, He is the Hearing, the Knowing,"
           },
           {
-            "ar": "يَنطِقُونَ",
-            "en": "they will speak",
-            "ref": "77:35",
-            "verse": "هَـٰذَا يَوْمُ لَا يَنطِقُونَ",
-            "verseEn": "This is a Day they will not speak,"
+            "ar": "نِعْمَةُ",
+            "en": "(for the) Grace",
+            "ref": "37:57",
+            "verse": "وَلَوْلَا نِعْمَةُ رَبِّى لَكُنتُ مِنَ ٱلْمُحْضَرِينَ",
+            "verseEn": "If not for the favor of my Lord, I would have been of those brought in [to Hell]."
           },
           {
-            "ar": "يَتَسَاءَلُونَ",
-            "en": "questioning one another",
-            "ref": "37:50",
-            "verse": "فَأَقْبَلَ بَعْضُهُمْ عَلَىٰ بَعْضٍۢ يَتَسَآءَلُونَ",
-            "verseEn": "And they will approach one another, inquiring of each other."
+            "ar": "ٱلرِّزْقَ",
+            "en": "the provision",
+            "ref": "39:52",
+            "verse": "أَوَلَمْ يَعْلَمُوٓا۟ أَنَّ ٱللَّهَ يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ وَيَقْدِرُ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍۢ لِّقَوْمٍۢ يُؤْمِنُونَ",
+            "verseEn": "Do they not know that Allāh extends provision for whom He wills and restricts [it]? Indeed in that are signs for a people who believe."
           },
           {
-            "ar": "يَصِفُونَ",
-            "en": "they attribute",
-            "ref": "23:91",
-            "verse": "مَا ٱتَّخَذَ ٱللَّهُ مِن وَلَدٍۢ وَمَا كَانَ مَعَهُۥ مِنْ إِلَـٰهٍ ۚ إِذًۭا لَّذَهَبَ كُلُّ إِلَـٰهٍۭ بِمَا خَلَقَ وَلَعَلَا بَعْضُهُمْ عَلَىٰ بَعْضٍۢ ۚ سُبْحَـٰنَ ٱللَّهِ عَمَّا يَصِفُونَ",
-            "verseEn": "Allāh has not taken any son, nor has there ever been with Him any deity. [If there had been], then each deity would have taken what it created, and some of them would have [sought to] overcome others. Exalted is Allāh above what they describe [concerning Him]."
+            "ar": "أَجْرَهُم",
+            "en": "their reward",
+            "ref": "28:54",
+            "verse": "أُو۟لَـٰٓئِكَ يُؤْتَوْنَ أَجْرَهُم مَّرَّتَيْنِ بِمَا صَبَرُوا۟ وَيَدْرَءُونَ بِٱلْحَسَنَةِ ٱلسَّيِّئَةَ وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ",
+            "verseEn": "Those will be given their reward twice for what they patiently endured and [because] they avert evil through good, and from what We have provided them they spend."
           }
         ]
       },
       {
-        "name": "مَظَاهِرُ الكَوْنِ الطَّبِيعِيَّةُ",
-        "nameEn": "Natural phenomena and realms in the Qur'an",
+        "name": "مُصْطَلَحَاتُ الْحَرْبِ وَالْقِتَالِ",
+        "nameEn": "Warfare terms mentioned in the Qur'an",
         "color": "purple",
         "items": [
           {
-            "ar": "السَّمَاءِ",
-            "en": "the heaven",
-            "ref": "22:70",
-            "verse": "أَلَمْ تَعْلَمْ أَنَّ ٱللَّهَ يَعْلَمُ مَا فِى ٱلسَّمَآءِ وَٱلْأَرْضِ ۗ إِنَّ ذَٰلِكَ فِى كِتَـٰبٍ ۚ إِنَّ ذَٰلِكَ عَلَى ٱللَّهِ يَسِيرٌۭ",
-            "verseEn": "Do you not know that Allāh knows what is in the heaven and earth? Indeed, that is in a Record. Indeed that, for Allāh, is easy."
+            "ar": "ٱلْحَرْبِ",
+            "en": "the war",
+            "ref": "8:57",
+            "verse": "فَإِمَّا تَثْقَفَنَّهُمْ فِى ٱلْحَرْبِ فَشَرِّدْ بِهِم مَّنْ خَلْفَهُمْ لَعَلَّهُمْ يَذَّكَّرُونَ",
+            "verseEn": "So if you, [O Muḥammad], gain dominance over them in war, disperse by [means of] them those behind them that perhaps they will be reminded."
           },
           {
-            "ar": "وَاللَّيْلِ",
-            "en": "And the night",
-            "ref": "81:17",
-            "verse": "وَٱلَّيْلِ إِذَا عَسْعَسَ",
-            "verseEn": "And by the night as it closes in"
+            "ar": "ٱلْجَمْعُ",
+            "en": "(their) assembly",
+            "ref": "54:45",
+            "verse": "سَيُهْزَمُ ٱلْجَمْعُ وَيُوَلُّونَ ٱلدُّبُرَ",
+            "verseEn": "[Their] assembly will be defeated, and they will turn their backs [in retreat]."
           },
           {
-            "ar": "الْأَرْضِ",
-            "en": "the earth",
-            "ref": "4:131",
-            "verse": "وَلِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ وَلَقَدْ وَصَّيْنَا ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ مِن قَبْلِكُمْ وَإِيَّاكُمْ أَنِ ٱتَّقُوا۟ ٱللَّهَ ۚ وَإِن تَكْفُرُوا۟ فَإِنَّ لِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۚ وَكَانَ ٱللَّهُ غَنِيًّا حَمِيدًۭا",
-            "verseEn": "And to Allāh belongs whatever is in the heavens and whatever is on the earth. And We have instructed those who were given the Scripture before you and yourselves to fear Allāh. But if you disbelieve - then to Allāh belongs whatever is in the heavens and whatever is on the earth. And ever is Allāh Free of need and Praiseworthy."
+            "ar": "مَصَانِعَ",
+            "en": "strongholds",
+            "ref": "26:129",
+            "verse": "وَتَتَّخِذُونَ مَصَانِعَ لَعَلَّكُمْ تَخْلُدُونَ",
+            "verseEn": "And take for yourselves constructions [i.e., palaces and fortresses] that you might abide eternally?"
           },
           {
-            "ar": "نَارٍ",
-            "en": "fire",
-            "ref": "38:76",
-            "verse": "قَالَ أَنَا۠ خَيْرٌۭ مِّنْهُ ۖ خَلَقْتَنِى مِن نَّارٍۢ وَخَلَقْتَهُۥ مِن طِينٍۢ",
-            "verseEn": "He said, \"I am better than him. You created me from fire and created him from clay.\""
+            "ar": "حِجَارَةً",
+            "en": "stones",
+            "ref": "51:33",
+            "verse": "لِنُرْسِلَ عَلَيْهِمْ حِجَارَةًۭ مِّن طِينٍۢ",
+            "verseEn": "To send down upon them stones of clay,"
           }
         ]
       }

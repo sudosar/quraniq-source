@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "puzzle": {
-    "word": "ساعة",
-    "display": "سَاعَة",
-    "hint": "The promised moment of reckoning that doubters think will never stand",
-    "verseRef": "18:36",
-    "arabicVerse": "وَمَآ أَظُنُّ ٱلسَّاعَةَ قَآئِمَةًۭ وَلَئِن رُّدِدتُّ إِلَىٰ رَبِّى لَأَجِدَنَّ خَيْرًۭا مِّنْهَا مُنقَلَبًۭا",
-    "verse": "18:36 - And I do not think the Hour will occur. And even if I should be brought back to my Lord, I will surely find better than this as a return.\""
+    "word": "دانية",
+    "display": "دَانِيَةً",
+    "hint": "Paradise shades described as hanging low and near above the righteous",
+    "verseRef": "76:14",
+    "arabicVerse": "وَدَانِيَةً عَلَيْهِمْ ظِلَـٰلُهَا وَذُلِّلَتْ قُطُوفُهَا تَذْلِيلًۭا",
+    "verse": "76:14 - And near above them are its shades, and its [fruit] to be picked will be lowered in compliance."
   },
   "generated": true,
   "model": "auto (chain)"
