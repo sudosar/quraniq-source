@@ -28,6 +28,7 @@ import json
 import os
 import sys
 import re
+import random
 import glob
 import time
 import requests
@@ -3535,6 +3536,21 @@ def generate_roothive(history, today):
     return puzzle
 
 
+def _shuffle_deduction_options(puzzle):
+    """Shuffle each deduction category's options in place.
+
+    Issue #266: the model emits options with the correct answer first, and
+    the frontend renders them in stored order, so the correct pill was
+    always first. Shuffling here (after validation, which is
+    order-independent) randomises future days; the frontend also shuffles
+    once per puzzle at render, which fixes already-published days.
+    """
+    for cat in puzzle.get("categories", {}).values():
+        opts = cat.get("options")
+        if isinstance(opts, list) and len(opts) > 1:
+            random.shuffle(opts)
+
+
 def generate_game(game_type, history, today):
     """Generate a single game puzzle with retries and model fallback chain.
 
@@ -3622,6 +3638,7 @@ def generate_game(game_type, history, today):
                 puzzle = enriched
             elif game_type == "deduction":
                 puzzle = enrich_deduction_with_verses(puzzle)
+                _shuffle_deduction_options(puzzle)
 
             print(f"\n  ✓ {config['label']} generated successfully using {model_label}")
             return puzzle
