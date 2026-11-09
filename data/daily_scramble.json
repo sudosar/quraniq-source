@@ -1,35 +1,32 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "puzzle": {
-    "verseRef": "10:64",
-    "reference": "Surah Yunus (10:64)",
+    "verseRef": "20:132",
+    "reference": "Ta-Ha (20:132)",
     "segments": [
-      "لَهُمُ الْبُشْرَىٰ",
-      "فِي الْحَيَاةِ الدُّنْيَا",
-      "وَفِي الْآخِرَةِ",
-      "لَا تَبْدِيلَ لِكَلِمَاتِ",
-      "اللَّهِ ذَٰلِكَ هُوَ",
-      "الْفَوْزُ الْعَظِيمُ"
+      "وَأْمُرْ أَهْلَكَ",
+      "بِالصَّلَاةِ وَاصْطَبِرْ",
+      "عَلَيْهَا لَا نَسْأَلُكَ",
+      "رِزْقًا نَّحْنُ نَرْزُقُكَ",
+      "وَالْعَاقِبَةُ لِلتَّقْوَىٰ"
     ],
     "translations": [
-      "For them (are) the glad tidings in",
-      "the life (of) the world and in",
-      "the Hereafter No change",
-      "(is there) in the Words (of) Allah",
-      "That is",
-      "the success the great"
+      "And enjoin (on) your family the prayer",
+      "and be steadfast therein Not",
+      "We ask you (for) provision",
+      "We provide (for) you",
+      "and the outcome (is) for the righteous[ness]"
     ],
-    "hint": "Glad tidings for Allah's close allies with an unchangeable promise and supreme success",
-    "arabic": "لَهُمُ ٱلْبُشْرَىٰ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ لِكَلِمَـٰتِ ٱللَّهِ ۚ ذَٰلِكَ هُوَ ٱلْفَوْزُ ٱلْعَظِيمُ",
+    "hint": "Command to uphold prayer with patience; Allah provides and success belongs to the God-conscious",
+    "arabic": "وَأْمُرْ أَهْلَكَ بِٱلصَّلَوٰةِ وَٱصْطَبِرْ عَلَيْهَا ۖ لَا نَسْـَٔلُكَ رِزْقًۭا ۖ نَّحْنُ نَرْزُقُكَ ۗ وَٱلْعَـٰقِبَةُ لِلتَّقْوَىٰ",
     "words": [
-      "لَهُمُ ٱلْبُشْرَىٰ فِى",
-      "ٱلْحَيَوٰةِ ٱلدُّنْيَا وَفِى",
-      "ٱلْـَٔاخِرَةِ ۚ لَا تَبْدِيلَ",
-      "لِكَلِمَـٰتِ ٱللَّهِ ۚ",
-      "ذَٰلِكَ هُوَ",
-      "ٱلْفَوْزُ ٱلْعَظِيمُ"
+      "وَأْمُرْ أَهْلَكَ بِٱلصَّلَوٰةِ",
+      "وَٱصْطَبِرْ عَلَيْهَا ۖ لَا",
+      "نَسْـَٔلُكَ رِزْقًۭا ۖ",
+      "نَّحْنُ نَرْزُقُكَ ۗ",
+      "وَٱلْعَـٰقِبَةُ لِلتَّقْوَىٰ"
     ],
-    "verseEn": "For them are good tidings in the worldly life and in the Hereafter. No change is there in the words [i.e., decrees] of Allāh. That is what is the great attainment."
+    "verseEn": "And enjoin prayer upon your family [and people] and be steadfast therein. We ask you not for provision; We provide for you, and the [best] outcome is for [those of] righteousness."
   },
   "generated": true,
   "model": "auto (chain)"

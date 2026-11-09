@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "puzzle": {
-    "word": "دانية",
-    "display": "دَانِيَةً",
-    "hint": "Paradise shades described as hanging low and near above the righteous",
-    "verseRef": "76:14",
-    "arabicVerse": "وَدَانِيَةً عَلَيْهِمْ ظِلَـٰلُهَا وَذُلِّلَتْ قُطُوفُهَا تَذْلِيلًۭا",
-    "verse": "76:14 - And near above them are its shades, and its [fruit] to be picked will be lowered in compliance."
+    "word": "منذر",
+    "display": "مُنذِرٌ",
+    "hint": "One tasked with warning people of consequences to come",
+    "verseRef": "13:7",
+    "arabicVerse": "وَيَقُولُ ٱلَّذِينَ كَفَرُوا۟ لَوْلَآ أُنزِلَ عَلَيْهِ ءَايَةٌۭ مِّن رَّبِّهِۦٓ ۗ إِنَّمَآ أَنتَ مُنذِرٌۭ ۖ وَلِكُلِّ قَوْمٍ هَادٍ",
+    "verse": "13:7 - And those who disbelieved say, \"Why has a sign not been sent down to him from his Lord?\" You are only a warner, and for every people is a guide."
   },
   "generated": true,
   "model": "auto (chain)"

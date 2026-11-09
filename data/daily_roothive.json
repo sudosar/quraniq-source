@@ -1,613 +1,559 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "puzzle": {
-    "center": "د",
+    "center": "ر",
     "outer": [
+      "ج",
       "ي",
-      "ر",
-      "ا",
-      "ق",
+      "ه",
+      "و",
       "م",
-      "ت"
+      "ا"
     ],
     "root": {
-      "letters": "قدر",
-      "display": "ق د ر",
-      "translit": "q-d-r",
-      "meaning": "The core idea is having power to set the right measure for things. From that come words for being able, deciding what happens, and fixing value and timing.",
-      "occurrences": 132,
-      "lemmaCount": 11
+      "letters": "جري",
+      "display": "ج ر ي",
+      "translit": "j-r-y",
+      "meaning": "The core idea is smooth, onward movement like water flowing. Ships, running streams and a set course all grow from that image of something gliding forward.",
+      "occurrences": 64,
+      "lemmaCount": 4
     },
     "words": [
       {
-        "w": "ادم",
+        "w": "اجر",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "آدَم",
-            "gloss": "adam",
-            "type": "proper noun",
-            "root": "أدم",
-            "count": 25,
-            "ref": "2:31",
-            "pos": 2,
+            "lemma": "أَجْر",
+            "gloss": "reward",
+            "type": "noun",
+            "root": "أجر",
+            "count": 105,
+            "ref": "3:136",
+            "pos": 14,
             "alt": [
-              "children of adam",
-              "adam disobeyed"
+              "payment",
+              "any payment"
             ]
           }
         ]
       },
       {
-        "w": "امد",
+        "w": "اري",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَمَدَّ",
-            "gloss": "extend",
+            "lemma": "أَرَيْ",
+            "gloss": "show",
             "type": "verb",
-            "root": "مدد",
-            "count": 10,
-            "ref": "17:20",
+            "root": "رأي",
+            "count": 40,
+            "ref": "6:75",
             "pos": 2,
             "form": 4
+          }
+        ]
+      },
+      {
+        "w": "امر",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "أَمْر",
+            "gloss": "command",
+            "type": "noun",
+            "root": "أمر",
+            "count": 166,
+            "ref": "2:117",
+            "pos": 6,
+            "alt": [
+              "matter",
+              "affair"
+            ]
           },
           {
-            "lemma": "أَمَد",
-            "gloss": "distance",
-            "type": "noun",
-            "root": "أمد",
-            "count": 4,
-            "ref": "3:30",
-            "pos": 19,
-            "alt": [
-              "time",
-              "term"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "ايد",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أَيَّدَ",
-            "gloss": "supports",
+            "lemma": "أَمَرَ",
+            "gloss": "commands",
             "type": "verb",
-            "root": "أيد",
-            "count": 9,
-            "ref": "3:13",
-            "pos": 20,
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "دار",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "دار",
-            "gloss": "home",
-            "type": "noun",
-            "root": "دور",
-            "count": 48,
-            "ref": "6:127",
-            "pos": 2,
+            "root": "أمر",
+            "count": 77,
+            "ref": "2:27",
+            "pos": 10,
             "alt": [
-              "house"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "دام",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "دامُ",
-            "gloss": "as long as remain",
-            "type": "verb",
-            "root": "دوم",
-            "count": 7,
-            "ref": "11:107",
-            "pos": 4,
-            "alt": [
-              "as long as remains"
+              "commanded",
+              "has ordered"
             ],
             "form": 1
           }
         ]
       },
       {
-        "w": "دمر",
+        "w": "جار",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "دَمَّرَ",
-            "gloss": "destroying",
-            "type": "verb",
-            "root": "دمر",
-            "count": 8,
-            "ref": "46:25",
-            "pos": 1,
-            "alt": [
-              "allah destroyed"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "راد",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "رادّ",
-            "gloss": "repeller",
-            "type": "active participle",
-            "root": "ردد",
+            "lemma": "جار",
+            "gloss": "neighbor",
+            "type": "noun",
+            "root": "جور",
             "count": 3,
-            "ref": "10:107",
+            "ref": "8:48",
             "pos": 14
           }
         ]
       },
       {
-        "w": "قدر",
+        "w": "جرم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "جَرَم",
+            "gloss": "doubt",
+            "type": "noun",
+            "root": "جرم",
+            "count": 5,
+            "ref": "11:22",
+            "pos": 2,
+            "alt": [
+              "no doubt"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "جري",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "قَدَرَ",
-            "gloss": "predestined",
+            "lemma": "جَرَيْ",
+            "gloss": "flow",
             "type": "verb",
-            "root": "قدر",
-            "count": 25,
-            "ref": "16:75",
+            "root": "جري",
+            "count": 57,
+            "ref": "2:25",
+            "pos": 9,
+            "alt": [
+              "flows",
+              "flowing"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "جهر",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "جَهْر",
+            "gloss": "public mention",
+            "type": "noun",
+            "root": "جهر",
+            "count": 7,
+            "ref": "4:148",
+            "pos": 4,
+            "alt": [
+              "what you make public",
+              "loudness"
+            ]
+          },
+          {
+            "lemma": "جَهَرَ",
+            "gloss": "publicizes",
+            "type": "verb",
+            "root": "جهر",
+            "count": 5,
+            "ref": "13:10",
             "pos": 7,
             "alt": [
-              "has power",
-              "would decree"
+              "be loud",
+              "speak aloud"
             ],
             "form": 1
-          },
-          {
-            "lemma": "قَدَّرَ",
-            "gloss": "plotted",
-            "type": "verb",
-            "root": "قدر",
-            "count": 16,
-            "ref": "73:20",
-            "pos": 17,
-            "alt": [
-              "determines",
-              "measured"
-            ],
-            "form": 2
-          },
-          {
-            "lemma": "قَدَر",
-            "gloss": "decreed",
-            "type": "noun",
-            "root": "قدر",
-            "count": 11,
-            "ref": "20:40",
-            "pos": 33,
-            "alt": [
-              "decree",
-              "period"
-            ]
-          },
-          {
-            "lemma": "قَدْر",
-            "gloss": "measure",
-            "type": "noun",
-            "root": "قدر",
-            "count": 7,
-            "ref": "65:3",
-            "pos": 21
           }
         ]
       },
       {
-        "w": "قدم",
+        "w": "راي",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "قَدَّمَ",
-            "gloss": "sent forth",
+            "lemma": "رَأَى",
+            "gloss": "see",
             "type": "verb",
-            "root": "قدم",
-            "count": 27,
-            "ref": "2:95",
-            "pos": 5,
+            "root": "رأي",
+            "count": 271,
+            "ref": "2:55",
+            "pos": 8,
             "alt": [
-              "have sent forth",
-              "has sent forth"
+              "saw",
+              "seen"
             ],
-            "form": 2
+            "form": 1
           },
           {
-            "lemma": "قَدَم",
-            "gloss": "respectable position",
+            "lemma": "رَأْى",
+            "gloss": "sight",
             "type": "noun",
-            "root": "قدم",
-            "count": 8,
-            "ref": "10:2",
-            "pos": 17,
-            "alt": [
-              "foot"
-            ]
-          },
-          {
-            "lemma": "قَدِمْ",
-            "gloss": "precede",
-            "type": "verb",
-            "root": "قدم",
+            "root": "رأي",
             "count": 2,
-            "ref": "11:98",
-            "pos": 1,
+            "ref": "3:13",
+            "pos": 17
+          }
+        ]
+      },
+      {
+        "w": "رجم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "رَجَمْ",
+            "gloss": "stone",
+            "type": "verb",
+            "root": "رجم",
+            "count": 5,
+            "ref": "11:91",
+            "pos": 14,
+            "alt": [
+              "would have stoned",
+              "surely, i will stone"
+            ],
             "form": 1
           }
         ]
       },
       {
-        "w": "مرد",
+        "w": "رمي",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "مَرَدّ",
-            "gloss": "return",
+            "lemma": "رَمَى",
+            "gloss": "throws",
+            "type": "verb",
+            "root": "رمي",
+            "count": 9,
+            "ref": "4:112",
+            "pos": 7,
+            "alt": [
+              "threw",
+              "throws up"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "مرج",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَرَجَ",
+            "gloss": "released",
+            "type": "verb",
+            "root": "مرج",
+            "count": 2,
+            "ref": "25:53",
+            "pos": 3,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "مره",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَرَّة",
+            "gloss": "time",
             "type": "noun",
-            "root": "ردد",
+            "root": "مرر",
+            "count": 20,
+            "ref": "2:229",
+            "pos": 2,
+            "alt": [
+              "twice",
+              "times"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "وري",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وُۥرِيَ",
+            "gloss": "to hide",
+            "type": "verb",
+            "root": "وري",
+            "count": 4,
+            "ref": "5:31",
+            "pos": 9,
+            "alt": [
+              "was concealed",
+              "covers"
+            ],
+            "form": 3
+          }
+        ]
+      },
+      {
+        "w": "اجرم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَجْرَمُ",
+            "gloss": "committed crimes",
+            "type": "verb",
+            "root": "جرم",
+            "count": 5,
+            "ref": "6:124",
+            "pos": 21,
+            "alt": [
+              "crimes you commit",
+              "sins we committed"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "امري",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "امْرِئ",
+            "gloss": "person",
+            "type": "noun",
+            "root": "مرأ",
+            "count": 5,
+            "ref": "24:11",
+            "pos": 16,
+            "alt": [
+              "man"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اهجر",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "اهْجُرْ",
+            "gloss": "avoid",
+            "type": "verb",
+            "root": "هجر",
+            "count": 5,
+            "ref": "4:34",
+            "pos": 26,
+            "alt": [
+              "forsake",
+              "leave"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "جهره",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "جَهْرَة",
+            "gloss": "manifestly",
+            "type": "noun",
+            "root": "جهر",
+            "count": 3,
+            "ref": "2:55",
+            "pos": 10,
+            "alt": [
+              "openly"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "جوار",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "جَوار",
+            "gloss": "run",
+            "type": "active participle",
+            "root": "جري",
+            "count": 3,
+            "ref": "42:32",
+            "pos": 3,
+            "alt": [
+              "ships"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "رجيم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "رَجِيم",
+            "gloss": "accursed",
+            "type": "adjective",
+            "root": "رجم",
             "count": 6,
-            "ref": "13:11",
-            "pos": 28,
-            "alt": [
-              "turning away",
-              "averted"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "ادري",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَدْرَى",
-            "gloss": "can make you know",
-            "type": "verb",
-            "root": "دري",
-            "count": 17,
-            "ref": "10:16",
-            "pos": 9,
-            "alt": [
-              "make you know",
-              "have made it known to"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اراد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَرادَ",
-            "gloss": "intends",
-            "type": "verb",
-            "root": "رود",
-            "count": 139,
-            "ref": "2:26",
-            "pos": 25,
-            "alt": [
-              "desires",
-              "intend"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "ارتد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "ارْتَدَّ",
-            "gloss": "turns away",
-            "type": "verb",
-            "root": "ردد",
-            "count": 8,
-            "ref": "2:217",
-            "pos": 39,
-            "alt": [
-              "turns back",
-              "returning"
-            ],
-            "form": 8
-          }
-        ]
-      },
-      {
-        "w": "اردي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَرْدَى",
-            "gloss": "may ruin",
-            "type": "verb",
-            "root": "ردي",
-            "count": 3,
-            "ref": "6:137",
-            "pos": 9,
-            "alt": [
-              "ruined",
-              "has ruined"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اييد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَيْيد",
-            "gloss": "possessor of strength",
-            "type": "noun",
-            "root": "أيد",
-            "count": 2,
-            "ref": "38:17",
-            "pos": 9,
-            "alt": [
-              "strength"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "تقدم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "تَقَدَّمَ",
-            "gloss": "preceded",
-            "type": "verb",
-            "root": "قدم",
-            "count": 2,
-            "ref": "48:2",
+            "ref": "15:17",
             "pos": 5,
             "alt": [
-              "proceed"
-            ],
-            "form": 5
+              "expelled"
+            ]
           }
         ]
       },
       {
-        "w": "دايم",
+        "w": "رميم",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "دائِم",
-            "gloss": "everlasting",
-            "type": "active participle",
-            "root": "دوم",
-            "count": 2,
-            "ref": "13:35",
-            "pos": 11,
-            "alt": [
-              "constant"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قادر",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "قادِر",
-            "gloss": "able",
-            "type": "active participle",
-            "root": "قدر",
-            "count": 14,
-            "ref": "6:37",
-            "pos": 11,
-            "alt": [
-              "have the power"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قدير",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "قَدِير",
-            "gloss": "all-powerful",
+            "lemma": "رَمِيم",
+            "gloss": "decomposed",
             "type": "noun",
-            "root": "قدر",
-            "count": 45,
-            "ref": "2:20",
-            "pos": 25
-          }
-        ]
-      },
-      {
-        "w": "قديم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "قَدِيم",
-            "gloss": "ancient",
-            "type": "adjective",
-            "root": "قدم",
-            "count": 3,
-            "ref": "46:11",
-            "pos": 19
-          }
-        ]
-      },
-      {
-        "w": "مريد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَرِيد",
-            "gloss": "rebellious",
-            "type": "adjective",
-            "root": "مرد",
+            "root": "رمم",
             "count": 2,
-            "ref": "4:117",
+            "ref": "36:78",
             "pos": 11
           }
         ]
       },
       {
-        "w": "تدمير",
+        "w": "مجرم",
         "family": false,
-        "points": 3,
+        "points": 2,
         "senses": [
           {
-            "lemma": "تَدْمِير",
-            "gloss": "destruction",
-            "type": "verbal noun",
-            "root": "دمر",
-            "count": 2,
-            "ref": "17:16",
-            "pos": 14
-          }
-        ]
-      },
-      {
-        "w": "تقدير",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "تَقْدِير",
-            "gloss": "decree",
-            "type": "verbal noun",
-            "root": "قدر",
-            "count": 5,
-            "ref": "6:96",
-            "pos": 10,
-            "alt": [
-              "ordaining",
-              "determination"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مدرار",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "مِدْرار",
-            "gloss": "abundance",
-            "type": "noun",
-            "root": "درر",
-            "count": 3,
-            "ref": "6:6",
-            "pos": 19,
-            "alt": [
-              "showering abundantly"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مقتدر",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مُقْتَدِر",
-            "gloss": "powerful one",
+            "lemma": "مُجْرِم",
+            "gloss": "criminals",
             "type": "active participle",
-            "root": "قدر",
-            "count": 4,
-            "ref": "18:45",
-            "pos": 23,
+            "root": "جرم",
+            "count": 52,
+            "ref": "7:133",
+            "pos": 13,
             "alt": [
-              "all able",
-              "have full power"
+              "criminal"
             ]
           }
         ]
       },
       {
-        "w": "مقدار",
+        "w": "مجري",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مَجْرى",
+            "gloss": "course",
+            "type": "noun",
+            "root": "جري",
+            "count": 1,
+            "ref": "11:41",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "مريه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مِرْيَة",
+            "gloss": "doubt",
+            "type": "noun",
+            "root": "مري",
+            "count": 5,
+            "ref": "11:17",
+            "pos": 29
+          }
+        ]
+      },
+      {
+        "w": "هاجر",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "هاجَرَ",
+            "gloss": "emigrates",
+            "type": "verb",
+            "root": "هجر",
+            "count": 16,
+            "ref": "4:100",
+            "pos": 2,
+            "alt": [
+              "emigrated"
+            ],
+            "form": 3
+          }
+        ]
+      },
+      {
+        "w": "جاريه",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "مِقْدار",
-            "gloss": "due proportion",
-            "type": "noun",
-            "root": "قدر",
+            "lemma": "جارِيَة",
+            "gloss": "flowing",
+            "type": "active participle",
+            "root": "جري",
             "count": 3,
-            "ref": "13:8",
-            "pos": 15,
+            "ref": "88:12",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "مهاجر",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُهاجِر",
+            "gloss": "emigrant",
+            "type": "active participle",
+            "root": "هجر",
+            "count": 7,
+            "ref": "4:100",
+            "pos": 16,
             "alt": [
-              "measure of which is",
-              "measure"
+              "emigrating"
             ]
           }
         ]
       }
     ],
-    "otherFamily": [
-      {
-        "lemma": "مَقْدُور",
-        "gloss": "destined",
-        "type": "passive participle",
-        "root": "قدر",
-        "count": 1,
-        "ref": "33:38",
-        "pos": 22
-      },
-      {
-        "lemma": "قُدُور",
-        "gloss": "cooking-pots",
-        "type": "noun",
-        "root": "قدر",
-        "count": 1,
-        "ref": "34:13",
-        "pos": 10
-      }
-    ],
-    "maxScore": 59,
-    "featuredRoot": "قدر"
+    "otherFamily": [],
+    "maxScore": 49,
+    "featuredRoot": "جري"
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,144 +1,144 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "puzzle": {
     "categories": [
       {
-        "name": "أَنْوَاعُ الْبَشَرِ",
-        "nameEn": "Human beings mentioned in the Qur'an",
+        "name": "أَسْمَاءُ اللَّهِ تَعَالَى",
+        "nameEn": "Names of Allah",
         "color": "yellow",
         "items": [
           {
-            "ar": "الْإِنسَانُ",
-            "en": "[the] man",
-            "ref": "36:77",
-            "verse": "أَوَلَمْ يَرَ ٱلْإِنسَـٰنُ أَنَّا خَلَقْنَـٰهُ مِن نُّطْفَةٍۢ فَإِذَا هُوَ خَصِيمٌۭ مُّبِينٌۭ",
-            "verseEn": "Does man not consider that We created him from a [mere] sperm-drop - then at once he is a clear adversary?"
+            "ar": "اللَّهَ",
+            "en": "Allah",
+            "ref": "8:51",
+            "verse": "ذَٰلِكَ بِمَا قَدَّمَتْ أَيْدِيكُمْ وَأَنَّ ٱللَّهَ لَيْسَ بِظَلَّـٰمٍۢ لِّلْعَبِيدِ",
+            "verseEn": "That is for what your hands have put forth [of evil] and because Allāh is not ever unjust to [His] servants.\""
           },
           {
-            "ar": "لِلْعِبَادِ",
-            "en": "for the slaves",
-            "ref": "50:11",
-            "verse": "رِّزْقًۭا لِّلْعِبَادِ ۖ وَأَحْيَيْنَا بِهِۦ بَلْدَةًۭ مَّيْتًۭا ۚ كَذَٰلِكَ ٱلْخُرُوجُ",
-            "verseEn": "As provision for the servants, and We have given life thereby to a dead land. Thus is the emergence [i.e., resurrection]."
+            "ar": "الْغَفُورُ",
+            "en": "(is) the Oft-Forgiving",
+            "ref": "46:8",
+            "verse": "أَمْ يَقُولُونَ ٱفْتَرَىٰهُ ۖ قُلْ إِنِ ٱفْتَرَيْتُهُۥ فَلَا تَمْلِكُونَ لِى مِنَ ٱللَّهِ شَيْـًٔا ۖ هُوَ أَعْلَمُ بِمَا تُفِيضُونَ فِيهِ ۖ كَفَىٰ بِهِۦ شَهِيدًۢا بَيْنِى وَبَيْنَكُمْ ۖ وَهُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
+            "verseEn": "Or do they say, \"He has invented it\"? Say, \"If I have invented it, you will not possess for me [the power of protection] from Allāh at all. He is most knowing of that in which you are involved. Sufficient is He as Witness between me and you, and He is the Forgiving, the Merciful.\""
           },
           {
-            "ar": "قَوْمٍ",
-            "en": "a people",
-            "ref": "5:102",
-            "verse": "قَدْ سَأَلَهَا قَوْمٌۭ مِّن قَبْلِكُمْ ثُمَّ أَصْبَحُوا۟ بِهَا كَـٰفِرِينَ",
-            "verseEn": "A people asked such [questions] before you; then they became thereby disbelievers."
+            "ar": "رَبِّ",
+            "en": "Lord",
+            "ref": "69:43",
+            "verse": "تَنزِيلٌۭ مِّن رَّبِّ ٱلْعَـٰلَمِينَ",
+            "verseEn": "[It is] a revelation from the Lord of the worlds."
           },
           {
-            "ar": "الرِّجَالَ",
-            "en": "the men",
-            "ref": "29:29",
-            "verse": "أَئِنَّكُمْ لَتَأْتُونَ ٱلرِّجَالَ وَتَقْطَعُونَ ٱلسَّبِيلَ وَتَأْتُونَ فِى نَادِيكُمُ ٱلْمُنكَرَ ۖ فَمَا كَانَ جَوَابَ قَوْمِهِۦٓ إِلَّآ أَن قَالُوا۟ ٱئْتِنَا بِعَذَابِ ٱللَّهِ إِن كُنتَ مِنَ ٱلصَّـٰدِقِينَ",
-            "verseEn": "Indeed, you approach men and obstruct the road and commit in your meetings [every] evil.\" And the answer of his people was not but that they said, \"Bring us the punishment of Allāh, if you should be of the truthful.\""
+            "ar": "الْعَزِيزُ",
+            "en": "(is) the All-Mighty",
+            "ref": "26:122",
+            "verse": "وَإِنَّ رَبَّكَ لَهُوَ ٱلْعَزِيزُ ٱلرَّحِيمُ",
+            "verseEn": "And indeed, your Lord - He is the Exalted in Might, the Merciful."
           }
         ]
       },
       {
-        "name": "أَنْوَاعُ الْكَلَامِ الْمَنْطُوقِ",
-        "nameEn": "Types of spoken utterances mentioned in the Qur'an",
+        "name": "أَلْفَاظُ الْعَذَابِ",
+        "nameEn": "Words denoting divine punishment",
         "color": "green",
         "items": [
           {
-            "ar": "الْقَوْلِ",
-            "en": "[the] speech",
-            "ref": "21:110",
-            "verse": "إِنَّهُۥ يَعْلَمُ ٱلْجَهْرَ مِنَ ٱلْقَوْلِ وَيَعْلَمُ مَا تَكْتُمُونَ",
-            "verseEn": "Indeed, He knows what is declared of speech, and He knows what you conceal."
+            "ar": "وَيْلٌ",
+            "en": "Woe",
+            "ref": "77:40",
+            "verse": "وَيْلٌۭ يَوْمَئِذٍۢ لِّلْمُكَذِّبِينَ",
+            "verseEn": "Woe, that Day, to the deniers."
           },
           {
-            "ar": "الْحَدِيثِ",
-            "en": "Statement",
-            "ref": "68:44",
-            "verse": "فَذَرْنِى وَمَن يُكَذِّبُ بِهَـٰذَا ٱلْحَدِيثِ ۖ سَنَسْتَدْرِجُهُم مِّنْ حَيْثُ لَا يَعْلَمُونَ",
-            "verseEn": "So leave Me, [O Muḥammad], with [the matter of] whoever denies this statement [i.e., the Qur’ān]. We will progressively lead them [to punishment] from where they do not know."
+            "ar": "بِعَذَابٍ",
+            "en": "of a punishment",
+            "ref": "84:24",
+            "verse": "فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ",
+            "verseEn": "So give them tidings of a painful punishment,"
           },
           {
-            "ar": "الْوَعْدُ",
-            "en": "promise (be fulfilled)",
-            "ref": "27:71",
-            "verse": "وَيَقُولُونَ مَتَىٰ هَـٰذَا ٱلْوَعْدُ إِن كُنتُمْ صَـٰدِقِينَ",
-            "verseEn": "And they say, \"When is [the fulfillment of] this promise, if you should be truthful?\""
+            "ar": "جَهَنَّمَ",
+            "en": "(of) Hell",
+            "ref": "40:49",
+            "verse": "وَقَالَ ٱلَّذِينَ فِى ٱلنَّارِ لِخَزَنَةِ جَهَنَّمَ ٱدْعُوا۟ رَبَّكُمْ يُخَفِّفْ عَنَّا يَوْمًۭا مِّنَ ٱلْعَذَابِ",
+            "verseEn": "And those in the Fire will say to the keepers of Hell, \"Supplicate your Lord to lighten for us a day from the punishment.\""
           },
           {
-            "ar": "أَيْمَانَهُمْ",
-            "en": "their oaths",
-            "ref": "58:16",
-            "verse": "ٱتَّخَذُوٓا۟ أَيْمَـٰنَهُمْ جُنَّةًۭ فَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ فَلَهُمْ عَذَابٌۭ مُّهِينٌۭ",
-            "verseEn": "They took their [false] oaths as a cover, so they averted [people] from the way of Allāh, and for them is a humiliating punishment."
+            "ar": "الْعِقَابِ",
+            "en": "(in) the penalty",
+            "ref": "8:52",
+            "verse": "كَدَأْبِ ءَالِ فِرْعَوْنَ ۙ وَٱلَّذِينَ مِن قَبْلِهِمْ ۚ كَفَرُوا۟ بِـَٔايَـٰتِ ٱللَّهِ فَأَخَذَهُمُ ٱللَّهُ بِذُنُوبِهِمْ ۗ إِنَّ ٱللَّهَ قَوِىٌّۭ شَدِيدُ ٱلْعِقَابِ",
+            "verseEn": "[Theirs is] like the custom of the people of Pharaoh and of those before them. They disbelieved in the signs of Allāh, so Allāh seized them for their sins. Indeed, Allāh is Powerful and severe in penalty."
           }
         ]
       },
       {
-        "name": "عَطَايَا اللَّهِ وَجَزَاؤُهُ",
-        "nameEn": "Gifts and rewards bestowed by Allah",
+        "name": "أَصْنَافُ النَّاسِ بِالْإِيمَانِ وَالْعَمَلِ",
+        "nameEn": "Collective labels for people by belief and conduct",
         "color": "blue",
         "items": [
           {
-            "ar": "رَحْمَةً",
-            "en": "As Mercy",
-            "ref": "44:6",
-            "verse": "رَحْمَةًۭ مِّن رَّبِّكَ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
-            "verseEn": "As mercy from your Lord. Indeed, He is the Hearing, the Knowing,"
+            "ar": "الْمُؤْمِنِينَ",
+            "en": "believing",
+            "ref": "37:81",
+            "verse": "إِنَّهُۥ مِنْ عِبَادِنَا ٱلْمُؤْمِنِينَ",
+            "verseEn": "Indeed, he was of Our believing servants."
           },
           {
-            "ar": "نِعْمَةُ",
-            "en": "(for the) Grace",
-            "ref": "37:57",
-            "verse": "وَلَوْلَا نِعْمَةُ رَبِّى لَكُنتُ مِنَ ٱلْمُحْضَرِينَ",
-            "verseEn": "If not for the favor of my Lord, I would have been of those brought in [to Hell]."
+            "ar": "الْمُجْرِمُونَ",
+            "en": "the criminals",
+            "ref": "26:99",
+            "verse": "وَمَآ أَضَلَّنَآ إِلَّا ٱلْمُجْرِمُونَ",
+            "verseEn": "And no one misguided us except the criminals."
           },
           {
-            "ar": "ٱلرِّزْقَ",
-            "en": "the provision",
-            "ref": "39:52",
-            "verse": "أَوَلَمْ يَعْلَمُوٓا۟ أَنَّ ٱللَّهَ يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ وَيَقْدِرُ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍۢ لِّقَوْمٍۢ يُؤْمِنُونَ",
-            "verseEn": "Do they not know that Allāh extends provision for whom He wills and restricts [it]? Indeed in that are signs for a people who believe."
+            "ar": "الْمُقَرَّبِينَ",
+            "en": "those brought near",
+            "ref": "56:88",
+            "verse": "فَأَمَّآ إِن كَانَ مِنَ ٱلْمُقَرَّبِينَ",
+            "verseEn": "And if he [i.e., the deceased] was of those brought near [to Allāh],"
           },
           {
-            "ar": "أَجْرَهُم",
-            "en": "their reward",
-            "ref": "28:54",
-            "verse": "أُو۟لَـٰٓئِكَ يُؤْتَوْنَ أَجْرَهُم مَّرَّتَيْنِ بِمَا صَبَرُوا۟ وَيَدْرَءُونَ بِٱلْحَسَنَةِ ٱلسَّيِّئَةَ وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ",
-            "verseEn": "Those will be given their reward twice for what they patiently endured and [because] they avert evil through good, and from what We have provided them they spend."
+            "ar": "الْمُعَوِّقِينَ",
+            "en": "those who hinder",
+            "ref": "33:18",
+            "verse": "۞ قَدْ يَعْلَمُ ٱللَّهُ ٱلْمُعَوِّقِينَ مِنكُمْ وَٱلْقَآئِلِينَ لِإِخْوَٰنِهِمْ هَلُمَّ إِلَيْنَا ۖ وَلَا يَأْتُونَ ٱلْبَأْسَ إِلَّا قَلِيلًا",
+            "verseEn": "Already Allāh knows the hinderers among you and those [hypocrites] who say to their brothers, \"Come to us,\" and do not go to battle, except for a few,"
           }
         ]
       },
       {
-        "name": "مُصْطَلَحَاتُ الْحَرْبِ وَالْقِتَالِ",
-        "nameEn": "Warfare terms mentioned in the Qur'an",
+        "name": "اَلْأَقَارِبُ وَالْأَهْلُ",
+        "nameEn": "Family relatives",
         "color": "purple",
         "items": [
           {
-            "ar": "ٱلْحَرْبِ",
-            "en": "the war",
-            "ref": "8:57",
-            "verse": "فَإِمَّا تَثْقَفَنَّهُمْ فِى ٱلْحَرْبِ فَشَرِّدْ بِهِم مَّنْ خَلْفَهُمْ لَعَلَّهُمْ يَذَّكَّرُونَ",
-            "verseEn": "So if you, [O Muḥammad], gain dominance over them in war, disperse by [means of] them those behind them that perhaps they will be reminded."
+            "ar": "أَزْوَاجِكُم",
+            "en": "your mates",
+            "ref": "26:166",
+            "verse": "وَتَذَرُونَ مَا خَلَقَ لَكُمْ رَبُّكُم مِّنْ أَزْوَٰجِكُم ۚ بَلْ أَنتُمْ قَوْمٌ عَادُونَ",
+            "verseEn": "And leave what your Lord has created for you as mates? But you are a people transgressing.\""
           },
           {
-            "ar": "ٱلْجَمْعُ",
-            "en": "(their) assembly",
-            "ref": "54:45",
-            "verse": "سَيُهْزَمُ ٱلْجَمْعُ وَيُوَلُّونَ ٱلدُّبُرَ",
-            "verseEn": "[Their] assembly will be defeated, and they will turn their backs [in retreat]."
+            "ar": "آبَاءَهُمْ",
+            "en": "their fathers",
+            "ref": "37:69",
+            "verse": "إِنَّهُمْ أَلْفَوْا۟ ءَابَآءَهُمْ ضَآلِّينَ",
+            "verseEn": "Indeed they found their fathers astray."
           },
           {
-            "ar": "مَصَانِعَ",
-            "en": "strongholds",
-            "ref": "26:129",
-            "verse": "وَتَتَّخِذُونَ مَصَانِعَ لَعَلَّكُمْ تَخْلُدُونَ",
-            "verseEn": "And take for yourselves constructions [i.e., palaces and fortresses] that you might abide eternally?"
+            "ar": "الْبَنَاتُ",
+            "en": "(are) daughters",
+            "ref": "52:39",
+            "verse": "أَمْ لَهُ ٱلْبَنَـٰتُ وَلَكُمُ ٱلْبَنُونَ",
+            "verseEn": "Or has He daughters while you have sons?"
           },
           {
-            "ar": "حِجَارَةً",
-            "en": "stones",
-            "ref": "51:33",
-            "verse": "لِنُرْسِلَ عَلَيْهِمْ حِجَارَةًۭ مِّن طِينٍۢ",
-            "verseEn": "To send down upon them stones of clay,"
+            "ar": "أَهْلِهِ",
+            "en": "his family",
+            "ref": "75:33",
+            "verse": "ثُمَّ ذَهَبَ إِلَىٰٓ أَهْلِهِۦ يَتَمَطَّىٰٓ",
+            "verseEn": "And then he went to his people, swaggering [in pride]."
           }
         ]
       }
