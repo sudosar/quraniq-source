@@ -1,65 +1,65 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "puzzle": {
-    "title": "The Whisperer of Gold in the Wilderness",
-    "intro": "Picture a vast desert encampment in a moment of waiting and uncertainty. A great leader has gone away for a meeting with the Divine, leaving behind a community eager for something tangible to hold onto. In that restless pause, a persuasive figure steps forward with shining promises and a clever creation that seems alive.",
+    "title": "The Palace of Mirrored Glass",
+    "intro": "Picture a distant land of wealth and splendor where the sun is worshipped instead of its Creator. A letter arrives bearing a call that cannot be ignored, and a journey begins toward a court greater than any seen before. There, illusion will be exposed by a floor that deceives the eyes, and a moment of clarity will change everything.",
     "clues": [
-      "I was among those who left Egypt with Musa, witnessing the sea parted for our escape.",
-      "I watched when our leader went to the mountain for forty nights to receive guidance.",
-      "I gathered ornaments from the people and shaped them with my own hands.",
-      "I fashioned a calf that gave a lowing sound, and I called the people to it.",
-      "I took a handful of dust from the track of the messenger and cast it into what I made.",
-      "I was confronted by Musa and condemned to say 'touch me not' and live apart, with a meeting promised for judgment."
+      "I ruled over a prosperous land whose people prostrated to the sun instead of Allah.",
+      "I received a noble letter calling me not to exalt myself but to come in submission to Allah.",
+      "I consulted my council and chose diplomacy first, sending a gift to test the sender.",
+      "I came to Sulayman, and my own throne was presented to me disguised to test my recognition.",
+      "I entered a lofty palace whose smooth glass floor I mistook for deep water.",
+      "I declared my submission with Sulayman to Allah, Lord of the worlds."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "As-Samiri",
-          "Abu Lahab",
-          "Namrud",
-          "Haman",
-          "Qarun"
+          "The Sister of Musa",
+          "The Wife of Abu Lahab",
+          "The Wife of Nuh",
+          "Bilqis, the Ruler of Saba",
+          "Zulaikha, the Wife of Al-Aziz"
         ],
-        "answer": "As-Samiri"
+        "answer": "Bilqis, the Ruler of Saba"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Demanded worship as the highest lord in Egypt",
-          "Built an ark to survive the great flood",
-          "Ordered a great fire to burn Ibrahim",
-          "Fashioned a golden calf that misled the Israelites",
-          "Plotted to kill Muhammad at the migration"
+          "Swallowed by a great fish in the depths of the sea",
+          "Struck by years of illness and loss of family",
+          "Ordered to sacrifice a beloved child in a dream",
+          "Tested by the disguised throne and the palace of glass",
+          "Thrown into a blazing fire for breaking idols"
         ],
-        "answer": "Fashioned a golden calf that misled the Israelites"
+        "answer": "Tested by the disguised throne and the palace of glass"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The stone tablets of the Torah",
-          "A handful of dust from the messenger's track",
-          "The cool fire prepared for Ibrahim",
-          "The mighty throne brought in a blink",
-          "The wooden ark built of planks and nails"
+          "The Ark built upon the waters",
+          "The cave of refuge for the sleepers",
+          "The crystal palace floor (Sarh)",
+          "The Nile River at the time of the exodus",
+          "The fire prepared by the idolaters"
         ],
-        "answer": "A handful of dust from the messenger's track"
+        "answer": "The crystal palace floor (Sarh)"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Swallowed by the earth with treasures",
-          "Destroyed by a mighty blast from the sky",
-          "Turned into apes for breaking the Sabbath",
-          "Drowned in the sea with pursuing army",
-          "Condemned to say 'touch me not' in isolation awaiting judgment"
+          "Was swallowed by the earth with my treasures",
+          "Remained in disbelief and was destroyed with my people",
+          "Submitted with Sulayman to Allah, Lord of the worlds",
+          "Drowned in the sea while pursuing the believers",
+          "Was turned to stone for breaking the Sabbath"
         ],
-        "answer": "Condemned to say 'touch me not' in isolation awaiting judgment"
+        "answer": "Submitted with Sulayman to Allah, Lord of the worlds"
       }
     },
-    "verseRef": "20:97",
-    "arabic": "قَالَ فَٱذْهَبْ فَإِنَّ لَكَ فِى ٱلْحَيَوٰةِ أَن تَقُولَ لَا مِسَاسَ ۖ وَإِنَّ لَكَ مَوْعِدًۭا لَّن تُخْلَفَهُۥ ۖ وَٱنظُرْ إِلَىٰٓ إِلَـٰهِكَ ٱلَّذِى ظَلْتَ عَلَيْهِ عَاكِفًۭا ۖ لَّنُحَرِّقَنَّهُۥ ثُمَّ لَنَنسِفَنَّهُۥ فِى ٱلْيَمِّ نَسْفًا",
-    "verse": "[Moses] said, \"Then go. And indeed, it is [decreed] for you in [this] life to say, 'No contact.' And indeed, you have an appointment [in the Hereafter] you will not fail to keep. And look at your 'god' to which you remained devoted. We will surely burn it and blow it [i.e., its ashes] into the sea with a blast. (20:97)"
+    "verseRef": "27:42",
+    "arabic": "فَلَمَّا جَآءَتْ قِيلَ أَهَـٰكَذَا عَرْشُكِ ۖ قَالَتْ كَأَنَّهُۥ هُوَ ۚ وَأُوتِينَا ٱلْعِلْمَ مِن قَبْلِهَا وَكُنَّا مُسْلِمِينَ",
+    "verse": "So when she arrived, it was said [to her], \"Is your throne like this?\" She said, \"[It is] as though it was it.\" [Solomon said], \"And we were given knowledge before her, and we have been Muslims [in submission to Allāh]. (27:42)"
   },
   "generated": true,
   "model": "auto (chain)"

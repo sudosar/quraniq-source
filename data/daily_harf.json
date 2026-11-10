@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "puzzle": {
-    "word": "منذر",
-    "display": "مُنذِرٌ",
-    "hint": "One tasked with warning people of consequences to come",
-    "verseRef": "13:7",
-    "arabicVerse": "وَيَقُولُ ٱلَّذِينَ كَفَرُوا۟ لَوْلَآ أُنزِلَ عَلَيْهِ ءَايَةٌۭ مِّن رَّبِّهِۦٓ ۗ إِنَّمَآ أَنتَ مُنذِرٌۭ ۖ وَلِكُلِّ قَوْمٍ هَادٍ",
-    "verse": "13:7 - And those who disbelieved say, \"Why has a sign not been sent down to him from his Lord?\" You are only a warner, and for every people is a guide."
+    "word": "تشاء",
+    "display": "تَشَاءُ",
+    "hint": "Divine prerogative over who receives authority and honor",
+    "verseRef": "3:26",
+    "arabicVerse": "قُلِ ٱللَّهُمَّ مَـٰلِكَ ٱلْمُلْكِ تُؤْتِى ٱلْمُلْكَ مَن تَشَآءُ وَتَنزِعُ ٱلْمُلْكَ مِمَّن تَشَآءُ وَتُعِزُّ مَن تَشَآءُ وَتُذِلُّ مَن تَشَآءُ ۖ بِيَدِكَ ٱلْخَيْرُ ۖ إِنَّكَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ",
+    "verse": "3:26 - Say, \"O Allāh, Owner of Sovereignty, You give sovereignty to whom You will and You take sovereignty away from whom You will. You honor whom You will and You humble whom You will. In Your hand is [all] good. Indeed, You are over all things competent."
   },
   "generated": true,
   "model": "auto (chain)"

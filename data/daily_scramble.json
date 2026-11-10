@@ -1,32 +1,32 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "puzzle": {
-    "verseRef": "20:132",
-    "reference": "Ta-Ha (20:132)",
+    "verseRef": "11:112",
+    "reference": "Surah Hud (11:112)",
     "segments": [
-      "وَأْمُرْ أَهْلَكَ",
-      "بِالصَّلَاةِ وَاصْطَبِرْ",
-      "عَلَيْهَا لَا نَسْأَلُكَ",
-      "رِزْقًا نَّحْنُ نَرْزُقُكَ",
-      "وَالْعَاقِبَةُ لِلتَّقْوَىٰ"
+      "فَاسْتَقِمْ كَمَا أُمِرْتَ",
+      "وَمَن تَابَ مَعَكَ",
+      "وَلَا تَطْغَوْا",
+      "إِنَّهُ بِمَا تَعْمَلُونَ",
+      "بَصِيرٌ"
     ],
     "translations": [
-      "And enjoin (on) your family the prayer",
-      "and be steadfast therein Not",
-      "We ask you (for) provision",
-      "We provide (for) you",
-      "and the outcome (is) for the righteous[ness]"
+      "So stand firm as you are commanded",
+      "and (those) who turn (in repentance) with you",
+      "and (do) not transgress",
+      "Indeed, He of what",
+      "you do (is) All-Seer"
     ],
-    "hint": "Command to uphold prayer with patience; Allah provides and success belongs to the God-conscious",
-    "arabic": "وَأْمُرْ أَهْلَكَ بِٱلصَّلَوٰةِ وَٱصْطَبِرْ عَلَيْهَا ۖ لَا نَسْـَٔلُكَ رِزْقًۭا ۖ نَّحْنُ نَرْزُقُكَ ۗ وَٱلْعَـٰقِبَةُ لِلتَّقْوَىٰ",
+    "hint": "A command for steadfastness and obedience without excess, with reminder of Allah's watchfulness",
+    "arabic": "فَٱسْتَقِمْ كَمَآ أُمِرْتَ وَمَن تَابَ مَعَكَ وَلَا تَطْغَوْا۟ ۚ إِنَّهُۥ بِمَا تَعْمَلُونَ بَصِيرٌۭ",
     "words": [
-      "وَأْمُرْ أَهْلَكَ بِٱلصَّلَوٰةِ",
-      "وَٱصْطَبِرْ عَلَيْهَا ۖ لَا",
-      "نَسْـَٔلُكَ رِزْقًۭا ۖ",
-      "نَّحْنُ نَرْزُقُكَ ۗ",
-      "وَٱلْعَـٰقِبَةُ لِلتَّقْوَىٰ"
+      "فَٱسْتَقِمْ كَمَآ أُمِرْتَ",
+      "وَمَن تَابَ مَعَكَ",
+      "وَلَا تَطْغَوْا۟ ۚ",
+      "إِنَّهُۥ بِمَا",
+      "تَعْمَلُونَ بَصِيرٌۭ"
     ],
-    "verseEn": "And enjoin prayer upon your family [and people] and be steadfast therein. We ask you not for provision; We provide for you, and the [best] outcome is for [those of] righteousness."
+    "verseEn": "So remain on a right course as you have been commanded, [you] and those who have turned back with you [to Allāh], and do not transgress. Indeed, He is Seeing of what you do."
   },
   "generated": true,
   "model": "auto (chain)"

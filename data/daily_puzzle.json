@@ -1,144 +1,144 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "puzzle": {
     "categories": [
       {
-        "name": "أَسْمَاءُ اللَّهِ تَعَالَى",
-        "nameEn": "Names of Allah",
+        "name": "جَمَاعَاتٌ مِنَ النَّاسِ",
+        "nameEn": "Groups of people mentioned in the Qur'an",
         "color": "yellow",
         "items": [
           {
-            "ar": "اللَّهَ",
-            "en": "Allah",
-            "ref": "8:51",
-            "verse": "ذَٰلِكَ بِمَا قَدَّمَتْ أَيْدِيكُمْ وَأَنَّ ٱللَّهَ لَيْسَ بِظَلَّـٰمٍۢ لِّلْعَبِيدِ",
-            "verseEn": "That is for what your hands have put forth [of evil] and because Allāh is not ever unjust to [His] servants.\""
+            "ar": "قَوْمُكَ",
+            "en": "Your people",
+            "ref": "43:57",
+            "verse": "۞ وَلَمَّا ضُرِبَ ٱبْنُ مَرْيَمَ مَثَلًا إِذَا قَوْمُكَ مِنْهُ يَصِدُّونَ",
+            "verseEn": "And when the son of Mary was presented as an example, immediately your people laughed aloud."
           },
           {
-            "ar": "الْغَفُورُ",
-            "en": "(is) the Oft-Forgiving",
-            "ref": "46:8",
-            "verse": "أَمْ يَقُولُونَ ٱفْتَرَىٰهُ ۖ قُلْ إِنِ ٱفْتَرَيْتُهُۥ فَلَا تَمْلِكُونَ لِى مِنَ ٱللَّهِ شَيْـًٔا ۖ هُوَ أَعْلَمُ بِمَا تُفِيضُونَ فِيهِ ۖ كَفَىٰ بِهِۦ شَهِيدًۢا بَيْنِى وَبَيْنَكُمْ ۖ وَهُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
-            "verseEn": "Or do they say, \"He has invented it\"? Say, \"If I have invented it, you will not possess for me [the power of protection] from Allāh at all. He is most knowing of that in which you are involved. Sufficient is He as Witness between me and you, and He is the Forgiving, the Merciful.\""
+            "ar": "أَهْلَهُ",
+            "en": "and his family",
+            "ref": "37:76",
+            "verse": "وَنَجَّيْنَـٰهُ وَأَهْلَهُۥ مِنَ ٱلْكَرْبِ ٱلْعَظِيمِ",
+            "verseEn": "And We saved him and his family from the great affliction."
           },
           {
-            "ar": "رَبِّ",
-            "en": "Lord",
-            "ref": "69:43",
-            "verse": "تَنزِيلٌۭ مِّن رَّبِّ ٱلْعَـٰلَمِينَ",
-            "verseEn": "[It is] a revelation from the Lord of the worlds."
+            "ar": "الْأَوَّلِينَ",
+            "en": "(of) the former (people)",
+            "ref": "37:71",
+            "verse": "وَلَقَدْ ضَلَّ قَبْلَهُمْ أَكْثَرُ ٱلْأَوَّلِينَ",
+            "verseEn": "And there had already strayed before them most of the former peoples,"
           },
           {
-            "ar": "الْعَزِيزُ",
-            "en": "(is) the All-Mighty",
-            "ref": "26:122",
-            "verse": "وَإِنَّ رَبَّكَ لَهُوَ ٱلْعَزِيزُ ٱلرَّحِيمُ",
-            "verseEn": "And indeed, your Lord - He is the Exalted in Might, the Merciful."
+            "ar": "الْمُقْتَسِمِينَ",
+            "en": "those who divided",
+            "ref": "15:90",
+            "verse": "كَمَآ أَنزَلْنَا عَلَى ٱلْمُقْتَسِمِينَ",
+            "verseEn": "Just as We had revealed [scriptures] to the separators"
           }
         ]
       },
       {
-        "name": "أَلْفَاظُ الْعَذَابِ",
-        "nameEn": "Words denoting divine punishment",
+        "name": "أَفْعَالُ الْقَوْلِ وَالسُّؤَالِ",
+        "nameEn": "Verbs of speech and questioning in the Qur'an",
         "color": "green",
         "items": [
           {
-            "ar": "وَيْلٌ",
-            "en": "Woe",
-            "ref": "77:40",
-            "verse": "وَيْلٌۭ يَوْمَئِذٍۢ لِّلْمُكَذِّبِينَ",
-            "verseEn": "Woe, that Day, to the deniers."
+            "ar": "قَالَ",
+            "en": "said",
+            "ref": "26:177",
+            "verse": "إِذْ قَالَ لَهُمْ شُعَيْبٌ أَلَا تَتَّقُونَ",
+            "verseEn": "When Shuʿayb said to them, \"Will you not fear Allāh?"
           },
           {
-            "ar": "بِعَذَابٍ",
-            "en": "of a punishment",
-            "ref": "84:24",
-            "verse": "فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ",
-            "verseEn": "So give them tidings of a painful punishment,"
+            "ar": "يَتَسَآءَلُونَ",
+            "en": "questioning one another",
+            "ref": "37:27",
+            "verse": "وَأَقْبَلَ بَعْضُهُمْ عَلَىٰ بَعْضٍۢ يَتَسَآءَلُونَ",
+            "verseEn": "And they will approach one another asking [i.e., blaming] each other."
           },
           {
-            "ar": "جَهَنَّمَ",
-            "en": "(of) Hell",
-            "ref": "40:49",
-            "verse": "وَقَالَ ٱلَّذِينَ فِى ٱلنَّارِ لِخَزَنَةِ جَهَنَّمَ ٱدْعُوا۟ رَبَّكُمْ يُخَفِّفْ عَنَّا يَوْمًۭا مِّنَ ٱلْعَذَابِ",
-            "verseEn": "And those in the Fire will say to the keepers of Hell, \"Supplicate your Lord to lighten for us a day from the punishment.\""
+            "ar": "يَصِفُونَ",
+            "en": "they attribute",
+            "ref": "37:159",
+            "verse": "سُبْحَـٰنَ ٱللَّهِ عَمَّا يَصِفُونَ",
+            "verseEn": "Exalted is Allāh above what they describe,"
           },
           {
-            "ar": "الْعِقَابِ",
-            "en": "(in) the penalty",
-            "ref": "8:52",
-            "verse": "كَدَأْبِ ءَالِ فِرْعَوْنَ ۙ وَٱلَّذِينَ مِن قَبْلِهِمْ ۚ كَفَرُوا۟ بِـَٔايَـٰتِ ٱللَّهِ فَأَخَذَهُمُ ٱللَّهُ بِذُنُوبِهِمْ ۗ إِنَّ ٱللَّهَ قَوِىٌّۭ شَدِيدُ ٱلْعِقَابِ",
-            "verseEn": "[Theirs is] like the custom of the people of Pharaoh and of those before them. They disbelieved in the signs of Allāh, so Allāh seized them for their sins. Indeed, Allāh is Powerful and severe in penalty."
+            "ar": "فَاسْتَفْتِهِمْ",
+            "en": "Then ask them",
+            "ref": "37:149",
+            "verse": "فَٱسْتَفْتِهِمْ أَلِرَبِّكَ ٱلْبَنَاتُ وَلَهُمُ ٱلْبَنُونَ",
+            "verseEn": "So inquire of them, [O Muḥammad], \"Does your Lord have daughters while they have sons?"
           }
         ]
       },
       {
-        "name": "أَصْنَافُ النَّاسِ بِالْإِيمَانِ وَالْعَمَلِ",
-        "nameEn": "Collective labels for people by belief and conduct",
+        "name": "الكُفْرُ وَالتَّكْذِيبُ وَالفِتْنَةُ",
+        "nameEn": "Acts and agents of disbelief and misguidance",
         "color": "blue",
         "items": [
           {
-            "ar": "الْمُؤْمِنِينَ",
-            "en": "believing",
-            "ref": "37:81",
-            "verse": "إِنَّهُۥ مِنْ عِبَادِنَا ٱلْمُؤْمِنِينَ",
-            "verseEn": "Indeed, he was of Our believing servants."
+            "ar": "كَذَّبَتْ",
+            "en": "Denied",
+            "ref": "26:160",
+            "verse": "كَذَّبَتْ قَوْمُ لُوطٍ ٱلْمُرْسَلِينَ",
+            "verseEn": "The people of Lot denied the messengers"
           },
           {
-            "ar": "الْمُجْرِمُونَ",
-            "en": "the criminals",
-            "ref": "26:99",
-            "verse": "وَمَآ أَضَلَّنَآ إِلَّا ٱلْمُجْرِمُونَ",
-            "verseEn": "And no one misguided us except the criminals."
+            "ar": "فَكَفَرُوا",
+            "en": "But they disbelieved",
+            "ref": "37:170",
+            "verse": "فَكَفَرُوا۟ بِهِۦ ۖ فَسَوْفَ يَعْلَمُونَ",
+            "verseEn": "But they disbelieved in it, so they are going to know."
           },
           {
-            "ar": "الْمُقَرَّبِينَ",
-            "en": "those brought near",
-            "ref": "56:88",
-            "verse": "فَأَمَّآ إِن كَانَ مِنَ ٱلْمُقَرَّبِينَ",
-            "verseEn": "And if he [i.e., the deceased] was of those brought near [to Allāh],"
+            "ar": "بِفَاتِنِينَ",
+            "en": "can tempt away (anyone)",
+            "ref": "37:162",
+            "verse": "مَآ أَنتُمْ عَلَيْهِ بِفَـٰتِنِينَ",
+            "verseEn": "You cannot tempt [anyone] away from Him"
           },
           {
-            "ar": "الْمُعَوِّقِينَ",
-            "en": "those who hinder",
-            "ref": "33:18",
-            "verse": "۞ قَدْ يَعْلَمُ ٱللَّهُ ٱلْمُعَوِّقِينَ مِنكُمْ وَٱلْقَآئِلِينَ لِإِخْوَٰنِهِمْ هَلُمَّ إِلَيْنَا ۖ وَلَا يَأْتُونَ ٱلْبَأْسَ إِلَّا قَلِيلًا",
-            "verseEn": "Already Allāh knows the hinderers among you and those [hypocrites] who say to their brothers, \"Come to us,\" and do not go to battle, except for a few,"
+            "ar": "الشَّيَاطِينُ",
+            "en": "the devils",
+            "ref": "26:210",
+            "verse": "وَمَا تَنَزَّلَتْ بِهِ ٱلشَّيَـٰطِينُ",
+            "verseEn": "And the devils have not brought it [i.e., the revelation] down."
           }
         ]
       },
       {
-        "name": "اَلْأَقَارِبُ وَالْأَهْلُ",
-        "nameEn": "Family relatives",
+        "name": "صِيَغُ جَمْعِ الْمُذَكَّرِ السَّالِمِ فِي الْقُرْآنِ",
+        "nameEn": "Words with masculine plural endings (-ūn/-īn) in the Qur'an",
         "color": "purple",
         "items": [
           {
-            "ar": "أَزْوَاجِكُم",
-            "en": "your mates",
-            "ref": "26:166",
-            "verse": "وَتَذَرُونَ مَا خَلَقَ لَكُمْ رَبُّكُم مِّنْ أَزْوَٰجِكُم ۚ بَلْ أَنتُمْ قَوْمٌ عَادُونَ",
-            "verseEn": "And leave what your Lord has created for you as mates? But you are a people transgressing.\""
+            "ar": "شَاهِدُونَ",
+            "en": "(were) witnesses",
+            "ref": "37:150",
+            "verse": "أَمْ خَلَقْنَا ٱلْمَلَـٰٓئِكَةَ إِنَـٰثًۭا وَهُمْ شَـٰهِدُونَ",
+            "verseEn": "Or did We create the angels as females while they were witnesses?\""
           },
           {
-            "ar": "آبَاءَهُمْ",
-            "en": "their fathers",
-            "ref": "37:69",
-            "verse": "إِنَّهُمْ أَلْفَوْا۟ ءَابَآءَهُمْ ضَآلِّينَ",
-            "verseEn": "Indeed they found their fathers astray."
+            "ar": "تَحْكُمُونَ",
+            "en": "you judge",
+            "ref": "37:154",
+            "verse": "مَا لَكُمْ كَيْفَ تَحْكُمُونَ",
+            "verseEn": "What is [wrong] with you? How do you make judgement?"
           },
           {
-            "ar": "الْبَنَاتُ",
-            "en": "(are) daughters",
-            "ref": "52:39",
-            "verse": "أَمْ لَهُ ٱلْبَنَـٰتُ وَلَكُمُ ٱلْبَنُونَ",
-            "verseEn": "Or has He daughters while you have sons?"
+            "ar": "تَذَكَّرُونَ",
+            "en": "you pay heed",
+            "ref": "37:155",
+            "verse": "أَفَلَا تَذَكَّرُونَ",
+            "verseEn": "Then will you not be reminded?"
           },
           {
-            "ar": "أَهْلِهِ",
-            "en": "his family",
-            "ref": "75:33",
-            "verse": "ثُمَّ ذَهَبَ إِلَىٰٓ أَهْلِهِۦ يَتَمَطَّىٰٓ",
-            "verseEn": "And then he went to his people, swaggering [in pride]."
+            "ar": "السَّاجِدِينَ",
+            "en": "those who prostrate",
+            "ref": "26:219",
+            "verse": "وَتَقَلُّبَكَ فِى ٱلسَّـٰجِدِينَ",
+            "verseEn": "And your movement among those who prostrate."
           }
         ]
       }

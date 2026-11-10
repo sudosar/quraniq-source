@@ -1,559 +1,264 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "puzzle": {
-    "center": "ر",
+    "center": "ف",
     "outer": [
-      "ج",
-      "ي",
-      "ه",
+      "ط",
+      "ن",
       "و",
-      "م",
-      "ا"
+      "ي",
+      "ا",
+      "ه"
     ],
     "root": {
-      "letters": "جري",
-      "display": "ج ر ي",
-      "translit": "j-r-y",
-      "meaning": "The core idea is smooth, onward movement like water flowing. Ships, running streams and a set course all grow from that image of something gliding forward.",
-      "occurrences": 64,
-      "lemmaCount": 4
+      "letters": "طوف",
+      "display": "ط و ف",
+      "translit": "ṭ-w-f",
+      "meaning": "The core idea is moving around something in a circle or going all around it. From this come a group set apart together, circling in worship or service, a thought circling the mind, and a flood covering everything.",
+      "occurrences": 41,
+      "lemmaCount": 6
     },
     "words": [
       {
-        "w": "اجر",
+        "w": "انف",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَجْر",
-            "gloss": "reward",
+            "lemma": "أَنف",
+            "gloss": "nose",
             "type": "noun",
-            "root": "أجر",
-            "count": 105,
-            "ref": "3:136",
-            "pos": 14,
-            "alt": [
-              "payment",
-              "any payment"
-            ]
+            "root": "أنف",
+            "count": 2,
+            "ref": "5:45",
+            "pos": 9
           }
         ]
       },
       {
-        "w": "اري",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أَرَيْ",
-            "gloss": "show",
-            "type": "verb",
-            "root": "رأي",
-            "count": 40,
-            "ref": "6:75",
-            "pos": 2,
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "امر",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أَمْر",
-            "gloss": "command",
-            "type": "noun",
-            "root": "أمر",
-            "count": 166,
-            "ref": "2:117",
-            "pos": 6,
-            "alt": [
-              "matter",
-              "affair"
-            ]
-          },
-          {
-            "lemma": "أَمَرَ",
-            "gloss": "commands",
-            "type": "verb",
-            "root": "أمر",
-            "count": 77,
-            "ref": "2:27",
-            "pos": 10,
-            "alt": [
-              "commanded",
-              "has ordered"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "جار",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "جار",
-            "gloss": "neighbor",
-            "type": "noun",
-            "root": "جور",
-            "count": 3,
-            "ref": "8:48",
-            "pos": 14
-          }
-        ]
-      },
-      {
-        "w": "جرم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "جَرَم",
-            "gloss": "doubt",
-            "type": "noun",
-            "root": "جرم",
-            "count": 5,
-            "ref": "11:22",
-            "pos": 2,
-            "alt": [
-              "no doubt"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "جري",
+        "w": "طاف",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "جَرَيْ",
-            "gloss": "flow",
+            "lemma": "طافَ",
+            "gloss": "be circulated",
             "type": "verb",
-            "root": "جري",
-            "count": 57,
-            "ref": "2:25",
-            "pos": 9,
+            "root": "طوف",
+            "count": 8,
+            "ref": "37:45",
+            "pos": 1,
             "alt": [
-              "flows",
-              "flowing"
+              "circulate"
             ],
             "form": 1
           }
         ]
       },
       {
-        "w": "جهر",
+        "w": "فيه",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "جَهْر",
-            "gloss": "public mention",
+            "lemma": "فِئَة",
+            "gloss": "company",
             "type": "noun",
-            "root": "جهر",
-            "count": 7,
-            "ref": "4:148",
-            "pos": 4,
+            "root": "فأي",
+            "count": 10,
+            "ref": "2:249",
+            "pos": 51,
             "alt": [
-              "what you make public",
-              "loudness"
-            ]
-          },
-          {
-            "lemma": "جَهَرَ",
-            "gloss": "publicizes",
-            "type": "verb",
-            "root": "جهر",
-            "count": 5,
-            "ref": "13:10",
-            "pos": 7,
-            "alt": [
-              "be loud",
-              "speak aloud"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "راي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "رَأَى",
-            "gloss": "see",
-            "type": "verb",
-            "root": "رأي",
-            "count": 271,
-            "ref": "2:55",
-            "pos": 8,
-            "alt": [
-              "saw",
-              "seen"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "رَأْى",
-            "gloss": "sight",
-            "type": "noun",
-            "root": "رأي",
-            "count": 2,
-            "ref": "3:13",
-            "pos": 17
-          }
-        ]
-      },
-      {
-        "w": "رجم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "رَجَمْ",
-            "gloss": "stone",
-            "type": "verb",
-            "root": "رجم",
-            "count": 5,
-            "ref": "11:91",
-            "pos": 14,
-            "alt": [
-              "would have stoned",
-              "surely, i will stone"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "رمي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "رَمَى",
-            "gloss": "throws",
-            "type": "verb",
-            "root": "رمي",
-            "count": 9,
-            "ref": "4:112",
-            "pos": 7,
-            "alt": [
-              "threw",
-              "throws up"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "مرج",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَرَجَ",
-            "gloss": "released",
-            "type": "verb",
-            "root": "مرج",
-            "count": 2,
-            "ref": "25:53",
-            "pos": 3,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "مره",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَرَّة",
-            "gloss": "time",
-            "type": "noun",
-            "root": "مرر",
-            "count": 20,
-            "ref": "2:229",
-            "pos": 2,
-            "alt": [
-              "twice",
-              "times"
+              "group",
+              "two hosts"
             ]
           }
         ]
       },
       {
-        "w": "وري",
+        "w": "وفي",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "وُۥرِيَ",
-            "gloss": "to hide",
+            "lemma": "وَفَّى",
+            "gloss": "be repaid in full",
             "type": "verb",
-            "root": "وري",
-            "count": 4,
-            "ref": "5:31",
-            "pos": 9,
+            "root": "وفي",
+            "count": 18,
+            "ref": "2:272",
+            "pos": 24,
             "alt": [
-              "was concealed",
-              "covers"
+              "repaid in full",
+              "is repaid in full"
             ],
-            "form": 3
+            "form": 2
           }
         ]
       },
       {
-        "w": "اجرم",
+        "w": "اطفا",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَجْرَمُ",
-            "gloss": "committed crimes",
+            "lemma": "أَطْفَأَ",
+            "gloss": "extinguished",
             "type": "verb",
-            "root": "جرم",
-            "count": 5,
-            "ref": "6:124",
-            "pos": 21,
+            "root": "طفأ",
+            "count": 3,
+            "ref": "5:64",
+            "pos": 38,
             "alt": [
-              "crimes you commit",
-              "sins we committed"
+              "extinguish",
+              "to put out"
             ],
             "form": 4
           }
         ]
       },
       {
-        "w": "امري",
+        "w": "اوفي",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "امْرِئ",
-            "gloss": "person",
-            "type": "noun",
-            "root": "مرأ",
-            "count": 5,
-            "ref": "24:11",
-            "pos": 16,
-            "alt": [
-              "man"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اهجر",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "اهْجُرْ",
-            "gloss": "avoid",
+            "lemma": "أَوْفَى",
+            "gloss": "fulfill",
             "type": "verb",
-            "root": "هجر",
-            "count": 5,
-            "ref": "4:34",
-            "pos": 26,
-            "alt": [
-              "forsake",
-              "leave"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "جهره",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "جَهْرَة",
-            "gloss": "manifestly",
-            "type": "noun",
-            "root": "جهر",
-            "count": 3,
-            "ref": "2:55",
+            "root": "وفي",
+            "count": 20,
+            "ref": "2:40",
             "pos": 10,
             "alt": [
-              "openly"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "جوار",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "جَوار",
-            "gloss": "run",
-            "type": "active participle",
-            "root": "جري",
-            "count": 3,
-            "ref": "42:32",
-            "pos": 3,
-            "alt": [
-              "ships"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "رجيم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "رَجِيم",
-            "gloss": "accursed",
-            "type": "adjective",
-            "root": "رجم",
-            "count": 6,
-            "ref": "15:17",
-            "pos": 5,
-            "alt": [
-              "expelled"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "رميم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "رَمِيم",
-            "gloss": "decomposed",
-            "type": "noun",
-            "root": "رمم",
-            "count": 2,
-            "ref": "36:78",
-            "pos": 11
-          }
-        ]
-      },
-      {
-        "w": "مجرم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُجْرِم",
-            "gloss": "criminals",
-            "type": "active participle",
-            "root": "جرم",
-            "count": 52,
-            "ref": "7:133",
-            "pos": 13,
-            "alt": [
-              "criminal"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مجري",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مَجْرى",
-            "gloss": "course",
-            "type": "noun",
-            "root": "جري",
-            "count": 1,
-            "ref": "11:41",
-            "pos": 6
-          }
-        ]
-      },
-      {
-        "w": "مريه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مِرْيَة",
-            "gloss": "doubt",
-            "type": "noun",
-            "root": "مري",
-            "count": 5,
-            "ref": "11:17",
-            "pos": 29
-          }
-        ]
-      },
-      {
-        "w": "هاجر",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "هاجَرَ",
-            "gloss": "emigrates",
-            "type": "verb",
-            "root": "هجر",
-            "count": 16,
-            "ref": "4:100",
-            "pos": 2,
-            "alt": [
-              "emigrated"
+              "fulfills",
+              "more faithful"
             ],
-            "form": 3
+            "form": 4
           }
         ]
       },
       {
-        "w": "جاريه",
+        "w": "طايف",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "طائِف",
+            "gloss": "visitation",
+            "type": "active participle",
+            "root": "طوف",
+            "count": 4,
+            "ref": "7:201",
+            "pos": 6,
+            "alt": [
+              "evil thought"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "طواف",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "طَوّاف",
+            "gloss": "moving about",
+            "type": "noun",
+            "root": "طوف",
+            "count": 1,
+            "ref": "24:58",
+            "pos": 37
+          }
+        ]
+      },
+      {
+        "w": "نطفه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "نُطْفَة",
+            "gloss": "semen-drop",
+            "type": "noun",
+            "root": "نطف",
+            "count": 12,
+            "ref": "16:4",
+            "pos": 4,
+            "alt": [
+              "minute quantity of semen"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "افواه",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "أَفْواه",
+            "gloss": "mouths",
+            "type": "noun",
+            "root": "فوه",
+            "count": 12,
+            "ref": "3:118",
+            "pos": 19
+          }
+        ]
+      },
+      {
+        "w": "طايفه",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "جارِيَة",
-            "gloss": "flowing",
-            "type": "active participle",
-            "root": "جري",
-            "count": 3,
-            "ref": "88:12",
-            "pos": 3
+            "lemma": "طائِفَة",
+            "gloss": "party",
+            "type": "noun",
+            "root": "طوف",
+            "count": 24,
+            "ref": "3:69",
+            "pos": 2,
+            "alt": [
+              "group",
+              "two parties"
+            ]
           }
         ]
       },
       {
-        "w": "مهاجر",
-        "family": false,
-        "points": 3,
+        "w": "طوفان",
+        "family": true,
+        "points": 5,
         "senses": [
           {
-            "lemma": "مُهاجِر",
-            "gloss": "emigrant",
-            "type": "active participle",
-            "root": "هجر",
-            "count": 7,
-            "ref": "4:100",
-            "pos": 16,
-            "alt": [
-              "emigrating"
-            ]
+            "lemma": "طُوفان",
+            "gloss": "flood",
+            "type": "noun",
+            "root": "طوف",
+            "count": 2,
+            "ref": "7:133",
+            "pos": 3
           }
         ]
       }
     ],
-    "otherFamily": [],
-    "maxScore": 49,
-    "featuredRoot": "جري"
+    "otherFamily": [
+      {
+        "lemma": "يَطَّوَّفَ",
+        "gloss": "walks",
+        "type": "verb",
+        "root": "طوف",
+        "count": 2,
+        "ref": "2:158",
+        "pos": 16,
+        "form": 5
+      }
+    ],
+    "maxScore": 33,
+    "featuredRoot": "طوف"
   },
   "generated": true,
   "model": "auto (chain)"
