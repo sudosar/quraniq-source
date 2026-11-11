@@ -1,264 +1,595 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "puzzle": {
-    "center": "ف",
+    "center": "ع",
     "outer": [
-      "ط",
-      "ن",
       "و",
-      "ي",
-      "ا",
-      "ه"
+      "ت",
+      "م",
+      "ط",
+      "س",
+      "ا"
     ],
     "root": {
-      "letters": "طوف",
-      "display": "ط و ف",
-      "translit": "ṭ-w-f",
-      "meaning": "The core idea is moving around something in a circle or going all around it. From this come a group set apart together, circling in worship or service, a thought circling the mind, and a flood covering everything.",
-      "occurrences": 41,
-      "lemmaCount": 6
+      "letters": "طوع",
+      "display": "ط و ع",
+      "translit": "ṭ-w-ʿ",
+      "meaning": "The core idea is willing compliance without force or resistance. It grows into obeying commands, being able to do something, and giving or acting voluntarily from the heart.",
+      "occurrences": 129,
+      "lemmaCount": 10
     },
     "words": [
       {
-        "w": "انف",
+        "w": "تسع",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَنف",
-            "gloss": "nose",
+            "lemma": "تِسْع",
+            "gloss": "nine",
             "type": "noun",
-            "root": "أنف",
-            "count": 2,
-            "ref": "5:45",
-            "pos": 9
+            "root": "تسع",
+            "count": 5,
+            "ref": "17:101",
+            "pos": 4,
+            "alt": [
+              "ninety-nine"
+            ]
           }
         ]
       },
       {
-        "w": "طاف",
-        "family": true,
-        "points": 3,
+        "w": "سمع",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "طافَ",
-            "gloss": "be circulated",
+            "lemma": "سَمِعَ",
+            "gloss": "heard",
             "type": "verb",
-            "root": "طوف",
-            "count": 8,
-            "ref": "37:45",
-            "pos": 1,
+            "root": "سمع",
+            "count": 78,
+            "ref": "2:171",
+            "pos": 9,
             "alt": [
-              "circulate"
+              "hear",
+              "hears"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "سَمْع",
+            "gloss": "hear",
+            "type": "noun",
+            "root": "سمع",
+            "count": 22,
+            "ref": "18:101",
+            "pos": 11,
+            "alt": [
+              "hearing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "طعم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "طَعِمُ",
+            "gloss": "taste",
+            "type": "verb",
+            "root": "طعم",
+            "count": 5,
+            "ref": "2:249",
+            "pos": 17,
+            "alt": [
+              "ate",
+              "can eat"
             ],
             "form": 1
           }
         ]
       },
       {
-        "w": "فيه",
+        "w": "طمع",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "فِئَة",
-            "gloss": "company",
+            "lemma": "طَمَع",
+            "gloss": "hope",
             "type": "noun",
-            "root": "فأي",
-            "count": 10,
-            "ref": "2:249",
-            "pos": 51,
+            "root": "طمع",
+            "count": 4,
+            "ref": "7:56",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "طوع",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "طَوْع",
+            "gloss": "willingly",
+            "type": "noun",
+            "root": "طوع",
+            "count": 4,
+            "ref": "3:83",
+            "pos": 11
+          }
+        ]
+      },
+      {
+        "w": "عام",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عام",
+            "gloss": "year",
+            "type": "noun",
+            "root": "عوم",
+            "count": 9,
+            "ref": "2:259",
+            "pos": 20,
             "alt": [
-              "group",
-              "two hosts"
+              "one year",
+              "two years"
             ]
           }
         ]
       },
       {
-        "w": "وفي",
+        "w": "عتو",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "وَفَّى",
-            "gloss": "be repaid in full",
-            "type": "verb",
-            "root": "وفي",
-            "count": 18,
-            "ref": "2:272",
-            "pos": 24,
+            "lemma": "عُتُوّ",
+            "gloss": "insolence",
+            "type": "noun",
+            "root": "عتو",
+            "count": 2,
+            "ref": "25:21",
+            "pos": 18,
             "alt": [
-              "repaid in full",
-              "is repaid in full"
+              "pride"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "متع",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَتَّعْ",
+            "gloss": "provide for",
+            "type": "verb",
+            "root": "متع",
+            "count": 18,
+            "ref": "2:126",
+            "pos": 22,
+            "alt": [
+              "grant him enjoyment",
+              "make provision for"
             ],
             "form": 2
           }
         ]
       },
       {
-        "w": "اطفا",
+        "w": "وسع",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَطْفَأَ",
-            "gloss": "extinguished",
+            "lemma": "وَسِعَ",
+            "gloss": "encompasses",
             "type": "verb",
-            "root": "طفأ",
-            "count": 3,
-            "ref": "5:64",
-            "pos": 38,
+            "root": "وسع",
+            "count": 6,
+            "ref": "2:255",
+            "pos": 41,
             "alt": [
-              "extinguish",
-              "to put out"
+              "extends",
+              "has encompassed"
             ],
-            "form": 4
+            "form": 1
+          },
+          {
+            "lemma": "وُسْع",
+            "gloss": "capacity",
+            "type": "noun",
+            "root": "وسع",
+            "count": 5,
+            "ref": "2:233",
+            "pos": 21
           }
         ]
       },
       {
-        "w": "اوفي",
+        "w": "اسمع",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَوْفَى",
-            "gloss": "fulfill",
+            "lemma": "أَسْمَعَ",
+            "gloss": "cause to hear",
             "type": "verb",
-            "root": "وفي",
-            "count": 20,
-            "ref": "2:40",
-            "pos": 10,
-            "alt": [
-              "fulfills",
-              "more faithful"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "طايف",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "طائِف",
-            "gloss": "visitation",
-            "type": "active participle",
-            "root": "طوف",
-            "count": 4,
-            "ref": "7:201",
+            "root": "سمع",
+            "count": 13,
+            "ref": "10:42",
             "pos": 6,
             "alt": [
-              "evil thought"
-            ]
+              "cause the deaf to hear",
+              "how they will hear"
+            ],
+            "form": 4
           }
         ]
       },
       {
-        "w": "طواف",
+        "w": "اطاع",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "طَوّاف",
-            "gloss": "moving about",
-            "type": "noun",
-            "root": "طوف",
-            "count": 1,
-            "ref": "24:58",
-            "pos": 37
+            "lemma": "أَطاعَ",
+            "gloss": "obey",
+            "type": "verb",
+            "root": "طوع",
+            "count": 72,
+            "ref": "4:13",
+            "pos": 5,
+            "alt": [
+              "obeys",
+              "obeyed"
+            ],
+            "form": 4
           }
         ]
       },
       {
-        "w": "نطفه",
+        "w": "اطعم",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "نُطْفَة",
-            "gloss": "semen-drop",
-            "type": "noun",
-            "root": "نطف",
-            "count": 12,
-            "ref": "16:4",
-            "pos": 4,
+            "lemma": "أَطْعَمَ",
+            "gloss": "feed",
+            "type": "verb",
+            "root": "طعم",
+            "count": 13,
+            "ref": "6:14",
+            "pos": 10,
             "alt": [
-              "minute quantity of semen"
+              "feeds",
+              "is fed"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "تطوع",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "تَطَوَّعَ",
+            "gloss": "volunteers",
+            "type": "verb",
+            "root": "طوع",
+            "count": 2,
+            "ref": "2:158",
+            "pos": 19,
+            "alt": [
+              "voluntarily does"
+            ],
+            "form": 5
+          }
+        ]
+      },
+      {
+        "w": "تمتع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "تَمَتَّعَ",
+            "gloss": "took advantage",
+            "type": "verb",
+            "root": "متع",
+            "count": 11,
+            "ref": "2:196",
+            "pos": 37,
+            "alt": [
+              "enjoy"
+            ],
+            "form": 5
+          }
+        ]
+      },
+      {
+        "w": "سماع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "سَمّاع",
+            "gloss": "listeners",
+            "type": "noun",
+            "root": "سمع",
+            "count": 4,
+            "ref": "5:41",
+            "pos": 20,
+            "alt": [
+              "would have listened"
             ]
           }
         ]
       },
       {
-        "w": "افواه",
+        "w": "طعام",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "طَعام",
+            "gloss": "food",
+            "type": "noun",
+            "root": "طعم",
+            "count": 24,
+            "ref": "2:61",
+            "pos": 7,
+            "alt": [
+              "feeding",
+              "feed"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "طوعت",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "طَوَّعَتْ",
+            "gloss": "prompted",
+            "type": "verb",
+            "root": "طوع",
+            "count": 1,
+            "ref": "5:30",
+            "pos": 1,
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "متاع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَتاع",
+            "gloss": "enjoyment",
+            "type": "noun",
+            "root": "متع",
+            "count": 35,
+            "ref": "2:236",
+            "pos": 21,
+            "alt": [
+              "provision",
+              "enjoy"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مطاع",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مُطاع",
+            "gloss": "one to be obeyed",
+            "type": "passive participle",
+            "root": "طوع",
+            "count": 1,
+            "ref": "81:21",
+            "pos": 1
+          }
+        ]
+      },
+      {
+        "w": "مطوع",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مُطَّوِّع",
+            "gloss": "ones who give willingly",
+            "type": "active participle",
+            "root": "طوع",
+            "count": 1,
+            "ref": "9:79",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "موسع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُوسِع",
+            "gloss": "wealthy",
+            "type": "active participle",
+            "root": "وسع",
+            "count": 2,
+            "ref": "2:236",
+            "pos": 16,
+            "alt": [
+              "expanders"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "واسع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "واسِع",
+            "gloss": "vast",
+            "type": "active participle",
+            "root": "وسع",
+            "count": 9,
+            "ref": "2:115",
+            "pos": 11,
+            "alt": [
+              "all-encompassing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "استمع",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "أَفْواه",
-            "gloss": "mouths",
-            "type": "noun",
-            "root": "فوه",
-            "count": 12,
-            "ref": "3:118",
-            "pos": 19
-          }
-        ]
-      },
-      {
-        "w": "طايفه",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "طائِفَة",
-            "gloss": "party",
-            "type": "noun",
-            "root": "طوف",
-            "count": 24,
-            "ref": "3:69",
-            "pos": 2,
+            "lemma": "اسْتَمَعَ",
+            "gloss": "listen",
+            "type": "verb",
+            "root": "سمع",
+            "count": 16,
+            "ref": "6:25",
+            "pos": 3,
             "alt": [
-              "group",
-              "two parties"
-            ]
+              "listened",
+              "listens"
+            ],
+            "form": 8
           }
         ]
       },
       {
-        "w": "طوفان",
-        "family": true,
-        "points": 5,
+        "w": "اطعام",
+        "family": false,
+        "points": 3,
         "senses": [
           {
-            "lemma": "طُوفان",
-            "gloss": "flood",
-            "type": "noun",
-            "root": "طوف",
+            "lemma": "إِطْعام",
+            "gloss": "feeding",
+            "type": "verbal noun",
+            "root": "طعم",
+            "count": 3,
+            "ref": "5:89",
+            "pos": 13
+          }
+        ]
+      },
+      {
+        "w": "مستمع",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُسْتَمِع",
+            "gloss": "listening",
+            "type": "active participle",
+            "root": "سمع",
             "count": 2,
-            "ref": "7:133",
-            "pos": 3
+            "ref": "26:15",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "استطاع",
+        "family": true,
+        "points": 6,
+        "senses": [
+          {
+            "lemma": "اسْتَطاعَ",
+            "gloss": "be able",
+            "type": "verb",
+            "root": "طوع",
+            "count": 42,
+            "ref": "2:282",
+            "pos": 45,
+            "alt": [
+              "is able",
+              "were able"
+            ],
+            "form": 10
+          }
+        ]
+      },
+      {
+        "w": "استمتع",
+        "family": false,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "اسْتَمْتَعَ",
+            "gloss": "profited",
+            "type": "verb",
+            "root": "متع",
+            "count": 6,
+            "ref": "6:128",
+            "pos": 15,
+            "alt": [
+              "enjoyed"
+            ],
+            "form": 10
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "يَطَّوَّفَ",
-        "gloss": "walks",
+        "lemma": "طاعَة",
+        "gloss": "obedience",
+        "type": "noun",
+        "root": "طوع",
+        "count": 3,
+        "ref": "4:81",
+        "pos": 2
+      },
+      {
+        "lemma": "يُطاعُ",
+        "gloss": "is obeyed",
         "type": "verb",
-        "root": "طوف",
+        "root": "طوع",
         "count": 2,
-        "ref": "2:158",
-        "pos": 16,
-        "form": 5
+        "ref": "40:18",
+        "pos": 15,
+        "form": 1
+      },
+      {
+        "lemma": "طائِع",
+        "gloss": "willingly",
+        "type": "active participle",
+        "root": "طوع",
+        "count": 1,
+        "ref": "41:11",
+        "pos": 16
       }
     ],
-    "maxScore": 33,
-    "featuredRoot": "طوف"
+    "maxScore": 66,
+    "featuredRoot": "طوع"
   },
   "generated": true,
   "model": "auto (chain)"

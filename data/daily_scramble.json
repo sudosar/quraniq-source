@@ -1,32 +1,32 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "puzzle": {
-    "verseRef": "11:112",
-    "reference": "Surah Hud (11:112)",
+    "verseRef": "42:25",
+    "reference": "Surah Ash-Shura (42:25)",
     "segments": [
-      "فَاسْتَقِمْ كَمَا أُمِرْتَ",
-      "وَمَن تَابَ مَعَكَ",
-      "وَلَا تَطْغَوْا",
-      "إِنَّهُ بِمَا تَعْمَلُونَ",
-      "بَصِيرٌ"
+      "وَهُوَ الَّذِي",
+      "يَقْبَلُ التَّوْبَةَ",
+      "عَنْ عِبَادِهِ",
+      "وَيَعْفُو عَنِ السَّيِّئَاتِ",
+      "وَيَعْلَمُ مَا تَفْعَلُونَ"
     ],
     "translations": [
-      "So stand firm as you are commanded",
-      "and (those) who turn (in repentance) with you",
-      "and (do) not transgress",
-      "Indeed, He of what",
-      "you do (is) All-Seer"
+      "And He (is) the One Who accepts",
+      "the repentance of His slaves",
+      "and pardons [of]",
+      "the evil and He knows",
+      "what you do"
     ],
-    "hint": "A command for steadfastness and obedience without excess, with reminder of Allah's watchfulness",
-    "arabic": "فَٱسْتَقِمْ كَمَآ أُمِرْتَ وَمَن تَابَ مَعَكَ وَلَا تَطْغَوْا۟ ۚ إِنَّهُۥ بِمَا تَعْمَلُونَ بَصِيرٌۭ",
+    "hint": "Allah's acceptance of repentance and forgiveness of sins",
+    "arabic": "وَهُوَ ٱلَّذِى يَقْبَلُ ٱلتَّوْبَةَ عَنْ عِبَادِهِۦ وَيَعْفُوا۟ عَنِ ٱلسَّيِّـَٔاتِ وَيَعْلَمُ مَا تَفْعَلُونَ",
     "words": [
-      "فَٱسْتَقِمْ كَمَآ أُمِرْتَ",
-      "وَمَن تَابَ مَعَكَ",
-      "وَلَا تَطْغَوْا۟ ۚ",
-      "إِنَّهُۥ بِمَا",
-      "تَعْمَلُونَ بَصِيرٌۭ"
+      "وَهُوَ ٱلَّذِى يَقْبَلُ",
+      "ٱلتَّوْبَةَ عَنْ عِبَادِهِۦ",
+      "وَيَعْفُوا۟ عَنِ",
+      "ٱلسَّيِّـَٔاتِ وَيَعْلَمُ",
+      "مَا تَفْعَلُونَ"
     ],
-    "verseEn": "So remain on a right course as you have been commanded, [you] and those who have turned back with you [to Allāh], and do not transgress. Indeed, He is Seeing of what you do."
+    "verseEn": "And it is He who accepts repentance from His servants and pardons misdeeds, and He knows what you do."
   },
   "generated": true,
   "model": "auto (chain)"
