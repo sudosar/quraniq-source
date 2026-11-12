@@ -195,12 +195,20 @@ html[data-font-size="2"] {
     --arabic-font-scale: 1.3;
 }
 
-/* Extra Large: keep wbw-en label and verse slide text from overflowing.
-   Caps the effective inline-scale factor using small-screen rem caps. */
+/* Extra Large on small phones: the root stays capped at 118% so general
+   layout never overflows, and --arabic-font-scale stays capped at 1.15
+   for other games — except inside Connections, whose verse text wraps
+   and whose wbw-en labels are width-capped, so it uses the full 1.3.
+   (Issue: XL setting left Connections verse text tiny.) */
 @media (max-width: 480px) {
     html[data-font-size="2"] {
         font-size: 118%;
         --arabic-font-scale: 1.15;
+    }
+    html[data-font-size="2"] .conn-solved-row,
+    html[data-font-size="2"] .connections-grid,
+    html[data-font-size="2"] .connections-theme-verses {
+        --arabic-font-scale: 1.3;
     }
 }
 
@@ -668,20 +676,20 @@ textarea {
 
 .conn-solved-category {
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 4px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .conn-solved-items {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
 }
 
 .conn-solved-items-ar {
     font-family: var(--font-arabic);
-    font-size: 1rem;
+    font-size: calc(1.25rem * var(--arabic-font-scale));
     direction: rtl;
 }
 
@@ -743,8 +751,9 @@ textarea {
 
 .verse-pill {
     font-family: var(--font-arabic);
-    font-size: 0.82rem;
-    padding: 4px 12px;
+    font-size: calc(1.05rem * var(--arabic-font-scale));
+    padding: 6px 14px;
+    min-height: 40px;
     border-radius: 20px;
     border: 1.5px solid rgba(0, 0, 0, 0.2);
     background: rgba(255, 255, 255, 0.3);
@@ -778,13 +787,13 @@ textarea {
 
 .verse-nav {
     flex-shrink: 0;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: none;
     background: rgba(0, 0, 0, 0.1);
     color: inherit;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -815,7 +824,7 @@ textarea {
     display: none;
     text-align: center;
     animation: verseFadeIn 0.3s ease;
-    padding: 4px 8px;
+    padding: 4px 2px;
     max-width: 100%;
     min-width: 0;
     /* overflow: visible so the verse translation and any larger-font
@@ -844,7 +853,7 @@ textarea {
 
 .verse-slide-word {
     font-family: var(--font-arabic);
-    font-size: 1.3rem;
+    font-size: calc(1.7rem * var(--arabic-font-scale));
     font-weight: 700;
     direction: rtl;
     margin-bottom: 2px;
@@ -853,9 +862,9 @@ textarea {
 }
 
 .verse-slide-meaning {
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     opacity: 0.75;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-style: italic;
     overflow-wrap: anywhere;
     max-width: 100%;
@@ -863,14 +872,14 @@ textarea {
 
 .verse-slide-ayah {
     font-family: var(--font-arabic);
-    font-size: 1.25rem;
-    line-height: 1.6;
+    font-size: calc(1.55rem * var(--arabic-font-scale));
+    line-height: 1.8;
     direction: rtl;
     margin-bottom: 8px;
     font-weight: 500;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    padding: 12px 16px;
+    padding: 12px 10px;
     overflow-wrap: anywhere;
     word-break: break-word;
     max-width: 100%;
@@ -878,12 +887,12 @@ textarea {
 }
 
 .verse-slide-en {
-    font-size: 0.88rem;
+    font-size: 1rem;
     line-height: 1.5;
     color: var(--text);
     opacity: 0.9;
     background: rgba(0, 0, 0, 0.05);
-    padding: 10px 14px;
+    padding: 12px 14px;
     border-radius: 8px;
     margin-bottom: 12px;
     text-align: left;
@@ -902,8 +911,8 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    margin-top: 4px;
+    gap: 12px;
+    margin-top: 8px;
 }
 
 .verse-slide-ref {
@@ -918,13 +927,13 @@ textarea {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     background: rgba(27, 122, 74, 0.1);
     color: var(--accent);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     transition: all 0.2s ease;
     vertical-align: middle;
 }
@@ -961,13 +970,13 @@ textarea {
 }
 
 .verse-play-btn {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     border: 2px solid rgba(0, 0, 0, 0.25);
     background: rgba(255, 255, 255, 0.3);
     color: inherit;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1026,15 +1035,13 @@ textarea {
 .verse-card {
     margin-bottom: 4px;
     position: relative;
-    /* Contain child overflow at large font sizes; allow scrolling when the
-       word-by-word display grows beyond a sensible height. */
-    max-height: 60vh;
+    /* No height cap: the card grows with its content so the translation,
+       play button and hint below the verse are always visible. Capping
+       it at 60vh hid them below an inner scroll once the verse text got
+       bigger (mobile readability fix). The page itself scrolls. */
     max-width: 100%;
     width: 100%;
-    overflow-y: auto;
     overflow-x: hidden;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
 }
 
@@ -1053,7 +1060,7 @@ textarea {
     align-items: flex-start;
     gap: 6px;
     direction: rtl;
-    padding: 8px 6px;
+    padding: 10px 4px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     line-height: 1.8;
@@ -1069,7 +1076,7 @@ textarea {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    padding: 6px 8px 10px;
+    padding: 4px 6px 8px;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -1094,9 +1101,11 @@ textarea {
 
 .wbw-ar {
     font-family: var(--font-arabic);
-    font-size: 1.25rem;
+    font-size: calc(1.55rem * var(--arabic-font-scale));
     pointer-events: none;
     line-height: 1.6;
+    overflow-wrap: anywhere;
+    max-width: 100%;
 }
 
 .wbw-en {
@@ -1212,7 +1221,7 @@ textarea {
 }
 
 .verse-reveal-hint {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0.45;
@@ -1269,7 +1278,7 @@ textarea {
 
 .theme-verse-ar {
     font-family: var(--font-arabic);
-    font-size: calc(1.2rem * var(--arabic-font-scale));
+    font-size: calc(1.4rem * var(--arabic-font-scale));
     direction: rtl;
     line-height: 1.8;
     margin-bottom: 6px;
@@ -1306,13 +1315,13 @@ textarea {
 .verse-dots {
     display: flex;
     justify-content: center;
-    gap: 6px;
-    margin-top: 10px;
+    gap: 8px;
+    margin-top: 12px;
 }
 
 .verse-dot {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -3254,8 +3263,10 @@ textarea {
         padding: 8px 3px;
     }
 
+    /* Same as the base rule: the Arabic scale must apply here too —
+       the old flat 1.25rem defeated the font-size setting on phones. */
     .conn-tile-ar {
-        font-size: 1.25rem;
+        font-size: calc(1.4rem * var(--arabic-font-scale));
         line-height: 1.3;
     }
 }
@@ -3278,7 +3289,7 @@ textarea {
     }
     
     .conn-tile-ar {
-        font-size: 1.1rem;
+        font-size: calc(1.25rem * var(--arabic-font-scale));
         line-height: 1.25;
     }
 }
