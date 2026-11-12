@@ -1,595 +1,639 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "puzzle": {
-    "center": "ع",
+    "center": "ن",
     "outer": [
-      "و",
-      "ت",
+      "ه",
+      "ا",
       "م",
-      "ط",
-      "س",
-      "ا"
+      "ت",
+      "ي",
+      "و"
     ],
     "root": {
-      "letters": "طوع",
-      "display": "ط و ع",
-      "translit": "ṭ-w-ʿ",
-      "meaning": "The core idea is willing compliance without force or resistance. It grows into obeying commands, being able to do something, and giving or acting voluntarily from the heart.",
-      "occurrences": 129,
-      "lemmaCount": 10
+      "letters": "امن",
+      "display": "ا م ن",
+      "translit": "ʾ-m-n",
+      "meaning": "The core idea is safety, trust and freedom from fear. Believing means placing trust in God, while being secure or trustworthy means giving that same safety to others.",
+      "occurrences": 879,
+      "lemmaCount": 15
     },
     "words": [
       {
-        "w": "تسع",
-        "family": false,
-        "points": 1,
+        "w": "امن",
+        "family": true,
+        "points": 3,
         "senses": [
           {
-            "lemma": "تِسْع",
-            "gloss": "nine",
-            "type": "noun",
-            "root": "تسع",
-            "count": 5,
-            "ref": "17:101",
-            "pos": 4,
-            "alt": [
-              "ninety-nine"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "سمع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "سَمِعَ",
-            "gloss": "heard",
+            "lemma": "آمَنَ",
+            "gloss": "believe",
             "type": "verb",
-            "root": "سمع",
-            "count": 78,
-            "ref": "2:171",
-            "pos": 9,
+            "root": "أمن",
+            "count": 537,
+            "ref": "2:13",
+            "pos": 6,
             "alt": [
-              "hear",
-              "hears"
+              "believed",
+              "believes"
+            ],
+            "form": 4
+          },
+          {
+            "lemma": "أَمِنَ",
+            "gloss": "entrusts",
+            "type": "verb",
+            "root": "أمن",
+            "count": 20,
+            "ref": "2:283",
+            "pos": 11,
+            "alt": [
+              "feel secure"
             ],
             "form": 1
           },
           {
-            "lemma": "سَمْع",
-            "gloss": "hear",
-            "type": "noun",
-            "root": "سمع",
-            "count": 22,
-            "ref": "18:101",
-            "pos": 11,
+            "lemma": "آمِن",
+            "gloss": "secure",
+            "type": "active participle",
+            "root": "أمن",
+            "count": 16,
+            "ref": "2:126",
+            "pos": 8,
             "alt": [
-              "hearing"
+              "safe",
+              "safely"
             ]
-          }
-        ]
-      },
-      {
-        "w": "طعم",
-        "family": false,
-        "points": 1,
-        "senses": [
+          },
           {
-            "lemma": "طَعِمُ",
-            "gloss": "taste",
-            "type": "verb",
-            "root": "طعم",
-            "count": 5,
-            "ref": "2:249",
-            "pos": 17,
-            "alt": [
-              "ate",
-              "can eat"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "طمع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "طَمَع",
-            "gloss": "hope",
+            "lemma": "أَمْن",
+            "gloss": "security",
             "type": "noun",
-            "root": "طمع",
-            "count": 4,
-            "ref": "7:56",
+            "root": "أمن",
+            "count": 5,
+            "ref": "24:55",
+            "pos": 26
+          }
+        ]
+      },
+      {
+        "w": "نهي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "نُهَى",
+            "gloss": "intelligence",
+            "type": "noun",
+            "root": "نهي",
+            "count": 2,
+            "ref": "20:54",
             "pos": 9
           }
         ]
       },
       {
-        "w": "طوع",
-        "family": true,
-        "points": 3,
+        "w": "نوم",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "طَوْع",
-            "gloss": "willingly",
+            "lemma": "نَوْم",
+            "gloss": "sleep",
             "type": "noun",
-            "root": "طوع",
+            "root": "نوم",
+            "count": 3,
+            "ref": "2:255",
+            "pos": 12
+          }
+        ]
+      },
+      {
+        "w": "هون",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هُون",
+            "gloss": "humiliation",
+            "type": "noun",
+            "root": "هون",
             "count": 4,
-            "ref": "3:83",
+            "ref": "16:59",
             "pos": 11
           }
         ]
       },
       {
-        "w": "عام",
+        "w": "هين",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "عام",
-            "gloss": "year",
+            "lemma": "هَيِّن",
+            "gloss": "easy for",
             "type": "noun",
-            "root": "عوم",
-            "count": 9,
-            "ref": "2:259",
-            "pos": 20,
+            "root": "هون",
+            "count": 3,
+            "ref": "19:9",
+            "pos": 7,
             "alt": [
-              "one year",
-              "two years"
+              "easy",
+              "insignificant"
             ]
           }
         ]
       },
       {
-        "w": "عتو",
+        "w": "وهن",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "عُتُوّ",
-            "gloss": "insolence",
-            "type": "noun",
-            "root": "عتو",
-            "count": 2,
-            "ref": "25:21",
-            "pos": 18,
-            "alt": [
-              "pride"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "متع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَتَّعْ",
-            "gloss": "provide for",
+            "lemma": "وَهَنَ",
+            "gloss": "weakened",
             "type": "verb",
-            "root": "متع",
-            "count": 18,
-            "ref": "2:126",
-            "pos": 22,
-            "alt": [
-              "grant him enjoyment",
-              "make provision for"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "وسع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وَسِعَ",
-            "gloss": "encompasses",
-            "type": "verb",
-            "root": "وسع",
-            "count": 6,
-            "ref": "2:255",
-            "pos": 41,
-            "alt": [
-              "extends",
-              "has encompassed"
-            ],
+            "root": "وهن",
+            "count": 5,
+            "ref": "19:4",
+            "pos": 4,
             "form": 1
           },
           {
-            "lemma": "وُسْع",
-            "gloss": "capacity",
+            "lemma": "وَهْن",
+            "gloss": "weakness",
             "type": "noun",
-            "root": "وسع",
-            "count": 5,
-            "ref": "2:233",
-            "pos": 21
-          }
-        ]
-      },
-      {
-        "w": "اسمع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَسْمَعَ",
-            "gloss": "cause to hear",
-            "type": "verb",
-            "root": "سمع",
-            "count": 13,
-            "ref": "10:42",
-            "pos": 6,
-            "alt": [
-              "cause the deaf to hear",
-              "how they will hear"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اطاع",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "أَطاعَ",
-            "gloss": "obey",
-            "type": "verb",
-            "root": "طوع",
-            "count": 72,
-            "ref": "4:13",
-            "pos": 5,
-            "alt": [
-              "obeys",
-              "obeyed"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اطعم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَطْعَمَ",
-            "gloss": "feed",
-            "type": "verb",
-            "root": "طعم",
-            "count": 13,
-            "ref": "6:14",
-            "pos": 10,
-            "alt": [
-              "feeds",
-              "is fed"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "تطوع",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "تَطَوَّعَ",
-            "gloss": "volunteers",
-            "type": "verb",
-            "root": "طوع",
+            "root": "وهن",
             "count": 2,
-            "ref": "2:158",
-            "pos": 19,
-            "alt": [
-              "voluntarily does"
-            ],
-            "form": 5
+            "ref": "31:14",
+            "pos": 6
           }
         ]
       },
       {
-        "w": "تمتع",
-        "family": false,
-        "points": 2,
+        "w": "امنه",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "تَمَتَّعَ",
-            "gloss": "took advantage",
-            "type": "verb",
-            "root": "متع",
-            "count": 11,
-            "ref": "2:196",
-            "pos": 37,
-            "alt": [
-              "enjoy"
-            ],
-            "form": 5
-          }
-        ]
-      },
-      {
-        "w": "سماع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "سَمّاع",
-            "gloss": "listeners",
+            "lemma": "أَمَنَة",
+            "gloss": "security",
             "type": "noun",
-            "root": "سمع",
-            "count": 4,
-            "ref": "5:41",
-            "pos": 20,
-            "alt": [
-              "would have listened"
-            ]
+            "root": "أمن",
+            "count": 2,
+            "ref": "3:154",
+            "pos": 7
+          },
+          {
+            "lemma": "آمِنَة",
+            "gloss": "secure",
+            "type": "active participle",
+            "root": "أمن",
+            "count": 1,
+            "ref": "16:112",
+            "pos": 6
           }
         ]
       },
       {
-        "w": "طعام",
-        "family": false,
-        "points": 2,
+        "w": "امين",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "طَعام",
-            "gloss": "food",
-            "type": "noun",
-            "root": "طعم",
-            "count": 24,
-            "ref": "2:61",
+            "lemma": "أَمِين",
+            "gloss": "trustworthy",
+            "type": "adjective",
+            "root": "أمن",
+            "count": 14,
+            "ref": "7:68",
             "pos": 7,
             "alt": [
-              "feeding",
-              "feed"
+              "trusted",
+              "secure"
             ]
           }
         ]
       },
       {
-        "w": "طوعت",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "طَوَّعَتْ",
-            "gloss": "prompted",
-            "type": "verb",
-            "root": "طوع",
-            "count": 1,
-            "ref": "5:30",
-            "pos": 1,
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "متاع",
+        "w": "انيه",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "مَتاع",
-            "gloss": "enjoyment",
-            "type": "noun",
-            "root": "متع",
-            "count": 35,
-            "ref": "2:236",
-            "pos": 21,
-            "alt": [
-              "provision",
-              "enjoy"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مطاع",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُطاع",
-            "gloss": "one to be obeyed",
-            "type": "passive participle",
-            "root": "طوع",
-            "count": 1,
-            "ref": "81:21",
-            "pos": 1
-          }
-        ]
-      },
-      {
-        "w": "مطوع",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُطَّوِّع",
-            "gloss": "ones who give willingly",
+            "lemma": "آنِيَة",
+            "gloss": "boiling",
             "type": "active participle",
-            "root": "طوع",
-            "count": 1,
-            "ref": "9:79",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "موسع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُوسِع",
-            "gloss": "wealthy",
-            "type": "active participle",
-            "root": "وسع",
+            "root": "أني",
             "count": 2,
-            "ref": "2:236",
-            "pos": 16,
-            "alt": [
-              "expanders"
-            ]
+            "ref": "88:5",
+            "pos": 4
           }
         ]
       },
       {
-        "w": "واسع",
+        "w": "اهان",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "واسِع",
-            "gloss": "vast",
-            "type": "active participle",
-            "root": "وسع",
-            "count": 9,
-            "ref": "2:115",
-            "pos": 11,
+            "lemma": "أَهانَ",
+            "gloss": "allah humiliates",
+            "type": "verb",
+            "root": "هون",
+            "count": 2,
+            "ref": "22:18",
+            "pos": 27,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "ايمن",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَيْمَن",
+            "gloss": "right",
+            "type": "adjective",
+            "root": "يمن",
+            "count": 3,
+            "ref": "19:52",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "مامن",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مَأْمَن",
+            "gloss": "place of safety",
+            "type": "noun",
+            "root": "أمن",
+            "count": 1,
+            "ref": "9:6",
+            "pos": 13
+          }
+        ]
+      },
+      {
+        "w": "متين",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَتِين",
+            "gloss": "firm",
+            "type": "noun",
+            "root": "متن",
+            "count": 3,
+            "ref": "7:183",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "منام",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَنام",
+            "gloss": "dream",
+            "type": "noun",
+            "root": "نوم",
+            "count": 4,
+            "ref": "8:43",
+            "pos": 5,
             "alt": [
-              "all-encompassing"
+              "sleep"
             ]
           }
         ]
       },
       {
-        "w": "استمع",
+        "w": "مهين",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُهِين",
+            "gloss": "humiliating",
+            "type": "active participle",
+            "root": "هون",
+            "count": 14,
+            "ref": "2:90",
+            "pos": 27
+          },
+          {
+            "lemma": "مَهِين",
+            "gloss": "despised",
+            "type": "adjective",
+            "root": "مهن",
+            "count": 4,
+            "ref": "32:8",
+            "pos": 8,
+            "alt": [
+              "insignificant",
+              "worthless"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مومن",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مُؤْمِن",
+            "gloss": "believers",
+            "type": "active participle",
+            "root": "أمن",
+            "count": 202,
+            "ref": "2:91",
+            "pos": 30,
+            "alt": [
+              "believer",
+              "believing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "نايم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "نائِم",
+            "gloss": "asleep",
+            "type": "active participle",
+            "root": "نوم",
+            "count": 2,
+            "ref": "7:97",
+            "pos": 9,
+            "alt": [
+              "were asleep"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "هنيي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "هَنِيئ",
+            "gloss": "satisfaction",
+            "type": "noun",
+            "root": "هنأ",
+            "count": 4,
+            "ref": "4:4",
+            "pos": 13
+          }
+        ]
+      },
+      {
+        "w": "يمين",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "يَمِين",
+            "gloss": "oaths",
+            "type": "noun",
+            "root": "يمن",
+            "count": 65,
+            "ref": "5:108",
+            "pos": 12,
+            "alt": [
+              "right"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "امانت",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "أَمانَت",
+            "gloss": "trust",
+            "type": "noun",
+            "root": "أمن",
+            "count": 2,
+            "ref": "2:283",
+            "pos": 17
+          }
+        ]
+      },
+      {
+        "w": "امانه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "أَمانَة",
+            "gloss": "trusts",
+            "type": "noun",
+            "root": "أمن",
+            "count": 4,
+            "ref": "4:58",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "امنيت",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "اسْتَمَعَ",
-            "gloss": "listen",
-            "type": "verb",
-            "root": "سمع",
-            "count": 16,
-            "ref": "6:25",
-            "pos": 3,
+            "lemma": "أُمْنِيَّت",
+            "gloss": "wishful thinking",
+            "type": "noun",
+            "root": "مني",
+            "count": 6,
+            "ref": "2:78",
+            "pos": 7,
             "alt": [
-              "listened",
-              "listens"
+              "desire"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "انتهي",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "انتَهَى",
+            "gloss": "desist",
+            "type": "verb",
+            "root": "نهي",
+            "count": 16,
+            "ref": "19:46",
+            "pos": 9,
+            "alt": [
+              "cease",
+              "desists"
             ],
             "form": 8
           }
         ]
       },
       {
-        "w": "اطعام",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "إِطْعام",
-            "gloss": "feeding",
-            "type": "verbal noun",
-            "root": "طعم",
-            "count": 3,
-            "ref": "5:89",
-            "pos": 13
-          }
-        ]
-      },
-      {
-        "w": "مستمع",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "مُسْتَمِع",
-            "gloss": "listening",
-            "type": "active participle",
-            "root": "سمع",
-            "count": 2,
-            "ref": "26:15",
-            "pos": 7
-          }
-        ]
-      },
-      {
-        "w": "استطاع",
+        "w": "اوتمن",
         "family": true,
-        "points": 6,
+        "points": 5,
         "senses": [
           {
-            "lemma": "اسْتَطاعَ",
-            "gloss": "be able",
+            "lemma": "اؤْتُمِنَ",
+            "gloss": "is entrusted",
             "type": "verb",
-            "root": "طوع",
-            "count": 42,
-            "ref": "2:282",
-            "pos": 45,
-            "alt": [
-              "is able",
-              "were able"
-            ],
-            "form": 10
+            "root": "أمن",
+            "count": 1,
+            "ref": "2:283",
+            "pos": 16,
+            "form": 8
           }
         ]
       },
       {
-        "w": "استمتع",
+        "w": "ايمان",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "إِيمان",
+            "gloss": "faith",
+            "type": "verbal noun",
+            "root": "أمن",
+            "count": 45,
+            "ref": "3:173",
+            "pos": 12
+          }
+        ]
+      },
+      {
+        "w": "مامون",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَأْمُون",
+            "gloss": "to be felt secure",
+            "type": "passive participle",
+            "root": "أمن",
+            "count": 1,
+            "ref": "70:28",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "ممنون",
         "family": false,
-        "points": 4,
+        "points": 3,
         "senses": [
           {
-            "lemma": "اسْتَمْتَعَ",
-            "gloss": "profited",
-            "type": "verb",
-            "root": "متع",
-            "count": 6,
-            "ref": "6:128",
-            "pos": 15,
+            "lemma": "مَمْنُون",
+            "gloss": "ending",
+            "type": "passive participle",
+            "root": "منن",
+            "count": 4,
+            "ref": "41:8",
+            "pos": 9,
             "alt": [
-              "enjoyed"
-            ],
-            "form": 10
+              "never ending",
+              "end"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "منتهي",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُنتَهَى",
+            "gloss": "utmost boundary",
+            "type": "passive participle",
+            "root": "نهي",
+            "count": 3,
+            "ref": "53:14",
+            "pos": 3,
+            "alt": [
+              "final goal",
+              "finality"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مهيمن",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُهَيْمِن",
+            "gloss": "guardian",
+            "type": "active participle",
+            "root": "همن",
+            "count": 2,
+            "ref": "5:48",
+            "pos": 11
+          }
+        ]
+      },
+      {
+        "w": "مومنه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مُؤْمِنَة",
+            "gloss": "believing",
+            "type": "active participle",
+            "root": "أمن",
+            "count": 28,
+            "ref": "2:221",
+            "pos": 7,
+            "alt": [
+              "believing woman",
+              "believers"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ميمنه",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مَيْمَنَة",
+            "gloss": "right",
+            "type": "noun",
+            "root": "يمن",
+            "count": 3,
+            "ref": "56:8",
+            "pos": 2
           }
         ]
       }
     ],
-    "otherFamily": [
-      {
-        "lemma": "طاعَة",
-        "gloss": "obedience",
-        "type": "noun",
-        "root": "طوع",
-        "count": 3,
-        "ref": "4:81",
-        "pos": 2
-      },
-      {
-        "lemma": "يُطاعُ",
-        "gloss": "is obeyed",
-        "type": "verb",
-        "root": "طوع",
-        "count": 2,
-        "ref": "40:18",
-        "pos": 15,
-        "form": 1
-      },
-      {
-        "lemma": "طائِع",
-        "gloss": "willingly",
-        "type": "active participle",
-        "root": "طوع",
-        "count": 1,
-        "ref": "41:11",
-        "pos": 16
-      }
-    ],
-    "maxScore": 66,
-    "featuredRoot": "طوع"
+    "otherFamily": [],
+    "maxScore": 90,
+    "featuredRoot": "أمن"
   },
   "generated": true,
   "model": "auto (chain)"

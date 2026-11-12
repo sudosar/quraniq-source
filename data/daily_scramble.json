@@ -1,32 +1,35 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "puzzle": {
-    "verseRef": "42:25",
-    "reference": "Surah Ash-Shura (42:25)",
+    "verseRef": "48:28",
+    "reference": "Al-Fath (48:28)",
     "segments": [
-      "وَهُوَ الَّذِي",
-      "يَقْبَلُ التَّوْبَةَ",
-      "عَنْ عِبَادِهِ",
-      "وَيَعْفُو عَنِ السَّيِّئَاتِ",
-      "وَيَعْلَمُ مَا تَفْعَلُونَ"
+      "هُوَ الَّذِي",
+      "أَرْسَلَ رَسُولَهُ",
+      "بِالْهُدَى وَدِينِ",
+      "الْحَقِّ لِيُظْهِرَهُ عَلَى",
+      "الدِّينِ كُلِّهِ",
+      "وَكَفَى بِاللَّهِ شَهِيدًا"
     ],
     "translations": [
-      "And He (is) the One Who accepts",
-      "the repentance of His slaves",
-      "and pardons [of]",
-      "the evil and He knows",
-      "what you do"
+      "He (is) the One Who (has) sent",
+      "His Messenger with guidance and (the) religion",
+      "the true that He (may) make it prevail",
+      "over the religions",
+      "all And sufficient is",
+      "Allah (as) a Witness"
     ],
-    "hint": "Allah's acceptance of repentance and forgiveness of sins",
-    "arabic": "وَهُوَ ٱلَّذِى يَقْبَلُ ٱلتَّوْبَةَ عَنْ عِبَادِهِۦ وَيَعْفُوا۟ عَنِ ٱلسَّيِّـَٔاتِ وَيَعْلَمُ مَا تَفْعَلُونَ",
+    "hint": "Allah sent His Messenger with guidance and truth to prevail over all religions",
+    "arabic": "هُوَ ٱلَّذِىٓ أَرْسَلَ رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ ٱلْحَقِّ لِيُظْهِرَهُۥ عَلَى ٱلدِّينِ كُلِّهِۦ ۚ وَكَفَىٰ بِٱللَّهِ شَهِيدًۭا",
     "words": [
-      "وَهُوَ ٱلَّذِى يَقْبَلُ",
-      "ٱلتَّوْبَةَ عَنْ عِبَادِهِۦ",
-      "وَيَعْفُوا۟ عَنِ",
-      "ٱلسَّيِّـَٔاتِ وَيَعْلَمُ",
-      "مَا تَفْعَلُونَ"
+      "هُوَ ٱلَّذِىٓ أَرْسَلَ",
+      "رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ",
+      "ٱلْحَقِّ لِيُظْهِرَهُۥ",
+      "عَلَى ٱلدِّينِ",
+      "كُلِّهِۦ ۚ وَكَفَىٰ",
+      "بِٱللَّهِ شَهِيدًۭا"
     ],
-    "verseEn": "And it is He who accepts repentance from His servants and pardons misdeeds, and He knows what you do."
+    "verseEn": "It is He who sent His Messenger with guidance and the religion of truth to manifest it over all religion. And sufficient is Allāh as Witness."
   },
   "generated": true,
   "model": "auto (chain)"
