@@ -1,35 +1,32 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "puzzle": {
-    "verseRef": "48:28",
-    "reference": "Al-Fath (48:28)",
+    "verseRef": "40:44",
+    "reference": "Surah Ghafir (40:44)",
     "segments": [
-      "هُوَ الَّذِي",
-      "أَرْسَلَ رَسُولَهُ",
-      "بِالْهُدَى وَدِينِ",
-      "الْحَقِّ لِيُظْهِرَهُ عَلَى",
-      "الدِّينِ كُلِّهِ",
-      "وَكَفَى بِاللَّهِ شَهِيدًا"
+      "وَأُفَوِّضُ أَمْرِي",
+      "إِلَى اللَّهِ",
+      "إِنَّ اللَّهَ",
+      "بَصِيرٌ",
+      "بِالْعِبَادِ"
     ],
     "translations": [
-      "He (is) the One Who (has) sent",
-      "His Messenger with guidance and (the) religion",
-      "the true that He (may) make it prevail",
-      "over the religions",
-      "all And sufficient is",
-      "Allah (as) a Witness"
+      "And you will remember what I say",
+      "to you and I entrust my affair",
+      "to Allah",
+      "Indeed Allah",
+      "(is) All-Seer of (His) slaves"
     ],
-    "hint": "Allah sent His Messenger with guidance and truth to prevail over all religions",
-    "arabic": "هُوَ ٱلَّذِىٓ أَرْسَلَ رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ ٱلْحَقِّ لِيُظْهِرَهُۥ عَلَى ٱلدِّينِ كُلِّهِۦ ۚ وَكَفَىٰ بِٱللَّهِ شَهِيدًۭا",
+    "hint": "A statement of tawakkul — entrusting all affairs to Allah who sees His servants",
+    "arabic": "فَسَتَذْكُرُونَ مَآ أَقُولُ لَكُمْ ۚ وَأُفَوِّضُ أَمْرِىٓ إِلَى ٱللَّهِ ۚ إِنَّ ٱللَّهَ بَصِيرٌۢ بِٱلْعِبَادِ",
     "words": [
-      "هُوَ ٱلَّذِىٓ أَرْسَلَ",
-      "رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ",
-      "ٱلْحَقِّ لِيُظْهِرَهُۥ",
-      "عَلَى ٱلدِّينِ",
-      "كُلِّهِۦ ۚ وَكَفَىٰ",
-      "بِٱللَّهِ شَهِيدًۭا"
+      "فَسَتَذْكُرُونَ مَآ أَقُولُ",
+      "لَكُمْ ۚ وَأُفَوِّضُ أَمْرِىٓ",
+      "إِلَى ٱللَّهِ ۚ",
+      "إِنَّ ٱللَّهَ",
+      "بَصِيرٌۢ بِٱلْعِبَادِ"
     ],
-    "verseEn": "It is He who sent His Messenger with guidance and the religion of truth to manifest it over all religion. And sufficient is Allāh as Witness."
+    "verseEn": "And you will remember what I [now] say to you, and I entrust my affair to Allāh. Indeed, Allāh is Seeing of [His] servants.\""
   },
   "generated": true,
   "model": "auto (chain)"

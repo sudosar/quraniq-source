@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "puzzle": {
-    "word": "اتى",
-    "display": "أَتَىٰ",
-    "hint": "Describes the arrival of a divine decree that should not be hastened",
-    "verseRef": "16:1",
-    "arabicVerse": "أَتَىٰٓ أَمْرُ ٱللَّهِ فَلَا تَسْتَعْجِلُوهُ ۚ سُبْحَـٰنَهُۥ وَتَعَـٰلَىٰ عَمَّا يُشْرِكُونَ",
-    "verse": "16:1 - The command of Allāh is coming, so be not impatient for it. Exalted is He and high above what they associate with Him."
+    "word": "تحية",
+    "display": "تَحِيَّة",
+    "hint": "The welcoming exchange offered with peace in Paradise",
+    "verseRef": "10:10",
+    "arabicVerse": "دَعْوَىٰهُمْ فِيهَا سُبْحَـٰنَكَ ٱللَّهُمَّ وَتَحِيَّتُهُمْ فِيهَا سَلَـٰمٌۭ ۚ وَءَاخِرُ دَعْوَىٰهُمْ أَنِ ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+    "verse": "10:10 - Their call therein will be, \"Exalted are You, O Allāh,\" and their greeting therein will be, \"Peace.\" And the last of their call will be, \"Praise to Allāh, Lord of the worlds!\""
   },
   "generated": true,
   "model": "auto (chain)"
