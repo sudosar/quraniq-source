@@ -1,570 +1,481 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "puzzle": {
-    "center": "ه",
+    "center": "د",
     "outer": [
-      "ي",
-      "ك",
-      "ل",
+      "ن",
+      "و",
+      "ا",
       "م",
-      "ت",
-      "ا"
+      "ه",
+      "ت"
     ],
     "root": {
-      "letters": "هلك",
-      "display": "ه ل ك",
-      "translit": "h-l-k",
-      "meaning": "The core idea is perishing and complete loss. Its forms describe dying, causing ruin, and the people or places that bring or suffer it.",
-      "occurrences": 68,
-      "lemmaCount": 8
+      "letters": "مدد",
+      "display": "م د د",
+      "translit": "m-d-d",
+      "meaning": "The core idea is stretching or extending something further. From spreading land to giving extra help or time, its words all share reaching beyond a limit.",
+      "occurrences": 32,
+      "lemmaCount": 9
     },
     "words": [
       {
-        "w": "اله",
+        "w": "ادم",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "إِلٰه",
-            "gloss": "god",
-            "type": "noun",
-            "root": "أله",
-            "count": 147,
-            "ref": "2:133",
-            "pos": 23,
+            "lemma": "آدَم",
+            "gloss": "adam",
+            "type": "proper noun",
+            "root": "أدم",
+            "count": 25,
+            "ref": "2:31",
+            "pos": 2,
             "alt": [
-              "gods",
-              "one god"
+              "children of adam",
+              "adam disobeyed"
             ]
           }
         ]
       },
       {
-        "w": "امه",
-        "family": false,
-        "points": 1,
+        "w": "امد",
+        "family": true,
+        "points": 3,
         "senses": [
           {
-            "lemma": "أُمَّة",
-            "gloss": "nation",
-            "type": "noun",
-            "root": "أمم",
-            "count": 64,
-            "ref": "2:128",
-            "pos": 7,
-            "alt": [
-              "community",
-              "nations"
-            ]
-          },
-          {
-            "lemma": "أَمَة",
-            "gloss": "bondwoman",
-            "type": "noun",
-            "root": "أمو",
-            "count": 2,
-            "ref": "2:221",
-            "pos": 6,
-            "alt": [
-              "female slaves"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اهل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أَهْل",
-            "gloss": "worthy",
-            "type": "noun",
-            "root": "أهل",
-            "count": 127,
-            "ref": "2:105",
-            "pos": 6,
-            "alt": [
-              "people",
-              "people of the book"
-            ]
-          },
-          {
-            "lemma": "أُهِلَّ",
-            "gloss": "has been dedicated",
+            "lemma": "أَمَدَّ",
+            "gloss": "extend",
             "type": "verb",
-            "root": "هلل",
+            "root": "مدد",
+            "count": 10,
+            "ref": "17:20",
+            "pos": 2,
+            "form": 4
+          },
+          {
+            "lemma": "أَمَد",
+            "gloss": "distance",
+            "type": "noun",
+            "root": "أمد",
             "count": 4,
-            "ref": "2:173",
-            "pos": 9,
+            "ref": "3:30",
+            "pos": 19,
             "alt": [
-              "dedicated"
+              "time",
+              "term"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "دام",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "دامُ",
+            "gloss": "as long as remain",
+            "type": "verb",
+            "root": "دوم",
+            "count": 7,
+            "ref": "11:107",
+            "pos": 4,
+            "alt": [
+              "as long as remains"
             ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "دنا",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "دَنا",
+            "gloss": "approached",
+            "type": "verb",
+            "root": "دنو",
+            "count": 2,
+            "ref": "53:8",
+            "pos": 2,
             "form": 4
           }
         ]
       },
       {
-        "w": "ايه",
+        "w": "دون",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "آيَة",
-            "gloss": "sign",
+            "lemma": "دُون",
+            "gloss": "besides",
             "type": "noun",
-            "root": "أيي",
-            "count": 382,
-            "ref": "2:99",
-            "pos": 4,
+            "root": "دون",
+            "count": 144,
+            "ref": "2:23",
+            "pos": 16,
             "alt": [
-              "verses",
-              "signs"
+              "besides allah",
+              "other than"
             ]
           }
         ]
       },
       {
-        "w": "كهل",
+        "w": "مدت",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُدَّت",
+            "gloss": "term",
+            "type": "noun",
+            "root": "مدد",
+            "count": 1,
+            "ref": "9:4",
+            "pos": 18
+          }
+        ]
+      },
+      {
+        "w": "مدد",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مَدَد",
+            "gloss": "supplement",
+            "type": "noun",
+            "root": "مدد",
+            "count": 1,
+            "ref": "18:109",
+            "pos": 18
+          }
+        ]
+      },
+      {
+        "w": "ممد",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُمِدّ",
+            "gloss": "going to reinforce",
+            "type": "active participle",
+            "root": "مدد",
+            "count": 1,
+            "ref": "8:9",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "مهد",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "كَهْل",
-            "gloss": "maturity",
+            "lemma": "مَهْد",
+            "gloss": "bed",
             "type": "noun",
-            "root": "كهل",
-            "count": 2,
-            "ref": "3:46",
+            "root": "مهد",
+            "count": 5,
+            "ref": "20:53",
             "pos": 5
           }
         ]
       },
       {
-        "w": "مله",
+        "w": "هاد",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "مِلَّة",
-            "gloss": "religion",
-            "type": "noun",
-            "root": "ملل",
-            "count": 15,
-            "ref": "2:130",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "مهل",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مُهْل",
-            "gloss": "like molten brass",
-            "type": "noun",
-            "root": "مهل",
-            "count": 3,
-            "ref": "18:29",
-            "pos": 22,
-            "alt": [
-              "like the murky oil",
-              "like molten copper"
-            ]
-          },
-          {
-            "lemma": "مَهِّلِ",
-            "gloss": "allow them respite",
+            "lemma": "هادُ",
+            "gloss": "are jews",
             "type": "verb",
-            "root": "مهل",
-            "count": 2,
-            "ref": "73:11",
+            "root": "هود",
+            "count": 11,
+            "ref": "2:62",
             "pos": 5,
             "alt": [
-              "give respite"
+              "were jews",
+              "became jews"
             ],
-            "form": 2
+            "form": 1
+          },
+          {
+            "lemma": "هاد",
+            "gloss": "guide",
+            "type": "active participle",
+            "root": "هدي",
+            "count": 7,
+            "ref": "13:7",
+            "pos": 15
           }
         ]
       },
       {
-        "w": "هات",
+        "w": "هود",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "هاتُ",
-            "gloss": "bring",
-            "type": "verb",
-            "root": "هات",
-            "count": 4,
-            "ref": "2:111",
-            "pos": 14,
-            "alt": [
-              "bring forth"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "هلك",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "هَلَكَ",
-            "gloss": "died",
-            "type": "verb",
-            "root": "هلك",
-            "count": 5,
-            "ref": "4:176",
-            "pos": 9,
-            "alt": [
-              "destroyed",
-              "is gone"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "هلم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "هَلُمّ",
-            "gloss": "come",
-            "type": "noun",
-            "root": "هلم",
-            "count": 2,
-            "ref": "6:150",
-            "pos": 2,
-            "alt": [
-              "bring forward"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اكمه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَكْمَه",
-            "gloss": "blind",
-            "type": "noun",
-            "root": "كمه",
-            "count": 2,
-            "ref": "3:49",
-            "pos": 25,
-            "alt": [
-              "born blind"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "الله",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "اللَّه",
-            "gloss": "besides allah",
+            "lemma": "هُود",
+            "gloss": "hud",
             "type": "proper noun",
-            "root": "أله",
-            "count": 2699,
-            "ref": "1:1",
-            "pos": 2,
+            "root": "هود",
+            "count": 10,
+            "ref": "2:111",
+            "pos": 8,
             "alt": [
-              "allah",
-              "allah lets go astray"
+              "jews",
+              "jew"
             ]
           }
         ]
       },
       {
-        "w": "الهي",
+        "w": "واد",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "واد",
+            "gloss": "valley",
+            "type": "noun",
+            "root": "ودي",
+            "count": 7,
+            "ref": "26:225",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "مداد",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مِداد",
+            "gloss": "ink",
+            "type": "noun",
+            "root": "مدد",
+            "count": 1,
+            "ref": "18:109",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "مهاد",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَلْهَى",
-            "gloss": "diverted",
-            "type": "verb",
-            "root": "لهو",
-            "count": 4,
-            "ref": "15:3",
+            "lemma": "مِهاد",
+            "gloss": "resting place",
+            "type": "noun",
+            "root": "مهد",
+            "count": 7,
+            "ref": "7:41",
             "pos": 4,
             "alt": [
-              "distracts",
-              "divert"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اهلك",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "أَهْلَكَ",
-            "gloss": "destroy",
-            "type": "verb",
-            "root": "هلك",
-            "count": 51,
-            "ref": "5:17",
-            "pos": 20,
-            "alt": [
-              "be destroyed",
-              "destroyed"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "كلمه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "كَلِمَة",
-            "gloss": "word",
-            "type": "noun",
-            "root": "كلم",
-            "count": 42,
-            "ref": "2:37",
-            "pos": 5,
-            "alt": [
-              "words",
-              "word of your lord"
+              "bed"
             ]
           }
         ]
       },
       {
-        "w": "ليله",
+        "w": "مهتد",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "لَيْلَة",
-            "gloss": "night",
-            "type": "noun",
-            "root": "ليل",
-            "count": 8,
-            "ref": "2:51",
-            "pos": 5,
-            "alt": [
-              "nights"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مايه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مِائَة",
-            "gloss": "hundred",
-            "type": "noun",
-            "root": "مأي",
-            "count": 10,
-            "ref": "2:259",
-            "pos": 19,
-            "alt": [
-              "two hundred",
-              "one hundred"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مهلك",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُهْلِك",
-            "gloss": "one who destroys",
+            "lemma": "مُهْتَد",
+            "gloss": "guided one",
             "type": "active participle",
-            "root": "هلك",
-            "count": 5,
-            "ref": "6:131",
-            "pos": 6,
-            "alt": [
-              "one to destroy",
-              "going to destroy"
-            ]
-          },
-          {
-            "lemma": "مَهْلِك",
-            "gloss": "destruction",
-            "type": "noun",
-            "root": "هلك",
-            "count": 2,
-            "ref": "27:49",
+            "root": "هدي",
+            "count": 3,
+            "ref": "57:26",
             "pos": 11
-          },
-          {
-            "lemma": "مُهْلَك",
-            "gloss": "were destroyed",
-            "type": "passive participle",
-            "root": "هلك",
-            "count": 1,
-            "ref": "23:48",
-            "pos": 4
           }
         ]
       },
       {
-        "w": "ميته",
+        "w": "موده",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "مَيْتَة",
-            "gloss": "dead",
+            "lemma": "مَوَدَّة",
+            "gloss": "love",
             "type": "noun",
-            "root": "موت",
-            "count": 6,
-            "ref": "6:139",
-            "pos": 14
-          }
-        ]
-      },
-      {
-        "w": "هالك",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "هالِك",
-            "gloss": "destroyed",
-            "type": "active participle",
-            "root": "هلك",
-            "count": 2,
-            "ref": "28:88",
-            "pos": 13
-          }
-        ]
-      },
-      {
-        "w": "هييه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "هَيْئَة",
-            "gloss": "like the shape",
-            "type": "noun",
-            "root": "هيأ",
-            "count": 2,
-            "ref": "3:49",
-            "pos": 16,
+            "root": "ودد",
+            "count": 8,
+            "ref": "4:73",
+            "pos": 12,
             "alt": [
-              "like the form"
+              "any affection",
+              "affection"
             ]
           }
         ]
       },
       {
-        "w": "اللهم",
+        "w": "نادم",
         "family": false,
-        "points": 3,
+        "points": 2,
         "senses": [
           {
-            "lemma": "اللَّهُمَّ",
-            "gloss": "o allah",
-            "type": "proper noun",
-            "root": "أله",
+            "lemma": "نادِم",
+            "gloss": "regretful",
+            "type": "active participle",
+            "root": "ندم",
             "count": 5,
-            "ref": "3:26",
-            "pos": 2
+            "ref": "5:52",
+            "pos": 28
           }
         ]
       },
       {
-        "w": "تهلكه",
-        "family": true,
-        "points": 5,
+        "w": "ودود",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "تَهْلُكَة",
-            "gloss": "destruction",
-            "type": "noun",
-            "root": "هلك",
-            "count": 1,
-            "ref": "2:195",
+            "lemma": "وَدُود",
+            "gloss": "most loving",
+            "type": "adjective",
+            "root": "ودد",
+            "count": 2,
+            "ref": "11:90",
             "pos": 9
           }
         ]
       },
       {
-        "w": "كامله",
+        "w": "انداد",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "كامِلَة",
-            "gloss": "all",
-            "type": "active participle",
-            "root": "كمل",
-            "count": 2,
-            "ref": "2:196",
-            "pos": 58,
+            "lemma": "أَنداد",
+            "gloss": "rivals",
+            "type": "noun",
+            "root": "ندد",
+            "count": 6,
+            "ref": "2:22",
+            "pos": 21,
             "alt": [
-              "full"
+              "equals"
             ]
           }
         ]
       },
       {
-        "w": "كلاله",
+        "w": "اوتاد",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "كَلالَة",
-            "gloss": "no parent or child",
+            "lemma": "أَوْتاد",
+            "gloss": "pegs",
             "type": "noun",
-            "root": "كلل",
-            "count": 2,
-            "ref": "4:12",
-            "pos": 54
+            "root": "وتد",
+            "count": 3,
+            "ref": "78:7",
+            "pos": 2
           }
         ]
       },
       {
-        "w": "مهلكي",
+        "w": "ممدده",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "مُهْلِكِي",
-            "gloss": "one to destroy",
-            "type": "noun",
-            "root": "هلك",
+            "lemma": "مُمَدَّدَة",
+            "gloss": "extended",
+            "type": "passive participle",
+            "root": "مدد",
             "count": 1,
-            "ref": "28:59",
-            "pos": 16
+            "ref": "104:9",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "ممدود",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَمْدُود",
+            "gloss": "extensive",
+            "type": "passive participle",
+            "root": "مدد",
+            "count": 2,
+            "ref": "56:30",
+            "pos": 2,
+            "alt": [
+              "extended"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ندامه",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "نَدامَة",
+            "gloss": "regret",
+            "type": "noun",
+            "root": "ندم",
+            "count": 2,
+            "ref": "10:54",
+            "pos": 12
           }
         ]
       }
     ],
-    "otherFamily": [],
-    "maxScore": 59,
-    "featuredRoot": "هلك"
+    "otherFamily": [
+      {
+        "lemma": "مَدَّ",
+        "gloss": "spread",
+        "type": "verb",
+        "root": "مدد",
+        "count": 13,
+        "ref": "13:3",
+        "pos": 3,
+        "alt": [
+          "extends",
+          "is spread"
+        ],
+        "form": 1
+      },
+      {
+        "lemma": "مَدّ",
+        "gloss": "extension",
+        "type": "verbal noun",
+        "root": "مدد",
+        "count": 2,
+        "ref": "19:75",
+        "pos": 9,
+        "alt": [
+          "extensively"
+        ]
+      }
+    ],
+    "maxScore": 53,
+    "featuredRoot": "مدد"
   },
   "generated": true,
   "model": "auto (chain)"

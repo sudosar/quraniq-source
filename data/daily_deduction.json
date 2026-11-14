@@ -1,65 +1,65 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "puzzle": {
-    "title": "the counsel etched in wisdom",
-    "intro": "Imagine standing beside a figure known not for miracles or kingdoms, but for words that still guide hearts today. This servant of Allah received a precious gift and poured gratitude into every counsel given to a beloved young learner.",
+    "title": "The Name Bestowed Before Birth",
+    "intro": "Picture a quiet sanctuary filled with earnest supplication after long years of waiting. From the unseen comes an answer carrying a name never given before, promising wisdom from early years and a life marked by devotion, compassion, and purity.",
     "clues": [
-      "I was blessed by Allah with wisdom, and I was commanded to be grateful for it.",
-      "I spoke to my son with tender admonition, warning with love and concern.",
-      "I told my son that associating partners with Allah is a tremendous wrong.",
-      "I advised my son to establish prayer, enjoin right, forbid wrong, and bear with patience.",
-      "I warned my son not to turn the cheek in pride nor to walk upon the earth in arrogance.",
-      "I taught my son to be moderate in pace and to lower the voice, for the harshest of sounds is the braying of donkeys."
+      "I was named by Allah Himself before I was born, with a name never given to anyone before me.",
+      "I was granted as an answer to earnest supplication by elderly parents who thought offspring was beyond possibility.",
+      "I was given wisdom, judgment, and the Scripture while I was still young.",
+      "I was dutiful to my parents and compassionate to others, and I was not arrogant or disobedient.",
+      "Allah decreed peace upon me on the day I was born, the day I die, and the day I shall be raised alive.",
+      "My father Zakariyya received the glad tidings of me from the angels while standing in prayer in the sanctuary (mihrab)."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Dhul-Kifl the Patient",
-          "Luqman the Wise",
-          "The Man of the Two Gardens",
-          "Tubba the Ruler",
-          "Khidr the Guide"
+          "Prophet Shu'ayb (Jethro)",
+          "Prophet Idris (Enoch)",
+          "Prophet Ishaq (Isaac)",
+          "Prophet Yusuf (Joseph)",
+          "Prophet Yahya (John)"
         ],
-        "answer": "Luqman the Wise"
+        "answer": "Prophet Yahya (John)"
       },
       "trial": {
-        "label": "My Greatest Counsel",
+        "label": "Blessing and Trial",
         "options": [
-          "Advising my child against associating partners with Allah",
-          "Building an ark to survive the great flood",
-          "Interpreting the ruler's dream while in prison",
-          "Confronting Pharaoh with miraculous signs",
-          "Being swallowed by a great fish in the sea"
+          "Swallowed by a great fish for leaving in anger",
+          "Thrown into a blazing fire for smashing idols",
+          "Denied shelter and left to be raised by a she-wolf",
+          "Granted to elderly parents after earnest supplication",
+          "Confronted Pharaoh and led an exodus across the sea"
         ],
-        "answer": "Advising my child against associating partners with Allah"
+        "answer": "Granted to elderly parents after earnest supplication"
       },
       "location": {
-        "label": "Gift Granted to Me",
+        "label": "Key Place",
         "options": [
-          "A staff that became a serpent",
-          "Wisdom and gratitude to Allah",
-          "A throne carried in the blink of an eye",
-          "An ark of gopher wood",
-          "A garden of date-palms and vines"
+          "The sanctuary (mihrab) where glad tidings were announced",
+          "The blazing fire prepared by idolaters",
+          "The belly of the great fish in the deep sea",
+          "The cave where sleepers rested for centuries",
+          "The valley of the ants on a royal march"
         ],
-        "answer": "Wisdom and gratitude to Allah"
+        "answer": "The sanctuary (mihrab) where glad tidings were announced"
       },
       "outcome": {
-        "label": "How I Am Remembered",
+        "label": "Divine Honor",
         "options": [
-          "As one drowned in the flood for disbelief",
-          "As one swallowed by the earth for pride",
-          "As a model of gratitude and wise parental counsel",
-          "As one destroyed by a mighty blast from the sky",
-          "As one transformed for breaking the Sabbath"
+          "Pelted from the sky by stones of baked clay",
+          "Swallowed alive by the earth for arrogance over treasure",
+          "Destroyed by a thunderous blast for hamstringing the she-camel",
+          "Drowned with an arrogant host in the parted sea",
+          "Peace upon me the day I was born, the day I die, and the day I am raised alive"
         ],
-        "answer": "As a model of gratitude and wise parental counsel"
+        "answer": "Peace upon me the day I was born, the day I die, and the day I am raised alive"
       }
     },
-    "verseRef": "31:12",
-    "arabic": "وَلَقَدْ ءَاتَيْنَا لُقْمَـٰنَ ٱلْحِكْمَةَ أَنِ ٱشْكُرْ لِلَّهِ ۚ وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِۦ ۖ وَمَن كَفَرَ فَإِنَّ ٱللَّهَ غَنِىٌّ حَمِيدٌۭ",
-    "verse": "And We had certainly given Luqmān wisdom [and said], \"Be grateful to Allāh.\" And whoever is grateful is grateful for [the benefit of] himself. And whoever denies [His favor] - then indeed, Allāh is Free of need and Praiseworthy. (31:12)"
+    "verseRef": "3:40",
+    "arabic": "قَالَ رَبِّ أَنَّىٰ يَكُونُ لِى غُلَـٰمٌۭ وَقَدْ بَلَغَنِىَ ٱلْكِبَرُ وَٱمْرَأَتِى عَاقِرٌۭ ۖ قَالَ كَذَٰلِكَ ٱللَّهُ يَفْعَلُ مَا يَشَآءُ",
+    "verse": "He said, \"My Lord, how will I have a boy when I have reached old age and my wife is barren?\" He [the angel] said, \"Such is Allāh; He does what He wills.\" (3:40)"
   },
   "generated": true,
   "model": "auto (chain)"

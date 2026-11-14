@@ -1,32 +1,32 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "puzzle": {
-    "verseRef": "40:44",
-    "reference": "Surah Ghafir (40:44)",
+    "verseRef": "59:19",
+    "reference": "Al-Hashr (59:19)",
     "segments": [
-      "وَأُفَوِّضُ أَمْرِي",
-      "إِلَى اللَّهِ",
-      "إِنَّ اللَّهَ",
-      "بَصِيرٌ",
-      "بِالْعِبَادِ"
+      "وَلَا تَكُونُوا",
+      "كَٱلَّذِينَ نَسُوا",
+      "ٱللَّهَ فَأَنسَىٰهُمْ",
+      "أَنفُسَهُمْ أُو۟لَـٰٓئِكَ",
+      "هُمُ ٱلْفَـٰسِقُونَ"
     ],
     "translations": [
-      "And you will remember what I say",
-      "to you and I entrust my affair",
-      "to Allah",
-      "Indeed Allah",
-      "(is) All-Seer of (His) slaves"
+      "And (do) not be",
+      "like those who forgot",
+      "Allah so He made them forget",
+      "themselves Those",
+      "[they] (are) the defiantly disobedient"
     ],
-    "hint": "A statement of tawakkul — entrusting all affairs to Allah who sees His servants",
-    "arabic": "فَسَتَذْكُرُونَ مَآ أَقُولُ لَكُمْ ۚ وَأُفَوِّضُ أَمْرِىٓ إِلَى ٱللَّهِ ۚ إِنَّ ٱللَّهَ بَصِيرٌۢ بِٱلْعِبَادِ",
+    "hint": "Warning against forgetting Allah and the consequence of self-forgetfulness",
+    "arabic": "وَلَا تَكُونُوا۟ كَٱلَّذِينَ نَسُوا۟ ٱللَّهَ فَأَنسَىٰهُمْ أَنفُسَهُمْ ۚ أُو۟لَـٰٓئِكَ هُمُ ٱلْفَـٰسِقُونَ",
     "words": [
-      "فَسَتَذْكُرُونَ مَآ أَقُولُ",
-      "لَكُمْ ۚ وَأُفَوِّضُ أَمْرِىٓ",
-      "إِلَى ٱللَّهِ ۚ",
-      "إِنَّ ٱللَّهَ",
-      "بَصِيرٌۢ بِٱلْعِبَادِ"
+      "وَلَا تَكُونُوا۟",
+      "كَٱلَّذِينَ نَسُوا۟",
+      "ٱللَّهَ فَأَنسَىٰهُمْ",
+      "أَنفُسَهُمْ ۚ أُو۟لَـٰٓئِكَ",
+      "هُمُ ٱلْفَـٰسِقُونَ"
     ],
-    "verseEn": "And you will remember what I [now] say to you, and I entrust my affair to Allāh. Indeed, Allāh is Seeing of [His] servants.\""
+    "verseEn": "And be not like those who forgot Allāh, so He made them forget themselves. Those are the defiantly disobedient."
   },
   "generated": true,
   "model": "auto (chain)"
