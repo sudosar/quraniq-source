@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "puzzle": {
-    "word": "غضب",
-    "display": "غَضَبٍ",
-    "hint": "Divine displeasure earned by those who reject truth",
-    "verseRef": "2:90",
-    "arabicVerse": "بِئْسَمَا ٱشْتَرَوْا۟ بِهِۦٓ أَنفُسَهُمْ أَن يَكْفُرُوا۟ بِمَآ أَنزَلَ ٱللَّهُ بَغْيًا أَن يُنَزِّلَ ٱللَّهُ مِن فَضْلِهِۦ عَلَىٰ مَن يَشَآءُ مِنْ عِبَادِهِۦ ۖ فَبَآءُو بِغَضَبٍ عَلَىٰ غَضَبٍۢ ۚ وَلِلْكَـٰفِرِينَ عَذَابٌۭ مُّهِينٌۭ",
-    "verse": "2:90 - How wretched is that for which they sold themselves - that they would disbelieve in what Allāh has revealed through [their] outrage that Allāh would send down His favor upon whom He wills from among His servants. So they returned having [earned] wrath upon wrath. And for the disbelievers is a humiliating punishment."
+    "word": "شديد",
+    "display": "شَدِيدٍ",
+    "hint": "How the Quran describes a harsh punishment awaiting disbelievers",
+    "verseRef": "14:2",
+    "arabicVerse": "ٱللَّهِ ٱلَّذِى لَهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ وَوَيْلٌۭ لِّلْكَـٰفِرِينَ مِنْ عَذَابٍۢ شَدِيدٍ",
+    "verse": "14:2 - Allāh, to whom belongs whatever is in the heavens and whatever is on the earth. And woe [i.e., destruction] to the disbelievers from a severe punishment -"
   },
   "generated": true,
   "model": "auto (chain)"

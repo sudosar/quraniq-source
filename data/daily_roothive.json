@@ -1,481 +1,599 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "puzzle": {
-    "center": "د",
+    "center": "ب",
     "outer": [
-      "ن",
-      "و",
-      "ا",
       "م",
+      "ت",
+      "ك",
       "ه",
-      "ت"
+      "ا",
+      "ر"
     ],
     "root": {
-      "letters": "مدد",
-      "display": "م د د",
-      "translit": "m-d-d",
-      "meaning": "The core idea is stretching or extending something further. From spreading land to giving extra help or time, its words all share reaching beyond a limit.",
+      "letters": "برك",
+      "display": "ب ر ك",
+      "translit": "b-r-k",
+      "meaning": "The core idea is lasting goodness and increase that brings benefit. Its forms describe God as the source of that goodness and others as receiving it.",
       "occurrences": 32,
-      "lemmaCount": 9
+      "lemmaCount": 5
     },
     "words": [
       {
-        "w": "ادم",
+        "w": "باب",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "آدَم",
-            "gloss": "adam",
-            "type": "proper noun",
-            "root": "أدم",
-            "count": 25,
-            "ref": "2:31",
-            "pos": 2,
-            "alt": [
-              "children of adam",
-              "adam disobeyed"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "امد",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "أَمَدَّ",
-            "gloss": "extend",
-            "type": "verb",
-            "root": "مدد",
-            "count": 10,
-            "ref": "17:20",
-            "pos": 2,
-            "form": 4
-          },
-          {
-            "lemma": "أَمَد",
-            "gloss": "distance",
+            "lemma": "باب",
+            "gloss": "gates",
             "type": "noun",
-            "root": "أمد",
-            "count": 4,
-            "ref": "3:30",
-            "pos": 19,
-            "alt": [
-              "time",
-              "term"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "دام",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "دامُ",
-            "gloss": "as long as remain",
-            "type": "verb",
-            "root": "دوم",
-            "count": 7,
-            "ref": "11:107",
-            "pos": 4,
-            "alt": [
-              "as long as remains"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "دنا",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "دَنا",
-            "gloss": "approached",
-            "type": "verb",
-            "root": "دنو",
-            "count": 2,
-            "ref": "53:8",
-            "pos": 2,
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "دون",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "دُون",
-            "gloss": "besides",
-            "type": "noun",
-            "root": "دون",
-            "count": 144,
-            "ref": "2:23",
-            "pos": 16,
-            "alt": [
-              "besides allah",
-              "other than"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مدت",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "مُدَّت",
-            "gloss": "term",
-            "type": "noun",
-            "root": "مدد",
-            "count": 1,
-            "ref": "9:4",
-            "pos": 18
-          }
-        ]
-      },
-      {
-        "w": "مدد",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "مَدَد",
-            "gloss": "supplement",
-            "type": "noun",
-            "root": "مدد",
-            "count": 1,
-            "ref": "18:109",
-            "pos": 18
-          }
-        ]
-      },
-      {
-        "w": "ممد",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "مُمِدّ",
-            "gloss": "going to reinforce",
-            "type": "active participle",
-            "root": "مدد",
-            "count": 1,
-            "ref": "8:9",
-            "pos": 7
-          }
-        ]
-      },
-      {
-        "w": "مهد",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَهْد",
-            "gloss": "bed",
-            "type": "noun",
-            "root": "مهد",
-            "count": 5,
-            "ref": "20:53",
-            "pos": 5
-          }
-        ]
-      },
-      {
-        "w": "هاد",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "هادُ",
-            "gloss": "are jews",
-            "type": "verb",
-            "root": "هود",
-            "count": 11,
-            "ref": "2:62",
-            "pos": 5,
-            "alt": [
-              "were jews",
-              "became jews"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "هاد",
-            "gloss": "guide",
-            "type": "active participle",
-            "root": "هدي",
-            "count": 7,
-            "ref": "13:7",
-            "pos": 15
-          }
-        ]
-      },
-      {
-        "w": "هود",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "هُود",
-            "gloss": "hud",
-            "type": "proper noun",
-            "root": "هود",
-            "count": 10,
-            "ref": "2:111",
+            "root": "بوب",
+            "count": 27,
+            "ref": "6:44",
             "pos": 8,
             "alt": [
-              "jews",
-              "jew"
+              "gate",
+              "doors"
             ]
           }
         ]
       },
       {
-        "w": "واد",
+        "w": "برا",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "واد",
-            "gloss": "valley",
-            "type": "noun",
-            "root": "ودي",
-            "count": 7,
-            "ref": "26:225",
-            "pos": 6
-          }
-        ]
-      },
-      {
-        "w": "مداد",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مِداد",
-            "gloss": "ink",
-            "type": "noun",
-            "root": "مدد",
-            "count": 1,
-            "ref": "18:109",
-            "pos": 5
-          }
-        ]
-      },
-      {
-        "w": "مهاد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مِهاد",
-            "gloss": "resting place",
-            "type": "noun",
-            "root": "مهد",
-            "count": 7,
-            "ref": "7:41",
-            "pos": 4,
-            "alt": [
-              "bed"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مهتد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُهْتَد",
-            "gloss": "guided one",
-            "type": "active participle",
-            "root": "هدي",
-            "count": 3,
-            "ref": "57:26",
-            "pos": 11
-          }
-        ]
-      },
-      {
-        "w": "موده",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَوَدَّة",
-            "gloss": "love",
-            "type": "noun",
-            "root": "ودد",
-            "count": 8,
-            "ref": "4:73",
-            "pos": 12,
-            "alt": [
-              "any affection",
-              "affection"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "نادم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "نادِم",
-            "gloss": "regretful",
-            "type": "active participle",
-            "root": "ندم",
-            "count": 5,
-            "ref": "5:52",
-            "pos": 28
-          }
-        ]
-      },
-      {
-        "w": "ودود",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "وَدُود",
-            "gloss": "most loving",
-            "type": "adjective",
-            "root": "ودد",
+            "lemma": "بَرَّأَ",
+            "gloss": "absolve",
+            "type": "verb",
+            "root": "برأ",
             "count": 2,
-            "ref": "11:90",
-            "pos": 9
+            "ref": "12:53",
+            "pos": 2,
+            "form": 2
           }
         ]
       },
       {
-        "w": "انداد",
+        "w": "بكت",
         "family": false,
-        "points": 3,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَنداد",
-            "gloss": "rivals",
-            "type": "noun",
-            "root": "ندد",
-            "count": 6,
-            "ref": "2:22",
-            "pos": 21,
+            "lemma": "بَكَتْ",
+            "gloss": "wept",
+            "type": "verb",
+            "root": "بكي",
+            "count": 5,
+            "ref": "44:29",
+            "pos": 2,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "بكر",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "بِكْر",
+            "gloss": "young",
+            "type": "adjective",
+            "root": "بكر",
+            "count": 3,
+            "ref": "2:68",
+            "pos": 17,
             "alt": [
-              "equals"
+              "virgins"
             ]
           }
         ]
       },
       {
-        "w": "اوتاد",
+        "w": "بهت",
         "family": false,
-        "points": 3,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَوْتاد",
-            "gloss": "pegs",
-            "type": "noun",
-            "root": "وتد",
-            "count": 3,
-            "ref": "78:7",
-            "pos": 2
+            "lemma": "بُهِتَ",
+            "gloss": "became dumbfounded",
+            "type": "verb",
+            "root": "بهت",
+            "count": 2,
+            "ref": "2:258",
+            "pos": 36,
+            "alt": [
+              "bewilder"
+            ],
+            "form": 1
           }
         ]
       },
       {
-        "w": "ممدده",
-        "family": true,
-        "points": 5,
+        "w": "ربا",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "مُمَدَّدَة",
-            "gloss": "extended",
-            "type": "passive participle",
-            "root": "مدد",
-            "count": 1,
-            "ref": "104:9",
+            "lemma": "رِبا",
+            "gloss": "usury",
+            "type": "noun",
+            "root": "ربو",
+            "count": 7,
+            "ref": "2:275",
             "pos": 3
           }
         ]
       },
       {
-        "w": "ممدود",
-        "family": true,
-        "points": 5,
+        "w": "ربت",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "مَمْدُود",
-            "gloss": "extensive",
-            "type": "passive participle",
-            "root": "مدد",
-            "count": 2,
-            "ref": "56:30",
-            "pos": 2,
+            "lemma": "رَبَتْ",
+            "gloss": "increase",
+            "type": "verb",
+            "root": "ربو",
+            "count": 4,
+            "ref": "30:39",
+            "pos": 10,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "ركب",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "رَكِبَ",
+            "gloss": "embark",
+            "type": "verb",
+            "root": "ركب",
+            "count": 9,
+            "ref": "11:42",
+            "pos": 14,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "كبت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "كُبِتَ",
+            "gloss": "were disgraced",
+            "type": "verb",
+            "root": "كبت",
+            "count": 3,
+            "ref": "58:5",
+            "pos": 8,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "كبر",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "كَبُرَ",
+            "gloss": "difficult",
+            "type": "verb",
+            "root": "كبر",
+            "count": 8,
+            "ref": "6:35",
+            "pos": 3,
             "alt": [
-              "extended"
+              "hard",
+              "great"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "كِبَر",
+            "gloss": "old age",
+            "type": "noun",
+            "root": "كبر",
+            "count": 6,
+            "ref": "2:266",
+            "pos": 20
+          },
+          {
+            "lemma": "كَبِّرْ",
+            "gloss": "magnify",
+            "type": "verb",
+            "root": "كبر",
+            "count": 4,
+            "ref": "2:185",
+            "pos": 38,
+            "alt": [
+              "may magnify"
+            ],
+            "form": 2
+          },
+          {
+            "lemma": "كِبْر",
+            "gloss": "greatness",
+            "type": "noun",
+            "root": "كبر",
+            "count": 2,
+            "ref": "40:56",
+            "pos": 14
+          }
+        ]
+      },
+      {
+        "w": "كتب",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "كَتَبَ",
+            "gloss": "prescribed",
+            "type": "verb",
+            "root": "كتب",
+            "count": 49,
+            "ref": "2:79",
+            "pos": 19,
+            "alt": [
+              "is prescribed",
+              "was prescribed"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "كرب",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "كَرْب",
+            "gloss": "distress",
+            "type": "noun",
+            "root": "كرب",
+            "count": 4,
+            "ref": "6:64",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "ماب",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَآب",
+            "gloss": "place of return",
+            "type": "noun",
+            "root": "أوب",
+            "count": 9,
+            "ref": "13:29",
+            "pos": 8,
+            "alt": [
+              "return"
             ]
           }
         ]
       },
       {
-        "w": "ندامه",
+        "w": "ابكم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَبْكَم",
+            "gloss": "dumb",
+            "type": "noun",
+            "root": "بكم",
+            "count": 6,
+            "ref": "2:18",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "اكبر",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَكْبَر",
+            "gloss": "greater",
+            "type": "noun",
+            "root": "كبر",
+            "count": 24,
+            "ref": "2:217",
+            "pos": 22,
+            "alt": [
+              "greatest"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "بارك",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "بارَكَ",
+            "gloss": "blessed is",
+            "type": "verb",
+            "root": "برك",
+            "count": 8,
+            "ref": "27:8",
+            "pos": 5,
+            "form": 3
+          }
+        ]
+      },
+      {
+        "w": "بركه",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "بَرَكَة",
+            "gloss": "blessings",
+            "type": "noun",
+            "root": "برك",
+            "count": 3,
+            "ref": "7:96",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "بكره",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "بُكْرَة",
+            "gloss": "early",
+            "type": "noun",
+            "root": "بكر",
+            "count": 7,
+            "ref": "19:11",
+            "pos": 10,
+            "alt": [
+              "morning"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "تبرا",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "تَبَرَّأَ",
+            "gloss": "disown",
+            "type": "verb",
+            "root": "برأ",
+            "count": 5,
+            "ref": "2:166",
+            "pos": 2,
+            "alt": [
+              "disassociated"
+            ],
+            "form": 5
+          }
+        ]
+      },
+      {
+        "w": "تراب",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "تُراب",
+            "gloss": "dust",
+            "type": "noun",
+            "root": "ترب",
+            "count": 17,
+            "ref": "2:264",
+            "pos": 23
+          }
+        ]
+      },
+      {
+        "w": "كاتب",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "كاتِب",
+            "gloss": "scribe",
+            "type": "active participle",
+            "root": "كتب",
+            "count": 6,
+            "ref": "2:282",
+            "pos": 13,
+            "alt": [
+              "recorders",
+              "recording"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "كتاب",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "كِتاب",
+            "gloss": "book",
+            "type": "noun",
+            "root": "كتب",
+            "count": 260,
+            "ref": "2:89",
+            "pos": 3,
+            "alt": [
+              "record",
+              "decree"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "متاب",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَتاب",
+            "gloss": "repentance",
+            "type": "noun",
+            "root": "توب",
+            "count": 2,
+            "ref": "25:71",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "ابكار",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "نَدامَة",
-            "gloss": "regret",
+            "lemma": "إِبْكار",
+            "gloss": "morning",
             "type": "noun",
-            "root": "ندم",
+            "root": "بكر",
             "count": 2,
-            "ref": "10:54",
-            "pos": 12
+            "ref": "3:41",
+            "pos": 20
+          }
+        ]
+      },
+      {
+        "w": "اتراب",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "أَتْراب",
+            "gloss": "well-matched",
+            "type": "noun",
+            "root": "ترب",
+            "count": 3,
+            "ref": "38:52",
+            "pos": 4,
+            "alt": [
+              "equals in age"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ارتاب",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "ارْتابَ",
+            "gloss": "may doubt",
+            "type": "verb",
+            "root": "ريب",
+            "count": 9,
+            "ref": "74:31",
+            "pos": 23,
+            "form": 8
+          }
+        ]
+      },
+      {
+        "w": "تبارك",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "تَبارَكَ",
+            "gloss": "blessed is he",
+            "type": "verb",
+            "root": "برك",
+            "count": 9,
+            "ref": "7:54",
+            "pos": 29,
+            "alt": [
+              "blessed is",
+              "blessed"
+            ],
+            "form": 6
+          }
+        ]
+      },
+      {
+        "w": "مبارك",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مُبارَك",
+            "gloss": "blessed",
+            "type": "passive participle",
+            "root": "برك",
+            "count": 8,
+            "ref": "3:96",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "متكبر",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُتَكَبِّر",
+            "gloss": "arrogant one",
+            "type": "active participle",
+            "root": "كبر",
+            "count": 7,
+            "ref": "40:27",
+            "pos": 9,
+            "alt": [
+              "arrogant"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مباركه",
+        "family": true,
+        "points": 6,
+        "senses": [
+          {
+            "lemma": "مُبارَكَة",
+            "gloss": "blessed",
+            "type": "noun",
+            "root": "برك",
+            "count": 4,
+            "ref": "24:35",
+            "pos": 20
           }
         ]
       }
     ],
-    "otherFamily": [
-      {
-        "lemma": "مَدَّ",
-        "gloss": "spread",
-        "type": "verb",
-        "root": "مدد",
-        "count": 13,
-        "ref": "13:3",
-        "pos": 3,
-        "alt": [
-          "extends",
-          "is spread"
-        ],
-        "form": 1
-      },
-      {
-        "lemma": "مَدّ",
-        "gloss": "extension",
-        "type": "verbal noun",
-        "root": "مدد",
-        "count": 2,
-        "ref": "19:75",
-        "pos": 9,
-        "alt": [
-          "extensively"
-        ]
-      }
-    ],
-    "maxScore": 53,
-    "featuredRoot": "مدد"
+    "otherFamily": [],
+    "maxScore": 65,
+    "featuredRoot": "برك"
   },
   "generated": true,
   "model": "auto (chain)"

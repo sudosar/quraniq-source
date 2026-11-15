@@ -1,65 +1,65 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "puzzle": {
-    "title": "The Name Bestowed Before Birth",
-    "intro": "Picture a quiet sanctuary filled with earnest supplication after long years of waiting. From the unseen comes an answer carrying a name never given before, promising wisdom from early years and a life marked by devotion, compassion, and purity.",
+    "title": "the river that revealed hearts",
+    "intro": "Picture an army on the march, thirsty and tested, where a single command at a riverbank will separate resolve from desire. A chosen leader guides the ranks toward a mighty foe, carrying trust in Allah alone.",
     "clues": [
-      "I was named by Allah Himself before I was born, with a name never given to anyone before me.",
-      "I was granted as an answer to earnest supplication by elderly parents who thought offspring was beyond possibility.",
-      "I was given wisdom, judgment, and the Scripture while I was still young.",
-      "I was dutiful to my parents and compassionate to others, and I was not arrogant or disobedient.",
-      "Allah decreed peace upon me on the day I was born, the day I die, and the day I shall be raised alive.",
-      "My father Zakariyya received the glad tidings of me from the angels while standing in prayer in the sanctuary (mihrab)."
+      "I was appointed by Allah as a leader over the Children of Israel after they asked for one to fight in His way.",
+      "I was given abundance in knowledge and stature as a sign of my selection, though my people questioned my authority.",
+      "I set out with the forces and told them Allah would test them with a river.",
+      "I warned that whoever drank freely from it would not be of me, except one who scooped a handful.",
+      "I crossed with the few who remained steadfast, facing an army far greater in number.",
+      "I led those who said how often a small company overcomes a large one by Allah's permission, before Jalut was defeated."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Shu'ayb (Jethro)",
-          "Prophet Idris (Enoch)",
-          "Prophet Ishaq (Isaac)",
-          "Prophet Yusuf (Joseph)",
-          "Prophet Yahya (John)"
+          "As-Samiri",
+          "Abu Lahab",
+          "Qarun",
+          "Talut",
+          "Jalut"
         ],
-        "answer": "Prophet Yahya (John)"
+        "answer": "Talut"
       },
       "trial": {
-        "label": "Blessing and Trial",
+        "label": "Trial/Event",
         "options": [
-          "Swallowed by a great fish for leaving in anger",
-          "Thrown into a blazing fire for smashing idols",
-          "Denied shelter and left to be raised by a she-wolf",
-          "Granted to elderly parents after earnest supplication",
-          "Confronted Pharaoh and led an exodus across the sea"
+          "Building an ark before the flood",
+          "Being thrown into a cool fire",
+          "Sleeping in a cave for many years",
+          "Testing the army with a river before battle",
+          "Being swallowed by a great fish"
         ],
-        "answer": "Granted to elderly parents after earnest supplication"
+        "answer": "Testing the army with a river before battle"
       },
       "location": {
-        "label": "Key Place",
+        "label": "Key Element",
         "options": [
-          "The sanctuary (mihrab) where glad tidings were announced",
-          "The blazing fire prepared by idolaters",
-          "The belly of the great fish in the deep sea",
-          "The cave where sleepers rested for centuries",
-          "The valley of the ants on a royal march"
+          "The river of the test",
+          "The valley of the ants",
+          "The fire of Namrud",
+          "The cave of the sleepers",
+          "The elephant army's path"
         ],
-        "answer": "The sanctuary (mihrab) where glad tidings were announced"
+        "answer": "The river of the test"
       },
       "outcome": {
-        "label": "Divine Honor",
+        "label": "Outcome",
         "options": [
-          "Pelted from the sky by stones of baked clay",
-          "Swallowed alive by the earth for arrogance over treasure",
-          "Destroyed by a thunderous blast for hamstringing the she-camel",
-          "Drowned with an arrogant host in the parted sea",
-          "Peace upon me the day I was born, the day I die, and the day I am raised alive"
+          "Swallowing by the earth with treasures",
+          "Transformation into apes for transgression",
+          "Destruction by a mighty blast",
+          "Victory by Allah's permission and Jalut was slain by Dawud",
+          "Drowning in the sea with hosts"
         ],
-        "answer": "Peace upon me the day I was born, the day I die, and the day I am raised alive"
+        "answer": "Victory by Allah's permission and Jalut was slain by Dawud"
       }
     },
-    "verseRef": "3:40",
-    "arabic": "قَالَ رَبِّ أَنَّىٰ يَكُونُ لِى غُلَـٰمٌۭ وَقَدْ بَلَغَنِىَ ٱلْكِبَرُ وَٱمْرَأَتِى عَاقِرٌۭ ۖ قَالَ كَذَٰلِكَ ٱللَّهُ يَفْعَلُ مَا يَشَآءُ",
-    "verse": "He said, \"My Lord, how will I have a boy when I have reached old age and my wife is barren?\" He [the angel] said, \"Such is Allāh; He does what He wills.\" (3:40)"
+    "verseRef": "2:249",
+    "arabic": "فَلَمَّا فَصَلَ طَالُوتُ بِٱلْجُنُودِ قَالَ إِنَّ ٱللَّهَ مُبْتَلِيكُم بِنَهَرٍۢ فَمَن شَرِبَ مِنْهُ فَلَيْسَ مِنِّى وَمَن لَّمْ يَطْعَمْهُ فَإِنَّهُۥ مِنِّىٓ إِلَّا مَنِ ٱغْتَرَفَ غُرْفَةًۢ بِيَدِهِۦ ۚ فَشَرِبُوا۟ مِنْهُ إِلَّا قَلِيلًۭا مِّنْهُمْ ۚ فَلَمَّا جَاوَزَهُۥ هُوَ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ قَالُوا۟ لَا طَاقَةَ لَنَا ٱلْيَوْمَ بِجَالُوتَ وَجُنُودِهِۦ ۚ قَالَ ٱلَّذِينَ يَظُنُّونَ أَنَّهُم مُّلَـٰقُوا۟ ٱللَّهِ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ۗ وَٱللَّهُ مَعَ ٱلصَّـٰبِرِينَ",
+    "verse": "And when Saul went forth with the soldiers, he said, \"Indeed, Allāh will be testing you with a river. So whoever drinks from it is not of me, and whoever does not taste it is indeed of me, excepting one who takes [from it] in the hollow of his hand.\" But they drank from it, except a [very] few of them. Then when he had crossed it along with those who believed with him, they said, \"There is no power for us today against Goliath and his soldiers.\" But those who were certain that they would meet Allāh said, \"How many a small company has overcome a large company by permission of Allāh. And Allāh is with the patient.\" (2:249)"
   },
   "generated": true,
   "model": "auto (chain)"
