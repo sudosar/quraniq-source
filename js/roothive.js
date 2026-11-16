@@ -515,7 +515,7 @@ function hiveShareText() {
         `${hiveMoonString(hive.moons)} ${HIVE_RANKS[hive.moons].name}`,
         `Words: ${hive.found.length}/${p.words.length} | Root family: ${famFound}/${family.length}${famFound === family.length ? ' 🍯' : ''} | Hints: ${hints}`,
         '',
-        'https://sudosar.github.io/quraniq/#roothive',
+        'https://sudosar.github.io/quraniq/roothive/',
     ].join('\n');
 }
 
