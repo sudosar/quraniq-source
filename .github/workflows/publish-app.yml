@@ -20,6 +20,7 @@ jobs:
           cp -r data public_build/
           cp -r js public_build/
           cp -r icons public_build/
+          cp -r connections harf deduction scramble roothive juz public_build/
           cp index.html public_build/
           cp admin.html public_build/
           cp test.html public_build/
