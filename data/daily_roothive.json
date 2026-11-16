@@ -1,599 +1,607 @@
 {
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "puzzle": {
-    "center": "ب",
+    "center": "ق",
     "outer": [
       "م",
-      "ت",
-      "ك",
       "ه",
       "ا",
-      "ر"
+      "ي",
+      "ت",
+      "و"
     ],
     "root": {
-      "letters": "برك",
-      "display": "ب ر ك",
-      "translit": "b-r-k",
-      "meaning": "The core idea is lasting goodness and increase that brings benefit. Its forms describe God as the source of that goodness and others as receiving it.",
-      "occurrences": 32,
-      "lemmaCount": 5
+      "letters": "قوم",
+      "display": "ق و م",
+      "translit": "q-w-m",
+      "meaning": "The core idea is standing upright and staying firm. It extends from physical standing to a steady uprightness in character and purpose.",
+      "occurrences": 660,
+      "lemmaCount": 22
     },
     "words": [
       {
-        "w": "باب",
+        "w": "تقي",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "باب",
-            "gloss": "gates",
+            "lemma": "تَقِيّ",
+            "gloss": "righteous",
             "type": "noun",
-            "root": "بوب",
-            "count": 27,
-            "ref": "6:44",
-            "pos": 8,
+            "root": "وقي",
+            "count": 4,
+            "ref": "19:13",
+            "pos": 6,
             "alt": [
-              "gate",
-              "doors"
+              "god fearing"
             ]
           }
         ]
       },
       {
-        "w": "برا",
-        "family": false,
-        "points": 1,
+        "w": "قام",
+        "family": true,
+        "points": 3,
         "senses": [
           {
-            "lemma": "بَرَّأَ",
-            "gloss": "absolve",
+            "lemma": "قامَ",
+            "gloss": "stand",
             "type": "verb",
-            "root": "برأ",
-            "count": 2,
-            "ref": "12:53",
-            "pos": 2,
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "بكت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "بَكَتْ",
-            "gloss": "wept",
-            "type": "verb",
-            "root": "بكي",
-            "count": 5,
-            "ref": "44:29",
-            "pos": 2,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "بكر",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "بِكْر",
-            "gloss": "young",
-            "type": "adjective",
-            "root": "بكر",
-            "count": 3,
-            "ref": "2:68",
-            "pos": 17,
-            "alt": [
-              "virgins"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "بهت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "بُهِتَ",
-            "gloss": "became dumbfounded",
-            "type": "verb",
-            "root": "بهت",
-            "count": 2,
-            "ref": "2:258",
-            "pos": 36,
-            "alt": [
-              "bewilder"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "ربا",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "رِبا",
-            "gloss": "usury",
-            "type": "noun",
-            "root": "ربو",
-            "count": 7,
+            "root": "قوم",
+            "count": 33,
             "ref": "2:275",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "ربت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "رَبَتْ",
-            "gloss": "increase",
-            "type": "verb",
-            "root": "ربو",
-            "count": 4,
-            "ref": "30:39",
-            "pos": 10,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "ركب",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "رَكِبَ",
-            "gloss": "embark",
-            "type": "verb",
-            "root": "ركب",
-            "count": 9,
-            "ref": "11:42",
-            "pos": 14,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "كبت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "كُبِتَ",
-            "gloss": "were disgraced",
-            "type": "verb",
-            "root": "كبت",
-            "count": 3,
-            "ref": "58:5",
             "pos": 8,
+            "alt": [
+              "established",
+              "stands"
+            ],
             "form": 1
           }
         ]
       },
       {
-        "w": "كبر",
+        "w": "قوم",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "قَوْم",
+            "gloss": "people",
+            "type": "noun",
+            "root": "قوم",
+            "count": 383,
+            "ref": "3:86",
+            "pos": 4,
+            "alt": [
+              "community",
+              "group"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "قوه",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "كَبُرَ",
-            "gloss": "difficult",
-            "type": "verb",
-            "root": "كبر",
-            "count": 8,
-            "ref": "6:35",
-            "pos": 3,
+            "lemma": "قُوَّة",
+            "gloss": "strength",
+            "type": "noun",
+            "root": "قوي",
+            "count": 30,
+            "ref": "8:60",
+            "pos": 6,
             "alt": [
-              "hard",
-              "great"
-            ],
-            "form": 1
+              "power",
+              "force"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "قوي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "قَوِيّ",
+            "gloss": "all-strong",
+            "type": "noun",
+            "root": "قوي",
+            "count": 11,
+            "ref": "8:52",
+            "pos": 15
+          }
+        ]
+      },
+      {
+        "w": "قيم",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "قَيِّم",
+            "gloss": "straight",
+            "type": "adjective",
+            "root": "قوم",
+            "count": 5,
+            "ref": "18:2",
+            "pos": 1
           },
           {
-            "lemma": "كِبَر",
-            "gloss": "old age",
+            "lemma": "قِيَم",
+            "gloss": "right",
+            "type": "adjective",
+            "root": "قوم",
+            "count": 1,
+            "ref": "6:161",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "مقت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَقْت",
+            "gloss": "hatred",
             "type": "noun",
-            "root": "كبر",
+            "root": "مقت",
             "count": 6,
-            "ref": "2:266",
-            "pos": 20
-          },
-          {
-            "lemma": "كَبِّرْ",
-            "gloss": "magnify",
-            "type": "verb",
-            "root": "كبر",
-            "count": 4,
-            "ref": "2:185",
-            "pos": 38,
+            "ref": "35:39",
+            "pos": 18,
             "alt": [
-              "may magnify"
-            ],
-            "form": 2
-          },
-          {
-            "lemma": "كِبْر",
-            "gloss": "greatness",
-            "type": "noun",
-            "root": "كبر",
-            "count": 2,
-            "ref": "40:56",
-            "pos": 14
+              "hateful"
+            ]
           }
         ]
       },
       {
-        "w": "كتب",
+        "w": "واق",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "كَتَبَ",
-            "gloss": "prescribed",
+            "lemma": "واق",
+            "gloss": "defender",
+            "type": "active participle",
+            "root": "وقي",
+            "count": 3,
+            "ref": "13:34",
+            "pos": 14,
+            "alt": [
+              "protector"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "وقت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وَقْت",
+            "gloss": "time",
+            "type": "noun",
+            "root": "وقت",
+            "count": 3,
+            "ref": "7:187",
+            "pos": 13
+          }
+        ]
+      },
+      {
+        "w": "وقي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وَقَى",
+            "gloss": "protect",
             "type": "verb",
-            "root": "كتب",
-            "count": 49,
-            "ref": "2:79",
+            "root": "وقي",
+            "count": 16,
+            "ref": "40:9",
+            "pos": 4,
+            "alt": [
+              "is saved"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "اتقي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "اتَّقَى",
+            "gloss": "fears",
+            "type": "verb",
+            "root": "وقي",
+            "count": 166,
+            "ref": "2:189",
             "pos": 19,
             "alt": [
-              "is prescribed",
-              "was prescribed"
+              "fear",
+              "fears allah"
             ],
-            "form": 1
+            "form": 8
+          },
+          {
+            "lemma": "أَتْقَى",
+            "gloss": "most righteous of",
+            "type": "noun",
+            "root": "وقي",
+            "count": 2,
+            "ref": "49:13",
+            "pos": 16,
+            "alt": [
+              "righteous"
+            ]
           }
         ]
       },
       {
-        "w": "كرب",
-        "family": false,
-        "points": 1,
+        "w": "اقام",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "كَرْب",
-            "gloss": "distress",
+            "lemma": "أَقامَ",
+            "gloss": "establish",
+            "type": "verb",
+            "root": "قوم",
+            "count": 54,
+            "ref": "10:105",
+            "pos": 2,
+            "alt": [
+              "direct",
+              "assign"
+            ],
+            "form": 4
+          },
+          {
+            "lemma": "إِقام",
+            "gloss": "establishment",
+            "type": "verbal noun",
+            "root": "قوم",
+            "count": 2,
+            "ref": "21:73",
+            "pos": 9,
+            "alt": [
+              "establishing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اقوم",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "أَقْوَم",
+            "gloss": "most straight",
             "type": "noun",
-            "root": "كرب",
+            "root": "قوم",
             "count": 4,
-            "ref": "6:64",
+            "ref": "17:9",
             "pos": 7
           }
         ]
       },
       {
-        "w": "ماب",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَآب",
-            "gloss": "place of return",
-            "type": "noun",
-            "root": "أوب",
-            "count": 9,
-            "ref": "13:29",
-            "pos": 8,
-            "alt": [
-              "return"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "ابكم",
+        "w": "تقوي",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَبْكَم",
-            "gloss": "dumb",
+            "lemma": "تَقْوَى",
+            "gloss": "righteousness",
             "type": "noun",
-            "root": "بكم",
-            "count": 6,
-            "ref": "2:18",
-            "pos": 2
-          }
-        ]
-      },
-      {
-        "w": "اكبر",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَكْبَر",
-            "gloss": "greater",
-            "type": "noun",
-            "root": "كبر",
-            "count": 24,
-            "ref": "2:217",
-            "pos": 22,
-            "alt": [
-              "greatest"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "بارك",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "بارَكَ",
-            "gloss": "blessed is",
-            "type": "verb",
-            "root": "برك",
-            "count": 8,
-            "ref": "27:8",
+            "root": "وقي",
+            "count": 17,
+            "ref": "9:109",
             "pos": 5,
-            "form": 3
-          }
-        ]
-      },
-      {
-        "w": "بركه",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "بَرَكَة",
-            "gloss": "blessings",
-            "type": "noun",
-            "root": "برك",
-            "count": 3,
-            "ref": "7:96",
-            "pos": 9
-          }
-        ]
-      },
-      {
-        "w": "بكره",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "بُكْرَة",
-            "gloss": "early",
-            "type": "noun",
-            "root": "بكر",
-            "count": 7,
-            "ref": "19:11",
-            "pos": 10,
             "alt": [
-              "morning"
+              "piety"
             ]
           }
         ]
       },
       {
-        "w": "تبرا",
-        "family": false,
-        "points": 2,
+        "w": "قايم",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "تَبَرَّأَ",
-            "gloss": "disown",
-            "type": "verb",
-            "root": "برأ",
-            "count": 5,
-            "ref": "2:166",
+            "lemma": "قائِم",
+            "gloss": "means of support",
+            "type": "active participle",
+            "root": "قوم",
+            "count": 17,
+            "ref": "3:18",
+            "pos": 11,
+            "alt": [
+              "standing",
+              "establishment"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "قوام",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "قَوّام",
+            "gloss": "protectors",
+            "type": "noun",
+            "root": "قوم",
+            "count": 3,
+            "ref": "4:34",
             "pos": 2,
             "alt": [
-              "disassociated"
-            ],
-            "form": 5
-          }
-        ]
-      },
-      {
-        "w": "تراب",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "تُراب",
-            "gloss": "dust",
-            "type": "noun",
-            "root": "ترب",
-            "count": 17,
-            "ref": "2:264",
-            "pos": 23
-          }
-        ]
-      },
-      {
-        "w": "كاتب",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "كاتِب",
-            "gloss": "scribe",
-            "type": "active participle",
-            "root": "كتب",
-            "count": 6,
-            "ref": "2:282",
-            "pos": 13,
-            "alt": [
-              "recorders",
-              "recording"
+              "custodians",
+              "steadfast"
             ]
+          },
+          {
+            "lemma": "قَوام",
+            "gloss": "moderate",
+            "type": "noun",
+            "root": "قوم",
+            "count": 1,
+            "ref": "25:67",
+            "pos": 11
           }
         ]
       },
       {
-        "w": "كتاب",
-        "family": false,
-        "points": 2,
+        "w": "قيمه",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "كِتاب",
-            "gloss": "book",
-            "type": "noun",
-            "root": "كتب",
-            "count": 260,
-            "ref": "2:89",
-            "pos": 3,
-            "alt": [
-              "record",
-              "decree"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "متاب",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَتاب",
-            "gloss": "repentance",
-            "type": "noun",
-            "root": "توب",
+            "lemma": "قَيِّمَة",
+            "gloss": "correct",
+            "type": "adjective",
+            "root": "قوم",
             "count": 2,
-            "ref": "25:71",
-            "pos": 9
+            "ref": "98:3",
+            "pos": 3
           }
         ]
       },
       {
-        "w": "ابكار",
-        "family": false,
-        "points": 3,
+        "w": "قيوم",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "إِبْكار",
-            "gloss": "morning",
-            "type": "noun",
-            "root": "بكر",
-            "count": 2,
-            "ref": "3:41",
-            "pos": 20
-          }
-        ]
-      },
-      {
-        "w": "اتراب",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "أَتْراب",
-            "gloss": "well-matched",
-            "type": "noun",
-            "root": "ترب",
+            "lemma": "قَيُّوم",
+            "gloss": "sustainer of all that exists",
+            "type": "adjective",
+            "root": "قوم",
             "count": 3,
-            "ref": "38:52",
-            "pos": 4,
+            "ref": "2:255",
+            "pos": 7,
             "alt": [
-              "equals in age"
+              "self-subsisting"
             ]
           }
         ]
       },
       {
-        "w": "ارتاب",
+        "w": "متقي",
         "family": false,
-        "points": 3,
+        "points": 2,
         "senses": [
           {
-            "lemma": "ارْتابَ",
-            "gloss": "may doubt",
-            "type": "verb",
-            "root": "ريب",
-            "count": 9,
-            "ref": "74:31",
-            "pos": 23,
-            "form": 8
-          }
-        ]
-      },
-      {
-        "w": "تبارك",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "تَبارَكَ",
-            "gloss": "blessed is he",
-            "type": "verb",
-            "root": "برك",
-            "count": 9,
-            "ref": "7:54",
-            "pos": 29,
+            "lemma": "مُتَّقي",
+            "gloss": "righteous",
+            "type": "active participle",
+            "root": "وقي",
+            "count": 49,
+            "ref": "2:2",
+            "pos": 7,
             "alt": [
-              "blessed is",
-              "blessed"
-            ],
-            "form": 6
+              "fear",
+              "god-fearing"
+            ]
           }
         ]
       },
       {
-        "w": "مبارك",
+        "w": "مقام",
         "family": true,
-        "points": 5,
+        "points": 4,
         "senses": [
           {
-            "lemma": "مُبارَك",
-            "gloss": "blessed",
+            "lemma": "مَقام",
+            "gloss": "position",
+            "type": "noun",
+            "root": "قوم",
+            "count": 14,
+            "ref": "2:125",
+            "pos": 9,
+            "alt": [
+              "standing place",
+              "standing"
+            ]
+          },
+          {
+            "lemma": "مُقام",
+            "gloss": "stand",
             "type": "passive participle",
-            "root": "برك",
-            "count": 8,
-            "ref": "3:96",
+            "root": "قوم",
+            "count": 3,
+            "ref": "33:13",
             "pos": 8
           }
         ]
       },
       {
-        "w": "متكبر",
-        "family": false,
-        "points": 3,
+        "w": "مقيم",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "مُتَكَبِّر",
-            "gloss": "arrogant one",
+            "lemma": "مُقِيم",
+            "gloss": "lasting",
             "type": "active participle",
-            "root": "كبر",
-            "count": 7,
-            "ref": "40:27",
-            "pos": 9,
+            "root": "قوم",
+            "count": 10,
+            "ref": "5:37",
+            "pos": 12,
             "alt": [
-              "arrogant"
+              "enduring",
+              "establisher"
             ]
           }
         ]
       },
       {
-        "w": "مباركه",
+        "w": "اقامت",
         "family": true,
-        "points": 6,
+        "points": 5,
         "senses": [
           {
-            "lemma": "مُبارَكَة",
-            "gloss": "blessed",
+            "lemma": "إِقامَت",
+            "gloss": "encampment",
+            "type": "verbal noun",
+            "root": "قوم",
+            "count": 1,
+            "ref": "16:80",
+            "pos": 17
+          }
+        ]
+      },
+      {
+        "w": "تقويم",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "تَقْوِيم",
+            "gloss": "mould",
+            "type": "verbal noun",
+            "root": "قوم",
+            "count": 1,
+            "ref": "95:4",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "قايمه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "قائِمَة",
+            "gloss": "occur",
+            "type": "active participle",
+            "root": "قوم",
+            "count": 5,
+            "ref": "3:113",
+            "pos": 7,
+            "alt": [
+              "standing",
+              "established"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "قيامه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "قِيامَة",
+            "gloss": "resurrection",
             "type": "noun",
-            "root": "برك",
-            "count": 4,
-            "ref": "24:35",
-            "pos": 20
+            "root": "قوم",
+            "count": 70,
+            "ref": "2:85",
+            "pos": 40,
+            "alt": [
+              "judgment"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مقامه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مُقامَة",
+            "gloss": "eternity",
+            "type": "passive participle",
+            "root": "قوم",
+            "count": 1,
+            "ref": "35:35",
+            "pos": 4
+          }
+        ]
+      },
+      {
+        "w": "ميقات",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مِيقات",
+            "gloss": "indicators of periods",
+            "type": "noun",
+            "root": "وقت",
+            "count": 8,
+            "ref": "2:189",
+            "pos": 6,
+            "alt": [
+              "set term",
+              "appointment"
+            ]
           }
         ]
       }
     ],
-    "otherFamily": [],
-    "maxScore": 65,
-    "featuredRoot": "برك"
+    "otherFamily": [
+      {
+        "lemma": "مُسْتَقِيم",
+        "gloss": "straight",
+        "type": "active participle",
+        "root": "قوم",
+        "count": 37,
+        "ref": "2:142",
+        "pos": 21,
+        "alt": [
+          "straight path"
+        ]
+      },
+      {
+        "lemma": "اسْتَقامُ",
+        "gloss": "take a straight way",
+        "type": "verb",
+        "root": "قوم",
+        "count": 10,
+        "ref": "81:28",
+        "pos": 5,
+        "form": 10
+      }
+    ],
+    "maxScore": 82,
+    "featuredRoot": "قوم"
   },
   "generated": true,
   "model": "auto (chain)"

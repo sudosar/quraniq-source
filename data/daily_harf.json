@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "puzzle": {
-    "word": "شديد",
-    "display": "شَدِيدٍ",
-    "hint": "How the Quran describes a harsh punishment awaiting disbelievers",
-    "verseRef": "14:2",
-    "arabicVerse": "ٱللَّهِ ٱلَّذِى لَهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ وَوَيْلٌۭ لِّلْكَـٰفِرِينَ مِنْ عَذَابٍۢ شَدِيدٍ",
-    "verse": "14:2 - Allāh, to whom belongs whatever is in the heavens and whatever is on the earth. And woe [i.e., destruction] to the disbelievers from a severe punishment -"
+    "word": "بكرة",
+    "display": "بُكْرَةً",
+    "hint": "The early part of the day for glorification, paired with late afternoon",
+    "verseRef": "48:9",
+    "arabicVerse": "لِّتُؤْمِنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ وَتُعَزِّرُوهُ وَتُوَقِّرُوهُ وَتُسَبِّحُوهُ بُكْرَةًۭ وَأَصِيلًا",
+    "verse": "48:9 - That you [people] may believe in Allāh and His Messenger and honor him and respect him [i.e., the Prophet (ﷺ)] and exalt Him [i.e., Allāh] morning and afternoon."
   },
   "generated": true,
   "model": "auto (chain)"

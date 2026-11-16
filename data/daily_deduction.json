@@ -1,65 +1,65 @@
 {
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "puzzle": {
-    "title": "the river that revealed hearts",
-    "intro": "Picture an army on the march, thirsty and tested, where a single command at a riverbank will separate resolve from desire. A chosen leader guides the ranks toward a mighty foe, carrying trust in Allah alone.",
+    "title": "solitude beneath the distant palm",
+    "intro": "Picture a quiet retreat far from familiar crowds, where devotion meets an extraordinary decree. A lone servant withdraws in purity and trust, sustained by unseen provision. Around this soul gather signs that defy ordinary explanation, while whispers of doubt wait beyond the place of seclusion. Step closer and listen, for the truth here will challenge every assumption.",
     "clues": [
-      "I was appointed by Allah as a leader over the Children of Israel after they asked for one to fight in His way.",
-      "I was given abundance in knowledge and stature as a sign of my selection, though my people questioned my authority.",
-      "I set out with the forces and told them Allah would test them with a river.",
-      "I warned that whoever drank freely from it would not be of me, except one who scooped a handful.",
-      "I crossed with the few who remained steadfast, facing an army far greater in number.",
-      "I led those who said how often a small company overcomes a large one by Allah's permission, before Jalut was defeated."
+      "I devoted myself to worship in seclusion, sustained by provision from my Lord.",
+      "I received glad tidings that Allah had chosen me above all women of the worlds.",
+      "I withdrew to a remote eastern place, veiled from my people, when a spirit appeared to me in the form of a perfect man.",
+      "I conceived a child by a word from Allah though no man had ever touched me.",
+      "I endured labor alone beneath a palm tree and heard a voice comfort me with a stream beneath me and fresh dates to eat and drink.",
+      "I returned to my people carrying my newborn, held a vow of silence, and my infant spoke from the cradle to defend me as a servant of Allah."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "As-Samiri",
-          "Abu Lahab",
-          "Qarun",
-          "Talut",
-          "Jalut"
+          "Bilqis, ruler of Saba",
+          "The wife of Imran",
+          "The wife of Lut",
+          "Maryam",
+          "Asiya, wife of Pharaoh"
         ],
-        "answer": "Talut"
+        "answer": "Maryam"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Building an ark before the flood",
-          "Being thrown into a cool fire",
-          "Sleeping in a cave for many years",
-          "Testing the army with a river before battle",
-          "Being swallowed by a great fish"
+          "Led an exodus across the parted sea",
+          "Built an ark to survive the flood",
+          "Thrown into a blazing fire and saved",
+          "Miraculous conception and solitary birth under a palm",
+          "Swallowed by a great fish in the deep sea"
         ],
-        "answer": "Testing the army with a river before battle"
+        "answer": "Miraculous conception and solitary birth under a palm"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The river of the test",
-          "The valley of the ants",
-          "The fire of Namrud",
-          "The cave of the sleepers",
-          "The elephant army's path"
+          "The palm trunk with a stream below",
+          "The ark resting on Mount Judi",
+          "The Kaaba in Makkah",
+          "The fire prepared by Namrud",
+          "The sacred valley of Tuwa"
         ],
-        "answer": "The river of the test"
+        "answer": "The palm trunk with a stream below"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Swallowing by the earth with treasures",
-          "Transformation into apes for transgression",
-          "Destruction by a mighty blast",
-          "Victory by Allah's permission and Jalut was slain by Dawud",
-          "Drowning in the sea with hosts"
+          "Swallowed by the earth with treasures",
+          "Destroyed by a thunderous blast for hamstringing the she-camel",
+          "Drowned with the army in the sea",
+          "Turned into apes for breaking the Sabbath",
+          "Vindicated when the newborn spoke in the cradle"
         ],
-        "answer": "Victory by Allah's permission and Jalut was slain by Dawud"
+        "answer": "Vindicated when the newborn spoke in the cradle"
       }
     },
-    "verseRef": "2:249",
-    "arabic": "فَلَمَّا فَصَلَ طَالُوتُ بِٱلْجُنُودِ قَالَ إِنَّ ٱللَّهَ مُبْتَلِيكُم بِنَهَرٍۢ فَمَن شَرِبَ مِنْهُ فَلَيْسَ مِنِّى وَمَن لَّمْ يَطْعَمْهُ فَإِنَّهُۥ مِنِّىٓ إِلَّا مَنِ ٱغْتَرَفَ غُرْفَةًۢ بِيَدِهِۦ ۚ فَشَرِبُوا۟ مِنْهُ إِلَّا قَلِيلًۭا مِّنْهُمْ ۚ فَلَمَّا جَاوَزَهُۥ هُوَ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ قَالُوا۟ لَا طَاقَةَ لَنَا ٱلْيَوْمَ بِجَالُوتَ وَجُنُودِهِۦ ۚ قَالَ ٱلَّذِينَ يَظُنُّونَ أَنَّهُم مُّلَـٰقُوا۟ ٱللَّهِ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ۗ وَٱللَّهُ مَعَ ٱلصَّـٰبِرِينَ",
-    "verse": "And when Saul went forth with the soldiers, he said, \"Indeed, Allāh will be testing you with a river. So whoever drinks from it is not of me, and whoever does not taste it is indeed of me, excepting one who takes [from it] in the hollow of his hand.\" But they drank from it, except a [very] few of them. Then when he had crossed it along with those who believed with him, they said, \"There is no power for us today against Goliath and his soldiers.\" But those who were certain that they would meet Allāh said, \"How many a small company has overcome a large company by permission of Allāh. And Allāh is with the patient.\" (2:249)"
+    "verseRef": "19:22",
+    "arabic": "۞ فَحَمَلَتْهُ فَٱنتَبَذَتْ بِهِۦ مَكَانًۭا قَصِيًّۭا",
+    "verse": "So she conceived him, and she withdrew with him to a remote place. (19:22)"
   },
   "generated": true,
   "model": "auto (chain)"
