@@ -905,7 +905,7 @@ function getConnShareText() {
 
     const { crescentRow, totalExplored, totalVerses, totalScore } = getConnCrescentData();
 
-    return `QuranIQ - Connections #${puzzleNum}\n${emojiGrid.trim()}\n${crescentRow} ${totalScore}/8\nVerses reviewed: ${totalExplored}/${totalVerses}\nGroups: ${correctCount}/4 | Mistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quraniq/#connections`;
+    return `QuranIQ - Connections #${puzzleNum}\n${emojiGrid.trim()}\n${crescentRow} ${totalScore}/8\nVerses reviewed: ${totalExplored}/${totalVerses}\nGroups: ${correctCount}/4 | Mistakes: ${mistakesUsed}/4\n\nhttps://sudosar.github.io/quraniq/connections/`;
 }
 
 function showConnResult(won, cacheOnly) {

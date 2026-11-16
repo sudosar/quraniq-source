@@ -602,7 +602,7 @@ function showHarfResult(won, cacheOnly) {
     const moonStr = '🌙'.repeat(moons) + '🌑'.repeat(5 - moons);
 
     const hintNote = harf.hintsUsed > 0 ? ` (${harf.hintsUsed} hint${harf.hintsUsed > 1 ? 's' : ''})` : '';
-    const shareText = `QuranIQ - Harf by Harf #${puzzleNum}\n${tries}/${harf.maxRows}${hintNote}\n\n${emojiGrid}${moonStr}\n\nhttps://sudosar.github.io/quraniq/#harf`;
+    const shareText = `QuranIQ - Harf by Harf #${puzzleNum}\n${tries}/${harf.maxRows}${hintNote}\n\n${emojiGrid}${moonStr}\n\nhttps://sudosar.github.io/quraniq/harf/`;
 
     const resultData = {
         icon: won ? '🌟' : '📖',
