@@ -3,7 +3,7 @@ Playwright + HTTP check: per-game OG share cards and landing pages.
 
 For each game, verifies:
   - /<game>/ serves a landing page with its own og:title / og:description /
-    og:image (1200x630 JPEG, <300KB) and og:url, plus a redirect to /#<game>
+    og:image (1200x1200 JPEG, <300KB) and og:url, plus a redirect to /#<game>
   - the game's share-text URL in js/ points at /<game>/, not /#<game>
   - opening /<game>/ in a browser lands on /#<game> with that game's
     section active
@@ -31,7 +31,7 @@ GAMES = {
     "connections": ("Ayah Connections", "connections", "connections-game", "js/connections.js"),
     "harf": ("Harf by Harf", "harf", "harf-game", "js/harf.js"),
     "deduction": ("Who Am I?", "deduction", "deduction-game", "js/deduction.js"),
-    "scramble": ("Ayah Scramble", "scramble", "scramble-game", "js/scramble.js"),
+    "scramble": ("Tarteeb", "scramble", "scramble-game", "js/scramble.js"),
     "roothive": ("Root Hive", "roothive", "roothive-game", "js/roothive.js"),
     "juz": ("Juz Journey", "juz", "juz-game", "js/juz-puzzle.js"),
 }
@@ -83,7 +83,7 @@ def check_landing(slug, title, mode):
     check(img == f"https://sudosar.github.io/quraniq/icons/og/og-{slug}.jpg",
           f"og:image is og-{slug}.jpg")
     check(p.props.get("og:image:width") == "1200", "og:image:width is 1200")
-    check(p.props.get("og:image:height") == "630", "og:image:height is 630")
+    check(p.props.get("og:image:height") == "1200", "og:image:height is 1200")
     check(p.props.get("og:image:type") == "image/jpeg", "og:image:type is jpeg")
     check(p.names.get("twitter:card") == "summary_large_image",
           "twitter:card is summary_large_image")
@@ -99,7 +99,7 @@ def check_landing(slug, title, mode):
     check(ctype == "image/jpeg", f"og-{slug}.jpg is jpeg")
     check(len(data) < 300_000, f"og-{slug}.jpg under 300KB ({len(data)} bytes)")
     im = Image.open(io.BytesIO(data))
-    check(im.size == (1200, 630), f"og-{slug}.jpg is 1200x630")
+    check(im.size == (1200, 1200), f"og-{slug}.jpg is 1200x1200")
 
 
 def check_share_url(slug, mode, js_file):

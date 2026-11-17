@@ -53,7 +53,7 @@ function showOnboarding() {
                     </div>
                     <div class="onboarding-mode">
                         <div class="onboarding-mode-icon" aria-hidden="true">🧩</div>
-                        <div class="onboarding-mode-name">Ayah Scramble</div>
+                        <div class="onboarding-mode-name">Tarteeb</div>
                         <div class="onboarding-mode-desc">Arrange words to complete a verse</div>
                     </div>
                 </div>
