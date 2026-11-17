@@ -1,607 +1,725 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "puzzle": {
-    "center": "ق",
+    "center": "ي",
     "outer": [
-      "م",
-      "ه",
+      "ر",
       "ا",
-      "ي",
       "ت",
-      "و"
+      "س",
+      "م",
+      "ط"
     ],
     "root": {
-      "letters": "قوم",
-      "display": "ق و م",
-      "translit": "q-w-m",
-      "meaning": "The core idea is standing upright and staying firm. It extends from physical standing to a steady uprightness in character and purpose.",
-      "occurrences": 660,
-      "lemmaCount": 22
+      "letters": "طير",
+      "display": "ط ي ر",
+      "translit": "ṭ-y-r",
+      "meaning": "The core idea is flying through the air with lightness and speed. It gives words for birds and flying, then extends to seeing omens in their flight and to anything spreading fast and far.",
+      "occurrences": 29,
+      "lemmaCount": 5
     },
     "words": [
       {
-        "w": "تقي",
+        "w": "اتي",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "تَقِيّ",
-            "gloss": "righteous",
-            "type": "noun",
-            "root": "وقي",
-            "count": 4,
-            "ref": "19:13",
-            "pos": 6,
-            "alt": [
-              "god fearing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قام",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "قامَ",
-            "gloss": "stand",
+            "lemma": "آتَى",
+            "gloss": "was given",
             "type": "verb",
-            "root": "قوم",
-            "count": 33,
-            "ref": "2:275",
-            "pos": 8,
-            "alt": [
-              "established",
-              "stands"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "قوم",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "قَوْم",
-            "gloss": "people",
-            "type": "noun",
-            "root": "قوم",
-            "count": 383,
-            "ref": "3:86",
-            "pos": 4,
-            "alt": [
-              "community",
-              "group"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قوه",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قُوَّة",
-            "gloss": "strength",
-            "type": "noun",
-            "root": "قوي",
-            "count": 30,
-            "ref": "8:60",
-            "pos": 6,
-            "alt": [
-              "power",
-              "force"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قوي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "قَوِيّ",
-            "gloss": "all-strong",
-            "type": "noun",
-            "root": "قوي",
-            "count": 11,
-            "ref": "8:52",
-            "pos": 15
-          }
-        ]
-      },
-      {
-        "w": "قيم",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "قَيِّم",
-            "gloss": "straight",
-            "type": "adjective",
-            "root": "قوم",
-            "count": 5,
-            "ref": "18:2",
-            "pos": 1
-          },
-          {
-            "lemma": "قِيَم",
-            "gloss": "right",
-            "type": "adjective",
-            "root": "قوم",
-            "count": 1,
-            "ref": "6:161",
-            "pos": 9
-          }
-        ]
-      },
-      {
-        "w": "مقت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَقْت",
-            "gloss": "hatred",
-            "type": "noun",
-            "root": "مقت",
-            "count": 6,
-            "ref": "35:39",
-            "pos": 18,
-            "alt": [
-              "hateful"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "واق",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "واق",
-            "gloss": "defender",
-            "type": "active participle",
-            "root": "وقي",
-            "count": 3,
-            "ref": "13:34",
-            "pos": 14,
-            "alt": [
-              "protector"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "وقت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وَقْت",
-            "gloss": "time",
-            "type": "noun",
-            "root": "وقت",
-            "count": 3,
-            "ref": "7:187",
-            "pos": 13
-          }
-        ]
-      },
-      {
-        "w": "وقي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "وَقَى",
-            "gloss": "protect",
-            "type": "verb",
-            "root": "وقي",
-            "count": 16,
-            "ref": "40:9",
-            "pos": 4,
-            "alt": [
-              "is saved"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "اتقي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "اتَّقَى",
-            "gloss": "fears",
-            "type": "verb",
-            "root": "وقي",
-            "count": 166,
-            "ref": "2:189",
-            "pos": 19,
-            "alt": [
-              "fear",
-              "fears allah"
-            ],
-            "form": 8
-          },
-          {
-            "lemma": "أَتْقَى",
-            "gloss": "most righteous of",
-            "type": "noun",
-            "root": "وقي",
-            "count": 2,
-            "ref": "49:13",
+            "root": "أتي",
+            "count": 271,
+            "ref": "2:136",
             "pos": 16,
             "alt": [
-              "righteous"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اقام",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "أَقامَ",
-            "gloss": "establish",
-            "type": "verb",
-            "root": "قوم",
-            "count": 54,
-            "ref": "10:105",
-            "pos": 2,
-            "alt": [
-              "direct",
-              "assign"
+              "is given",
+              "has been given"
             ],
             "form": 4
           },
           {
-            "lemma": "إِقام",
-            "gloss": "establishment",
-            "type": "verbal noun",
-            "root": "قوم",
-            "count": 2,
-            "ref": "21:73",
-            "pos": 9,
+            "lemma": "أَتَى",
+            "gloss": "comes",
+            "type": "verb",
+            "root": "أتي",
+            "count": 264,
+            "ref": "2:106",
+            "pos": 7,
             "alt": [
-              "establishing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اقوم",
-        "family": true,
-        "points": 4,
-        "senses": [
+              "come",
+              "bring"
+            ],
+            "form": 1
+          },
           {
-            "lemma": "أَقْوَم",
-            "gloss": "most straight",
-            "type": "noun",
-            "root": "قوم",
-            "count": 4,
-            "ref": "17:9",
-            "pos": 7
-          }
-        ]
-      },
-      {
-        "w": "تقوي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "تَقْوَى",
-            "gloss": "righteousness",
-            "type": "noun",
-            "root": "وقي",
-            "count": 17,
-            "ref": "9:109",
-            "pos": 5,
-            "alt": [
-              "piety"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قايم",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "قائِم",
-            "gloss": "means of support",
+            "lemma": "آتِي",
+            "gloss": "come",
             "type": "active participle",
-            "root": "قوم",
-            "count": 17,
-            "ref": "3:18",
-            "pos": 11,
+            "root": "أتي",
+            "count": 9,
+            "ref": "19:93",
+            "pos": 8,
             "alt": [
-              "standing",
-              "establishment"
+              "coming"
             ]
           }
         ]
       },
       {
-        "w": "قوام",
-        "family": true,
-        "points": 4,
+        "w": "اري",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "قَوّام",
-            "gloss": "protectors",
-            "type": "noun",
-            "root": "قوم",
-            "count": 3,
-            "ref": "4:34",
+            "lemma": "أَرَيْ",
+            "gloss": "show",
+            "type": "verb",
+            "root": "رأي",
+            "count": 40,
+            "ref": "6:75",
             "pos": 2,
-            "alt": [
-              "custodians",
-              "steadfast"
-            ]
-          },
-          {
-            "lemma": "قَوام",
-            "gloss": "moderate",
-            "type": "noun",
-            "root": "قوم",
-            "count": 1,
-            "ref": "25:67",
-            "pos": 11
+            "form": 4
           }
         ]
       },
       {
-        "w": "قيمه",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "قَيِّمَة",
-            "gloss": "correct",
-            "type": "adjective",
-            "root": "قوم",
-            "count": 2,
-            "ref": "98:3",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "قيوم",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "قَيُّوم",
-            "gloss": "sustainer of all that exists",
-            "type": "adjective",
-            "root": "قوم",
-            "count": 3,
-            "ref": "2:255",
-            "pos": 7,
-            "alt": [
-              "self-subsisting"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "متقي",
+        "w": "امي",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "مُتَّقي",
-            "gloss": "righteous",
-            "type": "active participle",
-            "root": "وقي",
-            "count": 49,
-            "ref": "2:2",
-            "pos": 7,
-            "alt": [
-              "fear",
-              "god-fearing"
-            ]
+            "lemma": "أُمِّيّ",
+            "gloss": "unlettered ones",
+            "type": "noun",
+            "root": "أمم",
+            "count": 6,
+            "ref": "2:78",
+            "pos": 2
           }
         ]
       },
       {
-        "w": "مقام",
-        "family": true,
-        "points": 4,
+        "w": "راي",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "مَقام",
-            "gloss": "position",
-            "type": "noun",
-            "root": "قوم",
-            "count": 14,
-            "ref": "2:125",
-            "pos": 9,
+            "lemma": "رَأَى",
+            "gloss": "saw",
+            "type": "verb",
+            "root": "رأي",
+            "count": 271,
+            "ref": "2:55",
+            "pos": 8,
             "alt": [
-              "standing place",
-              "standing"
-            ]
+              "see",
+              "seen"
+            ],
+            "form": 1
           },
           {
-            "lemma": "مُقام",
-            "gloss": "stand",
-            "type": "passive participle",
-            "root": "قوم",
-            "count": 3,
-            "ref": "33:13",
-            "pos": 8
-          }
-        ]
-      },
-      {
-        "w": "مقيم",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُقِيم",
-            "gloss": "lasting",
-            "type": "active participle",
-            "root": "قوم",
-            "count": 10,
-            "ref": "5:37",
-            "pos": 12,
-            "alt": [
-              "enduring",
-              "establisher"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اقامت",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "إِقامَت",
-            "gloss": "encampment",
-            "type": "verbal noun",
-            "root": "قوم",
-            "count": 1,
-            "ref": "16:80",
+            "lemma": "رَأْى",
+            "gloss": "sight",
+            "type": "noun",
+            "root": "رأي",
+            "count": 2,
+            "ref": "3:13",
             "pos": 17
           }
         ]
       },
       {
-        "w": "تقويم",
-        "family": true,
-        "points": 5,
+        "w": "رمي",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "تَقْوِيم",
-            "gloss": "mould",
-            "type": "verbal noun",
-            "root": "قوم",
-            "count": 1,
-            "ref": "95:4",
-            "pos": 6
-          }
-        ]
-      },
-      {
-        "w": "قايمه",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "قائِمَة",
-            "gloss": "occur",
-            "type": "active participle",
-            "root": "قوم",
-            "count": 5,
-            "ref": "3:113",
+            "lemma": "رَمَى",
+            "gloss": "throws",
+            "type": "verb",
+            "root": "رمي",
+            "count": 9,
+            "ref": "4:112",
             "pos": 7,
             "alt": [
-              "standing",
-              "established"
-            ]
+              "threw",
+              "throws up"
+            ],
+            "form": 1
           }
         ]
       },
       {
-        "w": "قيامه",
-        "family": true,
-        "points": 5,
+        "w": "سمي",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "قِيامَة",
-            "gloss": "resurrection",
+            "lemma": "سَمَّى",
+            "gloss": "named",
+            "type": "verb",
+            "root": "سمو",
+            "count": 8,
+            "ref": "76:18",
+            "pos": 3,
+            "form": 2
+          },
+          {
+            "lemma": "سَمِيّ",
+            "gloss": "name",
             "type": "noun",
-            "root": "قوم",
-            "count": 70,
-            "ref": "2:85",
-            "pos": 40,
+            "root": "سمو",
+            "count": 2,
+            "ref": "19:7",
+            "pos": 12,
             "alt": [
-              "judgment"
+              "any similarity"
             ]
           }
         ]
       },
       {
-        "w": "مقامه",
-        "family": true,
-        "points": 5,
+        "w": "سير",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "مُقامَة",
-            "gloss": "eternity",
-            "type": "passive participle",
-            "root": "قوم",
-            "count": 1,
-            "ref": "35:35",
-            "pos": 4
+            "lemma": "سَيْر",
+            "gloss": "movement",
+            "type": "noun",
+            "root": "سير",
+            "count": 2,
+            "ref": "52:10",
+            "pos": 3
           }
         ]
       },
       {
-        "w": "ميقات",
+        "w": "سيي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "سَيِّئ",
+            "gloss": "evil",
+            "type": "adjective",
+            "root": "سوأ",
+            "count": 4,
+            "ref": "9:102",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "طري",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "طَرِيّ",
+            "gloss": "fresh",
+            "type": "adjective",
+            "root": "طرو",
+            "count": 2,
+            "ref": "16:14",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "طير",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "طَيْر",
+            "gloss": "fowls",
+            "type": "noun",
+            "root": "طير",
+            "count": 19,
+            "ref": "3:49",
+            "pos": 21,
+            "alt": [
+              "bird",
+              "birds"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ميت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَيِّت",
+            "gloss": "dead",
+            "type": "noun",
+            "root": "موت",
+            "count": 38,
+            "ref": "2:28",
+            "pos": 5,
+            "alt": [
+              "die"
+            ]
+          },
+          {
+            "lemma": "مَيْت",
+            "gloss": "dead",
+            "type": "noun",
+            "root": "موت",
+            "count": 5,
+            "ref": "6:122",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "يسر",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "يُسْر",
+            "gloss": "ease",
+            "type": "noun",
+            "root": "يسر",
+            "count": 7,
+            "ref": "18:88",
+            "pos": 13
+          }
+        ]
+      },
+      {
+        "w": "اسري",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَسْرَى",
+            "gloss": "travel by night",
+            "type": "verb",
+            "root": "سري",
+            "count": 6,
+            "ref": "17:1",
+            "pos": 3,
+            "alt": [
+              "took"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "اسير",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَسِير",
+            "gloss": "captives",
+            "type": "noun",
+            "root": "أسر",
+            "count": 4,
+            "ref": "2:85",
+            "pos": 17,
+            "alt": [
+              "prisoners of war"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اطير",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "اطَّيَّرْ",
+            "gloss": "ascribe evil omens",
+            "type": "verb",
+            "root": "طير",
+            "count": 3,
+            "ref": "7:131",
+            "pos": 10,
+            "alt": [
+              "consider you a bad omen",
+              "see an evil omen"
+            ],
+            "form": 5
+          }
+        ]
+      },
+      {
+        "w": "امري",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "امْرِئ",
+            "gloss": "person",
+            "type": "noun",
+            "root": "مرأ",
+            "count": 5,
+            "ref": "24:11",
+            "pos": 16,
+            "alt": [
+              "man"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "تيسر",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "تَيَسَّرَ",
+            "gloss": "is easy",
+            "type": "verb",
+            "root": "يسر",
+            "count": 2,
+            "ref": "73:20",
+            "pos": 28,
+            "form": 5
+          }
+        ]
+      },
+      {
+        "w": "تيمم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "تَيَمَّمُ",
+            "gloss": "aim",
+            "type": "verb",
+            "root": "يمم",
+            "count": 3,
+            "ref": "2:267",
+            "pos": 15,
+            "alt": [
+              "tayammum",
+              "tayyammum"
+            ],
+            "form": 5
+          }
+        ]
+      },
+      {
+        "w": "رميم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "رَمِيم",
+            "gloss": "decomposed",
+            "type": "noun",
+            "root": "رمم",
+            "count": 2,
+            "ref": "36:78",
+            "pos": 11
+          }
+        ]
+      },
+      {
+        "w": "سيرت",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "سُيِّرَتْ",
+            "gloss": "could be moved",
+            "type": "verb",
+            "root": "سير",
+            "count": 5,
+            "ref": "13:31",
+            "pos": 4,
+            "alt": [
+              "cause move",
+              "are moved away"
+            ],
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "سيما",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "سِيما",
+            "gloss": "marks",
+            "type": "noun",
+            "root": "سوم",
+            "count": 6,
+            "ref": "2:273",
+            "pos": 18,
+            "alt": [
+              "mark"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "طاير",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "طائِر",
+            "gloss": "bird",
+            "type": "active participle",
+            "root": "طير",
+            "count": 5,
+            "ref": "6:38",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "مرسي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُرْسَى",
+            "gloss": "appointed time",
+            "type": "passive participle",
+            "root": "رسو",
+            "count": 3,
+            "ref": "7:187",
+            "pos": 5,
+            "alt": [
+              "anchorage",
+              "arrival"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مسمي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مُسَمًّى",
+            "gloss": "specified",
+            "type": "passive participle",
+            "root": "سمو",
+            "count": 21,
+            "ref": "2:282",
+            "pos": 9,
+            "alt": [
+              "appointed",
+              "fixed"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ميسر",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَيْسِر",
+            "gloss": "games of chance",
+            "type": "noun",
+            "root": "يسر",
+            "count": 3,
+            "ref": "2:219",
+            "pos": 4,
+            "alt": [
+              "gambling"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "يتيم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "يَتِيم",
+            "gloss": "orphan",
+            "type": "noun",
+            "root": "يتم",
+            "count": 23,
+            "ref": "4:127",
+            "pos": 14,
+            "alt": [
+              "orphans",
+              "two orphan boys"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "يسري",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "يُسْرَى",
+            "gloss": "to the ease",
+            "type": "noun",
+            "root": "يسر",
+            "count": 2,
+            "ref": "87:8",
+            "pos": 2,
+            "alt": [
+              "towards ease"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "يسير",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "يَسِير",
+            "gloss": "gradual",
+            "type": "noun",
+            "root": "يسر",
+            "count": 15,
+            "ref": "4:30",
+            "pos": 13,
+            "alt": [
+              "easy",
+              "little"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "سامري",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "مِيقات",
-            "gloss": "indicators of periods",
-            "type": "noun",
-            "root": "وقت",
-            "count": 8,
-            "ref": "2:189",
-            "pos": 6,
+            "lemma": "سامِرِيّ",
+            "gloss": "samiri",
+            "type": "proper noun",
+            "root": "سمر",
+            "count": 3,
+            "ref": "20:85",
+            "pos": 9,
             "alt": [
-              "set term",
-              "appointment"
+              "o samiri"
             ]
+          }
+        ]
+      },
+      {
+        "w": "ممتري",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مُمْتَري",
+            "gloss": "doubters",
+            "type": "active participle",
+            "root": "مري",
+            "count": 4,
+            "ref": "2:147",
+            "pos": 7,
+            "alt": [
+              "ones who doubt"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اساطير",
+        "family": false,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "أَساطِير",
+            "gloss": "tales",
+            "type": "noun",
+            "root": "سطر",
+            "count": 9,
+            "ref": "6:25",
+            "pos": 31,
+            "alt": [
+              "stories"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "استياس",
+        "family": false,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "اسْتَيْأَسَ",
+            "gloss": "gave up hope",
+            "type": "verb",
+            "root": "يأس",
+            "count": 2,
+            "ref": "12:110",
+            "pos": 3,
+            "form": 10
+          }
+        ]
+      },
+      {
+        "w": "استيسر",
+        "family": false,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "اسْتَيْسَرَ",
+            "gloss": "obtained with ease",
+            "type": "verb",
+            "root": "يسر",
+            "count": 2,
+            "ref": "2:196",
+            "pos": 8,
+            "form": 10
+          }
+        ]
+      },
+      {
+        "w": "مستطير",
+        "family": true,
+        "points": 6,
+        "senses": [
+          {
+            "lemma": "مُسْتَطِير",
+            "gloss": "widespread",
+            "type": "active participle",
+            "root": "طير",
+            "count": 1,
+            "ref": "76:7",
+            "pos": 7
           }
         ]
       }
     ],
     "otherFamily": [
       {
-        "lemma": "مُسْتَقِيم",
-        "gloss": "straight",
-        "type": "active participle",
-        "root": "قوم",
-        "count": 37,
-        "ref": "2:142",
-        "pos": 21,
-        "alt": [
-          "straight path"
-        ]
-      },
-      {
-        "lemma": "اسْتَقامُ",
-        "gloss": "take a straight way",
+        "lemma": "يَطِيرُ",
+        "gloss": "flies",
         "type": "verb",
-        "root": "قوم",
-        "count": 10,
-        "ref": "81:28",
-        "pos": 5,
-        "form": 10
+        "root": "طير",
+        "count": 1,
+        "ref": "6:38",
+        "pos": 8,
+        "form": 1
       }
     ],
-    "maxScore": 82,
-    "featuredRoot": "قوم"
+    "maxScore": 74,
+    "featuredRoot": "طير"
   },
   "generated": true,
   "model": "auto (chain)"

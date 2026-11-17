@@ -1,29 +1,35 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "puzzle": {
-    "verseRef": "67:13",
-    "reference": "Surah Al-Mulk (67:13)",
+    "verseRef": "22:38",
+    "reference": "Surah Al-Hajj (22:38)",
     "segments": [
-      "وَأَسِرُّوا قَوْلَكُمْ",
-      "أَوِ اجْهَرُوا بِهِ",
-      "إِنَّهُ عَلِيمٌ",
-      "بِذَاتِ الصُّدُورِ"
+      "إِنَّ اللَّهَ",
+      "يُدَافِعُ عَنِ",
+      "الَّذِينَ آمَنُوا",
+      "إِنَّ اللَّهَ لَا",
+      "يُحِبُّ كُلَّ",
+      "خَوَّانٍ كَفُورٍ"
     ],
     "translations": [
-      "And conceal your speech or",
-      "proclaim it",
-      "Indeed, He (is the) All-Knower",
-      "of what (is in) the breasts"
+      "Indeed Allah defends",
+      "defends those who",
+      "believe Indeed",
+      "Allah (does) not",
+      "like every",
+      "treacherous ungrateful"
     ],
-    "hint": "Allah's perfect knowledge of all secrets, hidden thoughts and open words",
-    "arabic": "وَأَسِرُّوا۟ قَوْلَكُمْ أَوِ ٱجْهَرُوا۟ بِهِۦٓ ۖ إِنَّهُۥ عَلِيمٌۢ بِذَاتِ ٱلصُّدُورِ",
+    "hint": "Allah's defense of the believers and His dislike of betrayal and ingratitude",
+    "arabic": "۞ إِنَّ ٱللَّهَ يُدَٰفِعُ عَنِ ٱلَّذِينَ ءَامَنُوٓا۟ ۗ إِنَّ ٱللَّهَ لَا يُحِبُّ كُلَّ خَوَّانٍۢ كَفُورٍ",
     "words": [
-      "وَأَسِرُّوا۟ قَوْلَكُمْ أَوِ",
-      "ٱجْهَرُوا۟ بِهِۦٓ ۖ",
-      "إِنَّهُۥ عَلِيمٌۢ",
-      "بِذَاتِ ٱلصُّدُورِ"
+      "۞ إِنَّ ٱللَّهَ يُدَٰفِعُ",
+      "عَنِ ٱلَّذِينَ",
+      "ءَامَنُوٓا۟ ۗ إِنَّ",
+      "ٱللَّهَ لَا",
+      "يُحِبُّ كُلَّ",
+      "خَوَّانٍۢ كَفُورٍ"
     ],
-    "verseEn": "And conceal your speech or publicize it; indeed, He is Knowing of that within the breasts."
+    "verseEn": "Indeed, Allāh defends those who have believed. Indeed, Allāh does not like everyone treacherous and ungrateful."
   },
   "generated": true,
   "model": "auto (chain)"
