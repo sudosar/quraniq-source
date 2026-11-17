@@ -7,7 +7,7 @@ For each game, verifies:
   - the game's share-text URL in js/ points at /<game>/, not /#<game>
   - opening /<game>/ in a browser lands on /#<game> with that game's
     section active
-Also checks the home page now serves the 1200x630 og-home.jpg card.
+Also checks the home page still serves the original og-preview.png logo card.
 
 Run: python3 tests/og_cards.py
 Requires: a local server on :8765 (python3 -m http.server 8765) and
@@ -118,10 +118,10 @@ def check_home():
     check(status == 200, "home returns 200")
     p = MetaParser()
     p.feed(body.decode("utf-8"))
-    check(p.props.get("og:image") == "https://sudosar.github.io/quraniq/icons/og/og-home.jpg",
-          "home og:image is og-home.jpg")
-    check(p.props.get("og:image:width") == "1200", "home og:image:width is 1200")
-    check(p.props.get("og:image:height") == "630", "home og:image:height is 630")
+    check(p.props.get("og:image") == "https://sudosar.github.io/quraniq/icons/og-preview.png",
+          "home og:image is og-preview.png")
+    check(p.props.get("og:image:width") == "512", "home og:image:width is 512")
+    check(p.props.get("og:image:height") == "512", "home og:image:height is 512")
 
 
 def check_redirects():
