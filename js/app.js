@@ -489,7 +489,7 @@ function showHelpModal() {
             <p>Select your answers for each category, then submit. The fewer clues you need, the better your score!</p>
         `,
         scramble: `
-            <h3>Ayah Scramble</h3>
+            <h3>Tarteeb</h3>
             <p>The segments of a Quranic verse have been scrambled. Tap segments to place them in the answer zone, or <strong>drag</strong> them to reorder. Rebuild the verse in the correct order!</p>
             <p>A free <strong>theme hint</strong> is always shown at the top to give you context about the verse.</p>
             <p><strong>Hints</strong> (each costs 1🌙):</p>
@@ -868,7 +868,7 @@ function getGameInsight(mode, stats) {
         connections: 'Ayah Connections',
         harf: 'Harf by Harf',
         deduction: 'Who Am I?',
-        scramble: 'Ayah Scramble',
+        scramble: 'Tarteeb',
         roothive: 'Root Hive'
     };
 
