@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "puzzle": {
-    "word": "معايش",
-    "display": "مَعَايِشَ",
-    "hint": "Provisions and means of livelihood granted for survival on earth",
-    "verseRef": "7:10",
-    "arabicVerse": "وَلَقَدْ مَكَّنَّـٰكُمْ فِى ٱلْأَرْضِ وَجَعَلْنَا لَكُمْ فِيهَا مَعَـٰيِشَ ۗ قَلِيلًۭا مَّا تَشْكُرُونَ",
-    "verse": "7:10 - And We have certainly established you upon the earth and made for you therein ways of livelihood. Little are you grateful."
+    "word": "عبادا",
+    "display": "عِبَادًا",
+    "hint": "Devoted servants sent with great might as a warning fulfilled",
+    "verseRef": "17:5",
+    "arabicVerse": "فَإِذَا جَآءَ وَعْدُ أُولَىٰهُمَا بَعَثْنَا عَلَيْكُمْ عِبَادًۭا لَّنَآ أُو۟لِى بَأْسٍۢ شَدِيدٍۢ فَجَاسُوا۟ خِلَـٰلَ ٱلدِّيَارِ ۚ وَكَانَ وَعْدًۭا مَّفْعُولًۭا",
+    "verse": "17:5 - So when the [time of] promise came for the first of them, We sent against you servants of Ours - those of great military might, and they probed [even] into the homes, and it was a promise fulfilled."
   },
   "generated": true,
   "model": "auto (chain)"

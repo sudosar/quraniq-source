@@ -1,144 +1,144 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "puzzle": {
     "categories": [
       {
-        "name": "مَخْلُوقَاتُ اللَّهِ",
-        "nameEn": "Creations of Allah",
+        "name": "أَفْعَالُ الْقَوْلِ وَالْكَلَامِ",
+        "nameEn": "Verbs of speaking in the Qur'an",
         "color": "yellow",
         "items": [
           {
-            "ar": "السَّمَاوَاتِ",
-            "en": "the heavens",
-            "ref": "14:19",
-            "verse": "أَلَمْ تَرَ أَنَّ ٱللَّهَ خَلَقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ بِٱلْحَقِّ ۚ إِن يَشَأْ يُذْهِبْكُمْ وَيَأْتِ بِخَلْقٍۢ جَدِيدٍۢ",
-            "verseEn": "Have you not seen [i.e., considered] that Allāh created the heavens and the earth in truth? If He wills, He can do away with you and produce a new creation."
+            "ar": "فَاسْأَلُوا",
+            "en": "So ask",
+            "ref": "21:7",
+            "verse": "وَمَآ أَرْسَلْنَا قَبْلَكَ إِلَّا رِجَالًۭا نُّوحِىٓ إِلَيْهِمْ ۖ فَسْـَٔلُوٓا۟ أَهْلَ ٱلذِّكْرِ إِن كُنتُمْ لَا تَعْلَمُونَ",
+            "verseEn": "And We sent not before you, [O Muḥammad], except men to whom We revealed [the message], so ask the people of the message [i.e., former scriptures] if you do not know."
           },
           {
-            "ar": "الْأَرْضِ",
-            "en": "the earth",
-            "ref": "17:4",
-            "verse": "وَقَضَيْنَآ إِلَىٰ بَنِىٓ إِسْرَٰٓءِيلَ فِى ٱلْكِتَـٰبِ لَتُفْسِدُنَّ فِى ٱلْأَرْضِ مَرَّتَيْنِ وَلَتَعْلُنَّ عُلُوًّۭا كَبِيرًۭا",
-            "verseEn": "And We conveyed to the Children of Israel in the Scripture that, \"You will surely cause corruption on the earth twice, and you will surely reach [a degree of] great haughtiness.\""
+            "ar": "يَسْتَصْرِخُهُ",
+            "en": "cried out to him for help",
+            "ref": "28:18",
+            "verse": "فَأَصْبَحَ فِى ٱلْمَدِينَةِ خَآئِفًۭا يَتَرَقَّبُ فَإِذَا ٱلَّذِى ٱسْتَنصَرَهُۥ بِٱلْأَمْسِ يَسْتَصْرِخُهُۥ ۚ قَالَ لَهُۥ مُوسَىٰٓ إِنَّكَ لَغَوِىٌّۭ مُّبِينٌۭ",
+            "verseEn": "And he became inside the city fearful and anticipating [exposure], when suddenly the one who sought his help the previous day cried out to him [once again]. Moses said to him, \"Indeed, you are an evident, [persistent] deviator.\""
           },
           {
-            "ar": "الْإِنسَانُ",
-            "en": "man",
-            "ref": "41:49",
-            "verse": "لَّا يَسْـَٔمُ ٱلْإِنسَـٰنُ مِن دُعَآءِ ٱلْخَيْرِ وَإِن مَّسَّهُ ٱلشَّرُّ فَيَـُٔوسٌۭ قَنُوطٌۭ",
-            "verseEn": "Man is not weary of supplication for good [things], but if evil touches him, he is hopeless and despairing."
+            "ar": "يَقُصُّونَ",
+            "en": "relating",
+            "ref": "7:35",
+            "verse": "يَـٰبَنِىٓ ءَادَمَ إِمَّا يَأْتِيَنَّكُمْ رُسُلٌۭ مِّنكُمْ يَقُصُّونَ عَلَيْكُمْ ءَايَـٰتِى ۙ فَمَنِ ٱتَّقَىٰ وَأَصْلَحَ فَلَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ",
+            "verseEn": "O children of Adam, if there come to you messengers from among you relating to you My verses [i.e., scriptures and laws], then whoever fears Allāh and reforms - there will be no fear concerning them, nor will they grieve."
           },
           {
-            "ar": "الْمَلَائِكَةُ",
-            "en": "and the Angels",
-            "ref": "16:49",
-            "verse": "وَلِلَّهِ يَسْجُدُ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ مِن دَآبَّةٍۢ وَٱلْمَلَـٰٓئِكَةُ وَهُمْ لَا يَسْتَكْبِرُونَ",
-            "verseEn": "And to Allāh prostrates whatever is in the heavens and whatever is on the earth of creatures, and the angels [as well], and they are not arrogant."
+            "ar": "قَالُوا",
+            "en": "They said",
+            "ref": "15:53",
+            "verse": "قَالُوا۟ لَا تَوْجَلْ إِنَّا نُبَشِّرُكَ بِغُلَـٰمٍ عَلِيمٍۢ",
+            "verseEn": "[The angels] said, \"Fear not. Indeed, we give you good tidings of a learned boy.\""
           }
         ]
       },
       {
-        "name": "أَفْعَالُ الْإِدْرَاكِ وَالْمَعْرِفَةِ",
-        "nameEn": "Acts of perceiving and knowing",
+        "name": "رُسُلٌ مَذْكُورُونَ فِي الْقُرْآنِ",
+        "nameEn": "Messengers named in the Qur'an",
         "color": "green",
         "items": [
           {
-            "ar": "رَأَىٰ",
-            "en": "he saw",
-            "ref": "53:18",
-            "verse": "لَقَدْ رَأَىٰ مِنْ ءَايَـٰتِ رَبِّهِ ٱلْكُبْرَىٰٓ",
-            "verseEn": "He certainly saw of the greatest signs of his Lord."
-          },
-          {
-            "ar": "أَعْلَمُ",
-            "en": "I know",
-            "ref": "11:31",
-            "verse": "وَلَآ أَقُولُ لَكُمْ عِندِى خَزَآئِنُ ٱللَّهِ وَلَآ أَعْلَمُ ٱلْغَيْبَ وَلَآ أَقُولُ إِنِّى مَلَكٌۭ وَلَآ أَقُولُ لِلَّذِينَ تَزْدَرِىٓ أَعْيُنُكُمْ لَن يُؤْتِيَهُمُ ٱللَّهُ خَيْرًا ۖ ٱللَّهُ أَعْلَمُ بِمَا فِىٓ أَنفُسِهِمْ  ۖ إِنِّىٓ إِذًۭا لَّمِنَ ٱلظَّـٰلِمِينَ",
-            "verseEn": "And I do not tell you that I have the depositories [containing the provision] of Allāh or that I know the unseen, nor do I tell you that I am an angel, nor do I say of those upon whom your eyes look down that Allāh will never grant them any good. Allāh is most knowing of what is within their souls. Indeed, I would then be among the wrongdoers [i.e., the unjust].\""
-          },
-          {
-            "ar": "مُّسْتَمِعُونَ",
-            "en": "listening",
-            "ref": "26:15",
-            "verse": "قَالَ كَلَّا ۖ فَٱذْهَبَا بِـَٔايَـٰتِنَآ ۖ إِنَّا مَعَكُم مُّسْتَمِعُونَ",
-            "verseEn": "[Allāh] said, \"No. Go both of you with Our signs; indeed, We are with you, listening."
-          },
-          {
-            "ar": "تُبْصِرُونَ",
-            "en": "see",
-            "ref": "27:54",
-            "verse": "وَلُوطًا إِذْ قَالَ لِقَوْمِهِۦٓ أَتَأْتُونَ ٱلْفَـٰحِشَةَ وَأَنتُمْ تُبْصِرُونَ",
-            "verseEn": "And [mention] Lot, when he said to his people, \"Do you commit immorality while you are seeing?"
-          }
-        ]
-      },
-      {
-        "name": "أَنْبِيَاءُ كَذَّبَهُمْ أَقْوَامُهُمْ",
-        "nameEn": "Prophets rejected by their people",
-        "color": "blue",
-        "items": [
-          {
             "ar": "نُوحٍ",
-            "en": "Nuh",
-            "ref": "11:36",
-            "verse": "وَأُوحِىَ إِلَىٰ نُوحٍ أَنَّهُۥ لَن يُؤْمِنَ مِن قَوْمِكَ إِلَّا مَن قَدْ ءَامَنَ فَلَا تَبْتَئِسْ بِمَا كَانُوا۟ يَفْعَلُونَ",
-            "verseEn": "And it was revealed to Noah that, \"No one will believe from your people except those who have already believed, so do not be distressed by what they have been doing."
-          },
-          {
-            "ar": "صَالِحًا",
-            "en": "Salih",
-            "ref": "27:45",
-            "verse": "وَلَقَدْ أَرْسَلْنَآ إِلَىٰ ثَمُودَ أَخَاهُمْ صَـٰلِحًا أَنِ ٱعْبُدُوا۟ ٱللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ",
-            "verseEn": "And We had certainly sent to Thamūd their brother Ṣāliḥ, [saying], \"Worship Allāh,\" and at once they were two parties conflicting."
-          },
-          {
-            "ar": "شُعَيْبُ",
-            "en": "O Shuaib",
-            "ref": "11:91",
-            "verse": "قَالُوا۟ يَـٰشُعَيْبُ مَا نَفْقَهُ كَثِيرًۭا مِّمَّا تَقُولُ وَإِنَّا لَنَرَىٰكَ فِينَا ضَعِيفًۭا ۖ وَلَوْلَا رَهْطُكَ لَرَجَمْنَـٰكَ ۖ وَمَآ أَنتَ عَلَيْنَا بِعَزِيزٍۢ",
-            "verseEn": "They said, \"O Shuʿayb, we do not understand much of what you say, and indeed, we consider you among us as weak. And if not for your family, we would have stoned you [to death]; and you are not to us one respected.\""
+            "en": "(of) Nuh",
+            "ref": "10:71",
+            "verse": "۞ وَٱتْلُ عَلَيْهِمْ نَبَأَ نُوحٍ إِذْ قَالَ لِقَوْمِهِۦ يَـٰقَوْمِ إِن كَانَ كَبُرَ عَلَيْكُم مَّقَامِى وَتَذْكِيرِى بِـَٔايَـٰتِ ٱللَّهِ فَعَلَى ٱللَّهِ تَوَكَّلْتُ فَأَجْمِعُوٓا۟ أَمْرَكُمْ وَشُرَكَآءَكُمْ ثُمَّ لَا يَكُنْ أَمْرُكُمْ عَلَيْكُمْ غُمَّةًۭ ثُمَّ ٱقْضُوٓا۟ إِلَىَّ وَلَا تُنظِرُونِ",
+            "verseEn": "And recite to them the news of Noah, when he said to his people, \"O my people, if my residence and my reminding of the signs of Allāh has become burdensome upon you - then I have relied upon Allāh. So resolve upon your plan and [call upon] your associates. Then let not your plan be obscure to you. Then carry it out upon me and do not give me respite."
           },
           {
             "ar": "مُوسَىٰ",
             "en": "Musa",
-            "ref": "26:10",
-            "verse": "وَإِذْ نَادَىٰ رَبُّكَ مُوسَىٰٓ أَنِ ٱئْتِ ٱلْقَوْمَ ٱلظَّـٰلِمِينَ",
-            "verseEn": "And [mention] when your Lord called Moses, [saying], \"Go to the wrongdoing people -"
+            "ref": "20:67",
+            "verse": "فَأَوْجَسَ فِى نَفْسِهِۦ خِيفَةًۭ مُّوسَىٰ",
+            "verseEn": "And he sensed within himself apprehension, did Moses."
+          },
+          {
+            "ar": "لُوطٍ",
+            "en": "(of) Lut",
+            "ref": "15:61",
+            "verse": "فَلَمَّا جَآءَ ءَالَ لُوطٍ ٱلْمُرْسَلُونَ",
+            "verseEn": "And when the messengers came to the family of Lot,"
+          },
+          {
+            "ar": "الْمَسِيحُ",
+            "en": "(is) the Messiah",
+            "ref": "5:75",
+            "verse": "مَّا ٱلْمَسِيحُ ٱبْنُ مَرْيَمَ إِلَّا رَسُولٌۭ قَدْ خَلَتْ مِن قَبْلِهِ ٱلرُّسُلُ وَأُمُّهُۥ صِدِّيقَةٌۭ ۖ كَانَا يَأْكُلَانِ ٱلطَّعَامَ ۗ ٱنظُرْ كَيْفَ نُبَيِّنُ لَهُمُ ٱلْـَٔايَـٰتِ ثُمَّ ٱنظُرْ أَنَّىٰ يُؤْفَكُونَ",
+            "verseEn": "The Messiah, son of Mary, was not but a messenger; [other] messengers have passed on before him. And his mother was a supporter of truth. They both used to eat food. Look how We make clear to them the signs; then look how they are deluded."
           }
         ]
       },
       {
-        "name": "أَلْفَاظُ الْعَذَابِ وَالْوَعِيدِ",
-        "nameEn": "Terms for divine punishment and woe",
+        "name": "أَلْفَاظُ الذُّنُوبِ وَالْمَعَاصِي",
+        "nameEn": "Terms for sinful acts condemned in the Qur'an",
+        "color": "blue",
+        "items": [
+          {
+            "ar": "فَاحِشَةً",
+            "en": "immorality",
+            "ref": "7:28",
+            "verse": "وَإِذَا فَعَلُوا۟ فَـٰحِشَةًۭ قَالُوا۟ وَجَدْنَا عَلَيْهَآ ءَابَآءَنَا وَٱللَّهُ أَمَرَنَا بِهَا ۗ قُلْ إِنَّ ٱللَّهَ لَا يَأْمُرُ بِٱلْفَحْشَآءِ ۖ أَتَقُولُونَ عَلَى ٱللَّهِ مَا لَا تَعْلَمُونَ",
+            "verseEn": "And when they commit an immorality, they say, \"We found our fathers doing it, and Allāh has ordered us to do it.\" Say, \"Indeed, Allāh does not order immorality. Do you say about Allāh that which you do not know?\""
+          },
+          {
+            "ar": "مُّنكَرٍ",
+            "en": "wrongdoing",
+            "ref": "5:79",
+            "verse": "كَانُوا۟ لَا يَتَنَاهَوْنَ عَن مُّنكَرٍۢ فَعَلُوهُ ۚ لَبِئْسَ مَا كَانُوا۟ يَفْعَلُونَ",
+            "verseEn": "They used not to prevent one another from wrongdoing that they did. How wretched was that which they were doing."
+          },
+          {
+            "ar": "السَّيِّئَاتِ",
+            "en": "the evil deeds",
+            "ref": "16:45",
+            "verse": "أَفَأَمِنَ ٱلَّذِينَ مَكَرُوا۟ ٱلسَّيِّـَٔاتِ أَن يَخْسِفَ ٱللَّهُ بِهِمُ ٱلْأَرْضَ أَوْ يَأْتِيَهُمُ ٱلْعَذَابُ مِنْ حَيْثُ لَا يَشْعُرُونَ",
+            "verseEn": "Then, do those who have planned evil deeds feel secure that Allāh will not cause the earth to swallow them or that the punishment will not come upon them from where they do not perceive?"
+          },
+          {
+            "ar": "كَذِبًا",
+            "en": "a lie",
+            "ref": "23:38",
+            "verse": "إِنْ هُوَ إِلَّا رَجُلٌ ٱفْتَرَىٰ عَلَى ٱللَّهِ كَذِبًۭا وَمَا نَحْنُ لَهُۥ بِمُؤْمِنِينَ",
+            "verseEn": "He is not but a man who has invented a lie about Allāh, and we will not believe him.\""
+          }
+        ]
+      },
+      {
+        "name": "أَسْمَاءُ الْمَفْعُولِ عَلَى وَزْنِ مَفْعُولٍ",
+        "nameEn": "Passive participles on the pattern mafʿūl (مفعول) in the Qur'an",
         "color": "purple",
         "items": [
           {
-            "ar": "لَعْنَةً",
-            "en": "(by) a curse",
-            "ref": "11:99",
-            "verse": "وَأُتْبِعُوا۟ فِى هَـٰذِهِۦ لَعْنَةًۭ وَيَوْمَ ٱلْقِيَـٰمَةِ ۚ بِئْسَ ٱلرِّفْدُ ٱلْمَرْفُودُ",
-            "verseEn": "And they were followed in this [world] with a curse and on the Day of Resurrection. And wretched is the gift which is given."
+            "ar": "مَمْدُودًا",
+            "en": "extensive",
+            "ref": "74:12",
+            "verse": "وَجَعَلْتُ لَهُۥ مَالًۭا مَّمْدُودًۭا",
+            "verseEn": "And to whom I granted extensive wealth"
           },
           {
-            "ar": "الْعَذَابِ",
-            "en": "the punishment",
-            "ref": "37:38",
-            "verse": "إِنَّكُمْ لَذَآئِقُوا۟ ٱلْعَذَابِ ٱلْأَلِيمِ",
-            "verseEn": "Indeed, you [disbelievers] will be tasters of the painful punishment,"
+            "ar": "مَجْذُوذٍ",
+            "en": "interrupted",
+            "ref": "11:108",
+            "verse": "۞ وَأَمَّا ٱلَّذِينَ سُعِدُوا۟ فَفِى ٱلْجَنَّةِ خَـٰلِدِينَ فِيهَا مَا دَامَتِ ٱلسَّمَـٰوَٰتُ وَٱلْأَرْضُ إِلَّا مَا شَآءَ رَبُّكَ ۖ عَطَآءً غَيْرَ مَجْذُوذٍۢ",
+            "verseEn": "And as for those who were [destined to be] prosperous, they will be in Paradise, abiding therein as long as the heavens and the earth endure, except what your Lord should will - a bestowal uninterrupted."
           },
           {
-            "ar": "وَيْلٌ",
-            "en": "Woe",
-            "ref": "77:28",
-            "verse": "وَيْلٌۭ يَوْمَئِذٍۢ لِّلْمُكَذِّبِينَ",
-            "verseEn": "Woe, that Day, to the deniers."
+            "ar": "مَنْقُوصٍ",
+            "en": "being diminished",
+            "ref": "11:109",
+            "verse": "فَلَا تَكُ فِى مِرْيَةٍۢ مِّمَّا يَعْبُدُ هَـٰٓؤُلَآءِ ۚ مَا يَعْبُدُونَ إِلَّا كَمَا يَعْبُدُ ءَابَآؤُهُم مِّن قَبْلُ ۚ وَإِنَّا لَمُوَفُّوهُمْ نَصِيبَهُمْ غَيْرَ مَنقُوصٍۢ",
+            "verseEn": "So do not be in doubt, [O Muḥammad], as to what these [polytheists] are worshipping. They worship not except as their fathers worshipped before. And indeed, We will give them their share undiminished."
           },
           {
-            "ar": "صِلِيًّا",
-            "en": "(of) being burnt",
-            "ref": "19:70",
-            "verse": "ثُمَّ لَنَحْنُ أَعْلَمُ بِٱلَّذِينَ هُمْ أَوْلَىٰ بِهَا صِلِيًّۭا",
-            "verseEn": "Then, surely it is We who are most knowing of those most worthy of burning therein."
+            "ar": "مَفْعُولًا",
+            "en": "(already) destined",
+            "ref": "8:44",
+            "verse": "وَإِذْ يُرِيكُمُوهُمْ إِذِ ٱلْتَقَيْتُمْ فِىٓ أَعْيُنِكُمْ قَلِيلًۭا وَيُقَلِّلُكُمْ فِىٓ أَعْيُنِهِمْ لِيَقْضِىَ ٱللَّهُ أَمْرًۭا كَانَ مَفْعُولًۭا ۗ وَإِلَى ٱللَّهِ تُرْجَعُ ٱلْأُمُورُ",
+            "verseEn": "And [remember] when He showed them to you, when you met, as few in your eyes, and He made you [appear] as few in their eyes so that Allāh might accomplish a matter already destined. And to Allāh are [all] matters returned."
           }
         ]
       }
