@@ -1,144 +1,144 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "puzzle": {
     "categories": [
       {
-        "name": "أَفْعَالُ الْقَوْلِ وَالْكَلَامِ",
-        "nameEn": "Verbs of speaking in the Qur'an",
+        "name": "أَعْمَالُ الْعِبَادَةِ",
+        "nameEn": "Acts of worship mentioned in the Qur'an",
         "color": "yellow",
         "items": [
           {
-            "ar": "فَاسْأَلُوا",
-            "en": "So ask",
-            "ref": "21:7",
-            "verse": "وَمَآ أَرْسَلْنَا قَبْلَكَ إِلَّا رِجَالًۭا نُّوحِىٓ إِلَيْهِمْ ۖ فَسْـَٔلُوٓا۟ أَهْلَ ٱلذِّكْرِ إِن كُنتُمْ لَا تَعْلَمُونَ",
-            "verseEn": "And We sent not before you, [O Muḥammad], except men to whom We revealed [the message], so ask the people of the message [i.e., former scriptures] if you do not know."
+            "ar": "الصَّلَاةِ",
+            "en": "the prayer",
+            "ref": "5:58",
+            "verse": "وَإِذَا نَادَيْتُمْ إِلَى ٱلصَّلَوٰةِ ٱتَّخَذُوهَا هُزُوًۭا وَلَعِبًۭا ۚ ذَٰلِكَ بِأَنَّهُمْ قَوْمٌۭ لَّا يَعْقِلُونَ",
+            "verseEn": "And when you call to prayer, they take it in ridicule and amusement. That is because they are a people who do not use reason."
           },
           {
-            "ar": "يَسْتَصْرِخُهُ",
-            "en": "cried out to him for help",
-            "ref": "28:18",
-            "verse": "فَأَصْبَحَ فِى ٱلْمَدِينَةِ خَآئِفًۭا يَتَرَقَّبُ فَإِذَا ٱلَّذِى ٱسْتَنصَرَهُۥ بِٱلْأَمْسِ يَسْتَصْرِخُهُۥ ۚ قَالَ لَهُۥ مُوسَىٰٓ إِنَّكَ لَغَوِىٌّۭ مُّبِينٌۭ",
-            "verseEn": "And he became inside the city fearful and anticipating [exposure], when suddenly the one who sought his help the previous day cried out to him [once again]. Moses said to him, \"Indeed, you are an evident, [persistent] deviator.\""
+            "ar": "وَزَكَاةً",
+            "en": "and purity",
+            "ref": "19:13",
+            "verse": "وَحَنَانًۭا مِّن لَّدُنَّا وَزَكَوٰةًۭ ۖ وَكَانَ تَقِيًّۭا",
+            "verseEn": "And affection from Us and purity, and he was fearing of Allāh"
           },
           {
-            "ar": "يَقُصُّونَ",
-            "en": "relating",
-            "ref": "7:35",
-            "verse": "يَـٰبَنِىٓ ءَادَمَ إِمَّا يَأْتِيَنَّكُمْ رُسُلٌۭ مِّنكُمْ يَقُصُّونَ عَلَيْكُمْ ءَايَـٰتِى ۙ فَمَنِ ٱتَّقَىٰ وَأَصْلَحَ فَلَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ",
-            "verseEn": "O children of Adam, if there come to you messengers from among you relating to you My verses [i.e., scriptures and laws], then whoever fears Allāh and reforms - there will be no fear concerning them, nor will they grieve."
+            "ar": "نُطْعِمُ",
+            "en": "feed",
+            "ref": "74:44",
+            "verse": "وَلَمْ نَكُ نُطْعِمُ ٱلْمِسْكِينَ",
+            "verseEn": "Nor did we used to feed the poor."
           },
           {
-            "ar": "قَالُوا",
-            "en": "They said",
-            "ref": "15:53",
-            "verse": "قَالُوا۟ لَا تَوْجَلْ إِنَّا نُبَشِّرُكَ بِغُلَـٰمٍ عَلِيمٍۢ",
-            "verseEn": "[The angels] said, \"Fear not. Indeed, we give you good tidings of a learned boy.\""
+            "ar": "سُبْحَانَهُ",
+            "en": "Glorified is He",
+            "ref": "17:43",
+            "verse": "سُبْحَـٰنَهُۥ وَتَعَـٰلَىٰ عَمَّا يَقُولُونَ عُلُوًّۭا كَبِيرًۭا",
+            "verseEn": "Exalted is He and high above what they say by great sublimity."
           }
         ]
       },
       {
-        "name": "رُسُلٌ مَذْكُورُونَ فِي الْقُرْآنِ",
-        "nameEn": "Messengers named in the Qur'an",
+        "name": "أَلْفَاظُ التَّقَدُّمِ وَالتَّأَخُّرِ فِي الزَّمَنِ",
+        "nameEn": "Words denoting earlier and later in time",
         "color": "green",
         "items": [
           {
-            "ar": "نُوحٍ",
-            "en": "(of) Nuh",
-            "ref": "10:71",
-            "verse": "۞ وَٱتْلُ عَلَيْهِمْ نَبَأَ نُوحٍ إِذْ قَالَ لِقَوْمِهِۦ يَـٰقَوْمِ إِن كَانَ كَبُرَ عَلَيْكُم مَّقَامِى وَتَذْكِيرِى بِـَٔايَـٰتِ ٱللَّهِ فَعَلَى ٱللَّهِ تَوَكَّلْتُ فَأَجْمِعُوٓا۟ أَمْرَكُمْ وَشُرَكَآءَكُمْ ثُمَّ لَا يَكُنْ أَمْرُكُمْ عَلَيْكُمْ غُمَّةًۭ ثُمَّ ٱقْضُوٓا۟ إِلَىَّ وَلَا تُنظِرُونِ",
-            "verseEn": "And recite to them the news of Noah, when he said to his people, \"O my people, if my residence and my reminding of the signs of Allāh has become burdensome upon you - then I have relied upon Allāh. So resolve upon your plan and [call upon] your associates. Then let not your plan be obscure to you. Then carry it out upon me and do not give me respite."
+            "ar": "قَبْلُ",
+            "en": "before",
+            "ref": "28:12",
+            "verse": "۞ وَحَرَّمْنَا عَلَيْهِ ٱلْمَرَاضِعَ مِن قَبْلُ فَقَالَتْ هَلْ أَدُلُّكُمْ عَلَىٰٓ أَهْلِ بَيْتٍۢ يَكْفُلُونَهُۥ لَكُمْ وَهُمْ لَهُۥ نَـٰصِحُونَ",
+            "verseEn": "And We had prevented from him [all] wet nurses before, so she said, \"Shall I direct you to a household that will be responsible for him for you while they are to him [for his upbringing] sincere?\""
           },
           {
-            "ar": "مُوسَىٰ",
-            "en": "Musa",
-            "ref": "20:67",
-            "verse": "فَأَوْجَسَ فِى نَفْسِهِۦ خِيفَةًۭ مُّوسَىٰ",
-            "verseEn": "And he sensed within himself apprehension, did Moses."
+            "ar": "بَعْدِهِم",
+            "en": "after them",
+            "ref": "10:75",
+            "verse": "ثُمَّ بَعَثْنَا مِنۢ بَعْدِهِم مُّوسَىٰ وَهَـٰرُونَ إِلَىٰ فِرْعَوْنَ وَمَلَإِي۟هِۦ بِـَٔايَـٰتِنَا فَٱسْتَكْبَرُوا۟ وَكَانُوا۟ قَوْمًۭا مُّجْرِمِينَ",
+            "verseEn": "Then We sent after them Moses and Aaron to Pharaoh and his establishment with Our signs, but they behaved arrogantly and were a criminal people."
           },
           {
-            "ar": "لُوطٍ",
-            "en": "(of) Lut",
-            "ref": "15:61",
-            "verse": "فَلَمَّا جَآءَ ءَالَ لُوطٍ ٱلْمُرْسَلُونَ",
-            "verseEn": "And when the messengers came to the family of Lot,"
+            "ar": "الْأَوَّلِينَ",
+            "en": "the former (people)",
+            "ref": "77:16",
+            "verse": "أَلَمْ نُهْلِكِ ٱلْأَوَّلِينَ",
+            "verseEn": "Did We not destroy the former peoples?"
           },
           {
-            "ar": "الْمَسِيحُ",
-            "en": "(is) the Messiah",
-            "ref": "5:75",
-            "verse": "مَّا ٱلْمَسِيحُ ٱبْنُ مَرْيَمَ إِلَّا رَسُولٌۭ قَدْ خَلَتْ مِن قَبْلِهِ ٱلرُّسُلُ وَأُمُّهُۥ صِدِّيقَةٌۭ ۖ كَانَا يَأْكُلَانِ ٱلطَّعَامَ ۗ ٱنظُرْ كَيْفَ نُبَيِّنُ لَهُمُ ٱلْـَٔايَـٰتِ ثُمَّ ٱنظُرْ أَنَّىٰ يُؤْفَكُونَ",
-            "verseEn": "The Messiah, son of Mary, was not but a messenger; [other] messengers have passed on before him. And his mother was a supporter of truth. They both used to eat food. Look how We make clear to them the signs; then look how they are deluded."
+            "ar": "الْآخِرِينَ",
+            "en": "the later people",
+            "ref": "56:40",
+            "verse": "وَثُلَّةٌۭ مِّنَ ٱلْـَٔاخِرِينَ",
+            "verseEn": "And a company of the later peoples."
           }
         ]
       },
       {
-        "name": "أَلْفَاظُ الذُّنُوبِ وَالْمَعَاصِي",
-        "nameEn": "Terms for sinful acts condemned in the Qur'an",
+        "name": "أَلْفَاظُ الْعِقَابِ الإِلَهِيِّ",
+        "nameEn": "Terms for divine punishment mentioned in the Qur'an",
         "color": "blue",
         "items": [
           {
-            "ar": "فَاحِشَةً",
-            "en": "immorality",
-            "ref": "7:28",
-            "verse": "وَإِذَا فَعَلُوا۟ فَـٰحِشَةًۭ قَالُوا۟ وَجَدْنَا عَلَيْهَآ ءَابَآءَنَا وَٱللَّهُ أَمَرَنَا بِهَا ۗ قُلْ إِنَّ ٱللَّهَ لَا يَأْمُرُ بِٱلْفَحْشَآءِ ۖ أَتَقُولُونَ عَلَى ٱللَّهِ مَا لَا تَعْلَمُونَ",
-            "verseEn": "And when they commit an immorality, they say, \"We found our fathers doing it, and Allāh has ordered us to do it.\" Say, \"Indeed, Allāh does not order immorality. Do you say about Allāh that which you do not know?\""
+            "ar": "بِعَذَابٍ",
+            "en": "a punishment",
+            "ref": "8:32",
+            "verse": "وَإِذْ قَالُوا۟ ٱللَّهُمَّ إِن كَانَ هَـٰذَا هُوَ ٱلْحَقَّ مِنْ عِندِكَ فَأَمْطِرْ عَلَيْنَا حِجَارَةًۭ مِّنَ ٱلسَّمَآءِ أَوِ ٱئْتِنَا بِعَذَابٍ أَلِيمٍۢ",
+            "verseEn": "And [remember] when they said, \"O Allāh, if this should be the truth from You, then rain down upon us stones from the sky or bring us a painful punishment.\""
           },
           {
-            "ar": "مُّنكَرٍ",
-            "en": "wrongdoing",
-            "ref": "5:79",
-            "verse": "كَانُوا۟ لَا يَتَنَاهَوْنَ عَن مُّنكَرٍۢ فَعَلُوهُ ۚ لَبِئْسَ مَا كَانُوا۟ يَفْعَلُونَ",
-            "verseEn": "They used not to prevent one another from wrongdoing that they did. How wretched was that which they were doing."
+            "ar": "بَأْسَ",
+            "en": "violence",
+            "ref": "6:65",
+            "verse": "قُلْ هُوَ ٱلْقَادِرُ عَلَىٰٓ أَن يَبْعَثَ عَلَيْكُمْ عَذَابًۭا مِّن فَوْقِكُمْ أَوْ مِن تَحْتِ أَرْجُلِكُمْ أَوْ يَلْبِسَكُمْ شِيَعًۭا وَيُذِيقَ بَعْضَكُم بَأْسَ بَعْضٍ ۗ ٱنظُرْ كَيْفَ نُصَرِّفُ ٱلْـَٔايَـٰتِ لَعَلَّهُمْ يَفْقَهُونَ",
+            "verseEn": "Say, \"He is the [one] Able to send upon you affliction from above you or from beneath your feet or to confuse you [so you become] sects and make you taste the violence of one another.\" Look how We diversify the signs that they might understand."
           },
           {
-            "ar": "السَّيِّئَاتِ",
-            "en": "the evil deeds",
-            "ref": "16:45",
-            "verse": "أَفَأَمِنَ ٱلَّذِينَ مَكَرُوا۟ ٱلسَّيِّـَٔاتِ أَن يَخْسِفَ ٱللَّهُ بِهِمُ ٱلْأَرْضَ أَوْ يَأْتِيَهُمُ ٱلْعَذَابُ مِنْ حَيْثُ لَا يَشْعُرُونَ",
-            "verseEn": "Then, do those who have planned evil deeds feel secure that Allāh will not cause the earth to swallow them or that the punishment will not come upon them from where they do not perceive?"
+            "ar": "عِقَابِ",
+            "en": "My penalty",
+            "ref": "38:14",
+            "verse": "إِن كُلٌّ إِلَّا كَذَّبَ ٱلرُّسُلَ فَحَقَّ عِقَابِ",
+            "verseEn": "Each of them denied the messengers, so My penalty was justified."
           },
           {
-            "ar": "كَذِبًا",
-            "en": "a lie",
-            "ref": "23:38",
-            "verse": "إِنْ هُوَ إِلَّا رَجُلٌ ٱفْتَرَىٰ عَلَى ٱللَّهِ كَذِبًۭا وَمَا نَحْنُ لَهُۥ بِمُؤْمِنِينَ",
-            "verseEn": "He is not but a man who has invented a lie about Allāh, and we will not believe him.\""
+            "ar": "أَخْذَهُ",
+            "en": "His seizure",
+            "ref": "11:102",
+            "verse": "وَكَذَٰلِكَ أَخْذُ رَبِّكَ إِذَآ أَخَذَ ٱلْقُرَىٰ وَهِىَ ظَـٰلِمَةٌ ۚ إِنَّ أَخْذَهُۥٓ أَلِيمٌۭ شَدِيدٌ",
+            "verseEn": "And thus is the seizure of your Lord when He seizes the cities while they are committing wrong. Indeed, His seizure is painful and severe."
           }
         ]
       },
       {
-        "name": "أَسْمَاءُ الْمَفْعُولِ عَلَى وَزْنِ مَفْعُولٍ",
-        "nameEn": "Passive participles on the pattern mafʿūl (مفعول) in the Qur'an",
+        "name": "أَلْفَاظُ الْجَزَاءِ الْإِلٰهِيّ",
+        "nameEn": "Terms for divine reward in the Qur'an",
         "color": "purple",
         "items": [
           {
-            "ar": "مَمْدُودًا",
-            "en": "extensive",
-            "ref": "74:12",
-            "verse": "وَجَعَلْتُ لَهُۥ مَالًۭا مَّمْدُودًۭا",
-            "verseEn": "And to whom I granted extensive wealth"
+            "ar": "الْجَنَّةِ",
+            "en": "(of) Paradise",
+            "ref": "7:50",
+            "verse": "وَنَادَىٰٓ أَصْحَـٰبُ ٱلنَّارِ أَصْحَـٰبَ ٱلْجَنَّةِ أَنْ أَفِيضُوا۟ عَلَيْنَا مِنَ ٱلْمَآءِ أَوْ مِمَّا رَزَقَكُمُ ٱللَّهُ ۚ قَالُوٓا۟ إِنَّ ٱللَّهَ حَرَّمَهُمَا عَلَى ٱلْكَـٰفِرِينَ",
+            "verseEn": "And the companions of the Fire will call to the companions of Paradise, \"Pour upon us some water or from whatever Allāh has provided you.\" They will say, \"Indeed, Allāh has forbidden them both to the disbelievers"
           },
           {
-            "ar": "مَجْذُوذٍ",
-            "en": "interrupted",
-            "ref": "11:108",
-            "verse": "۞ وَأَمَّا ٱلَّذِينَ سُعِدُوا۟ فَفِى ٱلْجَنَّةِ خَـٰلِدِينَ فِيهَا مَا دَامَتِ ٱلسَّمَـٰوَٰتُ وَٱلْأَرْضُ إِلَّا مَا شَآءَ رَبُّكَ ۖ عَطَآءً غَيْرَ مَجْذُوذٍۢ",
-            "verseEn": "And as for those who were [destined to be] prosperous, they will be in Paradise, abiding therein as long as the heavens and the earth endure, except what your Lord should will - a bestowal uninterrupted."
+            "ar": "رَحْمَةً",
+            "en": "a mercy",
+            "ref": "33:17",
+            "verse": "قُلْ مَن ذَا ٱلَّذِى يَعْصِمُكُم مِّنَ ٱللَّهِ إِنْ أَرَادَ بِكُمْ سُوٓءًا أَوْ أَرَادَ بِكُمْ رَحْمَةًۭ ۚ وَلَا يَجِدُونَ لَهُم مِّن دُونِ ٱللَّهِ وَلِيًّۭا وَلَا نَصِيرًۭا",
+            "verseEn": "Say, \"Who is it that can protect you from Allāh if He intends for you an ill or intends for you a mercy?\" And they will not find for themselves besides Allāh any protector or any helper."
           },
           {
-            "ar": "مَنْقُوصٍ",
-            "en": "being diminished",
-            "ref": "11:109",
-            "verse": "فَلَا تَكُ فِى مِرْيَةٍۢ مِّمَّا يَعْبُدُ هَـٰٓؤُلَآءِ ۚ مَا يَعْبُدُونَ إِلَّا كَمَا يَعْبُدُ ءَابَآؤُهُم مِّن قَبْلُ ۚ وَإِنَّا لَمُوَفُّوهُمْ نَصِيبَهُمْ غَيْرَ مَنقُوصٍۢ",
-            "verseEn": "So do not be in doubt, [O Muḥammad], as to what these [polytheists] are worshipping. They worship not except as their fathers worshipped before. And indeed, We will give them their share undiminished."
+            "ar": "أَجْرَ",
+            "en": "(the) reward",
+            "ref": "28:25",
+            "verse": "فَجَآءَتْهُ إِحْدَىٰهُمَا تَمْشِى عَلَى ٱسْتِحْيَآءٍۢ قَالَتْ إِنَّ أَبِى يَدْعُوكَ لِيَجْزِيَكَ أَجْرَ مَا سَقَيْتَ لَنَا ۚ فَلَمَّا جَآءَهُۥ وَقَصَّ عَلَيْهِ ٱلْقَصَصَ قَالَ لَا تَخَفْ ۖ نَجَوْتَ مِنَ ٱلْقَوْمِ ٱلظَّـٰلِمِينَ",
+            "verseEn": "Then one of the two women came to him walking with shyness. She said, \"Indeed, my father invites you that he may reward you for having watered for us.\" So when he came to him and related to him the story, he said, \"Fear not. You have escaped from the wrongdoing people.\""
           },
           {
-            "ar": "مَفْعُولًا",
-            "en": "(already) destined",
-            "ref": "8:44",
-            "verse": "وَإِذْ يُرِيكُمُوهُمْ إِذِ ٱلْتَقَيْتُمْ فِىٓ أَعْيُنِكُمْ قَلِيلًۭا وَيُقَلِّلُكُمْ فِىٓ أَعْيُنِهِمْ لِيَقْضِىَ ٱللَّهُ أَمْرًۭا كَانَ مَفْعُولًۭا ۗ وَإِلَى ٱللَّهِ تُرْجَعُ ٱلْأُمُورُ",
-            "verseEn": "And [remember] when He showed them to you, when you met, as few in your eyes, and He made you [appear] as few in their eyes so that Allāh might accomplish a matter already destined. And to Allāh are [all] matters returned."
+            "ar": "الْحُسْنَى",
+            "en": "with the best",
+            "ref": "53:31",
+            "verse": "وَلِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ لِيَجْزِىَ ٱلَّذِينَ أَسَـٰٓـُٔوا۟ بِمَا عَمِلُوا۟ وَيَجْزِىَ ٱلَّذِينَ أَحْسَنُوا۟ بِٱلْحُسْنَى",
+            "verseEn": "And to Allāh belongs whatever is in the heavens and whatever is in the earth - that He may recompense those who do evil with [the penalty of] what they have done and recompense those who do good with the best [reward] -"
           }
         ]
       }

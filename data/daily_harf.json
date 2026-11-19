@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "puzzle": {
-    "word": "عبادا",
-    "display": "عِبَادًا",
-    "hint": "Devoted servants sent with great might as a warning fulfilled",
-    "verseRef": "17:5",
-    "arabicVerse": "فَإِذَا جَآءَ وَعْدُ أُولَىٰهُمَا بَعَثْنَا عَلَيْكُمْ عِبَادًۭا لَّنَآ أُو۟لِى بَأْسٍۢ شَدِيدٍۢ فَجَاسُوا۟ خِلَـٰلَ ٱلدِّيَارِ ۚ وَكَانَ وَعْدًۭا مَّفْعُولًۭا",
-    "verse": "17:5 - So when the [time of] promise came for the first of them, We sent against you servants of Ours - those of great military might, and they probed [even] into the homes, and it was a promise fulfilled."
+    "word": "كفروا",
+    "display": "كَفَرُوا",
+    "hint": "Those who reject faith and wish they had submitted",
+    "verseRef": "15:2",
+    "arabicVerse": "رُّبَمَا يَوَدُّ ٱلَّذِينَ كَفَرُوا۟ لَوْ كَانُوا۟ مُسْلِمِينَ",
+    "verse": "15:2 - Perhaps those who disbelieve will wish that they had been Muslims."
   },
   "generated": true,
   "model": "auto (chain)"

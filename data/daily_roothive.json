@@ -1,578 +1,552 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "puzzle": {
-    "center": "ع",
+    "center": "د",
     "outer": [
-      "س",
-      "م",
-      "ر",
-      "ت",
+      "ه",
+      "ن",
       "ا",
-      "ه"
+      "ي",
+      "ت",
+      "ش"
     ],
     "root": {
-      "letters": "عمر",
-      "display": "ع م ر",
-      "translit": "ʿ-m-r",
-      "meaning": "The core idea is staying alive and full over time through building and care. That sense grows into long life and into keeping homes and hearts flourishing.",
-      "occurrences": 24,
-      "lemmaCount": 10
+      "letters": "شدد",
+      "display": "ش د د",
+      "translit": "sh-d-d",
+      "meaning": "The core idea is strength and intensity. It grows into words for severe punishment, greater power, full maturity, firm support, and violent wind.",
+      "occurrences": 102,
+      "lemmaCount": 5
     },
     "words": [
       {
-        "w": "تسع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "تِسْع",
-            "gloss": "nine",
-            "type": "noun",
-            "root": "تسع",
-            "count": 5,
-            "ref": "17:101",
-            "pos": 4,
-            "alt": [
-              "ninety-nine"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "راع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "راعِ",
-            "gloss": "raina",
-            "type": "verb",
-            "root": "رعي",
-            "count": 2,
-            "ref": "2:104",
-            "pos": 6,
-            "alt": [
-              "\"raina"
-            ],
-            "form": 3
-          }
-        ]
-      },
-      {
-        "w": "سعر",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "سُعُر",
-            "gloss": "madness",
-            "type": "noun",
-            "root": "سعر",
-            "count": 2,
-            "ref": "54:24",
-            "pos": 10
-          }
-        ]
-      },
-      {
-        "w": "سعه",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "سَعَة",
-            "gloss": "abundance",
-            "type": "noun",
-            "root": "وسع",
-            "count": 6,
-            "ref": "2:247",
-            "pos": 23,
-            "alt": [
-              "ample means"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "سمع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "سَمِعَ",
-            "gloss": "heard",
-            "type": "verb",
-            "root": "سمع",
-            "count": 78,
-            "ref": "2:171",
-            "pos": 9,
-            "alt": [
-              "hear",
-              "hears"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "سَمْع",
-            "gloss": "hear",
-            "type": "noun",
-            "root": "سمع",
-            "count": 22,
-            "ref": "18:101",
-            "pos": 11,
-            "alt": [
-              "hearing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عام",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عام",
-            "gloss": "year",
-            "type": "noun",
-            "root": "عوم",
-            "count": 9,
-            "ref": "2:259",
-            "pos": 20,
-            "alt": [
-              "one year",
-              "two years"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عسر",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عُسْر",
-            "gloss": "hardship",
-            "type": "noun",
-            "root": "عسر",
-            "count": 5,
-            "ref": "18:73",
-            "pos": 10,
-            "alt": [
-              "difficulty"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عمر",
+        "w": "اشد",
         "family": true,
         "points": 3,
         "senses": [
           {
-            "lemma": "عُمُر",
-            "gloss": "lifetime",
+            "lemma": "أَشَدّ",
+            "gloss": "stronger",
             "type": "noun",
-            "root": "عمر",
-            "count": 7,
-            "ref": "10:16",
-            "pos": 14
-          },
-          {
-            "lemma": "عَمَرُ",
-            "gloss": "maintain",
-            "type": "verb",
-            "root": "عمر",
-            "count": 4,
-            "ref": "9:18",
-            "pos": 2,
-            "form": 1
-          },
-          {
-            "lemma": "عَمْر",
-            "gloss": "life",
-            "type": "noun",
-            "root": "عمر",
-            "count": 1,
-            "ref": "15:72",
-            "pos": 1
-          }
-        ]
-      },
-      {
-        "w": "عمه",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَمَّة",
-            "gloss": "paternal aunts",
-            "type": "noun",
-            "root": "عمم",
-            "count": 3,
-            "ref": "4:23",
-            "pos": 6,
+            "root": "شدد",
+            "count": 31,
+            "ref": "2:74",
+            "pos": 10,
             "alt": [
-              "father's sisters"
+              "mightier",
+              "more intense"
+            ]
+          },
+          {
+            "lemma": "أَشُدّ",
+            "gloss": "maturity",
+            "type": "noun",
+            "root": "شدد",
+            "count": 8,
+            "ref": "6:152",
+            "pos": 11,
+            "alt": [
+              "full strength"
             ]
           }
         ]
       },
       {
-        "w": "متع",
+        "w": "ايد",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "مَتَّعْ",
-            "gloss": "provide for",
+            "lemma": "أَيَّدَ",
+            "gloss": "supports",
             "type": "verb",
-            "root": "متع",
-            "count": 18,
-            "ref": "2:126",
-            "pos": 22,
-            "alt": [
-              "grant him enjoyment",
-              "make provision for"
-            ],
+            "root": "أيد",
+            "count": 9,
+            "ref": "3:13",
+            "pos": 20,
             "form": 2
           }
         ]
       },
       {
-        "w": "اسرع",
+        "w": "دنا",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَسْرَع",
-            "gloss": "swiftest",
-            "type": "noun",
-            "root": "سرع",
-            "count": 2,
-            "ref": "6:62",
-            "pos": 11,
-            "alt": [
-              "more swift"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اسمع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَسْمَعَ",
-            "gloss": "cause to hear",
+            "lemma": "دَنا",
+            "gloss": "approached",
             "type": "verb",
-            "root": "سمع",
-            "count": 13,
-            "ref": "10:42",
-            "pos": 6,
-            "alt": [
-              "cause the deaf to hear",
-              "how they will hear"
-            ],
+            "root": "دنو",
+            "count": 2,
+            "ref": "53:8",
+            "pos": 2,
             "form": 4
           }
         ]
       },
       {
-        "w": "تسعه",
+        "w": "دين",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "تِسْعَة",
-            "gloss": "nine",
+            "lemma": "دِين",
+            "gloss": "religion",
             "type": "noun",
-            "root": "تسع",
-            "count": 2,
-            "ref": "27:48",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "تمتع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "تَمَتَّعَ",
-            "gloss": "took advantage",
-            "type": "verb",
-            "root": "متع",
-            "count": 11,
-            "ref": "2:196",
-            "pos": 37,
+            "root": "دين",
+            "count": 92,
+            "ref": "3:83",
+            "pos": 2,
             "alt": [
-              "enjoy"
-            ],
-            "form": 5
-          }
-        ]
-      },
-      {
-        "w": "ساعه",
-        "family": false,
-        "points": 2,
-        "senses": [
+              "law",
+              "religion of allah"
+            ]
+          },
           {
-            "lemma": "ساعَة",
-            "gloss": "hour",
+            "lemma": "دَيْن",
+            "gloss": "any debt",
             "type": "noun",
-            "root": "سوع",
-            "count": 48,
-            "ref": "7:34",
-            "pos": 9
+            "root": "دين",
+            "count": 5,
+            "ref": "4:11",
+            "pos": 55
           }
         ]
       },
       {
-        "w": "سراع",
+        "w": "ديه",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "سِراع",
-            "gloss": "hurrying",
-            "type": "verbal noun",
-            "root": "سرع",
+            "lemma": "دِيَة",
+            "gloss": "blood money",
+            "type": "noun",
+            "root": "ودي",
             "count": 2,
-            "ref": "50:44",
+            "ref": "4:92",
+            "pos": 16
+          }
+        ]
+      },
+      {
+        "w": "شدد",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "شَدَدْ",
+            "gloss": "reinforce",
+            "type": "verb",
+            "root": "شدد",
+            "count": 6,
+            "ref": "20:31",
+            "pos": 1,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "شهد",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "شَهِدَ",
+            "gloss": "testify",
+            "type": "verb",
+            "root": "شهد",
+            "count": 44,
+            "ref": "2:185",
+            "pos": 14,
+            "alt": [
+              "bears witness",
+              "testifies"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "هاد",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هادُ",
+            "gloss": "are jews",
+            "type": "verb",
+            "root": "هود",
+            "count": 11,
+            "ref": "2:62",
             "pos": 5,
             "alt": [
-              "rapidly"
-            ]
+              "were jews",
+              "became jews"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "هاد",
+            "gloss": "guide",
+            "type": "active participle",
+            "root": "هدي",
+            "count": 7,
+            "ref": "13:7",
+            "pos": 15
           }
         ]
       },
       {
-        "w": "سماع",
+        "w": "هدي",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "سَمّاع",
-            "gloss": "listeners",
-            "type": "noun",
-            "root": "سمع",
-            "count": 4,
-            "ref": "5:41",
-            "pos": 20,
-            "alt": [
-              "would have listened"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عسره",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "عُسْرَة",
-            "gloss": "difficulty",
-            "type": "noun",
-            "root": "عسر",
-            "count": 2,
-            "ref": "2:280",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "عمره",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "عُمْرَة",
-            "gloss": "umrah",
-            "type": "noun",
-            "root": "عمر",
-            "count": 2,
-            "ref": "2:196",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "متاع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَتاع",
-            "gloss": "enjoyment",
-            "type": "noun",
-            "root": "متع",
-            "count": 35,
-            "ref": "2:236",
-            "pos": 21,
-            "alt": [
-              "provision",
-              "enjoy"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "معمر",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُعَمَّر",
-            "gloss": "aged person",
-            "type": "passive participle",
-            "root": "عمر",
-            "count": 1,
-            "ref": "35:11",
-            "pos": 22
-          }
-        ]
-      },
-      {
-        "w": "استمع",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "اسْتَمَعَ",
-            "gloss": "listen",
+            "lemma": "هَدَى",
+            "gloss": "guide",
             "type": "verb",
-            "root": "سمع",
-            "count": 16,
-            "ref": "6:25",
+            "root": "هدي",
+            "count": 144,
+            "ref": "2:142",
+            "pos": 16,
+            "alt": [
+              "guides",
+              "guided"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "هُدًى",
+            "gloss": "guidance",
+            "type": "noun",
+            "root": "هدي",
+            "count": 85,
+            "ref": "2:2",
+            "pos": 6,
+            "alt": [
+              "guide",
+              "as guidance"
+            ]
+          },
+          {
+            "lemma": "هَدْي",
+            "gloss": "offering",
+            "type": "noun",
+            "root": "هدي",
+            "count": 7,
+            "ref": "5:95",
+            "pos": 24
+          }
+        ]
+      },
+      {
+        "w": "ادني",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَدْنَى",
+            "gloss": "more suitable",
+            "type": "noun",
+            "root": "دنو",
+            "count": 12,
+            "ref": "2:61",
+            "pos": 27,
+            "alt": [
+              "less",
+              "inferior"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اشهد",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَشْهَدَ",
+            "gloss": "call allah to witness",
+            "type": "verb",
+            "root": "شهد",
+            "count": 7,
+            "ref": "11:54",
+            "pos": 10,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "اهدي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَهْدَى",
+            "gloss": "better guided",
+            "type": "noun",
+            "root": "هدي",
+            "count": 7,
+            "ref": "4:51",
+            "pos": 16,
+            "alt": [
+              "best guided",
+              "better guide"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اييد",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَيْيد",
+            "gloss": "possessor of strength",
+            "type": "noun",
+            "root": "أيد",
+            "count": 2,
+            "ref": "38:17",
+            "pos": 9,
+            "alt": [
+              "strength"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "دنيا",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "دُنْيا",
+            "gloss": "world",
+            "type": "adjective",
+            "root": "دنو",
+            "count": 115,
+            "ref": "2:85",
+            "pos": 38,
+            "alt": [
+              "nearer",
+              "nearest"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "شاهد",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "شاهِد",
+            "gloss": "witness",
+            "type": "active participle",
+            "root": "شهد",
+            "count": 21,
+            "ref": "9:17",
+            "pos": 8,
+            "alt": [
+              "witnesses",
+              "witnessing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "شديد",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "شَدِيد",
+            "gloss": "mighty",
+            "type": "noun",
+            "root": "شدد",
+            "count": 56,
+            "ref": "2:165",
+            "pos": 30,
+            "alt": [
+              "severe",
+              "strong"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "شهيد",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "شَهِيد",
+            "gloss": "witnesses",
+            "type": "noun",
+            "root": "شهد",
+            "count": 56,
+            "ref": "2:133",
             "pos": 3,
             "alt": [
-              "listened",
-              "listens"
-            ],
-            "form": 8
+              "witness",
+              "two witnesses"
+            ]
           }
         ]
       },
       {
-        "w": "اعتمر",
-        "family": true,
-        "points": 5,
+        "w": "نادي",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "اعْتَمَرَ",
-            "gloss": "performs umrah",
-            "type": "verb",
-            "root": "عمر",
-            "count": 1,
-            "ref": "2:158",
-            "pos": 11,
-            "form": 8
+            "lemma": "نادِي",
+            "gloss": "meetings",
+            "type": "active participle",
+            "root": "ندي",
+            "count": 2,
+            "ref": "29:29",
+            "pos": 8,
+            "alt": [
+              "associates"
+            ]
           }
         ]
       },
       {
-        "w": "عماره",
-        "family": true,
-        "points": 5,
+        "w": "هادي",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "عِمارَة",
-            "gloss": "maintenance",
+            "lemma": "هادِي",
+            "gloss": "guide",
+            "type": "active participle",
+            "root": "هدي",
+            "count": 3,
+            "ref": "7:186",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "هديه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "هَدِيَّة",
+            "gloss": "gift",
             "type": "noun",
-            "root": "عمر",
-            "count": 1,
-            "ref": "9:19",
+            "root": "هدي",
+            "count": 2,
+            "ref": "27:35",
             "pos": 4
           }
         ]
       },
       {
-        "w": "مستمع",
+        "w": "اشتدت",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "اشْتَدَّتْ",
+            "gloss": "blows furiously",
+            "type": "verb",
+            "root": "شدد",
+            "count": 1,
+            "ref": "14:18",
+            "pos": 7,
+            "form": 8
+          }
+        ]
+      },
+      {
+        "w": "انداد",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "مُسْتَمِع",
-            "gloss": "listening",
-            "type": "active participle",
-            "root": "سمع",
-            "count": 2,
-            "ref": "26:15",
-            "pos": 7
-          }
-        ]
-      },
-      {
-        "w": "استعمر",
-        "family": true,
-        "points": 6,
-        "senses": [
-          {
-            "lemma": "اسْتَعْمَرَ",
-            "gloss": "settled",
-            "type": "verb",
-            "root": "عمر",
-            "count": 1,
-            "ref": "11:61",
-            "pos": 18,
-            "form": 10
-          }
-        ]
-      },
-      {
-        "w": "استمتع",
-        "family": false,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "اسْتَمْتَعَ",
-            "gloss": "profited",
-            "type": "verb",
-            "root": "متع",
+            "lemma": "أَنداد",
+            "gloss": "rivals",
+            "type": "noun",
+            "root": "ندد",
             "count": 6,
-            "ref": "6:128",
-            "pos": 15,
+            "ref": "2:22",
+            "pos": 21,
             "alt": [
-              "enjoyed"
+              "equals"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اهتدي",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "اهْتَدَى",
+            "gloss": "accepts guidance",
+            "type": "verb",
+            "root": "هدي",
+            "count": 40,
+            "ref": "10:35",
+            "pos": 22,
+            "alt": [
+              "guided",
+              "is guided"
             ],
-            "form": 10
+            "form": 8
+          }
+        ]
+      },
+      {
+        "w": "دانيه",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "دانِيَة",
+            "gloss": "hanging low",
+            "type": "active participle",
+            "root": "دنو",
+            "count": 3,
+            "ref": "6:99",
+            "pos": 24,
+            "alt": [
+              "hanging near"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "شهاده",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "شَهادَة",
+            "gloss": "testimony",
+            "type": "noun",
+            "root": "شهد",
+            "count": 26,
+            "ref": "2:140",
+            "pos": 22,
+            "alt": [
+              "testimonies"
+            ]
           }
         ]
       }
     ],
-    "otherFamily": [
-      {
-        "lemma": "يُعَمَّرُ",
-        "gloss": "could be granted a life",
-        "type": "verb",
-        "root": "عمر",
-        "count": 5,
-        "ref": "2:96",
-        "pos": 12,
-        "alt": [
-          "should be granted life",
-          "is granted life"
-        ],
-        "form": 2
-      },
-      {
-        "lemma": "مَعْمُور",
-        "gloss": "frequented",
-        "type": "passive participle",
-        "root": "عمر",
-        "count": 1,
-        "ref": "52:4",
-        "pos": 2
-      }
-    ],
-    "maxScore": 64,
-    "featuredRoot": "عمر"
+    "otherFamily": [],
+    "maxScore": 54,
+    "featuredRoot": "شدد"
   },
   "generated": true,
   "model": "auto (chain)"

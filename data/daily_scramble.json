@@ -1,29 +1,32 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "puzzle": {
-    "verseRef": "21:88",
-    "reference": "Surah Al-Anbiya (21:88)",
+    "verseRef": "12:86",
+    "reference": "Surah Yusuf (12:86)",
     "segments": [
-      "فَاسْتَجَبْنَا لَهُ",
-      "وَنَجَّيْنَاهُ مِنَ",
-      "الْغَمِّ وَكَذَلِكَ",
-      "نُنْجِي الْمُؤْمِنِينَ"
+      "قَالَ إِنَّمَا أَشْكُو",
+      "بَثِّي وَحُزْنِي",
+      "إِلَى اللَّهِ",
+      "وَأَعْلَمُ مِنَ اللَّهِ",
+      "مَا لَا تَعْلَمُونَ"
     ],
     "translations": [
-      "So We responded to him",
-      "and We saved him from",
-      "the distress And thus",
-      "We save the believers"
+      "He said Only I complain",
+      "(of) my suffering and my grief to",
+      "Allah and I know from",
+      "Allah what",
+      "not you know"
     ],
-    "hint": "Allah's answer to the prayer of Yunus in the belly of the whale and His promise to all believers",
-    "arabic": "فَٱسْتَجَبْنَا لَهُۥ وَنَجَّيْنَـٰهُ مِنَ ٱلْغَمِّ ۚ وَكَذَٰلِكَ نُـۨجِى ٱلْمُؤْمِنِينَ",
+    "hint": "Prophet Yaqub's words of patience and trust, turning his sorrow over Yusuf to Allah alone",
+    "arabic": "قَالَ إِنَّمَآ أَشْكُوا۟ بَثِّى وَحُزْنِىٓ إِلَى ٱللَّهِ وَأَعْلَمُ مِنَ ٱللَّهِ مَا لَا تَعْلَمُونَ",
     "words": [
-      "فَٱسْتَجَبْنَا لَهُۥ",
-      "وَنَجَّيْنَـٰهُ مِنَ",
-      "ٱلْغَمِّ ۚ وَكَذَٰلِكَ",
-      "نُـۨجِى ٱلْمُؤْمِنِينَ"
+      "قَالَ إِنَّمَآ أَشْكُوا۟",
+      "بَثِّى وَحُزْنِىٓ إِلَى",
+      "ٱللَّهِ وَأَعْلَمُ مِنَ",
+      "ٱللَّهِ مَا",
+      "لَا تَعْلَمُونَ"
     ],
-    "verseEn": "So We responded to him and saved him from the distress. And thus do We save the believers."
+    "verseEn": "He said, \"I only complain of my suffering and my grief to Allāh, and I know from Allāh that which you do not know."
   },
   "generated": true,
   "model": "auto (chain)"
