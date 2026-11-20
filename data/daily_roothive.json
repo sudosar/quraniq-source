@@ -1,552 +1,576 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "puzzle": {
-    "center": "د",
+    "center": "ع",
     "outer": [
-      "ه",
-      "ن",
-      "ا",
+      "ر",
       "ي",
       "ت",
-      "ش"
+      "ج",
+      "م",
+      "ا"
     ],
     "root": {
-      "letters": "شدد",
-      "display": "ش د د",
-      "translit": "sh-d-d",
-      "meaning": "The core idea is strength and intensity. It grows into words for severe punishment, greater power, full maturity, firm support, and violent wind.",
-      "occurrences": 102,
-      "lemmaCount": 5
+      "letters": "رجع",
+      "display": "ر ج ع",
+      "translit": "r-j-ʿ",
+      "meaning": "The core idea is going back to where something started. Its forms describe coming back, being sent back, or the final place of return.",
+      "occurrences": 104,
+      "lemmaCount": 6
     },
     "words": [
       {
-        "w": "اشد",
-        "family": true,
-        "points": 3,
+        "w": "جمع",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَشَدّ",
-            "gloss": "stronger",
-            "type": "noun",
-            "root": "شدد",
-            "count": 31,
-            "ref": "2:74",
-            "pos": 10,
+            "lemma": "جَمَعَ",
+            "gloss": "assemble",
+            "type": "verb",
+            "root": "جمع",
+            "count": 22,
+            "ref": "5:109",
+            "pos": 2,
             "alt": [
-              "mightier",
-              "more intense"
-            ]
+              "gathered",
+              "gather"
+            ],
+            "form": 1
           },
           {
-            "lemma": "أَشُدّ",
-            "gloss": "maturity",
+            "lemma": "جَمْع",
+            "gloss": "all together",
             "type": "noun",
-            "root": "شدد",
-            "count": 8,
-            "ref": "6:152",
+            "root": "جمع",
+            "count": 13,
+            "ref": "18:99",
             "pos": 11,
             "alt": [
-              "full strength"
+              "accumulation",
+              "collectively"
             ]
           }
         ]
       },
       {
-        "w": "ايد",
+        "w": "راع",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَيَّدَ",
-            "gloss": "supports",
+            "lemma": "راعِ",
+            "gloss": "raina",
             "type": "verb",
-            "root": "أيد",
+            "root": "رعي",
+            "count": 2,
+            "ref": "2:104",
+            "pos": 6,
+            "alt": [
+              "\"raina"
+            ],
+            "form": 3
+          }
+        ]
+      },
+      {
+        "w": "رجع",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "رَجَعَ",
+            "gloss": "return",
+            "type": "verb",
+            "root": "رجع",
+            "count": 79,
+            "ref": "2:210",
+            "pos": 16,
+            "alt": [
+              "be returned",
+              "returned"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "رَجْع",
+            "gloss": "return",
+            "type": "noun",
+            "root": "رجع",
+            "count": 3,
+            "ref": "50:3",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "عام",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عام",
+            "gloss": "year",
+            "type": "noun",
+            "root": "عوم",
             "count": 9,
-            "ref": "3:13",
+            "ref": "2:259",
             "pos": 20,
+            "alt": [
+              "one year",
+              "two years"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عتي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عِتِيّ",
+            "gloss": "extreme",
+            "type": "noun",
+            "root": "عتو",
+            "count": 2,
+            "ref": "19:8",
+            "pos": 14,
+            "alt": [
+              "rebellion"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عمر",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عُمُر",
+            "gloss": "lifetime",
+            "type": "noun",
+            "root": "عمر",
+            "count": 7,
+            "ref": "10:16",
+            "pos": 14
+          },
+          {
+            "lemma": "عَمَرُ",
+            "gloss": "maintain",
+            "type": "verb",
+            "root": "عمر",
+            "count": 4,
+            "ref": "9:18",
+            "pos": 2,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "عمي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عَمِيَ",
+            "gloss": "blinded",
+            "type": "verb",
+            "root": "عمي",
+            "count": 7,
+            "ref": "6:104",
+            "pos": 10,
+            "alt": [
+              "blind"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "عَمي",
+            "gloss": "blind",
+            "type": "adjective",
+            "root": "عمي",
+            "count": 2,
+            "ref": "7:64",
+            "pos": 14
+          },
+          {
+            "lemma": "عَمًى",
+            "gloss": "blindness",
+            "type": "noun",
+            "root": "عمي",
+            "count": 2,
+            "ref": "41:44",
+            "pos": 25
+          }
+        ]
+      },
+      {
+        "w": "عير",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عِير",
+            "gloss": "caravan",
+            "type": "noun",
+            "root": "عير",
+            "count": 3,
+            "ref": "12:70",
+            "pos": 13
+          }
+        ]
+      },
+      {
+        "w": "عيي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عَيِي",
+            "gloss": "tired",
+            "type": "verb",
+            "root": "عيي",
+            "count": 2,
+            "ref": "46:33",
+            "pos": 10,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "متع",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَتَّعْ",
+            "gloss": "provide for",
+            "type": "verb",
+            "root": "متع",
+            "count": 18,
+            "ref": "2:126",
+            "pos": 22,
+            "alt": [
+              "grant him enjoyment",
+              "make provision for"
+            ],
             "form": 2
           }
         ]
       },
       {
-        "w": "دنا",
+        "w": "اجمع",
         "family": false,
-        "points": 1,
+        "points": 2,
         "senses": [
           {
-            "lemma": "دَنا",
-            "gloss": "approached",
+            "lemma": "أَجْمَع",
+            "gloss": "all",
+            "type": "noun",
+            "root": "جمع",
+            "count": 26,
+            "ref": "2:161",
+            "pos": 13,
+            "alt": [
+              "all together",
+              "together"
+            ]
+          },
+          {
+            "lemma": "أَجْمَعُ",
+            "gloss": "put together",
             "type": "verb",
-            "root": "دنو",
-            "count": 2,
-            "ref": "53:8",
-            "pos": 2,
+            "root": "جمع",
+            "count": 4,
+            "ref": "10:71",
+            "pos": 20,
+            "alt": [
+              "all resolve",
+              "agreed"
+            ],
             "form": 4
           }
         ]
       },
       {
-        "w": "دين",
+        "w": "اعرج",
         "family": false,
-        "points": 1,
+        "points": 2,
         "senses": [
           {
-            "lemma": "دِين",
-            "gloss": "religion",
+            "lemma": "أَعْرَج",
+            "gloss": "lame",
             "type": "noun",
-            "root": "دين",
-            "count": 92,
-            "ref": "3:83",
-            "pos": 2,
-            "alt": [
-              "law",
-              "religion of allah"
-            ]
-          },
-          {
-            "lemma": "دَيْن",
-            "gloss": "any debt",
-            "type": "noun",
-            "root": "دين",
-            "count": 5,
-            "ref": "4:11",
-            "pos": 55
-          }
-        ]
-      },
-      {
-        "w": "ديه",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "دِيَة",
-            "gloss": "blood money",
-            "type": "noun",
-            "root": "ودي",
+            "root": "عرج",
             "count": 2,
-            "ref": "4:92",
-            "pos": 16
+            "ref": "24:61",
+            "pos": 7
           }
         ]
       },
       {
-        "w": "شدد",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "شَدَدْ",
-            "gloss": "reinforce",
-            "type": "verb",
-            "root": "شدد",
-            "count": 6,
-            "ref": "20:31",
-            "pos": 1,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "شهد",
+        "w": "اعمي",
         "family": false,
-        "points": 1,
+        "points": 2,
         "senses": [
           {
-            "lemma": "شَهِدَ",
-            "gloss": "testify",
-            "type": "verb",
-            "root": "شهد",
-            "count": 44,
-            "ref": "2:185",
-            "pos": 14,
-            "alt": [
-              "bears witness",
-              "testifies"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "هاد",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "هادُ",
-            "gloss": "are jews",
-            "type": "verb",
-            "root": "هود",
-            "count": 11,
-            "ref": "2:62",
-            "pos": 5,
-            "alt": [
-              "were jews",
-              "became jews"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "هاد",
-            "gloss": "guide",
-            "type": "active participle",
-            "root": "هدي",
-            "count": 7,
-            "ref": "13:7",
-            "pos": 15
-          }
-        ]
-      },
-      {
-        "w": "هدي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "هَدَى",
-            "gloss": "guide",
-            "type": "verb",
-            "root": "هدي",
-            "count": 144,
-            "ref": "2:142",
-            "pos": 16,
-            "alt": [
-              "guides",
-              "guided"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "هُدًى",
-            "gloss": "guidance",
+            "lemma": "أَعْمَى",
+            "gloss": "blind",
             "type": "noun",
-            "root": "هدي",
-            "count": 85,
-            "ref": "2:2",
-            "pos": 6,
-            "alt": [
-              "guide",
-              "as guidance"
-            ]
-          },
-          {
-            "lemma": "هَدْي",
-            "gloss": "offering",
-            "type": "noun",
-            "root": "هدي",
-            "count": 7,
-            "ref": "5:95",
-            "pos": 24
-          }
-        ]
-      },
-      {
-        "w": "ادني",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَدْنَى",
-            "gloss": "more suitable",
-            "type": "noun",
-            "root": "دنو",
-            "count": 12,
-            "ref": "2:61",
-            "pos": 27,
-            "alt": [
-              "less",
-              "inferior"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اشهد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَشْهَدَ",
-            "gloss": "call allah to witness",
-            "type": "verb",
-            "root": "شهد",
-            "count": 7,
-            "ref": "11:54",
-            "pos": 10,
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اهدي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَهْدَى",
-            "gloss": "better guided",
-            "type": "noun",
-            "root": "هدي",
-            "count": 7,
-            "ref": "4:51",
-            "pos": 16,
-            "alt": [
-              "best guided",
-              "better guide"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اييد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَيْيد",
-            "gloss": "possessor of strength",
-            "type": "noun",
-            "root": "أيد",
-            "count": 2,
-            "ref": "38:17",
-            "pos": 9,
-            "alt": [
-              "strength"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "دنيا",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "دُنْيا",
-            "gloss": "world",
-            "type": "adjective",
-            "root": "دنو",
-            "count": 115,
-            "ref": "2:85",
-            "pos": 38,
-            "alt": [
-              "nearer",
-              "nearest"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "شاهد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "شاهِد",
-            "gloss": "witness",
-            "type": "active participle",
-            "root": "شهد",
+            "root": "عمي",
             "count": 21,
-            "ref": "9:17",
+            "ref": "2:18",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "تمتع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "تَمَتَّعَ",
+            "gloss": "took advantage",
+            "type": "verb",
+            "root": "متع",
+            "count": 11,
+            "ref": "2:196",
+            "pos": 37,
+            "alt": [
+              "enjoy"
+            ],
+            "form": 5
+          }
+        ]
+      },
+      {
+        "w": "جامع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "جامِع",
+            "gloss": "collective action",
+            "type": "active participle",
+            "root": "جمع",
+            "count": 3,
+            "ref": "3:9",
+            "pos": 3,
+            "alt": [
+              "gather"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "جميع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "جَمِيع",
+            "gloss": "together",
+            "type": "noun",
+            "root": "جمع",
+            "count": 53,
+            "ref": "2:29",
             "pos": 8,
             "alt": [
-              "witnesses",
-              "witnessing"
+              "all",
+              "all together"
             ]
           }
         ]
       },
       {
-        "w": "شديد",
+        "w": "راجع",
         "family": true,
         "points": 4,
         "senses": [
           {
-            "lemma": "شَدِيد",
-            "gloss": "mighty",
-            "type": "noun",
-            "root": "شدد",
-            "count": 56,
-            "ref": "2:165",
-            "pos": 30,
-            "alt": [
-              "severe",
-              "strong"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "شهيد",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "شَهِيد",
-            "gloss": "witnesses",
-            "type": "noun",
-            "root": "شهد",
-            "count": 56,
-            "ref": "2:133",
-            "pos": 3,
-            "alt": [
-              "witness",
-              "two witnesses"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "نادي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "نادِي",
-            "gloss": "meetings",
+            "lemma": "راجِع",
+            "gloss": "return",
             "type": "active participle",
-            "root": "ندي",
+            "root": "رجع",
+            "count": 4,
+            "ref": "2:46",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "راعي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "راعي",
+            "gloss": "observers",
+            "type": "active participle",
+            "root": "رعي",
             "count": 2,
-            "ref": "29:29",
-            "pos": 8,
-            "alt": [
-              "associates"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "هادي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "هادِي",
-            "gloss": "guide",
-            "type": "active participle",
-            "root": "هدي",
-            "count": 3,
-            "ref": "7:186",
+            "ref": "23:8",
             "pos": 5
           }
         ]
       },
       {
-        "w": "هديه",
-        "family": false,
-        "points": 2,
+        "w": "رجعي",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "هَدِيَّة",
-            "gloss": "gift",
+            "lemma": "رُجْعَى",
+            "gloss": "return",
             "type": "noun",
-            "root": "هدي",
-            "count": 2,
-            "ref": "27:35",
+            "root": "رجع",
+            "count": 1,
+            "ref": "96:8",
             "pos": 4
           }
         ]
       },
       {
-        "w": "اشتدت",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "اشْتَدَّتْ",
-            "gloss": "blows furiously",
-            "type": "verb",
-            "root": "شدد",
-            "count": 1,
-            "ref": "14:18",
-            "pos": 7,
-            "form": 8
-          }
-        ]
-      },
-      {
-        "w": "انداد",
+        "w": "متاع",
         "family": false,
-        "points": 3,
+        "points": 2,
         "senses": [
           {
-            "lemma": "أَنداد",
-            "gloss": "rivals",
+            "lemma": "مَتاع",
+            "gloss": "enjoyment",
             "type": "noun",
-            "root": "ندد",
-            "count": 6,
-            "ref": "2:22",
+            "root": "متع",
+            "count": 35,
+            "ref": "2:236",
             "pos": 21,
             "alt": [
-              "equals"
+              "provision",
+              "enjoy"
             ]
           }
         ]
       },
       {
-        "w": "اهتدي",
+        "w": "مجمع",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَجْمَع",
+            "gloss": "junction",
+            "type": "noun",
+            "root": "جمع",
+            "count": 2,
+            "ref": "18:60",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "مرجع",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مَرْجِع",
+            "gloss": "return",
+            "type": "noun",
+            "root": "رجع",
+            "count": 16,
+            "ref": "3:55",
+            "pos": 24,
+            "alt": [
+              "be your return"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مرعي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَرْعَى",
+            "gloss": "pasture",
+            "type": "noun",
+            "root": "رعي",
+            "count": 2,
+            "ref": "79:31",
+            "pos": 4
+          }
+        ]
+      },
+      {
+        "w": "اجتمع",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "اهْتَدَى",
-            "gloss": "accepts guidance",
+            "lemma": "اجْتَمَعُ",
+            "gloss": "gathered",
             "type": "verb",
-            "root": "هدي",
-            "count": 40,
-            "ref": "10:35",
-            "pos": 22,
-            "alt": [
-              "guided",
-              "is guided"
-            ],
+            "root": "جمع",
+            "count": 2,
+            "ref": "17:88",
+            "pos": 3,
             "form": 8
           }
         ]
       },
       {
-        "w": "دانيه",
+        "w": "اعجمي",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "دانِيَة",
-            "gloss": "hanging low",
-            "type": "active participle",
-            "root": "دنو",
+            "lemma": "أَعْجَمِيّ",
+            "gloss": "foreign",
+            "type": "noun",
+            "root": "عجم",
             "count": 3,
-            "ref": "6:99",
-            "pos": 24,
-            "alt": [
-              "hanging near"
-            ]
+            "ref": "16:103",
+            "pos": 12
           }
         ]
       },
       {
-        "w": "شهاده",
+        "w": "معارج",
         "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "شَهادَة",
-            "gloss": "testimony",
+            "lemma": "مَعارِج",
+            "gloss": "stairways",
             "type": "noun",
-            "root": "شهد",
-            "count": 26,
-            "ref": "2:140",
-            "pos": 22,
+            "root": "عرج",
+            "count": 2,
+            "ref": "43:33",
+            "pos": 15,
             "alt": [
-              "testimonies"
+              "ways of ascent"
             ]
           }
         ]
       }
     ],
-    "otherFamily": [],
-    "maxScore": 54,
-    "featuredRoot": "شدد"
+    "otherFamily": [
+      {
+        "lemma": "يَتَراجَعَ",
+        "gloss": "return to each other",
+        "type": "verb",
+        "root": "رجع",
+        "count": 1,
+        "ref": "2:230",
+        "pos": 18,
+        "form": 6
+      }
+    ],
+    "maxScore": 53,
+    "featuredRoot": "رجع"
   },
   "generated": true,
   "model": "auto (chain)"

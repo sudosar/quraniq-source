@@ -1,32 +1,29 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "puzzle": {
-    "verseRef": "12:86",
-    "reference": "Surah Yusuf (12:86)",
+    "verseRef": "8:3",
+    "reference": "Surah Al-Anfal (8:3)",
     "segments": [
-      "قَالَ إِنَّمَا أَشْكُو",
-      "بَثِّي وَحُزْنِي",
-      "إِلَى اللَّهِ",
-      "وَأَعْلَمُ مِنَ اللَّهِ",
-      "مَا لَا تَعْلَمُونَ"
+      "الذين يقيمون",
+      "الصلاة",
+      "ومما رزقناهم",
+      "ينفقون"
     ],
     "translations": [
-      "He said Only I complain",
-      "(of) my suffering and my grief to",
-      "Allah and I know from",
-      "Allah what",
-      "not you know"
+      "Those who establish",
+      "the prayer and out of what",
+      "We have provided them",
+      "they spend"
     ],
-    "hint": "Prophet Yaqub's words of patience and trust, turning his sorrow over Yusuf to Allah alone",
-    "arabic": "قَالَ إِنَّمَآ أَشْكُوا۟ بَثِّى وَحُزْنِىٓ إِلَى ٱللَّهِ وَأَعْلَمُ مِنَ ٱللَّهِ مَا لَا تَعْلَمُونَ",
+    "hint": "Describes the qualities of true believers: prayer and charity",
+    "arabic": "ٱلَّذِينَ يُقِيمُونَ ٱلصَّلَوٰةَ وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ",
     "words": [
-      "قَالَ إِنَّمَآ أَشْكُوا۟",
-      "بَثِّى وَحُزْنِىٓ إِلَى",
-      "ٱللَّهِ وَأَعْلَمُ مِنَ",
-      "ٱللَّهِ مَا",
-      "لَا تَعْلَمُونَ"
+      "ٱلَّذِينَ يُقِيمُونَ",
+      "ٱلصَّلَوٰةَ وَمِمَّا",
+      "رَزَقْنَـٰهُمْ",
+      "يُنفِقُونَ"
     ],
-    "verseEn": "He said, \"I only complain of my suffering and my grief to Allāh, and I know from Allāh that which you do not know."
+    "verseEn": "The ones who establish prayer, and from what We have provided them, they spend."
   },
   "generated": true,
   "model": "auto (chain)"
