@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "puzzle": {
-    "word": "سكارى",
-    "display": "سُكَارَىٰ",
-    "hint": "Appearing intoxicated though sober on a terrifying Day",
-    "verseRef": "22:2",
-    "arabicVerse": "يَوْمَ تَرَوْنَهَا تَذْهَلُ كُلُّ مُرْضِعَةٍ عَمَّآ أَرْضَعَتْ وَتَضَعُ كُلُّ ذَاتِ حَمْلٍ حَمْلَهَا وَتَرَى ٱلنَّاسَ سُكَـٰرَىٰ وَمَا هُم بِسُكَـٰرَىٰ وَلَـٰكِنَّ عَذَابَ ٱللَّهِ شَدِيدٌۭ",
-    "verse": "22:2 - On the Day you see it every nursing mother will be distracted from that [child] she was nursing, and every pregnant woman will abort her pregnancy, and you will see the people [appearing] intoxicated while they are not intoxicated; but the punishment of Allāh is severe."
+    "word": "عليا",
+    "display": "عَلِيًّا",
+    "hint": "Describes a lofty station or elevated rank",
+    "verseRef": "19:57",
+    "arabicVerse": "وَرَفَعْنَـٰهُ مَكَانًا عَلِيًّا",
+    "verse": "19:57 - And We raised him to a high station."
   },
   "generated": true,
   "model": "auto (chain)"

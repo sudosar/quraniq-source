@@ -1,144 +1,144 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "puzzle": {
     "categories": [
       {
-        "name": "مَظَاهِرُ العَالَمِ الطَّبِيعِيِّ",
-        "nameEn": "Features of the natural world",
+        "name": "أَشْكَالُ التَّوَاصُلِ الْقَوْلِيِّ",
+        "nameEn": "Forms of spoken communication",
         "color": "yellow",
         "items": [
           {
-            "ar": "السَّمَاوَاتِ",
-            "en": "the heavens",
-            "ref": "17:99",
-            "verse": "۞ أَوَلَمْ يَرَوْا۟ أَنَّ ٱللَّهَ ٱلَّذِى خَلَقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ قَادِرٌ عَلَىٰٓ أَن يَخْلُقَ مِثْلَهُمْ وَجَعَلَ لَهُمْ أَجَلًۭا لَّا رَيْبَ فِيهِ فَأَبَى ٱلظَّـٰلِمُونَ إِلَّا كُفُورًۭا",
-            "verseEn": "Do they not see that Allāh, who created the heavens and earth, is [the one] Able to create the likes of them? And He has appointed for them a term, about which there is no doubt. But the wrongdoers refuse except disbelief."
+            "ar": "الْقَوْلُ",
+            "en": "the word",
+            "ref": "50:29",
+            "verse": "مَا يُبَدَّلُ ٱلْقَوْلُ لَدَىَّ وَمَآ أَنَا۠ بِظَلَّـٰمٍۢ لِّلْعَبِيدِ",
+            "verseEn": "The word [i.e., decree] will not be changed with Me, and never will I be unjust to the servants.\""
           },
           {
-            "ar": "الْأَرْضِ",
-            "en": "the earth ",
-            "ref": "26:7",
-            "verse": "أَوَلَمْ يَرَوْا۟ إِلَى ٱلْأَرْضِ كَمْ أَنۢبَتْنَا فِيهَا مِن كُلِّ زَوْجٍۢ كَرِيمٍ",
-            "verseEn": "Did they not look at the earth - how much We have produced therein from every noble kind?"
+            "ar": "ذِكْرٌ",
+            "en": "a reminder",
+            "ref": "7:63",
+            "verse": "أَوَعَجِبْتُمْ أَن جَآءَكُمْ ذِكْرٌۭ مِّن رَّبِّكُمْ عَلَىٰ رَجُلٍۢ مِّنكُمْ لِيُنذِرَكُمْ وَلِتَتَّقُوا۟ وَلَعَلَّكُمْ تُرْحَمُونَ",
+            "verseEn": "Then do you wonder that there has come to you a reminder from your Lord through a man from among you, that he may warn you and that you may fear Allāh so you might receive mercy?\""
           },
           {
-            "ar": "الْجِبَالُ",
-            "en": "the mountain",
-            "ref": "19:90",
-            "verse": "تَكَادُ ٱلسَّمَـٰوَٰتُ يَتَفَطَّرْنَ مِنْهُ وَتَنشَقُّ ٱلْأَرْضُ وَتَخِرُّ ٱلْجِبَالُ هَدًّا",
-            "verseEn": "The heavens almost rupture therefrom and the earth splits open and the mountains collapse in devastation"
+            "ar": "بِالشَّهَادَةِ",
+            "en": "the testimony",
+            "ref": "5:108",
+            "verse": "ذَٰلِكَ أَدْنَىٰٓ أَن يَأْتُوا۟ بِٱلشَّهَـٰدَةِ عَلَىٰ وَجْهِهَآ أَوْ يَخَافُوٓا۟ أَن تُرَدَّ أَيْمَـٰنٌۢ بَعْدَ أَيْمَـٰنِهِمْ ۗ وَٱتَّقُوا۟ ٱللَّهَ وَٱسْمَعُوا۟ ۗ وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلْفَـٰسِقِينَ",
+            "verseEn": "That is more likely that they will give testimony according to its [true] objective, or [at least] they would fear that [other] oaths might be taken after their oaths. And fear Allāh and listen [i.e., obey Him]; and Allāh does not guide the defiantly disobedient people."
           },
           {
-            "ar": "الْيَمِّ",
-            "en": "the sea",
-            "ref": "28:40",
-            "verse": "فَأَخَذْنَـٰهُ وَجُنُودَهُۥ فَنَبَذْنَـٰهُمْ فِى ٱلْيَمِّ ۖ فَٱنظُرْ كَيْفَ كَانَ عَـٰقِبَةُ ٱلظَّـٰلِمِينَ",
-            "verseEn": "So We took him and his soldiers and threw them into the sea. So see how was the end of the wrongdoers."
+            "ar": "نَبَإِ",
+            "en": "(the) news",
+            "ref": "28:3",
+            "verse": "نَتْلُوا۟ عَلَيْكَ مِن نَّبَإِ مُوسَىٰ وَفِرْعَوْنَ بِٱلْحَقِّ لِقَوْمٍۢ يُؤْمِنُونَ",
+            "verseEn": "We recite to you from the news of Moses and Pharaoh in truth for a people who believe."
           }
         ]
       },
       {
-        "name": "أَلْفَاظُ الآخِرَةِ وَالْحِسَابِ",
-        "nameEn": "Words for the Hereafter and Final Reckoning",
+        "name": "مَصَائِرُ الآخِرَةِ وَجَزَاؤُهَا",
+        "nameEn": "Afterlife Destinations and Recompense",
         "color": "green",
         "items": [
           {
-            "ar": "الْقِيَامَةِ",
-            "en": "(of) the Resurrection",
-            "ref": "19:95",
-            "verse": "وَكُلُّهُمْ ءَاتِيهِ يَوْمَ ٱلْقِيَـٰمَةِ فَرْدًا",
-            "verseEn": "And all of them are coming to Him on the Day of Resurrection alone."
+            "ar": "الْجَنَّةَ",
+            "en": "Paradise",
+            "ref": "43:70",
+            "verse": "ٱدْخُلُوا۟ ٱلْجَنَّةَ أَنتُمْ وَأَزْوَٰجُكُمْ تُحْبَرُونَ",
+            "verseEn": "Enter Paradise, you and your kinds, delighted.\""
           },
           {
-            "ar": "حِسَابٍ",
-            "en": "account",
-            "ref": "38:39",
-            "verse": "هَـٰذَا عَطَآؤُنَا فَٱمْنُنْ أَوْ أَمْسِكْ بِغَيْرِ حِسَابٍۢ",
-            "verseEn": "[We said], \"This is Our gift, so grant or withhold without account.\""
+            "ar": "جَهَنَّمَ",
+            "en": "Hell",
+            "ref": "38:56",
+            "verse": "جَهَنَّمَ يَصْلَوْنَهَا فَبِئْسَ ٱلْمِهَادُ",
+            "verseEn": "Hell, which they will [enter to] burn, and wretched is the resting place."
           },
           {
-            "ar": "الدِّينَ",
-            "en": "(in) the religion",
-            "ref": "39:11",
-            "verse": "قُلْ إِنِّىٓ أُمِرْتُ أَنْ أَعْبُدَ ٱللَّهَ مُخْلِصًۭا لَّهُ ٱلدِّينَ",
-            "verseEn": "Say, [O Muḥammad], \"Indeed, I have been commanded to worship Allāh, [being] sincere to Him in religion."
+            "ar": "عَذَابٌ",
+            "en": "a punishment",
+            "ref": "39:40",
+            "verse": "مَن يَأْتِيهِ عَذَابٌۭ يُخْزِيهِ وَيَحِلُّ عَلَيْهِ عَذَابٌۭ مُّقِيمٌ",
+            "verseEn": "To whom will come a torment disgracing him and on whom will descend an enduring punishment.\""
           },
           {
-            "ar": "الْآخِرَةِ",
-            "en": "(of) the Hereafter ",
-            "ref": "42:20",
-            "verse": "مَن كَانَ يُرِيدُ حَرْثَ ٱلْـَٔاخِرَةِ نَزِدْ لَهُۥ فِى حَرْثِهِۦ ۖ وَمَن كَانَ يُرِيدُ حَرْثَ ٱلدُّنْيَا نُؤْتِهِۦ مِنْهَا وَمَا لَهُۥ فِى ٱلْـَٔاخِرَةِ مِن نَّصِيبٍ",
-            "verseEn": "Whoever desires the harvest of the Hereafter - We increase for him in his harvest [i.e., reward]. And whoever desires the harvest [i.e., benefits] of this world - We give him thereof, but there is not for him in the Hereafter any share."
+            "ar": "النَّعِيمِ",
+            "en": "(of) Delight",
+            "ref": "68:34",
+            "verse": "إِنَّ لِلْمُتَّقِينَ عِندَ رَبِّهِمْ جَنَّـٰتِ ٱلنَّعِيمِ",
+            "verseEn": "Indeed, for the righteous with their Lord are the Gardens of Pleasure."
           }
         ]
       },
       {
-        "name": "أَفْعَالُ السُّخْرِيَةِ وَالِاسْتِهْزَاءِ",
-        "nameEn": "Verbs of mockery, laughter and insult toward revelation",
+        "name": "الأَرْزَاقُ وَالأَطْعِمَةُ",
+        "nameEn": "Foods and provisions bestowed by Allah",
         "color": "blue",
         "items": [
           {
-            "ar": "وَيَسْخَرُونَ",
-            "en": "while they mock",
-            "ref": "37:12",
-            "verse": "بَلْ عَجِبْتَ وَيَسْخَرُونَ",
-            "verseEn": "But you wonder, while they mock,"
+            "ar": "لَرِزْقُنَا",
+            "en": "(is) surely Our provision",
+            "ref": "38:54",
+            "verse": "إِنَّ هَـٰذَا لَرِزْقُنَا مَا لَهُۥ مِن نَّفَادٍ",
+            "verseEn": "Indeed, this is Our provision; for it there is no depletion."
           },
           {
-            "ar": "يَسْتَهْزِئُونَ",
-            "en": "mock",
-            "ref": "39:48",
-            "verse": "وَبَدَا لَهُمْ سَيِّـَٔاتُ مَا كَسَبُوا۟ وَحَاقَ بِهِم مَّا كَانُوا۟ بِهِۦ يَسْتَهْزِءُونَ",
-            "verseEn": "And there will appear to them the evils they had earned, and they will be enveloped by what they used to ridicule."
+            "ar": "مَتَاعُ",
+            "en": "(is) an enjoyment",
+            "ref": "28:60",
+            "verse": "وَمَآ أُوتِيتُم مِّن شَىْءٍۢ فَمَتَـٰعُ ٱلْحَيَوٰةِ ٱلدُّنْيَا وَزِينَتُهَا ۚ وَمَا عِندَ ٱللَّهِ خَيْرٌۭ وَأَبْقَىٰٓ ۚ أَفَلَا تَعْقِلُونَ",
+            "verseEn": "And whatever thing you [people] have been given - it is [only for] the enjoyment of worldly life and its adornment. And what is with Allāh is better and more lasting; so will you not use reason?"
           },
           {
-            "ar": "يَضْحَكُونَ",
-            "en": "laughed",
-            "ref": "43:47",
-            "verse": "فَلَمَّا جَآءَهُم بِـَٔايَـٰتِنَآ إِذَا هُم مِّنْهَا يَضْحَكُونَ",
-            "verseEn": "But when he brought them Our signs, at once they laughed at them."
+            "ar": "الْمَنَّ",
+            "en": "the Manna",
+            "ref": "20:80",
+            "verse": "يَـٰبَنِىٓ إِسْرَٰٓءِيلَ قَدْ أَنجَيْنَـٰكُم مِّنْ عَدُوِّكُمْ وَوَٰعَدْنَـٰكُمْ جَانِبَ ٱلطُّورِ ٱلْأَيْمَنَ وَنَزَّلْنَا عَلَيْكُمُ ٱلْمَنَّ وَٱلسَّلْوَىٰ",
+            "verseEn": "O Children of Israel, We delivered you from your enemy, and We made an appointment with you at the right side of the mount, and We sent down to you manna and quails,"
           },
           {
-            "ar": "فَيَسُبُّوا",
-            "en": "lest they insult",
-            "ref": "6:108",
-            "verse": "وَلَا تَسُبُّوا۟ ٱلَّذِينَ يَدْعُونَ مِن دُونِ ٱللَّهِ فَيَسُبُّوا۟ ٱللَّهَ عَدْوًۢا بِغَيْرِ عِلْمٍۢ ۗ كَذَٰلِكَ زَيَّنَّا لِكُلِّ أُمَّةٍ عَمَلَهُمْ ثُمَّ إِلَىٰ رَبِّهِم مَّرْجِعُهُمْ فَيُنَبِّئُهُم بِمَا كَانُوا۟ يَعْمَلُونَ",
-            "verseEn": "And do not insult those they invoke other than Allāh, lest they insult Allāh in enmity without knowledge. Thus We have made pleasing to every community their deeds. Then to their Lord is their return, and He will inform them about what they used to do."
+            "ar": "فَاكِهَةٍ",
+            "en": "fruits",
+            "ref": "55:52",
+            "verse": "فِيهِمَا مِن كُلِّ فَـٰكِهَةٍۢ زَوْجَانِ",
+            "verseEn": "In both of them are of every fruit, two kinds."
           }
         ]
       },
       {
-        "name": "أَلْقَابُ السُّلْطَةِ وَالنُّخْبَةِ",
-        "nameEn": "Titles for earthly rulers and elites",
+        "name": "أَلْفَاظُ الْكَذِبِ وَالِافْتِرَاءِ",
+        "nameEn": "Words Meaning Falsehood or Fabrication in the Qur'an",
         "color": "purple",
         "items": [
           {
-            "ar": "سَادَتَنَا",
-            "en": "our chiefs",
-            "ref": "33:67",
-            "verse": "وَقَالُوا۟ رَبَّنَآ إِنَّآ أَطَعْنَا سَادَتَنَا وَكُبَرَآءَنَا فَأَضَلُّونَا ٱلسَّبِيلَا۠",
-            "verseEn": "And they will say, \"Our Lord, indeed we obeyed our masters and our dignitaries, and they led us astray from the [right] way."
+            "ar": "أَسَاطِيرُ",
+            "en": "Stories",
+            "ref": "68:15",
+            "verse": "إِذَا تُتْلَىٰ عَلَيْهِ ءَايَـٰتُنَا قَالَ أَسَـٰطِيرُ ٱلْأَوَّلِينَ",
+            "verseEn": "When Our verses are recited to him, he says, \"Legends of the former peoples.\""
           },
           {
-            "ar": "وَمَلَئِهِ",
-            "en": "and his council of elites",
-            "ref": "23:46",
-            "verse": "إِلَىٰ فِرْعَوْنَ وَمَلَإِي۟هِۦ فَٱسْتَكْبَرُوا۟ وَكَانُوا۟ قَوْمًا عَالِينَ",
-            "verseEn": "To Pharaoh and his establishment, but they were arrogant and were a haughty people."
+            "ar": "اِخْتِلَاقٌ",
+            "en": "a fabrication",
+            "ref": "38:7",
+            "verse": "مَا سَمِعْنَا بِهَـٰذَا فِى ٱلْمِلَّةِ ٱلْـَٔاخِرَةِ إِنْ هَـٰذَآ إِلَّا ٱخْتِلَـٰقٌ",
+            "verseEn": "We have not heard of this in the latest religion. This is not but a fabrication."
           },
           {
-            "ar": "فِرْعَوْنَ",
-            "en": "(of) Firaun",
-            "ref": "26:11",
-            "verse": "قَوْمَ فِرْعَوْنَ ۚ أَلَا يَتَّقُونَ",
-            "verseEn": "The people of Pharaoh. Will they not fear Allāh?\""
+            "ar": "كَذِبًا",
+            "en": "any lie",
+            "ref": "72:5",
+            "verse": "وَأَنَّا ظَنَنَّآ أَن لَّن تَقُولَ ٱلْإِنسُ وَٱلْجِنُّ عَلَى ٱللَّهِ كَذِبًۭا",
+            "verseEn": "And we had thought that mankind and the jinn would never speak about Allāh a lie."
           },
           {
-            "ar": "مُتْرَفِيهَا",
-            "en": "its wealthy people",
-            "ref": "17:16",
-            "verse": "وَإِذَآ أَرَدْنَآ أَن نُّهْلِكَ قَرْيَةً أَمَرْنَا مُتْرَفِيهَا فَفَسَقُوا۟ فِيهَا فَحَقَّ عَلَيْهَا ٱلْقَوْلُ فَدَمَّرْنَـٰهَا تَدْمِيرًۭا",
-            "verseEn": "And when We intend to destroy a city, We command its affluent but they defiantly disobey therein; so the word [i.e., deserved decree] comes into effect upon it, and We destroy it with [complete] destruction."
+            "ar": "مُفْتَرًى",
+            "en": "invented",
+            "ref": "28:36",
+            "verse": "فَلَمَّا جَآءَهُم مُّوسَىٰ بِـَٔايَـٰتِنَا بَيِّنَـٰتٍۢ قَالُوا۟ مَا هَـٰذَآ إِلَّا سِحْرٌۭ مُّفْتَرًۭى وَمَا سَمِعْنَا بِهَـٰذَا فِىٓ ءَابَآئِنَا ٱلْأَوَّلِينَ",
+            "verseEn": "But when Moses came to them with Our signs as clear evidences, they said, \"This is not except invented magic, and we have not heard of this [religion] among our forefathers.\""
           }
         ]
       }

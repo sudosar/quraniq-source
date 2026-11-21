@@ -1,29 +1,29 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "puzzle": {
-    "verseRef": "8:3",
-    "reference": "Surah Al-Anfal (8:3)",
+    "verseRef": "15:23",
+    "reference": "Al-Hijr (15:23)",
     "segments": [
-      "الذين يقيمون",
-      "الصلاة",
-      "ومما رزقناهم",
-      "ينفقون"
+      "وَإِنَّا لَنَحْنُ",
+      "نُحْيِي",
+      "وَنُمِيتُ وَنَحْنُ",
+      "الْوَارِثُونَ"
     ],
     "translations": [
-      "Those who establish",
-      "the prayer and out of what",
-      "We have provided them",
-      "they spend"
+      "And indeed, We surely [We]",
+      "We give life and We cause death",
+      "and We",
+      "(are) the Inheritors"
     ],
-    "hint": "Describes the qualities of true believers: prayer and charity",
-    "arabic": "ٱلَّذِينَ يُقِيمُونَ ٱلصَّلَوٰةَ وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ",
+    "hint": "Allah's exclusive power over life, death, and ultimate inheritance",
+    "arabic": "وَإِنَّا لَنَحْنُ نُحْىِۦ وَنُمِيتُ وَنَحْنُ ٱلْوَٰرِثُونَ",
     "words": [
-      "ٱلَّذِينَ يُقِيمُونَ",
-      "ٱلصَّلَوٰةَ وَمِمَّا",
-      "رَزَقْنَـٰهُمْ",
-      "يُنفِقُونَ"
+      "وَإِنَّا لَنَحْنُ",
+      "نُحْىِۦ وَنُمِيتُ",
+      "وَنَحْنُ",
+      "ٱلْوَٰرِثُونَ"
     ],
-    "verseEn": "The ones who establish prayer, and from what We have provided them, they spend."
+    "verseEn": "And indeed, it is We who give life and cause death, and We are the Inheritor."
   },
   "generated": true,
   "model": "auto (chain)"

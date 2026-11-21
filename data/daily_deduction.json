@@ -1,65 +1,65 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "puzzle": {
-    "title": "the flight across the restless sea",
-    "intro": "Picture standing on the deck of an overloaded vessel as the waves surge and the crew casts lots to lighten the load. A lone figure steps forward, accepting a fate that seems like the end, only for the depths to become a place of prayer and return. Behind lies a community warned of coming punishment, ahead lies an unexpected mercy.",
+    "title": "the voices beside the still waters",
+    "intro": "Picture a community named not for a city or a ruler, but for the still water around which life gathered. Only a few verses remember this community, always listed among those who rejected guidance. Listen as they speak from obscurity.",
     "clues": [
-      "I was sent as a messenger to more than a hundred thousand people.",
-      "I left my people in anger before receiving permission to leave.",
-      "I boarded a laden ship and the crew cast lots to decide who would be thrown overboard.",
-      "I was cast into the sea and swallowed by a great fish while I was blameworthy.",
-      "I glorified Allah in the darknesses, declaring there is no deity but Him and that I had been of the wrongdoers.",
-      "I was cast onto the open shore, sick, and Allah caused a gourd plant to grow over me, then my people believed and were granted enjoyment for a time."
+      "We are a community named in the Quran, yet our full story remains veiled in mystery.",
+      "We are always mentioned alongside those who denied, like the people of Ad and Thamud.",
+      "We are called the Companions of Ar-Rass, the Well to which our life was tied.",
+      "We denied the messenger who was sent to us with clear guidance.",
+      "We are counted among those who rejected all the messengers sent by Allah.",
+      "We faced the threat fulfilled against every denier before us, destruction for our rejection."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Musa",
-          "Prophet Hud",
-          "Prophet Nuh",
-          "Prophet Lut",
-          "Prophet Yunus"
+          "The Companions of Ar-Rass",
+          "The People of Madyan",
+          "The Dwellers of Al-Hijr",
+          "The People of Lut",
+          "The People of Tubba'"
         ],
-        "answer": "Prophet Yunus"
+        "answer": "The Companions of Ar-Rass"
       },
       "trial": {
-        "label": "What Trial Did I Face?",
+        "label": "Trial/Event",
         "options": [
-          "Thrown into a fire made cool and safe",
-          "Swallowed by the great fish after fleeing",
-          "Cast into a deep well by jealous brothers",
-          "Struck with long illness and loss of health",
-          "Commanded to sacrifice a beloved child"
+          "Built a lofty tower to reach the heavens",
+          "Denied the messenger sent to us",
+          "Worshipped the golden calf in the absence of Musa",
+          "Plotted to kill Yusuf out of envy",
+          "Demanded to see Allah openly"
         ],
-        "answer": "Swallowed by the great fish after fleeing"
+        "answer": "Denied the messenger sent to us"
       },
       "location": {
-        "label": "What Is My Key Element?",
+        "label": "Key Element",
         "options": [
-          "The wooden Ark on the flood waters",
-          "The cave of refuge from persecution",
-          "The sacred valley of Tuwa",
-          "The great fish and its belly",
-          "The cool fire prepared by idolaters"
+          "Mount Judi of resting",
+          "The Mirrored Palace of glass",
+          "The Valley of the Ants",
+          "The Ark built under revelation",
+          "The Well (Ar-Rass)"
         ],
-        "answer": "The great fish and its belly"
+        "answer": "The Well (Ar-Rass)"
       },
       "outcome": {
-        "label": "What Was My Outcome?",
+        "label": "Outcome",
         "options": [
-          "Saved by glorification and my people believed and were spared for a time",
-          "My people were turned into apes for breaking the Sabbath",
-          "My people were swallowed by the earth for arrogance",
-          "My people were seized by a mighty blast from the sky",
-          "My people were drowned by the great flood"
+          "Swallowed by the earth for pride in treasure",
+          "Saved by the Ark from the flood",
+          "Made to sleep for centuries in a cave",
+          "Granted control of wind and jinn",
+          "Destroyed for denying the messengers"
         ],
-        "answer": "Saved by glorification and my people believed and were spared for a time"
+        "answer": "Destroyed for denying the messengers"
       }
     },
-    "verseRef": "37:147",
-    "arabic": "وَأَرْسَلْنَـٰهُ إِلَىٰ مِا۟ئَةِ أَلْفٍ أَوْ يَزِيدُونَ",
-    "verse": "And We sent him to [his people of] a hundred thousand or more. (37:147)"
+    "verseRef": "50:14",
+    "arabic": "وَأَصْحَـٰبُ ٱلْأَيْكَةِ وَقَوْمُ تُبَّعٍۢ ۚ كُلٌّۭ كَذَّبَ ٱلرُّسُلَ فَحَقَّ وَعِيدِ",
+    "verse": "And the companions of the thicket and the people of Tubbaʿ. All denied the messengers, so My threat was justly fulfilled. (50:14)"
   },
   "generated": true,
   "model": "auto (chain)"

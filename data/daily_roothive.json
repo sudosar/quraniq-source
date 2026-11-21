@@ -1,576 +1,529 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "puzzle": {
-    "center": "ع",
+    "center": "م",
     "outer": [
+      "ه",
+      "ح",
       "ر",
-      "ي",
       "ت",
-      "ج",
-      "م",
-      "ا"
+      "ا",
+      "و"
     ],
     "root": {
-      "letters": "رجع",
-      "display": "ر ج ع",
-      "translit": "r-j-ʿ",
-      "meaning": "The core idea is going back to where something started. Its forms describe coming back, being sent back, or the final place of return.",
-      "occurrences": 104,
+      "letters": "حرم",
+      "display": "ح ر م",
+      "translit": "ḥ-r-m",
+      "meaning": "The core idea is treating something as sacred and off limits. It grows into meanings of forbidding an act and of honoring protected boundaries where access is restricted.",
+      "occurrences": 83,
       "lemmaCount": 6
     },
     "words": [
       {
-        "w": "جمع",
+        "w": "اتم",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "جَمَعَ",
-            "gloss": "assemble",
+            "lemma": "أَتَمَّ",
+            "gloss": "perfect",
             "type": "verb",
-            "root": "جمع",
-            "count": 22,
-            "ref": "5:109",
-            "pos": 2,
+            "root": "تمم",
+            "count": 16,
+            "ref": "2:233",
+            "pos": 9,
             "alt": [
-              "gathered",
-              "gather"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "جَمْع",
-            "gloss": "all together",
-            "type": "noun",
-            "root": "جمع",
-            "count": 13,
-            "ref": "18:99",
-            "pos": 11,
-            "alt": [
-              "accumulation",
-              "collectively"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "راع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "راعِ",
-            "gloss": "raina",
-            "type": "verb",
-            "root": "رعي",
-            "count": 2,
-            "ref": "2:104",
-            "pos": 6,
-            "alt": [
-              "\"raina"
-            ],
-            "form": 3
-          }
-        ]
-      },
-      {
-        "w": "رجع",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "رَجَعَ",
-            "gloss": "return",
-            "type": "verb",
-            "root": "رجع",
-            "count": 79,
-            "ref": "2:210",
-            "pos": 16,
-            "alt": [
-              "be returned",
-              "returned"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "رَجْع",
-            "gloss": "return",
-            "type": "noun",
-            "root": "رجع",
-            "count": 3,
-            "ref": "50:3",
-            "pos": 6
-          }
-        ]
-      },
-      {
-        "w": "عام",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عام",
-            "gloss": "year",
-            "type": "noun",
-            "root": "عوم",
-            "count": 9,
-            "ref": "2:259",
-            "pos": 20,
-            "alt": [
-              "one year",
-              "two years"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عتي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عِتِيّ",
-            "gloss": "extreme",
-            "type": "noun",
-            "root": "عتو",
-            "count": 2,
-            "ref": "19:8",
-            "pos": 14,
-            "alt": [
-              "rebellion"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عمر",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عُمُر",
-            "gloss": "lifetime",
-            "type": "noun",
-            "root": "عمر",
-            "count": 7,
-            "ref": "10:16",
-            "pos": 14
-          },
-          {
-            "lemma": "عَمَرُ",
-            "gloss": "maintain",
-            "type": "verb",
-            "root": "عمر",
-            "count": 4,
-            "ref": "9:18",
-            "pos": 2,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "عمي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَمِيَ",
-            "gloss": "blinded",
-            "type": "verb",
-            "root": "عمي",
-            "count": 7,
-            "ref": "6:104",
-            "pos": 10,
-            "alt": [
-              "blind"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "عَمي",
-            "gloss": "blind",
-            "type": "adjective",
-            "root": "عمي",
-            "count": 2,
-            "ref": "7:64",
-            "pos": 14
-          },
-          {
-            "lemma": "عَمًى",
-            "gloss": "blindness",
-            "type": "noun",
-            "root": "عمي",
-            "count": 2,
-            "ref": "41:44",
-            "pos": 25
-          }
-        ]
-      },
-      {
-        "w": "عير",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عِير",
-            "gloss": "caravan",
-            "type": "noun",
-            "root": "عير",
-            "count": 3,
-            "ref": "12:70",
-            "pos": 13
-          }
-        ]
-      },
-      {
-        "w": "عيي",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "عَيِي",
-            "gloss": "tired",
-            "type": "verb",
-            "root": "عيي",
-            "count": 2,
-            "ref": "46:33",
-            "pos": 10,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "متع",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَتَّعْ",
-            "gloss": "provide for",
-            "type": "verb",
-            "root": "متع",
-            "count": 18,
-            "ref": "2:126",
-            "pos": 22,
-            "alt": [
-              "grant him enjoyment",
-              "make provision for"
-            ],
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "اجمع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَجْمَع",
-            "gloss": "all",
-            "type": "noun",
-            "root": "جمع",
-            "count": 26,
-            "ref": "2:161",
-            "pos": 13,
-            "alt": [
-              "all together",
-              "together"
-            ]
-          },
-          {
-            "lemma": "أَجْمَعُ",
-            "gloss": "put together",
-            "type": "verb",
-            "root": "جمع",
-            "count": 4,
-            "ref": "10:71",
-            "pos": 20,
-            "alt": [
-              "all resolve",
-              "agreed"
+              "complete",
+              "completes"
             ],
             "form": 4
           }
         ]
       },
       {
-        "w": "اعرج",
+        "w": "امر",
         "family": false,
-        "points": 2,
+        "points": 1,
         "senses": [
           {
-            "lemma": "أَعْرَج",
-            "gloss": "lame",
+            "lemma": "أَمْر",
+            "gloss": "command",
             "type": "noun",
-            "root": "عرج",
+            "root": "أمر",
+            "count": 166,
+            "ref": "2:117",
+            "pos": 6,
+            "alt": [
+              "matter",
+              "affair"
+            ]
+          },
+          {
+            "lemma": "أَمَرَ",
+            "gloss": "commands",
+            "type": "verb",
+            "root": "أمر",
+            "count": 77,
+            "ref": "2:27",
+            "pos": 10,
+            "alt": [
+              "commanded",
+              "has ordered"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "امه",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "أُمَّة",
+            "gloss": "nation",
+            "type": "noun",
+            "root": "أمم",
+            "count": 64,
+            "ref": "2:128",
+            "pos": 7,
+            "alt": [
+              "community",
+              "nations"
+            ]
+          },
+          {
+            "lemma": "أَمَة",
+            "gloss": "bondwoman",
+            "type": "noun",
+            "root": "أمو",
             "count": 2,
-            "ref": "24:61",
+            "ref": "2:221",
+            "pos": 6,
+            "alt": [
+              "female slaves"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حرم",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "حَرَّمَ",
+            "gloss": "allah has made unlawful",
+            "type": "verb",
+            "root": "حرم",
+            "count": 39,
+            "ref": "2:173",
+            "pos": 2,
+            "alt": [
+              "forbidden",
+              "has forbidden"
+            ],
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "حما",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حَمَإ",
+            "gloss": "black mud",
+            "type": "noun",
+            "root": "حمأ",
+            "count": 3,
+            "ref": "15:26",
             "pos": 7
           }
         ]
       },
       {
-        "w": "اعمي",
+        "w": "رحم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "رَحِمَ",
+            "gloss": "has mercy",
+            "type": "verb",
+            "root": "رحم",
+            "count": 28,
+            "ref": "11:43",
+            "pos": 17,
+            "alt": [
+              "lord has bestowed mercy",
+              "bestows mercy"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "مات",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "ماتَ",
+            "gloss": "die",
+            "type": "verb",
+            "root": "موت",
+            "count": 39,
+            "ref": "3:144",
+            "pos": 11,
+            "alt": [
+              "dies",
+              "died"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "محو",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَحَوْ",
+            "gloss": "eliminated",
+            "type": "verb",
+            "root": "محو",
+            "count": 3,
+            "ref": "13:39",
+            "pos": 1,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "مرح",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَرَح",
+            "gloss": "insolence",
+            "type": "noun",
+            "root": "مرح",
+            "count": 2,
+            "ref": "17:37",
+            "pos": 5,
+            "alt": [
+              "exultantly"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مره",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَرَّة",
+            "gloss": "time",
+            "type": "noun",
+            "root": "مرر",
+            "count": 20,
+            "ref": "2:229",
+            "pos": 2,
+            "alt": [
+              "twice",
+              "times"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "موت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَوْت",
+            "gloss": "death",
+            "type": "noun",
+            "root": "موت",
+            "count": 50,
+            "ref": "25:3",
+            "pos": 18
+          }
+        ]
+      },
+      {
+        "w": "ارحم",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَعْمَى",
-            "gloss": "blind",
+            "lemma": "أَرْحَم",
+            "gloss": "most merciful",
             "type": "noun",
-            "root": "عمي",
+            "root": "رحم",
+            "count": 4,
+            "ref": "7:151",
+            "pos": 10
+          }
+        ]
+      },
+      {
+        "w": "امات",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَماتَ",
+            "gloss": "causes death",
+            "type": "verb",
+            "root": "موت",
             "count": 21,
-            "ref": "2:18",
+            "ref": "53:44",
+            "pos": 3,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "امام",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "إِمام",
+            "gloss": "leaders",
+            "type": "noun",
+            "root": "أمم",
+            "count": 12,
+            "ref": "2:124",
+            "pos": 11,
+            "alt": [
+              "leader",
+              "guide"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حرام",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "حَرام",
+            "gloss": "ihram",
+            "type": "adjective",
+            "root": "حرم",
+            "count": 33,
+            "ref": "5:1",
+            "pos": 18,
+            "alt": [
+              "sanctuary",
+              "sacred"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حرمه",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "حُرُمَة",
+            "gloss": "sacred rites",
+            "type": "noun",
+            "root": "حرم",
+            "count": 2,
+            "ref": "22:30",
+            "pos": 4
+          }
+        ]
+      },
+      {
+        "w": "حمار",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حِمار",
+            "gloss": "donkeys",
+            "type": "noun",
+            "root": "حمر",
+            "count": 5,
+            "ref": "74:50",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "راحم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "راحِم",
+            "gloss": "show mercy",
+            "type": "active participle",
+            "root": "رحم",
+            "count": 6,
+            "ref": "7:151",
+            "pos": 11,
+            "alt": [
+              "merciful"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "رحمه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "رَحْمَة",
+            "gloss": "mercy from",
+            "type": "noun",
+            "root": "رحم",
+            "count": 114,
+            "ref": "2:218",
+            "pos": 12,
+            "alt": [
+              "mercy",
+              "mercy of allah"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "محرم",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مُحَرَّم",
+            "gloss": "forbidden",
+            "type": "passive participle",
+            "root": "حرم",
+            "count": 4,
+            "ref": "2:85",
+            "pos": 20
+          }
+        ]
+      },
+      {
+        "w": "ممات",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَمات",
+            "gloss": "dying",
+            "type": "noun",
+            "root": "موت",
+            "count": 3,
+            "ref": "6:162",
+            "pos": 6,
+            "alt": [
+              "death"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "موتت",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَوْتَت",
+            "gloss": "death",
+            "type": "noun",
+            "root": "موت",
+            "count": 3,
+            "ref": "37:59",
+            "pos": 2
+          }
+        ]
+      },
+      {
+        "w": "ارحام",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "أَرْحام",
+            "gloss": "wombs",
+            "type": "noun",
+            "root": "رحم",
+            "count": 12,
+            "ref": "6:143",
+            "pos": 17
+          }
+        ]
+      },
+      {
+        "w": "امرات",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "امْرَأَت",
+            "gloss": "wife",
+            "type": "noun",
+            "root": "مرأ",
+            "count": 26,
+            "ref": "3:35",
+            "pos": 3,
+            "alt": [
+              "woman",
+              "women"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "محرمه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مُحَرَّمَة",
+            "gloss": "forbidden",
+            "type": "passive participle",
+            "root": "حرم",
+            "count": 1,
+            "ref": "5:26",
             "pos": 3
           }
         ]
       },
       {
-        "w": "تمتع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "تَمَتَّعَ",
-            "gloss": "took advantage",
-            "type": "verb",
-            "root": "متع",
-            "count": 11,
-            "ref": "2:196",
-            "pos": 37,
-            "alt": [
-              "enjoy"
-            ],
-            "form": 5
-          }
-        ]
-      },
-      {
-        "w": "جامع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "جامِع",
-            "gloss": "collective action",
-            "type": "active participle",
-            "root": "جمع",
-            "count": 3,
-            "ref": "3:9",
-            "pos": 3,
-            "alt": [
-              "gather"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "جميع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "جَمِيع",
-            "gloss": "together",
-            "type": "noun",
-            "root": "جمع",
-            "count": 53,
-            "ref": "2:29",
-            "pos": 8,
-            "alt": [
-              "all",
-              "all together"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "راجع",
+        "w": "محروم",
         "family": true,
-        "points": 4,
+        "points": 5,
         "senses": [
           {
-            "lemma": "راجِع",
-            "gloss": "return",
-            "type": "active participle",
-            "root": "رجع",
+            "lemma": "مَحْرُوم",
+            "gloss": "deprived",
+            "type": "passive participle",
+            "root": "حرم",
             "count": 4,
-            "ref": "2:46",
-            "pos": 8
-          }
-        ]
-      },
-      {
-        "w": "راعي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "راعي",
-            "gloss": "observers",
-            "type": "active participle",
-            "root": "رعي",
-            "count": 2,
-            "ref": "23:8",
-            "pos": 5
-          }
-        ]
-      },
-      {
-        "w": "رجعي",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "رُجْعَى",
-            "gloss": "return",
-            "type": "noun",
-            "root": "رجع",
-            "count": 1,
-            "ref": "96:8",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "متاع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَتاع",
-            "gloss": "enjoyment",
-            "type": "noun",
-            "root": "متع",
-            "count": 35,
-            "ref": "2:236",
-            "pos": 21,
-            "alt": [
-              "provision",
-              "enjoy"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مجمع",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَجْمَع",
-            "gloss": "junction",
-            "type": "noun",
-            "root": "جمع",
-            "count": 2,
-            "ref": "18:60",
-            "pos": 9
-          }
-        ]
-      },
-      {
-        "w": "مرجع",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مَرْجِع",
-            "gloss": "return",
-            "type": "noun",
-            "root": "رجع",
-            "count": 16,
-            "ref": "3:55",
-            "pos": 24,
-            "alt": [
-              "be your return"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "مرعي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَرْعَى",
-            "gloss": "pasture",
-            "type": "noun",
-            "root": "رعي",
-            "count": 2,
-            "ref": "79:31",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "اجتمع",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "اجْتَمَعُ",
-            "gloss": "gathered",
-            "type": "verb",
-            "root": "جمع",
-            "count": 2,
-            "ref": "17:88",
-            "pos": 3,
-            "form": 8
-          }
-        ]
-      },
-      {
-        "w": "اعجمي",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "أَعْجَمِيّ",
-            "gloss": "foreign",
-            "type": "noun",
-            "root": "عجم",
-            "count": 3,
-            "ref": "16:103",
-            "pos": 12
-          }
-        ]
-      },
-      {
-        "w": "معارج",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "مَعارِج",
-            "gloss": "stairways",
-            "type": "noun",
-            "root": "عرج",
-            "count": 2,
-            "ref": "43:33",
-            "pos": 15,
-            "alt": [
-              "ways of ascent"
-            ]
+            "ref": "56:67",
+            "pos": 3
           }
         ]
       }
     ],
-    "otherFamily": [
-      {
-        "lemma": "يَتَراجَعَ",
-        "gloss": "return to each other",
-        "type": "verb",
-        "root": "رجع",
-        "count": 1,
-        "ref": "2:230",
-        "pos": 18,
-        "form": 6
-      }
-    ],
-    "maxScore": 53,
-    "featuredRoot": "رجع"
+    "otherFamily": [],
+    "maxScore": 57,
+    "featuredRoot": "حرم"
   },
   "generated": true,
   "model": "auto (chain)"
