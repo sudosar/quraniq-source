@@ -1,115 +1,68 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "puzzle": {
-    "center": "م",
+    "center": "ح",
     "outer": [
-      "ه",
-      "ح",
+      "م",
       "ر",
-      "ت",
+      "و",
+      "س",
       "ا",
-      "و"
+      "ت"
     ],
     "root": {
-      "letters": "حرم",
-      "display": "ح ر م",
-      "translit": "ḥ-r-m",
-      "meaning": "The core idea is treating something as sacred and off limits. It grows into meanings of forbidding an act and of honoring protected boundaries where access is restricted.",
-      "occurrences": 83,
-      "lemmaCount": 6
+      "letters": "سحر",
+      "display": "س ح ر",
+      "translit": "s-ḥ-r",
+      "meaning": "The core idea is turning things from reality through illusion and hidden influence. It gives words for magic and magicians, being bewitched, and the time before dawn when light is still veiled.",
+      "occurrences": 63,
+      "lemmaCount": 7
     },
     "words": [
       {
-        "w": "اتم",
+        "w": "احس",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَتَمَّ",
-            "gloss": "perfect",
+            "lemma": "أَحَسَّ",
+            "gloss": "perceived",
             "type": "verb",
-            "root": "تمم",
-            "count": 16,
-            "ref": "2:233",
-            "pos": 9,
+            "root": "حسس",
+            "count": 3,
+            "ref": "3:52",
+            "pos": 2,
             "alt": [
-              "complete",
-              "completes"
+              "perceive"
             ],
             "form": 4
           }
         ]
       },
       {
-        "w": "امر",
+        "w": "تحت",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَمْر",
-            "gloss": "command",
+            "lemma": "تَحْت",
+            "gloss": "under",
             "type": "noun",
-            "root": "أمر",
-            "count": 166,
-            "ref": "2:117",
-            "pos": 6,
+            "root": "تحت",
+            "count": 51,
+            "ref": "5:66",
+            "pos": 15,
             "alt": [
-              "matter",
-              "affair"
-            ]
-          },
-          {
-            "lemma": "أَمَرَ",
-            "gloss": "commands",
-            "type": "verb",
-            "root": "أمر",
-            "count": 77,
-            "ref": "2:27",
-            "pos": 10,
-            "alt": [
-              "commanded",
-              "has ordered"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "امه",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أُمَّة",
-            "gloss": "nation",
-            "type": "noun",
-            "root": "أمم",
-            "count": 64,
-            "ref": "2:128",
-            "pos": 7,
-            "alt": [
-              "community",
-              "nations"
-            ]
-          },
-          {
-            "lemma": "أَمَة",
-            "gloss": "bondwoman",
-            "type": "noun",
-            "root": "أمو",
-            "count": 2,
-            "ref": "2:221",
-            "pos": 6,
-            "alt": [
-              "female slaves"
+              "beneath",
+              "below"
             ]
           }
         ]
       },
       {
         "w": "حرم",
-        "family": true,
-        "points": 3,
+        "family": false,
+        "points": 1,
         "senses": [
           {
             "lemma": "حَرَّمَ",
@@ -144,6 +97,38 @@
         ]
       },
       {
+        "w": "حوت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حُوت",
+            "gloss": "fish",
+            "type": "noun",
+            "root": "حوت",
+            "count": 5,
+            "ref": "7:163",
+            "pos": 14
+          }
+        ]
+      },
+      {
+        "w": "حور",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حُور",
+            "gloss": "fair ones",
+            "type": "noun",
+            "root": "حور",
+            "count": 4,
+            "ref": "55:72",
+            "pos": 1
+          }
+        ]
+      },
+      {
         "w": "رحم",
         "family": false,
         "points": 1,
@@ -165,23 +150,109 @@
         ]
       },
       {
-        "w": "مات",
+        "w": "روح",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "ماتَ",
-            "gloss": "die",
-            "type": "verb",
-            "root": "موت",
-            "count": 39,
-            "ref": "3:144",
-            "pos": 11,
+            "lemma": "رُوح",
+            "gloss": "holy spirit",
+            "type": "noun",
+            "root": "روح",
+            "count": 21,
+            "ref": "16:102",
+            "pos": 3,
             "alt": [
-              "dies",
-              "died"
+              "inspiration"
+            ]
+          },
+          {
+            "lemma": "رَوْح",
+            "gloss": "mercy of allah",
+            "type": "noun",
+            "root": "روح",
+            "count": 3,
+            "ref": "12:87",
+            "pos": 10
+          }
+        ]
+      },
+      {
+        "w": "سحت",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "سُحْت",
+            "gloss": "forbidden",
+            "type": "noun",
+            "root": "سحت",
+            "count": 3,
+            "ref": "5:42",
+            "pos": 4
+          }
+        ]
+      },
+      {
+        "w": "سحر",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "سِحْر",
+            "gloss": "magic",
+            "type": "noun",
+            "root": "سحر",
+            "count": 28,
+            "ref": "5:110",
+            "pos": 62,
+            "alt": [
+              "two magic"
+            ]
+          },
+          {
+            "lemma": "سَحَر",
+            "gloss": "before dawn",
+            "type": "noun",
+            "root": "سحر",
+            "count": 3,
+            "ref": "3:17",
+            "pos": 6,
+            "alt": [
+              "hours before dawn",
+              "dawn"
+            ]
+          },
+          {
+            "lemma": "سَحَرُ",
+            "gloss": "bewitched",
+            "type": "verb",
+            "root": "سحر",
+            "count": 3,
+            "ref": "7:116",
+            "pos": 5,
+            "alt": [
+              "bewitch",
+              "are you deluded"
             ],
             "form": 1
+          }
+        ]
+      },
+      {
+        "w": "سرح",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "سَرِّحُ",
+            "gloss": "release",
+            "type": "verb",
+            "root": "سرح",
+            "count": 3,
+            "ref": "2:231",
+            "pos": 9,
+            "form": 2
           }
         ]
       },
@@ -222,42 +293,6 @@
         ]
       },
       {
-        "w": "مره",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَرَّة",
-            "gloss": "time",
-            "type": "noun",
-            "root": "مرر",
-            "count": 20,
-            "ref": "2:229",
-            "pos": 2,
-            "alt": [
-              "twice",
-              "times"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "موت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَوْت",
-            "gloss": "death",
-            "type": "noun",
-            "root": "موت",
-            "count": 50,
-            "ref": "25:3",
-            "pos": 18
-          }
-        ]
-      },
-      {
         "w": "ارحم",
         "family": false,
         "points": 2,
@@ -274,46 +309,26 @@
         ]
       },
       {
-        "w": "امات",
+        "w": "امسح",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَماتَ",
-            "gloss": "causes death",
+            "lemma": "امْسَحُ",
+            "gloss": "wipe",
             "type": "verb",
-            "root": "موت",
-            "count": 21,
-            "ref": "53:44",
-            "pos": 3,
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "امام",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "إِمام",
-            "gloss": "leaders",
-            "type": "noun",
-            "root": "أمم",
-            "count": 12,
-            "ref": "2:124",
-            "pos": 11,
-            "alt": [
-              "leader",
-              "guide"
-            ]
+            "root": "مسح",
+            "count": 3,
+            "ref": "4:43",
+            "pos": 41,
+            "form": 1
           }
         ]
       },
       {
         "w": "حرام",
-        "family": true,
-        "points": 4,
+        "family": false,
+        "points": 2,
         "senses": [
           {
             "lemma": "حَرام",
@@ -327,22 +342,6 @@
               "sanctuary",
               "sacred"
             ]
-          }
-        ]
-      },
-      {
-        "w": "حرمه",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "حُرُمَة",
-            "gloss": "sacred rites",
-            "type": "noun",
-            "root": "حرم",
-            "count": 2,
-            "ref": "22:30",
-            "pos": 4
           }
         ]
       },
@@ -382,29 +381,57 @@
         ]
       },
       {
-        "w": "رحمه",
+        "w": "ساحر",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "ساحِر",
+            "gloss": "magician",
+            "type": "active participle",
+            "root": "سحر",
+            "count": 22,
+            "ref": "7:112",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "سحار",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "سَحّار",
+            "gloss": "magician",
+            "type": "noun",
+            "root": "سحر",
+            "count": 1,
+            "ref": "26:37",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "سراح",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "رَحْمَة",
-            "gloss": "mercy from",
+            "lemma": "سَراح",
+            "gloss": "release",
             "type": "noun",
-            "root": "رحم",
-            "count": 114,
-            "ref": "2:218",
-            "pos": 12,
-            "alt": [
-              "mercy",
-              "mercy of allah"
-            ]
+            "root": "سرح",
+            "count": 2,
+            "ref": "33:28",
+            "pos": 14
           }
         ]
       },
       {
         "w": "محرم",
-        "family": true,
-        "points": 4,
+        "family": false,
+        "points": 2,
         "senses": [
           {
             "lemma": "مُحَرَّم",
@@ -418,37 +445,18 @@
         ]
       },
       {
-        "w": "ممات",
-        "family": false,
-        "points": 2,
+        "w": "مسحر",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "مَمات",
-            "gloss": "dying",
-            "type": "noun",
-            "root": "موت",
-            "count": 3,
-            "ref": "6:162",
-            "pos": 6,
-            "alt": [
-              "death"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "موتت",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مَوْتَت",
-            "gloss": "death",
-            "type": "noun",
-            "root": "موت",
-            "count": 3,
-            "ref": "37:59",
-            "pos": 2
+            "lemma": "مُسَحَّر",
+            "gloss": "bewitched",
+            "type": "passive participle",
+            "root": "سحر",
+            "count": 2,
+            "ref": "26:153",
+            "pos": 5
           }
         ]
       },
@@ -469,45 +477,9 @@
         ]
       },
       {
-        "w": "امرات",
+        "w": "محروم",
         "family": false,
         "points": 3,
-        "senses": [
-          {
-            "lemma": "امْرَأَت",
-            "gloss": "wife",
-            "type": "noun",
-            "root": "مرأ",
-            "count": 26,
-            "ref": "3:35",
-            "pos": 3,
-            "alt": [
-              "woman",
-              "women"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "محرمه",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مُحَرَّمَة",
-            "gloss": "forbidden",
-            "type": "passive participle",
-            "root": "حرم",
-            "count": 1,
-            "ref": "5:26",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "محروم",
-        "family": true,
-        "points": 5,
         "senses": [
           {
             "lemma": "مَحْرُوم",
@@ -519,11 +491,27 @@
             "pos": 3
           }
         ]
+      },
+      {
+        "w": "مسحور",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَسْحُور",
+            "gloss": "bewitched",
+            "type": "passive participle",
+            "root": "سحر",
+            "count": 4,
+            "ref": "15:15",
+            "pos": 8
+          }
+        ]
       }
     ],
     "otherFamily": [],
-    "maxScore": 57,
-    "featuredRoot": "حرم"
+    "maxScore": 52,
+    "featuredRoot": "سحر"
   },
   "generated": true,
   "model": "auto (chain)"

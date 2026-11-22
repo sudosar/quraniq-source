@@ -1,29 +1,35 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "puzzle": {
-    "verseRef": "15:23",
-    "reference": "Al-Hijr (15:23)",
+    "verseRef": "4:86",
+    "reference": "Surah An-Nisa (4:86)",
     "segments": [
-      "وَإِنَّا لَنَحْنُ",
-      "نُحْيِي",
-      "وَنُمِيتُ وَنَحْنُ",
-      "الْوَارِثُونَ"
+      "وَإِذَا حُيِّيتُم بِتَحِيَّةٍ",
+      "فَحَيُّوا بِأَحْسَنَ مِنْهَا",
+      "أَوْ رُدُّوهَا",
+      "إِنَّ اللَّهَ كَانَ",
+      "عَلَى كُلِّ شَيْءٍ",
+      "حَسِيبًا"
     ],
     "translations": [
-      "And indeed, We surely [We]",
-      "We give life and We cause death",
-      "and We",
-      "(are) the Inheritors"
+      "And when you are greeted with a greeting",
+      "then greet with better than it",
+      "or return it Indeed",
+      "Allah is",
+      "of every",
+      "thing an Accountant"
     ],
-    "hint": "Allah's exclusive power over life, death, and ultimate inheritance",
-    "arabic": "وَإِنَّا لَنَحْنُ نُحْىِۦ وَنُمِيتُ وَنَحْنُ ٱلْوَٰرِثُونَ",
+    "hint": "The etiquette of returning greetings with something better",
+    "arabic": "وَإِذَا حُيِّيتُم بِتَحِيَّةٍۢ فَحَيُّوا۟ بِأَحْسَنَ مِنْهَآ أَوْ رُدُّوهَآ ۗ إِنَّ ٱللَّهَ كَانَ عَلَىٰ كُلِّ شَىْءٍ حَسِيبًا",
     "words": [
-      "وَإِنَّا لَنَحْنُ",
-      "نُحْىِۦ وَنُمِيتُ",
-      "وَنَحْنُ",
-      "ٱلْوَٰرِثُونَ"
+      "وَإِذَا حُيِّيتُم بِتَحِيَّةٍۢ",
+      "فَحَيُّوا۟ بِأَحْسَنَ مِنْهَآ",
+      "أَوْ رُدُّوهَآ ۗ إِنَّ",
+      "ٱللَّهَ كَانَ",
+      "عَلَىٰ كُلِّ",
+      "شَىْءٍ حَسِيبًا"
     ],
-    "verseEn": "And indeed, it is We who give life and cause death, and We are the Inheritor."
+    "verseEn": "And when you are greeted with a greeting, greet [in return] with one better than it or [at least] return it [in a like manner]. Indeed Allāh is ever, over all things, an Accountant."
   },
   "generated": true,
   "model": "auto (chain)"
