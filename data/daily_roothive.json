@@ -1,517 +1,555 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "puzzle": {
-    "center": "ح",
+    "center": "ل",
     "outer": [
+      "ع",
       "م",
-      "ر",
-      "و",
-      "س",
+      "ف",
+      "ت",
       "ا",
-      "ت"
+      "و"
     ],
     "root": {
-      "letters": "سحر",
-      "display": "س ح ر",
-      "translit": "s-ḥ-r",
-      "meaning": "The core idea is turning things from reality through illusion and hidden influence. It gives words for magic and magicians, being bewitched, and the time before dawn when light is still veiled.",
-      "occurrences": 63,
-      "lemmaCount": 7
+      "letters": "فعل",
+      "display": "ف ع ل",
+      "translit": "f-ʿ-l",
+      "meaning": "It means to do or make something happen. Its different forms show the action from different sides.",
+      "occurrences": 108,
+      "lemmaCount": 6
     },
     "words": [
       {
-        "w": "احس",
+        "w": "افل",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَحَسَّ",
-            "gloss": "perceived",
+            "lemma": "أَفَلَ",
+            "gloss": "set",
             "type": "verb",
-            "root": "حسس",
+            "root": "أفل",
             "count": 3,
-            "ref": "3:52",
-            "pos": 2,
+            "ref": "6:76",
+            "pos": 11,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "الف",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "أَلْف",
+            "gloss": "thousand",
+            "type": "noun",
+            "root": "ألف",
+            "count": 14,
+            "ref": "2:96",
+            "pos": 13,
             "alt": [
-              "perceive"
+              "thousands",
+              "two thousand"
+            ]
+          },
+          {
+            "lemma": "أَلَّفَ",
+            "gloss": "put affection",
+            "type": "verb",
+            "root": "ألف",
+            "count": 5,
+            "ref": "8:63",
+            "pos": 16,
+            "alt": [
+              "joins"
+            ],
+            "form": 2
+          },
+          {
+            "lemma": "أَلْفَ",
+            "gloss": "found",
+            "type": "verb",
+            "root": "لفو",
+            "count": 3,
+            "ref": "2:170",
+            "pos": 12,
+            "alt": [
+              "both found"
             ],
             "form": 4
           }
         ]
       },
       {
-        "w": "تحت",
+        "w": "امل",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "تَحْت",
-            "gloss": "under",
+            "lemma": "أَمَل",
+            "gloss": "hope",
             "type": "noun",
-            "root": "تحت",
-            "count": 51,
-            "ref": "5:66",
-            "pos": 15,
-            "alt": [
-              "beneath",
-              "below"
-            ]
+            "root": "أمل",
+            "count": 2,
+            "ref": "18:46",
+            "pos": 13
           }
         ]
       },
       {
-        "w": "حرم",
+        "w": "اول",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "حَرَّمَ",
-            "gloss": "allah has made unlawful",
+            "lemma": "أَوَّل",
+            "gloss": "first",
+            "type": "noun",
+            "root": "أول",
+            "count": 82,
+            "ref": "2:41",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "علا",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عَلا",
+            "gloss": "exalted himself",
             "type": "verb",
-            "root": "حرم",
-            "count": 39,
-            "ref": "2:173",
-            "pos": 2,
+            "root": "علو",
+            "count": 6,
+            "ref": "28:4",
+            "pos": 3,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "علم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عَلِمَ",
+            "gloss": "knew",
+            "type": "verb",
+            "root": "علم",
+            "count": 382,
+            "ref": "2:30",
+            "pos": 25,
             "alt": [
-              "forbidden",
-              "has forbidden"
+              "knows",
+              "know"
             ],
+            "form": 1
+          },
+          {
+            "lemma": "عِلْم",
+            "gloss": "knowledge",
+            "type": "noun",
+            "root": "علم",
+            "count": 105,
+            "ref": "2:32",
+            "pos": 4,
+            "alt": [
+              "any knowledge",
+              "having known"
+            ]
+          },
+          {
+            "lemma": "عَلَّمَ",
+            "gloss": "taught",
+            "type": "verb",
+            "root": "علم",
+            "count": 41,
+            "ref": "55:2",
+            "pos": 1,
             "form": 2
           }
         ]
       },
       {
-        "w": "حما",
+        "w": "علو",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "حَمَإ",
-            "gloss": "black mud",
+            "lemma": "عُلُوّ",
+            "gloss": "haughtiness",
             "type": "noun",
-            "root": "حمأ",
-            "count": 3,
-            "ref": "15:26",
+            "root": "علو",
+            "count": 4,
+            "ref": "17:4",
+            "pos": 12,
+            "alt": [
+              "height",
+              "exaltedness"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عمل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "عَمِلَ",
+            "gloss": "did",
+            "type": "verb",
+            "root": "عمل",
+            "count": 276,
+            "ref": "3:30",
+            "pos": 6,
+            "alt": [
+              "does",
+              "do"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "عَمَل",
+            "gloss": "deed",
+            "type": "noun",
+            "root": "عمل",
+            "count": 71,
+            "ref": "3:195",
+            "pos": 7,
+            "alt": [
+              "deeds",
+              "work"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "فعل",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "فَعَلَ",
+            "gloss": "does",
+            "type": "verb",
+            "root": "فعل",
+            "count": 88,
+            "ref": "2:85",
+            "pos": 31,
+            "alt": [
+              "did",
+              "do"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "فِعْل",
+            "gloss": "doing",
+            "type": "verbal noun",
+            "root": "فعل",
+            "count": 1,
+            "ref": "21:73",
             "pos": 7
           }
         ]
       },
       {
-        "w": "حوت",
+        "w": "مال",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "حُوت",
-            "gloss": "fish",
+            "lemma": "مال",
+            "gloss": "wealth",
             "type": "noun",
-            "root": "حوت",
-            "count": 5,
-            "ref": "7:163",
-            "pos": 14
+            "root": "مول",
+            "count": 86,
+            "ref": "2:188",
+            "pos": 13,
+            "alt": [
+              "any wealth",
+              "wealth of allah"
+            ]
           }
         ]
       },
       {
-        "w": "حور",
+        "w": "ملا",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "حُور",
-            "gloss": "fair ones",
+            "lemma": "مَلَأ",
+            "gloss": "chiefs",
             "type": "noun",
-            "root": "حور",
-            "count": 4,
-            "ref": "55:72",
+            "root": "ملأ",
+            "count": 30,
+            "ref": "11:38",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "اعلم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَعْلَم",
+            "gloss": "most knowing",
+            "type": "noun",
+            "root": "علم",
+            "count": 49,
+            "ref": "2:140",
+            "pos": 15,
+            "alt": [
+              "knows best",
+              "know best"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "الاف",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "إِلاف",
+            "gloss": "familiarity",
+            "type": "verbal noun",
+            "root": "ألف",
+            "count": 2,
+            "ref": "106:1",
             "pos": 1
           }
         ]
       },
       {
-        "w": "رحم",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "رَحِمَ",
-            "gloss": "has mercy",
-            "type": "verb",
-            "root": "رحم",
-            "count": 28,
-            "ref": "11:43",
-            "pos": 17,
-            "alt": [
-              "lord has bestowed mercy",
-              "bestows mercy"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "روح",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "رُوح",
-            "gloss": "holy spirit",
-            "type": "noun",
-            "root": "روح",
-            "count": 21,
-            "ref": "16:102",
-            "pos": 3,
-            "alt": [
-              "inspiration"
-            ]
-          },
-          {
-            "lemma": "رَوْح",
-            "gloss": "mercy of allah",
-            "type": "noun",
-            "root": "روح",
-            "count": 3,
-            "ref": "12:87",
-            "pos": 10
-          }
-        ]
-      },
-      {
-        "w": "سحت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "سُحْت",
-            "gloss": "forbidden",
-            "type": "noun",
-            "root": "سحت",
-            "count": 3,
-            "ref": "5:42",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "سحر",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "سِحْر",
-            "gloss": "magic",
-            "type": "noun",
-            "root": "سحر",
-            "count": 28,
-            "ref": "5:110",
-            "pos": 62,
-            "alt": [
-              "two magic"
-            ]
-          },
-          {
-            "lemma": "سَحَر",
-            "gloss": "before dawn",
-            "type": "noun",
-            "root": "سحر",
-            "count": 3,
-            "ref": "3:17",
-            "pos": 6,
-            "alt": [
-              "hours before dawn",
-              "dawn"
-            ]
-          },
-          {
-            "lemma": "سَحَرُ",
-            "gloss": "bewitched",
-            "type": "verb",
-            "root": "سحر",
-            "count": 3,
-            "ref": "7:116",
-            "pos": 5,
-            "alt": [
-              "bewitch",
-              "are you deluded"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "سرح",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "سَرِّحُ",
-            "gloss": "release",
-            "type": "verb",
-            "root": "سرح",
-            "count": 3,
-            "ref": "2:231",
-            "pos": 9,
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "محو",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَحَوْ",
-            "gloss": "eliminated",
-            "type": "verb",
-            "root": "محو",
-            "count": 3,
-            "ref": "13:39",
-            "pos": 1,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "مرح",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "مَرَح",
-            "gloss": "insolence",
-            "type": "noun",
-            "root": "مرح",
-            "count": 2,
-            "ref": "17:37",
-            "pos": 5,
-            "alt": [
-              "exultantly"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "ارحم",
+        "w": "عالم",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "أَرْحَم",
-            "gloss": "most merciful",
+            "lemma": "عالَم",
+            "gloss": "worlds",
             "type": "noun",
-            "root": "رحم",
+            "root": "علم",
+            "count": 73,
+            "ref": "1:2",
+            "pos": 4,
+            "alt": [
+              "to the worlds",
+              "universe"
+            ]
+          },
+          {
+            "lemma": "عالِم",
+            "gloss": "knower",
+            "type": "active participle",
+            "root": "علم",
+            "count": 18,
+            "ref": "6:73",
+            "pos": 19,
+            "alt": [
+              "all-knower",
+              "well-knowing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "عامل",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "عامِل",
+            "gloss": "working",
+            "type": "active participle",
+            "root": "عمل",
+            "count": 12,
+            "ref": "3:195",
+            "pos": 8,
+            "alt": [
+              "doer",
+              "worker"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "علام",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "عَلّام",
+            "gloss": "all-knower",
+            "type": "noun",
+            "root": "علم",
             "count": 4,
-            "ref": "7:151",
-            "pos": 10
-          }
-        ]
-      },
-      {
-        "w": "امسح",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "امْسَحُ",
-            "gloss": "wipe",
-            "type": "verb",
-            "root": "مسح",
-            "count": 3,
-            "ref": "4:43",
-            "pos": 41,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "حرام",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "حَرام",
-            "gloss": "ihram",
-            "type": "adjective",
-            "root": "حرم",
-            "count": 33,
-            "ref": "5:1",
-            "pos": 18,
+            "ref": "5:109",
+            "pos": 14,
             "alt": [
-              "sanctuary",
-              "sacred"
+              "knower"
             ]
           }
         ]
       },
       {
-        "w": "حمار",
-        "family": false,
-        "points": 2,
+        "w": "فاعل",
+        "family": true,
+        "points": 4,
         "senses": [
           {
-            "lemma": "حِمار",
-            "gloss": "donkeys",
-            "type": "noun",
-            "root": "حمر",
-            "count": 5,
-            "ref": "74:50",
+            "lemma": "فاعِل",
+            "gloss": "doers",
+            "type": "active participle",
+            "root": "فعل",
+            "count": 9,
+            "ref": "12:10",
+            "pos": 16,
+            "alt": [
+              "doing",
+              "do"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "فعال",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "فَعّال",
+            "gloss": "all-accomplisher",
+            "type": "active participle",
+            "root": "فعل",
+            "count": 2,
+            "ref": "11:107",
+            "pos": 13,
+            "alt": [
+              "doer"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "فعلت",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "فَعْلَت",
+            "gloss": "deed",
+            "type": "verbal noun",
+            "root": "فعل",
+            "count": 1,
+            "ref": "26:19",
             "pos": 2
           }
         ]
       },
       {
-        "w": "راحم",
+        "w": "لولو",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "راحِم",
-            "gloss": "show mercy",
-            "type": "active participle",
-            "root": "رحم",
+            "lemma": "لُؤْلُؤ",
+            "gloss": "pearls",
+            "type": "noun",
+            "root": "لؤلؤ",
             "count": 6,
-            "ref": "7:151",
-            "pos": 11,
+            "ref": "52:24",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "ملوم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَلُوم",
+            "gloss": "blameworthy",
+            "type": "passive participle",
+            "root": "لوم",
+            "count": 5,
+            "ref": "17:29",
+            "pos": 12
+          }
+        ]
+      },
+      {
+        "w": "اعلام",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "أَعْلام",
+            "gloss": "like mountains",
+            "type": "noun",
+            "root": "علم",
+            "count": 2,
+            "ref": "42:32",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "معلوم",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مَعْلُوم",
+            "gloss": "known",
+            "type": "passive participle",
+            "root": "علم",
+            "count": 11,
+            "ref": "15:4",
+            "pos": 8,
             "alt": [
-              "merciful"
+              "well-known",
+              "determined"
             ]
           }
         ]
       },
       {
-        "w": "ساحر",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "ساحِر",
-            "gloss": "magician",
-            "type": "active participle",
-            "root": "سحر",
-            "count": 22,
-            "ref": "7:112",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "سحار",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "سَحّار",
-            "gloss": "magician",
-            "type": "noun",
-            "root": "سحر",
-            "count": 1,
-            "ref": "26:37",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "سراح",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "سَراح",
-            "gloss": "release",
-            "type": "noun",
-            "root": "سرح",
-            "count": 2,
-            "ref": "33:28",
-            "pos": 14
-          }
-        ]
-      },
-      {
-        "w": "محرم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "مُحَرَّم",
-            "gloss": "forbidden",
-            "type": "passive participle",
-            "root": "حرم",
-            "count": 4,
-            "ref": "2:85",
-            "pos": 20
-          }
-        ]
-      },
-      {
-        "w": "مسحر",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُسَحَّر",
-            "gloss": "bewitched",
-            "type": "passive participle",
-            "root": "سحر",
-            "count": 2,
-            "ref": "26:153",
-            "pos": 5
-          }
-        ]
-      },
-      {
-        "w": "ارحام",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "أَرْحام",
-            "gloss": "wombs",
-            "type": "noun",
-            "root": "رحم",
-            "count": 12,
-            "ref": "6:143",
-            "pos": 17
-          }
-        ]
-      },
-      {
-        "w": "محروم",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "مَحْرُوم",
-            "gloss": "deprived",
-            "type": "passive participle",
-            "root": "حرم",
-            "count": 4,
-            "ref": "56:67",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "مسحور",
+        "w": "مفعول",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "مَسْحُور",
-            "gloss": "bewitched",
+            "lemma": "مَفْعُول",
+            "gloss": "destined",
             "type": "passive participle",
-            "root": "سحر",
-            "count": 4,
-            "ref": "15:15",
-            "pos": 8
+            "root": "فعل",
+            "count": 7,
+            "ref": "4:47",
+            "pos": 28,
+            "alt": [
+              "executed",
+              "fulfilled"
+            ]
           }
         ]
       }
     ],
     "otherFamily": [],
-    "maxScore": 52,
-    "featuredRoot": "سحر"
+    "maxScore": 50,
+    "featuredRoot": "فعل"
   },
   "generated": true,
   "model": "auto (chain)"
