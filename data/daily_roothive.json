@@ -1,498 +1,539 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "puzzle": {
-    "center": "ق",
+    "center": "و",
     "outer": [
-      "ي",
-      "ب",
-      "م",
       "ا",
-      "ه",
-      "ع"
+      "ل",
+      "د",
+      "م",
+      "ي",
+      "ه"
     ],
     "root": {
-      "letters": "عقب",
-      "display": "ع ق ب",
-      "translit": "ʿ-q-b",
-      "meaning": "The core idea is what comes after something. Endings, results, penalties and turning back on your heels all grow from following after an action.",
-      "occurrences": 80,
-      "lemmaCount": 11
+      "letters": "ولد",
+      "display": "و ل د",
+      "translit": "w-l-d",
+      "meaning": "The core idea is birth and having children. From it come words for son and child, as well as father, mother and parents as the ones who give birth and raise them.",
+      "occurrences": 102,
+      "lemmaCount": 7
     },
     "words": [
       {
-        "w": "بقي",
+        "w": "اول",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "بَقِيَ",
-            "gloss": "spared",
-            "type": "verb",
-            "root": "بقي",
-            "count": 3,
-            "ref": "2:278",
-            "pos": 8,
-            "alt": [
-              "remained"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "عقب",
-        "family": true,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "عَقِب",
-            "gloss": "descendents",
+            "lemma": "أَوَّل",
+            "gloss": "first",
             "type": "noun",
-            "root": "عقب",
-            "count": 8,
-            "ref": "2:143",
-            "pos": 27,
-            "alt": [
-              "heels"
-            ]
-          },
-          {
-            "lemma": "عُقْب",
-            "gloss": "final end",
-            "type": "noun",
-            "root": "عقب",
-            "count": 1,
-            "ref": "18:44",
+            "root": "أول",
+            "count": 82,
+            "ref": "2:41",
             "pos": 9
           }
         ]
       },
       {
-        "w": "قام",
+        "w": "اوي",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "قامَ",
-            "gloss": "stand",
+            "lemma": "آوَى",
+            "gloss": "took",
             "type": "verb",
-            "root": "قوم",
-            "count": 33,
-            "ref": "2:275",
+            "root": "أوي",
+            "count": 9,
+            "ref": "12:69",
+            "pos": 5,
+            "form": 4
+          },
+          {
+            "lemma": "أَوَى",
+            "gloss": "could take refuge",
+            "type": "verb",
+            "root": "أوي",
+            "count": 5,
+            "ref": "11:80",
             "pos": 8,
             "alt": [
-              "established",
-              "stands"
+              "retreated"
             ],
             "form": 1
           }
         ]
       },
       {
-        "w": "قيم",
+        "w": "لهو",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "قَيِّم",
-            "gloss": "straight",
-            "type": "adjective",
-            "root": "قوم",
-            "count": 5,
-            "ref": "18:2",
-            "pos": 1
-          }
-        ]
-      },
-      {
-        "w": "ابقي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَبْقَى",
-            "gloss": "everlasting",
+            "lemma": "لَهْو",
+            "gloss": "amusement",
             "type": "noun",
-            "root": "بقي",
-            "count": 7,
-            "ref": "20:71",
-            "pos": 26,
-            "alt": [
-              "more lasting",
-              "ever lasting"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "اعقب",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "أَعْقَبَ",
-            "gloss": "penalized",
-            "type": "verb",
-            "root": "عقب",
-            "count": 1,
-            "ref": "9:77",
-            "pos": 1,
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اقام",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَقامَ",
-            "gloss": "establish",
-            "type": "verb",
-            "root": "قوم",
-            "count": 54,
-            "ref": "10:105",
-            "pos": 2,
-            "alt": [
-              "direct",
-              "assign"
-            ],
-            "form": 4
-          },
-          {
-            "lemma": "إِقام",
-            "gloss": "establishment",
-            "type": "verbal noun",
-            "root": "قوم",
-            "count": 2,
-            "ref": "21:73",
-            "pos": 9,
-            "alt": [
-              "establishing"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "باقي",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "باقي",
-            "gloss": "survivors",
-            "type": "active participle",
-            "root": "بقي",
-            "count": 2,
-            "ref": "26:120",
+            "root": "لهو",
+            "count": 10,
+            "ref": "7:51",
             "pos": 4,
             "alt": [
-              "remaining ones"
+              "pastime",
+              "idle tales"
             ]
           }
         ]
       },
       {
-        "w": "عاقب",
-        "family": true,
-        "points": 4,
+        "w": "هود",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "عاقَبَ",
-            "gloss": "has retaliated",
+            "lemma": "هُود",
+            "gloss": "hud",
+            "type": "proper noun",
+            "root": "هود",
+            "count": 10,
+            "ref": "2:111",
+            "pos": 8,
+            "alt": [
+              "jews",
+              "jew"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "هوي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هَوَى",
+            "gloss": "desire",
             "type": "verb",
-            "root": "عقب",
-            "count": 6,
-            "ref": "22:60",
-            "pos": 3,
+            "root": "هوي",
+            "count": 8,
+            "ref": "2:87",
+            "pos": 22,
             "alt": [
-              "was made to suffer"
+              "desired",
+              "incline"
             ],
-            "form": 3
+            "form": 1
           }
         ]
       },
       {
-        "w": "عقاب",
-        "family": true,
-        "points": 4,
+        "w": "واد",
+        "family": false,
+        "points": 1,
         "senses": [
           {
-            "lemma": "عِقاب",
-            "gloss": "penalty",
+            "lemma": "واد",
+            "gloss": "valley",
             "type": "noun",
-            "root": "عقب",
-            "count": 20,
-            "ref": "41:43",
-            "pos": 16
+            "root": "ودي",
+            "count": 7,
+            "ref": "26:225",
+            "pos": 6
           }
         ]
       },
       {
-        "w": "عقبه",
+        "w": "ولد",
         "family": true,
-        "points": 4,
+        "points": 3,
         "senses": [
           {
-            "lemma": "عَقَبَة",
-            "gloss": "steep path",
+            "lemma": "وَلَد",
+            "gloss": "boy",
             "type": "noun",
-            "root": "عقب",
+            "root": "ولد",
+            "count": 56,
+            "ref": "2:116",
+            "pos": 4,
+            "alt": [
+              "son",
+              "child"
+            ]
+          },
+          {
+            "lemma": "وَلَدَ",
+            "gloss": "was born",
+            "type": "verb",
+            "root": "ولد",
+            "count": 9,
+            "ref": "19:15",
+            "pos": 4,
+            "alt": [
+              "allah has begotten",
+              "begot"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "ولي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وَلِيّ",
+            "gloss": "protector",
+            "type": "noun",
+            "root": "ولي",
+            "count": 86,
+            "ref": "2:107",
+            "pos": 15,
+            "alt": [
+              "allies",
+              "protectors"
+            ]
+          },
+          {
+            "lemma": "وَلَّى",
+            "gloss": "make friends",
+            "type": "verb",
+            "root": "ولي",
+            "count": 30,
+            "ref": "6:129",
+            "pos": 2,
+            "alt": [
+              "turned back",
+              "turned"
+            ],
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "يوم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "يَوْم",
+            "gloss": "day",
+            "type": "noun",
+            "root": "يوم",
+            "count": 475,
+            "ref": "1:4",
+            "pos": 2,
+            "alt": [
+              "days",
+              "periods"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "اواه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَوّاه",
+            "gloss": "imploring",
+            "type": "noun",
+            "root": "أوه",
             "count": 2,
-            "ref": "90:11",
-            "pos": 3
+            "ref": "11:75",
+            "pos": 4
           }
         ]
       },
       {
-        "w": "عقبي",
-        "family": true,
-        "points": 4,
+        "w": "اولي",
+        "family": false,
+        "points": 2,
         "senses": [
           {
-            "lemma": "عُقْبَى",
-            "gloss": "final attainment",
+            "lemma": "أَوْلَى",
+            "gloss": "nearer",
             "type": "noun",
-            "root": "عقب",
+            "root": "ولي",
+            "count": 11,
+            "ref": "3:68",
+            "pos": 2,
+            "alt": [
+              "closer",
+              "woe"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "لولو",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "لُؤْلُؤ",
+            "gloss": "pearls",
+            "type": "noun",
+            "root": "لؤلؤ",
             "count": 6,
-            "ref": "13:22",
-            "pos": 18,
+            "ref": "52:24",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "ماوي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَأْوَى",
+            "gloss": "abode",
+            "type": "noun",
+            "root": "أوي",
+            "count": 22,
+            "ref": "3:151",
+            "pos": 15,
             "alt": [
-              "end",
-              "final"
+              "refuge"
             ]
           }
         ]
       },
       {
-        "w": "عقيم",
+        "w": "ملوم",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "عَقِيم",
-            "gloss": "barren",
-            "type": "adjective",
-            "root": "عقم",
-            "count": 4,
-            "ref": "22:55",
-            "pos": 16
-          }
-        ]
-      },
-      {
-        "w": "قايم",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "قائِم",
-            "gloss": "means of support",
-            "type": "active participle",
-            "root": "قوم",
-            "count": 17,
-            "ref": "3:18",
-            "pos": 11,
-            "alt": [
-              "standing",
-              "establishment"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قيمه",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "قَيِّمَة",
-            "gloss": "correct",
-            "type": "adjective",
-            "root": "قوم",
-            "count": 2,
-            "ref": "98:3",
-            "pos": 3
-          }
-        ]
-      },
-      {
-        "w": "معقب",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُعَقِّب",
-            "gloss": "adjuster",
-            "type": "active participle",
-            "root": "عقب",
-            "count": 1,
-            "ref": "13:41",
+            "lemma": "مَلُوم",
+            "gloss": "blameworthy",
+            "type": "passive participle",
+            "root": "لوم",
+            "count": 5,
+            "ref": "17:29",
             "pos": 12
           }
         ]
       },
       {
-        "w": "مقام",
+        "w": "موده",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "مَقام",
-            "gloss": "position",
+            "lemma": "مَوَدَّة",
+            "gloss": "love",
             "type": "noun",
-            "root": "قوم",
+            "root": "ودد",
+            "count": 8,
+            "ref": "4:73",
+            "pos": 12,
+            "alt": [
+              "any affection",
+              "affection"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مولي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَوْلَى",
+            "gloss": "relation",
+            "type": "noun",
+            "root": "ولي",
+            "count": 18,
+            "ref": "44:41",
+            "pos": 4,
+            "alt": [
+              "protector"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "والد",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "والِد",
+            "gloss": "father",
+            "type": "noun",
+            "root": "ولد",
             "count": 14,
-            "ref": "2:125",
-            "pos": 9,
-            "alt": [
-              "standing place",
-              "standing"
-            ]
-          },
-          {
-            "lemma": "مُقام",
-            "gloss": "stand",
-            "type": "passive participle",
-            "root": "قوم",
-            "count": 3,
-            "ref": "33:13",
-            "pos": 8
+            "ref": "31:33",
+            "pos": 9
           }
         ]
       },
       {
-        "w": "مقيم",
+        "w": "ودود",
         "family": false,
         "points": 2,
         "senses": [
           {
-            "lemma": "مُقِيم",
-            "gloss": "enduring",
+            "lemma": "وَدُود",
+            "gloss": "most loving",
+            "type": "adjective",
+            "root": "ودد",
+            "count": 2,
+            "ref": "11:90",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "وليد",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "وَلِيد",
+            "gloss": "child",
+            "type": "noun",
+            "root": "ولد",
+            "count": 7,
+            "ref": "26:18",
+            "pos": 5,
+            "alt": [
+              "boys",
+              "young boys"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "يهود",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "يَهُود",
+            "gloss": "jew",
+            "type": "proper noun",
+            "root": "هود",
+            "count": 9,
+            "ref": "3:67",
+            "pos": 4
+          }
+        ]
+      },
+      {
+        "w": "اوديه",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "أَوْدِيَة",
+            "gloss": "valleys",
+            "type": "noun",
+            "root": "ودي",
+            "count": 2,
+            "ref": "13:17",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "ممدود",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مَمْدُود",
+            "gloss": "extended",
+            "type": "passive participle",
+            "root": "مدد",
+            "count": 2,
+            "ref": "56:30",
+            "pos": 2,
+            "alt": [
+              "extensive"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "موالي",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "مَوالِي",
+            "gloss": "heirs",
+            "type": "noun",
+            "root": "ولي",
+            "count": 3,
+            "ref": "4:33",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "مولود",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "مَوْلُود",
+            "gloss": "father",
+            "type": "passive participle",
+            "root": "ولد",
+            "count": 3,
+            "ref": "2:233",
+            "pos": 27,
+            "alt": [
+              "son"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "والده",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "والِدَة",
+            "gloss": "mother",
             "type": "active participle",
-            "root": "قوم",
+            "root": "ولد",
+            "count": 3,
+            "ref": "2:233",
+            "pos": 24
+          }
+        ]
+      },
+      {
+        "w": "والدي",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "والِدَي",
+            "gloss": "parents",
+            "type": "noun",
+            "root": "ولد",
             "count": 10,
-            "ref": "5:37",
-            "pos": 12,
+            "ref": "14:41",
+            "pos": 4,
             "alt": [
-              "lasting",
-              "establisher"
+              "to his parents",
+              "goodness to his parents"
             ]
-          }
-        ]
-      },
-      {
-        "w": "باقيه",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "باقِيَة",
-            "gloss": "lasting",
-            "type": "active participle",
-            "root": "بقي",
-            "count": 4,
-            "ref": "43:28",
-            "pos": 3,
-            "alt": [
-              "remains"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "عاقبه",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "عاقِبَة",
-            "gloss": "end",
-            "type": "noun",
-            "root": "عقب",
-            "count": 32,
-            "ref": "3:137",
-            "pos": 12,
-            "alt": [
-              "good end in the hereafter"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قايمه",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "قائِمَة",
-            "gloss": "occur",
-            "type": "active participle",
-            "root": "قوم",
-            "count": 5,
-            "ref": "3:113",
-            "pos": 7,
-            "alt": [
-              "standing",
-              "established"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "قيامه",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "قِيامَة",
-            "gloss": "resurrection",
-            "type": "noun",
-            "root": "قوم",
-            "count": 70,
-            "ref": "2:85",
-            "pos": 40,
-            "alt": [
-              "judgment"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "معقبه",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مُعَقِّبَة",
-            "gloss": "successive",
-            "type": "active participle",
-            "root": "عقب",
-            "count": 1,
-            "ref": "13:11",
-            "pos": 2
           }
         ]
       }
     ],
-    "otherFamily": [
-      {
-        "lemma": "يُعَقِّبْ",
-        "gloss": "look back",
-        "type": "verb",
-        "root": "عقب",
-        "count": 2,
-        "ref": "27:10",
-        "pos": 11,
-        "alt": [
-          "return"
-        ],
-        "form": 2
-      }
-    ],
-    "maxScore": 65,
-    "featuredRoot": "عقب"
+    "otherFamily": [],
+    "maxScore": 61,
+    "featuredRoot": "ولد"
   },
   "generated": true,
   "model": "auto (chain)"

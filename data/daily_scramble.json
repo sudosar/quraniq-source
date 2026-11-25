@@ -1,32 +1,29 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "puzzle": {
-    "verseRef": "58:21",
-    "reference": "Al-Mujadila (58:21)",
+    "verseRef": "36:61",
+    "reference": "Ya-Sin (36:61)",
     "segments": [
-      "كتب الله",
-      "لأغلبن أنا",
-      "ورسلي",
-      "إن الله",
-      "قوي عزيز"
+      "وَأَنِ اعْبُدُونِي",
+      "هَٰذَا",
+      "صِرَاطٌ",
+      "مُّسْتَقِيمٌ"
     ],
     "translations": [
-      "Allah has decreed Allah has decreed",
-      "Surely, I will overcome I",
-      "and My Messengers Indeed",
-      "Allah (is) All-Strong",
-      "All-Mighty"
+      "And that you worship Me",
+      "This",
+      "(is) a Path",
+      "Straight"
     ],
-    "hint": "Allah's decreed promise of victory for Himself and His messengers",
-    "arabic": "كَتَبَ ٱللَّهُ لَأَغْلِبَنَّ أَنَا۠ وَرُسُلِىٓ ۚ إِنَّ ٱللَّهَ قَوِىٌّ عَزِيزٌۭ",
+    "hint": "Allah's command to worship Him alone as the straight path",
+    "arabic": "وَأَنِ ٱعْبُدُونِى ۚ هَـٰذَا صِرَٰطٌۭ مُّسْتَقِيمٌۭ",
     "words": [
-      "كَتَبَ ٱللَّهُ",
-      "لَأَغْلِبَنَّ أَنَا۠",
-      "وَرُسُلِىٓ ۚ إِنَّ",
-      "ٱللَّهَ قَوِىٌّ",
-      "عَزِيزٌۭ"
+      "وَأَنِ ٱعْبُدُونِى ۚ",
+      "هَـٰذَا",
+      "صِرَٰطٌۭ",
+      "مُّسْتَقِيمٌۭ"
     ],
-    "verseEn": "Allāh has written [i.e., decreed], \"I will surely overcome, I and My messengers.\" Indeed, Allāh is Powerful and Exalted in Might."
+    "verseEn": "And that you worship [only] Me? This is a straight path."
   },
   "generated": true,
   "model": "auto (chain)"

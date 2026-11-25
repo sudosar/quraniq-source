@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "puzzle": {
-    "word": "انسان",
-    "display": "إِنسَانَ",
-    "hint": "The clay-created being taught clear expression by the Most Merciful",
-    "verseRef": "55:3",
-    "arabicVerse": "خَلَقَ ٱلْإِنسَـٰنَ",
-    "verse": "55:3 - Created man,"
+    "word": "وعيد",
+    "display": "وَعِيد",
+    "hint": "A solemn divine warning linked to the Day when the trumpet is blown",
+    "verseRef": "50:20",
+    "arabicVerse": "وَنُفِخَ فِى ٱلصُّورِ ۚ ذَٰلِكَ يَوْمُ ٱلْوَعِيدِ",
+    "verse": "50:20 - And the Horn will be blown. That is the Day of [carrying out] the threat."
   },
   "generated": true,
   "model": "auto (chain)"
