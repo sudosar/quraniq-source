@@ -1,65 +1,65 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "puzzle": {
-    "title": "the scales that tipped toward ruin",
-    "intro": "In a lush and prosperous region, a thriving community let greed corrupt the marketplace. Known for skill in trade and abundance from surrounding gardens, this group faced a call to fairness and faith. Yet pride in wealth led to defiance, and a dark shadow gathered on the horizon.",
+    "title": "the garden vowed at dawn",
+    "intro": "In the quiet hours before sunrise, a plan was made in secret. A flourishing inheritance stood ready for harvest, yet a resolve formed to keep every fruit away from those in need. By morning, everything would look unfamiliar, and a lesson would be etched into blackened branches for all who reflect.",
     "clues": [
-      "We were a prosperous trading community living among gardens and wooded groves.",
-      "We cheated people in measures and weights, spreading corruption in the land.",
-      "We were warned by our messenger to worship Allah alone and to give full measure.",
-      "We mocked our messenger and demanded the punishment to come if he was truthful.",
-      "We were seized by the punishment of the Day of the Shadow when a cloud overshadowed us.",
-      "I am known as the Companions of the Wood, the people to whom Shu'ayb was sent."
+      "We inherited a flourishing garden and vowed to harvest all of its fruits for ourselves.",
+      "We swore to go out early at dawn while the poor who asked for their share were still asleep.",
+      "We excluded any exception from our oath and withheld the right of the needy without saying if Allah wills.",
+      "We went out whispering to one another to allow no poor person to enter our garden that day.",
+      "We imagined ourselves fully capable of gathering everything and preventing any gleaner from taking a portion.",
+      "We woke to find our garden ruined in the night, blackened as if harvested, and we said we were deprived and penitent."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The People of Thamud",
-          "The Companions of the Wood",
           "The Companions of the Trench",
+          "The Companions of the Garden",
+          "The Messengers of the Town in Surah Ya-Sin",
           "The People of the Elephant",
-          "The Companions of the Cave"
+          "The Keepers of Hellfire"
         ],
-        "answer": "The Companions of the Wood"
+        "answer": "The Companions of the Garden"
       },
       "trial": {
         "label": "Trial/Event",
         "options": [
-          "Giving short measure and defying our messenger",
-          "Demanding to see Allah directly at Mount Sinai",
-          "Building a tower to reach the heavens",
-          "Hiding faith secretly inside a palace",
-          "Worshipping a golden calf in the absence of Musa"
+          "Sacrificing a cow to resolve a murder dispute",
+          "Challenging a prophet to bring down stones from the sky",
+          "Plotting to harvest at dawn while denying the poor their share",
+          "Breaking the Sabbath by setting fishing nets",
+          "Building a dam to control floodwaters for trade"
         ],
-        "answer": "Giving short measure and defying our messenger"
+        "answer": "Plotting to harvest at dawn while denying the poor their share"
       },
       "location": {
         "label": "Key Element",
         "options": [
-          "The sacred valley of Tuwa",
-          "The fire that was made cool and safe",
-          "The wooded grove of Al-Aykah",
-          "The cave with a sleeper's dog at its entrance",
-          "The mirrored palace of glass"
+          "The sacred valley of Tuwa where fire was seen",
+          "The walled garden orchard to be reaped in the morning",
+          "The mirrored palace floor mistaken for water",
+          "The wooden ark built under divine instruction",
+          "The iron wall built between two mountains"
         ],
-        "answer": "The wooded grove of Al-Aykah"
+        "answer": "The walled garden orchard to be reaped in the morning"
       },
       "outcome": {
         "label": "Outcome",
         "options": [
-          "Drowned in the divided sea",
-          "Swallowed with treasures into the earth",
-          "Transformed into apes for breaking the Sabbath",
-          "Saved in an ark above the floodwaters",
-          "Destroyed by the punishment of the Day of Shadow"
+          "We were turned into apes for transgressing the Sabbath",
+          "We slept in a cave for three hundred and nine years",
+          "We were swallowed by the earth with treasures for pride",
+          "Our garden was destroyed overnight and left blackened like night",
+          "We were drowned in the sea while pursuing the believers"
         ],
-        "answer": "Destroyed by the punishment of the Day of Shadow"
+        "answer": "Our garden was destroyed overnight and left blackened like night"
       }
     },
-    "verseRef": "26:176",
-    "arabic": "كَذَّبَ أَصْحَـٰبُ لْـَٔيْكَةِ ٱلْمُرْسَلِينَ",
-    "verse": "The companions of the thicket [i.e., the people of Madyan] denied the messengers (26:176)"
+    "verseRef": "68:17",
+    "arabic": "إِنَّا بَلَوْنَـٰهُمْ كَمَا بَلَوْنَآ أَصْحَـٰبَ ٱلْجَنَّةِ إِذْ أَقْسَمُوا۟ لَيَصْرِمُنَّهَا مُصْبِحِينَ",
+    "verse": "Indeed, We have tried them as We tried the companions of the garden, when they swore to cut its fruit in the [early] morning (68:17)"
   },
   "generated": true,
   "model": "auto (chain)"

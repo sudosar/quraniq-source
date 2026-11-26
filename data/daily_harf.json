@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "puzzle": {
-    "word": "وعيد",
-    "display": "وَعِيد",
-    "hint": "A solemn divine warning linked to the Day when the trumpet is blown",
-    "verseRef": "50:20",
-    "arabicVerse": "وَنُفِخَ فِى ٱلصُّورِ ۚ ذَٰلِكَ يَوْمُ ٱلْوَعِيدِ",
-    "verse": "50:20 - And the Horn will be blown. That is the Day of [carrying out] the threat."
+    "word": "حليما",
+    "display": "حَلِيمًا",
+    "hint": "Divine quality of patience that delays punishment to give time to return",
+    "verseRef": "33:51",
+    "arabicVerse": "۞ تُرْجِى مَن تَشَآءُ مِنْهُنَّ وَتُـْٔوِىٓ إِلَيْكَ مَن تَشَآءُ ۖ وَمَنِ ٱبْتَغَيْتَ مِمَّنْ عَزَلْتَ فَلَا جُنَاحَ عَلَيْكَ ۚ ذَٰلِكَ أَدْنَىٰٓ أَن تَقَرَّ أَعْيُنُهُنَّ وَلَا يَحْزَنَّ وَيَرْضَيْنَ بِمَآ ءَاتَيْتَهُنَّ كُلُّهُنَّ ۚ وَٱللَّهُ يَعْلَمُ مَا فِى قُلُوبِكُمْ ۚ وَكَانَ ٱللَّهُ عَلِيمًا حَلِيمًۭا",
+    "verse": "33:51 - You, [O Muḥammad], may put aside whom you will of them or take to yourself whom you will. And any that you desire of those [wives] from whom you had [temporarily] separated - there is no blame upon you [in returning her]. That is more suitable that they should be content and not grieve and that they should be satisfied with what you have given them - all of them. And Allāh knows what is in your hearts. And ever is Allāh Knowing and Forbearing."
   },
   "generated": true,
   "model": "auto (chain)"

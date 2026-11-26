@@ -1,29 +1,32 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "puzzle": {
-    "verseRef": "36:61",
-    "reference": "Ya-Sin (36:61)",
+    "verseRef": "38:28",
+    "reference": "Sad (38:28)",
     "segments": [
-      "وَأَنِ اعْبُدُونِي",
-      "هَٰذَا",
-      "صِرَاطٌ",
-      "مُّسْتَقِيمٌ"
+      "أَمْ نَجْعَلُ الَّذِينَ",
+      "آمَنُوا وَعَمِلُوا الصَّالِحَاتِ",
+      "كَالْمُفْسِدِينَ فِي الْأَرْضِ",
+      "أَمْ نَجْعَلُ الْمُتَّقِينَ",
+      "كَالْفُجَّارِ"
     ],
     "translations": [
-      "And that you worship Me",
-      "This",
-      "(is) a Path",
-      "Straight"
+      "Or should We treat those who",
+      "believe and do righteous deeds",
+      "like those who spread corruption in the earth",
+      "Or should We treat",
+      "the pious like the wicked"
     ],
-    "hint": "Allah's command to worship Him alone as the straight path",
-    "arabic": "وَأَنِ ٱعْبُدُونِى ۚ هَـٰذَا صِرَٰطٌۭ مُّسْتَقِيمٌۭ",
+    "hint": "A verse about Allah's perfect justice — the righteous can never be equal to the corrupt",
+    "arabic": "أَمْ نَجْعَلُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ كَٱلْمُفْسِدِينَ فِى ٱلْأَرْضِ أَمْ نَجْعَلُ ٱلْمُتَّقِينَ كَٱلْفُجَّارِ",
     "words": [
-      "وَأَنِ ٱعْبُدُونِى ۚ",
-      "هَـٰذَا",
-      "صِرَٰطٌۭ",
-      "مُّسْتَقِيمٌۭ"
+      "أَمْ نَجْعَلُ ٱلَّذِينَ",
+      "ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ",
+      "كَٱلْمُفْسِدِينَ فِى ٱلْأَرْضِ",
+      "أَمْ نَجْعَلُ",
+      "ٱلْمُتَّقِينَ كَٱلْفُجَّارِ"
     ],
-    "verseEn": "And that you worship [only] Me? This is a straight path."
+    "verseEn": "Or should We treat those who believe and do righteous deeds like corrupters in the land? Or should We treat those who fear Allāh like the wicked?"
   },
   "generated": true,
   "model": "auto (chain)"
