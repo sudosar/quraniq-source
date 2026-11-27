@@ -1,0 +1,858 @@
+{
+  "connections": {
+    "categories": [
+      {
+        "name": "أَفْعَالُ الْإِعْرَاضِ وَالِانْصِرَافِ",
+        "nameEn": "Verbs meaning to turn away or turn back in the Qur'an",
+        "color": "yellow",
+        "items": [
+          {
+            "ar": "أَعْرِضْ",
+            "en": "and turn away",
+            "ref": "6:106",
+            "verse": "ٱتَّبِعْ مَآ أُوحِىَ إِلَيْكَ مِن رَّبِّكَ ۖ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ وَأَعْرِضْ عَنِ ٱلْمُشْرِكِينَ",
+            "verseEn": "Follow, [O Muḥammad], what has been revealed to you from your Lord - there is no deity except Him - and turn away from those who associate others with Allāh."
+          },
+          {
+            "ar": "تَوَلَّىٰ",
+            "en": "turned away",
+            "ref": "53:33",
+            "verse": "أَفَرَءَيْتَ ٱلَّذِى تَوَلَّىٰ",
+            "verseEn": "Have you seen the one who turned away"
+          },
+          {
+            "ar": "صَدُّوا",
+            "en": "and hindered",
+            "ref": "16:88",
+            "verse": "ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ زِدْنَـٰهُمْ عَذَابًۭا فَوْقَ ٱلْعَذَابِ بِمَا كَانُوا۟ يُفْسِدُونَ",
+            "verseEn": "Those who disbelieved and averted [others] from the way of Allāh - We will increase them in punishment over [their] punishment for what corruption they were causing."
+          },
+          {
+            "ar": "اِنْقَلَبُوا",
+            "en": "and returned",
+            "ref": "7:119",
+            "verse": "فَغُلِبُوا۟ هُنَالِكَ وَٱنقَلَبُوا۟ صَـٰغِرِينَ",
+            "verseEn": "And they [i.e., Pharaoh and his people] were overcome right there and became debased."
+          }
+        ]
+      },
+      {
+        "name": "أَلْفَاظُ الزَّمَنِ وَالتَّقْدِيمِ",
+        "nameEn": "Words denoting time and temporal order",
+        "color": "green",
+        "items": [
+          {
+            "ar": "قَبْلُ",
+            "en": "before",
+            "ref": "53:52",
+            "verse": "وَقَوْمَ نُوحٍۢ مِّن قَبْلُ ۖ إِنَّهُمْ كَانُوا۟ هُمْ أَظْلَمَ وَأَطْغَىٰ",
+            "verseEn": "And the people of Noah before. Indeed, it was they who were [even] more unjust and oppressing."
+          },
+          {
+            "ar": "أَجَلٍ",
+            "en": "a (fixed) term",
+            "ref": "7:135",
+            "verse": "فَلَمَّا كَشَفْنَا عَنْهُمُ ٱلرِّجْزَ إِلَىٰٓ أَجَلٍ هُم بَـٰلِغُوهُ إِذَا هُمْ يَنكُثُونَ",
+            "verseEn": "But when We removed the punishment from them until a term which they were to reach, then at once they broke their word."
+          },
+          {
+            "ar": "ٱلْأَوَّلُونَ",
+            "en": "former",
+            "ref": "56:48",
+            "verse": "أَوَءَابَآؤُنَا ٱلْأَوَّلُونَ",
+            "verseEn": "And our forefathers [as well]?\""
+          },
+          {
+            "ar": "يَوْمُ",
+            "en": "(is the) Day",
+            "ref": "77:38",
+            "verse": "هَـٰذَا يَوْمُ ٱلْفَصْلِ ۖ جَمَعْنَـٰكُمْ وَٱلْأَوَّلِينَ",
+            "verseEn": "This is the Day of Judgement; We will have assembled you and the former peoples."
+          }
+        ]
+      },
+      {
+        "name": "حَرَكَاتٌمَبْنِيَّةٌ لِلْمَجْهُولِ",
+        "nameEn": "Passive-voice verbs in the Qur'an",
+        "color": "blue",
+        "items": [
+          {
+            "ar": "فَأُلْقِيَ",
+            "en": "Then fell down",
+            "ref": "26:46",
+            "verse": "فَأُلْقِىَ ٱلسَّحَرَةُ سَـٰجِدِينَ",
+            "verseEn": "So the magicians fell down in prostration [to Allāh]."
+          },
+          {
+            "ar": "قِيلَ",
+            "en": "It was said",
+            "ref": "36:26",
+            "verse": "قِيلَ ٱدْخُلِ ٱلْجَنَّةَ ۖ قَالَ يَـٰلَيْتَ قَوْمِى يَعْلَمُونَ",
+            "verseEn": "It was said, \"Enter Paradise.\" He said, \"I wish my people could know"
+          },
+          {
+            "ar": "سُعِّرَتْ",
+            "en": "is set ablaze",
+            "ref": "81:12",
+            "verse": "وَإِذَا ٱلْجَحِيمُ سُعِّرَتْ",
+            "verseEn": "And when Hellfire is set ablaze"
+          },
+          {
+            "ar": "أُرْسِلُوا",
+            "en": "they had been sent",
+            "ref": "83:33",
+            "verse": "وَمَآ أُرْسِلُوا۟ عَلَيْهِمْ حَـٰفِظِينَ",
+            "verseEn": "But they had not been sent as guardians over them."
+          }
+        ]
+      },
+      {
+        "name": "أَدْوَارٌ وَمِهَنٌ بَشَرِيَّةٌ",
+        "nameEn": "Human occupations, titles and social roles",
+        "color": "purple",
+        "items": [
+          {
+            "ar": "الزَّارِعُونَ",
+            "en": "the Ones Who grow",
+            "ref": "56:64",
+            "verse": "ءَأَنتُمْ تَزْرَعُونَهُۥٓ أَمْ نَحْنُ ٱلزَّٰرِعُونَ",
+            "verseEn": "Is it you who makes it grow, or are We the grower?"
+          },
+          {
+            "ar": "شَاعِرٌ",
+            "en": "A poet",
+            "ref": "52:30",
+            "verse": "أَمْ يَقُولُونَ شَاعِرٌۭ نَّتَرَبَّصُ بِهِۦ رَيْبَ ٱلْمَنُونِ",
+            "verseEn": "Or do they say [of you], \"A poet for whom we await a misfortune of time\"?"
+          },
+          {
+            "ar": "السَّاحِرُونَ",
+            "en": "the magicians",
+            "ref": "10:77",
+            "verse": "قَالَ مُوسَىٰٓ أَتَقُولُونَ لِلْحَقِّ لَمَّا جَآءَكُمْ ۖ أَسِحْرٌ هَـٰذَا وَلَا يُفْلِحُ ٱلسَّـٰحِرُونَ",
+            "verseEn": "Moses said, \"Do you say [thus] about the truth when it has come to you? Is this magic? But magicians will not succeed.\""
+          },
+          {
+            "ar": "فِرْعَوْنَ",
+            "en": "Firaun",
+            "ref": "44:31",
+            "verse": "مِن فِرْعَوْنَ ۚ إِنَّهُۥ كَانَ عَالِيًۭا مِّنَ ٱلْمُسْرِفِينَ",
+            "verseEn": "From Pharaoh. Indeed, he was a haughty one among the transgressors."
+          }
+        ]
+      }
+    ]
+  },
+  "harf": {
+    "word": "بلاد",
+    "display": "بِلَادِ",
+    "hint": "Towns and lands where people journey and settle",
+    "verseRef": "40:4",
+    "arabicVerse": "مَا يُجَـٰدِلُ فِىٓ ءَايَـٰتِ ٱللَّهِ إِلَّا ٱلَّذِينَ كَفَرُوا۟ فَلَا يَغْرُرْكَ تَقَلُّبُهُمْ فِى ٱلْبِلَـٰدِ",
+    "verse": "40:4 - No one disputes concerning the signs of Allāh except those who disbelieve, so be not deceived by their [uninhibited] movement throughout the land."
+  },
+  "deduction": {
+    "title": "The City Turned Upside Down",
+    "intro": "In a valley steeped in corruption, one faithful soul stood alone against the tide. Tasked with calling a defiant community back to purity, this figure faced mockery, threats, and ultimate destruction descending from the sky.",
+    "clues": [
+      "I was sent as a messenger to a community that transgressed all bounds.",
+      "I warned my people about an immorality that no nation before them had committed.",
+      "I offered guidance in purity, but my people mocked me and demanded punishment instead.",
+      "I prayed to Allah for help against my corrupt people when they threatened to expel me.",
+      "Angels came to me in the form of guests, and I feared for them because of my people.",
+      "I was commanded to leave by night with my followers, and stones of baked clay rained upon those left behind."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Prophet Shuayb",
+          "Prophet Lut",
+          "Prophet Idris",
+          "Prophet Salih",
+          "Prophet Hud"
+        ],
+        "answer": "Prophet Lut"
+      },
+      "trial": {
+        "label": "What Was The Crime Of My People?",
+        "options": [
+          "Hamstringing the she-camel of Allah",
+          "Committing shameful immorality unknown to any nation before",
+          "Building lofty towers out of arrogance",
+          "Worshipping the golden calf in absence of their leader",
+          "Withholding measure and weight in trade"
+        ],
+        "answer": "Committing shameful immorality unknown to any nation before"
+      },
+      "location": {
+        "label": "What Was Sent Against The Transgressors?",
+        "options": [
+          "A flood that covered the mountaintops",
+          "Stones of baked clay marked by your Lord",
+          "A mighty blast that seized them at sunrise",
+          "Birds carrying stones against an army with elephants",
+          "A swarm of locusts, lice and frogs"
+        ],
+        "answer": "Stones of baked clay marked by your Lord"
+      },
+      "outcome": {
+        "label": "What Was My Final Outcome?",
+        "options": [
+          "I was raised alive to the heavens",
+          "I was swallowed by a great fish then forgiven",
+          "I was thrown into fire that became cool and safe",
+          "I was saved with my followers except my spouse who was left behind",
+          "I slept in a cave for many years"
+        ],
+        "answer": "I was saved with my followers except my spouse who was left behind"
+      }
+    },
+    "verseRef": "51:35",
+    "arabic": "فَأَخْرَجْنَا مَن كَانَ فِيهَا مِنَ ٱلْمُؤْمِنِينَ",
+    "verse": "So We brought out whoever was in them [i.e., the cities] of the believers. (51:35)"
+  },
+  "scramble": {
+    "verseRef": "61:9",
+    "reference": "As-Saff (61:9)",
+    "segments": [
+      "هُوَ الَّذِي",
+      "أَرْسَلَ رَسُولَهُ",
+      "بِالْهُدَىٰ وَدِينِ",
+      "الْحَقِّ لِيُظْهِرَهُ",
+      "عَلَى الدِّينِ كُلِّهِ",
+      "وَلَوْ كَرِهَ الْمُشْرِكُونَ"
+    ],
+    "translations": [
+      "He (is) the One Who sent",
+      "His Messenger with guidance and (the) religion",
+      "(of) the truth to make it prevail",
+      "over the religion",
+      "all of them although",
+      "dislike (it) the polytheists"
+    ],
+    "hint": "Allah sent His Messenger with guidance and the true religion to prevail over all else",
+    "arabic": "هُوَ ٱلَّذِىٓ أَرْسَلَ رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ ٱلْحَقِّ لِيُظْهِرَهُۥ عَلَى ٱلدِّينِ كُلِّهِۦ وَلَوْ كَرِهَ ٱلْمُشْرِكُونَ",
+    "words": [
+      "هُوَ ٱلَّذِىٓ أَرْسَلَ",
+      "رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ",
+      "ٱلْحَقِّ لِيُظْهِرَهُۥ",
+      "عَلَى ٱلدِّينِ",
+      "كُلِّهِۦ وَلَوْ",
+      "كَرِهَ ٱلْمُشْرِكُونَ"
+    ],
+    "verseEn": "It is He who sent His Messenger with guidance and the religion of truth to manifest it over all religion, although those who associate others with Allāh dislike it."
+  },
+  "roothive": {
+    "center": "ح",
+    "outer": [
+      "ا",
+      "ي",
+      "م",
+      "ه",
+      "ل",
+      "ص"
+    ],
+    "root": {
+      "letters": "صلح",
+      "display": "ص ل ح",
+      "translit": "ṣ-l-ḥ",
+      "meaning": "The core idea is making things right, good and whole. It grows into being a good person, doing good deeds, and fixing broken ties between people.",
+      "occurrences": 180,
+      "lemmaCount": 7
+    },
+    "words": [
+      {
+        "w": "احل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "أَحَلَّ",
+            "gloss": "permitted",
+            "type": "verb",
+            "root": "حلل",
+            "count": 20,
+            "ref": "2:187",
+            "pos": 1,
+            "alt": [
+              "are made lawful",
+              "has made lawful"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "حال",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حالَ",
+            "gloss": "comes",
+            "type": "verb",
+            "root": "حول",
+            "count": 3,
+            "ref": "8:24",
+            "pos": 14,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "حلل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حَلَلْ",
+            "gloss": "settles",
+            "type": "verb",
+            "root": "حلل",
+            "count": 14,
+            "ref": "2:228",
+            "pos": 7,
+            "alt": [
+              "lawful",
+              "on whom descends"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "حلم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حُلُم",
+            "gloss": "dreams",
+            "type": "noun",
+            "root": "حلم",
+            "count": 6,
+            "ref": "12:44",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "حما",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حَمَإ",
+            "gloss": "black mud",
+            "type": "noun",
+            "root": "حمأ",
+            "count": 3,
+            "ref": "15:26",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "حمل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حَمَلَ",
+            "gloss": "carries",
+            "type": "verb",
+            "root": "حمل",
+            "count": 41,
+            "ref": "2:286",
+            "pos": 22,
+            "alt": [
+              "carried",
+              "lay"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "حَمْل",
+            "gloss": "burden",
+            "type": "noun",
+            "root": "حمل",
+            "count": 7,
+            "ref": "7:189",
+            "pos": 15,
+            "alt": [
+              "pregnant woman",
+              "pregnant"
+            ]
+          },
+          {
+            "lemma": "حُمِّلَ",
+            "gloss": "placed on",
+            "type": "verb",
+            "root": "حمل",
+            "count": 5,
+            "ref": "24:54",
+            "pos": 11,
+            "form": 2
+          },
+          {
+            "lemma": "حِمْل",
+            "gloss": "load",
+            "type": "noun",
+            "root": "حمل",
+            "count": 3,
+            "ref": "12:72",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "صلح",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "صُلْح",
+            "gloss": "reconciliation",
+            "type": "noun",
+            "root": "صلح",
+            "count": 2,
+            "ref": "4:128",
+            "pos": 15
+          },
+          {
+            "lemma": "صَلَحَ",
+            "gloss": "righteous",
+            "type": "verb",
+            "root": "صلح",
+            "count": 2,
+            "ref": "13:23",
+            "pos": 5,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "لحم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "لَحْم",
+            "gloss": "flesh",
+            "type": "noun",
+            "root": "لحم",
+            "count": 12,
+            "ref": "2:259",
+            "pos": 56,
+            "alt": [
+              "meat"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "لمح",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "لَمْح",
+            "gloss": "as a twinkling",
+            "type": "noun",
+            "root": "لمح",
+            "count": 2,
+            "ref": "16:77",
+            "pos": 9,
+            "alt": [
+              "like the twinkling"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "محل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَحِلّ",
+            "gloss": "destination",
+            "type": "noun",
+            "root": "حلل",
+            "count": 3,
+            "ref": "2:196",
+            "pos": 17,
+            "alt": [
+              "place of sacrifice",
+              "place"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "محي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مُحْى",
+            "gloss": "give life",
+            "type": "active participle",
+            "root": "حيي",
+            "count": 2,
+            "ref": "30:50",
+            "pos": 13,
+            "alt": [
+              "giver of life"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ملح",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مِلْح",
+            "gloss": "salty",
+            "type": "noun",
+            "root": "ملح",
+            "count": 2,
+            "ref": "25:53",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "احصي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَحْصَى",
+            "gloss": "best calculated",
+            "type": "verb",
+            "root": "حصي",
+            "count": 11,
+            "ref": "18:12",
+            "pos": 6,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "احيا",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَحْيا",
+            "gloss": "revives",
+            "type": "verb",
+            "root": "حيي",
+            "count": 51,
+            "ref": "2:73",
+            "pos": 5,
+            "alt": [
+              "gives life",
+              "give life"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "اصلح",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "أَصْلَحَ",
+            "gloss": "amend",
+            "type": "verb",
+            "root": "صلح",
+            "count": 28,
+            "ref": "10:81",
+            "pos": 15,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "حلال",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَلال",
+            "gloss": "lawful",
+            "type": "noun",
+            "root": "حلل",
+            "count": 6,
+            "ref": "2:168",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "حليم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَلِيم",
+            "gloss": "most forbearing",
+            "type": "adjective",
+            "root": "حلم",
+            "count": 15,
+            "ref": "2:225",
+            "pos": 14,
+            "alt": [
+              "all-forbearing",
+              "forbearing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حليه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حِلْيَة",
+            "gloss": "ornaments",
+            "type": "noun",
+            "root": "حلي",
+            "count": 4,
+            "ref": "13:17",
+            "pos": 18
+          }
+        ]
+      },
+      {
+        "w": "حميم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَمِيم",
+            "gloss": "scalding water",
+            "type": "noun",
+            "root": "حمم",
+            "count": 20,
+            "ref": "6:70",
+            "pos": 40,
+            "alt": [
+              "boiling water",
+              "friend"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حميه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَمِيَّة",
+            "gloss": "disdain",
+            "type": "noun",
+            "root": "حمي",
+            "count": 2,
+            "ref": "48:26",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "حياه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَياة",
+            "gloss": "life",
+            "type": "noun",
+            "root": "حيي",
+            "count": 76,
+            "ref": "2:96",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "صالح",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "صالِح",
+            "gloss": "salih",
+            "type": "active participle",
+            "root": "صلح",
+            "count": 74,
+            "ref": "2:62",
+            "pos": 14,
+            "alt": [
+              "righteous",
+              "righteous deeds"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "صيحه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "صَيْحَة",
+            "gloss": "shout",
+            "type": "noun",
+            "root": "صيح",
+            "count": 13,
+            "ref": "36:29",
+            "pos": 4,
+            "alt": [
+              "thunderous blast"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "محيا",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَحْيا",
+            "gloss": "living",
+            "type": "noun",
+            "root": "حيي",
+            "count": 2,
+            "ref": "6:162",
+            "pos": 5,
+            "alt": [
+              "life"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "محيص",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَحِيص",
+            "gloss": "place of escape",
+            "type": "verbal noun",
+            "root": "حيص",
+            "count": 5,
+            "ref": "4:121",
+            "pos": 7,
+            "alt": [
+              "any escape",
+              "place of refuge"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مصلح",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مُصْلِح",
+            "gloss": "reformers",
+            "type": "active participle",
+            "root": "صلح",
+            "count": 5,
+            "ref": "2:11",
+            "pos": 11
+          }
+        ]
+      },
+      {
+        "w": "يحيي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "يَحْيَى",
+            "gloss": "yahya",
+            "type": "proper noun",
+            "root": "حيي",
+            "count": 5,
+            "ref": "19:7",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "اصلاح",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "إِصْلاح",
+            "gloss": "conciliation",
+            "type": "verbal noun",
+            "root": "صلح",
+            "count": 7,
+            "ref": "2:220",
+            "pos": 8,
+            "alt": [
+              "reconciliation",
+              "setting right"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حاميه",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "حامِيَة",
+            "gloss": "intensely hot",
+            "type": "active participle",
+            "root": "حمي",
+            "count": 2,
+            "ref": "88:4",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "صالحه",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "صالِحَة",
+            "gloss": "righteous women",
+            "type": "active participle",
+            "root": "صلح",
+            "count": 62,
+            "ref": "2:25",
+            "pos": 5,
+            "alt": [
+              "righteous deeds",
+              "good deeds"
+            ]
+          }
+        ]
+      }
+    ],
+    "otherFamily": [],
+    "maxScore": 63,
+    "featuredRoot": "صلح"
+  }
+}

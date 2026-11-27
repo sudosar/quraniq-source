@@ -1,602 +1,616 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "puzzle": {
-    "center": "ف",
+    "center": "ح",
     "outer": [
-      "س",
-      "خ",
+      "ا",
+      "ي",
       "م",
-      "ت",
+      "ه",
       "ل",
-      "ا"
+      "ص"
     ],
     "root": {
-      "letters": "خلف",
-      "display": "خ ل ف",
-      "translit": "kh-l-f",
-      "meaning": "The core idea is what comes after or stands behind. That sense extends to people who follow later, paths that split apart, and words that are left unkept.",
-      "occurrences": 127,
-      "lemmaCount": 18
+      "letters": "صلح",
+      "display": "ص ل ح",
+      "translit": "ṣ-l-ḥ",
+      "meaning": "The core idea is making things right, good and whole. It grows into being a good person, doing good deeds, and fixing broken ties between people.",
+      "occurrences": 180,
+      "lemmaCount": 7
     },
     "words": [
       {
-        "w": "اسف",
+        "w": "احل",
         "family": false,
         "points": 1,
         "senses": [
           {
-            "lemma": "أَسِف",
-            "gloss": "grieved",
-            "type": "noun",
-            "root": "أسف",
-            "count": 2,
-            "ref": "7:150",
+            "lemma": "أَحَلَّ",
+            "gloss": "permitted",
+            "type": "verb",
+            "root": "حلل",
+            "count": 20,
+            "ref": "2:187",
+            "pos": 1,
+            "alt": [
+              "are made lawful",
+              "has made lawful"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "حال",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حالَ",
+            "gloss": "comes",
+            "type": "verb",
+            "root": "حول",
+            "count": 3,
+            "ref": "8:24",
+            "pos": 14,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "حلل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حَلَلْ",
+            "gloss": "settles",
+            "type": "verb",
+            "root": "حلل",
+            "count": 14,
+            "ref": "2:228",
             "pos": 7,
             "alt": [
-              "sorrowful"
+              "lawful",
+              "on whom descends"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "حلم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حُلُم",
+            "gloss": "dreams",
+            "type": "noun",
+            "root": "حلم",
+            "count": 6,
+            "ref": "12:44",
+            "pos": 3
+          }
+        ]
+      },
+      {
+        "w": "حما",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حَمَإ",
+            "gloss": "black mud",
+            "type": "noun",
+            "root": "حمأ",
+            "count": 3,
+            "ref": "15:26",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "حمل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حَمَلَ",
+            "gloss": "carries",
+            "type": "verb",
+            "root": "حمل",
+            "count": 41,
+            "ref": "2:286",
+            "pos": 22,
+            "alt": [
+              "carried",
+              "lay"
+            ],
+            "form": 1
+          },
+          {
+            "lemma": "حَمْل",
+            "gloss": "burden",
+            "type": "noun",
+            "root": "حمل",
+            "count": 7,
+            "ref": "7:189",
+            "pos": 15,
+            "alt": [
+              "pregnant woman",
+              "pregnant"
             ]
           },
           {
-            "lemma": "أَسَف",
-            "gloss": "grief",
+            "lemma": "حُمِّلَ",
+            "gloss": "placed on",
+            "type": "verb",
+            "root": "حمل",
+            "count": 5,
+            "ref": "24:54",
+            "pos": 11,
+            "form": 2
+          },
+          {
+            "lemma": "حِمْل",
+            "gloss": "load",
             "type": "noun",
-            "root": "أسف",
+            "root": "حمل",
+            "count": 3,
+            "ref": "12:72",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "صلح",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "صُلْح",
+            "gloss": "reconciliation",
+            "type": "noun",
+            "root": "صلح",
             "count": 2,
-            "ref": "18:6",
+            "ref": "4:128",
+            "pos": 15
+          },
+          {
+            "lemma": "صَلَحَ",
+            "gloss": "righteous",
+            "type": "verb",
+            "root": "صلح",
+            "count": 2,
+            "ref": "13:23",
+            "pos": 5,
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "لحم",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "لَحْم",
+            "gloss": "flesh",
+            "type": "noun",
+            "root": "لحم",
+            "count": 12,
+            "ref": "2:259",
+            "pos": 56,
+            "alt": [
+              "meat"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "لمح",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "لَمْح",
+            "gloss": "as a twinkling",
+            "type": "noun",
+            "root": "لمح",
+            "count": 2,
+            "ref": "16:77",
+            "pos": 9,
+            "alt": [
+              "like the twinkling"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "محل",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مَحِلّ",
+            "gloss": "destination",
+            "type": "noun",
+            "root": "حلل",
+            "count": 3,
+            "ref": "2:196",
+            "pos": 17,
+            "alt": [
+              "place of sacrifice",
+              "place"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "محي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مُحْى",
+            "gloss": "give life",
+            "type": "active participle",
+            "root": "حيي",
+            "count": 2,
+            "ref": "30:50",
+            "pos": 13,
+            "alt": [
+              "giver of life"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "ملح",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "مِلْح",
+            "gloss": "salty",
+            "type": "noun",
+            "root": "ملح",
+            "count": 2,
+            "ref": "25:53",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "احصي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَحْصَى",
+            "gloss": "best calculated",
+            "type": "verb",
+            "root": "حصي",
+            "count": 11,
+            "ref": "18:12",
+            "pos": 6,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "احيا",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَحْيا",
+            "gloss": "revives",
+            "type": "verb",
+            "root": "حيي",
+            "count": 51,
+            "ref": "2:73",
+            "pos": 5,
+            "alt": [
+              "gives life",
+              "give life"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "اصلح",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "أَصْلَحَ",
+            "gloss": "amend",
+            "type": "verb",
+            "root": "صلح",
+            "count": 28,
+            "ref": "10:81",
+            "pos": 15,
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "حلال",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَلال",
+            "gloss": "lawful",
+            "type": "noun",
+            "root": "حلل",
+            "count": 6,
+            "ref": "2:168",
+            "pos": 7
+          }
+        ]
+      },
+      {
+        "w": "حليم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَلِيم",
+            "gloss": "most forbearing",
+            "type": "adjective",
+            "root": "حلم",
+            "count": 15,
+            "ref": "2:225",
+            "pos": 14,
+            "alt": [
+              "all-forbearing",
+              "forbearing"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حليه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حِلْيَة",
+            "gloss": "ornaments",
+            "type": "noun",
+            "root": "حلي",
+            "count": 4,
+            "ref": "13:17",
+            "pos": 18
+          }
+        ]
+      },
+      {
+        "w": "حميم",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَمِيم",
+            "gloss": "scalding water",
+            "type": "noun",
+            "root": "حمم",
+            "count": 20,
+            "ref": "6:70",
+            "pos": 40,
+            "alt": [
+              "boiling water",
+              "friend"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حميه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَمِيَّة",
+            "gloss": "disdain",
+            "type": "noun",
+            "root": "حمي",
+            "count": 2,
+            "ref": "48:26",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "حياه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حَياة",
+            "gloss": "life",
+            "type": "noun",
+            "root": "حيي",
+            "count": 76,
+            "ref": "2:96",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "صالح",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "صالِح",
+            "gloss": "salih",
+            "type": "active participle",
+            "root": "صلح",
+            "count": 74,
+            "ref": "2:62",
+            "pos": 14,
+            "alt": [
+              "righteous",
+              "righteous deeds"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "صيحه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "صَيْحَة",
+            "gloss": "shout",
+            "type": "noun",
+            "root": "صيح",
+            "count": 13,
+            "ref": "36:29",
+            "pos": 4,
+            "alt": [
+              "thunderous blast"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "محيا",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَحْيا",
+            "gloss": "living",
+            "type": "noun",
+            "root": "حيي",
+            "count": 2,
+            "ref": "6:162",
+            "pos": 5,
+            "alt": [
+              "life"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "محيص",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "مَحِيص",
+            "gloss": "place of escape",
+            "type": "verbal noun",
+            "root": "حيص",
+            "count": 5,
+            "ref": "4:121",
+            "pos": 7,
+            "alt": [
+              "any escape",
+              "place of refuge"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "مصلح",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "مُصْلِح",
+            "gloss": "reformers",
+            "type": "active participle",
+            "root": "صلح",
+            "count": 5,
+            "ref": "2:11",
             "pos": 11
           }
         ]
       },
       {
-        "w": "افل",
+        "w": "يحيي",
         "family": false,
-        "points": 1,
+        "points": 2,
         "senses": [
           {
-            "lemma": "أَفَلَ",
-            "gloss": "set",
-            "type": "verb",
-            "root": "أفل",
-            "count": 3,
-            "ref": "6:76",
-            "pos": 11,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "الف",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "أَلْف",
-            "gloss": "thousand",
-            "type": "noun",
-            "root": "ألف",
-            "count": 14,
-            "ref": "2:96",
-            "pos": 13,
-            "alt": [
-              "thousands",
-              "two thousand"
-            ]
-          },
-          {
-            "lemma": "أَلَّفَ",
-            "gloss": "put affection",
-            "type": "verb",
-            "root": "ألف",
+            "lemma": "يَحْيَى",
+            "gloss": "yahya",
+            "type": "proper noun",
+            "root": "حيي",
             "count": 5,
-            "ref": "8:63",
-            "pos": 16,
-            "alt": [
-              "joins"
-            ],
-            "form": 2
-          },
-          {
-            "lemma": "أَلْفَ",
-            "gloss": "found",
-            "type": "verb",
-            "root": "لفو",
-            "count": 3,
-            "ref": "2:170",
-            "pos": 12,
-            "alt": [
-              "both found"
-            ],
-            "form": 4
+            "ref": "19:7",
+            "pos": 6
           }
         ]
       },
       {
-        "w": "خاف",
-        "family": false,
-        "points": 1,
+        "w": "اصلاح",
+        "family": true,
+        "points": 5,
         "senses": [
           {
-            "lemma": "خافَ",
-            "gloss": "fear",
-            "type": "verb",
-            "root": "خوف",
-            "count": 83,
-            "ref": "2:182",
-            "pos": 2,
-            "alt": [
-              "fears",
-              "could i fear"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "خسف",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "خَسَفَ",
-            "gloss": "cause to swallow",
-            "type": "verb",
-            "root": "خسف",
-            "count": 8,
-            "ref": "16:45",
-            "pos": 6,
-            "alt": [
-              "allah will cave"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "خفت",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "خَفَّتْ",
-            "gloss": "light",
-            "type": "verb",
-            "root": "خفف",
-            "count": 3,
-            "ref": "7:9",
-            "pos": 2,
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "خفف",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "خَفَّفَ",
-            "gloss": "be lightened",
-            "type": "verb",
-            "root": "خفف",
-            "count": 8,
-            "ref": "2:86",
+            "lemma": "إِصْلاح",
+            "gloss": "conciliation",
+            "type": "verbal noun",
+            "root": "صلح",
+            "count": 7,
+            "ref": "2:220",
             "pos": 8,
             "alt": [
-              "lighten",
-              "has lightened"
-            ],
-            "form": 2
+              "reconciliation",
+              "setting right"
+            ]
           }
         ]
       },
       {
-        "w": "خلف",
-        "family": true,
+        "w": "حاميه",
+        "family": false,
         "points": 3,
         "senses": [
           {
-            "lemma": "خَلْف",
-            "gloss": "successors",
-            "type": "noun",
-            "root": "خلف",
-            "count": 22,
-            "ref": "7:169",
-            "pos": 4
-          },
-          {
-            "lemma": "خَلَفَ",
-            "gloss": "succeeded",
-            "type": "verb",
-            "root": "خلف",
-            "count": 5,
-            "ref": "7:142",
-            "pos": 16,
-            "alt": [
-              "take my place",
-              "have done in my place"
-            ],
-            "form": 1
-          },
-          {
-            "lemma": "خُلِّفُ",
-            "gloss": "were left behind",
-            "type": "verb",
-            "root": "خلف",
-            "count": 1,
-            "ref": "9:118",
-            "pos": 4,
-            "form": 2
-          }
-        ]
-      },
-      {
-        "w": "سلف",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "سَلَفَ",
-            "gloss": "passed",
-            "type": "verb",
-            "root": "سلف",
-            "count": 5,
-            "ref": "2:275",
-            "pos": 34,
-            "alt": [
-              "passed before",
-              "past"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "فات",
-        "family": false,
-        "points": 1,
-        "senses": [
-          {
-            "lemma": "فاتَ",
-            "gloss": "escaped",
-            "type": "verb",
-            "root": "فوت",
-            "count": 3,
-            "ref": "3:153",
-            "pos": 18,
-            "alt": [
-              "has escaped",
-              "have gone from"
-            ],
-            "form": 1
-          }
-        ]
-      },
-      {
-        "w": "اخلف",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "أَخْلَفُ",
-            "gloss": "break",
-            "type": "verb",
-            "root": "خلف",
-            "count": 14,
-            "ref": "2:80",
-            "pos": 14,
-            "alt": [
-              "fail",
-              "fail/violate"
-            ],
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "اسفل",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "أَسْفَل",
-            "gloss": "lower",
-            "type": "adjective",
-            "root": "سفل",
-            "count": 6,
-            "ref": "8:42",
-            "pos": 9,
-            "alt": [
-              "below",
-              "lowest"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "الاف",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "إِلاف",
-            "gloss": "familiarity",
-            "type": "verbal noun",
-            "root": "ألف",
+            "lemma": "حامِيَة",
+            "gloss": "intensely hot",
+            "type": "active participle",
+            "root": "حمي",
             "count": 2,
-            "ref": "106:1",
-            "pos": 1
+            "ref": "88:4",
+            "pos": 3
           }
         ]
       },
       {
-        "w": "خالف",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "خالِف",
-            "gloss": "stay behind",
-            "type": "active participle",
-            "root": "خلف",
-            "count": 1,
-            "ref": "9:83",
-            "pos": 25
-          }
-        ]
-      },
-      {
-        "w": "خلاف",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "خِلاف",
-            "gloss": "opposite sides",
-            "type": "noun",
-            "root": "خلف",
-            "count": 6,
-            "ref": "5:33",
-            "pos": 20,
-            "alt": [
-              "opposite",
-              "behind"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "سافل",
-        "family": false,
-        "points": 2,
-        "senses": [
-          {
-            "lemma": "سافِل",
-            "gloss": "low",
-            "type": "active participle",
-            "root": "سفل",
-            "count": 3,
-            "ref": "95:5",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "مخلف",
-        "family": true,
-        "points": 4,
-        "senses": [
-          {
-            "lemma": "مُخَلَّف",
-            "gloss": "remained behind",
-            "type": "passive participle",
-            "root": "خلف",
-            "count": 4,
-            "ref": "9:81",
-            "pos": 2,
-            "alt": [
-              "to those who remained behind"
-            ]
-          },
-          {
-            "lemma": "مُخْلِف",
-            "gloss": "fail",
-            "type": "active participle",
-            "root": "خلف",
-            "count": 1,
-            "ref": "14:47",
-            "pos": 4
-          }
-        ]
-      },
-      {
-        "w": "اختلف",
+        "w": "صالحه",
         "family": true,
         "points": 5,
         "senses": [
           {
-            "lemma": "اخْتَلَفَ",
-            "gloss": "differ",
-            "type": "verb",
-            "root": "خلف",
-            "count": 35,
-            "ref": "2:213",
-            "pos": 21,
-            "alt": [
-              "differed"
-            ],
-            "form": 8
-          }
-        ]
-      },
-      {
-        "w": "استخف",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "اسْتَخَفَّ",
-            "gloss": "bluffed",
-            "type": "verb",
-            "root": "خفف",
-            "count": 3,
-            "ref": "16:80",
-            "pos": 13,
-            "alt": [
-              "find light",
-              "take you in light estimation"
-            ],
-            "form": 10
-          }
-        ]
-      },
-      {
-        "w": "اسلفت",
-        "family": false,
-        "points": 3,
-        "senses": [
-          {
-            "lemma": "أَسْلَفَتْ",
-            "gloss": "previously",
-            "type": "verb",
-            "root": "سلف",
-            "count": 2,
-            "ref": "10:30",
-            "pos": 6,
-            "form": 4
-          }
-        ]
-      },
-      {
-        "w": "مختلف",
-        "family": true,
-        "points": 5,
-        "senses": [
-          {
-            "lemma": "مُخْتَلِف",
-            "gloss": "various",
+            "lemma": "صالِحَة",
+            "gloss": "righteous women",
             "type": "active participle",
-            "root": "خلف",
-            "count": 10,
-            "ref": "6:141",
-            "pos": 10,
+            "root": "صلح",
+            "count": 62,
+            "ref": "2:25",
+            "pos": 5,
             "alt": [
-              "varying",
-              "diverse"
+              "righteous deeds",
+              "good deeds"
             ]
-          }
-        ]
-      },
-      {
-        "w": "اختلاف",
-        "family": true,
-        "points": 6,
-        "senses": [
-          {
-            "lemma": "اخْتِلاف",
-            "gloss": "alternation",
-            "type": "verbal noun",
-            "root": "خلف",
-            "count": 7,
-            "ref": "4:82",
-            "pos": 12,
-            "alt": [
-              "contradiction"
-            ]
-          }
-        ]
-      },
-      {
-        "w": "استخلف",
-        "family": true,
-        "points": 6,
-        "senses": [
-          {
-            "lemma": "اسْتَخْلَفَ",
-            "gloss": "gave succession",
-            "type": "verb",
-            "root": "خلف",
-            "count": 5,
-            "ref": "24:55",
-            "pos": 12,
-            "form": 10
-          }
-        ]
-      },
-      {
-        "w": "مستخلف",
-        "family": true,
-        "points": 6,
-        "senses": [
-          {
-            "lemma": "مُسْتَخْلَف",
-            "gloss": "trustees",
-            "type": "passive participle",
-            "root": "خلف",
-            "count": 1,
-            "ref": "57:7",
-            "pos": 7
           }
         ]
       }
     ],
-    "otherFamily": [
-      {
-        "lemma": "خَلِيفَة",
-        "gloss": "successors",
-        "type": "noun",
-        "root": "خلف",
-        "count": 9,
-        "ref": "2:30",
-        "pos": 9,
-        "alt": [
-          "vicegerent",
-          "inheritors"
-        ]
-      },
-      {
-        "lemma": "خَوالِف",
-        "gloss": "stay behind",
-        "type": "noun",
-        "root": "خلف",
-        "count": 2,
-        "ref": "9:87",
-        "pos": 5
-      },
-      {
-        "lemma": "يُخالِفُ",
-        "gloss": "differ from",
-        "type": "verb",
-        "root": "خلف",
-        "count": 2,
-        "ref": "11:88",
-        "pos": 17,
-        "alt": [
-          "oppose"
-        ],
-        "form": 3
-      },
-      {
-        "lemma": "يَتَخَلَّفُ",
-        "gloss": "remain behind",
-        "type": "verb",
-        "root": "خلف",
-        "count": 1,
-        "ref": "9:120",
-        "pos": 10,
-        "form": 5
-      },
-      {
-        "lemma": "خِلْفَة",
-        "gloss": "succession",
-        "type": "noun",
-        "root": "خلف",
-        "count": 1,
-        "ref": "25:62",
-        "pos": 6
-      }
-    ],
-    "maxScore": 68,
-    "featuredRoot": "خلف"
+    "otherFamily": [],
+    "maxScore": 63,
+    "featuredRoot": "صلح"
   },
   "generated": true,
   "model": "auto (chain)"

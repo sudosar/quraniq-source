@@ -1,32 +1,35 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "puzzle": {
-    "verseRef": "38:28",
-    "reference": "Sad (38:28)",
+    "verseRef": "61:9",
+    "reference": "As-Saff (61:9)",
     "segments": [
-      "أَمْ نَجْعَلُ الَّذِينَ",
-      "آمَنُوا وَعَمِلُوا الصَّالِحَاتِ",
-      "كَالْمُفْسِدِينَ فِي الْأَرْضِ",
-      "أَمْ نَجْعَلُ الْمُتَّقِينَ",
-      "كَالْفُجَّارِ"
+      "هُوَ الَّذِي",
+      "أَرْسَلَ رَسُولَهُ",
+      "بِالْهُدَىٰ وَدِينِ",
+      "الْحَقِّ لِيُظْهِرَهُ",
+      "عَلَى الدِّينِ كُلِّهِ",
+      "وَلَوْ كَرِهَ الْمُشْرِكُونَ"
     ],
     "translations": [
-      "Or should We treat those who",
-      "believe and do righteous deeds",
-      "like those who spread corruption in the earth",
-      "Or should We treat",
-      "the pious like the wicked"
+      "He (is) the One Who sent",
+      "His Messenger with guidance and (the) religion",
+      "(of) the truth to make it prevail",
+      "over the religion",
+      "all of them although",
+      "dislike (it) the polytheists"
     ],
-    "hint": "A verse about Allah's perfect justice — the righteous can never be equal to the corrupt",
-    "arabic": "أَمْ نَجْعَلُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ كَٱلْمُفْسِدِينَ فِى ٱلْأَرْضِ أَمْ نَجْعَلُ ٱلْمُتَّقِينَ كَٱلْفُجَّارِ",
+    "hint": "Allah sent His Messenger with guidance and the true religion to prevail over all else",
+    "arabic": "هُوَ ٱلَّذِىٓ أَرْسَلَ رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ ٱلْحَقِّ لِيُظْهِرَهُۥ عَلَى ٱلدِّينِ كُلِّهِۦ وَلَوْ كَرِهَ ٱلْمُشْرِكُونَ",
     "words": [
-      "أَمْ نَجْعَلُ ٱلَّذِينَ",
-      "ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ",
-      "كَٱلْمُفْسِدِينَ فِى ٱلْأَرْضِ",
-      "أَمْ نَجْعَلُ",
-      "ٱلْمُتَّقِينَ كَٱلْفُجَّارِ"
+      "هُوَ ٱلَّذِىٓ أَرْسَلَ",
+      "رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ",
+      "ٱلْحَقِّ لِيُظْهِرَهُۥ",
+      "عَلَى ٱلدِّينِ",
+      "كُلِّهِۦ وَلَوْ",
+      "كَرِهَ ٱلْمُشْرِكُونَ"
     ],
-    "verseEn": "Or should We treat those who believe and do righteous deeds like corrupters in the land? Or should We treat those who fear Allāh like the wicked?"
+    "verseEn": "It is He who sent His Messenger with guidance and the religion of truth to manifest it over all religion, although those who associate others with Allāh dislike it."
   },
   "generated": true,
   "model": "auto (chain)"

@@ -1,144 +1,144 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "puzzle": {
     "categories": [
       {
-        "name": "أَمَاكِنُ السَّكَنِ وَالطَّرِيقِ",
-        "nameEn": "Populated places and travel routes",
+        "name": "أَفْعَالُ الْإِعْرَاضِ وَالِانْصِرَافِ",
+        "nameEn": "Verbs meaning to turn away or turn back in the Qur'an",
         "color": "yellow",
         "items": [
           {
-            "ar": "ٱلْمَدَآئِنِ",
-            "en": "the cities",
-            "ref": "7:111",
-            "verse": "قَالُوٓا۟ أَرْجِهْ وَأَخَاهُ وَأَرْسِلْ فِى ٱلْمَدَآئِنِ حَـٰشِرِينَ",
-            "verseEn": "They said, \"Postpone [the matter of] him and his brother and send among the cities gatherers"
+            "ar": "أَعْرِضْ",
+            "en": "and turn away",
+            "ref": "6:106",
+            "verse": "ٱتَّبِعْ مَآ أُوحِىَ إِلَيْكَ مِن رَّبِّكَ ۖ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ وَأَعْرِضْ عَنِ ٱلْمُشْرِكِينَ",
+            "verseEn": "Follow, [O Muḥammad], what has been revealed to you from your Lord - there is no deity except Him - and turn away from those who associate others with Allāh."
           },
           {
-            "ar": "قَرْيَةٍ",
-            "en": "a city",
-            "ref": "21:95",
-            "verse": "وَحَرَٰمٌ عَلَىٰ قَرْيَةٍ أَهْلَكْنَـٰهَآ أَنَّهُمْ لَا يَرْجِعُونَ",
-            "verseEn": "And it is prohibited to [the people of] a city which We have destroyed that they will [ever] return"
+            "ar": "تَوَلَّىٰ",
+            "en": "turned away",
+            "ref": "53:33",
+            "verse": "أَفَرَءَيْتَ ٱلَّذِى تَوَلَّىٰ",
+            "verseEn": "Have you seen the one who turned away"
           },
           {
-            "ar": "مَسَٰكِنِهِمْ",
-            "en": "their dwellings",
-            "ref": "32:26",
-            "verse": "أَوَلَمْ يَهْدِ لَهُمْ كَمْ أَهْلَكْنَا مِن قَبْلِهِم مِّنَ ٱلْقُرُونِ يَمْشُونَ فِى مَسَـٰكِنِهِمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ ۖ أَفَلَا يَسْمَعُونَ",
-            "verseEn": "Has it not become clear to them how many generations We destroyed before them, [as] they walk among their dwellings? Indeed in that are signs; then do they not hear?"
+            "ar": "صَدُّوا",
+            "en": "and hindered",
+            "ref": "16:88",
+            "verse": "ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ زِدْنَـٰهُمْ عَذَابًۭا فَوْقَ ٱلْعَذَابِ بِمَا كَانُوا۟ يُفْسِدُونَ",
+            "verseEn": "Those who disbelieved and averted [others] from the way of Allāh - We will increase them in punishment over [their] punishment for what corruption they were causing."
           },
           {
-            "ar": "لَبِسَبِيلٍ",
-            "en": "(is) on a road",
-            "ref": "15:76",
-            "verse": "وَإِنَّهَا لَبِسَبِيلٍۢ مُّقِيمٍ",
-            "verseEn": "And indeed, they [i.e., those cities] are [situated] on an established road."
+            "ar": "اِنْقَلَبُوا",
+            "en": "and returned",
+            "ref": "7:119",
+            "verse": "فَغُلِبُوا۟ هُنَالِكَ وَٱنقَلَبُوا۟ صَـٰغِرِينَ",
+            "verseEn": "And they [i.e., Pharaoh and his people] were overcome right there and became debased."
           }
         ]
       },
       {
-        "name": "أَفْعَالُ الْعَمَلِ وَالصُّنْعِ",
-        "nameEn": "Verbs of doing, making and earning",
+        "name": "أَلْفَاظُ الزَّمَنِ وَالتَّقْدِيمِ",
+        "nameEn": "Words denoting time and temporal order",
         "color": "green",
         "items": [
           {
-            "ar": "عَمِلَ",
-            "en": "does",
-            "ref": "45:15",
-            "verse": "مَنْ عَمِلَ صَـٰلِحًۭا فَلِنَفْسِهِۦ ۖ وَمَنْ أَسَآءَ فَعَلَيْهَا ۖ ثُمَّ إِلَىٰ رَبِّكُمْ تُرْجَعُونَ",
-            "verseEn": "Whoever does a good deed - it is for himself; and whoever does evil - it is against it [i.e., the self or soul]. Then to your Lord you will be returned."
+            "ar": "قَبْلُ",
+            "en": "before",
+            "ref": "53:52",
+            "verse": "وَقَوْمَ نُوحٍۢ مِّن قَبْلُ ۖ إِنَّهُمْ كَانُوا۟ هُمْ أَظْلَمَ وَأَطْغَىٰ",
+            "verseEn": "And the people of Noah before. Indeed, it was they who were [even] more unjust and oppressing."
           },
           {
-            "ar": "فَجَعَلَهُۥ",
-            "en": "and made him",
-            "ref": "68:50",
-            "verse": "فَٱجْتَبَـٰهُ رَبُّهُۥ فَجَعَلَهُۥ مِنَ ٱلصَّـٰلِحِينَ",
-            "verseEn": "And his Lord chose him and made him of the righteous."
+            "ar": "أَجَلٍ",
+            "en": "a (fixed) term",
+            "ref": "7:135",
+            "verse": "فَلَمَّا كَشَفْنَا عَنْهُمُ ٱلرِّجْزَ إِلَىٰٓ أَجَلٍ هُم بَـٰلِغُوهُ إِذَا هُمْ يَنكُثُونَ",
+            "verseEn": "But when We removed the punishment from them until a term which they were to reach, then at once they broke their word."
           },
           {
-            "ar": "يَكْسِبُونَ",
-            "en": "earn",
-            "ref": "39:50",
-            "verse": "قَدْ قَالَهَا ٱلَّذِينَ مِن قَبْلِهِمْ فَمَآ أَغْنَىٰ عَنْهُم مَّا كَانُوا۟ يَكْسِبُونَ",
-            "verseEn": "Those before them had already said it, but they were not availed by what they used to earn."
+            "ar": "ٱلْأَوَّلُونَ",
+            "en": "former",
+            "ref": "56:48",
+            "verse": "أَوَءَابَآؤُنَا ٱلْأَوَّلُونَ",
+            "verseEn": "And our forefathers [as well]?\""
           },
           {
-            "ar": "خَلَقْنَٰكُمْ",
-            "en": "[We] created you",
-            "ref": "56:57",
-            "verse": "نَحْنُ خَلَقْنَـٰكُمْ فَلَوْلَا تُصَدِّقُونَ",
-            "verseEn": "We have created you, so why do you not believe?"
+            "ar": "يَوْمُ",
+            "en": "(is the) Day",
+            "ref": "77:38",
+            "verse": "هَـٰذَا يَوْمُ ٱلْفَصْلِ ۖ جَمَعْنَـٰكُمْ وَٱلْأَوَّلِينَ",
+            "verseEn": "This is the Day of Judgement; We will have assembled you and the former peoples."
           }
         ]
       },
       {
-        "name": "الخَسَارُ وَالبُطْلَانُ وَالتَّدْمِيرُ",
-        "nameEn": "Words denoting ruin, loss and nullification",
+        "name": "حَرَكَاتٌمَبْنِيَّةٌ لِلْمَجْهُولِ",
+        "nameEn": "Passive-voice verbs in the Qur'an",
         "color": "blue",
         "items": [
           {
-            "ar": "وَبَطَلَ",
-            "en": "and became futile",
-            "ref": "7:118",
-            "verse": "فَوَقَعَ ٱلْحَقُّ وَبَطَلَ مَا كَانُوا۟ يَعْمَلُونَ",
-            "verseEn": "So the truth was established, and abolished was what they were doing."
+            "ar": "فَأُلْقِيَ",
+            "en": "Then fell down",
+            "ref": "26:46",
+            "verse": "فَأُلْقِىَ ٱلسَّحَرَةُ سَـٰجِدِينَ",
+            "verseEn": "So the magicians fell down in prostration [to Allāh]."
           },
           {
-            "ar": "وَسَيُحْبِطُ",
-            "en": "and He will make worthless",
-            "ref": "47:32",
-            "verse": "إِنَّ ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ وَشَآقُّوا۟ ٱلرَّسُولَ مِنۢ بَعْدِ مَا تَبَيَّنَ لَهُمُ ٱلْهُدَىٰ لَن يَضُرُّوا۟ ٱللَّهَ شَيْـًۭٔا وَسَيُحْبِطُ أَعْمَـٰلَهُمْ",
-            "verseEn": "Indeed, those who disbelieved and averted [people] from the path of Allāh and opposed the Messenger after guidance had become clear to them - never will they harm Allāh at all, and He will render worthless their deeds."
+            "ar": "قِيلَ",
+            "en": "It was said",
+            "ref": "36:26",
+            "verse": "قِيلَ ٱدْخُلِ ٱلْجَنَّةَ ۖ قَالَ يَـٰلَيْتَ قَوْمِى يَعْلَمُونَ",
+            "verseEn": "It was said, \"Enter Paradise.\" He said, \"I wish my people could know"
           },
           {
-            "ar": "وَخَسِرَ",
-            "en": "And are lost",
-            "ref": "40:85",
-            "verse": "فَلَمْ يَكُ يَنفَعُهُمْ إِيمَـٰنُهُمْ لَمَّا رَأَوْا۟ بَأْسَنَا ۖ سُنَّتَ ٱللَّهِ ٱلَّتِى قَدْ خَلَتْ فِى عِبَادِهِۦ ۖ وَخَسِرَ هُنَالِكَ ٱلْكَـٰفِرُونَ",
-            "verseEn": "But never did their faith benefit them once they saw Our punishment. [It is] the established way of Allāh which has preceded among His servants. And the disbelievers thereupon lost [all]."
+            "ar": "سُعِّرَتْ",
+            "en": "is set ablaze",
+            "ref": "81:12",
+            "verse": "وَإِذَا ٱلْجَحِيمُ سُعِّرَتْ",
+            "verseEn": "And when Hellfire is set ablaze"
           },
           {
-            "ar": "تُدَمِّرُ",
-            "en": "Destroying",
-            "ref": "46:25",
-            "verse": "تُدَمِّرُ كُلَّ شَىْءٍۭ بِأَمْرِ رَبِّهَا فَأَصْبَحُوا۟ لَا يُرَىٰٓ إِلَّا مَسَـٰكِنُهُمْ ۚ كَذَٰلِكَ نَجْزِى ٱلْقَوْمَ ٱلْمُجْرِمِينَ",
-            "verseEn": "Destroying everything by command of its Lord. And they became so that nothing was seen [of them] except their dwellings. Thus do We recompense the criminal people."
+            "ar": "أُرْسِلُوا",
+            "en": "they had been sent",
+            "ref": "83:33",
+            "verse": "وَمَآ أُرْسِلُوا۟ عَلَيْهِمْ حَـٰفِظِينَ",
+            "verseEn": "But they had not been sent as guardians over them."
           }
         ]
       },
       {
-        "name": "أَوْقَاتٌ وَمَوَاعِيدُ مُسَمَّاةٌ",
-        "nameEn": "Times and appointed moments",
+        "name": "أَدْوَارٌ وَمِهَنٌ بَشَرِيَّةٌ",
+        "nameEn": "Human occupations, titles and social roles",
         "color": "purple",
         "items": [
           {
-            "ar": "لِمِيقَاتِ",
-            "en": "for (the) appointment",
-            "ref": "26:38",
-            "verse": "فَجُمِعَ ٱلسَّحَرَةُ لِمِيقَـٰتِ يَوْمٍۢ مَّعْلُومٍۢ",
-            "verseEn": "So the magicians were assembled for the appointment of a well-known day."
+            "ar": "الزَّارِعُونَ",
+            "en": "the Ones Who grow",
+            "ref": "56:64",
+            "verse": "ءَأَنتُمْ تَزْرَعُونَهُۥٓ أَمْ نَحْنُ ٱلزَّٰرِعُونَ",
+            "verseEn": "Is it you who makes it grow, or are We the grower?"
           },
           {
-            "ar": "يَوْمِ",
-            "en": "(the) Day",
-            "ref": "38:79",
-            "verse": "قَالَ رَبِّ فَأَنظِرْنِىٓ إِلَىٰ يَوْمِ يُبْعَثُونَ",
-            "verseEn": "He said, \"My Lord, then reprieve me until the Day they are resurrected.\""
+            "ar": "شَاعِرٌ",
+            "en": "A poet",
+            "ref": "52:30",
+            "verse": "أَمْ يَقُولُونَ شَاعِرٌۭ نَّتَرَبَّصُ بِهِۦ رَيْبَ ٱلْمَنُونِ",
+            "verseEn": "Or do they say [of you], \"A poet for whom we await a misfortune of time\"?"
           },
           {
-            "ar": "أَمَدًا",
-            "en": "a (distant) term",
-            "ref": "72:25",
-            "verse": "قُلْ إِنْ أَدْرِىٓ أَقَرِيبٌۭ مَّا تُوعَدُونَ أَمْ يَجْعَلُ لَهُۥ رَبِّىٓ أَمَدًا",
-            "verseEn": "Say, \"I do not know if what you are promised is near or if my Lord will grant for it a [long] period.\""
+            "ar": "السَّاحِرُونَ",
+            "en": "the magicians",
+            "ref": "10:77",
+            "verse": "قَالَ مُوسَىٰٓ أَتَقُولُونَ لِلْحَقِّ لَمَّا جَآءَكُمْ ۖ أَسِحْرٌ هَـٰذَا وَلَا يُفْلِحُ ٱلسَّـٰحِرُونَ",
+            "verseEn": "Moses said, \"Do you say [thus] about the truth when it has come to you? Is this magic? But magicians will not succeed.\""
           },
           {
-            "ar": "ٱلسَّاعَةَ",
-            "en": "(for) the Hour",
-            "ref": "43:66",
-            "verse": "هَلْ يَنظُرُونَ إِلَّا ٱلسَّاعَةَ أَن تَأْتِيَهُم بَغْتَةًۭ وَهُمْ لَا يَشْعُرُونَ",
-            "verseEn": "Are they waiting except for the Hour to come upon them suddenly while they perceive not?"
+            "ar": "فِرْعَوْنَ",
+            "en": "Firaun",
+            "ref": "44:31",
+            "verse": "مِن فِرْعَوْنَ ۚ إِنَّهُۥ كَانَ عَالِيًۭا مِّنَ ٱلْمُسْرِفِينَ",
+            "verseEn": "From Pharaoh. Indeed, he was a haughty one among the transgressors."
           }
         ]
       }

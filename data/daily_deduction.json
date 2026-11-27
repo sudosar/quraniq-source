@@ -1,65 +1,65 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "puzzle": {
-    "title": "the garden vowed at dawn",
-    "intro": "In the quiet hours before sunrise, a plan was made in secret. A flourishing inheritance stood ready for harvest, yet a resolve formed to keep every fruit away from those in need. By morning, everything would look unfamiliar, and a lesson would be etched into blackened branches for all who reflect.",
+    "title": "The City Turned Upside Down",
+    "intro": "In a valley steeped in corruption, one faithful soul stood alone against the tide. Tasked with calling a defiant community back to purity, this figure faced mockery, threats, and ultimate destruction descending from the sky.",
     "clues": [
-      "We inherited a flourishing garden and vowed to harvest all of its fruits for ourselves.",
-      "We swore to go out early at dawn while the poor who asked for their share were still asleep.",
-      "We excluded any exception from our oath and withheld the right of the needy without saying if Allah wills.",
-      "We went out whispering to one another to allow no poor person to enter our garden that day.",
-      "We imagined ourselves fully capable of gathering everything and preventing any gleaner from taking a portion.",
-      "We woke to find our garden ruined in the night, blackened as if harvested, and we said we were deprived and penitent."
+      "I was sent as a messenger to a community that transgressed all bounds.",
+      "I warned my people about an immorality that no nation before them had committed.",
+      "I offered guidance in purity, but my people mocked me and demanded punishment instead.",
+      "I prayed to Allah for help against my corrupt people when they threatened to expel me.",
+      "Angels came to me in the form of guests, and I feared for them because of my people.",
+      "I was commanded to leave by night with my followers, and stones of baked clay rained upon those left behind."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "The Companions of the Trench",
-          "The Companions of the Garden",
-          "The Messengers of the Town in Surah Ya-Sin",
-          "The People of the Elephant",
-          "The Keepers of Hellfire"
+          "Prophet Shuayb",
+          "Prophet Lut",
+          "Prophet Idris",
+          "Prophet Salih",
+          "Prophet Hud"
         ],
-        "answer": "The Companions of the Garden"
+        "answer": "Prophet Lut"
       },
       "trial": {
-        "label": "Trial/Event",
+        "label": "What Was The Crime Of My People?",
         "options": [
-          "Sacrificing a cow to resolve a murder dispute",
-          "Challenging a prophet to bring down stones from the sky",
-          "Plotting to harvest at dawn while denying the poor their share",
-          "Breaking the Sabbath by setting fishing nets",
-          "Building a dam to control floodwaters for trade"
+          "Hamstringing the she-camel of Allah",
+          "Committing shameful immorality unknown to any nation before",
+          "Building lofty towers out of arrogance",
+          "Worshipping the golden calf in absence of their leader",
+          "Withholding measure and weight in trade"
         ],
-        "answer": "Plotting to harvest at dawn while denying the poor their share"
+        "answer": "Committing shameful immorality unknown to any nation before"
       },
       "location": {
-        "label": "Key Element",
+        "label": "What Was Sent Against The Transgressors?",
         "options": [
-          "The sacred valley of Tuwa where fire was seen",
-          "The walled garden orchard to be reaped in the morning",
-          "The mirrored palace floor mistaken for water",
-          "The wooden ark built under divine instruction",
-          "The iron wall built between two mountains"
+          "A flood that covered the mountaintops",
+          "Stones of baked clay marked by your Lord",
+          "A mighty blast that seized them at sunrise",
+          "Birds carrying stones against an army with elephants",
+          "A swarm of locusts, lice and frogs"
         ],
-        "answer": "The walled garden orchard to be reaped in the morning"
+        "answer": "Stones of baked clay marked by your Lord"
       },
       "outcome": {
-        "label": "Outcome",
+        "label": "What Was My Final Outcome?",
         "options": [
-          "We were turned into apes for transgressing the Sabbath",
-          "We slept in a cave for three hundred and nine years",
-          "We were swallowed by the earth with treasures for pride",
-          "Our garden was destroyed overnight and left blackened like night",
-          "We were drowned in the sea while pursuing the believers"
+          "I was raised alive to the heavens",
+          "I was swallowed by a great fish then forgiven",
+          "I was thrown into fire that became cool and safe",
+          "I was saved with my followers except my spouse who was left behind",
+          "I slept in a cave for many years"
         ],
-        "answer": "Our garden was destroyed overnight and left blackened like night"
+        "answer": "I was saved with my followers except my spouse who was left behind"
       }
     },
-    "verseRef": "68:17",
-    "arabic": "إِنَّا بَلَوْنَـٰهُمْ كَمَا بَلَوْنَآ أَصْحَـٰبَ ٱلْجَنَّةِ إِذْ أَقْسَمُوا۟ لَيَصْرِمُنَّهَا مُصْبِحِينَ",
-    "verse": "Indeed, We have tried them as We tried the companions of the garden, when they swore to cut its fruit in the [early] morning (68:17)"
+    "verseRef": "51:35",
+    "arabic": "فَأَخْرَجْنَا مَن كَانَ فِيهَا مِنَ ٱلْمُؤْمِنِينَ",
+    "verse": "So We brought out whoever was in them [i.e., the cities] of the believers. (51:35)"
   },
   "generated": true,
   "model": "auto (chain)"
