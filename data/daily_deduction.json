@@ -1,65 +1,65 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "puzzle": {
-    "title": "The City Turned Upside Down",
-    "intro": "In a valley steeped in corruption, one faithful soul stood alone against the tide. Tasked with calling a defiant community back to purity, this figure faced mockery, threats, and ultimate destruction descending from the sky.",
+    "title": "The Seal Beyond the Cave",
+    "intro": "Imagine a trusted soul in a city of idols, known for honesty long before revelation came. Retreat to a lonely cave, then a night journey of escape that would reshape history. Can you name this servant of Allah?",
     "clues": [
-      "I was sent as a messenger to a community that transgressed all bounds.",
-      "I warned my people about an immorality that no nation before them had committed.",
-      "I offered guidance in purity, but my people mocked me and demanded punishment instead.",
-      "I prayed to Allah for help against my corrupt people when they threatened to expel me.",
-      "Angels came to me in the form of guests, and I feared for them because of my people.",
-      "I was commanded to leave by night with my followers, and stones of baked clay rained upon those left behind."
+      "I was known among my people as the trustworthy one before revelation came to me.",
+      "I retreated to a cave for worship when the first words of revelation descended upon me.",
+      "I faced boycott, mockery and grief in my city yet continued to call to one God.",
+      "I was taken by night from the sacred mosque to the farthest mosque and beyond.",
+      "I left my home by night with my companion, sheltering in a cave while pursuers searched.",
+      "I entered a new city where Allah established for me a community and completed my mission as a mercy to the worlds."
     ],
     "categories": {
       "identity": {
         "label": "Who Am I?",
         "options": [
-          "Prophet Shuayb",
-          "Prophet Lut",
-          "Prophet Idris",
-          "Prophet Salih",
-          "Prophet Hud"
+          "Prophet Isa",
+          "Prophet Muhammad",
+          "Prophet Nuh",
+          "Prophet Ibrahim",
+          "Prophet Musa"
         ],
-        "answer": "Prophet Lut"
+        "answer": "Prophet Muhammad"
       },
       "trial": {
-        "label": "What Was The Crime Of My People?",
+        "label": "Trial/Event",
         "options": [
-          "Hamstringing the she-camel of Allah",
-          "Committing shameful immorality unknown to any nation before",
-          "Building lofty towers out of arrogance",
-          "Worshipping the golden calf in absence of their leader",
-          "Withholding measure and weight in trade"
+          "Hijrah to Madinah and establishment of the community",
+          "Being swallowed by the great fish",
+          "Parting the sea to escape Pharaoh",
+          "Building the Ark to survive the Flood",
+          "Being thrown into the fire for breaking idols"
         ],
-        "answer": "Committing shameful immorality unknown to any nation before"
+        "answer": "Hijrah to Madinah and establishment of the community"
       },
       "location": {
-        "label": "What Was Sent Against The Transgressors?",
+        "label": "Key Element",
         "options": [
-          "A flood that covered the mountaintops",
-          "Stones of baked clay marked by your Lord",
-          "A mighty blast that seized them at sunrise",
-          "Birds carrying stones against an army with elephants",
-          "A swarm of locusts, lice and frogs"
+          "The blazing fire prepared by the idolaters",
+          "The Ark built under divine instruction",
+          "Cave of Thawr on the journey of migration",
+          "Mount Sinai where the Torah was received",
+          "Belly of the whale in the depths of the sea"
         ],
-        "answer": "Stones of baked clay marked by your Lord"
+        "answer": "Cave of Thawr on the journey of migration"
       },
       "outcome": {
-        "label": "What Was My Final Outcome?",
+        "label": "Outcome",
         "options": [
-          "I was raised alive to the heavens",
-          "I was swallowed by a great fish then forgiven",
-          "I was thrown into fire that became cool and safe",
-          "I was saved with my followers except my spouse who was left behind",
-          "I slept in a cave for many years"
+          "The Flood drowned the disbelievers and the believers were saved",
+          "The fire became cool and peaceful by Allah's command",
+          "The whale released its captive after repentance and glorification",
+          "The sea drowned Pharaoh and his army",
+          "A secure community was founded and Islam spread as a mercy to the worlds"
         ],
-        "answer": "I was saved with my followers except my spouse who was left behind"
+        "answer": "A secure community was founded and Islam spread as a mercy to the worlds"
       }
     },
-    "verseRef": "51:35",
-    "arabic": "فَأَخْرَجْنَا مَن كَانَ فِيهَا مِنَ ٱلْمُؤْمِنِينَ",
-    "verse": "So We brought out whoever was in them [i.e., the cities] of the believers. (51:35)"
+    "verseRef": "4:170",
+    "arabic": "يَـٰٓأَيُّهَا ٱلنَّاسُ قَدْ جَآءَكُمُ ٱلرَّسُولُ بِٱلْحَقِّ مِن رَّبِّكُمْ فَـَٔامِنُوا۟ خَيْرًۭا لَّكُمْ ۚ وَإِن تَكْفُرُوا۟ فَإِنَّ لِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَكَانَ ٱللَّهُ عَلِيمًا حَكِيمًۭا",
+    "verse": "O mankind, the Messenger has come to you with the truth from your Lord, so believe; it is better for you. But if you disbelieve - then indeed, to Allāh belongs whatever is in the heavens and earth. And ever is Allāh Knowing and Wise. (4:170)"
   },
   "generated": true,
   "model": "auto (chain)"

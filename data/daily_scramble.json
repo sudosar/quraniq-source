@@ -1,35 +1,35 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "puzzle": {
-    "verseRef": "61:9",
-    "reference": "As-Saff (61:9)",
+    "verseRef": "25:58",
+    "reference": "Surah Al-Furqan (25:58)",
     "segments": [
-      "هُوَ الَّذِي",
-      "أَرْسَلَ رَسُولَهُ",
-      "بِالْهُدَىٰ وَدِينِ",
-      "الْحَقِّ لِيُظْهِرَهُ",
-      "عَلَى الدِّينِ كُلِّهِ",
-      "وَلَوْ كَرِهَ الْمُشْرِكُونَ"
+      "وَتَوَكَّلْ عَلَى",
+      "الْحَيِّ الَّذِي",
+      "لَا يَمُوتُ",
+      "وَسَبِّحْ بِحَمْدِهِ",
+      "وَكَفَىٰ بِهِ",
+      "بِذُنُوبِ عِبَادِهِ خَبِيرًا"
     ],
     "translations": [
-      "He (is) the One Who sent",
-      "His Messenger with guidance and (the) religion",
-      "(of) the truth to make it prevail",
-      "over the religion",
-      "all of them although",
-      "dislike (it) the polytheists"
+      "And put your trust in the Ever-Living",
+      "the One Who does not die",
+      "does not die and glorify",
+      "with His Praise And sufficient is",
+      "He regarding the sins",
+      "(of) His slaves All-Aware"
     ],
-    "hint": "Allah sent His Messenger with guidance and the true religion to prevail over all else",
-    "arabic": "هُوَ ٱلَّذِىٓ أَرْسَلَ رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ ٱلْحَقِّ لِيُظْهِرَهُۥ عَلَى ٱلدِّينِ كُلِّهِۦ وَلَوْ كَرِهَ ٱلْمُشْرِكُونَ",
+    "hint": "A command to place trust in the Ever-Living who never dies and to glorify Him",
+    "arabic": "وَتَوَكَّلْ عَلَى ٱلْحَىِّ ٱلَّذِى لَا يَمُوتُ وَسَبِّحْ بِحَمْدِهِۦ ۚ وَكَفَىٰ بِهِۦ بِذُنُوبِ عِبَادِهِۦ خَبِيرًا",
     "words": [
-      "هُوَ ٱلَّذِىٓ أَرْسَلَ",
-      "رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ",
-      "ٱلْحَقِّ لِيُظْهِرَهُۥ",
-      "عَلَى ٱلدِّينِ",
-      "كُلِّهِۦ وَلَوْ",
-      "كَرِهَ ٱلْمُشْرِكُونَ"
+      "وَتَوَكَّلْ عَلَى ٱلْحَىِّ",
+      "ٱلَّذِى لَا",
+      "يَمُوتُ وَسَبِّحْ",
+      "بِحَمْدِهِۦ ۚ وَكَفَىٰ",
+      "بِهِۦ بِذُنُوبِ",
+      "عِبَادِهِۦ خَبِيرًا"
     ],
-    "verseEn": "It is He who sent His Messenger with guidance and the religion of truth to manifest it over all religion, although those who associate others with Allāh dislike it."
+    "verseEn": "And rely upon the Ever-Living who does not die, and exalt [Allāh] with His praise. And sufficient is He to be, with the sins of His servants, [fully] Aware -"
   },
   "generated": true,
   "model": "auto (chain)"

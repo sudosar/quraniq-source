@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "puzzle": {
-    "word": "بلاد",
-    "display": "بِلَادِ",
-    "hint": "Towns and lands where people journey and settle",
-    "verseRef": "40:4",
-    "arabicVerse": "مَا يُجَـٰدِلُ فِىٓ ءَايَـٰتِ ٱللَّهِ إِلَّا ٱلَّذِينَ كَفَرُوا۟ فَلَا يَغْرُرْكَ تَقَلُّبُهُمْ فِى ٱلْبِلَـٰدِ",
-    "verse": "40:4 - No one disputes concerning the signs of Allāh except those who disbelieve, so be not deceived by their [uninhibited] movement throughout the land."
+    "word": "عزة",
+    "display": "عِزَّةٌ",
+    "hint": "Honor and exalted might that belongs to Allah, His Messenger and the believers",
+    "verseRef": "63:8",
+    "arabicVerse": "يَقُولُونَ لَئِن رَّجَعْنَآ إِلَى ٱلْمَدِينَةِ لَيُخْرِجَنَّ ٱلْأَعَزُّ مِنْهَا ٱلْأَذَلَّ ۚ وَلِلَّهِ ٱلْعِزَّةُ وَلِرَسُولِهِۦ وَلِلْمُؤْمِنِينَ وَلَـٰكِنَّ ٱلْمُنَـٰفِقِينَ لَا يَعْلَمُونَ",
+    "verse": "63:8 - They say, \"If we return to al-Madīnah, the more honored [for power] will surely expel therefrom the more humble.\" And to Allāh belongs [all] honor, and to His Messenger, and to the believers, but the hypocrites do not know."
   },
   "generated": true,
   "model": "auto (chain)"

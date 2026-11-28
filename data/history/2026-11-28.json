@@ -1,0 +1,796 @@
+{
+  "connections": {
+    "categories": [
+      {
+        "name": "جَمْعُ الْمُذَكَّرِ السَّالِمُ",
+        "nameEn": "Arabic words in the sound masculine plural form (ending in -ūn)",
+        "color": "yellow",
+        "items": [
+          {
+            "ar": "عَابِدُونَ",
+            "en": "(are) slaves",
+            "ref": "23:47",
+            "verse": "فَقَالُوٓا۟ أَنُؤْمِنُ لِبَشَرَيْنِ مِثْلِنَا وَقَوْمُهُمَا لَنَا عَـٰبِدُونَ",
+            "verseEn": "They said, \"Should we believe two men like ourselves while their people are for us in servitude?\""
+          },
+          {
+            "ar": "مُشْتَرِكُونَ",
+            "en": "(will be) sharers",
+            "ref": "37:33",
+            "verse": "فَإِنَّهُمْ يَوْمَئِذٍۢ فِى ٱلْعَذَابِ مُشْتَرِكُونَ",
+            "verseEn": "So indeed they, that Day, will be sharing in the punishment."
+          },
+          {
+            "ar": "مُعْرِضُونَ",
+            "en": "(is) averse",
+            "ref": "24:48",
+            "verse": "وَإِذَا دُعُوٓا۟ إِلَى ٱللَّهِ وَرَسُولِهِۦ لِيَحْكُمَ بَيْنَهُمْ إِذَا فَرِيقٌۭ مِّنْهُم مُّعْرِضُونَ",
+            "verseEn": "And when they are called to [the words of] Allāh and His Messenger to judge between them, at once a party of them turns aside [in refusal]."
+          },
+          {
+            "ar": "سَمَّاعُونَ",
+            "en": "Listeners",
+            "ref": "5:42",
+            "verse": "سَمَّـٰعُونَ لِلْكَذِبِ أَكَّـٰلُونَ لِلسُّحْتِ ۚ فَإِن جَآءُوكَ فَٱحْكُم بَيْنَهُمْ أَوْ أَعْرِضْ عَنْهُمْ ۖ وَإِن تُعْرِضْ عَنْهُمْ فَلَن يَضُرُّوكَ شَيْـًۭٔا ۖ وَإِنْ حَكَمْتَ فَٱحْكُم بَيْنَهُم بِٱلْقِسْطِ ۚ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُقْسِطِينَ",
+            "verseEn": "[They are] avid listeners to falsehood, devourers of [what is] unlawful. So if they come to you, [O Muḥammad], judge between them or turn away from them. And if you turn away from them - never will they harm you at all. And if you judge, judge between them with justice. Indeed, Allāh loves those who act justly."
+          }
+        ]
+      },
+      {
+        "name": "كَلِمَاتُ الْحَرَكَةِ وَالِانْتِقَالِ",
+        "nameEn": "Words denoting movement and travel",
+        "color": "green",
+        "items": [
+          {
+            "ar": "هَاجَرُوا",
+            "en": "emigrated",
+            "ref": "22:58",
+            "verse": "وَٱلَّذِينَ هَاجَرُوا۟ فِى سَبِيلِ ٱللَّهِ ثُمَّ قُتِلُوٓا۟ أَوْ مَاتُوا۟ لَيَرْزُقَنَّهُمُ ٱللَّهُ رِزْقًا حَسَنًۭا ۚ وَإِنَّ ٱللَّهَ لَهُوَ خَيْرُ ٱلرَّٰزِقِينَ",
+            "verseEn": "And those who emigrated for the cause of Allāh and then were killed or died - Allāh will surely provide for them a good provision. And indeed, it is Allāh who is the best of providers."
+          },
+          {
+            "ar": "جِئْتَ",
+            "en": "come",
+            "ref": "7:106",
+            "verse": "قَالَ إِن كُنتَ جِئْتَ بِـَٔايَةٍۢ فَأْتِ بِهَآ إِن كُنتَ مِنَ ٱلصَّـٰدِقِينَ",
+            "verseEn": "[Pharaoh] said, \"If you have come with a sign, then bring it forth, if you should be of the truthful.\""
+          },
+          {
+            "ar": "مُّهْطِعِينَ",
+            "en": "Racing ahead",
+            "ref": "54:8",
+            "verse": "مُّهْطِعِينَ إِلَى ٱلدَّاعِ ۖ يَقُولُ ٱلْكَـٰفِرُونَ هَـٰذَا يَوْمٌ عَسِرٌۭ",
+            "verseEn": "Racing ahead toward the Caller. The disbelievers will say, \"This is a difficult Day.\""
+          },
+          {
+            "ar": "الْمَسَاقُ",
+            "en": "(will be) the driving",
+            "ref": "75:30",
+            "verse": "إِلَىٰ رَبِّكَ يَوْمَئِذٍ ٱلْمَسَاقُ",
+            "verseEn": "To your Lord, that Day, will be the procession."
+          }
+        ]
+      },
+      {
+        "name": "أَلْفَاظُ الْمَالِ وَالْمِلْكِيَّةِ",
+        "nameEn": "Terms of wealth and possession",
+        "color": "blue",
+        "items": [
+          {
+            "ar": "أَمْوَالِكُمْ",
+            "en": "your wealth",
+            "ref": "3:186",
+            "verse": "۞ لَتُبْلَوُنَّ فِىٓ أَمْوَٰلِكُمْ وَأَنفُسِكُمْ وَلَتَسْمَعُنَّ مِنَ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ مِن قَبْلِكُمْ وَمِنَ ٱلَّذِينَ أَشْرَكُوٓا۟ أَذًۭى كَثِيرًۭا ۚ وَإِن تَصْبِرُوا۟ وَتَتَّقُوا۟ فَإِنَّ ذَٰلِكَ مِنْ عَزْمِ ٱلْأُمُورِ",
+            "verseEn": "You will surely be tested in your possessions and in yourselves. And you will surely hear from those who were given the Scripture before you and from those who associate others with Allāh much abuse. But if you are patient and fear Allāh - indeed, that is of the matters [worthy] of resolve."
+          },
+          {
+            "ar": "وَرَثَةِ",
+            "en": "(the) inheritors",
+            "ref": "26:85",
+            "verse": "وَٱجْعَلْنِى مِن وَرَثَةِ جَنَّةِ ٱلنَّعِيمِ",
+            "verseEn": "And place me among the inheritors of the Garden of Pleasure."
+          },
+          {
+            "ar": "رَهِينَةٌ",
+            "en": "(is) pledged",
+            "ref": "74:38",
+            "verse": "كُلُّ نَفْسٍۭ بِمَا كَسَبَتْ رَهِينَةٌ",
+            "verseEn": "Every soul, for what it has earned, will be retained."
+          },
+          {
+            "ar": "مَتَاعٌ",
+            "en": "An enjoyment",
+            "ref": "16:117",
+            "verse": "مَتَـٰعٌۭ قَلِيلٌۭ وَلَهُمْ عَذَابٌ أَلِيمٌۭ",
+            "verseEn": "[It is but] a brief enjoyment, and they will have a painful punishment."
+          }
+        ]
+      },
+      {
+        "name": "أَلْفَاظُ القَسَمِ وَالشَّهَادَةِ",
+        "nameEn": "Words used in swearing oaths and testimony",
+        "color": "purple",
+        "items": [
+          {
+            "ar": "فَوَرَبِّكَ",
+            "en": "So by your Lord",
+            "ref": "15:92",
+            "verse": "فَوَرَبِّكَ لَنَسْـَٔلَنَّهُمْ أَجْمَعِينَ",
+            "verseEn": "So by your Lord, We will surely question them all"
+          },
+          {
+            "ar": "تَقَاسَمُوا",
+            "en": "Swear to each other",
+            "ref": "27:49",
+            "verse": "قَالُوا۟ تَقَاسَمُوا۟ بِٱللَّهِ لَنُبَيِّتَنَّهُۥ وَأَهْلَهُۥ ثُمَّ لَنَقُولَنَّ لِوَلِيِّهِۦ مَا شَهِدْنَا مَهْلِكَ أَهْلِهِۦ وَإِنَّا لَصَـٰدِقُونَ",
+            "verseEn": "They said, \"Take a mutual oath by Allāh that we will kill him by night, he and his family. Then we will say to his executor, 'We did not witness the destruction of his family, and indeed, we are truthful.'\""
+          },
+          {
+            "ar": "شَهِيدًا",
+            "en": "(as) a Witness",
+            "ref": "29:52",
+            "verse": "قُلْ كَفَىٰ بِٱللَّهِ بَيْنِى وَبَيْنَكُمْ شَهِيدًۭا ۖ يَعْلَمُ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۗ وَٱلَّذِينَ ءَامَنُوا۟ بِٱلْبَـٰطِلِ وَكَفَرُوا۟ بِٱللَّهِ أُو۟لَـٰٓئِكَ هُمُ ٱلْخَـٰسِرُونَ",
+            "verseEn": "Say, \"Sufficient is Allāh between me and you as Witness. He knows what is in the heavens and earth. And they who have believed in falsehood and disbelieved in Allāh - it is those who are the losers.\""
+          },
+          {
+            "ar": "بِالْيَمِينِ",
+            "en": "by the right hand",
+            "ref": "69:45",
+            "verse": "لَأَخَذْنَا مِنْهُ بِٱلْيَمِينِ",
+            "verseEn": "We would have seized him by the right hand;"
+          }
+        ]
+      }
+    ]
+  },
+  "harf": {
+    "word": "عزة",
+    "display": "عِزَّةٌ",
+    "hint": "Honor and exalted might that belongs to Allah, His Messenger and the believers",
+    "verseRef": "63:8",
+    "arabicVerse": "يَقُولُونَ لَئِن رَّجَعْنَآ إِلَى ٱلْمَدِينَةِ لَيُخْرِجَنَّ ٱلْأَعَزُّ مِنْهَا ٱلْأَذَلَّ ۚ وَلِلَّهِ ٱلْعِزَّةُ وَلِرَسُولِهِۦ وَلِلْمُؤْمِنِينَ وَلَـٰكِنَّ ٱلْمُنَـٰفِقِينَ لَا يَعْلَمُونَ",
+    "verse": "63:8 - They say, \"If we return to al-Madīnah, the more honored [for power] will surely expel therefrom the more humble.\" And to Allāh belongs [all] honor, and to His Messenger, and to the believers, but the hypocrites do not know."
+  },
+  "deduction": {
+    "title": "The Seal Beyond the Cave",
+    "intro": "Imagine a trusted soul in a city of idols, known for honesty long before revelation came. Retreat to a lonely cave, then a night journey of escape that would reshape history. Can you name this servant of Allah?",
+    "clues": [
+      "I was known among my people as the trustworthy one before revelation came to me.",
+      "I retreated to a cave for worship when the first words of revelation descended upon me.",
+      "I faced boycott, mockery and grief in my city yet continued to call to one God.",
+      "I was taken by night from the sacred mosque to the farthest mosque and beyond.",
+      "I left my home by night with my companion, sheltering in a cave while pursuers searched.",
+      "I entered a new city where Allah established for me a community and completed my mission as a mercy to the worlds."
+    ],
+    "categories": {
+      "identity": {
+        "label": "Who Am I?",
+        "options": [
+          "Prophet Isa",
+          "Prophet Muhammad",
+          "Prophet Nuh",
+          "Prophet Ibrahim",
+          "Prophet Musa"
+        ],
+        "answer": "Prophet Muhammad"
+      },
+      "trial": {
+        "label": "Trial/Event",
+        "options": [
+          "Hijrah to Madinah and establishment of the community",
+          "Being swallowed by the great fish",
+          "Parting the sea to escape Pharaoh",
+          "Building the Ark to survive the Flood",
+          "Being thrown into the fire for breaking idols"
+        ],
+        "answer": "Hijrah to Madinah and establishment of the community"
+      },
+      "location": {
+        "label": "Key Element",
+        "options": [
+          "The blazing fire prepared by the idolaters",
+          "The Ark built under divine instruction",
+          "Cave of Thawr on the journey of migration",
+          "Mount Sinai where the Torah was received",
+          "Belly of the whale in the depths of the sea"
+        ],
+        "answer": "Cave of Thawr on the journey of migration"
+      },
+      "outcome": {
+        "label": "Outcome",
+        "options": [
+          "The Flood drowned the disbelievers and the believers were saved",
+          "The fire became cool and peaceful by Allah's command",
+          "The whale released its captive after repentance and glorification",
+          "The sea drowned Pharaoh and his army",
+          "A secure community was founded and Islam spread as a mercy to the worlds"
+        ],
+        "answer": "A secure community was founded and Islam spread as a mercy to the worlds"
+      }
+    },
+    "verseRef": "4:170",
+    "arabic": "يَـٰٓأَيُّهَا ٱلنَّاسُ قَدْ جَآءَكُمُ ٱلرَّسُولُ بِٱلْحَقِّ مِن رَّبِّكُمْ فَـَٔامِنُوا۟ خَيْرًۭا لَّكُمْ ۚ وَإِن تَكْفُرُوا۟ فَإِنَّ لِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَكَانَ ٱللَّهُ عَلِيمًا حَكِيمًۭا",
+    "verse": "O mankind, the Messenger has come to you with the truth from your Lord, so believe; it is better for you. But if you disbelieve - then indeed, to Allāh belongs whatever is in the heavens and earth. And ever is Allāh Knowing and Wise. (4:170)"
+  },
+  "scramble": {
+    "verseRef": "25:58",
+    "reference": "Surah Al-Furqan (25:58)",
+    "segments": [
+      "وَتَوَكَّلْ عَلَى",
+      "الْحَيِّ الَّذِي",
+      "لَا يَمُوتُ",
+      "وَسَبِّحْ بِحَمْدِهِ",
+      "وَكَفَىٰ بِهِ",
+      "بِذُنُوبِ عِبَادِهِ خَبِيرًا"
+    ],
+    "translations": [
+      "And put your trust in the Ever-Living",
+      "the One Who does not die",
+      "does not die and glorify",
+      "with His Praise And sufficient is",
+      "He regarding the sins",
+      "(of) His slaves All-Aware"
+    ],
+    "hint": "A command to place trust in the Ever-Living who never dies and to glorify Him",
+    "arabic": "وَتَوَكَّلْ عَلَى ٱلْحَىِّ ٱلَّذِى لَا يَمُوتُ وَسَبِّحْ بِحَمْدِهِۦ ۚ وَكَفَىٰ بِهِۦ بِذُنُوبِ عِبَادِهِۦ خَبِيرًا",
+    "words": [
+      "وَتَوَكَّلْ عَلَى ٱلْحَىِّ",
+      "ٱلَّذِى لَا",
+      "يَمُوتُ وَسَبِّحْ",
+      "بِحَمْدِهِۦ ۚ وَكَفَىٰ",
+      "بِهِۦ بِذُنُوبِ",
+      "عِبَادِهِۦ خَبِيرًا"
+    ],
+    "verseEn": "And rely upon the Ever-Living who does not die, and exalt [Allāh] with His praise. And sufficient is He to be, with the sins of His servants, [fully] Aware -"
+  },
+  "roothive": {
+    "center": "و",
+    "outer": [
+      "ي",
+      "ا",
+      "د",
+      "ح",
+      "ه",
+      "ل"
+    ],
+    "root": {
+      "letters": "وحد",
+      "display": "و ح د",
+      "translit": "w-ḥ-d",
+      "meaning": "The core idea is oneness and being without partner or equal. From it grow words for one thing and for being alone or unique.",
+      "occurrences": 68,
+      "lemmaCount": 4
+    },
+    "words": [
+      {
+        "w": "اول",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "أَوَّل",
+            "gloss": "first",
+            "type": "noun",
+            "root": "أول",
+            "count": 82,
+            "ref": "2:41",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "اوي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "آوَى",
+            "gloss": "took",
+            "type": "verb",
+            "root": "أوي",
+            "count": 9,
+            "ref": "12:69",
+            "pos": 5,
+            "form": 4
+          },
+          {
+            "lemma": "أَوَى",
+            "gloss": "could take refuge",
+            "type": "verb",
+            "root": "أوي",
+            "count": 5,
+            "ref": "11:80",
+            "pos": 8,
+            "alt": [
+              "retreated"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "حول",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "حَوْل",
+            "gloss": "around",
+            "type": "noun",
+            "root": "حول",
+            "count": 17,
+            "ref": "2:233",
+            "pos": 4,
+            "alt": [
+              "two years"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "لهو",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "لَهْو",
+            "gloss": "amusement",
+            "type": "noun",
+            "root": "لهو",
+            "count": 10,
+            "ref": "7:51",
+            "pos": 4,
+            "alt": [
+              "pastime",
+              "idle tales"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "لوح",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "لَوْح",
+            "gloss": "made of planks",
+            "type": "noun",
+            "root": "لوح",
+            "count": 5,
+            "ref": "54:13",
+            "pos": 4,
+            "alt": [
+              "tablet"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "هود",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هُود",
+            "gloss": "hud",
+            "type": "proper noun",
+            "root": "هود",
+            "count": 10,
+            "ref": "2:111",
+            "pos": 8,
+            "alt": [
+              "jews",
+              "jew"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "هوي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "هَوَى",
+            "gloss": "desire",
+            "type": "verb",
+            "root": "هوي",
+            "count": 8,
+            "ref": "2:87",
+            "pos": 22,
+            "alt": [
+              "desired",
+              "incline"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "واد",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "واد",
+            "gloss": "valley",
+            "type": "noun",
+            "root": "ودي",
+            "count": 7,
+            "ref": "26:225",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "وحد",
+        "family": true,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "وَحْد",
+            "gloss": "alone",
+            "type": "noun",
+            "root": "وحد",
+            "count": 6,
+            "ref": "7:70",
+            "pos": 5
+          }
+        ]
+      },
+      {
+        "w": "وحي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وَحْى",
+            "gloss": "revelation",
+            "type": "noun",
+            "root": "وحي",
+            "count": 6,
+            "ref": "42:51",
+            "pos": 8
+          }
+        ]
+      },
+      {
+        "w": "ولد",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وَلَد",
+            "gloss": "son",
+            "type": "noun",
+            "root": "ولد",
+            "count": 56,
+            "ref": "2:116",
+            "pos": 4,
+            "alt": [
+              "child",
+              "boy"
+            ]
+          },
+          {
+            "lemma": "وَلَدَ",
+            "gloss": "was born",
+            "type": "verb",
+            "root": "ولد",
+            "count": 9,
+            "ref": "19:15",
+            "pos": 4,
+            "alt": [
+              "allah has begotten",
+              "begot"
+            ],
+            "form": 1
+          }
+        ]
+      },
+      {
+        "w": "ولي",
+        "family": false,
+        "points": 1,
+        "senses": [
+          {
+            "lemma": "وَلِيّ",
+            "gloss": "protector",
+            "type": "noun",
+            "root": "ولي",
+            "count": 86,
+            "ref": "2:107",
+            "pos": 15,
+            "alt": [
+              "allies",
+              "protectors"
+            ]
+          },
+          {
+            "lemma": "وَلَّى",
+            "gloss": "make friends",
+            "type": "verb",
+            "root": "ولي",
+            "count": 30,
+            "ref": "6:129",
+            "pos": 2,
+            "alt": [
+              "turned back",
+              "turned"
+            ],
+            "form": 2
+          }
+        ]
+      },
+      {
+        "w": "اواه",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَوّاه",
+            "gloss": "imploring",
+            "type": "noun",
+            "root": "أوه",
+            "count": 2,
+            "ref": "11:75",
+            "pos": 4
+          }
+        ]
+      },
+      {
+        "w": "اوحي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَوْحَى",
+            "gloss": "has been revealed",
+            "type": "verb",
+            "root": "وحي",
+            "count": 72,
+            "ref": "6:50",
+            "pos": 20,
+            "alt": [
+              "is revealed",
+              "revealed"
+            ],
+            "form": 4
+          }
+        ]
+      },
+      {
+        "w": "اولي",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "أَوْلَى",
+            "gloss": "nearer",
+            "type": "noun",
+            "root": "ولي",
+            "count": 11,
+            "ref": "3:68",
+            "pos": 2,
+            "alt": [
+              "closer",
+              "woe"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "حدود",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "حُدُود",
+            "gloss": "limits",
+            "type": "noun",
+            "root": "حدد",
+            "count": 14,
+            "ref": "2:187",
+            "pos": 55
+          }
+        ]
+      },
+      {
+        "w": "لولو",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "لُؤْلُؤ",
+            "gloss": "pearls",
+            "type": "noun",
+            "root": "لؤلؤ",
+            "count": 6,
+            "ref": "52:24",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "واحد",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "واحِد",
+            "gloss": "one",
+            "type": "adjective",
+            "root": "وحد",
+            "count": 30,
+            "ref": "2:61",
+            "pos": 8,
+            "alt": [
+              "one god",
+              "one gate"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "والد",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "والِد",
+            "gloss": "father",
+            "type": "noun",
+            "root": "ولد",
+            "count": 14,
+            "ref": "31:33",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "وحيد",
+        "family": true,
+        "points": 4,
+        "senses": [
+          {
+            "lemma": "وَحِيد",
+            "gloss": "alone",
+            "type": "noun",
+            "root": "وحد",
+            "count": 1,
+            "ref": "74:11",
+            "pos": 4
+          }
+        ]
+      },
+      {
+        "w": "ودود",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "وَدُود",
+            "gloss": "most loving",
+            "type": "adjective",
+            "root": "ودد",
+            "count": 2,
+            "ref": "11:90",
+            "pos": 9
+          }
+        ]
+      },
+      {
+        "w": "وليد",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "وَلِيد",
+            "gloss": "child",
+            "type": "noun",
+            "root": "ولد",
+            "count": 7,
+            "ref": "26:18",
+            "pos": 5,
+            "alt": [
+              "boys",
+              "young boys"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "يهود",
+        "family": false,
+        "points": 2,
+        "senses": [
+          {
+            "lemma": "يَهُود",
+            "gloss": "jew",
+            "type": "proper noun",
+            "root": "هود",
+            "count": 9,
+            "ref": "3:67",
+            "pos": 4
+          }
+        ]
+      },
+      {
+        "w": "اوديه",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "أَوْدِيَة",
+            "gloss": "valleys",
+            "type": "noun",
+            "root": "ودي",
+            "count": 2,
+            "ref": "13:17",
+            "pos": 6
+          }
+        ]
+      },
+      {
+        "w": "واحده",
+        "family": true,
+        "points": 5,
+        "senses": [
+          {
+            "lemma": "واحِدَة",
+            "gloss": "single",
+            "type": "adjective",
+            "root": "وحد",
+            "count": 31,
+            "ref": "2:213",
+            "pos": 4,
+            "alt": [
+              "one",
+              "one community"
+            ]
+          }
+        ]
+      },
+      {
+        "w": "والده",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "والِدَة",
+            "gloss": "mother",
+            "type": "active participle",
+            "root": "ولد",
+            "count": 3,
+            "ref": "2:233",
+            "pos": 24
+          }
+        ]
+      },
+      {
+        "w": "والدي",
+        "family": false,
+        "points": 3,
+        "senses": [
+          {
+            "lemma": "والِدَي",
+            "gloss": "parents",
+            "type": "noun",
+            "root": "ولد",
+            "count": 10,
+            "ref": "14:41",
+            "pos": 4,
+            "alt": [
+              "to his parents",
+              "goodness to his parents"
+            ]
+          }
+        ]
+      }
+    ],
+    "otherFamily": [],
+    "maxScore": 54,
+    "featuredRoot": "وحد"
+  }
+}

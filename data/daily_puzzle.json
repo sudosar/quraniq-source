@@ -1,144 +1,144 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "puzzle": {
     "categories": [
       {
-        "name": "أَفْعَالُ الْإِعْرَاضِ وَالِانْصِرَافِ",
-        "nameEn": "Verbs meaning to turn away or turn back in the Qur'an",
+        "name": "جَمْعُ الْمُذَكَّرِ السَّالِمُ",
+        "nameEn": "Arabic words in the sound masculine plural form (ending in -ūn)",
         "color": "yellow",
         "items": [
           {
-            "ar": "أَعْرِضْ",
-            "en": "and turn away",
-            "ref": "6:106",
-            "verse": "ٱتَّبِعْ مَآ أُوحِىَ إِلَيْكَ مِن رَّبِّكَ ۖ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ وَأَعْرِضْ عَنِ ٱلْمُشْرِكِينَ",
-            "verseEn": "Follow, [O Muḥammad], what has been revealed to you from your Lord - there is no deity except Him - and turn away from those who associate others with Allāh."
+            "ar": "عَابِدُونَ",
+            "en": "(are) slaves",
+            "ref": "23:47",
+            "verse": "فَقَالُوٓا۟ أَنُؤْمِنُ لِبَشَرَيْنِ مِثْلِنَا وَقَوْمُهُمَا لَنَا عَـٰبِدُونَ",
+            "verseEn": "They said, \"Should we believe two men like ourselves while their people are for us in servitude?\""
           },
           {
-            "ar": "تَوَلَّىٰ",
-            "en": "turned away",
-            "ref": "53:33",
-            "verse": "أَفَرَءَيْتَ ٱلَّذِى تَوَلَّىٰ",
-            "verseEn": "Have you seen the one who turned away"
+            "ar": "مُشْتَرِكُونَ",
+            "en": "(will be) sharers",
+            "ref": "37:33",
+            "verse": "فَإِنَّهُمْ يَوْمَئِذٍۢ فِى ٱلْعَذَابِ مُشْتَرِكُونَ",
+            "verseEn": "So indeed they, that Day, will be sharing in the punishment."
           },
           {
-            "ar": "صَدُّوا",
-            "en": "and hindered",
-            "ref": "16:88",
-            "verse": "ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ زِدْنَـٰهُمْ عَذَابًۭا فَوْقَ ٱلْعَذَابِ بِمَا كَانُوا۟ يُفْسِدُونَ",
-            "verseEn": "Those who disbelieved and averted [others] from the way of Allāh - We will increase them in punishment over [their] punishment for what corruption they were causing."
+            "ar": "مُعْرِضُونَ",
+            "en": "(is) averse",
+            "ref": "24:48",
+            "verse": "وَإِذَا دُعُوٓا۟ إِلَى ٱللَّهِ وَرَسُولِهِۦ لِيَحْكُمَ بَيْنَهُمْ إِذَا فَرِيقٌۭ مِّنْهُم مُّعْرِضُونَ",
+            "verseEn": "And when they are called to [the words of] Allāh and His Messenger to judge between them, at once a party of them turns aside [in refusal]."
           },
           {
-            "ar": "اِنْقَلَبُوا",
-            "en": "and returned",
-            "ref": "7:119",
-            "verse": "فَغُلِبُوا۟ هُنَالِكَ وَٱنقَلَبُوا۟ صَـٰغِرِينَ",
-            "verseEn": "And they [i.e., Pharaoh and his people] were overcome right there and became debased."
+            "ar": "سَمَّاعُونَ",
+            "en": "Listeners",
+            "ref": "5:42",
+            "verse": "سَمَّـٰعُونَ لِلْكَذِبِ أَكَّـٰلُونَ لِلسُّحْتِ ۚ فَإِن جَآءُوكَ فَٱحْكُم بَيْنَهُمْ أَوْ أَعْرِضْ عَنْهُمْ ۖ وَإِن تُعْرِضْ عَنْهُمْ فَلَن يَضُرُّوكَ شَيْـًۭٔا ۖ وَإِنْ حَكَمْتَ فَٱحْكُم بَيْنَهُم بِٱلْقِسْطِ ۚ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُقْسِطِينَ",
+            "verseEn": "[They are] avid listeners to falsehood, devourers of [what is] unlawful. So if they come to you, [O Muḥammad], judge between them or turn away from them. And if you turn away from them - never will they harm you at all. And if you judge, judge between them with justice. Indeed, Allāh loves those who act justly."
           }
         ]
       },
       {
-        "name": "أَلْفَاظُ الزَّمَنِ وَالتَّقْدِيمِ",
-        "nameEn": "Words denoting time and temporal order",
+        "name": "كَلِمَاتُ الْحَرَكَةِ وَالِانْتِقَالِ",
+        "nameEn": "Words denoting movement and travel",
         "color": "green",
         "items": [
           {
-            "ar": "قَبْلُ",
-            "en": "before",
-            "ref": "53:52",
-            "verse": "وَقَوْمَ نُوحٍۢ مِّن قَبْلُ ۖ إِنَّهُمْ كَانُوا۟ هُمْ أَظْلَمَ وَأَطْغَىٰ",
-            "verseEn": "And the people of Noah before. Indeed, it was they who were [even] more unjust and oppressing."
+            "ar": "هَاجَرُوا",
+            "en": "emigrated",
+            "ref": "22:58",
+            "verse": "وَٱلَّذِينَ هَاجَرُوا۟ فِى سَبِيلِ ٱللَّهِ ثُمَّ قُتِلُوٓا۟ أَوْ مَاتُوا۟ لَيَرْزُقَنَّهُمُ ٱللَّهُ رِزْقًا حَسَنًۭا ۚ وَإِنَّ ٱللَّهَ لَهُوَ خَيْرُ ٱلرَّٰزِقِينَ",
+            "verseEn": "And those who emigrated for the cause of Allāh and then were killed or died - Allāh will surely provide for them a good provision. And indeed, it is Allāh who is the best of providers."
           },
           {
-            "ar": "أَجَلٍ",
-            "en": "a (fixed) term",
-            "ref": "7:135",
-            "verse": "فَلَمَّا كَشَفْنَا عَنْهُمُ ٱلرِّجْزَ إِلَىٰٓ أَجَلٍ هُم بَـٰلِغُوهُ إِذَا هُمْ يَنكُثُونَ",
-            "verseEn": "But when We removed the punishment from them until a term which they were to reach, then at once they broke their word."
+            "ar": "جِئْتَ",
+            "en": "come",
+            "ref": "7:106",
+            "verse": "قَالَ إِن كُنتَ جِئْتَ بِـَٔايَةٍۢ فَأْتِ بِهَآ إِن كُنتَ مِنَ ٱلصَّـٰدِقِينَ",
+            "verseEn": "[Pharaoh] said, \"If you have come with a sign, then bring it forth, if you should be of the truthful.\""
           },
           {
-            "ar": "ٱلْأَوَّلُونَ",
-            "en": "former",
-            "ref": "56:48",
-            "verse": "أَوَءَابَآؤُنَا ٱلْأَوَّلُونَ",
-            "verseEn": "And our forefathers [as well]?\""
+            "ar": "مُّهْطِعِينَ",
+            "en": "Racing ahead",
+            "ref": "54:8",
+            "verse": "مُّهْطِعِينَ إِلَى ٱلدَّاعِ ۖ يَقُولُ ٱلْكَـٰفِرُونَ هَـٰذَا يَوْمٌ عَسِرٌۭ",
+            "verseEn": "Racing ahead toward the Caller. The disbelievers will say, \"This is a difficult Day.\""
           },
           {
-            "ar": "يَوْمُ",
-            "en": "(is the) Day",
-            "ref": "77:38",
-            "verse": "هَـٰذَا يَوْمُ ٱلْفَصْلِ ۖ جَمَعْنَـٰكُمْ وَٱلْأَوَّلِينَ",
-            "verseEn": "This is the Day of Judgement; We will have assembled you and the former peoples."
+            "ar": "الْمَسَاقُ",
+            "en": "(will be) the driving",
+            "ref": "75:30",
+            "verse": "إِلَىٰ رَبِّكَ يَوْمَئِذٍ ٱلْمَسَاقُ",
+            "verseEn": "To your Lord, that Day, will be the procession."
           }
         ]
       },
       {
-        "name": "حَرَكَاتٌمَبْنِيَّةٌ لِلْمَجْهُولِ",
-        "nameEn": "Passive-voice verbs in the Qur'an",
+        "name": "أَلْفَاظُ الْمَالِ وَالْمِلْكِيَّةِ",
+        "nameEn": "Terms of wealth and possession",
         "color": "blue",
         "items": [
           {
-            "ar": "فَأُلْقِيَ",
-            "en": "Then fell down",
-            "ref": "26:46",
-            "verse": "فَأُلْقِىَ ٱلسَّحَرَةُ سَـٰجِدِينَ",
-            "verseEn": "So the magicians fell down in prostration [to Allāh]."
+            "ar": "أَمْوَالِكُمْ",
+            "en": "your wealth",
+            "ref": "3:186",
+            "verse": "۞ لَتُبْلَوُنَّ فِىٓ أَمْوَٰلِكُمْ وَأَنفُسِكُمْ وَلَتَسْمَعُنَّ مِنَ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ مِن قَبْلِكُمْ وَمِنَ ٱلَّذِينَ أَشْرَكُوٓا۟ أَذًۭى كَثِيرًۭا ۚ وَإِن تَصْبِرُوا۟ وَتَتَّقُوا۟ فَإِنَّ ذَٰلِكَ مِنْ عَزْمِ ٱلْأُمُورِ",
+            "verseEn": "You will surely be tested in your possessions and in yourselves. And you will surely hear from those who were given the Scripture before you and from those who associate others with Allāh much abuse. But if you are patient and fear Allāh - indeed, that is of the matters [worthy] of resolve."
           },
           {
-            "ar": "قِيلَ",
-            "en": "It was said",
-            "ref": "36:26",
-            "verse": "قِيلَ ٱدْخُلِ ٱلْجَنَّةَ ۖ قَالَ يَـٰلَيْتَ قَوْمِى يَعْلَمُونَ",
-            "verseEn": "It was said, \"Enter Paradise.\" He said, \"I wish my people could know"
+            "ar": "وَرَثَةِ",
+            "en": "(the) inheritors",
+            "ref": "26:85",
+            "verse": "وَٱجْعَلْنِى مِن وَرَثَةِ جَنَّةِ ٱلنَّعِيمِ",
+            "verseEn": "And place me among the inheritors of the Garden of Pleasure."
           },
           {
-            "ar": "سُعِّرَتْ",
-            "en": "is set ablaze",
-            "ref": "81:12",
-            "verse": "وَإِذَا ٱلْجَحِيمُ سُعِّرَتْ",
-            "verseEn": "And when Hellfire is set ablaze"
+            "ar": "رَهِينَةٌ",
+            "en": "(is) pledged",
+            "ref": "74:38",
+            "verse": "كُلُّ نَفْسٍۭ بِمَا كَسَبَتْ رَهِينَةٌ",
+            "verseEn": "Every soul, for what it has earned, will be retained."
           },
           {
-            "ar": "أُرْسِلُوا",
-            "en": "they had been sent",
-            "ref": "83:33",
-            "verse": "وَمَآ أُرْسِلُوا۟ عَلَيْهِمْ حَـٰفِظِينَ",
-            "verseEn": "But they had not been sent as guardians over them."
+            "ar": "مَتَاعٌ",
+            "en": "An enjoyment",
+            "ref": "16:117",
+            "verse": "مَتَـٰعٌۭ قَلِيلٌۭ وَلَهُمْ عَذَابٌ أَلِيمٌۭ",
+            "verseEn": "[It is but] a brief enjoyment, and they will have a painful punishment."
           }
         ]
       },
       {
-        "name": "أَدْوَارٌ وَمِهَنٌ بَشَرِيَّةٌ",
-        "nameEn": "Human occupations, titles and social roles",
+        "name": "أَلْفَاظُ القَسَمِ وَالشَّهَادَةِ",
+        "nameEn": "Words used in swearing oaths and testimony",
         "color": "purple",
         "items": [
           {
-            "ar": "الزَّارِعُونَ",
-            "en": "the Ones Who grow",
-            "ref": "56:64",
-            "verse": "ءَأَنتُمْ تَزْرَعُونَهُۥٓ أَمْ نَحْنُ ٱلزَّٰرِعُونَ",
-            "verseEn": "Is it you who makes it grow, or are We the grower?"
+            "ar": "فَوَرَبِّكَ",
+            "en": "So by your Lord",
+            "ref": "15:92",
+            "verse": "فَوَرَبِّكَ لَنَسْـَٔلَنَّهُمْ أَجْمَعِينَ",
+            "verseEn": "So by your Lord, We will surely question them all"
           },
           {
-            "ar": "شَاعِرٌ",
-            "en": "A poet",
-            "ref": "52:30",
-            "verse": "أَمْ يَقُولُونَ شَاعِرٌۭ نَّتَرَبَّصُ بِهِۦ رَيْبَ ٱلْمَنُونِ",
-            "verseEn": "Or do they say [of you], \"A poet for whom we await a misfortune of time\"?"
+            "ar": "تَقَاسَمُوا",
+            "en": "Swear to each other",
+            "ref": "27:49",
+            "verse": "قَالُوا۟ تَقَاسَمُوا۟ بِٱللَّهِ لَنُبَيِّتَنَّهُۥ وَأَهْلَهُۥ ثُمَّ لَنَقُولَنَّ لِوَلِيِّهِۦ مَا شَهِدْنَا مَهْلِكَ أَهْلِهِۦ وَإِنَّا لَصَـٰدِقُونَ",
+            "verseEn": "They said, \"Take a mutual oath by Allāh that we will kill him by night, he and his family. Then we will say to his executor, 'We did not witness the destruction of his family, and indeed, we are truthful.'\""
           },
           {
-            "ar": "السَّاحِرُونَ",
-            "en": "the magicians",
-            "ref": "10:77",
-            "verse": "قَالَ مُوسَىٰٓ أَتَقُولُونَ لِلْحَقِّ لَمَّا جَآءَكُمْ ۖ أَسِحْرٌ هَـٰذَا وَلَا يُفْلِحُ ٱلسَّـٰحِرُونَ",
-            "verseEn": "Moses said, \"Do you say [thus] about the truth when it has come to you? Is this magic? But magicians will not succeed.\""
+            "ar": "شَهِيدًا",
+            "en": "(as) a Witness",
+            "ref": "29:52",
+            "verse": "قُلْ كَفَىٰ بِٱللَّهِ بَيْنِى وَبَيْنَكُمْ شَهِيدًۭا ۖ يَعْلَمُ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۗ وَٱلَّذِينَ ءَامَنُوا۟ بِٱلْبَـٰطِلِ وَكَفَرُوا۟ بِٱللَّهِ أُو۟لَـٰٓئِكَ هُمُ ٱلْخَـٰسِرُونَ",
+            "verseEn": "Say, \"Sufficient is Allāh between me and you as Witness. He knows what is in the heavens and earth. And they who have believed in falsehood and disbelieved in Allāh - it is those who are the losers.\""
           },
           {
-            "ar": "فِرْعَوْنَ",
-            "en": "Firaun",
-            "ref": "44:31",
-            "verse": "مِن فِرْعَوْنَ ۚ إِنَّهُۥ كَانَ عَالِيًۭا مِّنَ ٱلْمُسْرِفِينَ",
-            "verseEn": "From Pharaoh. Indeed, he was a haughty one among the transgressors."
+            "ar": "بِالْيَمِينِ",
+            "en": "by the right hand",
+            "ref": "69:45",
+            "verse": "لَأَخَذْنَا مِنْهُ بِٱلْيَمِينِ",
+            "verseEn": "We would have seized him by the right hand;"
           }
         ]
       }
